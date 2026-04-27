@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pattaya Gym Directory — Muay Thai, CrossFit, MMA & Every Sport in Pattaya</title>
+  <meta name="description" content="The most comprehensive directory of gyms and sports venues in Pattaya, Thailand. Muay Thai camps, CrossFit boxes, MMA, BJJ, boxing, fitness, yoga, golf, tennis, watersports and more — with prices, locations, and reviews." />
+  <meta name="keywords" content="Pattaya gyms, Muay Thai Pattaya, CrossFit Pattaya, MMA Pattaya, BJJ Pattaya, fitness Pattaya, yoga Pattaya, sports Pattaya, Pattaya training, Thailand gym directory" />
+  <meta name="author" content="Pattaya Gym Directory" />
+  <link rel="canonical" href="https://pattaya-gym.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pattaya Gym Directory — Every Gym & Sport in Pattaya" />
+  <meta property="og:description" content="Find Muay Thai camps, CrossFit boxes, MMA gyms, fitness centers, yoga studios, golf clubs, watersports and more in Pattaya, Thailand." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pattaya-gym.com/" />
+  <meta property="og:image" content="https://pattaya-gym.com/og-image.jpg" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pattaya Gym Directory" />
+  <meta name="twitter:description" content="Every Muay Thai camp, CrossFit box, gym, and sports venue in Pattaya — one directory." />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Pattaya Gym Directory",
+    "url": "https://pattaya-gym.com",
+    "description": "Comprehensive directory of gyms, Muay Thai camps, and sports venues in Pattaya, Thailand.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pattaya-gym.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a href="/" class="brand">
+        <span class="brand-mark">P</span>
+        <span class="brand-text">PATTAYA <strong>GYM</strong></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#directory">Directory</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#submit">Add Your Gym</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">THE COMPLETE PATTAYA SPORTS GUIDE</p>
+      <h1>Every Gym &amp; Sport in <span class="accent">Pattaya</span></h1>
+      <p class="lead">From world-class Muay Thai camps to CrossFit boxes, BJJ academies, golf clubs, watersports and more — the most comprehensive sports directory in Pattaya, Thailand.</p>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search gyms, sports, areas (e.g. Muay Thai Jomtien)" autocomplete="off" />
+        <button id="search-clear" aria-label="Clear">×</button>
+      </div>
+      <div class="hero-stats">
+        <div><strong id="stat-total">—</strong><span>Venues</span></div>
+        <div><strong id="stat-categories">—</strong><span>Categories</span></div>
+        <div><strong>2026</strong><span>Updated</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="categories" class="categories">
+      <h2 class="section-title">Browse by Category</h2>
+      <div id="category-chips" class="chips"></div>
+    </section>
+
+    <section id="directory" class="directory">
+      <div class="directory-header">
+        <h2 class="section-title">Directory</h2>
+        <div class="result-count"><span id="result-count">0</span> venues</div>
+      </div>
+      <div id="gym-grid" class="grid"></div>
+      <div id="empty-state" class="empty" hidden>
+        <p>No venues match your filters. Try clearing the search or selecting a different category.</p>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <p>Pattaya is one of the world's great training destinations. From legendary Muay Thai camps producing world champions, to a thriving CrossFit and functional fitness scene, to expansive golf, tennis, and watersports — this site catalogs it all in one place. Listings are researched from gym websites, Google Maps, TripAdvisor, expat communities, and on-the-ground sources. Every entry includes a "last verified" date so you know the data is current.</p>
+      <p><strong>Found an error or want to add your gym?</strong> Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll get it updated.</p>
+    </section>
+
+    <section id="submit" class="submit">
+      <h2 class="section-title">Own a Gym? Get Listed Free.</h2>
+      <p>If you run a gym, camp, club, or sports venue in Pattaya, we'll add a free listing. Premium listings (photos, top placement, direct booking link) are coming soon.</p>
+      <a class="cta" href="mailto:hello@pattaya-gym.com?subject=Add%20my%20gym%20to%20pattaya-gym.com">Submit Your Venue</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <span class="brand-mark small">P</span>
+        <span>PATTAYA <strong>GYM</strong></span>
+      </div>
+      <p>© <span id="year"></span> pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
