@@ -36,3 +36,16 @@ Defined in `data.js` under `CATEGORIES`. Add new ones there if needed.
 ## Local preview
 
 Just double-click `index.html` — it runs from the file system, no server needed.
+
+## Per-venue SEO pages
+
+Each `venues/<id>.md` becomes a dedicated page at `/gyms/<id>/` with full meta tags and `LocalBusiness` schema. Run the build before every push:
+
+```cmd
+node build.js
+git add .
+git commit -m "Update venues"
+git push
+```
+
+This regenerates `gyms/<id>/index.html` for every `.md` file and updates `sitemap.xml`. To make it automatic on Cloudflare Pages: dashboard → `pattayagym` Pages project → Settings → Build & deployments → Build command = `node build.js` (Build output stays `/`).

@@ -271,36 +271,55 @@ const GYMS = [
   // === CROSSFIT / FUNCTIONAL ===
   {
     id: "crossfit-pattaya",
-    name: "CrossFit Pattaya",
+    name: "CrossFit Pattaya @ The Jungle Gym",
     category: "crossfit",
-    area: "Central Pattaya",
-    address: "Central Pattaya",
-    phone: "+66 92 000 0000",
-    website: "https://www.crossfitpattaya.com/",
-    social: { facebook: "CrossFitPattaya", instagram: "crossfitpattaya" },
-    hours: "Mon-Sat 6:00-21:00",
+    area: "Nong Prue / Central-East Pattaya",
+    address: "165/4 Moo 6, Nong Prue, Bang Lamung, Chonburi 20150",
+    phone: "",
+    website: "https://www.junglegympattaya.com/",
+    social: { facebook: "JungleGymPattaya", instagram: "junglegympattaya" },
+    hours: "CrossFit Mon-Fri 09:00-10:00 and 19:00-20:00; Sat 09:00-10:00",
     priceRange: "฿฿",
-    description: "Affiliated CrossFit box with daily WODs, Olympic lifting, and certified coaches. Drop-ins welcome.",
-    tags: ["wod", "olympic-lifting", "drop-ins", "english-coaches"],
-    mapsUrl: "https://maps.google.com/?q=CrossFit+Pattaya",
+    description: "The only CrossFit affiliate in Pattaya. Hybrid Jungle Gym facility — CrossFit + MMA + archery + dodgeball + slacklining + nutrition + DNA testing. Coach Murray strongly reviewed. Under Armour & Decathlon partnerships.",
+    tags: ["crossfit-affiliate", "multi-discipline", "archery", "english-coaches", "open-gym"],
+    mapsUrl: "https://maps.google.com/?q=Jungle+Gym+Pattaya",
+    detailFile: "venues/crossfit-pattaya.md",
     verified: "2026-04-27"
   },
 
   // === YOGA / PILATES ===
   {
-    id: "yoga-pattaya",
+    id: "yoga-pattaya-studio",
     name: "Yoga Pattaya Studio",
     category: "yoga",
-    area: "Jomtien",
-    address: "Jomtien Beach Road, Pattaya",
-    phone: "+66 80 000 0000",
-    website: "",
-    social: { facebook: "YogaPattaya" },
-    hours: "Daily classes morning and evening",
+    area: "Thepprasit / Jomtien",
+    address: "315/327 Thepprasit Soi 12, Pattaya, Chonburi",
+    phone: "+66 95 573 9376",
+    website: "https://yogapattaya.com/",
+    social: { facebook: "yogapattaya" },
+    hours: "Daily morning + evening classes (schedule on yogapattaya.com)",
     priceRange: "฿฿",
-    description: "Vinyasa, Hatha, and Yin yoga classes. Drop-in friendly, English-speaking instructors.",
-    tags: ["vinyasa", "drop-in", "english-instructors"],
-    mapsUrl: "https://maps.google.com/?q=Yoga+Pattaya+Jomtien",
+    description: "Pattaya's first dedicated international yoga studio. Comprehensive style range: Ashtanga, Mysore, Hatha, Hatha Vinyasa, Vinyasa Flow, Stretching, Fitness Yoga. Instruction in English, Russian, Thai. 2-week unlimited from ฿2,900.",
+    tags: ["ashtanga", "mysore", "vinyasa", "trilingual", "established", "near-jomtien"],
+    mapsUrl: "https://maps.google.com/?q=Yoga+Pattaya+Studio+Thepprasit",
+    detailFile: "venues/yoga-pattaya-studio.md",
+    verified: "2026-04-27"
+  },
+  {
+    id: "yoga-haus-pattaya",
+    name: "Yoga Haus Pattaya",
+    category: "yoga",
+    area: "Pattaya Klang / Central",
+    address: "Pattaya Klang Road, Central Pattaya (verify exact at studio)",
+    phone: "",
+    website: "",
+    social: {},
+    hours: "Group and private classes most days (confirm at studio)",
+    priceRange: "฿฿",
+    description: "Pattaya's most prominent hot yoga studio. Modern fitness-forward yoga venue with hot yoga, Fit Ball, and traditional formats. Central Pattaya location, walkable from many central accommodations.",
+    tags: ["hot-yoga", "fit-ball", "central", "modern", "fitness-yoga"],
+    mapsUrl: "https://maps.google.com/?q=Yoga+Haus+Pattaya+Klang",
+    detailFile: "venues/yoga-haus-pattaya.md",
     verified: "2026-04-27"
   },
 
@@ -338,6 +357,47 @@ const GYMS = [
     tags: ["coaching", "social-play", "court-rental"],
     mapsUrl: "https://maps.google.com/?q=Pattaya+Tennis+Club",
     verified: "2026-04-27"
+  },
+
+  // === WATERSPORTS ===
+  {
+    id: "mermaids-dive",
+    name: "Mermaid's Dive Center",
+    category: "watersports",
+    area: "Jomtien",
+    address: "Soi White House, Jomtien Beach Road",
+    phone: "+66 38 232 219",
+    website: "https://mermaidsdive.com/",
+    social: { facebook: "mermaidsdive" },
+    hours: "Daily 8:00-19:00",
+    priceRange: "฿฿฿",
+    description: "PADI 5-Star IDC dive center. Day trips, courses from beginner to instructor, technical diving available.",
+    tags: ["padi-5-star", "courses", "day-trips", "technical"],
+    mapsUrl: "https://maps.google.com/?q=Mermaid's+Dive+Pattaya",
+    verified: "2026-04-27"
+  },
+
+  // === RUNNING / CYCLING CLUBS ===
+  {
+    id: "pattaya-hash-house",
+    name: "Pattaya Hash House Harriers",
+    category: "clubs",
+    area: "Various",
+    address: "Weekly run from rotating start points",
+    phone: "",
+    website: "https://pattayahash.com/",
+    social: { facebook: "pattayahash" },
+    hours: "Mondays 16:00 (winter) / 17:00 (summer)",
+    priceRange: "฿",
+    description: "The world's largest weekly running club, a 'drinking club with a running problem'. Open to visitors, social atmosphere.",
+    tags: ["social", "weekly", "expat", "open-to-visitors"],
+    mapsUrl: "https://maps.google.com/?q=Pattaya+Hash+House+Harriers",
+    verified: "2026-04-27"
+  }
+];
+
+window.GYMS = GYMS;
+window.CATEGORIES = CATEGORIES;
   },
 
   // === WATERSPORTS ===

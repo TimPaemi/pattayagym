@@ -55,13 +55,22 @@
   const renderCard = (g) => {
     const tags = (g.tags || []).map((t) => `<span class="card-tag">${escapeHtml(t)}</span>`).join("");
     const actions = [];
-    if (g.mapsUrl) actions.push(`<a class="primary" href="${g.mapsUrl}" target="_blank" rel="noopener">📍 Map</a>`);
-    if (g.website) actions.push(`<a href="${g.website}" target="_blank" rel="noopener">Website</a>`);
-    if (g.phone) actions.push(`<a href="tel:${g.phone.replace(/\s/g, "")}">Call</a>`);
+    if (g.detailFile) {
+      // Built per-venue page exists at /gyms/<id>/
+      actions.push(`<a class="primary" href="/gyms/${g.id}/">View Details</a>`);
+      if (g.mapsUrl) actions.push(`<a href="${g.mapsUrl}" target="_blank" rel="noopener">Map</a>`);
+    } else {
+      if (g.mapsUrl) actions.push(`<a class="primary" href="${g.mapsUrl}" target="_blank" rel="noopener">Map</a>`);
+      if (g.website) actions.push(`<a href="${g.website}" target="_blank" rel="noopener">Website</a>`);
+      if (g.phone) actions.push(`<a href="tel:${g.phone.replace(/\s/g, "")}">Call</a>`);
+    }
+    const titleHtml = g.detailFile
+      ? `<a href="/gyms/${g.id}/" style="color:inherit;text-decoration:none;">${escapeHtml(g.name)}</a>`
+      : escapeHtml(g.name);
     return `
       <article class="card">
         <span class="card-cat">${catLabel(g.category)}</span>
-        <h3>${escapeHtml(g.name)}</h3>
+        <h3>${titleHtml}</h3>
         <div class="card-meta">
           ${g.area ? `<span>📍 ${escapeHtml(g.area)}</span>` : ""}
           ${g.priceRange ? `<span>💰 ${escapeHtml(g.priceRange)}</span>` : ""}
