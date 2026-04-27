@@ -312,34 +312,101 @@ function buildSitemap(venues) {
 }
 
 // ---------- Main ----------
-function main() {
-  if (!fs.existsSync(VENUES_DIR)) {
-    console.error('No venues/ directory found.');
-    process.exit(1);
-  }
+function loadGymsFromDataJs() {
+  const code = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
+  const win = {};
+  new Function('window', code)(win);
+  return { GYMS: win.GYMS || [], CATEGORIES: win.CATEGORIES || [] };
+}
 
+
+function buildStubBody(g, cats) {
+  const cat = cats.find(c => c.key === g.category);
+  const catLabel = cat ? cat.label : g.category;
+  const lines = [];
+  lines.push('## Overview');
+  lines.push('');
+  lines.push(g.description || ('Pattaya ' + catLabel + ' venue.'));
+  lines.push('');
+  lines.push('## Quick Facts');
+  lines.push('');
+  if (g.area) lines.push('- **Area:** ' + g.area);
+  if (g.address) lines.push('- **Address:** ' + g.address);
+  if (g.phone) lines.push('- **Phone:** ' + g.phone);
+  if (g.website) lines.push('- **Website:** ' + g.website);
+  if (g.hours) lines.push('- **Hours:** ' + g.hours);
+  if (g.priceRange) lines.push('- **Price range:** ' + g.priceRange);
+  if (g.tags && g.tags.length) lines.push('- **Tags:** ' + g.tags.join(', '));
+  lines.push('');
+  lines.push('## More Coming Soon');
+  lines.push('');
+  lines.push('This is a basic listing for **' + g.name + '**. A full deep-dive page with history, trainers, pricing tiers, schedules, reviews, and on-the-ground details is in progress and will be published as research is completed.');
+  lines.push('');
+  lines.push('Know this venue and want to help us improve the listing? Email **hello@pattaya-gym.com** with corrections, photos, or details and we will incorporate.');
+  return lines.join('\n');
+}
+
+function main() {
+  if (!fs.existsSync(VENUES_DIR)) fs.mkdirSync(VENUES_DIR);
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR);
 
-  const files = fs.readdirSync(VENUES_DIR).filter(f => f.endsWith('.md'));
+  const loaded = loadGymsFromDataJs();
+  const GYMS = loaded.GYMS;
+  const CATEGORIES = loaded.CATEGORIES;
   const venues = [];
 
-  files.forEach(file => {
-    const slug = file.replace(/\.md$/, '');
-    const raw = fs.readFileSync(path.join(VENUES_DIR, file), 'utf8');
-    const { fm, body } = parseFrontmatter(raw);
-    const bodyHtml = mdToHtml(body);
-    const html = buildVenuePage(slug, fm, bodyHtml, body);
+  const mdFiles = new Set(
+    fs.readdirSync(VENUES_DIR).filter(f => f.endsWith('.md')).map(f => f.replace(/\.md$/, ''))
+  );
 
+  let deepCount = 0, stubCount = 0;
+
+  GYMS.forEach(g => {
+    const slug = g.id;
+    let fm, bodyHtml, body;
+
+    if (mdFiles.has(slug)) {
+      const raw = fs.readFileSync(path.join(VENUES_DIR, slug + '.md'), 'utf8');
+      const parsed = parseFrontmatter(raw);
+      fm = parsed.fm;
+      body = parsed.body;
+      bodyHtml = mdToHtml(body);
+      deepCount++;
+    } else {
+      fm = {
+        id: slug,
+        name: g.name,
+        category: g.category,
+        area: g.area,
+        address: g.address,
+        phone: g.phone,
+        website: g.website,
+        social: g.social || {},
+        hours: g.hours,
+        priceRange: g.priceRange,
+        description: g.description,
+        tags: g.tags,
+        mapsUrl: g.mapsUrl,
+        verified: g.verified
+      };
+      body = buildStubBody(g, CATEGORIES);
+      bodyHtml = mdToHtml(body);
+      stubCount++;
+    }
+
+    const html = buildVenuePage(slug, fm, bodyHtml, body);
     const venueDir = path.join(OUT_DIR, slug);
     if (!fs.existsSync(venueDir)) fs.mkdirSync(venueDir);
     fs.writeFileSync(path.join(venueDir, 'index.html'), html);
 
     venues.push({ slug, fm });
-    console.log(`  built /gyms/${slug}/  (${fm.name || slug})`);
+    const tag = mdFiles.has(slug) ? 'DEEP' : 'stub';
+    console.log('  [' + tag + '] /gyms/' + slug + '/  (' + (fm.name || slug) + ')');
   });
 
   fs.writeFileSync(SITEMAP, buildSitemap(venues));
-  console.log(`\nGenerated ${venues.length} venue pages and updated sitemap.xml`);
+  console.log('\nGenerated ' + venues.length + ' venue pages (' + deepCount + ' deep + ' + stubCount + ' stubs)');
+  console.log('sitemap.xml updated.');
 }
 
 main();
