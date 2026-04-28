@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Tara Tennis Club is one of the newest dedicated racquet-sport facilities in Pattaya — a 2022-built multi-sport club featuring three newly resurfaced hard courts (one covered, two outdoor) with full tennis + pickleball + basketball capability and an on-site Gourmet Primo cafe. The 2022 construction d" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -40,35 +41,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily 06:00-22:00"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -86,36 +58,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=racquet">racquet</a> &nbsp;/&nbsp; Tara Tennis Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=racquet">racquet</a>
+      <span class="bc-sep">›</span>
+      <span>Tara Tennis Club</span>
     </div>
 
-    <span class="venue-cat-pill">racquet</span>
-    <h1 class="venue-h1">Tara Tennis Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">racquet</span>
+      <h1 class="venue-h1">Tara Tennis Club</h1>
+      <p class="venue-lede">Tara Tennis Club is one of the newest dedicated racquet-sport facilities in Pattaya — a 2022-built multi-sport club featuring three newly resurfaced hard courts (one covered, two outdoor) with full tennis + pickleball + basketball capability and an on-site Gourmet Primo cafe. The…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily 06:00-22:00</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily 06:00-22:00</span>
+        <span class="meta-chip meta-chip-accent">⭐ 2022-built newly resurfaced multi-sport facility — tennis + pickleball + basketball with one covered court</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      <a href="tel:+66951410568/+66879089800">Call +66 95 141 0568 / +66 87 908 9800</a>
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/taratennisclub" rel="noopener" target="_blank">Facebook</a> · <a href="https://instagram.com/tara_tennis_pattaya" rel="noopener" target="_blank">Instagram</a></span>
+      <div class="venue-actions">
+        
+        
+        <a class="btn btn-secondary" href="tel:+66951410568/+66879089800">📞 +66 95 141 0568 / +66 87 908 9800</a>
+        <a class="btn btn-ghost" href="https://facebook.com/taratennisclub" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://instagram.com/tara_tennis_pattaya" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Tara Tennis Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Tara Tennis Club is <strong>one of the newest dedicated racquet-sport facilities in Pattaya</strong> — a <strong>2022-built multi-sport club</strong> featuring <strong>three newly resurfaced hard courts (one covered, two outdoor)</strong> with full <strong>tennis + pickleball + basketball capability</strong> and an <strong>on-site Gourmet Primo cafe</strong>. The 2022 construction date is meaningful: where most Pattaya tennis facilities have decades-old surfaces with patchy maintenance, <strong>Tara's courts are still effectively fresh — playing surfaces still close to factory specifications, line paint still crisp, net hardware still tight</strong>.</p>
 <p>The club operates from <strong>06:00 to 22:00 daily</strong> — a full 16-hour window that accommodates <strong>early-morning runners-and-hitters, midday pros training, evening league play, and late-night casual social hits</strong>. With <strong>one covered court</strong>, Tara offers <strong>partial weather protection</strong> that lets play continue during rain (a meaningful advantage in Pattaya's monsoon-season afternoons), though it's not the <strong>fully covered 6-court complex that Greta Sport Club delivers</strong>.</p>
 <p>For Pattaya residents and visitors who want <strong>fresh modern hard courts with multi-sport flexibility, walkable convenience, and the rare 16-hour operating window</strong>, Tara Tennis Club is among the city's strongest racquet club options. The pickleball capability is particularly notable — Pattaya's pickleball community has grown rapidly post-2020, and Tara's dedicated court markings make it one of the few venues purpose-built for the sport.</p>
 <h2>Position in the Pattaya Racquet Market</h2>
 <p>Pattaya racquet sport facilities clustered by quality:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>Indoor / covered premium</strong> | Greta Sport Club (6 covered ITF courts) | ITF Plexipave roofed | | <strong>Premium hotel club</strong> | FITZ Club | Royal Cliff hotel-integrated | | <strong>2022 modern multi-sport</strong> | <strong>Tara Tennis Club</strong> | <strong>Fresh resurface + 16hr hours + 1 covered + multi-sport</strong> | | <strong>Multi-sport public</strong> | Pattaya Sports Club, Pattaya Tennis & Badminton Inter Club | Established mid-tier | | <strong>Outdoor club mid-tier</strong> | Pattaya Tennis Club, Tos Tennis | Floodlit outdoor |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Indoor / covered premium</strong></td><td>Greta Sport Club (6 covered ITF courts)</td><td>ITF Plexipave roofed</td></tr><tr><td><strong>Premium hotel club</strong></td><td>FITZ Club</td><td>Royal Cliff hotel-integrated</td></tr><tr><td><strong>2022 modern multi-sport</strong></td><td><strong>Tara Tennis Club</strong></td><td><strong>Fresh resurface + 16hr hours + 1 covered + multi-sport</strong></td></tr><tr><td><strong>Multi-sport public</strong></td><td>Pattaya Sports Club, Pattaya Tennis & Badminton Inter Club</td><td>Established mid-tier</td></tr><tr><td><strong>Outdoor club mid-tier</strong></td><td>Pattaya Tennis Club, Tos Tennis</td><td>Floodlit outdoor</td></tr></tbody></table></div>
 <p>Tara's specific position: <strong>newest, freshest surfaces with multi-sport (tennis + pickleball + basketball) and one covered court</strong> — sweet-spot value tier.</p>
 <h2>The 2022 Build</h2>
 <p>The 2022 construction date provides several advantages over older Pattaya tennis facilities:</p>
@@ -228,7 +207,8 @@
 <li><strong>Equipment rental:</strong> ~฿100-200 per session</li>
 <li><strong>Pickleball play:</strong> typically slightly cheaper than tennis</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>2022-built — newest hard court surfaces</strong> in Pattaya racquet scene</li>
 <li><strong>Multi-sport: tennis + pickleball + basketball</strong> capability</li>
@@ -241,7 +221,9 @@
 <li><strong>Beginner to intermediate friendly</strong></li>
 <li><strong>Reservation system</strong> via phone (095-141-0568, 087-908-9800)</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>3 courts only</strong> — Greta has 6 covered for premium</li>
 <li><strong>2 of 3 outdoor</strong> — weather-dependent on those</li>
@@ -251,7 +233,9 @@
 <li><strong>Multi-sport markings</strong> can confuse some pure tennis players</li>
 <li><strong>Smaller capacity</strong> than larger facilities</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Mid-tier serious players</strong> wanting fresh surfaces</li>
 <li><strong>Multi-sport racquet enthusiasts</strong> — tennis + pickleball</li>
@@ -261,7 +245,9 @@
 <li><strong>Players wanting cafe + courts</strong> integrated experience</li>
 <li><strong>Family bookings</strong> with cafe waiting space</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Tournament-grade ITF play</strong> — go to Greta</li>
 <li><strong>Large-capacity events</strong> — limited 3-court layout</li>
@@ -269,12 +255,24 @@
 <li><strong>Charity-civic community</strong> — go to Pattaya Sports Club</li>
 <li><strong>Single-discipline tennis purists</strong> — multi-sport markings may distract</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Pattaya, Chonburi | | Opened | 2022 | | Courts | 3 hard courts (1 covered, 2 outdoor) | | Multi-sport | Tennis + Pickleball + Basketball | | Hours | Daily 06:00-22:00 | | Phone | 095-141-0568 / 087-908-9800 | | Cafe | Gourmet Primo on-site | | Coaching | Yes | | Pro shop | Yes | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Pattaya, Chonburi</dd></div>
+<div class="fact-row"><dt>Opened</dt><dd>2022</dd></div>
+<div class="fact-row"><dt>Courts</dt><dd>3 hard courts (1 covered, 2 outdoor)</dd></div>
+<div class="fact-row"><dt>Multi-sport</dt><dd>Tennis + Pickleball + Basketball</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Daily 06:00-22:00</dd></div>
+<div class="fact-row"><dt>Phone</dt><dd>095-141-0568 / 087-908-9800</dd></div>
+<div class="fact-row"><dt>Cafe</dt><dd>Gourmet Primo on-site</dd></div>
+<div class="fact-row"><dt>Coaching</dt><dd>Yes</dd></div>
+<div class="fact-row"><dt>Pro shop</dt><dd>Yes</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (7)</summary>
         <ul>

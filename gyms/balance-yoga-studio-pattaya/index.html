@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Balance Yoga Studio Pattaya — stylized BΛLΛNCE — is a wellness-oriented yoga + sound healing studio steps from the sea, positioned by its founders as &quot;an island of harmony in sunny Pattaya&quot;. The studio occupies a distinct niche in the city&#39;s yoga ecosystem: the place to go when you want yoga as part" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily — schedule varies, confirm at studio"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=yoga">yoga</a> &nbsp;/&nbsp; Balance Yoga Studio Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=yoga">yoga</a>
+      <span class="bc-sep">›</span>
+      <span>Balance Yoga Studio Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">yoga</span>
-    <h1 class="venue-h1">Balance Yoga Studio Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">yoga</span>
+      <h1 class="venue-h1">Balance Yoga Studio Pattaya</h1>
+      <p class="venue-lede">Balance Yoga Studio Pattaya — stylized BΛLΛNCE — is a wellness-oriented yoga + sound healing studio steps from the sea, positioned by its founders as &quot;an island of harmony in sunny Pattaya&quot;. The studio occupies a distinct niche in the city&#39;s yoga ecosystem: the place to go when y…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Near sea — Pattaya / Jomtien beach-adjacent</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily — schedule varies, confirm at studio</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Near sea — Pattaya / Jomtien beach-adjacent</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily — schedule varies, confirm at studio</span>
+        <span class="meta-chip meta-chip-accent">⭐ Yoga + sound healing wellness studio steps from the sea — &quot;island of harmony&quot; positioning</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://balancepattaya.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://instagram.com/balanceyogapattaya" rel="noopener" target="_blank">Instagram</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://balancepattaya.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        <a class="btn btn-ghost" href="https://instagram.com/balanceyogapattaya" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Balance Yoga Studio Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Balance Yoga Studio Pattaya — stylized <strong>BΛLΛNCE</strong> — is a <strong>wellness-oriented yoga + sound healing studio steps from the sea</strong>, positioned by its founders as <strong>"an island of harmony in sunny Pattaya"</strong>. The studio occupies a distinct niche in the city's yoga ecosystem: <strong>the place to go when you want yoga as part of a broader wellness experience that includes sound therapy, meditation, tea ceremonies, and conversation circles</strong> rather than purely physical asana practice.</p>
 <p>The studio's core differentiator is the <strong>integration of sound healing into yoga practice</strong> — an approach using <strong>singing bowls, gongs, tuning forks, and sometimes voice toning</strong> to create vibrational immersion alongside breath and movement. This pairing of yoga and sound healing has gained significant momentum globally over the past decade, particularly in wellness-tourism destinations, and Balance is <strong>one of Pattaya's clearest expressions of that philosophy</strong>.</p>
 <p>For travelers and Pattaya residents seeking <strong>yoga that emphasizes inner experience over external workout</strong> — for those drawn to <strong>the slower, contemplative, sensory-rich end of yoga practice</strong> — Balance is the city's natural destination.</p>
 <h2>Position in the Pattaya Yoga Market</h2>
 <p>Pattaya's yoga studios differentiate clearly:</p>
-<p>| Studio | Positioning | |---|---| | <strong>Yoga Pattaya Studio</strong> | Established traditional — Ashtanga, Mysore, Hatha, Vinyasa | | <strong>Ashtanga Yoga Pattaya</strong> | Lineage-pure traditional Mysore method | | <strong>Yoga Haus</strong> | Fitness-oriented Hot Yoga + Fit Ball | | <strong>Balance Yoga Studio</strong> | <strong>Wellness + sound healing + meditation</strong> | | <strong>One-D Yoga</strong> | Mixed-style (Hatha, Vinyasa, Yin) | | <strong>Nok Yoga</strong> | Beach-tropical setting in Jomtien |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Studio</th><th>Positioning</th></tr></thead><tbody><tr><td><strong>Yoga Pattaya Studio</strong></td><td>Established traditional — Ashtanga, Mysore, Hatha, Vinyasa</td></tr><tr><td><strong>Ashtanga Yoga Pattaya</strong></td><td>Lineage-pure traditional Mysore method</td></tr><tr><td><strong>Yoga Haus</strong></td><td>Fitness-oriented Hot Yoga + Fit Ball</td></tr><tr><td><strong>Balance Yoga Studio</strong></td><td><strong>Wellness + sound healing + meditation</strong></td></tr><tr><td><strong>One-D Yoga</strong></td><td>Mixed-style (Hatha, Vinyasa, Yin)</td></tr><tr><td><strong>Nok Yoga</strong></td><td>Beach-tropical setting in Jomtien</td></tr></tbody></table></div>
 <p>Balance occupies the <strong>wellness-spiritual tier</strong> — close to the sea, soft-energy aesthetic, sound-immersive, contemplative.</p>
 <h2>Sound Healing — The Studio's Signature</h2>
 <h3>What Sound Healing Is</h3>
@@ -226,7 +205,8 @@
 <li><strong>Burnout recovery</strong> seekers — sound healing for nervous system reset</li>
 <li><strong>Beach-vacation visitors</strong> integrating wellness into trip</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Yoga + sound healing integration</strong> — rare in Pattaya</li>
 <li><strong>Beach-adjacent location</strong> — sea atmosphere</li>
@@ -239,7 +219,9 @@
 <li><strong>Refuge from Pattaya intensity</strong></li>
 <li><strong>Couples and groups</strong> can share experience</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Less traditional yoga rigor</strong> than Ashtanga Yoga Pattaya</li>
 <li><strong>Less fitness-intensity</strong> than Yoga Haus</li>
@@ -249,7 +231,9 @@
 <li><strong>Not for skeptics</strong> of vibrational therapy modalities</li>
 <li><strong>Smaller capacity</strong> — book ahead for popular sessions</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Wellness-tourism visitors</strong></li>
 <li><strong>Stress / burnout recovery</strong> seekers</li>
@@ -260,7 +244,9 @@
 <li><strong>Meditation practitioners</strong> wanting community</li>
 <li><strong>Spiritual-curious explorers</strong> beyond pure fitness</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Traditional Ashtanga purists</strong> — go Ashtanga Yoga Pattaya</li>
 <li><strong>Sweat-focused fitness yogis</strong> — go Yoga Haus</li>
@@ -268,12 +254,22 @@
 <li><strong>Pure asana focus</strong> without contemplative/spiritual layer</li>
 <li><strong>Budget seekers</strong> — wellness pricing premium over fitness yoga</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Pattaya — steps from the sea | | Specialty | Yoga + sound healing | | Style | Wellness, contemplative, soft-energy | | Modalities | Yoga, sound bath, meditation, tea ceremony, workshops | | Languages | English, Russian, Thai | | Drop-in class | ~฿400-600 | | Sound bath | ~฿500-1,000 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Pattaya — steps from the sea</dd></div>
+<div class="fact-row"><dt>Specialty</dt><dd>Yoga + sound healing</dd></div>
+<div class="fact-row"><dt>Style</dt><dd>Wellness, contemplative, soft-energy</dd></div>
+<div class="fact-row"><dt>Modalities</dt><dd>Yoga, sound bath, meditation, tea ceremony, workshops</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Russian, Thai</dd></div>
+<div class="fact-row"><dt>Drop-in class</dt><dd>~฿400-600</dd></div>
+<div class="fact-row"><dt>Sound bath</dt><dd>~฿500-1,000</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (4)</summary>
         <ul>

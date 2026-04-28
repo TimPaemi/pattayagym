@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Rusich Club is a Russian-language sports club in Pattaya operating under HSIF Thailand — serving the Pattaya Russian-speaking expat community with multi-sport programming, athletic activities, and community gatherings conducted primarily in Russian language. The club represents a meaningful part of " />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily — verify with club"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=clubs">clubs</a> &nbsp;/&nbsp; Rusich Club Pattaya (HSIF Thailand)
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=clubs">clubs</a>
+      <span class="bc-sep">›</span>
+      <span>Rusich Club Pattaya (HSIF Thailand)</span>
     </div>
 
-    <span class="venue-cat-pill">clubs</span>
-    <h1 class="venue-h1">Rusich Club Pattaya (HSIF Thailand)</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">clubs</span>
+      <h1 class="venue-h1">Rusich Club Pattaya (HSIF Thailand)</h1>
+      <p class="venue-lede">Rusich Club is a Russian-language sports club in Pattaya operating under HSIF Thailand — serving the Pattaya Russian-speaking expat community with multi-sport programming, athletic activities, and community gatherings conducted primarily in Russian language. The club represents a…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily — verify with club</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily — verify with club</span>
+        <span class="meta-chip meta-chip-accent">⭐ Russian-language sports club serving the Russian expat community — multi-sport including football</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://rusich.club/en/home_en/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://rusich.club/en/home_en/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Rusich Club Pattaya (HSIF Thailand)</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Rusich Club is <strong>a Russian-language sports club in Pattaya operating under HSIF Thailand</strong> — serving <strong>the Pattaya Russian-speaking expat community</strong> with multi-sport programming, athletic activities, and community gatherings conducted primarily in <strong>Russian language</strong>. The club represents <strong>a meaningful part of Pattaya's significant Russian expatriate population's social and athletic life</strong>, providing <strong>a culturally familiar environment for sports participation that mainstream Thai or English-language sports clubs cannot replicate</strong>.</p>
 <p>Pattaya hosts <strong>one of the largest Russian-speaking expatriate communities in Southeast Asia</strong> — a population that has grown rapidly since the early 2000s and accelerated meaningfully post-2022. <strong>Russian-language sports infrastructure</strong> like Rusich Club fills a need that's not addressed by <strong>Thai-language local clubs (Pattaya Sports Club, Pattaya Tennis & Badminton Inter Club, etc.) or English-language expat clubs (Pattaya Hash House Harriers founded by Vietnam veterans)</strong>.</p>
 <p>For Russian-speaking visitors and residents in Pattaya, Rusich Club provides <strong>same-language teammates, coaches, and social environment</strong> — meaningful for new arrivals who haven't yet acquired Thai or strong English skills.</p>
 <h2>Position in the Pattaya Russian Sports Scene</h2>
 <p>Pattaya's Russian-language sports infrastructure includes:</p>
-<p>| Type | Examples | Activity | |---|---|---| | <strong>Russian-language sports club</strong> | <strong>Rusich Club / HSIF Thailand</strong> | <strong>Multi-sport including football</strong> | | <strong>Russian-friendly mainstream gyms</strong> | Castra Gym, Sun Fitness, Yoga Pattaya Studio | Multilingual including Russian | | <strong>Russian-speaking yoga / wellness</strong> | Balance Yoga Studio, Yoga Pattaya, Nok Yoga | Russian instruction available | | <strong>Russian-skewed condos / properties</strong> | East Pattaya, Pratamnak, Naklua condos | Russian residential density |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Activity</th></tr></thead><tbody><tr><td><strong>Russian-language sports club</strong></td><td><strong>Rusich Club / HSIF Thailand</strong></td><td><strong>Multi-sport including football</strong></td></tr><tr><td><strong>Russian-friendly mainstream gyms</strong></td><td>Castra Gym, Sun Fitness, Yoga Pattaya Studio</td><td>Multilingual including Russian</td></tr><tr><td><strong>Russian-speaking yoga / wellness</strong></td><td>Balance Yoga Studio, Yoga Pattaya, Nok Yoga</td><td>Russian instruction available</td></tr><tr><td><strong>Russian-skewed condos / properties</strong></td><td>East Pattaya, Pratamnak, Naklua condos</td><td>Russian residential density</td></tr></tbody></table></div>
 <p>Rusich Club's specific niche: <strong>dedicated Russian-language sports club</strong> — different from gyms that <em>also</em> speak Russian.</p>
 <h2>Why Pattaya's Russian Community Matters</h2>
 <h3>Demographics</h3>
@@ -193,7 +172,8 @@
 <li><strong>Networking</strong> within Pattaya Russian community</li>
 <li><strong>Family-friendly</strong> social structure</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Russian-language sports environment</strong> — unique in Pattaya scene</li>
 <li><strong>Cultural familiarity</strong> for Russian-speaking residents</li>
@@ -203,7 +183,9 @@
 <li><strong>Family-friendly</strong> for Russian families</li>
 <li><strong>Easier integration</strong> for new Russian arrivals</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Russian language primary</strong> — may not suit non-Russian speakers</li>
 <li><strong>Limited online English information</strong> — direct contact required</li>
@@ -211,7 +193,9 @@
 <li><strong>Smaller community</strong> than mainstream Pattaya clubs</li>
 <li><strong>Russian-cultural events</strong> may not align with all participants</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Russian-speaking Pattaya residents and visitors</strong></li>
 <li><strong>Russian families</strong> with children seeking community</li>
@@ -220,18 +204,28 @@
 <li><strong>Russian-tourist short-term visitors</strong> wanting community connection</li>
 <li><strong>Russian-language coaching</strong> preference athletes</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Non-Russian-speakers</strong> without language interest</li>
 <li><strong>Pure athletic-skill development</strong> — mainstream international clubs may have higher standards</li>
 <li><strong>English-only</strong> community seekers</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Type | Russian-language sports club | | Parent | HSIF Thailand | | Languages | Russian (primary), English, Thai | | Sports | Multi-sport including football | | Demographic | Pattaya Russian expat community | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Type</dt><dd>Russian-language sports club</dd></div>
+<div class="fact-row"><dt>Parent</dt><dd>HSIF Thailand</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>Russian (primary), English, Thai</dd></div>
+<div class="fact-row"><dt>Sports</dt><dd>Multi-sport including football</dd></div>
+<div class="fact-row"><dt>Demographic</dt><dd>Pattaya Russian expat community</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (1)</summary>
         <ul>

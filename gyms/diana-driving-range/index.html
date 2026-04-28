@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Diana Driving Range is one of Pattaya&#39;s most established dedicated outdoor driving ranges — a 30-bay floodlit facility with 200-yard range depth, professional teaching pros for instruction, and an on-site restaurant for pre/post-practice fueling. Located in the Soi Diana area of Central Pattaya (Soi" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿",
   "openingHours": "Daily 06:00-22:00 (floodlit evening)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Diana Driving Range Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Diana Driving Range Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Diana Driving Range Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Diana Driving Range Pattaya</h1>
+      <p class="venue-lede">Diana Driving Range is one of Pattaya&#39;s most established dedicated outdoor driving ranges — a 30-bay floodlit facility with 200-yard range depth, professional teaching pros for instruction, and an on-site restaurant for pre/post-practice fueling. Located in the Soi Diana area of …</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Soi Diana / Central Pattaya</span>
-      <span>💰 ฿</span>
-      <span>🕐 Daily 06:00-22:00 (floodlit evening)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Soi Diana / Central Pattaya</span>
+        <span class="meta-chip">💰 ฿</span>
+        <span class="meta-chip">🕐 Daily 06:00-22:00 (floodlit evening)</span>
+        <span class="meta-chip meta-chip-accent">⭐ 30-bay floodlit dedicated driving range — 200-yard depth with on-site restaurant</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Diana Driving Range Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Diana Driving Range is <strong>one of Pattaya's most established dedicated outdoor driving ranges</strong> — a <strong>30-bay floodlit facility with 200-yard range depth</strong>, <strong>professional teaching pros for instruction</strong>, and <strong>an on-site restaurant</strong> for pre/post-practice fueling. Located in <strong>the Soi Diana area of Central Pattaya</strong> (Soi Diana Inn is one of central Pattaya's notable arterials connecting Beach Road and Soi Buakhao), Diana provides <strong>walkable practice access for tourists staying in central Pattaya hotels</strong> as well as <strong>established service for local Pattaya golfers</strong>.</p>
 <p>The 30-bay scale is meaningful — many Pattaya driving ranges offer 10-20 bays, and the 30-bay configuration ensures <strong>minimal waiting even at peak demand</strong>. The <strong>200-yard range depth</strong> is appropriate for <strong>all-club practice including driver work</strong> without ball-flight loss to back-stop netting. The <strong>floodlit configuration</strong> extends practice into evening hours — typically until 22:00 — which is <strong>the standard for serious Pattaya practice ranges</strong> but distinguishes Diana from morning-only or daylight-only options.</p>
 <p>For Pattaya tourists wanting <strong>walkable affordable practice</strong>, for Pattaya golfers seeking <strong>a higher bay-count alternative to single-purpose ranges</strong>, and for golfers wanting <strong>integrated restaurant amenities for full-day practice sessions</strong>, Diana Driving Range fills a meaningful niche between <strong>the most basic mat-bay ranges (Pattaya Golf Driving Range, 300 Yards Driving Range)</strong> and <strong>premium course-attached practice (Siam Country Club Waterside)</strong>.</p>
 <h2>Position in the Pattaya Practice Facility Market</h2>
 <p>Pattaya practice ranges tier:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>Premium course-attached</strong> | Siam Country Club Waterside, Burapha range | Real grass + championship integration | | <strong>Indoor / simulator</strong> | Golf Hub Pattaya | TrackMan / GC Quad + AC | | <strong>Floodlit dedicated range</strong> | <strong>Diana Driving Range</strong> | <strong>30 bays + 200 yards + restaurant</strong> | | <strong>Affordable mainstream</strong> | Pattaya Golf Driving Range | Mat bays + value pricing | | <strong>Boutique</strong> | 300 Yards Driving Range | Independent operation |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium course-attached</strong></td><td>Siam Country Club Waterside, Burapha range</td><td>Real grass + championship integration</td></tr><tr><td><strong>Indoor / simulator</strong></td><td>Golf Hub Pattaya</td><td>TrackMan / GC Quad + AC</td></tr><tr><td><strong>Floodlit dedicated range</strong></td><td><strong>Diana Driving Range</strong></td><td><strong>30 bays + 200 yards + restaurant</strong></td></tr><tr><td><strong>Affordable mainstream</strong></td><td>Pattaya Golf Driving Range</td><td>Mat bays + value pricing</td></tr><tr><td><strong>Boutique</strong></td><td>300 Yards Driving Range</td><td>Independent operation</td></tr></tbody></table></div>
 <p>Diana's specific position: <strong>the most amenity-integrated dedicated range in central Pattaya</strong>.</p>
 <h2>The 30-Bay Configuration</h2>
 <h3>Why 30 Bays Matters</h3>
@@ -226,7 +205,8 @@
 <li><strong>Equipment assessment</strong> alongside instruction</li>
 <li><strong>Affordable vs. course-based instruction</strong></li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>30 bays</strong> — high capacity, minimal queue</li>
 <li><strong>200-yard range depth</strong> — works for most practice</li>
@@ -240,7 +220,9 @@
 <li><strong>Beginner to advanced</strong> suitable</li>
 <li><strong>Mid-tier pricing</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Mat bays</strong> rather than real grass</li>
 <li><strong>Range balls</strong> rather than tour balls</li>
@@ -250,7 +232,9 @@
 <li><strong>Limited online presence</strong> — direct visit required for current details</li>
 <li><strong>Crowded peak hours</strong> even with 30 bays</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Central Pattaya tourists</strong> wanting walkable practice</li>
 <li><strong>Pre-round warm-up</strong> for Pattaya course players</li>
@@ -261,7 +245,9 @@
 <li><strong>Mid-tier value</strong> seekers</li>
 <li><strong>Junior development</strong> programs</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Premium real-grass practice</strong> — try Siam Country Club Waterside</li>
 <li><strong>Indoor / simulator training</strong> — try Golf Hub Pattaya</li>
@@ -269,12 +255,23 @@
 <li><strong>Tournament-grade equipment testing</strong> — try Golf Hub Pattaya for fitting</li>
 <li><strong>Driver-distance bombers</strong> — 200 yards may be insufficient for full driver work</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Soi Diana area, Central Pattaya | | Bays | 30 floodlit | | Range depth | 200 yards | | Restaurant | On-site | | Hours | Daily 06:00-22:00 | | Tray price | ~฿100-200 | | Lessons | ~฿800-1,500/hour with resident pros | | Languages | English, Thai | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Soi Diana area, Central Pattaya</dd></div>
+<div class="fact-row"><dt>Bays</dt><dd>30 floodlit</dd></div>
+<div class="fact-row"><dt>Range depth</dt><dd>200 yards</dd></div>
+<div class="fact-row"><dt>Restaurant</dt><dd>On-site</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Daily 06:00-22:00</dd></div>
+<div class="fact-row"><dt>Tray price</dt><dd>~฿100-200</dd></div>
+<div class="fact-row"><dt>Lessons</dt><dd>~฿800-1,500/hour with resident pros</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (6)</summary>
         <ul>

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="FAST PRO Football Academy is one of Pattaya&#39;s most credentialed youth football academies — a UEFA-A licensed European football coach-led program offering professional European-style football training to children ages 4-15. The academy distinguishes itself from local Thai-led football programs by imp" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "After-school sessions on weekly schedule (verify with academy)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,37 +57,44 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=kids-youth">kids youth</a> &nbsp;/&nbsp; FAST PRO Football Academy Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=kids-youth">kids youth</a>
+      <span class="bc-sep">›</span>
+      <span>FAST PRO Football Academy Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">kids youth</span>
-    <h1 class="venue-h1">FAST PRO Football Academy Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">kids youth</span>
+      <h1 class="venue-h1">FAST PRO Football Academy Pattaya</h1>
+      <p class="venue-lede">FAST PRO Football Academy is one of Pattaya&#39;s most credentialed youth football academies — a UEFA-A licensed European football coach-led program offering professional European-style football training to children ages 4-15. The academy distinguishes itself from local Thai-led foot…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Two locations — Horseshoe Point Pattaya + IP Soccer Club Pattaya</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 After-school sessions on weekly schedule (verify with academy)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Two locations — Horseshoe Point Pattaya + IP Soccer Club Pattaya</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 After-school sessions on weekly schedule (verify with academy)</span>
+        <span class="meta-chip meta-chip-accent">⭐ UEFA-A licensed European football coach — premium European-style football training Pattaya</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.fastprofootball.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/fastprofootball" rel="noopener" target="_blank">Facebook</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.fastprofootball.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        <a class="btn btn-ghost" href="https://facebook.com/fastprofootball" target="_blank" rel="noopener">Facebook</a>
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>FAST PRO Football Academy Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>FAST PRO Football Academy is <strong>one of Pattaya's most credentialed youth football academies</strong> — a <strong>UEFA-A licensed European football coach-led program</strong> offering <strong>professional European-style football training to children ages 4-15</strong>. The academy distinguishes itself from local Thai-led football programs by <strong>importing European coaching methodology directly through a UEFA-A qualified head coach</strong> — the second-highest UEFA coaching qualification, <strong>the same level required to coach top European professional youth academies</strong>.</p>
 <p>The academy operates from <strong>two Pattaya locations</strong>: <strong>Horseshoe Point Pattaya</strong> (the 1,500-acre equestrian and adventure resort east of Pattaya near Mabprachan Reservoir) and <strong>IP Soccer Club Pattaya</strong>. The dual-location model gives families <strong>schedule flexibility</strong> — sessions can be booked at the location more convenient to home / school.</p>
 <p>The academy's <strong>stated mission goes beyond pure football</strong>: <strong>"to develop young players not only as footballers but as confident, disciplined and motivated individuals through professional European-style football training in a safe, positive and structured environment."</strong> This <strong>character-and-values approach</strong> alongside <strong>technical football skill development</strong> appeals to parents seeking holistic athletic development for their children.</p>
 <p>For Pattaya expat families and Thai families seeking <strong>the most credentialed European-style youth football education available in the city</strong> — and especially for parents whose children show football promise warranting investment — FAST PRO is among the top-tier options alongside the newer <strong>Liverpool FC International Academy Pattaya</strong> (announced 2026).</p>
 <h2>Position in the Pattaya Youth Football Market</h2>
 <p>Pattaya football academies tier:</p>
-<p>| Academy | Coaching | Demographic | |---|---|---| | <strong>Liverpool FC International Academy</strong> (2026) | English elite curriculum | Premium / international | | <strong>FAST PRO Football Academy</strong> | <strong>UEFA-A licensed European coach</strong> | <strong>Mid-premium / international</strong> | | <strong>Planet Football</strong> | Mixed coaches + FC Planet club team | Established serious player development | | <strong>AF Academy</strong> | Pattaya-based, ages 3+ | Inclusive / family-friendly | | <strong>Pattaya City Football Academy</strong> | Thai-led local | Local Thai families |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Academy</th><th>Coaching</th><th>Demographic</th></tr></thead><tbody><tr><td><strong>Liverpool FC International Academy</strong> (2026)</td><td>English elite curriculum</td><td>Premium / international</td></tr><tr><td><strong>FAST PRO Football Academy</strong></td><td><strong>UEFA-A licensed European coach</strong></td><td><strong>Mid-premium / international</strong></td></tr><tr><td><strong>Planet Football</strong></td><td>Mixed coaches + FC Planet club team</td><td>Established serious player development</td></tr><tr><td><strong>AF Academy</strong></td><td>Pattaya-based, ages 3+</td><td>Inclusive / family-friendly</td></tr><tr><td><strong>Pattaya City Football Academy</strong></td><td>Thai-led local</td><td>Local Thai families</td></tr></tbody></table></div>
 <p>FAST PRO's specific position: <strong>most credentialed coaching available since the Liverpool partnership is still in early-stage 2026</strong>.</p>
 <h2>UEFA-A Licensed Coaching — What It Means</h2>
 <h3>UEFA Coaching License Hierarchy</h3>
@@ -231,7 +210,8 @@
 <li><strong>Match fees:</strong> additional for tournament participation</li>
 <li><strong>Trial sessions:</strong> sometimes free/discounted for prospective members</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>UEFA-A licensed European coach</strong> — top-tier qualification</li>
 <li><strong>2 training locations</strong> — Horseshoe Point + IP Soccer Club flexibility</li>
@@ -244,7 +224,9 @@
 <li><strong>English-speaking instruction</strong> — international family appropriate</li>
 <li><strong>Established academy</strong> with consistent reputation</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Premium pricing</strong> — not budget tier</li>
 <li><strong>Schedule density</strong> depends on Horseshoe Point + IP Soccer availability</li>
@@ -254,7 +236,9 @@
 <li><strong>Equipment costs</strong> family responsibility</li>
 <li><strong>No on-site accommodation</strong> for travel-distance families</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Pattaya expat families</strong> with school-age children</li>
 <li><strong>Football-promising children</strong> warranting credentialed coaching</li>
@@ -264,19 +248,29 @@
 <li><strong>Children considering competitive football pathway</strong></li>
 <li><strong>Holistic-development priority</strong> parents — skills + character</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Budget seekers</strong> — Thai-led local programs cheaper</li>
 <li><strong>Pure beginners trying football for first time</strong> — try AF Academy</li>
 <li><strong>Elite-pathway-only</strong> — Liverpool FC International Academy (when matured) may be top</li>
 <li><strong>Short-stay tourist families</strong> — better to do casual football</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Coach | UEFA-A licensed European football coach | | Locations | Horseshoe Point Pattaya + IP Soccer Club Pattaya | | Age range | 4-15 years | | Curriculum | European-style technical + tactical + character development | | Languages | English, Thai | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Coach</dt><dd>UEFA-A licensed European football coach</dd></div>
+<div class="fact-row"><dt>Locations</dt><dd>Horseshoe Point Pattaya + IP Soccer Club Pattaya</dd></div>
+<div class="fact-row"><dt>Age range</dt><dd>4-15 years</dd></div>
+<div class="fact-row"><dt>Curriculum</dt><dd>European-style technical + tactical + character development</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (8)</summary>
         <ul>

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Yoga Pattaya Studio bills itself as &quot;the first dedicated international yoga studio in Pattaya&quot; — and after years of operation it has emerged as the city&#39;s most established, comprehensive, and consistently top-rated yoga venue. Located on Thepprasit Soi 12, just minutes from Jomtien Beach, the studio" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -40,35 +41,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily morning + evening classes (specific schedule published on yogapattaya.com)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -86,30 +58,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=yoga">yoga</a> &nbsp;/&nbsp; Yoga Pattaya Studio
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=yoga">yoga</a>
+      <span class="bc-sep">›</span>
+      <span>Yoga Pattaya Studio</span>
     </div>
 
-    <span class="venue-cat-pill">yoga</span>
-    <h1 class="venue-h1">Yoga Pattaya Studio</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">yoga</span>
+      <h1 class="venue-h1">Yoga Pattaya Studio</h1>
+      <p class="venue-lede">Yoga Pattaya Studio bills itself as &quot;the first dedicated international yoga studio in Pattaya&quot; — and after years of operation it has emerged as the city&#39;s most established, comprehensive, and consistently top-rated yoga venue. Located on Thepprasit Soi 12, just minutes from Jomti…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Thepprasit / Jomtien</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily morning + evening classes (specific schedule published on yogapattaya.com)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Thepprasit / Jomtien</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily morning + evening classes (specific schedule published on yogapattaya.com)</span>
+        
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://yogapattaya.com/" target="_blank" rel="noopener">Official Website</a>
-      <a href="tel:+66955739376">Call +66 95 573 9376</a>
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/yogapattaya" rel="noopener" target="_blank">Facebook</a> · <a href="https://instagram.com/yoga.pattaya.studio" rel="noopener" target="_blank">Instagram</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://yogapattaya.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        <a class="btn btn-secondary" href="tel:+66955739376">📞 +66 95 573 9376</a>
+        <a class="btn btn-ghost" href="https://facebook.com/yogapattaya" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://instagram.com/yoga.pattaya.studio" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Yoga Pattaya Studio</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Yoga Pattaya Studio bills itself as <strong>"the first dedicated international yoga studio in Pattaya"</strong> — and after years of operation it has emerged as the city's most established, comprehensive, and consistently top-rated yoga venue. Located on <strong>Thepprasit Soi 12</strong>, just minutes from Jomtien Beach, the studio offers a remarkably broad style range (Ashtanga, Mysore, Hatha, Hatha Vinyasa, Vinyasa Flow, Fitness Yoga, Stretching), trilingual instruction (English, Russian, Thai — reflecting Pattaya's international demographics), and small-group/private sessions designed to deliver real personal attention.</p>
 <p>For travelers serious about a yoga practice during their Pattaya stay — and for the established expat community — Yoga Pattaya Studio is the default recommendation.</p>
 <h2>Position in the Market</h2>
@@ -164,7 +143,8 @@
 <li>Easy access from Sukhumvit Road via Thepprasit</li>
 <li>Songthaew or short taxi from central Pattaya</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>First and longest-established international yoga studio in Pattaya</strong></li>
 <li>Comprehensive style range (Ashtanga to Mysore to Vinyasa to Hatha)</li>
@@ -176,13 +156,16 @@
 <li>Walking distance to Jomtien Beach</li>
 <li>Welcoming to both beginners and serious practitioners</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li>Not in central Pattaya — Thepprasit / Jomtien location requires transport from Pattaya beach</li>
 <li>Studio size means peak-time classes can fill — book ahead</li>
 <li>No accommodation included (book locally)</li>
 <li>Style depth means range of teachers — ask which instructor for which style</li>
 </ul>
+</div></div>
 <h2>Reputation Summary</h2>
 <p><strong>Top-rated yoga studio in Pattaya</strong> across TripAdvisor and most local "best of" lists. Particularly strong reputation among:</p>
 <ul>
@@ -192,13 +175,17 @@
 <li><strong>First-time yoga travelers</strong> wanting a structured intro in English</li>
 </ul>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <p>Long-stay yoga practitioners • Russian-speaking visitors • Travelers wanting Ashtanga/Mysore • Serious yogis on holiday • Anyone wanting trilingual capability • Small-group personalized attention seekers</p>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <p>Travelers staying centrally who don't want to commute to Thepprasit • Pure hot-yoga seekers (try Yoga Haus) • Casual one-off drop-in tourists wanting a 30-min sample (better at hotel resort programs)</p>
+</div></div>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (7)</summary>
         <ul>

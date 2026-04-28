@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="AF Academy is a Russian-network children&#39;s football academy with a Pattaya branch alongside its original locations in Yaroslavl and Moscow, Russia. The academy operates two training fields in Pattaya — an outdoor field in South Pattaya and an indoor field in Central Pattaya — making it the only Patt" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Multi-session weekly schedule by age group"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,30 +57,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=kids-youth">kids youth</a> &nbsp;/&nbsp; AF Academy Football School
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=kids-youth">kids youth</a>
+      <span class="bc-sep">›</span>
+      <span>AF Academy Football School</span>
     </div>
 
-    <span class="venue-cat-pill">kids youth</span>
-    <h1 class="venue-h1">AF Academy Football School</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">kids youth</span>
+      <h1 class="venue-h1">AF Academy Football School</h1>
+      <p class="venue-lede">AF Academy is a Russian-network children&#39;s football academy with a Pattaya branch alongside its original locations in Yaroslavl and Moscow, Russia. The academy operates two training fields in Pattaya — an outdoor field in South Pattaya and an indoor field in Central Pattaya — mak…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 South Pattaya (outdoor field) + Central Pattaya (indoor field)</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Multi-session weekly schedule by age group</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 South Pattaya (outdoor field) + Central Pattaya (indoor field)</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Multi-session weekly schedule by age group</span>
+        <span class="meta-chip meta-chip-accent">⭐ Indoor + outdoor fields — weather-independent for central Pattaya sessions</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.afacademy.pro/en" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.afacademy.pro/en" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>AF Academy Football School</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>AF Academy is <strong>a Russian-network children's football academy with a Pattaya branch</strong> alongside its original locations in <strong>Yaroslavl and Moscow, Russia</strong>. The academy operates <strong>two training fields in Pattaya</strong> — an <strong>outdoor field in South Pattaya</strong> and an <strong>indoor field in Central Pattaya</strong> — making it <strong>the only Pattaya kids football operation with weather-independent training capability</strong> for its central sessions. Programming spans from <strong>age 3 (basic ball control) through teenagers age 14+ (game tactics)</strong>, with structured age-band curricula at each level.</p>
 <p>For Pattaya families — both Thai families and the large Russian expat community based in Pattaya — AF Academy is one of the leading kids football choices, alongside <strong>Pattaya City Football Academy</strong> (Bronze License Academy of the Football Association of Thailand) and <strong>Rusich Club</strong> (separate Russian-language football operation).</p>
 <h2>Network — Russia + Pattaya</h2>
@@ -194,9 +173,10 @@
 </ul>
 <p>Contact academy directly via <a href="https://www.afacademy.pro/en" rel="noopener" target="_blank">afacademy.pro/en</a> for current 2026 rates.</p>
 <h2>Position in Pattaya Kids Football Market</h2>
-<p>| Academy | Network | Language | Specialty | |---|---|---|---| | <strong>AF Academy</strong> (this) | Russian (Yaroslavl, Moscow) | Russian + English + Thai | Indoor + outdoor fields | | <strong>Pattaya City Football Academy</strong> | Football Association of Thailand Bronze License | Thai + English | Local Thai-track development | | <strong>Rusich Club</strong> | Russian | Russian | Russian-language exclusive | | <strong>Planet Football</strong> | Local | Thai + English | General football academy | | <strong>Regents International School Pattaya</strong> | UK/international school | English | School-based multi-sport |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Academy</th><th>Network</th><th>Language</th><th>Specialty</th></tr></thead><tbody><tr><td><strong>AF Academy</strong> (this)</td><td>Russian (Yaroslavl, Moscow)</td><td>Russian + English + Thai</td><td>Indoor + outdoor fields</td></tr><tr><td><strong>Pattaya City Football Academy</strong></td><td>Football Association of Thailand Bronze License</td><td>Thai + English</td><td>Local Thai-track development</td></tr><tr><td><strong>Rusich Club</strong></td><td>Russian</td><td>Russian</td><td>Russian-language exclusive</td></tr><tr><td><strong>Planet Football</strong></td><td>Local</td><td>Thai + English</td><td>General football academy</td></tr><tr><td><strong>Regents International School Pattaya</strong></td><td>UK/international school</td><td>English</td><td>School-based multi-sport</td></tr></tbody></table></div>
 <p>AF Academy occupies the <strong>Russian-network + indoor/outdoor flexibility</strong> niche.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Two fields</strong> — outdoor (South Pattaya) + indoor (Central Pattaya)</li>
 <li><strong>Weather-independent indoor option</strong> — uncommon in Pattaya kids football</li>
@@ -207,14 +187,18 @@
 <li><strong>Connection to Russian football network</strong> — tournaments, exchange opportunities</li>
 <li><strong>Changing rooms with showers</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Pricing not published</strong> — must inquire directly</li>
 <li><strong>Russian-network might feel less Thai-cultural</strong> than Pattaya City FC</li>
 <li><strong>Multi-location split</strong> can complicate scheduling for parents</li>
 <li><strong>Less locally-credentialed</strong> vs. Pattaya City FC's Football Association of Thailand Bronze License</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Russian-speaking Pattaya families</strong></li>
 <li><strong>Families with kids ages 3-15+</strong> wanting structured football progression</li>
@@ -222,18 +206,29 @@
 <li><strong>Multi-language households</strong> valuing Russian + English + Thai coaching</li>
 <li><strong>Pattaya expat families</strong> wanting international-network heritage</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Pure Thai-football-development track</strong> seekers (try Pattaya City FC)</li>
 <li><strong>Casual one-off football experience</strong> seekers (use beach pickup games)</li>
 <li><strong>Adult football players</strong> (academy is age 3-15+)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Network | Yaroslavl + Moscow + Pattaya (Russian academy) | | Website | afacademy.pro/en | | Fields | Outdoor (South Pattaya) + Indoor (Central Pattaya) | | Age range | 3+ (3-6, 7-9, 14+) | | Languages | Russian, English, Thai | | Specialty | Indoor + outdoor weather-independent training | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Network</dt><dd>Yaroslavl + Moscow + Pattaya (Russian academy)</dd></div>
+<div class="fact-row"><dt>Website</dt><dd>afacademy.pro/en</dd></div>
+<div class="fact-row"><dt>Fields</dt><dd>Outdoor (South Pattaya) + Indoor (Central Pattaya)</dd></div>
+<div class="fact-row"><dt>Age range</dt><dd>3+ (3-6, 7-9, 14+)</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>Russian, English, Thai</dd></div>
+<div class="fact-row"><dt>Specialty</dt><dd>Indoor + outdoor weather-independent training</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (3)</summary>
         <ul>

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Yoga Haus is the most prominent hot yoga and fitness-oriented yoga studio in central Pattaya — a modern, walkable studio on Pattaya Klang Road that has carved out a distinct niche in the city&#39;s yoga scene by embracing contemporary fitness-yoga hybrids rather than purely traditional Indian-lineage yo" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Group + private lessons most days; morning + evening sessions typical"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=yoga">yoga</a> &nbsp;/&nbsp; Yoga Haus Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=yoga">yoga</a>
+      <span class="bc-sep">›</span>
+      <span>Yoga Haus Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">yoga</span>
-    <h1 class="venue-h1">Yoga Haus Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">yoga</span>
+      <h1 class="venue-h1">Yoga Haus Pattaya</h1>
+      <p class="venue-lede">Yoga Haus is the most prominent hot yoga and fitness-oriented yoga studio in central Pattaya — a modern, walkable studio on Pattaya Klang Road that has carved out a distinct niche in the city&#39;s yoga scene by embracing contemporary fitness-yoga hybrids rather than purely tradition…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya Klang / Central Pattaya</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Group + private lessons most days; morning + evening sessions typical</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya Klang / Central Pattaya</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Group + private lessons most days; morning + evening sessions typical</span>
+        <span class="meta-chip meta-chip-accent">⭐ Pattaya&#39;s most prominent hot yoga + fit ball studio — modern, fitness-oriented</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Yoga Haus Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Yoga Haus is <strong>the most prominent hot yoga and fitness-oriented yoga studio in central Pattaya</strong> — a modern, walkable studio on <strong>Pattaya Klang Road</strong> that has carved out a distinct niche in the city's yoga scene by <strong>embracing contemporary fitness-yoga hybrids</strong> rather than purely traditional Indian-lineage yoga forms. Where <strong>Yoga Pattaya Studio</strong> (the city's first international yoga studio) leads on <strong>Ashtanga and Mysore practice</strong>, where <strong>Ashtanga Yoga Pattaya</strong> anchors the <strong>traditional Mysore-method community</strong>, and where <strong>Balance Yoga Studio</strong> focuses on <strong>yoga + sound healing</strong>, <strong>Yoga Haus is the studio Pattaya residents go to for sweaty, fitness-style yoga that pushes the comfort zone</strong>.</p>
 <p>The studio's two signature offerings are <strong>Hot Yoga</strong> (yoga practiced in a heated room, typically 35-40°C, derived from the Bikram method but often non-orthodox sequencing) and <strong>Fit Ball</strong> (resistance ball-based core and stability training that hybridizes yoga with fitness conditioning). Both are explicitly <strong>fitness-focused rather than meditative-traditional</strong>, which positions Yoga Haus alongside the city's commercial fitness gyms more than the spiritual yoga ashrams.</p>
 <p>For Pattaya residents and visitors who want <strong>a yoga workout</strong> rather than a yoga practice — who prioritize <strong>sweat, intensity, and physical conditioning</strong> alongside flexibility — Yoga Haus is the city's natural choice.</p>
 <h2>Position in the Pattaya Yoga Market</h2>
 <p>Pattaya's yoga ecosystem has evolved into clearly differentiated studios:</p>
-<p>| Studio | Specialty | Vibe | |---|---|---| | <strong>Yoga Pattaya Studio</strong> | Ashtanga + Mysore + Hatha + Vinyasa | Traditional + multilingual (Eng/Russian/Thai) | | <strong>Ashtanga Yoga Pattaya</strong> | Pure Ashtanga + Mysore practice | Lineage-purist | | <strong>Yoga Haus Pattaya</strong> | <strong>Hot Yoga + Fit Ball</strong> | <strong>Fitness-style, modern, sweaty</strong> | | <strong>Balance Yoga Studio</strong> | Yoga + sound healing | Wellness-spiritual | | <strong>One-D Yoga Studio</strong> | Hatha + Vinyasa + Yin | Mixed-style accessible | | <strong>Nok Yoga Pattaya</strong> | Beach setting in Jomtien | Tranquil tropical |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Studio</th><th>Specialty</th><th>Vibe</th></tr></thead><tbody><tr><td><strong>Yoga Pattaya Studio</strong></td><td>Ashtanga + Mysore + Hatha + Vinyasa</td><td>Traditional + multilingual (Eng/Russian/Thai)</td></tr><tr><td><strong>Ashtanga Yoga Pattaya</strong></td><td>Pure Ashtanga + Mysore practice</td><td>Lineage-purist</td></tr><tr><td><strong>Yoga Haus Pattaya</strong></td><td><strong>Hot Yoga + Fit Ball</strong></td><td><strong>Fitness-style, modern, sweaty</strong></td></tr><tr><td><strong>Balance Yoga Studio</strong></td><td>Yoga + sound healing</td><td>Wellness-spiritual</td></tr><tr><td><strong>One-D Yoga Studio</strong></td><td>Hatha + Vinyasa + Yin</td><td>Mixed-style accessible</td></tr><tr><td><strong>Nok Yoga Pattaya</strong></td><td>Beach setting in Jomtien</td><td>Tranquil tropical</td></tr></tbody></table></div>
 <p>This differentiation is healthy for Pattaya's yoga community — students can self-select by what they actually want from practice rather than settling for a one-size-fits-all studio.</p>
 <h2>Hot Yoga — The Signature Class</h2>
 <h3>What Hot Yoga Is</h3>
@@ -205,7 +184,8 @@
 <li><strong>Private lesson:</strong> ~฿1,500-2,500/hour</li>
 </ul>
 <p>Yoga Haus is positioned in the <strong>mid-tier</strong> — comparable to Yoga Pattaya Studio and One-D, more accessible than premium hotel-based wellness retreats.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Pattaya's most prominent hot yoga studio</strong></li>
 <li><strong>Fit Ball offering</strong> — unique hybrid in the Pattaya yoga market</li>
@@ -217,7 +197,9 @@
 <li><strong>Sweat-based workout</strong> combining cardio + flexibility</li>
 <li><strong>Different niche</strong> from traditional Pattaya yoga studios</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Limited online presence</strong> — booking and schedule require direct contact</li>
 <li><strong>Hot yoga not for everyone</strong> — heat sensitivity, medical conditions, hydration challenges</li>
@@ -226,7 +208,9 @@
 <li><strong>Studio capacity limits</strong> for hot rooms — book ahead in peak season</li>
 <li><strong>No on-site retreat / accommodation</strong> option</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Fitness-oriented yogis</strong> wanting yoga workout</li>
 <li><strong>Gym-goers</strong> trying yoga via familiar fitness format</li>
@@ -235,7 +219,9 @@
 <li><strong>Stability ball enthusiasts</strong> seeking Fit Ball offering</li>
 <li><strong>Comfort-zone-challenge seekers</strong></li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Traditional yoga purists</strong> — try Ashtanga Yoga Pattaya</li>
 <li><strong>Spiritual / meditative practice seekers</strong> — try Balance Yoga Studio</li>
@@ -243,12 +229,22 @@
 <li><strong>Russian-speaking visitors</strong> preferring multilingual support — try Yoga Pattaya Studio</li>
 <li><strong>Medical / pregnancy precaution</strong> practitioners — confirm with doctor first</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Pattaya Klang Road, Central Pattaya | | Specialty | Hot Yoga + Fit Ball | | Style | Fitness-oriented modern yoga | | Sessions | Group + private daily | | Drop-in class | ~฿400-600 | | Monthly unlimited | ~฿4,000-6,000 | | Languages | English, Thai | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Pattaya Klang Road, Central Pattaya</dd></div>
+<div class="fact-row"><dt>Specialty</dt><dd>Hot Yoga + Fit Ball</dd></div>
+<div class="fact-row"><dt>Style</dt><dd>Fitness-oriented modern yoga</dd></div>
+<div class="fact-row"><dt>Sessions</dt><dd>Group + private daily</dd></div>
+<div class="fact-row"><dt>Drop-in class</dt><dd>~฿400-600</dd></div>
+<div class="fact-row"><dt>Monthly unlimited</dt><dd>~฿4,000-6,000</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (3)</summary>
         <ul>

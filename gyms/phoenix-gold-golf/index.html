@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Phoenix Gold Golf &amp; Country Club is a 27-hole resort-style championship golf facility located in the Huay Yai area south of Pattaya, designed by Dennis Griffiths and opened in 1993. The course is structured as three nine-hole loops — Mountain, Lakes, and Ocean — combinable into any 18-hole round, ea" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily — tee times throughout the day"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,30 +57,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Phoenix Gold Golf &amp; Country Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Phoenix Gold Golf &amp; Country Club</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Phoenix Gold Golf &amp; Country Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Phoenix Gold Golf &amp; Country Club</h1>
+      <p class="venue-lede">Phoenix Gold Golf &amp; Country Club is a 27-hole resort-style championship golf facility located in the Huay Yai area south of Pattaya, designed by Dennis Griffiths and opened in 1993. The course is structured as three nine-hole loops — Mountain, Lakes, and Ocean — combinable into a…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Huay Yai (south of Pattaya)</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily — tee times throughout the day</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Huay Yai (south of Pattaya)</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — tee times throughout the day</span>
+        
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.phoenixgoldgolf.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.phoenixgoldgolf.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Phoenix Gold Golf & Country Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Phoenix Gold Golf & Country Club is a <strong>27-hole resort-style championship golf facility</strong> located in the <strong>Huay Yai area south of Pattaya</strong>, designed by <strong>Dennis Griffiths</strong> and opened in <strong>1993</strong>. The course is structured as <strong>three nine-hole loops</strong> — <strong>Mountain, Lakes, and Ocean</strong> — combinable into any 18-hole round, each named for the dominant terrain feature it traverses. The mix of <strong>wooded rolling terrain, gentle elevation changes, water hazards, and panoramic views</strong> of mountains and the Gulf of Thailand makes Phoenix Gold one of the most <strong>visually striking and beginner-friendly</strong> courses in the Pattaya region.</p>
 <p>In the Pattaya golf hierarchy, Phoenix Gold sits <strong>comfortably in the upper-mid tier</strong>: less prestigious than Laem Chabang International (Jack Nicklaus design, World Golf Awards perennial nominee) or Burapha (Graham + Panks, Thailand Open host), but <strong>more accessible, more forgiving, and more visually varied</strong> than either. For mixed-ability golf groups and visitors wanting a <strong>beautiful course with reasonable challenge and weekday rates around ฿3,000</strong>, Phoenix Gold is one of the best choices in the region.</p>
 <h2>The Designer — Dennis Griffiths</h2>
@@ -198,7 +177,8 @@
 <li><strong>From Suvarnabhumi (BKK):</strong> ~110 km / 1.5h</li>
 <li><strong>From U-Tapao (UTP):</strong> ~30-40 min</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>27-hole flexibility</strong> — three distinct nines (Mountain, Ocean, Lakes)</li>
 <li><strong>Visually striking</strong> — Gulf of Thailand views, mountain vistas, water features</li>
@@ -209,14 +189,18 @@
 <li><strong>South of Pattaya location</strong> — convenient from Jomtien, Pratumnak, central Pattaya</li>
 <li><strong>Multiple booking discount channels</strong> — 20-30% off walk-up easily achievable</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Cart NOT included in green fee</strong> (฿700/person extra)</li>
 <li><strong>Mid-tier prestige</strong> — not a major-tournament-host course like Burapha</li>
 <li><strong>Quality of caddy service can vary</strong> — some highly knowledgeable, some less so</li>
 <li><strong>Less demanding than Laem Chabang/Burapha for advanced players</strong> — purist tournament-grade golfers may want more challenge</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Mixed-ability golf groups</strong> wanting a beautiful, accessible round</li>
 <li><strong>Beginners and high-handicap players</strong> — wide fairways, forgiving design</li>
@@ -225,18 +209,32 @@
 <li><strong>Players prioritizing value</strong> — ฿3,000 weekday rate is competitive</li>
 <li><strong>Scenic / view-focused golfers</strong></li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Tournament-grade strategic challenge</strong> seekers (Laem Chabang or Burapha)</li>
 <li><strong>Pure walk-up budget golfers</strong> (use online booking for discounts)</li>
 <li><strong>Players wanting the absolute prestige round</strong> in Pattaya (Siam Country Club Old, Laem Chabang)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Designer | Dennis Griffiths | | Opened | 1993 | | Holes | 27 — Mountain · Lakes · Ocean nines | | Location | Huay Yai (south of Pattaya) | | Weekday green fee | ~฿3,000 (18 holes) | | Cart | ฿700/person (compulsory, separate from green fee) | | Caddy tip recommended | ฿400 | | Style | Resort-style championship, wooded rolling terrain | | Best for | Mixed-ability groups, scenic golf, value-tier rounds | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Designer</dt><dd>Dennis Griffiths</dd></div>
+<div class="fact-row"><dt>Opened</dt><dd>1993</dd></div>
+<div class="fact-row"><dt>Holes</dt><dd>27 — Mountain · Lakes · Ocean nines</dd></div>
+<div class="fact-row"><dt>Location</dt><dd>Huay Yai (south of Pattaya)</dd></div>
+<div class="fact-row"><dt>Weekday green fee</dt><dd>~฿3,000 (18 holes)</dd></div>
+<div class="fact-row"><dt>Cart</dt><dd>฿700/person (compulsory, separate from green fee)</dd></div>
+<div class="fact-row"><dt>Caddy tip recommended</dt><dd>฿400</dd></div>
+<div class="fact-row"><dt>Style</dt><dd>Resort-style championship, wooded rolling terrain</dd></div>
+<div class="fact-row"><dt>Best for</dt><dd>Mixed-ability groups, scenic golf, value-tier rounds</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (14)</summary>
         <ul>

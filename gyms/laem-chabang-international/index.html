@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Laem Chabang International Country Club is the most highly regarded golf course in the Pattaya region and one of the most respected championship courses in Thailand. A 27-hole Jack Nicklaus design opened in 1995, it sprawls across 700 acres of dramatic terrain in Sriracha district, Chonburi, 30 minu" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -40,35 +41,6 @@
   "priceRange": "฿฿฿฿",
   "openingHours": "Daily — tee times available throughout the day"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -86,30 +58,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Laem Chabang International Country Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Laem Chabang International Country Club</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Laem Chabang International Country Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Laem Chabang International Country Club</h1>
+      <p class="venue-lede">Laem Chabang International Country Club is the most highly regarded golf course in the Pattaya region and one of the most respected championship courses in Thailand. A 27-hole Jack Nicklaus design opened in 1995, it sprawls across 700 acres of dramatic terrain in Sriracha distric…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Sriracha (30 min from Pattaya)</span>
-      <span>💰 ฿฿฿฿</span>
-      <span>🕐 Daily — tee times available throughout the day</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Sriracha (30 min from Pattaya)</span>
+        <span class="meta-chip">💰 ฿฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — tee times available throughout the day</span>
+        
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.laemchabanggolf.com/" target="_blank" rel="noopener">Official Website</a>
-      <a href="tel:+66822223031-3">Call +66 82 222 3031-3</a>
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/Laemchabanggolff" rel="noopener" target="_blank">Facebook</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.laemchabanggolf.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        <a class="btn btn-secondary" href="tel:+66822223031-3">📞 +66 82 222 3031-3</a>
+        <a class="btn btn-ghost" href="https://facebook.com/Laemchabanggolff" target="_blank" rel="noopener">Facebook</a>
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Laem Chabang International Country Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Laem Chabang International Country Club is <strong>the most highly regarded golf course in the Pattaya region</strong> and one of the most respected championship courses in Thailand. A <strong>27-hole Jack Nicklaus design</strong> opened in <strong>1995</strong>, it sprawls across <strong>700 acres</strong> of dramatic terrain in Sriracha district, Chonburi, <strong>30 minutes north of central Pattaya</strong> and <strong>109 kilometers southeast of Bangkok</strong>. The course is one of <strong>only six Nicklaus designs in Thailand</strong>, all completed between 1991 and 1994, and is the only one widely considered the <strong>best layout in the Pattaya golf region</strong>.</p>
 <p>The course has been <strong>nominated for Best Course in Thailand every single year of the World Golf Awards</strong> — a level of consistent recognition matched by very few Asian courses. For golfers traveling to Pattaya — a region with <strong>30+ courses within an hour of central Pattaya</strong> — Laem Chabang is the <strong>default top-of-the-list pick</strong> for serious players who want a championship-caliber Nicklaus experience.</p>
 <h2>The Designer — Jack Nicklaus</h2>
@@ -199,7 +178,8 @@
 <li><strong>Distance from U-Tapao (UTP):</strong> ~50 km / 45 min</li>
 <li><strong>Most golfers travel via</strong> pre-arranged minivan transfers (~฿1,200-1,800 round-trip from Pattaya hotels) or rental car</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Designed by Jack Nicklaus</strong> — one of golf's greatest architects, in his peak Asian-design period</li>
 <li><strong>Best course layout in the Pattaya region</strong> (universal consensus)</li>
@@ -214,7 +194,9 @@
 <li><strong>Hosts Asian PGA Tour events</strong> — proven tournament-grade conditioning</li>
 <li><strong>Beautiful natural integration</strong> — coconut trees, lakes, streams, mountains</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Premium pricing</strong> — among the higher green fees in the Pattaya region</li>
 <li><strong>Caddy + cart + tip add up</strong> — true cost is meaningfully higher than headline green fee</li>
@@ -223,10 +205,12 @@
 <li><strong>Booking essential during high season</strong> (Nov-Feb) — walk-up tee times limited</li>
 <li><strong>Dress code enforced</strong> — collared shirts, golf shoes required (no problem for serious golfers, surprise for casual visitors)</li>
 </ul>
+</div></div>
 <h2>Reputation Summary</h2>
 <p>Laem Chabang International Country Club is <strong>the consensus best golf course in Pattaya region</strong> and <strong>one of the top championship courses in all of Thailand</strong>. The combination of Nicklaus design pedigree, 27-hole layout flexibility, pristine course conditioning, top-tier caddies, and immaculate clubhouse infrastructure puts it in a category of its own among Pattaya's golf options.</p>
 <p>For the <strong>golf-focused traveler with one round to play in Pattaya, this is the choice.</strong> For multi-day golf holidays, Laem Chabang typically anchors the itinerary — usually paired with <strong>Siam Country Club Old Course</strong> (the other Pattaya marquee), and supplemented with mid-tier rounds at <strong>Burapha</strong> or <strong>Phoenix Gold</strong> depending on preference.</p>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Serious golfers</strong> wanting Pattaya's flagship course experience</li>
 <li><strong>Multi-day golf-holiday travelers</strong> anchoring an itinerary</li>
@@ -235,19 +219,37 @@
 <li><strong>Companies and groups</strong> hosting golf events or tournaments</li>
 <li><strong>27-hole players</strong> who want layout variety in a single visit</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Beginners</strong> struggling with strategic course design (try Phoenix Gold for friendlier layouts)</li>
 <li><strong>Pure budget golfers</strong> — cheaper options like Treasure Hill exist in the region</li>
 <li><strong>Walk-up casual players</strong> without bookings during high season</li>
 <li><strong>Travelers without transport</strong> to Sriracha (no direct walking access)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Designer | Jack Nicklaus (one of 6 Thai designs 1991-1994) | | Opened | 1995 | | Layout | 27 holes — Lake (3,419 yd) + Mountain (3,446 yd) + Valley (3,619 yd) | | Land | 700 acres / 283 hectares | | Phone | +66 82 222 3031-3 | | Website | laemchabanggolf.com | | Location | Sriracha district, Chonburi | | Distance to Pattaya | ~30 min (~25 km north) | | Distance to Bangkok | 109 km | | Caddy fee (compulsory) | ฿450 | | Caddy tip recommended | ~฿300 | | Awards | Annual World Golf Awards Best Course in Thailand nominee | | Reputation | Best layout in Pattaya region (consensus) | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Designer</dt><dd>Jack Nicklaus (one of 6 Thai designs 1991-1994)</dd></div>
+<div class="fact-row"><dt>Opened</dt><dd>1995</dd></div>
+<div class="fact-row"><dt>Layout</dt><dd>27 holes — Lake (3,419 yd) + Mountain (3,446 yd) + Valley (3,619 yd)</dd></div>
+<div class="fact-row"><dt>Land</dt><dd>700 acres / 283 hectares</dd></div>
+<div class="fact-row"><dt>Phone</dt><dd>+66 82 222 3031-3</dd></div>
+<div class="fact-row"><dt>Website</dt><dd>laemchabanggolf.com</dd></div>
+<div class="fact-row"><dt>Location</dt><dd>Sriracha district, Chonburi</dd></div>
+<div class="fact-row"><dt>Distance to Pattaya</dt><dd>~30 min (~25 km north)</dd></div>
+<div class="fact-row"><dt>Distance to Bangkok</dt><dd>109 km</dd></div>
+<div class="fact-row"><dt>Caddy fee (compulsory)</dt><dd>฿450</dd></div>
+<div class="fact-row"><dt>Caddy tip recommended</dt><dd>~฿300</dd></div>
+<div class="fact-row"><dt>Awards</dt><dd>Annual World Golf Awards Best Course in Thailand nominee</dd></div>
+<div class="fact-row"><dt>Reputation</dt><dd>Best layout in Pattaya region (consensus)</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (14)</summary>
         <ul>

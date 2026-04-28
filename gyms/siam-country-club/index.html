@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Siam Country Club Pattaya is the most historically significant golf property in Thailand and the most decorated multi-course resort club in Pattaya. It is the first privately owned golf club ever opened in Thailand (1970), founded by the late industrialist Dr. Thaworn Phornprapha, originally designe" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -40,35 +41,6 @@
   "priceRange": "฿฿฿฿",
   "openingHours": "Daily — tee times throughout the day"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -86,30 +58,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Siam Country Club Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Siam Country Club Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Siam Country Club Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Siam Country Club Pattaya</h1>
+      <p class="venue-lede">Siam Country Club Pattaya is the most historically significant golf property in Thailand and the most decorated multi-course resort club in Pattaya. It is the first privately owned golf club ever opened in Thailand (1970), founded by the late industrialist Dr. Thaworn Phornprapha…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 East Pattaya / Pong, Bang Lamung</span>
-      <span>💰 ฿฿฿฿</span>
-      <span>🕐 Daily — tee times throughout the day</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 East Pattaya / Pong, Bang Lamung</span>
+        <span class="meta-chip">💰 ฿฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — tee times throughout the day</span>
+        <span class="meta-chip meta-chip-accent">⭐ Permanent venue for LPGA Honda Classic since 2010</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://siamcountryclub.com/" target="_blank" rel="noopener">Official Website</a>
-      <a href="tel:+6638909700">Call +66 38 909 700</a>
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://siamcountryclub.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        <a class="btn btn-secondary" href="tel:+6638909700">📞 +66 38 909 700</a>
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Siam Country Club Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Siam Country Club Pattaya is <strong>the most historically significant golf property in Thailand and the most decorated multi-course resort club in Pattaya</strong>. It is the <strong>first privately owned golf club ever opened in Thailand</strong> (1970), founded by the late industrialist <strong>Dr. Thaworn Phornprapha</strong>, originally designed by Japanese architect <strong>Ichisuke Izumi</strong>, and famously renovated by Americans <strong>Lee Schmidt and Brian Curley</strong> (2006-2007) to bring the Old Course up to modern international championship standards. The property has since expanded into a <strong>four-course championship complex</strong>:</p>
 <ul>
 <li><strong>Old Course (1970)</strong> — the original, par 72, renovated 2006-2007</li>
@@ -216,7 +195,8 @@
 <li><strong>Corporate and amateur tournaments</strong> year-round</li>
 <li><strong>Pro-am events</strong> tied to the Honda LPGA</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Thailand's first privately owned golf club</strong> (1970)</li>
 <li><strong>4 championship 18-hole courses on one property</strong> — most concentrated in Asia</li>
@@ -229,7 +209,9 @@
 <li><strong>Listed in Top 100 Asia courses</strong> historically</li>
 <li><strong>Multi-course packages</strong> for serious golf trips</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Premium pricing</strong> — among the highest green fees in Pattaya region</li>
 <li><strong>East Pattaya location</strong> (Pong area) — 20-25 min from central Pattaya</li>
@@ -238,7 +220,9 @@
 <li><strong>Old Course difficulty</strong> — high handicaps may struggle; consider Plantation instead</li>
 <li><strong>Members-priority</strong> during busy times can affect tee availability for visitors</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>LPGA fans</strong> wanting to walk the Honda Thailand course</li>
 <li><strong>Serious multi-day golf travelers</strong> — the 4-course property anchors a premium itinerary</li>
@@ -247,19 +231,36 @@
 <li><strong>Members and corporate hospitality</strong> — the property's club-culture roots</li>
 <li><strong>Photogenic / scenic round seekers</strong> — Waterside especially</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Pure budget golfers</strong> (cheaper Pattaya courses available)</li>
 <li><strong>Walk-up tee-time hopefuls</strong> (booking essential)</li>
 <li><strong>Non-golfers wanting walkable Pattaya</strong> (East Pattaya location requires transport)</li>
 <li><strong>High-handicap beginners on Old Course</strong> (Plantation more appropriate)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | 50 Moo 9, Pong, Bang Lamung, Chonburi | | Phone | +66 38 909 700 | | Website | siamcountryclub.com | | Founded | 1970 (Thailand's first private golf club) | | Founder | Dr. Thaworn Phornprapha | | Original Designer | Ichisuke Izumi (Japan) | | Old Course Renovation | 2006-2007 by Lee Schmidt + Brian Curley | | Courses | Old (1970) · Plantation (2008) · Waterside (2014) · Rolling Hills (2020) | | LPGA host | Honda LPGA Thailand annually since 2010 | | Old Course green fee | ~฿3,550 weekday / ~฿4,350 weekend | | Twilight | ~฿1,000 | | Caddy | ฿480 (compulsory, included); tip ฿500+ | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>50 Moo 9, Pong, Bang Lamung, Chonburi</dd></div>
+<div class="fact-row"><dt>Phone</dt><dd>+66 38 909 700</dd></div>
+<div class="fact-row"><dt>Website</dt><dd>siamcountryclub.com</dd></div>
+<div class="fact-row"><dt>Founded</dt><dd>1970 (Thailand's first private golf club)</dd></div>
+<div class="fact-row"><dt>Founder</dt><dd>Dr. Thaworn Phornprapha</dd></div>
+<div class="fact-row"><dt>Original Designer</dt><dd>Ichisuke Izumi (Japan)</dd></div>
+<div class="fact-row"><dt>Old Course Renovation</dt><dd>2006-2007 by Lee Schmidt + Brian Curley</dd></div>
+<div class="fact-row"><dt>Courses</dt><dd>Old (1970) · Plantation (2008) · Waterside (2014) · Rolling Hills (2020)</dd></div>
+<div class="fact-row"><dt>LPGA host</dt><dd>Honda LPGA Thailand annually since 2010</dd></div>
+<div class="fact-row"><dt>Old Course green fee</dt><dd>~฿3,550 weekday / ~฿4,350 weekend</dd></div>
+<div class="fact-row"><dt>Twilight</dt><dd>~฿1,000</dd></div>
+<div class="fact-row"><dt>Caddy</dt><dd>฿480 (compulsory, included); tip ฿500+</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (16)</summary>
         <ul>

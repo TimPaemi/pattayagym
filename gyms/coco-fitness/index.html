@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Coco Fitness is a central Pattaya commercial gym on the 4th floor of Mike&#39;s Mall with direct sea views over Pattaya Beach and one of the most accessible mid-budget pricing structures in central Pattaya. The gym is open daily from 07:00-23:00 (16 hours, 7 days a week), accepts walk-ins at ฿299-300/da" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿",
   "openingHours": "Daily 07:00-23:00 (7 days/week, 16 hours)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,34 +57,41 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=fitness">fitness</a> &nbsp;/&nbsp; Coco Fitness
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=fitness">fitness</a>
+      <span class="bc-sep">›</span>
+      <span>Coco Fitness</span>
     </div>
 
-    <span class="venue-cat-pill">fitness</span>
-    <h1 class="venue-h1">Coco Fitness</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">fitness</span>
+      <h1 class="venue-h1">Coco Fitness</h1>
+      <p class="venue-lede">Coco Fitness is a central Pattaya commercial gym on the 4th floor of Mike&#39;s Mall with direct sea views over Pattaya Beach and one of the most accessible mid-budget pricing structures in central Pattaya. The gym is open daily from 07:00-23:00 (16 hours, 7 days a week), accepts wal…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Mike&#39;s Mall, Central Pattaya / Beach</span>
-      <span>💰 ฿</span>
-      <span>🕐 Daily 07:00-23:00 (7 days/week, 16 hours)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Mike&#39;s Mall, Central Pattaya / Beach</span>
+        <span class="meta-chip">💰 ฿</span>
+        <span class="meta-chip">🕐 Daily 07:00-23:00 (7 days/week, 16 hours)</span>
+        <span class="meta-chip meta-chip-accent">⭐ Mall-floor commercial gym with sea views — among the most accessible mid-budget gyms in central Pattaya</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/cocofitnesspattaya" rel="noopener" target="_blank">Facebook</a></span>
+      <div class="venue-actions">
+        
+        
+        
+        <a class="btn btn-ghost" href="https://facebook.com/cocofitnesspattaya" target="_blank" rel="noopener">Facebook</a>
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Coco Fitness</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Coco Fitness is <strong>a central Pattaya commercial gym on the 4th floor of Mike's Mall</strong> with <strong>direct sea views over Pattaya Beach</strong> and one of the <strong>most accessible mid-budget pricing structures in central Pattaya</strong>. The gym is open <strong>daily from 07:00-23:00</strong> (16 hours, 7 days a week), accepts <strong>walk-ins at ฿299-300/day with towel and locker included</strong>, and offers <strong>monthly memberships at ฿1,399</strong> — putting it firmly in the <strong>value commercial tier</strong> alongside Universe Gym, SUN Fitness, and Fitness 7.</p>
 <p>For travelers and Pattaya residents wanting <strong>a real commercial gym in the central Beach Road / tourist hub area</strong> at unbeatable prices, Coco Fitness is one of the most convenient options. The <strong>sea views are a genuine quality-of-life feature</strong> — running on the cardio machines while looking out over Pattaya Beach is something only a handful of Pattaya gyms offer.</p>
 <h2>Position in the Pattaya Gym Market</h2>
-<p>| Tier | Gym | Monthly | |---|---|---| | <strong>Luxury</strong> | Fitz Club (Royal Cliff) | ฿5,000-12,000+ | | <strong>Chain</strong> | Jetts, True Fitness | ฿2,500-4,500 | | <strong>Mid-tier commercial</strong> | Platinum, Castra | ฿1,500-3,000 | | <strong>Value commercial</strong> | <strong>Coco Fitness</strong>, Universe Gym, SUN Fitness, Fitness 7 | ฿1,000-1,800 | | <strong>Budget no-frills</strong> | Tony's Gym | ฿800-1,500 |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Gym</th><th>Monthly</th></tr></thead><tbody><tr><td><strong>Luxury</strong></td><td>Fitz Club (Royal Cliff)</td><td>฿5,000-12,000+</td></tr><tr><td><strong>Chain</strong></td><td>Jetts, True Fitness</td><td>฿2,500-4,500</td></tr><tr><td><strong>Mid-tier commercial</strong></td><td>Platinum, Castra</td><td>฿1,500-3,000</td></tr><tr><td><strong>Value commercial</strong></td><td><strong>Coco Fitness</strong>, Universe Gym, SUN Fitness, Fitness 7</td><td>฿1,000-1,800</td></tr><tr><td><strong>Budget no-frills</strong></td><td>Tony's Gym</td><td>฿800-1,500</td></tr></tbody></table></div>
 <p>Coco Fitness sits in the <strong>value commercial</strong> tier with the best <strong>central / sea-view location</strong> of any gym in this tier.</p>
 <h2>Location — Mike's Mall 4th Floor</h2>
 <ul>
@@ -177,7 +156,8 @@
 <li><strong>Crowding during peak times</strong> (early evening especially)</li>
 </ul>
 <p>The review pattern suggests <strong>excellent value gym with occasional service-quality variability</strong> — typical for budget-tier commercial gyms.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Central Beach Road location</strong> — walking distance to most central Pattaya hotels</li>
 <li><strong>Pattaya Beach sea views</strong> — unique quality-of-life feature</li>
@@ -190,7 +170,9 @@
 <li><strong>English-speaking staff</strong> (variable per review)</li>
 <li><strong>Clean changing rooms</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Mall-floor location</strong> — 5-minute path from Beach Road to 4F via elevator</li>
 <li><strong>Mixed reviews on staff conduct</strong> — service quality variable</li>
@@ -199,7 +181,9 @@
 <li><strong>No group classes</strong> prominent</li>
 <li><strong>Tourist-area location</strong> can mean transient member base</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Central Pattaya / Beach Road-staying travelers</strong> — walking-distance access</li>
 <li><strong>Sea-view cardio enthusiasts</strong> — running with Pattaya Beach view is unique</li>
@@ -209,19 +193,33 @@
 <li><strong>Late-evening trainers</strong> (open until 23:00)</li>
 <li><strong>Personal-training-focused beginners</strong> — PTs available</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Sauna + pool combo seekers</strong> (no pool — try Fitz Club)</li>
 <li><strong>Classes-focused trainers</strong> (try Jetts, True Fitness)</li>
 <li><strong>Premium-experience seekers</strong> (try Fitz Club at Royal Cliff)</li>
 <li><strong>Travelers wanting standalone gym building</strong> (mall-floor location may feel awkward)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | 4th floor, Mike's Mall, Pattaya Beach Road | | Hours | 07:00-23:00 daily | | Day pass | ฿299-300 (incl. towel + locker key) | | 5-visit | ฿999 | | 2-week | ฿1,399 | | Monthly | ฿1,399 | | View | Pattaya Beach sea views | | Sauna | Yes | | Personal trainers | Available | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>4th floor, Mike's Mall, Pattaya Beach Road</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>07:00-23:00 daily</dd></div>
+<div class="fact-row"><dt>Day pass</dt><dd>฿299-300 (incl. towel + locker key)</dd></div>
+<div class="fact-row"><dt>5-visit</dt><dd>฿999</dd></div>
+<div class="fact-row"><dt>2-week</dt><dd>฿1,399</dd></div>
+<div class="fact-row"><dt>Monthly</dt><dd>฿1,399</dd></div>
+<div class="fact-row"><dt>View</dt><dd>Pattaya Beach sea views</dd></div>
+<div class="fact-row"><dt>Sauna</dt><dd>Yes</dd></div>
+<div class="fact-row"><dt>Personal trainers</dt><dd>Available</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (4)</summary>
         <ul>

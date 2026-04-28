@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Castra Gym is the largest and most established professional training facility on East Pattaya&#39;s &quot;Darkside&quot; — the swath of Pattaya east of Sukhumvit Road that&#39;s home to the city&#39;s expat residential community and hosts a parallel fitness scene distinct from the Beach Road and Walking Street tourist gy" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿",
   "openingHours": "Daily — extended hours, confirm at reception"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=fitness">fitness</a> &nbsp;/&nbsp; Castra Gym
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=fitness">fitness</a>
+      <span class="bc-sep">›</span>
+      <span>Castra Gym</span>
     </div>
 
-    <span class="venue-cat-pill">fitness</span>
-    <h1 class="venue-h1">Castra Gym</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">fitness</span>
+      <h1 class="venue-h1">Castra Gym</h1>
+      <p class="venue-lede">Castra Gym is the largest and most established professional training facility on East Pattaya&#39;s &quot;Darkside&quot; — the swath of Pattaya east of Sukhumvit Road that&#39;s home to the city&#39;s expat residential community and hosts a parallel fitness scene distinct from the Beach Road and Walki…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Khao Talo / East Pattaya (&quot;Darkside&quot;)</span>
-      <span>💰 ฿</span>
-      <span>🕐 Daily — extended hours, confirm at reception</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Khao Talo / East Pattaya (&quot;Darkside&quot;)</span>
+        <span class="meta-chip">💰 ฿</span>
+        <span class="meta-chip">🕐 Daily — extended hours, confirm at reception</span>
+        <span class="meta-chip meta-chip-accent">⭐ Biggest professional training facility on East Pattaya / Darkside — family-run, hardcore + comfortable</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://castragym.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/castra.gym" rel="noopener" target="_blank">Facebook</a> · <a href="https://instagram.com/castragym" rel="noopener" target="_blank">Instagram</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://castragym.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        <a class="btn btn-ghost" href="https://facebook.com/castra.gym" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://instagram.com/castragym" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Castra Gym</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Castra Gym is <strong>the largest and most established professional training facility on East Pattaya's "Darkside"</strong> — the swath of Pattaya east of Sukhumvit Road that's home to the city's expat residential community and hosts a parallel fitness scene distinct from the Beach Road and Walking Street tourist gyms. Located <strong>at the top of Khao Talo (Soi Khao Talo)</strong>, Castra is a <strong>family-run operation</strong> that has built a reputation over years for <strong>striking the rare balance between hardcore training environment and comfortable, air-conditioned facility</strong>.</p>
 <p>The gym genuinely caters to <strong>the full spectrum</strong> — <strong>professional athletes preparing for competition, dedicated bodybuilders, fitness beginners, expat retirees, and families</strong>. The on-site <strong>Castra Fight Club</strong> adds a combat sports layer (Muay Thai, boxing, kickboxing) alongside the main floor's bodybuilding and strength infrastructure, while <strong>yoga and group classes</strong> round out the offering.</p>
 <p>The pricing model is <strong>strikingly accessible</strong>: <strong>฿120 single visit, ฿7,000 annual unlimited</strong> — meaningfully cheaper than commercial chains (Jetts, True Fitness) and competitive with the most basic budget gyms in the city, but with substantially better equipment and atmosphere. For East Pattaya residents and Darkside-staying travelers, Castra is the <strong>default community fitness anchor</strong>.</p>
 <h2>Position in the Pattaya Fitness Market</h2>
 <p>Pattaya gyms cluster into geographic + style tiers:</p>
-<p>| Tier / Area | Examples | Vibe | |---|---|---| | <strong>Beach / Walking Street tourist</strong> | Tony's Gym, Universe Gym | Hardcore bodybuilding tourist hub | | <strong>Mall-attached chain</strong> | Jetts (Little Walk, Royal Garden), True Fitness | 24/7 commercial standard | | <strong>Premium private</strong> | FITZ Club | Luxury hotel club | | <strong>East Pattaya Darkside community</strong> | <strong>Castra Gym</strong>, Coco Fitness, Manhattan Pattaya | <strong>Resident-focused, no tourist surcharge</strong> | | <strong>Boutique / specialty</strong> | CrossFit Pattaya, BJJ-specific | Single-discipline focused |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier / Area</th><th>Examples</th><th>Vibe</th></tr></thead><tbody><tr><td><strong>Beach / Walking Street tourist</strong></td><td>Tony's Gym, Universe Gym</td><td>Hardcore bodybuilding tourist hub</td></tr><tr><td><strong>Mall-attached chain</strong></td><td>Jetts (Little Walk, Royal Garden), True Fitness</td><td>24/7 commercial standard</td></tr><tr><td><strong>Premium private</strong></td><td>FITZ Club</td><td>Luxury hotel club</td></tr><tr><td><strong>East Pattaya Darkside community</strong></td><td><strong>Castra Gym</strong>, Coco Fitness, Manhattan Pattaya</td><td><strong>Resident-focused, no tourist surcharge</strong></td></tr><tr><td><strong>Boutique / specialty</strong></td><td>CrossFit Pattaya, BJJ-specific</td><td>Single-discipline focused</td></tr></tbody></table></div>
 <p>Castra is <strong>the East Pattaya / Darkside fitness anchor</strong> — the gym most expat residents in the eastern condo developments default to.</p>
 <h2>What "Darkside" Means</h2>
 <p>In Pattaya local slang, <strong>"Darkside"</strong> refers to the area east of Sukhumvit Road — geographically the east side of the city. The nickname has been used for decades and originally referenced:</p>
@@ -227,7 +206,8 @@
 <li><strong>Near East Pattaya schools</strong> (Regents International, etc.)</li>
 <li><strong>Free parking</strong> typical of East Pattaya gyms</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Largest professional gym on East Pattaya / Darkside</strong></li>
 <li><strong>Family-run</strong> with welcoming community atmosphere</li>
@@ -241,7 +221,9 @@
 <li><strong>English / Thai / Russian</strong> spoken</li>
 <li><strong>Strong East Pattaya / Darkside community focus</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>East Pattaya location</strong> — not convenient for Beach Road / Walking Street travelers</li>
 <li><strong>Less polished branding</strong> than commercial chains</li>
@@ -250,7 +232,9 @@
 <li><strong>Family-run hours</strong> can vary — confirm before visiting</li>
 <li><strong>Crowded peak hours</strong> in residential prime time</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>East Pattaya / Darkside residents</strong> as primary gym</li>
 <li><strong>Long-stay expats</strong> wanting community gym</li>
@@ -260,7 +244,9 @@
 <li><strong>Families with East Pattaya school kids</strong> — convenient location</li>
 <li><strong>Beginners</strong> wanting personal-attention fitness intro</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Beach Road / Walking Street travelers</strong> wanting walk-up gyms</li>
 <li><strong>Premium-luxury seekers</strong> — try FITZ Club</li>
@@ -268,12 +254,23 @@
 <li><strong>One-shot tourists</strong> wanting central convenience</li>
 <li><strong>English-only visitors</strong> uncomfortable with multilingual environment</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Top of Khao Talo, East Pattaya | | Ownership | Family-run | | Single visit | ~฿120 | | Annual unlimited | ~฿7,000 | | Disciplines | Bodybuilding, Strength, Cardio, Muay Thai, Boxing, Yoga | | Combat sports | Castra Fight Club on-site | | Air conditioned | Yes (whole facility) | | Languages | English, Thai, Russian | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Top of Khao Talo, East Pattaya</dd></div>
+<div class="fact-row"><dt>Ownership</dt><dd>Family-run</dd></div>
+<div class="fact-row"><dt>Single visit</dt><dd>~฿120</dd></div>
+<div class="fact-row"><dt>Annual unlimited</dt><dd>~฿7,000</dd></div>
+<div class="fact-row"><dt>Disciplines</dt><dd>Bodybuilding, Strength, Cardio, Muay Thai, Boxing, Yoga</dd></div>
+<div class="fact-row"><dt>Combat sports</dt><dd>Castra Fight Club on-site</dd></div>
+<div class="fact-row"><dt>Air conditioned</dt><dd>Yes (whole facility)</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai, Russian</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (9)</summary>
         <ul>

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Play Padel Pattaya is the first dedicated padel facility in Pattaya AND the first indoor padel courts in all of Thailand — a genuinely pioneering venue for the world&#39;s fastest-growing racquet sport. Located on Kasetsin Soi 3 in Pratumnak, the facility features 6 air-conditioning units per court and " />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily — bookable per court"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,30 +57,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=racquet">racquet</a> &nbsp;/&nbsp; Play Padel Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=racquet">racquet</a>
+      <span class="bc-sep">›</span>
+      <span>Play Padel Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">racquet</span>
-    <h1 class="venue-h1">Play Padel Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">racquet</span>
+      <h1 class="venue-h1">Play Padel Pattaya</h1>
+      <p class="venue-lede">Play Padel Pattaya is the first dedicated padel facility in Pattaya AND the first indoor padel courts in all of Thailand — a genuinely pioneering venue for the world&#39;s fastest-growing racquet sport. Located on Kasetsin Soi 3 in Pratumnak, the facility features 6 air-conditioning …</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pratumnak / Kasetsin Soi 3</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily — bookable per court</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pratumnak / Kasetsin Soi 3</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — bookable per court</span>
+        <span class="meta-chip meta-chip-accent">⭐ First padel courts in Pattaya AND first indoor padel courts in all Thailand</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.playpadelpattaya.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/playpadelpattaya" rel="noopener" target="_blank">Facebook</a> · <a href="https://instagram.com/playpadelpattaya" rel="noopener" target="_blank">Instagram</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.playpadelpattaya.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        <a class="btn btn-ghost" href="https://facebook.com/playpadelpattaya" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://instagram.com/playpadelpattaya" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Play Padel Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Play Padel Pattaya is <strong>the first dedicated padel facility in Pattaya AND the first indoor padel courts in all of Thailand</strong> — a genuinely pioneering venue for the world's fastest-growing racquet sport. Located on <strong>Kasetsin Soi 3 in Pratumnak</strong>, the facility features <strong>6 air-conditioning units per court and a 11.5-meter high roof</strong>, providing <strong>fully climate-controlled play regardless of outside weather</strong>. Padel — a hybrid of tennis and squash played in glass-walled courts with a perforated paddle — has exploded globally over the past decade (estimated 30M+ players worldwide as of 2025), and Play Padel brings that boom to Pattaya in a first-mover position.</p>
 <p>For travelers and Pattaya residents wanting <strong>the year-round comfort of indoor AC padel</strong> in Thailand's climate, Play Padel is essentially the only option in Pattaya. The competition (Prime Padel Pattaya, Pattaya Padel Club) is more recent and operates differently — Play Padel's <strong>first-mover + climate-controlled</strong> combination is its core differentiator.</p>
 <h2>Why Padel — and Why First in Pattaya Matters</h2>
@@ -175,9 +154,10 @@
 <li><strong>Off-peak discounts</strong> typically available</li>
 </ul>
 <h2>Position in Pattaya Padel / Racquet Market</h2>
-<p>| Venue | Padel | Tennis | Squash | Other | |---|---|---|---|---| | <strong>Play Padel Pattaya</strong> (this) | <strong>Yes (first + indoor + AC)</strong> | No | No | — | | Prime Padel Pattaya | Yes (newer) | No | No | — | | Pattaya Padel Club | Yes | No | No | — | | Fitz Club Royal Cliff | Pickleball + multi-sport | 7 courts | 2 AC courts | Multi | | Pattaya Tennis & Badminton Inter Club | Pickleball | Yes | No | Badminton | | Greta Sport Club | No | 6 covered | No | — |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Venue</th><th>Padel</th><th>Tennis</th><th>Squash</th><th>Other</th></tr></thead><tbody><tr><td><strong>Play Padel Pattaya</strong> (this)</td><td><strong>Yes (first + indoor + AC)</strong></td><td>No</td><td>No</td><td>—</td></tr><tr><td>Prime Padel Pattaya</td><td>Yes (newer)</td><td>No</td><td>No</td><td>—</td></tr><tr><td>Pattaya Padel Club</td><td>Yes</td><td>No</td><td>No</td><td>—</td></tr><tr><td>Fitz Club Royal Cliff</td><td>Pickleball + multi-sport</td><td>7 courts</td><td>2 AC courts</td><td>Multi</td></tr><tr><td>Pattaya Tennis & Badminton Inter Club</td><td>Pickleball</td><td>Yes</td><td>No</td><td>Badminton</td></tr><tr><td>Greta Sport Club</td><td>No</td><td>6 covered</td><td>No</td><td>—</td></tr></tbody></table></div>
 <p>Play Padel is the <strong>dedicated padel destination</strong> in Pattaya. Players seeking padel should default here.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>First padel courts in Pattaya</strong> + <strong>first indoor padel in all Thailand</strong></li>
 <li><strong>Fully AC climate-controlled</strong> — 6 AC units per court</li>
@@ -189,7 +169,9 @@
 <li><strong>Online booking</strong> infrastructure</li>
 <li><strong>Equipment rental</strong> for first-time players</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Premium pricing</strong> vs. outdoor competitor courts</li>
 <li><strong>Booking essential</strong> during peak hours</li>
@@ -197,7 +179,9 @@
 <li><strong>Pratumnak location</strong> requires transport from central Pattaya / Naklua</li>
 <li><strong>Smaller player community</strong> than Bangkok / Phuket padel scenes (still growing)</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>First-time padel players</strong> in Thailand</li>
 <li><strong>Year-round padel commitment</strong> — AC indoor playability</li>
@@ -206,19 +190,30 @@
 <li><strong>Couples / doubles partners</strong> — padel is dominantly a doubles sport</li>
 <li><strong>Tennis or squash crossovers</strong> trying padel as a new discipline</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Pure tennis or squash players</strong> — single-sport facility</li>
 <li><strong>Travelers without transport</strong> to Pratumnak</li>
 <li><strong>Pure budget players</strong> — premium pricing reflects facility investment</li>
 <li><strong>Solo players</strong> (padel is doubles-dominant; need 3 partners)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Kasetsin Soi 3, Pratumnak, Pattaya | | Website | playpadelpattaya.com | | Status | First padel courts in Pattaya + first indoor padel in Thailand | | Court spec | 6 AC units/court, 11.5m roof, glass-walled | | Coaching | Licensed trainers available | | Booking | Daily, 1-hour slots, online | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Kasetsin Soi 3, Pratumnak, Pattaya</dd></div>
+<div class="fact-row"><dt>Website</dt><dd>playpadelpattaya.com</dd></div>
+<div class="fact-row"><dt>Status</dt><dd>First padel courts in Pattaya + first indoor padel in Thailand</dd></div>
+<div class="fact-row"><dt>Court spec</dt><dd>6 AC units/court, 11.5m roof, glass-walled</dd></div>
+<div class="fact-row"><dt>Coaching</dt><dd>Licensed trainers available</dd></div>
+<div class="fact-row"><dt>Booking</dt><dd>Daily, 1-hour slots, online</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (6)</summary>
         <ul>

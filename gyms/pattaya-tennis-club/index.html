@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Pattaya Tennis Club is a central-Pattaya outdoor tennis facility providing multi-court, floodlit, hard-surface tennis access for Pattaya residents, expats, and visitors who want a more accessible alternative to the premium covered courts at Greta Sport Club or the luxury hotel courts at FITZ Club. T" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "06:00-22:00 typical (floodlights for evening play)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=racquet">racquet</a> &nbsp;/&nbsp; Pattaya Tennis Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=racquet">racquet</a>
+      <span class="bc-sep">›</span>
+      <span>Pattaya Tennis Club</span>
     </div>
 
-    <span class="venue-cat-pill">racquet</span>
-    <h1 class="venue-h1">Pattaya Tennis Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">racquet</span>
+      <h1 class="venue-h1">Pattaya Tennis Club</h1>
+      <p class="venue-lede">Pattaya Tennis Club is a central-Pattaya outdoor tennis facility providing multi-court, floodlit, hard-surface tennis access for Pattaya residents, expats, and visitors who want a more accessible alternative to the premium covered courts at Greta Sport Club or the luxury hotel co…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Central Pattaya</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 06:00-22:00 typical (floodlights for evening play)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Central Pattaya</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 06:00-22:00 typical (floodlights for evening play)</span>
+        <span class="meta-chip meta-chip-accent">⭐ Central Pattaya outdoor tennis with multi-court setup, coaching, social play</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Pattaya Tennis Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Pattaya Tennis Club is <strong>a central-Pattaya outdoor tennis facility</strong> providing <strong>multi-court, floodlit, hard-surface tennis access</strong> for Pattaya residents, expats, and visitors who want <strong>a more accessible alternative to the premium covered courts at Greta Sport Club</strong> or the <strong>luxury hotel courts at FITZ Club</strong>. The club operates as part of the <strong>broader Pattaya tennis ecosystem</strong> — alongside Pattaya Sports Club, Pattaya Tennis & Badminton Inter Club, Tara Tennis Club, Tos Tennis, and various hotel courts — all serving a Pattaya tennis-playing population that's grown steadily as expat numbers have increased.</p>
 <p>Unlike Greta's <strong>6 covered ITF-rated Plexipave courts</strong> or FITZ Club's <strong>7 floodlit hard courts inside the Royal Cliff Beach Resort</strong>, Pattaya Tennis Club operates at the <strong>mid-tier accessible level</strong>: <strong>outdoor courts, evening floodlight play, weather-dependent scheduling, and modest pricing</strong>. The club anchors the <strong>central-Pattaya tennis scene</strong> with <strong>drop-in pickup play, member-led leagues, coaching for individuals and juniors, and equipment rental for travelers without their own racquets</strong>.</p>
 <p>For Pattaya residents and visitors who want <strong>tennis without the premium-club commitment</strong> but with <strong>better infrastructure than condo-shared single courts</strong>, Pattaya Tennis Club fills the niche.</p>
 <h2>Position in the Pattaya Tennis Market</h2>
 <p>Pattaya tennis options grouped by tier:</p>
-<p>| Tier | Examples | Style | |---|---|---| | <strong>Indoor / covered premium</strong> | Greta Sport Club | 6 covered ITF Plexipave courts | | <strong>Premium hotel club</strong> | FITZ Club, Cape Dara | Hotel-integrated, members + guests | | <strong>Mid-tier club</strong> | <strong>Pattaya Tennis Club</strong>, Tara Tennis, Tos Tennis | Outdoor, floodlit, accessible | | <strong>Multi-sport public</strong> | Pattaya Sports Club, Inter Club | Tennis + badminton + table tennis | | <strong>Hotel courts (drop-in)</strong> | Dusit, Royal Cliff (non-FITZ), various | Guest-priority, day-pass available | | <strong>Condo / villa private courts</strong> | Various | Resident-only |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Style</th></tr></thead><tbody><tr><td><strong>Indoor / covered premium</strong></td><td>Greta Sport Club</td><td>6 covered ITF Plexipave courts</td></tr><tr><td><strong>Premium hotel club</strong></td><td>FITZ Club, Cape Dara</td><td>Hotel-integrated, members + guests</td></tr><tr><td><strong>Mid-tier club</strong></td><td><strong>Pattaya Tennis Club</strong>, Tara Tennis, Tos Tennis</td><td>Outdoor, floodlit, accessible</td></tr><tr><td><strong>Multi-sport public</strong></td><td>Pattaya Sports Club, Inter Club</td><td>Tennis + badminton + table tennis</td></tr><tr><td><strong>Hotel courts (drop-in)</strong></td><td>Dusit, Royal Cliff (non-FITZ), various</td><td>Guest-priority, day-pass available</td></tr><tr><td><strong>Condo / villa private courts</strong></td><td>Various</td><td>Resident-only</td></tr></tbody></table></div>
 <p>Pattaya Tennis Club's <strong>niche is accessibility</strong>: central location, reasonable hours, walk-up friendly, no membership required for one-off play.</p>
 <h2>Court Configuration</h2>
 <h3>Surface</h3>
@@ -225,7 +204,8 @@
 <li><strong>Pickleball communities</strong> organize through Facebook and meetup channels</li>
 </ul>
 <p>Whether Pattaya Tennis Club specifically offers pickleball — confirm at the club. The trend across all Thai tennis venues is rapid pickleball adoption.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Central Pattaya location</strong> — accessible from most central hotels</li>
 <li><strong>Multiple courts</strong> — minimal waiting at off-peak</li>
@@ -238,7 +218,9 @@
 <li><strong>Junior development programs</strong></li>
 <li><strong>English-speaking pros</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Outdoor courts</strong> — weather-dependent (rain stops play)</li>
 <li><strong>Hot midday play</strong> uncomfortable in dry season (March-May)</li>
@@ -248,7 +230,9 @@
 <li><strong>No covered backup</strong> in monsoon season</li>
 <li><strong>Limited online booking infrastructure</strong></li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Central-Pattaya based players</strong> wanting walkable access</li>
 <li><strong>Casual recreational players</strong> seeking drop-in tennis</li>
@@ -258,7 +242,9 @@
 <li><strong>Junior players</strong> in development programs</li>
 <li><strong>Travelers without their own equipment</strong> (rental available)</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Tournament-grade players</strong> — Greta's covered courts are ITF-certified</li>
 <li><strong>Year-round weather-protected play</strong> — Greta is the only option</li>
@@ -266,12 +252,23 @@
 <li><strong>Walkability south of central</strong> — Greta and Jomtien venues serve south Pattaya better</li>
 <li><strong>Private-court privacy seekers</strong> — try condo / villa courts</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Location | Central Pattaya | | Court type | Outdoor hard courts (acrylic painted) | | Court count | Multiple (typically 4-6) | | Floodlights | Yes, evening play to ~22:00 | | Hours | 06:00-22:00 typical | | Coaching | Private + group available | | Equipment rental | Yes | | Court rental | ~฿200-400/hour | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Location</dt><dd>Central Pattaya</dd></div>
+<div class="fact-row"><dt>Court type</dt><dd>Outdoor hard courts (acrylic painted)</dd></div>
+<div class="fact-row"><dt>Court count</dt><dd>Multiple (typically 4-6)</dd></div>
+<div class="fact-row"><dt>Floodlights</dt><dd>Yes, evening play to ~22:00</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>06:00-22:00 typical</dd></div>
+<div class="fact-row"><dt>Coaching</dt><dd>Private + group available</dd></div>
+<div class="fact-row"><dt>Equipment rental</dt><dd>Yes</dd></div>
+<div class="fact-row"><dt>Court rental</dt><dd>~฿200-400/hour</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (7)</summary>
         <ul>

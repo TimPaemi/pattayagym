@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Ramayana Water Park is the largest water park in Thailand AND in all of Southeast Asia — a 184,000 square meter aquatic megaplex located 20 kilometers south of Pattaya at Na Jomtien, Sattahip, themed around the Ramayana — the great Hindu epic that&#39;s foundational to Thai culture and the source of the" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily 10:00-18:00 (verify at park)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=swimming">swimming</a> &nbsp;/&nbsp; Ramayana Water Park Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=swimming">swimming</a>
+      <span class="bc-sep">›</span>
+      <span>Ramayana Water Park Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">swimming</span>
-    <h1 class="venue-h1">Ramayana Water Park Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">swimming</span>
+      <h1 class="venue-h1">Ramayana Water Park Pattaya</h1>
+      <p class="venue-lede">Ramayana Water Park is the largest water park in Thailand AND in all of Southeast Asia — a 184,000 square meter aquatic megaplex located 20 kilometers south of Pattaya at Na Jomtien, Sattahip, themed around the Ramayana — the great Hindu epic that&#39;s foundational to Thai culture a…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Na Jomtien / Sattahip — 20 km south of Pattaya</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily 10:00-18:00 (verify at park)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Na Jomtien / Sattahip — 20 km south of Pattaya</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily 10:00-18:00 (verify at park)</span>
+        <span class="meta-chip meta-chip-accent">⭐ Largest water park in Thailand and Southeast Asia — 184,000 sqm with 26 slides / 34 lanes</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.ramayanawaterpark.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.ramayanawaterpark.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Ramayana Water Park Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Ramayana Water Park is <strong>the largest water park in Thailand AND in all of Southeast Asia</strong> — a <strong>184,000 square meter aquatic megaplex located 20 kilometers south of Pattaya at Na Jomtien, Sattahip</strong>, themed around <strong>the Ramayana — the great Hindu epic that's foundational to Thai culture and the source of the Ramakien (the Thai national epic)</strong>. The park covers an area roughly <strong>equivalent to 25 football pitches</strong> — making it dramatically larger than the nearby Cartoon Network Amazone (Columbia Pictures Aquaverse) facility and putting it in a different scale category than virtually any other Asian water park.</p>
 <p>The park opened officially on <strong>May 5, 2016</strong> after construction beginning in 2011 — a 5-year build that allowed the developers to deliver <strong>26 water slides across 34 lanes</strong>, <strong>a 600-meter-long lazy river that wraps around a natural hill with integrated waves, bubbles, and waterfalls</strong>, and <strong>a double wave pool with a 150-meter-wide beach</strong> that lets visitors <strong>swim with tubes in one section or wave-bathe without tubes in the other</strong>. The Ramayana cultural theming is integrated throughout the park architecture, landscaping, character costumes, and naming — distinguishing the experience from generic-themed water parks globally.</p>
 <p>The international recognition is meaningful: <strong>in 2019, just 3 years after opening, Ramayana ranked #1 in Asia and #10 in the World among water parks per TripAdvisor Travelers' Choice Awards</strong> — confirming that the park's scale, ambition, and execution made it a genuinely world-class destination.</p>
 <h2>Position in the Pattaya Aquatic Tourism Market</h2>
 <p>Pattaya's water park / aquatic destination tier:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>Largest in Southeast Asia</strong> | <strong>Ramayana Water Park</strong> | <strong>184,000 sqm — 26 slides / 34 lanes</strong> | | <strong>World-first themed</strong> | Cartoon Network Amazone (now Columbia Pictures Aquaverse) | First-of-kind, Polin Waterparks hardware | | <strong>Iconic destination pool</strong> | Hard Rock Pool | 2,000 sqm guitar deck | | <strong>Premium hotel pools</strong> | Royal Cliff (FITZ), Cape Dara | Hotel-luxury | | <strong>Public pools</strong> | Naklua, Jomtien | Budget swim |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Largest in Southeast Asia</strong></td><td><strong>Ramayana Water Park</strong></td><td><strong>184,000 sqm — 26 slides / 34 lanes</strong></td></tr><tr><td><strong>World-first themed</strong></td><td>Cartoon Network Amazone (now Columbia Pictures Aquaverse)</td><td>First-of-kind, Polin Waterparks hardware</td></tr><tr><td><strong>Iconic destination pool</strong></td><td>Hard Rock Pool</td><td>2,000 sqm guitar deck</td></tr><tr><td><strong>Premium hotel pools</strong></td><td>Royal Cliff (FITZ), Cape Dara</td><td>Hotel-luxury</td></tr><tr><td><strong>Public pools</strong></td><td>Naklua, Jomtien</td><td>Budget swim</td></tr></tbody></table></div>
 <p>Ramayana's specific position: <strong>the destination water park experience</strong> — visitors travel to Pattaya specifically to spend a full day at Ramayana, often as the centerpiece of their entire visit.</p>
 <h2>Scale — 184,000 Square Meters</h2>
 <p>The 184,000 sqm size is <strong>genuinely massive</strong>:</p>
@@ -252,7 +231,8 @@
 <li><strong>Voted by visitors globally</strong> — not industry insiders</li>
 </ul>
 <p>This puts Ramayana in <strong>company with global water-park flagships</strong>: Aquaventure (UAE), Tropical Islands (Germany), Cowabunga Bay (USA), Beach Park (Brazil), Wet 'n' Wild (multiple countries).</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Largest water park in Thailand AND Southeast Asia</strong> at 184,000 sqm</li>
 <li><strong>TripAdvisor World #10 / Asia #1</strong> ranking (2019)</li>
@@ -267,7 +247,9 @@
 <li><strong>Family-friendly</strong> all ages</li>
 <li><strong>Annual pass options</strong> for repeat visitors</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Premium pricing</strong> — day pass not budget</li>
 <li><strong>20 km south of Pattaya</strong> — requires transport / shuttle</li>
@@ -277,7 +259,9 @@
 <li><strong>Distance from Pattaya</strong> — full-day commitment</li>
 <li><strong>Hot-season heat</strong> can make slide queues uncomfortable</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Families with children</strong> — primary demographic</li>
 <li><strong>Tourist day-trippers</strong> — full-day experience</li>
@@ -287,7 +271,9 @@
 <li><strong>Birthday parties / group outings</strong></li>
 <li><strong>Annual pass families</strong> — repeat visits cost-justify</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Pure adult thrill-seekers</strong> — designed family-friendly</li>
 <li><strong>Quiet contemplation seekers</strong> — high energy</li>
@@ -295,12 +281,25 @@
 <li><strong>Single-day Pattaya visitors</strong> with packed itineraries</li>
 <li><strong>Walking Street based</strong> travelers without transport</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | 9 9, Tambon Na Chom Thian, Sattahip, Chonburi 20250 | | Opened | May 5, 2016 | | Area | 184,000 sqm — largest in SE Asia | | Slides | 26 slides / 34 lanes | | Lazy river | 600m around natural hill | | Wave pool | Double design with 150m beach | | Theme | Ramayana / Ramakien Hindu-Thai mythology | | TripAdvisor 2019 | #1 Asia / #10 World | | Distance from Pattaya | 20 km south | | Day pass | ~฿1,200-1,800 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>9 9, Tambon Na Chom Thian, Sattahip, Chonburi 20250</dd></div>
+<div class="fact-row"><dt>Opened</dt><dd>May 5, 2016</dd></div>
+<div class="fact-row"><dt>Area</dt><dd>184,000 sqm — largest in SE Asia</dd></div>
+<div class="fact-row"><dt>Slides</dt><dd>26 slides / 34 lanes</dd></div>
+<div class="fact-row"><dt>Lazy river</dt><dd>600m around natural hill</dd></div>
+<div class="fact-row"><dt>Wave pool</dt><dd>Double design with 150m beach</dd></div>
+<div class="fact-row"><dt>Theme</dt><dd>Ramayana / Ramakien Hindu-Thai mythology</dd></div>
+<div class="fact-row"><dt>TripAdvisor 2019</dt><dd>#1 Asia / #10 World</dd></div>
+<div class="fact-row"><dt>Distance from Pattaya</dt><dd>20 km south</dd></div>
+<div class="fact-row"><dt>Day pass</dt><dd>~฿1,200-1,800</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (10)</summary>
         <ul>

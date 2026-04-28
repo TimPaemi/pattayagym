@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Seafari is the oldest scuba diving operation in Pattaya and one of the first dive centers ever to open in Thailand — founded by Bill Burbridge in 1970. The center is British-owned, PADI 5-Star IDC certified, and located 2 minutes from Pattaya Beach Road behind Mike&#39;s Mall. With over 55 years of cont" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily, dive trips depart mornings; shop hours 8:00-18:00 typical"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,30 +57,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=watersports">watersports</a> &nbsp;/&nbsp; Seafari PADI Dive Centre
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=watersports">watersports</a>
+      <span class="bc-sep">›</span>
+      <span>Seafari PADI Dive Centre</span>
     </div>
 
-    <span class="venue-cat-pill">watersports</span>
-    <h1 class="venue-h1">Seafari PADI Dive Centre</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">watersports</span>
+      <h1 class="venue-h1">Seafari PADI Dive Centre</h1>
+      <p class="venue-lede">Seafari is the oldest scuba diving operation in Pattaya and one of the first dive centers ever to open in Thailand — founded by Bill Burbridge in 1970. The center is British-owned, PADI 5-Star IDC certified, and located 2 minutes from Pattaya Beach Road behind Mike&#39;s Mall. With o…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Behind Mike&#39;s Mall — 2 min from Pattaya Beach Road</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily, dive trips depart mornings; shop hours 8:00-18:00 typical</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Behind Mike&#39;s Mall — 2 min from Pattaya Beach Road</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily, dive trips depart mornings; shop hours 8:00-18:00 typical</span>
+        <span class="meta-chip meta-chip-accent">⭐ First scuba diving operation to open in Pattaya (1970) and one of the first in all of Thailand</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://seafari.co.th/" target="_blank" rel="noopener">Official Website</a>
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/Seafaridivepattaya" rel="noopener" target="_blank">Facebook</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://seafari.co.th/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        <a class="btn btn-ghost" href="https://facebook.com/Seafaridivepattaya" target="_blank" rel="noopener">Facebook</a>
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Seafari PADI Dive Centre</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Seafari is the <strong>oldest scuba diving operation in Pattaya</strong> and one of the <strong>first dive centers ever to open in Thailand</strong> — founded by <strong>Bill Burbridge</strong> in <strong>1970</strong>. The center is <strong>British-owned, PADI 5-Star IDC certified</strong>, and located <strong>2 minutes from Pattaya Beach Road behind Mike's Mall</strong>. With over <strong>55 years of continuous diving heritage</strong> in Pattaya waters, Seafari represents the foundational layer of Thai recreational diving — the operation that essentially <strong>introduced PADI scuba diving to the Eastern Seaboard</strong>.</p>
 <p>Course pricing starts at <strong>฿7,500 for entry-level certifications</strong> and ranges up to <strong>฿20,200</strong> for advanced and professional-level training. A current promotion bundles <strong>PADI Open Water + 50% off Advanced Course</strong> — meaningful savings for divers planning to certify through both levels.</p>
 <p>For travelers wanting <strong>the longest pedigree, deepest institutional knowledge, and PADI 5-Star IDC service standards</strong> in Pattaya, Seafari is one of two top choices (alongside Pattaya Dive Centre on Beach Road). Different visitors prefer different operators — Seafari for its historical legacy and IDC tier; Pattaya Dive Centre for its CDC tier and Beach Road frontage.</p>
@@ -189,7 +168,8 @@
 <li><strong>HTMS Sattakut</strong> — popular wreck dive</li>
 </ul>
 <p>The wrecks are covered in <strong>soft corals, sponges, sea fans</strong> and host <strong>batfish, barracuda, lionfish, giant groupers</strong>.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Oldest scuba diving operation in Pattaya</strong> (1970) — founded by Bill Burbridge</li>
 <li><strong>First-generation PADI center</strong> in Thailand</li>
@@ -203,14 +183,18 @@
 <li><strong>55+ years of continuous Pattaya operations</strong></li>
 <li><strong>Daily dive trips for certified divers</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Pricing slightly above regional average</strong> — premium tier dive center</li>
 <li><strong>Pattaya water visibility</strong> generally 5-15m vs. Andaman Coast 20-30m+</li>
 <li><strong>Tourist-area location</strong> can be busy peak season</li>
 <li><strong>Boat-based diving only</strong> — no shore diving from this center</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>First-time divers</strong> wanting Discover Scuba in central Pattaya</li>
 <li><strong>Open Water through Divemaster students</strong> committed to PADI progression</li>
@@ -219,18 +203,31 @@
 <li><strong>Heritage-conscious divers</strong> wanting to dive with Pattaya's first operator</li>
 <li><strong>English-speaking visitors</strong> prioritizing British-owned operation</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Andaman-coast quality visibility seekers</strong> (Phuket, Krabi, Similan offer better viz)</li>
 <li><strong>Pure budget divers</strong> — cheaper Jomtien operators exist</li>
 <li><strong>Travelers staying outside central Pattaya</strong> without convenient transport</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Behind Mike's Mall, 2 min from Pattaya Beach Road | | Founded | 1970 by Bill Burbridge | | Status | First scuba diving operation in Pattaya | | Ownership | British-owned | | PADI tier | 5-Star IDC (Instructor Development Centre) | | Course range | ฿7,500 entry → ฿20,200 advanced | | Promotion | Open Water + 50% off Advanced Course | | Languages | English, Thai | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Behind Mike's Mall, 2 min from Pattaya Beach Road</dd></div>
+<div class="fact-row"><dt>Founded</dt><dd>1970 by Bill Burbridge</dd></div>
+<div class="fact-row"><dt>Status</dt><dd>First scuba diving operation in Pattaya</dd></div>
+<div class="fact-row"><dt>Ownership</dt><dd>British-owned</dd></div>
+<div class="fact-row"><dt>PADI tier</dt><dd>5-Star IDC (Instructor Development Centre)</dd></div>
+<div class="fact-row"><dt>Course range</dt><dd>฿7,500 entry → ฿20,200 advanced</dd></div>
+<div class="fact-row"><dt>Promotion</dt><dd>Open Water + 50% off Advanced Course</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (10)</summary>
         <ul>

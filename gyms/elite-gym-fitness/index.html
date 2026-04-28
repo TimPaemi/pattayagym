@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Elite Gym &amp; Fitness Pattaya is one of the newest and most heavily invested commercial gym builds in the city — a 23 million baht facility opened in September 2022 that occupies 950 square meters of fully air-conditioned space on Sukhumvit Road, between Soi 42 and 44, opposite Soi 65. The constructio" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -40,35 +41,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily 06:30-22:00"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -86,36 +58,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=fitness">fitness</a> &nbsp;/&nbsp; Elite Gym &amp; Fitness Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=fitness">fitness</a>
+      <span class="bc-sep">›</span>
+      <span>Elite Gym &amp; Fitness Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">fitness</span>
-    <h1 class="venue-h1">Elite Gym &amp; Fitness Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">fitness</span>
+      <h1 class="venue-h1">Elite Gym &amp; Fitness Pattaya</h1>
+      <p class="venue-lede">Elite Gym &amp; Fitness Pattaya is one of the newest and most heavily invested commercial gym builds in the city — a 23 million baht facility opened in September 2022 that occupies 950 square meters of fully air-conditioned space on Sukhumvit Road, between Soi 42 and 44, opposite Soi…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Sukhumvit Road (between Soi 42 and 44, opposite Soi 65)</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily 06:30-22:00</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Sukhumvit Road (between Soi 42 and 44, opposite Soi 65)</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily 06:30-22:00</span>
+        <span class="meta-chip meta-chip-accent">⭐ 23-million-baht 2022 build — 950 sqm fully air-conditioned facility with state-of-the-art equipment</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://elitegympattaya.com/" target="_blank" rel="noopener">Official Website</a>
-      <a href="tel:+66981919421">Call +66 98 1919 421</a>
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/elite.gym.pattaya" rel="noopener" target="_blank">Facebook</a> · <a href="https://instagram.com/elite.gym.pattaya" rel="noopener" target="_blank">Instagram</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://elitegympattaya.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        <a class="btn btn-secondary" href="tel:+66981919421">📞 +66 98 1919 421</a>
+        <a class="btn btn-ghost" href="https://facebook.com/elite.gym.pattaya" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://instagram.com/elite.gym.pattaya" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Elite Gym & Fitness Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Elite Gym & Fitness Pattaya is <strong>one of the newest and most heavily invested commercial gym builds in the city</strong> — a <strong>23 million baht facility opened in September 2022</strong> that occupies <strong>950 square meters of fully air-conditioned space</strong> on <strong>Sukhumvit Road, between Soi 42 and 44, opposite Soi 65</strong>. The construction budget alone — <strong>roughly USD 650,000+</strong> — signals <strong>a meaningful capital commitment to high-end equipment, modern infrastructure, and clean design</strong> that distinguishes Elite from older neighborhood gyms in the area.</p>
 <p>The Sukhumvit location places Elite <strong>firmly in the East Pattaya / Naklua corridor</strong> — accessible by the city's main north-south arterial, easy reach from East Pattaya condos, Naklua hotels, and Sukhumvit-corridor expat residences. Operating <strong>06:30 to 22:00 seven days a week</strong>, the gym serves the early-bird-to-late-evening demographic without the 24/7 commitment of Jetts or Fitness 7, but with <strong>a more polished and recently outfitted environment</strong> than most independent gyms.</p>
 <p>For 2022+ Pattaya residents and visitors who prioritize <strong>brand-new equipment, fresh facilities, AC comfort, and modern training environment</strong>, Elite Gym & Fitness is among the strongest options on the Sukhumvit / East Pattaya / Naklua axis.</p>
 <h2>Position in the Pattaya Fitness Market</h2>
 <p>Pattaya commercial fitness positioned by recency and Sukhumvit-corridor focus:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>Premium private</strong> | FITZ Club | Royal Cliff luxury | | <strong>Largest independent</strong> | Muscle Factory | Pratamnak multi-floor bodybuilding | | <strong>24/7 large central</strong> | Fitness 7 (The Avenue), Jetts | Central + 24/7 | | <strong>2022 modern Sukhumvit</strong> | <strong>Elite Gym & Fitness</strong> | <strong>23M baht 950 sqm AC build</strong> | | <strong>East Pattaya community</strong> | Castra Gym | Family-run Darkside ฿7K/year |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium private</strong></td><td>FITZ Club</td><td>Royal Cliff luxury</td></tr><tr><td><strong>Largest independent</strong></td><td>Muscle Factory</td><td>Pratamnak multi-floor bodybuilding</td></tr><tr><td><strong>24/7 large central</strong></td><td>Fitness 7 (The Avenue), Jetts</td><td>Central + 24/7</td></tr><tr><td><strong>2022 modern Sukhumvit</strong></td><td><strong>Elite Gym & Fitness</strong></td><td><strong>23M baht 950 sqm AC build</strong></td></tr><tr><td><strong>East Pattaya community</strong></td><td>Castra Gym</td><td>Family-run Darkside ฿7K/year</td></tr></tbody></table></div>
 <p>Elite's specific niche: <strong>newest investment-grade Sukhumvit gym</strong> — modern infrastructure for the Sukhumvit / Naklua / East Pattaya residential corridor.</p>
 <h2>23 Million Baht Build — What It Bought</h2>
 <p>The 23M baht (~USD 650K+) construction budget in Pattaya context:</p>
@@ -229,7 +208,8 @@
 <li><strong>Personal training:</strong> ~฿800-1,500/session</li>
 <li><strong>Group classes:</strong> typically included or modest add-on</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>2022 build</strong> — newest commercial gym in the area</li>
 <li><strong>23 million baht investment</strong> — modern infrastructure</li>
@@ -242,7 +222,9 @@
 <li><strong>Multilingual staff</strong> — Russian/English/Thai</li>
 <li><strong>Clean and spacious</strong> per reviews</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Not 24/7</strong> — Fitness 7 and Jetts win on hours</li>
 <li><strong>Mid-premium pricing</strong> vs. budget independent gyms</li>
@@ -252,7 +234,9 @@
 <li><strong>Recent build</strong> = less established member community</li>
 <li><strong>Sukhumvit traffic</strong> can be heavy at peak hours</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>East Pattaya / Sukhumvit / Naklua residents</strong></li>
 <li><strong>Modern equipment seekers</strong> — newest available</li>
@@ -262,7 +246,9 @@
 <li><strong>Couples / professional expats</strong> — polished environment</li>
 <li><strong>Beginner + intermediate</strong> trainers</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>24/7 access seekers</strong> — Fitness 7, Jetts better</li>
 <li><strong>Walking Street based</strong> travelers — central gyms better</li>
@@ -270,12 +256,25 @@
 <li><strong>Combat sports trainees</strong> — Muay Thai camps directly</li>
 <li><strong>Pure budget seekers</strong> — Castra ฿7K/year unbeatable</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Sukhumvit Rd between Soi 42 & 44, opposite Soi 65 | | Opened | September 2022 | | Build budget | 23 million baht | | Floor space | 950 sqm | | AC | Fully air-conditioned | | Hours | Daily 06:30-22:00 | | Phone | +66 98 1919 421 | | Day pass | ~฿300-500 | | Monthly | ~฿1,800-2,800 | | Languages | English, Thai, Russian | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Sukhumvit Rd between Soi 42 & 44, opposite Soi 65</dd></div>
+<div class="fact-row"><dt>Opened</dt><dd>September 2022</dd></div>
+<div class="fact-row"><dt>Build budget</dt><dd>23 million baht</dd></div>
+<div class="fact-row"><dt>Floor space</dt><dd>950 sqm</dd></div>
+<div class="fact-row"><dt>AC</dt><dd>Fully air-conditioned</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Daily 06:30-22:00</dd></div>
+<div class="fact-row"><dt>Phone</dt><dd>+66 98 1919 421</dd></div>
+<div class="fact-row"><dt>Day pass</dt><dd>~฿300-500</dd></div>
+<div class="fact-row"><dt>Monthly</dt><dd>~฿1,800-2,800</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai, Russian</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (9)</summary>
         <ul>

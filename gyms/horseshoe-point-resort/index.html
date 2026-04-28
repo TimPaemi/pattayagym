@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Horseshoe Point Resort &amp; Country Club is the largest, most institutionally credentialed, most multi-disciplinary equestrian and adventure sports facility in Thailand and one of the leading riding schools in all of Asia. Spread over 1,500 acres of green countryside near Mabprachan Reservoir in East P" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -40,35 +41,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily — riding school sessions throughout the day, restaurants and other facilities daily"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -86,30 +58,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=equestrian">equestrian</a> &nbsp;/&nbsp; Horseshoe Point Resort &amp; Country Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=equestrian">equestrian</a>
+      <span class="bc-sep">›</span>
+      <span>Horseshoe Point Resort &amp; Country Club</span>
     </div>
 
-    <span class="venue-cat-pill">equestrian</span>
-    <h1 class="venue-h1">Horseshoe Point Resort &amp; Country Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">equestrian</span>
+      <h1 class="venue-h1">Horseshoe Point Resort &amp; Country Club</h1>
+      <p class="venue-lede">Horseshoe Point Resort &amp; Country Club is the largest, most institutionally credentialed, most multi-disciplinary equestrian and adventure sports facility in Thailand and one of the leading riding schools in all of Asia. Spread over 1,500 acres of green countryside near Mabprachan…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Mabprachan Reservoir / East Pattaya</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily — riding school sessions throughout the day, restaurants and other facilities daily</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Mabprachan Reservoir / East Pattaya</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — riding school sessions throughout the day, restaurants and other facilities daily</span>
+        
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      <a href="tel:+6638253599">Call +66 38 253 599</a>
-      
+      <div class="venue-actions">
+        
+        
+        <a class="btn btn-secondary" href="tel:+6638253599">📞 +66 38 253 599</a>
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Horseshoe Point Resort & Country Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Horseshoe Point Resort & Country Club is <strong>the largest, most institutionally credentialed, most multi-disciplinary equestrian and adventure sports facility in Thailand</strong> and one of the leading riding schools in all of Asia. Spread over <strong>1,500 acres of green countryside</strong> near <strong>Mabprachan Reservoir</strong> in East Pattaya, the property combines <strong>a serious international-standard equestrian operation</strong> (100+ horses across rare breeds, 5 indoor and outdoor arenas, dressage, polo, classical riding, full curriculum from kids' pony rides to advanced trail) with an <strong>adventure-sports playground</strong> (paintball, zipline, mountain biking, archery, water games, multi-sport field) and an <strong>on-site resort with accommodation, dining, and event facilities</strong>.</p>
 <p>For travelers in Pattaya wanting <strong>anything to do with horses</strong> — from a 15-minute first-time pony ride for a child to an intensive multi-week classical riding clinic — Horseshoe Point is essentially the only serious answer. It's also the city's strongest <strong>family activity destination</strong>, with paintball, zipline, and adventure programming sitting alongside the riding stables.</p>
 <h2>History & Pedigree — Why This Place Is Different</h2>
@@ -217,7 +196,8 @@
 <li><strong>Helmet and safety culture</strong> — proper equipment, attentive staff</li>
 </ul>
 <p>Some reviews note that the <strong>resort hotel side</strong> is inconsistent in quality (some rooms dated, some excellent) — the equestrian side is the consistent star.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>The largest and most credentialed equestrian facility in Thailand</strong></li>
 <li>TEF-certified + Portuguese classical riding lineage (Centro Equestre da Leziria Grande)</li>
@@ -233,7 +213,9 @@
 <li>Tack shop for equipment needs</li>
 <li>Hosts pony eventing competitions and championships</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Activity pricing not published online</strong> — must call or visit to confirm 2026 rates</li>
 <li><strong>Resort accommodation can be inconsistent</strong> — better as day-visit destination than overnight unless you book carefully</li>
@@ -241,7 +223,9 @@
 <li><strong>Premium pricing for serious equestrian programs</strong> — classical riding clinics and full lesson programs reflect the institutional caliber of instruction</li>
 <li><strong>Hot-season heat</strong> can be challenging on the property despite the indoor arenas</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Families with kids</strong> wanting a multi-activity day (riding + paintball + lunch + zipline)</li>
 <li><strong>Serious equestrian students</strong> — dressage, classical riding, polo, jumping</li>
@@ -250,19 +234,36 @@
 <li><strong>Multi-day riding-holiday travelers</strong> wanting accommodation + lessons bundled</li>
 <li><strong>Pattaya residents</strong> with regular riding interest (lesson packages, horse boarding)</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Travelers with no transport</strong> to reach East Pattaya</li>
 <li><strong>Pure beach-vacation travelers</strong> wanting walkable activities near the beach</li>
 <li><strong>Cheap-quick tourist photo-op seekers</strong> — the facility's pricing reflects its pedigree</li>
 <li><strong>Adult-only nightlife travelers</strong> — the property's vibe is family/sports/wedding-oriented</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | 100 Moo 9 Pong, Bang Lamung, Chonburi 20150 | | Phone | +66 38 253 599 | | Riding School Founded | 1999 | | Total Land | 1,500 acres | | Horses | 100+ (Lusitano, Lipizzaner, Warmbloods, Arabs, Falabella, Thai pony, Appaloosa) | | Arenas | 5 (indoor + outdoor) | | Certifications | Thailand Equestrian Federation (TEF) + Centro Equestre da Leziria Grande (Portugal) | | Activities | Riding · Polo · Paintball · Zipline · Mountain biking · Archery · Water balls | | Distance to Pattaya Beach | 14.5 km / 25-30 min by car | | Distance to Mabprachan Lake | ~10 min | | Accommodation | On-site (hotel + villas) | | Hours | Daily, riding school sessions throughout the day | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>100 Moo 9 Pong, Bang Lamung, Chonburi 20150</dd></div>
+<div class="fact-row"><dt>Phone</dt><dd>+66 38 253 599</dd></div>
+<div class="fact-row"><dt>Riding School Founded</dt><dd>1999</dd></div>
+<div class="fact-row"><dt>Total Land</dt><dd>1,500 acres</dd></div>
+<div class="fact-row"><dt>Horses</dt><dd>100+ (Lusitano, Lipizzaner, Warmbloods, Arabs, Falabella, Thai pony, Appaloosa)</dd></div>
+<div class="fact-row"><dt>Arenas</dt><dd>5 (indoor + outdoor)</dd></div>
+<div class="fact-row"><dt>Certifications</dt><dd>Thailand Equestrian Federation (TEF) + Centro Equestre da Leziria Grande (Portugal)</dd></div>
+<div class="fact-row"><dt>Activities</dt><dd>Riding · Polo · Paintball · Zipline · Mountain biking · Archery · Water balls</dd></div>
+<div class="fact-row"><dt>Distance to Pattaya Beach</dt><dd>14.5 km / 25-30 min by car</dd></div>
+<div class="fact-row"><dt>Distance to Mabprachan Lake</dt><dd>~10 min</dd></div>
+<div class="fact-row"><dt>Accommodation</dt><dd>On-site (hotel + villas)</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Daily, riding school sessions throughout the day</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (13)</summary>
         <ul>

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Mountain Shadow Country Club is a strategic 18-hole par-72 course built on a former mango plantation halfway between Bangkok and Pattaya, originally designed by American architect Ron Fream in 1993 and comprehensively renovated in 2004. The course&#39;s identity is anchored in two unusual features: its " />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily — first tee from sunrise; last tee typically 14:30"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Mountain Shadow Country Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Mountain Shadow Country Club</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Mountain Shadow Country Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Mountain Shadow Country Club</h1>
+      <p class="venue-lede">Mountain Shadow Country Club is a strategic 18-hole par-72 course built on a former mango plantation halfway between Bangkok and Pattaya, originally designed by American architect Ron Fream in 1993 and comprehensively renovated in 2004. The course&#39;s identity is anchored in two un…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Halfway between Bangkok and Pattaya / Si Racha</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Halfway between Bangkok and Pattaya / Si Racha</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip meta-chip-accent">⭐ Built on a former mango plantation — Ron Fream design with 4 island greens</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Mountain Shadow Country Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Mountain Shadow Country Club is <strong>a strategic 18-hole par-72 course built on a former mango plantation</strong> halfway between Bangkok and Pattaya, originally <strong>designed by American architect Ron Fream in 1993</strong> and <strong>comprehensively renovated in 2004</strong>. The course's identity is anchored in two unusual features: <strong>its mango-plantation heritage</strong>, with mature trees and tropical flowers providing the visual backdrop to every hole, and its <strong>four island greens</strong> — an exceptional concentration that gives Mountain Shadow a recurring island-shot rhythm not found at any other Pattaya-region course.</p>
 <p>The 6,722-yard layout is <strong>shorter than many championship courses</strong> but <strong>longer in playability</strong> because of the <strong>demanding strategic design</strong>: narrow undulating fairways, abundant water, fast greens with significant slope, and the ever-present risk of <strong>getting blocked out by the trees</strong> if a tee shot strays. The course is widely regarded as <strong>a thinking golfer's course rather than a bomber's course</strong> — distance off the tee matters less than positioning, shot shape, and approach precision.</p>
 <p>For golfers who appreciate <strong>strategic test-of-thought design</strong> with a <strong>botanical-garden visual atmosphere</strong>, Mountain Shadow rewards patient, accurate play in ways that brute-force long courses don't. The 41-minute drive from Pattaya is comfortably manageable, and the course has earned a <strong>loyal following among repeat Pattaya golfers</strong> who've moved past the resort headliners.</p>
 <h2>Position in the Pattaya Golf Market</h2>
 <p>The Pattaya golf scene's strategic-design tier:</p>
-<p>| Course | Designer | Strategic Identity | |---|---|---| | <strong>Khao Kheow</strong> | Pete Dye | Stadium-style, Asian Tour | | <strong>Mountain Shadow</strong> | <strong>Ron Fream</strong> | <strong>4 island greens, mango plantation</strong> | | <strong>Treasure Hill</strong> | Yoshikazu Kato | Jungle, narrow fairways | | <strong>Laem Chabang Int'l</strong> | Jack Nicklaus | Multi-routing, signature design | | <strong>Burapha A-D</strong> | Andy Dye, Stuart Owen | 36 holes value | | <strong>Phoenix Gold</strong> | Dennis Griffiths | Strategic, hilly |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Designer</th><th>Strategic Identity</th></tr></thead><tbody><tr><td><strong>Khao Kheow</strong></td><td>Pete Dye</td><td>Stadium-style, Asian Tour</td></tr><tr><td><strong>Mountain Shadow</strong></td><td><strong>Ron Fream</strong></td><td><strong>4 island greens, mango plantation</strong></td></tr><tr><td><strong>Treasure Hill</strong></td><td>Yoshikazu Kato</td><td>Jungle, narrow fairways</td></tr><tr><td><strong>Laem Chabang Int'l</strong></td><td>Jack Nicklaus</td><td>Multi-routing, signature design</td></tr><tr><td><strong>Burapha A-D</strong></td><td>Andy Dye, Stuart Owen</td><td>36 holes value</td></tr><tr><td><strong>Phoenix Gold</strong></td><td>Dennis Griffiths</td><td>Strategic, hilly</td></tr></tbody></table></div>
 <p>Mountain Shadow's <strong>specific signature is the four-island-green concentration</strong> — a distinguishing architectural feature that creates <strong>a unique playing rhythm</strong> of recurring full-water-carry approach shots.</p>
 <h2>Course Designer — Ron Fream</h2>
 <p>The course was designed by <strong>Ron Fream</strong>, an American golf course architect with global Thailand-region work, and <strong>renovated in 2004</strong> to address evolving turf grass technology and updated playing standards. Fream's design language tends toward:</p>
@@ -206,7 +185,8 @@
 <li><strong>Approximately 1 hour 15 min from Bangkok</strong></li>
 <li><strong>Strategic location</strong> for Bangkok-Pattaya golf trips combining multiple courses</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Ron Fream design</strong> with strategic test-of-thought architecture</li>
 <li><strong>Four island greens</strong> — exceptional concentration globally</li>
@@ -219,7 +199,9 @@
 <li><strong>Driving range</strong> for pre-round warm-up</li>
 <li><strong>Less crowded</strong> than the headline Pattaya courses</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Strategic difficulty</strong> punishes high handicappers</li>
 <li><strong>Narrow fairways and trees</strong> make hitting the cut critical</li>
@@ -229,7 +211,9 @@
 <li><strong>Mid-tier conditions</strong> vs. premium maintained courses</li>
 <li><strong>41-minute drive</strong> from Pattaya — not ultra-convenient</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Mid-to-low handicap players</strong> who can shape shots</li>
 <li><strong>Strategic-design appreciators</strong> seeking thinking-golfer challenges</li>
@@ -239,19 +223,32 @@
 <li><strong>Photographers</strong> appreciating the mango-plantation aesthetic</li>
 <li><strong>Couples or groups</strong> wanting moderate pricing with quality course</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Beginners and high handicappers</strong> — the trees and water punish errors</li>
 <li><strong>Distance bombers</strong> without shot shape — narrow fairways constrain</li>
 <li><strong>Premium-resort seekers</strong> — clubhouse is functional not luxurious</li>
 <li><strong>One-shot tourists</strong> wanting quick convenience (further than nearby Phoenix or Burapha)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Designer | Ron Fream (1993); renovated 2004 | | Holes | 18 | | Par | 72 | | Yardage | 6,722 yards | | Heritage | Built on former mango plantation | | Signature | 4 island greens — rare global concentration | | Distance from Pattaya | 41-minute drive | | Green fee + cart + caddy | ~฿1,800-3,000 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Designer</dt><dd>Ron Fream (1993); renovated 2004</dd></div>
+<div class="fact-row"><dt>Holes</dt><dd>18</dd></div>
+<div class="fact-row"><dt>Par</dt><dd>72</dd></div>
+<div class="fact-row"><dt>Yardage</dt><dd>6,722 yards</dd></div>
+<div class="fact-row"><dt>Heritage</dt><dd>Built on former mango plantation</dd></div>
+<div class="fact-row"><dt>Signature</dt><dd>4 island greens — rare global concentration</dd></div>
+<div class="fact-row"><dt>Distance from Pattaya</dt><dd>41-minute drive</dd></div>
+<div class="fact-row"><dt>Green fee + cart + caddy</dt><dd>~฿1,800-3,000</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (10)</summary>
         <ul>

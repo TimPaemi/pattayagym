@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Tony&#39;s Fitness is Pattaya&#39;s largest fitness gym chain and one of the city&#39;s longest-running commercial fitness operations. Founded in 2002 on Walking Street by Tony (the eponymous owner), the brand has grown over more than two decades into the largest group of fitness centers in Pattaya — approximat" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿",
   "openingHours": "Multi-location — main 3rd Road branch open 24 hours; others vary"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,30 +57,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=fitness">fitness</a> &nbsp;/&nbsp; Tony&#39;s Fitness Gym (Tony&#39;s Group Pattaya)
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=fitness">fitness</a>
+      <span class="bc-sep">›</span>
+      <span>Tony&#39;s Fitness Gym (Tony&#39;s Group Pattaya)</span>
     </div>
 
-    <span class="venue-cat-pill">fitness</span>
-    <h1 class="venue-h1">Tony&#39;s Fitness Gym (Tony&#39;s Group Pattaya)</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">fitness</span>
+      <h1 class="venue-h1">Tony&#39;s Fitness Gym (Tony&#39;s Group Pattaya)</h1>
+      <p class="venue-lede">Tony&#39;s Fitness is Pattaya&#39;s largest fitness gym chain and one of the city&#39;s longest-running commercial fitness operations. Founded in 2002 on Walking Street by Tony (the eponymous owner), the brand has grown over more than two decades into the largest group of fitness centers in …</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Multi-location — Wongamat, Soi Buakhao, Soi Diana Inn, 3rd Road + ~10 Pattaya locations</span>
-      <span>💰 ฿</span>
-      <span>🕐 Multi-location — main 3rd Road branch open 24 hours; others vary</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Multi-location — Wongamat, Soi Buakhao, Soi Diana Inn, 3rd Road + ~10 Pattaya locations</span>
+        <span class="meta-chip">💰 ฿</span>
+        <span class="meta-chip">🕐 Multi-location — main 3rd Road branch open 24 hours; others vary</span>
+        <span class="meta-chip meta-chip-accent">⭐ Largest fitness center group in Pattaya — ~10 gyms, multiple amenities</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/tonysgrouppattaya" rel="noopener" target="_blank">Facebook</a></span>
+      <div class="venue-actions">
+        
+        
+        
+        <a class="btn btn-ghost" href="https://facebook.com/tonysgrouppattaya" target="_blank" rel="noopener">Facebook</a>
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Tony's Fitness Gym (Tony's Group Pattaya)</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Tony's Fitness is <strong>Pattaya's largest fitness gym chain</strong> and one of the city's longest-running commercial fitness operations. Founded in <strong>2002</strong> on <strong>Walking Street</strong> by <strong>Tony</strong> (the eponymous owner), the brand has grown over more than two decades into the <strong>largest group of fitness centers in Pattaya</strong> — approximately <strong>10 locations spanning from Wongamat in the north to Jomtien in the south</strong>, plus additional locations in Bangkok and Si Racha. The flagship is the <strong>3rd Road branch near South Pattaya Road</strong>, which <strong>operates 24 hours</strong> and includes a <strong>large swimming pool</strong> alongside the main gym floor.</p>
 <p>Tony's positioning is <strong>iconic Pattaya commercial fitness at lifetime-membership-tier value pricing for residents</strong>, and <strong>moderately priced for tourists</strong>. With <strong>lifetime membership rates starting around ฿120/day</strong> and <strong>monthly rates from ฿800</strong> (locals) up to <strong>฿5,000/month for tourists</strong>, the value structure rewards local residents and long-stays significantly more than walk-in travelers.</p>
 <p>For Pattaya residents wanting a <strong>multi-location membership accessible across the city</strong>, Tony's is the historic default choice. The brand's reputation is mixed (some locations rated dim/dirty, others rated highly equipped) — visit a specific branch before committing.</p>
@@ -193,7 +172,8 @@
 </ul>
 <h3>Recommendation</h3>
 <p>For first-time visitors, <strong>check the 3rd Road flagship</strong> as the gold-standard Tony's experience. Smaller branches like Soi Buakhao have variable maintenance.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Largest fitness chain in Pattaya</strong> — ~10 locations across the city</li>
 <li><strong>Single membership covers all Tony's Pattaya branches</strong></li>
@@ -205,7 +185,9 @@
 <li><strong>Multi-location flexibility</strong> — train across Pattaya during the day</li>
 <li><strong>Bangkok + Si Racha network</strong> for traveling members</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Tourist pricing is expensive</strong> (฿250/day, ฿5,000/month) vs. competitors at ฿140/day and ฿1,400/month</li>
 <li><strong>Quality variable by branch</strong> — Soi Buakhao reviews flag cleanliness issues</li>
@@ -213,7 +195,9 @@
 <li><strong>Lifetime-membership commercial model</strong> can feel pushy to short-stay travelers</li>
 <li><strong>Less premium feel</strong> than Fitz Club, less bargain than Universe Gym</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Pattaya residents and long-stay expats</strong> — lifetime member value is exceptional</li>
 <li><strong>Multi-location members</strong> wanting access across the city</li>
@@ -221,18 +205,32 @@
 <li><strong>24-hour trainers</strong> (3rd Road only)</li>
 <li><strong>Pool + sauna + steam combo seekers</strong> on a budget (3rd Road)</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Short-stay tourists</strong> without committing to lifetime — better value at Universe, Coco, Fitness 7</li>
 <li><strong>Premium experience seekers</strong> (try Fitz Club at Royal Cliff)</li>
 <li><strong>Travelers wanting consistent branch quality</strong> without checking specific locations</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Founded | 2002 by Tony | | Pattaya locations | ~10 (Wongamat to Jomtien) | | Plus | Bangkok, Si Racha | | Flagship | 3rd Road near South Pattaya Road, 24-hour | | Flagship amenities | Pool, sauna, steam, jacuzzi, cardio + aerobics studios | | Lifetime member day | ~฿120 | | Lifetime member monthly | ~฿800 | | Tourist day | ~฿250 | | Tourist monthly | ~฿5,000 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Founded</dt><dd>2002 by Tony</dd></div>
+<div class="fact-row"><dt>Pattaya locations</dt><dd>~10 (Wongamat to Jomtien)</dd></div>
+<div class="fact-row"><dt>Plus</dt><dd>Bangkok, Si Racha</dd></div>
+<div class="fact-row"><dt>Flagship</dt><dd>3rd Road near South Pattaya Road, 24-hour</dd></div>
+<div class="fact-row"><dt>Flagship amenities</dt><dd>Pool, sauna, steam, jacuzzi, cardio + aerobics studios</dd></div>
+<div class="fact-row"><dt>Lifetime member day</dt><dd>~฿120</dd></div>
+<div class="fact-row"><dt>Lifetime member monthly</dt><dd>~฿800</dd></div>
+<div class="fact-row"><dt>Tourist day</dt><dd>~฿250</dd></div>
+<div class="fact-row"><dt>Tourist monthly</dt><dd>~฿5,000</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (4)</summary>
         <ul>

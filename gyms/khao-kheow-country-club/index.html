@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Khao Kheow Country Club is one of the most architecturally significant golf courses in the Pattaya/Eastern Seaboard region — a 27-hole Pete Dye-designed championship facility that opened in 1992 and has hosted multiple Asian Tour events including the Thailand Open. The Pete Dye signature is unmistak" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily — first tee from sunrise; last tee typically 14:30"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Khao Kheow Country Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Khao Kheow Country Club</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Khao Kheow Country Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Khao Kheow Country Club</h1>
+      <p class="venue-lede">Khao Kheow Country Club is one of the most architecturally significant golf courses in the Pattaya/Eastern Seaboard region — a 27-hole Pete Dye-designed championship facility that opened in 1992 and has hosted multiple Asian Tour events including the Thailand Open. The Pete Dye s…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Bang Phra / Si Racha (between Bangkok and Pattaya)</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Bang Phra / Si Racha (between Bangkok and Pattaya)</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip meta-chip-accent">⭐ Pete Dye-designed 27 holes — host of Asian Tour Thailand Open</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Khao Kheow Country Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Khao Kheow Country Club is <strong>one of the most architecturally significant golf courses in the Pattaya/Eastern Seaboard region</strong> — a <strong>27-hole Pete Dye-designed championship facility</strong> that opened in <strong>1992</strong> and has hosted <strong>multiple Asian Tour events</strong> including the <strong>Thailand Open</strong>. The Pete Dye signature is unmistakable: <strong>railroad-tie bunker walls, severe contouring, large strategic ponds, mounded fairways, and the iconic island-green par-3 17th</strong> that plays as the defining shot in any Khao Kheow round.</p>
 <p>The 27-hole layout — divided into <strong>Courses A, B, and C</strong> — gives the club a level of routing variety that <strong>18-hole-only Pattaya courses can't match</strong>. Players combine any two nines for an 18-hole round, with each combination presenting a different shot sequence and difficulty profile. <strong>Course A and B together</strong> typically play as the championship combination used in Asian Tour competition.</p>
 <p>For golfers who appreciate <strong>strategic, design-led architecture from one of golf history's defining course architects</strong>, and for those wanting a course that <strong>hosts professional tournaments rather than just package tourists</strong>, Khao Kheow is among the most distinguished options in Pattaya.</p>
 <h2>Position in the Pattaya Golf Market</h2>
 <p>Pattaya/Eastern Seaboard's championship-tier courses include:</p>
-<p>| Course | Designer | Distinction | |---|---|---| | <strong>Khao Kheow</strong> | <strong>Pete Dye</strong> | <strong>27 holes, Asian Tour host, island green</strong> | | <strong>Laem Chabang International</strong> | Jack Nicklaus | 27 holes, Nicklaus Signature design | | <strong>Siam Country Club Old/New/Plantation</strong> | Tom Wishon, Schmidt-Curley | LPGA Honda Tour host | | <strong>Burapha Golf Club</strong> | Andy Dye, Stuart Owen | 36 holes, value-tier | | <strong>St Andrews 2000</strong> | Roger Packard | Links-style, hilltop | | <strong>Mountain Shadow</strong> | Ron Fream | Renovated 2004, narrow strategic |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Designer</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Khao Kheow</strong></td><td><strong>Pete Dye</strong></td><td><strong>27 holes, Asian Tour host, island green</strong></td></tr><tr><td><strong>Laem Chabang International</strong></td><td>Jack Nicklaus</td><td>27 holes, Nicklaus Signature design</td></tr><tr><td><strong>Siam Country Club Old/New/Plantation</strong></td><td>Tom Wishon, Schmidt-Curley</td><td>LPGA Honda Tour host</td></tr><tr><td><strong>Burapha Golf Club</strong></td><td>Andy Dye, Stuart Owen</td><td>36 holes, value-tier</td></tr><tr><td><strong>St Andrews 2000</strong></td><td>Roger Packard</td><td>Links-style, hilltop</td></tr><tr><td><strong>Mountain Shadow</strong></td><td>Ron Fream</td><td>Renovated 2004, narrow strategic</td></tr></tbody></table></div>
 <p>Khao Kheow's specific positioning is <strong>"the Pete Dye experience"</strong> — a defining American golf design school not heavily represented in Asia.</p>
 <h2>Course Designer — Pete Dye</h2>
 <p>The course's signature is its association with <strong>Pete Dye (1925-2020)</strong>, one of the most influential American golf course architects of the 20th century. Dye's portfolio includes:</p>
@@ -232,7 +211,8 @@
 <li><strong>From Bangkok:</strong> ~110-120 km, ~1.5 hour drive</li>
 <li><strong>Often combined with Bangpra International</strong> for Bang Phra-area golf trips</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Pete Dye design</strong> — among the most architecturally significant courses in Asia</li>
 <li><strong>27 holes</strong> — variety unmatched by 18-hole-only competitors</li>
@@ -245,7 +225,9 @@
 <li><strong>Multiple-language caddy support</strong></li>
 <li><strong>Multiple-tee design</strong> for skill variety</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Premium pricing</strong> — meaningfully above value courses</li>
 <li><strong>Strategic difficulty</strong> punishes high handicappers</li>
@@ -254,7 +236,9 @@
 <li><strong>Cart-on-path mandates</strong> on some holes slow play</li>
 <li><strong>Distance from Pattaya</strong> makes for early-morning starts</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Mid-to-low handicap players</strong> who appreciate strategic design</li>
 <li><strong>Course-architecture connoisseurs</strong> — Pete Dye admirers especially</li>
@@ -263,19 +247,32 @@
 <li><strong>27-hole golfers</strong> wanting variety in a single venue</li>
 <li><strong>Photography-minded players</strong> — the island green is iconic</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Pure beginners</strong> who'll struggle with the strategic demands</li>
 <li><strong>Bombers</strong> who can't shape shots or position off the tee</li>
 <li><strong>Budget-tier seekers</strong> (Burapha, Treasure Hill cheaper)</li>
 <li><strong>Travelers based in central Pattaya</strong> wanting walkable courses</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Designer | Pete Dye | | Opened | 1992 | | Holes | 27 (Courses A, B, C — combine for 18) | | Par | 72 | | Tournament heritage | Asian Tour Thailand Open host | | Signature hole | Par-3 17th — island green (Pete Dye TPC Sawgrass nod) | | Distance from Pattaya | 40-50 km / 35-40 min drive | | Green fee + cart + caddy | ~฿2,800-4,500 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Designer</dt><dd>Pete Dye</dd></div>
+<div class="fact-row"><dt>Opened</dt><dd>1992</dd></div>
+<div class="fact-row"><dt>Holes</dt><dd>27 (Courses A, B, C — combine for 18)</dd></div>
+<div class="fact-row"><dt>Par</dt><dd>72</dd></div>
+<div class="fact-row"><dt>Tournament heritage</dt><dd>Asian Tour Thailand Open host</dd></div>
+<div class="fact-row"><dt>Signature hole</dt><dd>Par-3 17th — island green (Pete Dye TPC Sawgrass nod)</dd></div>
+<div class="fact-row"><dt>Distance from Pattaya</dt><dd>40-50 km / 35-40 min drive</dd></div>
+<div class="fact-row"><dt>Green fee + cart + caddy</dt><dd>~฿2,800-4,500</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (8)</summary>
         <ul>

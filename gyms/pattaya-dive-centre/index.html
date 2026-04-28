@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Pattaya Dive Centre is the longest-established PADI dive center on Pattaya&#39;s Beach Road — over 20 years at the same location between Soi 10 and Soi 11 — and the only Beach Road PADI 5-Star Dive Center. It is English-owned and operated by PADI Master Instructor David Wright, who brings more than 25 y" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily 8:00-19:00 (typical PADI dive shop hours)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,30 +57,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=watersports">watersports</a> &nbsp;/&nbsp; Pattaya Dive Centre
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=watersports">watersports</a>
+      <span class="bc-sep">›</span>
+      <span>Pattaya Dive Centre</span>
     </div>
 
-    <span class="venue-cat-pill">watersports</span>
-    <h1 class="venue-h1">Pattaya Dive Centre</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">watersports</span>
+      <h1 class="venue-h1">Pattaya Dive Centre</h1>
+      <p class="venue-lede">Pattaya Dive Centre is the longest-established PADI dive center on Pattaya&#39;s Beach Road — over 20 years at the same location between Soi 10 and Soi 11 — and the only Beach Road PADI 5-Star Dive Center. It is English-owned and operated by PADI Master Instructor David Wright, who b…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya Beach Road (between Soi 10 and Soi 11)</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily 8:00-19:00 (typical PADI dive shop hours)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya Beach Road (between Soi 10 and Soi 11)</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily 8:00-19:00 (typical PADI dive shop hours)</span>
+        
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.divecentrepattaya.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/Pattayadivecentrethailand" rel="noopener" target="_blank">Facebook</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.divecentrepattaya.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        <a class="btn btn-ghost" href="https://facebook.com/Pattayadivecentrethailand" target="_blank" rel="noopener">Facebook</a>
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Pattaya Dive Centre</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Pattaya Dive Centre is <strong>the longest-established PADI dive center on Pattaya's Beach Road</strong> — over <strong>20 years at the same location</strong> between Soi 10 and Soi 11 — and the <strong>only Beach Road PADI 5-Star Dive Center</strong>. It is <strong>English-owned and operated by PADI Master Instructor David Wright</strong>, who brings <strong>more than 25 years of dive industry experience</strong>. The center holds the rare <strong>PADI CDC (Career Development Centre)</strong> status — meaning the highest tier of PADI affiliation, the elite for instructor training and career development. It is also a <strong>Tec (Technical Diving) center</strong> offering technical diving programs, decompression certifications, and trimix training for advanced divers.</p>
 <p>For travelers wanting <strong>the longest-established, most-credentialed, English-language dive center on Pattaya Beach Road</strong>, Pattaya Dive Centre is the default top choice. Day-trip prices of <strong>฿3,200 for certified divers</strong> and <strong>฿4,500 for first-time Discover Scuba Diving</strong> are competitive with the broader Pattaya dive market while delivering CDC-tier training quality.</p>
 <h2>Heritage & Credentials</h2>
@@ -191,7 +170,8 @@
 <li><strong>Daily walk-in possible</strong> for trip booking and course inquiry</li>
 <li><strong>Boat departures:</strong> typically morning, return mid-afternoon</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Longest-established PADI dive center on Pattaya Beach Road</strong> (20+ years)</li>
 <li><strong>PADI CDC (Career Development Centre) status</strong> — top tier of PADI affiliation</li>
@@ -205,7 +185,9 @@
 <li><strong>Trips run daily</strong> for certified divers</li>
 <li><strong>Pattaya wreck diving specialist</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Tourism-focused location</strong> can be busy in peak season</li>
 <li><strong>Pricing is mid-tier</strong> — cheaper dive centers exist in Jomtien (less central)</li>
@@ -213,7 +195,9 @@
 <li><strong>Pattaya water visibility varies</strong> — generally 5-15m, not Andaman-coast quality</li>
 <li><strong>Wet season (June-October)</strong> can have rougher seas</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>First-time divers</strong> wanting Discover Scuba in central Pattaya</li>
 <li><strong>Certified recreational divers</strong> wanting daily trip access</li>
@@ -223,18 +207,31 @@
 <li><strong>Travelers staying in central Pattaya</strong> wanting walking-distance dive shop</li>
 <li><strong>Long-stay students</strong> doing PADI internship through CDC pathway</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Travelers based in Jomtien</strong> wanting walk-to-shop access (Jomtien Dive Center, Mermaid's Dive nearby instead)</li>
 <li><strong>Pure budget divers</strong> (slightly higher than non-Beach-Road operators)</li>
 <li><strong>Andaman-coast quality visibility seekers</strong> (Phuket, Krabi, Similan Islands offer better viz)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Beach Road, between Soi 10 and Soi 11, Pattaya | | Owner | David Wright (English, PADI Master Instructor, 25+ yrs) | | Established | 20+ years at same Beach Road location | | PADI tier | 5-Star CDC (Career Development Centre) — top tier | | Tec diving | Yes (Tec 40/45/50, Trimix, Rebreather) | | Languages | English, Thai | | Cert dive day trip | ~฿3,200 (2 dives) | | Discover Scuba Diving | ~฿4,500 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Beach Road, between Soi 10 and Soi 11, Pattaya</dd></div>
+<div class="fact-row"><dt>Owner</dt><dd>David Wright (English, PADI Master Instructor, 25+ yrs)</dd></div>
+<div class="fact-row"><dt>Established</dt><dd>20+ years at same Beach Road location</dd></div>
+<div class="fact-row"><dt>PADI tier</dt><dd>5-Star CDC (Career Development Centre) — top tier</dd></div>
+<div class="fact-row"><dt>Tec diving</dt><dd>Yes (Tec 40/45/50, Trimix, Rebreather)</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai</dd></div>
+<div class="fact-row"><dt>Cert dive day trip</dt><dd>~฿3,200 (2 dives)</dd></div>
+<div class="fact-row"><dt>Discover Scuba Diving</dt><dd>~฿4,500</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (11)</summary>
         <ul>

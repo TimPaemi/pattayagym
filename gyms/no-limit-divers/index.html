@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="No Limit Divers is the highest-tier dive center in Pattaya for professional and instructor-level training — a PADI 5-Star Instructor Development Center (IDC) led by Gary Phillips, one of the few PADI Platinum Course Directors in Asia. Where most Pattaya dive shops cap out at delivering recreational " />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily — boat departures morning; office reception 09:00-18:00 typically"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=watersports">watersports</a> &nbsp;/&nbsp; No Limit Divers
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=watersports">watersports</a>
+      <span class="bc-sep">›</span>
+      <span>No Limit Divers</span>
     </div>
 
-    <span class="venue-cat-pill">watersports</span>
-    <h1 class="venue-h1">No Limit Divers</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">watersports</span>
+      <h1 class="venue-h1">No Limit Divers</h1>
+      <p class="venue-lede">No Limit Divers is the highest-tier dive center in Pattaya for professional and instructor-level training — a PADI 5-Star Instructor Development Center (IDC) led by Gary Phillips, one of the few PADI Platinum Course Directors in Asia. Where most Pattaya dive shops cap out at deli…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya / Jomtien</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily — boat departures morning; office reception 09:00-18:00 typically</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya / Jomtien</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily — boat departures morning; office reception 09:00-18:00 typically</span>
+        <span class="meta-chip meta-chip-accent">⭐ PADI 5-Star IDC Center with Platinum Course Director — full pro-tier internships</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://nolimitdive.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://nolimitdive.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>No Limit Divers</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>No Limit Divers is <strong>the highest-tier dive center in Pattaya for professional and instructor-level training</strong> — a <strong>PADI 5-Star Instructor Development Center (IDC)</strong> led by <strong>Gary Phillips</strong>, one of the few <strong>PADI Platinum Course Directors in Asia</strong>. Where most Pattaya dive shops cap out at delivering recreational courses (Open Water through Rescue Diver), No Limit Divers is <strong>fully licensed to take students from zero diving experience all the way to certified PADI Open Water Scuba Instructor in-house</strong> — a vertical-stack capability that only a handful of dive operations in Thailand match.</p>
 <p>The operation runs <strong>two fully equipped dive centers</strong> in Pattaya/Jomtien with <strong>VIP-class boats</strong> servicing the offshore reef and wreck sites of the Gulf of Thailand, and offers <strong>dedicated multi-week internship programs</strong> including a <strong>Zero-to-Hero pathway</strong> for complete beginners and a <strong>fast-track 10-week Divemaster-to-Instructor Pro Plus program</strong> for serious career divers.</p>
 <p>For travelers who want <strong>the most credentialed pro-track diving education in the Pattaya region</strong>, who plan to <strong>work in the dive industry</strong>, or who simply want to be taught by <strong>Asia's senior PADI brass</strong>, No Limit Divers is the unambiguous top choice.</p>
 <h2>Position in the Pattaya Dive Market</h2>
 <p>Pattaya has multiple PADI shops, but they fall into clearly tiered groups:</p>
-<p>| Tier | Examples | Capability | |---|---|---| | <strong>Recreational entry-level</strong> | Various Pattaya beach dive shops | Open Water, fun dives only | | <strong>Recreational + Advanced</strong> | Mermaid's Dive Center, Aquanauts, Adventure Divers | OW, AOW, Rescue, fun dives | | <strong>PADI 5-Star Dive Resort</strong> | Pattaya Dive Centre, Jomtien Dive Center, Seafari | Full recreational + DM with audit | | <strong>PADI 5-Star CDC</strong> | Mermaid's Dive Center | Career Development Center designation | | <strong>PADI 5-Star IDC</strong> | <strong>No Limit Divers</strong> | <strong>Full Instructor Development Course in-house</strong> |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Capability</th></tr></thead><tbody><tr><td><strong>Recreational entry-level</strong></td><td>Various Pattaya beach dive shops</td><td>Open Water, fun dives only</td></tr><tr><td><strong>Recreational + Advanced</strong></td><td>Mermaid's Dive Center, Aquanauts, Adventure Divers</td><td>OW, AOW, Rescue, fun dives</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td>Pattaya Dive Centre, Jomtien Dive Center, Seafari</td><td>Full recreational + DM with audit</td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Mermaid's Dive Center</td><td>Career Development Center designation</td></tr><tr><td><strong>PADI 5-Star IDC</strong></td><td><strong>No Limit Divers</strong></td><td><strong>Full Instructor Development Course in-house</strong></td></tr></tbody></table></div>
 <p>The <strong>5-Star IDC tier</strong> is meaningfully different from a 5-Star Dive Resort or even 5-Star CDC. <strong>IDC affiliation</strong> means PADI has audited and certified the dive center to <strong>train new instructors</strong> — a multi-week curriculum culminating in an Instructor Examination (IE) that creates new PADI dive professionals.</p>
 <p>To run an IDC, the dive center must have:</p>
 <ul>
@@ -249,7 +228,8 @@
 <li><strong>Quick reboard ladders</strong></li>
 </ul>
 <p>The boat quality is meaningfully above the budget shop tier.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>PADI 5-Star IDC</strong> — top tier of PADI affiliate certification</li>
 <li><strong>Gary Phillips, PADI Platinum Course Director</strong> — among Asia's senior dive educators</li>
@@ -263,7 +243,9 @@
 <li><strong>Career-grade professional certification</strong> ready for industry employment</li>
 <li><strong>Decades of operating reputation</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Premium pricing</strong> vs. budget Pattaya dive shops for casual fun dives</li>
 <li><strong>Pattaya reef visibility</strong> is mid-tier (3-15m typical) — Phuket/Similan is better</li>
@@ -271,7 +253,9 @@
 <li><strong>Strong career-track focus</strong> — not the right vibe for casual one-shot tourists</li>
 <li><strong>High demand for IDC slots</strong> — book ahead</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Aspiring dive professionals</strong> — Divemaster, Instructor, Course Director track</li>
 <li><strong>Career changers</strong> seeking dive industry employment</li>
@@ -280,18 +264,30 @@
 <li><strong>Advanced divers</strong> wanting wreck access (HTMS Khram)</li>
 <li><strong>Diving educators</strong> wanting Platinum-tier mentorship</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>One-day vacation divers</strong> wanting cheapest fun dive</li>
 <li><strong>Pure resort-relaxation divers</strong> (Phuket / Similan / Koh Tao have better recreational viz)</li>
 <li><strong>Budget backpackers</strong> seeking lowest-cost OW certification</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Type | PADI 5-Star Instructor Development Center (IDC) | | Course Director | Gary Phillips — PADI Platinum | | Centers | 2 (Pattaya + Jomtien) | | Boats | VIP-class twin-hull | | Internships | Divemaster, Zero-to-Hero, 10-Week DM-to-Instructor | | Top dive site | HTMS Khram wreck (74m warship at 30m depth) | | Languages | English, Thai, multiple European | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Type</dt><dd>PADI 5-Star Instructor Development Center (IDC)</dd></div>
+<div class="fact-row"><dt>Course Director</dt><dd>Gary Phillips — PADI Platinum</dd></div>
+<div class="fact-row"><dt>Centers</dt><dd>2 (Pattaya + Jomtien)</dd></div>
+<div class="fact-row"><dt>Boats</dt><dd>VIP-class twin-hull</dd></div>
+<div class="fact-row"><dt>Internships</dt><dd>Divemaster, Zero-to-Hero, 10-Week DM-to-Instructor</dd></div>
+<div class="fact-row"><dt>Top dive site</dt><dd>HTMS Khram wreck (74m warship at 30m depth)</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai, multiple European</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (10)</summary>
         <ul>

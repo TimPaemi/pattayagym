@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Pattaya Golf Driving Range is the city&#39;s go-to practice facility for golfers wanting affordable warm-up, swing work, or lesson sessions without paying championship-course green fees. Open from approximately 07:00 to 22:00 daily — a generous 15-hour window — the range is priced at approximately ฿60 p" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿",
   "openingHours": "Daily 07:00-22:00 typical"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Pattaya Golf Driving Range
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Pattaya Golf Driving Range</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Pattaya Golf Driving Range</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Pattaya Golf Driving Range</h1>
+      <p class="venue-lede">Pattaya Golf Driving Range is the city&#39;s go-to practice facility for golfers wanting affordable warm-up, swing work, or lesson sessions without paying championship-course green fees. Open from approximately 07:00 to 22:00 daily — a generous 15-hour window — the range is priced at…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya</span>
-      <span>💰 ฿</span>
-      <span>🕐 Daily 07:00-22:00 typical</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya</span>
+        <span class="meta-chip">💰 ฿</span>
+        <span class="meta-chip">🕐 Daily 07:00-22:00 typical</span>
+        <span class="meta-chip meta-chip-accent">⭐ Affordable practice range — ฿60 per tray (~40 balls), 7am-10pm hours, lessons + club rental</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Pattaya Golf Driving Range</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Pattaya Golf Driving Range is <strong>the city's go-to practice facility for golfers wanting affordable warm-up, swing work, or lesson sessions without paying championship-course green fees</strong>. Open from approximately <strong>07:00 to 22:00 daily</strong> — a generous 15-hour window — the range is <strong>priced at approximately ฿60 per tray of ~40 balls</strong>, making it <strong>one of the most affordable golf practice facilities in central Pattaya</strong>. The range offers <strong>club rental for casual visitors who don't bring their own gear, and professional lessons through resident teaching pros</strong> for golfers wanting structured improvement.</p>
 <p>The range fills <strong>a critical gap in the Pattaya golf scene</strong>. The city's championship courses (Khao Kheow, Laem Chabang, Treasure Hill, Phoenix Gold, etc.) are <strong>40-50 minutes from central Pattaya</strong> and require <strong>a half-day commitment plus ฿1,500-4,500 in green fees</strong>. For golfers who want to <strong>warm up the swing before a course round, work on specific shot patterns, take a lesson, or simply hit balls without a full course session</strong>, the in-city driving range is <strong>dramatically more accessible</strong>.</p>
 <p>The Pattaya driving range scene also includes <strong>Diana Driving Range</strong> (30 floodlit bays, 200-yard range, pro instructors, on-site restaurant), <strong>Golf Hub Pattaya</strong> (indoor simulator + state-of-the-art club fitting on Soi Buakhao + East Pattaya), <strong>Siam Country Club Waterside Range</strong> (premium real-grass chip and putt area), and <strong>300 Yards Driving Range</strong> (independent operation). Pattaya Golf Driving Range sits in <strong>the affordable mainstream tier</strong> — a working range for working golfers.</p>
 <h2>Position in the Pattaya Practice Facility Market</h2>
 <p>Pattaya practice ranges tier:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>Premium course-attached</strong> | Siam Country Club Waterside, Burapha range | Real grass + championship integration | | <strong>Indoor / simulator</strong> | Golf Hub Pattaya | TrackMan / GC Quad launch monitor | | <strong>Floodlit dedicated range</strong> | Diana Driving Range | 30 bays + 200 yards + restaurant | | <strong>Affordable mainstream</strong> | <strong>Pattaya Golf Driving Range</strong>, 300 Yards | <strong>Mat bays + value pricing</strong> |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium course-attached</strong></td><td>Siam Country Club Waterside, Burapha range</td><td>Real grass + championship integration</td></tr><tr><td><strong>Indoor / simulator</strong></td><td>Golf Hub Pattaya</td><td>TrackMan / GC Quad launch monitor</td></tr><tr><td><strong>Floodlit dedicated range</strong></td><td>Diana Driving Range</td><td>30 bays + 200 yards + restaurant</td></tr><tr><td><strong>Affordable mainstream</strong></td><td><strong>Pattaya Golf Driving Range</strong>, 300 Yards</td><td><strong>Mat bays + value pricing</strong></td></tr></tbody></table></div>
 <p>Pattaya Golf Driving Range's specific position: <strong>the affordable workhorse range</strong> — basic but functional, value-priced, accessible.</p>
 <h2>Driving Range Practice — Why It Matters</h2>
 <p>For Pattaya golfers, range practice delivers value that course play can't:</p>
@@ -186,7 +165,8 @@
 <h2>Daily Routine</h2>
 <p>A typical session at Pattaya Golf Driving Range:</p>
 <p>1. <strong>Arrival</strong> — pay for tray (or trays) 2. <strong>Bay assignment</strong> — pick available bay 3. <strong>Stretching / warm-up</strong> — 5-10 minutes 4. <strong>Wedge / short iron warm-up</strong> — 5-10 balls of half-swings 5. <strong>Iron progression</strong> — work through 9, 7, 5 irons 6. <strong>Driver work</strong> — 10-15 balls full swing 7. <strong>Specialty shots</strong> — fades, draws, punch shots 8. <strong>Cool-down</strong> — back to wedge for feel 9. <strong>Total time:</strong> 30-45 minutes typical</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Affordable</strong> — ~฿60 per tray</li>
 <li><strong>Long hours</strong> — 07:00-22:00</li>
@@ -199,7 +179,9 @@
 <li><strong>Pre-round warm-up</strong> convenient for any Pattaya course player</li>
 <li><strong>Casual atmosphere</strong> — no membership pressure</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Mat bays</strong> rather than real grass — different feel from course</li>
 <li><strong>Range balls</strong> rather than tour balls</li>
@@ -210,7 +192,9 @@
 <li><strong>Crowded peak evening</strong> hours</li>
 <li><strong>Not suitable for short-game practice</strong> typically (no chipping/putting greens)</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Pre-round warm-up</strong> for Pattaya course players</li>
 <li><strong>Beginners</strong> taking first golf lessons</li>
@@ -221,7 +205,9 @@
 <li><strong>Late-evening practice</strong> sessions</li>
 <li><strong>Junior development</strong> programs</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Premium real-grass practice</strong> — try Siam Country Club Waterside</li>
 <li><strong>Indoor / simulator training</strong> — try Golf Hub Pattaya</li>
@@ -229,12 +215,23 @@
 <li><strong>Tournament-grade equipment testing</strong> — try Golf Hub Pattaya for fitting</li>
 <li><strong>Walking + putting practice</strong> — try a course's practice green</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Pattaya, Chonburi | | Hours | Daily 07:00-22:00 | | Tray price | ~฿60 (~40 balls) | | Club rental | Available | | Lessons | Professional pros available | | Surface | Mat bays | | Floodlit | Yes (evening play) | | Best for | Warm-up + practice + lessons + budget | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Pattaya, Chonburi</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Daily 07:00-22:00</dd></div>
+<div class="fact-row"><dt>Tray price</dt><dd>~฿60 (~40 balls)</dd></div>
+<div class="fact-row"><dt>Club rental</dt><dd>Available</dd></div>
+<div class="fact-row"><dt>Lessons</dt><dd>Professional pros available</dd></div>
+<div class="fact-row"><dt>Surface</dt><dd>Mat bays</dd></div>
+<div class="fact-row"><dt>Floodlit</dt><dd>Yes (evening play)</dd></div>
+<div class="fact-row"><dt>Best for</dt><dd>Warm-up + practice + lessons + budget</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (8)</summary>
         <ul>

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Euro Badminton is an East Pattaya badminton facility located just off Soi Chaiyaphruek 2 that distinguishes itself from other dedicated-badminton venues in the city by integrating badminton courts with a swimming pool and on-site eating area — creating a multi-amenity sports-and-food experience rath" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿",
   "openingHours": "Daily — verify directly at venue"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=racquet">racquet</a> &nbsp;/&nbsp; Euro Badminton
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=racquet">racquet</a>
+      <span class="bc-sep">›</span>
+      <span>Euro Badminton</span>
     </div>
 
-    <span class="venue-cat-pill">racquet</span>
-    <h1 class="venue-h1">Euro Badminton</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">racquet</span>
+      <h1 class="venue-h1">Euro Badminton</h1>
+      <p class="venue-lede">Euro Badminton is an East Pattaya badminton facility located just off Soi Chaiyaphruek 2 that distinguishes itself from other dedicated-badminton venues in the city by integrating badminton courts with a swimming pool and on-site eating area — creating a multi-amenity sports-and-…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Soi Chaiyaphruek 2 / East Pattaya</span>
-      <span>💰 ฿</span>
-      <span>🕐 Daily — verify directly at venue</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Soi Chaiyaphruek 2 / East Pattaya</span>
+        <span class="meta-chip">💰 ฿</span>
+        <span class="meta-chip">🕐 Daily — verify directly at venue</span>
+        <span class="meta-chip meta-chip-accent">⭐ East Pattaya badminton facility with multiple courts plus pool and on-site eating area</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Euro Badminton</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Euro Badminton is <strong>an East Pattaya badminton facility located just off Soi Chaiyaphruek 2</strong> that distinguishes itself from other dedicated-badminton venues in the city by <strong>integrating badminton courts with a swimming pool and on-site eating area</strong> — creating <strong>a multi-amenity sports-and-food experience</strong> rather than pure badminton-only court rental.</p>
 <p>The location — <strong>off Soi Chaiyaphruek 2 in East Pattaya</strong> — places Euro Badminton <strong>squarely in the East Pattaya / Darkside residential corridor</strong>, accessible to <strong>Mabprachan Lake area, Khao Talo area, and East Pattaya condo developments</strong>. This positioning makes it <strong>the natural badminton destination for East Pattaya residents and Russian/European expats</strong> who live in the eastern condo belt.</p>
 <p>The combined amenity model — courts + pool + food — encourages <strong>all-day or half-day visits</strong> rather than purely transactional court rentals. Players can train in the morning, swim mid-day, eat lunch on-site, and return for evening hits — all without leaving the venue. For families and groups especially, this integration creates <strong>a sports-club lifestyle experience at badminton-club pricing</strong>.</p>
 <h2>Position in the Pattaya Badminton Market</h2>
 <p>Pattaya badminton venues:</p>
-<p>| Venue | Type | Distinction | |---|---|---| | <strong>Pattaya Tennis & Badminton Inter Club</strong> | Multi-sport | Indoor badminton + tennis + pickleball | | <strong>Pattaya Sports Club</strong> | Multi-sport civic | Badminton + charity community | | <strong>Diamond Badminton</strong> | Dedicated single-sport | South Pattaya 3rd Road | | <strong>Euro Badminton</strong> | <strong>Dedicated + amenities</strong> | <strong>East Pattaya + pool + food</strong> | | <strong>X-Zyte Badminton</strong> | Dedicated single-sport | Independent | | <strong>Various hotel courts</strong> | Hotel-attached | Guest-priority |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Venue</th><th>Type</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Pattaya Tennis & Badminton Inter Club</strong></td><td>Multi-sport</td><td>Indoor badminton + tennis + pickleball</td></tr><tr><td><strong>Pattaya Sports Club</strong></td><td>Multi-sport civic</td><td>Badminton + charity community</td></tr><tr><td><strong>Diamond Badminton</strong></td><td>Dedicated single-sport</td><td>South Pattaya 3rd Road</td></tr><tr><td><strong>Euro Badminton</strong></td><td><strong>Dedicated + amenities</strong></td><td><strong>East Pattaya + pool + food</strong></td></tr><tr><td><strong>X-Zyte Badminton</strong></td><td>Dedicated single-sport</td><td>Independent</td></tr><tr><td><strong>Various hotel courts</strong></td><td>Hotel-attached</td><td>Guest-priority</td></tr></tbody></table></div>
 <p>Euro Badminton's specific position: <strong>East Pattaya badminton with pool + food amenities</strong> — a small-club lifestyle experience.</p>
 <h2>East Pattaya / Soi Chaiyaphruek</h2>
 <h3>Geographic Context</h3>
@@ -185,7 +164,8 @@
 <li><strong>Adult casual coaching</strong> for improvement seekers</li>
 <li><strong>Thai-language primary instruction</strong></li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>East Pattaya / Soi Chaiyaphruek 2 location</strong> — convenient for Darkside residents</li>
 <li><strong>Multi-amenity bundle</strong> — courts + pool + food</li>
@@ -196,7 +176,9 @@
 <li><strong>Russian / European expat</strong> appropriate language environment</li>
 <li><strong>Half-day or full-day visit capability</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Limited online presence</strong> — direct visit recommended for info</li>
 <li><strong>Hours not published online</strong></li>
@@ -205,7 +187,9 @@
 <li><strong>Basic infrastructure</strong> — not premium-tier</li>
 <li><strong>English communication possibly limited</strong></li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>East Pattaya / Darkside residents</strong> seeking badminton</li>
 <li><strong>Russian / European expats</strong> in East Pattaya condos</li>
@@ -215,19 +199,31 @@
 <li><strong>Budget-conscious players</strong></li>
 <li><strong>Thai-cultural-comfortable</strong> travelers</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Central / Walking Street</strong> based travelers — Pattaya Tennis & Badminton Inter Club closer</li>
 <li><strong>English-only-speakers</strong> seeking international service — Inter Club better</li>
 <li><strong>Premium amenities</strong> — basic infrastructure</li>
 <li><strong>Pure badminton training</strong> — multi-amenity may distract</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Soi Chaiyaphruek 2, East Pattaya | | Type | Dedicated badminton + integrated amenities | | Courts | Multiple indoor | | Amenities | Pool + on-site eating area | | Hours | Verify directly | | Hourly rate | ~฿100-250 | | Languages | Thai (primary), basic English | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Soi Chaiyaphruek 2, East Pattaya</dd></div>
+<div class="fact-row"><dt>Type</dt><dd>Dedicated badminton + integrated amenities</dd></div>
+<div class="fact-row"><dt>Courts</dt><dd>Multiple indoor</dd></div>
+<div class="fact-row"><dt>Amenities</dt><dd>Pool + on-site eating area</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Verify directly</dd></div>
+<div class="fact-row"><dt>Hourly rate</dt><dd>~฿100-250</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>Thai (primary), basic English</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (7)</summary>
         <ul>

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Pattaya Scuba Adventures is a PADI dive center serving the Pattaya near-island reef cluster — primarily Koh Larn (Coral Island), Koh Sak, and Koh Krok, all within a 30-minute boat ride off the Pattaya coast. The center caters to the wide spectrum of recreational divers: from first-time bubble-blower" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Boat departures morning; office reception 09:00-18:00"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=watersports">watersports</a> &nbsp;/&nbsp; Pattaya Scuba Adventures
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=watersports">watersports</a>
+      <span class="bc-sep">›</span>
+      <span>Pattaya Scuba Adventures</span>
     </div>
 
-    <span class="venue-cat-pill">watersports</span>
-    <h1 class="venue-h1">Pattaya Scuba Adventures</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">watersports</span>
+      <h1 class="venue-h1">Pattaya Scuba Adventures</h1>
+      <p class="venue-lede">Pattaya Scuba Adventures is a PADI dive center serving the Pattaya near-island reef cluster — primarily Koh Larn (Coral Island), Koh Sak, and Koh Krok, all within a 30-minute boat ride off the Pattaya coast. The center caters to the wide spectrum of recreational divers: from firs…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya / boat operations from Bali Hai Pier</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Boat departures morning; office reception 09:00-18:00</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya / boat operations from Bali Hai Pier</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Boat departures morning; office reception 09:00-18:00</span>
+        <span class="meta-chip meta-chip-accent">⭐ PADI dive center serving the Pattaya near-island reefs (Koh Larn, Koh Sak, Koh Krok)</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.pattaya-scuba-adventures.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.pattaya-scuba-adventures.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Pattaya Scuba Adventures</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Pattaya Scuba Adventures is <strong>a PADI dive center serving the Pattaya near-island reef cluster</strong> — primarily <strong>Koh Larn (Coral Island), Koh Sak, and Koh Krok</strong>, all within a <strong>30-minute boat ride</strong> off the Pattaya coast. The center caters to the <strong>wide spectrum of recreational divers</strong>: from <strong>first-time bubble-blowers booking a Discover Scuba Diving experience</strong> to <strong>certified open-water divers</strong> wanting <strong>fun-dive day trips on Pattaya's most accessible reefs</strong>.</p>
 <p>Pattaya's near-island diving offers <strong>a sheltered, beginner-friendly entry point</strong> to Thai scuba diving — with <strong>moderate visibility, calm currents, and reefs at recreational depths (5-18m)</strong> — making it different in character from the <strong>deeper, more current-driven, more famous Andaman Sea sites</strong> (Phuket, Similan Islands, Koh Tao). Pattaya near-island diving is <strong>not where you go for record-setting visibility or whale shark encounters</strong> — it's where you go for <strong>convenient, repeatable, training-ready diving from a base where you can also enjoy nightlife, shopping, and beach life</strong>.</p>
 <p>For travelers who want to <strong>try scuba in Pattaya</strong> or <strong>maintain dive certification with regular fun dives</strong>, Pattaya Scuba Adventures provides accessible, mid-tier service at the standard PADI dive shop quality level.</p>
 <h2>Position in the Pattaya Dive Market</h2>
 <p>Pattaya has multiple PADI dive operators:</p>
-<p>| Tier | Examples | Capability | |---|---|---| | <strong>PADI 5-Star IDC</strong> | No Limit Divers | Full instructor development | | <strong>PADI 5-Star CDC</strong> | Mermaid's Dive Center | Career Development Center | | <strong>PADI 5-Star Dive Resort</strong> | Pattaya Dive Centre, Jomtien Dive Center, Seafari | Full recreational + DM | | <strong>PADI Dive Center (recreational)</strong> | <strong>Pattaya Scuba Adventures</strong>, Adventure Divers | OW, AOW, fun dives | | <strong>Independent dive operators</strong> | Various beach-front | Day trips, basic |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Capability</th></tr></thead><tbody><tr><td><strong>PADI 5-Star IDC</strong></td><td>No Limit Divers</td><td>Full instructor development</td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Mermaid's Dive Center</td><td>Career Development Center</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td>Pattaya Dive Centre, Jomtien Dive Center, Seafari</td><td>Full recreational + DM</td></tr><tr><td><strong>PADI Dive Center (recreational)</strong></td><td><strong>Pattaya Scuba Adventures</strong>, Adventure Divers</td><td>OW, AOW, fun dives</td></tr><tr><td><strong>Independent dive operators</strong></td><td>Various beach-front</td><td>Day trips, basic</td></tr></tbody></table></div>
 <p>Pattaya Scuba Adventures operates in the <strong>standard PADI Dive Center recreational tier</strong> — full PADI affiliate certification but not the IDC / CDC career-track upper tiers.</p>
 <h2>Pattaya Near Islands — The Dive Region</h2>
 <p>The Pattaya near-island cluster sits <strong>6 km off the Pattaya coast</strong> — accessible by <strong>30-minute boat ride</strong> from Bali Hai Pier. The three main dive islands:</p>
@@ -160,7 +139,7 @@
 </ul>
 <h3>Why Near-Island Diving Is Different from Far-Island</h3>
 <p>Pattaya near-island diving differs meaningfully from advanced Thai diving:</p>
-<p>| Feature | Pattaya Near Islands | Phuket / Similan / Koh Tao | |---|---|---| | <strong>Depths</strong> | 5-18m | Up to 40m+ | | <strong>Visibility</strong> | 3-15m | 15-30m+ | | <strong>Currents</strong> | Mild / sheltered | Variable, sometimes strong | | <strong>Marine life</strong> | Reef fish, small sharks, turtles | Whale sharks, manta rays, big pelagics | | <strong>Best for</strong> | Training, casual fun dives | Advanced diving, photography | | <strong>Boat ride</strong> | 30 min | 1-3 hours |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Feature</th><th>Pattaya Near Islands</th><th>Phuket / Similan / Koh Tao</th></tr></thead><tbody><tr><td><strong>Depths</strong></td><td>5-18m</td><td>Up to 40m+</td></tr><tr><td><strong>Visibility</strong></td><td>3-15m</td><td>15-30m+</td></tr><tr><td><strong>Currents</strong></td><td>Mild / sheltered</td><td>Variable, sometimes strong</td></tr><tr><td><strong>Marine life</strong></td><td>Reef fish, small sharks, turtles</td><td>Whale sharks, manta rays, big pelagics</td></tr><tr><td><strong>Best for</strong></td><td>Training, casual fun dives</td><td>Advanced diving, photography</td></tr><tr><td><strong>Boat ride</strong></td><td>30 min</td><td>1-3 hours</td></tr></tbody></table></div>
 <p><strong>Pattaya near-island diving is excellent for training, refreshers, casual fun-dive vacations, and family/group introductions</strong> — but it's <strong>not the Thai diving you fly to Phuket for</strong>.</p>
 <h2>What Pattaya Scuba Adventures Offers</h2>
 <h3>Discover Scuba Diving (DSD) — No Certification Needed</h3>
@@ -229,7 +208,8 @@
 <li><strong>Equipment rental</strong> included in courses; available for fun dives</li>
 </ul>
 <p>Confirm current pricing via <a href="https://www.pattaya-scuba-adventures.com/" rel="noopener" target="_blank">pattaya-scuba-adventures.com</a>.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Convenient Pattaya operations</strong> — closer to most hotels than far-island operators</li>
 <li><strong>Sheltered near-island diving</strong> — beginner-friendly conditions</li>
@@ -240,7 +220,9 @@
 <li><strong>Flexible scheduling</strong> — daily departures</li>
 <li><strong>English communication</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Visibility lower than Andaman Sea</strong> sites (3-15m typical vs. 15-30m+)</li>
 <li><strong>Pattaya Bay water quality</strong> — some cloudiness, periodic algal influence</li>
@@ -249,7 +231,9 @@
 <li><strong>Best advanced diving requires longer boat rides</strong> to far islands or even other Thai regions</li>
 <li><strong>Standard recreational tier</strong> — not the highest-credentialed Pattaya operator (No Limit Divers / Mermaid's are PADI 5-Star IDC / CDC respectively)</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>First-time scuba</strong> trying it in Pattaya</li>
 <li><strong>Open Water certification</strong> during a Pattaya vacation</li>
@@ -258,7 +242,9 @@
 <li><strong>Budget-conscious certification seekers</strong> vs. Phuket/Koh Tao costs</li>
 <li><strong>Combined vacation</strong> — diving + Pattaya nightlife/shopping</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Pro / instructor track</strong> divers — choose No Limit Divers (5-Star IDC)</li>
 <li><strong>Big pelagic / advanced diving</strong> — go Phuket / Similan / Koh Tao</li>
@@ -266,12 +252,24 @@
 <li><strong>Wreck-focused divers</strong> — HTMS Khram requires AOW + advanced operators</li>
 <li><strong>Crystal-visibility chasers</strong> — Pattaya can't deliver Andaman-grade clarity</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | PADI tier | Standard PADI Dive Center (recreational) | | Departure pier | Bali Hai Pier, Pattaya | | Dive sites | Koh Larn, Koh Sak, Koh Krok (Pattaya near islands) | | Boat ride | ~30 minutes | | Depths | 5-18m typical | | Visibility | 3-15m | | Marine life | Reef fish, bamboo sharks, hawksbill turtles, octopus, nudibranchs | | Open Water Course | ~฿14,000-17,000 | | 2-tank fun dive | ~฿2,000-2,500 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>PADI tier</dt><dd>Standard PADI Dive Center (recreational)</dd></div>
+<div class="fact-row"><dt>Departure pier</dt><dd>Bali Hai Pier, Pattaya</dd></div>
+<div class="fact-row"><dt>Dive sites</dt><dd>Koh Larn, Koh Sak, Koh Krok (Pattaya near islands)</dd></div>
+<div class="fact-row"><dt>Boat ride</dt><dd>~30 minutes</dd></div>
+<div class="fact-row"><dt>Depths</dt><dd>5-18m typical</dd></div>
+<div class="fact-row"><dt>Visibility</dt><dd>3-15m</dd></div>
+<div class="fact-row"><dt>Marine life</dt><dd>Reef fish, bamboo sharks, hawksbill turtles, octopus, nudibranchs</dd></div>
+<div class="fact-row"><dt>Open Water Course</dt><dd>~฿14,000-17,000</dd></div>
+<div class="fact-row"><dt>2-tank fun dive</dt><dd>~฿2,000-2,500</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (9)</summary>
         <ul>

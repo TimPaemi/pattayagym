@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="First Serve Sports Club is a multi-sport private club in Pattaya that combines swimming with Swimming Association of Thailand-trained instructors, tennis courts and coaching, a gym, yoga programming, and a restaurant + juice bar serving international and Thai cuisine — all under a single membership-" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily — confirm at club"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=swimming">swimming</a> &nbsp;/&nbsp; First Serve Sports Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=swimming">swimming</a>
+      <span class="bc-sep">›</span>
+      <span>First Serve Sports Club</span>
     </div>
 
-    <span class="venue-cat-pill">swimming</span>
-    <h1 class="venue-h1">First Serve Sports Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">swimming</span>
+      <h1 class="venue-h1">First Serve Sports Club</h1>
+      <p class="venue-lede">First Serve Sports Club is a multi-sport private club in Pattaya that combines swimming with Swimming Association of Thailand-trained instructors, tennis courts and coaching, a gym, yoga programming, and a restaurant + juice bar serving international and Thai cuisine — all under …</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily — confirm at club</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily — confirm at club</span>
+        <span class="meta-chip meta-chip-accent">⭐ Multi-sport club — Swimming Association of Thailand-trained coaches + tennis + gym + yoga + restaurant</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.firstservesportsclub.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.firstservesportsclub.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>First Serve Sports Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>First Serve Sports Club is <strong>a multi-sport private club in Pattaya</strong> that combines <strong>swimming with Swimming Association of Thailand-trained instructors</strong>, <strong>tennis courts and coaching</strong>, <strong>a gym</strong>, <strong>yoga programming</strong>, and <strong>a restaurant + juice bar serving international and Thai cuisine</strong> — all under a single membership-style facility. The club differentiates from pure-swimming-pool venues like the public Naklua and Jomtien municipal pools (and from hotel pools like Hard Rock) by offering <strong>certified swim coaching pedigree alongside multi-sport amenities</strong> — making it <strong>the most comprehensive single-venue sports club for swimming-focused families</strong> in Pattaya.</p>
 <p>The swim coaching specifically holds <strong>Swimming Association of Thailand training credentials</strong> — meaning instructors are <strong>certified to the Thai national governing body's standards</strong> rather than informal or self-taught coaching. <strong>Coach Nook</strong> is highlighted in club reviews as <strong>very professional and highly recommended</strong>, and the broader instructor team is consistently praised as professional. <strong>Lessons available in Thai or English</strong> (English classes have limited time slots), making First Serve accessible to Pattaya's mixed Thai-and-international family demographic.</p>
 <p>The pricing is <strong>strikingly accessible</strong>: <strong>฿1,200/month for all-day unlimited swimming (swim as many times per day as you want)</strong> OR <strong>฿1,000/month for evening-only access (18:00-21:00)</strong>. For dedicated swimmers and families with children needing structured swim education, First Serve delivers <strong>certified coaching plus open-swim access at independent-club pricing</strong>.</p>
 <h2>Position in the Pattaya Swimming Market</h2>
 <p>Pattaya swimming infrastructure tier:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>Iconic destination pool</strong> | Hard Rock Pool (2,000 sqm) | Lifestyle / vacation centerpiece | | <strong>Premium hotel pools</strong> | Royal Cliff (FITZ Club integrated), Cape Dara, Dusit Thani | Luxury hotel-attached | | <strong>Mid-tier hotel pools</strong> | Manhattan, Cross Pattaya, various 4-star | Hotel-guest priority | | <strong>Multi-sport club with swim coaching</strong> | <strong>First Serve Sports Club</strong> | <strong>SAT-certified swim coaching + multi-sport amenities</strong> | | <strong>Public / municipal pools</strong> | Naklua public pool, Jomtien public pool | Basic, working-population | | <strong>School competition pools</strong> | Regents International | Premier student athletic | | <strong>Condo / villa private pools</strong> | Various residential | Resident-only |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Iconic destination pool</strong></td><td>Hard Rock Pool (2,000 sqm)</td><td>Lifestyle / vacation centerpiece</td></tr><tr><td><strong>Premium hotel pools</strong></td><td>Royal Cliff (FITZ Club integrated), Cape Dara, Dusit Thani</td><td>Luxury hotel-attached</td></tr><tr><td><strong>Mid-tier hotel pools</strong></td><td>Manhattan, Cross Pattaya, various 4-star</td><td>Hotel-guest priority</td></tr><tr><td><strong>Multi-sport club with swim coaching</strong></td><td><strong>First Serve Sports Club</strong></td><td><strong>SAT-certified swim coaching + multi-sport amenities</strong></td></tr><tr><td><strong>Public / municipal pools</strong></td><td>Naklua public pool, Jomtien public pool</td><td>Basic, working-population</td></tr><tr><td><strong>School competition pools</strong></td><td>Regents International</td><td>Premier student athletic</td></tr><tr><td><strong>Condo / villa private pools</strong></td><td>Various residential</td><td>Resident-only</td></tr></tbody></table></div>
 <p>First Serve's specific position: <strong>certified swim coaching + multi-sport club + open-swim access</strong> — different from pure-pool day-pass venues.</p>
 <h2>The Swim Coaching Pedigree</h2>
 <h3>Swimming Association of Thailand (SAT)</h3>
@@ -217,7 +196,8 @@
 <li><strong>Frequency:</strong> typically 1-3 sessions per week</li>
 <li><strong>Progression assessment:</strong> periodic skill checkpoints</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Swimming Association of Thailand-trained coaches</strong></li>
 <li><strong>Coach Nook</strong> highly recommended</li>
@@ -231,7 +211,9 @@
 <li><strong>On-site dining</strong> for combined meal/training visits</li>
 <li><strong>Established reputation</strong> in Pattaya swim community</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Limited online presence</strong> — direct contact for full details</li>
 <li><strong>Specific exact location</strong> not publicly clear without inquiry</li>
@@ -240,7 +222,9 @@
 <li><strong>Single facility</strong> — no multi-branch flexibility</li>
 <li><strong>Less iconic</strong> than Hard Rock destination pool</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Families</strong> wanting structured swim education for children</li>
 <li><strong>Adult swim learners</strong> — first-time or fear-of-water</li>
@@ -250,7 +234,9 @@
 <li><strong>Bilingual families</strong> wanting Thai or English coaching</li>
 <li><strong>Pattaya residents</strong> committing to long-term swim development</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Tourist day-pass visitors</strong> — go to Hard Rock or Manhattan</li>
 <li><strong>Pure-luxury experience</strong> — go to FITZ Club at Royal Cliff</li>
@@ -258,12 +244,22 @@
 <li><strong>Iconic photo-op pools</strong> — Hard Rock's free-form pool delivers</li>
 <li><strong>Combat sports</strong> — pure swim/multi-sport club doesn't offer</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | First Serve Sports Club, Pattaya | | Coaching | Swimming Association of Thailand-trained instructors | | Featured coach | Coach Nook | | Languages | Thai (primary), English (limited slots) | | All-day membership | ฿1,200/month | | Evening-only membership | ฿1,000/month (18:00-21:00) | | Multi-sport | Pool + Tennis + Gym + Yoga + Restaurant + Juice Bar | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>First Serve Sports Club, Pattaya</dd></div>
+<div class="fact-row"><dt>Coaching</dt><dd>Swimming Association of Thailand-trained instructors</dd></div>
+<div class="fact-row"><dt>Featured coach</dt><dd>Coach Nook</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>Thai (primary), English (limited slots)</dd></div>
+<div class="fact-row"><dt>All-day membership</dt><dd>฿1,200/month</dd></div>
+<div class="fact-row"><dt>Evening-only membership</dt><dd>฿1,000/month (18:00-21:00)</dd></div>
+<div class="fact-row"><dt>Multi-sport</dt><dd>Pool + Tennis + Gym + Yoga + Restaurant + Juice Bar</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (5)</summary>
         <ul>

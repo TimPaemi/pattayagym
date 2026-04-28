@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Universe Gym is one of the largest commercial fitness gyms in Pattaya and a long-time favorite of both Pattaya residents (locals + nomads + expats) and visiting fitness travelers. Located in Welcome Town, just off Sukhumvit Road in North Pattaya, the multi-level facility features at least five disti" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿",
   "openingHours": "Mon-Fri 08:00-22:00; Sat-Sun 09:00-22:00"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,35 +57,42 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=fitness">fitness</a> &nbsp;/&nbsp; Universe Gym
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=fitness">fitness</a>
+      <span class="bc-sep">›</span>
+      <span>Universe Gym</span>
     </div>
 
-    <span class="venue-cat-pill">fitness</span>
-    <h1 class="venue-h1">Universe Gym</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">fitness</span>
+      <h1 class="venue-h1">Universe Gym</h1>
+      <p class="venue-lede">Universe Gym is one of the largest commercial fitness gyms in Pattaya and a long-time favorite of both Pattaya residents (locals + nomads + expats) and visiting fitness travelers. Located in Welcome Town, just off Sukhumvit Road in North Pattaya, the multi-level facility features…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Welcome Town / North Pattaya</span>
-      <span>💰 ฿</span>
-      <span>🕐 Mon-Fri 08:00-22:00; Sat-Sun 09:00-22:00</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Welcome Town / North Pattaya</span>
+        <span class="meta-chip">💰 ฿</span>
+        <span class="meta-chip">🕐 Mon-Fri 08:00-22:00; Sat-Sun 09:00-22:00</span>
+        <span class="meta-chip meta-chip-accent">⭐ Among the largest commercial gyms in Pattaya</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/universe.gym.pattaya" rel="noopener" target="_blank">Facebook</a></span>
+      <div class="venue-actions">
+        
+        
+        
+        <a class="btn btn-ghost" href="https://facebook.com/universe.gym.pattaya" target="_blank" rel="noopener">Facebook</a>
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Universe Gym</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Universe Gym is <strong>one of the largest commercial fitness gyms in Pattaya</strong> and a long-time favorite of both <strong>Pattaya residents (locals + nomads + expats)</strong> and <strong>visiting fitness travelers</strong>. Located in <strong>Welcome Town, just off Sukhumvit Road in North Pattaya</strong>, the multi-level facility features <strong>at least five distinct training zones</strong>, offering everything from modern resistance machines and cardio equipment to free weights, functional fitness rigs, and ample floor space. With <strong>day passes starting at ฿140</strong>, <strong>monthly memberships at ฿1,400</strong>, and <strong>couples pricing</strong> that genuinely offers value, Universe Gym is one of the best-priced <strong>serious commercial gyms</strong> in Pattaya.</p>
 <p>For travelers and Pattaya residents wanting <strong>a real, fully-equipped commercial gym at unbeatable prices</strong> — without the boutique-tier markup of Fitz Club or chain markup of Jetts/True Fitness — Universe Gym is the default value pick.</p>
 <h2>Position in the Pattaya Gym Market</h2>
 <p>The Pattaya commercial gym hierarchy:</p>
-<p>| Tier | Examples | Monthly Cost | |---|---|---| | <strong>Luxury</strong> | Fitz Club (Royal Cliff) | ฿5,000-12,000+ | | <strong>Chain</strong> | Jetts Fitness, True Fitness | ฿2,500-4,500 | | <strong>Mid-tier commercial</strong> | Platinum Fitness, Coco, Castra | ฿1,500-3,000 | | <strong>Value commercial</strong> | <strong>Universe Gym</strong>, SUN Fitness, Fitness 7 | ฿1,000-1,800 | | <strong>Budget / no-frills</strong> | Tony's Gym | ฿800-1,500 |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Monthly Cost</th></tr></thead><tbody><tr><td><strong>Luxury</strong></td><td>Fitz Club (Royal Cliff)</td><td>฿5,000-12,000+</td></tr><tr><td><strong>Chain</strong></td><td>Jetts Fitness, True Fitness</td><td>฿2,500-4,500</td></tr><tr><td><strong>Mid-tier commercial</strong></td><td>Platinum Fitness, Coco, Castra</td><td>฿1,500-3,000</td></tr><tr><td><strong>Value commercial</strong></td><td><strong>Universe Gym</strong>, SUN Fitness, Fitness 7</td><td>฿1,000-1,800</td></tr><tr><td><strong>Budget / no-frills</strong></td><td>Tony's Gym</td><td>฿800-1,500</td></tr></tbody></table></div>
 <p>Universe Gym sits in the <strong>value commercial tier</strong> — meaning <strong>fully-equipped real gym</strong> at <strong>value pricing</strong>. This is <strong>the best price-to-quality ratio in Pattaya commercial fitness</strong> for visitors who don't need luxury amenities.</p>
 <h2>Location & Hours</h2>
 <h3>Address</h3>
@@ -171,7 +150,8 @@
 <li><strong>"Variety of reasonable packages and great discounts for couples"</strong></li>
 </ul>
 <p>The gym is <strong>frequently included in "Top Gyms in Pattaya" lists</strong> — typically ranking in the top 5 or top 7 lists.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Outstanding pricing</strong> — ฿140/day, ฿1,400/month, ฿2,100/month for couples</li>
 <li><strong>Among the largest commercial gyms in Pattaya</strong> — 5+ distinct training zones</li>
@@ -185,7 +165,9 @@
 <li><strong>Variety of cardio + strength + functional zones</strong></li>
 <li><strong>Couples discount tier</strong> — exceptional value for travel partners</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Equipment is "medium age"</strong> — not the newest in Pattaya (some machines aging)</li>
 <li><strong>No spa, sauna, or pool</strong> — pure gym, not a wellness resort</li>
@@ -194,7 +176,9 @@
 <li><strong>No personal training listed prominently</strong> — bring your own program</li>
 <li><strong>Basic facility aesthetics</strong> — functional, not luxury</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Pattaya expats and long-stay residents</strong> — monthly ฿1,400 is exceptional value</li>
 <li><strong>Couples training together</strong> — couples pricing is the best deal in Pattaya gym market</li>
@@ -204,7 +188,9 @@
 <li><strong>Daily-pass users</strong> — ฿140 walk-up is among the cheapest in Pattaya</li>
 <li><strong>Travelers staying in North Pattaya / Welcome Town / Naklua</strong></li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Beach-adjacent travelers</strong> without transport (other gyms more central)</li>
 <li><strong>Luxury-seeking visitors</strong> — try Fitz Club at Royal Cliff</li>
@@ -212,12 +198,25 @@
 <li><strong>Travelers wanting pool / sauna access</strong> at the gym (use a hotel gym for this)</li>
 <li><strong>People expecting brand-new latest-model equipment</strong></li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Welcome Town, 47/113 Moo 9, Nongprue, Bang Lamung 20150 | | Hours | Mon-Fri 08:00-22:00; Sat-Sun 09:00-22:00 | | Day pass | ฿140 | | 10-day pass | ฿1,200 | | Monthly | ฿1,400 | | Couples day | ฿210 | | Couples 10-day | ฿1,800 | | Couples monthly | ฿2,100 | | Layout | 5 zones across 2 floors | | Equipment | Modern resistance + cardio + free weights + functional rig | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Welcome Town, 47/113 Moo 9, Nongprue, Bang Lamung 20150</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Mon-Fri 08:00-22:00; Sat-Sun 09:00-22:00</dd></div>
+<div class="fact-row"><dt>Day pass</dt><dd>฿140</dd></div>
+<div class="fact-row"><dt>10-day pass</dt><dd>฿1,200</dd></div>
+<div class="fact-row"><dt>Monthly</dt><dd>฿1,400</dd></div>
+<div class="fact-row"><dt>Couples day</dt><dd>฿210</dd></div>
+<div class="fact-row"><dt>Couples 10-day</dt><dd>฿1,800</dd></div>
+<div class="fact-row"><dt>Couples monthly</dt><dd>฿2,100</dd></div>
+<div class="fact-row"><dt>Layout</dt><dd>5 zones across 2 floors</dd></div>
+<div class="fact-row"><dt>Equipment</dt><dd>Modern resistance + cardio + free weights + functional rig</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (9)</summary>
         <ul>

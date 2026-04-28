@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Pattana Sports Resort is the largest integrated sports-and-golf resort in the Pattaya region — a 400-acre property in Si Racha combining a 27-hole championship golf course, multi-sport training facilities, multiple accommodation tiers, a 7,000-capacity stadium, and conference and event infrastructur" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily — first tee from sunrise; last tee typically 14:30"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Pattana Golf Club &amp; Resort (Pattana Sports Resort)
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Pattana Golf Club &amp; Resort (Pattana Sports Resort)</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Pattana Golf Club &amp; Resort (Pattana Sports Resort)</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Pattana Golf Club &amp; Resort (Pattana Sports Resort)</h1>
+      <p class="venue-lede">Pattana Sports Resort is the largest integrated sports-and-golf resort in the Pattaya region — a 400-acre property in Si Racha combining a 27-hole championship golf course, multi-sport training facilities, multiple accommodation tiers, a 7,000-capacity stadium, and conference and…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Si Racha (40 km north of Pattaya, 90 min from Bangkok)</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Si Racha (40 km north of Pattaya, 90 min from Bangkok)</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip meta-chip-accent">⭐ 27-hole golf course on 400-acre property with full-scale sports resort + 7,000 capacity stadium</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://pattana.co.th/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://pattana.co.th/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Pattana Sports Resort</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Pattana Sports Resort is <strong>the largest integrated sports-and-golf resort in the Pattaya region</strong> — a <strong>400-acre property in Si Racha</strong> combining a <strong>27-hole championship golf course</strong>, <strong>multi-sport training facilities</strong>, <strong>multiple accommodation tiers</strong>, <strong>a 7,000-capacity stadium</strong>, and <strong>conference and event infrastructure</strong> under a single resort operation. Marketed as <strong>"Actively Together"</strong>, Pattana positions itself as the <strong>destination for sports-themed group travel</strong> — corporate retreats, sports tournaments, training camps, family active vacations, and golf groups — rather than as a pure-golf or pure-resort product.</p>
 <p>The 27-hole golf layout — divided into <strong>the Andreas, Brookei, and Calypso nines</strong> — gives Pattana <strong>the same routing flexibility as Khao Kheow Country Club and Laem Chabang International</strong>, with players combining any two nines for an 18-hole round. The course <strong>rolls through 400-acre property with mountain and lake views</strong>, <strong>fast greens, strategic bunkers, and tree-lined paths</strong> — a classic championship-tier configuration.</p>
 <p>What distinguishes Pattana from neighboring Pattaya golf options is <strong>the integrated sports resort layer</strong>: the <strong>7,000-capacity stadium</strong> (rare in resort properties), the <strong>multi-sport training facilities</strong>, and the <strong>four accommodation tiers</strong> (hotel rooms, mansion-style lodgings, villa home stays, affordable apartments) all on one property. <strong>Sports teams, training camps, and tournaments</strong> can run on-site without leaving the property — a value proposition no other Pattaya golf resort offers at this scale.</p>
 <h2>Position in the Pattaya Golf + Sports Market</h2>
 <p>Pattana occupies a unique cross-tier position:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>27-hole championship golf</strong> | Khao Kheow, Laem Chabang, <strong>Pattana</strong> | Multi-routing flexibility | | <strong>Premier resort + golf</strong> | Siam Country Club, Phoenix Gold | Golf-led with hotel layer | | <strong>Sports resort + facilities</strong> | Horseshoe Point Resort | Multi-sport residential | | <strong>Sports resort + golf + stadium</strong> | <strong>Pattana Sports Resort</strong> | <strong>Stadium + training + golf integration</strong> |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>27-hole championship golf</strong></td><td>Khao Kheow, Laem Chabang, <strong>Pattana</strong></td><td>Multi-routing flexibility</td></tr><tr><td><strong>Premier resort + golf</strong></td><td>Siam Country Club, Phoenix Gold</td><td>Golf-led with hotel layer</td></tr><tr><td><strong>Sports resort + facilities</strong></td><td>Horseshoe Point Resort</td><td>Multi-sport residential</td></tr><tr><td><strong>Sports resort + golf + stadium</strong></td><td><strong>Pattana Sports Resort</strong></td><td><strong>Stadium + training + golf integration</strong></td></tr></tbody></table></div>
 <p>The <strong>stadium + multi-sport + golf combination</strong> is genuinely unique in Pattaya. Horseshoe Point delivers multi-sport residential without a championship golf or stadium; Siam Country Club delivers world-class golf without stadium scale; Pattana combines both.</p>
 <h2>The 400-Acre Property</h2>
 <h3>Geographic Setting</h3>
@@ -233,7 +212,8 @@
 <p>This places Pattana <strong>mid-premium</strong> — meaningfully above value courses (Treasure Hill, Bangpra) but below the absolute premium tier (Siam Country Club Old, Chee Chan).</p>
 <h3>Accommodation</h3>
 <p>Rates vary widely by tier and season. Stay-and-play packages typically offer the best value for golf travelers. Confirm via <a href="https://pattana.co.th/" rel="noopener" target="_blank">pattana.co.th</a>.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>27-hole championship golf course</strong> with multi-routing flexibility</li>
 <li><strong>400-acre integrated sports resort</strong> — unique scale in Pattaya region</li>
@@ -246,7 +226,9 @@
 <li><strong>Convention / event capacity</strong> for large corporate groups</li>
 <li><strong>Sports team / training camp infrastructure</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>40 km from central Pattaya</strong> — not convenient for in-city travelers</li>
 <li><strong>Resort scale</strong> can feel impersonal vs. boutique courses</li>
@@ -255,7 +237,9 @@
 <li><strong>Strategic difficulty</strong> punishes high handicappers</li>
 <li><strong>Booking competition</strong> during peak season</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Corporate retreat / event planners</strong> wanting golf + meetings + accommodation</li>
 <li><strong>Sports teams + training camps</strong> needing facilities scale</li>
@@ -265,19 +249,33 @@
 <li><strong>Tournament participants and spectators</strong> — stadium + facilities</li>
 <li><strong>Families with active kids</strong> — multi-sport options keep everyone engaged</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Casual one-round golfers</strong> based in central Pattaya — too far</li>
 <li><strong>Pure golf purists</strong> — sports-resort positioning may dilute</li>
 <li><strong>Pure relaxation seekers</strong> — vibe is "actively together" not lounging</li>
 <li><strong>Budget tier seekers</strong> — value courses exist closer to Pattaya</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Pattana Golf Club & Resort, Si Racha, Chonburi | | Property size | 400 acres | | Holes | 27 (Andreas, Brookei, Calypso) | | Par | 72 | | Stadium capacity | 7,000 | | Distance from Pattaya | 40 km / 40-45 min drive | | Distance from Bangkok | 90 min drive | | Accommodation types | Hotel, Mansion, Villa, Apartments | | Restaurants | 3 (including Persimmon) | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Pattana Golf Club & Resort, Si Racha, Chonburi</dd></div>
+<div class="fact-row"><dt>Property size</dt><dd>400 acres</dd></div>
+<div class="fact-row"><dt>Holes</dt><dd>27 (Andreas, Brookei, Calypso)</dd></div>
+<div class="fact-row"><dt>Par</dt><dd>72</dd></div>
+<div class="fact-row"><dt>Stadium capacity</dt><dd>7,000</dd></div>
+<div class="fact-row"><dt>Distance from Pattaya</dt><dd>40 km / 40-45 min drive</dd></div>
+<div class="fact-row"><dt>Distance from Bangkok</dt><dd>90 min drive</dd></div>
+<div class="fact-row"><dt>Accommodation types</dt><dd>Hotel, Mansion, Villa, Apartments</dd></div>
+<div class="fact-row"><dt>Restaurants</dt><dd>3 (including Persimmon)</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (8)</summary>
         <ul>

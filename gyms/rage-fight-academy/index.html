@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Rage Fight Academy is one of Pattaya&#39;s most credentialed multi-discipline combat sports academies — a Boxing + Brazilian Jiu-Jitsu + MMA + Muay Thai gym located on Thappraya Road in South Pattaya, 5 minutes from Dongtan and Jomtien beaches. The gym was formerly known as Golden Glory Gym before being" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Mon-Sat, multi-discipline daily schedule"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,30 +57,37 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=muay-thai">muay thai</a> &nbsp;/&nbsp; Rage Fight Academy
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=muay-thai">muay thai</a>
+      <span class="bc-sep">›</span>
+      <span>Rage Fight Academy</span>
     </div>
 
-    <span class="venue-cat-pill">muay thai</span>
-    <h1 class="venue-h1">Rage Fight Academy</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">muay thai</span>
+      <h1 class="venue-h1">Rage Fight Academy</h1>
+      <p class="venue-lede">Rage Fight Academy is one of Pattaya&#39;s most credentialed multi-discipline combat sports academies — a Boxing + Brazilian Jiu-Jitsu + MMA + Muay Thai gym located on Thappraya Road in South Pattaya, 5 minutes from Dongtan and Jomtien beaches. The gym was formerly known as Golden Gl…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Thappraya Road / South Pattaya (5 min from Dongtan &amp; Jomtien beaches)</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Mon-Sat, multi-discipline daily schedule</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Thappraya Road / South Pattaya (5 min from Dongtan &amp; Jomtien beaches)</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Mon-Sat, multi-discipline daily schedule</span>
+        
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://ragefightacademy.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/ragefightacademy" rel="noopener" target="_blank">Facebook</a> · <a href="https://instagram.com/ragefightacademy" rel="noopener" target="_blank">Instagram</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://ragefightacademy.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        <a class="btn btn-ghost" href="https://facebook.com/ragefightacademy" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://instagram.com/ragefightacademy" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Rage Fight Academy</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Rage Fight Academy is <strong>one of Pattaya's most credentialed multi-discipline combat sports academies</strong> — a Boxing + Brazilian Jiu-Jitsu + MMA + Muay Thai gym located on <strong>Thappraya Road in South Pattaya</strong>, <strong>5 minutes from Dongtan and Jomtien beaches</strong>. The gym was <strong>formerly known as Golden Glory Gym</strong> before being acquired and rebranded in <strong>2021 by Bryan Flowers</strong>, the current Managing Director, who has rebuilt the operation around a <strong>results-driven combat sports philosophy</strong> with a team of credentialed coaches across each discipline.</p>
 <p>The headline coaching credential is exceptional: <strong>Head Combat Training Coach Charlton Lookyamo</strong> holds the <strong>WLC "Coach of the Year" 2020 award</strong> and has personally coached <strong>multiple boxing, Muay Thai, and K-1 world champions</strong>. He is the founder of <strong>Lookyamo Training</strong> — his eponymous coaching brand — and brings <strong>world-class striking instruction</strong> to Rage Fight Academy's daily classes.</p>
 <p>For travelers wanting <strong>multi-discipline credentialed instruction</strong> in a single Pattaya facility, with <strong>Education Visa support for long-stay students</strong>, Rage Fight Academy is the consensus top pick. Drop-in pricing of <strong>฿500 per session</strong> and monthly memberships at <strong>฿8,500</strong> make this <strong>mid-tier value pricing for premium-tier coaching</strong>.</p>
@@ -183,7 +162,8 @@
 <li>Many serious foreign Muay Thai practitioners base in Pattaya for years on these visas</li>
 </ul>
 <p>This alone makes Rage one of Pattaya's most foreign-student-friendly camps.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Bryan Flowers post-2021 ownership</strong> — clean operational reset, results-focused</li>
 <li><strong>Head coach Charlton Lookyamo</strong> — WLC Coach of the Year 2020, world-champion track record</li>
@@ -196,14 +176,18 @@
 <li><strong>Welcoming to beginners</strong> despite the credentialed coaching tier</li>
 <li><strong>Mid-tier pricing</strong> delivering premium-tier coaching access</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>No on-site accommodation</strong> — student must arrange housing</li>
 <li><strong>Newer-rebranded reputation</strong> vs. legacy Pattaya camps with 30+ years history</li>
 <li><strong>Mid-tier pricing</strong> — not the cheapest in Pattaya (Sor Klinmee, Petchrungruang are cheaper)</li>
 <li><strong>South Pattaya location</strong> — requires transport from central Pattaya / Naklua</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Multi-discipline athletes</strong> especially BJJ + Muay Thai cross-trainers</li>
 <li><strong>Long-stay students</strong> wanting Education Visa sponsorship</li>
@@ -212,18 +196,32 @@
 <li><strong>Active fight-team aspirants</strong></li>
 <li><strong>Beginners</strong> wanting structured, patient instruction</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Lineage purists</strong> (Sityodtong, Petchrungruang offer 60-year heritage)</li>
 <li><strong>On-site accommodation seekers</strong> (try Kombat Group, Silk, Fairtex)</li>
 <li><strong>Pure budget seekers</strong> (Sor Klinmee, WKO are cheaper)</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Location | Thappraya Road, South Pattaya, 5 min from Dongtan/Jomtien | | Website | ragefightacademy.com | | Owner | Bryan Flowers (acquired 2021, rebranded from Golden Glory Gym) | | Head Coach | Charlton Lookyamo — WLC Coach of the Year 2020 | | Disciplines | Muay Thai, Boxing, BJJ, MMA, Cross Training, Fitness | | Rings | 3 full-size + BJJ/MMA mat zone | | Drop-in | ~฿500/session | | Monthly | ~฿8,500 | | Visa support | Yes — Education Visa sponsorship | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Location</dt><dd>Thappraya Road, South Pattaya, 5 min from Dongtan/Jomtien</dd></div>
+<div class="fact-row"><dt>Website</dt><dd>ragefightacademy.com</dd></div>
+<div class="fact-row"><dt>Owner</dt><dd>Bryan Flowers (acquired 2021, rebranded from Golden Glory Gym)</dd></div>
+<div class="fact-row"><dt>Head Coach</dt><dd>Charlton Lookyamo — WLC Coach of the Year 2020</dd></div>
+<div class="fact-row"><dt>Disciplines</dt><dd>Muay Thai, Boxing, BJJ, MMA, Cross Training, Fitness</dd></div>
+<div class="fact-row"><dt>Rings</dt><dd>3 full-size + BJJ/MMA mat zone</dd></div>
+<div class="fact-row"><dt>Drop-in</dt><dd>~฿500/session</dd></div>
+<div class="fact-row"><dt>Monthly</dt><dd>~฿8,500</dd></div>
+<div class="fact-row"><dt>Visa support</dt><dd>Yes — Education Visa sponsorship</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (11)</summary>
         <ul>

@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Bangpra International Golf Club is one of the original golf courses in the Pattaya region — initially built in 1958, making it one of the oldest courses in all of Thailand and a foundational venue in the country&#39;s golf history. The course was comprehensively renovated and expanded in 1988 as a joint" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily — first tee from sunrise; last tee typically 14:30"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Bangpra International Golf Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Bangpra International Golf Club</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Bangpra International Golf Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Bangpra International Golf Club</h1>
+      <p class="venue-lede">Bangpra International Golf Club is one of the original golf courses in the Pattaya region — initially built in 1958, making it one of the oldest courses in all of Thailand and a foundational venue in the country&#39;s golf history. The course was comprehensively renovated and expande…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Sri Racha / Bang Phra (40 km north of Pattaya)</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Sri Racha / Bang Phra (40 km north of Pattaya)</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip meta-chip-accent">⭐ One of the first golf courses in the Pattaya region — opened 1958</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Bangpra International Golf Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Bangpra International Golf Club is <strong>one of the original golf courses in the Pattaya region</strong> — initially built in <strong>1958</strong>, making it one of the oldest courses in all of Thailand and a foundational venue in the country's golf history. The course was <strong>comprehensively renovated and expanded in 1988</strong> as a <strong>joint venture between the Tourism Authority of Thailand and Japanese Golf Professional consultants</strong>, making it the <strong>first project specifically designed to promote golf tourism in Thailand</strong> — the policy origin of what's now a multi-billion-baht industry.</p>
 <p>This historical positioning makes Bangpra <strong>unique in the Pattaya golf scene</strong>. While newer courses like Siam Country Club, Khao Kheow, and Laem Chabang are architecturally more decorated, <strong>Bangpra holds the distinction of being where Thailand's golf-tourism story began</strong>. The course remains <strong>one of the more mature Pattaya golf courses</strong> today, with <strong>decades of tree growth, established turf, and the patina that only old courses develop</strong>.</p>
 <p>For golf historians, value-tier players, and visitors curious about Thailand golf's origin story, Bangpra delivers a course that's <strong>simultaneously historically significant and accessibly priced</strong>.</p>
 <h2>Position in the Pattaya Golf Market</h2>
 <p>Pattaya golf history layered chronologically:</p>
-<p>| Era | Notable Openings | |---|---| | <strong>Pre-1960</strong> | <strong>Bangpra International</strong> (1958) — among Thailand's earliest courses | | <strong>1980s</strong> | Bangpra renovation (1988), Siam Country Club Old (1971/1992 redo) | | <strong>1990s</strong> | Khao Kheow (1992), Treasure Hill (1994), Phoenix Gold (1997), Laem Chabang (1995) | | <strong>2000s</strong> | St Andrews 2000, Siam Plantation (2008), Pattaya Country Club | | <strong>2010s</strong> | Siam Waterside (2014), Chee Chan Golf Resort (2018) | | <strong>2020s</strong> | Various renovations and new luxury developments |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Era</th><th>Notable Openings</th></tr></thead><tbody><tr><td><strong>Pre-1960</strong></td><td><strong>Bangpra International</strong> (1958) — among Thailand's earliest courses</td></tr><tr><td><strong>1980s</strong></td><td>Bangpra renovation (1988), Siam Country Club Old (1971/1992 redo)</td></tr><tr><td><strong>1990s</strong></td><td>Khao Kheow (1992), Treasure Hill (1994), Phoenix Gold (1997), Laem Chabang (1995)</td></tr><tr><td><strong>2000s</strong></td><td>St Andrews 2000, Siam Plantation (2008), Pattaya Country Club</td></tr><tr><td><strong>2010s</strong></td><td>Siam Waterside (2014), Chee Chan Golf Resort (2018)</td></tr><tr><td><strong>2020s</strong></td><td>Various renovations and new luxury developments</td></tr></tbody></table></div>
 <p>Bangpra represents <strong>the foundation generation</strong> — the platform that proved Thailand could attract international golf tourism.</p>
 <h2>Course Heritage — A Pioneering Project</h2>
 <h3>Original 1958 Build</h3>
@@ -205,7 +184,8 @@
 <li><strong>Often combined with Khao Kheow Country Club</strong> as a Bang Phra two-course day</li>
 <li><strong>From Bangkok:</strong> ~110 km, ~1.5 hour drive</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Among Thailand's oldest golf courses</strong> — historic significance</li>
 <li><strong>First golf-tourism flagship</strong> for Thailand (1988 renovation)</li>
@@ -217,7 +197,9 @@
 <li><strong>Multilingual caddy support</strong> (English, Thai, Japanese, Korean)</li>
 <li><strong>Strategic location</strong> for Bang Phra two-course days with Khao Kheow</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Architecturally less distinguished</strong> than nearby Pete Dye, Nicklaus designs</li>
 <li><strong>Mid-tier conditions</strong> vs. premium-maintained courses</li>
@@ -226,7 +208,9 @@
 <li><strong>Limited online presence</strong> — booking outside platforms takes effort</li>
 <li><strong>Tee box and bunker maintenance</strong> can be patchy in shoulder seasons</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Golf history enthusiasts</strong> wanting Thailand's golf tourism origin course</li>
 <li><strong>Value-conscious players</strong> seeking mature parkland golf</li>
@@ -236,19 +220,32 @@
 <li><strong>Senior players</strong> appreciating gentler routing</li>
 <li><strong>Japanese-speaking visitors</strong> for cultural familiarity</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Strategic-design connoisseurs</strong> seeking Pete Dye / Nicklaus pedigree</li>
 <li><strong>Tournament-prep players</strong> wanting championship-grade conditions</li>
 <li><strong>Premium-resort seekers</strong> wanting modern clubhouse amenities</li>
 <li><strong>Pattaya-central based travelers</strong> wanting close-by courses</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Bang Phra, Si Racha, Chonburi 20210 | | Originally opened | 1958 | | Renovated | 1988 (TAT + Japanese Golf Professional joint venture) | | Historic distinction | First golf-tourism-purpose course in Thailand | | Holes | 18 | | Par | 72 | | Distance from Pattaya | 40 km / 35-45 min drive | | Green fee + cart + caddy | ~฿1,400-2,200 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Bang Phra, Si Racha, Chonburi 20210</dd></div>
+<div class="fact-row"><dt>Originally opened</dt><dd>1958</dd></div>
+<div class="fact-row"><dt>Renovated</dt><dd>1988 (TAT + Japanese Golf Professional joint venture)</dd></div>
+<div class="fact-row"><dt>Historic distinction</dt><dd>First golf-tourism-purpose course in Thailand</dd></div>
+<div class="fact-row"><dt>Holes</dt><dd>18</dd></div>
+<div class="fact-row"><dt>Par</dt><dd>72</dd></div>
+<div class="fact-row"><dt>Distance from Pattaya</dt><dd>40 km / 35-45 min drive</dd></div>
+<div class="fact-row"><dt>Green fee + cart + caddy</dt><dd>~฿1,400-2,200</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (5)</summary>
         <ul>

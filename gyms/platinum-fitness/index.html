@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Platinum Fitness Club is a commercial fitness facility on Pattaya Klang Road in central Pattaya offering a long 17.5-hour daily operating window (05:30-23:00), fully air-conditioned environment, a comprehensive equipment package (cardio + weight machines + free weights), scheduled group classes, and" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -40,35 +41,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily 05:30-23:00"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -86,36 +58,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=fitness">fitness</a> &nbsp;/&nbsp; Platinum Fitness Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=fitness">fitness</a>
+      <span class="bc-sep">›</span>
+      <span>Platinum Fitness Club</span>
     </div>
 
-    <span class="venue-cat-pill">fitness</span>
-    <h1 class="venue-h1">Platinum Fitness Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">fitness</span>
+      <h1 class="venue-h1">Platinum Fitness Club</h1>
+      <p class="venue-lede">Platinum Fitness Club is a commercial fitness facility on Pattaya Klang Road in central Pattaya offering a long 17.5-hour daily operating window (05:30-23:00), fully air-conditioned environment, a comprehensive equipment package (cardio + weight machines + free weights), schedule…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pattaya Klang / Central Pattaya</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily 05:30-23:00</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pattaya Klang / Central Pattaya</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily 05:30-23:00</span>
+        <span class="meta-chip meta-chip-accent">⭐ Long-hours central Pattaya commercial gym with cardio, weight machines, group classes, sauna</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      <a href="tel:+6638412412">Call +66 38 412 412</a>
-      
+      <div class="venue-actions">
+        
+        
+        <a class="btn btn-secondary" href="tel:+6638412412">📞 +66 38 412 412</a>
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Platinum Fitness Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Platinum Fitness Club is <strong>a commercial fitness facility on Pattaya Klang Road in central Pattaya</strong> offering <strong>a long 17.5-hour daily operating window (05:30-23:00)</strong>, <strong>fully air-conditioned environment</strong>, <strong>a comprehensive equipment package (cardio + weight machines + free weights)</strong>, <strong>scheduled group classes</strong>, and <strong>a sauna for post-workout recovery</strong>. The Pattaya Klang location places it <strong>on one of central Pattaya's main east-west arterials</strong> — accessible from <strong>Walking Street area, Pattaya 2nd Road, Pattaya 3rd Road, and the Sukhumvit corridor</strong> within 5-15 minutes of most central residences and hotels.</p>
 <p>The 05:30 opening time is meaningful — earlier than most Pattaya commercial gyms and accommodating <strong>pre-dawn trainers</strong>, <strong>early-morning runners adding gym work</strong>, and <strong>shift workers</strong> finishing overnight schedules. The 23:00 close gives evening trainers a generous window after work or dinner. Combined with the <strong>AC environment</strong> and <strong>standard commercial gym amenity package including a sauna</strong>, Platinum Fitness delivers <strong>a full-service mainstream gym experience</strong> without the extreme price tier of hotel-attached or premium-private facilities.</p>
 <p>For Pattaya Klang area residents and central Pattaya travelers wanting <strong>an established commercial gym with long operating hours and recovery sauna</strong>, Platinum Fitness fills the niche.</p>
 <h2>Position in the Pattaya Fitness Market</h2>
 <p>Pattaya commercial fitness positioned by hours and amenities:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>24/7 international chain</strong> | Jetts (2 locations) | Australian chain | | <strong>24/7 large central independent</strong> | Fitness 7 (The Avenue) | 2,000+ sqm + boxing ring | | <strong>Long-hours mid-tier independent</strong> | <strong>Platinum Fitness Club</strong> | <strong>05:30-23:00 + sauna</strong> | | <strong>2022 modern Sukhumvit</strong> | Elite Gym & Fitness | 23M baht 950 sqm AC build | | <strong>Multi-branch independent value</strong> | SUN Fitness (3 branches) | ฿1,090/month + 3 branches | | <strong>East Pattaya community</strong> | Castra Gym | Family-run Darkside ฿7K/year |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>24/7 international chain</strong></td><td>Jetts (2 locations)</td><td>Australian chain</td></tr><tr><td><strong>24/7 large central independent</strong></td><td>Fitness 7 (The Avenue)</td><td>2,000+ sqm + boxing ring</td></tr><tr><td><strong>Long-hours mid-tier independent</strong></td><td><strong>Platinum Fitness Club</strong></td><td><strong>05:30-23:00 + sauna</strong></td></tr><tr><td><strong>2022 modern Sukhumvit</strong></td><td>Elite Gym & Fitness</td><td>23M baht 950 sqm AC build</td></tr><tr><td><strong>Multi-branch independent value</strong></td><td>SUN Fitness (3 branches)</td><td>฿1,090/month + 3 branches</td></tr><tr><td><strong>East Pattaya community</strong></td><td>Castra Gym</td><td>Family-run Darkside ฿7K/year</td></tr></tbody></table></div>
 <p>Platinum Fitness's specific position: <strong>central Pattaya independent with sauna + 17.5-hour operating window</strong>.</p>
 <h2>The 05:30-23:00 Hours</h2>
 <p>A meaningful operating window:</p>
@@ -227,7 +206,8 @@
 <p>This makes Platinum <strong>central walkable for tourist hotels</strong> while serving residential areas along the Klang corridor.</p>
 <h2>Phone Number</h2>
 <p><strong>+66 38 412 412</strong> — verify hours, current pricing, and class schedule by calling directly.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>05:30-23:00 hours</strong> — 17.5-hour operating window</li>
 <li><strong>Fully air-conditioned</strong></li>
@@ -240,7 +220,9 @@
 <li><strong>Pre-dawn opening</strong> for early trainers</li>
 <li><strong>Late-evening close</strong> for post-work training</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Not 24/7</strong> — Fitness 7, Jetts win on hours</li>
 <li><strong>Limited online presence</strong> — phone-based booking</li>
@@ -249,7 +231,9 @@
 <li><strong>Group class schedule density</strong> lower than chain gyms</li>
 <li><strong>No combat sports</strong> integration</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Pattaya Klang / central area residents</strong></li>
 <li><strong>Walking-distance gym seekers</strong> from central hotels</li>
@@ -259,7 +243,9 @@
 <li><strong>Hot-season AC comfort</strong> prioritizers</li>
 <li><strong>Beginner to intermediate</strong> lifters</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>24/7 access seekers</strong> — Fitness 7 or Jetts better</li>
 <li><strong>Hardcore bodybuilders</strong> — Muscle Factory, Castra, Tony's</li>
@@ -267,12 +253,25 @@
 <li><strong>Multi-branch flexibility</strong> — SUN Fitness's 3 branches</li>
 <li><strong>Pure budget seekers</strong> — Castra ฿7K/year unbeatable</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Pattaya Klang Road, Central Pattaya | | Phone | +66 38 412 412 | | Hours | Daily 05:30-23:00 | | AC | Fully air-conditioned | | Sauna | Yes (recovery amenity) | | Equipment | Cardio + Machines + Free weights | | Classes | Group classes included | | Day pass | ~฿300-500 | | Monthly | ~฿1,500-2,500 | | Languages | English, Thai | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Pattaya Klang Road, Central Pattaya</dd></div>
+<div class="fact-row"><dt>Phone</dt><dd>+66 38 412 412</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Daily 05:30-23:00</dd></div>
+<div class="fact-row"><dt>AC</dt><dd>Fully air-conditioned</dd></div>
+<div class="fact-row"><dt>Sauna</dt><dd>Yes (recovery amenity)</dd></div>
+<div class="fact-row"><dt>Equipment</dt><dd>Cardio + Machines + Free weights</dd></div>
+<div class="fact-row"><dt>Classes</dt><dd>Group classes included</dd></div>
+<div class="fact-row"><dt>Day pass</dt><dd>~฿300-500</dd></div>
+<div class="fact-row"><dt>Monthly</dt><dd>~฿1,500-2,500</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (3)</summary>
         <ul>

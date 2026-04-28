@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Jetts Fitness is the leading 24/7 commercial fitness chain in Thailand, operating multiple locations in Pattaya alongside its broader Bangkok / Hua Hin / Phuket / Chiang Mai national network. Originally founded in Australia in 2007, Jetts has expanded globally to Thailand, the United Kingdom, the Ne" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "24/7 (always open)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=fitness">fitness</a> &nbsp;/&nbsp; Jetts Fitness Pattaya
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=fitness">fitness</a>
+      <span class="bc-sep">›</span>
+      <span>Jetts Fitness Pattaya</span>
     </div>
 
-    <span class="venue-cat-pill">fitness</span>
-    <h1 class="venue-h1">Jetts Fitness Pattaya</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">fitness</span>
+      <h1 class="venue-h1">Jetts Fitness Pattaya</h1>
+      <p class="venue-lede">Jetts Fitness is the leading 24/7 commercial fitness chain in Thailand, operating multiple locations in Pattaya alongside its broader Bangkok / Hua Hin / Phuket / Chiang Mai national network. Originally founded in Australia in 2007, Jetts has expanded globally to Thailand, the Un…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Multiple (Little Walk Mall + Royal Garden Plaza)</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 24/7 (always open)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Multiple (Little Walk Mall + Royal Garden Plaza)</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 24/7 (always open)</span>
+        <span class="meta-chip meta-chip-accent">⭐ 24/7 access with no lock-in contracts and a global membership network</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://www.jetts.co.th/en/" target="_blank" rel="noopener">Official Website</a>
-      
-      <span style="padding:10px 4px;color:var(--text-muted);"><a href="https://facebook.com/JettsThailand" rel="noopener" target="_blank">Facebook</a> · <a href="https://instagram.com/jettsthailand" rel="noopener" target="_blank">Instagram</a></span>
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://www.jetts.co.th/en/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        <a class="btn btn-ghost" href="https://facebook.com/JettsThailand" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-ghost" href="https://instagram.com/jettsthailand" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Jetts Fitness Pattaya</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Jetts Fitness is <strong>the leading 24/7 commercial fitness chain in Thailand</strong>, operating multiple locations in Pattaya alongside its broader <strong>Bangkok / Hua Hin / Phuket / Chiang Mai national network</strong>. Originally <strong>founded in Australia in 2007</strong>, Jetts has expanded globally to <strong>Thailand, the United Kingdom, the Netherlands, and New Zealand</strong>, becoming one of the <strong>most recognizable international fitness brands in Southeast Asia</strong>.</p>
 <p>In Pattaya, Jetts operates from <strong>at least two key locations</strong> — <strong>Little Walk Mall (off Pattaya 2nd Road)</strong> and <strong>Royal Garden Plaza (on Pattaya Beach Road)</strong> — placing the chain conveniently within central Pattaya's main commercial corridors. The two defining brand features are <strong>24/7 access</strong> (the gyms literally never close) and <strong>no lock-in contracts</strong> (month-to-month memberships), making Jetts a natural fit for the <strong>traveler/expat demographic</strong> who can't commit to long-term Thai gym contracts.</p>
 <p>For travelers, working remote nomads, condo-dwellers, and short-stay residents who want a <strong>familiar Western-style commercial gym experience with predictable equipment quality</strong>, Jetts is the most accessible, least friction option in the Pattaya fitness scene.</p>
 <h2>Position in the Pattaya Fitness Market</h2>
 <p>Pattaya gym options span:</p>
-<p>| Tier | Examples | Vibe | |---|---|---| | <strong>Premium private</strong> | FITZ Club, Horseshoe Point | Luxury, lifestyle integration | | <strong>24/7 chain</strong> | <strong>Jetts</strong>, <strong>True Fitness</strong> | Western standard, no-contract | | <strong>Hardcore bodybuilding</strong> | Castra Gym, Tony's Gym, Universe Gym | Free weights, hardcore atmosphere | | <strong>Boutique multi-discipline</strong> | Coco Fitness, Manhattan | CrossFit-style + cardio | | <strong>Hotel gyms</strong> | Various | Guest-only or limited day pass |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Vibe</th></tr></thead><tbody><tr><td><strong>Premium private</strong></td><td>FITZ Club, Horseshoe Point</td><td>Luxury, lifestyle integration</td></tr><tr><td><strong>24/7 chain</strong></td><td><strong>Jetts</strong>, <strong>True Fitness</strong></td><td>Western standard, no-contract</td></tr><tr><td><strong>Hardcore bodybuilding</strong></td><td>Castra Gym, Tony's Gym, Universe Gym</td><td>Free weights, hardcore atmosphere</td></tr><tr><td><strong>Boutique multi-discipline</strong></td><td>Coco Fitness, Manhattan</td><td>CrossFit-style + cardio</td></tr><tr><td><strong>Hotel gyms</strong></td><td>Various</td><td>Guest-only or limited day pass</td></tr></tbody></table></div>
 <p>Jetts occupies the <strong>mid-tier 24/7 chain</strong> position — its sweet spot is <strong>convenience, hours, equipment standardization, and contract flexibility</strong>.</p>
 <h2>The Jetts Brand</h2>
 <h3>Origins (Australia, 2007)</h3>
@@ -233,7 +212,8 @@
 <li><strong>Insomniac trainers</strong> — late-night sessions</li>
 <li><strong>Hot-season hours-shifters</strong> — early AM or late PM to avoid heat</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>24/7 access</strong> — train any time, no exceptions</li>
 <li><strong>No lock-in contracts</strong> — cancel anytime</li>
@@ -247,7 +227,9 @@
 <li><strong>English-speaking staff</strong></li>
 <li><strong>Reliable cleanliness standards</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Mid-tier pricing</strong> vs. budget hardcore Pattaya gyms (Castra is much cheaper)</li>
 <li><strong>Mall location vibe</strong> — less community feel than independent gyms</li>
@@ -257,7 +239,9 @@
 <li><strong>Off-peak unstaffed</strong> — less help if equipment issues arise</li>
 <li><strong>Crowded peak hours</strong> — popular Pattaya commercial gym</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Travelers and short-stay visitors</strong> wanting day passes</li>
 <li><strong>International Jetts members</strong> from other countries</li>
@@ -267,19 +251,32 @@
 <li><strong>No-contract commitment-averse</strong> users</li>
 <li><strong>Group fitness class fans</strong> (Les Mills BODY series)</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Hardcore powerlifters / bodybuilders</strong> preferring Castra, Tony's, Universe</li>
 <li><strong>Combat sports trainees</strong> — try Muay Thai camps, MMA gyms</li>
 <li><strong>Premium luxury seekers</strong> — try FITZ Club</li>
 <li><strong>Pure budget seekers</strong> — local independent gyms cheaper</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Locations | Little Walk Mall + Royal Garden Plaza | | Hours | 24/7 (always open) | | Day pass | ~฿500 | | Monthly membership | ~฿1,550-1,700 | | Contract style | No lock-in (month-to-month) | | Brand origin | Australia (2007) | | Global reciprocal | Yes (international member access) | | Class brand | Les Mills BODYPUMP, BODYCOMBAT, BODYJAM + Zumba, Yoga, TRX | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Locations</dt><dd>Little Walk Mall + Royal Garden Plaza</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>24/7 (always open)</dd></div>
+<div class="fact-row"><dt>Day pass</dt><dd>~฿500</dd></div>
+<div class="fact-row"><dt>Monthly membership</dt><dd>~฿1,550-1,700</dd></div>
+<div class="fact-row"><dt>Contract style</dt><dd>No lock-in (month-to-month)</dd></div>
+<div class="fact-row"><dt>Brand origin</dt><dd>Australia (2007)</dd></div>
+<div class="fact-row"><dt>Global reciprocal</dt><dd>Yes (international member access)</dd></div>
+<div class="fact-row"><dt>Class brand</dt><dd>Les Mills BODYPUMP, BODYCOMBAT, BODYJAM + Zumba, Yoga, TRX</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (8)</summary>
         <ul>

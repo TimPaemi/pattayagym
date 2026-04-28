@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Manhattan Pattaya is a hotel-attached gym facility on Pratamnak Hill — the elevated ridge between Pattaya Beach and Jomtien Beach that hosts a concentration of mid-tier and premium hotels. The gym is on the ground floor near the swimming pool area of the Manhattan Pattaya Hotel, making it convenient" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily 08:00-21:00 (reservation required)"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=fitness">fitness</a> &nbsp;/&nbsp; Manhattan Pattaya (Hotel Gym)
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=fitness">fitness</a>
+      <span class="bc-sep">›</span>
+      <span>Manhattan Pattaya (Hotel Gym)</span>
     </div>
 
-    <span class="venue-cat-pill">fitness</span>
-    <h1 class="venue-h1">Manhattan Pattaya (Hotel Gym)</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">fitness</span>
+      <h1 class="venue-h1">Manhattan Pattaya (Hotel Gym)</h1>
+      <p class="venue-lede">Manhattan Pattaya is a hotel-attached gym facility on Pratamnak Hill — the elevated ridge between Pattaya Beach and Jomtien Beach that hosts a concentration of mid-tier and premium hotels. The gym is on the ground floor near the swimming pool area of the Manhattan Pattaya Hotel, …</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Pratamnak / Central Pattaya</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily 08:00-21:00 (reservation required)</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Pratamnak / Central Pattaya</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily 08:00-21:00 (reservation required)</span>
+        <span class="meta-chip meta-chip-accent">⭐ Hotel-attached gym at Manhattan Pattaya — Pratamnak area, ground floor near pool</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://manhattanpattaya.com/facilities/gym/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://manhattanpattaya.com/facilities/gym/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Manhattan Pattaya (Hotel Gym)</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Manhattan Pattaya is <strong>a hotel-attached gym facility on Pratamnak Hill</strong> — the elevated ridge between Pattaya Beach and Jomtien Beach that hosts a concentration of mid-tier and premium hotels. The gym is <strong>on the ground floor near the swimming pool area</strong> of the Manhattan Pattaya Hotel, making it convenient for <strong>hotel guests wanting integrated fitness during their stay</strong> as well as <strong>local Pratamnak Hill residents</strong> who can purchase day passes or longer memberships.</p>
 <p>Unlike commercial fitness chains (Jetts, True Fitness) that operate independently in malls, <strong>Manhattan Pattaya's gym serves primarily its own hotel guests</strong> with <strong>a structured 08:00-21:00 schedule and reservation requirement</strong> that maintains controlled-capacity training rather than open-floor crowds. This positioning gives Manhattan's gym a <strong>resort-style intimate feel</strong> while still offering proper fitness equipment for serious workouts.</p>
 <p>For travelers staying at Manhattan Pattaya or Pratamnak-area hotels who want <strong>convenient, walkable, well-maintained hotel-grade gym access without separate gym membership commitment</strong>, Manhattan delivers exactly that. For Pratamnak Hill residents wanting hotel-tier gym amenities, day passes and short-term memberships at Manhattan and similar hotel gyms offer <strong>a different value than commercial chain gyms</strong>.</p>
 <h2>Position in the Pratamnak Hill Fitness Market</h2>
 <p>Pratamnak Hill is one of Pattaya's most fitness-rich neighborhoods:</p>
-<p>| Facility | Type | Distinction | |---|---|---| | <strong>Manhattan Pattaya</strong> | <strong>Hotel gym</strong> | <strong>Ground floor + pool, 08:00-21:00, reservation</strong> | | <strong>Battle Conquer Gym</strong> | Independent multi-disc | Pratumnak Soi 5, MT + sauna + cold plunge | | <strong>Muscle Factory</strong> | Independent bodybuilding | Largest gym in Pattaya, multi-floor building | | <strong>Pratumnak Fitness Park</strong> | Outdoor public | <strong>Free</strong> outdoor gym, Soi 5 area | | <strong>Cross Pattaya Pratamnak</strong> | Hotel/condo gym | Mid-tier resort gym | | <strong>Various other hotel gyms</strong> | Hotel guest-priority | Hotel-specific |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Facility</th><th>Type</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Manhattan Pattaya</strong></td><td><strong>Hotel gym</strong></td><td><strong>Ground floor + pool, 08:00-21:00, reservation</strong></td></tr><tr><td><strong>Battle Conquer Gym</strong></td><td>Independent multi-disc</td><td>Pratumnak Soi 5, MT + sauna + cold plunge</td></tr><tr><td><strong>Muscle Factory</strong></td><td>Independent bodybuilding</td><td>Largest gym in Pattaya, multi-floor building</td></tr><tr><td><strong>Pratumnak Fitness Park</strong></td><td>Outdoor public</td><td><strong>Free</strong> outdoor gym, Soi 5 area</td></tr><tr><td><strong>Cross Pattaya Pratamnak</strong></td><td>Hotel/condo gym</td><td>Mid-tier resort gym</td></tr><tr><td><strong>Various other hotel gyms</strong></td><td>Hotel guest-priority</td><td>Hotel-specific</td></tr></tbody></table></div>
 <p>Pratamnak's density of fitness options stems from its <strong>affluent residential character + hotel concentration</strong> — both populations support fitness amenities.</p>
 <h2>Pratamnak Hill — Geographic Setting</h2>
 <h3>Location</h3>
@@ -213,7 +192,8 @@
 <li><strong>Cross Pattaya:</strong> larger hotel/condo complex with multiple sport facilities (basketball, fitness, etc.)</li>
 <li><strong>Manhattan:</strong> gym + pool focus, less multi-sport</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Pratamnak Hill location</strong> — quieter than central Pattaya</li>
 <li><strong>Hotel-attached convenience</strong> for guests</li>
@@ -226,7 +206,9 @@
 <li><strong>Easy walking to Pattaya Beach + Jomtien Beach</strong></li>
 <li><strong>Russian language support</strong> typical of Manhattan Pattaya guest base</li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Hotel-guest priority</strong> — non-guests may face limited access</li>
 <li><strong>Reservation required</strong> can frustrate spontaneous workouts</li>
@@ -237,7 +219,9 @@
 <li><strong>Hotel-stay pricing context</strong> — non-guests need to verify rates</li>
 <li><strong>Less community</strong> than independent gyms</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Manhattan Pattaya hotel guests</strong></li>
 <li><strong>Pratamnak Hill residents</strong> wanting walkable hotel-tier gym</li>
@@ -247,7 +231,9 @@
 <li><strong>General fitness</strong> — cardio + light weights focus</li>
 <li><strong>Couples</strong> wanting hotel-integrated fitness during stay</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Hardcore bodybuilders</strong> — go to Muscle Factory or Castra</li>
 <li><strong>Combat sports trainees</strong> — go to Battle Conquer or Muay Thai camps</li>
@@ -256,12 +242,23 @@
 <li><strong>Competition-grade equipment</strong> — limited equipment depth</li>
 <li><strong>Non-Manhattan Pattaya guests</strong> wanting unrestricted access</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Type | Hotel-attached gym | | Location | Manhattan Pattaya Hotel, Pratamnak | | Hours | Daily 08:00-21:00 | | Reservation | Required | | Pool | Adjacent (combined access) | | Equipment | General fitness — cardio + machines + free weights | | Day pass | ~฿300-500 (verify) | | Languages | English, Thai, Russian | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Type</dt><dd>Hotel-attached gym</dd></div>
+<div class="fact-row"><dt>Location</dt><dd>Manhattan Pattaya Hotel, Pratamnak</dd></div>
+<div class="fact-row"><dt>Hours</dt><dd>Daily 08:00-21:00</dd></div>
+<div class="fact-row"><dt>Reservation</dt><dd>Required</dd></div>
+<div class="fact-row"><dt>Pool</dt><dd>Adjacent (combined access)</dd></div>
+<div class="fact-row"><dt>Equipment</dt><dd>General fitness — cardio + machines + free weights</dd></div>
+<div class="fact-row"><dt>Day pass</dt><dd>~฿300-500 (verify)</dd></div>
+<div class="fact-row"><dt>Languages</dt><dd>English, Thai, Russian</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (7)</summary>
         <ul>

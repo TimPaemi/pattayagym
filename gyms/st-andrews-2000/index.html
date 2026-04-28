@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="St Andrews 2000 is the most architecturally daring golf course in the Pattaya / Eastern Seaboard region — a Desmond Muirhead-designed hilltop layout in Ban Chang, Rayong that opened in 2000 and is most famous for its two par-6 holes both stretching over 800 yards — features extraordinarily rare in T" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily — first tee from sunrise; last tee typically 14:30"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; St Andrews 2000 Golf Club
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>St Andrews 2000 Golf Club</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">St Andrews 2000 Golf Club</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">St Andrews 2000 Golf Club</h1>
+      <p class="venue-lede">St Andrews 2000 is the most architecturally daring golf course in the Pattaya / Eastern Seaboard region — a Desmond Muirhead-designed hilltop layout in Ban Chang, Rayong that opened in 2000 and is most famous for its two par-6 holes both stretching over 800 yards — features extra…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Ban Chang, Rayong (45 min from Pattaya)</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Ban Chang, Rayong (45 min from Pattaya)</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip meta-chip-accent">⭐ Desmond Muirhead-designed elevated hilltop course with two par-6 holes 800+ yards each</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      
-      
+      <div class="venue-actions">
+        
+        
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>St Andrews 2000 Golf Club</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>St Andrews 2000 is <strong>the most architecturally daring golf course in the Pattaya / Eastern Seaboard region</strong> — a <strong>Desmond Muirhead-designed hilltop layout in Ban Chang, Rayong</strong> that opened in <strong>2000</strong> and is most famous for its <strong>two par-6 holes both stretching over 800 yards</strong> — features extraordinarily rare in Thailand and almost nowhere else in Asia. Where the Pete Dye-designed Khao Kheow delivers strategic stadium-style golf, where Yoshikazu Kato's Treasure Hill weaves through jungle, and where the new David Dale Chee Chan presents a "Scottish Highlands" feel, <strong>St Andrews 2000 is the unapologetic showman of the region — elevated tees, dramatic vistas, split fairways, double fairways, and gargantuan greens that reward bold play and punish hesitation</strong>.</p>
 <p>The course is <strong>45 minutes from Pattaya</strong> in <strong>Ban Chang, Rayong</strong> — slightly outside Chonburi province but firmly inside the Eastern Seaboard golf circuit that Pattaya golfers travel routinely. The name <strong>"St Andrews 2000"</strong> is a millennial-era nod to <strong>the original Old Course at St Andrews, Scotland</strong> — though the course bears no resemblance to its Scottish namesake beyond the symbolic homage. Muirhead's actual design language is closer to <strong>dramatic American resort golf</strong> than links tradition.</p>
 <p>For golfers who appreciate <strong>architectural drama, dramatic risk-reward decision-making, and the rare opportunity to play par-6 holes at world-record-approaching distances</strong>, St Andrews 2000 is one of the <strong>most distinctive courses in all of Thailand</strong>.</p>
 <h2>Position in the Pattaya / Eastern Seaboard Golf Market</h2>
 <p>The Eastern Seaboard's architecturally distinguished tier:</p>
-<p>| Course | Designer | Architectural Identity | |---|---|---| | <strong>Khao Kheow</strong> | Pete Dye | American stadium / island green | | <strong>Laem Chabang International</strong> | Jack Nicklaus | Multi-routing Nicklaus signature | | <strong>Siam Country Club Old / Plantation</strong> | Schmidt-Curley, Tom Wishon | LPGA Honda Tour host | | <strong>Mountain Shadow</strong> | Ron Fream | 4 island greens, mango plantation | | <strong>Treasure Hill</strong> | Yoshikazu Kato | Jungle, narrow fairways | | <strong>Chee Chan Golf Resort</strong> | David Dale (Golfplan) | Scottish Highlands feel, cliff Buddha | | <strong>St Andrews 2000</strong> | <strong>Desmond Muirhead</strong> | <strong>Hilltop, par-6, split fairways, dramatic</strong> |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Designer</th><th>Architectural Identity</th></tr></thead><tbody><tr><td><strong>Khao Kheow</strong></td><td>Pete Dye</td><td>American stadium / island green</td></tr><tr><td><strong>Laem Chabang International</strong></td><td>Jack Nicklaus</td><td>Multi-routing Nicklaus signature</td></tr><tr><td><strong>Siam Country Club Old / Plantation</strong></td><td>Schmidt-Curley, Tom Wishon</td><td>LPGA Honda Tour host</td></tr><tr><td><strong>Mountain Shadow</strong></td><td>Ron Fream</td><td>4 island greens, mango plantation</td></tr><tr><td><strong>Treasure Hill</strong></td><td>Yoshikazu Kato</td><td>Jungle, narrow fairways</td></tr><tr><td><strong>Chee Chan Golf Resort</strong></td><td>David Dale (Golfplan)</td><td>Scottish Highlands feel, cliff Buddha</td></tr><tr><td><strong>St Andrews 2000</strong></td><td><strong>Desmond Muirhead</strong></td><td><strong>Hilltop, par-6, split fairways, dramatic</strong></td></tr></tbody></table></div>
 <p>Muirhead's creative vision puts St Andrews 2000 in a separate aesthetic category from any other Pattaya-area course.</p>
 <h2>Course Designer — Desmond Muirhead</h2>
 <p>The course was designed by <strong>Desmond Muirhead (1923-2002)</strong>, an <strong>English-born, American-trained golf architect</strong> with one of the most original and divisive portfolios in late-20th-century golf design:</p>
@@ -228,7 +207,8 @@
 <li><strong>Often combined with Phoenix Gold or Burapha</strong> for two-course Pattaya golf days</li>
 <li><strong>Closer to U-Tapao Airport</strong> than Pattaya (small advantage for fly-in visitors)</li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Desmond Muirhead design</strong> — distinctive architectural vision</li>
 <li><strong>Two par-6 holes 800+ yards each</strong> — world-rare feature</li>
@@ -241,7 +221,9 @@
 <li><strong>45 minutes from Pattaya</strong> — manageable distance</li>
 <li><strong>Multi-language caddy support</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Strategic difficulty</strong> punishes high handicappers</li>
 <li><strong>Par-6 holes</strong> can feel exhausting / discouraging for slower players</li>
@@ -251,7 +233,9 @@
 <li><strong>Polarizing design</strong> — some golfers find Muirhead's style "gimmicky"</li>
 <li><strong>Distance from Pattaya</strong> — 45 min drive</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Architectural-design connoisseurs</strong> seeking Muirhead's vision</li>
 <li><strong>Bucket-list golfers</strong> wanting par-6 experience</li>
@@ -261,7 +245,9 @@
 <li><strong>Group rounds</strong> where the pace doesn't matter</li>
 <li><strong>Players seeking memorable rather than predictable</strong> golf</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Pure beginners</strong> who'll struggle with the strategic and physical demands</li>
 <li><strong>Pace-of-play priority players</strong> — the design slows things down</li>
@@ -269,12 +255,24 @@
 <li><strong>Mobility-limited golfers</strong> — hilltop terrain demands walking and varied stance</li>
 <li><strong>Time-pressed travelers</strong> — the Ban Chang location adds drive time</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Ban Chang, Rayong | | Designer | Desmond Muirhead | | Opened | 2000 | | Holes | 18 | | Par | 72 | | Notable | Two par-6 holes (800+ yards each) — world-rare | | Other features | Elevated tees, split fairways, huge greens, hilltop terrain | | Distance from Pattaya | 45 min drive | | Green fee + cart + caddy | ~฿2,500-4,200 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Ban Chang, Rayong</dd></div>
+<div class="fact-row"><dt>Designer</dt><dd>Desmond Muirhead</dd></div>
+<div class="fact-row"><dt>Opened</dt><dd>2000</dd></div>
+<div class="fact-row"><dt>Holes</dt><dd>18</dd></div>
+<div class="fact-row"><dt>Par</dt><dd>72</dd></div>
+<div class="fact-row"><dt>Notable</dt><dd>Two par-6 holes (800+ yards each) — world-rare</dd></div>
+<div class="fact-row"><dt>Other features</dt><dd>Elevated tees, split fairways, huge greens, hilltop terrain</dd></div>
+<div class="fact-row"><dt>Distance from Pattaya</dt><dd>45 min drive</dd></div>
+<div class="fact-row"><dt>Green fee + cart + caddy</dt><dd>~฿2,500-4,200</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (10)</summary>
         <ul>

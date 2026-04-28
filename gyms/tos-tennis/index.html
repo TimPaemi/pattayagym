@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="TOS Tennis Club (also operated as TOS Tennis Academy) is the closest tennis facility to Jomtien Beach — a 2-court tennis venue tucked inside the Baan Suan Lalana residential development with swimming pool, locker room, and training gym integrated on-site. The location advantage is meaningful: where " />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -40,35 +41,6 @@
   "priceRange": "฿฿",
   "openingHours": "Daily — confirm at booking"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -86,36 +58,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=racquet">racquet</a> &nbsp;/&nbsp; TOS Tennis Club / TOS Tennis Academy
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=racquet">racquet</a>
+      <span class="bc-sep">›</span>
+      <span>TOS Tennis Club / TOS Tennis Academy</span>
     </div>
 
-    <span class="venue-cat-pill">racquet</span>
-    <h1 class="venue-h1">TOS Tennis Club / TOS Tennis Academy</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">racquet</span>
+      <h1 class="venue-h1">TOS Tennis Club / TOS Tennis Academy</h1>
+      <p class="venue-lede">TOS Tennis Club (also operated as TOS Tennis Academy) is the closest tennis facility to Jomtien Beach — a 2-court tennis venue tucked inside the Baan Suan Lalana residential development with swimming pool, locker room, and training gym integrated on-site. The location advantage i…</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Baan Suan Lalana — Jomtien Beach (closest to Jomtien)</span>
-      <span>💰 ฿฿</span>
-      <span>🕐 Daily — confirm at booking</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Baan Suan Lalana — Jomtien Beach (closest to Jomtien)</span>
+        <span class="meta-chip">💰 ฿฿</span>
+        <span class="meta-chip">🕐 Daily — confirm at booking</span>
+        <span class="meta-chip meta-chip-accent">⭐ Closest tennis facility to Jomtien Beach — 2 courts + pool + locker + gym at Baan Suan Lalana</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      
-      <a href="tel:+66891084402">Call +66 89 108 4402</a>
-      
+      <div class="venue-actions">
+        
+        
+        <a class="btn btn-secondary" href="tel:+66891084402">📞 +66 89 108 4402</a>
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>TOS Tennis Club / TOS Tennis Academy</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>TOS Tennis Club (also operated as <strong>TOS Tennis Academy</strong>) is <strong>the closest tennis facility to Jomtien Beach</strong> — a 2-court tennis venue tucked <strong>inside the Baan Suan Lalana residential development</strong> with <strong>swimming pool, locker room, and training gym</strong> integrated on-site. The location advantage is meaningful: where most Pattaya tennis facilities cluster in central Pattaya City or out toward Sattahip, TOS Tennis sits <strong>steps from Jomtien Beach in the south Pattaya beach belt</strong> where many traveling tennis players actually stay.</p>
 <p>The 2-court setup is <strong>the most modest in the Pattaya tennis scene</strong> — Greta has 6 covered courts, Tara has 3, Pattaya Tennis & Badminton Inter Club has 5. But the <strong>integrated swimming pool + locker room + training gym</strong> add <strong>a small-club lifestyle layer</strong> that pure tennis-only facilities don't offer. Players can train, shower, lift weights, swim, and recover in a single residential club setting.</p>
 <p>The current court conditions are <strong>fine for beginner play but would not be recommended for advanced play</strong> — the courts need resurfacing (planned at some point per the operators). For Jomtien-based travelers and Baan Suan Lalana residents who prioritize <strong>convenience, beach proximity, and integrated club amenities</strong> over premier-tier playing surfaces, TOS Tennis serves the niche.</p>
 <h2>Position in the Pattaya Tennis Market</h2>
 <p>Pattaya tennis facility tiers ranked:</p>
-<p>| Tier | Examples | Distinction | |---|---|---| | <strong>Indoor / covered premium</strong> | Greta Sport Club | 6 covered ITF Plexipave courts | | <strong>Premium hotel club</strong> | FITZ Club at Royal Cliff | Royal Cliff hotel-integrated | | <strong>2022 modern multi-sport</strong> | Tara Tennis Club | Fresh resurface + 3 courts + pickleball | | <strong>Multi-sport central</strong> | Pattaya Tennis & Badminton Inter Club | 5T + Badminton + Pickleball | | <strong>Foundational expat civic</strong> | Pattaya Sports Club | Charity + community | | <strong>Beach-adjacent residential</strong> | <strong>TOS Tennis Club</strong> | <strong>Closest to Jomtien Beach + 2 courts + pool + gym</strong> | | <strong>Outdoor club</strong> | Pattaya Tennis Club | Outdoor floodlit |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Indoor / covered premium</strong></td><td>Greta Sport Club</td><td>6 covered ITF Plexipave courts</td></tr><tr><td><strong>Premium hotel club</strong></td><td>FITZ Club at Royal Cliff</td><td>Royal Cliff hotel-integrated</td></tr><tr><td><strong>2022 modern multi-sport</strong></td><td>Tara Tennis Club</td><td>Fresh resurface + 3 courts + pickleball</td></tr><tr><td><strong>Multi-sport central</strong></td><td>Pattaya Tennis & Badminton Inter Club</td><td>5T + Badminton + Pickleball</td></tr><tr><td><strong>Foundational expat civic</strong></td><td>Pattaya Sports Club</td><td>Charity + community</td></tr><tr><td><strong>Beach-adjacent residential</strong></td><td><strong>TOS Tennis Club</strong></td><td><strong>Closest to Jomtien Beach + 2 courts + pool + gym</strong></td></tr><tr><td><strong>Outdoor club</strong></td><td>Pattaya Tennis Club</td><td>Outdoor floodlit</td></tr></tbody></table></div>
 <p>TOS Tennis's specific position: <strong>beach proximity + small-club lifestyle integration</strong> rather than tennis-quality leadership.</p>
 <h2>Baan Suan Lalana — The Setting</h2>
 <h3>What Baan Suan Lalana Is</h3>
@@ -197,7 +176,8 @@
 <li><strong>Annual membership</strong> tier available</li>
 </ul>
 <p>Direct contact recommended at <strong>+66 89 108 4402</strong> or <strong>tostennis@hotmail.com</strong> for current rates.</p>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Closest tennis facility to Jomtien Beach</strong> — walkable</li>
 <li><strong>2 courts + pool + locker + gym</strong> integrated</li>
@@ -209,7 +189,9 @@
 <li><strong>Member discounts</strong> for Baan Suan Lalana residents</li>
 <li><strong>No overwhelming tourist density</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Court conditions need resurfacing</strong> — affects bounce, surface quality</li>
 <li><strong>Only 2 courts</strong> — booking competition during peak times</li>
@@ -219,7 +201,9 @@
 <li><strong>Limited coaching staff</strong> vs. larger clubs</li>
 <li><strong>Smaller community</strong> than multi-court facilities</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Jomtien Beach-staying travelers</strong> wanting walkable tennis</li>
 <li><strong>Baan Suan Lalana residents</strong></li>
@@ -228,7 +212,9 @@
 <li><strong>Family / couple bookings</strong> with pool access</li>
 <li><strong>Beach + tennis combined</strong> day planning</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Advanced / tournament players</strong> — courts need resurfacing</li>
 <li><strong>Tournament-grade ITF tennis</strong> — go to Greta</li>
@@ -237,12 +223,22 @@
 <li><strong>Charity / civic engagement</strong> — go to Pattaya Sports Club</li>
 <li><strong>Multi-sport racquet enthusiasts</strong> — go to Pattaya Tennis & Badminton Inter Club</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Inside Baan Suan Lalana, Jomtien Beach area | | Distance to Jomtien Beach | Closest tennis facility to Jomtien | | Courts | 2 outdoor hard courts | | Court condition | Beginner-acceptable; resurfacing planned | | Amenities | Pool + locker + training gym | | Phone | 089-108-4402 | | Email | tostennis@hotmail.com | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Inside Baan Suan Lalana, Jomtien Beach area</dd></div>
+<div class="fact-row"><dt>Distance to Jomtien Beach</dt><dd>Closest tennis facility to Jomtien</dd></div>
+<div class="fact-row"><dt>Courts</dt><dd>2 outdoor hard courts</dd></div>
+<div class="fact-row"><dt>Court condition</dt><dd>Beginner-acceptable; resurfacing planned</dd></div>
+<div class="fact-row"><dt>Amenities</dt><dd>Pool + locker + training gym</dd></div>
+<div class="fact-row"><dt>Phone</dt><dd>089-108-4402</dd></div>
+<div class="fact-row"><dt>Email</dt><dd>tostennis@hotmail.com</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (5)</summary>
         <ul>

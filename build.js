@@ -32,21 +32,18 @@ function parseFrontmatter(text) {
     const line = lines[i];
     if (!line.trim()) { i++; continue; }
 
-    // top-level key: value
     const flat = line.match(/^([A-Za-z][\w-]*):\s*(.*)$/);
     if (flat && !line.startsWith('  ')) {
       const key = flat[1];
       let val = flat[2];
 
       if (val === '' || val === null) {
-        // nested block follows
         const block = [];
         i++;
         while (i < lines.length && (lines[i].startsWith('  ') || lines[i].trim() === '')) {
           block.push(lines[i]);
           i++;
         }
-        // determine if list or object
         if (block.some(l => l.trim().startsWith('- '))) {
           fm[key] = block
             .filter(l => l.trim().startsWith('- '))
@@ -62,7 +59,6 @@ function parseFrontmatter(text) {
         continue;
       }
 
-      // inline array
       if (val.startsWith('[') && val.endsWith(']')) {
         fm[key] = val.slice(1, -1).split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
       } else {
@@ -81,50 +77,189 @@ function escHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 }
 
+function applyInline(t) {
+  // Bold first (so it doesn't clash with italic), then italic, then links
+  t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  t = t.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '<em>$1</em>');
+  t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
+  t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
+  return t;
+}
+
+/**
+ * Convert markdown body to HTML.
+ * - Skips the first H1 (the page header already shows the venue name).
+ * - Detects markdown tables and renders as styled HTML tables.
+ * - Renders "Quick Reference Card" tables as a key-value fact card.
+ * - Wraps Pros / Cons / Best For / Not Best For sections in styled callouts.
+ */
 function mdToHtml(md) {
   const lines = md.split(/\r?\n/);
   const out = [];
   let inList = false;
   let para = [];
+  let firstH1Skipped = false;
+
+  // Section state: tracks which special section we're inside so we can wrap lists
+  // Values: null | 'pros' | 'cons' | 'best-for' | 'not-best-for' | 'quick-ref'
+  let sectionWrap = null;
+  let sectionOpen = false; // whether we currently have an open <div class="...">
+
+  function closeSectionWrap() {
+    if (sectionOpen) {
+      out.push('</div></div>');
+      sectionOpen = false;
+    }
+    sectionWrap = null;
+  }
 
   function flushPara() {
     if (para.length === 0) return;
     let t = para.join(' ').trim();
     if (!t) { para = []; return; }
-    // inline formatting
-    t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-    t = t.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
-    t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
-    out.push('<p>' + t + '</p>');
+    out.push('<p>' + applyInline(t) + '</p>');
     para = [];
   }
   function closeList() {
     if (inList) { out.push('</ul>'); inList = false; }
   }
 
-  for (let raw of lines) {
-    const line = raw;
+  function detectSectionFromHeading(text) {
+    const norm = text.toLowerCase().replace(/[^a-z ]/g, '').trim();
+    if (norm === 'pros') return 'pros';
+    if (norm === 'cons') return 'cons';
+    if (norm === 'best for') return 'best-for';
+    if (norm === 'not best for') return 'not-best-for';
+    if (norm === 'quick reference card' || norm === 'quick reference') return 'quick-ref';
+    return null;
+  }
 
-    if (/^#{1,6}\s/.test(line)) {
+  // Pre-pass: detect table blocks (a row, then a separator row of |---|---|, then more rows)
+  // We rebuild a line array where consecutive table lines are replaced with a single placeholder.
+  const processed = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    const next = lines[i + 1] || '';
+    const isHeaderRow = /^\s*\|.*\|\s*$/.test(line) && /^\s*\|\s*-{2,}/.test(next);
+    if (isHeaderRow) {
+      const headers = line.replace(/^\s*\||\|\s*$/g, '').split('|').map(s => s.trim());
+      i += 2; // skip header row + separator
+      const rows = [];
+      while (i < lines.length && /^\s*\|.*\|\s*$/.test(lines[i])) {
+        const cells = lines[i].replace(/^\s*\||\|\s*$/g, '').split('|').map(s => s.trim());
+        rows.push(cells);
+        i++;
+      }
+      processed.push({ type: 'table', headers, rows });
+      continue;
+    }
+    processed.push({ type: 'line', text: line });
+    i++;
+  }
+
+  for (const item of processed) {
+    if (item.type === 'table') {
       flushPara(); closeList();
-      const lvl = line.match(/^#+/)[0].length;
-      let text = line.replace(/^#+\s+/, '');
-      text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-      out.push(`<h${lvl}>${text}</h${lvl}>`);
+
+      // Quick Reference Card → fact-card layout (key-value, two columns total)
+      if (sectionWrap === 'quick-ref' && item.headers.length === 2) {
+        const dl = ['<dl class="fact-card">'];
+        for (const r of item.rows) {
+          if (r.length < 2) continue;
+          dl.push(`<div class="fact-row"><dt>${applyInline(r[0])}</dt><dd>${applyInline(r[1])}</dd></div>`);
+        }
+        dl.push('</dl>');
+        out.push(dl.join('\n'));
+        continue;
+      }
+
+      // Standard styled table for everything else
+      const html = ['<div class="md-table-wrap"><table class="md-table"><thead><tr>'];
+      for (const h of item.headers) html.push(`<th>${applyInline(h)}</th>`);
+      html.push('</tr></thead><tbody>');
+      for (const r of item.rows) {
+        html.push('<tr>');
+        for (let c = 0; c < item.headers.length; c++) {
+          html.push(`<td>${applyInline(r[c] || '')}</td>`);
+        }
+        html.push('</tr>');
+      }
+      html.push('</tbody></table></div>');
+      out.push(html.join(''));
       continue;
     }
 
+    const line = item.text;
+
+    // Headings
+    if (/^#{1,6}\s/.test(line)) {
+      flushPara(); closeList();
+
+      const lvl = line.match(/^#+/)[0].length;
+      let text = line.replace(/^#+\s+/, '');
+
+      // Skip the first H1 — the page already renders the title in venue-h1
+      if (lvl === 1 && !firstH1Skipped) {
+        firstH1Skipped = true;
+        continue;
+      }
+
+      // Close any open section wrapper before opening a new one
+      closeSectionWrap();
+
+      // H2 may begin a special section
+      if (lvl === 2) {
+        const detected = detectSectionFromHeading(text);
+        if (detected === 'pros') {
+          sectionWrap = 'pros';
+          out.push(`<h2 class="section-pros-cons">${applyInline(text)}</h2>`);
+          out.push('<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">');
+          sectionOpen = true;
+          continue;
+        }
+        if (detected === 'cons') {
+          sectionWrap = 'cons';
+          out.push(`<h2 class="section-pros-cons">${applyInline(text)}</h2>`);
+          out.push('<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">');
+          sectionOpen = true;
+          continue;
+        }
+        if (detected === 'best-for') {
+          sectionWrap = 'best-for';
+          out.push(`<h2>${applyInline(text)}</h2>`);
+          out.push('<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">');
+          sectionOpen = true;
+          continue;
+        }
+        if (detected === 'not-best-for') {
+          sectionWrap = 'not-best-for';
+          out.push(`<h2>${applyInline(text)}</h2>`);
+          out.push('<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">');
+          sectionOpen = true;
+          continue;
+        }
+        if (detected === 'quick-ref') {
+          sectionWrap = 'quick-ref';
+          out.push(`<h2 class="section-quick-ref">${applyInline(text)}</h2>`);
+          continue;
+        }
+      }
+
+      out.push(`<h${lvl}>${applyInline(text)}</h${lvl}>`);
+      continue;
+    }
+
+    // List items
     if (/^\s*-\s+/.test(line)) {
       flushPara();
       if (!inList) { out.push('<ul>'); inList = true; }
       let item = line.replace(/^\s*-\s+/, '');
-      item = item.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-      item = item.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
-      item = item.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
-      out.push('<li>' + item + '</li>');
+      out.push('<li>' + applyInline(item) + '</li>');
       continue;
     }
 
+    // Blank line
     if (/^\s*$/.test(line)) {
       flushPara(); closeList();
       continue;
@@ -132,8 +267,10 @@ function mdToHtml(md) {
 
     para.push(line);
   }
+
   flushPara();
   closeList();
+  closeSectionWrap();
   return out.join('\n');
 }
 
@@ -163,7 +300,6 @@ function buildVenuePage(slug, fm, bodyHtml, body) {
   const cat = (fm.category || '').replace(/-/g, ' ');
   const sources = Array.isArray(fm.sources) ? fm.sources : [];
 
-  // schema.org LocalBusiness
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -183,7 +319,7 @@ function buildVenuePage(slug, fm, bodyHtml, body) {
   const socialLinks = [
     social.facebook && `<a href="https://facebook.com/${social.facebook}" rel="noopener" target="_blank">Facebook</a>`,
     social.instagram && `<a href="https://instagram.com/${social.instagram}" rel="noopener" target="_blank">Instagram</a>`
-  ].filter(Boolean).join(' · ');
+  ].filter(Boolean).join('');
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -205,38 +341,10 @@ function buildVenuePage(slug, fm, bodyHtml, body) {
   <meta name="twitter:description" content="${escHtml(desc)}" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -254,25 +362,33 @@ function buildVenuePage(slug, fm, bodyHtml, body) {
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=${escHtml(fm.category || '')}">${escHtml(cat)}</a> &nbsp;/&nbsp; ${escHtml(fm.name)}
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=${escHtml(fm.category || '')}">${escHtml(cat)}</a>
+      <span class="bc-sep">›</span>
+      <span>${escHtml(fm.name)}</span>
     </div>
 
-    <span class="venue-cat-pill">${escHtml(cat)}</span>
-    <h1 class="venue-h1">${escHtml(fm.name)}</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">${escHtml(cat)}</span>
+      <h1 class="venue-h1">${escHtml(fm.name)}</h1>
+      ${firstPara ? `<p class="venue-lede">${escHtml(firstPara.slice(0, 280))}${firstPara.length > 280 ? '…' : ''}</p>` : ''}
 
-    <div class="venue-hero-meta">
-      ${fm.area ? `<span>📍 ${escHtml(fm.area)}</span>` : ''}
-      ${fm.priceRange ? `<span>💰 ${escHtml(fm.priceRange)}</span>` : ''}
-      ${fm.hours ? `<span>🕐 ${escHtml(fm.hours)}</span>` : ''}
-    </div>
+      <div class="venue-hero-meta">
+        ${fm.area ? `<span class="meta-chip">📍 ${escHtml(fm.area)}</span>` : ''}
+        ${fm.priceRange ? `<span class="meta-chip">💰 ${escHtml(fm.priceRange)}</span>` : ''}
+        ${fm.hours ? `<span class="meta-chip">🕐 ${escHtml(fm.hours)}</span>` : ''}
+        ${fm.distinction ? `<span class="meta-chip meta-chip-accent">⭐ ${escHtml(fm.distinction)}</span>` : ''}
+      </div>
 
-    <div class="venue-actions">
-      ${fm.mapsUrl ? `<a class="primary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">View on Google Maps</a>` : ''}
-      ${fm.website ? `<a href="${escHtml(fm.website)}" target="_blank" rel="noopener">Official Website</a>` : ''}
-      ${fm.phone ? `<a href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}">Call ${escHtml(fm.phone)}</a>` : ''}
-      ${socialLinks ? `<span style="padding:10px 4px;color:var(--text-muted);">${socialLinks}</span>` : ''}
+      <div class="venue-actions">
+        ${fm.mapsUrl ? `<a class="btn btn-primary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">📍 View on Google Maps</a>` : ''}
+        ${fm.website ? `<a class="btn btn-secondary" href="${escHtml(fm.website)}" target="_blank" rel="noopener">🔗 Official Website</a>` : ''}
+        ${fm.phone ? `<a class="btn btn-secondary" href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}">📞 ${escHtml(fm.phone)}</a>` : ''}
+        ${social.facebook ? `<a class="btn btn-ghost" href="https://facebook.com/${escHtml(social.facebook)}" target="_blank" rel="noopener">Facebook</a>` : ''}
+        ${social.instagram ? `<a class="btn btn-ghost" href="https://instagram.com/${escHtml(social.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ''}
+      </div>
     </div>
 
     <article class="venue-body">
@@ -280,7 +396,7 @@ function buildVenuePage(slug, fm, bodyHtml, body) {
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>${escHtml(fm.verified || 'N/A')}</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>${escHtml(fm.verified || 'N/A')}</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       ${sources.length ? `<details>
         <summary>Research sources (${sources.length})</summary>
         <ul>
@@ -340,9 +456,9 @@ function buildStubBody(g, cats) {
   lines.push('');
   lines.push('## More Coming Soon');
   lines.push('');
-  lines.push('This is a basic listing for **' + g.name + '**. A full deep-dive page with history, trainers, pricing tiers, schedules, reviews, and on-the-ground details is in progress and will be published as research is completed.');
+  lines.push('This is a basic listing for **' + g.name + '**. A full deep-dive page is in progress.');
   lines.push('');
-  lines.push('Know this venue and want to help us improve the listing? Email **hello@pattaya-gym.com** with corrections, photos, or details and we will incorporate.');
+  lines.push('Email **hello@pattaya-gym.com** with corrections, photos, or details.');
   return lines.join('\n');
 }
 
@@ -374,19 +490,10 @@ function main() {
       deepCount++;
     } else {
       fm = {
-        id: slug,
-        name: g.name,
-        category: g.category,
-        area: g.area,
-        address: g.address,
-        phone: g.phone,
-        website: g.website,
-        social: g.social || {},
-        hours: g.hours,
-        priceRange: g.priceRange,
-        description: g.description,
-        tags: g.tags,
-        mapsUrl: g.mapsUrl,
+        id: slug, name: g.name, category: g.category, area: g.area,
+        address: g.address, phone: g.phone, website: g.website,
+        social: g.social || {}, hours: g.hours, priceRange: g.priceRange,
+        description: g.description, tags: g.tags, mapsUrl: g.mapsUrl,
         verified: g.verified
       };
       body = buildStubBody(g, CATEGORIES);

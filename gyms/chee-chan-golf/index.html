@@ -18,6 +18,7 @@
   <meta name="twitter:description" content="Chee Chan Golf Resort is the newest premier-tier golf course in the Pattaya region — an 18-hole David Dale (Golfplan) design that opened in 2018 on 580 Rai (229 acres / 92 hectares) at Na Jomtien, Sattahip. The course&#39;s defining and unique feature is its direct sightline to Khao Chi Chan, a sacred m" />
 
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <script type="application/ld+json">{
@@ -39,35 +40,6 @@
   "priceRange": "฿฿฿",
   "openingHours": "Daily — first tee from sunrise; last tee typically 14:30"
 }</script>
-
-  <style>
-    .venue-page { max-width: 880px; margin: 0 auto; padding: 24px 32px 80px; }
-    .venue-breadcrumb { color: var(--text-muted); font-size: 13px; margin-bottom: 16px; }
-    .venue-breadcrumb a { color: var(--text-dim); }
-    .venue-h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin: 8px 0 12px; }
-    .venue-cat-pill { display: inline-block; background: rgba(255,184,0,0.12); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 12px; border-radius: 50px; margin-bottom: 8px; }
-    .venue-hero-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--text-dim); font-size: 14px; margin: 14px 0 20px; }
-    .venue-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 14px 0 24px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 36px; }
-    .venue-actions a { background: var(--border); color: var(--text); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; }
-    .venue-actions a.primary { background: var(--accent); color: #000; }
-    .venue-actions a:hover { background: var(--accent-hover); color: #000; }
-    .venue-body h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.3px; margin: 36px 0 14px; padding-top: 16px; border-top: 1px solid var(--border); }
-    .venue-body h2:first-of-type { border-top: none; padding-top: 0; }
-    .venue-body h3 { font-size: 1.15rem; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
-    .venue-body p { color: var(--text-dim); margin-bottom: 14px; }
-    .venue-body ul { padding-left: 22px; color: var(--text-dim); margin-bottom: 16px; }
-    .venue-body li { margin-bottom: 6px; line-height: 1.5; }
-    .venue-body strong { color: var(--text); }
-    .venue-body a { color: var(--accent); }
-    .venue-footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
-    .venue-footer details { margin-top: 14px; }
-    .venue-footer summary { cursor: pointer; color: var(--text-dim); font-weight: 600; padding: 6px 0; }
-    .venue-footer summary:hover { color: var(--accent); }
-    .venue-footer ul { padding-left: 22px; margin-top: 8px; }
-    .venue-footer li { margin-bottom: 4px; word-break: break-all; font-size: 12px; }
-    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 14px; padding: 8px 0; }
-    .back-link:hover { color: var(--accent); }
-  </style>
 </head>
 <body>
   <header class="hero" style="min-height: auto;">
@@ -85,36 +57,43 @@
   </header>
 
   <main class="venue-page">
-    <a class="back-link" href="/">&larr; Back to directory</a>
     <div class="venue-breadcrumb">
-      <a href="/">Pattaya Gym Directory</a> &nbsp;/&nbsp; <a href="/?cat=golf">golf</a> &nbsp;/&nbsp; Chee Chan Golf Resort
+      <a href="/">Directory</a>
+      <span class="bc-sep">›</span>
+      <a href="/?cat=golf">golf</a>
+      <span class="bc-sep">›</span>
+      <span>Chee Chan Golf Resort</span>
     </div>
 
-    <span class="venue-cat-pill">golf</span>
-    <h1 class="venue-h1">Chee Chan Golf Resort</h1>
+    <div class="venue-hero">
+      <span class="venue-cat-pill">golf</span>
+      <h1 class="venue-h1">Chee Chan Golf Resort</h1>
+      <p class="venue-lede">Chee Chan Golf Resort is the newest premier-tier golf course in the Pattaya region — an 18-hole David Dale (Golfplan) design that opened in 2018 on 580 Rai (229 acres / 92 hectares) at Na Jomtien, Sattahip. The course&#39;s defining and unique feature is its direct sightline to Khao …</p>
 
-    <div class="venue-hero-meta">
-      <span>📍 Na Jomtien / Sattahip</span>
-      <span>💰 ฿฿฿</span>
-      <span>🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
-    </div>
+      <div class="venue-hero-meta">
+        <span class="meta-chip">📍 Na Jomtien / Sattahip</span>
+        <span class="meta-chip">💰 ฿฿฿</span>
+        <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip meta-chip-accent">⭐ Newest premier Pattaya course (2018) with views of the world&#39;s largest cliff Buddha image</span>
+      </div>
 
-    <div class="venue-actions">
-      
-      <a href="https://cheechangolf.com/" target="_blank" rel="noopener">Official Website</a>
-      
-      
+      <div class="venue-actions">
+        
+        <a class="btn btn-secondary" href="https://cheechangolf.com/" target="_blank" rel="noopener">🔗 Official Website</a>
+        
+        
+        
+      </div>
     </div>
 
     <article class="venue-body">
-      <h1>Chee Chan Golf Resort</h1>
-<h2>Overview</h2>
+      <h2>Overview</h2>
 <p>Chee Chan Golf Resort is <strong>the newest premier-tier golf course in the Pattaya region</strong> — an <strong>18-hole David Dale (Golfplan) design that opened in 2018</strong> on <strong>580 Rai (229 acres / 92 hectares)</strong> at Na Jomtien, Sattahip. The course's defining and unique feature is its <strong>direct sightline to Khao Chi Chan</strong>, a sacred mountain whose <strong>130-meter (425-foot) cliff face displays the golden engraving of Phra Phuttha Maha Wachira Uttamopat Satsada — considered the world's largest Lord Buddha image carved on rock</strong>, visible <strong>from every single hole on the golf course</strong>.</p>
 <p>This single design feature places Chee Chan in <strong>a unique global category</strong>. There is no other golf course on Earth where the world's largest cliff Buddha is the visual backdrop of every shot. The combination of <strong>modern American architectural design (David Dale of Golfplan), 7,345-yard championship layout, premium maintenance, lightning-fast TifEagle greens, and the Khao Chi Chan visual backdrop</strong> creates an experience that's both <strong>architecturally serious and spiritually distinctive</strong>.</p>
 <p>For golfers who want the <strong>newest and most photographically iconic Pattaya golf experience</strong> — and especially for visitors who want to combine golf with a visit to the famous Khao Chi Chan cliff Buddha attraction — Chee Chan is the destination course.</p>
 <h2>Position in the Pattaya Golf Market</h2>
 <p>Chee Chan occupies a specific position in the modern era of Pattaya courses:</p>
-<p>| Era | Notable Course | Distinction | |---|---|---| | <strong>2010s premier</strong> | Siam Country Club Plantation (2008) | Schmidt-Curley design | | <strong>2010s premier</strong> | Siam Waterside (2014) | Lake-themed design | | <strong>Late 2010s</strong> | <strong>Chee Chan Golf Resort (2018)</strong> | <strong>Khao Chi Chan visual + Golfplan design</strong> | | <strong>2020s</strong> | Various renovations + boutique developments | Continuing evolution |</p>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Era</th><th>Notable Course</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>2010s premier</strong></td><td>Siam Country Club Plantation (2008)</td><td>Schmidt-Curley design</td></tr><tr><td><strong>2010s premier</strong></td><td>Siam Waterside (2014)</td><td>Lake-themed design</td></tr><tr><td><strong>Late 2010s</strong></td><td><strong>Chee Chan Golf Resort (2018)</strong></td><td><strong>Khao Chi Chan visual + Golfplan design</strong></td></tr><tr><td><strong>2020s</strong></td><td>Various renovations + boutique developments</td><td>Continuing evolution</td></tr></tbody></table></div>
 <p>Chee Chan is <strong>the newest of the premier-tier courses</strong> — meaning the most modern infrastructure, the freshest agronomy, and the latest architectural thinking.</p>
 <h2>The Khao Chi Chan Buddha — The Course's Defining Feature</h2>
 <p>The course's name and visual identity come from <strong>Khao Chi Chan</strong> (เขาชีจรรย์), the sacred mountain dominating the Sattahip skyline:</p>
@@ -237,7 +216,8 @@
 <li><strong>Closer to Pattaya than Khao Kheow / Laem Chabang</strong> (which are north)</li>
 <li><strong>Combinable with Greta Sport Club, Wat Yannasangwararam visit</strong></li>
 </ul>
-<h2>Pros</h2>
+<h2 class="section-pros-cons">Pros</h2>
+<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
 <ul>
 <li><strong>Newest premier course in Pattaya</strong> (2018) — modern infrastructure</li>
 <li><strong>Khao Chi Chan cliff Buddha</strong> visible from every hole — globally unique</li>
@@ -250,7 +230,9 @@
 <li><strong>Combinable with cultural tourism</strong> at Khao Chi Chan</li>
 <li><strong>Multilingual service</strong></li>
 </ul>
-<h2>Cons</h2>
+</div></div>
+<h2 class="section-pros-cons">Cons</h2>
+<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">
 <ul>
 <li><strong>Premium pricing</strong> — among the higher Pattaya green fees</li>
 <li><strong>Strategic difficulty</strong> — punishes high handicappers</li>
@@ -259,7 +241,9 @@
 <li><strong>Water-heavy holes</strong> risk lost-ball anxiety</li>
 <li><strong>No on-site resort accommodation</strong> — must arrange separately</li>
 </ul>
+</div></div>
 <h2>Best For</h2>
+<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
 <li><strong>Premium golf experience seekers</strong> wanting the newest Pattaya course</li>
 <li><strong>Photographers</strong> seeking iconic golf-and-Buddha shots</li>
@@ -268,19 +252,35 @@
 <li><strong>Cultural tourists</strong> combining golf with Khao Chi Chan visit</li>
 <li><strong>Visitors wanting "Scottish Highlands" aesthetic</strong> in Asia</li>
 </ul>
+</div></div>
 <h2>Not Best For</h2>
+<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Pure budget seekers</strong> (Treasure Hill, Bangpra cheaper)</li>
 <li><strong>High handicappers</strong> intimidated by water and fast greens</li>
 <li><strong>Walking-style golfers</strong> (mandatory carts)</li>
 <li><strong>Old-school course pedigree purists</strong> preferring 50+ year-old courses</li>
 </ul>
-<h2>Quick Reference Card</h2>
-<p>| Field | Value | |---|---| | Address | Na Jomtien, Sattahip, Chonburi | | Designer | David Dale (Golfplan) | | Opened | 2018 | | Holes | 18 | | Par | 72 | | Yardage | 7,345 (championship) / 6,527 (forward) | | Land area | 580 Rai (229 acres / 92 hectares) | | Signature | World's largest cliff Buddha visible from every hole | | Greens | TifEagle (premium fast hybrid Bermuda) | | Distance from Pattaya | 25-30 min drive | | Green fee + cart + caddy | ~฿3,500-5,500 | | Verified | 2026-04-27 |</p>
+</div></div>
+<h2 class="section-quick-ref">Quick Reference Card</h2>
+<dl class="fact-card">
+<div class="fact-row"><dt>Address</dt><dd>Na Jomtien, Sattahip, Chonburi</dd></div>
+<div class="fact-row"><dt>Designer</dt><dd>David Dale (Golfplan)</dd></div>
+<div class="fact-row"><dt>Opened</dt><dd>2018</dd></div>
+<div class="fact-row"><dt>Holes</dt><dd>18</dd></div>
+<div class="fact-row"><dt>Par</dt><dd>72</dd></div>
+<div class="fact-row"><dt>Yardage</dt><dd>7,345 (championship) / 6,527 (forward)</dd></div>
+<div class="fact-row"><dt>Land area</dt><dd>580 Rai (229 acres / 92 hectares)</dd></div>
+<div class="fact-row"><dt>Signature</dt><dd>World's largest cliff Buddha visible from every hole</dd></div>
+<div class="fact-row"><dt>Greens</dt><dd>TifEagle (premium fast hybrid Bermuda)</dd></div>
+<div class="fact-row"><dt>Distance from Pattaya</dt><dd>25-30 min drive</dd></div>
+<div class="fact-row"><dt>Green fee + cart + caddy</dt><dd>~฿3,500-5,500</dd></div>
+<div class="fact-row"><dt>Verified</dt><dd>2026-04-27</dd></div>
+</dl>
     </article>
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>2026-04-27</strong>. Listing is researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a> and we'll fix it.</p>
+      <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
         <summary>Research sources (10)</summary>
         <ul>
