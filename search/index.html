@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Search Pattaya Gyms &amp; Sport Venues</title>
+<meta name="description" content="Search 98+ verified Pattaya gyms, Muay Thai camps, dive operators, golf courses, and sport venues by name, area, category, or feature." />
+<link rel="canonical" href="https://pattaya-gym.com/search/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Search Pattaya Gyms &amp; Sport Venues" />
+<meta property="og:description" content="Search 98+ verified Pattaya gyms, Muay Thai camps, dive operators, golf courses, and sport venues by name, area, category, or feature." />
+<meta property="og:url" content="https://pattaya-gym.com/search/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/venue.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
+<style>
+  .search-input-wrap { position: relative; max-width: 720px; margin: 0 auto 24px; }
+  .search-input {
+    width: 100%; padding: 18px 56px 18px 22px; border-radius: 14px;
+    background: var(--card); border: 2px solid var(--border); color: var(--text);
+    font-size: 17px; transition: border-color 0.2s;
+  }
+  .search-input:focus { outline: 0; border-color: var(--accent); }
+  .search-icon { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--text-muted); }
+  .search-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 26px; max-width: 720px; margin-left: auto; margin-right: auto; }
+  .sf-pill { padding: 6px 12px; font-size: 12px; font-weight: 600; border-radius: 999px; background: var(--card); border: 1px solid var(--border); color: var(--text-dim); cursor: pointer; }
+  .sf-pill.active { background: var(--accent); color: #000; border-color: var(--accent); }
+  .search-stats { color: var(--text-muted); font-size: 13px; margin: 0 auto 14px; max-width: 720px; }
+  #search-results { max-width: 720px; margin: 0 auto; }
+  .sr-card { display: block; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; margin-bottom: 10px; transition: border-color 0.15s; }
+  .sr-card:hover { border-color: var(--accent); }
+  .sr-card h3 { margin: 0 0 4px; font-size: 1.05rem; color: var(--text); font-weight: 700; }
+  .sr-card .sr-meta { font-size: 12px; color: var(--text-muted); }
+  .sr-card .sr-cat { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; }
+  .sr-card p { margin: 6px 0 0; font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+  .sr-empty { text-align: center; color: var(--text-muted); padding: 40px 20px; }
+  mark { background: rgba(255,184,0,0.3); color: var(--accent); padding: 0 2px; border-radius: 2px; }
+</style>
+</head>
+<body>
+<header class="hero" style="min-height: auto;">
+  <nav class="nav">
+    <a href="/" class="brand">
+      <span class="brand-mark">P</span>
+      <span class="brand-text">PATTAYA <strong>GYM</strong></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#directory">Directory</a></li>
+      <li><a href="/map/">Map</a></li>
+      <li><a href="/search/">Search</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="venue-page">
+  <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Search</span></div>
+  <div class="venue-hero" style="text-align: center; padding: 36px 28px;">
+    <span class="venue-cat-pill">Search</span>
+    <h1 class="venue-h1" style="margin-bottom:6px;">Find your gym</h1>
+    <p class="venue-lede" style="margin: 0 auto 20px; max-width: 580px;">Search by venue name, neighborhood, sport, language, price tier, or feature. 98 verified venues.</p>
+    <div class="search-input-wrap">
+      <input type="search" class="search-input" id="q" placeholder="Try: muay thai jomtien · cheap yoga · 24 hour gym · english pickleball" autofocus />
+      <span class="search-icon">🔍</span>
+    </div>
+    <div class="search-filters" id="filters">
+      <button class="sf-pill active" data-cat="all">All categories</button>
+      <button class="sf-pill" data-cat="muay-thai">Muay Thai</button><button class="sf-pill" data-cat="mma">MMA</button><button class="sf-pill" data-cat="bjj">BJJ / Grappling</button><button class="sf-pill" data-cat="boxing">Boxing</button><button class="sf-pill" data-cat="crossfit">CrossFit / Functional</button><button class="sf-pill" data-cat="fitness">Fitness / Gym</button><button class="sf-pill" data-cat="yoga">Yoga / Pilates</button><button class="sf-pill" data-cat="golf">Golf</button><button class="sf-pill" data-cat="racquet">Tennis / Padel / Squash</button><button class="sf-pill" data-cat="swimming">Swimming</button><button class="sf-pill" data-cat="watersports">Watersports / Diving</button><button class="sf-pill" data-cat="climbing">Climbing</button><button class="sf-pill" data-cat="clubs">Running / Cycling Clubs</button><button class="sf-pill" data-cat="kids-youth">Kids / Youth Sports</button><button class="sf-pill" data-cat="equestrian">Equestrian</button><button class="sf-pill" data-cat="adventure">Adventure / Multi-Sport</button>
+    </div>
+  </div>
+  <p class="search-stats" id="stats"></p>
+  <div id="search-results"></div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div><span class="brand-mark small">P</span><span>PATTAYA <strong>GYM</strong></span></div>
+    <p>© 2026 pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
+  </div>
+</footer>
+<script src="/data.js"></script>
+<script>
+(function() {
+  var GYMS = window.GYMS || [];
+  var CATS = window.CATEGORIES || [];
+  var qInput = document.getElementById('q');
+  var resultsEl = document.getElementById('search-results');
+  var statsEl = document.getElementById('stats');
+  var activeCat = 'all';
+
+  function catLabel(k) { var c = CATS.find(function(x){return x.key===k;}); return c?c.label:k; }
+  function escapeRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  function highlight(text, q) {
+    if (!q || !text) return text || '';
+    var re = new RegExp('('+escapeRe(q)+')', 'gi');
+    return String(text).replace(re, '<mark>$1</mark>');
+  }
+  function score(g, q) {
+    if (!q) return 1;
+    var ql = q.toLowerCase();
+    var hay = (g.name+' '+g.area+' '+g.address+' '+(g.tags||[]).join(' ')+' '+g.description+' '+g.category+' '+g.hours+' '+g.priceRange).toLowerCase();
+    if (!hay.includes(ql)) {
+      // try splitting query
+      var parts = ql.split(/\s+/).filter(Boolean);
+      if (!parts.every(function(p){return hay.includes(p);})) return 0;
+      return 1;
+    }
+    if (g.name.toLowerCase().includes(ql)) return 5;
+    if (g.area && g.area.toLowerCase().includes(ql)) return 4;
+    if ((g.tags||[]).some(function(t){return t.toLowerCase().includes(ql);})) return 3;
+    return 2;
+  }
+
+  function render() {
+    var q = qInput.value.trim();
+    var res = GYMS
+      .filter(function(g){ return activeCat === 'all' || g.category === activeCat; })
+      .map(function(g){ return {g:g, s:score(g, q)}; })
+      .filter(function(x){ return x.s > 0; })
+      .sort(function(a,b){ return b.s - a.s; });
+
+    if (!res.length) {
+      resultsEl.innerHTML = '<div class="sr-empty">No venues match. Try a broader search or browse by <a href="/" style="color:var(--accent);">category</a>.</div>';
+      statsEl.textContent = q ? 'No results for "'+q+'"' : 'Type to search...';
+      return;
+    }
+
+    statsEl.textContent = res.length + ' result' + (res.length===1?'':'s') + (q?' for "'+q+'"':'') + (activeCat==='all'?'':' in ' + catLabel(activeCat));
+    resultsEl.innerHTML = res.map(function(x){
+      var g = x.g;
+      return '<a class="sr-card" href="/gyms/'+g.id+'/">' +
+        '<div class="sr-cat">'+catLabel(g.category)+'</div>' +
+        '<h3>'+highlight(g.name, q)+'</h3>' +
+        '<div class="sr-meta">'+(g.area?'📍 '+highlight(g.area,q)+' · ':'')+(g.priceRange?'💰 '+g.priceRange+' · ':'')+(g.hours?'🕐 '+g.hours:'')+'</div>' +
+        '<p>'+highlight(g.description||'', q)+'</p>' +
+      '</a>';
+    }).join('');
+  }
+
+  qInput.addEventListener('input', render);
+  document.getElementById('filters').addEventListener('click', function(e){
+    var b = e.target.closest('.sf-pill');
+    if (!b) return;
+    document.querySelectorAll('.sf-pill').forEach(function(x){x.classList.remove('active');});
+    b.classList.add('active');
+    activeCat = b.dataset.cat;
+    render();
+  });
+
+  // Pre-populate from URL ?q=
+  var urlQ = new URLSearchParams(location.search).get('q');
+  if (urlQ) qInput.value = urlQ;
+  render();
+})();
+</script>
+</body>
+</html>

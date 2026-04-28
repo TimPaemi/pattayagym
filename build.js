@@ -684,6 +684,8 @@ function main() {
   try {
     console.log('\n--- Building extras ---');
     require('./build-extras.js');
+    console.log('\n--- Building discovery (areas, guides, search, add form) ---');
+    require('./build-discovery.js');
   } catch (e) {
     console.error('Extras build failed:', e.message);
   }
