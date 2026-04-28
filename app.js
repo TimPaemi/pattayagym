@@ -55,18 +55,12 @@
   const renderCard = (g) => {
     const tags = (g.tags || []).map((t) => `<span class="card-tag">${escapeHtml(t)}</span>`).join("");
     const actions = [];
-    if (g.detailFile) {
-      // Built per-venue page exists at /gyms/<id>/
-      actions.push(`<a class="primary" href="/gyms/${g.id}/">View Details</a>`);
-      if (g.mapsUrl) actions.push(`<a href="${g.mapsUrl}" target="_blank" rel="noopener">Map</a>`);
-    } else {
-      if (g.mapsUrl) actions.push(`<a class="primary" href="${g.mapsUrl}" target="_blank" rel="noopener">Map</a>`);
-      if (g.website) actions.push(`<a href="${g.website}" target="_blank" rel="noopener">Website</a>`);
-      if (g.phone) actions.push(`<a href="tel:${g.phone.replace(/\s/g, "")}">Call</a>`);
-    }
-    const titleHtml = g.detailFile
-      ? `<a href="/gyms/${g.id}/" style="color:inherit;text-decoration:none;">${escapeHtml(g.name)}</a>`
-      : escapeHtml(g.name);
+    // Every venue in data.js now has a generated /gyms/<id>/ page (build.js handles all entries)
+    actions.push(`<a class="primary" href="/gyms/${g.id}/">View Details</a>`);
+    if (g.mapsUrl) actions.push(`<a href="${g.mapsUrl}" target="_blank" rel="noopener">Map</a>`);
+    if (g.website) actions.push(`<a href="${g.website}" target="_blank" rel="noopener">Website</a>`);
+    if (g.phone) actions.push(`<a href="tel:${g.phone.replace(/\s/g, "")}">Call</a>`);
+    const titleHtml = `<a href="/gyms/${g.id}/" style="color:inherit;text-decoration:none;">${escapeHtml(g.name)}</a>`;
     return `
       <article class="card">
         <span class="card-cat">${catLabel(g.category)}</span>
