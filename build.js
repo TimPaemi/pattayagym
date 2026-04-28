@@ -679,139 +679,14 @@ function main() {
   fs.writeFileSync(SITEMAP, buildSitemap(venues));
   console.log('\nGenerated ' + venues.length + ' venue pages (' + deepCount + ' deep + ' + stubCount + ' stubs)');
   console.log('sitemap.xml updated.');
+
+  // Chain extras
+  try {
+    console.log('\n--- Building extras ---');
+    require('./build-extras.js');
+  } catch (e) {
+    console.error('Extras build failed:', e.message);
+  }
 }
 
 main();
-ed.');
-}
-
-main();
-a>` : ''}
-    ${fm.phone ? `<a class="sa-btn" href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}" aria-label="Call ${escHtml(fm.name)}">
-      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
-    </a>` : ''}
-    ${fm.website ? `<a class="sa-btn" href="${escHtml(fm.website)}" target="_blank" rel="noopener" aria-label="Visit website">
-      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
-    </a>` : ''}
-    <button class="sa-btn sa-compare" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}" aria-label="Add to compare">
-      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
-    </button>
-    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
-      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
-    </button>
-  </nav>
-
-  <div class="scroll-progress" id="pg-scroll-progress"></div>
-
-  <script src="/share.js" defer></script>
-  <script src="/compare.js" defer></script>
-  <script>
-  (function () {
-    var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
-    function update() {
-      var h = document.documentElement;
-      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
-    }
-    document.addEventListener('scroll', update, { passive: true });
-    update();
-  })();
-  </script>
-</body>
-</html>
-`;
-}
-
-// ---------- Sitemap ----------
-function buildSitemap(venues) {
-  const today = new Date().toISOString().slice(0, 10);
-  const urls = [
-    `<url><loc>${SITE}/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>`,
-    ...venues.map(v => `<url><loc>${SITE}/gyms/${v.slug}/</loc><lastmod>${v.fm.verified || today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`)
-  ];
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  ${urls.join('\n  ')}\n</urlset>\n`;
-}
-
-// ---------- Main ----------
-function loadGymsFromDataJs() {
-  const code = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
-  const win = {};
-  new Function('window', code)(win);
-  return { GYMS: win.GYMS || [], CATEGORIES: win.CATEGORIES || [] };
-}
-
-function buildStubBody(g, cats) {
-  const cat = cats.find(c => c.key === g.category);
-  const catLabel = cat ? cat.label : g.category;
-  const lines = [];
-  lines.push('## Overview');
-  lines.push('');
-  lines.push(g.description || ('Pattaya ' + catLabel + ' venue.'));
-  lines.push('');
-  lines.push('## Quick Facts');
-  lines.push('');
-  if (g.area) lines.push('- **Area:** ' + g.area);
-  if (g.address) lines.push('- **Address:** ' + g.address);
-  if (g.phone) lines.push('- **Phone:** ' + g.phone);
-  if (g.website) lines.push('- **Website:** ' + g.website);
-  if (g.hours) lines.push('- **Hours:** ' + g.hours);
-  if (g.priceRange) lines.push('- **Price range:** ' + g.priceRange);
-  if (g.tags && g.tags.length) lines.push('- **Tags:** ' + g.tags.join(', '));
-  lines.push('');
-  lines.push('## More Coming Soon');
-  lines.push('');
-  lines.push('A full deep-dive page for **' + g.name + '** is in progress.');
-  return lines.join('\n');
-}
-
-function main() {
-  if (!fs.existsSync(VENUES_DIR)) fs.mkdirSync(VENUES_DIR);
-  if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR);
-  const loaded = loadGymsFromDataJs();
-  const GYMS = loaded.GYMS;
-  const CATEGORIES = loaded.CATEGORIES;
-  const venues = [];
-  const mdFiles = new Set(
-    fs.readdirSync(VENUES_DIR).filter(f => f.endsWith('.md')).map(f => f.replace(/\.md$/, ''))
-  );
-  let deepCount = 0, stubCount = 0;
-  GYMS.forEach(g => {
-    const slug = g.id;
-    let fm, bodyHtml, body;
-    if (mdFiles.has(slug)) {
-      const raw = fs.readFileSync(path.join(VENUES_DIR, slug + '.md'), 'utf8');
-      const parsed = parseFrontmatter(raw);
-      fm = parsed.fm;
-      if (!fm.mapsUrl && g.mapsUrl) fm.mapsUrl = g.mapsUrl;
-      if (!fm.description && g.description) fm.description = g.description;
-      body = parsed.body;
-      bodyHtml = mdToHtml(body);
-      deepCount++;
-    } else {
-      fm = {
-        id: slug, name: g.name, category: g.category, area: g.area,
-        address: g.address, phone: g.phone, website: g.website,
-        social: g.social || {}, hours: g.hours, priceRange: g.priceRange,
-        description: g.description, tags: g.tags, mapsUrl: g.mapsUrl,
-        verified: g.verified
-      };
-      body = buildStubBody(g, CATEGORIES);
-      bodyHtml = mdToHtml(body);
-      stubCount++;
-    }
-    const html = buildVenuePage(slug, fm, bodyHtml, body, GYMS, CATEGORIES);
-    const venueDir = path.join(OUT_DIR, slug);
-    if (!fs.existsSync(venueDir)) fs.mkdirSync(venueDir);
-    fs.writeFileSync(path.join(venueDir, 'index.html'), html);
-    venues.push({ slug, fm });
-    const tag = mdFiles.has(slug) ? 'DEEP' : 'stub';
-    console.log('  [' + tag + '] /gyms/' + slug + '/  (' + (fm.name || slug) + ')');
-  });
-  fs.writeFileSync(SITEMAP, buildSitemap(venues));
-  console.log('\nGenerated ' + venues.length + ' venue pages (' + deepCount + ' deep + ' + stubCount + ' stubs)');
-  console.log('sitemap.xml updated.');
-}
-
-main();
-);
