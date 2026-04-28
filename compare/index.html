@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare Pattaya Venues | Pattaya Gym Directory</title>
+  <meta name="description" content="Compare Pattaya gyms, Muay Thai camps, dive operators, golf courses and more side-by-side. Pick up to 4 venues and see them in a single comparison view." />
+  <link rel="canonical" href="https://pattaya-gym.com/compare/" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/venue.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
+  <style>
+    .compare-page { max-width: 1200px; margin: 0 auto; padding: 32px 24px 100px; }
+    .compare-page h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; letter-spacing: -1px; margin: 0 0 8px; }
+    .compare-page > p.lede { color: var(--text-dim); margin: 0 0 30px; max-width: 720px; line-height: 1.55; }
+    .compare-empty { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 60px 40px; text-align: center; }
+    .compare-empty h2 { font-weight: 700; margin: 0 0 12px; color: var(--text); }
+    .compare-empty p { color: var(--text-dim); margin: 0 0 20px; }
+    .compare-empty a { display: inline-block; padding: 12px 24px; background: var(--accent); color: #000; border-radius: 10px; font-weight: 700; text-decoration: none; }
+
+    .cmp-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
+    .cmp-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+    .cmp-table th, .cmp-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .cmp-table th { background: rgba(255,184,0,0.05); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; min-width: 130px; }
+    .cmp-table tbody tr:last-child th, .cmp-table tbody tr:last-child td { border-bottom: none; }
+    .cmp-venue-head { background: linear-gradient(180deg, rgba(255,184,0,0.07), rgba(255,184,0,0)); }
+    .cmp-venue-head th { background: transparent; padding: 22px 18px 16px; }
+    .cmp-venue-head .v-name { font-size: 1.1rem; font-weight: 800; color: var(--text); margin: 0 0 4px; line-height: 1.2; letter-spacing: -0.3px; }
+    .cmp-venue-head .v-name a { color: var(--text); text-decoration: none; }
+    .cmp-venue-head .v-name a:hover { color: var(--accent); }
+    .cmp-venue-head .v-cat { font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent); font-weight: 700; }
+    .cmp-venue-head .v-remove { background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 18px; float: right; padding: 0; line-height: 1; }
+    .cmp-venue-head .v-remove:hover { color: #f87171; }
+    .cmp-table td { color: var(--text-dim); }
+    .cmp-table td strong { color: var(--text); }
+    .cmp-table .row-label { font-weight: 700; color: var(--accent); font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; }
+    .cmp-table a { color: var(--accent); text-decoration: underline; text-decoration-color: rgba(255,184,0,0.3); }
+    .cmp-actions { padding: 16px 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .cmp-actions a { display: inline-flex; align-items: center; gap: 4px; padding: 7px 12px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; background: var(--border); color: var(--text); }
+    .cmp-actions a.primary { background: var(--accent); color: #000; }
+    .cmp-add-more { display: inline-block; margin: 24px 0 0; padding: 10px 18px; background: var(--card); border: 1px solid var(--border); color: var(--text-dim); border-radius: 10px; text-decoration: none; font-size: 14px; }
+    .cmp-add-more:hover { color: var(--accent); border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="hero" style="min-height: auto;">
+    <nav class="nav">
+      <a href="/" class="brand">
+        <span class="brand-mark">P</span>
+        <span class="brand-text">PATTAYA <strong>GYM</strong></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#directory">Directory</a></li>
+        <li><a href="/#categories">Categories</a></li>
+        <li><a href="/#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="compare-page">
+    <a class="back-link" href="/" style="color: var(--text-dim); text-decoration: none; font-size: 14px;">← Back to directory</a>
+    <h1>Compare Venues Side-by-Side</h1>
+    <p class="lede">Pick up to 4 Pattaya venues to compare on one screen. Hours, price, location, contact details, distinctive features — all the data lined up so you can decide quickly.</p>
+    <div id="compare-content"></div>
+    <a class="cmp-add-more" href="/">+ Browse directory to add more venues</a>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><span class="brand-mark small">P</span><span>PATTAYA <strong>GYM</strong></span></div>
+      <p>© 2026 pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
+    </div>
+  </footer>
+
+  <script src="/data.js"></script>
+  <script src="/share.js"></script>
+  <script src="/compare.js"></script>
+  <script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var ids = (params.get('ids') || '').split(',').filter(Boolean);
+    var content = document.getElementById('compare-content');
+    var GYMS = window.GYMS || [];
+    var CATS = window.CATEGORIES || [];
+
+    if (!ids.length) {
+      // Fall back to localStorage selection
+      try {
+        var saved = JSON.parse(localStorage.getItem('pg_compare_v1')) || [];
+        ids = saved.map(function (x) { return x.id; });
+      } catch (e) { ids = []; }
+    }
+
+    var venues = ids.map(function (id) {
+      return GYMS.find(function (g) { return g.id === id; });
+    }).filter(Boolean);
+
+    if (!venues.length) {
+      content.innerHTML =
+        '<div class="compare-empty">' +
+          '<h2>No venues selected yet</h2>' +
+          '<p>Browse the directory and click <strong>"+ Add to compare"</strong> on any venue. Pick 2–4 venues to see them side-by-side here.</p>' +
+          '<a href="/">Browse directory</a>' +
+        '</div>';
+      return;
+    }
+
+    function catLabel(key) {
+      var c = CATS.find(function (x) { return x.key === key; });
+      return c ? c.label : key;
+    }
+
+    function escAttr(s) {
+      return String(s || '').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    function val(v, key) {
+      var raw = v[key];
+      if (!raw) return '<span style="color:var(--text-muted);">—</span>';
+      if (key === 'website') return '<a href="' + escAttr(raw) + '" target="_blank" rel="noopener">Visit site →</a>';
+      if (key === 'mapsUrl') return '<a href="' + escAttr(raw) + '" target="_blank" rel="noopener">Open map →</a>';
+      if (key === 'tags' && Array.isArray(raw)) return raw.map(function (t) { return '<span style="display:inline-block;background:var(--border);padding:2px 8px;border-radius:4px;font-size:11px;margin-right:4px;margin-bottom:4px;">' + t + '</span>'; }).join('');
+      return raw;
+    }
+
+    var rows = [
+      { label: 'Category',     key: 'category', fn: function (v) { return '<strong>' + catLabel(v.category) + '</strong>'; } },
+      { label: 'Area',         key: 'area' },
+      { label: 'Address',      key: 'address' },
+      { label: 'Hours',        key: 'hours' },
+      { label: 'Price range',  key: 'priceRange', fn: function (v) { return v.priceRange ? '<strong>' + v.priceRange + '</strong>' : '<span style="color:var(--text-muted);">—</span>'; } },
+      { label: 'Phone',        key: 'phone',   fn: function (v) { return v.phone ? '<a href="tel:' + escAttr(String(v.phone).replace(/\s/g,'')) + '">' + v.phone + '</a>' : '<span style="color:var(--text-muted);">—</span>'; } },
+      { label: 'Website',      key: 'website' },
+      { label: 'Map',          key: 'mapsUrl' },
+      { label: 'Description',  key: 'description' },
+      { label: 'Tags',         key: 'tags' },
+      { label: 'Last verified', key: 'verified' }
+    ];
+
+    var headHtml = '<tr class="cmp-venue-head"><th></th>';
+    venues.forEach(function (v) {
+      headHtml += '<th>' +
+        '<button class="v-remove" onclick="(function(){var p=new URLSearchParams(location.search);var a=(p.get(\'ids\')||\'\').split(\',\').filter(function(x){return x&&x!==\'' + v.id + '\'});if(a.length){p.set(\'ids\',a.join(\',\'));location.search=p.toString();}else{location.href=\'/compare/\';}})()" title="Remove">×</button>' +
+        '<div class="v-cat">' + catLabel(v.category) + '</div>' +
+        '<div class="v-name"><a href="/gyms/' + v.id + '/">' + v.name + '</a></div>' +
+      '</th>';
+    });
+    headHtml += '</tr>';
+
+    var bodyHtml = '';
+    rows.forEach(function (r) {
+      bodyHtml += '<tr><th class="row-label">' + r.label + '</th>';
+      venues.forEach(function (v) {
+        var cell = r.fn ? r.fn(v) : val(v, r.key);
+        bodyHtml += '<td>' + cell + '</td>';
+      });
+      bodyHtml += '</tr>';
+    });
+
+    // Action row
+    bodyHtml += '<tr><th class="row-label">Actions</th>';
+    venues.forEach(function (v) {
+      bodyHtml += '<td><div class="cmp-actions">' +
+        '<a class="primary" href="/gyms/' + v.id + '/">View page</a>' +
+        (v.mapsUrl ? '<a href="' + escAttr(v.mapsUrl) + '" target="_blank" rel="noopener">Map</a>' : '') +
+        (v.website ? '<a href="' + escAttr(v.website) + '" target="_blank" rel="noopener">Site</a>' : '') +
+        '</div></td>';
+    });
+    bodyHtml += '</tr>';
+
+    content.innerHTML =
+      '<div class="cmp-table-wrap">' +
+        '<table class="cmp-table">' +
+          '<thead>' + headHtml + '</thead>' +
+          '<tbody>' + bodyHtml + '</tbody>' +
+        '</table>' +
+      '</div>';
+
+    // Sync localStorage with the URL ids so the floating widget reflects this view
+    try {
+      var current = venues.map(function (v) { return { id: v.id, name: v.name }; });
+      localStorage.setItem('pg_compare_v1', JSON.stringify(current));
+      if (PG && PG.compare) PG.compare.renderWidget();
+    } catch (e) {}
+
+    document.title = 'Comparing ' + venues.map(function (v) { return v.name; }).join(' vs ') + ' | Pattaya Gym';
+  })();
+  </script>
+</body>
+</html>

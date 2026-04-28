@@ -292,13 +292,22 @@ function extractFirstParagraph(body) {
     .replace(/\s+/g, ' ').trim();
 }
 
-function buildVenuePage(slug, fm, bodyHtml, body) {
+function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   const url = `${SITE}/gyms/${slug}/`;
   const title = `${fm.name} | Pattaya Gym Directory`;
   const firstPara = extractFirstParagraph(body || '');
   const desc = (fm.description || firstPara || `Train at ${fm.name} in Pattaya, Thailand. Address, pricing, schedule, trainers, reviews and more.`).replace(/\s+/g, ' ').slice(0, 300);
   const cat = (fm.category || '').replace(/-/g, ' ');
   const sources = Array.isArray(fm.sources) ? fm.sources : [];
+
+  // Related venues — same category, exclude self, pick first 3
+  const related = (allGyms || [])
+    .filter(g => g.category === fm.category && g.id !== slug)
+    .slice(0, 3);
+
+  // Resolve readable category label (CATEGORIES has emoji + label per key)
+  const catObj = (allCats || []).find(c => c.key === fm.category);
+  const catLabel = catObj ? catObj.label : cat;
 
   const schema = {
     '@context': 'https://schema.org',
@@ -384,16 +393,50 @@ function buildVenuePage(slug, fm, bodyHtml, body) {
 
       <div class="venue-actions">
         ${fm.mapsUrl ? `<a class="btn btn-primary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">📍 View on Google Maps</a>` : ''}
+        ${fm.mapsUrl ? `<a class="btn btn-secondary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">⭐ Read Google Reviews</a>` : ''}
         ${fm.website ? `<a class="btn btn-secondary" href="${escHtml(fm.website)}" target="_blank" rel="noopener">🔗 Official Website</a>` : ''}
         ${fm.phone ? `<a class="btn btn-secondary" href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}">📞 ${escHtml(fm.phone)}</a>` : ''}
         ${social.facebook ? `<a class="btn btn-ghost" href="https://facebook.com/${escHtml(social.facebook)}" target="_blank" rel="noopener">Facebook</a>` : ''}
         ${social.instagram ? `<a class="btn btn-ghost" href="https://instagram.com/${escHtml(social.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ''}
+        <button class="compare-btn" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}"><span class="cmp-btn-label">+ Add to compare</span></button>
+      </div>
+
+      <div class="share-bar">
+        <span class="share-label">Share</span>
+        <button class="share-btn share-wa" onclick="PG.share('whatsapp')" aria-label="Share on WhatsApp"><span class="share-ico">💬</span> WhatsApp</button>
+        <button class="share-btn share-fb" onclick="PG.share('facebook')" aria-label="Share on Facebook"><span class="share-ico">f</span> Facebook</button>
+        <button class="share-btn share-tw" onclick="PG.share('twitter')" aria-label="Share on X"><span class="share-ico">𝕏</span> X</button>
+        <button class="share-btn share-line" onclick="PG.share('line')" aria-label="Share on LINE"><span class="share-ico">L</span> LINE</button>
+        <button class="share-btn share-tg" onclick="PG.share('telegram')" aria-label="Share on Telegram"><span class="share-ico">✈</span> Telegram</button>
+        <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
 
     <article class="venue-body">
       ${bodyHtml}
     </article>
+
+    <div class="venue-cta-foot">
+      <h3>Visited or trained at ${escHtml(fm.name)}?</h3>
+      <p>Help other Pattaya travellers find the right gym — share this page or tell us what we got wrong.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary" onclick="PG.share('whatsapp')">💬 Share on WhatsApp</button>
+        <a class="btn btn-secondary" href="mailto:hello@pattaya-gym.com?subject=${encodeURIComponent('Update for ' + fm.name)}">✏️ Suggest an edit</a>
+        ${fm.mapsUrl ? `<a class="btn btn-secondary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">⭐ Leave a Google review</a>` : ''}
+      </div>
+    </div>
+
+    ${related.length ? `<section class="related-venues">
+      <h2>More ${escHtml(catLabel)} venues in Pattaya</h2>
+      <div class="related-grid">
+        ${related.map(r => `<a href="/gyms/${escHtml(r.id)}/" class="related-card">
+          <span class="rc-cat">${escHtml(catLabel)}</span>
+          <h3>${escHtml(r.name)}</h3>
+          <p>${escHtml(r.area || r.address || '')}</p>
+        </a>`).join('\n        ')}
+      </div>
+      <p style="margin-top: 16px; font-size: 14px;"><a href="/?cat=${escHtml(fm.category || '')}" style="color: var(--text-dim);">Browse all ${escHtml(catLabel)} venues →</a></p>
+    </section>` : ''}
 
     <footer class="venue-footer">
       <p>Last verified: <strong>${escHtml(fm.verified || 'N/A')}</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
@@ -412,6 +455,9 @@ function buildVenuePage(slug, fm, bodyHtml, body) {
       <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
     </div>
   </footer>
+
+  <script src="/share.js" defer></script>
+  <script src="/compare.js" defer></script>
 </body>
 </html>
 `;
@@ -501,7 +547,7 @@ function main() {
       stubCount++;
     }
 
-    const html = buildVenuePage(slug, fm, bodyHtml, body);
+    const html = buildVenuePage(slug, fm, bodyHtml, body, GYMS, CATEGORIES);
     const venueDir = path.join(OUT_DIR, slug);
     if (!fs.existsSync(venueDir)) fs.mkdirSync(venueDir);
     fs.writeFileSync(path.join(venueDir, 'index.html'), html);
@@ -514,6 +560,10 @@ function main() {
   fs.writeFileSync(SITEMAP, buildSitemap(venues));
   console.log('\nGenerated ' + venues.length + ' venue pages (' + deepCount + ' deep + ' + stubCount + ' stubs)');
   console.log('sitemap.xml updated.');
+}
+
+main();
+ed.');
 }
 
 main();

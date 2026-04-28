@@ -79,10 +79,22 @@
 
       <div class="venue-actions">
         
+        
         <a class="btn btn-secondary" href="https://seafari.co.th/" target="_blank" rel="noopener">🔗 Official Website</a>
         
         <a class="btn btn-ghost" href="https://facebook.com/Seafaridivepattaya" target="_blank" rel="noopener">Facebook</a>
         
+        <button class="compare-btn" data-pg-compare-id="seafari-padi-dive" data-pg-compare-name="Seafari PADI Dive Centre"><span class="cmp-btn-label">+ Add to compare</span></button>
+      </div>
+
+      <div class="share-bar">
+        <span class="share-label">Share</span>
+        <button class="share-btn share-wa" onclick="PG.share('whatsapp')" aria-label="Share on WhatsApp"><span class="share-ico">💬</span> WhatsApp</button>
+        <button class="share-btn share-fb" onclick="PG.share('facebook')" aria-label="Share on Facebook"><span class="share-ico">f</span> Facebook</button>
+        <button class="share-btn share-tw" onclick="PG.share('twitter')" aria-label="Share on X"><span class="share-ico">𝕏</span> X</button>
+        <button class="share-btn share-line" onclick="PG.share('line')" aria-label="Share on LINE"><span class="share-ico">L</span> LINE</button>
+        <button class="share-btn share-tg" onclick="PG.share('telegram')" aria-label="Share on Telegram"><span class="share-ico">✈</span> Telegram</button>
+        <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
 
@@ -226,6 +238,38 @@
 </dl>
     </article>
 
+    <div class="venue-cta-foot">
+      <h3>Visited or trained at Seafari PADI Dive Centre?</h3>
+      <p>Help other Pattaya travellers find the right gym — share this page or tell us what we got wrong.</p>
+      <div class="cta-row">
+        <button class="btn btn-primary" onclick="PG.share('whatsapp')">💬 Share on WhatsApp</button>
+        <a class="btn btn-secondary" href="mailto:hello@pattaya-gym.com?subject=Update%20for%20Seafari%20PADI%20Dive%20Centre">✏️ Suggest an edit</a>
+        
+      </div>
+    </div>
+
+    <section class="related-venues">
+      <h2>More Watersports / Diving venues in Pattaya</h2>
+      <div class="related-grid">
+        <a href="/gyms/mermaids-dive/" class="related-card">
+          <span class="rc-cat">Watersports / Diving</span>
+          <h3>Mermaid&#39;s Dive Center</h3>
+          <p>Jomtien</p>
+        </a>
+        <a href="/gyms/pattaya-dive-centre/" class="related-card">
+          <span class="rc-cat">Watersports / Diving</span>
+          <h3>Pattaya Dive Centre</h3>
+          <p>Beach Road</p>
+        </a>
+        <a href="/gyms/pattaya-scuba-adventures/" class="related-card">
+          <span class="rc-cat">Watersports / Diving</span>
+          <h3>Pattaya Scuba Adventures</h3>
+          <p>Pattaya</p>
+        </a>
+      </div>
+      <p style="margin-top: 16px; font-size: 14px;"><a href="/?cat=watersports" style="color: var(--text-dim);">Browse all Watersports / Diving venues →</a></p>
+    </section>
+
     <footer class="venue-footer">
       <p>Last verified: <strong>2026-04-27</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
       <details>
@@ -252,5 +296,8 @@
       <p>© 2026 pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
     </div>
   </footer>
+
+  <script src="/share.js" defer></script>
+  <script src="/compare.js" defer></script>
 </body>
 </html>
