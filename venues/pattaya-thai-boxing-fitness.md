@@ -1,14 +1,17 @@
 ---
 id: pattaya-thai-boxing-fitness
-name: Pattaya Thai Boxing and Fitness Gym (Jomtien)
+name: Pattaya Thai Boxing & Fitness Gym (Jomtien)
 category: muay-thai
-area: Jomtien Beach
-address: Soi 7, off Jomtien Beach Road (5 min walk to beach), Pattaya
+area: Jomtien Beach (Soi 7, 200m from beach)
+address: Down a small alley off Soi 7, Jomtien Beach, Pattaya
 phone: ""
 website: ""
 social: {}
-hours: Afternoons (open into early evening; closes ~17:00)
+hours: Afternoons primarily (typically until ~17:00); confirm at gym
 priceRange: ฿
+distinction: Hostel + gym combination — affordable Muay Thai + accommodation in one
+notableTrainer: Champ — actively competing pro fighter
+distanceToBeach: 200 meters
 beginnerFriendly: true
 languages: [English, Thai]
 verified: 2026-04-27
@@ -16,106 +19,147 @@ sources:
   - https://www.tripadvisor.com/Attraction_Review-g3366878-d8779491-Reviews-Pattaya_Thai_Boxing_and_Fitness_Gym-Jomtien_Beach_Pattaya_Chonburi_Province.html
   - https://wanderlog.com/place/details/12482800/jomtien-thai-boxing-gym
   - https://thaiboxingpattaya.com/muay-thai-classes
+  - https://www.muaythaipattaya.com/
 ---
 
-# Pattaya Thai Boxing and Fitness Gym (Jomtien)
+# Pattaya Thai Boxing & Fitness Gym (Jomtien)
 
 ## Overview
 
-Pattaya Thai Boxing and Fitness Gym is a small **walk-in, no-frills, budget-friendly Muay Thai gym** tucked into a small alley off **Soi 7 in Jomtien Beach**. It's the kind of place that doesn't show up in glossy training-vacation marketing but is well-known among Jomtien-based expats and travelers staying near the beach who want **affordable padwork without a monthly commitment or premium pricing**. At **฿300 for equipment access plus 4-5 rounds of pads**, it's one of the cheapest legitimate Muay Thai sessions you can get in Pattaya.
+Pattaya Thai Boxing & Fitness Gym is **a small, walk-in, hostel-attached Muay Thai gym in the heart of Jomtien Beach** — tucked into **a small alley off Soi 7, just 200 meters from the beach**. The operation pairs **affordable Muay Thai pad-rounds (~฿300 per session)** with **dorm + private bed budget accommodation**, making it one of the **most cost-effective combined training-and-stay options in Pattaya** for backpackers and short-stay travelers.
 
-The gym's reputation rests primarily on the **quality of its trainers** — one notable coach, **"Champ,"** is an actively competing professional fighter, which is unusual at this price tier and brings real ring intensity into pad sessions.
+The gym's **headline trainer is Champ** — an **actively competing professional fighter** whose pad-work coaching is consistently praised across reviews. The combination of **professional-grade trainer + hostel-tier pricing + literal beachside location** is unusual in Pattaya, and explains why this small operation holds steady positive ratings on TripAdvisor and Wanderlog despite minimal marketing presence.
 
-## Position in the Market
+For travelers wanting **authentic Muay Thai pad rounds without committing to a full camp** and **affordable Jomtien-area accommodation under one roof**, Pattaya Thai Boxing & Fitness is genuinely unique in the Pattaya market.
 
-Where Fairtex/Silk are premium, Battle Conquer is mid-tier with AC, and Sityodtong/Petchrungruang are authentic family camps with deep lineage — Pattaya Thai Boxing and Fitness occupies the **walk-in casual tier**: low cost, no membership pressure, decent trainers, perfect for travelers staying in Jomtien who want to add 2-3 sessions a week to their holiday without committing to a camp.
+## Position in the Pattaya Market
 
-## Disciplines
+This gym occupies a unique tier:
 
-- **Muay Thai** — primary focus, padwork-led
-- **Boxing** — particularly strong, multiple reviewers note the boxing trainers' high skill
-- **General fitness equipment** — cardio + free weights for own use
+| Type | Camps | Price Tier |
+|---|---|---|
+| **Hostel + budget gym (THIS)** | Pattaya Thai Boxing & Fitness | ฿300/session, hostel beds |
+| **Authentic budget camps** | Sor Klinmee, Petchrungruang, WKO | ฿200-400/session, separate accommodation |
+| **Mid-tier modern** | Battle Conquer, Venum, Rage | ฿500/session, separate accommodation |
+| **Boutique / all-inclusive** | Silk, Kombat Group | ฿15,000+/week with accommodation |
+| **Resort scale** | Fairtex | Drop-in ฿800 + premium hotel |
 
-## Trainers
+The combined hostel-gym model is rare. **Most Pattaya Muay Thai camps either provide on-site accommodation in barracks or expect students to arrange their own housing**. This gym splits the difference with **dorm + private bed hostel pricing**.
 
-The trainer reputation is the gym's main draw:
+## Trainer — Champ (Active Pro Fighter)
 
-- **Champ** — actively competing pro fighter; "real-world experience and intensity" in his pad sessions; consistently called out by name in positive reviews
-- General coaching staff described as **technically solid with good skill sets**
-- **Welcoming atmosphere** — multiple reviewers note the friendly, motivating vibe
-- **English communication** is workable
+The gym's standout asset is **Champ**, a **professional fighter who's still actively competing**. Reviews from various platforms emphasize:
 
-## Schedule
+- **Top-notch coaching** during pad rounds
+- **Real fight experience** translating into pad-holding intensity and technical correction
+- **Positive, focused, motivating atmosphere**
+- **English communication workable**
+- **Personalized attention** during walk-in sessions
 
-The gym is **open primarily in the afternoons**, typically into early evening:
+Having an actively competing pro at the budget tier is unusual — most pro fighters either coach at premium camps or run their own facilities. Champ's presence at Pattaya Thai Boxing & Fitness makes the **฿300/session value proposition genuinely exceptional**.
 
-- Likely opens around 13:00-14:00
-- Closes around **17:00**
-- Morning sessions possibly available — confirm at the gym
+## Pricing & Format
 
-The afternoon-only schedule is similar to WKO and means this is **not the right pick for travelers who train in the morning**.
+### Drop-In Training
 
-## Pricing
-
-Among the **lowest entry costs** in Pattaya for legitimate trainer-led Muay Thai:
-
-- **Single visit:** ~฿300 — equipment use + 4-5 rounds of pad work with a trainer
-- No membership pressure
-- No multi-day packages necessary
+- **~฿300 per session** — equipment use + pad work with Champ
+- 4-5 rounds of pad work typical
+- No long-term commitment
 - Walk-in friendly
 
-For comparison: a single ~฿300 session here is **half what you'd pay at Fairtex** and gets you direct trainer attention.
+### Hostel Accommodation
 
-## Facilities
+- **Mixed dorms** — backpacker-style shared beds
+- **Private beds** — small private rooms
+- **Free gym facilities for guests** — major value-add
+- **Free Muay Thai training included** for some guest tiers (confirm at booking)
 
-Basic but functional — definitely budget end of the spectrum:
+### Budget Calculation
 
-- Muay Thai pad/training area
+For a budget traveler:
+
+- **Hostel bed:** ~฿200-500/night
+- **Daily pad session:** ~฿300
+- **Total daily**: ~฿500-800 for **bed + serious pad-work training in Jomtien**
+
+Compare to:
+
+- **Fairtex hotel + training:** ~฿2,500-5,000/day
+- **Silk all-inclusive:** ~฿850-1,100/day
+- **Sor Klinmee + own accommodation:** ~฿700-1,200/day
+
+This is **the cheapest combined training-and-stay tier in Pattaya** while still delivering **professional-grade pad coaching from Champ**.
+
+## Facility
+
+Authentic, no-frills:
+
+- Muay Thai pad/training area (alleyway-set facility)
 - Heavy bags
 - Equipment for general strength and fitness
-- **Air fans** (no AC — important to note in hot season)
+- **Air fans** (no AC — important to note)
 - **Warm showers**
-- Modest size
+- Modest size, basic infrastructure
 
-Note: some reviewers mention the **shared equipment can be dirty/smelly** during peak times — bring your own hand wraps and tape, and a towel.
+The **Jomtien Beach location (200 m from sand)** means students can train and immediately recover at the beach — a quality-of-life feature that more expensive camps inland cannot match.
 
-## Accommodation
+## Hours
 
-No on-site accommodation — and given the walk-in casual model, none is needed. Jomtien Beach is **5 minutes walk away** with abundant hotels, condos, and short-term apartments. This is a perfect "drop-in while on holiday" gym rather than a residential training facility.
+The gym is **primarily open in the afternoons**, typically:
 
-## Location & Getting There
+- Opens ~13:00-14:00
+- Closes ~17:00
+- Some morning availability — confirm at gym
 
-- **Area:** Jomtien Beach, off Soi 7
-- **Walking distance to Jomtien Beach Road**, restaurants, 7-Elevens, ATMs
-- Easy to find for anyone staying in Jomtien
-- Songthaew or short taxi from central Pattaya
+The afternoon-only schedule is similar to WKO's model and means **morning trainers should look elsewhere**.
 
 ## Pros
 
-- **Excellent value** — ~฿300 per session including pad rounds with a trainer
-- **Pro fighter ("Champ")** as one of the trainers
-- Walk-in friendly, no membership pressure
-- Convenient location for Jomtien-based travelers
-- Welcoming atmosphere for beginners
-- Air fans and warm showers (basic but works)
+- **Excellent value** — ~฿300/session including pad rounds
+- **Pro fighter Champ** as headline trainer (actively competing)
+- **Hostel + gym combination** — sleep + train under one operation
+- **200m from Jomtien Beach** — train then beach
+- **Walk-in friendly** — no membership pressure
+- **Convenient for Jomtien-staying travelers**
+- **Welcoming atmosphere** for beginners
+- **Air fans + warm showers** (basic but functional)
 
 ## Cons
 
 - **Afternoon-only schedule** — no morning training
 - **No AC** (fans only) — challenging in March-May hot season
-- **Equipment cleanliness** flagged by some reviews — bring your own gear
-- Small facility — can wait for pad turn during peak times
-- No structured curriculum — drop-in nature means casual progression
-- Limited online presence — minimal info available without visiting
-
-## Reputation Summary
-
-Solid TripAdvisor reviews from **Jomtien-staying travelers and casual Muay Thai students**. Particularly recommended for travelers who want **2-3 quality pad sessions per week** while on holiday, without paying for a full training camp package. The coaching quality (especially Champ) is consistently called out as exceeding the price point.
+- **Equipment cleanliness** flagged by some reviewers — bring your own gear
+- **Small facility** — can wait for pad turn during peak times
+- **Hostel-tier accommodation** — basic, not for comfort-seekers
+- **No structured curriculum** — drop-in nature means casual progression
+- **Limited online presence** — minimal info available without visiting
 
 ## Best For
 
-Travelers staying in Jomtien on a holiday • Walk-in casual training • Budget-conscious students • People who train afternoons only • Travelers wanting boxing alongside Muay Thai
+- **Backpackers** wanting cheap Pattaya Muay Thai
+- **Walk-in casual training** seekers
+- **Budget-conscious students**
+- **Jomtien Beach-based travelers**
+- **Afternoon-only trainers**
+- **Travelers who want hostel + gym combined**
+- **First-time Muay Thai tasters** before committing to a full camp
 
 ## Not Best For
 
-Morning trainers • Hot-season visitors who need AC • Travelers wanting a structured camp curriculum • Long-stay students wanting visa support • Premium service / clean equipment seekers
+- **Morning trainers** (afternoon only)
+- **Hot-season visitors** needing AC
+- **Travelers wanting structured curriculum**
+- **Long-stay students** seeking visa support
+- **Premium-comfort seekers**
+
+## Quick Reference Card
+
+| Field | Value |
+|---|---|
+| Address | Off Soi 7, Jomtien Beach, Pattaya (200m from beach) |
+| Hours | Afternoons primarily |
+| Price | ~฿300/session (incl. pad rounds with Champ) |
+| Accommodation | Hostel — mixed dorms + private beds |
+| Notable trainer | Champ (active pro fighter) |
+| Distance to beach | 200 meters |
+| Verified | 2026-04-27 |

@@ -2,23 +2,30 @@
 id: silk-muay-thai
 name: Silk Muay Thai
 category: muay-thai
-area: Pattaya (verify exact, near Jomtien area)
-address: Pattaya, Bang Lamung, Chonburi (verify exact at gym)
+area: Pattaya
+address: Pattaya, Bang Lamung, Chonburi (verify exact at booking)
 phone: ""
 website: https://silkmuaythai.com/
 social:
   facebook: Silkmuaythai
-hours: Mon-Sat — Morning 07:00-09:30 & Afternoon 15:00-18:00
+  instagram: silkmuaythai
+hours: Mon-Sat — Morning 07:00-09:30 & Afternoon 15:00-18:00; closed Sundays
 priceRange: ฿฿฿
+distinction: 4.9/5 rated — premium boutique camp with all-inclusive accommodation packages
+roomFeatures: [Private bathroom, private balcony, AC, WiFi, mini-fridge, washing area access]
+amenities: [Swimming pool, sauna, spa, on-site restaurant]
 beginnerFriendly: true
-languages: [English, Thai]
+languages: [English, Thai, Russian]
 verified: 2026-04-27
 sources:
   - https://silkmuaythai.com/
   - https://silkmuaythai.com/our-process/
+  - https://silkmuaythai.com/our-team/
+  - https://www.facebook.com/Silkmuaythai/
+  - https://www.instagram.com/silkmuaythai/
   - https://www.muaythaimap.com/gyms/silk-muay-thai
   - https://muaythaicampsinthailand.com/silk-muay-thai-gym/
-  - https://www.facebook.com/Silkmuaythai/
+  - https://southeastasiabackpacker.com/booking-category/muay-thai/
   - https://www.cleverthai.com/top-muay-thai-gyms-in-pattaya/
 ---
 
@@ -26,99 +33,171 @@ sources:
 
 ## Overview
 
-Silk Muay Thai is one of Pattaya's **premium boutique training camps** — a smaller, design-conscious facility focused on **personalized attention, modern amenities, and an all-inclusive package model** that bundles training, accommodation, meals, and recovery into a single curated experience. It carries a **4.9/5 review rating** across major platforms and is consistently named in Pattaya Top-5 lists. Where Fairtex is the big resort and Sityodtong is the historic camp, Silk positions itself as the **luxury/wellness end of the Muay Thai market** — fewer students per trainer, modern accommodation, swimming pool, sauna, spa, and curated meals. For travelers who want a high-end retreat-style training holiday rather than gritty Thai immersion, Silk is built exactly for that.
+Silk Muay Thai is **Pattaya's premier boutique all-inclusive Muay Thai retreat camp** — a smaller, design-conscious facility focused on **personalized attention, modern amenities, and an integrated training-and-stay experience**. The camp carries a **near-perfect 4.9/5 rating** across major review platforms, putting it among the **top-rated combat sports facilities in Thailand by user score**. The model is straightforward: **book a package, live on-site in a modern private room, train twice a day, eat curated meals at the on-site restaurant, recover in the pool/sauna/spa, and emerge after a week or month transformed**.
 
-## Position in the Market
+For travelers wanting **the wellness-retreat version of a Muay Thai training holiday** — comfortable accommodation, integrated logistics, premium service standards — Silk is the most curated option in Pattaya. Where Sityodtong delivers raw authenticity and Fairtex delivers institutional scale, **Silk delivers a design-forward, hospitality-grade Muay Thai vacation**.
 
-Silk competes directly with the all-inclusive packages at Kombat Group, but with a distinctly **boutique-spa positioning** rather than Kombat's countryside-camp feel. Reviews describe trainers as **professional, friendly, and able to scale instruction across all skill levels** — the kind of personalized coaching that a premium price tier should deliver.
+## Position in the Pattaya Market
 
-## Disciplines
+Pattaya's Muay Thai market spans:
 
-Primary focus: **Muay Thai**. Strength and conditioning supplementary work integrated into the program. Less multi-discipline than Venum or Rage — this is **Muay-Thai-first** with wellness wrap-around.
+| Tier | Examples | Vibe |
+|---|---|---|
+| **Authentic budget** | Sor Klinmee, Petchrungruang, WKO | No-frills working camps |
+| **Mid-tier modern** | Battle Conquer, Venum, Rage | Multi-discipline, clean, mid-priced |
+| **Institutional resort** | Fairtex | Scale + brand + fighter pedigree |
+| **All-inclusive multi-disc** | Kombat Group | Residential, multi-discipline, 5/5 TripAdvisor |
+| **Boutique retreat** | **Silk Muay Thai** | Premium hospitality + Muay Thai integrated |
 
-## Daily Schedule
+Silk specifically occupies the **boutique retreat** tier — its closest competitor is Kombat Group (also residential, 5/5 reviews), but Silk leans **smaller / more design-forward / wellness-oriented** while Kombat leans **larger / multi-discipline / fitness-program-oriented**.
 
-**Mon-Sat**, two sessions daily:
+## On-Site Accommodation — The Core Proposition
 
-- **Morning:** 07:00-09:30 (2.5-hour block — generous)
-- **Afternoon:** 15:00-18:00 (3-hour block — generous)
+Silk's defining feature is that **the gym + accommodation + meals are integrated into a single product**. You book a package, you arrive, you stay in a modern private room, and everything else is handled.
 
-Sundays rest. The long blocks allow students to dial intensity to their level — drop-in for the technique portion, push hard for the full block, etc.
+### Room Features
+
+Each on-site accommodation room includes:
+
+- **Private bathroom**
+- **Private balcony**
+- **Air conditioning**
+- **WiFi**
+- **Mini-fridge**
+- **Access to washing area** (laundry)
+- **Modern furnishings** — design-forward aesthetic
+- **Daily housekeeping**
+
+This is a meaningful step up from the **fan-room barracks** common at traditional Thai camps, and from many mid-tier hotel options.
+
+### Pool, Sauna, Spa
+
+The wellness layer is integral, not an afterthought:
+
+- **Swimming pool** — for laps, recovery, and downtime
+- **Sauna** — post-training muscle relaxation and recovery
+- **Spa** — massage and treatments to support training recovery
+
+This positions Silk as **a wellness-and-training retreat** rather than a pure fight camp.
+
+## Disciplines & Programs
+
+**Muay Thai is the flagship**. Strength and conditioning supplementary work integrated.
+
+The camp is **less multi-discipline than Venum, Rage, or Kombat Group** — but the trade-off is **more focused, deeper Muay Thai instruction** rather than diluted across MMA/BJJ/Boxing.
+
+### Schedule
+
+**Mon-Sat. Sundays rest.**
+
+- **Morning:** **07:00-09:30** (2.5-hour block)
+- **Afternoon:** **15:00-18:00** (3-hour block)
+
+The **long session blocks** are deliberate — students dial intensity to their level. Drop-in for technique portion, push hard for the full block, take rest days as needed.
+
+### Trainers
+
+The coaching staff is **English-speaking** with strong reputation for:
+
+- **Personalized attention** — small class sizes vs. mass-camp model
+- **Welcoming to all levels** — beginners through serious athletes
+- **Patient pad-rounds** — corrective coaching not just cardio thrash
+- **Active fight team** — Silk fighters compete locally and internationally
+
+Reviews repeatedly call out the trainers as professional, friendly, and **able to scale instruction across skill levels**.
 
 ## Pricing
 
-Silk leads with **all-inclusive monthly packages** rather than drop-in pricing:
+Silk leads with **all-inclusive monthly packages**:
 
-- **1x training/day + 1 meal/day + private room (1 month):** ~฿25,500 (promo rate)
-- **2x training/day + 2 meals/day + private room (1 month):** ~฿33,000 (promo rate)
-- **Drop-in single session (without accommodation):** ~฿300-600 (typical Pattaya range)
+- **1x training/day + 1 meal/day + private room (1 month):** ~฿25,500 promo rate
+- **2x training/day + 2 meals/day + private room (1 month):** ~฿33,000 promo rate
+- **Drop-in single session (without accommodation):** ~฿300-600
+- **Weekly packages:** available — confirm at booking
 
 Note these are **promotional rates** — actual current pricing may differ; confirm at silkmuaythai.com.
 
-This is **premium pricing** — significantly higher than Sor Klinmee or WKO, comparable to the upper tier of Fairtex packages. You're paying for the integrated wellness experience, not just the training.
+For comparison:
+- **฿25,500/month all-inclusive** = ~฿850/day for **room + 1 meal + 1 training session** + pool/sauna/spa access
+- **฿33,000/month all-inclusive** = ~฿1,100/day for **room + 2 meals + 2 trainings** + amenities
 
-## Facilities
+This is **hospitality-tier pricing** — comparable to mid-range Pattaya hotel daily rates plus the training value-add.
 
-Premium-tier amenities for a Muay Thai camp:
+## On-Site Restaurant
 
-- Muay Thai ring(s)
-- Heavy bags, banana bags
-- **Swimming pool**
-- **Sauna**
-- **Spa services**
-- Modern **on-site accommodation** with private rooms
-- Curated **meal program** (Thai healthy menu)
-- Lounge / common area
+**An on-site restaurant serves fresh meals that support training and recovery**:
 
-The "package as wellness retreat" positioning is the central proposition.
+- **Light to hearty options** — both pre/post-workout fueling
+- **Fresh ingredients** — Thai + international menu
+- **Aligned with training nutrition** — high-protein, balanced
+- **Included in package meal counts** (1 or 2 per day depending on tier)
+- **Available à la carte** for additional meals beyond package
 
-## Trainers
+This eliminates the typical Pattaya-training-holiday hassle of figuring out food separately.
 
-Coaching staff is **English-speaking** and noted for **personalized attention** — described in reviews as professional and friendly, able to scale instruction across skill levels. Smaller class sizes (vs. Fairtex's mass model) mean more pad time per session.
+## Reviews & Reputation
 
-## Accommodation
+**4.9/5 rating** across major review platforms — among the highest user scores of any Pattaya combat sports facility. Recurring review themes:
 
-On-site accommodation is **integrated into the training packages**:
+- **Professional, friendly trainers** providing personalized attention
+- **Clean, well-maintained facility** consistently praised
+- **Pool and amenities** repeatedly highlighted as standout
+- **Value for the package** — the all-in pricing makes calculation simple
+- **Welcoming for beginners** despite premium positioning
+- **Active gym with fighters** — not just a tourist offering
 
-- **Modern private rooms** with AC
-- Pool / sauna / spa access included
-- Daily meals included (1 or 2 depending on package)
-
-This is a meaningful step up from the bunk-style barracks at traditional Thai camps.
-
-## Location & Getting There
-
-- **Area:** Pattaya — confirm exact at booking (Pattaya / Jomtien area)
-- Close to beach areas
-- Easy taxi/songthaew from anywhere in Pattaya
+Silk attracts a **wellness-oriented, retreat-vacation demographic** — different from the gritty-fighter crowd at Sityodtong/Petchrungruang.
 
 ## Pros
 
-- 4.9/5 rating across review platforms
-- Boutique-style with personalized attention
-- Modern accommodation included in packages
-- Pool + sauna + spa for recovery
-- Curated meal program (no need to figure out food)
-- Strong English-speaking coaching
-- Clean, well-maintained facilities
-- Premium retreat aesthetic for travelers wanting a wellness vibe
+- **4.9/5 rating** — one of the highest in Pattaya combat sports
+- **Boutique-style with personalized attention**
+- **Modern accommodation included** — private bathroom, balcony, AC, WiFi
+- **Pool + sauna + spa** for recovery
+- **Curated meal program** — no need to figure out food
+- **Strong English-speaking coaching**
+- **Active fight team** — quality training partners
+- **Clean, well-maintained facilities**
+- **Premium hospitality + Muay Thai integration**
+- **Smaller class sizes** vs. mega-camps
+- **All-inclusive pricing simplifies budgeting**
 
 ## Cons
 
-- Premium pricing — higher than mid-tier Pattaya camps
-- Less old-school Thai authenticity — feels more like a wellness retreat
-- Smaller training community vs. major camps (could be a pro or a con)
-- Muay-Thai-first; less multi-discipline than Venum or Rage
-- Less storied lineage than Fairtex / Sityodtong
-
-## Reputation Summary
-
-**Highly rated by travelers wanting a "training holiday" experience** — those for whom Muay Thai is one part of a wellness/fitness/Thailand vacation rather than the entire focus. Particularly favored by **first-time Muay Thai travelers**, **wellness-oriented students**, and **couples or solo travelers** wanting comfort layered onto authentic training.
+- **Premium pricing** — among the higher costs in Pattaya
+- **Less multi-discipline** than Kombat Group, Venum, Rage
+- **Less old-school authenticity** than Sityodtong, Petchrungruang
+- **Smaller training community** vs. major camps (could be pro or con)
+- **Booking required well in advance** during high season
 
 ## Best For
 
-First-time Muay Thai travelers wanting comfort and structure • Wellness-oriented training holidays • Travelers prioritizing accommodation + pool + spa included • Those who don't want to manage food/logistics separately • Couples or solo travelers wanting boutique service
+- **First-time Muay Thai travelers** wanting comfort and structure
+- **Wellness-oriented training holidays** (yoga + Muay Thai + spa lifestyle)
+- **Couples or solo travelers** wanting boutique service
+- **Travelers prioritizing comfort included** in the package
+- **Russian-speaking visitors** (large Pattaya demographic, supported here)
+- **Students who don't want to manage food/logistics separately**
 
 ## Not Best For
 
-Pure budget travelers • Lineage purists • Multi-discipline athletes wanting BJJ/MMA on site • Travelers who prefer authentic gritty Thai-camp atmospherics
+- **Pure budget travelers** (Sor Klinmee, WKO, Petchrungruang are cheaper)
+- **Lineage purists** seeking 60-year-old camp pedigrees
+- **Multi-discipline athletes** wanting BJJ/MMA on-site
+- **Authentic-Thai-camp atmospherics** preferers
+
+## Quick Reference Card
+
+| Field | Value |
+|---|---|
+| Address | Pattaya, Bang Lamung, Chonburi (confirm at booking) |
+| Website | silkmuaythai.com |
+| Hours | Mon-Sat 07:00-09:30 & 15:00-18:00 |
+| Rating | 4.9/5 (one of highest in Pattaya combat sports) |
+| Accommodation | Private rooms with bathroom, balcony, AC, WiFi, mini-fridge |
+| Amenities | Pool, sauna, spa, on-site restaurant |
+| 1-month package (1x/day + 1 meal) | ~฿25,500 |
+| 1-month package (2x/day + 2 meals) | ~฿33,000 |
+| Drop-in (no accom) | ~฿300-600 |
+| Languages | English, Thai, Russian |
+| Verified | 2026-04-27 |

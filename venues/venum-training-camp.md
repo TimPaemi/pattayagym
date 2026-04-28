@@ -2,128 +2,196 @@
 id: venum-training-camp
 name: Venum Training Camp Pattaya
 category: muay-thai
-area: Off Thepprasit Rd / near Jomtien Beach
-address: Soi Khopai 12, off Thepprasit Rd, Bang Lamung, Chonburi 20150 (~3km from Jomtien Beach)
+area: Soi Khopai / off Thepprasit Road (1.8 km from Jomtien Beach)
+address: Soi Khopai 12, Pattaya City, Bang Lamung District, Chonburi 20150
 phone: ""
 website: https://venom-mt.com/
 social:
   facebook: venumtrainingcamp
+  instagram: venumtrainingcamp
 hours: Mon-Sat — Muay Thai morning 07:00-09:00 & afternoon 15:00-18:00; MMA + BJJ + S&C extra slots
 priceRange: ฿฿
+founded: 2016
+founder: Mehdi Zatout (in partnership with Venum fight gear brand)
+mehdiRecord: 100+ Muay Thai fights; ONE Championship signed (current 4-2 in MMA)
+notableResident: Nabil Anane — Interim ONE Bantamweight Muay Thai World Champion (early 2025)
+disciplines: [Muay Thai, Boxing, BJJ, MMA, Wrestling, Strength & Conditioning, Combat Fitness]
 beginnerFriendly: true
-languages: [English, Thai]
+languages: [English, French, Thai]
 verified: 2026-04-27
 sources:
+  - https://venom-mt.com/
   - https://venom-mt.com/fees-schedule/
-  - https://www.nowmuaythai.com/gym/venum-training-camp
+  - https://www.siamfightmag.com/en/venum-gym-2/
   - https://www.muaythaimap.com/gyms/venum-training-camp
+  - https://muaythaicampsinthailand.com/venum-muay-thai-camp/
+  - https://www.tapology.com/gyms/7064-venum-training-camp
+  - https://muaythaiadvisor.com/muay-thai-gym/venum-training-camp-thailand/
+  - https://www.nowmuaythai.com/gym/venum-training-camp
+  - https://sportdvp.com/places/venum-training-camp/
   - https://www.muaythaiholidays.com/gym-partners/pattaya/venum-training-camp-pattaya/
+  - https://www.facebook.com/1653682564958973/
+  - https://www.instagram.com/venumtrainingcamp/
   - https://8limbsus.com/muay-thai-thailand/venum-training-camp-thailand-pattaya
-  - https://www.gcation.com/gyms/venum-training-camp
 ---
 
 # Venum Training Camp Pattaya
 
 ## Overview
 
-Venum Training Camp is a **modern, multi-discipline combat sports facility** located near Jomtien Beach in Pattaya. Built around the global Venum apparel/equipment brand presence in Thai combat sports, the camp delivers a structured curriculum across **Muay Thai, MMA, BJJ, Combat Fitness, Strength & Conditioning, and a kids program**. The location — just off Thepprasit Road, ~3km from Jomtien Beach — is perfect for travelers staying in Jomtien or south Pattaya, and the multi-discipline programming makes it a strong all-rounder pick for visitors who don't want to be locked into a Muay Thai-only camp.
+Venum Training Camp is **a modern, fighter-led, multi-discipline combat sports camp on Soi Khopai in Pattaya**, founded in **2016 by Mehdi Zatout** in partnership with the **Venum fight gear brand** — one of the world's leading combat-sports apparel and equipment companies. The camp's deliberate location **1.8 kilometers from Jomtien Beach in the Soi Khopai area** was chosen by Zatout to **avoid the prostitute-bar district** of Pattaya center, providing a **professional training environment removed from the city's nightlife distractions**.
 
-It is one of the **newer marquee additions to the Pattaya combat sports scene** and is frequently described in reviews as having a clean, professional feel without losing authentic Thai training character.
+Mehdi Zatout himself is the camp's defining figure: **a fighter with over 100 Muay Thai fights** and **currently signed to ONE Championship** with a **4-2 MMA record**. The camp's most famous current resident is **Nabil Anane**, who **holds the interim ONE Bantamweight Muay Thai World Championship** as of early **2025** — putting Venum in the rare company of Pattaya camps with an **active reigning ONE Championship title-holder** training out of the facility.
 
-## Disciplines
+For travelers wanting **fighter-led multi-discipline training in a removed, professional environment with active world-class athletes around them**, Venum Training Camp is among Pattaya's strongest choices.
 
-A genuinely broad offering for a Pattaya gym:
+## Founder — Mehdi Zatout
 
-- **Muay Thai** — flagship discipline, twice-daily sessions
-- **Mixed Martial Arts (MMA)** — once-daily structured class
-- **Brazilian Jiu-Jitsu (BJJ)** — twice-daily mat sessions
-- **Combat Fitness** — twice-daily, conditioning + striking blend
-- **Strength and Conditioning** — dedicated program
+The camp's identity is anchored in its founder, **Mehdi Zatout**, a fighter with deep Muay Thai roots who chose Pattaya as the home for his Venum-branded training operation:
+
+- **Over 100 Muay Thai fights** — an extensive professional career across Asia and internationally
+- **Currently signed to ONE Championship** — Asia's premier MMA promotion
+- **Current ONE FC MMA record: 4-2**
+- **Founded Venum Training Camp in 2016** in partnership with Venum brand
+- **Chose Soi Khopai location specifically to be off-centered** from Pattaya's nightlife — a clear professional positioning
+
+Zatout's fighter-pedigree-led operation contrasts with branded-by-equipment-company camps where the figurehead is more marketing than active fighter. Mehdi has skin in the game; he fights, trains, and runs the camp simultaneously.
+
+## The Venum Brand Partnership
+
+The camp operates **in partnership with Venum**, one of the world's leading combat sports brands:
+
+- **Premium fight gear and apparel** company
+- **Sponsors of multiple top fighters** across MMA and Muay Thai
+- **Brand-tier camps** in Pattaya, Bangkok, and select international locations
+- **Equipment sponsorship** for the camp — top-tier Venum bags, gloves, pads, mats throughout
+
+For students who follow Venum-sponsored fighters globally, training at Venum Pattaya provides **direct connection to the brand ecosystem**.
+
+## Notable Fighter — Nabil Anane (ONE Interim World Champion)
+
+The camp's marquee active resident:
+
+- **Nabil Anane** — currently holds the **Interim ONE Bantamweight Muay Thai World Championship** (early 2025)
+- ONE Championship is the highest-tier global MMA + Muay Thai promotion
+- Trains regularly at Venum Pattaya
+- Active competition pedigree — students share training space with a current world title holder
+
+This is **rare in Pattaya**. Most camps with title-holding fighters either have them training in private blocks or rotating between locations. Anane's regular Venum presence means **foreign students can find themselves in shared sessions with the reigning ONE interim Bantamweight MT champion**.
+
+## Disciplines & Programs
+
+Venum is genuinely multi-discipline:
+
+- **Muay Thai** — flagship, twice daily
+- **MMA** — full curriculum, cage and mats
+- **Western Boxing** — dedicated program
+- **Brazilian Jiu-Jitsu** — twice-daily mat sessions
+- **Wrestling** — uncommon in Pattaya, available at Venum (the discipline that's the gateway for serious MMA athletes)
+- **Combat Fitness** — twice-daily blended striking + conditioning
+- **Strength & Conditioning** — dedicated program
 - **Muay Thai Kids** — three times per week
-- **Private 1-on-1** — available 10:00-16:00, 18:00-19:00, and Sundays by appointment
+- **Private 1-on-1** — available 10:00-16:00, 18:00-19:00, Sundays by appointment
 
-This is closer to a full martial-arts academy model than a pure Thai camp.
+The presence of **Wrestling alongside Muay Thai** is unusual in Pattaya and meaningfully expands the gym's appeal to MMA-focused athletes.
 
 ## Daily Schedule
 
-Mon-Sat. Closed Sundays (private bookings still possible).
+**Mon-Sat. Sundays closed for group classes.**
 
 - **Muay Thai morning:** 07:00-09:00
 - **MMA morning:** 07:00-09:00 (all levels)
-- **Combat Fitness morning:** typically alongside MT class
+- **Combat Fitness:** alongside MT class
 - **BJJ slots:** morning + evening
-- **Muay Thai afternoon:** 15:00-18:00 (3-hour block — generous)
-- **S&C:** scheduled around the day
+- **Muay Thai afternoon:** 15:00-18:00 (3-hour generous block)
+- **S&C** scheduled around the day
 
-The 3-hour Muay Thai afternoon block is unusually long and generous — students can drop in for any portion of it.
+The 3-hour Muay Thai afternoon block lets students drop in for any portion based on their day.
 
 ## Pricing
-
-Tiered packages with day-pass options:
 
 - **1-day all-access pass** (Muay Thai + MMA + Wrestling): available
 - **Weekly Muay Thai pass:** available
 - **1-month Muay Thai (all levels):** flagship package
 - **1-month MMA & Wrestling:** separate package
 - **Combo packages** (multi-discipline): available
-- **Private lessons:** premium rate, scheduled around group classes
+- **Private lessons:** premium rate
 
-Specific current rates published at [venom-mt.com/fees-schedule/](https://venom-mt.com/fees-schedule/).
+[venom-mt.com/fees-schedule](https://venom-mt.com/fees-schedule/) for current 2026 rates.
 
 ## Facilities
 
-- Two Muay Thai/Boxing rings
-- Multiple heavy bags
-- Dedicated **MMA cage / mat area**
-- BJJ mat space
-- Strength and conditioning equipment (cardio + free weights)
-- Showers, lockers, changing rooms
-- Reception / café area
+- **Two Muay Thai/Boxing rings**
+- **Multiple heavy bags, banana bags, uppercut bags**
+- **Dedicated MMA cage / mat area**
+- **BJJ mat space**
+- **Wrestling mat zone** — uncommon in Pattaya
+- **Strength and conditioning equipment** (cardio, free weights)
+- **Showers, lockers, changing rooms**
+- **Reception / café area**
 
-The setup is described as **clean, modern, well-organized** — closer to a Western MMA gym aesthetic than the open-air Thai-traditional vibe of older camps.
+Modern, clean aesthetic — closer to a Western MMA gym than open-air Thai-traditional vibe.
 
-## Trainers
+## Location & Atmosphere
 
-International coaching staff covering Muay Thai (Thai pad-holders), MMA (cage and grappling), and BJJ (belted instructors). English-speaking instruction available across all programs. The multi-language coaching team makes the gym especially accessible for European, American, and Australian visitors.
+- **Soi Khopai 12** — deliberately off-centered from Pattaya nightlife
+- **1.8 km from Jomtien Beach**
+- **No prostitute bars in the alleyway** — a clean professional training environment
+- **Easy access** from Sukhumvit Road via Thepprasit
+- **3 km from main Jomtien tourist hub**
+- **10-15 min taxi** to Pattaya central
 
-## Accommodation
-
-No on-site accommodation, but the location near Jomtien is rich with hotel and condo options at every price point. Booking platforms regularly list **training-and-stay packages** for Venum guests through partner accommodations.
-
-## Location & Getting There
-
-- **Area:** Off Thepprasit Rd, near Jomtien Beach
-- **Specifically:** Soi Khopai 12, easy access from Sukhumvit Road
-- **3km from Jomtien Beach** — short songthaew or taxi ride
-- Dongtan Beach is also nearby
-- Pattaya central is a 10-15 min taxi away
+The location choice reflects Zatout's intentional positioning — **a serious training camp removed from Pattaya's distractions**, accessible enough for travelers but quiet enough for actual training focus.
 
 ## Pros
 
-- Genuine multi-discipline programming (rare in Pattaya)
-- Modern, clean facility
-- English-speaking coaches across disciplines
-- Beach proximity (Jomtien)
-- Flexible 1-day to monthly pass options
-- BJJ + Wrestling actually exist (not common in Pattaya MT camps)
-- Kids program available — good for traveling families
-- Strength and conditioning integrated
+- **Founder-led by Mehdi Zatout** — 100+ MT fights, ONE Championship signed
+- **Active interim ONE world champion (Nabil Anane) trains here**
+- **Genuine multi-discipline:** Muay Thai + Boxing + BJJ + MMA + Wrestling + S&C
+- **Wrestling discipline available** — rare in Pattaya, essential for MMA crossover athletes
+- **Venum brand partnership** — premium-tier equipment and brand connection
+- **Off-centered Soi Khopai location** — quiet, professional training environment, no nightlife distraction
+- **Modern facility aesthetic** — clean, well-maintained, multi-zone layout
+- **Private 1-on-1 available** during off-peak hours
+- **Kids program** (Muay Thai 3x/week)
+- **English-speaking and French-speaking** coaching available
+- **Professional ring + cage + mat setup** — multi-discipline simultaneous training possible
 
 ## Cons
 
-- No on-site accommodation
-- Newer reputation vs. legacy camps (less storied lineage)
-- Premium-modern feel may not satisfy Thai-traditionalist seekers
-- Location requires transport to central Pattaya nightlife
-
-## Reputation Summary
-
-Strong online reviews, particularly from **multi-discipline travelers and BJJ practitioners** who appreciate having all their bases covered in one gym. Often recommended as a "modern alternative to Fairtex" for travelers who want polish without resort-camp pricing.
+- **No on-site accommodation** by default — students arrange housing locally
+- **Newer reputation** vs. 60-year-legacy camps (Sityodtong, Petchrungruang)
+- **Branded-camp positioning** may feel less "authentic Thai" to traditionalists
+- **Pricing in mid-tier** — not budget; not premium-resort
 
 ## Best For
 
-Multi-discipline athletes • BJJ practitioners traveling to Thailand • Travelers staying in Jomtien • Families with kids interested in Muay Thai • Anyone wanting structured, modern training environment with English-speaking coaches
+- **MMA-focused athletes** wanting Muay Thai + Wrestling cross-training
+- **Multi-discipline athletes** generally
+- **Active fighters** wanting proximity to a reigning ONE world champion
+- **Mehdi Zatout fans / Venum-brand followers**
+- **Students wanting a quiet, focused training environment** away from nightlife
+- **French-speaking visitors** (Mehdi is French)
+- **Beach-adjacent travelers** (1.8 km from Jomtien)
 
 ## Not Best For
 
-Lineage purists wanting old-school Thai camp atmosphere • Travelers prioritizing on-site accommodation • Pure budget seekers
+- **Old-school Thai-camp purists**
+- **Travelers needing on-site accommodation packages** (better at Kombat Group, Silk, Fairtex)
+- **Pure budget seekers** (Sor Klinmee, WKO are cheaper)
+- **Students wanting central Pattaya nightlife adjacent**
+
+## Quick Reference Card
+
+| Field | Value |
+|---|---|
+| Address | Soi Khopai 12, Pattaya City, Bang Lamung 20150 |
+| Founded | 2016 |
+| Founder | Mehdi Zatout (100+ MT fights; ONE FC signed 4-2 MMA) |
+| Brand partner | Venum fight gear |
+| Notable resident | Nabil Anane — Interim ONE Bantamweight Muay Thai World Champion 2025 |
+| Disciplines | MT, Boxing, BJJ, MMA, Wrestling, S&C, Kids |
+| Hours | Mon-Sat, MT 07:00-09:00 + 15:00-18:00 |
+| Distance to Jomtien | 1.8 km |
+| Languages | English, French, Thai |
+| Verified | 2026-04-27 |
