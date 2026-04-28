@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">watersports</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">watersports</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 5 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Seafari PADI Dive Centre</h1>
-      <p class="venue-lede">Seafari is the oldest scuba diving operation in Pattaya and one of the first dive centers ever to open in Thailand — founded by Bill Burbridge in 1970. The center is British-owned, PADI 5-Star IDC certified, and located 2 minutes from Pattaya Beach Road behind Mike&#39;s Mall. With o…</p>
+      <p class="venue-lede">Seafari is the oldest scuba diving operation in Pattaya and one of the first dive centers ever to open in Thailand — founded by Bill Burbridge in 1970. The center is British-owned, PADI 5-Star IDC certified, and located 2 minutes from Patta…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Behind Mike&#39;s Mall — 2 min from Pattaya Beach Road</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Daily, dive trips depart mornings; shop hours 8:00-18:00 typical</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ First scuba diving operation to open in Pattaya (1970) and one of the first in all of Thailand</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Seafari is the <strong>oldest scuba diving operation in Pattaya</strong> and one of the <strong>first dive centers ever to open in Thailand</strong> — founded by <strong>Bill Burbridge</strong> in <strong>1970</strong>. The center is <strong>British-owned, PADI 5-Star IDC certified</strong>, and located <strong>2 minutes from Pattaya Beach Road behind Mike's Mall</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -297,7 +310,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://seafari.co.th/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="seafari-padi-dive" data-pg-compare-name="Seafari PADI Dive Centre" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

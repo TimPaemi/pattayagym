@@ -67,14 +67,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">watersports</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">watersports</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 4 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Mermaid&#39;s Dive Center</h1>
-      <p class="venue-lede">Mermaid&#39;s Dive Centre is the most established PADI dive operation in Pattaya — running continuously since 1990 and the first dive center in Pattaya to be awarded PADI CDC (Career Development Centre) status, the highest tier of PADI affiliation. The operation now spans three locat…</p>
+      <p class="venue-lede">Mermaid&#39;s Dive Centre is the most established PADI dive operation in Pattaya — running continuously since 1990 and the first dive center in Pattaya to be awarded PADI CDC (Career Development Centre) status, the highest tier of PADI affiliat…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Jomtien (Soi White House) + Pattaya Beach Road + Bangkok (Amarin Plaza)</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Daily 8:00-19:00 (typical PADI dive shop hours)</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         
       </div>
 
@@ -98,6 +106,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Mermaid's Dive Centre is <strong>the most established PADI dive operation in Pattaya</strong> — running continuously since <strong>1990</strong> and the <strong>first dive center in Pattaya to be awarded PADI CDC (Career Development Centre) status</strong>, the highest tier of PADI affiliation.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -283,7 +296,39 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    <a class="sa-btn" href="tel:+6638303333" aria-label="Call Mermaid&#39;s Dive Center">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>
+    <a class="sa-btn" href="https://www.mermaidsdivecenter.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="mermaids-dive" data-pg-compare-name="Mermaid&#39;s Dive Center" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

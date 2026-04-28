@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">adventure</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">adventure</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 7 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Bira Circuit (FIA-Standard Motor Racing Track)</h1>
-      <p class="venue-lede">Bira Circuit is Thailand&#39;s first FIA-standard motor racing track — a 2.410-kilometer permanent motor and motorbike racing circuit on a 65-acre property 15 kilometers northeast of Pattaya, opened in 1986 and named in honor of Prince Birabongse Bhanudej Bhanubandh — Thailand&#39;s firs…</p>
+      <p class="venue-lede">Bira Circuit is Thailand&#39;s first FIA-standard motor racing track — a 2.410-kilometer permanent motor and motorbike racing circuit on a 65-acre property 15 kilometers northeast of Pattaya, opened in 1986 and named in honor of Prince Birabong…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Banglamung — 15 km northeast of Pattaya</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Daily — track day schedules variable</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ First FIA-standard circuit in Thailand — named after Prince Birabongse, Thailand&#39;s first F1 driver</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Bira Circuit is <strong>Thailand's first FIA-standard motor racing track</strong> — a <strong>2.410-kilometer permanent motor and motorbike racing circuit on a 65-acre property 15 kilometers northeast of Pattaya</strong>, opened in <strong>1986</strong> and named in honor of **Prince Birabongse Bhanudej Bhanubandh — T</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -389,7 +402,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://bira.co.th/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="bira-circuit" data-pg-compare-name="Bira Circuit (FIA-Standard Motor Racing Track)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

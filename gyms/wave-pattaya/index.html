@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">watersports</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">watersports</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Wave Pattaya Watersports</h1>
-      <p class="venue-lede">Wave Pattaya is a multi-activity beach watersports operator covering the full menu of Pattaya beach adrenaline activities — parasailing, jet ski, banana boat, water skiing, wakeboarding, sea walker, kayaking, and stand-up paddleboarding. Where dedicated kitesurf schools (Kitesurf…</p>
+      <p class="venue-lede">Wave Pattaya is a multi-activity beach watersports operator covering the full menu of Pattaya beach adrenaline activities — parasailing, jet ski, banana boat, water skiing, wakeboarding, sea walker, kayaking, and stand-up paddleboarding. Wh…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Pattaya Beach / Jomtien Beach</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Daily — typically 09:00-17:00 (sea-condition dependent)</span>
+        <span class="meta-chip">🗣 English · Thai · Russian · Chinese</span>
         <span class="meta-chip meta-chip-accent">⭐ Multi-activity beach watersports operator covering parasailing, jet ski, banana boat, and more</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Wave Pattaya is <strong>a multi-activity beach watersports operator covering the full menu of Pattaya beach adrenaline activities</strong> — parasailing, jet ski, banana boat, water skiing, wakeboarding, sea walker, kayaking, and stand-up paddleboarding.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -366,7 +379,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://www.wavepattaya.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="wave-pattaya" data-pg-compare-name="Wave Pattaya Watersports" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

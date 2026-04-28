@@ -67,14 +67,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">golf</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">golf</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 16 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Burapha Golf Club</h1>
-      <p class="venue-lede">Burapha Golf Club is the most accomplished tournament-host venue in the Pattaya region and one of the few Thai courses with a dual-major-winner architectural pedigree. The 36-hole, two-course, Gary Panks + David Graham co-designed championship complex opened in 1995, originally a…</p>
+      <p class="venue-lede">Burapha Golf Club is the most accomplished tournament-host venue in the Pattaya region and one of the few Thai courses with a dual-major-winner architectural pedigree. The 36-hole, two-course, Gary Panks + David Graham co-designed champions…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Sriracha (35 min from Pattaya)</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Daily — tee times throughout the day; pro shop and clubhouse open extended hours</span>
+        <span class="meta-chip">🗣 English · Thai · Japanese support common in clubhouse</span>
         
       </div>
 
@@ -98,6 +106,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Burapha Golf Club is <strong>the most accomplished tournament-host venue in the Pattaya region</strong> and one of the few Thai courses with a <strong>dual-major-winner architectural pedigree</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -505,7 +518,39 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    <a class="sa-btn" href="tel:+6638372700" aria-label="Call Burapha Golf Club">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>
+    <a class="sa-btn" href="https://www.facebook.com/p/Burapha-Golf-Resort-Thailand-100057382482955/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="burapha-golf-club" data-pg-compare-name="Burapha Golf Club" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

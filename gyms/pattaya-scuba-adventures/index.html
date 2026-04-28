@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">watersports</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">watersports</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 7 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Pattaya Scuba Adventures</h1>
-      <p class="venue-lede">Pattaya Scuba Adventures is a PADI dive center serving the Pattaya near-island reef cluster — primarily Koh Larn (Coral Island), Koh Sak, and Koh Krok, all within a 30-minute boat ride off the Pattaya coast. The center caters to the wide spectrum of recreational divers: from firs…</p>
+      <p class="venue-lede">Pattaya Scuba Adventures is a PADI dive center serving the Pattaya near-island reef cluster — primarily Koh Larn (Coral Island), Koh Sak, and Koh Krok, all within a 30-minute boat ride off the Pattaya coast. The center caters to the wide sp…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Pattaya / boat operations from Bali Hai Pier</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Boat departures morning; office reception 09:00-18:00</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ PADI dive center serving the Pattaya near-island reefs (Koh Larn, Koh Sak, Koh Krok)</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Pattaya Scuba Adventures is <strong>a PADI dive center serving the Pattaya near-island reef cluster</strong> — primarily <strong>Koh Larn (Coral Island), Koh Sak, and Koh Krok</strong>, all within a <strong>30-minute boat ride</strong> off the Pattaya coast.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -338,7 +351,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://www.pattaya-scuba-adventures.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="pattaya-scuba-adventures" data-pg-compare-name="Pattaya Scuba Adventures" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

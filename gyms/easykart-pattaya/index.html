@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">adventure</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">adventure</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 5 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">EasyKart Pattaya Thepprasit (Outdoor Go Kart Track)</h1>
-      <p class="venue-lede">EasyKart Pattaya Thepprasit is the newest go-kart racing facility in Pattaya — an outdoor multi-track venue offering a 350-meter beginner track plus an 800-meter racing track with multi-tier kart classes (Kids Kart, Regular Kart, Fast Kart, 2-Seater Kart) and a broad operating wi…</p>
+      <p class="venue-lede">EasyKart Pattaya Thepprasit is the newest go-kart racing facility in Pattaya — an outdoor multi-track venue offering a 350-meter beginner track plus an 800-meter racing track with multi-tier kart classes (Kids Kart, Regular Kart, Fast Kart,…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Thepprasit Road</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Daily 10:00-01:00 (15 hours operating)</span>
+        <span class="meta-chip">🗣 English · Thai · Russian · Chinese</span>
         <span class="meta-chip meta-chip-accent">⭐ Newest go-kart track in Pattaya — outdoor 350m beginner + 800m racing tracks</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>EasyKart Pattaya Thepprasit is <strong>the newest go-kart racing facility in Pattaya</strong> — an outdoor multi-track venue offering <strong>a 350-meter beginner track plus an 800-meter racing track</strong> with <strong>multi-tier kart classes (Kids Kart, Regular Kart, Fast Kart, 2-Seater Kart)</strong> and a **broa</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -344,7 +357,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://easykart.net/pattaya-easykart-book-now/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="easykart-pattaya" data-pg-compare-name="EasyKart Pattaya Thepprasit (Outdoor Go Kart Track)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">fitness</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">fitness</span>
+        <span class="open-badge open-now">● Open now</span>
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Fitness 7 Pattaya (The Avenue)</h1>
-      <p class="venue-lede">Fitness 7 Pattaya is a 2,000+ square meter, 24-hour central Pattaya gym located at The Avenue Pattaya — 500 meters from Mike Shopping Mall, on the next road parallel to Beach Road. The location alone is meaningful: this is one of the most central walkable gym locations in Pattaya…</p>
+      <p class="venue-lede">Fitness 7 Pattaya is a 2,000+ square meter, 24-hour central Pattaya gym located at The Avenue Pattaya — 500 meters from Mike Shopping Mall, on the next road parallel to Beach Road. The location alone is meaningful: this is one of the most c…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 The Avenue Pattaya / Central Pattaya (parallel to Beach Road)</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 24 hours daily</span>
+        <span class="meta-chip">🗣 English · Thai · Russian</span>
         <span class="meta-chip meta-chip-accent">⭐ 2,000+ sqm 24-hour central Pattaya gym with boxing ring + functional training + free classes + free parking</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Fitness 7 Pattaya is <strong>a 2,000+ square meter, 24-hour central Pattaya gym</strong> located <strong>at The Avenue Pattaya — 500 meters from Mike Shopping Mall, on the next road parallel to Beach Road</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -324,7 +337,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://fitness7thailand.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="fitness-7" data-pg-compare-name="Fitness 7 Pattaya (The Avenue)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

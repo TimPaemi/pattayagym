@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">golf</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">golf</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 7 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Khao Kheow Country Club</h1>
-      <p class="venue-lede">Khao Kheow Country Club is one of the most architecturally significant golf courses in the Pattaya/Eastern Seaboard region — a 27-hole Pete Dye-designed championship facility that opened in 1992 and has hosted multiple Asian Tour events including the Thailand Open. The Pete Dye s…</p>
+      <p class="venue-lede">Khao Kheow Country Club is one of the most architecturally significant golf courses in the Pattaya/Eastern Seaboard region — a 27-hole Pete Dye-designed championship facility that opened in 1992 and has hosted multiple Asian Tour events inc…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Bang Phra / Si Racha (between Bangkok and Pattaya)</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip">🗣 English · Thai · Japanese · Korean</span>
         <span class="meta-chip meta-chip-accent">⭐ Pete Dye-designed 27 holes — host of Asian Tour Thailand Open</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Khao Kheow Country Club is <strong>one of the most architecturally significant golf courses in the Pattaya/Eastern Seaboard region</strong> — a <strong>27-hole Pete Dye-designed championship facility</strong> that opened in <strong>1992</strong> and has hosted <strong>multiple Asian Tour events</strong> including the <strong>Thailand Open</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -340,7 +353,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="khao-kheow-country-club" data-pg-compare-name="Khao Kheow Country Club" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

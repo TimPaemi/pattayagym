@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">swimming</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">swimming</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Cartoon Network Amazone Waterpark (now Columbia Pictures Aquaverse)</h1>
-      <p class="venue-lede">Cartoon Network Amazone Waterpark — rebranded in 2022 as Columbia Pictures Aquaverse — is the world&#39;s first Cartoon Network themed waterpark and one of Southeast Asia&#39;s largest theme-aquatic parks, located at 888 Moo 8, Na Jomtien, Sattahip, approximately 15 kilometers south of c…</p>
+      <p class="venue-lede">Cartoon Network Amazone Waterpark — rebranded in 2022 as Columbia Pictures Aquaverse — is the world&#39;s first Cartoon Network themed waterpark and one of Southeast Asia&#39;s largest theme-aquatic parks, located at 888 Moo 8, Na Jomtien, Sattahip…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Na Jomtien / Sattahip — 15 km south of Pattaya</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Daily 10:00-18:00 (verify at park)</span>
+        <span class="meta-chip">🗣 English · Thai · Russian · Chinese</span>
         <span class="meta-chip meta-chip-accent">⭐ World&#39;s first Cartoon Network themed waterpark (now rebranded Columbia Pictures Aquaverse)</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Cartoon Network Amazone Waterpark — <strong>rebranded in 2022 as Columbia Pictures Aquaverse</strong> — is <strong>the world's first Cartoon Network themed waterpark and one of Southeast Asia's largest theme-aquatic parks</strong>, located <strong>at 888 Moo 8, Na Jomtien, Sattahip, approximately 15 kilometers south of central Pattaya</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -344,7 +357,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://www.aquaverse.co.th/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="cartoon-network-amazone" data-pg-compare-name="Cartoon Network Amazone Waterpark (now Columbia Pictures Aquaverse)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

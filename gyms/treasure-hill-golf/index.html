@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">golf</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">golf</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 7 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Treasure Hill Golf &amp; Country Club</h1>
-      <p class="venue-lede">Treasure Hill Golf &amp; Country Club is a 7,264-yard par-72 championship course set in the jungle hills of Ban Bueng, approximately 60 kilometers from Pattaya (50-minute drive). Designed by Japanese architect Yoshikazu Kato and opened in 1994, the course is renowned for its mature j…</p>
+      <p class="venue-lede">Treasure Hill Golf &amp; Country Club is a 7,264-yard par-72 championship course set in the jungle hills of Ban Bueng, approximately 60 kilometers from Pattaya (50-minute drive). Designed by Japanese architect Yoshikazu Kato and opened in 1994,…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Ban Bueng / Khao Khansong (60 km from Pattaya)</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Open daily — first tee from sunrise; last tee typically 14:00-15:00 (call to confirm)</span>
+        <span class="meta-chip">🗣 English · Thai · Japanese</span>
         <span class="meta-chip meta-chip-accent">⭐ 7,264-yard par-72 jungle course with iconic concrete-crocodile signature hole</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Treasure Hill Golf & Country Club is <strong>a 7,264-yard par-72 championship course set in the jungle hills of Ban Bueng</strong>, approximately <strong>60 kilometers from Pattaya</strong> (50-minute drive).</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -324,7 +337,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="treasure-hill-golf" data-pg-compare-name="Treasure Hill Golf &amp; Country Club" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

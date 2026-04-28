@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">racquet</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">racquet</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 7 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Greta Sport Club Pattaya (at Greta Resort)</h1>
-      <p class="venue-lede">Greta Sport Club is the Pattaya region&#39;s premier indoor tennis facility — a 6-court fully-roofed tennis complex integrated into the Greta Resort in Na Jomtien (Sattahip District), approximately 18 kilometers south of Walking Street and central Pattaya. The club&#39;s defining feature…</p>
+      <p class="venue-lede">Greta Sport Club is the Pattaya region&#39;s premier indoor tennis facility — a 6-court fully-roofed tennis complex integrated into the Greta Resort in Na Jomtien (Sattahip District), approximately 18 kilometers south of Walking Street and cent…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Na Jomtien / Sattahip (18 km south of central Pattaya / Walking Street)</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 08:30-18:30 (pool); tennis evenings via floodlights</span>
+        <span class="meta-chip">🗣 English · Thai · Italian</span>
         <span class="meta-chip meta-chip-accent">⭐ 6 fully roof-covered tennis courts — rare in Pattaya, ITF-rated Plexipave surface</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Greta Sport Club is <strong>the Pattaya region's premier indoor tennis facility</strong> — a <strong>6-court fully-roofed tennis complex</strong> integrated into the <strong>Greta Resort</strong> in Na Jomtien (Sattahip District), approximately <strong>18 kilometers south of Walking Street and central Pattaya</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -348,7 +361,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="http://www.gretafarm.com/en/tennis/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="greta-sport-club" data-pg-compare-name="Greta Sport Club Pattaya (at Greta Resort)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

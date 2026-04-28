@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">golf</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">golf</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Diana Driving Range Pattaya</h1>
-      <p class="venue-lede">Diana Driving Range is one of Pattaya&#39;s most established dedicated outdoor driving ranges — a 30-bay floodlit facility with 200-yard range depth, professional teaching pros for instruction, and an on-site restaurant for pre/post-practice fueling. Located in the Soi Diana area of …</p>
+      <p class="venue-lede">Diana Driving Range is one of Pattaya&#39;s most established dedicated outdoor driving ranges — a 30-bay floodlit facility with 200-yard range depth, professional teaching pros for instruction, and an on-site restaurant for pre/post-practice fu…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Soi Diana / Central Pattaya</span>
         <span class="meta-chip">💰 ฿</span>
         <span class="meta-chip">🕐 Daily 06:00-22:00 (floodlit evening)</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ 30-bay floodlit dedicated driving range — 200-yard depth with on-site restaurant</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Diana Driving Range is <strong>one of Pattaya's most established dedicated outdoor driving ranges</strong> — a <strong>30-bay floodlit facility with 200-yard range depth</strong>, <strong>professional teaching pros for instruction</strong>, and <strong>an on-site restaurant</strong> for pre/post-practice fueling.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -337,7 +350,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="diana-driving-range" data-pg-compare-name="Diana Driving Range Pattaya" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">yoga</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">yoga</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Yoga Haus Pattaya</h1>
-      <p class="venue-lede">Yoga Haus is the most prominent hot yoga and fitness-oriented yoga studio in central Pattaya — a modern, walkable studio on Pattaya Klang Road that has carved out a distinct niche in the city&#39;s yoga scene by embracing contemporary fitness-yoga hybrids rather than purely tradition…</p>
+      <p class="venue-lede">Yoga Haus is the most prominent hot yoga and fitness-oriented yoga studio in central Pattaya — a modern, walkable studio on Pattaya Klang Road that has carved out a distinct niche in the city&#39;s yoga scene by embracing contemporary fitness-y…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Pattaya Klang / Central Pattaya</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Group + private lessons most days; morning + evening sessions typical</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ Pattaya&#39;s most prominent hot yoga + fit ball studio — modern, fitness-oriented</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Yoga Haus is <strong>the most prominent hot yoga and fitness-oriented yoga studio in central Pattaya</strong> — a modern, walkable studio on <strong>Pattaya Klang Road</strong> that has carved out a distinct niche in the city's yoga scene by <strong>embracing contemporary fitness-yoga hybrids</strong> rather than pure</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -307,7 +320,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="yoga-haus-pattaya" data-pg-compare-name="Yoga Haus Pattaya" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

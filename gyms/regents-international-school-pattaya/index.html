@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">kids youth</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">kids youth</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Regents International School Pattaya (Sports)</h1>
-      <p class="venue-lede">Regents International School Pattaya is one of the largest and most successful international schools on Thailand&#39;s Eastern Seaboard — a Nord Anglia Education school offering International Baccalaureate (IB) and A-Level curricula with a comprehensive sports infrastructure that put…</p>
+      <p class="venue-lede">Regents International School Pattaya is one of the largest and most successful international schools on Thailand&#39;s Eastern Seaboard — a Nord Anglia Education school offering International Baccalaureate (IB) and A-Level curricula with a comp…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Pattaya / Eastern Seaboard</span>
         <span class="meta-chip">💰 ฿฿฿฿</span>
         <span class="meta-chip">🕐 School hours; sports facilities for students + select community programs</span>
+        <span class="meta-chip">🗣 English (primary) · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ One of the largest international schools on Eastern Seaboard — IB + A-Level with elite multi-sport facilities</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Regents International School Pattaya is <strong>one of the largest and most successful international schools on Thailand's Eastern Seaboard</strong> — a <strong>Nord Anglia Education school offering International Baccalaureate (IB) and A-Level curricula</strong> with a **comprehensive sports infrastructur</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -364,7 +377,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://www.nordangliaeducation.com/risp-pattaya" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="regents-international-school-pattaya" data-pg-compare-name="Regents International School Pattaya (Sports)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

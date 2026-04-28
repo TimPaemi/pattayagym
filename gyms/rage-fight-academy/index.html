@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">muay thai</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">muay thai</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 5 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Rage Fight Academy</h1>
-      <p class="venue-lede">Rage Fight Academy is one of Pattaya&#39;s most credentialed multi-discipline combat sports academies — a Boxing + Brazilian Jiu-Jitsu + MMA + Muay Thai gym located on Thappraya Road in South Pattaya, 5 minutes from Dongtan and Jomtien beaches. The gym was formerly known as Golden Gl…</p>
+      <p class="venue-lede">Rage Fight Academy is one of Pattaya&#39;s most credentialed multi-discipline combat sports academies — a Boxing + Brazilian Jiu-Jitsu + MMA + Muay Thai gym located on Thappraya Road in South Pattaya, 5 minutes from Dongtan and Jomtien beaches.…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Thappraya Road / South Pattaya (5 min from Dongtan &amp; Jomtien beaches)</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Mon-Sat, multi-discipline daily schedule</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Rage Fight Academy is <strong>one of Pattaya's most credentialed multi-discipline combat sports academies</strong> — a Boxing + Brazilian Jiu-Jitsu + MMA + Muay Thai gym located on <strong>Thappraya Road in South Pattaya</strong>, <strong>5 minutes from Dongtan and Jomtien beaches</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -292,7 +305,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://ragefightacademy.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="rage-fight-academy" data-pg-compare-name="Rage Fight Academy" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

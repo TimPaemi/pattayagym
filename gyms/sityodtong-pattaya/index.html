@@ -67,14 +67,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">muay thai</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">muay thai</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 13 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Sityodtong Pattaya</h1>
-      <p class="venue-lede">Sityodtong Pattaya is arguably the most historically significant Muay Thai gym in the world and one of the few training environments where the term &quot;lineage&quot; still genuinely applies in 2026. Founded in 1960 by the late Grandmaster Kru Yodtong Senanan (1937-2013), the camp has pro…</p>
+      <p class="venue-lede">Sityodtong Pattaya is arguably the most historically significant Muay Thai gym in the world and one of the few training environments where the term &quot;lineage&quot; still genuinely applies in 2026. Founded in 1960 by the late Grandmaster Kru Yodto…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Naklua / Nong Prue</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Mon-Sat — Morning 08:00-10:00, Afternoon 15:00-17:30 / 18:00; closed Sundays</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         
       </div>
 
@@ -98,6 +106,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Sityodtong Pattaya is <strong>arguably the most historically significant Muay Thai gym in the world</strong> and one of the few training environments where the term "lineage" still genuinely applies in 2026.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -392,7 +405,39 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    <a class="sa-btn" href="tel:+6638251489" aria-label="Call Sityodtong Pattaya">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>
+    <a class="sa-btn" href="https://sityodtongthailand.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="sityodtong-pattaya" data-pg-compare-name="Sityodtong Pattaya" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

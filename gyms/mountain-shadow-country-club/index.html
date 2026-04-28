@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">golf</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">golf</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Mountain Shadow Country Club</h1>
-      <p class="venue-lede">Mountain Shadow Country Club is a strategic 18-hole par-72 course built on a former mango plantation halfway between Bangkok and Pattaya, originally designed by American architect Ron Fream in 1993 and comprehensively renovated in 2004. The course&#39;s identity is anchored in two un…</p>
+      <p class="venue-lede">Mountain Shadow Country Club is a strategic 18-hole par-72 course built on a former mango plantation halfway between Bangkok and Pattaya, originally designed by American architect Ron Fream in 1993 and comprehensively renovated in 2004. The…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Halfway between Bangkok and Pattaya / Si Racha</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ Built on a former mango plantation — Ron Fream design with 4 island greens</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Mountain Shadow Country Club is <strong>a strategic 18-hole par-72 course built on a former mango plantation</strong> halfway between Bangkok and Pattaya, originally <strong>designed by American architect Ron Fream in 1993</strong> and <strong>comprehensively renovated in 2004</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -318,7 +331,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="mountain-shadow-country-club" data-pg-compare-name="Mountain Shadow Country Club" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

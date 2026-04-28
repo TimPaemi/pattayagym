@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">fitness</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">fitness</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 4 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">True Fitness Pattaya</h1>
-      <p class="venue-lede">True Fitness is a multi-location commercial fitness chain with Pattaya operations offering a full Western-style commercial gym experience — modern equipment, group fitness studio, comprehensive class menu, and wellness amenities. The brand operates as one of Pattaya&#39;s premier com…</p>
+      <p class="venue-lede">True Fitness is a multi-location commercial fitness chain with Pattaya operations offering a full Western-style commercial gym experience — modern equipment, group fitness studio, comprehensive class menu, and wellness amenities. The brand …</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Central Pattaya / mall-attached</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Typically 06:00-22:00 (varies by location)</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ Multi-location commercial fitness chain offering full HIIT/yoga/spinning class menu</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>True Fitness is <strong>a multi-location commercial fitness chain</strong> with Pattaya operations offering <strong>a full Western-style commercial gym experience</strong> — modern equipment, group fitness studio, comprehensive class menu, and wellness amenities.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -317,7 +330,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="true-fitness-pattaya" data-pg-compare-name="True Fitness Pattaya" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

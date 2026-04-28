@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">golf</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">golf</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 5 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Pattaya Country Club</h1>
-      <p class="venue-lede">Pattaya Country Club is one of the closest 18-hole golf courses to central Pattaya — a 7,054-yard par-72 layout opened in 1993 and spread across more than 2,000 rai (320 hectares / 790 acres) of gently rolling hills in Khao Mai Kaeo. The location advantage is meaningful: where mo…</p>
+      <p class="venue-lede">Pattaya Country Club is one of the closest 18-hole golf courses to central Pattaya — a 7,054-yard par-72 layout opened in 1993 and spread across more than 2,000 rai (320 hectares / 790 acres) of gently rolling hills in Khao Mai Kaeo. The lo…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Khao Mai Kaeo (one of the closest courses to Pattaya proper)</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Daily — first tee from sunrise; last tee typically 14:30</span>
+        <span class="meta-chip">🗣 English · Thai · Korean · Japanese</span>
         <span class="meta-chip meta-chip-accent">⭐ One of the closest courses to central Pattaya — 2,000+ rai of rolling hills</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Pattaya Country Club is <strong>one of the closest 18-hole golf courses to central Pattaya</strong> — a <strong>7,054-yard par-72 layout opened in 1993</strong> and spread across <strong>more than 2,000 rai (320 hectares / 790 acres)</strong> of gently rolling hills in <strong>Khao Mai Kaeo</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -298,7 +311,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="pattaya-country-club" data-pg-compare-name="Pattaya Country Club" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

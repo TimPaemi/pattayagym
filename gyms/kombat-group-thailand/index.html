@@ -67,14 +67,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">muay thai</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">muay thai</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 13 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Kombat Group Thailand</h1>
-      <p class="venue-lede">Kombat Group Thailand is a multi-discipline, all-inclusive, residential combat sports and fitness retreat set on a peaceful rural campus in Huai Yai, just east of Pattaya. It is consistently ranked 5/5 on TripAdvisor with 409 of 416 reviewers giving it the maximum score — making …</p>
+      <p class="venue-lede">Kombat Group Thailand is a multi-discipline, all-inclusive, residential combat sports and fitness retreat set on a peaceful rural campus in Huai Yai, just east of Pattaya. It is consistently ranked 5/5 on TripAdvisor with 409 of 416 reviewe…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Huai Yai / East Pattaya (rural, near Chak Nok Lake)</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Day starts 08:00, ends ~19:00; classes Mon-Sat (Sundays no regular classes)</span>
+        <span class="meta-chip">🗣 English · Italian · Spanish · Thai</span>
         
       </div>
 
@@ -98,6 +106,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Kombat Group Thailand is a <strong>multi-discipline, all-inclusive, residential combat sports and fitness retreat</strong> set on a peaceful rural campus in Huai Yai, just east of Pattaya.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -457,7 +470,39 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    <a class="sa-btn" href="tel:+66810999333" aria-label="Call Kombat Group Thailand">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>
+    <a class="sa-btn" href="https://www.kombatgroup.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="kombat-group-thailand" data-pg-compare-name="Kombat Group Thailand" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

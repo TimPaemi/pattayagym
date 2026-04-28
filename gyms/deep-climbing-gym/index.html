@@ -67,14 +67,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">climbing</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">climbing</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 7 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Deep Climbing Gym (Harbor Pattaya)</h1>
-      <p class="venue-lede">Deep Climbing Gym is the first indoor climbing facility ever opened in Pattaya and remains the city&#39;s primary destination for rock climbing, top-rope, lead climbing, bouldering, and auto-belay practice. Located on the 8th floor of Harbor Pattaya Shopping Mall in Na Kluea, the gym…</p>
+      <p class="venue-lede">Deep Climbing Gym is the first indoor climbing facility ever opened in Pattaya and remains the city&#39;s primary destination for rock climbing, top-rope, lead climbing, bouldering, and auto-belay practice. Located on the 8th floor of Harbor Pa…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Na Kluea / North Pattaya — Harbor Pattaya Mall, 8th Floor</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Daily 10:00-22:00 (mall hours)</span>
+        <span class="meta-chip">🗣 English (limited) · Thai</span>
         
       </div>
 
@@ -98,6 +106,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Deep Climbing Gym is <strong>the first indoor climbing facility ever opened in Pattaya</strong> and remains the city's primary destination for rock climbing, top-rope, lead climbing, bouldering, and auto-belay practice.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -311,7 +324,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    <a class="sa-btn" href="tel:+66893321000" aria-label="Call Deep Climbing Gym (Harbor Pattaya)">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="deep-climbing-gym" data-pg-compare-name="Deep Climbing Gym (Harbor Pattaya)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

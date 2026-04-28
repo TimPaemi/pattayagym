@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">muay thai</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">muay thai</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 7 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Rambaa Somdet M16 Muay Thai &amp; MMA</h1>
-      <p class="venue-lede">Rambaa Somdet M16 is the personal training camp of Thailand&#39;s first MMA world champion, Rambaa &quot;M16&quot; Somdet (real name Silajak Klinmee). Founded in early 2016 in Nong Prue, Pattaya, just 100 meters from the Sor Klinmee Gym owned by Rambaa&#39;s uncle Tappaya, the camp is a working-fi…</p>
+      <p class="venue-lede">Rambaa Somdet M16 is the personal training camp of Thailand&#39;s first MMA world champion, Rambaa &quot;M16&quot; Somdet (real name Silajak Klinmee). Founded in early 2016 in Nong Prue, Pattaya, just 100 meters from the Sor Klinmee Gym owned by Rambaa&#39;s…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Nong Prue / East Pattaya (100m from Sor Klinmee)</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Mon-Sat — Morning + Afternoon sessions</span>
+        <span class="meta-chip">🗣 Thai · basic English</span>
         <span class="meta-chip meta-chip-accent">⭐ Founder is Thailand&#39;s first MMA world champion</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Rambaa Somdet M16 is <strong>the personal training camp of Thailand's first MMA world champion</strong>, <strong>Rambaa "M16" Somdet</strong> (real name <strong>Silajak Klinmee</strong>).</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -314,7 +327,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="rambaa-somdet-m16" data-pg-compare-name="Rambaa Somdet M16 Muay Thai &amp; MMA" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

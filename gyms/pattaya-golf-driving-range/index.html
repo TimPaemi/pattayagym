@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">golf</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">golf</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 5 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Pattaya Golf Driving Range</h1>
-      <p class="venue-lede">Pattaya Golf Driving Range is the city&#39;s go-to practice facility for golfers wanting affordable warm-up, swing work, or lesson sessions without paying championship-course green fees. Open from approximately 07:00 to 22:00 daily — a generous 15-hour window — the range is priced at…</p>
+      <p class="venue-lede">Pattaya Golf Driving Range is the city&#39;s go-to practice facility for golfers wanting affordable warm-up, swing work, or lesson sessions without paying championship-course green fees. Open from approximately 07:00 to 22:00 daily — a generous…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Pattaya</span>
         <span class="meta-chip">💰 ฿</span>
         <span class="meta-chip">🕐 Daily 07:00-22:00 typical</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ Affordable practice range — ฿60 per tray (~40 balls), 7am-10pm hours, lessons + club rental</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Pattaya Golf Driving Range is <strong>the city's go-to practice facility for golfers wanting affordable warm-up, swing work, or lesson sessions without paying championship-course green fees</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -299,7 +312,35 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    
+    <button class="sa-btn sa-compare" data-pg-compare-id="pattaya-golf-driving-range" data-pg-compare-name="Pattaya Golf Driving Range" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">yoga</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">yoga</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Ashtanga Yoga Pattaya</h1>
-      <p class="venue-lede">Ashtanga Yoga Pattaya is Pattaya&#39;s most lineage-pure Ashtanga yoga practice community — a studio (often associated with or operating in conjunction with Yoga Pattaya Studio in Soi 12 Thepprasit) where students practice traditional Ashtanga Vinyasa Yoga in the authentic Mysore met…</p>
+      <p class="venue-lede">Ashtanga Yoga Pattaya is Pattaya&#39;s most lineage-pure Ashtanga yoga practice community — a studio (often associated with or operating in conjunction with Yoga Pattaya Studio in Soi 12 Thepprasit) where students practice traditional Ashtanga …</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Pattaya — Soi 12 Thepprasit / Jomtien</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Morning Mysore practice + scheduled led classes; verify at studio</span>
+        <span class="meta-chip">🗣 English · Russian · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ Traditional Ashtanga Mysore-style practice with teachers trained at KPJ Ashtanga Yoga Institute (Mysore, India)</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Ashtanga Yoga Pattaya is <strong>Pattaya's most lineage-pure Ashtanga yoga practice community</strong> — a studio (often associated with or operating in conjunction with <strong>Yoga Pattaya Studio in Soi 12 Thepprasit</strong>) where students practice <strong>traditional Ashtanga Vinyasa Yoga in the authentic Mysore method</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -330,7 +343,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://ashtangayogapattaya.weebly.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="ashtanga-yoga-pattaya" data-pg-compare-name="Ashtanga Yoga Pattaya" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

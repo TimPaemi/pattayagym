@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">yoga</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">yoga</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Balance Yoga Studio Pattaya</h1>
-      <p class="venue-lede">Balance Yoga Studio Pattaya — stylized BΛLΛNCE — is a wellness-oriented yoga + sound healing studio steps from the sea, positioned by its founders as &quot;an island of harmony in sunny Pattaya&quot;. The studio occupies a distinct niche in the city&#39;s yoga ecosystem: the place to go when y…</p>
+      <p class="venue-lede">Balance Yoga Studio Pattaya — stylized BΛLΛNCE — is a wellness-oriented yoga + sound healing studio steps from the sea, positioned by its founders as &quot;an island of harmony in sunny Pattaya&quot;. The studio occupies a distinct niche in the city&#39;…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Near sea — Pattaya / Jomtien beach-adjacent</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Daily — schedule varies, confirm at studio</span>
+        <span class="meta-chip">🗣 English · Russian · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ Yoga + sound healing wellness studio steps from the sea — &quot;island of harmony&quot; positioning</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Balance Yoga Studio Pattaya — stylized <strong>BΛLΛNCE</strong> — is a <strong>wellness-oriented yoga + sound healing studio steps from the sea</strong>, positioned by its founders as <strong>"an island of harmony in sunny Pattaya"</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -333,7 +346,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://balancepattaya.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="balance-yoga-studio-pattaya" data-pg-compare-name="Balance Yoga Studio Pattaya" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

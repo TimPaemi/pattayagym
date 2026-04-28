@@ -292,6 +292,71 @@ function extractFirstParagraph(body) {
     .replace(/\s+/g, ' ').trim();
 }
 
+// Reading time in minutes (rough — ~210 words/min)
+function computeReadingTime(body) {
+  if (!body) return 1;
+  const words = body.replace(/[#*`>\-\[\]\(\)]/g, ' ').split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 210));
+}
+
+// Best-effort "Open now" detection. Returns 'open' | 'closed' | null (unknown).
+// hoursStr examples we try to parse: "Daily 06:00-22:00", "Mon-Fri 07:00-09:00 & 19:00-20:00", "24/7", "24 hours"
+function detectOpenStatus(hoursStr) {
+  if (!hoursStr) return null;
+  const s = String(hoursStr);
+  if (/24\/7|24\s*hours|always\s*open/i.test(s)) return 'open';
+  // Find time ranges like 07:00-22:00
+  const ranges = [];
+  const re = /(\d{1,2}):(\d{2})\s*[-–]\s*(\d{1,2}):(\d{2})/g;
+  let m;
+  while ((m = re.exec(s)) !== null) {
+    ranges.push({
+      from: parseInt(m[1], 10) * 60 + parseInt(m[2], 10),
+      to:   parseInt(m[3], 10) * 60 + parseInt(m[4], 10)
+    });
+  }
+  if (!ranges.length) return null;
+  // Use Bangkok time (UTC+7)
+  const now = new Date(Date.now() + 7 * 3600 * 1000);
+  const minutes = now.getUTCHours() * 60 + now.getUTCMinutes();
+  const open = ranges.some(r => {
+    if (r.to <= r.from) return minutes >= r.from || minutes <= r.to; // crossing midnight
+    return minutes >= r.from && minutes <= r.to;
+  });
+  return open ? 'open' : 'closed';
+}
+
+// Auto TL;DR — first 2 sentences (~280 chars max), preserves bold from md
+function buildTLDR(body) {
+  if (!body) return '';
+  // Skip headings, take first non-heading non-empty paragraph block
+  const lines = body.split(/\r?\n/);
+  const collected = [];
+  let started = false;
+  for (const line of lines) {
+    if (/^#{1,6}\s/.test(line)) { if (started) break; continue; }
+    if (/^\s*$/.test(line)) { if (started) break; continue; }
+    if (/^\s*-\s/.test(line)) continue;
+    if (/^\s*\|/.test(line)) continue;
+    started = true;
+    collected.push(line.trim());
+  }
+  let text = collected.join(' ').replace(/\s+/g, ' ').trim();
+  // Take first ~2 sentences or ~280 chars
+  const sentences = text.split(/(?<=[.!?])\s+/);
+  let out = '';
+  for (const s of sentences) {
+    if (out.length + s.length > 320) break;
+    out += (out ? ' ' : '') + s;
+    if (out.length > 200) break;
+  }
+  if (!out) out = text.slice(0, 280);
+  // Apply inline formatting (bold, links — but strip links to plain text for tldr)
+  out = out.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+  out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  return out;
+}
+
 function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   const url = `${SITE}/gyms/${slug}/`;
   const title = `${fm.name} | Pattaya Gym Directory`;
@@ -308,6 +373,13 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   // Resolve readable category label (CATEGORIES has emoji + label per key)
   const catObj = (allCats || []).find(c => c.key === fm.category);
   const catLabel = catObj ? catObj.label : cat;
+
+  // Mobile-first 2026 helpers
+  const readingMin = computeReadingTime(body);
+  const openStatus = detectOpenStatus(fm.hours);
+  const tldrHtml = buildTLDR(body);
+  const languagesArr = Array.isArray(fm.languages) ? fm.languages : [];
+  const languagesStr = languagesArr.join(' · ');
 
   const schema = {
     '@context': 'https://schema.org',
@@ -380,14 +452,22 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">${escHtml(cat)}</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">${escHtml(cat)}</span>
+        ${openStatus === 'open' ? '<span class="open-badge open-now">● Open now</span>' : ''}
+        ${openStatus === 'closed' ? '<span class="open-badge open-closed">● Closed now</span>' : ''}
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 ${readingMin} min read</span>
+        ${fm.verified ? `<span class="meta-dot">•</span><span class="reading-meta">Verified ${escHtml(fm.verified)}</span>` : ''}
+      </div>
       <h1 class="venue-h1">${escHtml(fm.name)}</h1>
-      ${firstPara ? `<p class="venue-lede">${escHtml(firstPara.slice(0, 280))}${firstPara.length > 280 ? '…' : ''}</p>` : ''}
+      ${firstPara ? `<p class="venue-lede">${escHtml(firstPara.slice(0, 240))}${firstPara.length > 240 ? '…' : ''}</p>` : ''}
 
       <div class="venue-hero-meta">
         ${fm.area ? `<span class="meta-chip">📍 ${escHtml(fm.area)}</span>` : ''}
         ${fm.priceRange ? `<span class="meta-chip">💰 ${escHtml(fm.priceRange)}</span>` : ''}
         ${fm.hours ? `<span class="meta-chip">🕐 ${escHtml(fm.hours)}</span>` : ''}
+        ${languagesStr ? `<span class="meta-chip">🗣 ${escHtml(languagesStr)}</span>` : ''}
         ${fm.distinction ? `<span class="meta-chip meta-chip-accent">⭐ ${escHtml(fm.distinction)}</span>` : ''}
       </div>
 
@@ -411,6 +491,11 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    ${tldrHtml ? `<aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>${tldrHtml}</p>
+    </aside>` : ''}
 
     <article class="venue-body">
       ${bodyHtml}
@@ -456,8 +541,42 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    ${fm.mapsUrl ? `<a class="sa-btn sa-primary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener" aria-label="Open in Google Maps">
+      <span class="sa-ico">📍</span><span class="sa-lbl">Map</span>
+    </a>` : ''}
+    ${fm.phone ? `<a class="sa-btn" href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}" aria-label="Call ${escHtml(fm.name)}">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>` : ''}
+    ${fm.website ? `<a class="sa-btn" href="${escHtml(fm.website)}" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>` : ''}
+    <button class="sa-btn sa-compare" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>
 `;
@@ -567,3 +686,132 @@ ed.');
 }
 
 main();
+a>` : ''}
+    ${fm.phone ? `<a class="sa-btn" href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}" aria-label="Call ${escHtml(fm.name)}">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>` : ''}
+    ${fm.website ? `<a class="sa-btn" href="${escHtml(fm.website)}" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>` : ''}
+    <button class="sa-btn sa-compare" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
+  <script src="/share.js" defer></script>
+  <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
+</body>
+</html>
+`;
+}
+
+// ---------- Sitemap ----------
+function buildSitemap(venues) {
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = [
+    `<url><loc>${SITE}/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>`,
+    ...venues.map(v => `<url><loc>${SITE}/gyms/${v.slug}/</loc><lastmod>${v.fm.verified || today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`)
+  ];
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  ${urls.join('\n  ')}\n</urlset>\n`;
+}
+
+// ---------- Main ----------
+function loadGymsFromDataJs() {
+  const code = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
+  const win = {};
+  new Function('window', code)(win);
+  return { GYMS: win.GYMS || [], CATEGORIES: win.CATEGORIES || [] };
+}
+
+function buildStubBody(g, cats) {
+  const cat = cats.find(c => c.key === g.category);
+  const catLabel = cat ? cat.label : g.category;
+  const lines = [];
+  lines.push('## Overview');
+  lines.push('');
+  lines.push(g.description || ('Pattaya ' + catLabel + ' venue.'));
+  lines.push('');
+  lines.push('## Quick Facts');
+  lines.push('');
+  if (g.area) lines.push('- **Area:** ' + g.area);
+  if (g.address) lines.push('- **Address:** ' + g.address);
+  if (g.phone) lines.push('- **Phone:** ' + g.phone);
+  if (g.website) lines.push('- **Website:** ' + g.website);
+  if (g.hours) lines.push('- **Hours:** ' + g.hours);
+  if (g.priceRange) lines.push('- **Price range:** ' + g.priceRange);
+  if (g.tags && g.tags.length) lines.push('- **Tags:** ' + g.tags.join(', '));
+  lines.push('');
+  lines.push('## More Coming Soon');
+  lines.push('');
+  lines.push('A full deep-dive page for **' + g.name + '** is in progress.');
+  return lines.join('\n');
+}
+
+function main() {
+  if (!fs.existsSync(VENUES_DIR)) fs.mkdirSync(VENUES_DIR);
+  if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR);
+  const loaded = loadGymsFromDataJs();
+  const GYMS = loaded.GYMS;
+  const CATEGORIES = loaded.CATEGORIES;
+  const venues = [];
+  const mdFiles = new Set(
+    fs.readdirSync(VENUES_DIR).filter(f => f.endsWith('.md')).map(f => f.replace(/\.md$/, ''))
+  );
+  let deepCount = 0, stubCount = 0;
+  GYMS.forEach(g => {
+    const slug = g.id;
+    let fm, bodyHtml, body;
+    if (mdFiles.has(slug)) {
+      const raw = fs.readFileSync(path.join(VENUES_DIR, slug + '.md'), 'utf8');
+      const parsed = parseFrontmatter(raw);
+      fm = parsed.fm;
+      if (!fm.mapsUrl && g.mapsUrl) fm.mapsUrl = g.mapsUrl;
+      if (!fm.description && g.description) fm.description = g.description;
+      body = parsed.body;
+      bodyHtml = mdToHtml(body);
+      deepCount++;
+    } else {
+      fm = {
+        id: slug, name: g.name, category: g.category, area: g.area,
+        address: g.address, phone: g.phone, website: g.website,
+        social: g.social || {}, hours: g.hours, priceRange: g.priceRange,
+        description: g.description, tags: g.tags, mapsUrl: g.mapsUrl,
+        verified: g.verified
+      };
+      body = buildStubBody(g, CATEGORIES);
+      bodyHtml = mdToHtml(body);
+      stubCount++;
+    }
+    const html = buildVenuePage(slug, fm, bodyHtml, body, GYMS, CATEGORIES);
+    const venueDir = path.join(OUT_DIR, slug);
+    if (!fs.existsSync(venueDir)) fs.mkdirSync(venueDir);
+    fs.writeFileSync(path.join(venueDir, 'index.html'), html);
+    venues.push({ slug, fm });
+    const tag = mdFiles.has(slug) ? 'DEEP' : 'stub';
+    console.log('  [' + tag + '] /gyms/' + slug + '/  (' + (fm.name || slug) + ')');
+  });
+  fs.writeFileSync(SITEMAP, buildSitemap(venues));
+  console.log('\nGenerated ' + venues.length + ' venue pages (' + deepCount + ' deep + ' + stubCount + ' stubs)');
+  console.log('sitemap.xml updated.');
+}
+
+main();
+);

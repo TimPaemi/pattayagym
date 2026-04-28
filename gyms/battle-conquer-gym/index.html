@@ -67,14 +67,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">muay thai</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">muay thai</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 9 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Battle Conquer Gym Pattaya</h1>
-      <p class="venue-lede">Battle Conquer Gym holds a unique position in the Pattaya Muay Thai market: it is the only fully air-conditioned Muay Thai gym in the city. In a country where Muay Thai training has historically been an open-air, sweat-drenched, heat-tested experience, Battle Conquer made a delib…</p>
+      <p class="venue-lede">Battle Conquer Gym holds a unique position in the Pattaya Muay Thai market: it is the only fully air-conditioned Muay Thai gym in the city. In a country where Muay Thai training has historically been an open-air, sweat-drenched, heat-tested…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Central Pattaya / near Pattaya Beach</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 7 days/week, twice-daily group classes (morning + afternoon)</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ The ONLY fully air-conditioned Muay Thai gym in Pattaya</span>
       </div>
 
@@ -98,6 +106,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Battle Conquer Gym holds a <strong>unique position in the Pattaya Muay Thai market</strong>: it is the <strong>only fully air-conditioned Muay Thai gym in the city</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -368,7 +381,39 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    <a class="sa-btn" href="tel:+66980853053" aria-label="Call Battle Conquer Gym Pattaya">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>
+    <a class="sa-btn" href="https://battleconquerpattaya.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="battle-conquer-gym" data-pg-compare-name="Battle Conquer Gym Pattaya" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

@@ -67,14 +67,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">watersports</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">watersports</span>
+        
+        <span class="open-badge open-closed">● Closed now</span>
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 4 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Jomtien Dive Center</h1>
-      <p class="venue-lede">Jomtien Dive Center is a PADI 5-Star IDC dive center in Jomtien Beach holding the 5-Star TripAdvisor Certificate alongside its PADI affiliation — making it one of Pattaya&#39;s most-credentialed dive operations on the Jomtien side. With phone +66 33 144 007 and team leader Gary at th…</p>
+      <p class="venue-lede">Jomtien Dive Center is a PADI 5-Star IDC dive center in Jomtien Beach holding the 5-Star TripAdvisor Certificate alongside its PADI affiliation — making it one of Pattaya&#39;s most-credentialed dive operations on the Jomtien side. With phone +…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Jomtien Beach</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Daily — dive trips depart mornings; shop hours typical 8:00-19:00</span>
+        <span class="meta-chip">🗣 English · Thai</span>
         
       </div>
 
@@ -98,6 +106,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Jomtien Dive Center is <strong>a PADI 5-Star IDC dive center in Jomtien Beach</strong> holding the <strong>5-Star TripAdvisor Certificate</strong> alongside its PADI affiliation — making it one of <strong>Pattaya's most-credentialed dive operations on the Jomtien side</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -292,7 +305,39 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    <a class="sa-btn" href="tel:+6633144007" aria-label="Call Jomtien Dive Center">
+      <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
+    </a>
+    <a class="sa-btn" href="https://jomtiendivecenter.com/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="jomtien-dive-center" data-pg-compare-name="Jomtien Dive Center" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

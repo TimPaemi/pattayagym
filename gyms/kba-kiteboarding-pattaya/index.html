@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">watersports</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">watersports</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 6 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">KBA Kiteboarding Asia Pattaya (Blue Lagoon)</h1>
-      <p class="venue-lede">KBA Pattaya is the Pattaya branch of Kiteboarding Asia (KBA) — Thailand&#39;s leading multi-location kiteboarding chain, with sister schools at Koh Samui, Phuket, Hua Hin, and Koh Phangan. The Pattaya operation is based at Blue Lagoon, 23/4 Moo 2, Soi Tanmanjai 14, Na Jomtien, Sattah…</p>
+      <p class="venue-lede">KBA Pattaya is the Pattaya branch of Kiteboarding Asia (KBA) — Thailand&#39;s leading multi-location kiteboarding chain, with sister schools at Koh Samui, Phuket, Hua Hin, and Koh Phangan. The Pattaya operation is based at Blue Lagoon, 23/4 Moo…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Na Jomtien / Sattahip — Blue Lagoon</span>
         <span class="meta-chip">💰 ฿฿฿</span>
         <span class="meta-chip">🕐 Daily — wind dependent (best November-March)</span>
+        <span class="meta-chip">🗣 English · Thai · Russian · German</span>
         <span class="meta-chip meta-chip-accent">⭐ Pattaya branch of KBA — Thailand&#39;s leading multi-location kiteboarding chain (Samui, Phuket, Hua Hin, Phangan, Pattaya)</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>KBA Pattaya is <strong>the Pattaya branch of Kiteboarding Asia (KBA) — Thailand's leading multi-location kiteboarding chain</strong>, with sister schools at <strong>Koh Samui, Phuket, Hua Hin, and Koh Phangan</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -356,7 +369,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://kiteboardingasia.com/pattaya/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="kba-kiteboarding-pattaya" data-pg-compare-name="KBA Kiteboarding Asia Pattaya (Blue Lagoon)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>

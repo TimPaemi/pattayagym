@@ -66,14 +66,22 @@
     </div>
 
     <div class="venue-hero">
-      <span class="venue-cat-pill">clubs</span>
+      <div class="venue-meta-line">
+        <span class="venue-cat-pill">clubs</span>
+        
+        
+        <span class="meta-dot">•</span>
+        <span class="reading-meta">📖 4 min read</span>
+        <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
+      </div>
       <h1 class="venue-h1">Rusich Club Pattaya (HSIF Thailand)</h1>
-      <p class="venue-lede">Rusich Club is a Russian-language sports club in Pattaya operating under HSIF Thailand — serving the Pattaya Russian-speaking expat community with multi-sport programming, athletic activities, and community gatherings conducted primarily in Russian language. The club represents a…</p>
+      <p class="venue-lede">Rusich Club is a Russian-language sports club in Pattaya operating under HSIF Thailand — serving the Pattaya Russian-speaking expat community with multi-sport programming, athletic activities, and community gatherings conducted primarily in…</p>
 
       <div class="venue-hero-meta">
         <span class="meta-chip">📍 Pattaya</span>
         <span class="meta-chip">💰 ฿฿</span>
         <span class="meta-chip">🕐 Daily — verify with club</span>
+        <span class="meta-chip">🗣 Russian · English · Thai</span>
         <span class="meta-chip meta-chip-accent">⭐ Russian-language sports club serving the Russian expat community — multi-sport including football</span>
       </div>
 
@@ -97,6 +105,11 @@
         <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
       </div>
     </div>
+
+    <aside class="tldr-card" aria-label="At a glance summary">
+      <div class="tldr-tag">⚡ The quick answer</div>
+      <p>Rusich Club is <strong>a Russian-language sports club in Pattaya operating under HSIF Thailand</strong> — serving <strong>the Pattaya Russian-speaking expat community</strong> with multi-sport programming, athletic activities, and community gatherings conducted primarily in <strong>Russian language</strong>.</p>
+    </aside>
 
     <article class="venue-body">
       <h2>Overview</h2>
@@ -286,7 +299,37 @@
     </div>
   </footer>
 
+  <!-- Sticky bottom action bar (mobile thumb-reach) -->
+  <nav class="sticky-actions" aria-label="Quick actions">
+    
+    
+    <a class="sa-btn" href="https://rusich.club/en/home_en/" target="_blank" rel="noopener" aria-label="Visit website">
+      <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
+    </a>
+    <button class="sa-btn sa-compare" data-pg-compare-id="rusich-club-football" data-pg-compare-name="Rusich Club Pattaya (HSIF Thailand)" aria-label="Add to compare">
+      <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
+    </button>
+    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+      <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
+    </button>
+  </nav>
+
+  <div class="scroll-progress" id="pg-scroll-progress"></div>
+
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
+  <script>
+  (function () {
+    var bar = document.getElementById('pg-scroll-progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
 </body>
 </html>
