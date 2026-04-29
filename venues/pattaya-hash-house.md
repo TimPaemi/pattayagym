@@ -1,5 +1,5 @@
 ---
-id: pattaya-hash-house-harriers
+id: pattaya-hash-house
 name: Pattaya Hash House Harriers
 category: clubs
 area: Pattaya / East Pattaya / various run locations

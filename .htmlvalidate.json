@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "html-validate:recommended"
+  ],
+  "rules": {
+    "aria-label-misuse": "off",
+    "attribute-empty-style": "off",
+    "no-dup-id": "off",
+    "no-implicit-button-type": "off",
+    "no-inline-style": "off",
+    "no-raw-characters": "off",
+    "no-redundant-for": "off",
+    "no-redundant-role": "off",
+    "no-trailing-whitespace": "off",
+    "tel-non-breaking": "off",
+    "unrecognized-char-ref": "off",
+    "valid-id": "off",
+    "void-style": "off"
+  }
+}

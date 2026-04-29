@@ -1,0 +1,16 @@
+{
+  "name": "pattaya-gym",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "validate": "node validate.js",
+    "watch": "node build.js --watch",
+    "serve": "npx http-server . -p 8080",
+    "html:validate": "npx --yes html-validate index.html search/index.html map/index.html category/muay-thai/index.html gyms/fairtex-pattaya/index.html"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "html-validate": "^9.7.1",
+    "http-server": "^14.1.1"
+  }
+}

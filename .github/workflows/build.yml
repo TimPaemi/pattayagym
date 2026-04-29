@@ -1,0 +1,59 @@
+name: Build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install tooling
+        run: npm install --ignore-scripts
+
+      - name: Validate source data
+        run: npm run validate
+
+      - name: Build static output
+        run: npm run build
+
+      - name: Validate sample HTML
+        run: npm run html:validate
+
+      - name: Run Lighthouse CI
+        id: lhci
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./.lighthouserc.json
+          temporaryPublicStorage: true
+          uploadArtifacts: true
+
+      - name: Comment Lighthouse report
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const links = `${{ steps.lhci.outputs.links }}`.trim();
+            const body = links
+              ? `Lighthouse CI completed.\n\n${links}`
+              : 'Lighthouse CI completed. See the workflow artifacts for reports.';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });

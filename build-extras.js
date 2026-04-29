@@ -107,6 +107,39 @@ function assetHref(file) {
   return `${file}?v=${ASSET_VERSION}`;
 }
 
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+}
+
+function resolveDirectChild(parent, childName) {
+  const parentPath = path.resolve(parent);
+  const target = path.resolve(parentPath, childName);
+  if (path.dirname(target) !== parentPath) {
+    throw new Error('Refusing to operate outside ' + parentPath + ': ' + childName);
+  }
+  return target;
+}
+
+function cleanupChildDirs(parent, expectedNames, label) {
+  ensureDir(parent);
+  const expected = new Set(Array.from(expectedNames).map(String));
+  fs.readdirSync(parent, { withFileTypes: true }).forEach(entry => {
+    if (!entry.isDirectory() || expected.has(entry.name)) return;
+    fs.rmSync(resolveDirectChild(parent, entry.name), { recursive: true, force: true });
+    console.log('  [CLEAN] removed stale ' + label + ': ' + entry.name);
+  });
+}
+
+function cleanupChildFiles(parent, expectedNames, label) {
+  ensureDir(parent);
+  const expected = new Set(Array.from(expectedNames).map(String));
+  fs.readdirSync(parent, { withFileTypes: true }).forEach(entry => {
+    if (!entry.isFile() || expected.has(entry.name)) return;
+    fs.rmSync(resolveDirectChild(parent, entry.name), { force: true });
+    console.log('  [CLEAN] removed stale ' + label + ': ' + entry.name);
+  });
+}
+
 function cleanText(s) {
   return String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
 }
@@ -836,9 +869,14 @@ function buildRss(allGyms, allCats, categoryKey) {
   const feedDesc = categoryKey
     ? `Latest ${catLabel(categoryKey).toLowerCase()} venues in the Pattaya Gym Directory.`
     : 'Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.';
+  const latestVerified = sorted
+    .map(g => g.verified)
+    .filter(Boolean)
+    .sort()
+    .reverse()[0] || LAST_BUILD_DATE;
   const items = sorted.map(g => {
     const url = `${SITE}/gyms/${g.id}/`;
-    const pubDate = (g.verified ? new Date(g.verified) : new Date()).toUTCString();
+    const pubDate = new Date((g.verified || latestVerified) + 'T00:00:00Z').toUTCString();
     const desc = (g.description || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
     return `  <item>
     <title>${escHtml(g.name || '')}</title>
@@ -849,7 +887,7 @@ function buildRss(allGyms, allCats, categoryKey) {
     <description><![CDATA[${desc}]]></description>
   </item>`;
   }).join('\n');
-  const lastBuild = new Date().toUTCString();
+  const lastBuild = new Date(latestVerified + 'T00:00:00Z').toUTCString();
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
@@ -951,6 +989,11 @@ function appendCategoryCss() {
 function main() {
   const { GYMS, CATEGORIES } = loadGymsFromDataJs();
   const extraUrls = [];
+  const activeCategories = CATEGORIES
+    .filter(cat => GYMS.some(g => g.category === cat.key))
+    .map(cat => cat.key);
+
+  cleanupChildDirs(path.join(ROOT, 'category'), activeCategories, 'category output directory');
 
   // 1. Category landing pages
   let catCount = 0;
@@ -997,7 +1040,8 @@ function main() {
   console.log('  [RSS] /feed.xml');
   extraUrls.push('/feed.xml');
   const feedDir = path.join(ROOT, 'feed');
-  if (!fs.existsSync(feedDir)) fs.mkdirSync(feedDir);
+  ensureDir(feedDir);
+  cleanupChildFiles(feedDir, activeCategories.map(key => `${key}.xml`), 'category RSS file');
   CATEGORIES.forEach(cat => {
     const gymsInCat = GYMS.filter(g => g.category === cat.key);
     if (!gymsInCat.length) return;

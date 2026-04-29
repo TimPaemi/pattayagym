@@ -10,4 +10,8 @@ Thumbs.db
 # Local
 .env
 *.log
+*.bak
 node_modules/
+tmp/
+.lighthouseci/
+lh-*.json

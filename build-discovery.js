@@ -23,6 +23,26 @@ function escHtml(s) {
 function assetHref(file) {
   return `${file}?v=${ASSET_VERSION}`;
 }
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+}
+function resolveDirectChild(parent, childName) {
+  const parentPath = path.resolve(parent);
+  const target = path.resolve(parentPath, childName);
+  if (path.dirname(target) !== parentPath) {
+    throw new Error('Refusing to operate outside ' + parentPath + ': ' + childName);
+  }
+  return target;
+}
+function cleanupChildDirs(parent, expectedNames, label) {
+  ensureDir(parent);
+  const expected = new Set(Array.from(expectedNames).map(String));
+  fs.readdirSync(parent, { withFileTypes: true }).forEach(entry => {
+    if (!entry.isDirectory() || expected.has(entry.name)) return;
+    fs.rmSync(resolveDirectChild(parent, entry.name), { recursive: true, force: true });
+    console.log('  [CLEAN] removed stale ' + label + ': ' + entry.name);
+  });
+}
 function loadGymsFromDataJs() {
   const code = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
   const win = {};
@@ -2152,23 +2172,25 @@ function main() {
   const extraUrls = [];
 
   // 1. Area pages
-  if (!fs.existsSync(path.join(ROOT, 'area'))) fs.mkdirSync(path.join(ROOT, 'area'));
+  ensureDir(path.join(ROOT, 'area'));
+  cleanupChildDirs(path.join(ROOT, 'area'), AREAS.map(a => a.slug), 'area output directory');
   AREAS.forEach(a => {
     const dir = path.join(ROOT, 'area', a.slug);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+    ensureDir(dir);
     fs.writeFileSync(path.join(dir, 'index.html'), buildAreaPage(a, GYMS, CATEGORIES));
     extraUrls.push(`/area/${a.slug}/`);
     console.log('  [AREA] /area/' + a.slug + '/');
   });
 
   // 2. Guides index + individual guides
-  if (!fs.existsSync(path.join(ROOT, 'guides'))) fs.mkdirSync(path.join(ROOT, 'guides'));
+  ensureDir(path.join(ROOT, 'guides'));
+  cleanupChildDirs(path.join(ROOT, 'guides'), GUIDES.map(g => g.slug), 'guide output directory');
   fs.writeFileSync(path.join(ROOT, 'guides', 'index.html'), buildGuidesIndex(GYMS));
   extraUrls.push('/guides/');
   console.log('  [GUIDES-IDX] /guides/');
   GUIDES.forEach(g => {
     const dir = path.join(ROOT, 'guides', g.slug);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+    ensureDir(dir);
     fs.writeFileSync(path.join(dir, 'index.html'), buildGuidePage(g, GYMS));
     extraUrls.push(`/guides/${g.slug}/`);
     console.log('  [GUIDE] /guides/' + g.slug + '/');

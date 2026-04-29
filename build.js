@@ -14,6 +14,7 @@ const path = require('path');
 const ROOT = __dirname;
 const VENUES_DIR = path.join(ROOT, 'venues');
 const OUT_DIR = path.join(ROOT, 'gyms');
+const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
 const ASSET_VERSION = '161';
@@ -1385,10 +1386,55 @@ function buildSitemap(venues) {
 
 // ---------- Main ----------
 function loadGymsFromDataJs() {
-  const code = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
+  const code = fs.readFileSync(DATA_FILE, 'utf8');
   const win = {};
   new Function('window', code)(win);
   return { GYMS: win.GYMS || [], CATEGORIES: win.CATEGORIES || [] };
+}
+
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+}
+
+function resolveDirectChild(parent, childName) {
+  const parentPath = path.resolve(parent);
+  const target = path.resolve(parentPath, childName);
+  if (path.dirname(target) !== parentPath) {
+    throw new Error('Refusing to operate outside ' + parentPath + ': ' + childName);
+  }
+  return target;
+}
+
+function cleanupChildDirs(parent, expectedNames, label) {
+  ensureDir(parent);
+  const expected = new Set(Array.from(expectedNames).map(String));
+  fs.readdirSync(parent, { withFileTypes: true }).forEach(entry => {
+    if (!entry.isDirectory() || expected.has(entry.name)) return;
+    const target = resolveDirectChild(parent, entry.name);
+    fs.rmSync(target, { recursive: true, force: true });
+    console.log('  [CLEAN] removed stale ' + label + ': ' + entry.name);
+  });
+}
+
+function runValidation() {
+  if (process.argv.includes('--skip-validate')) {
+    console.log('Validation skipped by --skip-validate.');
+    return;
+  }
+  const { validate } = require('./validate.js');
+  const result = validate({ root: ROOT, silent: true });
+  if (!result.ok) {
+    result.errors.forEach(e => console.error('[VALIDATION] ' + e));
+    throw new Error('Validation failed with ' + result.errors.length + ' error(s). Run node validate.js for details.');
+  }
+  console.log('Validation: 0 error(s), ' + result.warnings.length + ' warning(s).');
+}
+
+function clearBuildModuleCache() {
+  ['./build-extras.js', './build-discovery.js'].forEach(mod => {
+    const id = require.resolve(mod);
+    delete require.cache[id];
+  });
 }
 
 
@@ -1418,9 +1464,11 @@ function buildStubBody(g, cats) {
   return lines.join('\n');
 }
 
-function main() {
-  if (!fs.existsSync(VENUES_DIR)) fs.mkdirSync(VENUES_DIR);
-  if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR);
+function runBuild() {
+  runValidation();
+  clearBuildModuleCache();
+  ensureDir(VENUES_DIR);
+  ensureDir(OUT_DIR);
 
   const loaded = loadGymsFromDataJs();
   const GYMS = loaded.GYMS;
@@ -1432,6 +1480,8 @@ function main() {
   );
 
   let deepCount = 0, stubCount = 0;
+
+  cleanupChildDirs(OUT_DIR, GYMS.map(g => g.id), 'venue output directory');
 
   GYMS.forEach(g => {
     const slug = g.id;
@@ -1459,7 +1509,7 @@ function main() {
 
     const html = buildVenuePage(slug, fm, bodyHtml, body, GYMS, CATEGORIES);
     const venueDir = path.join(OUT_DIR, slug);
-    if (!fs.existsSync(venueDir)) fs.mkdirSync(venueDir);
+    ensureDir(venueDir);
     fs.writeFileSync(path.join(venueDir, 'index.html'), html);
 
     venues.push({ slug, fm });
@@ -1472,13 +1522,72 @@ function main() {
   console.log('sitemap.xml updated.');
 
   // Chain extras
+  console.log('\n--- Building extras ---');
+  require('./build-extras.js');
+  console.log('\n--- Building discovery (areas, guides, search, add form) ---');
+  require('./build-discovery.js');
+}
+
+function watch() {
+  let timer = null;
+  let building = false;
+  let pending = false;
+
+  function buildOnce() {
+    if (building) {
+      pending = true;
+      return;
+    }
+    building = true;
+    try {
+      runBuild();
+      console.log('\nWatch build complete at ' + new Date().toLocaleTimeString() + '.');
+    } catch (e) {
+      console.error(e.stack || e.message);
+    } finally {
+      building = false;
+      if (pending) {
+        pending = false;
+        schedule('queued change');
+      }
+    }
+  }
+
+  function schedule(reason) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      console.log('\n[watch] Change detected' + (reason ? ': ' + reason : '') + '. Rebuilding...');
+      buildOnce();
+    }, 250);
+  }
+
+  buildOnce();
+  [
+    DATA_FILE,
+    path.join(ROOT, 'build.js'),
+    path.join(ROOT, 'build-extras.js'),
+    path.join(ROOT, 'build-discovery.js'),
+    path.join(ROOT, 'validate.js')
+  ].forEach(file => {
+    if (!fs.existsSync(file)) return;
+    fs.watch(file, { persistent: true }, () => schedule(path.basename(file)));
+  });
+  fs.watch(VENUES_DIR, { persistent: true }, (eventType, filename) => {
+    if (!filename || String(filename).endsWith('.md')) schedule(path.join('venues', String(filename || '')));
+  });
+  console.log('\nWatching data.js, venues/, and build scripts. Press Ctrl+C to stop.');
+}
+
+function main() {
+  if (process.argv.includes('--watch')) {
+    watch();
+    return;
+  }
   try {
-    console.log('\n--- Building extras ---');
-    require('./build-extras.js');
-    console.log('\n--- Building discovery (areas, guides, search, add form) ---');
-    require('./build-discovery.js');
+    runBuild();
   } catch (e) {
-    console.error('Extras build failed:', e.message);
+    console.error(e.stack || e.message);
+    process.exitCode = 1;
   }
 }
 
