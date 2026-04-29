@@ -1124,3 +1124,64 @@ html { scroll-behavior: smooth; scroll-padding-top: 16px; }
 @media (max-width: 720px) {
   .back-to-top { bottom: calc(90px + env(safe-area-inset-bottom, 0)); right: 14px; width: 44px; height: 44px; font-size: 20px; }
 }
+
+/* === Desktop venue table of contents === */
+.venue-content-shell {
+  display: block;
+}
+
+.venue-page .recently-viewed {
+  padding: 28px 0 0;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1100px) {
+  .venue-page {
+    max-width: 1080px;
+  }
+  .venue-content-shell.has-toc {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 780px);
+    gap: 32px;
+    align-items: start;
+  }
+  .venue-content-shell.has-toc .jump-to {
+    position: sticky;
+    top: 96px;
+    z-index: 10;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    padding: 14px;
+  }
+  .venue-content-shell.has-toc .jump-to-label {
+    margin: 0 0 4px;
+  }
+  .venue-content-shell.has-toc .jump-pill {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 8px;
+    padding: 8px 10px;
+    min-height: 36px;
+    line-height: 1.25;
+  }
+  .venue-content-shell.has-toc .jump-pill.is-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+  }
+  .venue-content-shell.has-toc .venue-body {
+    min-width: 0;
+  }
+}
+
+@media (min-width: 1320px) {
+  .venue-page {
+    max-width: 1140px;
+  }
+  .venue-content-shell.has-toc {
+    grid-template-columns: 230px minmax(0, 820px);
+  }
+}

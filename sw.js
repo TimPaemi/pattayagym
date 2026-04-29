@@ -1,12 +1,14 @@
-const CACHE_NAME = 'pattaya-gym-v158-20260429';
+const CACHE_NAME = 'pattaya-gym-v159-20260429';
 const CORE_ASSETS = [
   '/',
-  '/styles.css?v=158',
-  '/venue.css?v=158',
-  '/app.js?v=158',
-  '/data.js?v=158',
-  '/share.js?v=158',
-  '/compare.js?v=158',
+  '/styles.css?v=159',
+  '/venue.css?v=159',
+  '/app.js?v=159',
+  '/data.js?v=159',
+  '/share.js?v=159',
+  '/compare.js?v=159',
+  '/recent.js?v=159',
+  '/shortcuts.js?v=159',
   '/search/',
   '/guides/',
   '/map/',

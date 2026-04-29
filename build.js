@@ -16,7 +16,7 @@ const VENUES_DIR = path.join(ROOT, 'venues');
 const OUT_DIR = path.join(ROOT, 'gyms');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '158';
+const ASSET_VERSION = '159';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 
@@ -543,6 +543,10 @@ function criticalCss() {
   return `<style>:root{color-scheme:dark;--bg:#0b0b0d;--card:#151518;--text:#f5f5f5;--text-dim:#d0d0d0;--text-muted:#9b9b9b;--accent:#ffb800;--border:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;line-height:1.6}a{color:inherit}.hero{position:relative;overflow:hidden}.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 32px;max-width:1200px;margin:0 auto;width:100%;background:rgba(11,11,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:900}.brand-mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--accent);color:#000}.brand-mark.small{width:28px;height:28px;border-radius:8px}.nav-links{display:flex;gap:16px;list-style:none;margin:0;padding:0}.nav-links a{text-decoration:none;color:var(--text-dim);font-weight:700}.venue-page{max-width:880px;margin:0 auto;padding:24px 32px 100px}.venue-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:24px;padding:4px 0}.venue-hero{position:relative;padding:32px 32px 28px;margin:0 -8px 36px}.venue-hero-art{position:absolute;top:18px;right:18px;width:116px;height:116px;color:var(--accent);opacity:.22;pointer-events:none;z-index:0}.venue-hero-art .cat-art{width:100%;height:100%;display:block}.venue-hero>*:not(.venue-hero-art){position:relative;z-index:1}.venue-hero .venue-h1{padding-right:130px}.venue-h1{font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.08;margin:10px 0 14px;font-weight:950}.venue-lede{color:var(--text-dim);font-size:1.05rem;max-width:760px}.venue-cat-pill,.meta-chip{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:999px;padding:6px 10px}.venue-cat-pill,.meta-chip-accent{color:#000;background:var(--accent);border-color:var(--accent);font-weight:800}.venue-hero-meta,.venue-meta-line,.venue-actions,.share-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.venue-hero-meta{margin-top:16px}.venue-meta-line{margin-bottom:14px}.share-bar{padding:14px 16px;margin:0 0 18px;background:var(--card);border:1px solid var(--border);border-radius:12px}.share-btn{border:1px solid var(--border);padding:7px 13px;border-radius:8px}.cat-venue-grid,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.cat-venue-card,.card{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 16px;border-radius:10px;text-decoration:none;font-weight:800}.btn-primary{background:var(--accent);color:#000}.site-footer{border-top:1px solid var(--border);background:#080809}img{max-width:100%;height:auto}@media(max-width:720px){.nav{overflow-x:auto;padding:14px 16px}.nav-links{overflow-x:auto}.venue-page{padding:16px 18px 80px}.venue-hero{padding:24px 20px 22px;margin:0 0 28px}.venue-hero-art{width:78px;height:78px;top:12px;right:12px;opacity:.15}.venue-hero .venue-h1{padding-right:70px}.venue-h1{font-size:1.8rem}.share-bar{padding:10px 12px}.cat-venue-grid{grid-template-columns:1fr}}</style>`;
 }
 
+function desktopTocCriticalCss() {
+  return `<style>.venue-content-shell{display:block}@media(min-width:1100px){.venue-page{max-width:1080px}.venue-content-shell.has-toc{display:grid;grid-template-columns:210px minmax(0,780px);gap:32px;align-items:start}.venue-content-shell.has-toc .jump-to{display:flex;position:sticky;top:96px;max-height:calc(100vh - 120px);overflow-y:auto;flex-direction:column;align-items:stretch;gap:6px;margin:0;padding:14px;border:1px solid var(--border);border-radius:12px;background:rgba(255,184,0,.04)}.venue-content-shell.has-toc .jump-to-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:800;color:var(--accent);margin:0 0 4px}.venue-content-shell.has-toc .jump-pill{display:flex;align-items:center;width:100%;justify-content:flex-start;border-radius:8px;padding:8px 10px;min-height:36px;color:var(--text-dim);background:var(--card);border:1px solid var(--border);text-decoration:none;font-size:13px;font-weight:600;line-height:1.25}.venue-content-shell.has-toc .venue-body{min-width:0}}@media(min-width:1320px){.venue-page{max-width:1140px}.venue-content-shell.has-toc{grid-template-columns:230px minmax(0,820px)}}</style>`;
+}
+
 function asyncStylesheet(file) {
   const href = assetHref(file);
   return `<link rel="preload" href="${href}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -555,6 +559,7 @@ function accessibilityCriticalCss() {
 
 function stylesheetTags(includeVenueCss = true) {
   return `${criticalCss()}
+  ${desktopTocCriticalCss()}
   ${accessibilityCriticalCss()}
   ${asyncStylesheet('/styles.css')}
   ${includeVenueCss ? asyncStylesheet('/venue.css') : ''}`;
@@ -957,6 +962,20 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   const tldrHtml = buildTLDR(body);
   const languagesArr = Array.isArray(fm.languages) ? fm.languages : [];
   const languagesStr = languagesArr.join(' · ');
+  const tocItems = [];
+  const headingRe = /<h2[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g;
+  let headingMatch;
+  while ((headingMatch = headingRe.exec(bodyHtml)) !== null) {
+    const id = headingMatch[1];
+    const label = headingMatch[2].replace(/<[^>]+>/g, '').trim();
+    if (label) tocItems.push({ id, label });
+  }
+  const tocHtml = tocItems.length >= 3
+    ? `<nav class="jump-to" aria-label="Table of contents">
+        <span class="jump-to-label">On this page</span>
+        ${tocItems.map(it => `<a href="#${it.id}" class="jump-pill">${escHtml(it.label)}</a>`).join('')}
+      </nav>`
+    : '';
 
   const ogImage = `${SITE}/og/${slug}.png`;
   const schema = buildVenueSchema(fm, slug, url, desc);
@@ -1001,6 +1020,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   ${stylesheetTags(true)}
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
   <script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
+  <script src="${assetHref('/shortcuts.js')}" defer></script>
   ${serviceWorkerRegistration()}
 
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
@@ -1080,26 +1100,21 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
       <p>${tldrHtml}</p>
     </aside>` : ''}
 
-    ${(() => {
-      // Extract H2 headings (with id + label) from bodyHtml for jump-to nav
-      const headingRe = /<h2[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g;
-      const items = [];
-      let m;
-      while ((m = headingRe.exec(bodyHtml)) !== null) {
-        const id = m[1];
-        const label = m[2].replace(/<[^>]+>/g, '').trim();
-        if (label) items.push({ id, label });
-      }
-      if (items.length < 3) return '';
-      return `<nav class="jump-to" aria-label="Jump to section">
-        <span class="jump-to-label">Jump to:</span>
-        ${items.map(it => `<a href="#${it.id}" class="jump-pill">${escHtml(it.label)}</a>`).join('')}
-      </nav>`;
-    })()}
+    <div class="venue-content-shell${tocHtml ? ' has-toc' : ''}">
+      ${tocHtml}
 
-    <article class="venue-body">
-      ${bodyHtml}
-    </article>
+      <article class="venue-body">
+        ${bodyHtml}
+      </article>
+    </div>
+
+    <section id="recently-viewed" class="recently-viewed venue-recent" hidden aria-labelledby="recently-viewed-title">
+      <div class="recent-head">
+        <h2 id="recently-viewed-title">Recently viewed</h2>
+        <p>Your last Pattaya venue pages on this device.</p>
+      </div>
+      <div id="recently-viewed-grid" class="recent-grid"></div>
+    </section>
 
     <div class="venue-cta-foot">
       <h3>Visited or trained at ${escHtml(fm.name)}?</h3>
@@ -1236,17 +1251,41 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <div class="scroll-progress" id="pg-scroll-progress"></div>
   <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
+  <script>window.PG_CURRENT_VENUE=${JSON.stringify({
+    id: slug,
+    name: fm.name || slug,
+    category: fm.category || '',
+    area: fm.area || '',
+    priceRange: fm.priceRange || '',
+    href: `/gyms/${slug}/`
+  })};</script>
   <script src="${assetHref('/share.js')}" defer></script>
   <script src="${assetHref('/compare.js')}" defer></script>
+  <script src="${assetHref('/recent.js')}" defer></script>
   <script>
   (function () {
     // Sticky nav scrolled-state
     var navEl = document.querySelector('.hero .nav');
     var bar = document.getElementById('pg-scroll-progress');
     var btn = document.getElementById('pg-back-to-top');
+    var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.jump-pill'));
+    var tocHeadings = tocLinks.map(function (link) {
+      var id = link.getAttribute('href') ? link.getAttribute('href').slice(1) : '';
+      return id ? document.getElementById(id) : null;
+    });
     if (btn) {
       btn.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+    function updateToc() {
+      if (!tocLinks.length) return;
+      var activeIndex = 0;
+      for (var i = 0; i < tocHeadings.length; i++) {
+        if (tocHeadings[i] && tocHeadings[i].getBoundingClientRect().top <= 150) activeIndex = i;
+      }
+      tocLinks.forEach(function (link, index) {
+        link.classList.toggle('is-active', index === activeIndex);
       });
     }
     function update() {
@@ -1261,6 +1300,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
         if (h.scrollTop > 30) navEl.classList.add('scrolled');
         else navEl.classList.remove('scrolled');
       }
+      updateToc();
     }
     document.addEventListener('scroll', update, { passive: true });
     update();
