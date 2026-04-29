@@ -6,7 +6,7 @@
   <atom:link href="https://pattaya-gym.com/feed.xml" rel="self" type="application/rss+xml" />
   <description>Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.</description>
   <language>en-US</language>
-  <lastBuildDate>Wed, 29 Apr 2026 17:36:28 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 29 Apr 2026 17:51:23 GMT</lastBuildDate>
   <item>
     <title>ALFA BJJ Pattaya</title>
     <link>https://pattaya-gym.com/gyms/alfa-bjj-pattaya/</link>
@@ -70,6 +70,14 @@
     <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
     <category>Running / Cycling Clubs</category>
     <description><![CDATA[FREE open-air group fitness on Pattaya Beach + Jomtien Beach boardwalks. Daily Zumba aerobics, dance fitness, yoga, tai chi, stretching. No fee, no signup. Genuine Thai cultural fitness phenomenon. Pattaya most underrated daily wellness routine.]]></description>
+  </item>
+  <item>
+    <title>Wong Amat Beach — Naklua Family Swimming Beach</title>
+    <link>https://pattaya-gym.com/gyms/wong-amat-beach/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/wong-amat-beach/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Swimming</category>
+    <description><![CDATA[Pattaya quietest, cleanest, most family-friendly main beach. ~4km long Naklua coastline with fenced safe-swim zone, beach volleyball court, jet ski + banana boat (central section). Walking distance to Centara Grand Mirage, Cape Dara, and Sanctuary of Truth. Free.]]></description>
   </item>
   <item>
     <title>Megabreak Pool Hall Pattaya</title>
@@ -238,14 +246,6 @@
     <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
     <category>Muay Thai</category>
     <description><![CDATA[Walk-in budget gym in Jomtien. ~฿300 for equipment + 4-5 rounds of pads. Pro fighter Champ on roster. Air fans, no AC.]]></description>
-  </item>
-  <item>
-    <title>FIGHT EVO360</title>
-    <link>https://pattaya-gym.com/gyms/fight-evo360/</link>
-    <guid isPermaLink="true">https://pattaya-gym.com/gyms/fight-evo360/</guid>
-    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
-    <category>Muay Thai</category>
-    <description><![CDATA[Combines traditional Muay Thai and boxing values with structured sports science and performance-based programming. Stub — needs deep research.]]></description>
   </item>
 </channel>
 </rss>
