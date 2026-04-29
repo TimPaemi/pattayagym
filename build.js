@@ -357,6 +357,142 @@ function buildTLDR(body) {
   return out;
 }
 
+// Per-category decorative SVG illustrations — added to venue hero blocks
+// + category cards. Pure inline SVG, no external deps. Subtle opacity/colour.
+function getCategoryArt(cat) {
+  const c = (cat || '').toString().toLowerCase();
+  // Stroke + fill share the same accent so the SVG inherits page theme.
+  // viewBox 0 0 120 120 — scaled by container CSS. fill="none" by default.
+  const wrap = (inner) =>
+    `<svg class="cat-art" viewBox="0 0 120 120" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+
+  switch (c) {
+    case 'muay-thai':
+      // Boxing glove silhouette
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M30 50 Q30 30 50 28 L72 28 Q90 28 92 46 L92 72 Q92 86 78 90 L74 96 Q72 100 66 100 L40 100 Q32 100 30 92 Z"/>
+        <path d="M55 50 Q66 48 75 52"/>
+        <path d="M55 64 Q66 62 75 66"/>
+        <path d="M55 78 Q66 76 75 80"/>
+        <path d="M30 50 L20 56 Q14 60 18 68 L24 78"/>
+      </g>`);
+    case 'fitness':
+      // Dumbbell
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <rect x="14" y="42" width="14" height="36" rx="3"/>
+        <rect x="92" y="42" width="14" height="36" rx="3"/>
+        <rect x="6" y="50" width="8" height="20" rx="2"/>
+        <rect x="106" y="50" width="8" height="20" rx="2"/>
+        <line x1="28" y1="60" x2="92" y2="60" stroke-width="6"/>
+      </g>`);
+    case 'yoga':
+      // Lotus / meditation pose
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="32" r="10"/>
+        <path d="M40 50 Q50 56 60 56 Q70 56 80 50"/>
+        <path d="M30 80 Q50 64 60 70 Q70 64 90 80 Q86 90 60 92 Q34 90 30 80 Z"/>
+        <path d="M40 60 Q26 70 28 86"/>
+        <path d="M80 60 Q94 70 92 86"/>
+      </g>`);
+    case 'golf':
+      // Golf club + ball
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="30" y1="22" x2="84" y2="86"/>
+        <path d="M76 80 Q92 88 96 102 Q88 100 80 92"/>
+        <circle cx="22" cy="100" r="8"/>
+        <circle cx="22" cy="100" r="1.2" fill="currentColor"/>
+        <circle cx="26" cy="98" r="1.2" fill="currentColor"/>
+        <circle cx="20" cy="104" r="1.2" fill="currentColor"/>
+      </g>`);
+    case 'racquet':
+      // Tennis/badminton racquet
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="48" cy="48" rx="26" ry="30"/>
+        <line x1="48" y1="22" x2="48" y2="74"/>
+        <line x1="22" y1="48" x2="74" y2="48"/>
+        <line x1="32" y1="28" x2="64" y2="68"/>
+        <line x1="64" y1="28" x2="32" y2="68"/>
+        <line x1="66" y1="68" x2="100" y2="104" stroke-width="3.5"/>
+        <circle cx="100" cy="104" r="3"/>
+      </g>`);
+    case 'swimming':
+      // Waves + swimmer
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="42" cy="36" r="8"/>
+        <path d="M50 42 L70 50 L86 44"/>
+        <path d="M55 50 L74 60 L90 56"/>
+        <path d="M10 78 Q22 70 34 78 T58 78 T82 78 T106 78"/>
+        <path d="M10 92 Q22 84 34 92 T58 92 T82 92 T106 92"/>
+      </g>`);
+    case 'watersports':
+      // Wave + sailboat
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="60" y1="20" x2="60" y2="68"/>
+        <path d="M60 26 L86 64 L60 64 Z"/>
+        <path d="M60 36 L34 64 L60 64"/>
+        <path d="M22 78 L98 78"/>
+        <path d="M14 90 Q26 84 38 90 T62 90 T86 90 T110 90"/>
+      </g>`);
+    case 'adventure':
+      // Mountain peaks
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 96 L40 50 L58 76 L78 36 L110 96 Z"/>
+        <line x1="40" y1="50" x2="33" y2="62"/>
+        <line x1="40" y1="50" x2="46" y2="60"/>
+        <line x1="78" y1="36" x2="71" y2="48"/>
+        <line x1="78" y1="36" x2="84" y2="46"/>
+        <circle cx="92" cy="22" r="6"/>
+      </g>`);
+    case 'climbing':
+      // Climbing holds + figure
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="60" y1="14" x2="60" y2="106"/>
+        <circle cx="36" cy="32" r="5"/>
+        <circle cx="84" cy="44" r="5"/>
+        <circle cx="32" cy="64" r="5"/>
+        <circle cx="86" cy="76" r="5"/>
+        <circle cx="40" cy="96" r="5"/>
+        <path d="M60 32 L36 32 M60 44 L84 44 M60 64 L32 64 M60 76 L86 76 M60 96 L40 96"/>
+      </g>`);
+    case 'kids-youth':
+      // Kid figure / playful
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="32" r="10"/>
+        <path d="M60 42 L60 70"/>
+        <path d="M60 50 L36 60 M60 50 L84 60"/>
+        <path d="M60 70 L40 100 M60 70 L80 100"/>
+        <circle cx="98" cy="86" r="6"/>
+      </g>`);
+    case 'crossfit':
+      // Kettlebell
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 26 Q50 18 60 18 Q70 18 70 26 L70 32"/>
+        <path d="M40 38 L80 38 Q96 38 100 60 L102 88 Q102 100 90 100 L30 100 Q18 100 18 88 L20 60 Q24 38 40 38 Z"/>
+        <circle cx="60" cy="68" r="14"/>
+      </g>`);
+    case 'equestrian':
+      // Horse silhouette
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 84 L22 60 Q22 48 36 46 L46 32 Q52 24 60 28 L70 36 L88 38 Q98 42 100 56 L100 84"/>
+        <path d="M40 84 L40 96 M52 84 L52 96 M82 84 L82 96 M94 84 L94 96"/>
+        <circle cx="92" cy="42" r="1.5" fill="currentColor"/>
+        <path d="M46 32 L42 22 M52 28 L50 18"/>
+      </g>`);
+    case 'clubs':
+    default:
+      // Generic — crossed flags / community
+      return wrap(`<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="60" r="38"/>
+        <path d="M40 56 Q60 40 80 56"/>
+        <path d="M40 70 Q60 86 80 70"/>
+        <line x1="40" y1="60" x2="80" y2="60" stroke-dasharray="2 4"/>
+        <line x1="60" y1="22" x2="60" y2="98"/>
+      </g>`);
+  }
+}
+
+global.getCategoryArt = getCategoryArt;
+
 function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   const url = `${SITE}/gyms/${slug}/`;
   const title = `${fm.name} | Pattaya Gym Directory`;
@@ -452,6 +588,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </div>
 
     <div class="venue-hero">
+      <div class="venue-hero-art" aria-hidden="true">${getCategoryArt(fm.category)}</div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">${escHtml(cat)}</span>
         ${openStatus === 'open' ? '<span class="open-badge open-now">● Open now</span>' : ''}

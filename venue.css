@@ -44,6 +44,33 @@
   background: radial-gradient(circle, rgba(255,184,0,0.08) 0%, transparent 65%);
   pointer-events: none;
 }
+.venue-hero-art {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 116px;
+  height: 116px;
+  color: var(--accent);
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  filter: drop-shadow(0 0 12px rgba(255,184,0,0.15));
+}
+.venue-hero-art .cat-art {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.venue-hero:hover .venue-hero-art {
+  opacity: 0.42;
+  transform: scale(1.05) rotate(-2deg);
+}
+.venue-hero > *:not(.venue-hero-art) { position: relative; z-index: 1; }
+.venue-hero .venue-h1 { padding-right: 130px; }
+@media (max-width: 720px) {
+  .venue-hero .venue-h1 { padding-right: 90px; }
+}
 
 .venue-cat-pill {
   display: inline-block;
@@ -871,7 +898,8 @@
 @media (max-width: 720px) {
   .venue-page { padding: 14px 16px 110px; } /* extra bottom for sticky bar */
   .venue-hero { padding: 20px 18px 18px; border-radius: 14px; }
-  .venue-h1 { font-size: 1.7rem; line-height: 1.1; margin-bottom: 10px; }
+  .venue-hero-art { width: 78px; height: 78px; top: 12px; right: 12px; opacity: 0.15; }
+  .venue-h1 { font-size: 1.7rem; line-height: 1.1; margin-bottom: 10px; padding-right: 70px; }
   .venue-lede { font-size: 0.95rem; line-height: 1.5; }
   .venue-meta-line { gap: 6px; margin-bottom: 10px; }
   .venue-hero-meta { gap: 6px; }

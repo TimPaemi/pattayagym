@@ -148,6 +148,7 @@ ${header()}
     <span>${escHtml(cat.label)}</span>
   </div>
   <div class="venue-hero">
+    <div class="venue-hero-art" aria-hidden="true">${(global.getCategoryArt && global.getCategoryArt(cat.key)) || ''}</div>
     <span class="venue-cat-pill">${escHtml(cat.label)}</span>
     <h1 class="venue-h1">${escHtml(cat.label)} in Pattaya</h1>
     <p class="venue-lede">${escHtml(intro)}</p>
