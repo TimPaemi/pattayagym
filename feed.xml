@@ -6,7 +6,7 @@
   <atom:link href="https://pattaya-gym.com/feed.xml" rel="self" type="application/rss+xml" />
   <description>Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.</description>
   <language>en-US</language>
-  <lastBuildDate>Wed, 29 Apr 2026 18:02:21 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 29 Apr 2026 18:12:00 GMT</lastBuildDate>
   <item>
     <title>ALFA BJJ Pattaya</title>
     <link>https://pattaya-gym.com/gyms/alfa-bjj-pattaya/</link>
@@ -86,6 +86,14 @@
     <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
     <category>Swimming</category>
     <description><![CDATA[Pattaya quietest, cleanest, most family-friendly main beach. ~4km long Naklua coastline with fenced safe-swim zone, beach volleyball court, jet ski + banana boat (central section). Walking distance to Centara Grand Mirage, Cape Dara, and Sanctuary of Truth. Free.]]></description>
+  </item>
+  <item>
+    <title>Big Buddha Hill (Wat Phra Yai) — Pratamnak Landmark</title>
+    <link>https://pattaya-gym.com/gyms/big-buddha-hill-wat-phra-yai/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/big-buddha-hill-wat-phra-yai/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Running / Cycling Clubs</category>
+    <description><![CDATA[Pattaya iconic 18m golden Buddha at peak of Pratamnak Hill. Free entry. Accessed via 100+ step grand staircase (genuine cardio climb). 360 degree panoramic Pattaya Bay + Jomtien views. Sunrise/sunset photography. Active temple with resident monks. Dress code applies.]]></description>
   </item>
   <item>
     <title>Koh Larn (Coral Island) — Pattaya Day-Trip Beach Island</title>
@@ -238,14 +246,6 @@
     <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
     <category>Muay Thai</category>
     <description><![CDATA[Modern multi-discipline facility near Jomtien. Muay Thai, MMA, BJJ, Combat Fitness, S&amp;C, kids program. 2 rings + cage/mat zone.]]></description>
-  </item>
-  <item>
-    <title>Rage Fight Academy</title>
-    <link>https://pattaya-gym.com/gyms/rage-fight-academy/</link>
-    <guid isPermaLink="true">https://pattaya-gym.com/gyms/rage-fight-academy/</guid>
-    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
-    <category>Muay Thai</category>
-    <description><![CDATA[Multi-discipline academy: Muay Thai, Boxing, BJJ, MMA, Cross Training. 3 rings + BJJ/MMA mats. Education Visa sponsor for long-stays.]]></description>
   </item>
 </channel>
 </rss>
