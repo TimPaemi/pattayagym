@@ -98,3 +98,12 @@
 - **Result:** Added a no-dependency source validator and wired it into the build, changed extras failures from swallowed errors to failing builds, added safe generated-output cleanup for stale venue/category/area/guide/feed artifacts, added `--watch` mode, made RSS `lastBuildDate` deterministic from `verified` dates, added npm scripts, CI with validation/build/html-validate/Lighthouse CI, basic HTML validation config, and expanded ignore rules.
 - **Concerns / open questions:** Validation exits 0 but reports 755 warnings, mostly missing optional markdown frontmatter fields and intentional data/frontmatter wording differences; those warnings are content-cleanup input for the remaining Section I work. The CI HTML validator uses a legacy-tolerant config so it checks structural parseability without blocking on existing inline style/self-closing/tag-convention issues. Lighthouse CI is configured in GitHub Actions but has not run on GitHub until this commit is pushed.
 - **Next:** Section L - documentation.
+
+## 2026-04-29 - Section L: Documentation
+
+- **Section completed:** L
+- **Files changed:** `README.md`, `CONTRIBUTING.md`, `.github/PULL_REQUEST_TEMPLATE.md`, `EDITORIAL_STYLE_GUIDE.md`, `SCHEMA_REFERENCE.md`, `WORK_LOG_CODEX.md`.
+- **Tests run:** `npm run validate` exited 0; `npm run build` confirmed `Generated 158 venue pages (158 deep + 0 stubs)`; `npm run html:validate` passed; `git diff --check` exited 0.
+- **Result:** Rewrote the README with project description, stack, local setup, npm scripts, file map, venue-add workflow, validation behaviour, idempotent build notes, deployment checks, CI, SEO/search references, analytics, OG image generation, and pointers to editorial/schema docs. Added contributor setup and conventions, a PR template, editorial voice/style/source rules, deep-page vs stub definitions, cross-linking guidance, and a schema reference covering global, venue, FAQ, breadcrumb, ItemList, service, and category schema usage.
+- **Concerns / open questions:** Documentation now records the 755 validation warnings as known editorial cleanup input; the remaining manual Section I fact-check/photo work is still not complete.
+- **Next:** Return to the unfinished Section I manual content polish and final quality-bar closeout.
