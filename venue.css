@@ -1039,3 +1039,49 @@
   color: var(--accent);
   letter-spacing: 0.3px;
 }
+
+/* === Jump-to anchor nav (top of venue body) === */
+.jump-to {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 0 0 28px;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, rgba(255,184,0,0.04), rgba(255,184,0,0));
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.jump-to-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-right: 4px;
+}
+.jump-pill {
+  display: inline-block;
+  padding: 6px 13px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.jump-pill:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+@media (max-width: 720px) {
+  .jump-to { padding: 10px 12px; gap: 4px; }
+  .jump-pill { padding: 5px 11px; font-size: 12px; }
+  .jump-to-label { font-size: 10px; letter-spacing: 1px; }
+}
+
+/* Smooth scrolling for anchor jumps */
+html { scroll-behavior: smooth; scroll-padding-top: 16px; }

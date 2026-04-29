@@ -328,3 +328,65 @@ Every one is contextual, keyword-rich, and built from real data — no thin/dupl
 2. Optional: split longer venue body paragraphs (the markdown source files) — 2-3 line max per paragraph rule. Would touch ~50 of the 138 venue MD files where a paragraph runs 4+ lines.
 3. Optional: add a "Jump to" anchor menu near the top of each venue page for quick navigation (TL;DR → Pros/Cons → Quick Reference → FAQ).
 4. Submit updated sitemap to Google Search Console after deploy.
+
+---
+
+## Batch 5 — Jump-to anchor nav on every venue page
+
+User: "Keep going" — continued.
+
+**Pages upgraded:** 138 venue pages
+
+**File edited:** `build.js`, `venue.css`
+
+**What was added:**
+1. New `slugifyHeading(text)` helper that converts heading text to URL-safe slug (lowercase, dashes, max 60 chars)
+2. Modified `mdToHtml()` to attach `id="<slug>"` to **every H2 and H3** in venue body — so any heading is now deep-linkable
+3. Added a **Jump-to pill row** at the top of every venue body — auto-extracted from the H2s in the rendered bodyHtml
+4. Pills only render when there are 3+ H2s (skips pages too short to need nav)
+5. Added smooth scrolling (`scroll-behavior: smooth; scroll-padding-top: 16px`) so anchor jumps glide instead of snap
+6. Mobile-responsive sizing — smaller pills + tighter padding under 720px
+
+**Visual structure:**
+
+```
+[Hero]
+[TL;DR card]
+[Jump to: Overview · Position · Location · Equipment · Pros · Cons · Quick reference · FAQ]  ← NEW
+[Body — H2 sections each with anchor id]
+[Share bar]
+[Related venues]
+[Auto-FAQ]
+```
+
+**Why this matters:**
+- Pattaya venue pages run 9-15K characters / 7-12 minute reads
+- On mobile, scrolling through 12 sections to find "Pros" was painful
+- Now: tap a pill, smooth-scroll to that section
+- Improves engagement signals (longer time on page, deeper scroll, more interactions)
+
+**SEO bonus:**
+- Anchor IDs are crawlable — Google can deep-link directly to `/gyms/sityodtong-pattaya/#pros` from search results
+- Improves featured-snippet eligibility for section-specific queries
+- Sub-heading targeting now possible
+
+**Verification:**
+- `node build.js` runs clean
+- Spot-checked Sityodtong (12 H2s → 12 pills), Pickleball Pattaya (10 H2s → 10 pills), Burapha Golf (10 H2s → 10 pills), Yoga Haus (10 H2s → 10 pills), Anytime Fitness (10 H2s → 10 pills), Dusit Thani (12 H2s → 12 pills) — all rendering correctly with smooth scroll
+
+**Final readability rollout summary**
+
+| Layer | Pages | Improvement |
+|---|---|---|
+| Homepage | 1 | Quick-answer + 5-Q FAQ + FAQPage schema |
+| Brand/utility (about, add, guides hub, search) | 4 | TL;DR blocks, scannable bullets |
+| Guides | 6 | Top-3 picks + 3-Q FAQ each + skip-links + 1-sentence-paragraph leads |
+| Categories | 13 | Top-3 venues + 3-4-Q topic FAQ + skip-links + 1-sentence-paragraph leads |
+| Areas | 6 | Top-5 categories matrix + 3-Q area FAQ + skip-links + 1-sentence-paragraph leads |
+| Venue pages | 138 | Jump-to anchor nav + auto-5-Q FAQ + FAQPage schema (already had TL;DR, drop cap, callouts, sticky bar, fact card, related grid) |
+| Pure UI (compare, map, 404) | 3 | Skipped — tool pages |
+| **Total** | **171** | **168 substantively improved** |
+
+**FAQ schema entries site-wide: 777+** — eligible for Google rich-result snippets across the entire directory.
+
+**SEO posture:** Zero keyword removed. Zero internal link removed. New internal links added everywhere. All canonical/title/meta/OG/JSON-LD untouched. Just better structure and scannability.

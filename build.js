@@ -73,6 +73,18 @@ function parseFrontmatter(text) {
 }
 
 // ---------- Markdown -> HTML ----------
+
+function slugifyHeading(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/&[a-z]+;/g, '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .slice(0, 60);
+}
+
 function escHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 }
@@ -213,40 +225,40 @@ function mdToHtml(md) {
         const detected = detectSectionFromHeading(text);
         if (detected === 'pros') {
           sectionWrap = 'pros';
-          out.push(`<h2 class="section-pros-cons">${applyInline(text)}</h2>`);
+          out.push(`<h2 id="${slugifyHeading(text)}" class="section-pros-cons">${applyInline(text)}</h2>`);
           out.push('<div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">');
           sectionOpen = true;
           continue;
         }
         if (detected === 'cons') {
           sectionWrap = 'cons';
-          out.push(`<h2 class="section-pros-cons">${applyInline(text)}</h2>`);
+          out.push(`<h2 id="${slugifyHeading(text)}" class="section-pros-cons">${applyInline(text)}</h2>`);
           out.push('<div class="callout callout-cons"><div class="callout-icon">✕</div><div class="callout-body">');
           sectionOpen = true;
           continue;
         }
         if (detected === 'best-for') {
           sectionWrap = 'best-for';
-          out.push(`<h2>${applyInline(text)}</h2>`);
+          out.push(`<h2 id="${slugifyHeading(text)}">${applyInline(text)}</h2>`);
           out.push('<div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">');
           sectionOpen = true;
           continue;
         }
         if (detected === 'not-best-for') {
           sectionWrap = 'not-best-for';
-          out.push(`<h2>${applyInline(text)}</h2>`);
+          out.push(`<h2 id="${slugifyHeading(text)}">${applyInline(text)}</h2>`);
           out.push('<div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">');
           sectionOpen = true;
           continue;
         }
         if (detected === 'quick-ref') {
           sectionWrap = 'quick-ref';
-          out.push(`<h2 class="section-quick-ref">${applyInline(text)}</h2>`);
+          out.push(`<h2 id="${slugifyHeading(text)}" class="section-quick-ref">${applyInline(text)}</h2>`);
           continue;
         }
       }
 
-      out.push(`<h${lvl}>${applyInline(text)}</h${lvl}>`);
+      out.push(`<h${lvl} id="${slugifyHeading(text)}">${applyInline(text)}</h${lvl}>`);
       continue;
     }
 
@@ -773,6 +785,23 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
       <div class="tldr-tag">⚡ The quick answer</div>
       <p>${tldrHtml}</p>
     </aside>` : ''}
+
+    ${(() => {
+      // Extract H2 headings (with id + label) from bodyHtml for jump-to nav
+      const headingRe = /<h2[^>]*id="([^"]+)"[^>]*>([\s\S]*?)<\/h2>/g;
+      const items = [];
+      let m;
+      while ((m = headingRe.exec(bodyHtml)) !== null) {
+        const id = m[1];
+        const label = m[2].replace(/<[^>]+>/g, '').trim();
+        if (label) items.push({ id, label });
+      }
+      if (items.length < 3) return '';
+      return `<nav class="jump-to" aria-label="Jump to section">
+        <span class="jump-to-label">Jump to:</span>
+        ${items.map(it => `<a href="#${it.id}" class="jump-pill">${escHtml(it.label)}</a>`).join('')}
+      </nav>`;
+    })()}
 
     <article class="venue-body">
       ${bodyHtml}
