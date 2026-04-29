@@ -113,3 +113,42 @@
   buildChips();
   render();
 })();
+
+// Sticky nav scrolled-state (homepage only — uses global window scroll)
+(function () {
+  var navEl = document.querySelector('.hero .nav');
+  if (!navEl) return;
+  function update() {
+    if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
+      navEl.classList.add('scrolled');
+    } else {
+      navEl.classList.remove('scrolled');
+    }
+  }
+  document.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+// Spotlight: most-recently-verified venues, top 6
+(function () {
+  var grid = document.getElementById('spotlight-grid');
+  if (!grid) return;
+  var GYMS = window.GYMS || [];
+  var CATS = window.CATEGORIES || [];
+  var catLabel = function (k) {
+    var c = CATS.find(function (x) { return x.key === k; });
+    return c ? c.label : k;
+  };
+  var sorted = GYMS.slice().sort(function (a, b) {
+    return String(b.verified || '').localeCompare(String(a.verified || ''));
+  }).slice(0, 6);
+  grid.innerHTML = sorted.map(function (g) {
+    return '<a class="spot-card" href="/gyms/' + g.id + '/">' +
+      '<span class="spot-cat">' + catLabel(g.category) + '</span>' +
+      '<h3>' + (g.name || '') + '</h3>' +
+      (g.area ? '<p class="spot-meta">📍 ' + g.area + (g.priceRange ? ' · 💰 ' + g.priceRange : '') + '</p>' : '') +
+      (g.description ? '<p class="spot-desc">' + g.description.slice(0, 110) + (g.description.length > 110 ? '…' : '') + '</p>' : '') +
+      '<span class="spot-cta">View page →</span>' +
+    '</a>';
+  }).join('');
+})();

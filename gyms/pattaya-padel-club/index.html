@@ -6,6 +6,7 @@
   <title>Pattaya Padel Club (Mabprachan Lake) | Pattaya Gym Directory</title>
   <meta name="description" content="Pattaya Padel Club is a dedicated padel courts facility on the shores of Mabprachan Reservoir in East Pattaya — the second of Pattaya&#39;s two padel-specific clubs alongside Play Padel Pattaya (which has Pattaya&#39;s first indoor padel courts on Pratamnak&#39;s Kasetsin Soi 3). Where Play Padel built indoor f" />
   <link rel="canonical" href="https://pattaya-gym.com/gyms/pattaya-padel-club/" />
+  <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Pattaya Padel Club (Mabprachan Lake)" />
@@ -343,6 +344,8 @@
         <h4>Best-of guides</h4>
         <ul>
           <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+          <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+          <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
           <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
           <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
           <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -390,6 +393,8 @@
   <script src="/compare.js" defer></script>
   <script>
   (function () {
+    // Sticky nav scrolled-state
+    var navEl = document.querySelector('.hero .nav');
     var bar = document.getElementById('pg-scroll-progress');
     var btn = document.getElementById('pg-back-to-top');
     if (btn) {
@@ -404,6 +409,10 @@
       if (btn) {
         if (h.scrollTop > 600) btn.classList.add('visible');
         else btn.classList.remove('visible');
+      }
+      if (navEl) {
+        if (h.scrollTop > 30) navEl.classList.add('scrolled');
+        else navEl.classList.remove('scrolled');
       }
     }
     document.addEventListener('scroll', update, { passive: true });

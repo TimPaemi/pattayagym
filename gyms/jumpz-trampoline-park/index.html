@@ -6,6 +6,7 @@
   <title>JumpZ Trampoline Park | Pattaya Gym Directory</title>
   <meta name="description" content="JumpZ Trampoline Park is Pattaya&#39;s primary indoor trampoline park — located on the 6th floor of Harbor Pattaya Shopping Mall on Central Pattaya Road, adjacent to Foodland Supermarket. The facility offers high-flying fun with trampolines, games, and family-friendly activities for all ages in a vibran" />
   <link rel="canonical" href="https://pattaya-gym.com/gyms/jumpz-trampoline-park/" />
+  <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="JumpZ Trampoline Park" />
@@ -309,6 +310,11 @@
     <section class="related-venues">
       <h2>More Kids / Youth Sports venues in Pattaya</h2>
       <div class="related-grid">
+        <a href="/gyms/bounce-pattaya/" class="related-card">
+          <span class="rc-cat">Kids / Youth Sports</span>
+          <h3>BOUNCE Pattaya — Trampoline Park</h3>
+          <p>Harbor Pattaya Mall — 6F / Central Pattaya</p>
+        </a>
         <a href="/gyms/af-academy-football/" class="related-card">
           <span class="rc-cat">Kids / Youth Sports</span>
           <h3>AF Academy</h3>
@@ -317,11 +323,6 @@
         <a href="/gyms/pattaya-city-football-academy/" class="related-card">
           <span class="rc-cat">Kids / Youth Sports</span>
           <h3>Pattaya City Football Academy</h3>
-          <p>Pattaya</p>
-        </a>
-        <a href="/gyms/planet-football-pattaya/" class="related-card">
-          <span class="rc-cat">Kids / Youth Sports</span>
-          <h3>Planet Football Pattaya</h3>
           <p>Pattaya</p>
         </a>
       </div>
@@ -382,6 +383,8 @@
         <h4>Best-of guides</h4>
         <ul>
           <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+          <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+          <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
           <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
           <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
           <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -427,6 +430,8 @@
   <script src="/compare.js" defer></script>
   <script>
   (function () {
+    // Sticky nav scrolled-state
+    var navEl = document.querySelector('.hero .nav');
     var bar = document.getElementById('pg-scroll-progress');
     var btn = document.getElementById('pg-back-to-top');
     if (btn) {
@@ -441,6 +446,10 @@
       if (btn) {
         if (h.scrollTop > 600) btn.classList.add('visible');
         else btn.classList.remove('visible');
+      }
+      if (navEl) {
+        if (h.scrollTop > 30) navEl.classList.add('scrolled');
+        else navEl.classList.remove('scrolled');
       }
     }
     document.addEventListener('scroll', update, { passive: true });

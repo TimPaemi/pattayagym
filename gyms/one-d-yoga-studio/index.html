@@ -6,6 +6,7 @@
   <title>One-D Yoga Studio | Pattaya Gym Directory</title>
   <meta name="description" content="One-D Yoga Studio (also stylized OneD Yoga) is a modern, prominent yoga studio along the Pattaya-Naklua Road offering a comprehensive multi-style yoga curriculum spanning Hatha, Vinyasa Flow, and Yin yoga alongside private sessions, workshops, and retreat programs. The studio sits at 571/32 Moo 5, N" />
   <link rel="canonical" href="https://pattaya-gym.com/gyms/one-d-yoga-studio/" />
+  <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="One-D Yoga Studio" />
@@ -410,6 +411,8 @@
         <h4>Best-of guides</h4>
         <ul>
           <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+          <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+          <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
           <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
           <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
           <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -455,6 +458,8 @@
   <script src="/compare.js" defer></script>
   <script>
   (function () {
+    // Sticky nav scrolled-state
+    var navEl = document.querySelector('.hero .nav');
     var bar = document.getElementById('pg-scroll-progress');
     var btn = document.getElementById('pg-back-to-top');
     if (btn) {
@@ -469,6 +474,10 @@
       if (btn) {
         if (h.scrollTop > 600) btn.classList.add('visible');
         else btn.classList.remove('visible');
+      }
+      if (navEl) {
+        if (h.scrollTop > 30) navEl.classList.add('scrolled');
+        else navEl.classList.remove('scrolled');
       }
     }
     document.addEventListener('scroll', update, { passive: true });

@@ -6,6 +6,7 @@
   <title>WKO Muay Thai &amp; Fitness Pattaya (ISS Gym) | Pattaya Gym Directory</title>
   <meta name="description" content="WKO Pattaya — also known as ISS Boxing Gym and operated under the World Kumite Organization umbrella — is one of the most content-rich, lineage-deep, low-priced training opportunities anywhere in Thailand. The four-storey building on Pattaya Klang Road houses Muay Thai, Karate, K-1, MMA, and fitness" />
   <link rel="canonical" href="https://pattaya-gym.com/gyms/wko-muay-thai/" />
+  <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="WKO Muay Thai &amp; Fitness Pattaya (ISS Gym)" />
@@ -254,7 +255,7 @@
 <ul>
 <li><strong>Address:</strong> 503/16 Moo 9, Pattaya Klang Road, Nong Prue, Bang Lamung</li>
 <li><strong>Heart of central Pattaya</strong> — Pattaya Klang is the main artery through the city</li>
-<li><strong>Walking distance to:</strong> Central Pattaya Mall, Soi Buakhao, Pattaya Beach (~10-15 min walk), Pattaya Floating Market via short taxi</li>
+<li><strong>Walking distance to:</strong> Central Pattaya Mall, Soi Buakhao, Pattaya Beach (~10-15 min walk), <a href="/gyms/pattaya-floating-market/">Pattaya Floating Market</a> via short taxi</li>
 <li><strong>Songthaew access:</strong> continuous on Pattaya Klang</li>
 <li><strong>Airport access:</strong> Suvarnabhumi (BKK) ~125 km / 1.5h taxi (~฿1,200); U-Tapao ~30-40 min (~฿500-800)</li>
 </ul>
@@ -433,6 +434,8 @@
         <h4>Best-of guides</h4>
         <ul>
           <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+          <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+          <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
           <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
           <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
           <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -482,6 +485,8 @@
   <script src="/compare.js" defer></script>
   <script>
   (function () {
+    // Sticky nav scrolled-state
+    var navEl = document.querySelector('.hero .nav');
     var bar = document.getElementById('pg-scroll-progress');
     var btn = document.getElementById('pg-back-to-top');
     if (btn) {
@@ -496,6 +501,10 @@
       if (btn) {
         if (h.scrollTop > 600) btn.classList.add('visible');
         else btn.classList.remove('visible');
+      }
+      if (navEl) {
+        if (h.scrollTop > 30) navEl.classList.add('scrolled');
+        else navEl.classList.remove('scrolled');
       }
     }
     document.addEventListener('scroll', update, { passive: true });

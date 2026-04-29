@@ -23,7 +23,21 @@ function loadGymsFromDataJs() {
   return { GYMS: win.GYMS || [], CATEGORIES: win.CATEGORIES || [] };
 }
 function header() {
-  return `<header class="hero" style="min-height: auto;">
+  return `<script>
+  (function () {
+    function update() {
+      var n = document.querySelector('.hero .nav');
+      if (!n) return;
+      if (document.documentElement.scrollTop > 30) n.classList.add('scrolled');
+      else n.classList.remove('scrolled');
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('scroll', update, { passive: true });
+      update();
+    });
+  })();
+  </script>
+<header class="hero" style="min-height: auto;">
   <nav class="nav">
     <a href="/" class="brand">
       <span class="brand-mark">P</span>
@@ -75,6 +89,8 @@ function footer() {
       <h4>Best-of guides</h4>
       <ul>
         <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+        <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+        <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
         <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
         <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
         <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -106,6 +122,7 @@ function commonHead(title, desc, canonical) {
 <title>${escHtml(title)}</title>
 <meta name="description" content="${escHtml(desc)}" />
 <link rel="canonical" href="${canonical}" />
+<link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="${escHtml(title)}" />
 <meta property="og:description" content="${escHtml(desc)}" />
@@ -489,7 +506,69 @@ const GUIDES = [
       { q: 'What sport is easiest to start in Pattaya?', a: 'Yoga, swimming, and running require no prior skill. For combat sports, most Muay Thai camps welcome total beginners. For watersports, scuba (open-water course in 3-4 days) and SUP are popular entry points.' },
       { q: 'Do I need equipment to start a sport in Pattaya?', a: 'Most venues provide all equipment for beginners — Muay Thai gloves and pads, dive gear, paddles for pickleball, racquets at hotel courts. Bring workout clothes and water.' },
       { q: 'Are Pattaya gyms beginner-friendly to women?', a: 'Many — Anytime Fitness, hotel gyms (Hilton, Andaz, Mövenpick), boutique yoga studios, and Fitz Club all rank well on female-friendly safety and comfort. The big bro-coded iron gyms are the exception, not the rule.' },
+    ]  },
+  {
+    slug: 'best-dive-operators-pattaya',
+    title: 'Best Dive Operators in Pattaya 2026',
+    h1: 'Best dive operators in Pattaya',
+    desc: 'Hand-picked best PADI and SSI dive shops in Pattaya for 2026 — from Five-Star IDC centres to British family-run schools and dedicated technical-diving operations.',
+    intro: 'Pattaya hosts more than 10 active dive operators serving the islands of Koh Larn, Koh Sak, Koh Krok and HTMS Khram wreck. This guide ranks the best by certification level, instructor depth, fleet quality, and reputation. Whether you want your Open Water cert in 4 days or a Tec Trimix course, there\'s an operator here that fits.',
+    pickerKey: 'dive',
+    filter: g => g.category === 'watersports' && /dive|scuba|padi|ssi|divers|aquanauts|mermaid/i.test(((g.tags||[]).join(' ') + ' ' + (g.name||'') + ' ' + (g.description||''))),
+    rank: g => {
+      const text = ((g.tags||[]).join(' ') + ' ' + (g.description||'')).toLowerCase();
+      let s = 0;
+      if (/5.?star|five.?star|idc/.test(text)) s += 15;
+      if (/padi/.test(text)) s += 8;
+      if (/ssi/.test(text)) s += 6;
+      if (/family|british|established/.test(text)) s += 4;
+      if (/technical|tec|trimix/.test(text)) s += 5;
+      if (g.priceRange === '฿฿฿') s += 2;
+      return s;
+    },
+    sections: [
+      { label: '⭐ PADI 5-Star IDC Centres', take: 2 },
+      { label: '🌊 Family-Run & Established Schools', take: 4 },
+      { label: '🏝 Other Verified Operators', take: 6 }
+    ],
+    faqs: [
+      { q: 'How much does Open Water dive certification cost in Pattaya?', a: 'PADI Open Water typically ฿11,000–฿16,000 over 3–4 days. SSI similar. Includes manual, gear, boat trips, and pool/confined-water sessions.' },
+      { q: 'Where do Pattaya dive boats go?', a: 'Coral Island (Koh Larn), Koh Sak, Koh Krok, Koh Khrok for shallow reefs. HTMS Khram (artificial reef wreck, ~30m) for advanced divers. Most operators run half-day or full-day boats with 2–3 dives.' },
+      { q: 'Are Pattaya dive sites good for beginners?', a: 'Yes — most reef dives are 8–18m with calm, clear water year-round. Visibility peaks Nov–Apr (15–25m). Gulf of Thailand currents are mild compared to Andaman Sea destinations.' }
     ]
+  },
+  {
+    slug: 'best-golf-courses-pattaya',
+    title: 'Best Golf Courses in Pattaya 2026',
+    h1: 'Best golf courses near Pattaya',
+    desc: 'Hand-picked best Pattaya / Eastern Seaboard golf courses for 2026 — from championship Pete Dye and Jack Nicklaus designs to value-tier 27-hole layouts and resort options with Buddha mountain views.',
+    intro: 'The Pattaya / Eastern Seaboard is one of Asia\'s densest premium-golf clusters with 17+ verified courses including championship Pete Dye, Jack Nicklaus and Peter Thomson designs. Most are within 30–50 minutes of central Pattaya. This guide ranks the best by architecture, conditioning, hosting history, and overall experience.',
+    pickerKey: 'golf-best',
+    filter: g => g.category === 'golf',
+    rank: g => {
+      const text = (g.description || '').toLowerCase() + ' ' + ((g.tags||[]).join(' ').toLowerCase());
+      let s = 0;
+      if (/championship|tour|tournament|host/.test(text)) s += 12;
+      if (/pete dye|nicklaus|thomson|fream/.test(text)) s += 10;
+      if (/27.?holes?|36.?holes?/.test(text)) s += 6;
+      if (g.priceRange === '฿฿฿฿') s += 8;
+      if (g.priceRange === '฿฿฿') s += 5;
+      if (/old course|premier|premium/.test(text)) s += 6;
+      return s;
+    },
+    sections: [
+      { label: '🏆 Championship & Tournament-Grade', take: 4 },
+      { label: '🌟 Top-Tier Premium', take: 4 },
+      { label: '💚 Best Value & Hidden Gems', take: 4 },
+      { label: '🌳 Other Verified Courses', take: 6 }
+    ],
+    faqs: [
+      { q: 'What is the best golf course in Pattaya?', a: 'Siam Country Club Old Course is the headline championship layout. Phoenix Gold Golf, Burapha (36-hole, Thailand Open host), and Pattana Sports & Resort all rank top-tier. Best is subjective — fast greens, tight fairways, or scenic views all have strong contenders.' },
+      { q: 'How much does golf in Pattaya cost?', a: 'Green fees ฿1,500–฿5,000 weekday, ฿2,500–฿7,500 weekend. Premium courses peak at ฿8,000+. Plus caddie ฿500–฿800 (mandatory at most courses) and cart ฿800–฿1,500.' },
+      { q: 'Are caddies required at Pattaya golf courses?', a: 'Yes at virtually all courses — Thai golf tradition. Caddies typically expect ฿500–฿800 base plus tips. Most are excellent with course knowledge and pace; many speak basic English.' },
+      { q: 'When is the best time to golf in Pattaya?', a: 'Cool dry season Nov–Feb is peak — book tee times 2–4 weeks ahead, especially weekends. Hot season Mar–May has cheaper rates and quieter courses. Rainy season Jun–Oct sees afternoon storms but morning play is fine.' }
+    ]
+
   }
 ];
 
@@ -633,6 +712,8 @@ ${header()}
     <h2 id="pick-h" class="tldr-title">Pick the right guide for you</h2>
     <ul class="tldr-list">
       <li><strong>Want the best Muay Thai?</strong> → <a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+      <li><strong>Looking to dive?</strong> → <a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+      <li><strong>Hitting the links?</strong> → <a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
       <li><strong>On a tight budget?</strong> → <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
       <li><strong>Looking for luxury?</strong> → <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
       <li><strong>Train at odd hours?</strong> → <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>

@@ -6,6 +6,7 @@
 <title>Page not found | Pattaya Gym</title>
 <meta name="description" content="The page you&#39;re looking for doesn&#39;t exist. Browse our directory of every Pattaya gym, Muay Thai camp, dive operator, and sport venue." />
 <link rel="canonical" href="https://pattaya-gym.com/404" />
+<link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Page not found | Pattaya Gym" />
 <meta property="og:description" content="The page you&#39;re looking for doesn&#39;t exist. Browse our directory of every Pattaya gym, Muay Thai camp, dive operator, and sport venue." />
@@ -17,6 +18,20 @@
 <meta name="robots" content="noindex" />
 </head>
 <body>
+<script>
+  (function () {
+    function update() {
+      var n = document.querySelector('.hero .nav');
+      if (!n) return;
+      if (document.documentElement.scrollTop > 30) n.classList.add('scrolled');
+      else n.classList.remove('scrolled');
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('scroll', update, { passive: true });
+      update();
+    });
+  })();
+  </script>
 <header class="hero" style="min-height: auto;">
   <nav class="nav">
     <a href="/" class="brand">
@@ -78,6 +93,8 @@
       <h4>Best-of guides</h4>
       <ul>
         <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+        <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+        <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
         <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
         <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
         <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>

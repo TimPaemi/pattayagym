@@ -6,6 +6,7 @@
   <title>Deep Climbing Gym (Harbor Pattaya) | Pattaya Gym Directory</title>
   <meta name="description" content="Deep Climbing Gym is the first indoor climbing facility ever opened in Pattaya and remains the city&#39;s primary destination for rock climbing, top-rope, lead climbing, bouldering, and auto-belay practice. Located on the 8th floor of Harbor Pattaya Shopping Mall in Na Kluea, the gym occupies a purpose-" />
   <link rel="canonical" href="https://pattaya-gym.com/gyms/deep-climbing-gym/" />
+  <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Deep Climbing Gym (Harbor Pattaya)" />
@@ -81,8 +82,8 @@
       </g></svg></div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">climbing</span>
-        <span class="open-badge open-now">● Open now</span>
         
+        <span class="open-badge open-closed">● Closed now</span>
         <span class="meta-dot">•</span>
         <span class="reading-meta">📖 7 min read</span>
         <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
@@ -374,6 +375,8 @@
         <h4>Best-of guides</h4>
         <ul>
           <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+          <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+          <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
           <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
           <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
           <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -421,6 +424,8 @@
   <script src="/compare.js" defer></script>
   <script>
   (function () {
+    // Sticky nav scrolled-state
+    var navEl = document.querySelector('.hero .nav');
     var bar = document.getElementById('pg-scroll-progress');
     var btn = document.getElementById('pg-back-to-top');
     if (btn) {
@@ -435,6 +440,10 @@
       if (btn) {
         if (h.scrollTop > 600) btn.classList.add('visible');
         else btn.classList.remove('visible');
+      }
+      if (navEl) {
+        if (h.scrollTop > 30) navEl.classList.add('scrolled');
+        else navEl.classList.remove('scrolled');
       }
     }
     document.addEventListener('scroll', update, { passive: true });

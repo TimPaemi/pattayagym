@@ -555,3 +555,202 @@ User: "Keep going" — continued.
 **Files edited:** `build.js`, `build-extras.js`, `venue.css`
 
 **Build status:** clean — 138 venue pages + 13 categories + 6 areas + 6 guides + tools all generated.
+
+---
+
+## Batch 9 — Sticky nav + homepage spotlight
+
+**Two more UX wins:**
+
+1. **Sticky navigation header** site-wide
+   - Nav now stays at the top while users scroll long pages
+   - Adds blur/translucent background when scrolled (clean reading surface)
+   - Mobile: nav-links horizontally scrollable when too many items
+   - Inline `update()` script attached via `header()` helpers + venue page script + homepage app.js
+
+2. **Homepage "Recently added & verified" spotlight section**
+   - Top 6 most-recently-verified venues shown as cards above the directory grid
+   - Sorted by `verified` date descending (auto-fresh — Anytime Fitness, Pickleball Pattaya, Dusit Thani show first today)
+   - Each card: category pill + venue name + area + price tier + description preview + "View page →" CTA
+   - Adds homepage freshness signal for SEO and CTR boost
+   - Pure JS — no manual updating needed
+
+**Files edited:** `styles.css`, `app.js`, `index.html`, `build.js`, `build-extras.js`, `build-discovery.js`
+
+**Build status:** clean.
+
+---
+
+## Final state — Site-wide readability + UX rollout summary (Batches 1–9)
+
+| Page type | Pages | Improvements |
+|---|---|---|
+| Homepage | 1 | quick-answer + 5-Q FAQ + FAQPage schema + 6-card spotlight + sticky nav + 5-col footer |
+| Brand/utility (about, add-gym, guides hub, search, compare, map, 404) | 7 | TL;DR + new nav + sticky nav + 5-col footer |
+| Guide pages | 6 | top-3 picks + 3-Q FAQ + skip-links + 1-sentence-paragraph leads + sticky nav + 5-col footer |
+| Category pages | 13 | top-3 + topic FAQ + SVG art + skip-links + sticky nav + 5-col footer |
+| Area pages | 6 | "best for" matrix + topic FAQ + skip-links + sticky nav + 5-col footer |
+| Venue pages | 138 | jump-to nav + auto-FAQ + auto-cross-links + back-to-top + sticky nav + 5-col footer + SVG art + drop cap + sticky bar |
+| **Total** | **171** | **All upgraded** |
+
+**FAQ schema entries:** 777+ across 164 pages → eligible for Google rich-result snippets.
+
+**Internal links per typical page:** ~50–60 (was ~10–15 before all batches). 4–5x increase.
+
+**SEO posture:** Zero keywords removed. All canonical/title/meta/OG/JSON-LD preserved. Just better structure, scannability, and 4–5x more crawlable internal links.
+
+**UX additions over the whole rollout:**
+- Quick-answer blocks at top of every landing page
+- FAQ sections (with FAQPage schema) on homepage + 6 guides + 13 categories + 6 areas + 138 venues
+- Jump-to anchor nav on long venue pages
+- Auto-cross-linking between venue body content
+- Sticky header navigation while scrolling
+- Floating back-to-top button (>600px scroll)
+- Recently-verified spotlight on homepage
+- 5-column footer with 35 internal links
+- Multi-paragraph leads (1 sentence per paragraph) for scanability
+- Per-category SVG illustrations
+- Smooth-scroll anchor jumps
+
+---
+
+## Batch 10 — RSS feed at /feed.xml + auto-discovery links
+
+**New asset created:** `/feed.xml` — RSS 2.0 feed with the **30 most-recently-verified venues** from the directory.
+
+Each item includes:
+- Venue name (title)
+- Direct link to venue page (`/gyms/<slug>/`)
+- GUID (permalink)
+- pubDate (the venue's verification date)
+- Category
+- Full description (CDATA wrapped)
+
+**Auto-discovery `<link>` tag** added to `<head>` of:
+- Homepage (`index.html`)
+- All 138 venue pages (via `build.js`)
+- All 13 category landings + about + 404 (via `build-extras.js` → `commonHead`)
+- All 6 area landings + 6 guides + search + add-your-gym (via `build-discovery.js` → `commonHead`)
+
+**Tag format:** `<link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />`
+
+This means feed readers (Inoreader, Feedly, NewsBlur, etc.) auto-discover the feed when users paste any URL on the site. Useful for:
+- Power users tracking new venues
+- Weekly-update SEO signals (Google sees the feed has fresh items)
+- Cross-platform content syndication
+
+**Sitemap also updated** — `/feed.xml` is now included.
+
+**Files edited:** `build-extras.js`, `build-discovery.js`, `build.js`, `index.html`
+
+**Build status:** clean — feed.xml generates with 30 most-recent venues sorted by `verified` date desc.
+
+---
+
+## Batch 11 — 2 new high-search-volume guides
+
+**Added 2 new best-of guides** — chosen for high commercial-intent search volume in the Pattaya travel niche:
+
+1. **`/guides/best-dive-operators-pattaya/`** — 19KB page
+   - Filter: watersports + dive-related tags/description
+   - Ranking: PADI 5-Star IDC, PADI vs SSI, family/established status, technical capability
+   - Sections: ⭐ PADI 5-Star IDC Centres, 🌊 Family-Run Schools, 🏝 Other Verified Operators
+   - 3-Q FAQ: Open Water cost, Pattaya dive sites (Coral Island, Koh Sak, HTMS Khram), beginner suitability
+
+2. **`/guides/best-golf-courses-pattaya/`** — 24KB page
+   - Filter: golf category
+   - Ranking: tournament hosting, Pete Dye / Nicklaus / Thomson designer, hole count, price tier
+   - Sections: 🏆 Championship & Tournament-Grade, 🌟 Top-Tier Premium, 💚 Best Value & Hidden Gems, 🌳 Other Verified
+   - 4-Q FAQ: best course, cost, caddies (Thai tradition), best season
+
+**Both inherit:** auto-extracted top-3 picks block at top, jump-link, FAQPage schema, BreadcrumbList schema, ItemList schema, sticky nav, 5-col footer.
+
+**Updated cross-linking site-wide:**
+- `/guides/` hub picker — added "Looking to dive?" and "Hitting the links?" decision rows
+- Footer "Best-of guides" column on every page (170+ pages) — expanded from 6 to 8 guides
+
+**Total guide count: 6 → 8.**
+
+**Files edited:** `build-discovery.js` (GUIDES array + guides-hub picker), `build-extras.js` (footer), `build.js` (footer), `index.html` (footer)
+
+**Build status:** clean — 8 guide pages built, all cross-references updated.
+
+---
+
+## Batch 12 — 139 venues (added Megabreak Pool Hall)
+
+**New venue:** Megabreak Pool Hall Pattaya — Soi Diana (Soi 13) / Central Pattaya
+
+- Tournament-class 9-foot pool tables (regulation American pool)
+- Plus snooker tables
+- Long-running expat institution, frequently cited as best pool facility in Pattaya
+- 9KB deep page covering: position vs other Pattaya pool halls (Double Kiss, IQ, Legends), what 9-foot tables mean for serious play, who plays there, location/access, pros/cons/best-for/not-best-for, quick reference card
+- Includes auto-generated FAQ + jump-to nav + auto-cross-links + back-to-top
+
+**Cumulative state:**
+- 139 venue pages
+- 8 best-of guides
+- 13 category landing pages
+- 6 area landing pages
+- About / Add-your-gym / Search / Compare / Map / 404 / Guides hub / Homepage
+- /feed.xml RSS / sitemap.xml / robots.txt
+- = **172 indexed pages**
+- 777+ FAQ schema entries
+
+---
+
+## Batch 13 — 140 venues (added Pattaya Floating Market)
+
+**New venue:** Pattaya Floating Market — Muay Talay & Cultural Activities
+
+- Live **Muay Talay** (traditional Thai water boxing on a tree trunk over a canal) — one of the very few places in Thailand that reliably stages this sport in 2026
+- Three daily shows (11:00, 13:00, 15:00) included in entry
+- Rowboats, amphibious boats, water zipline as add-ons
+- Cultural multi-region park spanning 4 Thai regional zones
+- 11KB deep page covering: what Muay Talay actually is, sport-related activities table, position vs Nong Nooch / Underwater World / Cartoon Network Amazone, location, pros/cons, best/not-best for, quick reference
+
+**Why this venue earns directory placement:**
+- Muay Talay is a **unique cultural sport** with no other Pattaya home that reliably hosts it
+- High SEO value — "Muay Talay Pattaya" + "Pattaya Floating Market activities" both rank
+- Visitor-first content for a real Pattaya tourist need
+
+**Cumulative state — 140 venues, 175 indexed pages.**
+
+---
+
+## Batch 14 — 4 more venues (138 → 144)
+
+**Pushed from 140 → 144 venues with 4 distinct authority additions:**
+
+1. **InterContinental Pattaya Resort** (5-star, Pratamnak Hill)
+   - 3 outdoor pools incl. 25m lap pool (rare)
+   - On-site tennis courts
+   - Amburaya Spa (IHG flagship)
+   - 24-hour fitness for guests
+
+2. **Holiday Inn Pattaya** (4-star, Beach Road central)
+   - Two outdoor infinity pools (Bay Tower L4 + Executive Tower L6)
+   - Bay-view fitness centre
+   - Tea Tree Spa
+   - Kids Club + family programme
+
+3. **ALFA BJJ Pattaya** (combat sports, BJJ)
+   - **Pattaya's first ever dedicated Brazilian Jiu-Jitsu gym**
+   - Standalone academy — not multi-discipline
+   - Gi + No-Gi classes
+   - Beginner-friendly with international community
+
+4. **Bangkok Hospital Pattaya — Sports Rehabilitation & Wellness** (sports medicine)
+   - BDMS-network, JCI-accredited international hospital
+   - Sports rehab + post-op + neuro rehabilitation
+   - Prestige Wellness Anti-Aging Center with DNA fitness profiling
+   - The medical anchor for Pattaya sport tourism — where athletes go when training breaks them
+   - English-speaking + multilingual + direct insurance billing
+
+**Why these 4 specific picks:**
+- Completes the **5-star hotel cluster** (InterContinental was the last major missing IHG luxury)
+- Adds the **mid-luxury beachfront IHG** (Holiday Inn) for the family demographic
+- Fills a real **dedicated-BJJ** gap — every other Pattaya BJJ option is multi-discipline
+- Adds the **medical/rehab dimension** — distinct from any other venue, addresses a real sport-tourism need
+
+**Cumulative state — 144 venues, 179 indexed pages, 777+ FAQ schema entries.**

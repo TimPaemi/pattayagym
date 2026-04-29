@@ -107,7 +107,21 @@ function loadGymsFromDataJs() {
 }
 
 function header() {
-  return `<header class="hero" style="min-height: auto;">
+  return `<script>
+  (function () {
+    function update() {
+      var n = document.querySelector('.hero .nav');
+      if (!n) return;
+      if (document.documentElement.scrollTop > 30) n.classList.add('scrolled');
+      else n.classList.remove('scrolled');
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('scroll', update, { passive: true });
+      update();
+    });
+  })();
+  </script>
+<header class="hero" style="min-height: auto;">
   <nav class="nav">
     <a href="/" class="brand">
       <span class="brand-mark">P</span>
@@ -160,6 +174,8 @@ function footer() {
       <h4>Best-of guides</h4>
       <ul>
         <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+        <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+        <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
         <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
         <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
         <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -192,6 +208,7 @@ function commonHead(title, desc, canonical) {
 <title>${escHtml(title)}</title>
 <meta name="description" content="${escHtml(desc)}" />
 <link rel="canonical" href="${canonical}" />
+<link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="${escHtml(title)}" />
 <meta property="og:description" content="${escHtml(desc)}" />
@@ -599,6 +616,45 @@ ${footer()}
 }
 
 // ============== ROBOTS.TXT ==============
+
+// ============== /feed.xml — RSS feed of recently-verified venues ==============
+function buildRss(allGyms, allCats) {
+  const sorted = allGyms.slice().sort((a, b) =>
+    String(b.verified || '').localeCompare(String(a.verified || ''))
+  ).slice(0, 30);
+  const catLabel = (k) => {
+    const c = allCats.find(x => x.key === k);
+    return c ? c.label : k;
+  };
+  const items = sorted.map(g => {
+    const url = `${SITE}/gyms/${g.id}/`;
+    const pubDate = (g.verified ? new Date(g.verified) : new Date()).toUTCString();
+    const desc = (g.description || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    return `  <item>
+    <title>${escHtml(g.name || '')}</title>
+    <link>${url}</link>
+    <guid isPermaLink="true">${url}</guid>
+    <pubDate>${pubDate}</pubDate>
+    <category>${escHtml(catLabel(g.category))}</category>
+    <description><![CDATA[${desc}]]></description>
+  </item>`;
+  }).join('\n');
+  const lastBuild = new Date().toUTCString();
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Pattaya Gym Directory — Recently Added Venues</title>
+  <link>${SITE}/</link>
+  <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml" />
+  <description>Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.</description>
+  <language>en-US</language>
+  <lastBuildDate>${lastBuild}</lastBuildDate>
+${items}
+</channel>
+</rss>
+`;
+}
+
 function buildRobots() {
   return `User-agent: *
 Allow: /
@@ -727,6 +783,11 @@ function main() {
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), buildRobots());
   console.log('  [ROB] /robots.txt');
 
+  // 5b. RSS feed of recently-verified venues
+  fs.writeFileSync(path.join(ROOT, 'feed.xml'), buildRss(GYMS, CATEGORIES));
+  console.log('  [RSS] /feed.xml');
+  extraUrls.push('/feed.xml');
+
   // 6. CSS injection for category grid
   appendCategoryCss();
   console.log('  [CSS] category grid styles appended to venue.css');
@@ -744,15 +805,6 @@ function main() {
     if (urlsToAdd) {
       const updated = existing.replace('</urlset>', urlsToAdd + '\n</urlset>');
       fs.writeFileSync(sitemapPath, updated);
-      console.log('  [SMP] sitemap.xml updated (+' + extraUrls.length + ' urls)');
-    }
-  }
-
-  console.log('\nExtras built: ' + catCount + ' category pages + map + about + 404 + robots.txt');
-}
-
-main();
-s.writeFileSync(sitemapPath, updated);
       console.log('  [SMP] sitemap.xml updated (+' + extraUrls.length + ' urls)');
     }
   }

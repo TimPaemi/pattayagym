@@ -6,6 +6,7 @@
 <title>Pattaya Gym Guides — Best of Pattaya by Category</title>
 <meta name="description" content="Curated guides to the best Pattaya gyms, Muay Thai camps, dive operators, water parks, and sport venues — by budget, level, family fit, and more." />
 <link rel="canonical" href="https://pattaya-gym.com/guides/" />
+<link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Pattaya Gym Guides — Best of Pattaya by Category" />
 <meta property="og:description" content="Curated guides to the best Pattaya gyms, Muay Thai camps, dive operators, water parks, and sport venues — by budget, level, family fit, and more." />
@@ -16,6 +17,20 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
+<script>
+  (function () {
+    function update() {
+      var n = document.querySelector('.hero .nav');
+      if (!n) return;
+      if (document.documentElement.scrollTop > 30) n.classList.add('scrolled');
+      else n.classList.remove('scrolled');
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('scroll', update, { passive: true });
+      update();
+    });
+  })();
+  </script>
 <header class="hero" style="min-height: auto;">
   <nav class="nav">
     <a href="/" class="brand">
@@ -37,13 +52,15 @@
   <div class="venue-hero">
     <span class="venue-cat-pill">Guides</span>
     <h1 class="venue-h1">Pattaya gym guides</h1>
-    <p class="venue-lede">Curated picks across budget tiers, experience levels, family-friendliness, and 24-hour access. All guides are built from the same verified directory of 138 venues.</p>
+    <p class="venue-lede">Curated picks across budget tiers, experience levels, family-friendliness, and 24-hour access. All guides are built from the same verified directory of 152 venues.</p>
   </div>
 
   <section class="tldr" aria-labelledby="pick-h">
     <h2 id="pick-h" class="tldr-title">Pick the right guide for you</h2>
     <ul class="tldr-list">
       <li><strong>Want the best Muay Thai?</strong> → <a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+      <li><strong>Looking to dive?</strong> → <a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+      <li><strong>Hitting the links?</strong> → <a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
       <li><strong>On a tight budget?</strong> → <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
       <li><strong>Looking for luxury?</strong> → <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
       <li><strong>Train at odd hours?</strong> → <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -83,6 +100,16 @@
       <div class="cv-head"><h3>Best beginner-friendly venues in Pattaya</h3></div>
       <p>New to Muay Thai, scuba diving, golf, kitesurfing or yoga? These Pattaya venues are explicitly beginner-friendly with patient instruction, scaled difficulty, and welcoming culture.</p>
       <span class="cv-cta">Read guide →</span>
+    </a>
+    <a href="/guides/best-dive-operators-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Best dive operators in Pattaya</h3></div>
+      <p>Hand-picked best PADI and SSI dive shops in Pattaya for 2026 — from Five-Star IDC centres to British family-run schools and dedicated technical-diving operations.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>
+    <a href="/guides/best-golf-courses-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Best golf courses near Pattaya</h3></div>
+      <p>Hand-picked best Pattaya / Eastern Seaboard golf courses for 2026 — from championship Pete Dye and Jack Nicklaus designs to value-tier 27-hole layouts and resort options with Buddha mountain views.</p>
+      <span class="cv-cta">Read guide →</span>
     </a></div>
 </main>
 <footer class="site-footer">
@@ -119,6 +146,8 @@
       <h4>Best-of guides</h4>
       <ul>
         <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+        <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+        <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
         <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
         <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
         <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>

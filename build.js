@@ -778,6 +778,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <title>${escHtml(title)}</title>
   <meta name="description" content="${escHtml(desc)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${escHtml(fm.name)}" />
@@ -971,6 +972,8 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
         <h4>Best-of guides</h4>
         <ul>
           <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+          <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+          <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
           <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
           <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
           <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
@@ -1022,6 +1025,8 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <script src="/compare.js" defer></script>
   <script>
   (function () {
+    // Sticky nav scrolled-state
+    var navEl = document.querySelector('.hero .nav');
     var bar = document.getElementById('pg-scroll-progress');
     var btn = document.getElementById('pg-back-to-top');
     if (btn) {
@@ -1036,6 +1041,10 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
       if (btn) {
         if (h.scrollTop > 600) btn.classList.add('visible');
         else btn.classList.remove('visible');
+      }
+      if (navEl) {
+        if (h.scrollTop > 30) navEl.classList.add('scrolled');
+        else navEl.classList.remove('scrolled');
       }
     }
     document.addEventListener('scroll', update, { passive: true });
@@ -1150,6 +1159,14 @@ function main() {
     console.log('\n--- Building extras ---');
     require('./build-extras.js');
     console.log('\n--- Building discovery (areas, guides, search, add form) ---');
+    require('./build-discovery.js');
+  } catch (e) {
+    console.error('Extras build failed:', e.message);
+  }
+}
+
+main();
+ng discovery (areas, guides, search, add form) ---');
     require('./build-discovery.js');
   } catch (e) {
     console.error('Extras build failed:', e.message);

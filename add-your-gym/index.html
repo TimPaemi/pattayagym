@@ -6,6 +6,7 @@
 <title>Add Your Gym to Pattaya Gym Directory</title>
 <meta name="description" content="Own a gym, Muay Thai camp, dive operator, or sport venue in Pattaya? Submit your listing for free verification and inclusion in the directory." />
 <link rel="canonical" href="https://pattaya-gym.com/add-your-gym/" />
+<link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Add Your Gym to Pattaya Gym Directory" />
 <meta property="og:description" content="Own a gym, Muay Thai camp, dive operator, or sport venue in Pattaya? Submit your listing for free verification and inclusion in the directory." />
@@ -31,6 +32,20 @@
 </style>
 </head>
 <body>
+<script>
+  (function () {
+    function update() {
+      var n = document.querySelector('.hero .nav');
+      if (!n) return;
+      if (document.documentElement.scrollTop > 30) n.classList.add('scrolled');
+      else n.classList.remove('scrolled');
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener('scroll', update, { passive: true });
+      update();
+    });
+  })();
+  </script>
 <header class="hero" style="min-height: auto;">
   <nav class="nav">
     <a href="/" class="brand">
@@ -169,6 +184,8 @@
       <h4>Best-of guides</h4>
       <ul>
         <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+        <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
+        <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
         <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
         <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
         <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
