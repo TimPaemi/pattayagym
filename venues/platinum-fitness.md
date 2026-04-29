@@ -37,7 +37,7 @@ Pattaya commercial fitness positioned by hours and amenities:
 
 | Tier | Examples | Distinction |
 |---|---|---|
-| **24/7 international chain** | Jetts (2 locations) | Australian chain |
+| **24/7 international chain** | Jetts (Little Walk Mall) | Australian chain |
 | **24/7 large central independent** | Fitness 7 (The Avenue) | 2,000+ sqm + boxing ring |
 | **Long-hours mid-tier independent** | **Platinum Fitness Club** | **05:30-23:00 + sauna** |
 | **2022 modern Sukhumvit** | Elite Gym & Fitness | 23M baht 950 sqm AC build |

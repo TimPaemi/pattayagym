@@ -35,7 +35,7 @@ sources:
 
 Jetts Fitness is **the leading 24/7 commercial fitness chain in Thailand**, operating multiple locations in Pattaya alongside its broader **Bangkok / Hua Hin / Phuket / Chiang Mai national network**. Originally **founded in Australia in 2007**, Jetts has expanded globally to **Thailand, the United Kingdom, the Netherlands, and New Zealand**, becoming one of the **most recognizable international fitness brands in Southeast Asia**.
 
-In Pattaya, Jetts operates from **at least two key locations** — **Little Walk Mall (off Pattaya 2nd Road)** and **Royal Garden Plaza (on Pattaya Beach Road)** — placing the chain conveniently within central Pattaya's main commercial corridors. The two defining brand features are **24/7 access** (the gyms literally never close) and **no lock-in contracts** (month-to-month memberships), making Jetts a natural fit for the **traveller/expat demographic** who can't commit to long-term Thai gym contracts.
+In Pattaya, Jetts now operates from **a single location at Little Walk Mall on Sukhumvit Road**, after the original Royal Garden Plaza branch on Pattaya Beach Road permanently closed on 31 May 2022. The two defining brand features are **24/7 access** (the gym literally never closes) and **no lock-in contracts** (month-to-month memberships), making Jetts a natural fit for the **traveller/expat demographic** who can't commit to long-term Thai gym contracts.
 
 For travellers, working remote nomads, condo-dwellers, and short-stay residents who want a **familiar Western-style commercial gym experience with predictable equipment quality**, Jetts is the most accessible, least friction option in the Pattaya fitness scene.
 
@@ -79,9 +79,9 @@ This last feature is **uniquely valuable for international travellers** — a Je
 
 ### Jetts Little Walk Mall
 
-- **Address:** Little Walk Mall, Pattaya 2nd Road, Central Pattaya
-- **Location:** Inside the Little Walk shopping/lifestyle complex
-- **Convenience:** Walk-up from Beach Road and 2nd Road hotels; 5-minute walk from Walking Street north
+- **Address:** 8/114 Sukhumvit Rd, Bang Lamung District, Chonburi 20150 (Little Walk Mall)
+- **Location:** Inside the Little Walk shopping/lifestyle complex on Sukhumvit / Pattaya Klang
+- **Convenience:** Mall-attached parking; baht-bus access from Beach Road and 2nd Road; ~10-minute drive from Walking Street
 - **Vibe:** Modern commercial space, full GroupX studio, full equipment floor
 
 ### Jetts Royal Garden Plaza (closed)

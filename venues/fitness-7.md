@@ -49,7 +49,7 @@ Pattaya commercial fitness landscape:
 |---|---|---|
 | **Premium private** | FITZ Club | Royal Cliff luxury |
 | **Largest independent** | Muscle Factory (Pratamnak) | "Largest gym in Pattaya" |
-| **24/7 chain** | Jetts (Little Walk + Royal Garden) | Australian chain network |
+| **24/7 chain** | Jetts (Little Walk Mall) | Australian chain network |
 | **Mid-tier chain** | True Fitness | Class-focused multi-location |
 | **24/7 large central independent** | **Fitness 7 (The Avenue)** | **2,000+ sqm + 24hr + central** |
 | **Hardcore bodybuilding** | Castra Gym, Tony's Gym, Universe Gym | Independent free-weight focused |

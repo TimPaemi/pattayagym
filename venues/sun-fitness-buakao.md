@@ -34,7 +34,7 @@ sources:
 
 ## Overview
 
-SUN Fitness is **a 3-branch independent Pattaya fitness chain** with locations at **Pratamnak Hill, Soi Buakhao (near Central Festival), and Naklua** — making it **one of Pattaya's few legitimate multi-branch local gym networks** alongside the international chains (Jetts at Little Walk + Royal Garden, True Fitness multi-location). The defining value proposition is **a single membership card that covers all 3 branches** — meaning members can train at any location depending on which is most convenient on a given day.
+SUN Fitness is **a 3-branch independent Pattaya fitness chain** with locations at **Pratamnak Hill, Soi Buakhao (near Central Festival), and Naklua** — making it **one of Pattaya's few legitimate multi-branch local gym networks** alongside the international chains (Jetts at Little Walk Mall, True Fitness multi-location). The defining value proposition is **a single membership card that covers all 3 branches** — meaning members can train at any location depending on which is most convenient on a given day.
 
 The pricing model is **strikingly accessible**: **~฿1,090 monthly with full air-conditioning, machine variety, and well-thought-out layout** — meaningfully cheaper than international chain memberships (Jetts ฿1,550-1,700, True Fitness ฿2,000-3,500) while delivering **the same core gym infrastructure**. The **fully air-conditioned facility** is meaningful in tropical Pattaya — many budget independent gyms operate with fans only.
 
@@ -49,7 +49,7 @@ Pattaya commercial fitness positioned by branch network and price tier:
 | **Premium private** | FITZ Club | Royal Cliff luxury |
 | **Largest independent** | Muscle Factory (Pratamnak) | "Largest gym in Pattaya" |
 | **24/7 large central independent** | Fitness 7 (The Avenue) | 2,000+ sqm + boxing ring |
-| **24/7 international chain** | Jetts (2 locations) | Australian chain |
+| **24/7 international chain** | Jetts (Little Walk Mall) | Australian chain |
 | **Multi-branch international** | True Fitness | Class-focused |
 | **2022 modern Sukhumvit** | Elite Gym & Fitness | 23M baht 950 sqm AC build |
 | **East Pattaya community** | Castra Gym | Family-run Darkside |

@@ -47,7 +47,7 @@ Pattaya gyms cluster into geographic + style tiers:
 | Tier / Area | Examples | Vibe |
 |---|---|---|
 | **Beach / Walking Street tourist** | Tony's Gym, Universe Gym | Hardcore bodybuilding tourist hub |
-| **Mall-attached chain** | Jetts (Little Walk, Royal Garden), True Fitness | 24/7 commercial standard |
+| **Mall-attached chain** | Jetts (Little Walk Mall), True Fitness | 24/7 commercial standard |
 | **Premium private** | FITZ Club | Luxury hotel club |
 | **East Pattaya Darkside community** | **Castra Gym**, Coco Fitness, Manhattan Pattaya | **Resident-focused, no tourist surcharge** |
 | **Boutique / specialty** | CrossFit Pattaya, BJJ-specific | Single-discipline focused |

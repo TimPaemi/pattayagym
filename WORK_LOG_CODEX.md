@@ -241,3 +241,65 @@
 - Ocean Marina building range (274/1-3 → 274/1-9)
 
 Plus stub address/phone upgrades for ~15 venues from generic "Pattaya" or "Central Pattaya" placeholders to specific street numbers and area codes.
+
+## 2026-04-29 - Section I (continued): Jetts Royal Garden Plaza cross-reference sweep
+
+- **Section status:** Editorial cleanup follow-up to the Jetts Royal Garden Plaza closure correction.
+- **Files changed:** `venues/jetts-fitness-pattaya.md`, `venues/castra-gym.md`, `venues/fitness-7.md`, `venues/sun-fitness-buakao.md`, `venues/platinum-fitness.md`.
+- **Why:** After fixing the Jetts page itself, a sweep across all 158 venue MDs found 5 other pages still claiming "Jetts (Little Walk + Royal Garden)" or "Jetts (2 locations)" in market-position tables and Overview prose. Those are now stale and were corrected to "Jetts (Little Walk Mall)" or equivalent.
+- **Specific edits:**
+  - `castra-gym.md` line 50: `Jetts (Little Walk, Royal Garden)` → `Jetts (Little Walk Mall)`
+  - `fitness-7.md` line 52: `Jetts (Little Walk + Royal Garden)` → `Jetts (Little Walk Mall)`
+  - `sun-fitness-buakao.md` line 37 (Overview): `Jetts at Little Walk + Royal Garden` → `Jetts at Little Walk Mall`
+  - `sun-fitness-buakao.md` line 52 (table): `Jetts (2 locations)` → `Jetts (Little Walk Mall)`
+  - `platinum-fitness.md` line 40 (table): `Jetts (2 locations)` → `Jetts (Little Walk Mall)`
+  - `jetts-fitness-pattaya.md` line 38 (Overview): rewritten from "operates from at least two key locations" claim to single-location reality with closure explanation
+  - `jetts-fitness-pattaya.md` line 82 (Pattaya Locations section): address upgraded from `Little Walk Mall, Pattaya 2nd Road, Central Pattaya` → `8/114 Sukhumvit Rd, Bang Lamung District, Chonburi 20150 (Little Walk Mall)`. The "Pattaya 2nd Road" claim was geographically wrong; Little Walk is on Sukhumvit / Pattaya Klang
+- **Remaining incidental references:** A few non-Jetts mentions of "Royal Garden Plaza" survive in `jumpz-trampoline-park.md` line 32 (listing it as a family-friendly mall — still factually correct, the mall itself is still open) and `manhattan-pattaya-fitness.md` line 64 ("walking access to both Pattaya Beach and Jomtien Beach" — unrelated geographic phrase). No edits needed.
+- **Tests run:** None — git index corruption persists in the sandbox.
+- **Concerns / open questions:** Sweep was constrained to body-text claims about Jetts having 2 locations. The build-discovery cross-link auto-generator may also surface stale anchor text — recommend a post-deploy `npm run build` re-run to regenerate the gyms/*/ HTML output and confirm no auto-generated cross-link references stale data.
+- **Next:** Section I content polish is now substantively done. Remaining handoff items: licensed photography (Tim-side decision on stock vs. owner outreach), final manual QA closeout (real iPhone Safari + Android Chrome + VoiceOver/NVDA + live Lighthouse on production URLs), Yoga Pattaya unit-number resolution (owner contact), Pattaya Tennis Club editorial decision (keep / re-anchor / remove), Pending tasks #7 + #8 (www subdomain redirect + Google Search Console submission).
+
+## 2026-04-29 - Section I (continued): data.js truncation recovery + green-build confirmation
+
+- **Section status:** Recovery + verification.
+- **Files changed:** `data.js` (restored from `git show HEAD:data.js`), `WORK_LOG_CODEX.md`.
+- **What happened:** Mid-session, ran `node validate.js --all-warnings` to investigate the 755-warning baseline. The script crashed with `SyntaxError: Unexpected token ')'` at line 232. Investigation showed `data.js` had been silently truncated mid-line at the InterContinental Pattaya entry (line 229) — the recurring edit-tool truncation bug that has bitten previous sessions. The on-disk file was 228 lines with the InterContinental entry cut off after `hours: "24/7 fitness for guests; spa daily",`. The closing `];` and `module.exports`/`window` assignments were lost.
+- **Recovery:** `git show HEAD:data.js > data.js` restored the file. Critical insight: **HEAD already contained all my data.js edits from this entire session** — Tim must have been committing/pushing the work between batches from his Windows terminal, so HEAD at the time of restoration was a clean canonical copy of every fact-check edit. Diff between truncated working tree and HEAD was exactly 11 lines (the truncated tail).
+- **Verification post-restore:**
+  - `node --check data.js` → **SYNTAX OK**
+  - `node validate.js` → **Validation: 0 error(s), 750 warning(s)** (down from 755 — the 5-warning reduction comes from this session's stub upgrades adding previously-missing optional fields)
+  - `node build.js` → **Generated 158 venue pages (158 deep + 0 stubs)**
+  - All other critical files (build.js, build-extras.js, build-discovery.js, index.html, app.js, styles.css, venue.css, compare.js, compare/index.html, validate.js) compared line-counts against HEAD: **all clean, no other truncation**.
+  - All 18 critical venue MDs touched this session (Jetts, Deep Climbing, Muscle Factory, Khao Chi Chan, Elite Gym, EasyKart, Wong Amat, ALFA BJJ, Bangkok Hospital, Ocean Marina, Pattaya Park, Bangpra, Sports Club, Archery, Castra, Fitness 7, SUN Fitness, Platinum) compared against HEAD: **all clean**.
+- **Concerns / open questions:** The truncation bug is intermittent and there's no preventive fix from the sandbox side. Recommendation: keep the `git show HEAD:data.js > data.js` recovery pattern documented for future sessions. Encouragingly, this time HEAD was up-to-date with the session's work, so recovery was lossless — that depended on Tim's commit cadence keeping pace with the work. **For future sessions, batching commits more aggressively (after every 3-5 edits) would minimise loss exposure.**
+- **Final session state:**
+  - `data.js`: 239 lines, syntax green, 158 venues
+  - Validation: 0 errors, 750 warnings
+  - Build: 158 deep + 0 stubs
+  - Section I fact-check: 28/30 Checked, 2/30 Flagged
+  - Cross-reference sweep complete (Jetts Royal Garden Plaza)
+  - Recovery from truncation complete
+  - Ready for Tim's deploy commit + push
+
+- **Next:** Tim's git/deploy flow remains: `del .git\index && git reset` (if needed) → `git status` → `git add` → `git commit` → `git push`. The deploy command list from the earlier message is still accurate; `data.js` is in clean post-restore state and includes all fact-check work.
+
+## 2026-04-29 - Section I closeout: discovered backlog (post-Section I work)
+
+While running validate.js to confirm green build, surfaced **750 warnings** worth a triage so future sessions know what's structural vs. cosmetic.
+
+**Warning distribution (validate.js --all-warnings):**
+
+| Type | Count | Severity | Notes |
+|---|---|---|---|
+| Missing optional MD frontmatter field (`description`, `tags`, `mapsUrl`, `phone`, `website`) | 584 | Low — most fields are present in `data.js`; the validator just notes when they're absent from MD frontmatter. Build still works because build.js reads from data.js | Low priority — pure metadata cosmetic |
+| Area string differs MD vs data.js | 109 | Low — display only; MDs typically have richer phrasing | Resync data.js to match MD canonical phrasing in a future editorial pass |
+| Name string differs MD vs data.js | 55 | Medium — affects displayed names + canonical URLs / schema | Worth a focused editorial sync pass; risk of SEO regressions if done carelessly |
+
+**One real structural issue worth flagging for future work:**
+
+- **Duplicate AF Academy entries:** `data.js` and `venues/` contain **two separate records for the same business** — `af-academy-football` (older stub-era entry, name: "AF Academy", verified 2026-04-27) and `af-academy-pattaya` (deeper entry, name: "AF Academy Football School Pattaya", verified 2026-04-29). Both share website `https://www.afacademy.pro/en`. This generates two distinct URLs (`/gyms/af-academy-football/` and `/gyms/af-academy-pattaya/`) which is real duplicate-content SEO risk. **Not fixed this session** because deduplication requires URL handling (301 redirects via `_redirects`), schema-cross-link sweeps, sitemap update — out of scope for fact-checking. Recommend a future Section M (or J extension) cleanup pass: pick the `af-academy-pattaya` entry as canonical (richer detail, verified 2026-04-29), 301-redirect `/gyms/af-academy-football/` → `/gyms/af-academy-pattaya/`, remove the stub from `data.js`.
+
+**Verification of additional file integrity (post-truncation recovery):**
+
+All 18 critical venue MDs touched this session compared cleanly against HEAD line-counts. All 10 critical JS/HTML/CSS files compared cleanly against HEAD. **The truncation was isolated to data.js only** and is now fully recovered.
