@@ -31,7 +31,7 @@ sources:
 
 Mermaid's Dive Centre is **the most established PADI dive operation in Pattaya** — running continuously since **1990** and the **first dive center in Pattaya to be awarded PADI CDC (Career Development Centre) status**, the highest tier of PADI affiliation. The operation now spans **three locations**: the original **Jomtien Beach** branch on **Soi White House**, a **Pattaya Beach Road** branch in central Pattaya, and a **Bangkok branch at Amarin Plaza** — making it the only multi-location dive operation between Bangkok and the Cambodian border.
 
-For travelers wanting **the most institutionally credentialed Pattaya dive operation with 35+ years of operational history**, Mermaid's is the consensus top choice. Its **CDC status puts it ahead of even Pattaya Dive Centre (CDC) and Seafari (IDC)** in PADI tiering historically — though all three are now CDC or top-tier credentialed.
+For travellers wanting **the most institutionally credentialed Pattaya dive operation with 35+ years of operational history**, Mermaid's is the consensus top choice. Its **CDC status puts it ahead of even Pattaya Dive Centre (CDC) and Seafari (IDC)** in PADI tiering historically — though all three are now CDC or top-tier credentialed.
 
 ## Heritage — 35+ Years of Pattaya Diving
 
@@ -141,16 +141,16 @@ The 35-year operational history shows in the **mature operation, well-trained cr
 
 - **First-time divers** wanting Discover Scuba in Pattaya
 - **PADI course students** at any level (CDC tier supports the whole pathway)
-- **Travelers staying in Jomtien** (closest of the three locations to Mermaid's)
+- **Travellers staying in Jomtien** (closest of the three locations to Mermaid's)
 - **Heritage-conscious divers** wanting Pattaya's longest-running operator
-- **Multi-location travelers** moving between Pattaya and Bangkok
+- **Multi-location travellers** moving between Pattaya and Bangkok
 - **PADI internship / professional track candidates**
 
 ## Not Best For
 
 - **Andaman-coast quality visibility seekers** (Phuket / Krabi / Similan)
 - **Pure budget divers** (cheaper non-CDC operators exist)
-- **Travelers wanting walking access from central Pattaya without multi-location confusion** (use Pattaya Dive Centre on Beach Road for walk-in)
+- **Travellers wanting walking access from central Pattaya without multi-location confusion** (use Pattaya Dive Centre on Beach Road for walk-in)
 
 ## Quick Reference Card
 

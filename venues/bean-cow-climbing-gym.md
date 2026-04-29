@@ -32,9 +32,9 @@ sources:
 
 ## Overview
 
-Bean Cow is **Pattaya's family-friendly climbing destination** — a **500-square-meter purpose-built climbing facility** in Huay Yai with **bouldering, top rope, and lead climbing**, plus dedicated **kids play areas, free water, showers**, and a **community-center culture** that distinguishes it from the more downtown-tourist-focused Deep Climbing Gym at Harbor Mall. The gym positions itself as **"come for the climbing, stay for the community"** — and the operational details (weekly bouldering wall resets, free first-timer orientation, family pricing tiers, kids zones, multi-month visit passes) all reinforce that ethos.
+Bean Cow is **Pattaya's family-friendly climbing destination** — a **500-square-metre purpose-built climbing facility** in Huay Yai with **bouldering, top rope, and lead climbing**, plus dedicated **kids play areas, free water, showers**, and a **community-center culture** that distinguishes it from the more downtown-tourist-focused Deep Climbing Gym at Harbor Mall. The gym positions itself as **"come for the climbing, stay for the community"** — and the operational details (weekly bouldering wall resets, free first-timer orientation, family pricing tiers, kids zones, multi-month visit passes) all reinforce that ethos.
 
-For Pattaya residents wanting **a regular climbing community to belong to**, families wanting **kids climbing programs**, and travelers seeking **a more relaxed alternative to the mall-floor Deep Climbing**, Bean Cow is the answer. Pattaya now has two indoor climbing options — Deep is the **first** and **mall-located** option; Bean Cow is the **community-driven** option. Active climbers in Pattaya often visit both.
+For Pattaya residents wanting **a regular climbing community to belong to**, families wanting **kids climbing programs**, and travellers seeking **a more relaxed alternative to the mall-floor Deep Climbing**, Bean Cow is the answer. Pattaya now has two indoor climbing options — Deep is the **first** and **mall-located** option; Bean Cow is the **community-driven** option. Active climbers in Pattaya often visit both.
 
 ## Position in the Pattaya Climbing Market
 
@@ -44,7 +44,7 @@ Pattaya's climbing scene was historically nonexistent. Two facilities now exist:
 |---|---|---|
 | **Location** | Harbor Mall 8F (Naklua) | Huay Yai (East Pattaya) |
 | **Status** | First indoor climbing in Pattaya | Family/community focus |
-| **Wall height** | 10 meters | 8 meters (typical reports) |
+| **Wall height** | 10 metres | 8 metres (typical reports) |
 | **Disciplines** | Top rope, lead, bouldering, auto-belay | Top rope, lead, bouldering |
 | **Size** | ~27 routes | 500 sqm |
 | **Reset frequency** | Periodic | **Weekly bouldering wall reset** |
@@ -56,7 +56,7 @@ Together, they cover the climbing spectrum in Pattaya. **Active climbers visit b
 
 ## Facility — 500 sqm of Climbing
 
-The **500 square meter** facility includes:
+The **500 square metre** facility includes:
 
 - **Bouldering area** with frequently-reset problems
 - **Top rope wall** — main height climbing

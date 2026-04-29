@@ -33,11 +33,11 @@ sources:
 
 ## Overview
 
-Pattaya Sky Ride is **the city's primary helicopter tour and charter operator** — offering **aerial sightseeing tours over Pattaya beaches, city landmarks, and temples** alongside **fast Bangkok-to-Pattaya charter transfers** for travelers who want to skip the 2-3 hour ground transit. The fleet includes **Airbus EC-135 (up to 5 passengers) and Airbus EC-130 (up to 6 passengers)** aircraft — premium twin-engine helicopters with **spacious leather seats, air conditioning, and headphones with microphones for pilot communication during flight**.
+Pattaya Sky Ride is **the city's primary helicopter tour and charter operator** — offering **aerial sightseeing tours over Pattaya beaches, city landmarks, and temples** alongside **fast Bangkok-to-Pattaya charter transfers** for travellers who want to skip the 2-3 hour ground transit. The fleet includes **Airbus EC-135 (up to 5 passengers) and Airbus EC-130 (up to 6 passengers)** aircraft — premium twin-engine helicopters with **spacious leather seats, air conditioning, and headphones with microphones for pilot communication during flight**.
 
 Helicopter tourism is **the apex aerial-experience tier** in Pattaya — above Pattaya Park's 56th-floor Tower Jump zip line, above Tarzan Adventure's 25-platform jungle zipline, and above Flight of the Gibbon's 3 km canopy course. While **Thai Sky Adventures' tandem skydive (13,000 ft from a fixed-wing aircraft)** delivers **the more visceral aerial thrill**, helicopter tours deliver **the more sustained sightseeing experience** — looking down on Pattaya Bay, the Sanctuary of Truth, the offshore islands, and the skyline at leisure rather than during a 60-second freefall.
 
-The **Bangkok-to-Pattaya charter** is genuinely useful for premium travelers — at **129,200 THB for the 45-minute flight (landing at Royal Cliff Beach Pattaya)**, it's expensive but converts the typical 2.5-3 hour Bangkok-Pattaya ground transit into a sub-hour aerial experience with photographic memories of central Thailand from the air.
+The **Bangkok-to-Pattaya charter** is genuinely useful for premium travellers — at **129,200 THB for the 45-minute flight (landing at Royal Cliff Beach Pattaya)**, it's expensive but converts the typical 2.5-3 hour Bangkok-Pattaya ground transit into a sub-hour aerial experience with photographic memories of central Thailand from the air.
 
 ## Position in the Pattaya Aerial Adventure Market
 
@@ -133,7 +133,7 @@ The premium transfer service:
 - **Avoid Bangkok-Pattaya highway traffic**
 - **Cost:** 129,200 THB per charter (entire helicopter, up to 5-6 passengers)
 
-For groups of 5-6 sharing the cost, this is **~21,500-26,000 THB per person** — premium but possibly justifiable for time-pressed corporate travelers vs. dealing with traffic.
+For groups of 5-6 sharing the cost, this is **~21,500-26,000 THB per person** — premium but possibly justifiable for time-pressed corporate travellers vs. dealing with traffic.
 
 ### Custom Charters
 
@@ -200,7 +200,7 @@ Modern commercial helicopter operations have **excellent safety records**:
 - **Airbus EC-135 + EC-130** premium aircraft
 - **Up to 6 passengers** for groups
 - **Sustained sightseeing** vs. brief skydive flash
-- **Bangkok-Pattaya charter** for time-pressed travelers
+- **Bangkok-Pattaya charter** for time-pressed travellers
 - **Sanctuary of Truth + Buddha Mountain** aerial views
 - **Multilingual pilot commentary**
 - **Photography-friendly** large windows
@@ -212,7 +212,7 @@ Modern commercial helicopter operations have **excellent safety records**:
 - **Premium-luxury pricing** — ฿35,000-130,000+ typical
 - **Per-helicopter pricing** — best value with full group
 - **Weather-dependent** — heavy rain / poor visibility cancels
-- **Pregnant + heart-condition** travelers excluded
+- **Pregnant + heart-condition** travellers excluded
 - **Short experience** — 15-30 min tours feel quick at the price
 - **Booking lead time** required — not walk-up
 - **Photography from helicopter** — vibration affects sharpness
@@ -220,10 +220,10 @@ Modern commercial helicopter operations have **excellent safety records**:
 
 ## Best For
 
-- **Premium travelers** with substantial budget
+- **Premium travellers** with substantial budget
 - **Groups of 5-6** sharing the cost
 - **Anniversary / proposal** memorable experience
-- **Corporate travelers** Bangkok-Pattaya time-pressed
+- **Corporate travellers** Bangkok-Pattaya time-pressed
 - **Aerial photography** professionals
 - **Full-luxury Pattaya tourism** stack
 - **Sanctuary of Truth + landmark** photographers
@@ -231,11 +231,11 @@ Modern commercial helicopter operations have **excellent safety records**:
 
 ## Not Best For
 
-- **Pure budget travelers** — dramatically expensive
+- **Pure budget travellers** — dramatically expensive
 - **Adrenaline thrill** preference — skydiving more visceral
-- **Solo travelers** — per-helicopter pricing unfavorable
-- **Pregnant or recovering** travelers
-- **Walking Street based** travelers without departure-pad transport
+- **Solo travellers** — per-helicopter pricing unfavorable
+- **Pregnant or recovering** travellers
+- **Walking Street based** travellers without departure-pad transport
 
 ## Quick Reference Card
 

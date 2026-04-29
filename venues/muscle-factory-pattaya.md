@@ -38,9 +38,9 @@ sources:
 
 Muscle Factory Pattaya is **the largest hardcore gym in Pattaya** — a **multi-floor bodybuilding-and-powerlifting institution on Pratamnak Hill** that occupies **a massive building with 3-story-high ceiling, several floors of equipment, extensive free-weight sections, multiple squat racks, dedicated deadlift platforms, every machine imaginable, and complete cardio infrastructure**. The Pattaya facility is **the sister gym to the Bangkok Muscle Factory** — together forming **Thailand's two-location hardcore gym network**, both operated under the **Muscle Factory brand (mfbkk.com)** dedicated to **serious training rather than commercial mainstream fitness**.
 
-The gym's identity is **uncompromisingly hardcore**: **no AC** (industrial fans circulate air through the 3-story space), **emphasis on heavy free-weight training**, **dedicated deadlift platforms** (rare in Pattaya gyms), **multiple squat racks for simultaneous heavy sessions**, **complete machine inventory for accessory work**, and **a community of competitive bodybuilders, powerlifters, and dedicated lifters who prioritize equipment quality and training intensity over comfort amenities**.
+The gym's identity is **uncompromisingly hardcore**: **no AC** (industrial fans circulate air through the 3-story space), **emphasis on heavy free-weight training**, **dedicated deadlift platforms** (rare in Pattaya gyms), **multiple squat racks for simultaneous heavy sessions**, **complete machine inventory for accessory work**, and **a community of competitive bodybuilders, powerlifters, and dedicated lifters who prioritise equipment quality and training intensity over comfort amenities**.
 
-For Pattaya residents and visitors who **train seriously and prioritize equipment depth over Western commercial gym amenities** — and especially for **competitive bodybuilders, powerlifters, strongman trainees, and intermediate-to-advanced lifters who've outgrown commercial chain gyms** — Muscle Factory is the city's unambiguous top choice. The gym has earned recognition as **"Pattaya's premier gym for serious lifters"** and is internationally known among the global iron-game community traveling to Thailand.
+For Pattaya residents and visitors who **train seriously and prioritise equipment depth over Western commercial gym amenities** — and especially for **competitive bodybuilders, powerlifters, strongman trainees, and intermediate-to-advanced lifters who've outgrown commercial chain gyms** — Muscle Factory is the city's unambiguous top choice. The gym has earned recognition as **"Pattaya's premier gym for serious lifters"** and is internationally known among the global iron-game community traveling to Thailand.
 
 ## Position in the Pattaya Fitness Market
 
@@ -206,7 +206,7 @@ This is **mid-tier pricing** — value vs. commercial chains since you're gettin
 - **No AC** — open-air with fans (cooler in shoulder seasons)
 - **Industrial aesthetic** — not for boutique-fitness preferences
 - **Hardcore atmosphere** — beginners may feel intimidated
-- **Pratamnak Hill location** — not convenient for Walking Street based travelers
+- **Pratamnak Hill location** — not convenient for Walking Street based travellers
 - **Less group class diversity** vs. commercial chains
 - **Crowded peak hours** for popular squat racks / dumbbells
 - **No combat sports** integration
@@ -227,7 +227,7 @@ This is **mid-tier pricing** — value vs. commercial chains since you're gettin
 - **Casual fitness members** — Jetts, True Fitness, SUN Fitness more accessible
 - **Beginners** — commercial chains less intimidating
 - **AC-comfort prioritizers** — Elite Gym & Fitness, Manhattan Pattaya
-- **Walking Street area travelers** — Fitness 7 / Tony's Gym closer
+- **Walking Street area travellers** — Fitness 7 / Tony's Gym closer
 - **Combat sports trainees** — go to Muay Thai camps
 
 ## Quick Reference Card

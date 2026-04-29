@@ -38,9 +38,9 @@ sources:
 
 Sor Klinmee is **a small, family-owned, working-fighter Muay Thai camp in East Pattaya** with **one of the deepest fighting-family legacies in modern Thai combat sports**. Founded in **2009** by **Mit Klinmee** — better known as **Tappaya Sit-Or**, his ring name during his championship fighting career — the gym is the home of **Sudsakorn Sor Klinmee**, one of Thailand's most accomplished Muay Thai exporters with a remarkable **330-fight career** (278 wins, 48 losses, 4 draws). It is also part of the **broader Sit-Or / Klinmee fighting dynasty** — a multi-generation family that includes **Tappaya himself, his brother Yokthai Sit-Or, nephew Rambaa "M16" Somdet** (Thailand's first MMA world champion), and **Sinsamut Klinmee** (Sudsakorn's younger brother, currently in ONE Championship).
 
-For training depth, you cannot find a more **lineage-rich small camp in Pattaya**. The gym sits **100 meters from Rambaa Somdet's M16 Gym** — the two operations function as a small Sit-Or family training cluster in Nong Prue, with cross-training between camps possible.
+For training depth, you cannot find a more **lineage-rich small camp in Pattaya**. The gym sits **100 metres from Rambaa Somdet's M16 Gym** — the two operations function as a small Sit-Or family training cluster in Nong Prue, with cross-training between camps possible.
 
-For travelers wanting **authentic Thai pedagogy at low prices** under a fighter who's competed at the highest international levels, Sor Klinmee is one of the strongest budget choices in Pattaya. Drop-in pricing in the **฿200-300 range** and monthly memberships around **฿4,000-7,000** make this gym genuinely accessible for committed long-stay students.
+For travellers wanting **authentic Thai pedagogy at low prices** under a fighter who's competed at the highest international levels, Sor Klinmee is one of the strongest budget choices in Pattaya. Drop-in pricing in the **฿200-300 range** and monthly memberships around **฿4,000-7,000** make this gym genuinely accessible for committed long-stay students.
 
 ## The Sit-Or / Klinmee Fighting Family
 
@@ -70,7 +70,7 @@ Rambaa is **Tappaya's nephew** and one of the most accomplished combat sports fi
 - **Thailand's first ever MMA World Champion** — won the **Shooto Flyweight World Championship in 2009** in Tokyo
 - **World's best 115 lb / Flyweight MMA fighter from ~2007-2012**
 - Final MMA record: 16 fights, 13 wins / 3 losses
-- **Opened Rambaa Somdet M16 Gym** in 2016, **100 meters from Sor Klinmee** — the two family camps form a small cluster
+- **Opened Rambaa Somdet M16 Gym** in 2016, **100 metres from Sor Klinmee** — the two family camps form a small cluster
 
 ### Sudsakorn "O" Sor Klinmee (Star Fighter at the Camp)
 
@@ -117,7 +117,7 @@ Sor Klinmee is a **traditional, no-frills Thai working camp**. Open-air pavilion
 
 - Walk-in rates around **฿200-300** per session
 - No long-term commitment required
-- Suitable for **travelers spending 1-4 weeks in Pattaya** wanting authentic training
+- Suitable for **travellers spending 1-4 weeks in Pattaya** wanting authentic training
 
 ### Adjacent to Rambaa M16
 
@@ -155,7 +155,7 @@ For a student who wants **direct access to a former pro fighter from a deep figh
 - **Lineage tied to Rambaa "M16" Somdet** — Thailand's first MMA world champion
 - **Lineage tied to Sinsamut Klinmee** — current ONE Championship fighter
 - **Family-camp culture** — three generations of fighters trained on this property
-- **Drop-in friendly** for short-stay travelers
+- **Drop-in friendly** for short-stay travellers
 - **Low-key location** in Nong Prue — quieter than tourist-facing camps
 
 ## Cons
@@ -181,7 +181,7 @@ For a student who wants **direct access to a former pro fighter from a deep figh
 ## Not Best For
 
 - **Tourist-style 1-week passive holidays** seeking pool + sauna + breakfast
-- **Travelers who need extensive English communication**
+- **Travellers who need extensive English communication**
 - **AC training preference** (try Battle Conquer)
 - **Booking-from-abroad ease** seekers (Fairtex, Kombat, Silk are easier to arrange remotely)
 

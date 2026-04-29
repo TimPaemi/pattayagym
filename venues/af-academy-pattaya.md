@@ -38,7 +38,7 @@ The Russian-language Instagram handle (@af_academy_thai) and **trilingual servic
 
 ## Position in the Pattaya Youth Football Market
 
-Pattaya football academies organized by age range:
+Pattaya football academies organised by age range:
 
 | Academy | Age Range | Coaching |
 |---|---|---|
@@ -55,7 +55,7 @@ AF Academy's specific niche: **age 3 entry point** — earliest in Pattaya, plus
 
 ### Early Football Development Science
 
-Modern youth football pedagogy emphasizes early ball-familiarity:
+Modern youth football pedagogy emphasises early ball-familiarity:
 
 - **Ages 3-5:** Pure motor skill development — running, kicking, balance, ball-eye coordination
 - **Ages 5-7:** Basic ball control, simple passing, fun-first games
@@ -67,7 +67,7 @@ Children who **start ball-familiarity at age 3** typically have **5-7 year head 
 ### Why Few Academies Accept 3-Year-Olds
 
 - **Coaching difficulty** — managing 3-year-old attention spans is hard
-- **Pedagogical training** for very young children is specialized
+- **Pedagogical training** for very young children is specialised
 - **Physical limitations** — children's coordination is still developing
 - **Parental requirement** — adults must be present
 - **Lower commercial appeal** — competitive results aren't the focus
@@ -203,7 +203,7 @@ Direct contact: **+66 96 078 8308** or **info@afacademy.pro**.
 - **Russian-speaking Pattaya families**
 - **Multi-location convenience** seekers
 - **Long-term football development** introductory tier
-- **Children's first organized sport** experience
+- **Children's first organised sport** experience
 - **Indoor + outdoor field options**
 - **Naklua / Jomtien / Pratumnak / Central residents**
 - **Beginner-confidence-building** priorities

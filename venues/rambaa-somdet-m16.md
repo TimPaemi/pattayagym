@@ -34,9 +34,9 @@ sources:
 
 ## Overview
 
-Rambaa Somdet M16 is **the personal training camp of Thailand's first MMA world champion**, **Rambaa "M16" Somdet** (real name **Silajak Klinmee**). Founded in **early 2016** in **Nong Prue, Pattaya**, **just 100 meters from the Sor Klinmee Gym** owned by Rambaa's uncle Tappaya, the camp is a working-fighter operation where students train **directly under Rambaa himself** — a man who **carved his name into Thai sports history twice**: once as a Golden-Era Muay Thai fighter and again as the **first Thai-born MMA world champion** when he won the **Shooto Flyweight World Championship in Tokyo on 23 November 2009**.
+Rambaa Somdet M16 is **the personal training camp of Thailand's first MMA world champion**, **Rambaa "M16" Somdet** (real name **Silajak Klinmee**). Founded in **early 2016** in **Nong Prue, Pattaya**, **just 100 metres from the Sor Klinmee Gym** owned by Rambaa's uncle Tappaya, the camp is a working-fighter operation where students train **directly under Rambaa himself** — a man who **carved his name into Thai sports history twice**: once as a Golden-Era Muay Thai fighter and again as the **first Thai-born MMA world champion** when he won the **Shooto Flyweight World Championship in Tokyo on 23 November 2009**.
 
-The camp is small, traditional, and deeply embedded in the **Klinmee fighting family** that also includes **Sudsakorn Sor Klinmee** (278W in 330 fights, Rambaa's cousin) and **Sinsamut Klinmee** (Rambaa's cousin, currently in ONE Championship). Together with Sor Klinmee Gym 100 meters away, Rambaa M16 forms half of a **two-camp Klinmee/Sit-Or family training cluster** in East Pattaya — a rare opportunity to train within a multi-generational Thai fighting dynasty.
+The camp is small, traditional, and deeply embedded in the **Klinmee fighting family** that also includes **Sudsakorn Sor Klinmee** (278W in 330 fights, Rambaa's cousin) and **Sinsamut Klinmee** (Rambaa's cousin, currently in ONE Championship). Together with Sor Klinmee Gym 100 metres away, Rambaa M16 forms half of a **two-camp Klinmee/Sit-Or family training cluster** in East Pattaya — a rare opportunity to train within a multi-generational Thai fighting dynasty.
 
 For students wanting **MMA + Muay Thai cross-training under a former world champion who actively coaches**, with the option to mix sessions at the adjacent Sor Klinmee Gym, Rambaa M16 is genuinely unique in the Pattaya market.
 
@@ -98,7 +98,7 @@ The two camps function as a **family cluster**:
 
 - **Sor Klinmee** (Tappaya's gym, opened 2009): primarily Muay Thai
 - **Rambaa M16** (opened 2016): Muay Thai + MMA cage work
-- **100 meters apart** — students can move between them
+- **100 metres apart** — students can move between them
 
 This integrated cluster is rare in modern Thai Muay Thai. **Most family camps consolidate into a single facility**; the Klinmee family chose to maintain two adjacent operations under different family heads.
 
@@ -191,7 +191,7 @@ Rates are **comparable to authentic mid-tier Pattaya camps** — meaningfully ch
 
 - **Pure tourists** seeking resort polish
 - **One-week luxury training holidays**
-- **Travelers needing extensive English support**
+- **Travellers needing extensive English support**
 - **AC-comfort seekers** (try Battle Conquer)
 
 ## Quick Reference Card

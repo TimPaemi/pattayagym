@@ -32,7 +32,7 @@ sources:
 
 ## Overview
 
-Pattaya Triathlon is **the most popular triathlon event in Thailand** — part of the **Thailand Tri-League series** organized by **SportMaster** (the same operator behind Pattaya Marathon). The Tri-League runs **three major triathlon races each year**: **Bangsaen Triathlon** (Thailand's biggest at 2,000+ triathletes), **Pattaya Triathlon** (the most trendy at 1,500+ triathletes), and **Sattahip Triathlon**. Together with the **multi-sport festival surrounding each event** — featuring **Thai cultural / food / sporting goods expos plus Breakfast Runs** — these events draw **15,000+ total participants across each weekend**.
+Pattaya Triathlon is **the most popular triathlon event in Thailand** — part of the **Thailand Tri-League series** organised by **SportMaster** (the same operator behind Pattaya Marathon). The Tri-League runs **three major triathlon races each year**: **Bangsaen Triathlon** (Thailand's biggest at 2,000+ triathletes), **Pattaya Triathlon** (the most trendy at 1,500+ triathletes), and **Sattahip Triathlon**. Together with the **multi-sport festival surrounding each event** — featuring **Thai cultural / food / sporting goods expos plus Breakfast Runs** — these events draw **15,000+ total participants across each weekend**.
 
 The Pattaya course is genuinely scenic: **750m swim at Bali Hai Pier** (in the Gulf of Thailand), **20km bike on flat roads through Sukhumvit Highway** (challenging traffic management closed for race), and **5km run into the unforgettable high-slope Pattaya hill** (Buddha Hill / Pratamnak elevation). The combination of **swim-bike-run with substantial elevation in the run section** creates a memorable triathlon experience that's distinct from flat-course Asian alternatives.
 
@@ -96,7 +96,7 @@ Pattaya Triathlon is described as **"the most trendy"**:
 ### Run — 5 km into Pattaya Hill
 
 - **From Beach Road heading up Pratamnak / Buddha Hill**
-- **Substantial elevation gain** — ~50-80 meters
+- **Substantial elevation gain** — ~50-80 metres
 - **Punishing finish** to the race
 - **Memorable / "unforgettable"** course feature
 - **Sea views** during ascent
@@ -223,7 +223,7 @@ Bike rental available in Pattaya for international visitors who don't want to fl
 - **Single-discipline athletes** — pure runners or pure cyclists
 - **Equipment-budget-constrained** athletes — bike rental adds cost
 - **Cool-climate-only** athletes
-- **Walking Street based** travelers without transport — race spread across city
+- **Walking Street based** travellers without transport — race spread across city
 
 ## Quick Reference Card
 

@@ -57,7 +57,7 @@ Kombat Group Thailand is a **multi-discipline, all-inclusive, residential combat
 
 The facility is structured around a **residential, immersive model**: you book a package (1 week, 2 weeks, 1 month, longer), you live on the campus, three meals a day are prepared in the on-site kitchen, and your training, food, sleep, recovery, and community are all integrated into one experience. It is the **antithesis of a drop-in tourist gym** and the **best argument in Pattaya for the all-inclusive training holiday format**.
 
-For travelers wanting **structure without the chaos of central Pattaya**, **multiple disciplines without resort-camp pricing**, and a **community that actively makes you better**, Kombat Group is the closest thing Pattaya has to a guaranteed-quality experience.
+For travellers wanting **structure without the chaos of central Pattaya**, **multiple disciplines without resort-camp pricing**, and a **community that actively makes you better**, Kombat Group is the closest thing Pattaya has to a guaranteed-quality experience.
 
 ## The Founder — Christian Daghio (1969 – 2018)
 
@@ -102,10 +102,10 @@ Kombat Group is genuinely multi-disciplinary — broader than almost any other P
 - **Western Boxing** — proper boxing program with dedicated rings; rare in Pattaya outside this camp
 - **Mixed Martial Arts (MMA)** — full curriculum, cage and mats
 - **Brazilian Jiu-Jitsu (BJJ)** — black belt instruction, Gi and No-Gi
-- **Krav Maga** — practical self-defense, Israeli combat system
+- **Krav Maga** — practical self-defence, Israeli combat system
 - **Weight Loss Bootcamp** — flagship non-fighter program; combines martial arts + functional fitness + nutrition
 - **Total Fitness Bootcamp** — non-combat fitness program
-- **Self-defense** — separate from Krav Maga, more general
+- **Self-defence** — separate from Krav Maga, more general
 - **Aqua Fitness** — pool-based conditioning
 - **Beach Training** — outdoor sessions, occasional
 - **Random outdoor activities** — built into longer-stay schedules
@@ -133,7 +133,7 @@ Highly structured, designed to keep guests engaged from morning to evening:
 - **Mon, Wed, Fri:** 19:00-20:30
 - **Tue, Thu:** 07:30-09:00 (morning option)
 
-### Krav Maga / MMA / Self-Defense
+### Krav Maga / MMA / Self-defence
 
 - Slotted within the morning/evening windows; specific timing varies by week
 - **Add-on** to your daily Muay Thai routine
@@ -203,7 +203,7 @@ Multiple room tiers integrated with training packages:
 
 - **Deluxe Room (Single/Double):** Spacious, nestled around the swimming pool, with **mini-fridge, kettle (complimentary tea/coffee), smart TV**
 - **Standard Room (Single/Double):** Comfortable AC rooms, well-furnished
-- **Shared Accommodation:** Budget option for solo travelers willing to share
+- **Shared Accommodation:** Budget option for solo travellers willing to share
 
 All rooms get **daily cleaning** and the laundry service is repeatedly praised as **fast and reliable**.
 
@@ -231,7 +231,7 @@ Three primary tiers: **budget, standard, all-inclusive luxury**. All prices in T
 - All training across disciplines (Muay Thai, Boxing, BJJ, Krav Maga, MMA, Weight Loss, etc.)
 - Pool access, garden, lounge
 - Daily cleaning
-- Access to organized weekly outdoor activities (beach training, excursions)
+- Access to organised weekly outdoor activities (beach training, excursions)
 
 ### What's NOT Included
 
@@ -258,7 +258,7 @@ Kombat Group's **TripAdvisor reputation is extraordinary**:
 - Ranked among the **top combat sports camps in all of Thailand**
 - Recurring reviewer themes:
   - **"Family feel"** — most-cited single phrase
-  - **"Well organized, well equipped, well staffed"**
+  - **"Well organised, well equipped, well staffed"**
   - **"Amazing sense of serious purpose with kind, thoughtful belonging"**
   - **"Staff and management make you feel at home from the very first moment"**
   - **"Highly motivated and supportive students from all over the world"**
@@ -308,9 +308,9 @@ The camp's **success stories** include dramatic weight-loss transformations — 
 
 Kombat Group is **the safest, most predictably high-quality combat sports residential experience in the Pattaya region**. It is particularly strong with:
 
-- **European travelers** (especially Italian, Spanish-speaking — Daghio's legacy + Cristiano's languages)
+- **European travellers** (especially Italian, Spanish-speaking — Daghio's legacy + Cristiano's languages)
 - **Beginners on transformation programs** (Weight Loss success stories are real)
-- **Travelers who want zero-logistics holidays** (everything is handled — book and arrive)
+- **Travellers who want zero-logistics holidays** (everything is handled — book and arrive)
 - **Couples/groups** doing fitness retreats together
 - **Multi-discipline cross-trainers** wanting BJJ + Muay Thai + Boxing under one roof
 - **Returning students** (return-customer rate is exceptionally high)
@@ -323,16 +323,16 @@ Where Fairtex offers institutional polish at the cost of attentive consistency, 
 - **Beginners and intermediate athletes** wanting structured programming
 - **Multi-discipline enthusiasts** (Muay Thai + BJJ + Boxing + MMA + Krav)
 - **European clients** (Italian/Spanish-language support)
-- **Weight-loss / fitness-transformation travelers**
+- **Weight-loss / fitness-transformation travellers**
 - **Couples or groups** doing a fitness retreat together
-- **Travelers wanting peace away from Pattaya's chaos**
+- **Travellers wanting peace away from Pattaya's chaos**
 - **Western Boxing students** (largest dedicated Boxing program in Pattaya)
 - **First-time fight tourists** wanting a guaranteed-quality, low-stress experience
 
 ## Not Best For
 
 - **Drop-in / casual training** trainees (the all-inclusive bundle is the value)
-- **Travelers wanting walkable Pattaya nightlife / beach proximity**
+- **Travellers wanting walkable Pattaya nightlife / beach proximity**
 - **Pure budget seekers** (Sor Klinmee, WKO, Petchrungruang are far cheaper)
 - **Old-school Thai-camp authenticity purists**
 - **Pro fighters needing tiny-camp dedicated trainer relationships**
@@ -347,7 +347,7 @@ Where Fairtex offers institutional polish at the cost of attentive consistency, 
 | Website | kombatgroup.com |
 | Founded | 2004 by Christian Daghio (1969-2018) |
 | Daghio's record | 190 MT fights / 145 wins; 7× MT World Champ; 2× WBA Asian Boxing Champ; 1st Italian to win at Lumpinee |
-| Disciplines | Muay Thai, Boxing, MMA, BJJ, Krav Maga, Weight Loss, Self-defense |
+| Disciplines | Muay Thai, Boxing, MMA, BJJ, Krav Maga, Weight Loss, Self-defence |
 | Rings | 4 Muay Thai + 2 Boxing = **6 total** |
 | Gym size | 800 m² Muay Thai + 500 m² Boxing |
 | Drop-in | ~฿700/session |

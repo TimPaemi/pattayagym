@@ -196,7 +196,7 @@ Trampoline parks have **known injury risk** — sprains, fractures, dislocations
 - **Pure adults** without children — designed family
 - **Single-day Pattaya visitors** with packed itineraries
 - **Quiet contemplation** seekers — trampoline parks are loud
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **Pure budget seekers** — premium per-hour pricing
 
 ## Quick Reference Card

@@ -77,7 +77,7 @@ The Fairtex stable is **the most decorated of any modern Muay Thai camp** and re
 
 - **Stamp Fairtex** — One of the most accomplished female fighters in combat sports. Two-division ONE Champion (Atomweight Muay Thai + Atomweight Kickboxing) and a former ONE Atomweight MMA contender. Muay Thai record: **64-17-5**. MMA record: **9-2** (per Tapology). Over 80 professional Muay Thai bouts, with stadium championships and two-division Northeastern Thailand championships before turning pro internationally.
 
-- **Smilla "The Hurricane" Sundell** — Swedish-born (Sundbyberg, 12 November 2004), trained karate from age 5 for self-defense, first tried Muay Thai at age 10-11 on a Thailand vacation. Moved with her family from Sweden to Ko Samui then to **Pattaya in October 2019, at age 14**, joining Fairtex specifically because of Stamp Fairtex's two-sport world-champion status. Defeated Jackie Buntan on **22 April 2022** to become the **inaugural ONE Women's Strawweight Muay Thai Champion** at **17 years and 5 months — the youngest world champion in Muay Thai history**. Went **5-0 in ONE Championship**, including three TKOs (notably over Allycia Hellen Rodrigues in September 2023 and Natalia Diachkova in May 2024) before being stripped of the title in 2024 for missing weight at the Diachkova bout. Continues to train and compete at Fairtex Pattaya.
+- **Smilla "The Hurricane" Sundell** — Swedish-born (Sundbyberg, 12 November 2004), trained karate from age 5 for self-defence, first tried Muay Thai at age 10-11 on a Thailand vacation. Moved with her family from Sweden to Ko Samui then to **Pattaya in October 2019, at age 14**, joining Fairtex specifically because of Stamp Fairtex's two-sport world-champion status. Defeated Jackie Buntan on **22 April 2022** to become the **inaugural ONE Women's Strawweight Muay Thai Champion** at **17 years and 5 months — the youngest world champion in Muay Thai history**. Went **5-0 in ONE Championship**, including three TKOs (notably over Allycia Hellen Rodrigues in September 2023 and Natalia Diachkova in May 2024) before being stripped of the title in 2024 for missing weight at the Diachkova bout. Continues to train and compete at Fairtex Pattaya.
 
 - **Yodsanklai "The Boxing Computer" Fairtex** — Career professional Muay Thai record: **202 wins, 74 losses, 4 draws** over a 15-year career. **Two-time Lumpinee Stadium Champion** (at 112 lb and 147 lb), former **WBC Muay Thai World Super Welterweight Champion at 154 lb**. ONE Championship featherweight star. Widely regarded as one of the most technically proficient and commercially successful Muay Thai fighters of the 2010s.
 
@@ -146,7 +146,7 @@ Dedicated S&C area with **battle ropes, assault bikes, kettlebells**, free weigh
 
 ### Sports Club Programs
 
-A separate Sports Club program (alongside the Training Center) offers exercise, weight loss, and self-defense classes for non-fighters and casual users — yoga, fitness classes, basketball, racquetball/squash.
+A separate Sports Club program (alongside the Training Center) offers exercise, weight loss, and self-defence classes for non-fighters and casual users — yoga, fitness classes, basketball, racquetball/squash.
 
 ## Daily Schedule (Detailed)
 
@@ -247,7 +247,7 @@ This is what ฿฿฿ pricing buys you:
 
 ### Recovery & Wellness
 
-- **25-meter outdoor swimming pool** (proper laps, not just a leisure pool)
+- **25-metre outdoor swimming pool** (proper laps, not just a leisure pool)
 - **Hot bath**
 - **Cold plunge / ice bath**
 - **Sauna**
@@ -327,7 +327,7 @@ Multiple reviews flag **unwelcoming staff in the Fairtex pro shop** — describe
 
 ### Mini Zoo on Grounds
 
-The hotel has historically kept some animals on the grounds (described variously as a small menagerie). Some compassionate travelers find this distressing.
+The hotel has historically kept some animals on the grounds (described variously as a small menagerie). Some compassionate travellers find this distressing.
 
 ### Not Recommended For
 
@@ -411,7 +411,7 @@ If you're going for the **first time and value certainty**, Silk Muay Thai or Ko
 - Returning fight athletes • Serious training holidays of 1+ months
 - BJJ/MMA cross-trainers wanting world-class Muay Thai layered on
 - Women fighters (Stamp + Smilla environment is generational)
-- Travelers wanting one-stop campus convenience
+- Travellers wanting one-stop campus convenience
 - Fans/students of Yodsanklai, Stamp, Smilla wanting to train where they train
 - Pro shop pilgrims (Fairtex gear from source)
 - Anyone with 16+ year-old age requirement met
@@ -420,8 +420,8 @@ If you're going for the **first time and value certainty**, Silk Muay Thai or Ko
 
 - Total beginners on a 1-week passive vacation (try Silk, Battle Conquer instead)
 - Children under 16 (minimum age 16)
-- Pure budget travelers (cheaper authentic Pattaya camps abound — Sor Klinmee, WKO, Petchrungruang)
-- Travelers wanting tiny-family-camp atmosphere
+- Pure budget travellers (cheaper authentic Pattaya camps abound — Sor Klinmee, WKO, Petchrungruang)
+- Travellers wanting tiny-family-camp atmosphere
 - Pro fighters needing private/dedicated trainer relationships (smaller camps better)
 - Russian-only speakers (try Yoga Pattaya Studio for context — Fairtex is English/Thai)
 

@@ -29,7 +29,7 @@ verified: 2026-04-29
 
 The Sanctuary of Truth (ปราสาทสัจธรรม / Prasat Sut Ja-Tum) is Pattaya's most iconic cultural landmark and one of Thailand's most extraordinary feats of religious architecture. A **105-metre-tall, all-teak-wood temple, hand-carved without a single nail, built since 1981 and still under active construction**, it is unlike anything else in Thailand or in Asia. Visitors come for the architecture, but the on-site experience extends well beyond a static museum visit — **horseback riding, speed boat tours, elephant displays, and a 30-minute traditional Thai water-skill performance** all earn it a place in this directory's coverage of "every sport-related activity in Pattaya."
 
-For travelers planning a Pattaya trip, the Sanctuary of Truth is one of the **two or three things you can't reasonably skip** — it has appeared on every "best of Pattaya" list since the 1990s, anchors the Naklua tourism economy, and remains one of the most photographed structures in Thailand.
+For travellers planning a Pattaya trip, the Sanctuary of Truth is one of the **two or three things you can't reasonably skip** — it has appeared on every "best of Pattaya" list since the 1990s, anchors the Naklua tourism economy, and remains one of the most photographed structures in Thailand.
 
 ## What it is
 
@@ -50,7 +50,7 @@ The Sanctuary of Truth is on a **secluded peninsula on the Naklua side of Pattay
 | **ATV rides** | Available on some tour packages |
 | **Walking the grounds** | Photogenic — temple + tropical gardens + ocean views |
 
-Note: animal-related activities (horse, elephant) are part of the traditional Thai cultural park experience. Some travelers prefer to skip animal interactions on ethical grounds; the temple itself and the boat/water performance still make the visit worthwhile.
+Note: animal-related activities (horse, elephant) are part of the traditional Thai cultural park experience. Some travellers prefer to skip animal interactions on ethical grounds; the temple itself and the boat/water performance still make the visit worthwhile.
 
 ## Position in Pattaya market
 
@@ -105,7 +105,7 @@ Sanctuary of Truth's distinctive: **the architecture is the experience**. Nong N
 
 ## Not best for
 
-- Travelers ethically opposed to animal-attraction inclusion (skip the horse and elephant; the rest is fine)
+- Travellers ethically opposed to animal-attraction inclusion (skip the horse and elephant; the rest is fine)
 - Anyone with mobility-limited interest in wood-temple architecture
 - Walking Street / nightlife-focused trips (this is a daytime activity)
 - Visitors with less than 2 hours available
@@ -131,4 +131,4 @@ The fastest path: Bolt/Grab from any Pattaya hotel direct to "Sanctuary of Truth
 
 Plan to time your visit around the **30-minute traditional water performance** which runs at fixed times throughout the day (verify on arrival; typically a few times per afternoon). The performance is the unique-to-here piece beyond the architecture and is worth scheduling around.
 
-For travelers planning a North Pattaya / Naklua cultural day, pair the Sanctuary of Truth (morning) with **Wong Amat Beach** (lunch + swim, 5 min away), **Cape Dara Resort spa** (afternoon, 5 min away), and **Pattaya Bike and Boat Tours** (alternative active morning).
+For travellers planning a North Pattaya / Naklua cultural day, pair the Sanctuary of Truth (morning) with **Wong Amat Beach** (lunch + swim, 5 min away), **Cape Dara Resort spa** (afternoon, 5 min away), and **Pattaya Bike and Boat Tours** (alternative active morning).

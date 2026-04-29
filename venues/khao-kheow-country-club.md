@@ -171,7 +171,7 @@ This is **mid-premium tier pricing** — meaningfully above value courses (Treas
 - **Driving range** for warm-up
 - **Practice green** at clubhouse
 - **Pro shop** with apparel and accessories
-- **Caddy area** organized for fast assignment
+- **Caddy area** organised for fast assignment
 
 The facilities are **tournament-ready scale** — large enough to handle Asian Tour field logistics — meaning casual rounds benefit from the broader infrastructure.
 
@@ -219,7 +219,7 @@ The facilities are **tournament-ready scale** — large enough to handle Asian T
 - **Pure beginners** who'll struggle with the strategic demands
 - **Bombers** who can't shape shots or position off the tee
 - **Budget-tier seekers** (Burapha, Treasure Hill cheaper)
-- **Travelers based in central Pattaya** wanting walkable courses
+- **Travellers based in central Pattaya** wanting walkable courses
 
 ## Quick Reference Card
 

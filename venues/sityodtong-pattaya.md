@@ -61,7 +61,7 @@ His own fighting career began at **age 14** when he started formal Muay Thai tra
 
 **In 1960**, at the age of 23, Kru Yodtong founded his first camp in **Mabtaput**, in the province of **Rayong**, just south of Pattaya. The camp grew, his fighters started winning at the highest levels, and **about 15 years later** he purchased several acres of land in the **Banglamung province** (the administrative district that includes Pattaya) and **moved Sityodtong to its current location** in Naklua. The Pattaya facility has operated continuously on that site ever since.
 
-Kru Yodtong was inducted into multiple Muay Thai halls of fame globally. He is universally credited as one of the **architects of modern Muay Thai pedagogy** — his teaching system emphasized technical precision, strategic intelligence, ring craft, and individualized fighter development over the volume-and-conditioning approach that dominates many contemporary tourist-facing camps. He passed away in 2013, leaving the camp to his trained successors and family. His teaching system continues largely intact at the Pattaya facility today.
+Kru Yodtong was inducted into multiple Muay Thai halls of fame globally. He is universally credited as one of the **architects of modern Muay Thai pedagogy** — his teaching system emphasised technical precision, strategic intelligence, ring craft, and individualized fighter development over the volume-and-conditioning approach that dominates many contemporary tourist-facing camps. He passed away in 2013, leaving the camp to his trained successors and family. His teaching system continues largely intact at the Pattaya facility today.
 
 ## Notable Alumni — The Sityodtong Roll Call
 
@@ -138,7 +138,7 @@ The Pattaya HQ is the **only camp with the original ring, the original land, and
 
 ## Trainers Today
 
-The current coaching staff are former Sityodtong fighters and Kru Yodtong's direct students. Reviews repeatedly emphasize:
+The current coaching staff are former Sityodtong fighters and Kru Yodtong's direct students. Reviews repeatedly emphasise:
 
 - **Patience with beginners** — explicit and non-rushed technique instruction
 - **Attention to fundamentals** — focus on stance, balance, angles, ring craft rather than just conditioning
@@ -238,7 +238,7 @@ For students wanting more comfort, **plenty of hotels and condos in Naklua / Nor
 - **No pool, sauna, AC training hall, or resort amenities** (deliberate)
 - **English support varies by trainer** — most foundational instruction works fine in English, but nuanced corrections may require Thai or charades
 - **Open-air training** = hot, humid, exposed to weather (especially rough in March-May hot season)
-- **Basic accommodation** — not for travelers wanting hotel comfort
+- **Basic accommodation** — not for travellers wanting hotel comfort
 - **Limited online presence** for booking remotely — most arrangements happen on arrival or via WhatsApp
 - **Schedule rigidity** — only the standard morning/afternoon sessions; no specialty programs (no MMA, BJJ, or strength curriculum)
 - **No food on premises** — students walk to local Thai restaurants (a feature for some, a nuisance for others)
@@ -266,17 +266,17 @@ If you want **resort-style training with breakfast buffet**, go to Fairtex or Si
 - Anyone wanting to study under direct Yodtong descendants
 - European fighters tracing the Kaman/Dekkers tradition
 - MMA strikers tracing DellaGrotte's lineage
-- Travelers comfortable with basic accommodation and open-air training
+- Travellers comfortable with basic accommodation and open-air training
 - Budget-conscious students wanting world-class instruction
 
 ## Not Best For
 
 - Pure tourists on a 1-week passive holiday looking for resort vibes
-- Travelers who need AC, pool, breakfast buffet, spa
+- Travellers who need AC, pool, breakfast buffet, spa
 - Anyone uncomfortable with open-air, traditional Thai-camp facilities
 - Hot-season visitors with low heat tolerance (no AC training hall)
 - Multi-discipline athletes wanting BJJ/MMA/CrossFit on-site
-- Travelers who don't speak any English at all (some Thai-only senior trainers)
+- Travellers who don't speak any English at all (some Thai-only senior trainers)
 - Beginners who want a structured "level 1, level 2, level 3" curriculum rather than absorbed apprenticeship
 
 ## Quick Reference Card

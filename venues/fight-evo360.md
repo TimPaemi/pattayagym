@@ -34,7 +34,7 @@ sources:
 
 ## Overview
 
-Fight EVO360 is **a performance-structured Muay Thai gym on Thepprasit Road** that distinguishes itself from traditional Pattaya Muay Thai camps by **integrating modern strength & conditioning, performance nutrition, and structured athletic development with traditional Muay Thai instruction**. The gym positions itself with the explicit philosophy of **"evolving the athlete within every person ready to challenge their limits in the gym or in life"** — a more modern fitness-and-development orientation than the lineage-pure Thai camps (Sor Klinmee, Sityodtong, Petchrungruang, Sitpholek) that emphasize traditional Muay Thai progression.
+Fight EVO360 is **a performance-structured Muay Thai gym on Thepprasit Road** that distinguishes itself from traditional Pattaya Muay Thai camps by **integrating modern strength & conditioning, performance nutrition, and structured athletic development with traditional Muay Thai instruction**. The gym positions itself with the explicit philosophy of **"evolving the athlete within every person ready to challenge their limits in the gym or in life"** — a more modern fitness-and-development orientation than the lineage-pure Thai camps (Sor Klinmee, Sityodtong, Petchrungruang, Sitpholek) that emphasise traditional Muay Thai progression.
 
 The gym is located at **193/15 Moo 11, Thepprasit Road, Muang Pattaya, Bang Lamung District, Chonburi 20150** — placing it in **the Thepprasit corridor that connects central Pattaya, Jomtien, and East Pattaya**, accessible from multiple residential and tourist zones. Training operates **Mon-Sat with morning classes 08:00-10:00, evening group classes, and open gym sessions** — matching the morning + evening rhythm typical of serious Pattaya Muay Thai facilities.
 
@@ -217,7 +217,7 @@ Fight EVO360 is **mid-tier performance-oriented pricing** — meaningfully more 
 - **Athletes with sports science backgrounds** appreciating modern pedagogy
 - **English-speaking foreign students**
 - **Multi-discipline trainees** — MT + S&C + boxing
-- **Thepprasit corridor based** travelers and residents
+- **Thepprasit corridor based** travellers and residents
 
 ## Not Best For
 
@@ -225,7 +225,7 @@ Fight EVO360 is **mid-tier performance-oriented pricing** — meaningfully more 
 - **Pure budget seekers** — hostel-attached camps cheaper
 - **Resort luxury seekers** — try Silk, Fairtex, Kombat Group
 - **Family-camp atmosphere** seekers — try Sor Klinmee
-- **Walking Street based** travelers wanting walkable gyms
+- **Walking Street based** travellers wanting walkable gyms
 
 ## Quick Reference Card
 

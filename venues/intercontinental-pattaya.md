@@ -28,7 +28,7 @@ verified: 2026-04-29
 
 InterContinental Pattaya Resort is the **IHG luxury flagship** on Pratamnak Hill — perched between Pattaya Beach and Jomtien Beach with sweeping bay views, three outdoor pools, the **Amburaya Spa**, a 24-hour fitness centre, tennis courts, and a heritage that traces back to 1971 when the original Royal Cliff complex first put Pratamnak on Pattaya's luxury hospitality map.
 
-For travelers wanting a 5-star fitness + spa + pool day in a quieter, elevated, sea-view setting — and not the louder Beach Road Hilton or the resort-water-park Centara Mirage — InterContinental delivers a more refined, more residential luxury experience. Tennis players in particular have a strong reason to choose IC over its peers (more on this below).
+For travellers wanting a 5-star fitness + spa + pool day in a quieter, elevated, sea-view setting — and not the louder Beach Road Hilton or the resort-water-park Centara Mirage — InterContinental delivers a more refined, more residential luxury experience. Tennis players in particular have a strong reason to choose IC over its peers (more on this below).
 
 ## Position in Pattaya market
 
@@ -132,8 +132,8 @@ This is one of InterContinental's underrated draws. **Tennis courts** are availa
 
 - Powerlifters / serious heavy-iron trainees
 - Families wanting a water park (Centara Grand Mirage is the right choice)
-- Walking Street nightlife-adjacent travelers (IC is residential-quiet, intentionally)
-- Budget travelers — pricing is full 5-star
+- Walking Street nightlife-adjacent travellers (IC is residential-quiet, intentionally)
+- Budget travellers — pricing is full 5-star
 
 ## Quick reference card
 
@@ -154,4 +154,4 @@ This is one of InterContinental's underrated draws. **Tennis courts** are availa
 
 For overnight stays, book through ihg.com or major OTAs. For day-pass: call the resort and ask for the spa/fitness desk; quote "day-pass + spa" and ask what's currently available. For tennis: enquire about court hire and booking lead time separately. For Amburaya Spa: book directly through the spa, ideally 24–48 hours ahead on weekends.
 
-For travelers planning a Pratamnak Hill multi-venue day, pair InterContinental with **Royal Cliff Fitz Club** (members-only racquet/swim/fitness — but day-pass possible), **Pickleball Pattaya** (5 min away), and **Muscle Factory** (the heavy-iron counterpoint). The hill clusters luxury + serious training within 10 minutes of each other.
+For travellers planning a Pratamnak Hill multi-venue day, pair InterContinental with **Royal Cliff Fitz Club** (members-only racquet/swim/fitness — but day-pass possible), **Pickleball Pattaya** (5 min away), and **Muscle Factory** (the heavy-iron counterpoint). The hill clusters luxury + serious training within 10 minutes of each other.

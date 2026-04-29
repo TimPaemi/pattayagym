@@ -107,7 +107,7 @@ For Advanced Open Water+ divers:
 
 #### HTMS Khram
 
-- **74-meter WWII Royal Thai Navy LSM**
+- **74-metre WWII Royal Thai Navy LSM**
 - **Sunk November 2003** as artificial reef
 - **Deck at 18-22m**, hull to 30m
 - **Coral colonization** since 2003

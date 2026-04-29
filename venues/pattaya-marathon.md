@@ -37,7 +37,7 @@ sources:
 
 The **Amazing Thailand Pattaya Marathon** is **Pattaya's flagship annual running event** — a **World Athletics International Standard Road Race** held every **July along Pattaya Beach Road**, with **multiple distance categories from Fun Run through 10 km, 21 km Half Marathon, and the full 42.195 km Marathon**. First held in **1992**, the race has grown into **one of Thailand's largest road races** with **15,000+ total participants** across all distance categories at the 2024 event.
 
-The race is **organized by Thailand Tri-League** (under SportMaster), the country's most successful road running event promoter, and **certified to World Athletics International Standard** — meaning **distances are precisely measured, course is properly marshaled, timing is professional, and finishing times are valid for international qualifying purposes** (including Boston Marathon qualification standards). The course winds along the **iconic Pattaya Beach Road** with **the Gulf of Thailand on one side** for the duration of the run — making it visually distinctive among Asian marathons.
+The race is **organised by Thailand Tri-League** (under SportMaster), the country's most successful road running event promoter, and **certified to World Athletics International Standard** — meaning **distances are precisely measured, course is properly marshaled, timing is professional, and finishing times are valid for international qualifying purposes** (including Boston Marathon qualification standards). The course winds along the **iconic Pattaya Beach Road** with **the Gulf of Thailand on one side** for the duration of the run — making it visually distinctive among Asian marathons.
 
 For Pattaya residents who run, expat retirees with running backgrounds, visiting marathon tourists planning their Asian race calendar, and complete beginners wanting their first 10 km event, the Pattaya Marathon is **the city's must-do running calendar fixture**.
 
@@ -232,7 +232,7 @@ Many runners book **Pattaya hotels for the race weekend**:
 
 - **Cool-climate-only** runners not heat-acclimated
 - **Anti-mass-participation** preference — better for solo trail
-- **November-March visit** scheduled travelers — race is July only
+- **November-March visit** scheduled travellers — race is July only
 - **Walking-only** preference — Fun Run is the only walker-friendly option
 
 ## Quick Reference Card

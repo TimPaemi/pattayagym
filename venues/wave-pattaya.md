@@ -35,7 +35,7 @@ Wave Pattaya is **a multi-activity beach watersports operator covering the full 
 
 The operation runs from **Pattaya Beach** (north central) and **Jomtien Beach** (south, longer beach with more space for tow-sport operations). Each activity is **bookable individually or as bundled packages** — typical "all-day water sports adventure" packages combining parasailing + jet ski + banana boat in a single guided session.
 
-For travelers who want **the classic Thai beach activity experience** — parasailing photos with the Pattaya skyline, jet ski rides past Koh Larn, banana boat group laughs — **Wave Pattaya provides organized access to all of it under one operator**, with **safety equipment, English-speaking guides, and structured pricing** that mitigates some of the ad-hoc beach-vendor experience pitfalls.
+For travellers who want **the classic Thai beach activity experience** — parasailing photos with the Pattaya skyline, jet ski rides past Koh Larn, banana boat group laughs — **Wave Pattaya provides organised access to all of it under one operator**, with **safety equipment, English-speaking guides, and structured pricing** that mitigates some of the ad-hoc beach-vendor experience pitfalls.
 
 ## Position in the Pattaya Watersports Market
 
@@ -73,7 +73,7 @@ The marquee Pattaya beach activity:
 - **Safety gear** provided
 - **Professional guides** for first-timers
 - **CRITICAL CAUTION:** **The Pattaya jet-ski damage scam** has operated for years — operators claim pre-existing damage and demand high compensation
-- **Wave Pattaya's organized model** mitigates this scam risk vs. independent vendors
+- **Wave Pattaya's organised model** mitigates this scam risk vs. independent vendors
 - **Always inspect and photograph the jet ski** before riding regardless of operator
 
 ### Banana Boat

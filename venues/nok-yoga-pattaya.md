@@ -35,9 +35,9 @@ Nok Yoga Pattaya is **a Naklua-area yoga studio that distinguishes itself by ble
 - **Self-healing yoga** (therapeutic application focus)
 - **Conventional yoga sessions** for all levels
 
-The studio sits **at 571/32 Moo 5, Naklua 16/2, Pattaya-Naklua Road** — in the **Naklua area north of central Pattaya**, the quieter residential / Thai-resident-dominant strip. The **tranquil location near Jomtien Beach** for some sessions and the **digital-nomad-friendly flexible schedule** position Nok Yoga as a **peaceful wellness destination for travelers wanting integration of work-life balance with traditional Thai healing practices**.
+The studio sits **at 571/32 Moo 5, Naklua 16/2, Pattaya-Naklua Road** — in the **Naklua area north of central Pattaya**, the quieter residential / Thai-resident-dominant strip. The **tranquil location near Jomtien Beach** for some sessions and the **digital-nomad-friendly flexible schedule** position Nok Yoga as a **peaceful wellness destination for travellers wanting integration of work-life balance with traditional Thai healing practices**.
 
-For students curious about **how Thai indigenous traditions inform yoga practice** — and especially for travelers wanting yoga that feels **culturally located in Thailand** rather than imported wholesale from India or California — Nok Yoga is the authentic choice.
+For students curious about **how Thai indigenous traditions inform yoga practice** — and especially for travellers wanting yoga that feels **culturally located in Thailand** rather than imported wholesale from India or California — Nok Yoga is the authentic choice.
 
 ## Position in the Pattaya Yoga Market
 
@@ -66,7 +66,7 @@ Thailand has its own indigenous body-mind tradition that pre-dates the modern im
 - **"Dat Ton"** means self-stretching
 - **Originated in pre-modern Thai monastery culture**
 - **Visible at Wat Pho** in Bangkok — the famous traditional Thai massage temple has Reusi Dat Ton statues showing the postures
-- **Distinct from Indian yoga** — emphasizes self-massage, breath, gentle stretching, healing applications
+- **Distinct from Indian yoga** — emphasises self-massage, breath, gentle stretching, healing applications
 - **Has overlap with yoga asana** — many postures resemble yoga poses but with Thai twist
 
 ### Thai Yoga = Yoga + Thai Massage Body Knowledge
@@ -174,7 +174,7 @@ Pattaya yoga studio mid-tier pricing:
 - **Less fitness-intensity** than Yoga Haus
 - **Less wellness-spa** than Balance Yoga Studio
 - **Limited online schedule visibility** — direct contact required
-- **Naklua location** less convenient for central-Pattaya travelers
+- **Naklua location** less convenient for central-Pattaya travellers
 - **Smaller studio capacity** likely
 - **Marketing less mainstream** than commercial chains
 
@@ -193,7 +193,7 @@ Pattaya yoga studio mid-tier pricing:
 - **Lineage-purist Ashtanga** practitioners — go to Ashtanga Yoga Pattaya
 - **Hot yoga / fitness-yoga** seekers — go to Yoga Haus
 - **Premium wellness retreat** seekers — go to Silk-tier camps
-- **Walking Street based** travelers wanting walkable studios
+- **Walking Street based** travellers wanting walkable studios
 
 ## Quick Reference Card
 

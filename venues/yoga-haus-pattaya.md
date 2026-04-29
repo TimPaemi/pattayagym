@@ -28,7 +28,7 @@ Yoga Haus is **the most prominent hot yoga and fitness-oriented yoga studio in c
 
 The studio's two signature offerings are **Hot Yoga** (yoga practiced in a heated room, typically 35-40°C, derived from the Bikram method but often non-orthodox sequencing) and **Fit Ball** (resistance ball-based core and stability training that hybridizes yoga with fitness conditioning). Both are explicitly **fitness-focused rather than meditative-traditional**, which positions Yoga Haus alongside the city's commercial fitness gyms more than the spiritual yoga ashrams.
 
-For Pattaya residents and visitors who want **a yoga workout** rather than a yoga practice — who prioritize **sweat, intensity, and physical conditioning** alongside flexibility — Yoga Haus is the city's natural choice.
+For Pattaya residents and visitors who want **a yoga workout** rather than a yoga practice — who prioritise **sweat, intensity, and physical conditioning** alongside flexibility — Yoga Haus is the city's natural choice.
 
 ## Position in the Pattaya Yoga Market
 

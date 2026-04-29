@@ -42,7 +42,7 @@ Battle Conquer Gym holds a **unique position in the Pattaya Muay Thai market**: 
 
 The gym describes itself as **"old school, family-run, built on sweat, grit, and tradition"** — which sounds contradictory paired with the AC and ice plunge, but works in practice. The training intensity is real (120-minute classes with full Thai trainer attention, full curriculum from punches to clinching), the equipment is hardcore (free weights, resistance machines, full strength setup), and the recovery is professional (sauna for post-training muscle relaxation, ice plunge for muscle soreness reduction). It's the "**train like a fighter, recover like a pro athlete**" formula in a single facility.
 
-For travelers and Pattaya residents wanting **serious Muay Thai training without melting in the heat**, Battle Conquer is essentially the **only option in the market** that offers AC. The differentiator is real and the execution is well-reviewed.
+For travellers and Pattaya residents wanting **serious Muay Thai training without melting in the heat**, Battle Conquer is essentially the **only option in the market** that offers AC. The differentiator is real and the execution is well-reviewed.
 
 ## What Makes Battle Conquer Different
 
@@ -58,7 +58,7 @@ Battle Conquer made the explicit decision to **build their main Muay Thai traini
 - **Minus**: Some Thai-traditionalists view AC as compromising the cultural experience
 - **Minus**: Slightly higher operational costs reflected in pricing
 
-For travelers visiting in **March, April, or May** specifically, the AC alone is worth the small price premium. The hot season can otherwise make outdoor training a 2-hour exercise in dehydration and cardiovascular survival rather than technical Muay Thai.
+For travellers visiting in **March, April, or May** specifically, the AC alone is worth the small price premium. The hot season can otherwise make outdoor training a 2-hour exercise in dehydration and cardiovascular survival rather than technical Muay Thai.
 
 ### The Hardcore Weights Pairing
 
@@ -140,9 +140,9 @@ The 120-minute class length is **substantial** — most Thai gyms run 90-minute 
 
 ### Trainer Quality
 
-**Experienced fighter-trainers welcome all skill levels** in a **supportive, no-ego environment focused on real results**. English-speaking trainers are available — meaningful for travelers who don't speak Thai.
+**Experienced fighter-trainers welcome all skill levels** in a **supportive, no-ego environment focused on real results**. English-speaking trainers are available — meaningful for travellers who don't speak Thai.
 
-The "no-ego" culture is a deliberate positioning. Many Muay Thai gyms have intimidating cultures designed for serious fighters; Battle Conquer markets explicitly to a broader range including beginners, fitness travelers, and women, while maintaining genuine training depth.
+The "no-ego" culture is a deliberate positioning. Many Muay Thai gyms have intimidating cultures designed for serious fighters; Battle Conquer markets explicitly to a broader range including beginners, fitness travellers, and women, while maintaining genuine training depth.
 
 ## Pricing
 
@@ -156,7 +156,7 @@ Battle Conquer publishes pricing on its [official site](https://battleconquerpat
 - **2-Month Muay Thai Group Class:** unlimited group sessions for **60 consecutive days** with morning OR afternoon flexibility
 - **3-Month Muay Thai Group Class:** unlimited for **90 consecutive days**, choose morning or afternoon
 - **Private 1-on-1 training:** available
-- **Organized fight bookings** — they can arrange fight opportunities for visiting students
+- **Organised fight bookings** — they can arrange fight opportunities for visiting students
 
 ### All-Inclusive Retreat Packages
 
@@ -172,7 +172,7 @@ Battle Conquer also operates **all-inclusive Muay Thai beach holiday packages** 
 - **On-site dining or meal allowance**
 - **Some packages include excursions**
 
-This positions Battle Conquer as both **a daily-training gym for residents and walk-ins** and a **structured retreat destination for travelers** wanting the all-inclusive experience.
+This positions Battle Conquer as both **a daily-training gym for residents and walk-ins** and a **structured retreat destination for travellers** wanting the all-inclusive experience.
 
 ### Contact for Booking
 
@@ -186,15 +186,15 @@ This positions Battle Conquer as both **a daily-training gym for residents and w
 Battle Conquer has built a **strong online reputation** rooted in:
 
 - **AC differentiator** — repeatedly highlighted in positive reviews, especially during hot season
-- **Welcoming atmosphere** — "praised by travelers for authentic, welcoming atmosphere in a serene setting"
+- **Welcoming atmosphere** — "praised by travellers for authentic, welcoming atmosphere in a serene setting"
 - **Clean facility** — "facility is noted for its cleanliness"
-- **Helpful staff and organized excursions** — for retreat package guests
+- **Helpful staff and organised excursions** — for retreat package guests
 - **Morning yoga** included in some packages — popular wellness layer
 - **Afternoon wellness activities** — broadens beyond pure combat training
 - **Trainer quality** — experienced fighter-trainers, supportive culture
 - **Recovery infrastructure** (sauna + ice plunge) — repeatedly mentioned as a stand-out feature
 
-The gym's positioning of **modern facility + traditional training + wellness layer** attracts a slightly different demographic than the traditional Thai-camp purists — younger travelers, women, fitness-tourism visitors, and travelers wanting a polished experience without paying full Fairtex resort markup.
+The gym's positioning of **modern facility + traditional training + wellness layer** attracts a slightly different demographic than the traditional Thai-camp purists — younger travellers, women, fitness-tourism visitors, and travellers wanting a polished experience without paying full Fairtex resort markup.
 
 ## Position in the Pattaya Market
 
@@ -232,27 +232,27 @@ The gym's positioning of **modern facility + traditional training + wellness lay
 - **No on-site accommodation by default** (requires retreat package or external hotel)
 - **Mid-tier pricing** — not budget; not premium-resort either
 - **Newer reputation** vs. legacy camps with 60-year histories
-- **AC removes the "traditional" Thai-camp atmosphere** that some travelers seek
+- **AC removes the "traditional" Thai-camp atmosphere** that some travellers seek
 
 ## Reputation Summary
 
-Strong fit for **travelers staying near Pattaya Beach, hot-season visitors, fitness-and-wellness oriented students, beginners wanting a comfortable introduction, and serious lifters who want strength training paired with Muay Thai**. The AC + recovery infrastructure positioning is **genuinely unique in the Pattaya market** and the execution is well-reviewed across TripAdvisor, NowMuayThai, and retreat-booking platforms.
+Strong fit for **travellers staying near Pattaya Beach, hot-season visitors, fitness-and-wellness oriented students, beginners wanting a comfortable introduction, and serious lifters who want strength training paired with Muay Thai**. The AC + recovery infrastructure positioning is **genuinely unique in the Pattaya market** and the execution is well-reviewed across TripAdvisor, NowMuayThai, and retreat-booking platforms.
 
 ## Best For
 
-- **Travelers staying near Pattaya Beach** (walking distance)
+- **Travellers staying near Pattaya Beach** (walking distance)
 - **Hot-season visitors** (March-May)
 - **Strength-and-conditioning + Muay Thai cross-trainers**
-- **Flexible-schedule travelers** (no pre-booking needed)
+- **Flexible-schedule travellers** (no pre-booking needed)
 - **Beginners** wanting a welcoming, no-ego environment
-- **Fitness-retreat travelers** (all-inclusive packages with yoga/wellness)
+- **Fitness-retreat travellers** (all-inclusive packages with yoga/wellness)
 - **Returning Muay Thai visitors** wanting AC comfort
 
 ## Not Best For
 
 - **Old-school Thai authenticity purists** (try Sityodtong, Petchrungruang)
-- **Pure budget travelers** (cheaper camps available — Sor Klinmee, WKO)
-- **Travelers wanting on-site accommodation** (retreat packages exist but most use external hotels)
+- **Pure budget travellers** (cheaper camps available — Sor Klinmee, WKO)
+- **Travellers wanting on-site accommodation** (retreat packages exist but most use external hotels)
 - **Lineage purists** seeking 60-year-old camp pedigrees
 
 ## Quick Reference Card

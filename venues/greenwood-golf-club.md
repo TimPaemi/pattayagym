@@ -74,7 +74,7 @@ Thomson partnered with **Dennis Wolveridge** to design dozens of Asia-Pacific co
 - **Vietnamese major courses**
 - **Indonesian / Malaysian** projects
 
-The partnership style emphasizes:
+The partnership style emphasises:
 
 - **Working with natural terrain** rather than bulldozing flat
 - **Strategic playability** — multiple lines of attack
@@ -196,17 +196,17 @@ This is **dramatically cheaper than premium Pattaya courses** (Siam Country Club
 - **Repeat Pattaya golfers** who've played headline courses
 - **Value seekers** wanting quality at fair price
 - **Senior players** appreciating gentler routing
-- **Stay-and-play** travelers willing to base at Greenwood Resort
+- **Stay-and-play** travellers willing to base at Greenwood Resort
 - **Two-course-day** packagers (combine with Khao Kheow nearby)
 - **Walking-eligible** golfers (where allowed)
 
 ## Not Best For
 
-- **Time-pressed Pattaya travelers** wanting closer courses
+- **Time-pressed Pattaya travellers** wanting closer courses
 - **Premium-resort seekers** — Siam Country Club delivers spa/stay/golf
 - **Tournament-grade conditions** — Asian Tour-host courses better-maintained
 - **Coastal sea-view** preference — inland location
-- **Walking Street based** travelers — too far for casual round
+- **Walking Street based** travellers — too far for casual round
 
 ## Quick Reference Card
 

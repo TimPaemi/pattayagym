@@ -32,7 +32,7 @@ sources:
 
 Pattaya hosts **Thailand's most active expat cycling scene outside Bangkok** — a network of road and mountain bike clubs running **weekend group rides, training rides, mountain bike trails, and weekly social meetups**. The cycling community has grown significantly over the past decade, supported by **Pattaya's largely flat surrounding countryside, year-round riding weather, surprisingly quiet roads outside the city center, and the natural training grounds of Mabprachan Reservoir's perimeter loop and the hills around Khao Mai Kaew**.
 
-The cycling scene is **organized through multiple overlapping clubs** rather than a single dominant organization:
+The cycling scene is **organised through multiple overlapping clubs** rather than a single dominant organization:
 
 - **Cuore Masters Team Pattaya** — competitive road cycling training group
 - **Monkey Xtreme Bike Riders** — mixed Thai-foreign group, weekly rides
@@ -67,7 +67,7 @@ Cycling clubs occupy the **outdoor endurance / multi-club** niche.
 - **Mabprachan Reservoir loop** — 4 km perimeter, popular training circuit
 - **Quiet country roads** outside city center — Bang Saray, Phoenix Wong-Amat areas
 - **Affordable bike maintenance** — local shops cheap for repairs
-- **Cheap quality bikes** — Thailand has growing bike retail (Trek, Specialized, Giant)
+- **Cheap quality bikes** — Thailand has growing bike retail (Trek, Specialised, Giant)
 
 ### Best Riding Times
 
@@ -232,7 +232,7 @@ This is **dramatically cheaper than gym memberships** — cycling community is f
 - **Heat-sensitive** riders without early-morning availability
 - **Single-shot experience** seekers — these are commitment communities
 - **Premium-coached training** — peer-only instruction
-- **Walking Street based** travelers without transport to meet points
+- **Walking Street based** travellers without transport to meet points
 
 ## Quick Reference Card
 

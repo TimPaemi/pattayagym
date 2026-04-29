@@ -187,7 +187,7 @@ The Naklua branch's **22:00 close** is slightly earlier — likely reflecting di
 
 - **Mobile Pattaya residents** moving between Pratamnak / Central / Naklua
 - **Value-conscious gym goers** wanting commercial amenities at independent prices
-- **Pratamnak / Soi Buakhao / Naklua based** travelers
+- **Pratamnak / Soi Buakhao / Naklua based** travellers
 - **Long-stay expats** wanting affordable monthly memberships
 - **Beginner to intermediate** trainers
 - **AC comfort prioritizers**
@@ -196,7 +196,7 @@ The Naklua branch's **22:00 close** is slightly earlier — likely reflecting di
 ## Not Best For
 
 - **24/7 access seekers** — Fitness 7, Jetts better
-- **Walking Street based** travelers wanting walkable gyms (not directly on Beach Road)
+- **Walking Street based** travellers wanting walkable gyms (not directly on Beach Road)
 - **Combat sports trainees** — go to Muay Thai camps
 - **Premium luxury seekers** — go to FITZ Club
 - **East Pattaya / Darkside** based members — Castra better proximity

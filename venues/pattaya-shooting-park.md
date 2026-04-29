@@ -36,7 +36,7 @@ Pattaya Shooting Park is **Pattaya's largest outdoor shooting range** — a mult
 
 The range offers **firearms ranging from .22 LR (lightest, ideal for beginners) through .38 Special, 9mm, .45 ACP, and shotguns** — with **expert instructors guiding every shooter through safety protocols, stance, grip, and target acquisition**. **Free Pattaya hotel pickup is included in most packages**, making logistics simple for tourists who don't want to figure out transport to East Pattaya independently.
 
-For travelers wanting **a structured supervised firearms experience with multiple gun options**, and especially for **first-time shooters who appreciate the patient instruction this range is known for**, Pattaya Shooting Park is the city's flagship outdoor shooting venue alongside the indoor competitor **Dragon Shooting Club** (which has the largest indoor range in Thailand with 20+ shooting lanes).
+For travellers wanting **a structured supervised firearms experience with multiple gun options**, and especially for **first-time shooters who appreciate the patient instruction this range is known for**, Pattaya Shooting Park is the city's flagship outdoor shooting venue alongside the indoor competitor **Dragon Shooting Club** (which has the largest indoor range in Thailand with 20+ shooting lanes).
 
 ## Position in the Pattaya Shooting Range Market
 
@@ -96,7 +96,7 @@ For Pattaya tourists, **outdoor at Pattaya Shooting Park** is closer to **the ci
 - **Revolver classic caliber**
 - **.38 Special:** moderate recoil, simpler operation
 - **.357:** more powerful, heavier recoil
-- **Used in:** police service, sport shooting, self-defense
+- **Used in:** police service, sport shooting, self-defence
 
 #### .45 ACP
 
@@ -219,9 +219,9 @@ Free hotel pickup typically includes:
 
 ## Not Best For
 
-- **Strict-anti-firearm** travelers
+- **Strict-anti-firearm** travellers
 - **Children under 16**
-- **Pregnant or recovering travelers**
+- **Pregnant or recovering travellers**
 - **Walking Street walkable preference** — this requires transport
 - **Pure budget seekers** — single-shot tickets minimum ~฿1,200
 - **Indoor / AC comfort** seekers — try Dragon Shooting Club

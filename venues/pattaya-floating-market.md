@@ -25,7 +25,7 @@ mapsUrl: https://maps.google.com/?q=Pattaya+Floating+Market
 verified: 2026-04-29
 ---
 
-The Pattaya Floating Market is more than a market — it's a **cultural-and-sport-attraction park** organised across canals into four Thai regional zones (Northern, Central, Southern, North-Eastern), with live performance arenas spliced through. While it ranks as a tourist attraction first, it earns a place in this directory thanks to **Muay Talay** — Thailand's traditional "water boxing" sport — plus on-site rowing, amphibious boating, and a water zipline. For travelers wanting a Thai-cultural-sport combination day rather than a serious training session, this is one of Pattaya's signature stops.
+The Pattaya Floating Market is more than a market — it's a **cultural-and-sport-attraction park** organised across canals into four Thai regional zones (Northern, Central, Southern, North-Eastern), with live performance arenas spliced through. While it ranks as a tourist attraction first, it earns a place in this directory thanks to **Muay Talay** — Thailand's traditional "water boxing" sport — plus on-site rowing, amphibious boating, and a water zipline. For travellers wanting a Thai-cultural-sport combination day rather than a serious training session, this is one of Pattaya's signature stops.
 
 ## What Muay Talay actually is
 
@@ -50,7 +50,7 @@ For visitors, this is one of the very few places in Thailand where you can relia
 
 Pattaya has a few large-format **cultural attractions** that mix performance and activity — Nong Nooch Tropical Garden, Underwater World, Cartoon Network Amazone, Khao Chi Chan (Buddha Mountain). The Floating Market differentiates with its **canal infrastructure and Muay Talay** — no other Pattaya attraction reliably stages water boxing as a core daily show.
 
-For travelers planning a "cultural-sport day," the floating market pairs naturally with:
+For travellers planning a "cultural-sport day," the floating market pairs naturally with:
 
 - **Pattaya Kart Speedway / EasyKart** (Thepprasit, 5 min away) for adrenaline
 - **Khao Chi Chan / Buddha Mountain** (15 min south) for spiritual calm
@@ -92,7 +92,7 @@ Plan **2–3 hours** for the full visit if you want to catch a Muay Talay show +
 ## Not best for
 
 - Serious Muay Thai training/observation (the real ring is at MAX Stadium or Pattaya Boxing World)
-- Independent travelers wanting authentic markets (try Naklua morning markets)
+- Independent travellers wanting authentic markets (try Naklua morning markets)
 - Long-stay residents wanting daily-use venues — this is a once-or-twice-a-year visit
 - Anyone planning to spend 4+ hours — venue is sized for ~2-3 hours
 

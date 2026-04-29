@@ -31,7 +31,7 @@ sources:
 
 Pattaya Tennis Club is **a central-Pattaya outdoor tennis facility** providing **multi-court, floodlit, hard-surface tennis access** for Pattaya residents, expats, and visitors who want **a more accessible alternative to the premium covered courts at Greta Sport Club** or the **luxury hotel courts at FITZ Club**. The club operates as part of the **broader Pattaya tennis ecosystem** — alongside Pattaya Sports Club, Pattaya Tennis & Badminton Inter Club, Tara Tennis Club, Tos Tennis, and various hotel courts — all serving a Pattaya tennis-playing population that's grown steadily as expat numbers have increased.
 
-Unlike Greta's **6 covered ITF-rated Plexipave courts** or FITZ Club's **7 floodlit hard courts inside the Royal Cliff Beach Resort**, Pattaya Tennis Club operates at the **mid-tier accessible level**: **outdoor courts, evening floodlight play, weather-dependent scheduling, and modest pricing**. The club anchors the **central-Pattaya tennis scene** with **drop-in pickup play, member-led leagues, coaching for individuals and juniors, and equipment rental for travelers without their own racquets**.
+Unlike Greta's **6 covered ITF-rated Plexipave courts** or FITZ Club's **7 floodlit hard courts inside the Royal Cliff Beach Resort**, Pattaya Tennis Club operates at the **mid-tier accessible level**: **outdoor courts, evening floodlight play, weather-dependent scheduling, and modest pricing**. The club anchors the **central-Pattaya tennis scene** with **drop-in pickup play, member-led leagues, coaching for individuals and juniors, and equipment rental for travellers without their own racquets**.
 
 For Pattaya residents and visitors who want **tennis without the premium-club commitment** but with **better infrastructure than condo-shared single courts**, Pattaya Tennis Club fills the niche.
 
@@ -82,7 +82,7 @@ For **weather-independent year-round play**, **Greta's covered courts** are the 
 
 - **Court rental by the hour** — typical Thai tennis club model
 - **Pay-and-play** — no membership required
-- **Equipment rental** for travelers without racquets
+- **Equipment rental** for travellers without racquets
 - **Hourly rates** ~฿200-400 depending on time and demand
 
 ### Coaching
@@ -94,7 +94,7 @@ For **weather-independent year-round play**, **Greta's covered courts** are the 
 
 ### Social Play & Leagues
 
-- **Open hits / pickup sessions** typically organized by club regulars
+- **Open hits / pickup sessions** typically organised by club regulars
 - **Member-led leagues** — usually informal round-robin, occasional ranked
 - **Weekly mixed doubles** common at mid-tier Pattaya clubs
 - **Tournament participation** in regional Pattaya events
@@ -176,7 +176,7 @@ Whether Pattaya Tennis Club specifically offers pickleball — confirm at the cl
 - **Floodlit** for evening play
 - **Drop-in friendly** — no membership pressure
 - **Coaching available** — private and group
-- **Equipment rental** for travelers
+- **Equipment rental** for travellers
 - **Mid-tier pricing** — accessible vs. premium clubs
 - **Established Pattaya tennis community**
 - **Junior development programs**
@@ -200,7 +200,7 @@ Whether Pattaya Tennis Club specifically offers pickleball — confirm at the cl
 - **Mid-budget players** not wanting premium-club commitment
 - **Pickup-play seekers** wanting social tennis hits
 - **Junior players** in development programs
-- **Travelers without their own equipment** (rental available)
+- **Travellers without their own equipment** (rental available)
 
 ## Not Best For
 

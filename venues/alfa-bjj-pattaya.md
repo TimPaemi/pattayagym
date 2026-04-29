@@ -40,7 +40,7 @@ Pattaya BJJ training options now span:
 | **Rage Fight Academy** | Multi-discipline academy | BJJ-strong; Education Visa sponsor |
 | **Kombat Group Thailand** | All-inclusive resort + multi-discipline | Daily Gi + No-Gi with black belt instructor |
 
-ALFA's pure-BJJ position fits a specific student profile: someone who already trains BJJ seriously back home, or wants to commit to BJJ specifically rather than picking up the broader striking-and-grappling combat-sport curriculum. Most international BJJ travelers fit this — they already train at a single-discipline academy at home and want the same focused environment in Pattaya.
+ALFA's pure-BJJ position fits a specific student profile: someone who already trains BJJ seriously back home, or wants to commit to BJJ specifically rather than picking up the broader striking-and-grappling combat-sport curriculum. Most international BJJ travellers fit this — they already train at a single-discipline academy at home and want the same focused environment in Pattaya.
 
 ## Class structure
 
@@ -72,7 +72,7 @@ ALFA pricing fits the ฿฿ tier range. Confirm current rates by Facebook DM be
 - **Water bottle** — Pattaya humidity is real
 - **Slippers** — to walk to the mat without bringing outside dirt
 
-If you don't own a Gi yet and you're planning to commit, ALFA can typically advise where to buy one in Thailand — most BJJ travelers buy locally to save shipping.
+If you don't own a Gi yet and you're planning to commit, ALFA can typically advise where to buy one in Thailand — most BJJ travellers buy locally to save shipping.
 
 ## Pros
 
@@ -86,7 +86,7 @@ If you don't own a Gi yet and you're planning to commit, ALFA can typically advi
 
 ## Cons
 
-- **No formal website** — Facebook is the primary contact channel; some travelers prefer a polished site for verification
+- **No formal website** — Facebook is the primary contact channel; some travellers prefer a polished site for verification
 - **Smaller mat area** likely than multi-discipline mega-gyms (Fairtex, Venum)
 - **No striking / cross-training** — if you want a unified MT + BJJ schedule, multi-discipline is better
 - **Class times can shift seasonally** — verify before showing up
@@ -104,7 +104,7 @@ If you don't own a Gi yet and you're planning to commit, ALFA can typically advi
 
 - Mixed-martial-arts students who want striking + grappling in one place (try Venum, Rage, or Kombat)
 - Total combat-sports first-timers who don't yet know which art they prefer (multi-discipline is more flexible)
-- Travelers wanting full all-inclusive resort packages (Kombat Group is purpose-built for that)
+- Travellers wanting full all-inclusive resort packages (Kombat Group is purpose-built for that)
 - Heavy lifters who want strength + grappling combo (try Battle Conquer or Fairtex)
 
 ## Quick reference card
@@ -126,4 +126,4 @@ If you don't own a Gi yet and you're planning to commit, ALFA can typically advi
 
 The fastest path: message **AlfaBJJPattaya** on Facebook to confirm the current schedule, location, and drop-in policy. Most BJJ academies welcome visiting practitioners who are properly attired and know basic mat etiquette (bowing, no shoes on the mat, hygienic Gi/rashguard). For total beginners, ask about the next fundamentals class — that's the safest entry point to a new academy.
 
-For travelers planning a BJJ-focused Pattaya trip, ALFA pairs well with **Fairtex** (for the institutional Brazilian Jiu-Jitsu programme of the Fairtex worldwide network) or **Rage Fight Academy** (for sparring partners with broader cross-training experience). Most committed BJJ travelers spend a few weeks rotating between two or three academies to get exposure to different teaching styles and rolling partners.
+For travellers planning a BJJ-focused Pattaya trip, ALFA pairs well with **Fairtex** (for the institutional Brazilian Jiu-Jitsu programme of the Fairtex worldwide network) or **Rage Fight Academy** (for sparring partners with broader cross-training experience). Most committed BJJ travellers spend a few weeks rotating between two or three academies to get exposure to different teaching styles and rolling partners.

@@ -3,11 +3,11 @@ id: max-muay-thai-stadium
 name: MAX Muay Thai Stadium Pattaya
 category: muay-thai
 area: Sukhumvit Road — next to King Power Pattaya
-address: Sukhumvit Road, near Central Pattaya Road intersection, next to King Power Pattaya
-phone: ""
+address: 42/108 Moo 9, Sukhumvit Road, Nongprue, Bang Lamung, Chonburi 20150
+phone: "+66 80 471 6008"
 website: https://www.muaythaistadium.com/max-pattaya
 social: {}
-hours: Fights every night 19:45-20:45 (doors 18:45)
+hours: Nightly shows, usually 19:00 or 19:45 by date; doors around 18:45
 priceRange: ฿฿฿
 distinction: Pattaya's only Muay Thai stadium with daily fight events — organizer of MAX World Championships
 type: Muay Thai stadium / fight venue
@@ -16,7 +16,7 @@ fightsPerCard: 3 bouts (typically 3 bouts of 3 rounds each)
 hostedChampionships: MAX World Championships
 beginnerFriendly: true (spectator)
 languages: [English, Thai, Russian, Chinese]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.muaythaistadium.com/max-pattaya
   - https://thaiboxingpattaya.com/max-muay-thai-stadium
@@ -34,9 +34,9 @@ sources:
 
 ## Overview
 
-MAX Muay Thai Stadium Pattaya is **Pattaya's only Thai boxing venue with daily fight events** — a purpose-built Muay Thai stadium **on Sukhumvit Road next to King Power Pattaya** that has **hosted multiple MAX World Championships** and operates as both **a fight stadium and a Muay Thai promotion organization**. Where Pattaya's Muay Thai gyms (Fairtex, Sityodtong, Sor Klinmee, Petchrungruang, Sitpholek, Venum, Battle Conquer, Rambaa M16, etc.) deliver **training and trainer access**, MAX Muay Thai delivers **the spectator experience — watching world-class Muay Thai fights live in person, every single night of the year**.
+MAX Muay Thai Stadium Pattaya is **Pattaya's only Thai boxing venue with daily fight events** — a purpose-built Muay Thai stadium **on Sukhumvit Road next to King Power Pattaya** that has **hosted multiple MAX World Championships** and operates as both **a fight stadium and a Muay Thai promotion organisation**. Where Pattaya's Muay Thai gyms (Fairtex, Sityodtong, Sor Klinmee, Petchrungruang, Sitpholek, Venum, Battle Conquer, Rambaa M16, etc.) deliver **training and trainer access**, MAX Muay Thai delivers **the spectator experience — watching world-class Muay Thai fights live in person, every single night of the year**.
 
-The format is decisively crowd-friendly: **3 high-energy bouts per card**, doors open at 18:45, fights start 19:45 and conclude by 20:45 — a perfect ~2-hour entertainment slot for tourists who want to **experience real Muay Thai without needing to fly to Bangkok's Lumpinee or Rajadamnern stadiums**. The MAX brand is genuinely significant in modern Muay Thai — **credited for elevating the level of entertainment and modernizing presentation of the sport** in Thailand, with **shorter rounds, faster pace, more music, more lighting, and explicit tourist-friendly programming** vs. the older traditional stadium format.
+The format is decisively crowd-friendly: current public ticket listings show **nightly starts that vary by date, commonly 19:00 or 19:45**, with doors around 18:45 — a compact evening slot for tourists who want to **experience real Muay Thai without needing to fly to Bangkok's Lumpinee or Rajadamnern stadiums**. The MAX brand is genuinely significant in modern Muay Thai — **credited for elevating the level of entertainment and modernising presentation of the sport** in Thailand, with **shorter rounds, faster pace, more music, more lighting, and explicit tourist-friendly programming** vs. the older traditional stadium format.
 
 For Pattaya tourists wanting **the iconic Muay Thai live-fight experience**, MAX is genuinely the only credible option in the city. The combination of **daily availability, central Sukhumvit / King Power location, and modern entertainment-style production** makes it accessible in ways that traditional Bangkok stadiums (Rajadamnern Tuesdays/Thursdays/Saturdays only, Lumpinee Friday nights only) cannot match.
 
@@ -188,7 +188,7 @@ Indicative pricing (varies by event, season, fighter card):
 
 - **Don't yell instructions** at fighters in their language
 - **Don't take pictures during ritual Wai Khru** dance (respectful pause)
-- **Don't bet at this venue** — gambling is private, not stadium-organized
+- **Don't bet at this venue** — gambling is private, not stadium-organised
 - **Don't enter ring area** — staff-only
 
 ## Pros
@@ -228,7 +228,7 @@ Indicative pricing (varies by event, season, fighter card):
 ## Not Best For
 
 - **Muay Thai purists** — go to Bangkok Rajadamnern or Lumpinee
-- **Pure budget travelers** — local Thai venues cheaper
+- **Pure budget travellers** — local Thai venues cheaper
 - **Animal-fight sensitivities** — well, this is human combat sport
 - **Photophobia** — strobe and lighting effects throughout
 - **Fight-night specific scheduling** — call ahead during low season

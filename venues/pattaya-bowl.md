@@ -31,7 +31,7 @@ Pattaya Bowl is **a North Pattaya ten-pin bowling alley** at **463/78 M.9, Soi R
 
 Pattaya hosts **multiple bowling alleys** — including S.F. Strike Bowl, P.S. Bowl, Wave Bowl at Royal Jomtien Resort, and Pattaya Bowl. The market serves **a mix of Thai families (bowling is popular in Thai middle-class entertainment), tourist groups, expat residents, and birthday/group bookings**. Bowling is **a low-skill-floor activity** — anyone can participate regardless of fitness level — making it suitable for **mixed-age, mixed-ability group outings** (corporate, family, friends).
 
-For Pattaya travelers and residents wanting **late-night indoor recreation, group entertainment, weather-independent activity, or family bowling outings**, Pattaya Bowl delivers a straightforward bowling experience in **a North Pattaya / 2nd Road location** convenient to many central hotels and condos.
+For Pattaya travellers and residents wanting **late-night indoor recreation, group entertainment, weather-independent activity, or family bowling outings**, Pattaya Bowl delivers a straightforward bowling experience in **a North Pattaya / 2nd Road location** convenient to many central hotels and condos.
 
 ## Position in the Pattaya Bowling Market
 

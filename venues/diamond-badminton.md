@@ -142,7 +142,7 @@ Badminton is **meaningfully cheaper than tennis** in Pattaya due to:
 ## Best For
 
 - **South Pattaya residents** seeking badminton
-- **Pattaya 3rd Road area** based travelers
+- **Pattaya 3rd Road area** based travellers
 - **Thai badminton community**
 - **Chinese / Indonesian / Malaysian / Indian expats** appreciating badminton
 - **Year-round indoor sport** seekers

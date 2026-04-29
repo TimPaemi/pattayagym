@@ -30,9 +30,9 @@ sources:
 
 ## Overview
 
-Pattaya Park is **the original Pattaya beachfront tower-and-water-park complex** — opened in **1989 as the first and tallest beachfront tower in Pattaya**, combining **a water park with slides and pools, a private beach, an amusement park with roller coaster and rides, AND a 170-meter zip-line tower jump from the 56th floor of Pattaya Park Tower**. Located on **Soi 12 Thappraya Road at the South Pattaya / Jomtien border**, the complex predates Cartoon Network Amazone (2014) and Ramayana Water Park (2016) by decades — making it **Pattaya's foundational water-park-and-thrill destination** that established the model these newer parks built on.
+Pattaya Park is **the original Pattaya beachfront tower-and-water-park complex** — opened in **1989 as the first and tallest beachfront tower in Pattaya**, combining **a water park with slides and pools, a private beach, an amusement park with roller coaster and rides, AND a 170-metre zip-line tower jump from the 56th floor of Pattaya Park Tower**. Located on **Soi 12 Thappraya Road at the South Pattaya / Jomtien border**, the complex predates Cartoon Network Amazone (2014) and Ramayana Water Park (2016) by decades — making it **Pattaya's foundational water-park-and-thrill destination** that established the model these newer parks built on.
 
-The complex's **most iconic attraction is the Tower Jump** — a **170-meter zip line slide from the 56th floor** where riders are **strapped into a harness and slide down to ground level**. Despite the name "Tower Jump", riders aren't truly free-falling — they're attached to the zip line throughout — but the **adrenaline experience of stepping off the 56th-floor platform** delivers a **bucket-list-tier thrill** for those who want to challenge their fear of heights.
+The complex's **most iconic attraction is the Tower Jump** — a **170-metre zip line slide from the 56th floor** where riders are **strapped into a harness and slide down to ground level**. Despite the name "Tower Jump", riders aren't truly free-falling — they're attached to the zip line throughout — but the **adrenaline experience of stepping off the 56th-floor platform** delivers a **bucket-list-tier thrill** for those who want to challenge their fear of heights.
 
 For Pattaya families and tourists who want **a single-venue full-day experience combining water slides, beach time, amusement rides, AND a unique tower zip line** — and especially for **adrenaline seekers who want to slide off a 56th-floor tower** — Pattaya Park is genuinely unique in the city. The 1989 vintage means it's older and less polished than the newer water parks, but the **tower zip line cannot be replicated** by competitors.
 
@@ -81,7 +81,7 @@ For visitors comparing, **newer parks deliver more modern hardware**; **Pattaya 
 The Tower Jump is **the centerpiece thrill experience**:
 
 - **Located at Pattaya Park Tower** — the original 1989 building
-- **Slide from the 56th floor** — approximately **170 meters elevation**
+- **Slide from the 56th floor** — approximately **170 metres elevation**
 - **Zip line system** — riders strapped into harness, attached to cable
 - **Slide path** descends from tower to ground
 - **NOT free-falling** despite the "Jump" name

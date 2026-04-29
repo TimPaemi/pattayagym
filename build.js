@@ -1108,13 +1108,11 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
       <span>${escHtml(fm.name)}</span>
     </div>
 
-    <div class="venue-hero">
+      <div class="venue-hero">
       <div class="venue-hero-art" aria-hidden="true">${getCategoryArt(fm.category)}</div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">${escHtml(cat)}</span>
-        ${openStatus === 'open' ? '<span class="open-badge open-now">● Open now</span>' : ''}
-        ${openStatus === 'closed' ? '<span class="open-badge open-closed">● Closed now</span>' : ''}
-        <span class="meta-dot">•</span>
+${openStatus === 'open' ? '        <span class="open-badge open-now">● Open now</span>\n' : ''}${openStatus === 'closed' ? '        <span class="open-badge open-closed">● Closed now</span>\n' : ''}        <span class="meta-dot">•</span>
         <span class="reading-meta">📖 ${readingMin} min read</span>
         ${fm.verified ? `<span class="meta-dot">•</span><span class="reading-meta">Verified ${escHtml(fm.verified)}</span>` : ''}
       </div>

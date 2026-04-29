@@ -263,7 +263,7 @@ Repeatedly described in reviews as **"the real thing,"** **"an authentic Thai fa
 - **Women fighters following Sylvie's lineage**
 - **Foreign fighters wanting Khru Nu's solo morning attention**
 - **Italian and Russian-speaking students** (large existing community)
-- **Travelers prioritizing authenticity over comfort**
+- **Travellers prioritising authenticity over comfort**
 - **Anyone interested in deep technical immersion under family-camp culture**
 - **Students who want to train alongside actual Thai stadium-track kids**
 - **Budget-conscious serious students**
@@ -273,7 +273,7 @@ Repeatedly described in reviews as **"the real thing,"** **"an authentic Thai fa
 
 - **Tourist-style 1-week training holidays**
 - **Students who need strong English instruction**
-- **Travelers wanting modern fitness amenities**
+- **Travellers wanting modern fitness amenities**
 - **Anyone uncomfortable with small, traditional, family-owned training environments**
 - **Pure beginners who want a structured "level 1, level 2" curriculum** (Petchrungruang is absorbed apprenticeship, not curriculum)
 

@@ -33,11 +33,11 @@ sources:
 
 ## Overview
 
-Pattaya Panthers Rugby Football Club is **Pattaya's only rugby organization** — a **social rugby club playing both contact and touch rugby formats** that's most famous for **organizing the annual Pattaya Tens tournament held in May**. The Pattaya Tens has become **a fixture on the Asian rugby social tournament calendar**, attracting **Thai-based teams alongside international touring teams** (typically men's social rugby with the multi-day weekend format that defines social rugby tournaments globally).
+Pattaya Panthers Rugby Football Club is **Pattaya's only rugby organization** — a **social rugby club playing both contact and touch rugby formats** that's most famous for **organising the annual Pattaya Tens tournament held in May**. The Pattaya Tens has become **a fixture on the Asian rugby social tournament calendar**, attracting **Thai-based teams alongside international touring teams** (typically men's social rugby with the multi-day weekend format that defines social rugby tournaments globally).
 
 Rugby in Thailand is **niche but established** — the **Bangkok Rugby Union scene includes Southerners Sports Club, British Club Bangkok rugby, Bangkok Patana International School rugby, and various social clubs**. The **Bangkok International Rugby Sevens (founded 1995)** has grown to **16 international teams**, anchoring Thai rugby's competitive calendar. Pattaya Panthers fits into this ecosystem as **the resort-city's social-rugby anchor**, hosting the May Pattaya Tens that complements the Bangkok-based competitive tournaments.
 
-For Pattaya residents from rugby-playing nations (UK, Australia, NZ, South Africa, Argentina, France, Wales, Ireland, Pacific Islands) and **traveling rugby tourists** during the Pattaya Tens weekend, the Panthers are **the entry point for organized rugby in the city**. The club welcomes **both serious rugby players and total beginners** — touch rugby provides accessible entry without contact-tackle commitment.
+For Pattaya residents from rugby-playing nations (UK, Australia, NZ, South Africa, Argentina, France, Wales, Ireland, Pacific Islands) and **traveling rugby tourists** during the Pattaya Tens weekend, the Panthers are **the entry point for organised rugby in the city**. The club welcomes **both serious rugby players and total beginners** — touch rugby provides accessible entry without contact-tackle commitment.
 
 ## Position in the Pattaya Sport Clubs Market
 
@@ -112,7 +112,7 @@ The Pattaya Tens runs **annually in May**:
 
 ### Why It Attracts Tourists
 
-Social rugby tournaments globally attract **rugby-playing travelers** who plan vacations around tournaments:
+Social rugby tournaments globally attract **rugby-playing travellers** who plan vacations around tournaments:
 
 - **Hong Kong Sevens, Dubai Sevens, Singapore Sevens** — major scaled
 - **Bangkok International Rugby Sevens** — Thailand premier
@@ -200,7 +200,7 @@ Typical social rugby club pricing:
 - **British / Commonwealth expats** with rugby background
 - **University rugby alumni** wanting to keep playing
 - **Touch rugby enthusiasts** — accessible format
-- **Social-tournament travelers** during Pattaya Tens (May)
+- **Social-tournament travellers** during Pattaya Tens (May)
 - **Long-stay residents** seeking community
 - **Pacific Island / Argentine / French** expats with rugby DNA
 - **Total beginners** wanting touch rugby intro

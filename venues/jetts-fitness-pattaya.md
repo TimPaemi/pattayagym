@@ -35,9 +35,9 @@ sources:
 
 Jetts Fitness is **the leading 24/7 commercial fitness chain in Thailand**, operating multiple locations in Pattaya alongside its broader **Bangkok / Hua Hin / Phuket / Chiang Mai national network**. Originally **founded in Australia in 2007**, Jetts has expanded globally to **Thailand, the United Kingdom, the Netherlands, and New Zealand**, becoming one of the **most recognizable international fitness brands in Southeast Asia**.
 
-In Pattaya, Jetts operates from **at least two key locations** — **Little Walk Mall (off Pattaya 2nd Road)** and **Royal Garden Plaza (on Pattaya Beach Road)** — placing the chain conveniently within central Pattaya's main commercial corridors. The two defining brand features are **24/7 access** (the gyms literally never close) and **no lock-in contracts** (month-to-month memberships), making Jetts a natural fit for the **traveler/expat demographic** who can't commit to long-term Thai gym contracts.
+In Pattaya, Jetts operates from **at least two key locations** — **Little Walk Mall (off Pattaya 2nd Road)** and **Royal Garden Plaza (on Pattaya Beach Road)** — placing the chain conveniently within central Pattaya's main commercial corridors. The two defining brand features are **24/7 access** (the gyms literally never close) and **no lock-in contracts** (month-to-month memberships), making Jetts a natural fit for the **traveller/expat demographic** who can't commit to long-term Thai gym contracts.
 
-For travelers, working remote nomads, condo-dwellers, and short-stay residents who want a **familiar Western-style commercial gym experience with predictable equipment quality**, Jetts is the most accessible, least friction option in the Pattaya fitness scene.
+For travellers, working remote nomads, condo-dwellers, and short-stay residents who want a **familiar Western-style commercial gym experience with predictable equipment quality**, Jetts is the most accessible, least friction option in the Pattaya fitness scene.
 
 ## Position in the Pattaya Fitness Market
 
@@ -73,7 +73,7 @@ Jetts was **founded in Brisbane, Australia in 2007** by **Brendon Levenson and C
 - **Group training (GroupX) classes** — included in membership
 - **Global reciprocal access** — members get access to Jetts clubs worldwide while traveling
 
-This last feature is **uniquely valuable for international travelers** — a Jetts member from Sydney can walk into Jetts Pattaya without paying day-pass fees.
+This last feature is **uniquely valuable for international travellers** — a Jetts member from Sydney can walk into Jetts Pattaya without paying day-pass fees.
 
 ## Pattaya Locations
 
@@ -152,7 +152,7 @@ The Les Mills program family is **internationally licensed** and consistent acro
 
 ### Day Pass
 
-- **~฿500 day pass** for non-members and travelers
+- **~฿500 day pass** for non-members and travellers
 - **No commitment** — pay and use single visit
 
 ### Membership Tiers (indicative 2026)
@@ -178,7 +178,7 @@ This pricing positions Jetts in the **mid-tier** of Pattaya gyms — meaningfull
 The 24/7 model is **especially valued by**:
 
 - **Shift workers** — chefs, hospitality staff, expat workers with non-9-to-5 schedules
-- **Jet-lagged travelers** — early-morning workouts post-arrival
+- **Jet-lagged travellers** — early-morning workouts post-arrival
 - **Insomniac trainers** — late-night sessions
 - **Hot-season hours-shifters** — early AM or late PM to avoid heat
 
@@ -192,7 +192,7 @@ The 24/7 model is **especially valued by**:
 - **GroupX classes** included (Les Mills family)
 - **Modern brand-name machines** (Life Fitness, Matrix, etc.)
 - **Convenient mall locations** in central Pattaya
-- **Day pass option** for travelers
+- **Day pass option** for travellers
 - **English-speaking staff**
 - **Reliable cleanliness standards**
 
@@ -208,7 +208,7 @@ The 24/7 model is **especially valued by**:
 
 ## Best For
 
-- **Travelers and short-stay visitors** wanting day passes
+- **Travellers and short-stay visitors** wanting day passes
 - **International Jetts members** from other countries
 - **Working expats** in central Pattaya
 - **Mall-shoppers** who want gym access between errands

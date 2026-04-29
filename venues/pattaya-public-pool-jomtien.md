@@ -28,7 +28,7 @@ The Jomtien Public Swimming Pool is **the second of Pattaya's two municipal publ
 
 Like the Naklua public pool, the Jomtien public pool operates on **standard Thai municipal pool model**: **basic infrastructure, low entry fees, lifeguard supervision, locker rooms with showers, and chlorinated water maintained to public health standards**. The pricing is the same exceptional value as Naklua's pool — typically **฿20-100 per visit** depending on resident status and age — making it **the most affordable formal swimming access in south Pattaya**.
 
-For Jomtien Beach residents (especially those at Baan Suan Lalana, Jomtien condos, View Talay developments), South Pattaya residents, and budget-conscious travelers staying in Jomtien hotels, the public pool serves daily lap swimming, family recreation, and casual cooling-off needs at Thai community pricing.
+For Jomtien Beach residents (especially those at Baan Suan Lalana, Jomtien condos, View Talay developments), South Pattaya residents, and budget-conscious travellers staying in Jomtien hotels, the public pool serves daily lap swimming, family recreation, and casual cooling-off needs at Thai community pricing.
 
 ## Position in the Pattaya Swimming Market
 
@@ -102,7 +102,7 @@ Standard Thai municipal pool features:
 
 ### Layout
 
-- **25-meter or 50-meter lap pool** — typical public pool sizes
+- **25-metre or 50-metre lap pool** — typical public pool sizes
 - **Lap lane markings** for fitness swimming
 - **Shallow + deep ends**
 - **Recreational area** for casual swimming
@@ -210,7 +210,7 @@ This is **dramatically cheaper than any private pool option** in Pattaya. A dail
 - **Premium swim experience** seekers
 - **Swim coaching seekers** — First Serve Sports Club
 - **Iconic photo-op pools** — Hard Rock delivers
-- **Walking Street based** travelers
+- **Walking Street based** travellers
 
 ## Quick Reference Card
 

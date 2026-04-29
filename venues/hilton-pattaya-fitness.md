@@ -36,7 +36,7 @@ sources:
 
 Hilton Pattaya is **a 5-star international flagship hotel** in central Pattaya whose **integrated wellness facilities — 24-hour fitness center, 16th-floor outdoor infinity pool with panoramic Gulf of Thailand views, and the multi-award-winning eforea Spa** — make it **one of Pattaya's premium hotel-fitness destinations**. The hotel is **adjacent to Central Festival Pattaya Beach Mall** on Beach Road, putting it **at the heart of central Pattaya** with the kind of accessibility that hotel-attached fitness facilities in less-central locations cannot match.
 
-The **24-hour fitness center** distinguishes Hilton from most Pattaya hotel gyms (which typically operate 06:00-22:00). For **shift-working expats, jet-lagged travelers, late-night fitness enthusiasts, and pre-dawn early risers**, the **24/7 access at a 5-star tier** is genuinely meaningful — most options at this hour-tier are commercial chains (Jetts, Fitness 7) or hardcore independents (Muscle Factory). Hilton delivers **24/7 fitness inside a 5-star hotel context** with the **service standards, hygiene, and amenity polish** that comes with the Hilton international brand.
+The **24-hour fitness center** distinguishes Hilton from most Pattaya hotel gyms (which typically operate 06:00-22:00). For **shift-working expats, jet-lagged travellers, late-night fitness enthusiasts, and pre-dawn early risers**, the **24/7 access at a 5-star tier** is genuinely meaningful — most options at this hour-tier are commercial chains (Jetts, Fitness 7) or hardcore independents (Muscle Factory). Hilton delivers **24/7 fitness inside a 5-star hotel context** with the **service standards, hygiene, and amenity polish** that comes with the Hilton international brand.
 
 The **16th-floor outdoor infinity pool with panoramic views** is **a Pattaya landmark** in itself — featured in countless travel photos, attracting non-guests via day-pass programs, and providing **the kind of elevated-pool experience** that the Sky Aquarium Pool at Royal Cliff Hotels Group (FITZ Club's parent) competes with at the absolute Pattaya premium tier.
 
@@ -207,10 +207,10 @@ This **central-density location** is the most-walkable of any premium Pattaya 5-
 - **Hilton international brand** loyalists
 - **Hilton Honors** members maximizing benefits
 - **24/7 access seekers** at 5-star tier
-- **Central Pattaya based** travelers wanting walkable luxury
+- **Central Pattaya based** travellers wanting walkable luxury
 - **Day-pass tourists** wanting iconic 16th-floor pool experience
 - **Spa-day visitors** with eforea Spa booking
-- **Business travelers** with central hotel needs
+- **Business travellers** with central hotel needs
 - **Couples** wanting integrated wellness-and-luxury
 
 ## Not Best For

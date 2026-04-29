@@ -35,7 +35,7 @@ Pattaya Scuba Adventures is **a PADI dive center serving the Pattaya near-island
 
 Pattaya's near-island diving offers **a sheltered, beginner-friendly entry point** to Thai scuba diving — with **moderate visibility, calm currents, and reefs at recreational depths (5-18m)** — making it different in character from the **deeper, more current-driven, more famous Andaman Sea sites** (Phuket, Similan Islands, Koh Tao). Pattaya near-island diving is **not where you go for record-setting visibility or whale shark encounters** — it's where you go for **convenient, repeatable, training-ready diving from a base where you can also enjoy nightlife, shopping, and beach life**.
 
-For travelers who want to **try scuba in Pattaya** or **maintain dive certification with regular fun dives**, Pattaya Scuba Adventures provides accessible, mid-tier service at the standard PADI dive shop quality level.
+For travellers who want to **try scuba in Pattaya** or **maintain dive certification with regular fun dives**, Pattaya Scuba Adventures provides accessible, mid-tier service at the standard PADI dive shop quality level.
 
 ## Position in the Pattaya Dive Market
 

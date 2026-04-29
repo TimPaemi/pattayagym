@@ -93,7 +93,7 @@ Various scattered courts.
 - **Casual / fun:** anyone can play, no prior experience needed
 - **Intermediate:** some skill expected, played 2v2 or 4v4
 - **Competitive:** skilled players, 2v2 sand format, decent serves and spikes
-- **Tournaments:** organized via Instagram and Facebook
+- **Tournaments:** organised via Instagram and Facebook
 
 ## Beach Volleyball Specifics
 
@@ -113,7 +113,7 @@ Various scattered courts.
 - **Lifestyle appeal** — beach + sport combination
 - **Doubles social** — 2v2 format is intense and conversational
 - **Year-round** in tropical destinations
-- **No specialized equipment** — just sand and net
+- **No specialised equipment** — just sand and net
 
 ## Pricing
 
@@ -124,7 +124,7 @@ Various scattered courts.
 - **Net + lines:** community-installed
 - **Tournaments:** modest entry fees ($5-20) for formal events
 
-This is **the cheapest organized sport** in Pattaya alongside running with the Hash and pétanque.
+This is **the cheapest organised sport** in Pattaya alongside running with the Hash and pétanque.
 
 ## Equipment Needed
 
@@ -179,7 +179,7 @@ This is **the cheapest organized sport** in Pattaya alongside running with the H
 
 - **Outdoor only** — weather and sun-dependent
 - **Hot sand midday** — restricts playing windows
-- **Self-organized** — schedule changes via social media
+- **Self-organised** — schedule changes via social media
 - **No formal coaching** — peer instruction only
 - **Tournament rare** — primarily casual play
 - **Bring own ball** ideally
@@ -188,7 +188,7 @@ This is **the cheapest organized sport** in Pattaya alongside running with the H
 
 ## Best For
 
-- **Beach-staying travelers** wanting active beach time
+- **Beach-staying travellers** wanting active beach time
 - **International visitors** familiar with beach volleyball
 - **Pattaya residents** wanting outdoor community
 - **Mixed-skill social** play preference

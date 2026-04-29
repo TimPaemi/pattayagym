@@ -29,9 +29,9 @@ sources:
 
 ## Overview
 
-Play Padel Pattaya is **the first dedicated padel facility in Pattaya AND the first indoor padel courts in all of Thailand** — a genuinely pioneering venue for the world's fastest-growing racquet sport. Located on **Kasetsin Soi 3 in Pratumnak**, the facility features **6 air-conditioning units per court and a 11.5-meter high roof**, providing **fully climate-controlled play regardless of outside weather**. Padel — a hybrid of tennis and squash played in glass-walled courts with a perforated paddle — has exploded globally over the past decade (estimated 30M+ players worldwide as of 2025), and Play Padel brings that boom to Pattaya in a first-mover position.
+Play Padel Pattaya is **the first dedicated padel facility in Pattaya AND the first indoor padel courts in all of Thailand** — a genuinely pioneering venue for the world's fastest-growing racquet sport. Located on **Kasetsin Soi 3 in Pratumnak**, the facility features **6 air-conditioning units per court and a 11.5-metre high roof**, providing **fully climate-controlled play regardless of outside weather**. Padel — a hybrid of tennis and squash played in glass-walled courts with a perforated paddle — has exploded globally over the past decade (estimated 30M+ players worldwide as of 2025), and Play Padel brings that boom to Pattaya in a first-mover position.
 
-For travelers and Pattaya residents wanting **the year-round comfort of indoor AC padel** in Thailand's climate, Play Padel is essentially the only option in Pattaya. The competition (Prime Padel Pattaya, Pattaya Padel Club) is more recent and operates differently — Play Padel's **first-mover + climate-controlled** combination is its core differentiator.
+For travellers and Pattaya residents wanting **the year-round comfort of indoor AC padel** in Thailand's climate, Play Padel is essentially the only option in Pattaya. The competition (Prime Padel Pattaya, Pattaya Padel Club) is more recent and operates differently — Play Padel's **first-mover + climate-controlled** combination is its core differentiator.
 
 ## Why Padel — and Why First in Pattaya Matters
 
@@ -57,7 +57,7 @@ Play Padel's facility specs reflect serious investment:
 ### Per Court
 
 - **6 AC units** per court — extraordinary cooling capacity
-- **11.5 meter high roof** — meets international padel ceiling height standards (no obstruction for high lobs and overhead shots)
+- **11.5 metre high roof** — meets international padel ceiling height standards (no obstruction for high lobs and overhead shots)
 - **Fully indoor and climate-controlled** — playable regardless of outside conditions
 - **Glass walls** — international padel standard
 - **Synthetic turf surface** — proper padel court surface
@@ -150,7 +150,7 @@ Play Padel is the **dedicated padel destination** in Pattaya. Players seeking pa
 ## Not Best For
 
 - **Pure tennis or squash players** — single-sport facility
-- **Travelers without transport** to Pratumnak
+- **Travellers without transport** to Pratumnak
 - **Pure budget players** — premium pricing reflects facility investment
 - **Solo players** (padel is doubles-dominant; need 3 partners)
 

@@ -27,7 +27,7 @@ verified: 2026-04-29
 
 Holiday Inn Pattaya is the **IHG mid-luxury Beach Road sister** to the upscale InterContinental Pattaya Resort up on Pratamnak Hill. Where InterContinental commands the hilltop, Holiday Inn commands the **beachfront** — directly opposite Pattaya Beach with two-tower architecture giving most rooms a sea view and two **infinity pools** suspended high above the boardwalk.
 
-For families, mid-budget travelers, and weekenders who want **central beachfront position + reliable IHG-grade fitness/spa stack** without the full ฿฿฿฿ premium of a 5-star hotel, Holiday Inn Pattaya is one of the strongest pure-value picks in the city.
+For families, mid-budget travellers, and weekenders who want **central beachfront position + reliable IHG-grade fitness/spa stack** without the full ฿฿฿฿ premium of a 5-star hotel, Holiday Inn Pattaya is one of the strongest pure-value picks in the city.
 
 ## Position in Pattaya market
 
@@ -108,7 +108,7 @@ Holiday Inn Pattaya is **explicitly family-positioned** in Pattaya's hotel marke
 - **Pool hours 06:00–20:00** — not 24/7 like the 5-stars
 - **Beach Road traffic noise** in lower-floor rooms
 - **No separate adult-only pool** — Bay Tower and Executive pools both accept kids
-- **Fitness equipment is mid-spec** — fine for most travelers, not for serious lifters
+- **Fitness equipment is mid-spec** — fine for most travellers, not for serious lifters
 - **Not as quiet as Pratamnak InterContinental** — central tourist-zone setting
 - **Day-pass culture less established** than Hilton or InterContinental
 
@@ -118,7 +118,7 @@ Holiday Inn Pattaya is **explicitly family-positioned** in Pattaya's hotel marke
 - Mid-budget IHG loyalists
 - Beach Road central preference (walking distance to everything)
 - Casual swimmers wanting infinity-pool experience
-- Travelers wanting a fitness centre with actual daylight + view
+- Travellers wanting a fitness centre with actual daylight + view
 - Spa visitors looking for the mid-tier Tea Tree experience over 5-star pricing
 
 ## Not best for
@@ -149,4 +149,4 @@ Holiday Inn Pattaya is **explicitly family-positioned** in Pattaya's hotel marke
 
 For overnight stays, book through ihg.com or major OTAs. For day-pass: call +66 38 725 555 — Holiday Inn's day-pass programme is less established than the 5-star tier but spa-only bookings are typically welcomed. Free underground parking for self-drivers.
 
-For travelers planning a Beach Road central day with multiple stops, pair Holiday Inn with **Hilton Pattaya** (3 min walk south for the 16th-floor infinity pool day-pass), **Hard Rock pool** (3 min walk for the largest free-form pool in SE Asia), and **Pattaya Beach** itself (across the road). Central Festival Mall is 5 min walk for shopping/F&B between sessions.
+For travellers planning a Beach Road central day with multiple stops, pair Holiday Inn with **Hilton Pattaya** (3 min walk south for the 16th-floor infinity pool day-pass), **Hard Rock pool** (3 min walk for the largest free-form pool in SE Asia), and **Pattaya Beach** itself (across the road). Central Festival Mall is 5 min walk for shopping/F&B between sessions.

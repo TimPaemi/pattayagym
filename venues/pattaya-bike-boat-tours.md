@@ -28,7 +28,7 @@ verified: 2026-04-29
 
 Pattaya's tourist economy is dominated by Walking Street energy, beach jet skis, and shopping malls — most visitors leave without seeing the real Pattaya hinterland: rural Thai villages, rubber and pineapple plantations, fishing communities, and the quieter back roads of Bang Lamung. **Pattaya Bike and Boat Tours** is the operator that has built its identity around taking small groups out of that tourist bubble and into the surrounding countryside on a bicycle.
 
-Owner-operated and based on **Pattaya-Naklua Road between Soi 18 and 18/1**, the company runs **guided bicycle tours on quiet roads** that most tour operators never touch, plus optional **boat extensions** that pair cycling with sea-side village visits or quieter coastal coves. For active travelers wanting to **actually see Thailand** during their Pattaya trip — not just consume Pattaya's nightlife and beach — this is one of the strongest adventure-tourism picks in the city.
+Owner-operated and based on **Pattaya-Naklua Road between Soi 18 and 18/1**, the company runs **guided bicycle tours on quiet roads** that most tour operators never touch, plus optional **boat extensions** that pair cycling with sea-side village visits or quieter coastal coves. For active travellers wanting to **actually see Thailand** during their Pattaya trip — not just consume Pattaya's nightlife and beach — this is one of the strongest adventure-tourism picks in the city.
 
 ## Position in Pattaya market
 
@@ -91,10 +91,10 @@ Beyond guided tours, the company runs a bike rental side — useful for visitors
 
 ## Best for
 
-- Active travelers wanting to see real rural Thailand from a bike
+- Active travellers wanting to see real rural Thailand from a bike
 - First-time Pattaya visitors who want a non-mainstream day
 - Couples or small groups wanting a curated outdoor experience
-- Travelers nervous about cycling solo on Thai roads
+- Travellers nervous about cycling solo on Thai roads
 - Photographers — village + boat + countryside content
 - Cyclists wanting a "rest day" pace ride during a longer Thai trip
 
@@ -102,7 +102,7 @@ Beyond guided tours, the company runs a bike rental side — useful for visitors
 
 - Competitive cyclists wanting Strava-segment hammer rides (try cycling clubs instead)
 - DIY explorers who already know Thai roads (rent solo from Venture Bike Hire)
-- Walking Street nightlife travelers — this is a daytime activity
+- Walking Street nightlife travellers — this is a daytime activity
 - Total cycling beginners on hilly routes — verify route difficulty matches your level
 
 ## Quick reference card
@@ -127,4 +127,4 @@ The fastest path: book through their **website** (pattayabikeandboattours.com) o
 
 Wear comfortable cycling shorts (or sturdy regular shorts), lightweight breathable shirt, real trainers (not flip-flops), sunscreen. Bring sunglasses and a water bottle (refills provided). Cash for tips and any extras at the lunch stop.
 
-For travelers planning a multi-active day, pair the morning bike-and-boat tour with an afternoon at **Wong Amat Beach** (5 min from the Naklua office) for swimming, or with the **Sanctuary of Truth** if your tour doesn't already include it.
+For travellers planning a multi-active day, pair the morning bike-and-boat tour with an afternoon at **Wong Amat Beach** (5 min from the Naklua office) for swimming, or with the **Sanctuary of Truth** if your tour doesn't already include it.

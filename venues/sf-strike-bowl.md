@@ -198,7 +198,7 @@ This is **dramatically cheaper than Western bowling** — UK / US bowling alleys
 
 ## Best For
 
-- **Central Pattaya based** travelers wanting walkable bowling
+- **Central Pattaya based** travellers wanting walkable bowling
 - **Family group entertainment** — kids' bumpers + parent break
 - **Friend groups** of 4-8
 - **Birthday parties** with VIP lane booking

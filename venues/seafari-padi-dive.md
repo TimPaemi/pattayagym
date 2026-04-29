@@ -39,7 +39,7 @@ Seafari is the **oldest scuba diving operation in Pattaya** and one of the **fir
 
 Course pricing starts at **฿7,500 for entry-level certifications** and ranges up to **฿20,200** for advanced and professional-level training. A current promotion bundles **PADI Open Water + 50% off Advanced Course** — meaningful savings for divers planning to certify through both levels.
 
-For travelers wanting **the longest pedigree, deepest institutional knowledge, and PADI 5-Star IDC service standards** in Pattaya, Seafari is one of two top choices (alongside Pattaya Dive Centre on Beach Road). Different visitors prefer different operators — Seafari for its historical legacy and IDC tier; Pattaya Dive Centre for its CDC tier and Beach Road frontage.
+For travellers wanting **the longest pedigree, deepest institutional knowledge, and PADI 5-Star IDC service standards** in Pattaya, Seafari is one of two top choices (alongside Pattaya Dive Centre on Beach Road). Different visitors prefer different operators — Seafari for its historical legacy and IDC tier; Pattaya Dive Centre for its CDC tier and Beach Road frontage.
 
 ## History — Bill Burbridge & The Birth of Pattaya Diving
 
@@ -160,13 +160,13 @@ The wrecks are covered in **soft corals, sponges, sea fans** and host **batfish,
 - **Instructor-track candidates** needing IDC training
 - **Certified divers** wanting daily boat trip access
 - **Heritage-conscious divers** wanting to dive with Pattaya's first operator
-- **English-speaking visitors** prioritizing British-owned operation
+- **English-speaking visitors** prioritising British-owned operation
 
 ## Not Best For
 
 - **Andaman-coast quality visibility seekers** (Phuket, Krabi, Similan offer better viz)
 - **Pure budget divers** — cheaper Jomtien operators exist
-- **Travelers staying outside central Pattaya** without convenient transport
+- **Travellers staying outside central Pattaya** without convenient transport
 
 ## Quick Reference Card
 

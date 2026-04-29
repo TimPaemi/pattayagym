@@ -35,7 +35,7 @@ sources:
 
 ## Overview
 
-Fitness 7 Pattaya is **a 2,000+ square meter, 24-hour central Pattaya gym** located **at The Avenue Pattaya — 500 meters from Mike Shopping Mall, on the next road parallel to Beach Road**. The location alone is meaningful: this is **one of the most central walkable gym locations in Pattaya**, accessible from **Walking Street, Soi Buakhao, Beach Road, and 2nd Road hotels** within a 5-15 minute walk. Fitness 7 belongs to **Fitness7 Thailand**, a regional Thai fitness brand with multiple branches across the country.
+Fitness 7 Pattaya is **a 2,000+ square metre, 24-hour central Pattaya gym** located **at The Avenue Pattaya — 500 metres from Mike Shopping Mall, on the next road parallel to Beach Road**. The location alone is meaningful: this is **one of the most central walkable gym locations in Pattaya**, accessible from **Walking Street, Soi Buakhao, Beach Road, and 2nd Road hotels** within a 5-15 minute walk. Fitness 7 belongs to **Fitness7 Thailand**, a regional Thai fitness brand with multiple branches across the country.
 
 The 2,000+ sqm floor space puts Fitness 7 in **the larger commercial gym tier in Pattaya** — meaningfully bigger than most chain gym locations (Jetts, True Fitness) and competing in scale only with **Muscle Factory** on Pratamnak Hill ("the largest gym in Pattaya"). The equipment and amenity mix is aggressive: **cardio machines, weighted machines, free weights, a boxing ring, and dedicated functional training areas** — meaning students can do **bodybuilding, cardio, free-weight strength, boxing-style cross-training, and functional / kettlebell / sled work** all in one facility.
 
@@ -62,7 +62,7 @@ Fitness 7's specific advantage: **scale + 24/7 hours + central walkable location
 
 **The Avenue Pattaya** is a **commercial / lifestyle complex on Pattaya 2nd Road** — the road **parallel to Beach Road**:
 
-- **500 meters from Mike Shopping Mall** — a major central Pattaya landmark
+- **500 metres from Mike Shopping Mall** — a major central Pattaya landmark
 - **5-10 minute walk from Walking Street** north end
 - **5 minute walk from Beach Road** mid-section
 - **Walking Street, Soi Buakhao, Soi LK Metro** all within easy access
@@ -84,7 +84,7 @@ This makes Fitness 7 **the most walkable serious gym for tourists and visitors**
 ### Who Uses 24/7
 
 - **Shift workers** — chefs, hospitality, security, cab drivers
-- **Jet-lagged travelers** — first-night arrival workouts
+- **Jet-lagged travellers** — first-night arrival workouts
 - **Insomniacs** — late-night sessions
 - **Hot-season hours-shifters** — pre-dawn or late-night to avoid heat
 - **Dedicated bodybuilders** — flexible scheduling around food prep
@@ -186,7 +186,7 @@ The free parking and free classes are meaningful cost reductions vs. competitors
 
 ## Best For
 
-- **Central Pattaya travelers** wanting walkable serious gym
+- **Central Pattaya travellers** wanting walkable serious gym
 - **24/7 access seekers** — shift workers, jet-lagged, insomniacs
 - **Multi-discipline trainers** — cardio + strength + boxing + functional
 - **Group class lovers** — free included

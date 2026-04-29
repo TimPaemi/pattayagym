@@ -36,11 +36,11 @@ sources:
 
 ## Overview
 
-Greta Sport Club is **the Pattaya region's premier indoor tennis facility** — a **6-court fully-roofed tennis complex** integrated into the **Greta Resort** in Na Jomtien (Sattahip District), approximately **18 kilometers south of Walking Street and central Pattaya**. The club's defining feature is what no other Pattaya racquet venue offers: **all six tennis courts are completely covered by a permanent roof structure**, protecting players from **direct sun, hot-season heat (March-May), and rainy-season storms** — eliminating the typical Thai-tennis problem of postponed sessions due to weather.
+Greta Sport Club is **the Pattaya region's premier indoor tennis facility** — a **6-court fully-roofed tennis complex** integrated into the **Greta Resort** in Na Jomtien (Sattahip District), approximately **18 kilometres south of Walking Street and central Pattaya**. The club's defining feature is what no other Pattaya racquet venue offers: **all six tennis courts are completely covered by a permanent roof structure**, protecting players from **direct sun, hot-season heat (March-May), and rainy-season storms** — eliminating the typical Thai-tennis problem of postponed sessions due to weather.
 
 The courts use the **Plexipave surface system, certified by the International Tennis Federation (ITF) at Category 3**, with **500 lux uniform glare-free floodlight illumination** for evening play. The combination of **roof cover + ITF-certified surface + tournament-grade lighting** puts Greta Sport Club in a **distinct quality tier from any other Pattaya tennis facility**, where most courts are open-air with patchy maintenance.
 
-The club is **embedded in the Greta Resort property** — meaning members and their guests have access to the **swimming pool, gym, spa, restaurant, sauna, and beach tennis courts** alongside the main tennis offering. For tennis players relocating to or visiting Pattaya who **prioritize court quality and weather-protected play**, Greta Sport Club is unambiguously the top choice.
+The club is **embedded in the Greta Resort property** — meaning members and their guests have access to the **swimming pool, gym, spa, restaurant, sauna, and beach tennis courts** alongside the main tennis offering. For tennis players relocating to or visiting Pattaya who **prioritise court quality and weather-protected play**, Greta Sport Club is unambiguously the top choice.
 
 ## Position in the Pattaya Tennis Market
 
@@ -93,7 +93,7 @@ This is genuinely **rare in Thailand** outside Bangkok. Most provincial tennis c
 ### Floodlighting
 
 - **500 lux uniform illumination** — meets ITF night-play standards
-- **Glare-free design** — pole positioning and shielding optimize for play, not periphery
+- **Glare-free design** — pole positioning and shielding optimise for play, not periphery
 - **Evening play extends well past sunset** — usable until ~22:00
 
 ### Court Number
@@ -231,7 +231,7 @@ Quieter, resort-area location away from Pattaya nightlife. The Na Jomtien strip 
 
 ## Not Best For
 
-- **Walking Street / central Pattaya** based travelers wanting walkable courts
+- **Walking Street / central Pattaya** based travellers wanting walkable courts
 - **Pure budget players** (Pattaya Sports Club, Tara, Tos are cheaper)
 - **Multi-sport athletes** wanting one-stop fitness (Fitz Club, Horseshoe Point)
 - **Casual one-time hitters** unwilling to travel south of Jomtien

@@ -38,7 +38,7 @@ sources:
 
 Clubloongchat is a **family-run beachside watersports school and rider community on Na Jomtien Beach, Pattaya** — and it carries one of the deepest legacies in Thai watersports. **Founded by the patriarch known affectionately as "Loongchat" (literally "Uncle Chat")**, the operation has a **40-year family legacy** of passion and expertise, and is **the original windsurfing school on Jomtien Beach with over 30 years of teaching experience**, plus **Pattaya's first private kitesurf school**. It now teaches and rents across the full modern wind-and-water sports range: **Kitesurf, Wingfoil, Windsurf, SUP, Sailing, E-foil, and Hobie Catamarans**.
 
-For travelers wanting **professional, certified, multi-discipline watersports instruction in Pattaya** — the kind that progresses you from absolute zero to actually riding — Clubloongchat is the established institution. The combination of multi-decade pedagogy, complete equipment rental, master-coach private 1:1 instruction, and a beachside community vibe makes it the **default top-tier choice** for serious wind-and-water sports in Pattaya/Jomtien.
+For travellers wanting **professional, certified, multi-discipline watersports instruction in Pattaya** — the kind that progresses you from absolute zero to actually riding — Clubloongchat is the established institution. The combination of multi-decade pedagogy, complete equipment rental, master-coach private 1:1 instruction, and a beachside community vibe makes it the **default top-tier choice** for serious wind-and-water sports in Pattaya/Jomtien.
 
 ## The Loongchat Legacy
 
@@ -49,11 +49,11 @@ The school's identity centers on its founder, **"Loongchat" (Uncle Chat)**, a li
 - **Professional teaching methodology** refined through thousands of students
 - **Reputation as Pattaya's go-to watersports authority** — the school other operators reference
 
-When the website describes the operation as **"a passion meets adventure"** and emphasizes a **family-run business**, this isn't marketing flourish — it's an accurate description of a multi-generational operation passing knowledge between family members.
+When the website describes the operation as **"a passion meets adventure"** and emphasises a **family-run business**, this isn't marketing flourish — it's an accurate description of a multi-generational operation passing knowledge between family members.
 
 ## Disciplines Offered
 
-Clubloongchat is unusually broad — **most watersports schools specialize in one or two disciplines**, but Clubloongchat genuinely covers the full wind-and-water sports range:
+Clubloongchat is unusually broad — **most watersports schools specialise in one or two disciplines**, but Clubloongchat genuinely covers the full wind-and-water sports range:
 
 ### Kitesurfing (Pattaya's First Private School)
 
@@ -77,7 +77,7 @@ The school's foundational discipline — **30+ years of teaching expertise**. Wi
 
 ### Stand-Up Paddleboarding (SUP)
 
-The most beginner-friendly water discipline. Lessons and rentals available — popular as a casual activity for travelers, families, and as cross-training for surfers and kitesurfers.
+The most beginner-friendly water discipline. Lessons and rentals available — popular as a casual activity for travellers, families, and as cross-training for surfers and kitesurfers.
 
 ### Sailing
 
@@ -128,7 +128,7 @@ For exact 2026 pricing: [clubloongchat.com/pattaya-water-sports-lesson-prices](h
 
 ## Pattaya Wind & Tide Conditions
 
-Clubloongchat publishes a [detailed Pattaya watersports seasons guide](https://www.clubloongchat.com/pattaya-water-sports-seasons), and even hosts a **live wind meter on its website** for real-time conditions.
+Clubloongchat publishes a [detailed Pattaya watersports seasons guide](https://www.clubloongchat.com/pattaya-water-sports-seasons), and even hosts a **live wind metre on its website** for real-time conditions.
 
 ### Wind Patterns
 
@@ -145,7 +145,7 @@ Clubloongchat publishes a [detailed Pattaya watersports seasons guide](https://w
 - **SUP:** calm-water seasons, year-round generally
 - **Sailing:** year-round, varying conditions
 
-The live wind meter on their site lets travelers **plan a session based on actual conditions** rather than guesswork.
+The live wind metre on their site lets travellers **plan a session based on actual conditions** rather than guesswork.
 
 ## Beach Setup & Equipment
 
@@ -172,7 +172,7 @@ The school operates **directly on Na Jomtien Beach** — students walk from the 
 - **Beginner-friendly Discovery Lessons** for first-time water-sports trial
 - **Premium equipment library** — latest gear, well-maintained
 - **Beachside operation** — direct water access, no transport coordination
-- **Live wind meter on website** — real-time condition planning
+- **Live wind metre on website** — real-time condition planning
 - **Detailed seasons guide** — informed visit timing
 - **Less-crowded Na Jomtien location** — calmer water, more space
 - **English-speaking instruction** — accessible for international visitors
@@ -192,7 +192,7 @@ The school operates **directly on Na Jomtien Beach** — students walk from the 
 
 - **First-time kitesurfers and wingfoilers** wanting professional safety-first introduction
 - **Multi-discipline athletes** wanting to progress across kitesurf + wingfoil + windsurf with one school
-- **Returning watersports travelers** who already know they want quality instruction
+- **Returning watersports travellers** who already know they want quality instruction
 - **Equipment renters** who want premium gear and beachside service
 - **Pattaya residents** developing watersports skills over multi-year progression
 
@@ -204,14 +204,14 @@ The 40-year legacy is the differentiator. **Most Pattaya beach-watersports opera
 - **Wingfoilers** at any level
 - **Windsurfers** wanting deep institutional expertise
 - **SUP / casual paddlers** seeking quality rental gear
-- **Multi-discipline watersports travelers**
+- **Multi-discipline watersports travellers**
 - **Hobie Cat and small-boat sailors**
 - **Returning Pattaya watersports visitors**
 
 ## Not Best For
 
 - **Pure budget watersports seekers** (cheaper jet-ski operators along Jomtien Beach Road)
-- **Travelers based in central Pattaya** without transport to Na Jomtien
+- **Travellers based in central Pattaya** without transport to Na Jomtien
 - **Group-lesson preferers** (Clubloongchat is 1:1 private)
 - **No-wind day visitors** (sessions wind-dependent)
 
@@ -227,7 +227,7 @@ The 40-year legacy is the differentiator. **Most Pattaya beach-watersports opera
 | Disciplines | Kitesurf · Wingfoil · Windsurf · SUP · Sailing · E-foil · Hobie Cat |
 | Instruction model | Private 1:1 Master Coach |
 | Kitesurf entry | Discovery Lesson 90 min · 4hr Course · 8hr Course |
-| Live wind meter | clubloongchat.com/windmeter |
+| Live wind metre | clubloongchat.com/windmeter |
 | Wind range | 7-30 knots; beginner ideal 8-15 knots |
 | Hours | Daily, wind/tide dependent |
 | Verified | 2026-04-27 |

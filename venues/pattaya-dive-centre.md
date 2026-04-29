@@ -37,7 +37,7 @@ sources:
 
 Pattaya Dive Centre is **the longest-established PADI dive center on Pattaya's Beach Road** — over **20 years at the same location** between Soi 10 and Soi 11 — and the **only Beach Road PADI 5-Star Dive Center**. It is **English-owned and operated by PADI Master Instructor David Wright**, who brings **more than 25 years of dive industry experience**. The center holds the rare **PADI CDC (Career Development Centre)** status — meaning the highest tier of PADI affiliation, the elite for instructor training and career development. It is also a **Tec (Technical Diving) center** offering technical diving programs, decompression certifications, and trimix training for advanced divers.
 
-For travelers wanting **the longest-established, most-credentialed, English-language dive center on Pattaya Beach Road**, Pattaya Dive Centre is the default top choice. Day-trip prices of **฿3,200 for certified divers** and **฿4,500 for first-time Discover Scuba Diving** are competitive with the broader Pattaya dive market while delivering CDC-tier training quality.
+For travellers wanting **the longest-established, most-credentialed, English-language dive center on Pattaya Beach Road**, Pattaya Dive Centre is the default top choice. Day-trip prices of **฿3,200 for certified divers** and **฿4,500 for first-time Discover Scuba Diving** are competitive with the broader Pattaya dive market while delivering CDC-tier training quality.
 
 ## Heritage & Credentials
 
@@ -172,12 +172,12 @@ The center benefits from David Wright's long-tenured leadership — consistent m
 - **Open Water through Divemaster students**
 - **Tec divers** seeking technical certifications
 - **Wreck-dive enthusiasts** — Pattaya is Thailand's wreck capital
-- **Travelers staying in central Pattaya** wanting walking-distance dive shop
+- **Travellers staying in central Pattaya** wanting walking-distance dive shop
 - **Long-stay students** doing PADI internship through CDC pathway
 
 ## Not Best For
 
-- **Travelers based in Jomtien** wanting walk-to-shop access (Jomtien Dive Center, Mermaid's Dive nearby instead)
+- **Travellers based in Jomtien** wanting walk-to-shop access (Jomtien Dive Center, Mermaid's Dive nearby instead)
 - **Pure budget divers** (slightly higher than non-Beach-Road operators)
 - **Andaman-coast quality visibility seekers** (Phuket, Krabi, Similan Islands offer better viz)
 

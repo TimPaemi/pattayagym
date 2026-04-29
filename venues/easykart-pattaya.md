@@ -37,7 +37,7 @@ sources:
 
 ## Overview
 
-EasyKart Pattaya Thepprasit is **the newest go-kart racing facility in Pattaya** — an outdoor multi-track venue offering **a 350-meter beginner track plus an 800-meter racing track** with **multi-tier kart classes (Kids Kart, Regular Kart, Fast Kart, 2-Seater Kart)** and a **broad operating window from 10:00 to 01:00 daily**. The 15-hour operating schedule is **substantially longer than competitor Pattaya Kart Speedway** (the older first-karting-in-Pattaya facility on Thepprasit Soi 9), making EasyKart **the most accessible karting venue for evening and late-night enthusiasts**.
+EasyKart Pattaya Thepprasit is **the newest go-kart racing facility in Pattaya** — an outdoor multi-track venue offering **a 350-metre beginner track plus an 800-metre racing track** with **multi-tier kart classes (Kids Kart, Regular Kart, Fast Kart, 2-Seater Kart)** and a **broad operating window from 10:00 to 01:00 daily**. The 15-hour operating schedule is **substantially longer than competitor Pattaya Kart Speedway** (the older first-karting-in-Pattaya facility on Thepprasit Soi 9), making EasyKart **the most accessible karting venue for evening and late-night enthusiasts**.
 
 The facility sits on **Thepprasit Road** — Pattaya's adventure-and-action corridor that also hosts **Pattaya Kart Speedway, Pattaya Floating Market**, and various tourist activities. EasyKart's specific position: **modern infrastructure, multi-tier track system, accessible pricing (from ~฿480-598 per session), and family-friendly age range from 7-year-olds (Kids Kart) to adults (Fast Kart and 2-Seater for kids+adults together)**.
 
@@ -57,18 +57,18 @@ EasyKart's specific advantage: **dual-track configuration + modern karts + exten
 
 ## Track Configuration
 
-### Beginner Track (350 meters)
+### Beginner Track (350 metres)
 
-- **350-meter outdoor track**
+- **350-metre outdoor track**
 - **Wider, gentler turns** for skill-building
 - **Suitable for** Kids Kart and Regular Kart at slower speeds
 - **Max speed for Regular Kart: 35 km/h**
 - **First-time karters** start here
 - **Adult-supervised kids** comfortable on this track
 
-### Racing Track (800 meters)
+### Racing Track (800 metres)
 
-- **800-meter outdoor racing track**
+- **800-metre outdoor racing track**
 - **Tighter turns + faster straights**
 - **Suitable for** Regular Kart and Fast Kart at higher speeds
 - **Max speed for Regular Kart: 55 km/h**
@@ -216,7 +216,7 @@ Standard karting safety:
 ## Not Best For
 
 - **Pure budget seekers** — kids' arcade indoor karts cheaper
-- **Walk-in only travelers** — booking advantage
+- **Walk-in only travellers** — booking advantage
 - **Heat-sensitive participants** in dry season midday
 - **Rain-season visitors** with outdoor closure risk
 - **Small-child supervision** issues — minimum age 7

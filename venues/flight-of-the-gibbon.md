@@ -39,7 +39,7 @@ sources:
 
 ## Overview
 
-Flight of the Gibbon is **the largest canopy zip-line tour in all of Thailand** — a **3-kilometer course with 24 platforms** routed through **the jungle canopy inside Khao Kheow Open Zoo (which itself sits inside the Chompoo Wildlife Sanctuary)** approximately **1 hour drive from Pattaya / 90 minutes from Bangkok**. The course combines **ziplines, double ziplines, abseiling stations, sky bridges, and spiral staircases** into a **2.5-hour guided experience** with **two Sky Rangers per group** for safety and rainforest interpretation.
+Flight of the Gibbon is **the largest canopy zip-line tour in all of Thailand** — a **3-kilometre course with 24 platforms** routed through **the jungle canopy inside Khao Kheow Open Zoo (which itself sits inside the Chompoo Wildlife Sanctuary)** approximately **1 hour drive from Pattaya / 90 minutes from Bangkok**. The course combines **ziplines, double ziplines, abseiling stations, sky bridges, and spiral staircases** into a **2.5-hour guided experience** with **two Sky Rangers per group** for safety and rainforest interpretation.
 
 The canopy setting is **fundamentally different from Pattaya's other zipline options** (Tarzan Adventure 25-platform jungle course, Pattaya Park Tower Jump 56th-floor cable). Flight of the Gibbon delivers **a genuine rainforest canopy experience inside a protected wildlife sanctuary** — including **the rare possibility of spotting wild gibbons** while ziplining. The location's protected status, the **3 km course length** (longer than Tarzan's 25 platforms), and the **package inclusions (hotel pickup + Khao Kheow Open Safari Park tour + local Thai lunch)** make it **a full-day adventure-tourism experience** rather than a short add-on activity.
 
@@ -73,7 +73,7 @@ Flight of the Gibbon's specific position: **the only protected-wildlife-sanctuar
 
 ### Why Conservation Framing Matters
 
-Most adventure tourism (skydive, kart, shooting) is purely thrill-driven. Flight of the Gibbon's framing emphasizes:
+Most adventure tourism (skydive, kart, shooting) is purely thrill-driven. Flight of the Gibbon's framing emphasises:
 
 - **Education** about Thai rainforest ecosystems
 - **Wildlife conservation** awareness
@@ -81,7 +81,7 @@ Most adventure tourism (skydive, kart, shooting) is purely thrill-driven. Flight
 - **Protected sanctuary** access
 - **Gibbon population** restoration programs (the brand contributes to)
 
-For environmentally-conscious travelers, this matters meaningfully.
+For environmentally-conscious travellers, this matters meaningfully.
 
 ## The Khao Kheow Setting
 
@@ -152,7 +152,7 @@ The 24-platform course features:
 
 ### Why 3 km Matters
 
-**3 kilometers** of canopy course is **substantial**:
+**3 kilometres** of canopy course is **substantial**:
 
 - **Most canopy tours globally** are 1-2 km
 - **Tarzan Adventure (Pattaya):** ~1.5 km estimated
@@ -179,7 +179,7 @@ For a single ticket, the package delivers **a full 6-8 hour adventure-tourism da
 
 ### Physical Requirements
 
-- **Minimum height:** 1 meter (3 feet 3 inches)
+- **Minimum height:** 1 metre (3 feet 3 inches)
 - **Maximum weight:** 130 kg
 - **Pregnant women:** not allowed
 - **Heart conditions:** consult physician
@@ -236,7 +236,7 @@ This is **premium-tier adventure pricing** but the **all-inclusive package** del
 - **Premium pricing** — ฿3,500-5,000+ typical
 - **Weight / height / health restrictions**
 - **Outdoor only** — heavy rain may delay tours
-- **Pregnant + heart-condition** travelers excluded
+- **Pregnant + heart-condition** travellers excluded
 - **Group dynamics** — some pace mismatch possible
 - **No guaranteed wildlife** sightings
 - **Far from Walking Street** — transport mandatory
@@ -244,7 +244,7 @@ This is **premium-tier adventure pricing** but the **all-inclusive package** del
 ## Best For
 
 - **Adventure-tourism stack visitors** combining karts + skydive + zipline
-- **Conservation-curious** travelers
+- **Conservation-curious** travellers
 - **Combined zipline + zoo** day-out seekers
 - **Couples / friend groups** wanting shared adventure
 - **Photography enthusiasts** — canopy + wildlife shots
@@ -254,8 +254,8 @@ This is **premium-tier adventure pricing** but the **all-inclusive package** del
 ## Not Best For
 
 - **Pure thrill seekers** preferring urban high-speed (Pattaya Park Tower Jump 56th floor faster)
-- **Walking Street based** travelers without 8-hour day
-- **Pregnant or recovering** travelers
+- **Walking Street based** travellers without 8-hour day
+- **Pregnant or recovering** travellers
 - **Pure budget seekers** — Tarzan Adventure cheaper for quick zipline
 - **Pure budget zipline** seekers
 - **Fear-of-heights** participants without preparation

@@ -36,11 +36,11 @@ sources:
 
 ## Overview
 
-Elite Gym & Fitness Pattaya is **one of the newest and most heavily invested commercial gym builds in the city** — a **23 million baht facility opened in September 2022** that occupies **950 square meters of fully air-conditioned space** on **Sukhumvit Road, between Soi 42 and 44, opposite Soi 65**. The construction budget alone — **roughly USD 650,000+** — signals **a meaningful capital commitment to high-end equipment, modern infrastructure, and clean design** that distinguishes Elite from older neighborhood gyms in the area.
+Elite Gym & Fitness Pattaya is **one of the newest and most heavily invested commercial gym builds in the city** — a **23 million baht facility opened in September 2022** that occupies **950 square metres of fully air-conditioned space** on **Sukhumvit Road, between Soi 42 and 44, opposite Soi 65**. The construction budget alone — **roughly USD 650,000+** — signals **a meaningful capital commitment to high-end equipment, modern infrastructure, and clean design** that distinguishes Elite from older neighborhood gyms in the area.
 
 The Sukhumvit location places Elite **firmly in the East Pattaya / Naklua corridor** — accessible by the city's main north-south arterial, easy reach from East Pattaya condos, Naklua hotels, and Sukhumvit-corridor expat residences. Operating **06:30 to 22:00 seven days a week**, the gym serves the early-bird-to-late-evening demographic without the 24/7 commitment of Jetts or Fitness 7, but with **a more polished and recently outfitted environment** than most independent gyms.
 
-For 2022+ Pattaya residents and visitors who prioritize **brand-new equipment, fresh facilities, AC comfort, and modern training environment**, Elite Gym & Fitness is among the strongest options on the Sukhumvit / East Pattaya / Naklua axis.
+For 2022+ Pattaya residents and visitors who prioritise **brand-new equipment, fresh facilities, AC comfort, and modern training environment**, Elite Gym & Fitness is among the strongest options on the Sukhumvit / East Pattaya / Naklua axis.
 
 ## Position in the Pattaya Fitness Market
 
@@ -217,7 +217,7 @@ Modern Sukhumvit-area gym pricing:
 ## Not Best For
 
 - **24/7 access seekers** — Fitness 7, Jetts better
-- **Walking Street based** travelers — central gyms better
+- **Walking Street based** travellers — central gyms better
 - **Hardcore bodybuilders** — Muscle Factory, Tony's, Castra
 - **Combat sports trainees** — Muay Thai camps directly
 - **Pure budget seekers** — Castra ฿7K/year unbeatable

@@ -35,11 +35,11 @@ sources:
 
 ## Overview
 
-Hard Rock Pool Pattaya is **the Eastern Seaboard's largest free-form swimming pool** — a **2,000 square meter aquatic centerpiece at the Hard Rock Hotel Pattaya on Beach Road** that is **internationally recognized as one of Asia's most iconic hotel pools**. The pool's **guitar-shaped deck design** (a Hard Rock brand signature) and **artificial sand beach** integrated into the pool itself create **a destination experience that goes beyond utilitarian hotel-pool function** — visitors come to Hard Rock specifically because of the pool, and many non-hotel guests purchase **day passes specifically for pool access**.
+Hard Rock Pool Pattaya is **the Eastern Seaboard's largest free-form swimming pool** — a **2,000 square metre aquatic centerpiece at the Hard Rock Hotel Pattaya on Beach Road** that is **internationally recognized as one of Asia's most iconic hotel pools**. The pool's **guitar-shaped deck design** (a Hard Rock brand signature) and **artificial sand beach** integrated into the pool itself create **a destination experience that goes beyond utilitarian hotel-pool function** — visitors come to Hard Rock specifically because of the pool, and many non-hotel guests purchase **day passes specifically for pool access**.
 
 The 2,000 sqm space is divided into **multiple distinct zones**: a **beach-sand pool** with shallow entry mimicking ocean shore, a **cocktail pool** for adult-only relaxation with drinks service, a **shallow pool** for casual splashing, a **main pool with deeper water for laps and active swimming**, a **kids' area with slides and water features**, and a **jacuzzi** for relaxation. The whole complex is patrolled by **certified lifeguards** and equipped with **underwater speakers** that play music throughout the pool environment.
 
-For Pattaya travelers — whether Hard Rock guests or day-pass visitors — the pool experience is a **lifestyle / vacation centerpiece** rather than a fitness facility. **Family Foam Adventures every Saturday from 17:00 to 18:00** add scheduled family entertainment, and the **regular Pool Party events** transform the venue into an iconic Pattaya nightlife / day-life social hub.
+For Pattaya travellers — whether Hard Rock guests or day-pass visitors — the pool experience is a **lifestyle / vacation centerpiece** rather than a fitness facility. **Family Foam Adventures every Saturday from 17:00 to 18:00** add scheduled family entertainment, and the **regular Pool Party events** transform the venue into an iconic Pattaya nightlife / day-life social hub.
 
 ## Position in the Pattaya Swimming Market
 
@@ -107,7 +107,7 @@ The scale enables **simultaneous family swimming, adult drinking, kids on slides
 ### 4. Main Pool (Lap-Capable)
 
 - **Deeper water** for active swimming
-- **Lap-distance possible** (though not Olympic / lap-pool optimized)
+- **Lap-distance possible** (though not Olympic / lap-pool optimised)
 - **Standard recreation depth**
 
 ### 5. Kids' Area with Slides
@@ -217,7 +217,7 @@ Direct contact recommended for current rates.
 
 - **Day pass pricing** premium tier
 - **Crowded peak season** — book ahead
-- **Not optimized for serious lap swimming**
+- **Not optimised for serious lap swimming**
 - **Tourist-density vibe** — not for solitude seekers
 - **Music throughout** — not for silence preferers
 - **Hotel guest priority** for cabanas

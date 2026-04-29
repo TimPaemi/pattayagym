@@ -74,7 +74,7 @@ Mövenpick's specific position: **Swiss-branded 5-star at Na Jomtien** — diffe
 
 ### What "Swiss Hospitality" Means
 
-Mövenpick's brand promise emphasizes:
+Mövenpick's brand promise emphasises:
 
 - **Methodical service** — precise, attentive, professional
 - **Quality consistency** across properties
@@ -117,7 +117,7 @@ Joining the **Pattaya 24/7 hotel fitness club**:
 - **Andaz Pattaya Jomtien** 24/7 Technogym
 - **Mövenpick Siam Na Jomtien** 24/7 (this entry)
 
-Three 5-star options for **always-open fitness** — meaningful for shift workers, jet-lagged travelers, and dedicated trainers.
+Three 5-star options for **always-open fitness** — meaningful for shift workers, jet-lagged travellers, and dedicated trainers.
 
 ## The Pools
 
@@ -196,7 +196,7 @@ Mövenpick Siam Na Jomtien is **upper-premium tier**:
 - **Premium pricing** — 5-star tier
 - **Day pass availability** limited
 - **No combat sports** integration
-- **Less wellness-specialized** than Andaz Pattaya Jomtien's onsen / Turkish / Finnish triple
+- **Less wellness-specialised** than Andaz Pattaya Jomtien's onsen / Turkish / Finnish triple
 
 ## Best For
 
@@ -215,7 +215,7 @@ Mövenpick Siam Na Jomtien is **upper-premium tier**:
 - **Boutique-couple retreat** — Andaz Pattaya Jomtien adult-focus better
 - **Pure family water park** focus — Centara Grand Mirage's Lost World wins
 - **Pattaya central density** lovers
-- **Pure budget travelers**
+- **Pure budget travellers**
 - **Combat sports / hardcore fitness**
 
 ## Quick Reference Card

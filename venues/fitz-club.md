@@ -42,9 +42,9 @@ sources:
 
 Fitz Club is **the most decorated, best-equipped, and most-awarded luxury sports club in Pattaya** — a 5-star multi-sport facility nested inside the **Royal Cliff Hotels Group** complex on **Pratumnak Hill**. The club holds the rare distinction of being **the only sports club and gym in Pattaya to win the TripAdvisor Travellers' Choice Award for three consecutive years (2023, 2024, 2025) with a perfect 100% score** — putting it in a category by itself among Eastern Seaboard sports facilities.
 
-Where most Pattaya gyms specialize in one or two disciplines, **Fitz Club delivers premium-tier facilities across racquet sports, swimming, fitness, wellness, kids' programs, and the new wave of "modern multi-sport" courts** (pickleball, futsal, basketball, badminton). Combined with its luxury hotel-resort context — Royal Cliff has 7 swimming pools across the property, two private beaches, the Cliff Spa, multiple award-winning restaurants, and a 1973 heritage as Pattaya's most established luxury hospitality brand — Fitz Club becomes **a destination, not just a gym**.
+Where most Pattaya gyms specialise in one or two disciplines, **Fitz Club delivers premium-tier facilities across racquet sports, swimming, fitness, wellness, kids' programs, and the new wave of "modern multi-sport" courts** (pickleball, futsal, basketball, badminton). Combined with its luxury hotel-resort context — Royal Cliff has 7 swimming pools across the property, two private beaches, the Cliff Spa, multiple award-winning restaurants, and a 1973 heritage as Pattaya's most established luxury hospitality brand — Fitz Club becomes **a destination, not just a gym**.
 
-For travelers, expats, and Pattaya residents wanting the **single most comprehensive sports-and-wellness experience in the region**, Fitz Club is the answer.
+For travellers, expats, and Pattaya residents wanting the **single most comprehensive sports-and-wellness experience in the region**, Fitz Club is the answer.
 
 ## Parent Brand — Royal Cliff Hotels Group
 
@@ -143,7 +143,7 @@ Adjoining the sports facilities is **Cliff Spa** — a **TripAdvisor Travellers'
 - **Full menu of treatments**: massage, facials, body scrubs, body wraps, traditional Thai therapies
 - Sauna and steam room access (also available at the Fitz fitness center)
 
-For active travelers wanting an integrated **train-and-recover** day, Fitz Club + Cliff Spa is essentially purpose-built.
+For active travellers wanting an integrated **train-and-recover** day, Fitz Club + Cliff Spa is essentially purpose-built.
 
 ## Kids Program
 
@@ -170,7 +170,7 @@ Multiple membership tiers available with **special privileges including access t
 
 ### Day Visitors
 
-**Welcomed for daily fitness center use** — meaningful for travelers staying elsewhere.
+**Welcomed for daily fitness center use** — meaningful for travellers staying elsewhere.
 
 ### First-Time Visitor Trial
 
@@ -184,7 +184,7 @@ This is one of the most generous trial offers among Pattaya sports clubs and is 
 
 ### Royal Wellness Sports Package
 
-Royal Cliff offers a **bundled hotel-stay + Fitz Club access + wellness program package** — popular with sports-tourism travelers wanting an integrated holiday.
+Royal Cliff offers a **bundled hotel-stay + Fitz Club access + wellness program package** — popular with sports-tourism travellers wanting an integrated holiday.
 
 ## Pricing
 
@@ -266,7 +266,7 @@ Among long-stay expats and Pattaya residents, **Fitz Club membership signals a p
 - **Serious tennis players** wanting Pattaya's best courts, coaches, tournaments
 - **Squash players** (one of few squash venues in Pattaya)
 - **Multi-sport athletes** rotating across racquet sports + gym + swim + spa
-- **Family travelers** with kids — strongest kids facilities in Pattaya
+- **Family travellers** with kids — strongest kids facilities in Pattaya
 - **Premium-tier hotel guests** at Royal Cliff
 - **Pickleball early adopters** in Pattaya
 - **Spa + sport integration** seekers (Cliff Spa adjacent)
@@ -275,7 +275,7 @@ Among long-stay expats and Pattaya residents, **Fitz Club membership signals a p
 ## Not Best For
 
 - **Pure budget sports seekers** (cheaper public courts and gyms exist)
-- **Travelers staying far from Pratumnak** without convenient transport
+- **Travellers staying far from Pratumnak** without convenient transport
 - **Solo Muay Thai purists** (better dedicated camps elsewhere — Fairtex, WKO, Sityodtong)
 - **Casual drop-ins** who don't want the resort-hotel context
 

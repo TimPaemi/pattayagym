@@ -29,7 +29,7 @@ Platinum Fitness Club is **a commercial fitness facility on Pattaya Klang Road i
 
 The 05:30 opening time is meaningful — earlier than most Pattaya commercial gyms and accommodating **pre-dawn trainers**, **early-morning runners adding gym work**, and **shift workers** finishing overnight schedules. The 23:00 close gives evening trainers a generous window after work or dinner. Combined with the **AC environment** and **standard commercial gym amenity package including a sauna**, Platinum Fitness delivers **a full-service mainstream gym experience** without the extreme price tier of hotel-attached or premium-private facilities.
 
-For Pattaya Klang area residents and central Pattaya travelers wanting **an established commercial gym with long operating hours and recovery sauna**, Platinum Fitness fills the niche.
+For Pattaya Klang area residents and central Pattaya travellers wanting **an established commercial gym with long operating hours and recovery sauna**, Platinum Fitness fills the niche.
 
 ## Position in the Pattaya Fitness Market
 

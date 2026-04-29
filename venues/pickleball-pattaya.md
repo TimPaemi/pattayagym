@@ -8,7 +8,7 @@ phone: ""
 website: https://pickleballpattaya.com/
 social:
   facebook: PickleballPattaya
-hours: Daily — booking-based, daytime + evening lit play
+hours: Daily 07:00-21:00
 priceRange: ฿฿
 description: Pattaya's first dedicated pickleball facility, on Pratumnak Soi 6. Full pickleball-only courts (paddles + balls + ball machine included), among the best court lighting in Thailand for night sessions, beginner lessons from an English-speaking licensed coach. The driver of Pattaya's fast-growing 50+ expat pickleball scene.
 tags:
@@ -21,7 +21,10 @@ tags:
   - 50-plus
   - social-leagues
 mapsUrl: https://maps.google.com/?q=Pickleball+Pattaya+Pratumnak
-verified: 2026-04-28
+verified: 2026-04-29
+sources:
+  - https://pickleballpattaya.com/
+  - https://pattayasports.org/pickle-ball/
 ---
 
 Pickleball is the fastest-growing sport on the planet, and Pattaya — with its enormous, mostly-50+ expat retiree base — has become one of the largest, most active pickleball scenes in Thailand. **Pickleball Pattaya** on Pratumnak Soi 6 is the city's flagship dedicated facility: courts built specifically for pickleball, top-tier lighting for evening play, full equipment included, and beginner lessons from an English-speaking licensed coach. If you've never picked up a paddle, this is the easy on-ramp. If you already play and just need a court to drop into, this is the obvious answer.
@@ -52,7 +55,7 @@ For residents: huge swathes of long-stay expats live within 5 minutes of Pratumn
 | Ball machine | Available on site for solo drills + lesson use |
 | Coach | English-speaking, licensed pickleball coach (lessons bookable) |
 
-The included paddles + balls is a huge unlock for travelers — you can fly into Pattaya without packing gear and play your first session within an hour of landing.
+The included paddles + balls is a huge unlock for travellers — you can fly into Pattaya without packing gear and play your first session within an hour of landing.
 
 ## Programming
 
@@ -107,7 +110,7 @@ If you're new to Pattaya and want a shortcut to a friend group inside your first
 
 - Players wanting tennis, badminton, or squash (try Fitz Club, Inter Club, or Tennis Pattaya)
 - Indoor-only players (the courts are outdoor — though night-lit)
-- Bargain-hunters happy with painted-over public courts (cheaper but less specialized)
+- Bargain-hunters happy with painted-over public courts (cheaper but less specialised)
 - Players outside the 30–80 demographic who'd rather find a younger crowd elsewhere
 
 ## Quick reference card
@@ -129,4 +132,4 @@ If you're new to Pattaya and want a shortcut to a friend group inside your first
 
 The fastest path: message Pickleball Pattaya through their Facebook page or website to book a court or a beginner lesson. Show up at the venue with workout-friendly shoes (court shoes ideal — not running shoes with high heel drops; the lateral movement in pickleball is hard on running soles). Paddles, balls, water, and the rest are sorted on site.
 
-For travelers: it's a 5–15 minute Bolt/Grab from any Pattaya hotel. Tell the driver "Pratumnak Soi 6 — Pickleball Pattaya". For residents: the easiest way into the community is to book one beginner lesson, then ask the coach when the next open-play session runs — you'll have a regular game inside two weeks.
+For travellers: it's a 5–15 minute Bolt/Grab from any Pattaya hotel. Tell the driver "Pratumnak Soi 6 — Pickleball Pattaya". For residents: the easiest way into the community is to book one beginner lesson, then ask the coach when the next open-play session runs — you'll have a regular game inside two weeks.

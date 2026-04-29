@@ -39,7 +39,7 @@ sources:
 
 ## Overview
 
-Centara Grand Mirage Beach Resort is **Pattaya's flagship Lost World-themed family resort** — a **5-star property on 230 meters of private Wong Amat Beach (North Pattaya)** featuring **555 sea-facing rooms, suites, and family residences**, **8 dining venues**, **the Lost World on-site water park with multiple slides and pools**, **the multi-award Spa Cenvaree with 24 treatment rooms**, and **an active fitness program including a fitness center, 2 tennis courts, and an unusual rock climbing wall**. The Lost World theming — **prehistoric / jungle / waterfall aesthetic** — gives the resort **a distinctive identity vs. generic 5-star hotels** and makes it **one of Pattaya's most family-friendly luxury options**.
+Centara Grand Mirage Beach Resort is **Pattaya's flagship Lost World-themed family resort** — a **5-star property on 230 metres of private Wong Amat Beach (North Pattaya)** featuring **555 sea-facing rooms, suites, and family residences**, **8 dining venues**, **the Lost World on-site water park with multiple slides and pools**, **the multi-award Spa Cenvaree with 24 treatment rooms**, and **an active fitness program including a fitness center, 2 tennis courts, and an unusual rock climbing wall**. The Lost World theming — **prehistoric / jungle / waterfall aesthetic** — gives the resort **a distinctive identity vs. generic 5-star hotels** and makes it **one of Pattaya's most family-friendly luxury options**.
 
 The **Lost World on-site water park** is the resort's defining feature — most premium hotel pools cap at 1-2 pools while Centara delivers **a sprawling jungle-themed water park** with **freeform pool, lazy river, multiple slides, an adult pool, jacuzzis, cliff jumping platforms, and the Monsoon Island children's water playground**. While not as massive as Ramayana Water Park (184,000 sqm Southeast Asia largest), Centara's on-site water park **is genuinely substantial** and lets resort guests have **water park experiences without leaving the property**.
 
@@ -136,7 +136,7 @@ The **Lost World water park scale** is genuinely substantial — guests can spen
 - **Floodlit for evening play**
 - **Hotel guest priority**
 - **Tennis pro** likely available
-- **Equipment rental** for travelers
+- **Equipment rental** for travellers
 
 ### Rock Climbing Wall
 
@@ -190,13 +190,13 @@ A **separate yoga and meditation pavilion** beyond the spa proper:
 - **Sunrise / sunset programs**
 - **Visiting yoga teacher** workshops
 
-## The 230-Meter Private Beach
+## The 230-Metre Private Beach
 
 ### Wong Amat Beach Setting
 
 Centara's beach is genuinely meaningful:
 
-- **230 meters of private sandy beach**
+- **230 metres of private sandy beach**
 - **North Pattaya / Wong Amat** location (quieter than central Pattaya)
 - **Direct hotel access** — no public-beach navigation
 - **Beach service** — loungers, towels, drinks
@@ -247,9 +247,9 @@ Centara pricing — premium family-resort tier:
 - **Multi-generation family** travel — diverse amenity range
 - **Couples wanting active resort** vs. boutique wellness
 - **Stay-and-play** with on-site water park
-- **Wong Amat / North Pattaya** based travelers
+- **Wong Amat / North Pattaya** based travellers
 - **Centara loyalty** members
-- **Long-stay travelers** with family suite needs
+- **Long-stay travellers** with family suite needs
 - **Active programs** participants (Pilates, climbing, kayaking, aqua aerobics)
 
 ## Not Best For

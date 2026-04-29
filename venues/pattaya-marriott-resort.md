@@ -42,7 +42,7 @@ The Pattaya 5-star tier:
 | **Centara Grand Mirage** | Centara | Wong Amat | Lost World water park |
 | **Cape Dara Resort** | Independent | Naklua cliffside | Luminous Spa + mineral bath |
 | **Mövenpick Siam Hotel** | Accor | Na Jomtien | Swiss-Accor 24h fitness |
-| **Royal Cliff (Fitz Club)** | Independent | Pratamnak | Triple-TripAdvisor-Travelers'-Choice |
+| **Royal Cliff (Fitz Club)** | Independent | Pratamnak | Triple-TripAdvisor-Travellers'-Choice |
 | **Dusit Thani Pattaya** | Dusit | North Pattaya headland | Heritage Thai-flagship + Devarana Wellness |
 | **Pattaya Marriott Resort** (this venue) | Marriott | Na Jomtien beachfront | Bonvoy + direct-beach + Quan Spa |
 | **Holiday Inn Pattaya** | IHG | Beach Road central | 4-star, 2 infinity pools, family |

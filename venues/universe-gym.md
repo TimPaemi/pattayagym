@@ -30,9 +30,9 @@ sources:
 
 ## Overview
 
-Universe Gym is **one of the largest commercial fitness gyms in Pattaya** and a long-time favorite of both **Pattaya residents (locals + nomads + expats)** and **visiting fitness travelers**. Located in **Welcome Town, just off Sukhumvit Road in North Pattaya**, the multi-level facility features **at least five distinct training zones**, offering everything from modern resistance machines and cardio equipment to free weights, functional fitness rigs, and ample floor space. With **day passes starting at ฿140**, **monthly memberships at ฿1,400**, and **couples pricing** that genuinely offers value, Universe Gym is one of the best-priced **serious commercial gyms** in Pattaya.
+Universe Gym is **one of the largest commercial fitness gyms in Pattaya** and a long-time favorite of both **Pattaya residents (locals + nomads + expats)** and **visiting fitness travellers**. Located in **Welcome Town, just off Sukhumvit Road in North Pattaya**, the multi-level facility features **at least five distinct training zones**, offering everything from modern resistance machines and cardio equipment to free weights, functional fitness rigs, and ample floor space. With **day passes starting at ฿140**, **monthly memberships at ฿1,400**, and **couples pricing** that genuinely offers value, Universe Gym is one of the best-priced **serious commercial gyms** in Pattaya.
 
-For travelers and Pattaya residents wanting **a real, fully-equipped commercial gym at unbeatable prices** — without the boutique-tier markup of Fitz Club or chain markup of Jetts/True Fitness — Universe Gym is the default value pick.
+For travellers and Pattaya residents wanting **a real, fully-equipped commercial gym at unbeatable prices** — without the boutique-tier markup of Fitz Club or chain markup of Jetts/True Fitness — Universe Gym is the default value pick.
 
 ## Position in the Pattaya Gym Market
 
@@ -66,7 +66,7 @@ The gym is located in **Welcome Town** — a residential and commercial complex 
 - **Monday-Friday:** 08:00 – 22:00 (14 hours)
 - **Saturday-Sunday:** 09:00 – 22:00 (13 hours)
 
-Late-evening hours suit **expat residents** with day jobs and **travelers** who want post-beach evening sessions.
+Late-evening hours suit **expat residents** with day jobs and **travellers** who want post-beach evening sessions.
 
 ## The Facility — Five Training Zones
 
@@ -113,7 +113,7 @@ For travel partners, the **couples monthly at ฿2,100 total** is one of the **b
 
 ## Reviews & Reputation
 
-Universe Gym's reputation among **Pattaya expats, digital nomads, and visiting travelers** is consistently positive:
+Universe Gym's reputation among **Pattaya expats, digital nomads, and visiting travellers** is consistently positive:
 
 - **"One of the largest gyms in Pattaya"**
 - **"Equipment is medium age, mostly in good condition with plenty of it available"**
@@ -131,7 +131,7 @@ The gym is **frequently included in "Top Gyms in Pattaya" lists** — typically 
 - **Multi-floor design** — never feels crowded
 - **Long hours** (08:00-22:00 weekdays, 09:00-22:00 weekends)
 - **Clean facility with good changing rooms**
-- **Welcoming to locals, expats, nomads, travelers**
+- **Welcoming to locals, expats, nomads, travellers**
 - **Welcome Town location** — accessible from North Pattaya / Naklua
 - **Medium-age equipment well-maintained**
 - **Variety of cardio + strength + functional zones**
@@ -152,16 +152,16 @@ The gym is **frequently included in "Top Gyms in Pattaya" lists** — typically 
 - **Couples training together** — couples pricing is the best deal in Pattaya gym market
 - **Bodybuilders / serious lifters** — full free-weight setup
 - **Functional fitness enthusiasts** — upstairs functional rig
-- **Cardio-focused travelers** — multiple cardio zones
+- **Cardio-focused travellers** — multiple cardio zones
 - **Daily-pass users** — ฿140 walk-up is among the cheapest in Pattaya
-- **Travelers staying in North Pattaya / Welcome Town / Naklua**
+- **Travellers staying in North Pattaya / Welcome Town / Naklua**
 
 ## Not Best For
 
-- **Beach-adjacent travelers** without transport (other gyms more central)
+- **Beach-adjacent travellers** without transport (other gyms more central)
 - **Luxury-seeking visitors** — try Fitz Club at Royal Cliff
 - **Group-class focused trainers** — try Jetts, True Fitness
-- **Travelers wanting pool / sauna access** at the gym (use a hotel gym for this)
+- **Travellers wanting pool / sauna access** at the gym (use a hotel gym for this)
 - **People expecting brand-new latest-model equipment**
 
 ## Quick Reference Card

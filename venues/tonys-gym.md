@@ -29,7 +29,7 @@ sources:
 
 Tony's Fitness is **Pattaya's largest fitness gym chain** and one of the city's longest-running commercial fitness operations. Founded in **2002** on **Walking Street** by **Tony** (the eponymous owner), the brand has grown over more than two decades into the **largest group of fitness centers in Pattaya** — approximately **10 locations spanning from Wongamat in the north to Jomtien in the south**, plus additional locations in Bangkok and Si Racha. The flagship is the **3rd Road branch near South Pattaya Road**, which **operates 24 hours** and includes a **large swimming pool** alongside the main gym floor.
 
-Tony's positioning is **iconic Pattaya commercial fitness at lifetime-membership-tier value pricing for residents**, and **moderately priced for tourists**. With **lifetime membership rates starting around ฿120/day** and **monthly rates from ฿800** (locals) up to **฿5,000/month for tourists**, the value structure rewards local residents and long-stays significantly more than walk-in travelers.
+Tony's positioning is **iconic Pattaya commercial fitness at lifetime-membership-tier value pricing for residents**, and **moderately priced for tourists**. With **lifetime membership rates starting around ฿120/day** and **monthly rates from ฿800** (locals) up to **฿5,000/month for tourists**, the value structure rewards local residents and long-stays significantly more than walk-in travellers.
 
 For Pattaya residents wanting a **multi-location membership accessible across the city**, Tony's is the historic default choice. The brand's reputation is mixed (some locations rated dim/dirty, others rated highly equipped) — visit a specific branch before committing.
 
@@ -73,7 +73,7 @@ Single membership access across all Tony's Pattaya locations (with possible excl
 
 ### Bangkok and Si Racha
 
-The brand extends beyond Pattaya into Bangkok and Si Racha — useful for travelers moving between Thai cities.
+The brand extends beyond Pattaya into Bangkok and Si Racha — useful for travellers moving between Thai cities.
 
 ## Bodybuilding Focus
 
@@ -101,7 +101,7 @@ This is **excellent value** — comparable to Universe Gym monthly (฿1,400) an
 
 ### Tourist / Walk-In Pricing
 
-For travelers **without lifetime membership**:
+For travellers **without lifetime membership**:
 
 - **Day pass:** **~฿250 per visit**
 - **Monthly:** **~฿5,000/month**
@@ -154,7 +154,7 @@ For first-time visitors, **check the 3rd Road flagship** as the gold-standard To
 - **Tourist pricing is expensive** (฿250/day, ฿5,000/month) vs. competitors at ฿140/day and ฿1,400/month
 - **Quality variable by branch** — Soi Buakhao reviews flag cleanliness issues
 - **Some peak amenities removed** (3rd Road badminton, yoga room closed)
-- **Lifetime-membership commercial model** can feel pushy to short-stay travelers
+- **Lifetime-membership commercial model** can feel pushy to short-stay travellers
 - **Less premium feel** than Fitz Club, less bargain than Universe Gym
 
 ## Best For
@@ -169,7 +169,7 @@ For first-time visitors, **check the 3rd Road flagship** as the gold-standard To
 
 - **Short-stay tourists** without committing to lifetime — better value at Universe, Coco, Fitness 7
 - **Premium experience seekers** (try Fitz Club at Royal Cliff)
-- **Travelers wanting consistent branch quality** without checking specific locations
+- **Travellers wanting consistent branch quality** without checking specific locations
 
 ## Quick Reference Card
 

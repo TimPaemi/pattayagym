@@ -84,7 +84,7 @@ Pattaya Padel Club has **multiple dedicated padel courts**:
 
 ### Standard Padel Court Specs
 
-- **20 meters × 10 meters** total
+- **20 metres × 10 metres** total
 - **Glass back walls** (3-3.5m tall)
 - **Glass / mesh side walls**
 - **Synthetic turf surface** with sand infill
@@ -130,7 +130,7 @@ This is **comparable to tennis court rates in Pattaya** but the **per-person cos
 - **Spanish / Latin American friendly** — culturally aligned
 - **Doubles social format** — built-in community
 - **East Pattaya location** — quieter than central
-- **Equipment rental** for travelers
+- **Equipment rental** for travellers
 - **Coaching available**
 - **Combinable** with Mabprachan running, dining, watersports
 - **Fastest-growing global racquet sport** — early-mover advantage
@@ -159,7 +159,7 @@ This is **comparable to tennis court rates in Pattaya** but the **per-person cos
 
 - **Singles tennis enthusiasts**
 - **Indoor / AC preference** — Play Padel better
-- **Walking Street based** travelers — distance
+- **Walking Street based** travellers — distance
 - **Year-round commitment** without weather flexibility — Play Padel indoor wins
 - **Pure budget** — public tennis cheaper
 

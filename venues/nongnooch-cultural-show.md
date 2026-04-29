@@ -186,7 +186,7 @@ Nong Nooch ticket tiers:
 
 - **Real Muay Thai spectators** — go to MAX or Pattaya Boxing World
 - **Pure athletic / sport** seekers — this is cultural-tourism
-- **Animal welfare-sensitive** travelers — skip elephant component
+- **Animal welfare-sensitive** travellers — skip elephant component
 - **Walking Street walkable preference** — transport required
 - **Pure budget seekers** — premium ticket pricing
 

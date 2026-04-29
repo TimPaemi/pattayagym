@@ -145,7 +145,7 @@ WKO is genuinely multi-disciplinary:
 - **Kung Fu / Wing Chun** — McInnes's foundational style, occasional instruction
 - **Western Boxing** — boxing-specific training (lineage from Yodsanan project)
 - **Fitness training** — full gym floor with cardio and weights, juice bar
-- **Self-defense** — practical street/urban defense classes
+- **Self-defence** — practical street/urban defense classes
 - **Private 1-on-1** with McInnes available "by rare opportunity" — premium experience
 
 ## Daily Schedule
@@ -221,7 +221,7 @@ The **songthaew (baht bus)** runs along Pattaya Klang Road continuously — ฿1
 - **Sakmongkol as resident Muay Thai coach** — Golden-Era legend, 231-20-4 record
 - **Sifu McInnes** — the only Westerner ever to officiate at Lumpinee
 - **Outstanding value** — ~฿4,000/month for elite-level trainers
-- **Multi-discipline complex** — Muay Thai, Karate, MMA, K-1, fitness, self-defense
+- **Multi-discipline complex** — Muay Thai, Karate, MMA, K-1, fitness, self-defence
 - **Walkable central Pattaya location** — Pattaya Klang is the city's main artery
 - **Smaller, focused class sizes** — more direct trainer attention than mega-camps
 - **No tourist-camp markup** — pricing reflects real Pattaya rates, not foreigner premiums
@@ -260,10 +260,10 @@ Almost no one stumbles into WKO as a first-time tourist. **Almost everyone who f
 ## Not Best For
 
 - **Two-a-day intensive trainees** (only afternoon session)
-- **Travelers needing on-site accommodation** (none provided)
+- **Travellers needing on-site accommodation** (none provided)
 - **Resort-experience seekers** wanting pool, breakfast buffet, spa
 - **Pure Muay Thai purists** who'll be put off by the Karate / WKO branding
-- **Travelers who want morning Muay Thai only**
+- **Travellers who want morning Muay Thai only**
 - **Anyone needing very heavy English documentation and online booking**
 
 ## Quick Reference Card

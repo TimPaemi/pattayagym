@@ -213,11 +213,11 @@ Zipline / ropes courses have **statistically rare but real injury risk**:
 
 ## Not Best For
 
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **Heat-sensitive** visitors in dry season midday
-- **Pregnant or recovering** travelers
+- **Pregnant or recovering** travellers
 - **Severe fear of heights** without therapeutic preparation
-- **Animal welfare conscious** travelers (skip elephant riding)
+- **Animal welfare conscious** travellers (skip elephant riding)
 - **Pure budget seekers** — ~฿1,500+ for full course
 
 ## Quick Reference Card

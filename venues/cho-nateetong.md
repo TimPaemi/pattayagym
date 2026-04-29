@@ -155,7 +155,7 @@ The Cho Nateetong style appears to be:
 ## Best For
 
 - **Long-stay expat residents** in East Pattaya
-- **Sukhumvit corridor** based travelers
+- **Sukhumvit corridor** based travellers
 - **Budget-conscious** Muay Thai students
 - **Strength + Muay Thai** cross-trainers wanting one venue
 - **Authentic experience** seekers vs. tourism-polished camps
@@ -164,7 +164,7 @@ The Cho Nateetong style appears to be:
 ## Not Best For
 
 - **One-shot tourists** wanting tourist-marketed experience
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **Resort luxury seekers** — try Silk, Fairtex, Kombat Group
 - **Multi-discipline athletes** wanting BJJ / MMA / boxing — try Venum, Battle Conquer
 - **English-only structured curriculum** — communication is workable, not premium

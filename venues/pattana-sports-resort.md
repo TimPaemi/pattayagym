@@ -89,7 +89,7 @@ This scale enables **simultaneous group activities** — a corporate retreat can
 
 ### Course Characteristics
 
-The course design emphasizes:
+The course design emphasises:
 
 - **Rolling fairways** — natural Si Racha land contours
 - **Fast greens** — premium agronomy
@@ -186,7 +186,7 @@ This places Pattana **mid-premium** — meaningfully above value courses (Treasu
 
 ### Accommodation
 
-Rates vary widely by tier and season. Stay-and-play packages typically offer the best value for golf travelers. Confirm via [pattana.co.th](https://pattana.co.th/).
+Rates vary widely by tier and season. Stay-and-play packages typically offer the best value for golf travellers. Confirm via [pattana.co.th](https://pattana.co.th/).
 
 ## Pros
 
@@ -203,7 +203,7 @@ Rates vary widely by tier and season. Stay-and-play packages typically offer the
 
 ## Cons
 
-- **40 km from central Pattaya** — not convenient for in-city travelers
+- **40 km from central Pattaya** — not convenient for in-city travellers
 - **Resort scale** can feel impersonal vs. boutique courses
 - **Premium pricing** vs. value Pattaya courses
 - **Sports-resort positioning** may dilute pure golf experience for purists

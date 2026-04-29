@@ -36,7 +36,7 @@ sources:
 
 Pattaya hosts **multiple competing ATV / Buggy / Off-Road tour operators** running guided rides through **the rural countryside east of the city — Pong Village area near Lake Mabprachan, jungle plantations, farmland, creek crossings, and mud trails**. The major operators include **ATV & BUGGY Adventures Pattaya (Polaris ATVs, "only REAL off-road ATV tour")**, **ATV Pattaya Tours (English + Thai guides, beginner instruction)**, **ATV Adventures Pattaya (operating since 2006, FUN + EXTREME tour options)**, and **Pattaya Off Road Safari (Pong Village near Mabprachan, ATV + Buggy + Enduro)**.
 
-The format is consistent across operators: **complimentary hotel pickup from Pattaya, transfer to off-road property 30 minutes east of the city, beginner-friendly safety briefing on practice track, then 2 hours of guided trail riding through jungle / mud / creeks / farmland**, then transfer back. **No license or prior experience needed** — operators emphasize that ATVs and buggies are safe and intuitive enough for first-timers, with guides providing practice-track instruction before the real tour begins.
+The format is consistent across operators: **complimentary hotel pickup from Pattaya, transfer to off-road property 30 minutes east of the city, beginner-friendly safety briefing on practice track, then 2 hours of guided trail riding through jungle / mud / creeks / farmland**, then transfer back. **No license or prior experience needed** — operators emphasise that ATVs and buggies are safe and intuitive enough for first-timers, with guides providing practice-track instruction before the real tour begins.
 
 For Pattaya tourists wanting **off-road adventure beyond the karting tracks (EasyKart / Pattaya Kart Speedway), beyond ziplines (Tarzan Adventure), and away from urban tourism intensity**, the ATV scene delivers **genuine countryside exploration with adrenaline**. The **30-minute drive east** is meaningful — these tours genuinely take you out of the tourist bubble into rural Chonburi.
 
@@ -70,7 +70,7 @@ ATV tours' specific niche: **rural countryside exploration via mechanized off-ro
 
 ### ATV Pattaya Tours
 
-- **Many kilometers** of off-road tracks
+- **Many kilometres** of off-road tracks
 - **Variety of terrain** — jungles, farmland, plantations, mud, creeks, dried river beds
 - **English + Thai speaking guides**
 - **10-minute beginner instruction** on practice track first
@@ -203,9 +203,9 @@ ATV tour pricing varies by operator and tour length:
 
 ## Not Best For
 
-- **Pregnant or recovering** travelers
+- **Pregnant or recovering** travellers
 - **Pure budget seekers** — premium per-hour
-- **Walking Street based** travelers without 1/2-day to commit
+- **Walking Street based** travellers without 1/2-day to commit
 - **Animal-welfare conscious** — ATVs disturb wildlife
 - **Quiet / contemplative** preference
 - **Children under 16** typically as solo riders

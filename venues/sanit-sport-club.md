@@ -59,7 +59,7 @@ The current standout fighter is **Krasuk Sanitmuaythaigym** — a **MAX Muay Tha
 | Evening 1 | 18:00 |
 | Evening 2 | 19:15 |
 
-Four sessions daily — flexible enough to fit working expats (early or late), travelers (any session), and competitive fighters (multi-session days).
+Four sessions daily — flexible enough to fit working expats (early or late), travellers (any session), and competitive fighters (multi-session days).
 
 ### What Muay Thai training looks like
 
@@ -109,7 +109,7 @@ Pricing fits the ฿฿ tier. Confirm current Muay Thai monthly rates and fitnes
 ## Cons
 
 - **East Pattaya location** — 15–25 min from Walking Street / Beach Road for tourists
-- **No polished website** — Facebook is the primary channel; some travelers prefer a more developed site
+- **No polished website** — Facebook is the primary channel; some travellers prefer a more developed site
 - **Mid-spec fitness equipment** — fine for general training, not for heavy powerlifting
 - **Class schedule confirmation needed** — verify current week before showing up
 - **Less English-marketing-polish** than the big international camps — but English-speaking trainers available
@@ -151,4 +151,4 @@ Pricing fits the ฿฿ tier. Confirm current Muay Thai monthly rates and fitnes
 
 The fastest path: message **sanitsportclub** on Facebook to confirm the current Muay Thai schedule, drop-in pricing, and address pin. Show up for a session in workout gear; trainers will assess your level and pair you appropriately. Bring hand wraps and mouth guard for Muay Thai sessions.
 
-For travelers planning an East Pattaya / Mabprachan day, pair Sanit Sport Club with a **morning run around Mabprachan Reservoir (4 km loop)**, training session, **lunch at one of the lakeside cafés**, and afternoon visit to the **Pattaya Archery Club** or **Thai Polo & Equestrian Club** if you want to add a third sport-related stop. The Mabprachan area packs more sport options into a tight radius than most Pattaya neighbourhoods outside Pratamnak.
+For travellers planning an East Pattaya / Mabprachan day, pair Sanit Sport Club with a **morning run around Mabprachan Reservoir (4 km loop)**, training session, **lunch at one of the lakeside cafés**, and afternoon visit to the **Pattaya Archery Club** or **Thai Polo & Equestrian Club** if you want to add a third sport-related stop. The Mabprachan area packs more sport options into a tight radius than most Pattaya neighbourhoods outside Pratamnak.

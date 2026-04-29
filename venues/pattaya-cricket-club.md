@@ -36,11 +36,11 @@ sources:
 
 ## Overview
 
-Pattaya Cricket Club is **the only Pattaya-based cricket organization competing in the Bangkok Cricket League (BCL)** — Thailand's largest expat cricket league, established 2002 and officially recognized by the **Sport Authority of Thailand (SAT) and Cricket Association of Thailand (CAT)**. The club was **founded in 2010** when a group of cricket enthusiasts started organized play in Pattaya, gradually building **a 1st XI (Stallions) competing in Bangkok Premier League / A Division**, **a Thoroughbreds over-45 social fixtures team**, and **a junior programme for youngsters of all ages**.
+Pattaya Cricket Club is **the only Pattaya-based cricket organization competing in the Bangkok Cricket League (BCL)** — Thailand's largest expat cricket league, established 2002 and officially recognized by the **Sport Authority of Thailand (SAT) and Cricket Association of Thailand (CAT)**. The club was **founded in 2010** when a group of cricket enthusiasts started organised play in Pattaya, gradually building **a 1st XI (Stallions) competing in Bangkok Premier League / A Division**, **a Thoroughbreds over-45 social fixtures team**, and **a junior programme for youngsters of all ages**.
 
 Cricket in Thailand is **traditionally an expatriate sport** — British, Australian, Indian, Pakistani, Sri Lankan, South African expat communities form the player base — but Pattaya Cricket Club has **deliberately developed local Thai community interest** alongside expat membership. The Bangkok-based BCL runs **multiple divisions (Premier 50-overs, A Division 25-overs, B Division 25-overs, CAT T20 Super League 20-overs)** played **from November to June** during Thailand's cool-dry season when cricket grounds are properly playable.
 
-For Pattaya residents from cricket-playing nations who want to **continue playing the sport in Thailand**, and for **traveling cricketers** looking for organized fixtures during long Pattaya stays, the Pattaya Cricket Club is genuinely the only option in the city.
+For Pattaya residents from cricket-playing nations who want to **continue playing the sport in Thailand**, and for **traveling cricketers** looking for organised fixtures during long Pattaya stays, the Pattaya Cricket Club is genuinely the only option in the city.
 
 ## Position in the Pattaya Sport Clubs Market
 
@@ -61,7 +61,7 @@ Pattaya Cricket Club's specific position: **the most committed cricket community
 
 ### Why Cricket Is Niche
 
-Thailand's national sport ecosystem prioritizes:
+Thailand's national sport ecosystem prioritises:
 
 - **Football (soccer)** — overwhelmingly dominant
 - **Muay Thai** — cultural and competitive
@@ -232,7 +232,7 @@ This is **dramatically cheaper than UK / Australian / South African** cricket cl
 
 - **Pure tourists** — multi-week commitment for fixtures
 - **Off-season visitors** (July-October)
-- **Walking Street based** travelers — most fixtures require transport
+- **Walking Street based** travellers — most fixtures require transport
 - **Single-day cricket experience** seekers — no drop-in nets typically
 - **Equipment-budget-constrained** beginners — gear adds up
 

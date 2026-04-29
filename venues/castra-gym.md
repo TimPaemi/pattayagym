@@ -38,7 +38,7 @@ Castra Gym is **the largest and most established professional training facility 
 
 The gym genuinely caters to **the full spectrum** — **professional athletes preparing for competition, dedicated bodybuilders, fitness beginners, expat retirees, and families**. The on-site **Castra Fight Club** adds a combat sports layer (Muay Thai, boxing, kickboxing) alongside the main floor's bodybuilding and strength infrastructure, while **yoga and group classes** round out the offering.
 
-The pricing model is **strikingly accessible**: **฿120 single visit, ฿7,000 annual unlimited** — meaningfully cheaper than commercial chains (Jetts, True Fitness) and competitive with the most basic budget gyms in the city, but with substantially better equipment and atmosphere. For East Pattaya residents and Darkside-staying travelers, Castra is the **default community fitness anchor**.
+The pricing model is **strikingly accessible**: **฿120 single visit, ฿7,000 annual unlimited** — meaningfully cheaper than commercial chains (Jetts, True Fitness) and competitive with the most basic budget gyms in the city, but with substantially better equipment and atmosphere. For East Pattaya residents and Darkside-staying travellers, Castra is the **default community fitness anchor**.
 
 ## Position in the Pattaya Fitness Market
 
@@ -199,7 +199,7 @@ The **Russian / Russian-speaking demographic** is significant — staff often ha
 
 ## Cons
 
-- **East Pattaya location** — not convenient for Beach Road / Walking Street travelers
+- **East Pattaya location** — not convenient for Beach Road / Walking Street travellers
 - **Less polished branding** than commercial chains
 - **GroupX class schedule** less dense than chain gyms
 - **Limited online presence** vs. commercial chains
@@ -218,7 +218,7 @@ The **Russian / Russian-speaking demographic** is significant — staff often ha
 
 ## Not Best For
 
-- **Beach Road / Walking Street travelers** wanting walk-up gyms
+- **Beach Road / Walking Street travellers** wanting walk-up gyms
 - **Premium-luxury seekers** — try FITZ Club
 - **Pure 24/7-needers** — try Jetts (Castra has standard hours)
 - **One-shot tourists** wanting central convenience

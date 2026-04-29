@@ -378,24 +378,24 @@ Burapha is **the consensus second-best golf course in the Pattaya region after L
 - **Resort-grade clubhouse**
 - **Reasonable pricing through discount channels**
 
-…makes it the **default second pick** for any Pattaya golf itinerary. **Most multi-day Pattaya golf travelers play Laem Chabang + Burapha as the headline pair**, often supplementing with Phoenix Gold, Siam Country Club Old Course, or Treasure Hill depending on time and budget.
+…makes it the **default second pick** for any Pattaya golf itinerary. **Most multi-day Pattaya golf travellers play Laem Chabang + Burapha as the headline pair**, often supplementing with Phoenix Gold, Siam Country Club Old Course, or Treasure Hill depending on time and budget.
 
 For golfers wanting **tournament-pedigree fairways** to walk on, Burapha is unique in Pattaya: **the courses where Thailand Opens, Asian Masters Finals, and Mercedes Benz Juniors have actually been contested**.
 
 ## Best For
 
-- **Multi-day Pattaya golf travelers** — pair with Laem Chabang for the perfect 2-day itinerary
+- **Multi-day Pattaya golf travellers** — pair with Laem Chabang for the perfect 2-day itinerary
 - **Tournament-pedigree appreciators** — walk fairways the pros have played
 - **Mixed-ability golf groups** — East friendly, West demanding; both available
 - **Major-winner architecture fans** — Graham + Panks pedigree is rare in Asia
 - **Multi-round same-day visitors** — 36 holes lets you double up
-- **Golf-resort-stay travelers** — on-site accommodation works
+- **Golf-resort-stay travellers** — on-site accommodation works
 - **Tournament players** seeking championship-level conditions
 
 ## Not Best For
 
 - **Pure budget walk-up players** — significant discount available via online booking
-- **Travelers without transport** — 35 min from central Pattaya, no walking access
+- **Travellers without transport** — 35 min from central Pattaya, no walking access
 - **High-handicap beginners** — the rough and water make it expensive on lost balls; smaller courses better for first-Thailand rounds
 - **One-and-done casual visitors** — better appreciated across multiple rounds
 - **Walking-only golfers in hot season** — the heat + course size genuinely demand a cart

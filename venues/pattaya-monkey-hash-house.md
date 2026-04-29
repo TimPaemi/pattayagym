@@ -31,7 +31,7 @@ sources:
 
 ## Overview
 
-Pattaya Monkey Hash House Harriers ("Monkey Hash" or "PMH3") is **the longer-form, more demanding sister kennel of the foundational Pattaya Hash House Harriers** — a Hash House Harriers chapter that runs **only on odd-numbered months (January, March, May, July, September, November) on the 3rd Saturday**, with each run requiring participants to **walk at least 8 kilometers over moderately difficult terrain in approximately 2 hours**. Where the **Pattaya Hash House Harriers (PH3)** runs **every Monday** with a **mainstream 5-10 km mixed-pace format** suitable for runners, joggers, and walkers, **Monkey Hash filters for the more committed segment** of the Pattaya hashing community — those who want **longer routes, harder terrain, and a more dedicated 6-times-per-year monthly tradition**.
+Pattaya Monkey Hash House Harriers ("Monkey Hash" or "PMH3") is **the longer-form, more demanding sister kennel of the foundational Pattaya Hash House Harriers** — a Hash House Harriers chapter that runs **only on odd-numbered months (January, March, May, July, September, November) on the 3rd Saturday**, with each run requiring participants to **walk at least 8 kilometres over moderately difficult terrain in approximately 2 hours**. Where the **Pattaya Hash House Harriers (PH3)** runs **every Monday** with a **mainstream 5-10 km mixed-pace format** suitable for runners, joggers, and walkers, **Monkey Hash filters for the more committed segment** of the Pattaya hashing community — those who want **longer routes, harder terrain, and a more dedicated 6-times-per-year monthly tradition**.
 
 The bi-monthly schedule (every other month) and **the explicit minimum 8km / 2-hour requirement** mean Monkey Hash is **fundamentally different in character from typical hashes**. Most HHH chapters globally welcome casual walkers and slow joggers. Monkey Hash sets a clear bar: **you need to be capable of moderate hiking-level activity for 2+ hours over varied Thai countryside terrain**.
 
@@ -147,7 +147,7 @@ Monkey Hash runs in **varied locations across the Pattaya extended region**:
 - Hilltop forest reserves
 - Coastal cliffside trails
 
-The terrain selection prioritizes **moderate-difficulty trails** — meaning the Hare seeks out routes that provide the 8km+ challenge.
+The terrain selection prioritises **moderate-difficulty trails** — meaning the Hare seeks out routes that provide the 8km+ challenge.
 
 ## Participant Profile
 
@@ -201,7 +201,7 @@ The terrain selection prioritizes **moderate-difficulty trails** — meaning the
 - **2-hour duration** in tropical heat is challenging
 - **Less social density** than weekly PH3
 - **Visitors may not align** with Pattaya stay dates
-- **Bawdy hash culture** may not suit conservative travelers
+- **Bawdy hash culture** may not suit conservative travellers
 - **Trail terrain unpredictable** — bring shoes ready for mud/hills
 
 ## Best For
@@ -220,7 +220,7 @@ The terrain selection prioritizes **moderate-difficulty trails** — meaning the
 - **Short-stay tourists** — schedule rarely aligns
 - **Pure runners** seeking pace — try standard running clubs
 - **Very fit speed athletes** — moderate terrain limits pace
-- **Mobility-limited travelers** — terrain is demanding
+- **Mobility-limited travellers** — terrain is demanding
 
 ## Quick Reference Card
 

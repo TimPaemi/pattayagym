@@ -33,7 +33,7 @@ Kitesurf Pattaya is **a long-running IKO (International Kiteboarding Organizatio
 
 The Jomtien stretch hosts multiple kitesurfing schools — alongside **KBA Pattaya (at Blue Lagoon, slightly south)** and **Clubloongchat Watersports (at Na Jomtien)** — but **Kitesurf Pattaya occupies the central south-Jomtien position** that's particularly accessible from Jomtien-area hotels and condos. The school's IKO certification means instruction follows **the international standard for kitesurfing safety and progression**, with certifications **transferable to schools worldwide** — a Kitesurf Pattaya graduate can rent equipment in Brazil, Cape Town, Tarifa, or Boracay using their IKO card.
 
-For travelers staying in Jomtien or central Pattaya who want **a kitesurfing learning experience without traveling 20+ minutes south to Na Jomtien**, Kitesurf Pattaya is the geographically convenient choice. The **$250 beginner package** is also among the **best-value introductory programs** in Thailand's kitesurfing scene.
+For travellers staying in Jomtien or central Pattaya who want **a kitesurfing learning experience without traveling 20+ minutes south to Na Jomtien**, Kitesurf Pattaya is the geographically convenient choice. The **$250 beginner package** is also among the **best-value introductory programs** in Thailand's kitesurfing scene.
 
 ## Position in the Pattaya Kitesurfing Market
 
@@ -46,7 +46,7 @@ Pattaya's kitesurfing schools concentrate at south Jomtien and Na Jomtien:
 | **Clubloongchat Watersports** | Na Jomtien | Multi-sport — kite, wing, windsurf, sail, SUP |
 | **Various independent operators** | Jomtien Beach | Day-trip rentals, basic instruction |
 
-Kitesurf Pattaya's **central south-Jomtien location** makes it the most walk-up accessible school for hotel-based travelers in Jomtien.
+Kitesurf Pattaya's **central south-Jomtien location** makes it the most walk-up accessible school for hotel-based travellers in Jomtien.
 
 ## Why Jomtien Beach for Kitesurfing
 
@@ -202,10 +202,10 @@ Lessons typically scheduled **late morning through afternoon** to maximize wind 
 ## Best For
 
 - **Complete kitesurfing beginners** wanting clear $250 entry
-- **Jomtien-based travelers** wanting walking-distance school
+- **Jomtien-based travellers** wanting walking-distance school
 - **IKO certification seekers** for global portability
 - **Light-wind preferring beginners** (vs. windier Hua Hin)
-- **Multi-day commit** travelers (3+ days in Pattaya)
+- **Multi-day commit** travellers (3+ days in Pattaya)
 - **Russian-speaking visitors**
 - **November-March seasonal visitors**
 
@@ -215,7 +215,7 @@ Lessons typically scheduled **late morning through afternoon** to maximize wind 
 - **Multi-discipline curious** — try KBA or Clubloongchat
 - **Single-day quick lesson seekers** — kitesurfing requires multi-day progression
 - **Advanced rider rentals** without certification — bring IKO card or get certified first
-- **Central Pattaya based** travelers wanting Beach Road convenience
+- **Central Pattaya based** travellers wanting Beach Road convenience
 - **High-wind big-air riders** — Hua Hin or Phuket better for that
 
 ## Quick Reference Card

@@ -35,7 +35,7 @@ Pratumnak Fitness Park is **Pattaya's premier FREE outdoor fitness facility** �
 
 The park exists thanks to **Pattaya City Municipality investment in public sport infrastructure** — funded by tax revenue and operated as **community fitness amenity for residents and visitors of Pratumnak Hill**. The location specifically — **on Buddha Hill, adjacent to one of Pattaya's most peaceful Buddhist temple areas** — combines **fitness with the contemplative atmosphere of the hill setting**, making the park as much a destination for **outdoor wellness as for hardcore strength training**.
 
-For Pattaya residents on Pratumnak, for budget-conscious travelers, for fitness enthusiasts wanting outdoor-environment training, for street-workout / calisthenics specialists, and for tourists wanting **a free workout with views of Pattaya** — Pratumnak Fitness Park delivers an **experience genuinely impossible to replicate at any commercial gym, regardless of price**.
+For Pattaya residents on Pratumnak, for budget-conscious travellers, for fitness enthusiasts wanting outdoor-environment training, for street-workout / calisthenics specialists, and for tourists wanting **a free workout with views of Pattaya** — Pratumnak Fitness Park delivers an **experience genuinely impossible to replicate at any commercial gym, regardless of price**.
 
 ## Position in the Pattaya Fitness Market
 
@@ -117,7 +117,7 @@ This is the park's specialty:
 The **calisthenics / street workout community** is **growing globally** — bodyweight-based training that requires minimal equipment but extensive practice. Pratumnak Fitness Park's calisthenics setup attracts:
 
 - **Pattaya street workout community** for skill development
-- **Travelers from international street workout scenes**
+- **Travellers from international street workout scenes**
 - **Bodyweight athletes** maintaining routines while traveling
 - **Beginners** wanting accessible bodyweight progression
 
@@ -223,7 +223,7 @@ The fitness park's adjacency to Buddha Hill creates:
 ## Best For
 
 - **Pratumnak Hill residents** wanting walkable free fitness
-- **Budget-conscious travelers** and long-stay residents
+- **Budget-conscious travellers** and long-stay residents
 - **Calisthenics / street workout** practitioners
 - **Beginners** wanting low-stakes introduction to weights
 - **Tourists** wanting free workout option
@@ -238,7 +238,7 @@ The fitness park's adjacency to Buddha Hill creates:
 - **Heat-sensitive** trainers in dry season midday
 - **Hygiene-prioritizers** preferring commercial cleanliness
 - **Coaching seekers** — no instruction available
-- **Walking Street based** travelers — Fitness 7 or Tony's Gym closer
+- **Walking Street based** travellers — Fitness 7 or Tony's Gym closer
 
 ## Quick Reference Card
 

@@ -32,7 +32,7 @@ TOS Tennis Club (also operated as **TOS Tennis Academy**) is **the closest tenni
 
 The 2-court setup is **the most modest in the Pattaya tennis scene** — Greta has 6 covered courts, Tara has 3, Pattaya Tennis & Badminton Inter Club has 5. But the **integrated swimming pool + locker room + training gym** add **a small-club lifestyle layer** that pure tennis-only facilities don't offer. Players can train, shower, lift weights, swim, and recover in a single residential club setting.
 
-The current court conditions are **fine for beginner play but would not be recommended for advanced play** — the courts need resurfacing (planned at some point per the operators). For Jomtien-based travelers and Baan Suan Lalana residents who prioritize **convenience, beach proximity, and integrated club amenities** over premier-tier playing surfaces, TOS Tennis serves the niche.
+The current court conditions are **fine for beginner play but would not be recommended for advanced play** — the courts need resurfacing (planned at some point per the operators). For Jomtien-based travellers and Baan Suan Lalana residents who prioritise **convenience, beach proximity, and integrated club amenities** over premier-tier playing surfaces, TOS Tennis serves the niche.
 
 ## Position in the Pattaya Tennis Market
 
@@ -66,7 +66,7 @@ The TOS Tennis facility serves both **Baan Suan Lalana residents** (who likely h
 
 ### Why Beach Proximity Matters
 
-For tennis-playing travelers staying at Jomtien Beach hotels:
+For tennis-playing travellers staying at Jomtien Beach hotels:
 
 - **Walking-distance courts** vs. 30+ minute drive to Greta or Khao Mai Kaeo
 - **Beach time + tennis combination** in a single day
@@ -167,7 +167,7 @@ Direct contact recommended at **+66 89 108 4402** or **tostennis@hotmail.com** f
 
 ## Best For
 
-- **Jomtien Beach-staying travelers** wanting walkable tennis
+- **Jomtien Beach-staying travellers** wanting walkable tennis
 - **Baan Suan Lalana residents**
 - **Beginner / intermediate** casual players
 - **Small-club lifestyle** preferences

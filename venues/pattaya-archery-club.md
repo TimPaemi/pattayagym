@@ -30,7 +30,7 @@ sources:
 
 Pattaya Archery Club is **a non-profit archery organization founded in 2006** that's dedicated to **enabling archers of all nationalities and levels — from total beginner to competitive expert — to enjoy archery while in Pattaya**. The club operates **scheduled shooting sessions Tuesday, Thursday, Saturday, and Sunday from 10:00 to 12:00**, with **a quiet relaxing atmosphere, beginner coaching, equipment provision, and surprisingly comprehensive on-site amenities including bungalow accommodation, swimming pool, tennis court, and a fishing boat**.
 
-The non-profit structure is meaningful: **the club is run for archery, not for profit**, meaning **prices stay accessible, scheduling caters to members and dedicated archers rather than tourist-volume optimization, and the equipment / coaching are oriented around skill development rather than throughput**. The combination of **on-site accommodation + multiple sport amenities** makes this **one of Pattaya's few "stay and train" archery destinations** for serious students traveling from elsewhere in Thailand or internationally.
+The non-profit structure is meaningful: **the club is run for archery, not for profit**, meaning **prices stay accessible, scheduling caters to members and dedicated archers rather than tourist-volume optimisation, and the equipment / coaching are oriented around skill development rather than throughput**. The combination of **on-site accommodation + multiple sport amenities** makes this **one of Pattaya's few "stay and train" archery destinations** for serious students traveling from elsewhere in Thailand or internationally.
 
 For Pattaya residents and visitors curious about archery, the **welcoming non-profit atmosphere with patient beginner coaching** makes the Pattaya Archery Club an accessible entry into a sport that's globally underserved in tourist destinations.
 
@@ -198,7 +198,7 @@ This pricing is **dramatically cheaper than commercial archery ranges** in touri
 
 - **Beginner archers** wanting patient introduction
 - **Olympic / recurve archery** practitioners
-- **Long-stay travelers** who can attend regular sessions
+- **Long-stay travellers** who can attend regular sessions
 - **Multi-amenity stay-and-train** seekers
 - **Couples / family** combining archery + tennis + pool + fishing
 - **Non-tourism-pricing** value seekers
@@ -209,7 +209,7 @@ This pricing is **dramatically cheaper than commercial archery ranges** in touri
 
 - **One-shot tourists** wanting quick experience — Tarzan Adventure / Pattaya Shooting Park have flying-fox archery as add-on
 - **Daily flexibility** — only 4 days/week
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **Indoor / AC** preference — outdoor only
 - **Compound bow specialists** — recurve dominant likely
 

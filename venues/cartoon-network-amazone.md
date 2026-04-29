@@ -31,7 +31,7 @@ sources:
 
 ## Overview
 
-Cartoon Network Amazone Waterpark — **rebranded in 2022 as Columbia Pictures Aquaverse** — is **the world's first Cartoon Network themed waterpark and one of Southeast Asia's largest theme-aquatic parks**, located **at 888 Moo 8, Na Jomtien, Sattahip, approximately 15 kilometers south of central Pattaya**. Originally opened in **2014** as a partnership between **Amazon Falls Co., Ltd. and Cartoon Network Enterprises**, the park combined **18 different waterslides across 3 themed zones** with **Cartoon Network character integration including Ben 10, Adventure Time's Finn and Jake, The Powerpuff Girls, and Johnny Bravo**, plus **artificial sea, river rafting, FlowRider surfing, live shows, and rainforest-themed landscaping**.
+Cartoon Network Amazone Waterpark — **rebranded in 2022 as Columbia Pictures Aquaverse** — is **the world's first Cartoon Network themed waterpark and one of Southeast Asia's largest theme-aquatic parks**, located **at 888 Moo 8, Na Jomtien, Sattahip, approximately 15 kilometres south of central Pattaya**. Originally opened in **2014** as a partnership between **Amazon Falls Co., Ltd. and Cartoon Network Enterprises**, the park combined **18 different waterslides across 3 themed zones** with **Cartoon Network character integration including Ben 10, Adventure Time's Finn and Jake, The Powerpuff Girls, and Johnny Bravo**, plus **artificial sea, river rafting, FlowRider surfing, live shows, and rainforest-themed landscaping**.
 
 In 2022, the licensing transitioned and the park rebranded to **Columbia Pictures Aquaverse** — now featuring **Sony Pictures intellectual property (Ghostbusters, Bad Boys, Jumanji, Hotel Transylvania, etc.)** instead of Cartoon Network characters. The physical infrastructure remained largely the same — the slide hardware (manufactured by **Polin Waterparks**), zones, and most attractions are unchanged. Only the theming, character imagery, and naming of attractions shifted.
 
@@ -88,9 +88,9 @@ For people remembering the original Cartoon Network Amazone, the slides themselv
 
 The Cartoon Network era's signature zone with Ben 10 themes:
 
-- **The Omnitrix** — 23-meter tall sphere with digital projection and surround sound; 4-rider raft attraction inspired by Ben 10's alien device
-- **Goop Loop** — 12-meter freefall capsule with trap door release, then 360-degree loop
-- **XLR8-TOR** — 18-meter drop slide named after Ben 10's lightning-fast alien; one of the tallest and steepest rides in Asia
+- **The Omnitrix** — 23-metre tall sphere with digital projection and surround sound; 4-rider raft attraction inspired by Ben 10's alien device
+- **Goop Loop** — 12-metre freefall capsule with trap door release, then 360-degree loop
+- **XLR8-TOR** — 18-metre drop slide named after Ben 10's lightning-fast alien; one of the tallest and steepest rides in Asia
 
 (In Columbia Pictures Aquaverse, these may be re-themed but physical hardware persists)
 
@@ -223,7 +223,7 @@ Day pass pricing varies seasonally:
 - **Quiet contemplation seekers** — high energy and crowds
 - **Pure budget tourists** — day pass meaningful spend
 - **Single-day Pattaya visitors** with packed itineraries
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **Rain-season visitors** — wet days less appealing
 
 ## Quick Reference Card

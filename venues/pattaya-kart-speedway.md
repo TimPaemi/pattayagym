@@ -35,7 +35,7 @@ sources:
 
 Pattaya Kart Speedway is **the first karting track in Pattaya** — opened on **Thepprasit Road Soi 9 in 1987** and continuously operating for **35+ years**, making it one of the longest-running motorsport venues in the city alongside the Bira Circuit FIA-rated motor racing track. While the newer **EasyKart Pattaya Thepprasit** (also Thepprasit Road) brings fresher modern infrastructure, **Pattaya Kart Speedway brings the original-and-still-active Pattaya karting heritage** plus **a meaningfully expanded multi-activity offering** including **ATV riding, paintballing, bungee jumping, and other sporting activities** integrated into a single adventure compound.
 
-The two-track configuration mirrors EasyKart's: **450-meter beginner track** for **amateurs, children, and double-seater karts**, plus a **750-meter professional track** for **experienced drivers wanting higher-speed action**. The 750m pro track is **slightly shorter than EasyKart's 800m racing track** but the **35-year operating heritage** plus **bundled adventure activities** give Pattaya Kart Speedway a different value proposition.
+The two-track configuration mirrors EasyKart's: **450-metre beginner track** for **amateurs, children, and double-seater karts**, plus a **750-metre professional track** for **experienced drivers wanting higher-speed action**. The 750m pro track is **slightly shorter than EasyKart's 800m racing track** but the **35-year operating heritage** plus **bundled adventure activities** give Pattaya Kart Speedway a different value proposition.
 
 For Pattaya tourists wanting **multi-activity adventure days combining karting + ATV + paintball + bungee under single venue management**, Pattaya Kart Speedway is genuinely the only consolidated option. EasyKart is karting-only; Pattaya Kart Speedway is the multi-activity adventure park.
 
@@ -67,7 +67,7 @@ This heritage doesn't make Pattaya Kart Speedway "better" than EasyKart, but it 
 
 ## Two-Track Configuration
 
-### Beginner Track (450 meters)
+### Beginner Track (450 metres)
 
 - **For amateurs, children, and family**
 - **Wider turns** for confidence-building
@@ -76,7 +76,7 @@ This heritage doesn't make Pattaya Kart Speedway "better" than EasyKart, but it 
 - **Safety priority** over speed
 - **Suitable for** ages 7+ with adult supervision
 
-### Professional Track (750 meters)
+### Professional Track (750 metres)
 
 - **For experienced drivers**
 - **Tighter turns + faster straights**

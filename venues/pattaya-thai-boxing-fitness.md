@@ -26,11 +26,11 @@ sources:
 
 ## Overview
 
-Pattaya Thai Boxing & Fitness Gym is **a small, walk-in, hostel-attached Muay Thai gym in the heart of Jomtien Beach** — tucked into **a small alley off Soi 7, just 200 meters from the beach**. The operation pairs **affordable Muay Thai pad-rounds (~฿300 per session)** with **dorm + private bed budget accommodation**, making it one of the **most cost-effective combined training-and-stay options in Pattaya** for backpackers and short-stay travelers.
+Pattaya Thai Boxing & Fitness Gym is **a small, walk-in, hostel-attached Muay Thai gym in the heart of Jomtien Beach** — tucked into **a small alley off Soi 7, just 200 metres from the beach**. The operation pairs **affordable Muay Thai pad-rounds (~฿300 per session)** with **dorm + private bed budget accommodation**, making it one of the **most cost-effective combined training-and-stay options in Pattaya** for backpackers and short-stay travellers.
 
 The gym's **headline trainer is Champ** — an **actively competing professional fighter** whose pad-work coaching is consistently praised across reviews. The combination of **professional-grade trainer + hostel-tier pricing + literal beachside location** is unusual in Pattaya, and explains why this small operation holds steady positive ratings on TripAdvisor and Wanderlog despite minimal marketing presence.
 
-For travelers wanting **authentic Muay Thai pad rounds without committing to a full camp** and **affordable Jomtien-area accommodation under one roof**, Pattaya Thai Boxing & Fitness is genuinely unique in the Pattaya market.
+For travellers wanting **authentic Muay Thai pad rounds without committing to a full camp** and **affordable Jomtien-area accommodation under one roof**, Pattaya Thai Boxing & Fitness is genuinely unique in the Pattaya market.
 
 ## Position in the Pattaya Market
 
@@ -48,7 +48,7 @@ The combined hostel-gym model is rare. **Most Pattaya Muay Thai camps either pro
 
 ## Trainer — Champ (Active Pro Fighter)
 
-The gym's standout asset is **Champ**, a **professional fighter who's still actively competing**. Reviews from various platforms emphasize:
+The gym's standout asset is **Champ**, a **professional fighter who's still actively competing**. Reviews from various platforms emphasise:
 
 - **Top-notch coaching** during pad rounds
 - **Real fight experience** translating into pad-holding intensity and technical correction
@@ -76,7 +76,7 @@ Having an actively competing pro at the budget tier is unusual — most pro figh
 
 ### Budget Calculation
 
-For a budget traveler:
+For a budget traveller:
 
 - **Hostel bed:** ~฿200-500/night
 - **Daily pad session:** ~฿300
@@ -120,7 +120,7 @@ The afternoon-only schedule is similar to WKO's model and means **morning traine
 - **Hostel + gym combination** — sleep + train under one operation
 - **200m from Jomtien Beach** — train then beach
 - **Walk-in friendly** — no membership pressure
-- **Convenient for Jomtien-staying travelers**
+- **Convenient for Jomtien-staying travellers**
 - **Welcoming atmosphere** for beginners
 - **Air fans + warm showers** (basic but functional)
 
@@ -139,16 +139,16 @@ The afternoon-only schedule is similar to WKO's model and means **morning traine
 - **Backpackers** wanting cheap Pattaya Muay Thai
 - **Walk-in casual training** seekers
 - **Budget-conscious students**
-- **Jomtien Beach-based travelers**
+- **Jomtien Beach-based travellers**
 - **Afternoon-only trainers**
-- **Travelers who want hostel + gym combined**
+- **Travellers who want hostel + gym combined**
 - **First-time Muay Thai tasters** before committing to a full camp
 
 ## Not Best For
 
 - **Morning trainers** (afternoon only)
 - **Hot-season visitors** needing AC
-- **Travelers wanting structured curriculum**
+- **Travellers wanting structured curriculum**
 - **Long-stay students** seeking visa support
 - **Premium-comfort seekers**
 
@@ -161,5 +161,5 @@ The afternoon-only schedule is similar to WKO's model and means **morning traine
 | Price | ~฿300/session (incl. pad rounds with Champ) |
 | Accommodation | Hostel — mixed dorms + private beds |
 | Notable trainer | Champ (active pro fighter) |
-| Distance to beach | 200 meters |
+| Distance to beach | 200 metres |
 | Verified | 2026-04-27 |

@@ -31,7 +31,7 @@ sources:
 
 Yoga Pattaya Studio bills itself as **"the first dedicated international yoga studio in Pattaya"** — and after years of operation it has emerged as the city's most established, comprehensive, and consistently top-rated yoga venue. Located on **Thepprasit Soi 12**, just minutes from Jomtien Beach, the studio offers a remarkably broad style range (Ashtanga, Mysore, Hatha, Hatha Vinyasa, Vinyasa Flow, Fitness Yoga, Stretching), trilingual instruction (English, Russian, Thai — reflecting Pattaya's international demographics), and small-group/private sessions designed to deliver real personal attention.
 
-For travelers serious about a yoga practice during their Pattaya stay — and for the established expat community — Yoga Pattaya Studio is the default recommendation.
+For travellers serious about a yoga practice during their Pattaya stay — and for the established expat community — Yoga Pattaya Studio is the default recommendation.
 
 ## Position in the Market
 
@@ -120,14 +120,14 @@ Unique among Pattaya studios — they run a parallel **e-commerce yoga store** o
 **Top-rated yoga studio in Pattaya** across TripAdvisor and most local "best of" lists. Particularly strong reputation among:
 
 - **Long-stay expats** who treat it as their home studio
-- **Serious yoga travelers** wanting Ashtanga or Mysore practice
+- **Serious yoga travellers** wanting Ashtanga or Mysore practice
 - **Russian-speaking visitors** (large demographic in Pattaya — the Russian-language instruction is a real differentiator)
-- **First-time yoga travelers** wanting a structured intro in English
+- **First-time yoga travellers** wanting a structured intro in English
 
 ## Best For
 
-Long-stay yoga practitioners • Russian-speaking visitors • Travelers wanting Ashtanga/Mysore • Serious yogis on holiday • Anyone wanting trilingual capability • Small-group personalized attention seekers
+Long-stay yoga practitioners • Russian-speaking visitors • Travellers wanting Ashtanga/Mysore • Serious yogis on holiday • Anyone wanting trilingual capability • Small-group personalized attention seekers
 
 ## Not Best For
 
-Travelers staying centrally who don't want to commute to Thepprasit • Pure hot-yoga seekers (try Yoga Haus) • Casual one-off drop-in tourists wanting a 30-min sample (better at hotel resort programs)
+Travellers staying centrally who don't want to commute to Thepprasit • Pure hot-yoga seekers (try Yoga Haus) • Casual one-off drop-in tourists wanting a 30-min sample (better at hotel resort programs)

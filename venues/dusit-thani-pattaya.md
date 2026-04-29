@@ -35,7 +35,7 @@ If you came to Pattaya to **train hard at a Muay Thai camp**, this is not your v
 
 Pattaya's 5-star hospitality stack now includes Hilton Pattaya, Andaz Pattaya Jomtien (Hyatt), Centara Grand Mirage, Cape Dara, Mövenpick Siam Na Jomtien, Royal Cliff (Fitz Club), and InterContinental Pattaya. Each has its own positioning — Hilton is mall-attached and central, Andaz is boutique-Hyatt at Na Jomtien, Centara is family-Lost-World-themed, Cape Dara is beach-cliff residential, Mövenpick is Swiss-precision, Royal Cliff is the racquet-sport-and-conferences citadel.
 
-**Dusit Thani Pattaya is the heritage flagship** — older than most of the rest, anchored in Thai design and hospitality DNA, geographically commanding the most photographed headland on the Pattaya coastline. It was the first true 5-star hotel in Pattaya, and decades later it still trades on that legacy. The wellness side leans into **traditional Thai healing — herbal compresses, Thai massage, yoga, meditation** — rather than chasing the latest IV-drip / cryo / contrast-therapy trend. It's a different vibe, and for many travelers (especially repeat Pattaya visitors and the older luxury set) it's the right one.
+**Dusit Thani Pattaya is the heritage flagship** — older than most of the rest, anchored in Thai design and hospitality DNA, geographically commanding the most photographed headland on the Pattaya coastline. It was the first true 5-star hotel in Pattaya, and decades later it still trades on that legacy. The wellness side leans into **traditional Thai healing — herbal compresses, Thai massage, yoga, meditation** — rather than chasing the latest IV-drip / cryo / contrast-therapy trend. It's a different vibe, and for many travellers (especially repeat Pattaya visitors and the older luxury set) it's the right one.
 
 ## Location
 
@@ -119,16 +119,16 @@ Always call ahead — programs and rates rotate.
 ## Best for
 
 - Couples on a wellness escape — spa + pool + beach + dinner sequencing
-- Solo travelers wanting genuine Thai wellness traditions in a 5-star setting
+- Solo travellers wanting genuine Thai wellness traditions in a 5-star setting
 - Bangkok weekenders driving down for a 1–2 night reset
 - Tennis players who want a luxury court session
-- Older luxury travelers who prefer heritage over trendy
+- Older luxury travellers who prefer heritage over trendy
 - Day-pass visitors wanting world-class spa without committing to overnight
 
 ## Not best for
 
 - Powerlifters and competitive athletes — equipment is hotel-spec, not sport-spec
-- Budget travelers — full 5-star pricing applies
+- Budget travellers — full 5-star pricing applies
 - Party crowd — Dusit's vibe is gracious + quiet, not Walking Street-adjacent energy
 - Families with very young kids who want a dedicated water park (try Centara Grand Mirage instead)
 
@@ -148,7 +148,7 @@ Always call ahead — programs and rates rotate.
 | Tennis | Yes — historical tournament venue |
 | Day-pass | Yes — call to confirm current rate |
 | Reservations | dusit.com — central booking |
-| Best for | Couples, solo wellness travelers, day-pass spa visitors |
+| Best for | Couples, solo wellness travellers, day-pass spa visitors |
 
 ## How to visit
 

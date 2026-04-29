@@ -71,11 +71,11 @@ Pattaya's transformation from quiet fishing village to international tourist cit
 
 ### The Founding Generation
 
-By the early 1990s, this **Vietnam-veteran expat community had aged into retirement** with established lives in Pattaya. **Bill Gilmore and like-minded sports-active veterans** organized informal gatherings:
+By the early 1990s, this **Vietnam-veteran expat community had aged into retirement** with established lives in Pattaya. **Bill Gilmore and like-minded sports-active veterans** organised informal gatherings:
 
 - **Tennis matches** in available Pattaya facilities
 - **Social drinks** at expat bars
-- **Discussion of organizing more formally** for community sport
+- **Discussion of organising more formally** for community sport
 
 ### 1992-1996 Formation
 

@@ -235,7 +235,7 @@ The KBA Pattaya operation is at **Blue Lagoon, Na Jomtien** — south of central
 
 - **Off-season visitors** wanting kiteboarding (April-October)
 - **Pure budget seekers** (lessons add up)
-- **Central Pattaya based** travelers wanting walking-distance schools (try Wave Pattaya central)
+- **Central Pattaya based** travellers wanting walking-distance schools (try Wave Pattaya central)
 - **Surf-only enthusiasts** (Pattaya isn't a surf destination)
 - **Solo unsupervised renters** without IKO certification
 

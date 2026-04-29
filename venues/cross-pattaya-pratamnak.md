@@ -199,7 +199,7 @@ Direct contact recommended to verify current rates and availability.
 ## Best For
 
 - **Cross Pattaya Pratamnak hotel guests**
-- **5-star hotel-stay travelers** wanting integrated fitness
+- **5-star hotel-stay travellers** wanting integrated fitness
 - **Family / group travel** appreciating PLAYROOM amenity
 - **Couples wanting** serene wellness option
 - **Pratamnak Hill residents** with access
@@ -212,7 +212,7 @@ Direct contact recommended to verify current rates and availability.
 - **Hardcore bodybuilders** — go to Muscle Factory or Castra
 - **Combat sports trainees** — go to Battle Conquer
 - **Budget seekers** — Castra ฿7,000/year unbeatable
-- **Walking Street based** travelers wanting walkable gyms
+- **Walking Street based** travellers wanting walkable gyms
 - **Class-density seekers** — chain gyms have more group class options
 
 ## Quick Reference Card

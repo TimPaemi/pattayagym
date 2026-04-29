@@ -35,7 +35,7 @@ sources:
 
 ## Overview
 
-Khao Chi Chan — popularly known as **Buddha Mountain** — is **one of the largest Buddha images in the world** carved into a limestone cliff face in **Na Chom Thian / Sattahip district approximately 20 kilometers southeast of Pattaya**. The Buddha image stands **109 meters tall (357 feet) and stretches 70 meters wide (230 feet) across the mountain's surface**, plated in **24-carat gold leaf** that catches sunlight visible for kilometers. The image was created in **1995-1996 using laser-engraving at night for precision**, then **gold-leafed by hand** — a Thai royal commission to mark **King Bhumibol's Golden Jubilee (50 years on the throne)**.
+Khao Chi Chan — popularly known as **Buddha Mountain** — is **one of the largest Buddha images in the world** carved into a limestone cliff face in **Na Chom Thian / Sattahip district approximately 20 kilometres southeast of Pattaya**. The Buddha image stands **109 metres tall (357 feet) and stretches 70 metres wide (230 feet) across the mountain's surface**, plated in **24-carat gold leaf** that catches sunlight visible for kilometres. The image was created in **1995-1996 using laser-engraving at night for precision**, then **gold-leafed by hand** — a Thai royal commission to mark **King Bhumibol's Golden Jubilee (50 years on the throne)**.
 
 While not a traditional sports facility, Khao Chi Chan functions as **a free public walking, meditation, and contemplative-recreation destination** — the **landscaped gardens at the base** offer **walking paths through ponds and small temples**, the **viewing area** invites **quiet sitting and meditation**, and the **outdoor environment** suits the **mindfulness-and-light-walking** mode that's increasingly recognized as a wellness practice. **The site is genuinely free** — no entrance fee, no parking fee, open daily 08:00-18:00.
 
@@ -71,12 +71,12 @@ The Phra Phuttha Maha Wachira Uttamopat Satsada (the Buddha image's official nam
 
 ### Buddha Image Specs
 
-- **Height:** 109 meters (357 ft)
-- **Width:** 70 meters (230 ft)
+- **Height:** 109 metres (357 ft)
+- **Width:** 70 metres (230 ft)
 - **Position:** Seated in **dhyana mudra** (meditation pose)
 - **Plating:** 24-carat gold leaf
 - **Iconography:** classical Sukhothai-period Thai Buddha style
-- **Visible from:** Surrounding kilometers including the adjacent Chee Chan Golf Resort
+- **Visible from:** Surrounding kilometres including the adjacent Chee Chan Golf Resort
 
 ## What Visitors Do
 
@@ -205,7 +205,7 @@ This is **one of the few major Pattaya-area attractions with zero commercial ent
 
 ## Best For
 
-- **Cultural / contemplative travelers**
+- **Cultural / contemplative travellers**
 - **Photographers** — golden-hour lighting magnificent
 - **Multi-stop day trippers** combining with Sattahip attractions
 - **Free-attraction seekers**
@@ -216,10 +216,10 @@ This is **one of the few major Pattaya-area attractions with zero commercial ent
 ## Not Best For
 
 - **Rigorous hiking / fitness** seekers — gentle walking only
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **Religious-skeptical** visitors uncomfortable with sacred contexts
-- **Modest-dress unwilling** travelers — required at sacred sites
-- **Indoor / AC** preferring travelers
+- **Modest-dress unwilling** travellers — required at sacred sites
+- **Indoor / AC** preferring travellers
 
 ## Quick Reference Card
 

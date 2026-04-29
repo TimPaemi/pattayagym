@@ -33,11 +33,11 @@ sources:
 
 ## Overview
 
-Regents International School Pattaya is **one of the largest and most successful international schools on Thailand's Eastern Seaboard** — a **Nord Anglia Education school offering International Baccalaureate (IB) and A-Level curricula** with a **comprehensive sports infrastructure that puts it among the best-equipped international schools in Southeast Asia** for student athletics. The school's sports facilities include **two competition-standard outdoor swimming pools, a 400-meter all-weather running track, an air-conditioned double-size sports hall, a full-sized football pitch, an Astroturf sports pitch, a fitness centre, and refurbished changing rooms** — infrastructure that **rivals university-level sports complexes** elsewhere.
+Regents International School Pattaya is **one of the largest and most successful international schools on Thailand's Eastern Seaboard** — a **Nord Anglia Education school offering International Baccalaureate (IB) and A-Level curricula** with a **comprehensive sports infrastructure that puts it among the best-equipped international schools in Southeast Asia** for student athletics. The school's sports facilities include **two competition-standard outdoor swimming pools, a 400-metre all-weather running track, an air-conditioned double-size sports hall, a full-sized football pitch, an Astroturf sports pitch, a fitness centre, and refurbished changing rooms** — infrastructure that **rivals university-level sports complexes** elsewhere.
 
 The school offers students **200+ sport, cultural, musical, technical, and community-based activities** — meaning sports are a meaningful pillar of the broader Regents experience rather than an afterthought. Specific sport programs span **basketball, football (soccer), swimming, athletics, rugby, cricket, volleyball, tennis, and many others** — covering virtually all major team sports plus individual disciplines.
 
-For families relocating to or visiting Pattaya with children of school age — and especially for those prioritizing **British/international education with strong athletics programs** — Regents represents the top tier of the Pattaya international school market. The school's facilities also occasionally host **community sports events and school-attached programs** for local Pattaya families, though primary use is by enrolled students.
+For families relocating to or visiting Pattaya with children of school age — and especially for those prioritising **British/international education with strong athletics programs** — Regents represents the top tier of the Pattaya international school market. The school's facilities also occasionally host **community sports events and school-attached programs** for local Pattaya families, though primary use is by enrolled students.
 
 ## Position in the Pattaya Education + Sports Market
 
@@ -95,7 +95,7 @@ This pricing positions Regents firmly in the **upper-tier expat / wealthy Thai f
 
 The two-pool configuration is meaningful — most schools have one pool. Two pools enable **simultaneous lap swimming for two different age groups, or competition + training simultaneously**.
 
-### 400-Meter All-Weather Running Track
+### 400-Metre All-Weather Running Track
 
 - **Olympic-standard 400m** track distance
 - **All-weather surface** (typically synthetic / Mondo-style rubber)

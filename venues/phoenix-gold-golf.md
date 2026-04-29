@@ -45,7 +45,7 @@ In the Pattaya golf hierarchy, Phoenix Gold sits **comfortably in the upper-mid 
 
 ## The Designer — Dennis Griffiths
 
-**Dennis Griffiths** is an American golf course architect known for designs across the Southern United States, with several international projects including Phoenix Gold. His design philosophy emphasizes:
+**Dennis Griffiths** is an American golf course architect known for designs across the Southern United States, with several international projects including Phoenix Gold. His design philosophy emphasises:
 
 - **Natural terrain integration** — using existing landforms rather than fighting them
 - **Strategic variety** — each hole presenting different shot demands
@@ -164,7 +164,7 @@ Bundled packages typically include **green fee + caddy + cart + transport from y
 - **Beginners and high-handicap players** — wide fairways, forgiving design
 - **Multi-day visitors** wanting visual variety across three nines
 - **Photographers** — the Ocean and Mountain nines are highly photogenic
-- **Players prioritizing value** — ฿3,000 weekday rate is competitive
+- **Players prioritising value** — ฿3,000 weekday rate is competitive
 - **Scenic / view-focused golfers**
 
 ## Not Best For

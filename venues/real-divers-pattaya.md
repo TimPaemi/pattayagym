@@ -39,7 +39,7 @@ sources:
 
 Real Divers is **Pattaya's only British family-run PADI 5-Star Instructor Development Center (IDC)** — operating since **2005** by **brothers Neil and Peter Chandler**, sons of founder Dave Chandler (a retired British journalist who started diving 30 years ago, sold his publishing company, and emigrated to Thailand to pursue diving full-time). The family-business character is genuinely meaningful in Pattaya's dive market — most dive shops are corporate-owned or independently owned by single instructors, while Real Divers' **multi-generational family operation** delivers a different cultural and operational profile.
 
-The boat is a **12-meter speedboat** — meaningfully larger than typical Pattaya dive boats — making it stable for full classes plus crew with comfortable kit-up zones, dry storage, and freshwater. **Trips depart at 09:00 and return by 14:00**, fitting a 5-hour window perfect for tourists who want to combine diving with afternoon Pattaya activities. **Daily trips run year-round to either the Pattaya near islands or the Samae San islands** (south of Sattahip), both delivering coral and wreck diving at recreational depths.
+The boat is a **12-metre speedboat** — meaningfully larger than typical Pattaya dive boats — making it stable for full classes plus crew with comfortable kit-up zones, dry storage, and freshwater. **Trips depart at 09:00 and return by 14:00**, fitting a 5-hour window perfect for tourists who want to combine diving with afternoon Pattaya activities. **Daily trips run year-round to either the Pattaya near islands or the Samae San islands** (south of Sattahip), both delivering coral and wreck diving at recreational depths.
 
 The PADI 5-Star IDC tier puts Real Divers alongside **No Limit Divers (PADI 5-Star IDC, Gary Phillips Platinum Course Director)** and **Aquanauts (PADI 5-Star CDC + Nat Geo)** as **the top three credentialed dive operations in Pattaya**. For divers wanting **the most credentialed instruction available in the city plus the family-business operational character**, Real Divers is genuinely the British family choice.
 
@@ -83,11 +83,11 @@ The two brothers operate Real Divers as a **family business**:
 
 The **multi-generational family pedigree** is unusual in the Pattaya dive industry and gives Real Divers **a distinctive customer experience** — long-term relationships, generational continuity, and the kind of reputation built incrementally over decades.
 
-## The 12-Meter Speedboat
+## The 12-Metre Speedboat
 
 ### Why Boat Size Matters
 
-A **12-meter speedboat** is **larger than typical Pattaya dive boats** (most operators use 8-10m boats):
+A **12-metre speedboat** is **larger than typical Pattaya dive boats** (most operators use 8-10m boats):
 
 - **More stable** — better for newer divers or rough conditions
 - **Comfortable kit-up zones** — dry tank racks, equipment storage
@@ -189,7 +189,7 @@ Pricing is **comparable to other Pattaya 5-Star tier operators** — premium ref
 - **PADI 5-Star IDC** — top tier credential
 - **British family-run** — Chandler brothers continuing father's vision
 - **20+ years operating** — established
-- **12-meter speedboat** — large + comfortable + stable
+- **12-metre speedboat** — large + comfortable + stable
 - **Full instructor pipeline** in-house
 - **Samae San islands** trip option — rare specialty
 - **Daily trips** with reliable 09:00 departure / 14:00 return
@@ -233,7 +233,7 @@ Pricing is **comparable to other Pattaya 5-Star tier operators** — premium ref
 | Ownership | British family — Chandler brothers Neil & Peter |
 | Established | 2005 (founder Dave Chandler) |
 | Operating | 20+ years |
-| Boat | 12-meter speedboat |
+| Boat | 12-metre speedboat |
 | Daily trip | 09:00-14:00 |
 | Sites | Pattaya near islands + Samae San islands |
 | Languages | English, Thai |

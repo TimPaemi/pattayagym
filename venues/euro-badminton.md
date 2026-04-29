@@ -142,7 +142,7 @@ Confirm direct at venue.
 
 - **Limited online presence** — direct visit recommended for info
 - **Hours not published online**
-- **East Pattaya based** — not convenient for central / South Pattaya travelers
+- **East Pattaya based** — not convenient for central / South Pattaya travellers
 - **Smaller scale** than premium multi-sport facilities
 - **Basic infrastructure** — not premium-tier
 - **English communication possibly limited**
@@ -155,11 +155,11 @@ Confirm direct at venue.
 - **Group gatherings** — half-day plans with food
 - **Year-round indoor sport** seekers
 - **Budget-conscious players**
-- **Thai-cultural-comfortable** travelers
+- **Thai-cultural-comfortable** travellers
 
 ## Not Best For
 
-- **Central / Walking Street** based travelers — Pattaya Tennis & Badminton Inter Club closer
+- **Central / Walking Street** based travellers — Pattaya Tennis & Badminton Inter Club closer
 - **English-only-speakers** seeking international service — Inter Club better
 - **Premium amenities** — basic infrastructure
 - **Pure badminton training** — multi-amenity may distract

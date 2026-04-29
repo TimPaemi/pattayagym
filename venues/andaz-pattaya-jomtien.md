@@ -37,9 +37,9 @@ sources:
 
 ## Overview
 
-Andaz Pattaya Jomtien Beach is **a 5-star Hyatt Andaz boutique concept hotel on Na Jomtien Beach** delivering **the most wellness-integrated luxury hotel fitness experience in the Pattaya region**. The property's stated approach — **"complete serenity surrounded by the wonders of nature"** with **"world-class internationally-branded luxury lifestyle resort where visitors can escape from the outside world"** — drives **a fitness + spa stack that emphasizes restoration alongside athletic conditioning**: the **24-hour Technogym fitness center with separate yoga and stretching room**, **three distinct pools (Water Court / beachfront infinity / Lagoon Pool)**, and the **Panpuri Spa with 6 treatment rooms plus the rare combination of Japanese onsen + Turkish bath + Finnish sauna**.
+Andaz Pattaya Jomtien Beach is **a 5-star Hyatt Andaz boutique concept hotel on Na Jomtien Beach** delivering **the most wellness-integrated luxury hotel fitness experience in the Pattaya region**. The property's stated approach — **"complete serenity surrounded by the wonders of nature"** with **"world-class internationally-branded luxury lifestyle resort where visitors can escape from the outside world"** — drives **a fitness + spa stack that emphasises restoration alongside athletic conditioning**: the **24-hour Technogym fitness center with separate yoga and stretching room**, **three distinct pools (Water Court / beachfront infinity / Lagoon Pool)**, and the **Panpuri Spa with 6 treatment rooms plus the rare combination of Japanese onsen + Turkish bath + Finnish sauna**.
 
-For the **wellness-tourism demographic** specifically — travelers prioritizing **integrated movement-and-recovery routines** rather than pure athletic training — Andaz delivers what no other Pattaya hotel quite matches. The **Panpuri Spa** is **a Thai luxury spa brand** with global recognition, and the **multi-bath cultural option** (onsen / Turkish / Finnish) is genuinely rare even at premium global hotel-spa brands.
+For the **wellness-tourism demographic** specifically — travellers prioritising **integrated movement-and-recovery routines** rather than pure athletic training — Andaz delivers what no other Pattaya hotel quite matches. The **Panpuri Spa** is **a Thai luxury spa brand** with global recognition, and the **multi-bath cultural option** (onsen / Turkish / Finnish) is genuinely rare even at premium global hotel-spa brands.
 
 The Na Jomtien location places Andaz **adjacent to the Sattahip premium recreation cluster** (Greta Sport Club ITF tennis 18 km, Cartoon Network Amazone water park, Ramayana Water Park, Chee Chan Golf Resort, Khao Chi Chan Buddha Mountain) — meaning **a multi-day stay can stack premium golf, premium tennis, world-class water parks, contemplative cultural sites, and integrated wellness all within a 30-min radius**.
 
@@ -168,7 +168,7 @@ The **three-pool segmentation** (adult-quiet, beachfront, family) is **dramatica
 Standard Panpuri Spa programs include:
 
 - **Thai massage** — traditional Thai
-- **Sports massage** — for active travelers
+- **Sports massage** — for active travellers
 - **Aromatherapy** — Panpuri-branded oils
 - **Hydrotherapy**
 - **Facial treatments** — multi-skin-type
@@ -185,7 +185,7 @@ Andaz's three-bath cultural combination is genuinely distinctive:
 - **Hot mineral water** soaking pools
 - **Traditional Japanese bathhouse** experience
 - **Therapeutic and meditative**
-- **Rare in Thailand outside specialized Japanese-themed venues**
+- **Rare in Thailand outside specialised Japanese-themed venues**
 
 #### Turkish Bath
 
@@ -243,8 +243,8 @@ This is **firmly premium-tier** — among Pattaya's most expensive hotel options
 
 ## Best For
 
-- **Wellness-tourism** travelers
-- **Couples' retreat** prioritizing relaxation
+- **Wellness-tourism** travellers
+- **Couples' retreat** prioritising relaxation
 - **Hyatt loyalty members** maximizing benefits
 - **Spa enthusiasts** wanting Panpuri brand
 - **Onsen + Turkish + Finnish** bath enthusiasts (rare combination)
@@ -257,7 +257,7 @@ This is **firmly premium-tier** — among Pattaya's most expensive hotel options
 
 - **Pure athletic training** focus — premium camps better
 - **Family with energetic kids** — Centara Grand Mirage water park better
-- **Walking Street based** travelers — distance from Andaz substantial
+- **Walking Street based** travellers — distance from Andaz substantial
 - **Hardcore fitness specialists** — Technogym is solid but not bodybuilding-tier
 - **Pure budget seekers**
 - **Combat sports** — none on-site

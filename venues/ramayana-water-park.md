@@ -36,11 +36,11 @@ sources:
 
 ## Overview
 
-Ramayana Water Park is **the largest water park in Thailand AND in all of Southeast Asia** — a **184,000 square meter aquatic megaplex located 20 kilometers south of Pattaya at Na Jomtien, Sattahip**, themed around **the Ramayana — the great Hindu epic that's foundational to Thai culture and the source of the Ramakien (the Thai national epic)**. The park covers an area roughly **equivalent to 25 football pitches** — making it dramatically larger than the nearby Cartoon Network Amazone (Columbia Pictures Aquaverse) facility and putting it in a different scale category than virtually any other Asian water park.
+Ramayana Water Park is **the largest water park in Thailand AND in all of Southeast Asia** — a **184,000 square metre aquatic megaplex located 20 kilometres south of Pattaya at Na Jomtien, Sattahip**, themed around **the Ramayana — the great Hindu epic that's foundational to Thai culture and the source of the Ramakien (the Thai national epic)**. The park covers an area roughly **equivalent to 25 football pitches** — making it dramatically larger than the nearby Cartoon Network Amazone (Columbia Pictures Aquaverse) facility and putting it in a different scale category than virtually any other Asian water park.
 
-The park opened officially on **May 5, 2016** after construction beginning in 2011 — a 5-year build that allowed the developers to deliver **26 water slides across 34 lanes**, **a 600-meter-long lazy river that wraps around a natural hill with integrated waves, bubbles, and waterfalls**, and **a double wave pool with a 150-meter-wide beach** that lets visitors **swim with tubes in one section or wave-bathe without tubes in the other**. The Ramayana cultural theming is integrated throughout the park architecture, landscaping, character costumes, and naming — distinguishing the experience from generic-themed water parks globally.
+The park opened officially on **May 5, 2016** after construction beginning in 2011 — a 5-year build that allowed the developers to deliver **26 water slides across 34 lanes**, **a 600-metre-long lazy river that wraps around a natural hill with integrated waves, bubbles, and waterfalls**, and **a double wave pool with a 150-metre-wide beach** that lets visitors **swim with tubes in one section or wave-bathe without tubes in the other**. The Ramayana cultural theming is integrated throughout the park architecture, landscaping, character costumes, and naming — distinguishing the experience from generic-themed water parks globally.
 
-The international recognition is meaningful: **in 2019, just 3 years after opening, Ramayana ranked #1 in Asia and #10 in the World among water parks per TripAdvisor Travelers' Choice Awards** — confirming that the park's scale, ambition, and execution made it a genuinely world-class destination.
+The international recognition is meaningful: **in 2019, just 3 years after opening, Ramayana ranked #1 in Asia and #10 in the World among water parks per TripAdvisor Travellers' Choice Awards** — confirming that the park's scale, ambition, and execution made it a genuinely world-class destination.
 
 ## Position in the Pattaya Aquatic Tourism Market
 
@@ -56,7 +56,7 @@ Pattaya's water park / aquatic destination tier:
 
 Ramayana's specific position: **the destination water park experience** — visitors travel to Pattaya specifically to spend a full day at Ramayana, often as the centerpiece of their entire visit.
 
-## Scale — 184,000 Square Meters
+## Scale — 184,000 Square Metres
 
 The 184,000 sqm size is **genuinely massive**:
 
@@ -132,13 +132,13 @@ The 26 slides span **34 lanes** (some slides are multi-lane):
 
 Like Cartoon Network Amazone, Ramayana likely uses **premium international slide manufacturers (Polin Waterparks, ProSlide, WhiteWater West)** for engineering-grade safety and ride quality.
 
-## The 600-Meter Lazy River
+## The 600-Metre Lazy River
 
 ### Why It's Distinctive
 
 Most lazy rivers are simple circular channels around the perimeter of a water park. Ramayana's lazy river:
 
-- **Runs 600 meters** — substantially longer than typical
+- **Runs 600 metres** — substantially longer than typical
 - **Wraps around a natural hill** — provides elevation variation and scenic views
 - **Integrated waves** — periodic waves through the river course
 - **Bubbles** — bubbling sections for varied sensation
@@ -155,7 +155,7 @@ The wave pool is **double-functioned**:
 
 - **Side 1:** **Tube section** for floating wave-riding
 - **Side 2:** **Open swim section** without tubes for direct wave-bathing
-- **Beach:** **150 meters wide (490 feet)** — among the largest artificial beaches in any water park
+- **Beach:** **150 metres wide (490 feet)** — among the largest artificial beaches in any water park
 
 ### Wave Generation
 
@@ -204,7 +204,7 @@ Standard Pattaya water park pricing tiers:
 
 ## TripAdvisor World Top 10 Ranking
 
-The 2019 TripAdvisor Travelers' Choice Awards ranking is meaningful:
+The 2019 TripAdvisor Travellers' Choice Awards ranking is meaningful:
 
 - **#1 Water Park in Asia** (2019)
 - **#10 Water Park in the World** (2019)
@@ -254,7 +254,7 @@ This puts Ramayana in **company with global water-park flagships**: Aquaventure 
 - **Quiet contemplation seekers** — high energy
 - **Pure budget tourists** — day pass meaningful spend
 - **Single-day Pattaya visitors** with packed itineraries
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 
 ## Quick Reference Card
 

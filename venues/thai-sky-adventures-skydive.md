@@ -35,9 +35,9 @@ sources:
 
 ## Overview
 
-Thai Sky Adventures is **the only full-time skydiving drop zone in Southeast Asia** — a uniquely positioned operator with **over 25 years of skydiving experience** that delivers tandem jumps from **13,000 feet (4,000 meters)** with **60 seconds of freefall at 200 km/h** followed by a **5-minute parachute ride** featuring **stunning ocean views over Rayong's beaches**. The dropzone is located **25 km north of Pattaya** (and 96 km south of Bangkok) with **free hotel pickup from Pattaya** included for both **07:00 AM and 10:00 AM jump slots**.
+Thai Sky Adventures is **the only full-time skydiving drop zone in Southeast Asia** — a uniquely positioned operator with **over 25 years of skydiving experience** that delivers tandem jumps from **13,000 feet (4,000 metres)** with **60 seconds of freefall at 200 km/h** followed by a **5-minute parachute ride** featuring **stunning ocean views over Rayong's beaches**. The dropzone is located **25 km north of Pattaya** (and 96 km south of Bangkok) with **free hotel pickup from Pattaya** included for both **07:00 AM and 10:00 AM jump slots**.
 
-The skydiving experience is **Pattaya's apex adrenaline activity** — for travelers who've already done water parks (Cartoon Network Amazone, Ramayana), beach activities (parasailing with Wave Pattaya, kitesurfing with KBA Pattaya), karting (EasyKart), and other thrills, **a tandem skydive is the bucket-list capstone**. The 60 seconds of freefall at 200 km/h is genuinely **a transformative experience** — most first-time skydivers describe it as **one of the most intense moments of their lives**.
+The skydiving experience is **Pattaya's apex adrenaline activity** — for travellers who've already done water parks (Cartoon Network Amazone, Ramayana), beach activities (parasailing with Wave Pattaya, kitesurfing with KBA Pattaya), karting (EasyKart), and other thrills, **a tandem skydive is the bucket-list capstone**. The 60 seconds of freefall at 200 km/h is genuinely **a transformative experience** — most first-time skydivers describe it as **one of the most intense moments of their lives**.
 
 The "only full-time SE Asia drop zone" positioning is meaningful: most Asian regions have **occasional skydiving operations** that run when conditions allow, but Thai Sky Adventures operates **with year-round drop zone infrastructure, certified tandem instructors, professional aircraft, and continuous safety standards** — putting it in a category usually reserved for the major skydiving destinations globally (Florida, California, Spain, Australia, New Zealand).
 
@@ -81,7 +81,7 @@ Unlike skydiving operations in temperate climates that close during winter:
 Permanent full-time operation supports:
 
 - **Dedicated runway** for skydive aircraft
-- **Aircraft optimized** for jumper logistics
+- **Aircraft optimised** for jumper logistics
 - **Trained ground crew** for landing safety
 - **Equipment maintenance** to international standards
 - **Backup systems** and emergency procedures
@@ -261,17 +261,17 @@ Skydiving is **inherently risky**:
 - **Couples wanting transformative shared experience**
 - **Photographers / videographers** valuing aerial Pattaya footage
 - **First-time skydivers** (tandem format ideal)
-- **Pattaya travelers** with at least one half-day available
-- **Athletes / fit travelers** comfortable with physical exertion
+- **Pattaya travellers** with at least one half-day available
+- **Athletes / fit travellers** comfortable with physical exertion
 - **Adventure-tourism photographers**
 
 ## Not Best For
 
-- **Pregnant travelers**
+- **Pregnant travellers**
 - **Heart condition / recent surgery** patients
 - **Heavily overweight participants** (over 115 kg)
 - **Children under 12**
-- **Pure budget travelers** — premium pricing
+- **Pure budget travellers** — premium pricing
 - **Quick-experience tourists** — half-day commitment
 - **Severe-fear-of-heights** participants without therapeutic preparation
 

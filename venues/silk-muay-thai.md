@@ -35,7 +35,7 @@ sources:
 
 Silk Muay Thai is **Pattaya's premier boutique all-inclusive Muay Thai retreat camp** — a smaller, design-conscious facility focused on **personalized attention, modern amenities, and an integrated training-and-stay experience**. The camp carries a **near-perfect 4.9/5 rating** across major review platforms, putting it among the **top-rated combat sports facilities in Thailand by user score**. The model is straightforward: **book a package, live on-site in a modern private room, train twice a day, eat curated meals at the on-site restaurant, recover in the pool/sauna/spa, and emerge after a week or month transformed**.
 
-For travelers wanting **the wellness-retreat version of a Muay Thai training holiday** — comfortable accommodation, integrated logistics, premium service standards — Silk is the most curated option in Pattaya. Where Sityodtong delivers raw authenticity and Fairtex delivers institutional scale, **Silk delivers a design-forward, hospitality-grade Muay Thai vacation**.
+For travellers wanting **the wellness-retreat version of a Muay Thai training holiday** — comfortable accommodation, integrated logistics, premium service standards — Silk is the most curated option in Pattaya. Where Sityodtong delivers raw authenticity and Fairtex delivers institutional scale, **Silk delivers a design-forward, hospitality-grade Muay Thai vacation**.
 
 ## Position in the Pattaya Market
 
@@ -172,16 +172,16 @@ Silk attracts a **wellness-oriented, retreat-vacation demographic** — differen
 
 ## Best For
 
-- **First-time Muay Thai travelers** wanting comfort and structure
+- **First-time Muay Thai travellers** wanting comfort and structure
 - **Wellness-oriented training holidays** (yoga + Muay Thai + spa lifestyle)
-- **Couples or solo travelers** wanting boutique service
-- **Travelers prioritizing comfort included** in the package
+- **Couples or solo travellers** wanting boutique service
+- **Travellers prioritising comfort included** in the package
 - **Russian-speaking visitors** (large Pattaya demographic, supported here)
 - **Students who don't want to manage food/logistics separately**
 
 ## Not Best For
 
-- **Pure budget travelers** (Sor Klinmee, WKO, Petchrungruang are cheaper)
+- **Pure budget travellers** (Sor Klinmee, WKO, Petchrungruang are cheaper)
 - **Lineage purists** seeking 60-year-old camp pedigrees
 - **Multi-discipline athletes** wanting BJJ/MMA on-site
 - **Authentic-Thai-camp atmospherics** preferers

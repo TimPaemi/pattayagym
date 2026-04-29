@@ -37,7 +37,7 @@ sources:
 
 ## Overview
 
-Underwater World Pattaya is **Pattaya's only aquarium** — and crucially, **the first modern aquarium in Thailand**, opened in **2003**. The facility features **a 105+ meter clear acrylic underwater tunnel** with **180-degree views** that let visitors **walk through the marine environment as if diving deep into the sea**, plus **5,000+ marine animals from regional species** displayed across **four themed zones (Coral Reef / Shark / Stingray / Giant of Siam)** including **the biggest jellyfish collection in Thailand**.
+Underwater World Pattaya is **Pattaya's only aquarium** — and crucially, **the first modern aquarium in Thailand**, opened in **2003**. The facility features **a 105+ metre clear acrylic underwater tunnel** with **180-degree views** that let visitors **walk through the marine environment as if diving deep into the sea**, plus **5,000+ marine animals from regional species** displayed across **four themed zones (Coral Reef / Shark / Stingray / Giant of Siam)** including **the biggest jellyfish collection in Thailand**.
 
 Beyond passive observation, Underwater World offers genuine **shark and manta ray dive experiences** for visitors with diving certifications who want to **dive with the sharks and manta rays for the experience of a lifetime**. This **dive-with-sharks program** distinguishes Underwater World from typical aquariums — it's not just a viewing facility but a **legitimate dive experience venue** that complements Pattaya's broader PADI dive ecosystem (No Limit Divers, Real Divers, Aquanauts, etc.).
 
@@ -82,11 +82,11 @@ By 2026, Underwater World has operated **for 22+ years**:
 - **Conservation contributions** to Thai marine education
 - **Generations of Thai students** have visited on school trips
 
-## The 105+ Meter Underwater Tunnel
+## The 105+ Metre Underwater Tunnel
 
 ### Tunnel Design
 
-The **105+ meter clear acrylic tunnel** is **the facility's signature feature**:
+The **105+ metre clear acrylic tunnel** is **the facility's signature feature**:
 
 - **Acrylic construction** — clearer than glass, scratch-resistant
 - **180-degree visibility** — walk through, see fish all around
@@ -144,7 +144,7 @@ The 180-degree experience is **fundamentally different from looking through aqua
 The **jellyfish collection** is genuinely distinctive:
 
 - **Multiple species** — moon jellies, comb jellies, lion's mane, etc.
-- **Specialized lighting** to showcase translucent bodies
+- **Specialised lighting** to showcase translucent bodies
 - **Educational** about jellyfish biology
 - **Photographic spectacle** — Instagram-worthy
 - **Calming visual** experience
@@ -240,7 +240,7 @@ For divers who **specifically want guaranteed shark interaction**, Underwater Wo
 - **Rainy-day activity** — indoor weather-immune
 - **Photography enthusiasts** — jellyfish + tunnel shots
 - **PADI divers** wanting guaranteed shark sightings
-- **Marine biology curious** travelers
+- **Marine biology curious** travellers
 - **Couples / dates** for unique experience
 - **Multi-language tour groups**
 - **Combinable** with Pattaya nearby attractions
@@ -248,7 +248,7 @@ For divers who **specifically want guaranteed shark interaction**, Underwater Wo
 ## Not Best For
 
 - **Wild marine experience** preference — go open-water diving
-- **Walking Street based** travelers — Sukhumvit transport required
+- **Walking Street based** travellers — Sukhumvit transport required
 - **Animal-welfare-strict** visitors uncomfortable with captive marine life
 - **Pure thrill seekers** — aquarium is gentle experience
 - **Pure budget tourists** — admission tier above public pools
@@ -260,7 +260,7 @@ For divers who **specifically want guaranteed shark interaction**, Underwater Wo
 | Address | 22/22 Moo 11, Sukhumvit Road, Nong Prue, Bang Lamung |
 | Opened | 2003 — first modern aquarium in Thailand |
 | Hours | Daily 09:00-18:00 |
-| Tunnel | 105+ meters clear acrylic with 180-degree view |
+| Tunnel | 105+ metres clear acrylic with 180-degree view |
 | Marine animals | 5,000+ from regional species |
 | Zones | Coral Reef + Shark + Stingray + Giant of Siam |
 | Special | Biggest jellyfish collection in Thailand |

@@ -43,7 +43,7 @@ sources:
 
 Horseshoe Point Resort & Country Club is **the largest, most institutionally credentialed, most multi-disciplinary equestrian and adventure sports facility in Thailand** and one of the leading riding schools in all of Asia. Spread over **1,500 acres of green countryside** near **Mabprachan Reservoir** in East Pattaya, the property combines **a serious international-standard equestrian operation** (100+ horses across rare breeds, 5 indoor and outdoor arenas, dressage, polo, classical riding, full curriculum from kids' pony rides to advanced trail) with an **adventure-sports playground** (paintball, zipline, mountain biking, archery, water games, multi-sport field) and an **on-site resort with accommodation, dining, and event facilities**.
 
-For travelers in Pattaya wanting **anything to do with horses** — from a 15-minute first-time pony ride for a child to an intensive multi-week classical riding clinic — Horseshoe Point is essentially the only serious answer. It's also the city's strongest **family activity destination**, with paintball, zipline, and adventure programming sitting alongside the riding stables.
+For travellers in Pattaya wanting **anything to do with horses** — from a 15-minute first-time pony ride for a child to an intensive multi-week classical riding clinic — Horseshoe Point is essentially the only serious answer. It's also the city's strongest **family activity destination**, with paintball, zipline, and adventure programming sitting alongside the riding stables.
 
 ## History & Pedigree — Why This Place Is Different
 
@@ -207,15 +207,15 @@ Some reviews note that the **resort hotel side** is inconsistent in quality (som
 - **Serious equestrian students** — dressage, classical riding, polo, jumping
 - **Beginner riders / first-timers** wanting safe, well-instructed introduction
 - **Wedding parties or corporate events** seeking a unique countryside venue
-- **Multi-day riding-holiday travelers** wanting accommodation + lessons bundled
+- **Multi-day riding-holiday travellers** wanting accommodation + lessons bundled
 - **Pattaya residents** with regular riding interest (lesson packages, horse boarding)
 
 ## Not Best For
 
-- **Travelers with no transport** to reach East Pattaya
-- **Pure beach-vacation travelers** wanting walkable activities near the beach
+- **Travellers with no transport** to reach East Pattaya
+- **Pure beach-vacation travellers** wanting walkable activities near the beach
 - **Cheap-quick tourist photo-op seekers** — the facility's pricing reflects its pedigree
-- **Adult-only nightlife travelers** — the property's vibe is family/sports/wedding-oriented
+- **Adult-only nightlife travellers** — the property's vibe is family/sports/wedding-oriented
 
 ## Quick Reference Card
 

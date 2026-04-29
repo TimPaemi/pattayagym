@@ -60,7 +60,7 @@ Lawn bowls' specific position: **substantial dedicated infrastructure** unique i
 
 ### Origins (England, 13th century+)
 
-**Lawn bowls** is one of the **oldest organized sports in the English-speaking world**:
+**Lawn bowls** is one of the **oldest organised sports in the English-speaking world**:
 
 - **Formalized rules** in England by 13th-14th century
 - **Sir Francis Drake famously played** at Plymouth Hoe in 1588 before sailing to defeat the Spanish Armada
@@ -197,7 +197,7 @@ For British and Commonwealth retirees in Pattaya, lawn bowls is **deeply cultura
 ## Best For
 
 - **British / Australian / NZ / South African retirees** seeking community
-- **Older fitness-active** travelers with bowls background
+- **Older fitness-active** travellers with bowls background
 - **Multi-decade** committed players
 - **Charity / community** event participants
 - **All-weather players** (Banchang covered)
@@ -208,7 +208,7 @@ For British and Commonwealth retirees in Pattaya, lawn bowls is **deeply cultura
 
 - **Younger / high-energy** seekers
 - **One-shot tourists** — rules learnable but skill takes time
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **Pure athletic intensity** seekers — bowls is leisurely
 
 ## Quick Reference Card

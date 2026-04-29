@@ -39,11 +39,11 @@ sources:
 
 ## Overview
 
-Venum Training Camp is **a modern, fighter-led, multi-discipline combat sports camp on Soi Khopai in Pattaya**, founded in **2016 by Mehdi Zatout** in partnership with the **Venum fight gear brand** — one of the world's leading combat-sports apparel and equipment companies. The camp's deliberate location **1.8 kilometers from Jomtien Beach in the Soi Khopai area** was chosen by Zatout to **avoid the prostitute-bar district** of Pattaya center, providing a **professional training environment removed from the city's nightlife distractions**.
+Venum Training Camp is **a modern, fighter-led, multi-discipline combat sports camp on Soi Khopai in Pattaya**, founded in **2016 by Mehdi Zatout** in partnership with the **Venum fight gear brand** — one of the world's leading combat-sports apparel and equipment companies. The camp's deliberate location **1.8 kilometres from Jomtien Beach in the Soi Khopai area** was chosen by Zatout to **avoid the prostitute-bar district** of Pattaya center, providing a **professional training environment removed from the city's nightlife distractions**.
 
 Mehdi Zatout himself is the camp's defining figure: **a fighter with over 100 Muay Thai fights** and **currently signed to ONE Championship** with a **4-2 MMA record**. The camp's most famous current resident is **Nabil Anane**, who **holds the interim ONE Bantamweight Muay Thai World Championship** as of early **2025** — putting Venum in the rare company of Pattaya camps with an **active reigning ONE Championship title-holder** training out of the facility.
 
-For travelers wanting **fighter-led multi-discipline training in a removed, professional environment with active world-class athletes around them**, Venum Training Camp is among Pattaya's strongest choices.
+For travellers wanting **fighter-led multi-discipline training in a removed, professional environment with active world-class athletes around them**, Venum Training Camp is among Pattaya's strongest choices.
 
 ## Founder — Mehdi Zatout
 
@@ -141,7 +141,7 @@ Modern, clean aesthetic — closer to a Western MMA gym than open-air Thai-tradi
 - **3 km from main Jomtien tourist hub**
 - **10-15 min taxi** to Pattaya central
 
-The location choice reflects Zatout's intentional positioning — **a serious training camp removed from Pattaya's distractions**, accessible enough for travelers but quiet enough for actual training focus.
+The location choice reflects Zatout's intentional positioning — **a serious training camp removed from Pattaya's distractions**, accessible enough for travellers but quiet enough for actual training focus.
 
 ## Pros
 
@@ -172,12 +172,12 @@ The location choice reflects Zatout's intentional positioning — **a serious tr
 - **Mehdi Zatout fans / Venum-brand followers**
 - **Students wanting a quiet, focused training environment** away from nightlife
 - **French-speaking visitors** (Mehdi is French)
-- **Beach-adjacent travelers** (1.8 km from Jomtien)
+- **Beach-adjacent travellers** (1.8 km from Jomtien)
 
 ## Not Best For
 
 - **Old-school Thai-camp purists**
-- **Travelers needing on-site accommodation packages** (better at Kombat Group, Silk, Fairtex)
+- **Travellers needing on-site accommodation packages** (better at Kombat Group, Silk, Fairtex)
 - **Pure budget seekers** (Sor Klinmee, WKO are cheaper)
 - **Students wanting central Pattaya nightlife adjacent**
 

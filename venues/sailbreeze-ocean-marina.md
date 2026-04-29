@@ -34,11 +34,11 @@ sources:
 
 ## Overview
 
-SailBreeze is **Thailand's most experienced sailing school** — operating for **over 20 years** out of **Ocean Marina Yacht Club Jomtien**, which is **Southeast Asia's largest marina** with **450+ berths and capacity for boats up to 75 meters / 250 feet**. The combination of **deepest sailing-instruction pedigree in the country plus the regional flagship marina infrastructure** makes SailBreeze the unambiguous top choice for Pattaya residents and visitors who want to learn sailing, charter yachts, or join organized cruising.
+SailBreeze is **Thailand's most experienced sailing school** — operating for **over 20 years** out of **Ocean Marina Yacht Club Jomtien**, which is **Southeast Asia's largest marina** with **450+ berths and capacity for boats up to 75 metres / 250 feet**. The combination of **deepest sailing-instruction pedigree in the country plus the regional flagship marina infrastructure** makes SailBreeze the unambiguous top choice for Pattaya residents and visitors who want to learn sailing, charter yachts, or join organised cruising.
 
 The school offers **a complete progression pathway**: **adult sailing classes from absolute beginner**, **children's sailing programs**, **IYT (International Yacht Training) certification courses** — the global standard for sailing licensing — and **"Zero-to-Hero" intensive courses** that take complete novices through to RYA/IYT-equivalent qualifications in a single residential program. Beyond instruction, **SailBreeze runs the marina's yacht charter operation** (hourly, daily, multi-day), **mile-builder cruises** (where students log nautical miles toward higher certifications while sailing actual passages), and **day sailing adventures** for those who just want a guided experience without instruction.
 
-For Pattaya travelers wanting sailing experience, **SailBreeze + Ocean Marina is genuinely the only legitimate option in the city**. The setting on **Na Jomtien's calm crescent beach** with **direct Gulf of Thailand access** also makes the marina **a destination in itself** — the wharf-side restaurants, yacht-watching, and twilight cocktails are part of Pattaya's growing premium tourism offer.
+For Pattaya travellers wanting sailing experience, **SailBreeze + Ocean Marina is genuinely the only legitimate option in the city**. The setting on **Na Jomtien's calm crescent beach** with **direct Gulf of Thailand access** also makes the marina **a destination in itself** — the wharf-side restaurants, yacht-watching, and twilight cocktails are part of Pattaya's growing premium tourism offer.
 
 ## Position in the Pattaya Watersports Market
 
@@ -61,7 +61,7 @@ SailBreeze occupies the **sailing specialty tier** — no other Pattaya operator
 **Ocean Marina Yacht Club Jomtien** is **Thailand's premier marina resort complex** and **Southeast Asia's largest marina**:
 
 - **450+ modern berths**
-- **Boats up to 75 meters / 250 feet** accommodated
+- **Boats up to 75 metres / 250 feet** accommodated
 - **Direct Gulf of Thailand access**
 - **Crescent-bay calm water** for sheltered berthing
 - **Full-service marina** — fuel, maintenance, chandlery, dive locker
@@ -212,7 +212,7 @@ This positioning isn't marketing fluff — there's genuinely **no comparable sai
 - **Premium pricing** — sailing courses are not cheap
 - **Multi-day commitment** for proper certification
 - **Na Jomtien location** — 25-30 min from central Pattaya
-- **Specialized instruction** — not a one-shot tourist activity
+- **Specialised instruction** — not a one-shot tourist activity
 - **Mid-range physical demand** — sailing requires balance and core
 - **Equipment investment** — own gear becomes appealing for committed sailors
 - **Wind dependence** for some lessons
@@ -230,7 +230,7 @@ This positioning isn't marketing fluff — there's genuinely **no comparable sai
 ## Not Best For
 
 - **One-shot tourists** wanting quick beach activity — try Wave Pattaya
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **Budget-tier seekers** — sailing is premium
 - **Cable wake / kite preference** — different watersports
 

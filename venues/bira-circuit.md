@@ -38,7 +38,7 @@ sources:
 
 ## Overview
 
-Bira Circuit is **Thailand's first FIA-standard motor racing track** — a **2.410-kilometer permanent motor and motorbike racing circuit on a 65-acre property 15 kilometers northeast of Pattaya**, opened in **1986** and named in honor of **Prince Birabongse Bhanudej Bhanubandh — Thailand's first Formula 1 racing driver**. The circuit is genuinely historic: it was the **first venue in Thailand to meet Fédération Internationale de l'Automobile (FIA) standards**, paving the way for **Asian Formula 2000 hosting since 1997, the South East Asia Touring Car Zone Challenge (SEATCZC) since 1992, and decades of regional motor racing competition**.
+Bira Circuit is **Thailand's first FIA-standard motor racing track** — a **2.410-kilometre permanent motor and motorbike racing circuit on a 65-acre property 15 kilometres northeast of Pattaya**, opened in **1986** and named in honor of **Prince Birabongse Bhanudej Bhanubandh — Thailand's first Formula 1 racing driver**. The circuit is genuinely historic: it was the **first venue in Thailand to meet Fédération Internationale de l'Automobile (FIA) standards**, paving the way for **Asian Formula 2000 hosting since 1997, the South East Asia Touring Car Zone Challenge (SEATCZC) since 1992, and decades of regional motor racing competition**.
 
 The 2.41 km track is **twisty and bumpy with elevation changes and two chicanes plus a fast downhill double-apex corner** — providing **a technical driving challenge that tests both car setup and driver skill**. The facility includes **30 pit garages for race cars, a control tower, medical centre, meeting rooms, and a grandstand and spectator area accommodating up to 30,000 people** — putting it in **the regional motorsports tier alongside major Asian circuits**.
 
@@ -266,7 +266,7 @@ Maintaining FIA status requires **ongoing infrastructure investment**.
 - **Beginner karting** — go to EasyKart or Pattaya Kart Speedway
 - **Spectacle-only seekers** without race-day timing
 - **Pure budget tourists** — track day costs add up
-- **Walking Street based** travelers — distance from city
+- **Walking Street based** travellers — distance from city
 - **Family-friendly** without specific motorsport interest
 
 ## Quick Reference Card

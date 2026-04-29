@@ -35,7 +35,7 @@ sources:
 
 Siam Bayshore Resort Pattaya features **six championship-level outdoor tennis courts** at its **5-star resort property near Walking Street** — making it **the largest hotel tennis facility in central Pattaya** and one of the few hotel-attached tennis venues that **opens court access to the general public** rather than restricting to hotel guests only. The resort spans **over 20 acres** with **270 elegantly appointed rooms and suites** alongside the tennis facility, **2 outdoor pools and a children's pool with waterslide**, **Lotus Spa**, **free valet parking**, and **a serene retreat setting just steps from Pattaya's vibrant nightlife**.
 
-The 6-court layout matches Greta Sport Club's count (the only Pattaya facility with **6 covered courts**), but Siam Bayshore's courts are **outdoor championship-level** rather than covered — making them weather-dependent but no less tournament-grade in surface and dimensions. The **600-meter walking distance from Pattaya Night Walking Street** is meaningful: most central-Pattaya tennis players have to commute to East Pattaya, Greta in Sattahip, or other distant facilities. Siam Bayshore puts **6 quality courts within walking distance** of the city's tourist core.
+The 6-court layout matches Greta Sport Club's count (the only Pattaya facility with **6 covered courts**), but Siam Bayshore's courts are **outdoor championship-level** rather than covered — making them weather-dependent but no less tournament-grade in surface and dimensions. The **600-metre walking distance from Pattaya Night Walking Street** is meaningful: most central-Pattaya tennis players have to commute to East Pattaya, Greta in Sattahip, or other distant facilities. Siam Bayshore puts **6 quality courts within walking distance** of the city's tourist core.
 
 For Pattaya tennis players staying at central hotels, Siam Bayshore Resort Pattaya is **the most accessible quality court access in the city** — and for Siam Bayshore guests, the 6 courts are **a meaningful resort amenity** competing with FITZ Club and Greta in court count.
 
@@ -52,7 +52,7 @@ Pattaya tennis facility tiers ranked by court count:
 | **Tara Tennis Club** | 3 (1 covered) | Newest 2022 build |
 | **TOS Tennis Club** | 2 + pool + gym | Closest to Jomtien |
 
-Siam Bayshore's specific position: **central Pattaya 5-star resort tennis with public access** — most accessible quality tennis to Walking Street area travelers.
+Siam Bayshore's specific position: **central Pattaya 5-star resort tennis with public access** — most accessible quality tennis to Walking Street area travellers.
 
 ## The 5-Star Resort Context
 
@@ -152,14 +152,14 @@ Hotel-tier tennis pricing for non-guests:
 
 ### Geographic Setting
 
-- **600 meters from Pattaya Night Walking Street**
+- **600 metres from Pattaya Night Walking Street**
 - **15-minute walk to sand beach**
 - **Walking distance to Beach Road, 2nd Road, Soi Buakhao**
 - **Songthaew (baht bus) accessible**
 
 ### Why It Matters
 
-For Pattaya travelers:
+For Pattaya travellers:
 
 - **No commute to tennis** — walk from hotel
 - **Combine tennis with nightlife** — play afternoon, walk to dinner
@@ -192,13 +192,13 @@ For Pattaya travelers:
 
 ## Best For
 
-- **Walking Street based travelers** wanting walkable tennis
+- **Walking Street based travellers** wanting walkable tennis
 - **5-star hotel guests** with included tennis access
 - **Family / couple combining** tennis + pool + spa
 - **Daytime players** (07:00-18:00 hours)
 - **Multi-court requiring** events / leagues
 - **Central Pattaya residents** with court access
-- **Tennis + Walking Street** dual-purpose travelers
+- **Tennis + Walking Street** dual-purpose travellers
 
 ## Not Best For
 
@@ -206,7 +206,7 @@ For Pattaya travelers:
 - **Year-round weather-protected** play — Greta required
 - **Pure budget seekers** — premium hotel pricing
 - **Tournament-grade ITF play** — Greta's Plexipave-rated facility better
-- **East Pattaya / Darkside** based travelers
+- **East Pattaya / Darkside** based travellers
 
 ## Quick Reference Card
 

@@ -40,7 +40,7 @@ AF Academy operates an **international children's football academy network**:
 The Russian-network heritage means:
 
 - **Russian-language coaching** available
-- **Russian football pedagogy** — typically emphasizes technical skills, ball control, structured drilling
+- **Russian football pedagogy** — typically emphasises technical skills, ball control, structured drilling
 - **Connection to the Russian children's football ecosystem** (tournaments, talent pathway)
 - **Cultural fit for Pattaya's large Russian demographic**
 

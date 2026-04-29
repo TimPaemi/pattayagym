@@ -101,7 +101,7 @@ For Pattaya golfers, range practice delivers value that course play can't:
 ### Mat Bays
 
 - **Artificial turf mats** with rubber tees
-- **Numbered bays** for organized booking
+- **Numbered bays** for organised booking
 - **Some bays may have shade structures** for sun protection
 - **Bays vary** in distance to back-stop net (200-280 yards typical)
 
@@ -139,7 +139,7 @@ A typical session at Pattaya Golf Driving Range:
 - **Affordable** — ~฿60 per tray
 - **Long hours** — 07:00-22:00
 - **Walkable / driveable** central Pattaya location
-- **Club rental** for travelers without gear
+- **Club rental** for travellers without gear
 - **Professional lessons** available
 - **Floodlit** for evening practice
 - **Year-round** weather-resilient (some bays have shade structures)
@@ -164,7 +164,7 @@ A typical session at Pattaya Golf Driving Range:
 - **Beginners** taking first golf lessons
 - **Casual golfers** without time for full courses
 - **Practice-focused improvement** seekers
-- **Travelers without their own gear** needing rental
+- **Travellers without their own gear** needing rental
 - **Budget golfers** wanting affordable practice
 - **Late-evening practice** sessions
 - **Junior development** programs

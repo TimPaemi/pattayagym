@@ -67,7 +67,7 @@ The Prestige Wellness Center sits in a different market: not injury treatment, b
 
 - **DNA diet and fitness profile testing** — personalised genetic-based recommendations
 - **Weight Management Program** — root-cause analysis (hormonal, metabolic, lifestyle)
-- **Hormone optimization** consultations
+- **Hormone optimisation** consultations
 - **IV nutrition therapy**
 - **Longevity assessment programmes**
 - **Aesthetic medicine** integration

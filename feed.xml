@@ -6,7 +6,7 @@
   <atom:link href="https://pattaya-gym.com/feed.xml" rel="self" type="application/rss+xml" />
   <description>Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.</description>
   <language>en-US</language>
-  <lastBuildDate>Wed, 29 Apr 2026 21:12:31 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 29 Apr 2026 21:21:51 GMT</lastBuildDate>
   <item>
     <title>ALFA BJJ Pattaya</title>
     <link>https://pattaya-gym.com/gyms/alfa-bjj-pattaya/</link>
@@ -40,6 +40,22 @@
     <description><![CDATA[World first Muay Thai stadium, founded 1945. Almost nightly fight cards. RWS Rajadamnern World Series Saturday flagship (8 fights + free beers). Tickets ฿1,600-4,500. Pair with Lumpinee for canonical Bangkok MT weekend.]]></description>
   </item>
   <item>
+    <title>Coco Fitness</title>
+    <link>https://pattaya-gym.com/gyms/coco-fitness/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/coco-fitness/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Fitness / Gym</category>
+    <description><![CDATA[Central Pattaya commercial gym on the 4th floor of Mike Shopping Mall. Sea-view cardio, walk-in day passes, towel and locker included, and value monthly pricing.]]></description>
+  </item>
+  <item>
+    <title>Pickleball Pattaya</title>
+    <link>https://pattaya-gym.com/gyms/pickleball-pattaya/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/pickleball-pattaya/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Tennis / Padel / Squash</category>
+    <description><![CDATA[Pattaya's flagship dedicated pickleball facility on Pratumnak Soi 6. Two full-sized courts, paddles, balls, ball machine, strong lighting, and beginner lessons from an English-speaking licensed coach.]]></description>
+  </item>
+  <item>
     <title>BOUNCE Pattaya — Trampoline Park</title>
     <link>https://pattaya-gym.com/gyms/bounce-pattaya/</link>
     <guid isPermaLink="true">https://pattaya-gym.com/gyms/bounce-pattaya/</guid>
@@ -70,6 +86,14 @@
     <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
     <category>Adventure / Multi-Sport</category>
     <description><![CDATA[Guided bicycle + boat tour operator. Quiet back-road routes through real Thai villages, plantations, fishing communities. Small-group English-speaking tours. Bike rental also available. Naklua-based.]]></description>
+  </item>
+  <item>
+    <title>MAX Muay Thai Stadium Pattaya</title>
+    <link>https://pattaya-gym.com/gyms/max-muay-thai-stadium/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/max-muay-thai-stadium/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Muay Thai</category>
+    <description><![CDATA[Pattaya daily Muay Thai stadium near King Power on Sukhumvit Road. Tourist-friendly live fight cards, online ticketing, and current listings that vary between 19:00 and 19:45 starts by date.]]></description>
   </item>
   <item>
     <title>Pattaya Beach Public Aerobics — Open-Air Free Fitness</title>
@@ -176,14 +200,6 @@
     <description><![CDATA[Global 24/7 gym franchise with 2 Pattaya locations. Key-fob access, worldwide reciprocity at 5,000+ clubs, no-contract memberships, 1-day free trial, personal training. Clean, predictable, female-friendly alternative to bro-gym Pattaya.]]></description>
   </item>
   <item>
-    <title>Pickleball Pattaya</title>
-    <link>https://pattaya-gym.com/gyms/pickleball-pattaya/</link>
-    <guid isPermaLink="true">https://pattaya-gym.com/gyms/pickleball-pattaya/</guid>
-    <pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate>
-    <category>Tennis / Padel / Squash</category>
-    <description><![CDATA[Pattaya's first dedicated pickleball facility. Paddles + balls + ball machine included. Top-tier court lighting. English-speaking licensed coach. Anchor of the city's fast-growing 50+ expat pickleball scene.]]></description>
-  </item>
-  <item>
     <title>Dusit Thani Pattaya — Devarana Wellness</title>
     <link>https://pattaya-gym.com/gyms/dusit-thani-pattaya/</link>
     <guid isPermaLink="true">https://pattaya-gym.com/gyms/dusit-thani-pattaya/</guid>
@@ -230,22 +246,6 @@
     <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
     <category>Muay Thai</category>
     <description><![CDATA[Pattaya's only fully air-conditioned Muay Thai gym. Weight room, sauna, ice plunge. 7-day flexible scheduling, English-speaking trainers.]]></description>
-  </item>
-  <item>
-    <title>Sor Klinmee Muay Thai Gym</title>
-    <link>https://pattaya-gym.com/gyms/sor-klinmee/</link>
-    <guid isPermaLink="true">https://pattaya-gym.com/gyms/sor-klinmee/</guid>
-    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
-    <category>Muay Thai</category>
-    <description><![CDATA[Family-run authentic Thai camp, founded 2009 by Mit Klinmee. Home of Sudsakorn Sor Klinmee (278W/330F). Drop-ins ~฿200-300.]]></description>
-  </item>
-  <item>
-    <title>Petchrungruang Gym</title>
-    <link>https://pattaya-gym.com/gyms/petchrungruang-gym/</link>
-    <guid isPermaLink="true">https://pattaya-gym.com/gyms/petchrungruang-gym/</guid>
-    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
-    <category>Muay Thai</category>
-    <description><![CDATA[Pattaya's 2nd-oldest gym (1986). Three generations of family. Head coach Khru Nu (Lumpinee 2nd-place, 90 fights). Home of Sylvie von Duuglas-Ittu (270+ fights).]]></description>
   </item>
 </channel>
 </rss>

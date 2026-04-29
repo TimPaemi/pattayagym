@@ -53,7 +53,7 @@ Siam Country Club Pattaya is **the most historically significant golf property i
 
 For nearly **two decades since its renovation**, the **Old Course has been the permanent venue for the Honda LPGA Thailand**, the LPGA Tour's Asia-swing flagship event since 2010. This makes Siam Country Club **the only Pattaya-region course with a continuous LPGA Tour presence**, and one of the only Asian courses with that level of consistent international tour hosting.
 
-For travelers planning a Pattaya golf trip, the **Old Course is the headline round** — a course you walk knowing professional women's golf has been contested on these fairways every winter for 15+ years. Combined with the three sister courses, Siam Country Club is the **most concentrated multi-course championship golf experience in Thailand**.
+For travellers planning a Pattaya golf trip, the **Old Course is the headline round** — a course you walk knowing professional women's golf has been contested on these fairways every winter for 15+ years. Combined with the three sister courses, Siam Country Club is the **most concentrated multi-course championship golf experience in Thailand**.
 
 ## History — Thailand's First Privately Owned Golf Club
 
@@ -192,7 +192,7 @@ Siam Country Club Old Course's tournament resume is the deepest in Thai golf:
 ## Best For
 
 - **LPGA fans** wanting to walk the Honda Thailand course
-- **Serious multi-day golf travelers** — the 4-course property anchors a premium itinerary
+- **Serious multi-day golf travellers** — the 4-course property anchors a premium itinerary
 - **Tournament-grade conditioning seekers**
 - **Multi-ability golf groups** (Plantation easier, Old harder)
 - **Members and corporate hospitality** — the property's club-culture roots

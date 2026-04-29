@@ -41,7 +41,7 @@ Chatrium Golf Resort Soi Dao is **the most remote, mountain-set, and visually di
 
 The course was originally designed by **Dennis Griffiths** — the same architect responsible for **Phoenix Gold Golf and Country Club** in the Pattaya area — and **redesigned in 2015 by local Thai architect Pirapon Namatra of Golf East** with hole rerouting and refinements. The result is **a 7,144-yard par-72 course** that runs through **395 acres of mountain terrain with emerald-green landscapes, water hazards, and the signature par-3 14th** as its defining hole.
 
-For golfers who want **a genuinely distant, mountain-set, multi-day golf experience that combines golf with hospitality and nature** — and for Pattaya-based golf travelers who want **a 3-day weekend escape from the coast** — Chatrium Golf Resort Soi Dao is the most distinct experience available within the broader Pattaya golf circuit.
+For golfers who want **a genuinely distant, mountain-set, multi-day golf experience that combines golf with hospitality and nature** — and for Pattaya-based golf travellers who want **a 3-day weekend escape from the coast** — Chatrium Golf Resort Soi Dao is the most distinct experience available within the broader Pattaya golf circuit.
 
 ## Position in the Pattaya Extended Golf Market
 
@@ -224,7 +224,7 @@ This **2-day or 3-day golf trip format** is the natural Chatrium experience.
 
 - **3 hours from Pattaya** — full destination commitment
 - **Multi-day required** — same-day round trip impractical
-- **Less convenient** for short-stay travelers
+- **Less convenient** for short-stay travellers
 - **Hotel has only 47 rooms** — book ahead in peak season
 - **Strategic difficulty** punishes high handicappers
 - **Far from major airports** — U-Tapao 2hr, Suvarnabhumi 3hr
@@ -232,7 +232,7 @@ This **2-day or 3-day golf trip format** is the natural Chatrium experience.
 
 ## Best For
 
-- **2-3 day Pattaya golf escape** travelers
+- **2-3 day Pattaya golf escape** travellers
 - **Multi-round destination golfers** wanting multiple courses in one stay
 - **Mountain-and-cool-weather** preference golfers
 - **Hot-season visitors** wanting temperature relief

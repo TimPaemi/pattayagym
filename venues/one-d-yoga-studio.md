@@ -32,7 +32,7 @@ sources:
 
 One-D Yoga Studio (also stylized **OneD Yoga**) is **a modern, prominent yoga studio along the Pattaya-Naklua Road** offering **a comprehensive multi-style yoga curriculum spanning Hatha, Vinyasa Flow, and Yin yoga** alongside **private sessions, workshops, and retreat programs**. The studio sits at **571/32 Moo 5, Naklua 16/2, Pattaya-Naklua Road** — placing it **in the same Naklua corridor as Nok Yoga Pattaya** but with a meaningfully different programming emphasis.
 
-Where Nok Yoga emphasizes **traditional Thai stretching and self-healing yoga**, where Yoga Pattaya Studio focuses on **Ashtanga + Mysore + multilingual international yoga**, where Yoga Haus pushes **Hot Yoga + Fit Ball fitness intensity**, and where Balance Yoga integrates **sound healing wellness**, **One-D Yoga Studio occupies the "modern accessible multi-style" middle ground** — offering the **mainstream curriculum that appeals to the broadest practitioner base** without strong tilt toward any specific tradition.
+Where Nok Yoga emphasises **traditional Thai stretching and self-healing yoga**, where Yoga Pattaya Studio focuses on **Ashtanga + Mysore + multilingual international yoga**, where Yoga Haus pushes **Hot Yoga + Fit Ball fitness intensity**, and where Balance Yoga integrates **sound healing wellness**, **One-D Yoga Studio occupies the "modern accessible multi-style" middle ground** — offering the **mainstream curriculum that appeals to the broadest practitioner base** without strong tilt toward any specific tradition.
 
 The studio's strengths are its **full membership flexibility** (drop-in, monthly, long-term packages), **private session availability**, **workshop programming**, and **retreat options** — the full menu of services that committed yogis expect from an established studio. Combined with **clean modern facilities, knowledgeable teachers, and the Naklua location's quieter character**, One-D delivers **a comfortable home for daily yoga practice**.
 
@@ -130,7 +130,7 @@ One-D runs **special workshops focusing on different aspects of yoga, meditation
 ### Why Workshops Matter
 
 - **Deeper focus** than weekly classes
-- **Specialized instruction** beyond regular curriculum
+- **Specialised instruction** beyond regular curriculum
 - **Community building** with other dedicated practitioners
 - **Skill plateaus broken** by extended attention
 - **Special-interest topics** — meditation, philosophy beyond just postures
@@ -213,7 +213,7 @@ The Naklua location aligns with **Pattaya's wellness-tourism corridor** — quie
 - **No Hot Yoga** option (try Yoga Haus)
 - **No sound healing** integration (try Balance Yoga)
 - **No Reusi Dat Ton / Thai-specific** focus (try Nok Yoga)
-- **Naklua location** less convenient for Walking Street based travelers
+- **Naklua location** less convenient for Walking Street based travellers
 - **Limited online presence** beyond Facebook
 
 ## Best For
@@ -232,7 +232,7 @@ The Naklua location aligns with **Pattaya's wellness-tourism corridor** — quie
 - **Hot yoga / fitness yoga** — go to Yoga Haus
 - **Sound healing wellness** — go to Balance Yoga
 - **Thai cultural integration** — go to Nok Yoga
-- **Walking Street based** travelers wanting walkable studios
+- **Walking Street based** travellers wanting walkable studios
 
 ## Quick Reference Card
 

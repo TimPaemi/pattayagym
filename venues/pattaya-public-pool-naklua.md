@@ -99,7 +99,7 @@ Specific Naklua pool details aren't extensively published online. Standard Thai 
 
 ### Pool Layout
 
-- **25-meter or 50-meter lap pool** — standard public pool sizes
+- **25-metre or 50-metre lap pool** — standard public pool sizes
 - **Shallow end + deep end** progression
 - **Lap lanes** for fitness swimming
 - **Recreational area** for casual play

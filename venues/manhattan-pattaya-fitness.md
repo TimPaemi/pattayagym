@@ -34,7 +34,7 @@ Manhattan Pattaya is **a hotel-attached gym facility on Pratamnak Hill** — the
 
 Unlike commercial fitness chains (Jetts, True Fitness) that operate independently in malls, **Manhattan Pattaya's gym serves primarily its own hotel guests** with **a structured 08:00-21:00 schedule and reservation requirement** that maintains controlled-capacity training rather than open-floor crowds. This positioning gives Manhattan's gym a **resort-style intimate feel** while still offering proper fitness equipment for serious workouts.
 
-For travelers staying at Manhattan Pattaya or Pratamnak-area hotels who want **convenient, walkable, well-maintained hotel-grade gym access without separate gym membership commitment**, Manhattan delivers exactly that. For Pratamnak Hill residents wanting hotel-tier gym amenities, day passes and short-term memberships at Manhattan and similar hotel gyms offer **a different value than commercial chain gyms**.
+For travellers staying at Manhattan Pattaya or Pratamnak-area hotels who want **convenient, walkable, well-maintained hotel-grade gym access without separate gym membership commitment**, Manhattan delivers exactly that. For Pratamnak Hill residents wanting hotel-tier gym amenities, day passes and short-term memberships at Manhattan and similar hotel gyms offer **a different value than commercial chain gyms**.
 
 ## Position in the Pratamnak Hill Fitness Market
 

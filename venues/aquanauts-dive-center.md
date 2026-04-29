@@ -117,7 +117,7 @@ Aquanauts' Nat Geo designation means **conservation framing** alongside pure rec
 
 Beyond recreational diving (max 40m, single tank, no decompression):
 
-- **Technical diving** uses **multiple tanks**, **decompression stops**, **mixed gases (Nitrox, Trimix, oxygen)**, and **specialized equipment**
+- **Technical diving** uses **multiple tanks**, **decompression stops**, **mixed gases (Nitrox, Trimix, oxygen)**, and **specialised equipment**
 - **Common tech specialties**:
   - **Deep diving** beyond 40m
   - **Cave diving**

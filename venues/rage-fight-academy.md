@@ -41,7 +41,7 @@ Rage Fight Academy is **one of Pattaya's most credentialed multi-discipline comb
 
 The headline coaching credential is exceptional: **Head Combat Training Coach Charlton Lookyamo** holds the **WLC "Coach of the Year" 2020 award** and has personally coached **multiple boxing, Muay Thai, and K-1 world champions**. He is the founder of **Lookyamo Training** — his eponymous coaching brand — and brings **world-class striking instruction** to Rage Fight Academy's daily classes.
 
-For travelers wanting **multi-discipline credentialed instruction** in a single Pattaya facility, with **Education Visa support for long-stay students**, Rage Fight Academy is the consensus top pick. Drop-in pricing of **฿500 per session** and monthly memberships at **฿8,500** make this **mid-tier value pricing for premium-tier coaching**.
+For travellers wanting **multi-discipline credentialed instruction** in a single Pattaya facility, with **Education Visa support for long-stay students**, Rage Fight Academy is the consensus top pick. Drop-in pricing of **฿500 per session** and monthly memberships at **฿8,500** make this **mid-tier value pricing for premium-tier coaching**.
 
 ## The Bryan Flowers Era — Acquired 2021
 
@@ -152,7 +152,7 @@ This alone makes Rage one of Pattaya's most foreign-student-friendly camps.
 
 - **Multi-discipline athletes** especially BJJ + Muay Thai cross-trainers
 - **Long-stay students** wanting Education Visa sponsorship
-- **Travelers staying in Jomtien / South Pattaya** (walkable)
+- **Travellers staying in Jomtien / South Pattaya** (walkable)
 - **Striking-focused students** wanting Lookyamo's world-champion coaching pedigree
 - **Active fight-team aspirants**
 - **Beginners** wanting structured, patient instruction

@@ -38,7 +38,7 @@ No Limit Divers is **the highest-tier dive center in Pattaya for professional an
 
 The operation runs **two fully equipped dive centers** in Pattaya/Jomtien with **VIP-class boats** servicing the offshore reef and wreck sites of the Gulf of Thailand, and offers **dedicated multi-week internship programs** including a **Zero-to-Hero pathway** for complete beginners and a **fast-track 10-week Divemaster-to-Instructor Pro Plus program** for serious career divers.
 
-For travelers who want **the most credentialed pro-track diving education in the Pattaya region**, who plan to **work in the dive industry**, or who simply want to be taught by **Asia's senior PADI brass**, No Limit Divers is the unambiguous top choice.
+For travellers who want **the most credentialed pro-track diving education in the Pattaya region**, who plan to **work in the dive industry**, or who simply want to be taught by **Asia's senior PADI brass**, No Limit Divers is the unambiguous top choice.
 
 ## Position in the Pattaya Dive Market
 
@@ -105,7 +105,7 @@ No Limit Divers' fleet of VIP-class boats serves Pattaya's offshore dive sites:
 
 ### HTMS Khram
 
-The HTMS Khram wreck is one of the **regional standout dive sites** — a **74-meter-long Royal Thai Navy decommissioned LSM landing ship** sunk **near Koh Khram in 2003** as an artificial reef. It sits in **30m of water** with the deck at **18-22m**, making it accessible to AOW-certified divers.
+The HTMS Khram wreck is one of the **regional standout dive sites** — a **74-metre-long Royal Thai Navy decommissioned LSM landing ship** sunk **near Koh Khram in 2003** as an artificial reef. It sits in **30m of water** with the deck at **18-22m**, making it accessible to AOW-certified divers.
 
 The wreck has developed extensive coral colonization since 2003 and harbors:
 

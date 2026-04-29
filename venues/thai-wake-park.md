@@ -221,7 +221,7 @@ Wakeboarding is **higher-risk than swimming**:
 ## Best For
 
 - **First-time wakeboarders** wanting affordable progression
-- **Mid-stay travelers** with multiple sessions planned
+- **Mid-stay travellers** with multiple sessions planned
 - **Couples / friend groups** active vacation
 - **Mabprachan-area residents** with local convenience
 - **Trick-curious riders** wanting kicker / slider practice
@@ -230,7 +230,7 @@ Wakeboarding is **higher-risk than swimming**:
 
 ## Not Best For
 
-- **Walking Street based** travelers without transport
+- **Walking Street based** travellers without transport
 - **One-shot novelty** seekers — single session may not yield "got up" success
 - **Boat-towed wake purists** — different feel
 - **Knee/back injury** sufferers — falls can aggravate

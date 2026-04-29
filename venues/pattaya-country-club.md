@@ -164,7 +164,7 @@ The facilities are **functional rather than premium-resort** — comparable to o
 
 ## Best For
 
-- **Time-pressed Pattaya travelers** wanting close 18-hole golf
+- **Time-pressed Pattaya travellers** wanting close 18-hole golf
 - **Mid-handicap players** seeking accessible round
 - **Senior golfers** appreciating gentler routing
 - **Multiple-round visitors** combining with other Pattaya courses

@@ -27,7 +27,7 @@ sources:
 
 Jomtien Dive Center is **a PADI 5-Star IDC dive center in Jomtien Beach** holding the **5-Star TripAdvisor Certificate** alongside its PADI affiliation — making it one of **Pattaya's most-credentialed dive operations on the Jomtien side**. With phone **+66 33 144 007** and team leader **Gary** at the helm, the center markets itself as **"the widest selection of dive courses in Pattaya"** — a meaningful claim given its IDC status and ability to certify divers from absolute beginner all the way through professional instructor levels.
 
-For travelers staying in Jomtien (vs. central Pattaya / Beach Road), this is **the closest premium-tier dive center**, eliminating the typical Pattaya-central-vs-Jomtien commute that other operators require.
+For travellers staying in Jomtien (vs. central Pattaya / Beach Road), this is **the closest premium-tier dive center**, eliminating the typical Pattaya-central-vs-Jomtien commute that other operators require.
 
 ## Position in the Pattaya Dive Market
 
@@ -44,7 +44,7 @@ Pattaya's PADI dive centers cluster into two geographic groups:
 - **Jomtien Dive Center** (THIS) — PADI 5-Star IDC, Jomtien Beach
 - **Mermaid's Dive Center** — PADI 5-Star IDC, Soi White House, Jomtien
 
-For Jomtien-based travelers, Jomtien Dive Center provides **walking-distance or short-songthaew access** to professional-grade dive operations.
+For Jomtien-based travellers, Jomtien Dive Center provides **walking-distance or short-songthaew access** to professional-grade dive operations.
 
 ## Credentials
 
@@ -129,7 +129,7 @@ Jomtien Dive Center runs trips to all the standard Pattaya dive sites:
 
 - **PADI 5-Star IDC** + **5-Star TripAdvisor Certificate** dual credentials
 - **Award-winning** with consistent customer-facing recognition
-- **Jomtien Beach location** — convenient for Jomtien-based travelers
+- **Jomtien Beach location** — convenient for Jomtien-based travellers
 - **Widest course selection in Pattaya** (per gym's own marketing)
 - **Full PADI progression** — beginner through instructor
 - **Tec Diving capable**
@@ -140,23 +140,23 @@ Jomtien Dive Center runs trips to all the standard Pattaya dive sites:
 
 ## Cons
 
-- **Jomtien-side location** less convenient for central Pattaya travelers
+- **Jomtien-side location** less convenient for central Pattaya travellers
 - **Pricing is mid-tier** — not the cheapest Pattaya operator
 - **Pattaya water visibility** generally 5-15m vs. Andaman 20-30m
 - **Boat-based diving only**
 
 ## Best For
 
-- **Travelers staying in Jomtien** — closest premium-tier dive operator
+- **Travellers staying in Jomtien** — closest premium-tier dive operator
 - **First-time divers** wanting Discover Scuba in Jomtien
 - **Open Water through Divemaster students**
 - **Instructor-track candidates** needing IDC training
 - **Certified divers** wanting daily boat trip access
-- **5-Star quality seekers** prioritizing PADI + TripAdvisor recognition
+- **5-Star quality seekers** prioritising PADI + TripAdvisor recognition
 
 ## Not Best For
 
-- **Central Pattaya / Beach Road travelers** without convenient Jomtien transport
+- **Central Pattaya / Beach Road travellers** without convenient Jomtien transport
 - **Pure budget divers** — cheaper non-IDC operators exist
 - **Andaman-coast quality visibility seekers** (Phuket / Krabi / Similan)
 

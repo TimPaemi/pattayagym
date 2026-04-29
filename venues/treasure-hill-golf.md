@@ -35,7 +35,7 @@ sources:
 
 ## Overview
 
-Treasure Hill Golf & Country Club is **a 7,264-yard par-72 championship course set in the jungle hills of Ban Bueng**, approximately **60 kilometers from Pattaya** (50-minute drive). Designed by **Japanese architect Yoshikazu Kato** and opened in **1994**, the course is renowned for its **mature jungle setting** with no surrounding housing development — a rarity in modern Thai golf where most courses are now ringed with villa estates. The fairways thread through **mature trees lining every hole** with **the jungle pressing in just outside the cut**, a design language that emphasizes **target golf, accuracy off the tee, and shot-shaping** over distance bombing.
+Treasure Hill Golf & Country Club is **a 7,264-yard par-72 championship course set in the jungle hills of Ban Bueng**, approximately **60 kilometres from Pattaya** (50-minute drive). Designed by **Japanese architect Yoshikazu Kato** and opened in **1994**, the course is renowned for its **mature jungle setting** with no surrounding housing development — a rarity in modern Thai golf where most courses are now ringed with villa estates. The fairways thread through **mature trees lining every hole** with **the jungle pressing in just outside the cut**, a design language that emphasises **target golf, accuracy off the tee, and shot-shaping** over distance bombing.
 
 The course's signature feature is the **par-5 16th hole** — known as the **"crocodile hole"** because of the **concrete crocodile sculpture installed in the pond left of the green**, a piece of golf-course folklore that distinguishes Treasure Hill from any other Thailand course. The crocodile guards the hazard, becoming both an unforgettable visual landmark and a psychological reminder to favor the right side of the green on approach.
 
@@ -58,7 +58,7 @@ Treasure Hill occupies the **hidden character** tier — it's not on the every-p
 
 The course was designed by **Yoshikazu Kato**, a Japanese golf architect whose Thailand portfolio includes **multiple Eastern Seaboard courses**. Japanese golf course designers from the 1990s-2000s era characteristically:
 
-- **Emphasize aesthetic harmony** with native landscape
+- **Emphasise aesthetic harmony** with native landscape
 - **Use mature trees as natural hazards** rather than bulldozing the site flat
 - **Build greens with subtle slope and tier complexes**
 - **Incorporate water hazards strategically** rather than cosmetically
@@ -197,7 +197,7 @@ The Ban Bueng location means **less convenience than Bangsai, Phoenix Gold, or B
 - **Beginners and high handicappers** (the trees and water punish bad shots)
 - **Premium-resort seekers** (Siam Country Club delivers spa/stay/golf integration)
 - **Distance-only bombers** who need wide forgiveness lines
-- **Time-pressed travelers** based in central Pattaya wanting closer courses (Phoenix, Burapha, Khao Kheow)
+- **Time-pressed travellers** based in central Pattaya wanting closer courses (Phoenix, Burapha, Khao Kheow)
 
 ## Quick Reference Card
 

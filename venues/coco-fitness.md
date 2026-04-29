@@ -3,7 +3,7 @@ id: coco-fitness
 name: Coco Fitness
 category: fitness
 area: Mike's Mall, Central Pattaya / Beach
-address: 4th floor, Mike's Mall, Pattaya Beach Road, Pattaya, Chonburi
+address: 4th floor, Mike Shopping Mall, 262 Beach Road, Pattaya 20150
 phone: ""
 website: ""
 social:
@@ -14,7 +14,7 @@ distinction: Mall-floor commercial gym with sea views — among the most accessi
 beachView: Yes — gym faces Pattaya Beach
 beginnerFriendly: true
 languages: [English, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.tripadvisor.com/Attraction_Review-g293919-d14902726-Reviews-Coco_Fitness-Pattaya_Chonburi_Province.html
   - https://www.facebook.com/cocofitnesspattaya/
@@ -26,9 +26,9 @@ sources:
 
 ## Overview
 
-Coco Fitness is **a central Pattaya commercial gym on the 4th floor of Mike's Mall** with **direct sea views over Pattaya Beach** and one of the **most accessible mid-budget pricing structures in central Pattaya**. The gym is open **daily from 07:00-23:00** (16 hours, 7 days a week), accepts **walk-ins at ฿299-300/day with towel and locker included**, and offers **monthly memberships at ฿1,399** — putting it firmly in the **value commercial tier** alongside Universe Gym, SUN Fitness, and Fitness 7.
+Coco Fitness is **a central Pattaya commercial gym on the 4th floor of Mike Shopping Mall** with **direct sea views over Pattaya Beach** and one of the **most accessible mid-budget pricing structures in central Pattaya**. The gym is open **daily from 07:00-23:00** (16 hours, 7 days a week), accepts **walk-ins at ฿299-300/day with towel and locker included**, and offers **monthly memberships at ฿1,399** — putting it firmly in the **value commercial tier** alongside Universe Gym, SUN Fitness, and Fitness 7.
 
-For travelers and Pattaya residents wanting **a real commercial gym in the central Beach Road / tourist hub area** at unbeatable prices, Coco Fitness is one of the most convenient options. The **sea views are a genuine quality-of-life feature** — running on the cardio machines while looking out over Pattaya Beach is something only a handful of Pattaya gyms offer.
+For travellers and Pattaya residents wanting **a real commercial gym in the central Beach Road / tourist hub area** at unbeatable prices, Coco Fitness is one of the most convenient options. The **sea views are a genuine quality-of-life feature** — running on the cardio machines while looking out over Pattaya Beach is something only a handful of Pattaya gyms offer.
 
 ## Position in the Pattaya Gym Market
 
@@ -59,7 +59,7 @@ The Mike's Mall 4th-floor location is unusual — most Pattaya gyms are at stree
 - **Walk-in friendly** — no membership required for daily access
 
 The early-morning to late-night hours suit:
-- **Travelers** with flexible schedules
+- **Travellers** with flexible schedules
 - **Local expats** with day jobs
 - **Late-evening trainers** wanting post-dinner sessions
 - **Early-morning trainers** wanting pre-beach workouts
@@ -135,10 +135,10 @@ The review pattern suggests **excellent value gym with occasional service-qualit
 
 ## Best For
 
-- **Central Pattaya / Beach Road-staying travelers** — walking-distance access
+- **Central Pattaya / Beach Road-staying travellers** — walking-distance access
 - **Sea-view cardio enthusiasts** — running with Pattaya Beach view is unique
 - **Budget-conscious commercial gym users**
-- **Travelers wanting walk-in friendly** without membership pressure
+- **Travellers wanting walk-in friendly** without membership pressure
 - **Daily-pass users** for short stays
 - **Late-evening trainers** (open until 23:00)
 - **Personal-training-focused beginners** — PTs available
@@ -148,7 +148,7 @@ The review pattern suggests **excellent value gym with occasional service-qualit
 - **Sauna + pool combo seekers** (no pool — try Fitz Club)
 - **Classes-focused trainers** (try Jetts, True Fitness)
 - **Premium-experience seekers** (try Fitz Club at Royal Cliff)
-- **Travelers wanting standalone gym building** (mall-floor location may feel awkward)
+- **Travellers wanting standalone gym building** (mall-floor location may feel awkward)
 
 ## Quick Reference Card
 

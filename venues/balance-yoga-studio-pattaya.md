@@ -30,7 +30,7 @@ Balance Yoga Studio Pattaya — stylized **BΛLΛNCE** — is a **wellness-orien
 
 The studio's core differentiator is the **integration of sound healing into yoga practice** — an approach using **singing bowls, gongs, tuning forks, and sometimes voice toning** to create vibrational immersion alongside breath and movement. This pairing of yoga and sound healing has gained significant momentum globally over the past decade, particularly in wellness-tourism destinations, and Balance is **one of Pattaya's clearest expressions of that philosophy**.
 
-For travelers and Pattaya residents seeking **yoga that emphasizes inner experience over external workout** — for those drawn to **the slower, contemplative, sensory-rich end of yoga practice** — Balance is the city's natural destination.
+For travellers and Pattaya residents seeking **yoga that emphasises inner experience over external workout** — for those drawn to **the slower, contemplative, sensory-rich end of yoga practice** — Balance is the city's natural destination.
 
 ## Position in the Pattaya Yoga Market
 
@@ -94,7 +94,7 @@ When integrated with yoga, sound healing typically appears as:
 The studio's tagline — **"island of harmony in sunny Pattaya"** — frames it deliberately:
 
 - **Refuge from the city's chaos** (Pattaya's nightlife, traffic, tourism intensity)
-- **Wellness-prioritizing environment** — not a fitness gym vibe
+- **Wellness-prioritising environment** — not a fitness gym vibe
 - **Soft-spoken, slow-paced** atmosphere
 - **Aesthetic curated for calm** — likely natural materials, plants, ambient sound
 - **Welcoming culture** — explicit invitation to "every guest feels welcome"

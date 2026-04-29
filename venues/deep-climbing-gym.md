@@ -34,21 +34,21 @@ sources:
 
 ## Overview
 
-Deep Climbing Gym is **the first indoor climbing facility ever opened in Pattaya** and remains the city's primary destination for rock climbing, top-rope, lead climbing, bouldering, and auto-belay practice. Located on the **8th floor of Harbor Pattaya Shopping Mall** in Na Kluea, the gym occupies a purpose-designed climbing space themed around a **deep blue ocean** aesthetic — air-conditioned, well-lit, with a **10-meter main wall**, approximately **27 routes**, both **TrueBlue auto-belay systems** and **manual rope stations**, and a **bouldering area**. It is the only serious climbing destination within Pattaya itself (the other Pattaya option, Bean Cow Climbing Gym, is smaller and family-focused).
+Deep Climbing Gym is **the first indoor climbing facility ever opened in Pattaya** and remains the city's primary destination for rock climbing, top-rope, lead climbing, bouldering, and auto-belay practice. Located on the **8th floor of Harbor Pattaya Shopping Mall** in Na Kluea, the gym occupies a purpose-designed climbing space themed around a **deep blue ocean** aesthetic — air-conditioned, well-lit, with a **10-metre main wall**, approximately **27 routes**, both **TrueBlue auto-belay systems** and **manual rope stations**, and a **bouldering area**. It is the only serious climbing destination within Pattaya itself (the other Pattaya option, Bean Cow Climbing Gym, is smaller and family-focused).
 
-For travelers and Pattaya residents wanting **proper indoor climbing**, this is the answer — and at **฿480 for a 3-hour adult day pass with harness and shoes included**, it's accessible pricing for what is genuinely a unique facility in the city.
+For travellers and Pattaya residents wanting **proper indoor climbing**, this is the answer — and at **฿480 for a 3-hour adult day pass with harness and shoes included**, it's accessible pricing for what is genuinely a unique facility in the city.
 
 ## Position in the Pattaya Market
 
 Pattaya has historically been **a climbing dead zone**. While Bangkok has a thriving indoor climbing scene (Rock Domain, RQ Club, Urban Playground) and Krabi/Tonsai is one of Asia's premier outdoor climbing destinations, **Pattaya had no climbing infrastructure for decades**. Deep Climbing Gym changed that — it is **literally the first wall-climbing facility in the city** — and remains the primary serious climbing option, with Bean Cow Climbing Gym opening later as a smaller family-friendly alternative.
 
-For visiting climbers passing through Pattaya, **Deep is the only meaningful option** in town. Day-tripping to Bangkok climbing gyms is a 90-minute drive each way — Deep saves the day for travelers who want to climb without leaving Pattaya.
+For visiting climbers passing through Pattaya, **Deep is the only meaningful option** in town. Day-tripping to Bangkok climbing gyms is a 90-minute drive each way — Deep saves the day for travellers who want to climb without leaving Pattaya.
 
 ## The Facility
 
 ### Main Wall
 
-- **Approximately 10 meters tall** — proper top-rope and lead height
+- **Approximately 10 metres tall** — proper top-rope and lead height
 - **One long top-rope wall** with **lead routes** also bolted
 - **About 20 routes on the high wall**
 - **Maximum difficulty: 6c+** (UIAA scale equivalent: ~VII+/VIII-) — caters mostly to beginner-to-intermediate climbers; experienced climbers will find the upper grades manageable
@@ -59,7 +59,7 @@ For visiting climbers passing through Pattaya, **Deep is the only meaningful opt
 - **TrueBlue auto-belay systems** installed
 - **Approximately 10 auto-belay routes** available
 - Suitable for **professional and beginner climbers** alike
-- Allows **solo climbing without a partner** — a key feature for travelers
+- Allows **solo climbing without a partner** — a key feature for travellers
 - TrueBlue is a respected international auto-belay brand with reliable safety record
 
 ### Bouldering Area
@@ -134,13 +134,13 @@ The gym primarily operates as **drop-in climbing access** rather than structured
 
 ## Strengths
 
-The reasons Pattaya climbers and travelers choose Deep:
+The reasons Pattaya climbers and travellers choose Deep:
 
 - **The first and primary climbing facility in Pattaya** — literally the only serious option in town
-- **10-meter wall height** — proper top-rope and lead climbing, not just bouldering
+- **10-metre wall height** — proper top-rope and lead climbing, not just bouldering
 - **Auto-belay system** — solo climbers can use the wall without a partner
 - **Air-conditioned** — climbing in Thai climate without melting
-- **Free belay support** — major plus for solo travelers
+- **Free belay support** — major plus for solo travellers
 - **Friendly staff** — described as fun, tight-knit
 - **Reasonable pricing** — ฿480/3 hours with gear is accessible
 - **Mall location** — easy parking, restrooms, food nearby, kids activities (Harborland) in the same building
@@ -164,7 +164,7 @@ Honest critique:
 
 - **Beginners** — perfect introduction to indoor climbing
 - **Intermediate climbers** — good variety, appropriate challenge level
-- **Travelers passing through Pattaya** — only meaningful option in the city
+- **Travellers passing through Pattaya** — only meaningful option in the city
 - **Families with kids** — pair climbing visit with Harborland kids zone in same building
 - **Auto-belay solo climbers** — well-equipped for partner-less climbing
 
@@ -175,15 +175,15 @@ Honest critique:
 
 ## Sister/Alternative
 
-**Bean Cow Climbing Gym** is Pattaya's other indoor climbing option — smaller, more family-focused, with **CWA-certified teachers** offering **top-rope safety classes**. Bean Cow's wall is **8 meters** vs. Deep's 10m. Bean Cow leans more **structured-classes**; Deep leans more **drop-in**. Active Pattaya climbers often visit both.
+**Bean Cow Climbing Gym** is Pattaya's other indoor climbing option — smaller, more family-focused, with **CWA-certified teachers** offering **top-rope safety classes**. Bean Cow's wall is **8 metres** vs. Deep's 10m. Bean Cow leans more **structured-classes**; Deep leans more **drop-in**. Active Pattaya climbers often visit both.
 
 ## Best For
 
 - **Beginners** (top rope or auto-belay introduction)
 - **Intermediate climbers** (routes up to 6c+)
-- **Solo travelers** (auto-belay + free belay support)
+- **Solo travellers** (auto-belay + free belay support)
 - **Families with kids** (pair with Harborland in same mall)
-- **Travelers wanting climbing without leaving Pattaya**
+- **Travellers wanting climbing without leaving Pattaya**
 - **Pattaya residents** who climb 1-3 times/week
 
 ## Not Best For
@@ -200,7 +200,7 @@ Honest critique:
 | Address | Harbor Pattaya, Floor 8, 190/25 Moo 9, Pattaya Klang Rd, Na Kluea |
 | Phone | +66 89 332 1000 |
 | Hours | Daily 10:00-22:00 |
-| Wall height | 10 meters |
+| Wall height | 10 metres |
 | Total routes | ~27 |
 | Auto-belay routes | ~10 (TrueBlue system) |
 | Max grade | 6c+ |

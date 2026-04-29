@@ -133,7 +133,7 @@ The dual-venue model lets parents choose **the location closer to home, school, 
 - **Cognitive development** matches instruction complexity
 - **Physical maturity** prevents injury and frustration
 - **Peer-learning** with same-age teammates
-- **Coach can specialize** in age-group pedagogy
+- **Coach can specialise** in age-group pedagogy
 
 ## Training Curriculum
 

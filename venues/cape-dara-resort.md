@@ -39,7 +39,7 @@ Cape Dara Resort is **a 5-star beach-cliff luxury resort on Dara Beach in Naklua
 
 The **Luminous Spa** is the resort's wellness centerpiece — offering **aromatherapy treatments and yoga classes alongside standard massage and facial menu**, providing **an integrated wellness experience for stay-and-spa guests**. The **mineral bath** is genuinely unusual at Pattaya hotels — most have standard chlorinated pools and saunas; Cape Dara's mineral water bathing offers therapeutic recovery benefits typical of European-style spa resorts.
 
-For couples and travelers seeking **5-star luxury without the Beach Road / Walking Street density**, Cape Dara delivers **the boutique cliff-resort alternative** in North Pattaya / Naklua. The location is **walking distance to Wong Amat Beach, Naklua's local Thai community feel, and quiet residential corridors** — fundamentally different from central Pattaya's tourism-saturated atmosphere.
+For couples and travellers seeking **5-star luxury without the Beach Road / Walking Street density**, Cape Dara delivers **the boutique cliff-resort alternative** in North Pattaya / Naklua. The location is **walking distance to Wong Amat Beach, Naklua's local Thai community feel, and quiet residential corridors** — fundamentally different from central Pattaya's tourism-saturated atmosphere.
 
 ## Position in the Pattaya 5-Star Resort Market
 
@@ -201,11 +201,11 @@ Pricing is **comparable to other Pattaya 5-stars** — slightly cheaper than And
 
 - **Couples wanting quietude** vs. central Pattaya density
 - **5-star but boutique** preference
-- **Naklua / North Pattaya** based travelers
+- **Naklua / North Pattaya** based travellers
 - **Spa enthusiasts** wanting Luminous Spa + mineral bath combo
 - **Sea-view luxury** seekers
 - **Long-stay** couples / families
-- **Wellness-focused** travelers
+- **Wellness-focused** travellers
 - **Multi-night** spa-and-stay programs
 
 ## Not Best For
@@ -214,7 +214,7 @@ Pricing is **comparable to other Pattaya 5-stars** — slightly cheaper than And
 - **Family with kids needing water park** — Centara Grand Mirage better
 - **Hardcore fitness focus** — equipment is hotel-tier not premium
 - **Combat sports trainees**
-- **Pure budget travelers**
+- **Pure budget travellers**
 - **Adventurous nightlife focus** — too quiet and removed
 
 ## Quick Reference Card

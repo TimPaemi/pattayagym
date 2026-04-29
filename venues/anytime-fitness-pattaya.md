@@ -78,7 +78,7 @@ Coaches in Pattaya tend to be a mix of Thai certified PTs and resident expat tra
 - 1-on-1 personal training (strength, fat loss, sport-specific prep)
 - Small group training (HIIT, kettlebell, conditioning)
 - Free fitness assessment for new members
-- Specialized classes (varies by club and season — check the schedule)
+- Specialised classes (varies by club and season — check the schedule)
 
 Don't expect Equinox-grade boutique class production. Do expect competent, accountable coaching that actually shows up to your booked sessions.
 

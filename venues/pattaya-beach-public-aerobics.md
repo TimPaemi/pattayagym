@@ -145,10 +145,10 @@ The energy is strong, communal, and deeply Thai. Music ranges from Thai pop to i
 
 - Long-stay Pattaya residents wanting a daily zero-cost fitness routine
 - Tourists curious about authentic Thai community fitness
-- Older travelers preferring low-impact group sessions
+- Older travellers preferring low-impact group sessions
 - Yoga / tai chi practitioners wanting outdoor sunrise practice
 - Beginners intimidated by indoor gyms
-- Solo travelers wanting easy social connection
+- Solo travellers wanting easy social connection
 - Anyone who likes their workout to come with a sea view
 
 ## Not best for

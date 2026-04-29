@@ -36,7 +36,7 @@ sources:
 
 ## Overview
 
-Chee Chan Golf Resort is **the newest premier-tier golf course in the Pattaya region** — an **18-hole David Dale (Golfplan) design that opened in 2018** on **580 Rai (229 acres / 92 hectares)** at Na Jomtien, Sattahip. The course's defining and unique feature is its **direct sightline to Khao Chi Chan**, a sacred mountain whose **130-meter (425-foot) cliff face displays the golden engraving of Phra Phuttha Maha Wachira Uttamopat Satsada — considered the world's largest Lord Buddha image carved on rock**, visible **from every single hole on the golf course**.
+Chee Chan Golf Resort is **the newest premier-tier golf course in the Pattaya region** — an **18-hole David Dale (Golfplan) design that opened in 2018** on **580 Rai (229 acres / 92 hectares)** at Na Jomtien, Sattahip. The course's defining and unique feature is its **direct sightline to Khao Chi Chan**, a sacred mountain whose **130-metre (425-foot) cliff face displays the golden engraving of Phra Phuttha Maha Wachira Uttamopat Satsada — considered the world's largest Lord Buddha image carved on rock**, visible **from every single hole on the golf course**.
 
 This single design feature places Chee Chan in **a unique global category**. There is no other golf course on Earth where the world's largest cliff Buddha is the visual backdrop of every shot. The combination of **modern American architectural design (David Dale of Golfplan), 7,345-yard championship layout, premium maintenance, lightning-fast TifEagle greens, and the Khao Chi Chan visual backdrop** creates an experience that's both **architecturally serious and spiritually distinctive**.
 
@@ -62,16 +62,16 @@ The course's name and visual identity come from **Khao Chi Chan** (เขาช�
 ### The Buddha Image
 
 - **Phra Phuttha Maha Wachira Uttamopat Satsada** — official name
-- **130 meters tall** (the Buddha figure itself)
+- **130 metres tall** (the Buddha figure itself)
 - **Carved into the cliff face** of Khao Chi Chan in 1995-1996
 - **Considered the world's largest Buddha image carved on a cliff**
-- **Created by laser-engraving and gold leaf inlay** — the gold makes the image visible for kilometers
+- **Created by laser-engraving and gold leaf inlay** — the gold makes the image visible for kilometres
 - **Sacred Buddhist site** — pilgrimages and meditation visits common
 - **Visible from every hole of Chee Chan Golf Resort** by design
 
 ### Why This Matters for Golf
 
-Most golf courses have **architectural visual focal points** — a clubhouse, a water feature, a distant mountain. Chee Chan has **a 130-meter golden Buddha visible from every shot**. The implications:
+Most golf courses have **architectural visual focal points** — a clubhouse, a water feature, a distant mountain. Chee Chan has **a 130-metre golden Buddha visible from every shot**. The implications:
 
 - **Photographic appeal** — every hole has a "money shot"
 - **Spiritual atmosphere** — Buddhist visitors feel reverent
@@ -98,7 +98,7 @@ The course was designed by **David Dale of Golfplan**, an American golf architec
 - **Multiple Asian projects** including courses in Thailand, Vietnam, China, India
 - **Known for routing designs** that respect natural landscape
 
-Dale's design for Chee Chan emphasizes:
+Dale's design for Chee Chan emphasises:
 
 - **Routing oriented for Khao Chi Chan visual presence**
 - **"Scottish Highlands" playing experience** — gently rolling hills, firm fairways, natural-look bunkering
@@ -144,7 +144,7 @@ The greens are seeded with **TifEagle**, a premium ultra-dwarf Bermuda hybrid th
 - **Tolerates very low mowing heights** (1.5mm or below)
 - **Produces faster green speeds** (12+ stimpmeter routine)
 - **Holds true ball roll** on slopes
-- **Requires specialized maintenance** but pays off in playing quality
+- **Requires specialised maintenance** but pays off in playing quality
 
 For visitors used to **slower Thai-tropical greens**, TifEagle at Chee Chan is a meaningful adjustment — putts that would die at 1m past the hole on slower greens roll 3m past at TifEagle pace.
 

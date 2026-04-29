@@ -38,7 +38,7 @@ sources:
 
 **Jungle Gym Pattaya is the first and only legitimate CrossFit affiliate in Pattaya** — a multi-discipline functional fitness facility owned and operated by **Coach Murray**, located on **165/4 Moo 6, Nong Prue, in central-east Pattaya**. The brand pairing is deliberate: as Coach Murray himself describes it, *"CrossFit Pattaya is our premier program, but the Jungle Gym is our identity"*. The facility runs serious **CrossFit programming on the official PADI-equivalent CrossFit affiliate model** — branded WODs, Olympic lifting, certified coach instruction — alongside a **wildly varied multi-discipline programming layer** that includes MMA, dodgeball, slacklining, target archery, archery tag, yoga, nutrition coaching, and even DNA testing for fitness profiles.
 
-The gym carries **partnership status with Under Armour and Decathlon**, putting brand-name equipment and gear support behind the operation. For travelers and Pattaya residents wanting **a real CrossFit affiliate experience plus genuinely fun multi-activity programming**, Jungle Gym is the only answer in the city — and the variety alone makes it a standout.
+The gym carries **partnership status with Under Armour and Decathlon**, putting brand-name equipment and gear support behind the operation. For travellers and Pattaya residents wanting **a real CrossFit affiliate experience plus genuinely fun multi-activity programming**, Jungle Gym is the only answer in the city — and the variety alone makes it a standout.
 
 ## Position in the Pattaya Market
 
@@ -88,10 +88,10 @@ What sets Jungle Gym apart from any other Pattaya gym is the **breadth of progra
 - **Nutrition Programming** — diet plans tailored to goals
 - **DNA Testing** — genetic profile-based training/nutrition recommendations (uncommon in Pattaya)
 
-### Combat & Self-Defense
+### Combat & Self-defence
 
 - **MMA** — striking + grappling cross-training
-- **Self-Defense** — practical defense classes
+- **Self-defence** — practical defense classes
 
 ### Unusual Activities (The Jungle Gym Side)
 
@@ -132,7 +132,7 @@ Jungle Gym uses standard tiered membership models common in Western CrossFit box
 - **3-month / 6-month / annual** packages discount further
 - **Personal training:** premium rate
 - **Multi-discipline class packages:** custom rates
-- **DNA testing + program:** specialized one-time fee
+- **DNA testing + program:** specialised one-time fee
 - **Family / event bookings** (archery tag, dodgeball): group event pricing
 
 For exact 2026 rates: [junglegympattaya.com](https://www.junglegympattaya.com/) or contact via Facebook / Instagram DM.
@@ -176,7 +176,7 @@ The "Jungle Gym" branding hints at the eclectic facility:
 
 - **Visiting CrossFitters** needing a Pattaya affiliate
 - **Multi-discipline functional fitness fans**
-- **Travelers wanting flexible drop-in pricing**
+- **Travellers wanting flexible drop-in pricing**
 - **Families/groups wanting unusual activities** (archery tag, dodgeball)
 - **Coach Murray fans** — the head coach is the gym
 - **Expat fitness community** in Pattaya
@@ -187,7 +187,7 @@ The "Jungle Gym" branding hints at the eclectic facility:
 - **Hardcore CrossFitters** needing multiple class options per day
 - **Pure-CrossFit-box purists** without other activities
 - **Pure budget seekers**
-- **Travelers wanting on-site accommodation**
+- **Travellers wanting on-site accommodation**
 
 ## Quick Reference Card
 

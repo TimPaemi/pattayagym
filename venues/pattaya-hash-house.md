@@ -197,13 +197,13 @@ The PH3 membership reflects Pattaya's expat community:
 - **Casual runners + joggers + walkers** seeking a structured weekly outing
 - **Adventurers** who like exploring countryside and hills
 - **Singles, couples, families** alike — many members bring partners
-- **Long-stay travelers** wanting Monday-night plans every week
+- **Long-stay travellers** wanting Monday-night plans every week
 
 ## Not Best For
 
 - **Strict-pace serious runners** seeking competition (try MD Pattaya runs)
 - **Teetotalers / non-drinkers** uncomfortable with beer-centric circles
-- **Religious-conservative travelers** — hash humor is irreverent and crude
+- **Religious-conservative travellers** — hash humor is irreverent and crude
 - **Solo female runners** seeking women-only spaces (PH3 is mixed)
 
 ## Quick Reference Card

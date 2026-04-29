@@ -82,7 +82,7 @@ The 1988 renovation's **Japanese consultant involvement** is visible in:
 - **Multiple-tier tee box layouts** (Japanese golf typically has 4-5 tee options vs. American 3-4)
 - **Onsen-style bathing facilities** in the original clubhouse renovation
 - **Japanese-language signage and caddy services**
-- **Course routing that emphasizes natural land contours**
+- **Course routing that emphasises natural land contours**
 
 The Japanese-Thai cultural blend has remained a feature of the club ever since.
 
@@ -193,7 +193,7 @@ The clubhouse has the **lived-in patina of a 60+ year-old institution** — not 
 - **Strategic-design connoisseurs** seeking Pete Dye / Nicklaus pedigree
 - **Tournament-prep players** wanting championship-grade conditions
 - **Premium-resort seekers** wanting modern clubhouse amenities
-- **Pattaya-central based travelers** wanting close-by courses
+- **Pattaya-central based travellers** wanting close-by courses
 
 ## Quick Reference Card
 

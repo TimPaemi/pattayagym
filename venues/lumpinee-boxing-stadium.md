@@ -49,7 +49,7 @@ Saturday cards are particularly meaningful for Pattaya Muay Thai: **Fairtex Figh
 
 ## Why a day-trip from Pattaya
 
-The case for a Pattaya-based traveler making the trip:
+The case for a Pattaya-based traveller making the trip:
 
 - **You will see the best Muay Thai you'll ever see live.** Lumpinee fight cards are the global benchmark.
 - **Bangkok-Pattaya drive is 1.5–2 hours each way** via the Motorway. Doable as a long day or, more comfortably, a single Bangkok overnight.
@@ -79,7 +79,7 @@ Most fighters' careers progress regional → MAX or Boxing World Pattaya level �
 **Public transport:**
 - Bangkok Bus Terminal → Pattaya bus runs 06:00–22:00, ~฿130, ~2 hr
 - Metro then Grab to Ramintra Road for Lumpinee
-- Or Bangkok-side hotel + Grab + Lumpinee — easier for less-mobile travelers
+- Or Bangkok-side hotel + Grab + Lumpinee — easier for less-mobile travellers
 
 **Tickets:**
 - Book online via lumpineestadium.com or muaythaistadium.com partners
@@ -118,12 +118,12 @@ Most fighters' careers progress regional → MAX or Boxing World Pattaya level �
 - Fight tourists building a Bangkok-Pattaya combined trip
 - Pattaya camp athletes whose teammates are competing at Lumpinee
 - Photographers / journalists with appropriate credentials
-- Any traveler who wants to say they've seen Muay Thai at the cathedral
+- Any traveller who wants to say they've seen Muay Thai at the cathedral
 
 ## Not best for
 
 - Casual tourists wanting "a Muay Thai show" — try MAX Pattaya or Pattaya Boxing World locally instead
-- Travelers without 1.5-hour-each-way time budget
+- Travellers without 1.5-hour-each-way time budget
 - Smoke-sensitive or noise-sensitive visitors (it's a fight crowd, not an opera house)
 - Children under ~10 (long evening, intense atmosphere)
 
@@ -148,4 +148,4 @@ For a **single long day**: leave Pattaya 14:00 Friday, arrive Bangkok 16:00, din
 
 For a **comfortable weekend**: book Bangkok hotel near the stadium for Friday night, see the fight, sleep, optionally do Bangkok sightseeing Saturday, drive back Saturday afternoon.
 
-For travelers planning a Muay Thai-focused Thailand trip, pair Lumpinee with **Rajadamnern Boxing Stadium** (Bangkok's other great traditional stadium — schedule permits seeing both in a weekend) and continue to **Pattaya** for daily training at one of the Pattaya camps the directory covers in depth.
+For travellers planning a Muay Thai-focused Thailand trip, pair Lumpinee with **Rajadamnern Boxing Stadium** (Bangkok's other great traditional stadium — schedule permits seeing both in a weekend) and continue to **Pattaya** for daily training at one of the Pattaya camps the directory covers in depth.

@@ -88,7 +88,7 @@ The Wednesday-Friday cadence is **the traditional Thai stadium pattern**:
 
 This schedule mirrors **Rajadamnern Stadium (Tue/Thu/Sat)** and **Lumpinee Stadium (Fri/Sat)** — Bangkok's two flagship traditional Muay Thai stadiums.
 
-For travelers who want Bangkok-stadium-style Muay Thai without the Bangkok travel, **Pattaya Boxing World on Wednesday or Friday** is the closest experience available outside the capital.
+For travellers who want Bangkok-stadium-style Muay Thai without the Bangkok travel, **Pattaya Boxing World on Wednesday or Friday** is the closest experience available outside the capital.
 
 ## Fight Card Format
 
@@ -205,7 +205,7 @@ Pattaya Boxing World is **typically cheaper than MAX** — partly because it's t
 
 - **Daily flexibility** seekers — MAX better for any-night plans
 - **Tourism polish** preference — MAX better for first-timers
-- **Walking Street based** travelers — distance varies
+- **Walking Street based** travellers — distance varies
 - **Single-evening tourists** without day-of-week flexibility
 - **Production / smoke / strobe** aesthetic preference — MAX delivers more
 

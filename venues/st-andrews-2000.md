@@ -218,7 +218,7 @@ This is **mid-premium tier pricing** — comparable to Khao Kheow or Mountain Sh
 - **Pace-of-play priority players** — the design slows things down
 - **Traditional architecture purists** who dislike Muirhead's signature dramatic style
 - **Mobility-limited golfers** — hilltop terrain demands walking and varied stance
-- **Time-pressed travelers** — the Ban Chang location adds drive time
+- **Time-pressed travellers** — the Ban Chang location adds drive time
 
 ## Quick Reference Card
 

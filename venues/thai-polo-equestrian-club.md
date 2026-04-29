@@ -179,7 +179,7 @@ Thai Polo's Derby facility allows **international Derby competition** — yet an
 The decision to install **an Argentinian vet as general manager** signals **ambition at international polo standards**:
 
 - **Argentina is the world's #1 polo nation** — produces the best polo ponies, players, and horse care
-- **Argentinian vets specialize** in polo horse medicine
+- **Argentinian vets specialise** in polo horse medicine
 - **International recognition** of credentials
 - **Network access** to global polo and equestrian community
 
@@ -275,15 +275,15 @@ For non-members wanting to **try polo or take a lesson**, packages are available
 - **Horse owners** seeking premium boarding
 - **Multi-discipline equestrian** athletes
 - **High-society Pattaya / Bangkok**
-- **Visiting international polo / equestrian** travelers
+- **Visiting international polo / equestrian** travellers
 
 ## Not Best For
 
 - **Casual one-time tourists** wanting horse photos — go to Horseshoe Point
 - **Family adventure-park** seekers — Horseshoe Point delivers this
-- **Pure budget travelers** — premium pricing
+- **Pure budget travellers** — premium pricing
 - **Beginners with limited time** — riding skill takes years to develop
-- **Walking Street based** travelers — too far from central Pattaya
+- **Walking Street based** travellers — too far from central Pattaya
 
 ## Quick Reference Card
 

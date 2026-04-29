@@ -40,7 +40,7 @@ sources:
 
 ## Overview
 
-Laem Chabang International Country Club is **the most highly regarded golf course in the Pattaya region** and one of the most respected championship courses in Thailand. A **27-hole Jack Nicklaus design** opened in **1995**, it sprawls across **700 acres** of dramatic terrain in Sriracha district, Chonburi, **30 minutes north of central Pattaya** and **109 kilometers southeast of Bangkok**. The course is one of **only six Nicklaus designs in Thailand**, all completed between 1991 and 1994, and is the only one widely considered the **best layout in the Pattaya golf region**.
+Laem Chabang International Country Club is **the most highly regarded golf course in the Pattaya region** and one of the most respected championship courses in Thailand. A **27-hole Jack Nicklaus design** opened in **1995**, it sprawls across **700 acres** of dramatic terrain in Sriracha district, Chonburi, **30 minutes north of central Pattaya** and **109 kilometres southeast of Bangkok**. The course is one of **only six Nicklaus designs in Thailand**, all completed between 1991 and 1994, and is the only one widely considered the **best layout in the Pattaya golf region**.
 
 The course has been **nominated for Best Course in Thailand every single year of the World Golf Awards** — a level of consistent recognition matched by very few Asian courses. For golfers traveling to Pattaya — a region with **30+ courses within an hour of central Pattaya** — Laem Chabang is the **default top-of-the-list pick** for serious players who want a championship-caliber Nicklaus experience.
 
@@ -182,12 +182,12 @@ For tournament-grade experience, this is the Pattaya course.
 
 Laem Chabang International Country Club is **the consensus best golf course in Pattaya region** and **one of the top championship courses in all of Thailand**. The combination of Nicklaus design pedigree, 27-hole layout flexibility, pristine course conditioning, top-tier caddies, and immaculate clubhouse infrastructure puts it in a category of its own among Pattaya's golf options.
 
-For the **golf-focused traveler with one round to play in Pattaya, this is the choice.** For multi-day golf holidays, Laem Chabang typically anchors the itinerary — usually paired with **Siam Country Club Old Course** (the other Pattaya marquee), and supplemented with mid-tier rounds at **Burapha** or **Phoenix Gold** depending on preference.
+For the **golf-focused traveller with one round to play in Pattaya, this is the choice.** For multi-day golf holidays, Laem Chabang typically anchors the itinerary — usually paired with **Siam Country Club Old Course** (the other Pattaya marquee), and supplemented with mid-tier rounds at **Burapha** or **Phoenix Gold** depending on preference.
 
 ## Best For
 
 - **Serious golfers** wanting Pattaya's flagship course experience
-- **Multi-day golf-holiday travelers** anchoring an itinerary
+- **Multi-day golf-holiday travellers** anchoring an itinerary
 - **Tournament-style players** wanting championship-grade conditioning
 - **Nicklaus design fans** — one of his signature Asian projects
 - **Companies and groups** hosting golf events or tournaments
@@ -198,7 +198,7 @@ For the **golf-focused traveler with one round to play in Pattaya, this is the c
 - **Beginners** struggling with strategic course design (try Phoenix Gold for friendlier layouts)
 - **Pure budget golfers** — cheaper options like Treasure Hill exist in the region
 - **Walk-up casual players** without bookings during high season
-- **Travelers without transport** to Sriracha (no direct walking access)
+- **Travellers without transport** to Sriracha (no direct walking access)
 
 ## Quick Reference Card
 
