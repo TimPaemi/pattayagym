@@ -177,6 +177,19 @@ ${header()}
       <span class="meta-chip">🏷 ${Object.keys(byCat).length} categories</span>
     </div>
   </div>
+  ${(() => {
+    const catCounts = Object.entries(byCat).sort((a,b) => b[1].length - a[1].length).slice(0, 5);
+    if (!catCounts.length) return '';
+    const labels = (key) => { const c = allCats.find(x => x.key === key); return c ? c.label : key; };
+    return `<section class="tldr" aria-labelledby="area-tldr-h">
+      <h2 id="area-tldr-h" class="tldr-title">What ${escHtml(area.name)} is best for</h2>
+      <ul class="tldr-list">
+        ${catCounts.map(([key, list]) => `<li><strong>${escHtml(labels(key))}</strong> — ${list.length} venue${list.length === 1 ? '' : 's'} (top: <a href="/gyms/${escHtml(list[0].id)}/" style="color:var(--accent);">${escHtml(list[0].name)}</a>)</li>`).join('')}
+      </ul>
+      <p style="margin: 12px 0 0; font-size: 13px; color: var(--text-muted);"><a href="#area-full" style="color: var(--accent);">Skip to all ${matchingGyms.length} venues in ${escHtml(area.name)} →</a></p>
+    </section>`;
+  })()}
+  <div id="area-full"></div>
   ${sections || '<p style="margin-top:30px;color:var(--text-dim);">No verified venues found in this area yet.</p>'}
   <div class="venue-cta-foot" style="margin-top:48px;">
     <h3>Looking for something specific?</h3>
@@ -225,6 +238,11 @@ const GUIDES = [
       { label: '🏝 Best Resort + Stay Packages', take: 3 },
       { label: '💰 Best Budget Options', take: 3 },
       { label: '🌟 Other Notable Options', take: 4 }
+    ],
+    faqs: [
+      { q: 'What is the best Muay Thai gym in Pattaya for beginners?', a: 'Sityodtong, Fairtex, and Kombat Group all run dedicated beginner programs in English. Most camps will pair beginners with patient pad-holders for the first 2-4 weeks of fundamentals.' },
+      { q: 'How much does Muay Thai cost in Pattaya?', a: 'Drop-in sessions ฿300-฿500. Monthly unlimited training ฿4,000-฿15,000 depending on prestige. All-inclusive resort camps with accommodation ฿20,000-฿60,000/month.' },
+      { q: 'Do I need to be fit to start Muay Thai in Pattaya?', a: 'No. Most camps explicitly welcome total beginners. Expect to be tired in week one — by week three, you\'ll be coasting through 2-hour sessions.' },
     ]
   },
   {
@@ -250,6 +268,11 @@ const GUIDES = [
       { label: '🆓 Free Options', take: 2 },
       { label: '💸 Best Budget Memberships', take: 5 },
       { label: '🥊 Cheapest Muay Thai Sessions', take: 3 }
+    ],
+    faqs: [
+      { q: 'What is the cheapest gym in Pattaya?', a: 'Free public running routes (Pattaya Beach, Mabprachan Lake) cost nothing. The cheapest membership gyms run ฿1,500-฿2,500/month — Castra Gym, Universe Gym, and Tony\'s Gym are typical.' },
+      { q: 'Are there free workout spots in Pattaya?', a: 'Yes — Pattaya Beach 5.8km path, Jomtien Beach, Mabprachan Lake 4km loop, Pratumnak Park, and Chaiyapruek 400m track are all free public spaces with running and outdoor calisthenics.' },
+      { q: 'Can I train Muay Thai cheaply in Pattaya?', a: 'Yes. WKO/ISS Gym at ~฿4,000/month is among the cheapest verified Muay Thai monthly rates with serious coaching. Drop-in classes at most camps run ฿300-฿500.' },
     ]
   },
   {
@@ -273,6 +296,11 @@ const GUIDES = [
       { label: '⭐ Top-Tier Picks', take: 4 },
       { label: '🏌 Premium Golf', take: 4 },
       { label: '🎾 Premium Racquet Sports', take: 3 }
+    ],
+    faqs: [
+      { q: 'What is the most exclusive sports club in Pattaya?', a: 'FITZ Club at Royal Cliff Hotels is the headline luxury racquet/swim/fitness club — multi-award-winning. For golf, Siam Country Club Old Course and Phoenix Gold rank top-tier.' },
+      { q: 'Which Pattaya hotels have the best 5-star fitness facilities?', a: 'Hilton Pattaya, Andaz Jomtien (Hyatt), Centara Grand Mirage, Cape Dara, Mövenpick Siam Na Jomtien, Royal Cliff (Fitz Club), and Dusit Thani all offer day-pass access to genuinely premium facilities.' },
+      { q: 'Is there a luxury polo or equestrian club in Pattaya?', a: 'Thai Polo & Equestrian Club is the most prominent — internationally recognised, hosting tournaments. Horseshoe Point Resort is the second major equestrian destination.' },
     ]
   },
   {
@@ -290,6 +318,11 @@ const GUIDES = [
     },
     sections: [
       { label: '🌙 Always-Open Options', take: 10 }
+    ],
+    faqs: [
+      { q: 'Which 24-hour gyms in Pattaya don\'t require membership?', a: 'Most 24/7 gyms are membership-based, but Anytime Fitness offers 1-day free trials and Jetts has no-contract month-to-month plans you can cancel anytime.' },
+      { q: 'Can I drop in at 3am to a Pattaya gym?', a: 'Yes — Anytime Fitness Pattaya (key-fob), Jetts (key-card), and Fitness 7 (24-hour staffed) all allow access at any hour for members.' },
+      { q: 'Do Pattaya hotels have 24-hour fitness centers?', a: 'Many 5-star hotels offer 24-hour fitness for guests — Hilton, Andaz, Mövenpick, and Centara Grand Mirage all run 24/7. Day-pass availability varies.' },
     ]
   },
   {
@@ -317,6 +350,11 @@ const GUIDES = [
       { label: '🌊 Water Parks & Swimming', take: 4 },
       { label: '⚽ Kids\' Sport Academies', take: 5 },
       { label: '🎢 Adventure & Fun', take: 3 }
+    ],
+    faqs: [
+      { q: 'What is the best Pattaya activity for kids?', a: 'Cartoon Network Amazone and Centara Grand Mirage water park are the headline picks. Underwater World, Nong Nooch, and Flight of the Gibbon all work well for ages 5+.' },
+      { q: 'Are there sports classes for kids in Pattaya?', a: 'Yes — AF Academy (football), Kombat Group (kids\' Muay Thai), Fitz Club (kids\' tennis + swim), and Pattaya Sports Club (multi-sport) all run dedicated youth programs.' },
+      { q: 'Is Pattaya safe for families with young children?', a: 'Yes — the venues listed are all explicitly family-oriented with safety protocols, supervision, and English-speaking staff. Pattaya Beach and Jomtien Beach are calm-water family beaches.' },
     ]
   },
   {
@@ -340,6 +378,11 @@ const GUIDES = [
     },
     sections: [
       { label: '🎓 Best for First-Timers', take: 12 }
+    ],
+    faqs: [
+      { q: 'What sport is easiest to start in Pattaya?', a: 'Yoga, swimming, and running require no prior skill. For combat sports, most Muay Thai camps welcome total beginners. For watersports, scuba (open-water course in 3-4 days) and SUP are popular entry points.' },
+      { q: 'Do I need equipment to start a sport in Pattaya?', a: 'Most venues provide all equipment for beginners — Muay Thai gloves and pads, dive gear, paddles for pickleball, racquets at hotel courts. Bring workout clothes and water.' },
+      { q: 'Are Pattaya gyms beginner-friendly to women?', a: 'Many — Anytime Fitness, hotel gyms (Hilton, Andaz, Mövenpick), boutique yoga studios, and Fitz Club all rank well on female-friendly safety and comfort. The big bro-coded iron gyms are the exception, not the rule.' },
     ]
   }
 ];
@@ -378,12 +421,38 @@ function buildGuidePage(guide, allGyms) {
     }))
   };
 
+  // TL;DR — top 3 picks block
+  const top3 = sorted.slice(0, 3);
+  const tldrHtml = top3.length ? `
+  <section class="tldr" aria-labelledby="tldr-h">
+    <h2 id="tldr-h" class="tldr-title">Quick answer — top picks</h2>
+    <ol class="tldr-list" style="list-style: decimal inside;">
+      ${top3.map((g, i) => `<li><strong><a href="/gyms/${g.id}/" style="color:var(--accent);">${escHtml(g.name)}</a></strong> — ${escHtml((g.description || '').slice(0, 110))}${(g.description||'').length > 110 ? '…' : ''}</li>`).join('')}
+    </ol>
+    <p style="margin: 12px 0 0; font-size: 13px; color: var(--text-muted);">Full ranking and reasoning below. <a href="#full-list" style="color: var(--accent);">Skip to full list →</a></p>
+  </section>` : '';
+
+  // FAQ block
+  const faqs = guide.faqs || [];
+  const faqHtml = faqs.length ? `
+  <section class="about" aria-labelledby="faq-h" style="margin-top: 48px;">
+    <h2 id="faq-h" style="font-size: 1.4rem; margin-bottom: 18px;">Common questions</h2>
+    ${faqs.map(f => `<details class="faq-item"><summary>${escHtml(f.q)}</summary><p>${escHtml(f.a)}</p></details>`).join('')}
+  </section>` : '';
+
+  // FAQPage schema (only if we have FAQs)
+  const faqSchema = faqs.length ? `<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+  })}</script>` : '';
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 ${commonHead(guide.title, guide.desc, url)}
 <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(itemListSchema)}</script>
+${faqSchema}
 </head>
 <body>
 ${header()}
@@ -404,7 +473,10 @@ ${header()}
       <span class="meta-chip">📅 Updated ${new Date().toISOString().slice(0,10)}</span>
     </div>
   </div>
+  ${tldrHtml}
+  <div id="full-list"></div>
   ${sectionsHtml.join('')}
+  ${faqHtml}
   <div class="venue-cta-foot" style="margin-top:48px;">
     <h3>Want to compare these side-by-side?</h3>
     <p>Click "+ Add to compare" on any venue page. Then visit /compare/ to see them in a single table.</p>

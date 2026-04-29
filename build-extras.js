@@ -157,7 +157,19 @@ ${header()}
       <span class="meta-chip">📅 Last updated ${new Date().toISOString().slice(0,10)}</span>
     </div>
   </div>
-  <h2 style="margin-top:36px; margin-bottom:18px; font-size:1.4rem; font-weight:800; color: var(--text);">All ${escHtml(cat.label)} venues</h2>
+  ${(() => {
+    const top = gymsInCat.slice(0, 3);
+    if (!top.length) return '';
+    return `<section class="tldr" aria-labelledby="tldr-h">
+      <h2 id="tldr-h" class="tldr-title">Quick answer — top ${escHtml(cat.label.toLowerCase())} venues</h2>
+      <ol class="tldr-list" style="list-style: decimal inside;">
+        ${top.map(g => `<li><strong><a href="/gyms/${escHtml(g.id)}/" style="color:var(--accent);">${escHtml(g.name)}</a></strong>${g.area ? ` — ${escHtml(g.area)}` : ''}${g.priceRange ? ` · ${escHtml(g.priceRange)}` : ''}</li>`).join('')}
+      </ol>
+      <p style="margin: 12px 0 0; font-size: 13px; color: var(--text-muted);"><a href="#full-list" style="color: var(--accent);">Skip to all ${gymsInCat.length} venues →</a></p>
+    </section>`;
+  })()}
+
+  <h2 id="full-list" style="margin-top:36px; margin-bottom:18px; font-size:1.4rem; font-weight:800; color: var(--text);">All ${escHtml(cat.label)} venues</h2>
   <div class="cat-venue-grid">
     ${cards}
   </div>

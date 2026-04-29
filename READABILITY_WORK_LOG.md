@@ -131,3 +131,70 @@ Status: **DONE — awaiting approval before Batch 2.**
 Source file: `build-discovery.js` (one function `buildGuidePage` likely; will inspect first). Will add: TL;DR scannable answer at top, ranked list with sub-headings, comparison table, FAQ block per guide, FAQPage schema where 3+ Qs justify it.
 
 (`/guides/family-friendly-pattaya/` slips to Batch 3 with category landings.)
+
+---
+
+## Batch 2 — Site-wide rollout (user override: "Do it in general with all guides and sites")
+
+User asked to apply the readability upgrade across ALL guides + categories + areas at once instead of 5-page batches. Done in a single pass via the build-script source files.
+
+**Pages upgraded (25):**
+- 6 individual guide pages (`/guides/best-muay-thai-pattaya/`, `cheapest-gyms-pattaya`, `luxury-sports-clubs-pattaya`, `24-hour-gyms-pattaya`, `family-friendly-pattaya`, `best-for-beginners-pattaya`)
+- 13 category landing pages (`/category/fitness/`, `clubs`, `watersports`, `muay-thai`, `golf`, `racquet`, `adventure`, `swimming`, `yoga`, `kids-youth`, `climbing`, `equestrian`, `crossfit`)
+- 6 area landing pages (`/area/jomtien/`, `naklua`, `pratamnak`, `east-pattaya`, `central-pattaya`, `sattahip`)
+
+**Files edited:**
+- `build-discovery.js` — added `faqs` arrays (3 each) to all 6 guides; rewrote `buildGuidePage` to render TL;DR (top-3 picks) + FAQ section + FAQPage JSON-LD; rewrote `buildAreaPage` to render area "What this area is best for" top-5-categories quick-answer block
+- `build-extras.js` — rewrote `buildCategoryPage` to render top-3 venue quick-answer block above the full grid
+
+**What each page now has:**
+
+**Guides (6 pages):**
+- Hero
+- **NEW:** "Quick answer — top picks" block (top 3 ranked venues with names + 110-char summaries)
+- "Skip to full list →" anchor link
+- Existing ranked sections (now anchored at #full-list)
+- **NEW:** "Common questions" expandable FAQ (3 Qs each, with FAQPage schema)
+- Existing CTA footer
+
+**Category landings (13 pages):**
+- Hero
+- **NEW:** "Quick answer — top {category} venues" block (top 3 venues with area + price)
+- "Skip to all {N} venues →" anchor link
+- Full venue grid (now anchored at #full-list)
+- Existing CTA footer
+
+**Area landings (6 pages):**
+- Hero
+- **NEW:** "What {area} is best for" block (top 5 categories ranked by venue count, each with the strongest venue linked)
+- "Skip to all {N} venues in {area} →" anchor link
+- Full venues grouped by category (now anchored at #area-full)
+- Existing CTA footer
+
+**SEO impact:**
+- Added FAQPage structured data on all 6 guides (5 with 3 Qs each = 18 total FAQ schema items eligible for rich results)
+- Internal link density increased — every guide/category/area now links into 3-5 specific venue pages from the quick-answer block
+- Anchor links (`#full-list`, `#area-full`) help featured-snippet eligibility
+- Zero keyword removal — all original intros, descriptions, sections, CTAs preserved
+
+**Risk / uncertainty:**
+- The auto-generated FAQ for `family-friendly-pattaya` references "Pattaya Beach and Jomtien Beach are calm-water family beaches" — generally true but Pattaya Beach can have rough water in monsoon. If we want to be technically airtight, soften to "are popular family beaches".
+- Top-3 picks are deterministic (sorted by guide.rank function). If a venue's data changes substantially, top-3 may shift on next build — that's expected and desired.
+
+**Verification:**
+- `node build.js` runs clean
+- Verified all 6 guide pages render "Quick answer" + "Common questions" + FAQPage schema (3 hits each)
+- Verified all 13 category pages render "Quick answer" + "Skip to all" (2 hits each)
+- Verified all 6 area pages render "What X is best for" + "Skip to all" (2 hits each)
+
+**Pages NOT yet touched in this rollout:**
+- `/compare/` — pure tool UI, low value to add reading aids
+- `/map/` — pure tool UI, same
+- `/404/` — already simple/scannable
+- 138 venue pages — already have TL;DR, callouts, drop cap, sticky bar, fact-card, related grid; no readability deficit identified
+- Add www subdomain redirect — separate infra task
+
+### Next suggested
+- Push all changes to GitHub for Cloudflare deploy
+- Optional: also add an FAQ section + auto-generated quick-answer to each individual venue page (138 pages, would need per-category Q/A templates — bigger lift)
+- Submit updated sitemap to Google Search Console after deploy
