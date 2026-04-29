@@ -152,3 +152,67 @@
     '</a>';
   }).join('');
 })();
+
+// Featured this month: editorially curated venues rotated by calendar month.
+(function () {
+  var wrap = document.getElementById('featured-month');
+  var grid = document.getElementById('featured-month-grid');
+  if (!wrap || !grid) return;
+  var GYMS = window.GYMS || [];
+  var CATS = window.CATEGORIES || [];
+  var esc = function (s) {
+    return String(s || '').replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+  var catLabel = function (k) {
+    var c = CATS.find(function (x) { return x.key === k; });
+    return c ? c.label : k;
+  };
+  var featured = GYMS.filter(function (g) { return g.featured; });
+  if (!featured.length) return;
+  var now = new Date();
+  var offset = (now.getFullYear() * 12 + now.getMonth()) % featured.length;
+  var picks = featured.slice(offset).concat(featured.slice(0, offset)).slice(0, 3);
+  grid.innerHTML = picks.map(function (g) {
+    return '<a class="featured-card" href="/gyms/' + encodeURIComponent(g.id) + '/">' +
+      '<span>' + esc(catLabel(g.category)) + '</span>' +
+      '<h3>' + esc(g.name) + '</h3>' +
+      '<p>' + esc(g.area || g.description || 'Pattaya') + '</p>' +
+    '</a>';
+  }).join('');
+  wrap.hidden = false;
+})();
+
+// Reader feedback: pulled from a manual JSON file so testimonials are explicit editorial data.
+(function () {
+  var section = document.getElementById('reader-feedback');
+  var grid = document.getElementById('reviews-grid');
+  var empty = document.getElementById('reviews-empty');
+  if (!section || !grid) return;
+  var esc = function (s) {
+    return String(s || '').replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+  fetch('/data/reviews.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : { reviews: [] }; })
+    .then(function (payload) {
+      var reviews = Array.isArray(payload) ? payload : (payload.reviews || []);
+      reviews = reviews.filter(function (r) { return r && r.published !== false && r.quote; }).slice(0, 5);
+      if (!reviews.length) {
+        if (empty) empty.hidden = false;
+        return;
+      }
+      if (empty) empty.hidden = true;
+      grid.innerHTML = reviews.map(function (r) {
+        return '<article class="review-card">' +
+          '<blockquote>' + esc(r.quote) + '</blockquote>' +
+          '<cite>' + esc(r.name || 'Directory reader') + (r.context ? ' - ' + esc(r.context) : '') + '</cite>' +
+        '</article>';
+      }).join('');
+    })
+    .catch(function () {
+      if (empty) empty.hidden = false;
+    });
+})();

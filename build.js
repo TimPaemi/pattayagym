@@ -16,9 +16,11 @@ const VENUES_DIR = path.join(ROOT, 'venues');
 const OUT_DIR = path.join(ROOT, 'gyms');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '159';
+const ASSET_VERSION = '160';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
+const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
+const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
 
 // ---------- Frontmatter parser ----------
 function parseFrontmatter(text) {
@@ -540,7 +542,7 @@ function metaDesc(s) {
 }
 
 function criticalCss() {
-  return `<style>:root{color-scheme:dark;--bg:#0b0b0d;--card:#151518;--text:#f5f5f5;--text-dim:#d0d0d0;--text-muted:#9b9b9b;--accent:#ffb800;--border:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;line-height:1.6}a{color:inherit}.hero{position:relative;overflow:hidden}.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 32px;max-width:1200px;margin:0 auto;width:100%;background:rgba(11,11,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:900}.brand-mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--accent);color:#000}.brand-mark.small{width:28px;height:28px;border-radius:8px}.nav-links{display:flex;gap:16px;list-style:none;margin:0;padding:0}.nav-links a{text-decoration:none;color:var(--text-dim);font-weight:700}.venue-page{max-width:880px;margin:0 auto;padding:24px 32px 100px}.venue-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:24px;padding:4px 0}.venue-hero{position:relative;padding:32px 32px 28px;margin:0 -8px 36px}.venue-hero-art{position:absolute;top:18px;right:18px;width:116px;height:116px;color:var(--accent);opacity:.22;pointer-events:none;z-index:0}.venue-hero-art .cat-art{width:100%;height:100%;display:block}.venue-hero>*:not(.venue-hero-art){position:relative;z-index:1}.venue-hero .venue-h1{padding-right:130px}.venue-h1{font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.08;margin:10px 0 14px;font-weight:950}.venue-lede{color:var(--text-dim);font-size:1.05rem;max-width:760px}.venue-cat-pill,.meta-chip{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:999px;padding:6px 10px}.venue-cat-pill,.meta-chip-accent{color:#000;background:var(--accent);border-color:var(--accent);font-weight:800}.venue-hero-meta,.venue-meta-line,.venue-actions,.share-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.venue-hero-meta{margin-top:16px}.venue-meta-line{margin-bottom:14px}.share-bar{padding:14px 16px;margin:0 0 18px;background:var(--card);border:1px solid var(--border);border-radius:12px}.share-btn{border:1px solid var(--border);padding:7px 13px;border-radius:8px}.cat-venue-grid,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.cat-venue-card,.card{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 16px;border-radius:10px;text-decoration:none;font-weight:800}.btn-primary{background:var(--accent);color:#000}.site-footer{border-top:1px solid var(--border);background:#080809}img{max-width:100%;height:auto}@media(max-width:720px){.nav{overflow-x:auto;padding:14px 16px}.nav-links{overflow-x:auto}.venue-page{padding:16px 18px 80px}.venue-hero{padding:24px 20px 22px;margin:0 0 28px}.venue-hero-art{width:78px;height:78px;top:12px;right:12px;opacity:.15}.venue-hero .venue-h1{padding-right:70px}.venue-h1{font-size:1.8rem}.share-bar{padding:10px 12px}.cat-venue-grid{grid-template-columns:1fr}}</style>`;
+  return `<style>:root{color-scheme:dark;--bg:#0b0b0d;--card:#151518;--text:#f5f5f5;--text-dim:#d0d0d0;--text-muted:#9b9b9b;--accent:#ffb800;--border:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;line-height:1.6}a{color:inherit}.hero{position:relative;overflow:hidden}.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 32px;max-width:1200px;margin:0 auto;width:100%;background:rgba(11,11,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:900}.brand-mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--accent);color:#000}.brand-mark.small{width:28px;height:28px;border-radius:8px}.nav-links{display:flex;gap:16px;list-style:none;margin:0;padding:0}.nav-links a{text-decoration:none;color:var(--text-dim);font-weight:700}.venue-page{max-width:880px;margin:0 auto;padding:24px 32px 100px}.venue-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:24px;padding:4px 0}.venue-hero{position:relative;padding:32px 32px 28px;margin:0 -8px 36px}.venue-hero-art{position:absolute;top:18px;right:18px;width:116px;height:116px;color:var(--accent);opacity:.22;pointer-events:none;z-index:0}.venue-hero-art .cat-art{width:100%;height:100%;display:block}.venue-hero>*:not(.venue-hero-art){position:relative;z-index:1}.venue-hero .venue-h1{padding-right:130px}.venue-h1{font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.08;margin:10px 0 14px;font-weight:950}.venue-lede{color:var(--text-dim);font-size:1.05rem;max-width:760px}.venue-cat-pill,.meta-chip{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:999px;padding:6px 10px}.venue-cat-pill,.meta-chip-accent{color:#000;background:var(--accent);border-color:var(--accent);font-weight:800}.venue-hero-meta,.venue-meta-line,.venue-actions,.share-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px}.venue-hero-meta{margin-top:16px}.venue-meta-line{margin-bottom:14px}.share-bar{padding:14px 16px;margin:0 0 18px;background:var(--card);border:1px solid var(--border);border-radius:12px}.share-btn{border:1px solid var(--border);padding:7px 13px;border-radius:8px}.cat-venue-grid,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.cat-venue-card,.card{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 16px;border-radius:10px;text-decoration:none;font-weight:800}.btn-primary{background:var(--accent);color:#000}.site-footer{border-top:1px solid var(--border);background:#080809}img{max-width:100%;height:auto}@media(max-width:720px){.nav{overflow-x:auto;padding:14px 16px}.nav-links{overflow-x:auto}.venue-page{padding:14px 16px 110px}.venue-hero{padding:20px 18px 18px;margin:0 0 28px}.venue-hero-art{width:78px;height:78px;top:12px;right:12px;opacity:.15}.venue-hero .venue-h1{padding-right:70px}.venue-h1{font-size:1.7rem}.share-bar{padding:10px 12px}.cat-venue-grid{grid-template-columns:1fr}}</style>`;
 }
 
 function desktopTocCriticalCss() {
@@ -567,6 +569,59 @@ function stylesheetTags(includeVenueCss = true) {
 
 function serviceWorkerRegistration() {
   return `<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>`;
+}
+
+function newsletterFooterHtml() {
+  return `<div class="footer-newsletter">
+    <div class="newsletter-card">
+      <div>
+        <p class="newsletter-kicker">Stay current</p>
+        <h2>Get Pattaya gym updates by email.</h2>
+        <p>Fresh listings, corrected hours, and new guide notes from the directory.</p>
+      </div>
+      <form class="newsletter-form" action="${NEWSLETTER_ACTION}" method="post">
+        <input type="hidden" name="embed" value="1" />
+        <input type="hidden" name="tag" value="website-footer" />
+        <div class="newsletter-field">
+          <label for="footer-email">Email address *</label>
+          <input id="footer-email" name="email" type="email" autocomplete="email" required aria-required="true" placeholder="you@example.com" />
+        </div>
+        <div class="newsletter-field">
+          <label for="footer-first-name">First name <span aria-hidden="true">(optional)</span></label>
+          <input id="footer-first-name" name="metadata__first-name" type="text" autocomplete="given-name" placeholder="Alex" />
+        </div>
+        <div>
+          <p class="frequency-label" id="footer-frequency-label">Frequency</p>
+          <div class="frequency-options" role="radiogroup" aria-labelledby="footer-frequency-label">
+            <label><input type="radio" name="metadata__frequency" value="weekly" checked /> Weekly</label>
+            <label><input type="radio" name="metadata__frequency" value="monthly" /> Monthly</label>
+            <label><input type="radio" name="metadata__frequency" value="major-updates" /> Major updates</label>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>`;
+}
+
+function pageFeedbackHtml(urlPath, title) {
+  const safeTitle = title || 'Pattaya Gym page';
+  const goodSubject = encodeURIComponent(`Helpful page: ${safeTitle}`);
+  const badSubject = encodeURIComponent(`Needs work: ${safeTitle}`);
+  const body = encodeURIComponent(`Page: ${SITE}${urlPath || '/'}\nWhat helped or what should change?\n`);
+  return `<section class="page-feedback" aria-labelledby="page-feedback-title">
+    <div class="page-feedback-card">
+      <div>
+        <p class="feedback-kicker">Editorial feedback</p>
+        <h2 id="page-feedback-title">Did this page help?</h2>
+        <p>Send a one-click note so we know which pages need more research.</p>
+      </div>
+      <div class="feedback-actions">
+        <a class="btn" href="mailto:hello@pattaya-gym.com?subject=${goodSubject}&body=${body}">Helpful</a>
+        <a class="btn" href="mailto:hello@pattaya-gym.com?subject=${badSubject}&body=${body}">Needs work</a>
+      </div>
+    </div>
+  </section>`;
 }
 
 function schemaTypesForCategory(cat) {
@@ -1121,7 +1176,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
       <p>Help other Pattaya travellers find the right gym — share this page or tell us what we got wrong.</p>
       <div class="cta-row">
         <button class="btn btn-primary" onclick="PG.share('whatsapp')">💬 Share on WhatsApp</button>
-        <a class="btn btn-secondary" href="mailto:hello@pattaya-gym.com?subject=${encodeURIComponent('Update for ' + fm.name)}">✏️ Suggest an edit</a>
+        <a class="btn btn-secondary" href="mailto:hello@pattaya-gym.com?subject=${encodeURIComponent('Edit suggestion: ' + fm.name)}">✏️ Suggest an edit</a>
         ${fm.mapsUrl ? `<a class="btn btn-secondary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">⭐ Leave a Google review</a>` : ''}
       </div>
     </div>
@@ -1151,6 +1206,8 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
         mainEntity: _faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
       })}</script>`;
     })()}
+
+    ${pageFeedbackHtml(`/gyms/${slug}/`, fm.name || slug)}
 
     <footer class="venue-footer">
       <p>Last verified: <strong>${escHtml(fm.verified || 'N/A')}</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
@@ -1219,13 +1276,15 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
           <li><a href="/methodology/">Research methodology</a></li>
           <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
           <li><a href="/add-your-gym/">Add your gym</a></li>
-          <li><a href="mailto:hello@pattaya-gym.com">Contact</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/press/">Press</a></li>
         </ul>
       </div>
     </div>
+    ${newsletterFooterHtml()}
     <div class="site-footer-base">
       <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
-      <p class="sf-disclaimer">Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
+      <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
     </div>
   </footer>
 
