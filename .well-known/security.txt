@@ -1,0 +1,5 @@
+Contact: mailto:hello@pattaya-gym.com
+Expires: 2027-04-29T23:59:59Z
+Preferred-Languages: en
+Canonical: https://pattaya-gym.com/.well-known/security.txt
+Policy: https://pattaya-gym.com/.well-known/security.txt

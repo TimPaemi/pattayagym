@@ -16,6 +16,9 @@ const VENUES_DIR = path.join(ROOT, 'venues');
 const OUT_DIR = path.join(ROOT, 'gyms');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
+const ASSET_VERSION = '158';
+const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
+const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 
 // ---------- Frontmatter parser ----------
 function parseFrontmatter(text) {
@@ -505,6 +508,160 @@ function getCategoryArt(cat) {
 
 global.getCategoryArt = getCategoryArt;
 
+function assetHref(file) {
+  return `${file}?v=${ASSET_VERSION}`;
+}
+
+function schemaTypesForCategory(cat) {
+  const key = String(cat || '').toLowerCase();
+  const byCategory = {
+    'muay-thai': ['LocalBusiness', 'SportsActivityLocation', 'SportsClub'],
+    fitness: ['LocalBusiness', 'HealthClub', 'ExerciseGym'],
+    crossfit: ['LocalBusiness', 'HealthClub', 'ExerciseGym'],
+    golf: ['LocalBusiness', 'GolfCourse'],
+    yoga: ['LocalBusiness', 'HealthAndBeautyBusiness'],
+    climbing: ['LocalBusiness', 'SportsActivityLocation'],
+    watersports: ['LocalBusiness', 'SportsActivityLocation'],
+    swimming: ['LocalBusiness', 'SportsActivityLocation'],
+    racquet: ['LocalBusiness', 'SportsActivityLocation', 'SportsClub'],
+    'kids-youth': ['LocalBusiness', 'SportsActivityLocation'],
+    equestrian: ['LocalBusiness', 'SportsActivityLocation'],
+    adventure: ['LocalBusiness', 'SportsActivityLocation'],
+    clubs: ['LocalBusiness', 'SportsClub']
+  };
+  return byCategory[key] || ['LocalBusiness', 'SportsActivityLocation'];
+}
+
+function serviceTypeForCategory(cat) {
+  const key = String(cat || '').toLowerCase();
+  return ({
+    'muay-thai': 'Muay Thai training',
+    fitness: 'Gym and fitness training',
+    crossfit: 'Functional fitness training',
+    golf: 'Golf course access',
+    yoga: 'Yoga and Pilates classes',
+    climbing: 'Indoor climbing',
+    watersports: 'Watersports and diving',
+    swimming: 'Swimming and aquatics',
+    racquet: 'Racquet sports',
+    'kids-youth': 'Youth sports programmes',
+    equestrian: 'Equestrian sports',
+    adventure: 'Adventure sports',
+    clubs: 'Sports club activities'
+  })[key] || 'Sports and fitness venue';
+}
+
+function mapPriceRangeToDollars(priceRange) {
+  const raw = String(priceRange || '').trim();
+  if (!raw) return undefined;
+  const bahtCount = (raw.match(/฿/g) || []).length || (raw.match(/à¸¿/g) || []).length;
+  if (bahtCount) return '$'.repeat(Math.max(1, Math.min(4, bahtCount)));
+  const cleaned = raw.replace(/\s+/g, '');
+  if (cleaned.length <= 4) return '$'.repeat(Math.max(1, Math.min(4, cleaned.length)));
+  return raw;
+}
+
+function postalCodeFromAddress(address) {
+  const match = String(address || '').match(/\b(\d{5})\b/);
+  return match ? match[1] : undefined;
+}
+
+function openingDaysFromHours(hours) {
+  const s = String(hours || '').toLowerCase();
+  const all = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  if (/24\/7|24 hours|daily|every day|7 days/.test(s)) return all;
+  if (/mon\s*[-–]\s*sat|monday\s*[-–]\s*saturday/.test(s)) return all.slice(0, 6);
+  if (/mon\s*[-–]\s*fri|monday\s*[-–]\s*friday/.test(s)) return all.slice(0, 5);
+  if (/sat\s*[-–]\s*sun|saturday\s*[-–]\s*sunday/.test(s)) return all.slice(5);
+  if (/closed sunday|closed sundays/.test(s)) return all.slice(0, 6);
+  return undefined;
+}
+
+function normaliseSchemaTime(hour, minute) {
+  const h = String(hour).padStart(2, '0');
+  const m = String(minute == null || minute === '' ? '00' : minute).padStart(2, '0');
+  return `${h}:${m}`;
+}
+
+function parseOpeningHoursSpecification(hours) {
+  const raw = String(hours || '');
+  if (!raw.trim()) return undefined;
+  const dayOfWeek = openingDaysFromHours(raw);
+  if (/24\/7|24 hours/.test(raw.toLowerCase())) {
+    return [{ '@type': 'OpeningHoursSpecification', dayOfWeek: dayOfWeek || openingDaysFromHours('daily'), opens: '00:00', closes: '23:59' }];
+  }
+  const ranges = [];
+  const re = /(\d{1,2})(?::(\d{2}))?\s*[-–]\s*(\d{1,2})(?::(\d{2}))?/g;
+  let match;
+  while ((match = re.exec(raw)) !== null) {
+    const openHour = Number(match[1]);
+    const closeHour = Number(match[3]);
+    if (openHour > 23 || closeHour > 24) continue;
+    ranges.push({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: dayOfWeek || openingDaysFromHours('daily'),
+      opens: normaliseSchemaTime(match[1], match[2]),
+      closes: normaliseSchemaTime(match[3], match[4])
+    });
+  }
+  return ranges.length ? ranges : undefined;
+}
+
+function buildVenueSchema(fm, slug, url, desc) {
+  const image = `${SITE}/og/${slug}.png`;
+  const sameAs = [
+    fm.social && fm.social.facebook && `https://facebook.com/${fm.social.facebook}`,
+    fm.social && fm.social.instagram && `https://instagram.com/${fm.social.instagram}`
+  ].filter(Boolean);
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': schemaTypesForCategory(fm.category),
+    '@id': `${url}#venue`,
+    name: fm.name,
+    description: desc,
+    url: fm.website || url,
+    mainEntityOfPage: url,
+    image,
+    telephone: fm.phone || undefined,
+    priceRange: mapPriceRangeToDollars(fm.priceRange),
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: fm.address || '',
+      addressLocality: 'Pattaya',
+      addressRegion: 'Chonburi',
+      postalCode: postalCodeFromAddress(fm.address),
+      addressCountry: 'TH'
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: PATTAYA_GEO.latitude,
+      longitude: PATTAYA_GEO.longitude
+    },
+    openingHours: fm.hours || undefined,
+    openingHoursSpecification: parseOpeningHoursSpecification(fm.hours),
+    sameAs: sameAs.length ? sameAs : undefined,
+    makesOffer: {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: serviceTypeForCategory(fm.category),
+        serviceType: serviceTypeForCategory(fm.category),
+        areaServed: { '@type': 'City', name: 'Pattaya' }
+      }
+    },
+    additionalProperty: [{
+      '@type': 'PropertyValue',
+      name: 'geo_accuracy',
+      value: 'Approximate Pattaya centroid; TODO replace with venue-specific latitude and longitude.'
+    }]
+  };
+
+  Object.keys(schema).forEach(k => schema[k] === undefined && delete schema[k]);
+  Object.keys(schema.address).forEach(k => schema.address[k] === undefined && delete schema.address[k]);
+  return schema;
+}
+
 
 // Auto-generate 3-5 FAQ items per venue page.
 // Category-aware so a Muay Thai camp gets different Qs than a golf course.
@@ -749,20 +906,8 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   const languagesArr = Array.isArray(fm.languages) ? fm.languages : [];
   const languagesStr = languagesArr.join(' · ');
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': url,
-    name: fm.name,
-    description: desc,
-    url: fm.website || url,
-    image: fm.photos && fm.photos[0] ? fm.photos[0] : `${SITE}/og-image.jpg`,
-    address: { '@type': 'PostalAddress', streetAddress: fm.address || '', addressLocality: 'Pattaya', addressRegion: 'Chonburi', postalCode: '20150', addressCountry: 'TH' },
-    telephone: fm.phone || undefined,
-    priceRange: fm.priceRange || undefined,
-    openingHours: fm.hours || undefined
-  };
-  Object.keys(schema).forEach(k => schema[k] === undefined && delete schema[k]);
+  const ogImage = `${SITE}/og/${slug}.png`;
+  const schema = buildVenueSchema(fm, slug, url, desc);
 
   const social = fm.social || {};
   const socialLinks = [
@@ -775,24 +920,35 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b0d" />
   <title>${escHtml(title)}</title>
   <meta name="description" content="${escHtml(desc)}" />
   <link rel="canonical" href="${url}" />
+  <link rel="alternate" hreflang="en" href="${url}" />
+  <link rel="alternate" hreflang="x-default" href="${url}" />
   <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
+
+  <meta http-equiv="x-dns-prefetch-control" content="on" />
+  <link rel="dns-prefetch" href="//maps.google.com" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${escHtml(fm.name)}" />
   <meta property="og:description" content="${escHtml(desc)}" />
   <meta property="og:url" content="${url}" />
+  <meta property="og:image" content="${ogImage}" />
   <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${escHtml(fm.name)}" />
   <meta name="twitter:description" content="${escHtml(desc)}" />
+  <meta name="twitter:image" content="${ogImage}" />
 
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="/venue.css" />
+  <link rel="preload" href="${assetHref('/styles.css')}" as="style" />
+  <link rel="preload" href="${assetHref('/venue.css')}" as="style" />
+  <link rel="stylesheet" href="${assetHref('/styles.css')}" />
+  <link rel="stylesheet" href="${assetHref('/venue.css')}" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
+  <script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
 
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
 </head>
@@ -1021,8 +1177,8 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <div class="scroll-progress" id="pg-scroll-progress"></div>
   <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
-  <script src="/share.js" defer></script>
-  <script src="/compare.js" defer></script>
+  <script src="${assetHref('/share.js')}" defer></script>
+  <script src="${assetHref('/compare.js')}" defer></script>
   <script>
   (function () {
     // Sticky nav scrolled-state

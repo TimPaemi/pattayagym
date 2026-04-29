@@ -1,0 +1,10 @@
+/* TEAM */
+Site: Pattaya Gym Directory
+Contact: hello@pattaya-gym.com
+Location: Pattaya, Chonburi, Thailand
+
+/* SITE */
+URL: https://pattaya-gym.com/
+Purpose: Independent directory of gyms and sport venues in Pattaya.
+Stack: Static HTML, CSS, JavaScript, Node.js build scripts.
+Standards: SEO, WCAG 2.1 AA, fast static delivery on Cloudflare Pages.

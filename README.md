@@ -49,3 +49,38 @@ git push
 ```
 
 This regenerates `gyms/<id>/index.html` for every `.md` file and updates `sitemap.xml`. To make it automatic on Cloudflare Pages: dashboard → `pattayagym` Pages project → Settings → Build & deployments → Build command = `node build.js` (Build output stays `/`).
+
+## Local server preview
+
+For generated pages and root-relative assets, use a local server:
+
+```cmd
+python -m http.server 8080
+```
+
+## Cloudflare Pages
+
+- `_redirects` contains a host-specific `www.pattaya-gym.com` to `pattaya-gym.com` 301 redirect. Keep it host-specific to avoid an apex redirect loop.
+- `_headers` sets default HTML caching, long-lived immutable caching for static CSS/JS/OG assets, and baseline security headers.
+- Static assets are referenced with `?v=158` cache-busting query strings. Update that version when changing `styles.css`, `venue.css`, `app.js`, `data.js`, `share.js`, or `compare.js`.
+
+## Search console
+
+- Sitemap: `https://pattaya-gym.com/sitemap.xml`
+- Robots: `https://pattaya-gym.com/robots.txt`
+- Google Search Console verification meta tag: not configured in this repo yet.
+- Bing Webmaster Tools verification meta tag: not configured in this repo yet.
+
+## Analytics
+
+All pages include the Plausible script for `pattaya-gym.com`. Analytics will record once the domain is configured in Plausible.
+
+## Social images
+
+Run this after changing venue names, categories, or adding venues:
+
+```cmd
+powershell -ExecutionPolicy Bypass -File scripts\generate-og-images.ps1
+```
+
+It creates `og-image.png` plus one `og/<venue-id>.png` image per venue.

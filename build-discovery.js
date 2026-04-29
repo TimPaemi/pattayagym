@@ -12,9 +12,14 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
+const ASSET_VERSION = '158';
+const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 
 function escHtml(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+}
+function assetHref(file) {
+  return `${file}?v=${ASSET_VERSION}`;
 }
 function loadGymsFromDataJs() {
   const code = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
@@ -119,17 +124,27 @@ function footer() {
 function commonHead(title, desc, canonical) {
   return `<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b0b0d" />
 <title>${escHtml(title)}</title>
 <meta name="description" content="${escHtml(desc)}" />
 <link rel="canonical" href="${canonical}" />
+<link rel="alternate" hreflang="en" href="${canonical}" />
+<link rel="alternate" hreflang="x-default" href="${canonical}" />
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
+<meta http-equiv="x-dns-prefetch-control" content="on" />
+<link rel="dns-prefetch" href="//maps.google.com" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="${escHtml(title)}" />
 <meta property="og:description" content="${escHtml(desc)}" />
 <meta property="og:url" content="${canonical}" />
+<meta property="og:image" content="${DEFAULT_OG_IMAGE}" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="stylesheet" href="/styles.css" />
-<link rel="stylesheet" href="/venue.css" />
+<meta name="twitter:image" content="${DEFAULT_OG_IMAGE}" />
+<link rel="preload" href="${assetHref('/styles.css')}" as="style" />
+<link rel="preload" href="${assetHref('/venue.css')}" as="style" />
+<link rel="stylesheet" href="${assetHref('/styles.css')}" />
+<link rel="stylesheet" href="${assetHref('/venue.css')}" />
+<script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />`;
 }
 
@@ -325,8 +340,8 @@ ${header()}
   </div>
 </main>
 ${footer()}
-<script src="/share.js" defer></script>
-<script src="/compare.js" defer></script>
+<script src="${assetHref('/share.js')}" defer></script>
+<script src="${assetHref('/compare.js')}" defer></script>
 </body>
 </html>
 `;
@@ -676,8 +691,8 @@ ${header()}
   </div>
 </main>
 ${footer()}
-<script src="/share.js" defer></script>
-<script src="/compare.js" defer></script>
+<script src="${assetHref('/share.js')}" defer></script>
+<script src="${assetHref('/compare.js')}" defer></script>
 </body>
 </html>
 `;
@@ -786,7 +801,7 @@ ${header()}
   <div id="search-results"></div>
 </main>
 ${footer()}
-<script src="/data.js"></script>
+<script src="${assetHref('/data.js')}"></script>
 <script>
 (function() {
   var GYMS = window.GYMS || [];
