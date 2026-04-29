@@ -54,6 +54,7 @@ const GYMS = [
   { id: "fitz-club", name: "Fitz Club (Royal Cliff Hotels)", category: "fitness", area: "Pratumnak / Royal Cliff", address: "Royal Cliff Hotels Group, Pratumnak Hill", phone: "", website: "https://www.royalcliff.com/facilities/fitz-club/", social: {}, hours: "Daily extended hours", priceRange: "฿฿฿฿", description: "Award-winning luxury sports club: 7 tennis courts, 2 AC squash courts, table tennis, swimming, gym, professional coaching. Premium tier.", tags: ["luxury","tennis","squash","swimming","gym","kids-coaching"], mapsUrl: "https://maps.google.com/?q=Fitz+Club+Royal+Cliff+Pattaya", verified: "2026-04-27" },
   { id: "elite-gym-fitness", name: "Elite Gym & Fitness Pattaya", category: "fitness", area: "Pattaya", address: "Pattaya — verify exact", phone: "", website: "https://elitegympattaya.com/", social: { facebook: "elite.gym.pattaya" }, hours: "Daily extended", priceRange: "฿฿", description: "Modern facility with top-notch equipment. Integrates yoga and other fitness programs.", tags: ["commercial","modern","yoga"], mapsUrl: "https://maps.google.com/?q=Elite+Gym+Fitness+Pattaya", verified: "2026-04-27" },
   { id: "jetts-fitness-pattaya", name: "Jetts Fitness Pattaya", category: "fitness", area: "Multiple (Little Walk, Royal Garden)", address: "Little Walk Pattaya + Royal Garden locations", phone: "", website: "https://www.jetts.co.th/", social: {}, hours: "24/7", priceRange: "฿฿", description: "24/7 fitness chain with multiple locations across Thailand. No-contract memberships, modern equipment.", tags: ["chain","24-7","no-contract"], mapsUrl: "https://maps.google.com/?q=Jetts+Fitness+Pattaya", verified: "2026-04-27" },
+  { id: "anytime-fitness-pattaya", name: "Anytime Fitness Pattaya", category: "fitness", area: "Multiple (Bukis Point South Pattaya + Again Pattaya)", address: "Bukis Point Mall, Thappraya Rd (South Pattaya) + Again Pattaya complex", phone: "", website: "https://www.anytimefitness.co.th/", social: { facebook: "AnytimeFitnessTh", instagram: "anytimefitness.southpattaya" }, hours: "24/7 (manned hours vary)", priceRange: "฿฿", description: "Global 24/7 gym franchise with 2 Pattaya locations. Key-fob access, worldwide reciprocity at 5,000+ clubs, no-contract memberships, 1-day free trial, personal training. Clean, predictable, female-friendly alternative to bro-gym Pattaya.", tags: ["24-7","chain","franchise","global-access","bukis-point","no-contract","free-trial"], mapsUrl: "https://maps.google.com/?q=Anytime+Fitness+Pattaya", verified: "2026-04-28" },
   { id: "fitness-7", name: "Fitness 7", category: "fitness", area: "Avenue Pattaya / Central", address: "Avenue Pattaya, between 2nd Rd and Soi Buakhao", phone: "", website: "", social: {}, hours: "24 hours", priceRange: "฿฿", description: "2000+ sqm, 24-hour gym in Avenue Pattaya. Cardio, weights, free weights, boxing ring, functional training areas.", tags: ["24-7","large","boxing-ring","central"], mapsUrl: "https://maps.google.com/?q=Fitness+7+Avenue+Pattaya", verified: "2026-04-27" },
   { id: "true-fitness-pattaya", name: "True Fitness Pattaya", category: "fitness", area: "Pattaya", address: "Pattaya — verify exact", phone: "", website: "", social: {}, hours: "Daily", priceRange: "฿฿฿", description: "Popular fitness chain: HIIT, yoga, spinning. Modern facility, group classes, nutrition counseling.", tags: ["chain","classes","hiit","yoga"], mapsUrl: "https://maps.google.com/?q=True+Fitness+Pattaya", verified: "2026-04-27" },
   { id: "castra-gym", name: "Castra Gym", category: "fitness", area: "Soi Khao Talo / East Pattaya", address: "Soi Khao Talo, East Pattaya", phone: "", website: "", social: {}, hours: "Daily", priceRange: "฿", description: "Relaxed atmosphere from bodybuilders to general fitness. East Pattaya location, less touristy.", tags: ["bodybuilding","relaxed","east-pattaya"], mapsUrl: "https://maps.google.com/?q=Castra+Gym+Pattaya", verified: "2026-04-27" },
@@ -200,31 +201,17 @@ const GYMS = [
   { id: "movenpick-siam-pattaya", name: "Mövenpick Siam Hotel Na Jomtien Pattaya", category: "fitness", area: "Na Jomtien", address: "Mövenpick Siam Hotel Na Jomtien Pattaya, Na Jomtien", phone: "", website: "https://www.movenpickpattayanajomtien.com/", social: {}, hours: "24/7 fitness; spa + pool extended", priceRange: "฿฿฿฿", description: "5-star Swiss-hospitality (Accor). 24-hour 2nd-floor fitness with floor-to-ceiling windows. 262 rooms. Seafront + lagoon pools. Little Birds Kids Club.", tags: ["5-star","swiss","movenpick","accor","24-hour","kids-club","na-jomtien"], mapsUrl: "https://maps.google.com/?q=Movenpick+Siam+Pattaya", verified: "2026-04-27" },
 
   { id: "flight-of-the-gibbon", name: "Flight of the Gibbon — Khao Kheow Canopy", category: "adventure", area: "Khao Kheow / Si Racha (1hr from Pattaya)", address: "Inside Khao Kheow Open Zoo, Si Racha District, Chonburi", phone: "", website: "https://flightofthegibbon.com/", social: {}, hours: "Daily — multi-session with hotel pickups", priceRange: "฿฿฿", description: "Largest canopy zipline in Thailand. 3 km course, 24 platforms. Inside Khao Kheow Open Zoo wildlife sanctuary. 2.5-hour zipline + zoo + lunch all-inclusive day.", tags: ["zipline","canopy","largest-thailand","wildlife-sanctuary","khao-kheow","all-inclusive"], mapsUrl: "https://maps.google.com/?q=Flight+of+the+Gibbon+Pattaya", verified: "2026-04-27" },
-  { id: "underwater-world-pattaya", name: "Underwater World Pattaya", category: "watersports", area: "Sukhumvit Road", address: "22/22 Moo 11, Sukhumvit Rd, Nong Prue, Bang Lamung", phone: "", website: "https://underwaterworldpattaya.com/", social: {}, hours: "Daily 09:00-18:00", priceRange: "฿฿", description: "Pattaya only aquarium. First modern aquarium in Thailand (2003). 105m+ underwater tunnel. 5,000+ marine animals. 4 zones. Dive-with-sharks program for certified divers. Biggest jellyfish collection in Thailand.", tags: ["aquarium","first-thailand","underwater-tunnel","shark-dive","jellyfish","family"], mapsUrl: "https://maps.google.com/?q=Underwater+World+Pattaya", verified: "2026-04-27" }
+  { id: "underwater-world-pattaya", name: "Underwater World Pattaya", category: "watersports", area: "Sukhumvit Road", address: "22/22 Moo 11, Sukhumvit Rd, Nong Prue, Bang Lamung", phone: "", website: "https://underwaterworldpattaya.com/", social: {}, hours: "Daily 09:00-18:00", priceRange: "฿฿", description: "Pattaya only aquarium. First modern aquarium in Thailand (2003). 105m+ underwater tunnel. 5,000+ marine animals. 4 zones. Dive-with-sharks program for certified divers. Biggest jellyfish collection in Thailand.", tags: ["aquarium","first-thailand","underwater-tunnel","shark-dive","jellyfish","family"], mapsUrl: "https://maps.google.com/?q=Underwater+World+Pattaya", verified: "2026-04-27" },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  { id: "pattaya-sky-ride-helicopter", name: "Pattaya Sky Ride — Helicopter Tours", category: "adventure", area: "Various landing pads", address: "Pattaya — verify departure pad at booking", phone: "", website: "https://www.pattayaskyride.com/", social: {}, hours: "Daily by appointment", priceRange: "฿฿฿฿", description: "Pattaya helicopter sightseeing + Bangkok-Pattaya charter (45-min). Airbus EC-135 + EC-130 aircraft. Up to 6 passengers. 129,200 THB Bangkok-Pattaya charter.", tags: ["helicopter","charter","airbus","luxury","bangkok-transfer","aerial-sightseeing"], mapsUrl: "https://maps.google.com/?q=Pattaya+Sky+Ride+Helicopter", verified: "2026-04-27" },
+  { id: "pattaya-panthers-rugby", name: "Pattaya Panthers Rugby Football Club", category: "clubs", area: "Pattaya", address: "Pattaya Panthers RFC, Pattaya", phone: "", website: "https://pattayapanthers.com/", social: { facebook: "pattayapanthersrugby" }, hours: "Training + match days vary", priceRange: "฿฿", description: "Pattaya only rugby club. Contact + touch rugby formats. Annual Pattaya Tens tournament in May with international touring teams. Beginner-friendly.", tags: ["rugby","social","pattaya-tens","contact-touch","british-commonwealth"], mapsUrl: "https://maps.google.com/?q=Pattaya+Panthers+Rugby", verified: "2026-04-27" },
+  { id: "sf-strike-bowl", name: "SF Strike Bowl Pattaya (Central Festival)", category: "clubs", area: "Central Festival Pattaya Beach Mall — 6F", address: "6th Floor, Central Festival Pattaya Beach Mall, Beach Road", phone: "", website: "", social: { facebook: "sfstrikebowlptb.sf" }, hours: "Daily 12:00-22:00", priceRange: "฿฿", description: "Modern mall-attached bowling — 16 regular + 2 VIP lanes (separate partitioned space). Pool tables + sea-view smoking lounge + arcade. SF Group operator. 180 baht/game.", tags: ["bowling","mall-attached","central-festival","vip-lanes","sf-group","family"], mapsUrl: "https://maps.google.com/?q=SF+Strike+Bowl+Central+Festival+Pattaya", verified: "2026-04-27" }
 ];
 
-window.GYMS = GYMS;
-window.CATEGORIES = CATEGORIES;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { CATEGORIES: CATEGORIES, GYMS: GYMS };
+}
+if (typeof window !== 'undefined') {
+  window.CATEGORIES = CATEGORIES;
+  window.GYMS = GYMS;
+}
