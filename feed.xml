@@ -6,7 +6,7 @@
   <atom:link href="https://pattaya-gym.com/feed.xml" rel="self" type="application/rss+xml" />
   <description>Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.</description>
   <language>en-US</language>
-  <lastBuildDate>Wed, 29 Apr 2026 17:51:23 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 29 Apr 2026 17:57:31 GMT</lastBuildDate>
   <item>
     <title>ALFA BJJ Pattaya</title>
     <link>https://pattaya-gym.com/gyms/alfa-bjj-pattaya/</link>
@@ -78,6 +78,14 @@
     <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
     <category>Swimming</category>
     <description><![CDATA[Pattaya quietest, cleanest, most family-friendly main beach. ~4km long Naklua coastline with fenced safe-swim zone, beach volleyball court, jet ski + banana boat (central section). Walking distance to Centara Grand Mirage, Cape Dara, and Sanctuary of Truth. Free.]]></description>
+  </item>
+  <item>
+    <title>Koh Larn (Coral Island) — Pattaya Day-Trip Beach Island</title>
+    <link>https://pattaya-gym.com/gyms/koh-larn-coral-island/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/koh-larn-coral-island/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Watersports / Diving</category>
+    <description><![CDATA[Pattaya primary day-trip beach island. 30-min ferry from Bali Hai Pier. 6 beaches (Tawaen, Samae, Tien, Nual, Ta Yai, La). Parasailing, banana boats, jet ski, snorkeling, intro scuba, beach volleyball. Genuinely clearer water + whiter sand than mainland.]]></description>
   </item>
   <item>
     <title>Megabreak Pool Hall Pattaya</title>
@@ -238,14 +246,6 @@
     <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
     <category>Muay Thai</category>
     <description><![CDATA[Premium boutique camp. 4.9/5 rated. All-inclusive packages from ฿25,500/month with private room + pool/sauna/spa + meals.]]></description>
-  </item>
-  <item>
-    <title>Pattaya Thai Boxing &amp; Fitness Gym (Jomtien)</title>
-    <link>https://pattaya-gym.com/gyms/pattaya-thai-boxing-fitness/</link>
-    <guid isPermaLink="true">https://pattaya-gym.com/gyms/pattaya-thai-boxing-fitness/</guid>
-    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
-    <category>Muay Thai</category>
-    <description><![CDATA[Walk-in budget gym in Jomtien. ~฿300 for equipment + 4-5 rounds of pads. Pro fighter Champ on roster. Air fans, no AC.]]></description>
   </item>
 </channel>
 </rss>
