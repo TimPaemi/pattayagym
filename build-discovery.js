@@ -446,6 +446,20 @@ ${header()}
     <h1 class="venue-h1">Pattaya gym guides</h1>
     <p class="venue-lede">Curated picks across budget tiers, experience levels, family-friendliness, and 24-hour access. All guides are built from the same verified directory of ${allGyms.length} venues.</p>
   </div>
+
+  <section class="tldr" aria-labelledby="pick-h">
+    <h2 id="pick-h" class="tldr-title">Pick the right guide for you</h2>
+    <ul class="tldr-list">
+      <li><strong>Want the best Muay Thai?</strong> → <a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
+      <li><strong>On a tight budget?</strong> → <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
+      <li><strong>Looking for luxury?</strong> → <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
+      <li><strong>Train at odd hours?</strong> → <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
+      <li><strong>Travelling with kids?</strong> → <a href="/guides/family-friendly-pattaya/">Family-friendly</a></li>
+      <li><strong>Total beginner?</strong> → <a href="/guides/best-for-beginners-pattaya/">Best for beginners</a></li>
+    </ul>
+  </section>
+
+  <h2 style="margin: 36px 0 18px; font-size: 1.4rem; font-weight: 800; color: var(--text);">All guides</h2>
   <div class="cat-venue-grid">${cards}</div>
 </main>
 ${footer()}
@@ -501,6 +515,9 @@ ${header()}
       <button class="sf-pill active" data-cat="all">All categories</button>
       ${allCats.map(c => `<button class="sf-pill" data-cat="${c.key}">${escHtml(c.label)}</button>`).join('')}
     </div>
+    <p style="font-size: 12.5px; color: var(--text-muted); margin: 14px auto 0; max-width: 580px; line-height: 1.6;">
+      Tip: combine a sport with an area ("yoga jomtien"), or with a feature ("24 hour", "english", "cheap", "family"). Multiple words narrow results.
+    </p>
   </div>
   <p class="search-stats" id="stats"></p>
   <div id="search-results"></div>
@@ -618,6 +635,27 @@ ${header()}
     <h1 class="venue-h1">Add your gym to the directory</h1>
     <p class="venue-lede">Free listing. We verify your venue against public sources, write a full deep-dive page, and add it to the directory — usually within 1-2 weeks. No payment required, no "featured" slots for sale.</p>
   </div>
+
+  <section class="tldr" style="max-width: 640px; margin: 0 auto 24px;" aria-labelledby="why-h">
+    <h2 id="why-h" class="tldr-title">What you get</h2>
+    <ul class="tldr-list">
+      <li><strong>A full deep-dive page</strong> on pattaya-gym.com — with your address, hours, prices, distinctions, and photos</li>
+      <li><strong>Permanent backlink</strong> + listing in your category and area landing pages</li>
+      <li><strong>Compare-tool inclusion</strong> — visitors can stack you next to competitors</li>
+      <li><strong>Search visibility</strong> on the site's full-text search</li>
+      <li><strong>Free verification refresh</strong> annually — keep your info current</li>
+    </ul>
+  </section>
+
+  <section class="tldr" style="max-width: 640px; margin: 0 auto 24px;" aria-labelledby="how-h">
+    <h2 id="how-h" class="tldr-title">How it works (3 steps)</h2>
+    <ol class="tldr-list" style="list-style: decimal inside;">
+      <li><strong>Submit the form below</strong> with your venue details</li>
+      <li><strong>We verify</strong> against your website, social media, and TripAdvisor (1–2 weeks)</li>
+      <li><strong>Page goes live</strong> — you get a link to share with members and customers</li>
+    </ol>
+  </section>
+
   <form class="form-card" action="mailto:hello@pattaya-gym.com" method="post" enctype="text/plain">
     <div class="form-row">
       <label for="name">Venue name *</label>
