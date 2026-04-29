@@ -135,8 +135,13 @@ function asyncStylesheet(file) {
 <noscript><link rel="stylesheet" href="${href}" /></noscript>`;
 }
 
+function accessibilityCriticalCss() {
+  return `<style>.skip-link{position:absolute;left:16px;top:10px;z-index:1000;transform:translateY(-140%);background:var(--accent);color:#000;padding:10px 14px;border-radius:8px;font-weight:800}.skip-link:focus{transform:translateY(0)}:focus-visible{outline:2px solid var(--accent);outline-offset:3px}</style>`;
+}
+
 function stylesheetTags(includeVenueCss = true) {
   return `${criticalCss()}
+${accessibilityCriticalCss()}
 ${asyncStylesheet('/styles.css')}
 ${includeVenueCss ? asyncStylesheet('/venue.css') : ''}`;
 }
@@ -167,8 +172,9 @@ function header() {
     });
   })();
   </script>
-<header class="hero" style="min-height: auto;">
-  <nav class="nav">
+<a href="#main" class="skip-link">Skip to main content</a>
+<header class="hero" style="min-height: auto;" role="banner">
+  <nav class="nav" role="navigation" aria-label="Primary navigation">
     <a href="/" class="brand">
       <span class="brand-mark">P</span>
       <span class="brand-text">PATTAYA <strong>GYM</strong></span>
@@ -186,14 +192,14 @@ function header() {
 }
 
 function footer() {
-  return `<footer class="site-footer">
+  return `<footer class="site-footer" role="contentinfo">
   <div class="site-footer-inner">
     <div class="sf-col sf-brand-col">
       <div class="sf-brand"><span class="brand-mark small">P</span><span class="sf-brand-text">PATTAYA <strong>GYM</strong></span></div>
       <p class="sf-tag">The most comprehensive directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand.</p>
     </div>
     <div class="sf-col">
-      <h4>Sport categories</h4>
+      <p class="sf-heading">Sport categories</p>
       <ul>
         <li><a href="/category/muay-thai/">Muay Thai camps</a></li>
         <li><a href="/category/fitness/">Fitness gyms</a></li>
@@ -206,7 +212,7 @@ function footer() {
       </ul>
     </div>
     <div class="sf-col">
-      <h4>Areas of Pattaya</h4>
+      <p class="sf-heading">Areas of Pattaya</p>
       <ul>
         <li><a href="/area/jomtien/">Jomtien Beach</a></li>
         <li><a href="/area/naklua/">Naklua / North Pattaya</a></li>
@@ -217,7 +223,7 @@ function footer() {
       </ul>
     </div>
     <div class="sf-col">
-      <h4>Best-of guides</h4>
+      <p class="sf-heading">Best-of guides</p>
       <ul>
         <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
         <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
@@ -233,7 +239,7 @@ function footer() {
       </ul>
     </div>
     <div class="sf-col">
-      <h4>Tools &amp; site</h4>
+      <p class="sf-heading">Tools &amp; site</p>
       <ul>
         <li><a href="/search/">Search venues</a></li>
         <li><a href="/map/">Interactive map</a></li>
@@ -351,7 +357,7 @@ ${commonHead(title, desc, url)}
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb">
     <a href="/">Directory</a>
     <span class="bc-sep">›</span>
@@ -493,7 +499,7 @@ ${commonHead(title, desc, url)}
 </head>
 <body>
 ${header()}
-<main class="venue-page map-page">
+<main id="main" class="venue-page map-page" role="main">
   <div class="venue-breadcrumb">
     <a href="/">Directory</a>
     <span class="bc-sep">›</span>
@@ -575,7 +581,7 @@ ${commonHead(title, desc, url)}
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb">
     <a href="/">Directory</a>
     <span class="bc-sep">›</span>
@@ -657,7 +663,7 @@ ${commonHead('Page not found | Pattaya Gym', 'The page you\'re looking for doesn
 </head>
 <body>
 ${header()}
-<main class="venue-page" style="text-align: center; padding-top: 60px;">
+<main id="main" class="venue-page" role="main" style="text-align: center; padding-top: 60px;">
   <div style="font-size: 8rem; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 12px;">404</div>
   <h1 class="venue-h1" style="font-size: 1.8rem;">Lost in Pattaya?</h1>
   <p class="venue-lede" style="max-width: 520px; margin-left: auto; margin-right: auto;">The page you're looking for doesn't exist. Maybe it moved, maybe we typoed a slug somewhere — either way, here's where to go next.</p>

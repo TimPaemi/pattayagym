@@ -56,8 +56,9 @@
   </script>
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav">
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="hero" role="banner">
+    <nav class="nav" role="navigation" aria-label="Primary navigation">
       <a href="/" class="brand">
         <span class="brand-mark">P</span>
         <span class="brand-text">PATTAYA <strong>GYM</strong></span>
@@ -88,7 +89,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" role="main">
     <section id="quick-answer" class="quick-answer" aria-labelledby="qa-h2">
       <h2 id="qa-h2" class="section-title">What's in this directory</h2>
       <ul class="qa-list">
@@ -176,13 +177,13 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="site-footer-inner">
       <div class="sf-col sf-brand-col">
         <div class="sf-brand"><span class="brand-mark small">P</span><span class="sf-brand-text">PATTAYA <strong>GYM</strong></span></div>
         <p class="sf-tag">The most comprehensive directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand.</p>
       </div>
-      <div class="sf-col"><h4>Sport categories</h4><ul>
+      <div class="sf-col"><p class="sf-heading">Sport categories</p><ul>
         <li><a href="/category/muay-thai/">Muay Thai camps</a></li>
         <li><a href="/category/fitness/">Fitness gyms</a></li>
         <li><a href="/category/golf/">Golf courses</a></li>
@@ -192,7 +193,7 @@
         <li><a href="/category/swimming/">Swimming pools</a></li>
         <li><a href="/category/adventure/">Adventure</a></li>
       </ul></div>
-      <div class="sf-col"><h4>Areas of Pattaya</h4><ul>
+      <div class="sf-col"><p class="sf-heading">Areas of Pattaya</p><ul>
         <li><a href="/area/jomtien/">Jomtien Beach</a></li>
         <li><a href="/area/naklua/">Naklua / North Pattaya</a></li>
         <li><a href="/area/pratamnak/">Pratamnak Hill</a></li>
@@ -200,7 +201,7 @@
         <li><a href="/area/east-pattaya/">East Pattaya / Darkside</a></li>
         <li><a href="/area/sattahip/">Sattahip / Far South</a></li>
       </ul></div>
-      <div class="sf-col"><h4>Best-of guides</h4><ul>
+      <div class="sf-col"><p class="sf-heading">Best-of guides</p><ul>
         <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
         <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
         <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
@@ -213,7 +214,7 @@
         <li><a href="/guides/female-friendly-gyms-pattaya/">Female-friendly venues</a></li>
         <li><a href="/guides/pattaya-seniors-low-impact-sport/">Seniors 65+ sport guide</a></li>
       </ul></div>
-      <div class="sf-col"><h4>Tools &amp; site</h4><ul>
+      <div class="sf-col"><p class="sf-heading">Tools &amp; site</p><ul>
         <li><a href="/search/">Search venues</a></li>
         <li><a href="/map/">Interactive map</a></li>
         <li><a href="/compare/">Compare venues</a></li>

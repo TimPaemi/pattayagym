@@ -92,13 +92,17 @@ function escHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 }
 
+function markThaiText(html) {
+  return String(html).replace(/([\u0E00-\u0E3E\u0E40-\u0E7F][\u0E00-\u0E7F\s]*[\u0E00-\u0E3E\u0E40-\u0E7F])/g, '<span lang="th">$1</span>');
+}
+
 function applyInline(t) {
   // Bold first (so it doesn't clash with italic), then italic, then links
   t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   t = t.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '<em>$1</em>');
   t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
   t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" rel="noopener" target="_blank">$1</a>');
-  return t;
+  return markThaiText(t);
 }
 
 /**
@@ -545,8 +549,13 @@ function asyncStylesheet(file) {
   <noscript><link rel="stylesheet" href="${href}" /></noscript>`;
 }
 
+function accessibilityCriticalCss() {
+  return `<style>.skip-link{position:absolute;left:16px;top:10px;z-index:1000;transform:translateY(-140%);background:var(--accent);color:#000;padding:10px 14px;border-radius:8px;font-weight:800}.skip-link:focus{transform:translateY(0)}:focus-visible{outline:2px solid var(--accent);outline-offset:3px}</style>`;
+}
+
 function stylesheetTags(includeVenueCss = true) {
   return `${criticalCss()}
+  ${accessibilityCriticalCss()}
   ${asyncStylesheet('/styles.css')}
   ${includeVenueCss ? asyncStylesheet('/venue.css') : ''}`;
 }
@@ -994,8 +1003,9 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
 </head>
 <body>
-  <header class="hero" style="min-height: auto;">
-    <nav class="nav">
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header class="hero" style="min-height: auto;" role="banner">
+    <nav class="nav" role="navigation" aria-label="Primary navigation">
       <a href="/" class="brand">
         <span class="brand-mark">P</span>
         <span class="brand-text">PATTAYA <strong>GYM</strong></span>
@@ -1011,7 +1021,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </nav>
   </header>
 
-  <main class="venue-page">
+  <main id="main" class="venue-page" role="main">
     <div class="venue-breadcrumb">
       <a href="/">Directory</a>
       <span class="bc-sep">›</span>
@@ -1053,12 +1063,12 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
 
       <div class="share-bar">
         <span class="share-label">Share</span>
-        <button class="share-btn share-wa" onclick="PG.share('whatsapp')" aria-label="Share on WhatsApp"><span class="share-ico">💬</span> WhatsApp</button>
-        <button class="share-btn share-fb" onclick="PG.share('facebook')" aria-label="Share on Facebook"><span class="share-ico">f</span> Facebook</button>
-        <button class="share-btn share-tw" onclick="PG.share('twitter')" aria-label="Share on X"><span class="share-ico">𝕏</span> X</button>
-        <button class="share-btn share-line" onclick="PG.share('line')" aria-label="Share on LINE"><span class="share-ico">L</span> LINE</button>
-        <button class="share-btn share-tg" onclick="PG.share('telegram')" aria-label="Share on Telegram"><span class="share-ico">✈</span> Telegram</button>
-        <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico">🔗</span> Copy link</button>
+        <button class="share-btn share-wa" onclick="PG.share('whatsapp')" aria-label="Share on WhatsApp"><span class="share-ico" aria-hidden="true">💬</span> WhatsApp</button>
+        <button class="share-btn share-fb" onclick="PG.share('facebook')" aria-label="Share on Facebook"><span class="share-ico" aria-hidden="true">f</span> Facebook</button>
+        <button class="share-btn share-tw" onclick="PG.share('twitter')" aria-label="Share on X"><span class="share-ico" aria-hidden="true">𝕏</span> X</button>
+        <button class="share-btn share-line" onclick="PG.share('line')" aria-label="Share on LINE"><span class="share-ico" aria-hidden="true">L</span> LINE</button>
+        <button class="share-btn share-tg" onclick="PG.share('telegram')" aria-label="Share on Telegram"><span class="share-ico" aria-hidden="true">✈</span> Telegram</button>
+        <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico" aria-hidden="true">🔗</span> Copy link</button>
       </div>
     </div>
 
@@ -1135,14 +1145,14 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </footer>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="site-footer-inner">
       <div class="sf-col sf-brand-col">
         <div class="sf-brand"><span class="brand-mark small">P</span><span class="sf-brand-text">PATTAYA <strong>GYM</strong></span></div>
         <p class="sf-tag">The most comprehensive directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand.</p>
       </div>
       <div class="sf-col">
-        <h4>Sport categories</h4>
+        <p class="sf-heading">Sport categories</p>
         <ul>
           <li><a href="/category/muay-thai/">Muay Thai camps</a></li>
           <li><a href="/category/fitness/">Fitness gyms</a></li>
@@ -1155,7 +1165,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
         </ul>
       </div>
       <div class="sf-col">
-        <h4>Areas of Pattaya</h4>
+        <p class="sf-heading">Areas of Pattaya</p>
         <ul>
           <li><a href="/area/jomtien/">Jomtien Beach</a></li>
           <li><a href="/area/naklua/">Naklua / North Pattaya</a></li>
@@ -1166,7 +1176,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
         </ul>
       </div>
       <div class="sf-col">
-        <h4>Best-of guides</h4>
+        <p class="sf-heading">Best-of guides</p>
         <ul>
           <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
           <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
@@ -1182,7 +1192,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
         </ul>
       </div>
       <div class="sf-col">
-        <h4>Tools &amp; site</h4>
+        <p class="sf-heading">Tools &amp; site</p>
         <ul>
           <li><a href="/search/">Search venues</a></li>
           <li><a href="/map/">Interactive map</a></li>

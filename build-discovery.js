@@ -42,8 +42,9 @@ function header() {
     });
   })();
   </script>
-<header class="hero" style="min-height: auto;">
-  <nav class="nav">
+<a href="#main" class="skip-link">Skip to main content</a>
+<header class="hero" style="min-height: auto;" role="banner">
+  <nav class="nav" role="navigation" aria-label="Primary navigation">
     <a href="/" class="brand">
       <span class="brand-mark">P</span>
       <span class="brand-text">PATTAYA <strong>GYM</strong></span>
@@ -60,14 +61,14 @@ function header() {
 </header>`;
 }
 function footer() {
-  return `<footer class="site-footer">
+  return `<footer class="site-footer" role="contentinfo">
   <div class="site-footer-inner">
     <div class="sf-col sf-brand-col">
       <div class="sf-brand"><span class="brand-mark small">P</span><span class="sf-brand-text">PATTAYA <strong>GYM</strong></span></div>
       <p class="sf-tag">The most comprehensive directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand.</p>
     </div>
     <div class="sf-col">
-      <h4>Sport categories</h4>
+      <p class="sf-heading">Sport categories</p>
       <ul>
         <li><a href="/category/muay-thai/">Muay Thai camps</a></li>
         <li><a href="/category/fitness/">Fitness gyms</a></li>
@@ -80,7 +81,7 @@ function footer() {
       </ul>
     </div>
     <div class="sf-col">
-      <h4>Areas of Pattaya</h4>
+      <p class="sf-heading">Areas of Pattaya</p>
       <ul>
         <li><a href="/area/jomtien/">Jomtien Beach</a></li>
         <li><a href="/area/naklua/">Naklua / North Pattaya</a></li>
@@ -91,7 +92,7 @@ function footer() {
       </ul>
     </div>
     <div class="sf-col">
-      <h4>Best-of guides</h4>
+      <p class="sf-heading">Best-of guides</p>
       <ul>
         <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
         <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
@@ -107,7 +108,7 @@ function footer() {
       </ul>
     </div>
     <div class="sf-col">
-      <h4>Tools &amp; site</h4>
+      <p class="sf-heading">Tools &amp; site</p>
       <ul>
         <li><a href="/search/">Search venues</a></li>
         <li><a href="/map/">Interactive map</a></li>
@@ -196,8 +197,13 @@ function asyncStylesheet(file) {
 <noscript><link rel="stylesheet" href="${href}" /></noscript>`;
 }
 
+function accessibilityCriticalCss() {
+  return `<style>.skip-link{position:absolute;left:16px;top:10px;z-index:1000;transform:translateY(-140%);background:var(--accent);color:#000;padding:10px 14px;border-radius:8px;font-weight:800}.skip-link:focus{transform:translateY(0)}:focus-visible{outline:2px solid var(--accent);outline-offset:3px}</style>`;
+}
+
 function stylesheetTags(includeVenueCss = true) {
   return `${criticalCss()}
+${accessibilityCriticalCss()}
 ${asyncStylesheet('/styles.css')}
 ${includeVenueCss ? asyncStylesheet('/venue.css') : ''}`;
 }
@@ -363,7 +369,7 @@ ${commonHead(title, desc, url)}
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb">
     <a href="/">Directory</a>
     <span class="bc-sep">›</span>
@@ -947,7 +953,7 @@ ${faqSchema}
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb">
     <a href="/">Directory</a>
     <span class="bc-sep">›</span>
@@ -1007,7 +1013,7 @@ ${commonHead('Pattaya Gym Guides — Best of Pattaya by Category', 'Curated guid
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Guides</span></div>
   <div class="venue-hero">
     <span class="venue-cat-pill">Guides</span>
@@ -1075,7 +1081,7 @@ ${commonHead('Research Methodology | Pattaya Gym', `How Pattaya Gym researches, 
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Methodology</span></div>
   <div class="venue-hero">
     <span class="venue-cat-pill">Methodology</span>
@@ -1156,7 +1162,7 @@ ${commonHead('Pattaya Sport Tourism Stats | Pattaya Gym', `Live Pattaya sport to
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Pattaya sport stats</span></div>
   <div class="venue-hero">
     <span class="venue-cat-pill">Stats</span>
@@ -1244,7 +1250,7 @@ ${commonHead('Search Pattaya Gyms & Sport Venues', `Search ${allGyms.length}+ ve
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Search</span></div>
   <div class="venue-hero" style="text-align: center; padding: 36px 28px;">
     <span class="venue-cat-pill">Search</span>
@@ -1361,7 +1367,7 @@ ${commonHead('Add Your Gym to Pattaya Gym Directory', 'Own a gym, Muay Thai camp
   .form-row input, .form-row textarea, .form-row select {
     width: 100%; padding: 12px 14px; border-radius: 10px;
     background: rgba(0,0,0,0.3); border: 1px solid var(--border);
-    color: var(--text); font-size: 15px; font-family: inherit;
+    color: var(--text); font-size: 16px; font-family: inherit;
   }
   .form-row textarea { min-height: 100px; resize: vertical; }
   .form-row input:focus, .form-row textarea:focus, .form-row select:focus { outline: 0; border-color: var(--accent); }
@@ -1371,7 +1377,7 @@ ${commonHead('Add Your Gym to Pattaya Gym Directory', 'Own a gym, Muay Thai camp
 </head>
 <body>
 ${header()}
-<main class="venue-page">
+<main id="main" class="venue-page" role="main">
   <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Add your gym</span></div>
   <div class="venue-hero">
     <span class="venue-cat-pill">Submit</span>
@@ -1402,11 +1408,11 @@ ${header()}
   <form class="form-card" action="mailto:hello@pattaya-gym.com" method="post" enctype="text/plain">
     <div class="form-row">
       <label for="name">Venue name *</label>
-      <input id="name" name="name" type="text" required placeholder="e.g. Tiger Muay Thai Pattaya" />
+      <input id="name" name="name" type="text" required aria-required="true" placeholder="e.g. Tiger Muay Thai Pattaya" />
     </div>
     <div class="form-row">
       <label for="category">Category *</label>
-      <select id="category" name="category" required>
+      <select id="category" name="category" required aria-required="true">
         <option value="">Select…</option>
         <option>Muay Thai</option>
         <option>MMA</option>
@@ -1428,7 +1434,7 @@ ${header()}
     </div>
     <div class="form-row">
       <label for="address">Full address *</label>
-      <input id="address" name="address" type="text" required placeholder="123 Soi Buakhao, Pattaya, Chonburi 20150" />
+      <input id="address" name="address" type="text" required aria-required="true" placeholder="123 Soi Buakhao, Pattaya, Chonburi 20150" />
     </div>
     <div class="form-row">
       <label for="website">Website</label>
@@ -1448,12 +1454,12 @@ ${header()}
     </div>
     <div class="form-row">
       <label for="distinction">What makes your venue distinctive?</label>
-      <span class="hint">Awards, lineage, equipment, trainers, certifications — what would the directory page highlight?</span>
-      <textarea id="distinction" name="distinction" placeholder="e.g. Only PADI 5-Star IDC dive shop in Pattaya"></textarea>
+      <span class="hint" id="distinction-hint">Awards, lineage, equipment, trainers, certifications — what would the directory page highlight?</span>
+      <textarea id="distinction" name="distinction" aria-describedby="distinction-hint" placeholder="e.g. Only PADI 5-Star IDC dive shop in Pattaya"></textarea>
     </div>
     <div class="form-row">
       <label for="contact">Your name &amp; email *</label>
-      <input id="contact" name="contact" type="text" required placeholder="Tim · tim@gym.com" />
+      <input id="contact" name="contact" type="text" required aria-required="true" placeholder="Tim · tim@gym.com" />
     </div>
     <button class="form-submit" type="submit">Send submission →</button>
   </form>
