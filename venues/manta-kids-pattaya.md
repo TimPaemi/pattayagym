@@ -17,7 +17,7 @@ headCoach: Former Thai national swimmer
 instructorCertification: ASCTA (Australia Swimming Coach & Teacher Association)
 beginnerFriendly: true
 languages: [English, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.igcenter-pattaya.com/en/manta-kids-pattaya-en/
   - https://www.themantaswim.com/

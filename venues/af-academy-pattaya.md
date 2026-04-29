@@ -16,7 +16,7 @@ trainingLocations: 4+ — Naklua HQ + Jomtien + Pratumnak + Central Pattaya
 indoorOutdoor: Outdoor field (South Pattaya) + Indoor field (Central Pattaya)
 beginnerFriendly: true
 languages: [English, Russian, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.afacademy.pro/en
   - https://www.instagram.com/af_academy_thai/

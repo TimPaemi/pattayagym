@@ -2,8 +2,8 @@
 id: jetts-fitness-pattaya
 name: Jetts Fitness Pattaya
 category: fitness
-area: Multiple (Little Walk Mall + Royal Garden Plaza)
-address: "Locations: Little Walk Mall, Pattaya 2nd Road; Royal Garden Plaza, Pattaya Beach Road"
+area: Little Walk Mall (Sukhumvit / Pattaya Klang)
+address: "8/114 Sukhumvit Rd, Bang Lamung District, Chonburi 20150 (Little Walk Mall — Royal Garden Plaza branch closed May 2022)"
 phone: ""
 website: https://www.jetts.co.th/en/
 social:
@@ -17,7 +17,7 @@ contractStyle: No lock-in (month-to-month)
 classesIncluded: [BODYPUMP, BODYCOMBAT, BODYJAM, Zumba, Yoga, TRX, Free Move (Hip-Hop)]
 beginnerFriendly: true
 languages: [English, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.jetts.co.th/en/
   - https://www.facebook.com/JettsThailand/
@@ -84,14 +84,9 @@ This last feature is **uniquely valuable for international travellers** — a Je
 - **Convenience:** Walk-up from Beach Road and 2nd Road hotels; 5-minute walk from Walking Street north
 - **Vibe:** Modern commercial space, full GroupX studio, full equipment floor
 
-### Jetts Royal Garden Plaza
+### Jetts Royal Garden Plaza (closed)
 
-- **Address:** Royal Garden Plaza, Pattaya Beach Road
-- **Location:** Inside the Royal Garden shopping mall
-- **Convenience:** Direct beach-road access; family-friendly mall context
-- **Vibe:** Mall-attached gym with full equipment
-
-Both locations follow the **same brand standard** — equipment, layout, classes, and operations are virtually identical, making member transition between locations seamless.
+The Royal Garden Plaza branch on Pattaya Beach Road **permanently closed on 31 May 2022**. Members of the original two-club Pattaya footprint were consolidated into Little Walk, which remains the only Pattaya Jetts club. The Beach Road space was a mall-attached, family-context location with the same brand standard as Little Walk before closure.
 
 ## Equipment & Floor Layout
 
@@ -227,7 +222,7 @@ The 24/7 model is **especially valued by**:
 
 | Field | Value |
 |---|---|
-| Locations | Little Walk Mall + Royal Garden Plaza |
+| Locations | Little Walk Mall (Sukhumvit) — Royal Garden Plaza branch closed May 2022 |
 | Hours | 24/7 (always open) |
 | Day pass | ~฿500 |
 | Monthly membership | ~฿1,550-1,700 |
@@ -235,4 +230,4 @@ The 24/7 model is **especially valued by**:
 | Brand origin | Australia (2007) |
 | Global reciprocal | Yes (international member access) |
 | Class brand | Les Mills BODYPUMP, BODYCOMBAT, BODYJAM + Zumba, Yoga, TRX |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-29 |

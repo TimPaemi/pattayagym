@@ -8,7 +8,7 @@ phone: +66 89 332 1000
 website: ""
 social:
   facebook: deeppattaya
-hours: Daily 10:00-22:00 (mall hours)
+hours: Mon-Fri 10:30-19:00; Sat-Sun 10:30-19:30 (Harbor Mall floor 8)
 priceRange: ฿฿
 status: First indoor climbing facility ever opened in Pattaya
 wallHeight: 10 meters
@@ -16,7 +16,7 @@ totalRoutes: ~27 routes
 maxDifficulty: 6c+
 beginnerFriendly: true
 languages: [English (limited), Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.tripadvisor.com/Attraction_Review-g293919-d10771852-Reviews-Deep_Climbing_Gym-Pattaya_Chonburi_Province.html
   - https://wanderlog.com/place/details/4953879/deep-climbing-gym-harbor-pattaya

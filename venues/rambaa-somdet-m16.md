@@ -17,7 +17,7 @@ familyConnections: "Uncles Tappaya (Mit) Klinmee + Yok Thai (Manit) Klinmee; cou
 distinction: Founder is Thailand's first MMA world champion
 beginnerFriendly: true
 languages: [Thai, basic English]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://en.wikipedia.org/wiki/Rambaa_Somdet
   - https://www.tapology.com/fightcenter/fighters/10150-rambaa-somdet-m-16

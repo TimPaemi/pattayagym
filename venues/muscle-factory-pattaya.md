@@ -3,13 +3,13 @@ id: muscle-factory-pattaya
 name: Muscle Factory Pattaya
 category: fitness
 area: Pratamnak Hill
-address: Pratamnak Hill, Pattaya, Bang Lamung, Chonburi
-phone: ""
+address: Pratumnak Soi 5, Nongprue, Bang Lamung, Chonburi 20150
+phone: "+66 83 695 9196"
 website: https://mfbkk.com/
 social:
   facebook: musclefactorypattaya
   instagram: musclefactorypattaya
-hours: Daily — extended hours (verify at venue)
+hours: Mon-Fri 07:00-24:00; Sat-Sun 07:00-23:00
 priceRange: ฿฿
 distinction: Largest hardcore gym in Pattaya — multi-floor Pratamnak Hill bodybuilding institution
 parentBrand: Muscle Factory (also Bangkok flagship)
@@ -18,7 +18,7 @@ hardcoreFocus: Yes — bodybuilding, powerlifting, serious lifting
 acStatus: No AC — industrial fans + 3-story ceiling for ventilation
 beginnerFriendly: false
 languages: [English, Thai, Russian]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://mfbkk.com/
   - https://mfbkk.com/contact-us/

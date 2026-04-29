@@ -3,11 +3,11 @@ id: khao-chi-chan-buddha-mountain
 name: Khao Chi Chan (Buddha Mountain) — Walking & Meditation
 category: clubs
 area: Na Chom Thian / Sattahip — 20 km southeast of Pattaya
-address: Khao Chi Chan, Na Chom Thian, Sattahip District, Chonburi
+address: Khao Chi Chan, Na Chom Thian, Sattahip District, Chonburi 20250
 phone: ""
 website: ""
 social: {}
-hours: Daily 08:00-18:00
+hours: Daily 06:00-18:00
 priceRange: ฿
 distinction: Free public visit to world's largest cliff Buddha image (109m × 70m, 24-carat gold) — meditation + walking gardens
 type: Religious / cultural / walking gardens
@@ -18,7 +18,7 @@ entryFee: Free
 distanceFromPattaya: 20 km (~30-min drive)
 beginnerFriendly: true
 languages: [Thai (primary), English signage]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://forevervacation.com/pattaya/khao-chi-chan-buddha-mountain
   - https://airial.travel/attractions/thailand/na-chom-thian/khao-chi-chan-buddha-mountain-s77pbCma

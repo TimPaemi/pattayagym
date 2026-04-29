@@ -3,7 +3,7 @@ id: pattaya-cricket-club
 name: Pattaya Cricket Club
 category: clubs
 area: Pattaya — home ground varies
-address: Pattaya Cricket Club, Pattaya, Bang Lamung, Chonburi
+address: Pattaya Cricket Club @ Horseshoe Point Resort, 100 Moo 9, Tambon Pong, Bang Lamung, Chonburi 20150
 phone: ""
 website: http://www.pattayacricketclub.com/
 social:
@@ -18,7 +18,7 @@ divisionsCompeted: A Division (25 Overs)
 season: November-June
 beginnerFriendly: true (junior programme)
 languages: [English, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - http://www.pattayacricketclub.com/
   - https://pattayasports.org/cricket/

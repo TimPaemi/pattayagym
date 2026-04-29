@@ -3,7 +3,7 @@ id: thai-sky-adventures-skydive
 name: Thai Sky Adventures (Tandem Skydiving Pattaya)
 category: adventure
 area: Dropzone 25 km north of Pattaya / Rayong direction
-address: "Dropzone 25 km north of Pattaya — Pattaya pickup; 96 km south of Bangkok"
+address: "Dropzone near Nong Kho Reservoir, ~25 km north of Pattaya — Pattaya hotel pickup included"
 phone: ""
 website: https://thaiskyadventures.com/
 social: {}
@@ -18,7 +18,7 @@ minAge: 12 years (parental consent)
 weightRange: 25 kg minimum / 95 kg basic / 115 kg max
 beginnerFriendly: false
 languages: [English, Thai, Russian, Chinese]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://thaiskyadventures.com/
   - https://thaiskyadventures.com/tandem-skydiving/

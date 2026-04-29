@@ -3,7 +3,7 @@ id: elite-gym-fitness
 name: Elite Gym & Fitness Pattaya
 category: fitness
 area: Sukhumvit Road (between Soi 42 and 44, opposite Soi 65)
-address: Sukhumvit Road, between Soi 42 and 44, opposite Soi 65, Pattaya
+address: 392/62 Sukhumvit Road (between Soi 42 and 44, opposite Soi 65), Pattaya
 phone: "+66 98 1919 421"
 website: https://elitegympattaya.com/
 social:
@@ -19,7 +19,7 @@ fullyAirConditioned: Yes
 features: [Cardio, Strength, Free weights, Group classes, Personalized training]
 beginnerFriendly: true
 languages: [English, Thai, Russian]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://elitegympattaya.com/
   - https://elitegympattaya.com/our-location/

@@ -3,8 +3,8 @@ id: easykart-pattaya
 name: EasyKart Pattaya Thepprasit (Outdoor Go Kart Track)
 category: adventure
 area: Thepprasit Road
-address: EasyKart Pattaya Thepprasit, Pattaya, Bang Lamung, Chonburi
-phone: ""
+address: 168/24 Moo 12 Thepprasit Road, Pattaya City, Bang Lamung District, Chonburi 20150
+phone: "+66 91 038 6111"
 website: https://easykart.net/pattaya-easykart-book-now/
 social: {}
 hours: Daily 10:00-01:00 (15 hours operating)
@@ -19,7 +19,7 @@ kartTypes: [Kids Kart (7-13yr 130cm+), Regular Kart (12+ 140cm+), Fast Kart (15+
 priceFrom: 480-598 baht per session
 beginnerFriendly: true
 languages: [English, Thai, Russian, Chinese]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://easykart.net/pattaya-easykart-book-now/
   - https://www.ticket2attraction.com/discount-tickets/easy-kart-pattaya-thepprasit/

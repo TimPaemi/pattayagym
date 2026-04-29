@@ -3,8 +3,8 @@ id: kba-kiteboarding-pattaya
 name: KBA Kiteboarding Asia Pattaya (Blue Lagoon)
 category: watersports
 area: Na Jomtien / Sattahip — Blue Lagoon
-address: Blue Lagoon, 23/4 Moo 2, Soi Tanmanjai 14, Na Jomtien, Sattahip, Chonburi
-phone: ""
+address: Blue Lagoon, 23/4 Moo 2, Soi Tanmanjai 14, Na Jomtien, Sattahip, Chonburi 20250
+phone: "+66 85 134 9588"
 website: https://kiteboardingasia.com/pattaya/
 social:
   facebook: KBAPattaya
@@ -16,7 +16,7 @@ disciplines: [Kiteboarding, E-foil, Wingfoil, Wing SUP, Kitefoil]
 hourlyRate: ฿1,333/hour
 beginnerFriendly: true
 languages: [English, Thai, Russian, German]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://kiteboardingasia.com/pattaya/
   - https://kbapattaya.com/

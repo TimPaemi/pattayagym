@@ -3,7 +3,7 @@ id: siam-country-club
 name: Siam Country Club Pattaya
 category: golf
 area: East Pattaya / Pong, Bang Lamung
-address: 50 Moo 9, Pong, Bang Lamung District, Chonburi, Thailand
+address: 50 Moo 9, Pong, Bang Lamung District, Chonburi 20150, Thailand
 phone: +66 38 909 700
 website: https://siamcountryclub.com/
 social: {}
@@ -20,7 +20,7 @@ caddyTipRecommended: ฿500+
 greenFeeRange: ฿3,550 weekday — ฿4,350 weekend; twilight ฿1,000
 beginnerFriendly: false (championship courses)
 languages: [English, Thai, Japanese, Korean]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://siamcountryclub.com/
   - https://siamcountryclub.com/old-course/

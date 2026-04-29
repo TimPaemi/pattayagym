@@ -18,7 +18,7 @@ par: 72
 holes: 18
 beginnerFriendly: false
 languages: [English, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.golfasian.com/golf-courses/thailand-golf-courses/pattaya/mountain-shadow-golf-club/
   - https://www.golfpattaya.com/mountain-shadow-golf-club/
@@ -211,4 +211,4 @@ The facilities are **functional rather than premium-resort** — Mountain Shadow
 | Signature | 4 island greens — rare global concentration |
 | Distance from Pattaya | 41-minute drive |
 | Green fee + cart + caddy | ~฿1,800-3,000 |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-29 |
