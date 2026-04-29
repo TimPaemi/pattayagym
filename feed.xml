@@ -6,7 +6,7 @@
   <atom:link href="https://pattaya-gym.com/feed.xml" rel="self" type="application/rss+xml" />
   <description>Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.</description>
   <language>en-US</language>
-  <lastBuildDate>Wed, 29 Apr 2026 17:57:31 GMT</lastBuildDate>
+  <lastBuildDate>Wed, 29 Apr 2026 18:02:21 GMT</lastBuildDate>
   <item>
     <title>ALFA BJJ Pattaya</title>
     <link>https://pattaya-gym.com/gyms/alfa-bjj-pattaya/</link>
@@ -54,6 +54,14 @@
     <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
     <category>Watersports / Diving</category>
     <description><![CDATA[Thailand most prestigious yacht club, founded 60+ years ago. RYA-accredited sailing + powerboating training. World-class regattas (ILCA, OK Dinghy, Optimist, Dart, Hobie, Multihull). Pratamnak Hill clubhouse + pool + boat storage + beach bar.]]></description>
+  </item>
+  <item>
+    <title>Ocean Marina Jomtien — Southeast Asia Largest Marina</title>
+    <link>https://pattaya-gym.com/gyms/ocean-marina-jomtien/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/ocean-marina-jomtien/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Watersports / Diving</category>
+    <description><![CDATA[Southeast Asia largest marina. 455 wet berths + 100 trailer + 30 hardstand. Yachts up to 75m. Award-winning. Top of the Gulf Regatta host. SailBreeze sailing school on-site. Yacht charter + brokerage hub. Customs clearance for international yachts.]]></description>
   </item>
   <item>
     <title>Pattaya Bike and Boat Tours</title>
@@ -238,14 +246,6 @@
     <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
     <category>Muay Thai</category>
     <description><![CDATA[Multi-discipline academy: Muay Thai, Boxing, BJJ, MMA, Cross Training. 3 rings + BJJ/MMA mats. Education Visa sponsor for long-stays.]]></description>
-  </item>
-  <item>
-    <title>Silk Muay Thai</title>
-    <link>https://pattaya-gym.com/gyms/silk-muay-thai/</link>
-    <guid isPermaLink="true">https://pattaya-gym.com/gyms/silk-muay-thai/</guid>
-    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
-    <category>Muay Thai</category>
-    <description><![CDATA[Premium boutique camp. 4.9/5 rated. All-inclusive packages from ฿25,500/month with private room + pool/sauna/spa + meals.]]></description>
   </item>
 </channel>
 </rss>
