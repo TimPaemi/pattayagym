@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /compare/
 
 Sitemap: https://pattaya-gym.com/sitemap.xml

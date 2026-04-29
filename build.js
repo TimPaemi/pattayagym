@@ -973,6 +973,9 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0b0b0d" />
+  <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/icon-180.png" />
   <title>${escHtml(title)}</title>
   <meta name="description" content="${escHtml(desc)}" />
   <link rel="canonical" href="${url}" />

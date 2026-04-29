@@ -469,6 +469,9 @@
   padding: 12px 16px;
   list-style: none;
   font-size: 14px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 .venue-footer summary::-webkit-details-marker { display: none; }
 .venue-footer summary::before {
@@ -805,8 +808,8 @@
 
 @media (max-width: 720px) {
   .share-bar { padding: 10px 12px; }
-  .share-btn { padding: 6px 10px; font-size: 12px; }
-  #pg-compare-widget { bottom: 12px; right: 12px; }
+  .share-btn { padding: 10px 12px; min-height: 44px; font-size: 12px; }
+  #pg-compare-widget { bottom: calc(78px + env(safe-area-inset-bottom, 0)); right: 12px; }
   .venue-body > p:first-of-type::first-letter { font-size: 2.8em; }
 }
 
@@ -888,7 +891,7 @@
 @media (max-width: 720px) {
   .btn { padding: 12px 16px; min-height: 44px; font-size: 14px; }
   .compare-btn { min-height: 44px; padding: 12px 16px; }
-  .share-btn { min-height: 40px; padding: 10px 14px; font-size: 13px; }
+  .share-btn { min-height: 44px; padding: 10px 14px; font-size: 13px; }
   .meta-chip { padding: 8px 12px; font-size: 13px; }
   .venue-cat-pill { padding: 6px 14px; font-size: 11px; }
   .reading-meta { font-size: 11px; }
@@ -948,8 +951,7 @@
 
 @media (max-width: 720px) {
   .sticky-actions { display: flex; }
-  /* Hide the floating compare widget on mobile — sticky bar handles it */
-  #pg-compare-widget { bottom: 70px; }
+  #pg-compare-widget { bottom: calc(78px + env(safe-area-inset-bottom, 0)); }
 }
 
 /* Make hero CTA buttons compact on phones — sticky bar carries the action load */
@@ -1061,8 +1063,10 @@
   margin-right: 4px;
 }
 .jump-pill {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 6px 13px;
+  min-height: 32px;
   font-size: 13px;
   font-weight: 600;
   color: var(--text-dim);
@@ -1079,7 +1083,7 @@
 }
 @media (max-width: 720px) {
   .jump-to { padding: 10px 12px; gap: 4px; }
-  .jump-pill { padding: 5px 11px; font-size: 12px; }
+  .jump-pill { padding: 6px 12px; min-height: 36px; font-size: 12px; }
   .jump-to-label { font-size: 10px; letter-spacing: 1px; }
 }
 
@@ -1089,7 +1093,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 16px; }
 /* === Back-to-top floating button === */
 .back-to-top {
   position: fixed;
-  bottom: 80px;
+  bottom: calc(80px + env(safe-area-inset-bottom, 0));
   right: 16px;
   width: 44px;
   height: 44px;
@@ -1118,5 +1122,5 @@ html { scroll-behavior: smooth; scroll-padding-top: 16px; }
   transform: translateY(-2px);
 }
 @media (max-width: 720px) {
-  .back-to-top { bottom: 90px; right: 14px; width: 42px; height: 42px; font-size: 20px; }
+  .back-to-top { bottom: calc(90px + env(safe-area-inset-bottom, 0)); right: 14px; width: 44px; height: 44px; font-size: 20px; }
 }

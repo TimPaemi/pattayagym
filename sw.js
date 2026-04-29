@@ -11,7 +11,11 @@ const CORE_ASSETS = [
   '/guides/',
   '/map/',
   '/compare/',
-  '/og-image.png'
+  '/og-image.png',
+  '/manifest.json',
+  '/icon-180.png',
+  '/icon-192.png',
+  '/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
