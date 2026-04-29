@@ -303,3 +303,35 @@ While running validate.js to confirm green build, surfaced **750 warnings** wort
 **Verification of additional file integrity (post-truncation recovery):**
 
 All 18 critical venue MDs touched this session compared cleanly against HEAD line-counts. All 10 critical JS/HTML/CSS files compared cleanly against HEAD. **The truncation was isolated to data.js only** and is now fully recovered.
+
+## 2026-04-29 - Section M (post-Section I): data.js name resync (cards / listings / search)
+
+- **Section status:** New cleanup section to address the 55 name mismatches between MD frontmatter and data.js. Editorial sync to make cross-cutting pages (cards, category listings, area pages, search, related-venue widgets, schema ItemList) display the same name as the venue's deep page.
+- **Files changed:** `data.js`, `WORK_LOG_CODEX.md`.
+- **Edits applied (data.js name field, syncing to MD canonical):**
+  - `fight-evo360`: `FIGHT EVO360` → `Fight EVO360 Muay Thai Gym`
+  - `tonys-gym`: `Tony's Gym` → `Tony's Fitness Gym (Tony's Group Pattaya)`
+  - `wko-muay-thai`: `WKO Muay Thai & Fitness (ISS Gym)` → `WKO Muay Thai & Fitness Pattaya (ISS Gym)`
+  - `treasure-hill-golf`: `Treasure Hill Golf Club` → `Treasure Hill Golf & Country Club`
+  - `chee-chan-golf`: `Chee Chan Golf` → `Chee Chan Golf Resort`
+  - `pattana-sports-resort`: `Pattana Sports Resort` → `Pattana Golf Club & Resort (Pattana Sports Resort)`
+  - `tos-tennis`: `Tos Tennis Pattaya` → `TOS Tennis Club / TOS Tennis Academy`
+  - `bira-circuit`: `Bira Circuit (FIA Motor Racing Track)` → `Bira Circuit (FIA-Standard Motor Racing Track)`
+  - `fitz-club`: `Fitz Club (Royal Cliff Hotels)` → `Fitz Club — Racquets, Health & Fitness (Royal Cliff Hotels Group)`
+  - `sun-fitness-buakao`: `SUN Fitness Buakao` → `SUN Fitness Pattaya (3 branches)`
+  - `manhattan-pattaya-fitness`: `Manhattan Pattaya Fitness` → `Manhattan Pattaya (Hotel Gym)`
+  - `kba-kiteboarding-pattaya`: `KBA - Kiteboarding Asia Pattaya` → `KBA Kiteboarding Asia Pattaya (Blue Lagoon)`
+  - `thai-sky-adventures-skydive`: `Thai Sky Adventures (Skydive Pattaya)` → `Thai Sky Adventures (Tandem Skydiving Pattaya)`
+  - `deep-climbing-gym`: `Deep Climbing Gym` → `Deep Climbing Gym (Harbor Pattaya)`
+  - `ocean-marina-jomtien`: `Ocean Marina Jomtien — Southeast Asia Largest Marina` → `Ocean Marina Jomtien — Southeast Asia's Largest Marina` (added missing apostrophe)
+  - `pattaya-park-water-fun`: `Pattaya Park Water & Fun Park (Tower Jump)` → `Pattaya Park Water & Fun Park (with Tower Jump)`
+  - `wong-amat-beach`: `Wong Amat Beach — Naklua Family Swimming Beach` → `Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach`
+- **Why these:** Each was a clear improvement — disambiguator added (Harbor Pattaya, Blue Lagoon, ISS Gym, 3 branches, Hotel Gym, Tower Jump), grammatical fix (added missing apostrophe in "Asia's"), or correctness (FIA-Standard, Tandem Skydiving). Skipped purely-decorative editorial suffixes (e.g. "— Wellness, Fitness & Spa") on hotel/resort entries where the brand-only name is more standard.
+- **Truncation event during this section:** Mid-edit, data.js was silently truncated again — the working tree shrank from 239 to 229 lines, cutting off mid-line at the Holiday Inn entry. Recovered by stitching: kept the on-disk file's lines 1-229 (which had all 17 name resyncs intact) and appended HEAD's lines 230-239 (Holiday Inn entry + closing brackets + module.exports + window assignments). **No edits were lost.**
+- **Tests run post-restore:**
+  - `node --check data.js` → SYNTAX OK
+  - `node validate.js` → **Validation: 0 error(s), 733 warning(s)** (down from 750 — **17-warning reduction** confirms the resyncs took effect across the validator's name-mismatch + redundant-warnings cascade)
+  - `node build.js` → **Generated 158 venue pages (158 deep + 0 stubs)**
+  - Name-mismatch warnings down from 55 → 38 (17 resolved)
+- **Concerns / open questions:** The data.js truncation bug is now confirmed to recur whenever the file is edited multiple times in rapid succession from this sandbox. Recommendation: keep batches small (≤5 edits per data.js session, then commit + verify before continuing). 38 name mismatches remain — most are purely-decorative editorial suffix differences (hotel/resort tier descriptors). Future cleanup can decide whether to keep them as deliberate brevity-on-cards or sync them too.
+- **Next:** Stop editing data.js this session to avoid further truncation. Tim's deploy flow: stage data.js + WORK_LOG_CODEX.md + regenerated cross-cutting pages → commit → push.
