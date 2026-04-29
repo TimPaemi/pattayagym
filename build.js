@@ -493,6 +493,146 @@ function getCategoryArt(cat) {
 
 global.getCategoryArt = getCategoryArt;
 
+
+// Auto-generate 3-5 FAQ items per venue page.
+// Category-aware so a Muay Thai camp gets different Qs than a golf course.
+function generateVenueFAQs(fm) {
+  const name = fm.name || 'this venue';
+  const area = fm.area || '';
+  const cat = (fm.category || '').toLowerCase();
+  const price = fm.priceRange || '';
+  const hours = fm.hours || '';
+  const desc = fm.description || '';
+  const tags = (fm.tags || []).map(t => String(t).toLowerCase()).join(' ');
+  const has = (s) => (desc + ' ' + tags).toLowerCase().includes(s);
+  const fmt = (s) => String(s || '').replace(/[<>]/g, '').trim();
+
+  const faqs = [];
+
+  // Q1 — location (universal)
+  if (area || fm.address) {
+    faqs.push({
+      q: `Where is ${name}?`,
+      a: `${name} is located in ${fmt(area || fm.address)}, Pattaya, Thailand.${fm.address && fm.address !== area ? ' Full address: ' + fmt(fm.address) + '.' : ''}`
+    });
+  }
+
+  // Q2 — hours (universal if hours data present)
+  if (hours) {
+    faqs.push({
+      q: `What are the opening hours of ${name}?`,
+      a: `${name} operates ${fmt(hours)}. Hours can change on Thai public holidays — call ahead or check their website to confirm.`
+    });
+  }
+
+  // Q3 — pricing (if price tier present)
+  if (price) {
+    const priceMap = {
+      '฿': 'budget tier (typically under ฿2,000/month or low drop-in rates)',
+      '฿฿': 'mid-tier pricing (typically ฿2,000–฿5,000/month or moderate drop-in)',
+      '฿฿฿': 'premium tier (typically ฿5,000–฿15,000/month or higher drop-in)',
+      '฿฿฿฿': 'luxury tier (typically ฿15,000+/month or 5-star resort pricing)'
+    };
+    const explained = priceMap[price] || 'see venue page for current rates';
+    faqs.push({
+      q: `How much does ${name} cost?`,
+      a: `${name} is in the ${price} tier — ${explained}. For exact current rates, contact the venue directly.`
+    });
+  }
+
+  // Q4 — category-specific
+  if (cat === 'muay-thai') {
+    faqs.push({
+      q: `Is ${name} good for beginners?`,
+      a: has('beginner') || has('all-level') || has('first-time')
+        ? `Yes — ${name} explicitly welcomes beginners and runs entry-level instruction. No prior experience needed.`
+        : `Most Pattaya Muay Thai camps welcome beginners. Contact ${name} directly to ask about their beginner programs and what to expect on day one.`
+    });
+  } else if (cat === 'fitness') {
+    faqs.push({
+      q: `Does ${name} require a long-term contract?`,
+      a: has('no-contract') || has('drop-in')
+        ? `${name} offers flexible no-contract options. Drop-in rates are typically available for visitors and short-stay residents.`
+        : `Contact ${name} directly to ask about contract terms and drop-in rates. Most Pattaya gyms offer monthly options without long contracts.`
+    });
+  } else if (cat === 'golf') {
+    faqs.push({
+      q: `Do I need to book in advance at ${name}?`,
+      a: `Tee-time booking in advance is strongly recommended at all Pattaya golf courses, especially on weekends and during peak tourist season (Nov–Feb). Most courses also rent clubs and arrange caddies on the day.`
+    });
+  } else if (cat === 'yoga') {
+    faqs.push({
+      q: `What styles of yoga does ${name} offer?`,
+      a: desc.toLowerCase().includes('vinyasa') || desc.toLowerCase().includes('hatha') || desc.toLowerCase().includes('ashtanga') || desc.toLowerCase().includes('yin')
+        ? `Per the venue page above, ${name} teaches a mix of styles. Class schedules vary — check their website or social media for the current week.`
+        : `${name} typically offers a mix of yoga styles. Check their schedule for current class types and times.`
+    });
+  } else if (cat === 'watersports') {
+    faqs.push({
+      q: `Do I need experience for activities at ${name}?`,
+      a: has('beginner') || has('first-time') || has('intro')
+        ? `${name} caters to first-timers as well as experienced participants. Equipment and instruction are provided.`
+        : `Most Pattaya watersports operators run programs for total beginners with full equipment and instruction included. Contact ${name} for current packages.`
+    });
+  } else if (cat === 'racquet') {
+    faqs.push({
+      q: `Can I rent racquets and equipment at ${name}?`,
+      a: `Most Pattaya racquet venues provide loaner racquets and balls. Confirm with ${name} at booking, especially if you need specific equipment for tennis, pickleball, badminton, or squash.`
+    });
+  } else if (cat === 'swimming') {
+    faqs.push({
+      q: `Is ${name} open to non-members or hotel guests only?`,
+      a: has('public') || has('municipal')
+        ? `${name} is open to the public — typically pay-per-visit.`
+        : `Access policies vary. Contact ${name} to confirm whether day-pass, membership, or hotel-guest-only access applies.`
+    });
+  } else if (cat === 'kids-youth') {
+    faqs.push({
+      q: `What age range does ${name} accept?`,
+      a: `Age ranges vary by program. Contact ${name} directly to confirm minimum age and whether parental supervision is required during sessions.`
+    });
+  } else if (cat === 'adventure') {
+    faqs.push({
+      q: `Is hotel pickup included at ${name}?`,
+      a: has('hotel pickup') || has('transfer')
+        ? `Yes — ${name} typically includes hotel pickup from central Pattaya. Confirm pickup window at booking.`
+        : `Hotel pickup may be available — confirm at booking. Otherwise Bolt/Grab from central Pattaya is the easiest option.`
+    });
+  } else if (cat === 'climbing') {
+    faqs.push({
+      q: `Do I need climbing experience to visit ${name}?`,
+      a: `${name} caters to all skill levels — beginners use auto-belay routes and easy boulder problems, while experienced climbers tackle harder routes. Shoes and harnesses are typically rentable on site.`
+    });
+  } else if (cat === 'crossfit') {
+    faqs.push({
+      q: `Are CrossFit beginners welcome at ${name}?`,
+      a: `Yes — beginners typically start with a fundamentals course or scaled drop-in class. Contact ${name} to confirm their on-ramp process.`
+    });
+  } else if (cat === 'equestrian') {
+    faqs.push({
+      q: `Are riding lessons available at ${name}?`,
+      a: `Most Pattaya equestrian venues offer lessons for all levels — from first-time riders to experienced equestrians and polo players. Book in advance to confirm coach availability.`
+    });
+  } else {
+    faqs.push({
+      q: `Is ${name} suitable for first-time visitors?`,
+      a: has('beginner') || has('all-level') || has('family') || has('kid')
+        ? `Yes — ${name} welcomes first-time visitors and beginners.`
+        : `${name} is open to a wide range of visitors. Contact the venue to confirm what fits your level and goals.`
+    });
+  }
+
+  // Q5 — language (universal, always relevant for Pattaya)
+  faqs.push({
+    q: `Do staff at ${name} speak English?`,
+    a: has('english') || has('international') || has('expat')
+      ? `Yes — ${name} regularly serves international clients and English-speaking staff are available.`
+      : `Pattaya is an international tourist city, and most venues have at least one English-speaking staff member. Contact ${name} ahead of your visit if you need language confirmation.`
+  });
+
+  return faqs.slice(0, 5);
+}
+
 function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   const url = `${SITE}/gyms/${slug}/`;
   const title = `${fm.name} | Pattaya Gym Directory`;
@@ -659,6 +799,20 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
       </div>
       <p style="margin-top: 16px; font-size: 14px;"><a href="/?cat=${escHtml(fm.category || '')}" style="color: var(--text-dim);">Browse all ${escHtml(catLabel)} venues →</a></p>
     </section>` : ''}
+
+    ${(() => {
+      const _faqs = generateVenueFAQs(fm);
+      if (!_faqs.length) return '';
+      return `<section class="about" aria-labelledby="v-faq-h" style="margin-top: 40px;">
+        <h2 id="v-faq-h" style="font-size: 1.4rem; margin-bottom: 16px;">Common questions about ${escHtml(fm.name || 'this venue')}</h2>
+        ${_faqs.map(f => `<details class="faq-item"><summary>${escHtml(f.q)}</summary><p>${escHtml(f.a)}</p></details>`).join('')}
+      </section>
+      <script type="application/ld+json">${JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: _faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+      })}</script>`;
+    })()}
 
     <footer class="venue-footer">
       <p>Last verified: <strong>${escHtml(fm.verified || 'N/A')}</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>

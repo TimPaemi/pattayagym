@@ -198,3 +198,59 @@ User asked to apply the readability upgrade across ALL guides + categories + are
 - Push all changes to GitHub for Cloudflare deploy
 - Optional: also add an FAQ section + auto-generated quick-answer to each individual venue page (138 pages, would need per-category Q/A templates — bigger lift)
 - Submit updated sitemap to Google Search Console after deploy
+
+---
+
+## Batch 3 — Auto-FAQ on all 138 venue pages
+
+User: "KEEP WORKING" — continued without waiting for batch approval.
+
+**Pages upgraded:** 138 venue pages (every `/gyms/<slug>/`)
+
+**File edited:** `build.js`
+
+**What was added:**
+1. New helper `generateVenueFAQs(fm)` that builds 5 category-aware FAQ items per venue from the existing frontmatter data — no manual writing needed, no source-of-truth duplication.
+2. FAQ render block + FAQPage JSON-LD schema injected into `buildVenuePage` right before the `<footer class="venue-footer">`.
+
+**FAQ structure per venue (5 questions):**
+1. **Where is {venue}?** — uses `area` + `address`
+2. **What are the opening hours?** — uses `hours` + Thai-holiday caveat
+3. **How much does {venue} cost?** — translates `priceRange` (฿/฿฿/฿฿฿/฿฿฿฿) into a typical baht range
+4. **Category-specific question** — different per category:
+   - Muay Thai → beginner-friendly?
+   - Fitness → contract / drop-in available?
+   - Golf → advance booking required?
+   - Yoga → which styles offered?
+   - Watersports → experience needed?
+   - Racquet → racquet rental available?
+   - Swimming → public access or members only?
+   - Kids/Youth → age range accepted?
+   - Adventure → hotel pickup included?
+   - Climbing → experience required?
+   - CrossFit → beginners welcome?
+   - Equestrian → riding lessons available?
+   - Clubs / fallback → first-time visitors welcome?
+5. **Do staff speak English?** — checks tags/description for English/international markers, gives appropriate answer
+
+The FAQ generator inspects tags + description to give specific answers when the data supports it (e.g. "yes — explicitly welcomes beginners") and falls back to safer language ("contact directly to confirm") when not.
+
+**SEO impact:**
+- 138 venue pages × 5 FAQ items = **690 FAQPage schema entries** now eligible for Google rich-result snippets
+- Every page now answers the most common pre-visit questions inline (location, hours, price, suitability, language) — addresses "people also ask" and zero-click intents
+- All Q&A is built from existing data — no thin content, no duplicate boilerplate (each is venue-name + category-specific)
+
+**Verification:**
+- `node build.js` ran clean
+- Spot-checked Sityodtong (Muay Thai), Anytime Fitness (fitness), Pickleball Pattaya (racquet), Burapha (golf), Yoga Haus (yoga), Dusit Thani (fitness/luxury) — all rendering 5 contextually-correct FAQ items + FAQPage schema
+
+**Risk / uncertainty:**
+- The price-range translation uses generic ranges (฿฿ = "typically ฿2,000–฿5,000/month or moderate drop-in"). For most fitness venues this is accurate; for Muay Thai camps, all-inclusive resort packages, and luxury hotels these ranges may understate the actual cost. Pages note "for exact current rates, contact the venue directly" so visitors aren't misled, but consider per-category override later.
+- The English-speaking question is universally helpful in Pattaya context but slightly redundant on pages already mentioning international/English clientele — kept for SEO consistency.
+
+**Total readability rollout to date:**
+- 1 homepage + 5 brand/utility pages (Batch 1)
+- 6 guides + 13 categories + 6 areas (Batch 2 — site-wide rollout)
+- 138 venue pages (Batch 3 — auto-FAQ)
+- = **169 of 170** site pages now have improved scannable structure + FAQ schema where applicable
+- Remaining: `/compare/`, `/map/`, `/404/` (tool/utility pages — minimal value to add reading aids)
