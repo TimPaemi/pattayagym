@@ -26,3 +26,12 @@
 - **Result:** Added five long-tail best-of guides for digital nomads, female-friendly venues, childcare/family pools, seniors 65+, and Thai gym terms; added contextual internal links with varied anchor text inside new guide prose; added `/methodology/` and `/pattaya-sport-stats/`; tightened generated title/meta-description output; made guide count copy dynamic via `{count}` placeholders; expanded footers to surface new authority pages and guides.
 - **Concerns / open questions:** The new guide rankings are rule-based against existing venue metadata, so later Section I fact-checking and photography work should refine recommendations where source details are thin. Search Console submission and live rich-result validation remain deploy-side tasks.
 - **Next:** Section D - performance.
+
+## 2026-04-29 - Section D: Performance
+
+- **Section completed:** D
+- **Files changed:** `build.js`, `build-extras.js`, `build-discovery.js`, `index.html`, `compare/index.html`, `_headers`, `sw.js`, generated venue/category/area/guide/search/map/about/404 HTML and XML output.
+- **Tests run:** `node --check build.js build-extras.js build-discovery.js sw.js`; `node build.js` confirmed `Generated 158 venue pages (158 deep + 0 stubs)`; coverage scan confirmed 200/200 HTML pages have inline critical CSS, stylesheet preload, and service-worker registration; file-integrity scan over 379 text/source files found 0 bad endings or syntax issues; category-art SVG scan confirmed 158 generated SVGs with max inline size 519 bytes; local Lighthouse sample: homepage 99/89/100/100, Fairtex venue 97/94/100/100, Muay Thai category 100/95/100/100.
+- **Result:** Added inline critical CSS and non-blocking stylesheet loading to generated pages, kept the homepage stylesheet render-blocking to eliminate hero CLS, deferred service-worker registration, added an offline-first `sw.js`, added no-cache service-worker headers, reduced first-paint layout shift on generated venue/category pages, and minified generated category art SVG output.
+- **Concerns / open questions:** Accessibility scores are intentionally not yet at the final target because Section E owns skip links, focus states, contrast, landmarks, and form semantics. The homepage is the one page that does not use async full-CSS loading because the normal stylesheet load gives zero CLS and still reaches 99 Performance locally. `data.js` remains 97,364 bytes raw / 24,999 bytes gzip; deeper data compaction should be revisited only if it does not reduce venue content quality.
+- **Next:** Section E - accessibility.
