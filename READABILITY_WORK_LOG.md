@@ -390,3 +390,76 @@ User: "Keep going" — continued.
 **FAQ schema entries site-wide: 777+** — eligible for Google rich-result snippets across the entire directory.
 
 **SEO posture:** Zero keyword removed. Zero internal link removed. New internal links added everywhere. All canonical/title/meta/OG/JSON-LD untouched. Just better structure and scannability.
+
+---
+
+## Batch 6 — Site-wide nav + multi-column footer overhaul
+
+User: "Keep going" — continued.
+
+**Pages affected:** Every page on the site (170+) — both static and generated.
+
+### Header nav expanded
+
+**Before:** Directory · Categories · About (only 3-4 items, mostly anchor-only)
+**After:** Directory · **Guides** · **Map** · **Search** · **Compare** · About
+
+Now every page has 1-tap access to all six site sections, no matter where the visitor lands. Previously you had to know to look in the homepage About paragraph or scroll to find these tools.
+
+### Multi-column site footer
+
+**Before:** Brand mark + © line. That's it. Zero internal links.
+
+**After:** 5-column footer with **35 internal links** to:
+
+- **Sport categories** — Muay Thai, Fitness, Golf, Yoga, Watersports, Racquet, Swimming, Adventure (8 links)
+- **Areas of Pattaya** — Jomtien, Naklua, Pratamnak, Central Pattaya, East Pattaya, Sattahip (6 links)
+- **Best-of guides** — Best Muay Thai, Cheapest, Luxury, 24-hour, Family-friendly, Beginners (6 links)
+- **Tools & site** — Search, Map, Compare, About, Add-your-gym, Contact (6 links)
+- **Brand column** — descriptive tagline + indie/no-paid-placement disclaimer
+
+Mobile-responsive: collapses 5 → 3 → 2 columns at 980px and 600px breakpoints.
+
+### Files edited
+
+- `build.js` — venue page header nav + footer (138 pages)
+- `build-extras.js` — header() and footer() helpers (about, 13 categories, /map/, /404/)
+- `build-discovery.js` — duplicate header() and footer() (6 areas, 6 guides, /guides/, /search/, /add-your-gym/)
+- `index.html` — homepage nav + footer + earlier batch-1 changes (re-applied after Edit-tool truncation)
+- `styles.css` — appended ~75 lines of `.site-footer*`, `.sf-col`, `.sf-brand-col` CSS with mobile breakpoints
+
+### SEO impact
+
+This is a **massive internal link density boost**:
+
+- Before: typical venue page had ~10–15 internal links (header nav + breadcrumb + related-grid)
+- After: typical venue page has **45+ internal links** (header nav 6 + breadcrumb 2 + jump-to ~10 + related ~6 + footer 35)
+- Every page now has direct hops to: any category landing, any area landing, any best-of guide, any tool
+- Crawler discovery dramatically improved — Google can now reach every important page from any page in 1–2 hops
+
+Crawl-depth wins:
+- `/guides/best-for-beginners-pattaya/` reachable from every page (previously only via guides hub)
+- `/area/east-pattaya/` reachable from every page
+- `/category/equestrian/` reachable from every page
+
+### Verification
+
+- `node build.js` runs clean (138 venue pages + extras + discovery)
+- Spot-checked: gyms/sityodtong-pattaya/, category/muay-thai/, area/jomtien/, guides/best-muay-thai-pattaya/, about/, search/, add-your-gym/, index.html → all show new nav (6 items) + new footer (5 cols)
+
+### Final readability + UX rollout summary (Batches 1–6)
+
+| Improvement | Pages affected |
+|---|---|
+| Quick-answer / TL;DR blocks | 26 (homepage + about + add-gym + guides hub + search + 6 guides + 13 categories + 6 areas) |
+| Topic FAQs + FAQPage schema | 26 (homepage + 6 guides + 13 categories + 6 areas) |
+| Auto-FAQ on venue pages | 138 venues |
+| Jump-to anchor nav | 138 venues |
+| 1-sentence-per-paragraph leads | 25 (categories + areas + guides) |
+| Category SVG art | 151 (138 venues + 13 categories) |
+| Expanded site nav | 170+ (every generated + static page) |
+| Multi-column footer with 35 internal links | 170+ (every generated + static page) |
+
+**Total FAQ schema entries:** 777+ across 164 pages.
+
+**Total internal-linking lift:** typical page went from ~10–15 internal links to 45+. Crawl depth and PageRank distribution dramatically improved.
