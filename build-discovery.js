@@ -737,7 +737,7 @@ function buildSearchPage(allGyms, allCats) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-${commonHead('Search Pattaya Gyms & Sport Venues', 'Search 98+ verified Pattaya gyms, Muay Thai camps, dive operators, golf courses, and sport venues by name, area, category, or feature.', url)}
+${commonHead('Search Pattaya Gyms & Sport Venues', `Search ${allGyms.length}+ verified Pattaya gyms, Muay Thai camps, dive operators, golf courses, and sport venues by name, area, category, or feature.`, url)}
 <style>
   .search-input-wrap { position: relative; max-width: 720px; margin: 0 auto 24px; }
   .search-input {

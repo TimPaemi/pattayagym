@@ -1166,11 +1166,3 @@ function main() {
 }
 
 main();
-ng discovery (areas, guides, search, add form) ---');
-    require('./build-discovery.js');
-  } catch (e) {
-    console.error('Extras build failed:', e.message);
-  }
-}
-
-main();
