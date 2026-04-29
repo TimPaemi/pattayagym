@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Pattaya Gym Directory - CrossFit / Functional venues</title>
+  <link>https://pattaya-gym.com/</link>
+  <atom:link href="https://pattaya-gym.com/feed/crossfit.xml" rel="self" type="application/rss+xml" />
+  <description>Latest crossfit / functional venues in the Pattaya Gym Directory.</description>
+  <language>en-US</language>
+  <lastBuildDate>Wed, 29 Apr 2026 21:40:20 GMT</lastBuildDate>
+  <item>
+    <title>CrossFit Pattaya @ The Jungle Gym</title>
+    <link>https://pattaya-gym.com/gyms/crossfit-pattaya/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/crossfit-pattaya/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>CrossFit / Functional</category>
+    <description><![CDATA[Pattaya's only CrossFit affiliate. Multi-discipline: CrossFit + MMA + archery + dodgeball + slacklining. Coach Murray. UA &amp; Decathlon partners.]]></description>
+  </item>
+</channel>
+</rss>

@@ -14,7 +14,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '160';
+const ASSET_VERSION = '161';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -282,8 +282,11 @@ function footer() {
       <p class="sf-heading">Tools &amp; site</p>
       <ul>
         <li><a href="/search/">Search venues</a></li>
+        <li><a href="/favorites/">Saved favorites</a></li>
         <li><a href="/map/">Interactive map</a></li>
         <li><a href="/compare/">Compare venues</a></li>
+        <li><a href="/plan-my-trip/">Plan my trip</a></li>
+        <li><a href="/find-my-coach/">Find my coach</a></li>
         <li><a href="/about/">About this site</a></li>
         <li><a href="/methodology/">Research methodology</a></li>
         <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
@@ -359,9 +362,10 @@ function buildCategoryPage(cat, gymsInCat, allCats) {
   };
 
   const cards = gymsInCat.map(g => `
-    <a href="/gyms/${escHtml(g.id)}/" class="cat-venue-card">
+    <article class="cat-venue-card">
       <div class="cv-head">
-        <h3>${escHtml(g.name)}</h3>
+        <h3><a href="/gyms/${escHtml(g.id)}/">${escHtml(g.name)}</a></h3>
+        <button class="favorite-btn" data-pg-favorite-id="${escHtml(g.id)}" data-pg-favorite-name="${escHtml(g.name)}" data-pg-favorite-category="${escHtml(g.category)}" data-pg-favorite-area="${escHtml(g.area || '')}" data-pg-favorite-price="${escHtml(g.priceRange || '')}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>
       </div>
       ${g.area ? `<div class="cv-meta">📍 ${escHtml(g.area)}</div>` : ''}
       ${g.hours ? `<div class="cv-meta">🕐 ${escHtml(g.hours)}</div>` : ''}
@@ -370,8 +374,8 @@ function buildCategoryPage(cat, gymsInCat, allCats) {
         ${g.priceRange ? `<span class="cv-pill">💰 ${escHtml(g.priceRange)}</span>` : ''}
         ${(g.tags || []).slice(0, 3).map(t => `<span class="cv-pill cv-pill-tag">${escHtml(t)}</span>`).join('')}
       </div>
-      <span class="cv-cta">View full page →</span>
-    </a>
+      <a class="cv-cta" href="/gyms/${escHtml(g.id)}/">View full page -></a>
+    </article>
   `).join('');
 
   const intros = {
@@ -398,6 +402,7 @@ function buildCategoryPage(cat, gymsInCat, allCats) {
 <html lang="en">
 <head>
 ${commonHead(title, desc, url)}
+<link rel="alternate" type="application/rss+xml" title="Pattaya Gym - ${escHtml(cat.label)} feed" href="/feed/${escHtml(cat.key)}.xml" />
 <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(itemListSchema)}</script>
 </head>
@@ -466,6 +471,7 @@ ${header()}
 </main>
 ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
+<script src="${assetHref('/favorites.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
 </body>
 </html>
@@ -541,6 +547,7 @@ ${commonHead(title, desc, url)}
   .leaflet-popup-content p { margin: 0 0 6px; font-size: 12px; color: #555; }
   .leaflet-popup-content a { color: var(--accent); font-weight: 700; font-size: 12px; }
   .leaflet-container { background: #1a1a1a; }
+  @media (max-width: 880px) { #pg-map { min-height: 440px; } }
 </style>
 </head>
 <body>
@@ -560,7 +567,16 @@ ${header()}
       return count ? `<button class="ml-pill" data-cat="${c.key}">${escHtml(c.label)} (${count})</button>` : '';
     }).filter(Boolean).join('')}
   </div>
-  <div id="pg-map"></div>
+  <div class="map-layout">
+    <div id="pg-map"></div>
+    <aside class="map-panel" aria-labelledby="map-panel-title">
+      <div class="map-panel-head">
+        <h2 id="map-panel-title">Visible venues</h2>
+        <p id="map-panel-count" style="margin:4px 0 0;color:var(--text-muted);font-size:12px;"></p>
+      </div>
+      <div class="map-panel-list" id="map-panel-list"></div>
+    </aside>
+  </div>
   <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);">Pin positions are approximate (clustered by neighborhood) — click any pin to see exact venue details and one-click Google Maps directions.</p>
 </main>
 ${footer()}
@@ -573,41 +589,116 @@ ${footer()}
     maxZoom: 18,
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
+  var activeCat = 'all';
+  var activeLayers = [];
+  var markerById = {};
+  var panelList = document.getElementById('map-panel-list');
+  var panelCount = document.getElementById('map-panel-count');
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+    });
+  }
+  function catLabel(k) {
+    var cat = CATS.find(function(c){return c.key===k;});
+    return cat ? cat.label : k;
+  }
   function catColor(k) {
     var palette = { 'muay-thai':'#f87171','fitness':'#ffb800','golf':'#22c55e','yoga':'#a855f7','racquet':'#3b82f6','watersports':'#06b6d4','swimming':'#0ea5e9','climbing':'#ef4444','clubs':'#f59e0b','kids-youth':'#ec4899','equestrian':'#a16207','crossfit':'#84cc16','adventure':'#fb923c','mma':'#dc2626','bjj':'#7c3aed','boxing':'#fde047' };
     return palette[k] || '#ffb800';
   }
-  var groups = {};
-  MARKERS.forEach(function(m) {
-    var cat = CATS.find(function(c){return c.key===m.category;});
+  function popupHtml(m) {
+    return '<h4>' + esc(m.name) + '</h4>' +
+      '<p>' + esc(catLabel(m.category)) + (m.area ? ' - ' + esc(m.area) : '') + (m.priceRange ? ' - ' + esc(m.priceRange) : '') + '</p>' +
+      '<a href="/gyms/' + encodeURIComponent(m.id) + '/">View full page -></a>';
+  }
+  function markerLayer(m) {
     var color = catColor(m.category);
     var ico = L.divIcon({
-      html: '<div style="background:'+color+';border:2px solid #000;width:22px;height:22px;border-radius:50%;box-shadow:0 0 0 1px '+color+'80;"></div>',
-      className: 'pg-pin', iconSize: [22,22], iconAnchor: [11,11]
+      html: '<div style="background:' + color + ';border:2px solid #000;width:22px;height:22px;border-radius:50%;box-shadow:0 0 0 1px ' + color + '80;"></div>',
+      className: 'pg-pin',
+      iconSize: [22,22],
+      iconAnchor: [11,11]
     });
     var mk = L.marker([m.lat, m.lng], { icon: ico });
-    mk.bindPopup(
-      '<h4>'+m.name+'</h4>' +
-      '<p>'+(cat?cat.label:m.category)+(m.area?' • '+m.area:'')+(m.priceRange?' • '+m.priceRange:'')+'</p>' +
-      '<a href="/gyms/'+m.id+'/">View full page →</a>'
-    );
-    groups[m.category] = groups[m.category] || [];
-    groups[m.category].push(mk);
-    mk.addTo(map);
-  });
+    mk._pgId = m.id;
+    mk.bindPopup(popupHtml(m));
+    markerById[m.id] = mk;
+    return mk;
+  }
+  function clusterLayer(items) {
+    var lat = items.reduce(function(sum, m){ return sum + m.lat; }, 0) / items.length;
+    var lng = items.reduce(function(sum, m){ return sum + m.lng; }, 0) / items.length;
+    var layer = L.marker([lat, lng], {
+      icon: L.divIcon({
+        html: '<div class="map-cluster">' + items.length + '</div>',
+        className: 'pg-cluster-wrap',
+        iconSize: [36,36],
+        iconAnchor: [18,18]
+      })
+    });
+    layer.bindPopup('<h4>' + items.length + ' venues in this area</h4><p>Zoom in to split this cluster.</p>');
+    layer.on('click', function () { map.flyTo([lat, lng], Math.max(map.getZoom() + 2, 13)); });
+    return layer;
+  }
+  function filteredMarkers() {
+    return MARKERS.filter(function (m) { return activeCat === 'all' || m.category === activeCat; });
+  }
+  function visibleLayers(list) {
+    if (map.getZoom() >= 13) return list.map(markerLayer);
+    var buckets = {};
+    list.forEach(function (m) {
+      var key = Math.round(m.lat * 22) + ':' + Math.round(m.lng * 22);
+      buckets[key] = buckets[key] || [];
+      buckets[key].push(m);
+    });
+    return Object.keys(buckets).map(function (key) {
+      return buckets[key].length > 1 ? clusterLayer(buckets[key]) : markerLayer(buckets[key][0]);
+    });
+  }
+  function renderPanel() {
+    var bounds = map.getBounds();
+    var list = filteredMarkers().filter(function (m) {
+      return bounds.contains([m.lat, m.lng]);
+    }).sort(function (a, b) {
+      return a.name.localeCompare(b.name);
+    });
+    panelCount.textContent = list.length + ' visible of ' + filteredMarkers().length + ' matching venues';
+    panelList.innerHTML = list.slice(0, 80).map(function (m) {
+      return '<button class="map-panel-item" data-map-id="' + esc(m.id) + '">' +
+        '<strong>' + esc(m.name) + '</strong>' +
+        '<span>' + esc(catLabel(m.category)) + (m.area ? ' - ' + esc(m.area) : '') + (m.priceRange ? ' - ' + esc(m.priceRange) : '') + '</span>' +
+      '</button>';
+    }).join('');
+  }
+  function renderMarkers() {
+    activeLayers.forEach(function (layer) { map.removeLayer(layer); });
+    markerById = {};
+    activeLayers = visibleLayers(filteredMarkers());
+    activeLayers.forEach(function (layer) { layer.addTo(map); });
+    renderPanel();
+  }
   document.querySelectorAll('.ml-pill').forEach(function(btn){
     btn.addEventListener('click', function(){
       document.querySelectorAll('.ml-pill').forEach(function(b){b.classList.remove('active');});
       btn.classList.add('active');
-      var cat = btn.dataset.cat;
-      Object.keys(groups).forEach(function(k){
-        groups[k].forEach(function(mk){
-          if (cat === 'all' || k === cat) mk.addTo(map);
-          else map.removeLayer(mk);
-        });
-      });
+      activeCat = btn.dataset.cat;
+      renderMarkers();
     });
   });
+  panelList.addEventListener('click', function (event) {
+    var btn = event.target.closest('[data-map-id]');
+    if (!btn) return;
+    var marker = MARKERS.find(function (m) { return m.id === btn.dataset.mapId; });
+    if (!marker) return;
+    map.flyTo([marker.lat, marker.lng], 14);
+    setTimeout(function () {
+      renderMarkers();
+      if (markerById[marker.id]) markerById[marker.id].openPopup();
+    }, 450);
+  });
+  map.on('moveend zoomend', renderMarkers);
+  renderMarkers();
 </script>
 </body>
 </html>
@@ -729,14 +820,22 @@ ${footer()}
 // ============== ROBOTS.TXT ==============
 
 // ============== /feed.xml — RSS feed of recently-verified venues ==============
-function buildRss(allGyms, allCats) {
-  const sorted = allGyms.slice().sort((a, b) =>
+function buildRss(allGyms, allCats, categoryKey) {
+  const selected = categoryKey ? allGyms.filter(g => g.category === categoryKey) : allGyms;
+  const sorted = selected.slice().sort((a, b) =>
     String(b.verified || '').localeCompare(String(a.verified || ''))
   ).slice(0, 30);
   const catLabel = (k) => {
     const c = allCats.find(x => x.key === k);
     return c ? c.label : k;
   };
+  const feedTitle = categoryKey
+    ? `Pattaya Gym Directory - ${catLabel(categoryKey)} venues`
+    : 'Pattaya Gym Directory - Recently Added Venues';
+  const feedUrl = categoryKey ? `${SITE}/feed/${categoryKey}.xml` : `${SITE}/feed.xml`;
+  const feedDesc = categoryKey
+    ? `Latest ${catLabel(categoryKey).toLowerCase()} venues in the Pattaya Gym Directory.`
+    : 'Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.';
   const items = sorted.map(g => {
     const url = `${SITE}/gyms/${g.id}/`;
     const pubDate = (g.verified ? new Date(g.verified) : new Date()).toUTCString();
@@ -754,10 +853,10 @@ function buildRss(allGyms, allCats) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Pattaya Gym Directory — Recently Added Venues</title>
+  <title>${escHtml(feedTitle)}</title>
   <link>${SITE}/</link>
-  <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml" />
-  <description>Latest gyms, Muay Thai camps, dive operators, golf courses, and sport venues added to the Pattaya Gym Directory.</description>
+  <atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />
+  <description>${escHtml(feedDesc)}</description>
   <language>en-US</language>
   <lastBuildDate>${lastBuild}</lastBuildDate>
 ${items}
@@ -897,6 +996,14 @@ function main() {
   fs.writeFileSync(path.join(ROOT, 'feed.xml'), buildRss(GYMS, CATEGORIES));
   console.log('  [RSS] /feed.xml');
   extraUrls.push('/feed.xml');
+  const feedDir = path.join(ROOT, 'feed');
+  if (!fs.existsSync(feedDir)) fs.mkdirSync(feedDir);
+  CATEGORIES.forEach(cat => {
+    const gymsInCat = GYMS.filter(g => g.category === cat.key);
+    if (!gymsInCat.length) return;
+    fs.writeFileSync(path.join(feedDir, `${cat.key}.xml`), buildRss(GYMS, CATEGORIES, cat.key));
+    console.log('  [RSS] /feed/' + cat.key + '.xml');
+  });
 
   // 6. CSS injection for category grid
   appendCategoryCss();

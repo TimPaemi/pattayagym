@@ -26,6 +26,9 @@
 /compare.js
   Cache-Control: public, max-age=31536000, immutable
 
+/favorites.js
+  Cache-Control: public, max-age=31536000, immutable
+
 /recent.js
   Cache-Control: public, max-age=31536000, immutable
 

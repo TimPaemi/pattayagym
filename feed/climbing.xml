@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Pattaya Gym Directory - Climbing venues</title>
+  <link>https://pattaya-gym.com/</link>
+  <atom:link href="https://pattaya-gym.com/feed/climbing.xml" rel="self" type="application/rss+xml" />
+  <description>Latest climbing venues in the Pattaya Gym Directory.</description>
+  <language>en-US</language>
+  <lastBuildDate>Wed, 29 Apr 2026 21:40:20 GMT</lastBuildDate>
+  <item>
+    <title>Deep Climbing Gym</title>
+    <link>https://pattaya-gym.com/gyms/deep-climbing-gym/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/deep-climbing-gym/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Climbing</category>
+    <description><![CDATA[Pattaya's first indoor climbing gym. Air-conditioned, 10m wall, ocean theme. Top rope, auto-belay, lead, bouldering routes.]]></description>
+  </item>
+  <item>
+    <title>Bean Cow Climbing Gym</title>
+    <link>https://pattaya-gym.com/gyms/bean-cow-climbing-gym/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/bean-cow-climbing-gym/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Climbing</category>
+    <description><![CDATA[Family-friendly climbing gym. 8m wall. Top rope + lead climbing. CWA-certified teachers, belayer services, top rope safety classes.]]></description>
+  </item>
+</channel>
+</rss>

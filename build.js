@@ -16,7 +16,7 @@ const VENUES_DIR = path.join(ROOT, 'venues');
 const OUT_DIR = path.join(ROOT, 'gyms');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '160';
+const ASSET_VERSION = '161';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -1134,6 +1134,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
         ${fm.phone ? `<a class="btn btn-secondary" href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}">📞 ${escHtml(fm.phone)}</a>` : ''}
         ${social.facebook ? `<a class="btn btn-ghost" href="https://facebook.com/${escHtml(social.facebook)}" target="_blank" rel="noopener">Facebook</a>` : ''}
         ${social.instagram ? `<a class="btn btn-ghost" href="https://instagram.com/${escHtml(social.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ''}
+        <button class="favorite-btn" data-pg-favorite-id="${escHtml(slug)}" data-pg-favorite-name="${escHtml(fm.name)}" data-pg-favorite-category="${escHtml(fm.category || '')}" data-pg-favorite-area="${escHtml(fm.area || '')}" data-pg-favorite-price="${escHtml(fm.priceRange || '')}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>
         <button class="compare-btn" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}"><span class="cmp-btn-label">+ Add to compare</span></button>
       </div>
 
@@ -1268,8 +1269,11 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
         <p class="sf-heading">Tools &amp; site</p>
         <ul>
           <li><a href="/search/">Search venues</a></li>
+          <li><a href="/favorites/">Saved favorites</a></li>
           <li><a href="/map/">Interactive map</a></li>
           <li><a href="/compare/">Compare venues</a></li>
+          <li><a href="/plan-my-trip/">Plan my trip</a></li>
+          <li><a href="/find-my-coach/">Find my coach</a></li>
           <li><a href="/about/">About this site</a></li>
           <li><a href="/methodology/">Research methodology</a></li>
           <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
@@ -1317,6 +1321,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
     href: `/gyms/${slug}/`
   })};</script>
   <script src="${assetHref('/share.js')}" defer></script>
+  <script src="${assetHref('/favorites.js')}" defer></script>
   <script src="${assetHref('/compare.js')}" defer></script>
   <script src="${assetHref('/recent.js')}" defer></script>
   <script>

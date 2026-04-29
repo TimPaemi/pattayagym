@@ -61,9 +61,13 @@
     if (g.website) actions.push(`<a href="${g.website}" target="_blank" rel="noopener">Website</a>`);
     if (g.phone) actions.push(`<a href="tel:${g.phone.replace(/\s/g, "")}">Call</a>`);
     const titleHtml = `<a href="/gyms/${g.id}/" style="color:inherit;text-decoration:none;">${escapeHtml(g.name)}</a>`;
+    const favoriteBtn = `<button class="favorite-btn card-favorite" data-pg-favorite-id="${escapeHtml(g.id)}" data-pg-favorite-name="${escapeHtml(g.name)}" data-pg-favorite-category="${escapeHtml(g.category)}" data-pg-favorite-area="${escapeHtml(g.area || "")}" data-pg-favorite-price="${escapeHtml(g.priceRange || "")}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>`;
     return `
       <article class="card">
-        <span class="card-cat">${catLabel(g.category)}</span>
+        <div class="card-head">
+          <span class="card-cat">${catLabel(g.category)}</span>
+          ${favoriteBtn}
+        </div>
         <h3>${titleHtml}</h3>
         <div class="card-meta">
           ${g.area ? `<span>📍 ${escapeHtml(g.area)}</span>` : ""}
@@ -93,6 +97,11 @@
     grid.innerHTML = filtered.map(renderCard).join("");
     resultCount.textContent = filtered.length;
     empty.hidden = filtered.length > 0;
+    if (window.PG && PG.favorites) {
+      PG.favorites.bindButtons(grid);
+      PG.favorites.refreshAllButtons();
+      PG.favorites.renderWidget();
+    }
   };
 
   search.addEventListener("input", (e) => {

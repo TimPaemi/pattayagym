@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Pattaya Gym Directory - Yoga / Pilates venues</title>
+  <link>https://pattaya-gym.com/</link>
+  <atom:link href="https://pattaya-gym.com/feed/yoga.xml" rel="self" type="application/rss+xml" />
+  <description>Latest yoga / pilates venues in the Pattaya Gym Directory.</description>
+  <language>en-US</language>
+  <lastBuildDate>Wed, 29 Apr 2026 21:40:20 GMT</lastBuildDate>
+  <item>
+    <title>Yoga Pattaya Studio</title>
+    <link>https://pattaya-gym.com/gyms/yoga-pattaya-studio/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/yoga-pattaya-studio/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Yoga / Pilates</category>
+    <description><![CDATA[Pattaya's first international yoga studio. Ashtanga, Mysore, Hatha, Vinyasa Flow, Stretching, Fitness Yoga. English/Russian/Thai.]]></description>
+  </item>
+  <item>
+    <title>Yoga Haus Pattaya</title>
+    <link>https://pattaya-gym.com/gyms/yoga-haus-pattaya/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/yoga-haus-pattaya/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Yoga / Pilates</category>
+    <description><![CDATA[Pattaya's most prominent hot yoga studio. Modern fitness-yoga vibe with Hot Yoga and Fit Ball. Walkable central.]]></description>
+  </item>
+  <item>
+    <title>Ashtanga Yoga Pattaya</title>
+    <link>https://pattaya-gym.com/gyms/ashtanga-yoga-pattaya/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/ashtanga-yoga-pattaya/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Yoga / Pilates</category>
+    <description><![CDATA[Traditional Ashtanga yoga with hands-on adjustments. Mysore-style focus.]]></description>
+  </item>
+  <item>
+    <title>One-D Yoga Studio</title>
+    <link>https://pattaya-gym.com/gyms/one-d-yoga-studio/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/one-d-yoga-studio/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Yoga / Pilates</category>
+    <description><![CDATA[Various classes: traditional Hatha, Vinyasa Flow, Yin Yoga. Modern studio.]]></description>
+  </item>
+  <item>
+    <title>Nok Yoga Pattaya</title>
+    <link>https://pattaya-gym.com/gyms/nok-yoga-pattaya/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/nok-yoga-pattaya/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Yoga / Pilates</category>
+    <description><![CDATA[Range of yoga sessions for all levels in tranquil beach setting near Jomtien.]]></description>
+  </item>
+  <item>
+    <title>Balance Yoga Studio Pattaya</title>
+    <link>https://pattaya-gym.com/gyms/balance-yoga-studio-pattaya/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/balance-yoga-studio-pattaya/</guid>
+    <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+    <category>Yoga / Pilates</category>
+    <description><![CDATA[Yoga + sound healing. Steps from the sea. 'Island of harmony in sunny Pattaya'.]]></description>
+  </item>
+</channel>
+</rss>

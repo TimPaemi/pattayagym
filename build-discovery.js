@@ -12,7 +12,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '160';
+const ASSET_VERSION = '161';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -147,8 +147,11 @@ function footer() {
       <p class="sf-heading">Tools &amp; site</p>
       <ul>
         <li><a href="/search/">Search venues</a></li>
+        <li><a href="/favorites/">Saved favorites</a></li>
         <li><a href="/map/">Interactive map</a></li>
         <li><a href="/compare/">Compare venues</a></li>
+        <li><a href="/plan-my-trip/">Plan my trip</a></li>
+        <li><a href="/find-my-coach/">Find my coach</a></li>
         <li><a href="/about/">About this site</a></li>
         <li><a href="/methodology/">Research methodology</a></li>
         <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
@@ -217,8 +220,11 @@ ${serviceWorkerRegistration()}
 
 function venueCard(g) {
   const tags = (g.tags || []).slice(0, 3).map(t => `<span class="cv-pill cv-pill-tag">${escHtml(t)}</span>`).join('');
-  return `<a href="/gyms/${escHtml(g.id)}/" class="cat-venue-card">
-    <div class="cv-head"><h3>${escHtml(g.name)}</h3></div>
+  return `<article class="cat-venue-card">
+    <div class="cv-head">
+      <h3><a href="/gyms/${escHtml(g.id)}/">${escHtml(g.name)}</a></h3>
+      <button class="favorite-btn" data-pg-favorite-id="${escHtml(g.id)}" data-pg-favorite-name="${escHtml(g.name)}" data-pg-favorite-category="${escHtml(g.category || '')}" data-pg-favorite-area="${escHtml(g.area || '')}" data-pg-favorite-price="${escHtml(g.priceRange || '')}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>
+    </div>
     ${g.area ? `<div class="cv-meta">📍 ${escHtml(g.area)}</div>` : ''}
     ${g.hours ? `<div class="cv-meta">🕐 ${escHtml(g.hours)}</div>` : ''}
     <p>${escHtml(g.description || '')}</p>
@@ -226,8 +232,8 @@ function venueCard(g) {
       ${g.priceRange ? `<span class="cv-pill">💰 ${escHtml(g.priceRange)}</span>` : ''}
       ${tags}
     </div>
-    <span class="cv-cta">View full page →</span>
-  </a>`;
+    <a class="cv-cta" href="/gyms/${escHtml(g.id)}/">View full page -></a>
+  </article>`;
 }
 
 function cleanText(s) {
@@ -501,6 +507,7 @@ ${header()}
 </main>
 ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
+<script src="${assetHref('/favorites.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
 </body>
 </html>
@@ -1064,6 +1071,7 @@ ${header()}
 </main>
 ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
+<script src="${assetHref('/favorites.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
 </body>
 </html>
@@ -1343,6 +1351,7 @@ ${header()}
     </p>
   </div>
   <p class="search-stats" id="stats"></p>
+  <h2 id="search-results-title" style="max-width:720px;margin:0 auto 12px;font-size:1.1rem;">Search results</h2>
   <div id="search-results"></div>
 </main>
 ${footer()}
@@ -1545,6 +1554,235 @@ ${footer()}
 `;
 }
 
+// Section J override: richer client-side search with persistent scroll and deeper filters.
+function buildSearchPage(allGyms, allCats) {
+  const url = `${SITE}/search/`;
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+${commonHead('Search Pattaya Gyms & Sport Venues', `Search ${allGyms.length}+ verified Pattaya gyms, Muay Thai camps, dive operators, golf courses, and sport venues by name, area, category, price, hours, or language.`, url)}
+<style>
+  .search-input-wrap { position: relative; max-width: 720px; margin: 0 auto 24px; }
+  .search-input { width: 100%; padding: 18px 56px 18px 22px; border-radius: 14px; background: var(--card); border: 2px solid var(--border); color: var(--text); font-size: 17px; transition: border-color 0.2s, box-shadow 0.2s; }
+  .search-input:focus { outline: 0; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(255,184,0,0.12); }
+  .search-icon { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--text-muted); }
+  .search-filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 auto 18px; max-width: 720px; }
+  .sf-pill { min-height: 38px; padding: 7px 12px; font-size: 12px; font-weight: 700; border-radius: 999px; background: var(--card); border: 1px solid var(--border); color: var(--text-dim); cursor: pointer; }
+  .sf-pill.active { background: var(--accent); color: #000; border-color: var(--accent); }
+  .search-stats { color: var(--text-muted); font-size: 13px; margin: 0 auto 14px; max-width: 720px; }
+  #search-results { max-width: 720px; margin: 0 auto; }
+  .sr-card { display: block; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; margin-bottom: 10px; transition: border-color 0.15s; }
+  .sr-card:hover { border-color: var(--accent); }
+  .sr-card h3 { margin: 0 0 4px; font-size: 1.05rem; color: var(--text); font-weight: 700; }
+  .sr-card h3 a { color: inherit; text-decoration: none; }
+  .sr-card .sr-meta { font-size: 12px; color: var(--text-muted); }
+  .sr-card .sr-cat { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 800; }
+  .sr-card p { margin: 6px 0 0; font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+  .sr-empty { text-align: center; color: var(--text-muted); padding: 40px 20px; }
+  mark { background: rgba(255,184,0,0.3); color: var(--accent); padding: 0 2px; border-radius: 2px; }
+</style>
+</head>
+<body>
+${header()}
+<main id="main" class="venue-page" role="main">
+  <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Search</span></div>
+  <div class="venue-hero" style="text-align: center; padding: 36px 28px;">
+    <span class="venue-cat-pill">Search</span>
+    <h1 class="venue-h1" style="margin-bottom:6px;">Find your gym</h1>
+    <p class="venue-lede" style="margin: 0 auto 20px; max-width: 580px;">Search by venue name, neighbourhood, sport, language, price tier, open-now status, or feature. ${allGyms.length} verified venues.</p>
+    <div class="search-input-wrap">
+      <input type="search" class="search-input" id="q" placeholder="Try: muay thai jomtien, cheap yoga, 24 hour gym, english pickleball" autofocus />
+      <span class="search-icon" aria-hidden="true">&#128269;</span>
+    </div>
+    <div class="search-filters" id="filters">
+      <button class="sf-pill active" data-cat="all">All categories</button>
+      ${allCats.map(c => `<button class="sf-pill" data-cat="${c.key}">${escHtml(c.label)}</button>`).join('')}
+    </div>
+    <div class="search-filter-panel" aria-label="Search filters">
+      <label for="area-filter">Area
+        <select id="area-filter"><option value="all">All areas</option></select>
+      </label>
+      <label for="price-filter">Price
+        <select id="price-filter">
+          <option value="all">All prices</option>
+          <option value="฿">฿ budget</option>
+          <option value="฿฿">฿฿ mid-range</option>
+          <option value="฿฿฿">฿฿฿ premium</option>
+          <option value="฿฿฿฿">฿฿฿฿ luxury</option>
+        </select>
+      </label>
+      <label for="language-filter">Language
+        <select id="language-filter"><option value="all">Any language</option></select>
+      </label>
+      <label class="search-check" for="open-filter"><input id="open-filter" type="checkbox" /> <span>Open now</span></label>
+    </div>
+  </div>
+  <p class="search-stats" id="stats"></p>
+  <h2 id="search-results-title" style="max-width:720px;margin:0 auto 12px;font-size:1.1rem;">Search results</h2>
+  <div id="search-results"></div>
+</main>
+${footer()}
+<script src="${assetHref('/data.js')}"></script>
+<script src="${assetHref('/favorites.js')}"></script>
+<script>
+(function() {
+  var GYMS = window.GYMS || [];
+  var CATS = window.CATEGORIES || [];
+  var qInput = document.getElementById('q');
+  var resultsEl = document.getElementById('search-results');
+  var statsEl = document.getElementById('stats');
+  var areaFilter = document.getElementById('area-filter');
+  var priceFilter = document.getElementById('price-filter');
+  var languageFilter = document.getElementById('language-filter');
+  var openFilter = document.getElementById('open-filter');
+  var activeCat = 'all';
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+    });
+  }
+  function catLabel(k) { var c = CATS.find(function(x){return x.key===k;}); return c?c.label:k; }
+  function escapeRe(s){ return s.replace(/[-\\/\\^$*+?.()|[\\]{}]/g, '\\\\$&'); }
+  function highlight(text, q) {
+    if (!q || !text) return esc(text || '');
+    var re = new RegExp('('+escapeRe(q)+')', 'gi');
+    return esc(text).replace(re, '<mark>$1</mark>');
+  }
+  function venueText(g) {
+    return [g.name, g.area, g.address, g.description, g.category, g.hours, g.priceRange, (g.tags || []).join(' '), (g.languages || []).join(' ')].join(' ').toLowerCase();
+  }
+  function languagesFor(g) {
+    var explicit = Array.isArray(g.languages) ? g.languages.slice() : [];
+    var text = venueText(g);
+    ['English','Thai','Russian','French','German','Chinese','Japanese','Korean'].forEach(function (lang) {
+      if (text.indexOf(lang.toLowerCase()) >= 0 && explicit.indexOf(lang) < 0) explicit.push(lang);
+    });
+    if (!explicit.length) explicit.push('English');
+    return explicit;
+  }
+  function bangkokMinutes() {
+    var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Bangkok', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+    var hour = Number(parts.find(function (p) { return p.type === 'hour'; }).value);
+    var minute = Number(parts.find(function (p) { return p.type === 'minute'; }).value);
+    return hour * 60 + minute;
+  }
+  function isOpenNow(g) {
+    var h = String(g.hours || '').toLowerCase();
+    if (!h) return false;
+    if (/24\\s*\\/\\s*7|24 hours|always open|round the clock/.test(h)) return true;
+    if (/closed|appointment|varies|seasonal|event|fight/.test(h)) return false;
+    var match = h.match(/(\\d{1,2})(?::(\\d{2}))?\\s*(am|pm)?\\s*[-–]\\s*(\\d{1,2})(?::(\\d{2}))?\\s*(am|pm)?/i);
+    if (!match) return /daily|open/i.test(h);
+    function toMinutes(hour, minute, meridian) {
+      var hh = Number(hour);
+      var mm = Number(minute || 0);
+      if (meridian) {
+        meridian = meridian.toLowerCase();
+        if (meridian === 'pm' && hh < 12) hh += 12;
+        if (meridian === 'am' && hh === 12) hh = 0;
+      }
+      return hh * 60 + mm;
+    }
+    var start = toMinutes(match[1], match[2], match[3]);
+    var end = toMinutes(match[4], match[5], match[6] || match[3]);
+    var now = bangkokMinutes();
+    return end < start ? (now >= start || now <= end) : (now >= start && now <= end);
+  }
+  function score(g, q) {
+    if (!q) return 1;
+    var ql = q.toLowerCase();
+    var hay = venueText(g);
+    if (!hay.includes(ql)) {
+      var parts = ql.split(/\\s+/).filter(Boolean);
+      if (!parts.every(function(p){return hay.includes(p);})) return 0;
+      return 1;
+    }
+    if (String(g.name || '').toLowerCase().includes(ql)) return 5;
+    if (g.area && g.area.toLowerCase().includes(ql)) return 4;
+    if ((g.tags||[]).some(function(t){return t.toLowerCase().includes(ql);})) return 3;
+    return 2;
+  }
+  function passFilters(g) {
+    if (activeCat !== 'all' && g.category !== activeCat) return false;
+    if (areaFilter.value !== 'all' && String(g.area || '') !== areaFilter.value) return false;
+    if (priceFilter.value !== 'all' && String(g.priceRange || '') !== priceFilter.value) return false;
+    if (languageFilter.value !== 'all' && languagesFor(g).indexOf(languageFilter.value) < 0) return false;
+    if (openFilter.checked && !isOpenNow(g)) return false;
+    return true;
+  }
+  function populateFilters() {
+    var areas = {};
+    var langs = {};
+    GYMS.forEach(function (g) {
+      if (g.area) areas[g.area] = true;
+      languagesFor(g).forEach(function (lang) { langs[lang] = true; });
+    });
+    Object.keys(areas).sort().forEach(function (area) {
+      var option = document.createElement('option');
+      option.value = area;
+      option.textContent = area;
+      areaFilter.appendChild(option);
+    });
+    Object.keys(langs).sort().forEach(function (lang) {
+      var option = document.createElement('option');
+      option.value = lang;
+      option.textContent = lang;
+      languageFilter.appendChild(option);
+    });
+  }
+  function render(preserveScroll) {
+    var y = window.scrollY;
+    var q = qInput.value.trim();
+    var res = GYMS.filter(passFilters).map(function(g){ return {g:g, s:score(g, q)}; }).filter(function(x){ return x.s > 0; }).sort(function(a,b){ return b.s - a.s; });
+    if (!res.length) {
+      resultsEl.innerHTML = '<div class="sr-empty">No venues match. Try a broader search or browse by <a href="/" style="color:var(--accent);">category</a>.</div>';
+      statsEl.textContent = q ? 'No results for "'+q+'"' : 'No venues match the selected filters';
+      if (preserveScroll) requestAnimationFrame(function () { window.scrollTo(0, y); });
+      return;
+    }
+    statsEl.textContent = res.length + ' result' + (res.length===1?'':'s') + (q?' for "'+q+'"':'') + (activeCat==='all'?'':' in ' + catLabel(activeCat));
+    resultsEl.innerHTML = res.map(function(x){
+      var g = x.g;
+      return '<article class="sr-card">' +
+        '<div class="card-head"><div class="sr-cat">'+esc(catLabel(g.category))+'</div>' +
+        '<button class="favorite-btn card-favorite" data-pg-favorite-id="'+esc(g.id)+'" data-pg-favorite-name="'+esc(g.name)+'" data-pg-favorite-category="'+esc(g.category || '')+'" data-pg-favorite-area="'+esc(g.area || '')+'" data-pg-favorite-price="'+esc(g.priceRange || '')+'" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button></div>' +
+        '<h3><a href="/gyms/'+encodeURIComponent(g.id)+'/">'+highlight(g.name, q)+'</a></h3>' +
+        '<div class="sr-meta">'+(g.area?'Area: '+highlight(g.area,q)+' - ':'')+(g.priceRange?'Price: '+esc(g.priceRange)+' - ':'')+(g.hours?'Hours: '+esc(g.hours):'')+'</div>' +
+        '<p>'+highlight(g.description||'', q)+'</p>' +
+      '</article>';
+    }).join('');
+    if (window.PG && PG.favorites) {
+      PG.favorites.bindButtons(resultsEl);
+      PG.favorites.refreshAllButtons();
+      PG.favorites.renderWidget();
+    }
+    if (preserveScroll) requestAnimationFrame(function () { window.scrollTo(0, y); });
+  }
+
+  qInput.addEventListener('input', function () { render(false); });
+  document.getElementById('filters').addEventListener('click', function(e){
+    var b = e.target.closest('.sf-pill');
+    if (!b) return;
+    document.querySelectorAll('.sf-pill').forEach(function(x){x.classList.remove('active');});
+    b.classList.add('active');
+    activeCat = b.dataset.cat;
+    render(true);
+  });
+  [areaFilter, priceFilter, languageFilter, openFilter].forEach(function (el) {
+    el.addEventListener('change', function () { render(true); });
+  });
+  var urlQ = new URLSearchParams(location.search).get('q');
+  if (urlQ) qInput.value = urlQ;
+  populateFilters();
+  render(false);
+})();
+</script>
+</body>
+</html>
+`;
+}
+
 function buildContactPage() {
   const url = `${SITE}/contact/`;
   return `<!DOCTYPE html>
@@ -1639,6 +1877,275 @@ ${footer()}
 `;
 }
 
+function buildFavoritesPage(allGyms) {
+  const url = `${SITE}/favorites/`;
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+${commonHead('Saved Pattaya Gyms | Pattaya Gym Favorites', 'View the Pattaya gyms, Muay Thai camps, golf courses, dive operators, and sport venues you saved while browsing the directory.', url)}
+</head>
+<body>
+${header()}
+<main id="main" class="venue-page" role="main">
+  <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">&gt;</span> <span>Favorites</span></div>
+  <div class="venue-hero">
+    <span class="venue-cat-pill">Favorites</span>
+    <h1 class="venue-h1">Your saved Pattaya venues</h1>
+    <p class="venue-lede">Favorites are stored in this browser only. Use the heart buttons on cards and venue pages to build a shortlist before you compare, map, or plan your trip.</p>
+    <div class="venue-actions">
+      <a class="btn btn-primary" href="/search/">Find more venues</a>
+      <a class="btn btn-secondary" href="/compare/">Open compare tool</a>
+      <button class="btn btn-secondary" type="button" onclick="PG.favorites && PG.favorites.clear()">Clear favorites</button>
+    </div>
+  </div>
+  <p id="favorites-empty" class="sr-empty">No favorites saved yet. Start with <a href="/search/" style="color:var(--accent);">search</a> or browse the <a href="/" style="color:var(--accent);">homepage directory</a>.</p>
+  <div class="cat-venue-grid" id="favorites-list"></div>
+</main>
+${footer()}
+<script src="${assetHref('/data.js')}"></script>
+<script src="${assetHref('/favorites.js')}"></script>
+</body>
+</html>
+`;
+}
+
+function buildTripPlannerPage(allGyms, allCats) {
+  const url = `${SITE}/plan-my-trip/`;
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+${commonHead('Plan My Pattaya Fitness Trip | Pattaya Gym', 'Build a simple Pattaya fitness itinerary from verified gyms, Muay Thai camps, pools, golf courses, dive operators, and family-friendly sport venues.', url)}
+</head>
+<body>
+${header()}
+<main id="main" class="venue-page" role="main">
+  <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">&gt;</span> <span>Plan my trip</span></div>
+  <div class="venue-hero">
+    <span class="venue-cat-pill">Trip planner</span>
+    <h1 class="venue-h1">Plan your Pattaya training trip</h1>
+    <p class="venue-lede">Choose your stay length, training goal, budget, and preferred area. The planner returns 5-8 venues plus a simple daily rhythm you can adjust.</p>
+  </div>
+  <div class="tool-grid">
+    <form class="planner-card" id="trip-form">
+      <label for="trip-days">Trip length
+        <select id="trip-days">
+          <option value="3">3 days</option>
+          <option value="7" selected>1 week</option>
+          <option value="14">2 weeks</option>
+          <option value="30">1 month</option>
+        </select>
+      </label>
+      <label for="trip-goal">Primary goal
+        <select id="trip-goal">
+          <option value="fitness">General fitness</option>
+          <option value="muay-thai">Muay Thai training</option>
+          <option value="family">Family-friendly sport</option>
+          <option value="low-impact">Low-impact / seniors</option>
+          <option value="watersports">Watersports and diving</option>
+          <option value="golf">Golf-focused trip</option>
+        </select>
+      </label>
+      <label for="trip-budget">Budget
+        <select id="trip-budget">
+          <option value="all">Any budget</option>
+          <option value="฿">Budget</option>
+          <option value="฿฿" selected>Mid-range</option>
+          <option value="฿฿฿">Premium</option>
+          <option value="฿฿฿฿">Luxury</option>
+        </select>
+      </label>
+      <label for="trip-area">Area preference
+        <select id="trip-area"><option value="all">Any area</option></select>
+      </label>
+      <button class="btn btn-primary" type="submit">Build itinerary</button>
+    </form>
+    <section class="tool-results" aria-live="polite">
+      <h2 style="margin-top:0;">Recommended venues</h2>
+      <div class="tool-results-list" id="trip-results"></div>
+      <h2>Daily rhythm</h2>
+      <ol class="tldr-list" id="trip-schedule"></ol>
+    </section>
+  </div>
+</main>
+${footer()}
+<script src="${assetHref('/data.js')}"></script>
+<script src="${assetHref('/favorites.js')}"></script>
+<script>
+(function () {
+  var GYMS = window.GYMS || [];
+  var CATS = ${JSON.stringify(allCats)};
+  var area = document.getElementById('trip-area');
+  var form = document.getElementById('trip-form');
+  var results = document.getElementById('trip-results');
+  var schedule = document.getElementById('trip-schedule');
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]; }); }
+  function catLabel(k) { var c = CATS.find(function(x){return x.key===k;}); return c?c.label:k; }
+  function text(g) { return [g.name,g.category,g.area,g.description,(g.tags||[]).join(' ')].join(' ').toLowerCase(); }
+  function populateAreas() {
+    var seen = {};
+    GYMS.forEach(function (g) { if (g.area) seen[g.area] = true; });
+    Object.keys(seen).sort().forEach(function (a) {
+      var o = document.createElement('option');
+      o.value = a;
+      o.textContent = a;
+      area.appendChild(o);
+    });
+  }
+  function goalScore(g, goal) {
+    var t = text(g);
+    if (goal === 'muay-thai') return g.category === 'muay-thai' ? 12 : (/boxing|mma|bjj|fight/.test(t) ? 5 : 0);
+    if (goal === 'family') return /family|kids|youth|pool|water.?park|academy|child|junior/.test(t) || g.category === 'kids-youth' || g.category === 'swimming' ? 10 : 0;
+    if (goal === 'low-impact') return /yoga|pilates|pool|swim|senior|low.?impact|walking|golf/.test(t) || ['yoga','swimming','golf'].indexOf(g.category) >= 0 ? 10 : 0;
+    if (goal === 'watersports') return ['watersports','swimming'].indexOf(g.category) >= 0 ? 10 : 0;
+    if (goal === 'golf') return g.category === 'golf' ? 10 : 0;
+    return ['fitness','crossfit','yoga','swimming','muay-thai'].indexOf(g.category) >= 0 ? 8 : 1;
+  }
+  function render() {
+    var days = Number(document.getElementById('trip-days').value || 7);
+    var goal = document.getElementById('trip-goal').value;
+    var budget = document.getElementById('trip-budget').value;
+    var pickedArea = area.value;
+    var picks = GYMS.map(function (g) {
+      var s = goalScore(g, goal);
+      if (budget !== 'all' && g.priceRange === budget) s += 4;
+      if (pickedArea !== 'all' && g.area === pickedArea) s += 5;
+      if (/beginner|english|day pass|drop.?in|family|open/.test(text(g))) s += 1;
+      return { g:g, s:s };
+    }).filter(function (x) { return x.s > 0; }).sort(function (a,b) { return b.s - a.s; }).slice(0, Math.min(8, Math.max(5, days)));
+    results.innerHTML = picks.map(function (x) {
+      var g = x.g;
+      return '<article class="tool-result-card"><h3><a href="/gyms/'+encodeURIComponent(g.id)+'/">'+esc(g.name)+'</a></h3><p>'+esc(catLabel(g.category))+(g.area?' - '+esc(g.area):'')+(g.priceRange?' - '+esc(g.priceRange):'')+'</p><p>'+esc(g.description || '')+'</p><button class="favorite-btn" data-pg-favorite-id="'+esc(g.id)+'" data-pg-favorite-name="'+esc(g.name)+'" data-pg-favorite-category="'+esc(g.category || '')+'" data-pg-favorite-area="'+esc(g.area || '')+'" data-pg-favorite-price="'+esc(g.priceRange || '')+'" aria-pressed="false"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button></article>';
+    }).join('');
+    schedule.innerHTML = [
+      'Morning: primary training session near your base area.',
+      'Midday: recovery, pool, beach walk, or lunch close to the venue.',
+      'Afternoon: lighter technique, mobility, golf range, or dive theory depending on the goal.',
+      days >= 7 ? 'Every third day: use a lower-impact venue to manage heat, sleep and travel fatigue.' : 'Keep the final day flexible so you can repeat the venue that fits best.',
+      'Evening: confirm the next day by phone or social media because Pattaya hours change quickly.'
+    ].map(function (x) { return '<li>'+esc(x)+'</li>'; }).join('');
+    if (window.PG && PG.favorites) { PG.favorites.bindButtons(results); PG.favorites.refreshAllButtons(); }
+  }
+  populateAreas();
+  form.addEventListener('submit', function (event) { event.preventDefault(); render(); });
+  form.addEventListener('change', render);
+  render();
+})();
+</script>
+</body>
+</html>
+`;
+}
+
+function buildCoachFinderPage(allGyms, allCats) {
+  const url = `${SITE}/find-my-coach/`;
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+${commonHead('Find My Pattaya Coach | Muay Thai, MMA and Boxing', 'Use Pattaya Gym venue metadata to shortlist Muay Thai, MMA, BJJ, and boxing gyms by discipline, language, beginner fit, and female-friendly signals.', url)}
+</head>
+<body>
+${header()}
+<main id="main" class="venue-page" role="main">
+  <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">&gt;</span> <span>Find my coach</span></div>
+  <div class="venue-hero">
+    <span class="venue-cat-pill">Combat sport finder</span>
+    <h1 class="venue-h1">Find a Pattaya fight coach or camp</h1>
+    <p class="venue-lede">This is a rule-based shortlist from venue metadata, not a live trainer roster. Confirm current coaches, language fit, and sparring expectations with the gym before booking.</p>
+  </div>
+  <div class="tool-grid">
+    <form class="planner-card" id="coach-form">
+      <label for="coach-discipline">Discipline
+        <select id="coach-discipline">
+          <option value="muay-thai">Muay Thai</option>
+          <option value="boxing">Boxing</option>
+          <option value="mma">MMA</option>
+          <option value="bjj">BJJ / grappling</option>
+        </select>
+      </label>
+      <label for="coach-language">Preferred language
+        <select id="coach-language">
+          <option value="all">Any language</option>
+          <option value="english">English</option>
+          <option value="thai">Thai</option>
+          <option value="russian">Russian</option>
+        </select>
+      </label>
+      <label for="coach-style">Training style
+        <select id="coach-style">
+          <option value="beginner">Beginner-friendly</option>
+          <option value="fight">Fight preparation</option>
+          <option value="fitness">Fitness and conditioning</option>
+          <option value="private">Private coaching</option>
+        </select>
+      </label>
+      <label for="coach-gender">Coach preference
+        <select id="coach-gender">
+          <option value="all">No preference</option>
+          <option value="female">Female-friendly signals</option>
+        </select>
+      </label>
+      <button class="btn btn-primary" type="submit">Find matches</button>
+    </form>
+    <section class="tool-results" aria-live="polite">
+      <h2 style="margin-top:0;">Best-fit camps and gyms</h2>
+      <div class="tool-results-list" id="coach-results"></div>
+    </section>
+  </div>
+</main>
+${footer()}
+<script src="${assetHref('/data.js')}"></script>
+<script src="${assetHref('/favorites.js')}"></script>
+<script>
+(function () {
+  var GYMS = window.GYMS || [];
+  var CATS = ${JSON.stringify(allCats)};
+  var form = document.getElementById('coach-form');
+  var results = document.getElementById('coach-results');
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]; }); }
+  function catLabel(k) { var c = CATS.find(function(x){return x.key===k;}); return c?c.label:k; }
+  function text(g) { return [g.name,g.category,g.area,g.description,g.hours,(g.tags||[]).join(' '),(g.languages||[]).join(' ')].join(' ').toLowerCase(); }
+  function render() {
+    var discipline = document.getElementById('coach-discipline').value;
+    var language = document.getElementById('coach-language').value;
+    var style = document.getElementById('coach-style').value;
+    var gender = document.getElementById('coach-gender').value;
+    var picks = GYMS.map(function (g) {
+      var t = text(g);
+      var s = 0;
+      if (discipline === g.category) s += 12;
+      if (discipline === 'boxing' && /boxing/.test(t)) s += 8;
+      if (discipline === 'mma' && /mma|mixed martial|fight|cage|grappling/.test(t)) s += 8;
+      if (discipline === 'bjj' && /bjj|jiu.?jitsu|grappling|wrestling/.test(t)) s += 8;
+      if (discipline === 'muay-thai' && /muay thai|thai boxing|camp/.test(t)) s += 8;
+      if (language !== 'all' && t.indexOf(language) >= 0) s += 4;
+      if (language === 'english' && !/russian|thai only/.test(t)) s += 1;
+      if (style === 'beginner' && /beginner|intro|all levels|fitness|friendly/.test(t)) s += 5;
+      if (style === 'fight' && /fighter|fight|sparring|stadium|champion|professional|one championship/.test(t)) s += 5;
+      if (style === 'fitness' && /fitness|conditioning|weight loss|beginner|group class/.test(t)) s += 4;
+      if (style === 'private' && /private|one.?to.?one|personal|pt/.test(t)) s += 4;
+      if (gender === 'female' && /female|women|woman|safe|beginner|yoga|friendly/.test(t)) s += 3;
+      return { g:g, s:s };
+    }).filter(function (x) { return x.s > 0 && ['muay-thai','mma','bjj','boxing','fitness'].indexOf(x.g.category) >= 0; }).sort(function (a,b) { return b.s - a.s; }).slice(0, 8);
+    if (!picks.length) {
+      results.innerHTML = '<p class="sr-empty">No strong matches. Try a broader discipline or remove language constraints.</p>';
+      return;
+    }
+    results.innerHTML = picks.map(function (x) {
+      var g = x.g;
+      return '<article class="tool-result-card"><h3><a href="/gyms/'+encodeURIComponent(g.id)+'/">'+esc(g.name)+'</a></h3><p>'+esc(catLabel(g.category))+(g.area?' - '+esc(g.area):'')+(g.priceRange?' - '+esc(g.priceRange):'')+'</p><p>'+esc(g.description || '')+'</p><button class="favorite-btn" data-pg-favorite-id="'+esc(g.id)+'" data-pg-favorite-name="'+esc(g.name)+'" data-pg-favorite-category="'+esc(g.category || '')+'" data-pg-favorite-area="'+esc(g.area || '')+'" data-pg-favorite-price="'+esc(g.priceRange || '')+'" aria-pressed="false"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button></article>';
+    }).join('');
+    if (window.PG && PG.favorites) { PG.favorites.bindButtons(results); PG.favorites.refreshAllButtons(); }
+  }
+  form.addEventListener('submit', function (event) { event.preventDefault(); render(); });
+  form.addEventListener('change', render);
+  render();
+})();
+</script>
+</body>
+</html>
+`;
+}
+
 // ============== MAIN ==============
 function main() {
   const { GYMS, CATEGORIES } = loadGymsFromDataJs();
@@ -1702,7 +2209,23 @@ function main() {
   extraUrls.push('/press/');
   console.log('  [PRESS] /press/');
 
-  // 8. Update sitemap (dedup)
+  // 8. Section J utility tools
+  if (!fs.existsSync(path.join(ROOT, 'favorites'))) fs.mkdirSync(path.join(ROOT, 'favorites'));
+  fs.writeFileSync(path.join(ROOT, 'favorites', 'index.html'), buildFavoritesPage(GYMS));
+  extraUrls.push('/favorites/');
+  console.log('  [FAV] /favorites/');
+
+  if (!fs.existsSync(path.join(ROOT, 'plan-my-trip'))) fs.mkdirSync(path.join(ROOT, 'plan-my-trip'));
+  fs.writeFileSync(path.join(ROOT, 'plan-my-trip', 'index.html'), buildTripPlannerPage(GYMS, CATEGORIES));
+  extraUrls.push('/plan-my-trip/');
+  console.log('  [TRIP] /plan-my-trip/');
+
+  if (!fs.existsSync(path.join(ROOT, 'find-my-coach'))) fs.mkdirSync(path.join(ROOT, 'find-my-coach'));
+  fs.writeFileSync(path.join(ROOT, 'find-my-coach', 'index.html'), buildCoachFinderPage(GYMS, CATEGORIES));
+  extraUrls.push('/find-my-coach/');
+  console.log('  [COACH] /find-my-coach/');
+
+  // 9. Update sitemap (dedup)
   const sitemapPath = path.join(ROOT, 'sitemap.xml');
   if (fs.existsSync(sitemapPath)) {
     const today = new Date().toISOString().slice(0, 10);
@@ -1718,7 +2241,7 @@ function main() {
     }
   }
 
-  console.log('\nDiscovery built: ' + AREAS.length + ' area pages + ' + GUIDES.length + ' guides + search + add form + methodology + stats + contact + press');
+  console.log('\nDiscovery built: ' + AREAS.length + ' area pages + ' + GUIDES.length + ' guides + search + add form + methodology + stats + contact + press + Section J tools');
 }
 
 main();
