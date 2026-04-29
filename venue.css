@@ -1120,3 +1120,39 @@ html { scroll-behavior: smooth; scroll-padding-top: 16px; }
 @media (max-width: 720px) {
   .back-to-top { bottom: 90px; right: 14px; width: 42px; height: 42px; font-size: 20px; }
 }
+-top: 16px; }
+
+/* === Back-to-top floating button === */
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 60;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: #ffc933;
+  transform: translateY(-2px);
+}
+@media (max-width: 720px) {
+  .back-to-top { bottom: 90px; right: 14px; width: 42px; height: 42px; font-size: 20px; }
+}
