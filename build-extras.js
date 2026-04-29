@@ -105,6 +105,26 @@ function assetHref(file) {
   return `${file}?v=${ASSET_VERSION}`;
 }
 
+function cleanText(s) {
+  return String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
+}
+
+function clipAtWord(s, max) {
+  const text = cleanText(s);
+  if (text.length <= max) return text;
+  const cut = text.slice(0, Math.max(0, max - 3));
+  const boundary = cut.lastIndexOf(' ');
+  return (boundary > 40 ? cut.slice(0, boundary) : cut).replace(/[.,;:\s]+$/, '') + '...';
+}
+
+function metaTitle(s) {
+  return clipAtWord(s, 60);
+}
+
+function metaDesc(s) {
+  return clipAtWord(s, 158);
+}
+
 function loadGymsFromDataJs() {
   const code = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
   const win = {};
@@ -187,6 +207,9 @@ function footer() {
         <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
         <li><a href="/guides/family-friendly-pattaya/">Family-friendly</a></li>
         <li><a href="/guides/best-for-beginners-pattaya/">Best for beginners</a></li>
+        <li><a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a></li>
+        <li><a href="/guides/female-friendly-gyms-pattaya/">Female-friendly venues</a></li>
+        <li><a href="/guides/pattaya-seniors-low-impact-sport/">Seniors 65+ sport guide</a></li>
       </ul>
     </div>
     <div class="sf-col">
@@ -196,6 +219,8 @@ function footer() {
         <li><a href="/map/">Interactive map</a></li>
         <li><a href="/compare/">Compare venues</a></li>
         <li><a href="/about/">About this site</a></li>
+        <li><a href="/methodology/">Research methodology</a></li>
+        <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
         <li><a href="/add-your-gym/">Add your gym</a></li>
         <li><a href="mailto:hello@pattaya-gym.com">Contact</a></li>
       </ul>
@@ -212,8 +237,8 @@ function commonHead(title, desc, canonical) {
   return `<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0b0b0d" />
-<title>${escHtml(title)}</title>
-<meta name="description" content="${escHtml(desc)}" />
+<title>${escHtml(metaTitle(title))}</title>
+<meta name="description" content="${escHtml(metaDesc(desc))}" />
 <link rel="canonical" href="${canonical}" />
 <link rel="alternate" hreflang="en" href="${canonical}" />
 <link rel="alternate" hreflang="x-default" href="${canonical}" />
@@ -221,8 +246,8 @@ function commonHead(title, desc, canonical) {
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <link rel="dns-prefetch" href="//maps.google.com" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="${escHtml(title)}" />
-<meta property="og:description" content="${escHtml(desc)}" />
+<meta property="og:title" content="${escHtml(metaTitle(title))}" />
+<meta property="og:description" content="${escHtml(metaDesc(desc))}" />
 <meta property="og:url" content="${canonical}" />
 <meta property="og:image" content="${DEFAULT_OG_IMAGE}" />
 <meta name="twitter:card" content="summary_large_image" />

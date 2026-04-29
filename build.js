@@ -512,6 +512,28 @@ function assetHref(file) {
   return `${file}?v=${ASSET_VERSION}`;
 }
 
+function cleanText(s) {
+  return String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
+}
+
+function clipAtWord(s, max) {
+  const text = cleanText(s);
+  if (text.length <= max) return text;
+  const cut = text.slice(0, Math.max(0, max - 3));
+  const boundary = cut.lastIndexOf(' ');
+  return (boundary > 40 ? cut.slice(0, boundary) : cut).replace(/[.,;:\s]+$/, '') + '...';
+}
+
+function venueMetaTitle(name) {
+  const suffix = ' | Pattaya Gym';
+  const base = cleanText(name).replace(/\s+\([^)]{8,}\)/g, '');
+  return clipAtWord(base, 60 - suffix.length) + suffix;
+}
+
+function metaDesc(s) {
+  return clipAtWord(s, 158);
+}
+
 function schemaTypesForCategory(cat) {
   const key = String(cat || '').toLowerCase();
   const byCategory = {
@@ -884,9 +906,9 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   // Auto-link venue cross-references in body HTML
   bodyHtml = autoLinkVenues(bodyHtml, slug, allGyms);
   const url = `${SITE}/gyms/${slug}/`;
-  const title = `${fm.name} | Pattaya Gym Directory`;
+  const title = venueMetaTitle(fm.name);
   const firstPara = extractFirstParagraph(body || '');
-  const desc = (fm.description || firstPara || `Train at ${fm.name} in Pattaya, Thailand. Address, pricing, schedule, trainers, reviews and more.`).replace(/\s+/g, ' ').slice(0, 300);
+  const desc = metaDesc(fm.description || firstPara || `Train at ${fm.name} in Pattaya, Thailand. Address, pricing, schedule, trainers, reviews and more.`);
   const cat = (fm.category || '').replace(/-/g, ' ');
   const sources = Array.isArray(fm.sources) ? fm.sources : [];
 
@@ -1135,6 +1157,9 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
           <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
           <li><a href="/guides/family-friendly-pattaya/">Family-friendly</a></li>
           <li><a href="/guides/best-for-beginners-pattaya/">Best for beginners</a></li>
+          <li><a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a></li>
+          <li><a href="/guides/female-friendly-gyms-pattaya/">Female-friendly venues</a></li>
+          <li><a href="/guides/pattaya-seniors-low-impact-sport/">Seniors 65+ sport guide</a></li>
         </ul>
       </div>
       <div class="sf-col">
@@ -1144,6 +1169,8 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
           <li><a href="/map/">Interactive map</a></li>
           <li><a href="/compare/">Compare venues</a></li>
           <li><a href="/about/">About this site</a></li>
+          <li><a href="/methodology/">Research methodology</a></li>
+          <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
           <li><a href="/add-your-gym/">Add your gym</a></li>
           <li><a href="mailto:hello@pattaya-gym.com">Contact</a></li>
         </ul>

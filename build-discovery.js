@@ -101,6 +101,9 @@ function footer() {
         <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
         <li><a href="/guides/family-friendly-pattaya/">Family-friendly</a></li>
         <li><a href="/guides/best-for-beginners-pattaya/">Best for beginners</a></li>
+        <li><a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a></li>
+        <li><a href="/guides/female-friendly-gyms-pattaya/">Female-friendly venues</a></li>
+        <li><a href="/guides/pattaya-seniors-low-impact-sport/">Seniors 65+ sport guide</a></li>
       </ul>
     </div>
     <div class="sf-col">
@@ -110,6 +113,8 @@ function footer() {
         <li><a href="/map/">Interactive map</a></li>
         <li><a href="/compare/">Compare venues</a></li>
         <li><a href="/about/">About this site</a></li>
+        <li><a href="/methodology/">Research methodology</a></li>
+        <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
         <li><a href="/add-your-gym/">Add your gym</a></li>
         <li><a href="mailto:hello@pattaya-gym.com">Contact</a></li>
       </ul>
@@ -125,8 +130,8 @@ function commonHead(title, desc, canonical) {
   return `<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0b0b0d" />
-<title>${escHtml(title)}</title>
-<meta name="description" content="${escHtml(desc)}" />
+<title>${escHtml(metaTitle(title))}</title>
+<meta name="description" content="${escHtml(metaDesc(desc))}" />
 <link rel="canonical" href="${canonical}" />
 <link rel="alternate" hreflang="en" href="${canonical}" />
 <link rel="alternate" hreflang="x-default" href="${canonical}" />
@@ -134,8 +139,8 @@ function commonHead(title, desc, canonical) {
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <link rel="dns-prefetch" href="//maps.google.com" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="${escHtml(title)}" />
-<meta property="og:description" content="${escHtml(desc)}" />
+<meta property="og:title" content="${escHtml(metaTitle(title))}" />
+<meta property="og:description" content="${escHtml(metaDesc(desc))}" />
 <meta property="og:url" content="${canonical}" />
 <meta property="og:image" content="${DEFAULT_OG_IMAGE}" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -161,6 +166,64 @@ function venueCard(g) {
     </div>
     <span class="cv-cta">View full page →</span>
   </a>`;
+}
+
+function cleanText(s) {
+  return String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
+}
+
+function clipAtWord(s, max) {
+  const text = cleanText(s);
+  if (text.length <= max) return text;
+  const cut = text.slice(0, Math.max(0, max - 3));
+  const boundary = cut.lastIndexOf(' ');
+  return (boundary > 40 ? cut.slice(0, boundary) : cut).replace(/[.,;:\s]+$/, '') + '...';
+}
+
+function metaTitle(s) {
+  return clipAtWord(s, 60);
+}
+
+function metaDesc(s) {
+  return clipAtWord(s, 158);
+}
+
+function textForVenue(g) {
+  return cleanText([
+    g.name,
+    g.category,
+    g.area,
+    g.address,
+    g.hours,
+    g.priceRange,
+    g.description,
+    (g.tags || []).join(' ')
+  ].join(' ')).toLowerCase();
+}
+
+function guideCopy(value, sorted, allGyms) {
+  const text = typeof value === 'function' ? value(sorted, allGyms) : value;
+  return cleanText(text).replace(/\{count\}/g, String(sorted.length)).replace(/\{total\}/g, String(allGyms.length));
+}
+
+function categoryLabel(key, allCats) {
+  const cat = (allCats || []).find(c => c.key === key);
+  return cat ? cat.label : key;
+}
+
+function countBy(items, getKey) {
+  const counts = new Map();
+  items.forEach(item => {
+    const key = getKey(item) || 'Unknown';
+    counts.set(key, (counts.get(key) || 0) + 1);
+  });
+  return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
+}
+
+function venueMarkdownCount() {
+  const dir = path.join(ROOT, 'venues');
+  if (!fs.existsSync(dir)) return 0;
+  return fs.readdirSync(dir).filter(f => /\.md$/i.test(f)).length;
 }
 
 // ============== AREA PAGES ==============
@@ -354,7 +417,7 @@ const GUIDES = [
     title: 'Best Muay Thai Gyms in Pattaya 2026',
     h1: 'Best Muay Thai gyms in Pattaya',
     desc: 'Hand-picked best Muay Thai camps in Pattaya for 2026 — from authentic budget gyms to premium all-inclusive resort camps. With pricing, trainers, and what each is best for.',
-    intro: 'Pattaya has 14+ verified Muay Thai camps spanning every tier. This guide picks the best for different goals — from total beginners trying their first pad round to fight-prep students looking for serious sparring partners.',
+    intro: 'Pattaya has {count} verified Muay Thai camps spanning every tier. This guide picks the best for different goals — from total beginners trying their first pad round to fight-prep students looking for serious sparring partners.',
     pickerKey: 'best-mt',
     filter: g => g.category === 'muay-thai',
     rank: g => {
@@ -557,7 +620,7 @@ const GUIDES = [
     title: 'Best Golf Courses in Pattaya 2026',
     h1: 'Best golf courses near Pattaya',
     desc: 'Hand-picked best Pattaya / Eastern Seaboard golf courses for 2026 — from championship Pete Dye and Jack Nicklaus designs to value-tier 27-hole layouts and resort options with Buddha mountain views.',
-    intro: 'The Pattaya / Eastern Seaboard is one of Asia\'s densest premium-golf clusters with 17+ verified courses including championship Pete Dye, Jack Nicklaus and Peter Thomson designs. Most are within 30–50 minutes of central Pattaya. This guide ranks the best by architecture, conditioning, hosting history, and overall experience.',
+    intro: 'The Pattaya / Eastern Seaboard is one of Asia\'s densest premium-golf clusters with {count} verified courses including championship Pete Dye, Jack Nicklaus and Peter Thomson designs. Most are within 30–50 minutes of central Pattaya. This guide ranks the best by architecture, conditioning, hosting history, and overall experience.',
     pickerKey: 'golf-best',
     filter: g => g.category === 'golf',
     rank: g => {
@@ -583,7 +646,213 @@ const GUIDES = [
       { q: 'Are caddies required at Pattaya golf courses?', a: 'Yes at virtually all courses — Thai golf tradition. Caddies typically expect ฿500–฿800 base plus tips. Most are excellent with course knowledge and pace; many speak basic English.' },
       { q: 'When is the best time to golf in Pattaya?', a: 'Cool dry season Nov–Feb is peak — book tee times 2–4 weeks ahead, especially weekends. Hot season Mar–May has cheaper rates and quieter courses. Rainy season Jun–Oct sees afternoon storms but morning play is fine.' }
     ]
-
+  },
+  {
+    slug: 'pattaya-digital-nomad-fitness',
+    title: 'Pattaya Digital Nomad Fitness Guide | Pattaya Gym',
+    h1: 'Pattaya fitness for digital nomads',
+    desc: 'Flexible Pattaya gyms, yoga studios, runs, pools and Muay Thai camps for remote workers who need short memberships, late hours and easy routines.',
+    intro: 'Remote workers need frictionless training more than perfect programming. This guide favours venues with 24-hour access, no-contract plans, central or Jomtien locations, English-friendly staff, and routines that fit around calls.',
+    pickerKey: 'nomads',
+    filter: g => {
+      const text = textForVenue(g);
+      return ['fitness', 'yoga', 'muay-thai', 'swimming', 'clubs', 'crossfit'].includes(g.category)
+        && /24|no.?contract|day.?pass|central|jomtien|english|air.?con|pool|sauna|class|yoga|running|beach|hotel|fitness|workout/.test(text);
+    },
+    rank: g => {
+      const text = textForVenue(g);
+      let s = 0;
+      if (/24|no.?contract|day.?pass/.test(text)) s += 14;
+      if (/central|jomtien|beach/.test(text)) s += 8;
+      if (/english|air.?con|sauna|pool/.test(text)) s += 6;
+      if (g.category === 'fitness') s += 7;
+      if (g.category === 'yoga' || g.category === 'clubs') s += 5;
+      if (g.priceRange === '฿' || g.priceRange === '฿฿') s += 4;
+      return s;
+    },
+    sections: [
+      { label: 'Flexible memberships and 24-hour access', take: 6 },
+      { label: 'Workday reset sessions', take: 5 },
+      { label: 'Outdoor routines before or after calls', take: 4 }
+    ],
+    faqs: [
+      { q: 'What is the best Pattaya gym setup for a digital nomad?', a: 'Use a no-contract chain or 24-hour gym for lifting, then add one low-friction recovery option such as yoga, swimming, beach running or Muay Thai once or twice a week.' },
+      { q: 'Which Pattaya areas are easiest for remote-worker fitness routines?', a: 'Central Pattaya works best for late access and chain gyms. Jomtien works better for beach running, yoga and calmer long-stay routines.' },
+      { q: 'Can I train without committing to a long membership?', a: 'Yes. Many Pattaya gyms offer day passes, weekly passes or no-contract memberships. Muay Thai camps also commonly accept drop-in classes.' }
+    ],
+    extraHtml: sorted => {
+      const jetts = sorted.find(g => g.id === 'jetts-fitness-pattaya');
+      const beach = sorted.find(g => /beach|jomtien/i.test(g.area || '') && g.category === 'clubs');
+      return `<article class="venue-body guide-extra">
+        <h2>Sample remote-worker weekly routine</h2>
+        <ul>
+          <li><strong>Monday and Thursday:</strong> lift at ${jetts ? `<a href="/gyms/${jetts.id}/">a no-contract Jetts branch</a>` : 'a no-contract chain gym'} before dinner, when air-conditioned gyms are quieter.</li>
+          <li><strong>Tuesday:</strong> use a yoga or mobility class as a screen-break day rather than another maximal session.</li>
+          <li><strong>Wednesday:</strong> train Muay Thai technique only; avoid hard sparring before late calls.</li>
+          <li><strong>Weekend:</strong> use ${beach ? `<a href="/gyms/${beach.id}/">the beach-running option</a>` : 'Jomtien or Pattaya Beach'} for easy cardio, then keep one full rest day.</li>
+        </ul>
+      </article>`;
+    }
+  },
+  {
+    slug: 'female-friendly-gyms-pattaya',
+    title: 'Female-Friendly Gyms in Pattaya | Pattaya Gym',
+    h1: 'Female-friendly gyms and sport venues in Pattaya',
+    desc: 'Women-friendly Pattaya gyms, yoga studios, pools and beginner Muay Thai venues with safer locations, clear pricing and comfortable training culture.',
+    intro: 'Female travellers and long-stay residents often optimise for a different mix: safe transport, clean changing rooms, transparent pricing, English-speaking staff, beginner-friendly classes and a training floor that feels comfortable rather than performative.',
+    pickerKey: 'women',
+    filter: g => {
+      const text = textForVenue(g);
+      return ['fitness', 'yoga', 'muay-thai', 'swimming', 'racquet'].includes(g.category)
+        && /female|beginner|women|ladies|yoga|hotel|pool|classes|english|clean|safe|family|luxury|air.?con|trainer/.test(text);
+    },
+    rank: g => {
+      const text = textForVenue(g);
+      let s = 0;
+      if (/female|women|ladies/.test(text)) s += 18;
+      if (/beginner|all.?level|classes|english/.test(text)) s += 8;
+      if (/hotel|luxury|pool|clean|safe|air.?con/.test(text)) s += 7;
+      if (g.category === 'yoga' || g.category === 'swimming') s += 6;
+      if (g.category === 'fitness') s += 4;
+      return s;
+    },
+    sections: [
+      { label: 'Most comfortable all-round choices', take: 6 },
+      { label: 'Yoga, pools and lower-pressure training', take: 5 },
+      { label: 'Beginner-friendly combat sport options', take: 4 }
+    ],
+    faqs: [
+      { q: 'Are there women-only gyms in Pattaya?', a: 'The directory is stronger on female-friendly mixed venues than strictly women-only gyms. Look for yoga studios, hotel clubs, clean commercial gyms and beginner Muay Thai camps with English-speaking staff.' },
+      { q: 'Is it safe for solo women to train in Pattaya?', a: 'Many venues are safe and professional, especially hotel clubs, chain gyms and established studios. Choose well-lit areas, use Grab or Bolt at night, and avoid venues that will not quote prices clearly.' },
+      { q: 'Can beginner women try Muay Thai in Pattaya?', a: 'Yes. Several camps teach complete beginners and fitness-focused students. Tell the gym you want technique and conditioning, not hard sparring.' }
+    ],
+    extraHtml: sorted => {
+      const yoga = sorted.find(g => g.category === 'yoga');
+      const fairtex = sorted.find(g => g.id === 'fairtex-pattaya');
+      return `<article class="venue-body guide-extra">
+        <h2>Practical safety filters</h2>
+        <ul>
+          <li>Prioritise venues that publish opening hours, prices and maps links before you travel across town.</li>
+          <li>For first sessions, choose staffed hours rather than key-fob-only late-night access.</li>
+          <li>${yoga ? `<a href="/gyms/${yoga.id}/">A dedicated yoga studio</a>` : 'Dedicated yoga studios'} usually gives the lowest-pressure first week.</li>
+          <li>${fairtex ? `<a href="/gyms/${fairtex.id}/">The Fairtex Naklua camp</a>` : 'Established heritage camps'} is better for structured Muay Thai than a random tourist pad session.</li>
+        </ul>
+      </article>`;
+    }
+  },
+  {
+    slug: 'pattaya-gyms-childcare-family-pools',
+    title: 'Pattaya Gyms With Childcare and Pools | Pattaya Gym',
+    h1: 'Pattaya gyms with childcare, kids sport and family pools',
+    desc: 'Family-friendly Pattaya gyms, pools, kids academies and water parks for parents who need safe activities, swim time and child-friendly sport options.',
+    intro: 'This guide is for parents who still want to train. It favours pools, kids academies, supervised sport programmes, hotel clubs and large family venues where children have a genuine activity instead of waiting beside the equipment.',
+    pickerKey: 'childcare-pools',
+    filter: g => {
+      const text = textForVenue(g);
+      return g.category === 'kids-youth' || g.category === 'swimming'
+        || /family|kid|child|junior|academy|pool|water.?park|swim|coaching|play|children/.test(text);
+    },
+    rank: g => {
+      const text = textForVenue(g);
+      let s = 0;
+      if (g.category === 'kids-youth') s += 18;
+      if (g.category === 'swimming') s += 10;
+      if (/pool|swim|water.?park/.test(text)) s += 10;
+      if (/child|kid|junior|academy|coaching/.test(text)) s += 8;
+      if (/family|hotel|resort/.test(text)) s += 5;
+      return s;
+    },
+    sections: [
+      { label: 'Best pools and water-play venues', take: 5 },
+      { label: 'Kids academies and coached sport', take: 6 },
+      { label: 'Parent-friendly training bases', take: 4 }
+    ],
+    faqs: [
+      { q: 'Do Pattaya gyms offer childcare?', a: 'Dedicated childcare is uncommon, but family pools, kids academies and hotel clubs solve the same problem by giving children a supervised or structured activity while adults train nearby.' },
+      { q: 'Which Pattaya venues are best for children who need to burn energy?', a: 'Water parks, football academies, swim schools, trampoline or adventure venues, and hotel pool clubs are usually better than conventional gyms.' },
+      { q: 'Can parents train while kids take lessons?', a: 'Yes at multi-sport clubs, hotel clubs and some academies. Confirm supervision, pickup rules and lesson times directly before relying on it.' }
+    ]
+  },
+  {
+    slug: 'pattaya-seniors-low-impact-sport',
+    title: 'Pattaya Seniors Low-Impact Sport Guide | Pattaya Gym',
+    h1: 'Low-impact sport in Pattaya for seniors 65+',
+    desc: 'Low-impact Pattaya fitness options for seniors: swimming, yoga, golf, walking routes, racquet clubs and rehab-friendly sport venues.',
+    intro: 'Pattaya has a large retiree and long-stay community, so low-impact sport matters. This guide prioritises swimming, walking routes, yoga, golf, pickleball, gentle racquet sports and venues with controlled environments over high-intensity training.',
+    pickerKey: 'seniors',
+    filter: g => {
+      const text = textForVenue(g);
+      return ['swimming', 'yoga', 'golf', 'racquet', 'clubs', 'fitness'].includes(g.category)
+        && /pool|swim|yoga|walk|walking|running|lake|golf|pickleball|tennis|rehab|physio|hotel|low|senior|beginner/.test(text);
+    },
+    rank: g => {
+      const text = textForVenue(g);
+      let s = 0;
+      if (g.category === 'swimming' || g.category === 'yoga') s += 12;
+      if (g.category === 'golf' || g.category === 'racquet') s += 8;
+      if (/pickleball|walk|walking|lake|pool|swim|rehab|physio/.test(text)) s += 10;
+      if (/beginner|hotel|air.?con|low/.test(text)) s += 5;
+      if (g.priceRange === '฿' || g.priceRange === '฿฿') s += 3;
+      return s;
+    },
+    sections: [
+      { label: 'Gentle cardio and pool-based options', take: 6 },
+      { label: 'Low-impact racquet and golf choices', take: 6 },
+      { label: 'Easy public routes and community sport', take: 4 }
+    ],
+    faqs: [
+      { q: 'What is the safest sport for seniors in Pattaya?', a: 'Swimming, walking routes, beginner yoga, golf practice and pickleball are usually the safest starting points because intensity can be scaled easily.' },
+      { q: 'Are Pattaya gyms suitable for older beginners?', a: 'Some are. Choose air-conditioned commercial gyms, hotel clubs or coached studios rather than hardcore bodybuilding rooms if joint safety and supervision matter.' },
+      { q: 'When should seniors train outdoors in Pattaya?', a: 'Early morning is best. Heat and humidity rise quickly after 9am, so carry water and avoid peak-afternoon outdoor sessions.' }
+    ]
+  },
+  {
+    slug: 'thai-gym-terms-pattaya',
+    title: 'Thai Gym Terms for Pattaya Sport Visitors',
+    h1: 'Thai gym terms for Pattaya sport visitors',
+    desc: 'A Pattaya sport vocabulary cheat sheet for gyms, Muay Thai camps, yoga, swimming, golf, directions, prices and polite Thai phrases.',
+    intro: 'You can train comfortably in English at many Pattaya venues, but a few Thai words make check-in, prices, directions and Muay Thai classes smoother. Use this as a quick field guide before your first session.',
+    pickerKey: 'thai-terms',
+    filter: g => ['muay-thai', 'fitness', 'yoga', 'watersports', 'golf', 'racquet'].includes(g.category),
+    rank: g => {
+      const text = textForVenue(g);
+      let s = 0;
+      if (g.category === 'muay-thai') s += 10;
+      if (/thai|english|beginner|lesson|class|trainer|coach/.test(text)) s += 6;
+      if (g.category === 'fitness' || g.category === 'yoga') s += 4;
+      return s;
+    },
+    sections: [
+      { label: 'Venues where Thai phrases help most', take: 6 },
+      { label: 'Beginner-friendly places to practise', take: 6 }
+    ],
+    faqs: [
+      { q: 'Do Pattaya gyms speak English?', a: 'Many tourist-facing gyms, Muay Thai camps, dive shops and hotel clubs speak English. Small local gyms may use basic English, gestures and phone translation.' },
+      { q: 'Should I use Thai at Muay Thai camps?', a: 'A few words help. Say hello, thank the trainer, learn left/right/kick/punch/counting, and ask politely before filming.' },
+      { q: 'What is the most useful Thai phrase for gyms?', a: 'Start with asking the price, whether the venue is open today, and whether one session or a day pass is available.' }
+    ],
+    extraHtml: () => `<article class="venue-body guide-extra">
+      <h2>Core vocabulary cheat sheet</h2>
+      <table>
+        <thead><tr><th>English</th><th>Thai</th><th>How to use it</th></tr></thead>
+        <tbody>
+          <tr><td>Gym</td><td><span lang="th">&#x0e22;&#x0e34;&#x0e21;</span> (yim)</td><td>Ask a driver for the gym or look for signage.</td></tr>
+          <tr><td>Muay Thai</td><td><span lang="th">&#x0e21;&#x0e27;&#x0e22;&#x0e44;&#x0e17;&#x0e22;</span> (muay thai)</td><td>The sport itself; camps often say this in English too.</td></tr>
+          <tr><td>Boxing camp</td><td><span lang="th">&#x0e04;&#x0e48;&#x0e32;&#x0e22;&#x0e21;&#x0e27;&#x0e22;</span> (khai muay)</td><td>Useful for local Muay Thai gyms away from hotel areas.</td></tr>
+          <tr><td>Trainer / teacher</td><td><span lang="th">&#x0e04;&#x0e23;&#x0e39;</span> (khru)</td><td>Polite way to address a Muay Thai trainer.</td></tr>
+          <tr><td>Price</td><td><span lang="th">&#x0e23;&#x0e32;&#x0e04;&#x0e32;</span> (raa-khaa)</td><td>Use before asking about a drop-in, monthly fee or lesson.</td></tr>
+          <tr><td>Open</td><td><span lang="th">&#x0e40;&#x0e1b;&#x0e34;&#x0e14;</span> (bpert)</td><td>Useful when checking whether a gym is open today.</td></tr>
+          <tr><td>Closed</td><td><span lang="th">&#x0e1b;&#x0e34;&#x0e14;</span> (bpit)</td><td>Common on holiday or maintenance notices.</td></tr>
+          <tr><td>Thank you</td><td><span lang="th">&#x0e02;&#x0e2d;&#x0e1a;&#x0e04;&#x0e38;&#x0e13;</span> (khop khun)</td><td>Use after pad work, coaching, directions or help.</td></tr>
+        </tbody>
+      </table>
+      <h2>Polite questions to screenshot</h2>
+      <ul>
+        <li><strong>One session?</strong> Ask for a single class or day pass before discussing monthly membership.</li>
+        <li><strong>Open today?</strong> Show the venue name and ask whether it is open now, especially around Thai holidays.</li>
+        <li><strong>Can I film?</strong> Always ask before recording sparring, pad work or other members.</li>
+      </ul>
+    </article>`
   }
 ];
 
@@ -591,6 +860,9 @@ function buildGuidePage(guide, allGyms) {
   const url = `${SITE}/guides/${guide.slug}/`;
   const filtered = allGyms.filter(guide.filter);
   const sorted = filtered.slice().sort((a, b) => guide.rank(b) - guide.rank(a));
+  const guideTitle = guideCopy(guide.title, sorted, allGyms);
+  const guideDesc = guideCopy(guide.desc, sorted, allGyms);
+  const guideIntro = guideCopy(guide.intro, sorted, allGyms);
 
   // Distribute across sections
   const sectionsHtml = [];
@@ -639,6 +911,7 @@ function buildGuidePage(guide, allGyms) {
     <h2 id="faq-h" style="font-size: 1.4rem; margin-bottom: 18px;">Common questions</h2>
     ${faqs.map(f => `<details class="faq-item"><summary>${escHtml(f.q)}</summary><p>${escHtml(f.a)}</p></details>`).join('')}
   </section>` : '';
+  const extraHtml = typeof guide.extraHtml === 'function' ? guide.extraHtml(sorted, allGyms) : '';
 
   // FAQPage schema (only if we have FAQs)
   const faqSchema = faqs.length ? `<script type="application/ld+json">${JSON.stringify({
@@ -649,7 +922,7 @@ function buildGuidePage(guide, allGyms) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-${commonHead(guide.title, guide.desc, url)}
+${commonHead(guideTitle, guideDesc, url)}
 <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(itemListSchema)}</script>
 ${faqSchema}
@@ -668,8 +941,8 @@ ${header()}
     <span class="venue-cat-pill">Guide</span>
     <h1 class="venue-h1">${escHtml(guide.h1)}</h1>
     ${(() => {
-      const parts = String(guide.intro).split(/(?<=[.!?])\s+(?=[A-Z])/).filter(Boolean);
-      if (parts.length <= 1) return `<p class="venue-lede">${escHtml(guide.intro)}</p>`;
+      const parts = String(guideIntro).split(/(?<=[.!?])\s+(?=[A-Z])/).filter(Boolean);
+      if (parts.length <= 1) return `<p class="venue-lede">${escHtml(guideIntro)}</p>`;
       return parts.map((c, i) => `<p class="venue-lede"${i > 0 ? ' style="margin-top: 10px; font-size: 0.96rem;"' : ''}>${escHtml(c)}</p>`).join('');
     })()}
     <div class="venue-hero-meta">
@@ -680,6 +953,7 @@ ${header()}
   ${tldrHtml}
   <div id="full-list"></div>
   ${sectionsHtml.join('')}
+  ${extraHtml}
   ${faqHtml}
   <div class="venue-cta-foot" style="margin-top:48px;">
     <h3>Want to compare these side-by-side?</h3>
@@ -734,11 +1008,184 @@ ${header()}
       <li><strong>Train at odd hours?</strong> → <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
       <li><strong>Travelling with kids?</strong> → <a href="/guides/family-friendly-pattaya/">Family-friendly</a></li>
       <li><strong>Total beginner?</strong> → <a href="/guides/best-for-beginners-pattaya/">Best for beginners</a></li>
+      <li><strong>Working remotely?</strong> → <a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a></li>
+      <li><strong>Solo female traveller?</strong> → <a href="/guides/female-friendly-gyms-pattaya/">Female-friendly venues</a></li>
+      <li><strong>Need kids covered?</strong> → <a href="/guides/pattaya-gyms-childcare-family-pools/">Childcare, kids sport and pools</a></li>
+      <li><strong>Prefer lower impact?</strong> → <a href="/guides/pattaya-seniors-low-impact-sport/">Seniors 65+ sport guide</a></li>
+      <li><strong>Need Thai phrases?</strong> → <a href="/guides/thai-gym-terms-pattaya/">Thai gym terms cheat sheet</a></li>
     </ul>
   </section>
 
   <h2 style="margin: 36px 0 18px; font-size: 1.4rem; font-weight: 800; color: var(--text);">All guides</h2>
   <div class="cat-venue-grid">${cards}</div>
+</main>
+${footer()}
+</body>
+</html>
+`;
+}
+
+// ============== /methodology/ PAGE ==============
+function buildMethodologyPage(allGyms, allCats) {
+  const url = `${SITE}/methodology/`;
+  const today = new Date().toISOString().slice(0, 10);
+  const mdCount = venueMarkdownCount();
+  const byCategory = countBy(allGyms, g => g.category);
+  const activeCategoryCount = byCategory.length;
+  const catRows = byCategory
+    .map(([key, count]) => `<tr><td>${escHtml(categoryLabel(key, allCats))}</td><td>${count}</td></tr>`)
+    .join('');
+  const newest = allGyms.map(g => g.verified).filter(Boolean).sort().slice(-1)[0] || today;
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'Pattaya Gym research methodology',
+    url,
+    dateModified: today,
+    mainEntity: {
+      '@type': 'Thing',
+      name: 'Pattaya Gym Directory editorial methodology',
+      description: `How pattaya-gym.com researches, verifies and updates ${allGyms.length} Pattaya sport venues.`
+    }
+  };
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+${commonHead('Research Methodology | Pattaya Gym', `How Pattaya Gym researches, verifies and updates ${allGyms.length} Pattaya gyms, Muay Thai camps, golf courses and sport venues.`, url)}
+<script type="application/ld+json">${JSON.stringify(schema)}</script>
+</head>
+<body>
+${header()}
+<main class="venue-page">
+  <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Methodology</span></div>
+  <div class="venue-hero">
+    <span class="venue-cat-pill">Methodology</span>
+    <h1 class="venue-h1">How we research and verify Pattaya sport venues</h1>
+    <p class="venue-lede">This directory is built from venue-level research, public source checks and structured editorial review. The current build covers ${allGyms.length} venues across ${activeCategoryCount} active sport categories, with ${mdCount} Markdown source pages.</p>
+    <div class="venue-hero-meta">
+      <span class="meta-chip meta-chip-accent">${allGyms.length} venue records</span>
+      <span class="meta-chip">${mdCount} source pages</span>
+      <span class="meta-chip">Updated ${today}</span>
+    </div>
+  </div>
+
+  <article class="venue-body">
+    <h2>Source hierarchy</h2>
+    <p>We prefer official venue sources first: the venue website, booking page, current social profile, published timetable, official Google Business Profile and first-party maps listing. Specialist bodies such as PADI, SSI, golf-course operators, hotel brands and sport federations are used where relevant.</p>
+    <p>Third-party directories, travel sites and user reviews are supporting evidence only. They help identify stale opening hours, renamed venues and location changes, but they do not override the venue's own current information without a second source.</p>
+
+    <h2>What gets verified</h2>
+    <ul>
+      <li><strong>Identity:</strong> venue name, sport category, location and whether the venue is still operating.</li>
+      <li><strong>Visitor utility:</strong> address, maps link, phone, website or social profile, hours, likely price tier and practical access notes.</li>
+      <li><strong>Editorial fit:</strong> what the venue is best for, who should avoid it, and which similar venues deserve comparison.</li>
+      <li><strong>Freshness:</strong> every record carries a verified date; the newest verified date in this build is ${escHtml(newest)}.</li>
+    </ul>
+
+    <h2>Ranking policy</h2>
+    <p>Guide rankings are editorial, not paid placement. They combine category fit, source confidence, practical value to visitors, uniqueness, location, operating hours, budget fit and beginner suitability. The same venue can rank differently in different guides because "best" depends on the visitor's goal.</p>
+
+    <h2>Directory coverage by category</h2>
+    <table>
+      <thead><tr><th>Category</th><th>Venues</th></tr></thead>
+      <tbody>${catRows}</tbody>
+    </table>
+
+    <h2>Corrections and transparency</h2>
+    <p>Venue details in Pattaya change quickly. If you spot outdated hours, a closed business, a wrong phone number or a better source, send the correction to <a href="mailto:hello@pattaya-gym.com?subject=Directory%20correction">hello@pattaya-gym.com</a>. We prioritise corrections that include an official source URL or a current photo of posted hours.</p>
+  </article>
+</main>
+${footer()}
+</body>
+</html>
+`;
+}
+
+// ============== /pattaya-sport-stats/ PAGE ==============
+function buildStatsPage(allGyms, allCats) {
+  const url = `${SITE}/pattaya-sport-stats/`;
+  const today = new Date().toISOString().slice(0, 10);
+  const byCategory = countBy(allGyms, g => g.category);
+  const byArea = countBy(allGyms, g => cleanText(g.area || 'Unknown area'));
+  const byPrice = countBy(allGyms, g => g.priceRange || 'Unknown');
+  const freeish = allGyms.filter(g => /free|public|beach|park|lake|running route|calisthenics/i.test(textForVenue(g)) && (g.priceRange === '฿' || /free|public/i.test(textForVenue(g))));
+  const verifiedDates = allGyms.map(g => g.verified).filter(Boolean).sort();
+  const newest = verifiedDates[verifiedDates.length - 1] || today;
+  const oldest = verifiedDates[0] || today;
+  const topCatRows = byCategory.map(([key, count]) => {
+    const pct = Math.round((count / allGyms.length) * 100);
+    return `<tr><td><a href="/category/${escHtml(key)}/">${escHtml(categoryLabel(key, allCats))}</a></td><td>${count}</td><td>${pct}%</td></tr>`;
+  }).join('');
+  const topAreaRows = byArea.slice(0, 12).map(([area, count]) => `<tr><td>${escHtml(area)}</td><td>${count}</td></tr>`).join('');
+  const priceRows = byPrice.map(([price, count]) => `<tr><td>${escHtml(price)}</td><td>${count}</td></tr>`).join('');
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'Pattaya sport venue directory statistics',
+    url,
+    dateModified: today,
+    spatialCoverage: { '@type': 'Place', name: 'Pattaya, Chonburi, Thailand' },
+    variableMeasured: ['venue count', 'category count', 'area count', 'price tier count'],
+    description: `Live build statistics from ${allGyms.length} Pattaya gym and sport venue records.`
+  };
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+${commonHead('Pattaya Sport Tourism Stats | Pattaya Gym', `Live Pattaya sport tourism stats from ${allGyms.length} venues: top categories, areas, price tiers, free options and verification freshness.`, url)}
+<script type="application/ld+json">${JSON.stringify(schema)}</script>
+</head>
+<body>
+${header()}
+<main class="venue-page">
+  <div class="venue-breadcrumb"><a href="/">Directory</a> <span class="bc-sep">›</span> <span>Pattaya sport stats</span></div>
+  <div class="venue-hero">
+    <span class="venue-cat-pill">Stats</span>
+    <h1 class="venue-h1">Pattaya sport tourism stats</h1>
+    <p class="venue-lede">A live snapshot of the Pattaya sport directory: venue counts, category mix, area concentration, budget tiers and freshness signals generated directly from data.js.</p>
+    <div class="venue-hero-meta">
+      <span class="meta-chip meta-chip-accent">${allGyms.length} venues</span>
+      <span class="meta-chip">${byCategory.length} active categories</span>
+      <span class="meta-chip">${freeish.length} free or public options flagged</span>
+      <span class="meta-chip">Updated ${today}</span>
+    </div>
+  </div>
+
+  <section class="tldr" aria-labelledby="stats-h">
+    <h2 id="stats-h" class="tldr-title">Quick numbers</h2>
+    <ul class="tldr-list">
+      <li><strong>${allGyms.length} total venues</strong> in the current public directory.</li>
+      <li><strong>${byCategory[0][1]} ${escHtml(categoryLabel(byCategory[0][0], allCats)).toLowerCase()} venues</strong> make the largest category.</li>
+      <li><strong>${byArea[0][1]} venues</strong> use ${escHtml(byArea[0][0])} as their primary area label.</li>
+      <li><strong>${freeish.length} venues</strong> are flagged as free, public, beach, park or route-style options.</li>
+      <li><strong>Verified date range:</strong> ${escHtml(oldest)} to ${escHtml(newest)}.</li>
+    </ul>
+  </section>
+
+  <article class="venue-body">
+    <h2>Venues by category</h2>
+    <table>
+      <thead><tr><th>Category</th><th>Venues</th><th>Share</th></tr></thead>
+      <tbody>${topCatRows}</tbody>
+    </table>
+
+    <h2>Top area labels</h2>
+    <table>
+      <thead><tr><th>Area label</th><th>Venues</th></tr></thead>
+      <tbody>${topAreaRows}</tbody>
+    </table>
+
+    <h2>Price tier distribution</h2>
+    <table>
+      <thead><tr><th>Price tier</th><th>Venues</th></tr></thead>
+      <tbody>${priceRows}</tbody>
+    </table>
+
+    <h2>How to read these numbers</h2>
+    <p>Counts reflect the editorial directory, not every informal sport activity in Chonburi. A golf course, hotel fitness club, dive operator, Muay Thai camp and public running route each count as one venue record when they have a dedicated page and enough source material to help visitors make a decision.</p>
+    <p>Area labels are intentionally practical rather than municipal. Visitors search for places like Jomtien, Naklua, Pratamnak and East Pattaya, so the stats use those familiar labels even when official postal boundaries differ.</p>
+  </article>
 </main>
 ${footer()}
 </body>
@@ -1040,7 +1487,19 @@ function main() {
   extraUrls.push('/add-your-gym/');
   console.log('  [ADD] /add-your-gym/');
 
-  // 5. Update sitemap (dedup)
+  // 5. Methodology page
+  if (!fs.existsSync(path.join(ROOT, 'methodology'))) fs.mkdirSync(path.join(ROOT, 'methodology'));
+  fs.writeFileSync(path.join(ROOT, 'methodology', 'index.html'), buildMethodologyPage(GYMS, CATEGORIES));
+  extraUrls.push('/methodology/');
+  console.log('  [METHOD] /methodology/');
+
+  // 6. Directory statistics page
+  if (!fs.existsSync(path.join(ROOT, 'pattaya-sport-stats'))) fs.mkdirSync(path.join(ROOT, 'pattaya-sport-stats'));
+  fs.writeFileSync(path.join(ROOT, 'pattaya-sport-stats', 'index.html'), buildStatsPage(GYMS, CATEGORIES));
+  extraUrls.push('/pattaya-sport-stats/');
+  console.log('  [STATS] /pattaya-sport-stats/');
+
+  // 7. Update sitemap (dedup)
   const sitemapPath = path.join(ROOT, 'sitemap.xml');
   if (fs.existsSync(sitemapPath)) {
     const today = new Date().toISOString().slice(0, 10);
@@ -1056,7 +1515,7 @@ function main() {
     }
   }
 
-  console.log('\nDiscovery built: ' + AREAS.length + ' area pages + ' + GUIDES.length + ' guides + search + add form');
+  console.log('\nDiscovery built: ' + AREAS.length + ' area pages + ' + GUIDES.length + ' guides + search + add form + methodology + stats');
 }
 
 main();
