@@ -134,7 +134,7 @@
 <p>The <strong>Bangkok-to-Pattaya charter</strong> is genuinely useful for premium travelers — at <strong>129,200 THB for the 45-minute flight (landing at Royal Cliff Beach Pattaya)</strong>, it's expensive but converts the typical 2.5-3 hour Bangkok-Pattaya ground transit into a sub-hour aerial experience with photographic memories of central Thailand from the air.</p>
 <h2 id="position-in-the-pattaya-aerial-adventure-market">Position in the Pattaya Aerial Adventure Market</h2>
 <p>Pattaya's aerial-experience tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Apex aerial luxury</strong></td><td><strong>Pattaya Sky Ride helicopter</strong></td><td><strong>Airbus EC-135 / EC-130 aircraft, sustained sightseeing</strong></td></tr><tr><td><strong>Tandem skydive</strong></td><td>Thai Sky Adventures</td><td>13,000 ft tandem freefall</td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>170m zip line from 56th floor</td></tr><tr><td><strong>Canopy zipline</strong></td><td>Flight of the Gibbon, Tarzan Adventure</td><td>Forest-canopy ziplines</td></tr><tr><td><strong>Parasailing</strong></td><td>Wave Pattaya beach operators</td><td>Beach-launched harness flights</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Apex aerial luxury</strong></td><td><strong>Pattaya Sky Ride helicopter</strong></td><td><strong>Airbus EC-135 / EC-130 aircraft, sustained sightseeing</strong></td></tr><tr><td><strong>Tandem skydive</strong></td><td><a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a></td><td>13,000 ft tandem freefall</td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>170m zip line from 56th floor</td></tr><tr><td><strong>Canopy zipline</strong></td><td><a href="/gyms/flight-of-the-gibbon/">Flight of the Gibbon</a>, <a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure</a></td><td>Forest-canopy ziplines</td></tr><tr><td><strong>Parasailing</strong></td><td>Wave Pattaya beach operators</td><td>Beach-launched harness flights</td></tr></tbody></table></div>
 <p>Pattaya Sky Ride's specific position: <strong>the only proper helicopter sightseeing operator</strong> in the city — premium-tier aerial luxury.</p>
 <h2 id="the-aircraft">The Aircraft</h2>
 <h3 id="airbus-ec-135">Airbus EC-135</h3>
@@ -172,7 +172,7 @@
 <li><strong>Pattaya Beach</strong> from above</li>
 <li><strong>Walking Street</strong> aerial perspective (less recognizable from air than ground)</li>
 <li><strong>Beach Road / 2nd Road / Sukhumvit</strong> street grid</li>
-<li><strong>Sea-side hotels</strong> including Hilton, Royal Cliff, Andaz</li>
+<li><strong>Sea-side hotels</strong> including <a href="/gyms/hilton-pattaya-fitness/">Hilton</a>, Royal Cliff, Andaz</li>
 <li><strong>Bali Hai Pier</strong> with dive boats and ferries</li>
 </ul>
 <h4 id="offshore-islands">Offshore Islands</h4>
@@ -460,17 +460,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

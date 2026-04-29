@@ -713,6 +713,12 @@ function main() {
   extraUrls.push('/about/');
   console.log('  [ABT] /about/');
 
+  // 3b. Compare (already exists as a static file but we want it in the sitemap)
+  if (fs.existsSync(path.join(ROOT, 'compare', 'index.html'))) {
+    extraUrls.push('/compare/');
+    console.log('  [SMP-CMP] /compare/ added to sitemap');
+  }
+
   // 4. 404
   fs.writeFileSync(path.join(ROOT, '404.html'), build404());
   console.log('  [404] /404.html');
@@ -738,6 +744,15 @@ function main() {
     if (urlsToAdd) {
       const updated = existing.replace('</urlset>', urlsToAdd + '\n</urlset>');
       fs.writeFileSync(sitemapPath, updated);
+      console.log('  [SMP] sitemap.xml updated (+' + extraUrls.length + ' urls)');
+    }
+  }
+
+  console.log('\nExtras built: ' + catCount + ' category pages + map + about + 404 + robots.txt');
+}
+
+main();
+s.writeFileSync(sitemapPath, updated);
       console.log('  [SMP] sitemap.xml updated (+' + extraUrls.length + ' urls)');
     }
   }

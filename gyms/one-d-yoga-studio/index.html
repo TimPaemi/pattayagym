@@ -128,12 +128,12 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>One-D Yoga Studio (also stylized <strong>OneD Yoga</strong>) is <strong>a modern, prominent yoga studio along the Pattaya-Naklua Road</strong> offering <strong>a comprehensive multi-style yoga curriculum spanning Hatha, Vinyasa Flow, and Yin yoga</strong> alongside <strong>private sessions, workshops, and retreat programs</strong>. The studio sits at <strong>571/32 Moo 5, Naklua 16/2, Pattaya-Naklua Road</strong> — placing it <strong>in the same Naklua corridor as Nok Yoga Pattaya</strong> but with a meaningfully different programming emphasis.</p>
-<p>Where Nok Yoga emphasizes <strong>traditional Thai stretching and self-healing yoga</strong>, where Yoga Pattaya Studio focuses on <strong>Ashtanga + Mysore + multilingual international yoga</strong>, where Yoga Haus pushes <strong>Hot Yoga + Fit Ball fitness intensity</strong>, and where Balance Yoga integrates <strong>sound healing wellness</strong>, <strong>One-D Yoga Studio occupies the "modern accessible multi-style" middle ground</strong> — offering the <strong>mainstream curriculum that appeals to the broadest practitioner base</strong> without strong tilt toward any specific tradition.</p>
+<p>One-D Yoga Studio (also stylized <strong>OneD Yoga</strong>) is <strong>a modern, prominent yoga studio along the Pattaya-Naklua Road</strong> offering <strong>a comprehensive multi-style yoga curriculum spanning Hatha, Vinyasa Flow, and Yin yoga</strong> alongside <strong>private sessions, workshops, and retreat programs</strong>. The studio sits at <strong>571/32 Moo 5, Naklua 16/2, Pattaya-Naklua Road</strong> — placing it <strong>in the same Naklua corridor as <a href="/gyms/nok-yoga-pattaya/">Nok Yoga Pattaya</a></strong> but with a meaningfully different programming emphasis.</p>
+<p>Where Nok Yoga emphasizes <strong>traditional Thai stretching and self-healing yoga</strong>, where <a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> focuses on <strong>Ashtanga + Mysore + multilingual international yoga</strong>, where <a href="/gyms/yoga-haus-pattaya/">Yoga Haus</a> pushes <strong>Hot Yoga + Fit Ball fitness intensity</strong>, and where Balance Yoga integrates <strong>sound healing wellness</strong>, <strong>One-D Yoga Studio occupies the "modern accessible multi-style" middle ground</strong> — offering the <strong>mainstream curriculum that appeals to the broadest practitioner base</strong> without strong tilt toward any specific tradition.</p>
 <p>The studio's strengths are its <strong>full membership flexibility</strong> (drop-in, monthly, long-term packages), <strong>private session availability</strong>, <strong>workshop programming</strong>, and <strong>retreat options</strong> — the full menu of services that committed yogis expect from an established studio. Combined with <strong>clean modern facilities, knowledgeable teachers, and the Naklua location's quieter character</strong>, One-D delivers <strong>a comfortable home for daily yoga practice</strong>.</p>
 <h2 id="position-in-the-pattaya-yoga-market">Position in the Pattaya Yoga Market</h2>
 <p>Pattaya yoga studios differentiate by emphasis:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Studio</th><th>Specialty</th></tr></thead><tbody><tr><td><strong>Yoga Pattaya Studio</strong></td><td>Established multi-style + Mysore + multilingual</td></tr><tr><td><strong>Ashtanga Yoga Pattaya</strong></td><td>Lineage-pure traditional Mysore method</td></tr><tr><td><strong>Yoga Haus</strong></td><td>Hot Yoga + Fit Ball (fitness-style)</td></tr><tr><td><strong>Balance Yoga Studio</strong></td><td>Yoga + sound healing (wellness)</td></tr><tr><td><strong>One-D Yoga Studio</strong></td><td><strong>Modern accessible multi-style — Hatha + Vinyasa + Yin</strong></td></tr><tr><td><strong>Nok Yoga</strong></td><td>Thai yoga + traditional Reusi Dat Ton</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Studio</th><th>Specialty</th></tr></thead><tbody><tr><td><strong>Yoga Pattaya Studio</strong></td><td>Established multi-style + Mysore + multilingual</td></tr><tr><td><strong><a href="/gyms/ashtanga-yoga-pattaya/">Ashtanga Yoga Pattaya</a></strong></td><td>Lineage-pure traditional Mysore method</td></tr><tr><td><strong>Yoga Haus</strong></td><td>Hot Yoga + Fit Ball (fitness-style)</td></tr><tr><td><strong><a href="/gyms/balance-yoga-studio-pattaya/">Balance Yoga Studio</a></strong></td><td>Yoga + sound healing (wellness)</td></tr><tr><td><strong>One-D Yoga Studio</strong></td><td><strong>Modern accessible multi-style — Hatha + Vinyasa + Yin</strong></td></tr><tr><td><strong>Nok Yoga</strong></td><td>Thai yoga + traditional Reusi Dat Ton</td></tr></tbody></table></div>
 <p>One-D's specific position: <strong>the mainstream modern multi-style studio</strong> that suits practitioners who want <strong>standard yoga without specialty emphasis</strong>.</p>
 <h2 id="the-three-core-yoga-styles-at-one-d">The Three Core Yoga Styles at One-D</h2>
 <h3 id="hatha-yoga">Hatha Yoga</h3>
@@ -449,17 +449,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

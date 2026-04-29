@@ -130,7 +130,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Bean Cow is <strong>Pattaya's family-friendly climbing destination</strong> — a <strong>500-square-meter purpose-built climbing facility</strong> in Huay Yai with <strong>bouldering, top rope, and lead climbing</strong>, plus dedicated <strong>kids play areas, free water, showers</strong>, and a <strong>community-center culture</strong> that distinguishes it from the more downtown-tourist-focused Deep Climbing Gym at Harbor Mall. The gym positions itself as <strong>"come for the climbing, stay for the community"</strong> — and the operational details (weekly bouldering wall resets, free first-timer orientation, family pricing tiers, kids zones, multi-month visit passes) all reinforce that ethos.</p>
+<p>Bean Cow is <strong>Pattaya's family-friendly climbing destination</strong> — a <strong>500-square-meter purpose-built climbing facility</strong> in Huay Yai with <strong>bouldering, top rope, and lead climbing</strong>, plus dedicated <strong>kids play areas, free water, showers</strong>, and a <strong>community-center culture</strong> that distinguishes it from the more downtown-tourist-focused <a href="/gyms/deep-climbing-gym/">Deep Climbing Gym</a> at Harbor Mall. The gym positions itself as <strong>"come for the climbing, stay for the community"</strong> — and the operational details (weekly bouldering wall resets, free first-timer orientation, family pricing tiers, kids zones, multi-month visit passes) all reinforce that ethos.</p>
 <p>For Pattaya residents wanting <strong>a regular climbing community to belong to</strong>, families wanting <strong>kids climbing programs</strong>, and travelers seeking <strong>a more relaxed alternative to the mall-floor Deep Climbing</strong>, Bean Cow is the answer. Pattaya now has two indoor climbing options — Deep is the <strong>first</strong> and <strong>mall-located</strong> option; Bean Cow is the <strong>community-driven</strong> option. Active climbers in Pattaya often visit both.</p>
 <h2 id="position-in-the-pattaya-climbing-market">Position in the Pattaya Climbing Market</h2>
 <p>Pattaya's climbing scene was historically nonexistent. Two facilities now exist:</p>
@@ -388,17 +388,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

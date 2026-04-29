@@ -131,10 +131,10 @@
       <h2 id="overview">Overview</h2>
 <p>Pattaya hosts <strong>multiple competing ATV / Buggy / Off-Road tour operators</strong> running guided rides through <strong>the rural countryside east of the city — Pong Village area near Lake Mabprachan, jungle plantations, farmland, creek crossings, and mud trails</strong>. The major operators include <strong>ATV & BUGGY Adventures Pattaya (Polaris ATVs, "only REAL off-road ATV tour")</strong>, <strong>ATV Pattaya Tours (English + Thai guides, beginner instruction)</strong>, <strong>ATV Adventures Pattaya (operating since 2006, FUN + EXTREME tour options)</strong>, and <strong>Pattaya Off Road Safari (Pong Village near Mabprachan, ATV + Buggy + Enduro)</strong>.</p>
 <p>The format is consistent across operators: <strong>complimentary hotel pickup from Pattaya, transfer to off-road property 30 minutes east of the city, beginner-friendly safety briefing on practice track, then 2 hours of guided trail riding through jungle / mud / creeks / farmland</strong>, then transfer back. <strong>No license or prior experience needed</strong> — operators emphasize that ATVs and buggies are safe and intuitive enough for first-timers, with guides providing practice-track instruction before the real tour begins.</p>
-<p>For Pattaya tourists wanting <strong>off-road adventure beyond the karting tracks (EasyKart / Pattaya Kart Speedway), beyond ziplines (Tarzan Adventure), and away from urban tourism intensity</strong>, the ATV scene delivers <strong>genuine countryside exploration with adrenaline</strong>. The <strong>30-minute drive east</strong> is meaningful — these tours genuinely take you out of the tourist bubble into rural Chonburi.</p>
+<p>For Pattaya tourists wanting <strong>off-road adventure beyond the karting tracks (EasyKart / <a href="/gyms/pattaya-kart-speedway/">Pattaya Kart Speedway</a>), beyond ziplines (<a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure</a>), and away from urban tourism intensity</strong>, the ATV scene delivers <strong>genuine countryside exploration with adrenaline</strong>. The <strong>30-minute drive east</strong> is meaningful — these tours genuinely take you out of the tourist bubble into rural Chonburi.</p>
 <h2 id="position-in-the-pattaya-adventure-market">Position in the Pattaya Adventure Market</h2>
 <p>Pattaya's outdoor adventure tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Tandem skydive</strong></td><td>Thai Sky Adventures</td><td>13,000 ft jump</td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>56-floor cable</td></tr><tr><td><strong>Jungle zipline ropes</strong></td><td>Tarzan Adventure</td><td>25-platform Sattahip</td></tr><tr><td><strong>Karting</strong></td><td>EasyKart, Pattaya Kart Speedway</td><td>Track-bound</td></tr><tr><td><strong>FIA motor racing</strong></td><td>Bira Circuit</td><td>Track-bound</td></tr><tr><td><strong>Shooting</strong></td><td>Pattaya Shooting Park, Dragon Shooting</td><td>Outdoor + indoor ranges</td></tr><tr><td><strong>Off-road ATV / Buggy</strong></td><td><strong>ATV Tours Pattaya / ATV Adventures / Off Road Safari</strong></td><td><strong>Real countryside off-road</strong></td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Tandem skydive</strong></td><td><a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a></td><td>13,000 ft jump</td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>56-floor cable</td></tr><tr><td><strong>Jungle zipline ropes</strong></td><td>Tarzan Adventure</td><td>25-platform Sattahip</td></tr><tr><td><strong>Karting</strong></td><td>EasyKart, Pattaya Kart Speedway</td><td>Track-bound</td></tr><tr><td><strong>FIA motor racing</strong></td><td><a href="/gyms/bira-circuit/">Bira Circuit</a></td><td>Track-bound</td></tr><tr><td><strong>Shooting</strong></td><td><a href="/gyms/pattaya-shooting-park/">Pattaya Shooting Park</a>, Dragon Shooting</td><td>Outdoor + indoor ranges</td></tr><tr><td><strong>Off-road ATV / Buggy</strong></td><td><strong>ATV Tours Pattaya / ATV Adventures / Off Road Safari</strong></td><td><strong>Real countryside off-road</strong></td></tr></tbody></table></div>
 <p>ATV tours' specific niche: <strong>rural countryside exploration via mechanized off-road vehicle</strong> — different from track-based or fixed-platform alternatives.</p>
 <h2 id="the-major-operators">The Major Operators</h2>
 <h3 id="atv-buggy-adventures-pattaya">ATV & BUGGY Adventures Pattaya</h3>
@@ -210,7 +210,7 @@
 <li><strong>Plantation infrastructure</strong> — paths through palm/rubber/fruit</li>
 <li><strong>Hill / valley</strong> elevation variation</li>
 <li><strong>Lake adjacencies</strong> for scenic views</li>
-<li><strong>Combinable with</strong> other Mabprachan activities (Thai Wake Park cable wakeboard, Horseshoe Point, Thai Polo Club)</li>
+<li><strong>Combinable with</strong> other Mabprachan activities (<a href="/gyms/thai-wake-park/">Thai Wake Park</a> cable wakeboard, Horseshoe Point, Thai Polo Club)</li>
 </ul>
 <p>This is <strong>the same general area</strong> that Pattaya MTB Club uses for mountain biking trails — same off-road infrastructure, different vehicle type.</p>
 <h2 id="pricing-indicative">Pricing (Indicative)</h2>
@@ -435,17 +435,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

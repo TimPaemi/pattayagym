@@ -135,7 +135,7 @@
 <p>The club is <strong>embedded in the Greta Resort property</strong> — meaning members and their guests have access to the <strong>swimming pool, gym, spa, restaurant, sauna, and beach tennis courts</strong> alongside the main tennis offering. For tennis players relocating to or visiting Pattaya who <strong>prioritize court quality and weather-protected play</strong>, Greta Sport Club is unambiguously the top choice.</p>
 <h2 id="position-in-the-pattaya-tennis-market">Position in the Pattaya Tennis Market</h2>
 <p>Pattaya tennis options span:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Court Quality</th></tr></thead><tbody><tr><td><strong>Indoor / covered premium</strong></td><td><strong>Greta Sport Club</strong></td><td><strong>6 covered Plexipave courts, ITF-rated</strong></td></tr><tr><td><strong>Outdoor club</strong></td><td>Pattaya Tennis Club, Tara, Tos Tennis</td><td>Various surfaces, open-air</td></tr><tr><td><strong>Hotel courts</strong></td><td>Various hotels (Cape Dara, Royal Cliff, Pattaya Park)</td><td>Hotel-grade, mostly guest-only</td></tr><tr><td><strong>Public / municipal</strong></td><td>Pattaya Sports Club, Inter Club</td><td>Functional, basic</td></tr><tr><td><strong>Beach tennis specialty</strong></td><td>Greta + a few sand-court venues</td><td>Different sport entirely</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Court Quality</th></tr></thead><tbody><tr><td><strong>Indoor / covered premium</strong></td><td><strong>Greta Sport Club</strong></td><td><strong>6 covered Plexipave courts, ITF-rated</strong></td></tr><tr><td><strong>Outdoor club</strong></td><td><a href="/gyms/pattaya-tennis-club/">Pattaya Tennis Club</a>, Tara, <a href="/gyms/tos-tennis/">Tos Tennis</a></td><td>Various surfaces, open-air</td></tr><tr><td><strong>Hotel courts</strong></td><td>Various hotels (Cape Dara, Royal Cliff, Pattaya Park)</td><td>Hotel-grade, mostly guest-only</td></tr><tr><td><strong>Public / municipal</strong></td><td><a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a>, Inter Club</td><td>Functional, basic</td></tr><tr><td><strong>Beach tennis specialty</strong></td><td>Greta + a few sand-court venues</td><td>Different sport entirely</td></tr></tbody></table></div>
 <p>Greta is the <strong>only multi-court, fully-roofed, ITF-certified tennis facility</strong> in the Pattaya region. For tournament-grade or professional tennis training in Pattaya, Greta is genuinely the only option.</p>
 <h2 id="the-italian-connection">The Italian Connection</h2>
 <p>The Greta brand is <strong>Italian-owned and operated</strong> — visible in:</p>
@@ -300,7 +300,7 @@
 <ul>
 <li><strong>Walking Street / central Pattaya</strong> based travelers wanting walkable courts</li>
 <li><strong>Pure budget players</strong> (Pattaya Sports Club, Tara, Tos are cheaper)</li>
-<li><strong>Multi-sport athletes</strong> wanting one-stop fitness (Fitz Club, Horseshoe Point)</li>
+<li><strong>Multi-sport athletes</strong> wanting one-stop fitness (<a href="/gyms/fitz-club/">Fitz Club</a>, Horseshoe Point)</li>
 <li><strong>Casual one-time hitters</strong> unwilling to travel south of Jomtien</li>
 </ul>
 </div></div>
@@ -452,17 +452,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

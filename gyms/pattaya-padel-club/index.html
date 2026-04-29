@@ -130,7 +130,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Pattaya Padel Club is <strong>a dedicated padel courts facility on the shores of Mabprachan Reservoir</strong> in East Pattaya — the second of Pattaya's two padel-specific clubs alongside <strong>Play Padel Pattaya</strong> (which has Pattaya's first indoor padel courts on Pratamnak's Kasetsin Soi 3). Where Play Padel built indoor first-mover facilities, <strong>Pattaya Padel Club leans into the lake setting</strong>: courts with <strong>stunning views of Mabprachan Lake</strong>, integrated into the East Pattaya / Mabprachan community alongside Thai Wake Park, Horseshoe Point, and the Klinmee Muay Thai cluster.</p>
+<p>Pattaya Padel Club is <strong>a dedicated padel courts facility on the shores of Mabprachan Reservoir</strong> in East Pattaya — the second of Pattaya's two padel-specific clubs alongside <strong><a href="/gyms/play-padel-pattaya/">Play Padel Pattaya</a></strong> (which has Pattaya's first indoor padel courts on Pratamnak's Kasetsin Soi 3). Where Play Padel built indoor first-mover facilities, <strong>Pattaya Padel Club leans into the lake setting</strong>: courts with <strong>stunning views of Mabprachan Lake</strong>, integrated into the East Pattaya / Mabprachan community alongside <a href="/gyms/thai-wake-park/">Thai Wake Park</a>, Horseshoe Point, and the Klinmee Muay Thai cluster.</p>
 <p>Padel is <strong>the fastest-growing racquet sport globally</strong> — originated in Mexico in 1969, exploded in Spain (where it now rivals tennis in popularity), and has spread rapidly through Europe, Latin America, and increasingly Asia since 2018. The sport combines <strong>tennis fundamentals with squash-style wall play</strong> in <strong>a smaller doubles-only court enclosed by glass walls and metal mesh</strong>. Easier than tennis to start, faster than squash, more social than singles tennis — padel's appeal lies in <strong>how quickly beginners can have fun rallies vs. tennis's longer learning curve</strong>.</p>
 <p>For Pattaya racquet players curious about padel — and especially for <strong>the growing Spanish, Latin American, and European expat community</strong> for whom padel is already a staple — Pattaya Padel Club is the city's lakeside option.</p>
 <h2 id="position-in-the-pattaya-padel-market">Position in the Pattaya Padel Market</h2>
@@ -214,7 +214,7 @@
 <li><strong>Outdoor only</strong> — weather and heat dependent</li>
 <li><strong>Single sport</strong> — no multi-racquet flexibility</li>
 <li><strong>East Pattaya location</strong> — 25-30 min from Walking Street</li>
-<li><strong>Less established community</strong> than tennis at Pattaya Sports Club / Greta</li>
+<li><strong>Less established community</strong> than tennis at <a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a> / Greta</li>
 <li><strong>Limited online presence</strong> vs. Play Padel</li>
 <li><strong>No indoor backup</strong> in monsoon season</li>
 <li><strong>Sport unfamiliar</strong> to most Asian visitors — instruction often needed</li>
@@ -384,17 +384,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

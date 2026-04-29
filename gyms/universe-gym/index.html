@@ -129,10 +129,10 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Universe Gym is <strong>one of the largest commercial fitness gyms in Pattaya</strong> and a long-time favorite of both <strong>Pattaya residents (locals + nomads + expats)</strong> and <strong>visiting fitness travelers</strong>. Located in <strong>Welcome Town, just off Sukhumvit Road in North Pattaya</strong>, the multi-level facility features <strong>at least five distinct training zones</strong>, offering everything from modern resistance machines and cardio equipment to free weights, functional fitness rigs, and ample floor space. With <strong>day passes starting at ฿140</strong>, <strong>monthly memberships at ฿1,400</strong>, and <strong>couples pricing</strong> that genuinely offers value, Universe Gym is one of the best-priced <strong>serious commercial gyms</strong> in Pattaya.</p>
-<p>For travelers and Pattaya residents wanting <strong>a real, fully-equipped commercial gym at unbeatable prices</strong> — without the boutique-tier markup of Fitz Club or chain markup of Jetts/True Fitness — Universe Gym is the default value pick.</p>
+<p>For travelers and Pattaya residents wanting <strong>a real, fully-equipped commercial gym at unbeatable prices</strong> — without the boutique-tier markup of <a href="/gyms/fitz-club/">Fitz Club</a> or chain markup of Jetts/True Fitness — Universe Gym is the default value pick.</p>
 <h2 id="position-in-the-pattaya-gym-market">Position in the Pattaya Gym Market</h2>
 <p>The Pattaya commercial gym hierarchy:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Monthly Cost</th></tr></thead><tbody><tr><td><strong>Luxury</strong></td><td>Fitz Club (Royal Cliff)</td><td>฿5,000-12,000+</td></tr><tr><td><strong>Chain</strong></td><td>Jetts Fitness, True Fitness</td><td>฿2,500-4,500</td></tr><tr><td><strong>Mid-tier commercial</strong></td><td>Platinum Fitness, Coco, Castra</td><td>฿1,500-3,000</td></tr><tr><td><strong>Value commercial</strong></td><td><strong>Universe Gym</strong>, SUN Fitness, Fitness 7</td><td>฿1,000-1,800</td></tr><tr><td><strong>Budget / no-frills</strong></td><td>Tony's Gym</td><td>฿800-1,500</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Monthly Cost</th></tr></thead><tbody><tr><td><strong>Luxury</strong></td><td>Fitz Club (Royal Cliff)</td><td>฿5,000-12,000+</td></tr><tr><td><strong>Chain</strong></td><td><a href="/gyms/jetts-fitness-pattaya/">Jetts Fitness</a>, <a href="/gyms/true-fitness-pattaya/">True Fitness</a></td><td>฿2,500-4,500</td></tr><tr><td><strong>Mid-tier commercial</strong></td><td>Platinum Fitness, Coco, Castra</td><td>฿1,500-3,000</td></tr><tr><td><strong>Value commercial</strong></td><td><strong>Universe Gym</strong>, SUN Fitness, <a href="/gyms/fitness-7/">Fitness 7</a></td><td>฿1,000-1,800</td></tr><tr><td><strong>Budget / no-frills</strong></td><td><a href="/gyms/tonys-gym/">Tony's Gym</a></td><td>฿800-1,500</td></tr></tbody></table></div>
 <p>Universe Gym sits in the <strong>value commercial tier</strong> — meaning <strong>fully-equipped real gym</strong> at <strong>value pricing</strong>. This is <strong>the best price-to-quality ratio in Pattaya commercial fitness</strong> for visitors who don't need luxury amenities.</p>
 <h2 id="location-hours">Location & Hours</h2>
 <h3 id="address">Address</h3>
@@ -385,17 +385,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

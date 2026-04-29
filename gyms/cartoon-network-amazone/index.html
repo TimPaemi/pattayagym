@@ -133,7 +133,7 @@
 <p>For Pattaya families and tourists looking for <strong>a full-day water-park experience with serious slide hardware (some of Asia's tallest)</strong> — and especially for those visiting with children who recognize the cartoon / movie IPs — Cartoon Network Amazone / Columbia Pictures Aquaverse remains <strong>one of the Eastern Seaboard's marquee family-tourism destinations</strong>.</p>
 <h2 id="position-in-the-pattaya-aquatic-family-tourism-market">Position in the Pattaya Aquatic / Family Tourism Market</h2>
 <p>Pattaya's aquatic / water-themed tourism tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Themed waterpark</strong></td><td><strong>Cartoon Network Amazone / Columbia Pictures Aquaverse</strong></td><td><strong>World-first IP-themed waterpark — 18 slides, 3 zones</strong></td></tr><tr><td><strong>Themed waterpark — Asian</strong></td><td>Ramayana Water Park (separate Pattaya facility)</td><td>Mythology-themed</td></tr><tr><td><strong>Iconic destination pool</strong></td><td>Hard Rock Pool</td><td>2,000 sqm guitar deck</td></tr><tr><td><strong>Premium hotel pools</strong></td><td>Royal Cliff, Cape Dara</td><td>Luxury hotel-attached</td></tr><tr><td><strong>Public pools</strong></td><td>Naklua, Jomtien public pools</td><td>Budget swim</td></tr><tr><td><strong>Multi-sport club</strong></td><td>First Serve Sports Club</td><td>Lessons + multi-sport</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Themed waterpark</strong></td><td><strong>Cartoon Network Amazone / Columbia Pictures Aquaverse</strong></td><td><strong>World-first IP-themed waterpark — 18 slides, 3 zones</strong></td></tr><tr><td><strong>Themed waterpark — Asian</strong></td><td><a href="/gyms/ramayana-water-park/">Ramayana Water Park</a> (separate Pattaya facility)</td><td>Mythology-themed</td></tr><tr><td><strong>Iconic destination pool</strong></td><td>Hard Rock Pool</td><td>2,000 sqm guitar deck</td></tr><tr><td><strong>Premium hotel pools</strong></td><td>Royal Cliff, Cape Dara</td><td>Luxury hotel-attached</td></tr><tr><td><strong>Public pools</strong></td><td>Naklua, Jomtien public pools</td><td>Budget swim</td></tr><tr><td><strong>Multi-sport club</strong></td><td><a href="/gyms/first-serve-sports-club/">First Serve Sports Club</a></td><td>Lessons + multi-sport</td></tr></tbody></table></div>
 <p>The waterpark's specific position: <strong>destination tourism</strong> — visitors travel to Pattaya specifically to experience the park, day-pass tourist attraction.</p>
 <h2 id="the-2014-2022-ip-transition">The 2014 → 2022 IP Transition</h2>
 <h3 id="original-cartoon-network-era-2014-2021">Original Cartoon Network Era (2014-2021)</h3>
@@ -446,17 +446,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

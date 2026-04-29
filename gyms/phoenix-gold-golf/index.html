@@ -256,7 +256,7 @@
 <ul>
 <li><strong>Tournament-grade strategic challenge</strong> seekers (Laem Chabang or Burapha)</li>
 <li><strong>Pure walk-up budget golfers</strong> (use online booking for discounts)</li>
-<li><strong>Players wanting the absolute prestige round</strong> in Pattaya (Siam Country Club Old, Laem Chabang)</li>
+<li><strong>Players wanting the absolute prestige round</strong> in Pattaya (<a href="/gyms/siam-country-club/">Siam Country Club</a> Old, Laem Chabang)</li>
 </ul>
 </div></div>
 <h2 id="quick-reference-card" class="section-quick-ref">Quick Reference Card</h2>
@@ -411,17 +411,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

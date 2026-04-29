@@ -129,11 +129,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Rusich Club is <strong>a Russian-language sports club in Pattaya operating under HSIF Thailand</strong> — serving <strong>the Pattaya Russian-speaking expat community</strong> with multi-sport programming, athletic activities, and community gatherings conducted primarily in <strong>Russian language</strong>. The club represents <strong>a meaningful part of Pattaya's significant Russian expatriate population's social and athletic life</strong>, providing <strong>a culturally familiar environment for sports participation that mainstream Thai or English-language sports clubs cannot replicate</strong>.</p>
-<p>Pattaya hosts <strong>one of the largest Russian-speaking expatriate communities in Southeast Asia</strong> — a population that has grown rapidly since the early 2000s and accelerated meaningfully post-2022. <strong>Russian-language sports infrastructure</strong> like Rusich Club fills a need that's not addressed by <strong>Thai-language local clubs (Pattaya Sports Club, Pattaya Tennis & Badminton Inter Club, etc.) or English-language expat clubs (Pattaya Hash House Harriers founded by Vietnam veterans)</strong>.</p>
+<p>Pattaya hosts <strong>one of the largest Russian-speaking expatriate communities in Southeast Asia</strong> — a population that has grown rapidly since the early 2000s and accelerated meaningfully post-2022. <strong>Russian-language sports infrastructure</strong> like Rusich Club fills a need that's not addressed by <strong>Thai-language local clubs (<a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a>, <a href="/gyms/pattaya-tennis-badminton-inter-club/">Pattaya Tennis & Badminton Inter Club</a>, etc.) or English-language expat clubs (<a href="/gyms/pattaya-hash-house/">Pattaya Hash House Harriers</a> founded by Vietnam veterans)</strong>.</p>
 <p>For Russian-speaking visitors and residents in Pattaya, Rusich Club provides <strong>same-language teammates, coaches, and social environment</strong> — meaningful for new arrivals who haven't yet acquired Thai or strong English skills.</p>
 <h2 id="position-in-the-pattaya-russian-sports-scene">Position in the Pattaya Russian Sports Scene</h2>
 <p>Pattaya's Russian-language sports infrastructure includes:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Activity</th></tr></thead><tbody><tr><td><strong>Russian-language sports club</strong></td><td><strong>Rusich Club / HSIF Thailand</strong></td><td><strong>Multi-sport including football</strong></td></tr><tr><td><strong>Russian-friendly mainstream gyms</strong></td><td>Castra Gym, Sun Fitness, Yoga Pattaya Studio</td><td>Multilingual including Russian</td></tr><tr><td><strong>Russian-speaking yoga / wellness</strong></td><td>Balance Yoga Studio, Yoga Pattaya, Nok Yoga</td><td>Russian instruction available</td></tr><tr><td><strong>Russian-skewed condos / properties</strong></td><td>East Pattaya, Pratamnak, Naklua condos</td><td>Russian residential density</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Activity</th></tr></thead><tbody><tr><td><strong>Russian-language sports club</strong></td><td><strong>Rusich Club / HSIF Thailand</strong></td><td><strong>Multi-sport including football</strong></td></tr><tr><td><strong>Russian-friendly mainstream gyms</strong></td><td><a href="/gyms/castra-gym/">Castra Gym</a>, Sun Fitness, <a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a></td><td>Multilingual including Russian</td></tr><tr><td><strong>Russian-speaking yoga / wellness</strong></td><td><a href="/gyms/balance-yoga-studio-pattaya/">Balance Yoga Studio</a>, Yoga Pattaya, <a href="/gyms/nok-yoga-pattaya/">Nok Yoga</a></td><td>Russian instruction available</td></tr><tr><td><strong>Russian-skewed condos / properties</strong></td><td>East Pattaya, Pratamnak, Naklua condos</td><td>Russian residential density</td></tr></tbody></table></div>
 <p>Rusich Club's specific niche: <strong>dedicated Russian-language sports club</strong> — different from gyms that <em>also</em> speak Russian.</p>
 <h2 id="why-pattayas-russian-community-matters">Why Pattaya's Russian Community Matters</h2>
 <h3 id="demographics">Demographics</h3>
@@ -388,17 +388,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

@@ -79,8 +79,8 @@
       </g></svg></div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">watersports</span>
-        <span class="open-badge open-now">● Open now</span>
         
+        <span class="open-badge open-closed">● Closed now</span>
         <span class="meta-dot">•</span>
         <span class="reading-meta">📖 4 min read</span>
         <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
@@ -135,14 +135,14 @@
 <p>Pattaya's PADI dive centers cluster into two geographic groups:</p>
 <h3 id="beach-road-central-pattaya">Beach Road (Central Pattaya)</h3>
 <ul>
-<li><strong>Pattaya Dive Centre</strong> — PADI 5-Star CDC, 20+ years, Beach Road between Soi 10 and 11</li>
+<li><strong><a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a></strong> — PADI 5-Star CDC, 20+ years, Beach Road between Soi 10 and 11</li>
 <li><strong>Seafari</strong> — PADI 5-Star IDC, behind Mike's Mall, Pattaya's first dive center (1970)</li>
-<li><strong>No Limit Divers</strong> — PADI 5-Star IDC</li>
+<li><strong><a href="/gyms/no-limit-divers/">No Limit Divers</a></strong> — PADI 5-Star IDC</li>
 </ul>
 <h3 id="jomtien">Jomtien</h3>
 <ul>
 <li><strong>Jomtien Dive Center</strong> (THIS) — PADI 5-Star IDC, Jomtien Beach</li>
-<li><strong>Mermaid's Dive Center</strong> — PADI 5-Star IDC, Soi White House, Jomtien</li>
+<li><strong><a href="/gyms/mermaids-dive/">Mermaid's Dive Center</a></strong> — PADI 5-Star IDC, Soi White House, Jomtien</li>
 </ul>
 <p>For Jomtien-based travelers, Jomtien Dive Center provides <strong>walking-distance or short-songthaew access</strong> to professional-grade dive operations.</p>
 <h2 id="credentials">Credentials</h2>
@@ -396,17 +396,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

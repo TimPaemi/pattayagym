@@ -133,7 +133,7 @@
 <p>For French-speaking visitors, retired European expats, and anyone curious about a low-impact outdoor social sport, Pattaya Sai 3 Petanque Club is the established community entry point.</p>
 <h2 id="position-in-the-pattaya-sport-clubs-market">Position in the Pattaya Sport Clubs Market</h2>
 <p>Pattaya social-sport clubs:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Club</th><th>Sport</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Pattaya Hash House Harriers</strong></td><td>Running</td><td>1984 founding</td></tr><tr><td><strong>Pattaya Sports Club</strong></td><td>Multi-sport (tennis, etc.)</td><td>1992 founding, charity</td></tr><tr><td><strong>Pattaya Cycling Clubs</strong></td><td>Cycling</td><td>Multiple clubs, weekend rides</td></tr><tr><td><strong>Rusich Club</strong></td><td>Russian-language sports</td><td>Multi-discipline</td></tr><tr><td><strong>Pattaya Sai 3 Petanque</strong></td><td><strong>Pétanque</strong></td><td><strong>French-influenced boules community</strong></td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Club</th><th>Sport</th><th>Distinction</th></tr></thead><tbody><tr><td><strong><a href="/gyms/pattaya-hash-house/">Pattaya Hash House Harriers</a></strong></td><td>Running</td><td>1984 founding</td></tr><tr><td><strong><a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a></strong></td><td>Multi-sport (tennis, etc.)</td><td>1992 founding, charity</td></tr><tr><td><strong><a href="/gyms/pattaya-cycling-clubs/">Pattaya Cycling Clubs</a></strong></td><td>Cycling</td><td>Multiple clubs, weekend rides</td></tr><tr><td><strong><a href="/gyms/rusich-club-football/">Rusich Club</a></strong></td><td>Russian-language sports</td><td>Multi-discipline</td></tr><tr><td><strong>Pattaya Sai 3 Petanque</strong></td><td><strong>Pétanque</strong></td><td><strong>French-influenced boules community</strong></td></tr></tbody></table></div>
 <p>Pétanque occupies a niche but <strong>culturally meaningful</strong> position — for many French and European retirees, the game is a daily ritual.</p>
 <h2 id="what-ptanque-is">What Pétanque Is</h2>
 <h3 id="origins">Origins</h3>
@@ -393,17 +393,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

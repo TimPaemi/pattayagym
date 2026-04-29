@@ -134,7 +134,7 @@
 <p>For Pattaya Klang area residents and central Pattaya travelers wanting <strong>an established commercial gym with long operating hours and recovery sauna</strong>, Platinum Fitness fills the niche.</p>
 <h2 id="position-in-the-pattaya-fitness-market">Position in the Pattaya Fitness Market</h2>
 <p>Pattaya commercial fitness positioned by hours and amenities:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>24/7 international chain</strong></td><td>Jetts (2 locations)</td><td>Australian chain</td></tr><tr><td><strong>24/7 large central independent</strong></td><td>Fitness 7 (The Avenue)</td><td>2,000+ sqm + boxing ring</td></tr><tr><td><strong>Long-hours mid-tier independent</strong></td><td><strong>Platinum Fitness Club</strong></td><td><strong>05:30-23:00 + sauna</strong></td></tr><tr><td><strong>2022 modern Sukhumvit</strong></td><td>Elite Gym & Fitness</td><td>23M baht 950 sqm AC build</td></tr><tr><td><strong>Multi-branch independent value</strong></td><td>SUN Fitness (3 branches)</td><td>฿1,090/month + 3 branches</td></tr><tr><td><strong>East Pattaya community</strong></td><td>Castra Gym</td><td>Family-run Darkside ฿7K/year</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>24/7 international chain</strong></td><td>Jetts (2 locations)</td><td>Australian chain</td></tr><tr><td><strong>24/7 large central independent</strong></td><td><a href="/gyms/fitness-7/">Fitness 7</a> (The Avenue)</td><td>2,000+ sqm + boxing ring</td></tr><tr><td><strong>Long-hours mid-tier independent</strong></td><td><strong>Platinum Fitness Club</strong></td><td><strong>05:30-23:00 + sauna</strong></td></tr><tr><td><strong>2022 modern Sukhumvit</strong></td><td><a href="/gyms/elite-gym-fitness/">Elite Gym & Fitness</a></td><td>23M baht 950 sqm AC build</td></tr><tr><td><strong>Multi-branch independent value</strong></td><td>SUN Fitness (3 branches)</td><td>฿1,090/month + 3 branches</td></tr><tr><td><strong>East Pattaya community</strong></td><td><a href="/gyms/castra-gym/">Castra Gym</a></td><td>Family-run Darkside ฿7K/year</td></tr></tbody></table></div>
 <p>Platinum Fitness's specific position: <strong>central Pattaya independent with sauna + 17.5-hour operating window</strong>.</p>
 <h2 id="the-0530-2300-hours">The 05:30-23:00 Hours</h2>
 <p>A meaningful operating window:</p>
@@ -178,7 +178,7 @@
 <p>Most Pattaya commercial gyms <strong>don't have saunas</strong> — typical amenity package is just locker rooms with showers. Sauna access is usually only at:</p>
 <ul>
 <li><strong>Premium hotel gyms</strong> (Royal Cliff, Manhattan)</li>
-<li><strong>Battle Conquer Gym</strong> (combat sports + sauna + cold plunge)</li>
+<li><strong><a href="/gyms/battle-conquer-gym/">Battle Conquer Gym</a></strong> (combat sports + sauna + cold plunge)</li>
 <li><strong>Platinum Fitness</strong> (this venue)</li>
 <li><strong>Certain spa-attached</strong> facilities</li>
 </ul>
@@ -288,7 +288,7 @@
 <div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>24/7 access seekers</strong> — Fitness 7 or Jetts better</li>
-<li><strong>Hardcore bodybuilders</strong> — Muscle Factory, Castra, Tony's</li>
+<li><strong>Hardcore bodybuilders</strong> — <a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a>, Castra, Tony's</li>
 <li><strong>Combat sports trainees</strong> — Muay Thai camps direct</li>
 <li><strong>Multi-branch flexibility</strong> — SUN Fitness's 3 branches</li>
 <li><strong>Pure budget seekers</strong> — Castra ฿7K/year unbeatable</li>
@@ -436,17 +436,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

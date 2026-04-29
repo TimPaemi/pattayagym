@@ -135,7 +135,7 @@
 <p>For Pattaya tennis players staying at central hotels, Siam Bayshore Resort Pattaya is <strong>the most accessible quality court access in the city</strong> — and for Siam Bayshore guests, the 6 courts are <strong>a meaningful resort amenity</strong> competing with FITZ Club and Greta in court count.</p>
 <h2 id="position-in-the-pattaya-tennis-market">Position in the Pattaya Tennis Market</h2>
 <p>Pattaya tennis facility tiers ranked by court count:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Facility</th><th>Courts</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Greta Sport Club</strong></td><td>6 covered ITF Plexipave</td><td>Premium covered</td></tr><tr><td><strong>Siam Bayshore Resort</strong></td><td><strong>6 outdoor championship</strong></td><td><strong>5-star resort + walkable from Walking St</strong></td></tr><tr><td><strong>Pattaya Tennis & Badminton Inter Club</strong></td><td>5 + Badminton + Pickleball</td><td>Multi-sport central</td></tr><tr><td><strong>FITZ Club at Royal Cliff</strong></td><td>7 floodlit hard</td><td>Royal Cliff hotel-luxury</td></tr><tr><td><strong>Tara Tennis Club</strong></td><td>3 (1 covered)</td><td>Newest 2022 build</td></tr><tr><td><strong>TOS Tennis Club</strong></td><td>2 + pool + gym</td><td>Closest to Jomtien</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Facility</th><th>Courts</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Greta Sport Club</strong></td><td>6 covered ITF Plexipave</td><td>Premium covered</td></tr><tr><td><strong>Siam Bayshore Resort</strong></td><td><strong>6 outdoor championship</strong></td><td><strong>5-star resort + walkable from Walking St</strong></td></tr><tr><td><strong><a href="/gyms/pattaya-tennis-badminton-inter-club/">Pattaya Tennis & Badminton Inter Club</a></strong></td><td>5 + Badminton + <a href="/gyms/pickleball-pattaya/">Pickleball</a></td><td>Multi-sport central</td></tr><tr><td><strong>FITZ Club at Royal Cliff</strong></td><td>7 floodlit hard</td><td>Royal Cliff hotel-luxury</td></tr><tr><td><strong><a href="/gyms/tara-tennis-club/">Tara Tennis Club</a></strong></td><td>3 (1 covered)</td><td>Newest 2022 build</td></tr><tr><td><strong>TOS Tennis Club</strong></td><td>2 + pool + gym</td><td>Closest to Jomtien</td></tr></tbody></table></div>
 <p>Siam Bayshore's specific position: <strong>central Pattaya 5-star resort tennis with public access</strong> — most accessible quality tennis to Walking Street area travelers.</p>
 <h2 id="the-5-star-resort-context">The 5-Star Resort Context</h2>
 <h3 id="hotel-profile">Hotel Profile</h3>
@@ -282,7 +282,7 @@
 <h2 id="not-best-for">Not Best For</h2>
 <div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
-<li><strong>Evening / floodlit play</strong> seekers — Pattaya Tennis Club, Tara, Pattaya Tennis & Badminton Inter Club better</li>
+<li><strong>Evening / floodlit play</strong> seekers — <a href="/gyms/pattaya-tennis-club/">Pattaya Tennis Club</a>, Tara, Pattaya Tennis & Badminton Inter Club better</li>
 <li><strong>Year-round weather-protected</strong> play — Greta required</li>
 <li><strong>Pure budget seekers</strong> — premium hotel pricing</li>
 <li><strong>Tournament-grade ITF play</strong> — Greta's Plexipave-rated facility better</li>
@@ -436,17 +436,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

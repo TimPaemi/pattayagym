@@ -133,7 +133,7 @@
 <p>The pricing is <strong>strikingly accessible</strong>: <strong>฿1,200/month for all-day unlimited swimming (swim as many times per day as you want)</strong> OR <strong>฿1,000/month for evening-only access (18:00-21:00)</strong>. For dedicated swimmers and families with children needing structured swim education, First Serve delivers <strong>certified coaching plus open-swim access at independent-club pricing</strong>.</p>
 <h2 id="position-in-the-pattaya-swimming-market">Position in the Pattaya Swimming Market</h2>
 <p>Pattaya swimming infrastructure tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Iconic destination pool</strong></td><td>Hard Rock Pool (2,000 sqm)</td><td>Lifestyle / vacation centerpiece</td></tr><tr><td><strong>Premium hotel pools</strong></td><td>Royal Cliff (FITZ Club integrated), Cape Dara, Dusit Thani</td><td>Luxury hotel-attached</td></tr><tr><td><strong>Mid-tier hotel pools</strong></td><td>Manhattan, Cross Pattaya, various 4-star</td><td>Hotel-guest priority</td></tr><tr><td><strong>Multi-sport club with swim coaching</strong></td><td><strong>First Serve Sports Club</strong></td><td><strong>SAT-certified swim coaching + multi-sport amenities</strong></td></tr><tr><td><strong>Public / municipal pools</strong></td><td>Naklua public pool, Jomtien public pool</td><td>Basic, working-population</td></tr><tr><td><strong>School competition pools</strong></td><td>Regents International</td><td>Premier student athletic</td></tr><tr><td><strong>Condo / villa private pools</strong></td><td>Various residential</td><td>Resident-only</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Iconic destination pool</strong></td><td>Hard Rock Pool (2,000 sqm)</td><td>Lifestyle / vacation centerpiece</td></tr><tr><td><strong>Premium hotel pools</strong></td><td>Royal Cliff (FITZ Club integrated), Cape Dara, <a href="/gyms/dusit-thani-pattaya/">Dusit Thani</a></td><td>Luxury hotel-attached</td></tr><tr><td><strong>Mid-tier hotel pools</strong></td><td>Manhattan, Cross Pattaya, various 4-star</td><td>Hotel-guest priority</td></tr><tr><td><strong>Multi-sport club with swim coaching</strong></td><td><strong>First Serve Sports Club</strong></td><td><strong>SAT-certified swim coaching + multi-sport amenities</strong></td></tr><tr><td><strong>Public / municipal pools</strong></td><td>Naklua public pool, Jomtien public pool</td><td>Basic, working-population</td></tr><tr><td><strong>School competition pools</strong></td><td>Regents International</td><td>Premier student athletic</td></tr><tr><td><strong>Condo / villa private pools</strong></td><td>Various residential</td><td>Resident-only</td></tr></tbody></table></div>
 <p>First Serve's specific position: <strong>certified swim coaching + multi-sport club + open-swim access</strong> — different from pure-pool day-pass venues.</p>
 <h2 id="the-swim-coaching-pedigree">The Swim Coaching Pedigree</h2>
 <h3 id="swimming-association-of-thailand-sat">Swimming Association of Thailand (SAT)</h3>
@@ -426,17 +426,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

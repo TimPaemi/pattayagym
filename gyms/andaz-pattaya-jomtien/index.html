@@ -130,10 +130,10 @@
       <h2 id="overview">Overview</h2>
 <p>Andaz Pattaya Jomtien Beach is <strong>a 5-star Hyatt Andaz boutique concept hotel on Na Jomtien Beach</strong> delivering <strong>the most wellness-integrated luxury hotel fitness experience in the Pattaya region</strong>. The property's stated approach — <strong>"complete serenity surrounded by the wonders of nature"</strong> with <strong>"world-class internationally-branded luxury lifestyle resort where visitors can escape from the outside world"</strong> — drives <strong>a fitness + spa stack that emphasizes restoration alongside athletic conditioning</strong>: the <strong>24-hour Technogym fitness center with separate yoga and stretching room</strong>, <strong>three distinct pools (Water Court / beachfront infinity / Lagoon Pool)</strong>, and the <strong>Panpuri Spa with 6 treatment rooms plus the rare combination of Japanese onsen + Turkish bath + Finnish sauna</strong>.</p>
 <p>For the <strong>wellness-tourism demographic</strong> specifically — travelers prioritizing <strong>integrated movement-and-recovery routines</strong> rather than pure athletic training — Andaz delivers what no other Pattaya hotel quite matches. The <strong>Panpuri Spa</strong> is <strong>a Thai luxury spa brand</strong> with global recognition, and the <strong>multi-bath cultural option</strong> (onsen / Turkish / Finnish) is genuinely rare even at premium global hotel-spa brands.</p>
-<p>The Na Jomtien location places Andaz <strong>adjacent to the Sattahip premium recreation cluster</strong> (Greta Sport Club ITF tennis 18 km, Cartoon Network Amazone water park, Ramayana Water Park, Chee Chan Golf Resort, Khao Chi Chan Buddha Mountain) — meaning <strong>a multi-day stay can stack premium golf, premium tennis, world-class water parks, contemplative cultural sites, and integrated wellness all within a 30-min radius</strong>.</p>
+<p>The Na Jomtien location places Andaz <strong>adjacent to the Sattahip premium recreation cluster</strong> (Greta Sport Club ITF tennis 18 km, Cartoon Network Amazone water park, <a href="/gyms/ramayana-water-park/">Ramayana Water Park</a>, <a href="/gyms/chee-chan-golf/">Chee Chan Golf</a> Resort, Khao Chi Chan Buddha Mountain) — meaning <strong>a multi-day stay can stack premium golf, premium tennis, world-class water parks, contemplative cultural sites, and integrated wellness all within a 30-min radius</strong>.</p>
 <h2 id="position-in-the-pattaya-5-star-hotel-fitness-market">Position in the Pattaya 5-Star Hotel Fitness Market</h2>
 <p>Pattaya 5-star hotel fitness clubs:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Hotel</th><th>Fitness Distinction</th></tr></thead><tbody><tr><td><strong>Royal Cliff (FITZ Club)</strong></td><td>7 floodlit tennis + Sky Aquarium infinity + Triple TripAdvisor TC awards</td></tr><tr><td><strong>Hilton Pattaya</strong></td><td>24/7 fitness + 16th-floor infinity pool + eforea Spa</td></tr><tr><td><strong>Andaz Pattaya Jomtien</strong></td><td><strong>24/7 Technogym + 3 pools + Panpuri Spa with onsen/Turkish/Finnish</strong></td></tr><tr><td><strong>Cape Dara Resort</strong></td><td>Beach-cliff luxury</td></tr><tr><td><strong>Cross Pattaya Pratamnak</strong></td><td>Cloud Club + PLAYROOM</td></tr><tr><td><strong>Centara Grand Mirage</strong></td><td>The Lost World water park, family-themed</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Hotel</th><th>Fitness Distinction</th></tr></thead><tbody><tr><td><strong>Royal Cliff (FITZ Club)</strong></td><td>7 floodlit tennis + Sky Aquarium infinity + Triple TripAdvisor TC awards</td></tr><tr><td><strong><a href="/gyms/hilton-pattaya-fitness/">Hilton Pattaya</a></strong></td><td>24/7 fitness + 16th-floor infinity pool + eforea Spa</td></tr><tr><td><strong>Andaz Pattaya Jomtien</strong></td><td><strong>24/7 Technogym + 3 pools + Panpuri Spa with onsen/Turkish/Finnish</strong></td></tr><tr><td><strong><a href="/gyms/cape-dara-resort/">Cape Dara Resort</a></strong></td><td>Beach-cliff luxury</td></tr><tr><td><strong><a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a></strong></td><td>Cloud Club + PLAYROOM</td></tr><tr><td><strong>Centara Grand Mirage</strong></td><td>The Lost World water park, family-themed</td></tr></tbody></table></div>
 <p>Andaz's specific position: <strong>the most wellness-integrated boutique 5-star</strong> in the Pattaya area.</p>
 <h2 id="the-hyatt-andaz-brand">The Hyatt Andaz Brand</h2>
 <h3 id="what-andaz-means">What "Andaz" Means</h3>
@@ -475,17 +475,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

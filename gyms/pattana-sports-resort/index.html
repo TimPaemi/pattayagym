@@ -130,11 +130,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Pattana Sports Resort is <strong>the largest integrated sports-and-golf resort in the Pattaya region</strong> — a <strong>400-acre property in Si Racha</strong> combining a <strong>27-hole championship golf course</strong>, <strong>multi-sport training facilities</strong>, <strong>multiple accommodation tiers</strong>, <strong>a 7,000-capacity stadium</strong>, and <strong>conference and event infrastructure</strong> under a single resort operation. Marketed as <strong>"Actively Together"</strong>, Pattana positions itself as the <strong>destination for sports-themed group travel</strong> — corporate retreats, sports tournaments, training camps, family active vacations, and golf groups — rather than as a pure-golf or pure-resort product.</p>
-<p>The 27-hole golf layout — divided into <strong>the Andreas, Brookei, and Calypso nines</strong> — gives Pattana <strong>the same routing flexibility as Khao Kheow Country Club and Laem Chabang International</strong>, with players combining any two nines for an 18-hole round. The course <strong>rolls through 400-acre property with mountain and lake views</strong>, <strong>fast greens, strategic bunkers, and tree-lined paths</strong> — a classic championship-tier configuration.</p>
+<p>The 27-hole golf layout — divided into <strong>the Andreas, Brookei, and Calypso nines</strong> — gives Pattana <strong>the same routing flexibility as <a href="/gyms/khao-kheow-country-club/">Khao Kheow Country Club</a> and Laem Chabang International</strong>, with players combining any two nines for an 18-hole round. The course <strong>rolls through 400-acre property with mountain and lake views</strong>, <strong>fast greens, strategic bunkers, and tree-lined paths</strong> — a classic championship-tier configuration.</p>
 <p>What distinguishes Pattana from neighboring Pattaya golf options is <strong>the integrated sports resort layer</strong>: the <strong>7,000-capacity stadium</strong> (rare in resort properties), the <strong>multi-sport training facilities</strong>, and the <strong>four accommodation tiers</strong> (hotel rooms, mansion-style lodgings, villa home stays, affordable apartments) all on one property. <strong>Sports teams, training camps, and tournaments</strong> can run on-site without leaving the property — a value proposition no other Pattaya golf resort offers at this scale.</p>
 <h2 id="position-in-the-pattaya-golf-sports-market">Position in the Pattaya Golf + Sports Market</h2>
 <p>Pattana occupies a unique cross-tier position:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>27-hole championship golf</strong></td><td>Khao Kheow, Laem Chabang, <strong>Pattana</strong></td><td>Multi-routing flexibility</td></tr><tr><td><strong>Premier resort + golf</strong></td><td>Siam Country Club, Phoenix Gold</td><td>Golf-led with hotel layer</td></tr><tr><td><strong>Sports resort + facilities</strong></td><td>Horseshoe Point Resort</td><td>Multi-sport residential</td></tr><tr><td><strong>Sports resort + golf + stadium</strong></td><td><strong>Pattana Sports Resort</strong></td><td><strong>Stadium + training + golf integration</strong></td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>27-hole championship golf</strong></td><td>Khao Kheow, Laem Chabang, <strong>Pattana</strong></td><td>Multi-routing flexibility</td></tr><tr><td><strong>Premier resort + golf</strong></td><td><a href="/gyms/siam-country-club/">Siam Country Club</a>, Phoenix Gold</td><td>Golf-led with hotel layer</td></tr><tr><td><strong>Sports resort + facilities</strong></td><td>Horseshoe Point Resort</td><td>Multi-sport residential</td></tr><tr><td><strong>Sports resort + golf + stadium</strong></td><td><strong>Pattana Sports Resort</strong></td><td><strong>Stadium + training + golf integration</strong></td></tr></tbody></table></div>
 <p>The <strong>stadium + multi-sport + golf combination</strong> is genuinely unique in Pattaya. Horseshoe Point delivers multi-sport residential without a championship golf or stadium; Siam Country Club delivers world-class golf without stadium scale; Pattana combines both.</p>
 <h2 id="the-400-acre-property">The 400-Acre Property</h2>
 <h3 id="geographic-setting">Geographic Setting</h3>
@@ -446,17 +446,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

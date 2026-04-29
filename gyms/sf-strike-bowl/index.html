@@ -133,7 +133,7 @@
 <p>The combination of <strong>mall-attached convenience, modern infrastructure, 16 regular + 2 VIP lanes, integrated pool tables, smoking lounge with sea view, and arcade with video game machines</strong> makes SF Strike Bowl <strong>the family-friendly group entertainment anchor for central Pattaya</strong>. For families, friend groups, corporate events, birthdays, and post-cinema continuation entertainment, SF Strike Bowl is the most natural choice.</p>
 <h2 id="position-in-the-pattaya-bowling-market">Position in the Pattaya Bowling Market</h2>
 <p>Pattaya bowling alleys:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Alley</th><th>Location</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>SF Strike Bowl</strong></td><td><strong>Central Festival Pattaya Beach Mall — 6F</strong></td><td><strong>18 lanes (16+2 VIP), SF Group operator, mall-attached</strong></td></tr><tr><td><strong>Pattaya Bowl</strong></td><td>North Pattaya / Soi Regent Marina</td><td>Late-night to 02:00</td></tr><tr><td><strong>P.S. Bowl</strong></td><td>Various Pattaya locations</td><td>Established</td></tr><tr><td><strong>Wave Bowl (Royal Jomtien Resort)</strong></td><td>Jomtien</td><td>Hotel-attached</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Alley</th><th>Location</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>SF Strike Bowl</strong></td><td><strong>Central Festival Pattaya Beach Mall — 6F</strong></td><td><strong>18 lanes (16+2 VIP), SF Group operator, mall-attached</strong></td></tr><tr><td><strong><a href="/gyms/pattaya-bowl/">Pattaya Bowl</a></strong></td><td>North Pattaya / Soi Regent Marina</td><td>Late-night to 02:00</td></tr><tr><td><strong>P.S. Bowl</strong></td><td>Various Pattaya locations</td><td>Established</td></tr><tr><td><strong>Wave Bowl (Royal Jomtien Resort)</strong></td><td>Jomtien</td><td>Hotel-attached</td></tr></tbody></table></div>
 <p>SF Strike Bowl's specific position: <strong>the most modern + central + mall-attached option</strong> — different from the late-night-friendly Pattaya Bowl or hotel-attached Wave Bowl.</p>
 <h2 id="the-16-2-vip-lane-configuration">The 16 + 2 VIP Lane Configuration</h2>
 <h3 id="why-18-lanes-matters">Why 18 Lanes Matters</h3>
@@ -168,7 +168,7 @@
 <ul>
 <li><strong>Direct Beach Road position</strong> — central Pattaya core</li>
 <li><strong>Multiple floors</strong> of retail, dining, entertainment</li>
-<li><strong>Adjacent to Hilton Pattaya hotel</strong></li>
+<li><strong>Adjacent to <a href="/gyms/hilton-pattaya-fitness/">Hilton Pattaya</a> hotel</strong></li>
 <li><strong>Walkable from Beach Road / 2nd Road / Walking Street</strong></li>
 <li><strong>Songthaew accessible</strong> from anywhere in Pattaya</li>
 <li><strong>Air-conditioned</strong> mall environment</li>
@@ -432,17 +432,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

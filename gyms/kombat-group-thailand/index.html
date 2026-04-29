@@ -362,7 +362,7 @@
 <li><strong>Multi-discipline cross-trainers</strong> wanting BJJ + Muay Thai + Boxing under one roof</li>
 <li><strong>Returning students</strong> (return-customer rate is exceptionally high)</li>
 </ul>
-<p>Where Fairtex offers institutional polish at the cost of attentive consistency, and Sityodtong offers lineage at the cost of facility comfort, <strong>Kombat Group offers a curated, predictable, structured experience</strong> that may be the <strong>single most consistent product in the Pattaya combat sports market</strong>.</p>
+<p>Where Fairtex offers institutional polish at the cost of attentive consistency, and <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> offers lineage at the cost of facility comfort, <strong>Kombat Group offers a curated, predictable, structured experience</strong> that may be the <strong>single most consistent product in the Pattaya combat sports market</strong>.</p>
 <h2 id="best-for">Best For</h2>
 <div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
@@ -561,17 +561,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

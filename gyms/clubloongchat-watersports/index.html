@@ -128,7 +128,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Clubloongchat is a <strong>family-run beachside watersports school and rider community on Na Jomtien Beach, Pattaya</strong> — and it carries one of the deepest legacies in Thai watersports. <strong>Founded by the patriarch known affectionately as "Loongchat" (literally "Uncle Chat")</strong>, the operation has a <strong>40-year family legacy</strong> of passion and expertise, and is <strong>the original windsurfing school on Jomtien Beach with over 30 years of teaching experience</strong>, plus <strong>Pattaya's first private kitesurf school</strong>. It now teaches and rents across the full modern wind-and-water sports range: <strong>Kitesurf, Wingfoil, Windsurf, SUP, Sailing, E-foil, and Hobie Catamarans</strong>.</p>
+<p>Clubloongchat is a <strong>family-run beachside watersports school and rider community on Na Jomtien Beach, Pattaya</strong> — and it carries one of the deepest legacies in Thai watersports. <strong>Founded by the patriarch known affectionately as "Loongchat" (literally "Uncle Chat")</strong>, the operation has a <strong>40-year family legacy</strong> of passion and expertise, and is <strong>the original windsurfing school on Jomtien Beach with over 30 years of teaching experience</strong>, plus <strong>Pattaya's first private kitesurf school</strong>. It now teaches and rents across the full modern wind-and-water sports range: <strong><a href="/gyms/kitesurf-pattaya/">Kitesurf</a>, Wingfoil, Windsurf, SUP, Sailing, E-foil, and Hobie Catamarans</strong>.</p>
 <p>For travelers wanting <strong>professional, certified, multi-discipline watersports instruction in Pattaya</strong> — the kind that progresses you from absolute zero to actually riding — Clubloongchat is the established institution. The combination of multi-decade pedagogy, complete equipment rental, master-coach private 1:1 instruction, and a beachside community vibe makes it the <strong>default top-tier choice</strong> for serious wind-and-water sports in Pattaya/Jomtien.</p>
 <h2 id="the-loongchat-legacy">The Loongchat Legacy</h2>
 <p>The school's identity centers on its founder, <strong>"Loongchat" (Uncle Chat)</strong>, a living-legend figure in Thai watersports who pioneered windsurfing on Jomtien Beach over 30 years ago. The school remains family-run, with the patriarch's expertise now joined by a next generation of master coaches. The 40-year family legacy translates into:</p>
@@ -437,17 +437,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

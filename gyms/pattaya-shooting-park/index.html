@@ -79,8 +79,8 @@
       </g></svg></div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">adventure</span>
-        <span class="open-badge open-now">● Open now</span>
         
+        <span class="open-badge open-closed">● Closed now</span>
         <span class="meta-dot">•</span>
         <span class="reading-meta">📖 6 min read</span>
         <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
@@ -129,9 +129,9 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Pattaya Shooting Park is <strong>Pattaya's largest outdoor shooting range</strong> — a multi-discipline firearms facility on <strong>Soi Khao Mai Kaew in East Pattaya</strong> offering <strong>a diverse menu of pistols, revolvers, shotguns, and rifles</strong> to tourists and residents who want to experience supervised live-fire shooting in a controlled environment. The range is one of Pattaya's signature adrenaline tourism activities — alongside the Tower Jump at Pattaya Park, EasyKart go-karting, Thai Sky Adventures skydiving, and Bira Circuit motor racing — appealing to <strong>the demographic that wants to try something they can't easily do at home</strong>.</p>
+<p>Pattaya Shooting Park is <strong>Pattaya's largest outdoor shooting range</strong> — a multi-discipline firearms facility on <strong>Soi Khao Mai Kaew in East Pattaya</strong> offering <strong>a diverse menu of pistols, revolvers, shotguns, and rifles</strong> to tourists and residents who want to experience supervised live-fire shooting in a controlled environment. The range is one of Pattaya's signature adrenaline tourism activities — alongside the Tower Jump at Pattaya Park, EasyKart go-karting, <a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a> skydiving, and <a href="/gyms/bira-circuit/">Bira Circuit</a> motor racing — appealing to <strong>the demographic that wants to try something they can't easily do at home</strong>.</p>
 <p>The range offers <strong>firearms ranging from .22 LR (lightest, ideal for beginners) through .38 Special, 9mm, .45 ACP, and shotguns</strong> — with <strong>expert instructors guiding every shooter through safety protocols, stance, grip, and target acquisition</strong>. <strong>Free Pattaya hotel pickup is included in most packages</strong>, making logistics simple for tourists who don't want to figure out transport to East Pattaya independently.</p>
-<p>For travelers wanting <strong>a structured supervised firearms experience with multiple gun options</strong>, and especially for <strong>first-time shooters who appreciate the patient instruction this range is known for</strong>, Pattaya Shooting Park is the city's flagship outdoor shooting venue alongside the indoor competitor <strong>Dragon Shooting Club</strong> (which has the largest indoor range in Thailand with 20+ shooting lanes).</p>
+<p>For travelers wanting <strong>a structured supervised firearms experience with multiple gun options</strong>, and especially for <strong>first-time shooters who appreciate the patient instruction this range is known for</strong>, Pattaya Shooting Park is the city's flagship outdoor shooting venue alongside the indoor competitor <strong><a href="/gyms/dragon-shooting-club/">Dragon Shooting Club</a></strong> (which has the largest indoor range in Thailand with 20+ shooting lanes).</p>
 <h2 id="position-in-the-pattaya-shooting-range-market">Position in the Pattaya Shooting Range Market</h2>
 <p>Pattaya has three meaningful shooting ranges:</p>
 <div class="md-table-wrap"><table class="md-table"><thead><tr><th>Range</th><th>Type</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Pattaya Shooting Park</strong></td><td><strong>Outdoor</strong></td><td><strong>Largest outdoor range in Pattaya</strong></td></tr><tr><td><strong>Dragon Shooting Club</strong></td><td>Indoor (Pattaya)</td><td>World-class indoor with 20 lanes + 3 private</td></tr><tr><td><strong>Tiffany's Shooting Range</strong></td><td>Indoor (cabaret-attached)</td><td>Tourist-focused, packages from 600-2,500 baht</td></tr></tbody></table></div>
@@ -450,17 +450,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

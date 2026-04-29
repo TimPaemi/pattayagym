@@ -132,7 +132,7 @@
 <p>Yoga Pattaya Studio bills itself as <strong>"the first dedicated international yoga studio in Pattaya"</strong> — and after years of operation it has emerged as the city's most established, comprehensive, and consistently top-rated yoga venue. Located on <strong>Thepprasit Soi 12</strong>, just minutes from Jomtien Beach, the studio offers a remarkably broad style range (Ashtanga, Mysore, Hatha, Hatha Vinyasa, Vinyasa Flow, Fitness Yoga, Stretching), trilingual instruction (English, Russian, Thai — reflecting Pattaya's international demographics), and small-group/private sessions designed to deliver real personal attention.</p>
 <p>For travelers serious about a yoga practice during their Pattaya stay — and for the established expat community — Yoga Pattaya Studio is the default recommendation.</p>
 <h2 id="position-in-the-market">Position in the Market</h2>
-<p>Pattaya has multiple yoga studios (Yoga Haus, One-D Yoga, Nok Yoga, Ashtanga Yoga Pattaya, plus hotel/resort yoga programs), but <strong>Yoga Pattaya Studio is the longest-established, most international, and most reviewed</strong>. It's the one where you'll find the deepest stylistic range and the most reliable English instruction. Pricing is transparent, the booking flow is simple, and the studio caters to drop-ins as well as committed long-term students.</p>
+<p>Pattaya has multiple yoga studios (<a href="/gyms/yoga-haus-pattaya/">Yoga Haus</a>, One-D Yoga, <a href="/gyms/nok-yoga-pattaya/">Nok Yoga</a>, <a href="/gyms/ashtanga-yoga-pattaya/">Ashtanga Yoga Pattaya</a>, plus hotel/resort yoga programs), but <strong>Yoga Pattaya Studio is the longest-established, most international, and most reviewed</strong>. It's the one where you'll find the deepest stylistic range and the most reliable English instruction. Pricing is transparent, the booking flow is simple, and the studio caters to drop-ins as well as committed long-term students.</p>
 <h2 id="yoga-styles-offered">Yoga Styles Offered</h2>
 <p>A genuinely comprehensive lineup — rare for a single Thai studio:</p>
 <ul>
@@ -178,7 +178,7 @@
 <p>Unique among Pattaya studios — they run a parallel <strong>e-commerce yoga store</strong> on their site shipping yoga gear across Thailand. Worth knowing if you need to replace a mat or buy props mid-trip.</p>
 <h2 id="location-getting-there">Location & Getting There</h2>
 <ul>
-<li><strong>Area:</strong> Thepprasit Soi 12 — same general area as Venum Training Camp</li>
+<li><strong>Area:</strong> Thepprasit Soi 12 — same general area as <a href="/gyms/venum-training-camp/">Venum Training Camp</a></li>
 <li><strong>Walking distance to Jomtien Beach</strong> (~5-10 min depending on exact end of soi)</li>
 <li>Easy access from Sukhumvit Road via Thepprasit</li>
 <li>Songthaew or short taxi from central Pattaya</li>
@@ -356,17 +356,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

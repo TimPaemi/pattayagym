@@ -134,7 +134,7 @@
 <p>For golfers wanting <strong>Peter Thomson architectural pedigree at value-tier pricing</strong>, Greenwood is among the strongest combinations in the Pattaya extended golf market.</p>
 <h2 id="position-in-the-pattaya-eastern-seaboard-golf-market">Position in the Pattaya / Eastern Seaboard Golf Market</h2>
 <p>Pattaya area's 27-hole championship golf:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Designer</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Khao Kheow Country Club</strong></td><td>Pete Dye</td><td>American stadium, Asian Tour host</td></tr><tr><td><strong>Laem Chabang International</strong></td><td>Jack Nicklaus</td><td>Multi-routing Nicklaus signature</td></tr><tr><td><strong>Pattana Sports Resort</strong></td><td>Various</td><td>400-acre integrated sports resort</td></tr><tr><td><strong>Greenwood Golf Club</strong></td><td><strong>Peter Thomson + Dennis Wolveridge</strong></td><td><strong>27-hole, Australian-design, value pricing</strong></td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Designer</th><th>Distinction</th></tr></thead><tbody><tr><td><strong><a href="/gyms/khao-kheow-country-club/">Khao Kheow Country Club</a></strong></td><td>Pete Dye</td><td>American stadium, Asian Tour host</td></tr><tr><td><strong>Laem Chabang International</strong></td><td>Jack Nicklaus</td><td>Multi-routing Nicklaus signature</td></tr><tr><td><strong><a href="/gyms/pattana-sports-resort/">Pattana Sports Resort</a></strong></td><td>Various</td><td>400-acre integrated sports resort</td></tr><tr><td><strong>Greenwood Golf Club</strong></td><td><strong>Peter Thomson + Dennis Wolveridge</strong></td><td><strong>27-hole, Australian-design, value pricing</strong></td></tr></tbody></table></div>
 <p>Greenwood's specific advantage: <strong>Peter Thomson architecture</strong> at <strong>mid-tier value pricing</strong> rather than premium tier.</p>
 <h2 id="peter-thomson-the-architect">Peter Thomson — The Architect</h2>
 <h3 id="career-highlights">Career Highlights</h3>
@@ -228,7 +228,7 @@
 <li><strong>Stay-and-play packages</strong> with Greenwood Resort</li>
 <li><strong>Group / corporate</strong> rates negotiable</li>
 </ul>
-<p>This is <strong>dramatically cheaper than premium Pattaya courses</strong> (Siam Country Club Old ฿4,500+, Chee Chan ฿3,500-5,500) for <strong>comparable architectural quality</strong>.</p>
+<p>This is <strong>dramatically cheaper than premium Pattaya courses</strong> (<a href="/gyms/siam-country-club/">Siam Country Club</a> Old ฿4,500+, Chee Chan ฿3,500-5,500) for <strong>comparable architectural quality</strong>.</p>
 <h2 id="clubhouse-facilities">Clubhouse & Facilities</h2>
 <ul>
 <li><strong>Excellent quality locker rooms</strong></li>
@@ -433,17 +433,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

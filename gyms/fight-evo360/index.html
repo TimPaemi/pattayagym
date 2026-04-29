@@ -128,7 +128,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Fight EVO360 is <strong>a performance-structured Muay Thai gym on Thepprasit Road</strong> that distinguishes itself from traditional Pattaya Muay Thai camps by <strong>integrating modern strength & conditioning, performance nutrition, and structured athletic development with traditional Muay Thai instruction</strong>. The gym positions itself with the explicit philosophy of <strong>"evolving the athlete within every person ready to challenge their limits in the gym or in life"</strong> — a more modern fitness-and-development orientation than the lineage-pure Thai camps (Sor Klinmee, Sityodtong, Petchrungruang, Sitpholek) that emphasize traditional Muay Thai progression.</p>
+<p>Fight EVO360 is <strong>a performance-structured Muay Thai gym on Thepprasit Road</strong> that distinguishes itself from traditional Pattaya Muay Thai camps by <strong>integrating modern strength & conditioning, performance nutrition, and structured athletic development with traditional Muay Thai instruction</strong>. The gym positions itself with the explicit philosophy of <strong>"evolving the athlete within every person ready to challenge their limits in the gym or in life"</strong> — a more modern fitness-and-development orientation than the lineage-pure Thai camps (Sor Klinmee, <a href="/gyms/sityodtong-pattaya/">Sityodtong</a>, Petchrungruang, Sitpholek) that emphasize traditional Muay Thai progression.</p>
 <p>The gym is located at <strong>193/15 Moo 11, Thepprasit Road, Muang Pattaya, Bang Lamung District, Chonburi 20150</strong> — placing it in <strong>the Thepprasit corridor that connects central Pattaya, Jomtien, and East Pattaya</strong>, accessible from multiple residential and tourist zones. Training operates <strong>Mon-Sat with morning classes 08:00-10:00, evening group classes, and open gym sessions</strong> — matching the morning + evening rhythm typical of serious Pattaya Muay Thai facilities.</p>
 <p>The trainer roster includes <strong>elite and championship-level Muay Thai and boxing trainers</strong>, and the curriculum spans <strong>well-developed and battle-tested programs in Muay Training, Strength & Conditioning, and Performance Nutrition</strong>. For students wanting <strong>modern athletic-development structure layered on top of authentic Muay Thai instruction</strong>, Fight EVO360 fills a meaningful niche in the Pattaya combat sports market.</p>
 <h2 id="position-in-the-pattaya-muay-thai-market">Position in the Pattaya Muay Thai Market</h2>
@@ -441,17 +441,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

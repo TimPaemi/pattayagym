@@ -134,7 +134,7 @@
 <p>For Pattaya expat families and Thai families seeking <strong>the most credentialed European-style youth football education available in the city</strong> — and especially for parents whose children show football promise warranting investment — FAST PRO is among the top-tier options alongside the newer <strong>Liverpool FC International Academy Pattaya</strong> (announced 2026).</p>
 <h2 id="position-in-the-pattaya-youth-football-market">Position in the Pattaya Youth Football Market</h2>
 <p>Pattaya football academies tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Academy</th><th>Coaching</th><th>Demographic</th></tr></thead><tbody><tr><td><strong>Liverpool FC International Academy</strong> (2026)</td><td>English elite curriculum</td><td>Premium / international</td></tr><tr><td><strong>FAST PRO Football Academy</strong></td><td><strong>UEFA-A licensed European coach</strong></td><td><strong>Mid-premium / international</strong></td></tr><tr><td><strong>Planet Football</strong></td><td>Mixed coaches + FC Planet club team</td><td>Established serious player development</td></tr><tr><td><strong>AF Academy</strong></td><td>Pattaya-based, ages 3+</td><td>Inclusive / family-friendly</td></tr><tr><td><strong>Pattaya City Football Academy</strong></td><td>Thai-led local</td><td>Local Thai families</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Academy</th><th>Coaching</th><th>Demographic</th></tr></thead><tbody><tr><td><strong>Liverpool FC International Academy</strong> (2026)</td><td>English elite curriculum</td><td>Premium / international</td></tr><tr><td><strong>FAST PRO Football Academy</strong></td><td><strong>UEFA-A licensed European coach</strong></td><td><strong>Mid-premium / international</strong></td></tr><tr><td><strong><a href="/gyms/planet-football-pattaya/">Planet Football</a></strong></td><td>Mixed coaches + FC Planet club team</td><td>Established serious player development</td></tr><tr><td><strong><a href="/gyms/af-academy-football/">AF Academy</a></strong></td><td>Pattaya-based, ages 3+</td><td>Inclusive / family-friendly</td></tr><tr><td><strong><a href="/gyms/pattaya-city-football-academy/">Pattaya City Football Academy</a></strong></td><td>Thai-led local</td><td>Local Thai families</td></tr></tbody></table></div>
 <p>FAST PRO's specific position: <strong>most credentialed coaching available since the Liverpool partnership is still in early-stage 2026</strong>.</p>
 <h2 id="uefa-a-licensed-coaching-what-it-means">UEFA-A Licensed Coaching — What It Means</h2>
 <h3 id="uefa-coaching-license-hierarchy">UEFA Coaching License Hierarchy</h3>
@@ -166,7 +166,7 @@
 <p>This is <strong>dramatically higher caliber instruction than amateur-coached programs</strong> that dominate Thai youth football.</p>
 <h2 id="two-training-locations">Two Training Locations</h2>
 <h3 id="1-horseshoe-point-pattaya">1. Horseshoe Point Pattaya</h3>
-<p><strong>Horseshoe Point Resort & Country Club</strong> is the partnership venue for FAST PRO sessions:</p>
+<p><strong><a href="/gyms/horseshoe-point-resort/">Horseshoe Point Resort & Country Club</a></strong> is the partnership venue for FAST PRO sessions:</p>
 <ul>
 <li><strong>1,500-acre property</strong> with multi-sport facilities</li>
 <li><strong>East Pattaya near Mabprachan Reservoir</strong></li>
@@ -440,17 +440,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

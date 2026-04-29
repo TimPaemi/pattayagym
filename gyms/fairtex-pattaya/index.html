@@ -79,8 +79,8 @@
       </g></svg></div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">muay thai</span>
-        <span class="open-badge open-now">● Open now</span>
         
+        <span class="open-badge open-closed">● Closed now</span>
         <span class="meta-dot">•</span>
         <span class="reading-meta">📖 16 min read</span>
         <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
@@ -443,7 +443,7 @@
 <li><strong>Total beginners on a 1-week passive holiday</strong>: often rate it 6-7/10 — overwhelmed, sometimes assigned weaker trainers, find the price doesn't match their experience</li>
 <li><strong>Returning students who learn the system</strong>: rate it 9-10/10 — they request specific trainers, use the multi-discipline access, befriend pro fighters, get the legendary version of Fairtex</li>
 </ul>
-<p>If you're going for the <strong>first time and value certainty</strong>, Silk Muay Thai or Kombat Group offer more curated experiences. If you want the <strong>best-case Fairtex</strong> — train under Yodsanklai-tier trainers, share a ring with Smilla Sundell, walk through hallways where Stamp is filming her next ONE camp — you have to navigate the system. The reward, when it works, is unmatched.</p>
+<p>If you're going for the <strong>first time and value certainty</strong>, <a href="/gyms/silk-muay-thai/">Silk Muay Thai</a> or Kombat Group offer more curated experiences. If you want the <strong>best-case Fairtex</strong> — train under Yodsanklai-tier trainers, share a ring with Smilla Sundell, walk through hallways where Stamp is filming her next ONE camp — you have to navigate the system. The reward, when it works, is unmatched.</p>
 <h2 id="best-for">Best For</h2>
 <div class="callout callout-best"><div class="callout-icon">★</div><div class="callout-body">
 <ul>
@@ -464,7 +464,7 @@
 <li>Pure budget travelers (cheaper authentic Pattaya camps abound — Sor Klinmee, WKO, Petchrungruang)</li>
 <li>Travelers wanting tiny-family-camp atmosphere</li>
 <li>Pro fighters needing private/dedicated trainer relationships (smaller camps better)</li>
-<li>Russian-only speakers (try Yoga Pattaya Studio for context — Fairtex is English/Thai)</li>
+<li>Russian-only speakers (try <a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> for context — Fairtex is English/Thai)</li>
 </ul>
 </div></div>
 <h2 id="quick-reference-card" class="section-quick-ref">Quick Reference Card</h2>
@@ -639,17 +639,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

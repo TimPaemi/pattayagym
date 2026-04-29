@@ -133,7 +133,7 @@
 <p>The <strong>@pattaya_beach_volley Instagram community</strong> organizes regular meetups, tournaments, and skills sessions. <strong>Multiple court locations</strong> exist along Jomtien Beach plus other Pattaya beaches, but Jomtien is the recognized center of activity.</p>
 <h2 id="position-in-the-pattaya-beach-sport-market">Position in the Pattaya Beach Sport Market</h2>
 <p>Pattaya's beach-side sport scene:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Sport</th><th>Where</th><th>Cost</th></tr></thead><tbody><tr><td><strong>Beach volleyball</strong></td><td><strong>Jomtien Beach courts</strong></td><td><strong>Free pickup play</strong></td></tr><tr><td>Beach tennis</td><td>Greta Sport Club</td><td>Premium club</td></tr><tr><td>Parasailing / jet ski</td><td>Wave Pattaya / beach vendors</td><td>฿2,000+/session</td></tr><tr><td>Kitesurfing</td><td>KBA, Kitesurf Pattaya</td><td>฿9,000+/3-day course</td></tr><tr><td>Frisbee / casual</td><td>Various beaches</td><td>Free informal</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Sport</th><th>Where</th><th>Cost</th></tr></thead><tbody><tr><td><strong>Beach volleyball</strong></td><td><strong>Jomtien Beach courts</strong></td><td><strong>Free pickup play</strong></td></tr><tr><td>Beach tennis</td><td>Greta Sport Club</td><td>Premium club</td></tr><tr><td>Parasailing / jet ski</td><td>Wave Pattaya / beach vendors</td><td>฿2,000+/session</td></tr><tr><td>Kitesurfing</td><td>KBA, <a href="/gyms/kitesurf-pattaya/">Kitesurf Pattaya</a></td><td>฿9,000+/3-day course</td></tr><tr><td>Frisbee / casual</td><td>Various beaches</td><td>Free informal</td></tr></tbody></table></div>
 <p>Beach volleyball occupies the <strong>free community pickup tier</strong> — uniquely accessible.</p>
 <h2 id="where-to-play">Where to Play</h2>
 <h3 id="jomtien-beach-primary">Jomtien Beach (Primary)</h3>
@@ -419,17 +419,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

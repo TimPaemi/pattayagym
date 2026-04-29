@@ -130,11 +130,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Bangpra International Golf Club is <strong>one of the original golf courses in the Pattaya region</strong> — initially built in <strong>1958</strong>, making it one of the oldest courses in all of Thailand and a foundational venue in the country's golf history. The course was <strong>comprehensively renovated and expanded in 1988</strong> as a <strong>joint venture between the Tourism Authority of Thailand and Japanese Golf Professional consultants</strong>, making it the <strong>first project specifically designed to promote golf tourism in Thailand</strong> — the policy origin of what's now a multi-billion-baht industry.</p>
-<p>This historical positioning makes Bangpra <strong>unique in the Pattaya golf scene</strong>. While newer courses like Siam Country Club, Khao Kheow, and Laem Chabang are architecturally more decorated, <strong>Bangpra holds the distinction of being where Thailand's golf-tourism story began</strong>. The course remains <strong>one of the more mature Pattaya golf courses</strong> today, with <strong>decades of tree growth, established turf, and the patina that only old courses develop</strong>.</p>
+<p>This historical positioning makes Bangpra <strong>unique in the Pattaya golf scene</strong>. While newer courses like <a href="/gyms/siam-country-club/">Siam Country Club</a>, Khao Kheow, and Laem Chabang are architecturally more decorated, <strong>Bangpra holds the distinction of being where Thailand's golf-tourism story began</strong>. The course remains <strong>one of the more mature Pattaya golf courses</strong> today, with <strong>decades of tree growth, established turf, and the patina that only old courses develop</strong>.</p>
 <p>For golf historians, value-tier players, and visitors curious about Thailand golf's origin story, Bangpra delivers a course that's <strong>simultaneously historically significant and accessibly priced</strong>.</p>
 <h2 id="position-in-the-pattaya-golf-market">Position in the Pattaya Golf Market</h2>
 <p>Pattaya golf history layered chronologically:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Era</th><th>Notable Openings</th></tr></thead><tbody><tr><td><strong>Pre-1960</strong></td><td><strong>Bangpra International</strong> (1958) — among Thailand's earliest courses</td></tr><tr><td><strong>1980s</strong></td><td>Bangpra renovation (1988), Siam Country Club Old (1971/1992 redo)</td></tr><tr><td><strong>1990s</strong></td><td>Khao Kheow (1992), Treasure Hill (1994), Phoenix Gold (1997), Laem Chabang (1995)</td></tr><tr><td><strong>2000s</strong></td><td>St Andrews 2000, Siam Plantation (2008), Pattaya Country Club</td></tr><tr><td><strong>2010s</strong></td><td>Siam Waterside (2014), Chee Chan Golf Resort (2018)</td></tr><tr><td><strong>2020s</strong></td><td>Various renovations and new luxury developments</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Era</th><th>Notable Openings</th></tr></thead><tbody><tr><td><strong>Pre-1960</strong></td><td><strong>Bangpra International</strong> (1958) — among Thailand's earliest courses</td></tr><tr><td><strong>1980s</strong></td><td>Bangpra renovation (1988), Siam Country Club Old (1971/1992 redo)</td></tr><tr><td><strong>1990s</strong></td><td>Khao Kheow (1992), Treasure Hill (1994), Phoenix Gold (1997), Laem Chabang (1995)</td></tr><tr><td><strong>2000s</strong></td><td>St Andrews 2000, Siam Plantation (2008), <a href="/gyms/pattaya-country-club/">Pattaya Country Club</a></td></tr><tr><td><strong>2010s</strong></td><td>Siam Waterside (2014), <a href="/gyms/chee-chan-golf/">Chee Chan Golf</a> Resort (2018)</td></tr><tr><td><strong>2020s</strong></td><td>Various renovations and new luxury developments</td></tr></tbody></table></div>
 <p>Bangpra represents <strong>the foundation generation</strong> — the platform that proved Thailand could attract international golf tourism.</p>
 <h2 id="course-heritage-a-pioneering-project">Course Heritage — A Pioneering Project</h2>
 <h3 id="original-1958-build">Original 1958 Build</h3>
@@ -222,7 +222,7 @@
 <li><strong>40 km north of central Pattaya</strong></li>
 <li><strong>35-45 minute drive</strong> typical</li>
 <li><strong>From Sukhumvit / Pattaya:</strong> north toward Si Racha, then west to Bang Phra</li>
-<li><strong>Often combined with Khao Kheow Country Club</strong> as a Bang Phra two-course day</li>
+<li><strong>Often combined with <a href="/gyms/khao-kheow-country-club/">Khao Kheow Country Club</a></strong> as a Bang Phra two-course day</li>
 <li><strong>From Bangkok:</strong> ~110 km, ~1.5 hour drive</li>
 </ul>
 <h2 id="pros" class="section-pros-cons">Pros</h2>
@@ -411,17 +411,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

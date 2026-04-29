@@ -129,7 +129,7 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>AF Academy is <strong>a Russian-network children's football academy with a Pattaya branch</strong> alongside its original locations in <strong>Yaroslavl and Moscow, Russia</strong>. The academy operates <strong>two training fields in Pattaya</strong> — an <strong>outdoor field in South Pattaya</strong> and an <strong>indoor field in Central Pattaya</strong> — making it <strong>the only Pattaya kids football operation with weather-independent training capability</strong> for its central sessions. Programming spans from <strong>age 3 (basic ball control) through teenagers age 14+ (game tactics)</strong>, with structured age-band curricula at each level.</p>
-<p>For Pattaya families — both Thai families and the large Russian expat community based in Pattaya — AF Academy is one of the leading kids football choices, alongside <strong>Pattaya City Football Academy</strong> (Bronze License Academy of the Football Association of Thailand) and <strong>Rusich Club</strong> (separate Russian-language football operation).</p>
+<p>For Pattaya families — both Thai families and the large Russian expat community based in Pattaya — AF Academy is one of the leading kids football choices, alongside <strong><a href="/gyms/pattaya-city-football-academy/">Pattaya City Football Academy</a></strong> (Bronze License Academy of the Football Association of Thailand) and <strong><a href="/gyms/rusich-club-football/">Rusich Club</a></strong> (separate Russian-language football operation).</p>
 <h2 id="network-russia-pattaya">Network — Russia + Pattaya</h2>
 <p>AF Academy operates an <strong>international children's football academy network</strong>:</p>
 <ul>
@@ -213,7 +213,7 @@
 </ul>
 <p>Contact academy directly via <a href="https://www.afacademy.pro/en" rel="noopener" target="_blank">afacademy.pro/en</a> for current 2026 rates.</p>
 <h2 id="position-in-pattaya-kids-football-market">Position in Pattaya Kids Football Market</h2>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Academy</th><th>Network</th><th>Language</th><th>Specialty</th></tr></thead><tbody><tr><td><strong>AF Academy</strong> (this)</td><td>Russian (Yaroslavl, Moscow)</td><td>Russian + English + Thai</td><td>Indoor + outdoor fields</td></tr><tr><td><strong>Pattaya City Football Academy</strong></td><td>Football Association of Thailand Bronze License</td><td>Thai + English</td><td>Local Thai-track development</td></tr><tr><td><strong>Rusich Club</strong></td><td>Russian</td><td>Russian</td><td>Russian-language exclusive</td></tr><tr><td><strong>Planet Football</strong></td><td>Local</td><td>Thai + English</td><td>General football academy</td></tr><tr><td><strong>Regents International School Pattaya</strong></td><td>UK/international school</td><td>English</td><td>School-based multi-sport</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Academy</th><th>Network</th><th>Language</th><th>Specialty</th></tr></thead><tbody><tr><td><strong>AF Academy</strong> (this)</td><td>Russian (Yaroslavl, Moscow)</td><td>Russian + English + Thai</td><td>Indoor + outdoor fields</td></tr><tr><td><strong>Pattaya City Football Academy</strong></td><td>Football Association of Thailand Bronze License</td><td>Thai + English</td><td>Local Thai-track development</td></tr><tr><td><strong>Rusich Club</strong></td><td>Russian</td><td>Russian</td><td>Russian-language exclusive</td></tr><tr><td><strong><a href="/gyms/planet-football-pattaya/">Planet Football</a></strong></td><td>Local</td><td>Thai + English</td><td>General football academy</td></tr><tr><td><strong><a href="/gyms/regents-international-school-pattaya/">Regents International School Pattaya</a></strong></td><td>UK/international school</td><td>English</td><td>School-based multi-sport</td></tr></tbody></table></div>
 <p>AF Academy occupies the <strong>Russian-network + indoor/outdoor flexibility</strong> niche.</p>
 <h2 id="pros" class="section-pros-cons">Pros</h2>
 <div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
@@ -393,17 +393,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

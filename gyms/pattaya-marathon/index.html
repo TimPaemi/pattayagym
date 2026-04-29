@@ -133,7 +133,7 @@
 <p>For Pattaya residents who run, expat retirees with running backgrounds, visiting marathon tourists planning their Asian race calendar, and complete beginners wanting their first 10 km event, the Pattaya Marathon is <strong>the city's must-do running calendar fixture</strong>.</p>
 <h2 id="position-in-the-pattaya-running-scene">Position in the Pattaya Running Scene</h2>
 <p>Pattaya's running ecosystem:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Annual mass-participation event</strong></td><td><strong>Pattaya Marathon (July)</strong></td><td><strong>World Athletics certified, 15,000+ runners</strong></td></tr><tr><td><strong>Annual triathlon</strong></td><td>Pattaya Triathlon (Tri-League)</td><td>1,500+ triathletes</td></tr><tr><td><strong>Weekly social running</strong></td><td>Pattaya Hash House Harriers (Mon)</td><td>1984 founding</td></tr><tr><td><strong>Bi-monthly trail</strong></td><td>Pattaya Monkey Hash</td><td>8km moderate</td></tr><tr><td><strong>Cycling clubs</strong></td><td>Cuore Masters, Monkey Xtreme, etc.</td><td>Weekend group rides</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Annual mass-participation event</strong></td><td><strong>Pattaya Marathon (July)</strong></td><td><strong>World Athletics certified, 15,000+ runners</strong></td></tr><tr><td><strong>Annual triathlon</strong></td><td><a href="/gyms/pattaya-triathlon/">Pattaya Triathlon</a> (Tri-League)</td><td>1,500+ triathletes</td></tr><tr><td><strong>Weekly social running</strong></td><td><a href="/gyms/pattaya-hash-house/">Pattaya Hash House Harriers</a> (Mon)</td><td>1984 founding</td></tr><tr><td><strong>Bi-monthly trail</strong></td><td>Pattaya Monkey Hash</td><td>8km moderate</td></tr><tr><td><strong>Cycling clubs</strong></td><td>Cuore Masters, Monkey Xtreme, etc.</td><td>Weekend group rides</td></tr></tbody></table></div>
 <p>The Pattaya Marathon's specific role: <strong>the once-a-year race day</strong> that anchors the city's annual running calendar.</p>
 <h2 id="the-1992-origins-growth">The 1992 Origins & Growth</h2>
 <h3 id="30-year-heritage">30+ Year Heritage</h3>
@@ -457,17 +457,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

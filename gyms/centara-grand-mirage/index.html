@@ -129,11 +129,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Centara Grand Mirage Beach Resort is <strong>Pattaya's flagship Lost World-themed family resort</strong> — a <strong>5-star property on 230 meters of private Wong Amat Beach (North Pattaya)</strong> featuring <strong>555 sea-facing rooms, suites, and family residences</strong>, <strong>8 dining venues</strong>, <strong>the Lost World on-site water park with multiple slides and pools</strong>, <strong>the multi-award Spa Cenvaree with 24 treatment rooms</strong>, and <strong>an active fitness program including a fitness center, 2 tennis courts, and an unusual rock climbing wall</strong>. The Lost World theming — <strong>prehistoric / jungle / waterfall aesthetic</strong> — gives the resort <strong>a distinctive identity vs. generic 5-star hotels</strong> and makes it <strong>one of Pattaya's most family-friendly luxury options</strong>.</p>
-<p>The <strong>Lost World on-site water park</strong> is the resort's defining feature — most premium hotel pools cap at 1-2 pools while Centara delivers <strong>a sprawling jungle-themed water park</strong> with <strong>freeform pool, lazy river, multiple slides, an adult pool, jacuzzis, cliff jumping platforms, and the Monsoon Island children's water playground</strong>. While not as massive as Ramayana Water Park (184,000 sqm Southeast Asia largest), Centara's on-site water park <strong>is genuinely substantial</strong> and lets resort guests have <strong>water park experiences without leaving the property</strong>.</p>
+<p>The <strong>Lost World on-site water park</strong> is the resort's defining feature — most premium hotel pools cap at 1-2 pools while Centara delivers <strong>a sprawling jungle-themed water park</strong> with <strong>freeform pool, lazy river, multiple slides, an adult pool, jacuzzis, cliff jumping platforms, and the Monsoon Island children's water playground</strong>. While not as massive as <a href="/gyms/ramayana-water-park/">Ramayana Water Park</a> (184,000 sqm Southeast Asia largest), Centara's on-site water park <strong>is genuinely substantial</strong> and lets resort guests have <strong>water park experiences without leaving the property</strong>.</p>
 <p>The <strong>rock climbing wall</strong> is <strong>uniquely rare</strong> at a Pattaya resort — most family-resort fitness offerings stop at gym + tennis. Centara adds <strong>proper rock climbing</strong> to the active recreation menu, alongside <strong>Pilates, Latin aqua aerobics, and kayaking activity programs</strong>.</p>
 <h2 id="position-in-the-pattaya-5-star-family-resort-market">Position in the Pattaya 5-Star Family Resort Market</h2>
 <p>Pattaya 5-star family resorts:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Hotel</th><th>Family Distinction</th></tr></thead><tbody><tr><td><strong>Centara Grand Mirage</strong></td><td><strong>Lost World water park + 555 rooms + 24-room Spa Cenvaree + rock climbing wall</strong></td></tr><tr><td><strong>Hard Rock Hotel</strong></td><td>2,000 sqm guitar-deck pool with Family Foam Adventure Saturdays</td></tr><tr><td><strong>Pattaya Park Beach Resort</strong></td><td>Tower Jump + water park + amusement rides</td></tr><tr><td><strong>Royal Cliff Hotels Group</strong></td><td>7 swimming pools, FITZ Club fitness, Cliff Spa</td></tr><tr><td><strong>Cross Pattaya Pratamnak</strong></td><td>Cloud Club fitness + PLAYROOM</td></tr><tr><td><strong>Andaz Pattaya Jomtien</strong></td><td>Boutique wellness — adult-couple tier</td></tr><tr><td><strong>Hilton Pattaya</strong></td><td>Beach Road urban-luxury</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Hotel</th><th>Family Distinction</th></tr></thead><tbody><tr><td><strong>Centara Grand Mirage</strong></td><td><strong>Lost World water park + 555 rooms + 24-room Spa Cenvaree + rock climbing wall</strong></td></tr><tr><td><strong>Hard Rock Hotel</strong></td><td>2,000 sqm guitar-deck pool with Family Foam Adventure Saturdays</td></tr><tr><td><strong>Pattaya Park Beach Resort</strong></td><td>Tower Jump + water park + amusement rides</td></tr><tr><td><strong>Royal Cliff Hotels Group</strong></td><td>7 swimming pools, FITZ Club fitness, Cliff Spa</td></tr><tr><td><strong><a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a></strong></td><td>Cloud Club fitness + PLAYROOM</td></tr><tr><td><strong>Andaz Pattaya Jomtien</strong></td><td>Boutique wellness — adult-couple tier</td></tr><tr><td><strong><a href="/gyms/hilton-pattaya-fitness/">Hilton Pattaya</a></strong></td><td>Beach Road urban-luxury</td></tr></tbody></table></div>
 <p>Centara's specific position: <strong>the most family-themed 5-star with on-site water park scale</strong>.</p>
 <h2 id="lost-world-the-themed-water-park">Lost World — The Themed Water Park</h2>
 <h3 id="theme-aesthetic">Theme & Aesthetic</h3>
@@ -473,17 +473,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

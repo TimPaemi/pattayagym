@@ -128,7 +128,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Pattaya Boxing World Stadium is <strong>Pattaya's secondary Muay Thai fight venue</strong> alongside the daily-operating MAX Muay Thai Stadium — running <strong>real Muay Thai fight nights every Wednesday and Friday evening at 20:00</strong>, supplemented with <strong>Muay Thai cultural shows throughout the rest of the week</strong>. The stadium is <strong>promoted by Frank Sitpholek</strong> — the same Frank Sitpholek who <strong>owns the Sitpholek Institute of Muay Thai Techniques training camp</strong> (which has produced 9 world champions including Wanlop Sitpholek and Leonard Sitpholek). This gives Pattaya Boxing World <strong>a direct training camp + fight stadium pipeline</strong> that elite Pattaya camps can leverage to <strong>place their fighters in real ring competition</strong>.</p>
+<p>Pattaya Boxing World Stadium is <strong>Pattaya's secondary Muay Thai fight venue</strong> alongside the daily-operating <a href="/gyms/max-muay-thai-stadium/">MAX Muay Thai Stadium</a> — running <strong>real Muay Thai fight nights every Wednesday and Friday evening at 20:00</strong>, supplemented with <strong>Muay Thai cultural shows throughout the rest of the week</strong>. The stadium is <strong>promoted by Frank Sitpholek</strong> — the same Frank Sitpholek who <strong>owns the Sitpholek Institute of Muay Thai Techniques training camp</strong> (which has produced 9 world champions including Wanlop Sitpholek and Leonard Sitpholek). This gives Pattaya Boxing World <strong>a direct training camp + fight stadium pipeline</strong> that elite Pattaya camps can leverage to <strong>place their fighters in real ring competition</strong>.</p>
 <p>The fight cards span <strong>young kids (junior Muay Thai) through professional adult fighters</strong> — meaning visitors can witness <strong>the full age spectrum of competitive Muay Thai</strong>, from teenagers gaining ring experience to seasoned pros defending titles. Annual events like <strong>the Sitpholek International Thai Boxing Charity Gala (December 28)</strong> bring together international fight tourism with charitable fundraising — packing the stadium with spectators looking for top-class fight action.</p>
 <p>For Pattaya visitors who want <strong>live Muay Thai but find MAX's nightly tourism-focused production too commercial</strong>, Pattaya Boxing World offers <strong>a more authentic local-fight-night atmosphere</strong> with <strong>traditional Thai gambling culture, smaller crowds, and the scrappier energy of a community fight stadium</strong> vs. MAX's polished tourist-friendly format.</p>
 <h2 id="position-in-the-pattaya-muay-thai-spectator-market">Position in the Pattaya Muay Thai Spectator Market</h2>
@@ -428,17 +428,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

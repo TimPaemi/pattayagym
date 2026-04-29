@@ -129,11 +129,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Mövenpick Siam Hotel Na Jomtien Pattaya is <strong>a 5-star Swiss-hospitality beachfront resort</strong> in <strong>one of Pattaya's most peaceful coastal areas — Na Jomtien</strong>. The hotel operates under the <strong>Mövenpick brand (now part of Accor Group)</strong> with <strong>262 elegant rooms, sea-view accommodations, a lagoon pool, full spa, and a 24-hour fitness center on the 2nd floor with floor-to-ceiling windows providing premium views during workouts</strong>. The <strong>Swiss-hospitality positioning</strong> — methodical service, premium attention to detail, European-style operational standards — distinguishes Mövenpick from generic Asian-branded 5-stars.</p>
-<p>The fitness center placement is meaningful: <strong>the 2nd-floor location with floor-to-ceiling windows</strong> delivers <strong>a workout view experience</strong> vs. typical hotel basement / mezzanine fitness rooms. <strong>State-of-the-art resistance machines + cardio equipment</strong> at premium tier match the Mövenpick brand expectations. <strong>24-hour access</strong> matches Hilton Pattaya and Andaz Pattaya Jomtien for Pattaya 5-star always-open fitness.</p>
-<p>The <strong>Na Jomtien location</strong> places Mövenpick <strong>adjacent to the Sattahip premium recreation cluster</strong> — Greta Sport Club ITF tennis 18 km, Cartoon Network Amazone water park, Ramayana Water Park, Chee Chan Golf Resort, Khao Chi Chan Buddha Mountain, Andaz Pattaya Jomtien — meaning <strong>multi-day visitors can stack premium golf, tennis, water parks, cultural sites, and integrated wellness all within a 30-minute radius</strong>.</p>
+<p>The fitness center placement is meaningful: <strong>the 2nd-floor location with floor-to-ceiling windows</strong> delivers <strong>a workout view experience</strong> vs. typical hotel basement / mezzanine fitness rooms. <strong>State-of-the-art resistance machines + cardio equipment</strong> at premium tier match the Mövenpick brand expectations. <strong>24-hour access</strong> matches <a href="/gyms/hilton-pattaya-fitness/">Hilton Pattaya</a> and Andaz Pattaya Jomtien for Pattaya 5-star always-open fitness.</p>
+<p>The <strong>Na Jomtien location</strong> places Mövenpick <strong>adjacent to the Sattahip premium recreation cluster</strong> — Greta Sport Club ITF tennis 18 km, Cartoon Network Amazone water park, <a href="/gyms/ramayana-water-park/">Ramayana Water Park</a>, <a href="/gyms/chee-chan-golf/">Chee Chan Golf</a> Resort, Khao Chi Chan Buddha Mountain, Andaz Pattaya Jomtien — meaning <strong>multi-day visitors can stack premium golf, tennis, water parks, cultural sites, and integrated wellness all within a 30-minute radius</strong>.</p>
 <h2 id="position-in-the-pattaya-5-star-market">Position in the Pattaya 5-Star Market</h2>
 <p>Pattaya's 5-star hotel options:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Hotel</th><th>Brand / Distinction</th></tr></thead><tbody><tr><td>Royal Cliff Hotels Group (FITZ Club)</td><td>Multi-property luxury hospitality</td></tr><tr><td>Hilton Pattaya</td><td>International Hilton flagship</td></tr><tr><td>Andaz Pattaya Jomtien</td><td>Hyatt boutique with onsen</td></tr><tr><td>Centara Grand Mirage</td><td>Lost World family resort</td></tr><tr><td>Cape Dara Resort</td><td>Beach-cliff boutique</td></tr><tr><td><strong>Mövenpick Siam Na Jomtien</strong></td><td><strong>Swiss-hospitality 5-star with 24-hour 2nd-floor fitness</strong></td></tr><tr><td>Cross Pattaya Pratamnak</td><td>Pratamnak with Cloud Club + PLAYROOM</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Hotel</th><th>Brand / Distinction</th></tr></thead><tbody><tr><td>Royal Cliff Hotels Group (FITZ Club)</td><td>Multi-property luxury hospitality</td></tr><tr><td>Hilton Pattaya</td><td>International Hilton flagship</td></tr><tr><td>Andaz Pattaya Jomtien</td><td>Hyatt boutique with onsen</td></tr><tr><td>Centara Grand Mirage</td><td>Lost World family resort</td></tr><tr><td><a href="/gyms/cape-dara-resort/">Cape Dara Resort</a></td><td>Beach-cliff boutique</td></tr><tr><td><strong>Mövenpick Siam Na Jomtien</strong></td><td><strong>Swiss-hospitality 5-star with 24-hour 2nd-floor fitness</strong></td></tr><tr><td><a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a></td><td>Pratamnak with Cloud Club + PLAYROOM</td></tr></tbody></table></div>
 <p>Mövenpick's specific position: <strong>Swiss-branded 5-star at Na Jomtien</strong> — different from the Hyatt / Hilton / Centara competition with European hospitality character.</p>
 <h2 id="the-mvenpick-accor-brand">The Mövenpick / Accor Brand</h2>
 <h3 id="mvenpick-history">Mövenpick History</h3>
@@ -434,17 +434,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

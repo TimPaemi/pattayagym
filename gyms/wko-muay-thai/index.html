@@ -215,7 +215,7 @@
 <li>Other disciplines (Karate, MMA, fitness) run on independent schedules across the day</li>
 <li>Building open extended hours for fitness floor / dojo use</li>
 </ul>
-<p>The single-session model is the explicit reason monthly pricing is so cheap. <strong>If you need two-a-day intensives, look elsewhere</strong> (Fairtex, Battle Conquer, Sityodtong). If you want <strong>one elite session per day and your free time for the beach, gym work, or whatever</strong>, WKO is ideal.</p>
+<p>The single-session model is the explicit reason monthly pricing is so cheap. <strong>If you need two-a-day intensives, look elsewhere</strong> (Fairtex, Battle Conquer, <a href="/gyms/sityodtong-pattaya/">Sityodtong</a>). If you want <strong>one elite session per day and your free time for the beach, gym work, or whatever</strong>, WKO is ideal.</p>
 <h3 id="inside-a-sakmongkol-session">Inside a Sakmongkol Session</h3>
 <p>Detailed training journals (notably from Sylvie von Duuglas-Ittu's 8limbs.us blog) document the Sakmongkol session structure:</p>
 <p>1. Warm-up — shadow boxing, basic conditioning 2. <strong>Padwork with Sakmongkol himself</strong> — 4-5 rounds, often longer for serious students; technical corrections during rounds 3. <strong>Clinching practice</strong> post-pads (a major Sakmongkol specialty given his Lumpinee clinch experience) 4. Bag work and shadow at student's pace 5. Cool-down</p>
@@ -476,17 +476,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

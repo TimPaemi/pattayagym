@@ -130,7 +130,7 @@
       <p>Anytime Fitness is the world's largest 24/7 gym franchise — over 5,000 clubs across 50+ countries — and Pattaya carries two well-run locations giving members the same key-fob, walk-in-anytime, train-anywhere model that built the brand. If you live in Pattaya part-time, travel a lot, or simply want a clean, lights-always-on, no-drama box to lift in at 4am after a long flight, this is the answer.</p>
 <p>The Pattaya footprint splits across two clubs: <strong>Anytime Fitness Bukis Point South Pattaya</strong> sits inside Bukis Point Mall on Thappraya Road, walking distance from Jomtien and Pratamnak — the core South Pattaya residential corridor where most expat retirees and digital nomads actually live. <strong>Anytime Fitness "Again Pattaya"</strong> is the second club, mid-city. Both are franchised by the same Thailand operator, share equipment standards, and are accessible by any Anytime Fitness member globally with a single key-fob.</p>
 <h2 id="position-in-pattaya-market">Position in Pattaya market</h2>
-<p>Pattaya's gym landscape is barbell-heavy and bro-coded — Tony's Gym, Universe Gym, Elite Gym Pattaya, Fitness 7 — most of these are either old-school iron palaces or mall-based 24-hour boxes (Jetts, Fitness Plus). Anytime Fitness is the <strong>clean, predictable, globally-standardized</strong> option. You walk in and it looks identical to the Anytime Fitness in Sydney, Manila, or Manchester: same mid-tier Life Fitness / Matrix / Precor gear, same friendly-but-not-pushy front desk, same "swipe in, train, swipe out" rhythm. For people who travel for work, who left a US/UK/AU Anytime Fitness membership behind, or who just want a gym that <strong>isn't</strong> going to test their tolerance for grunting and dropped plates — this is the spot.</p>
+<p>Pattaya's gym landscape is barbell-heavy and bro-coded — <a href="/gyms/tonys-gym/">Tony's Gym</a>, <a href="/gyms/universe-gym/">Universe Gym</a>, Elite Gym Pattaya, <a href="/gyms/fitness-7/">Fitness 7</a> — most of these are either old-school iron palaces or mall-based 24-hour boxes (Jetts, Fitness Plus). Anytime Fitness is the <strong>clean, predictable, globally-standardized</strong> option. You walk in and it looks identical to the Anytime Fitness in Sydney, Manila, or Manchester: same mid-tier Life Fitness / Matrix / Precor gear, same friendly-but-not-pushy front desk, same "swipe in, train, swipe out" rhythm. For people who travel for work, who left a US/UK/AU Anytime Fitness membership behind, or who just want a gym that <strong>isn't</strong> going to test their tolerance for grunting and dropped plates — this is the spot.</p>
 <h2 id="locations">Locations</h2>
 <h3 id="anytime-fitness-bukis-point-south-pattaya">Anytime Fitness Bukis Point — South Pattaya</h3>
 <p>Bukis Point is a small lifestyle mall on Thappraya Road, the spine connecting Pattaya proper to Jomtien Beach. The gym is on an upper level, well-lit, and benefits from mall security plus its own access control. Convenient parking, easy scooter drop-off, and surrounding F&B (cafés, healthy lunch spots, a few salons) mean members rarely need to leave the building between work, training, and a post-session coffee.</p>
@@ -341,17 +341,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

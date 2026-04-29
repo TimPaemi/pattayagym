@@ -131,7 +131,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Deep Climbing Gym is <strong>the first indoor climbing facility ever opened in Pattaya</strong> and remains the city's primary destination for rock climbing, top-rope, lead climbing, bouldering, and auto-belay practice. Located on the <strong>8th floor of Harbor Pattaya Shopping Mall</strong> in Na Kluea, the gym occupies a purpose-designed climbing space themed around a <strong>deep blue ocean</strong> aesthetic — air-conditioned, well-lit, with a <strong>10-meter main wall</strong>, approximately <strong>27 routes</strong>, both <strong>TrueBlue auto-belay systems</strong> and <strong>manual rope stations</strong>, and a <strong>bouldering area</strong>. It is the only serious climbing destination within Pattaya itself (the other Pattaya option, Bean Cow Climbing Gym, is smaller and family-focused).</p>
+<p>Deep Climbing Gym is <strong>the first indoor climbing facility ever opened in Pattaya</strong> and remains the city's primary destination for rock climbing, top-rope, lead climbing, bouldering, and auto-belay practice. Located on the <strong>8th floor of Harbor Pattaya Shopping Mall</strong> in Na Kluea, the gym occupies a purpose-designed climbing space themed around a <strong>deep blue ocean</strong> aesthetic — air-conditioned, well-lit, with a <strong>10-meter main wall</strong>, approximately <strong>27 routes</strong>, both <strong>TrueBlue auto-belay systems</strong> and <strong>manual rope stations</strong>, and a <strong>bouldering area</strong>. It is the only serious climbing destination within Pattaya itself (the other Pattaya option, <a href="/gyms/bean-cow-climbing-gym/">Bean Cow Climbing Gym</a>, is smaller and family-focused).</p>
 <p>For travelers and Pattaya residents wanting <strong>proper indoor climbing</strong>, this is the answer — and at <strong>฿480 for a 3-hour adult day pass with harness and shoes included</strong>, it's accessible pricing for what is genuinely a unique facility in the city.</p>
 <h2 id="position-in-the-pattaya-market">Position in the Pattaya Market</h2>
 <p>Pattaya has historically been <strong>a climbing dead zone</strong>. While Bangkok has a thriving indoor climbing scene (Rock Domain, RQ Club, Urban Playground) and Krabi/Tonsai is one of Asia's premier outdoor climbing destinations, <strong>Pattaya had no climbing infrastructure for decades</strong>. Deep Climbing Gym changed that — it is <strong>literally the first wall-climbing facility in the city</strong> — and remains the primary serious climbing option, with Bean Cow Climbing Gym opening later as a smaller family-friendly alternative.</p>
@@ -415,17 +415,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

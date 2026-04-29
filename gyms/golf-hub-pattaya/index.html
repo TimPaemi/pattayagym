@@ -129,12 +129,12 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Golf Hub Pattaya is <strong>the only premium indoor golf simulator and club fitting facility in Pattaya</strong> — providing <strong>AC-controlled, weather-independent year-round golf practice and serious club-fitting services</strong> at multiple Pattaya locations including <strong>Soi Buakhao and East Pattaya</strong>. Where outdoor driving ranges (Pattaya Golf Driving Range, Diana Driving Range, 300 Yards Driving Range) close during heavy rain and become unbearable in midday hot-season heat, Golf Hub's <strong>indoor air-conditioned simulator bays operate year-round regardless of weather</strong> — making them especially valuable during Pattaya's monsoon season (May-October) and dry-season hot afternoons (March-May).</p>
+<p>Golf Hub Pattaya is <strong>the only premium indoor golf simulator and club fitting facility in Pattaya</strong> — providing <strong>AC-controlled, weather-independent year-round golf practice and serious club-fitting services</strong> at multiple Pattaya locations including <strong>Soi Buakhao and East Pattaya</strong>. Where outdoor driving ranges (<a href="/gyms/pattaya-golf-driving-range/">Pattaya Golf Driving Range</a>, <a href="/gyms/diana-driving-range/">Diana Driving Range</a>, 300 Yards Driving Range) close during heavy rain and become unbearable in midday hot-season heat, Golf Hub's <strong>indoor air-conditioned simulator bays operate year-round regardless of weather</strong> — making them especially valuable during Pattaya's monsoon season (May-October) and dry-season hot afternoons (March-May).</p>
 <p>The facility's distinguishing feature beyond pure simulator practice is <strong>state-of-the-art club fitting using premium launch monitors (typically TrackMan or GC Quad)</strong> — equipment that <strong>costs $20,000-50,000+ per unit</strong> and provides <strong>professional-tier ball-flight data including launch angle, spin rate, club-path, face-angle, smash factor, peak height, carry distance, side spin, and dozens of other metrics</strong>. This data depth is <strong>dramatically beyond</strong> what any outdoor range can provide and is <strong>the industry-standard equipment for premium club fitting</strong> at top fitting centers globally.</p>
 <p>For Pattaya golfers serious about <strong>swing improvement, equipment selection, year-round practice, and lesson-based development</strong>, Golf Hub fills a niche that's otherwise unavailable in the city. The facility serves <strong>a meaningful demographic of expat golfers, traveling business players, serious amateur competitors, and equipment-curious players</strong> who want the data and technology of major fitting centers.</p>
 <h2 id="position-in-the-pattaya-practice-facility-market">Position in the Pattaya Practice Facility Market</h2>
 <p>Pattaya practice ranges tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium course-attached</strong></td><td>Siam Country Club Waterside, Burapha range</td><td>Real grass + championship integration</td></tr><tr><td><strong>Indoor / simulator</strong></td><td><strong>Golf Hub Pattaya</strong></td><td><strong>TrackMan / GC Quad + AC + multi-location</strong></td></tr><tr><td><strong>Floodlit dedicated range</strong></td><td>Diana Driving Range</td><td>30 bays + 200 yards + restaurant</td></tr><tr><td><strong>Affordable mainstream</strong></td><td>Pattaya Golf Driving Range</td><td>Mat bays + value pricing</td></tr><tr><td><strong>Boutique</strong></td><td>300 Yards Driving Range</td><td>Independent operation</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium course-attached</strong></td><td><a href="/gyms/siam-country-club/">Siam Country Club</a> Waterside, Burapha range</td><td>Real grass + championship integration</td></tr><tr><td><strong>Indoor / simulator</strong></td><td><strong>Golf Hub Pattaya</strong></td><td><strong>TrackMan / GC Quad + AC + multi-location</strong></td></tr><tr><td><strong>Floodlit dedicated range</strong></td><td>Diana Driving Range</td><td>30 bays + 200 yards + restaurant</td></tr><tr><td><strong>Affordable mainstream</strong></td><td>Pattaya Golf Driving Range</td><td>Mat bays + value pricing</td></tr><tr><td><strong>Boutique</strong></td><td>300 Yards Driving Range</td><td>Independent operation</td></tr></tbody></table></div>
 <p>Golf Hub's specific niche: <strong>the only AC indoor simulator + premium fitting in Pattaya</strong>.</p>
 <h2 id="what-indoor-golf-simulators-do">What Indoor Golf Simulators Do</h2>
 <h3 id="the-technology">The Technology</h3>
@@ -457,17 +457,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

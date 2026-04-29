@@ -78,8 +78,8 @@
       </g></svg></div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">muay thai</span>
+        <span class="open-badge open-now">● Open now</span>
         
-        <span class="open-badge open-closed">● Closed now</span>
         <span class="meta-dot">•</span>
         <span class="reading-meta">📖 6 min read</span>
         <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
@@ -128,7 +128,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>MAX Muay Thai Stadium Pattaya is <strong>Pattaya's only Thai boxing venue with daily fight events</strong> — a purpose-built Muay Thai stadium <strong>on Sukhumvit Road next to King Power Pattaya</strong> that has <strong>hosted multiple MAX World Championships</strong> and operates as both <strong>a fight stadium and a Muay Thai promotion organization</strong>. Where Pattaya's Muay Thai gyms (Fairtex, Sityodtong, Sor Klinmee, Petchrungruang, Sitpholek, Venum, Battle Conquer, Rambaa M16, etc.) deliver <strong>training and trainer access</strong>, MAX Muay Thai delivers <strong>the spectator experience — watching world-class Muay Thai fights live in person, every single night of the year</strong>.</p>
+<p>MAX Muay Thai Stadium Pattaya is <strong>Pattaya's only Thai boxing venue with daily fight events</strong> — a purpose-built Muay Thai stadium <strong>on Sukhumvit Road next to King Power Pattaya</strong> that has <strong>hosted multiple MAX World Championships</strong> and operates as both <strong>a fight stadium and a Muay Thai promotion organization</strong>. Where Pattaya's Muay Thai gyms (Fairtex, <a href="/gyms/sityodtong-pattaya/">Sityodtong</a>, Sor Klinmee, Petchrungruang, Sitpholek, Venum, Battle Conquer, Rambaa M16, etc.) deliver <strong>training and trainer access</strong>, MAX Muay Thai delivers <strong>the spectator experience — watching world-class Muay Thai fights live in person, every single night of the year</strong>.</p>
 <p>The format is decisively crowd-friendly: <strong>3 high-energy bouts per card</strong>, doors open at 18:45, fights start 19:45 and conclude by 20:45 — a perfect ~2-hour entertainment slot for tourists who want to <strong>experience real Muay Thai without needing to fly to Bangkok's Lumpinee or Rajadamnern stadiums</strong>. The MAX brand is genuinely significant in modern Muay Thai — <strong>credited for elevating the level of entertainment and modernizing presentation of the sport</strong> in Thailand, with <strong>shorter rounds, faster pace, more music, more lighting, and explicit tourist-friendly programming</strong> vs. the older traditional stadium format.</p>
 <p>For Pattaya tourists wanting <strong>the iconic Muay Thai live-fight experience</strong>, MAX is genuinely the only credible option in the city. The combination of <strong>daily availability, central Sukhumvit / King Power location, and modern entertainment-style production</strong> makes it accessible in ways that traditional Bangkok stadiums (Rajadamnern Tuesdays/Thursdays/Saturdays only, Lumpinee Friday nights only) cannot match.</p>
 <h2 id="position-in-the-pattaya-muay-thai-market">Position in the Pattaya Muay Thai Market</h2>
@@ -136,7 +136,7 @@
 <h3 id="training-side">Training Side</h3>
 <div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th></tr></thead><tbody><tr><td>Resort / luxury camps</td><td>Fairtex, Silk, Kombat Group</td></tr><tr><td>Authentic / lineage camps</td><td>Sityodtong, Sor Klinmee, Petchrungruang, Rambaa M16</td></tr><tr><td>Modern multi-discipline</td><td>Battle Conquer, Venum, Rage</td></tr><tr><td>Performance-structured</td><td>Fight Evo360</td></tr><tr><td>Legacy production</td><td>Sitpholek (9 world champions)</td></tr></tbody></table></div>
 <h3 id="spectator-side">Spectator Side</h3>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Example</th></tr></thead><tbody><tr><td><strong>Daily live fights</strong></td><td><strong>MAX Muay Thai Stadium Pattaya</strong></td></tr><tr><td>Occasional events</td><td>Pattaya Boxing World Stadium (less frequent), private camps' charity fights</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Example</th></tr></thead><tbody><tr><td><strong>Daily live fights</strong></td><td><strong>MAX Muay Thai Stadium Pattaya</strong></td></tr><tr><td>Occasional events</td><td><a href="/gyms/pattaya-boxing-world/">Pattaya Boxing World Stadium</a> (less frequent), private camps' charity fights</td></tr></tbody></table></div>
 <p>MAX occupies the <strong>daily spectator experience tier</strong> — and is genuinely <strong>the only daily option</strong> in the city.</p>
 <h2 id="the-max-brand">The MAX Brand</h2>
 <h3 id="origins-significance">Origins & Significance</h3>
@@ -454,17 +454,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

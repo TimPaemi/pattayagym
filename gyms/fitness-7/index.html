@@ -129,11 +129,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Fitness 7 Pattaya is <strong>a 2,000+ square meter, 24-hour central Pattaya gym</strong> located <strong>at The Avenue Pattaya — 500 meters from Mike Shopping Mall, on the next road parallel to Beach Road</strong>. The location alone is meaningful: this is <strong>one of the most central walkable gym locations in Pattaya</strong>, accessible from <strong>Walking Street, Soi Buakhao, Beach Road, and 2nd Road hotels</strong> within a 5-15 minute walk. Fitness 7 belongs to <strong>Fitness7 Thailand</strong>, a regional Thai fitness brand with multiple branches across the country.</p>
-<p>The 2,000+ sqm floor space puts Fitness 7 in <strong>the larger commercial gym tier in Pattaya</strong> — meaningfully bigger than most chain gym locations (Jetts, True Fitness) and competing in scale only with <strong>Muscle Factory</strong> on Pratamnak Hill ("the largest gym in Pattaya"). The equipment and amenity mix is aggressive: <strong>cardio machines, weighted machines, free weights, a boxing ring, and dedicated functional training areas</strong> — meaning students can do <strong>bodybuilding, cardio, free-weight strength, boxing-style cross-training, and functional / kettlebell / sled work</strong> all in one facility.</p>
+<p>The 2,000+ sqm floor space puts Fitness 7 in <strong>the larger commercial gym tier in Pattaya</strong> — meaningfully bigger than most chain gym locations (Jetts, <a href="/gyms/true-fitness-pattaya/">True Fitness</a>) and competing in scale only with <strong><a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a></strong> on Pratamnak Hill ("the largest gym in Pattaya"). The equipment and amenity mix is aggressive: <strong>cardio machines, weighted machines, free weights, a boxing ring, and dedicated functional training areas</strong> — meaning students can do <strong>bodybuilding, cardio, free-weight strength, boxing-style cross-training, and functional / kettlebell / sled work</strong> all in one facility.</p>
 <p>The combination of <strong>24-hour access + central location + 2,000+ sqm + free parking + free classes</strong> makes Fitness 7 <strong>the strongest "everything for everyone" central-Pattaya gym</strong> option for visitors and residents alike.</p>
 <h2 id="position-in-the-pattaya-fitness-market">Position in the Pattaya Fitness Market</h2>
 <p>Pattaya commercial fitness landscape:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium private</strong></td><td>FITZ Club</td><td>Royal Cliff luxury</td></tr><tr><td><strong>Largest independent</strong></td><td>Muscle Factory (Pratamnak)</td><td>"Largest gym in Pattaya"</td></tr><tr><td><strong>24/7 chain</strong></td><td>Jetts (Little Walk + Royal Garden)</td><td>Australian chain network</td></tr><tr><td><strong>Mid-tier chain</strong></td><td>True Fitness</td><td>Class-focused multi-location</td></tr><tr><td><strong>24/7 large central independent</strong></td><td><strong>Fitness 7 (The Avenue)</strong></td><td><strong>2,000+ sqm + 24hr + central</strong></td></tr><tr><td><strong>Hardcore bodybuilding</strong></td><td>Castra Gym, Tony's Gym, Universe Gym</td><td>Independent free-weight focused</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium private</strong></td><td>FITZ Club</td><td>Royal Cliff luxury</td></tr><tr><td><strong>Largest independent</strong></td><td>Muscle Factory (Pratamnak)</td><td>"Largest gym in Pattaya"</td></tr><tr><td><strong>24/7 chain</strong></td><td>Jetts (Little Walk + Royal Garden)</td><td>Australian chain network</td></tr><tr><td><strong>Mid-tier chain</strong></td><td>True Fitness</td><td>Class-focused multi-location</td></tr><tr><td><strong>24/7 large central independent</strong></td><td><strong>Fitness 7 (The Avenue)</strong></td><td><strong>2,000+ sqm + 24hr + central</strong></td></tr><tr><td><strong>Hardcore bodybuilding</strong></td><td><a href="/gyms/castra-gym/">Castra Gym</a>, <a href="/gyms/tonys-gym/">Tony's Gym</a>, <a href="/gyms/universe-gym/">Universe Gym</a></td><td>Independent free-weight focused</td></tr></tbody></table></div>
 <p>Fitness 7's specific advantage: <strong>scale + 24/7 hours + central walkable location + included free classes and parking</strong> — covers more boxes than any single competitor.</p>
 <h2 id="the-avenue-pattaya-strategic-location">The Avenue Pattaya — Strategic Location</h2>
 <h3 id="geographic-advantage">Geographic Advantage</h3>
@@ -426,17 +426,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

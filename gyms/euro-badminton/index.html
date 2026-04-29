@@ -135,7 +135,7 @@
 <p>The combined amenity model — courts + pool + food — encourages <strong>all-day or half-day visits</strong> rather than purely transactional court rentals. Players can train in the morning, swim mid-day, eat lunch on-site, and return for evening hits — all without leaving the venue. For families and groups especially, this integration creates <strong>a sports-club lifestyle experience at badminton-club pricing</strong>.</p>
 <h2 id="position-in-the-pattaya-badminton-market">Position in the Pattaya Badminton Market</h2>
 <p>Pattaya badminton venues:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Venue</th><th>Type</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Pattaya Tennis & Badminton Inter Club</strong></td><td>Multi-sport</td><td>Indoor badminton + tennis + pickleball</td></tr><tr><td><strong>Pattaya Sports Club</strong></td><td>Multi-sport civic</td><td>Badminton + charity community</td></tr><tr><td><strong>Diamond Badminton</strong></td><td>Dedicated single-sport</td><td>South Pattaya 3rd Road</td></tr><tr><td><strong>Euro Badminton</strong></td><td><strong>Dedicated + amenities</strong></td><td><strong>East Pattaya + pool + food</strong></td></tr><tr><td><strong>X-Zyte Badminton</strong></td><td>Dedicated single-sport</td><td>Independent</td></tr><tr><td><strong>Various hotel courts</strong></td><td>Hotel-attached</td><td>Guest-priority</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Venue</th><th>Type</th><th>Distinction</th></tr></thead><tbody><tr><td><strong><a href="/gyms/pattaya-tennis-badminton-inter-club/">Pattaya Tennis & Badminton Inter Club</a></strong></td><td>Multi-sport</td><td>Indoor badminton + tennis + pickleball</td></tr><tr><td><strong><a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a></strong></td><td>Multi-sport civic</td><td>Badminton + charity community</td></tr><tr><td><strong><a href="/gyms/diamond-badminton/">Diamond Badminton</a></strong></td><td>Dedicated single-sport</td><td>South Pattaya 3rd Road</td></tr><tr><td><strong>Euro Badminton</strong></td><td><strong>Dedicated + amenities</strong></td><td><strong>East Pattaya + pool + food</strong></td></tr><tr><td><strong>X-Zyte Badminton</strong></td><td>Dedicated single-sport</td><td>Independent</td></tr><tr><td><strong>Various hotel courts</strong></td><td>Hotel-attached</td><td>Guest-priority</td></tr></tbody></table></div>
 <p>Euro Badminton's specific position: <strong>East Pattaya badminton with pool + food amenities</strong> — a small-club lifestyle experience.</p>
 <h2 id="east-pattaya-soi-chaiyaphruek">East Pattaya / Soi Chaiyaphruek</h2>
 <h3 id="geographic-context">Geographic Context</h3>
@@ -392,17 +392,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

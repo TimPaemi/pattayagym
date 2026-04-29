@@ -133,7 +133,7 @@
 <p>For Pattaya residents on Pratumnak, for budget-conscious travelers, for fitness enthusiasts wanting outdoor-environment training, for street-workout / calisthenics specialists, and for tourists wanting <strong>a free workout with views of Pattaya</strong> — Pratumnak Fitness Park delivers an <strong>experience genuinely impossible to replicate at any commercial gym, regardless of price</strong>.</p>
 <h2 id="position-in-the-pattaya-fitness-market">Position in the Pattaya Fitness Market</h2>
 <p>Pattaya commercial fitness landscape with public option:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Cost</th></tr></thead><tbody><tr><td><strong>Premium private</strong></td><td>FITZ Club</td><td>~฿2,500+/month</td></tr><tr><td><strong>Largest hardcore</strong></td><td>Muscle Factory</td><td>~฿1,500-2,500/month</td></tr><tr><td><strong>24/7 large central</strong></td><td>Fitness 7, Jetts</td><td>~฿1,500-1,700/month</td></tr><tr><td><strong>Multi-branch independent</strong></td><td>SUN Fitness</td><td>~฿1,090/month</td></tr><tr><td><strong>East Pattaya value</strong></td><td>Castra Gym</td><td>~฿580/month (annual)</td></tr><tr><td><strong>Free outdoor public</strong></td><td><strong>Pratumnak Fitness Park</strong></td><td><strong>FREE</strong></td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Cost</th></tr></thead><tbody><tr><td><strong>Premium private</strong></td><td>FITZ Club</td><td>~฿2,500+/month</td></tr><tr><td><strong>Largest hardcore</strong></td><td><a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a></td><td>~฿1,500-2,500/month</td></tr><tr><td><strong>24/7 large central</strong></td><td><a href="/gyms/fitness-7/">Fitness 7</a>, Jetts</td><td>~฿1,500-1,700/month</td></tr><tr><td><strong>Multi-branch independent</strong></td><td>SUN Fitness</td><td>~฿1,090/month</td></tr><tr><td><strong>East Pattaya value</strong></td><td><a href="/gyms/castra-gym/">Castra Gym</a></td><td>~฿580/month (annual)</td></tr><tr><td><strong>Free outdoor public</strong></td><td><strong>Pratumnak Fitness Park</strong></td><td><strong>FREE</strong></td></tr></tbody></table></div>
 <p>Pratumnak Fitness Park's specific position: <strong>the only legitimate FREE outdoor multi-equipment fitness facility in Pattaya</strong> — unmatchable on cost alone.</p>
 <h2 id="why-a-public-outdoor-gym-matters">Why a Public Outdoor Gym Matters</h2>
 <h3 id="thai-public-sport-infrastructure">Thai Public Sport Infrastructure</h3>
@@ -315,7 +315,7 @@
 <li><strong>Heat-sensitive</strong> trainers in dry season midday</li>
 <li><strong>Hygiene-prioritizers</strong> preferring commercial cleanliness</li>
 <li><strong>Coaching seekers</strong> — no instruction available</li>
-<li><strong>Walking Street based</strong> travelers — Fitness 7 or Tony's Gym closer</li>
+<li><strong>Walking Street based</strong> travelers — Fitness 7 or <a href="/gyms/tonys-gym/">Tony's Gym</a> closer</li>
 </ul>
 </div></div>
 <h2 id="quick-reference-card" class="section-quick-ref">Quick Reference Card</h2>
@@ -459,17 +459,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

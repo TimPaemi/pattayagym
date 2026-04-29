@@ -128,12 +128,12 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Cape Dara Resort is <strong>a 5-star beach-cliff luxury resort on Dara Beach in Naklua / North Pattaya</strong> delivering <strong>a more boutique-residential luxury experience than the larger central-Pattaya 5-stars (Hilton, Royal Cliff)</strong>. The wellness facilities — <strong>2 outdoor pools (including a signature infinity pool), the Luminous Spa, mineral bath, sauna, steam room, beauty centre, and a fitness room with yoga classes</strong> — combine into <strong>a quieter alternative to the busier Pattaya beach hotels</strong>, with <strong>Cape Dara's residential cliff position</strong> giving guests <strong>panoramic Gulf of Thailand views without the central-Pattaya tourism intensity</strong>.</p>
+<p>Cape Dara Resort is <strong>a 5-star beach-cliff luxury resort on Dara Beach in Naklua / North Pattaya</strong> delivering <strong>a more boutique-residential luxury experience than the larger central-Pattaya 5-stars (<a href="/gyms/hilton-pattaya-fitness/">Hilton</a>, Royal Cliff)</strong>. The wellness facilities — <strong>2 outdoor pools (including a signature infinity pool), the Luminous Spa, mineral bath, sauna, steam room, beauty centre, and a fitness room with yoga classes</strong> — combine into <strong>a quieter alternative to the busier Pattaya beach hotels</strong>, with <strong>Cape Dara's residential cliff position</strong> giving guests <strong>panoramic Gulf of Thailand views without the central-Pattaya tourism intensity</strong>.</p>
 <p>The <strong>Luminous Spa</strong> is the resort's wellness centerpiece — offering <strong>aromatherapy treatments and yoga classes alongside standard massage and facial menu</strong>, providing <strong>an integrated wellness experience for stay-and-spa guests</strong>. The <strong>mineral bath</strong> is genuinely unusual at Pattaya hotels — most have standard chlorinated pools and saunas; Cape Dara's mineral water bathing offers therapeutic recovery benefits typical of European-style spa resorts.</p>
 <p>For couples and travelers seeking <strong>5-star luxury without the Beach Road / Walking Street density</strong>, Cape Dara delivers <strong>the boutique cliff-resort alternative</strong> in North Pattaya / Naklua. The location is <strong>walking distance to Wong Amat Beach, Naklua's local Thai community feel, and quiet residential corridors</strong> — fundamentally different from central Pattaya's tourism-saturated atmosphere.</p>
 <h2 id="position-in-the-pattaya-5-star-resort-market">Position in the Pattaya 5-Star Resort Market</h2>
 <p>Pattaya's 5-star wellness positioning:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Resort</th><th>Wellness Distinction</th></tr></thead><tbody><tr><td><strong>Royal Cliff (FITZ Club)</strong></td><td>7 floodlit tennis + Sky Aquarium + Triple TripAdvisor TC</td></tr><tr><td><strong>Hilton Pattaya</strong></td><td>24/7 fitness + 16th-floor infinity + Beach Road central</td></tr><tr><td><strong>Andaz Pattaya Jomtien</strong></td><td>24/7 Technogym + onsen / Turkish / Finnish triple bath</td></tr><tr><td><strong>Centara Grand Mirage</strong></td><td>Lost World water park + 24-room Spa Cenvaree + rock climbing</td></tr><tr><td><strong>Cape Dara</strong></td><td><strong>Beach-cliff infinity pool + Luminous Spa + mineral bath + Naklua quietude</strong></td></tr><tr><td><strong>Cross Pattaya Pratamnak</strong></td><td>Cloud Club + PLAYROOM games</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Resort</th><th>Wellness Distinction</th></tr></thead><tbody><tr><td><strong>Royal Cliff (FITZ Club)</strong></td><td>7 floodlit tennis + Sky Aquarium + Triple TripAdvisor TC</td></tr><tr><td><strong>Hilton Pattaya</strong></td><td>24/7 fitness + 16th-floor infinity + Beach Road central</td></tr><tr><td><strong>Andaz Pattaya Jomtien</strong></td><td>24/7 Technogym + onsen / Turkish / Finnish triple bath</td></tr><tr><td><strong>Centara Grand Mirage</strong></td><td>Lost World water park + 24-room Spa Cenvaree + rock climbing</td></tr><tr><td><strong>Cape Dara</strong></td><td><strong>Beach-cliff infinity pool + Luminous Spa + mineral bath + Naklua quietude</strong></td></tr><tr><td><strong><a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a></strong></td><td>Cloud Club + PLAYROOM games</td></tr></tbody></table></div>
 <p>Cape Dara's specific position: <strong>the boutique-quietude 5-star</strong> — among Pattaya's most peaceful luxury hotels.</p>
 <h2 id="the-cliff-beach-position">The Cliff-Beach Position</h2>
 <h3 id="why-the-setting-matters">Why The Setting Matters</h3>
@@ -436,17 +436,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

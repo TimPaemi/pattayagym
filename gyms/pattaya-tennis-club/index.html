@@ -130,7 +130,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Pattaya Tennis Club is <strong>a central-Pattaya outdoor tennis facility</strong> providing <strong>multi-court, floodlit, hard-surface tennis access</strong> for Pattaya residents, expats, and visitors who want <strong>a more accessible alternative to the premium covered courts at Greta Sport Club</strong> or the <strong>luxury hotel courts at FITZ Club</strong>. The club operates as part of the <strong>broader Pattaya tennis ecosystem</strong> — alongside Pattaya Sports Club, Pattaya Tennis & Badminton Inter Club, Tara Tennis Club, Tos Tennis, and various hotel courts — all serving a Pattaya tennis-playing population that's grown steadily as expat numbers have increased.</p>
+<p>Pattaya Tennis Club is <strong>a central-Pattaya outdoor tennis facility</strong> providing <strong>multi-court, floodlit, hard-surface tennis access</strong> for Pattaya residents, expats, and visitors who want <strong>a more accessible alternative to the premium covered courts at Greta Sport Club</strong> or the <strong>luxury hotel courts at FITZ Club</strong>. The club operates as part of the <strong>broader Pattaya tennis ecosystem</strong> — alongside <a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a>, <a href="/gyms/pattaya-tennis-badminton-inter-club/">Pattaya Tennis & Badminton Inter Club</a>, <a href="/gyms/tara-tennis-club/">Tara Tennis Club</a>, <a href="/gyms/tos-tennis/">Tos Tennis</a>, and various hotel courts — all serving a Pattaya tennis-playing population that's grown steadily as expat numbers have increased.</p>
 <p>Unlike Greta's <strong>6 covered ITF-rated Plexipave courts</strong> or FITZ Club's <strong>7 floodlit hard courts inside the Royal Cliff Beach Resort</strong>, Pattaya Tennis Club operates at the <strong>mid-tier accessible level</strong>: <strong>outdoor courts, evening floodlight play, weather-dependent scheduling, and modest pricing</strong>. The club anchors the <strong>central-Pattaya tennis scene</strong> with <strong>drop-in pickup play, member-led leagues, coaching for individuals and juniors, and equipment rental for travelers without their own racquets</strong>.</p>
 <p>For Pattaya residents and visitors who want <strong>tennis without the premium-club commitment</strong> but with <strong>better infrastructure than condo-shared single courts</strong>, Pattaya Tennis Club fills the niche.</p>
 <h2 id="position-in-the-pattaya-tennis-market">Position in the Pattaya Tennis Market</h2>
@@ -243,7 +243,7 @@
 <ul>
 <li><strong>Pattaya Tennis & Badminton Inter Club</strong> explicitly offers <strong>pickleball</strong> alongside traditional racquet sports</li>
 <li><strong>Several outdoor tennis venues</strong> have added pickleball court markings on existing hard courts</li>
-<li><strong>Pickleball communities</strong> organize through Facebook and meetup channels</li>
+<li><strong><a href="/gyms/pickleball-pattaya/">Pickleball</a> communities</strong> organize through Facebook and meetup channels</li>
 </ul>
 <p>Whether Pattaya Tennis Club specifically offers pickleball — confirm at the club. The trend across all Thai tennis venues is rapid pickleball adoption.</p>
 <h2 id="pros" class="section-pros-cons">Pros</h2>
@@ -437,17 +437,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

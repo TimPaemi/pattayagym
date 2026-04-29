@@ -289,7 +289,7 @@
 <div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Casual one-off swim lesson seekers</strong> (better at hotel pools)</li>
-<li><strong>Adult swim instruction</strong> (Manta Kids is exclusively kids 4mo-12yr; check First Serve Sports Club for adults)</li>
+<li><strong>Adult swim instruction</strong> (Manta Kids is exclusively kids 4mo-12yr; check <a href="/gyms/first-serve-sports-club/">First Serve Sports Club</a> for adults)</li>
 <li><strong>Drop-in pool access</strong> without instruction (use Hard Rock pool day pass or public pools)</li>
 <li><strong>Children over 12</strong> (program age cap)</li>
 </ul>
@@ -446,17 +446,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

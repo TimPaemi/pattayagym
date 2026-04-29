@@ -130,7 +130,7 @@
       <h2 id="overview">Overview</h2>
 <p>Seafari is the <strong>oldest scuba diving operation in Pattaya</strong> and one of the <strong>first dive centers ever to open in Thailand</strong> — founded by <strong>Bill Burbridge</strong> in <strong>1970</strong>. The center is <strong>British-owned, PADI 5-Star IDC certified</strong>, and located <strong>2 minutes from Pattaya Beach Road behind Mike's Mall</strong>. With over <strong>55 years of continuous diving heritage</strong> in Pattaya waters, Seafari represents the foundational layer of Thai recreational diving — the operation that essentially <strong>introduced PADI scuba diving to the Eastern Seaboard</strong>.</p>
 <p>Course pricing starts at <strong>฿7,500 for entry-level certifications</strong> and ranges up to <strong>฿20,200</strong> for advanced and professional-level training. A current promotion bundles <strong>PADI Open Water + 50% off Advanced Course</strong> — meaningful savings for divers planning to certify through both levels.</p>
-<p>For travelers wanting <strong>the longest pedigree, deepest institutional knowledge, and PADI 5-Star IDC service standards</strong> in Pattaya, Seafari is one of two top choices (alongside Pattaya Dive Centre on Beach Road). Different visitors prefer different operators — Seafari for its historical legacy and IDC tier; Pattaya Dive Centre for its CDC tier and Beach Road frontage.</p>
+<p>For travelers wanting <strong>the longest pedigree, deepest institutional knowledge, and PADI 5-Star IDC service standards</strong> in Pattaya, Seafari is one of two top choices (alongside <a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a> on Beach Road). Different visitors prefer different operators — Seafari for its historical legacy and IDC tier; Pattaya Dive Centre for its CDC tier and Beach Road frontage.</p>
 <h2 id="history-bill-burbridge-the-birth-of-pattaya-diving">History — Bill Burbridge & The Birth of Pattaya Diving</h2>
 <p>In <strong>1970</strong>, when Pattaya was still primarily a small fishing town beginning its tourism evolution, <strong>Bill Burbridge</strong> opened <strong>Seafari Diving</strong> — the <strong>first scuba diving operation in Pattaya</strong> and <strong>one of the very first PADI dive centers in all of Thailand</strong>.</p>
 <p>This puts Seafari's founding date in the <strong>early generation of Asian recreational diving</strong>. PADI itself was only founded in 1966, four years before Seafari. To open a PADI-certified scuba operation in Thailand in 1970 required:</p>
@@ -399,17 +399,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

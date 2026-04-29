@@ -133,7 +133,7 @@
 <p>For Pattaya residents and visitors wanting <strong>wakeboarding without boat costs, with structured progression from absolute beginner to freestyle competition level</strong>, Thai Wake Park is the city's only cable option and one of Thailand's best cable parks alongside Thai Wake Park's sister facility in Lumlukka, Bangkok.</p>
 <h2 id="position-in-the-pattaya-watersports-market">Position in the Pattaya Watersports Market</h2>
 <p>Pattaya's wake-and-water sport tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Cable wakeboarding</strong></td><td><strong>Thai Wake Park</strong></td><td><strong>Only cable park in Pattaya — 2 lakes</strong></td></tr><tr><td><strong>Boat-towed wakeboarding</strong></td><td>Wave Pattaya, beach operators</td><td>Per-session bookings, beach-based</td></tr><tr><td><strong>Kitesurfing schools</strong></td><td>Kitesurf Pattaya, KBA, Clubloongchat</td><td>Wind-dependent ocean sport</td></tr><tr><td><strong>PADI scuba</strong></td><td>No Limit Divers, Mermaid's, etc.</td><td>Underwater specialty</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Cable wakeboarding</strong></td><td><strong>Thai Wake Park</strong></td><td><strong>Only cable park in Pattaya — 2 lakes</strong></td></tr><tr><td><strong>Boat-towed wakeboarding</strong></td><td>Wave Pattaya, beach operators</td><td>Per-session bookings, beach-based</td></tr><tr><td><strong>Kitesurfing schools</strong></td><td><a href="/gyms/kitesurf-pattaya/">Kitesurf Pattaya</a>, KBA, Clubloongchat</td><td>Wind-dependent ocean sport</td></tr><tr><td><strong>PADI scuba</strong></td><td><a href="/gyms/no-limit-divers/">No Limit Divers</a>, Mermaid's, etc.</td><td>Underwater specialty</td></tr></tbody></table></div>
 <p>Thai Wake Park's specific position: <strong>the only cable wake facility in Pattaya</strong> — with no direct competitors after Lakeland Cable Ski closed.</p>
 <h2 id="what-cable-wakeboarding-is">What Cable Wakeboarding Is</h2>
 <h3 id="how-it-works">How It Works</h3>
@@ -214,7 +214,7 @@
 <p><strong>Mabprachan Reservoir / Lake</strong> is the largest natural-feel waterbody in the Pattaya area:</p>
 <ul>
 <li><strong>Approximately 4 km perimeter</strong></li>
-<li><strong>Surrounded by</strong> condo developments, the Klinmee Muay Thai cluster, Horseshoe Point Resort, Thai Polo & Equestrian Club</li>
+<li><strong>Surrounded by</strong> condo developments, the Klinmee Muay Thai cluster, Horseshoe Point Resort, <a href="/gyms/thai-polo-equestrian-club/">Thai Polo & Equestrian Club</a></li>
 <li><strong>Public running / cycling path</strong> around the lake</li>
 <li><strong>Quiet vs. central Pattaya</strong> — residential community feel</li>
 <li><strong>East Pattaya / Darkside</strong> location</li>
@@ -456,17 +456,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

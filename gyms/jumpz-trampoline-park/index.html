@@ -78,8 +78,8 @@
       </g></svg></div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">kids youth</span>
-        <span class="open-badge open-now">● Open now</span>
         
+        <span class="open-badge open-closed">● Closed now</span>
         <span class="meta-dot">•</span>
         <span class="reading-meta">📖 5 min read</span>
         <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
@@ -128,12 +128,12 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>JumpZ Trampoline Park is <strong>Pattaya's primary indoor trampoline park</strong> — located <strong>on the 6th floor of Harbor Pattaya Shopping Mall on Central Pattaya Road, adjacent to Foodland Supermarket</strong>. The facility offers <strong>high-flying fun with trampolines, games, and family-friendly activities for all ages in a vibrant indoor environment</strong> — providing <strong>Pattaya's main weather-independent active-play option for families with children</strong> alongside the Deep Climbing Gym (also at Harbor Pattaya), Bean Cow Climbing Gym, and Manta Kids' multi-sport activities.</p>
+<p>JumpZ Trampoline Park is <strong>Pattaya's primary indoor trampoline park</strong> — located <strong>on the 6th floor of Harbor Pattaya Shopping Mall on Central Pattaya Road, adjacent to Foodland Supermarket</strong>. The facility offers <strong>high-flying fun with trampolines, games, and family-friendly activities for all ages in a vibrant indoor environment</strong> — providing <strong>Pattaya's main weather-independent active-play option for families with children</strong> alongside the <a href="/gyms/deep-climbing-gym/">Deep Climbing Gym</a> (also at Harbor Pattaya), <a href="/gyms/bean-cow-climbing-gym/">Bean Cow Climbing Gym</a>, and Manta Kids' multi-sport activities.</p>
 <p>The Harbor Pattaya Shopping Mall location is meaningful: <strong>Harbor Pattaya is one of Pattaya's family-friendly mall destinations</strong> (alongside Central Festival Pattaya and Royal Garden Plaza), and the <strong>6th floor placement provides indoor air-conditioned, weather-immune family entertainment</strong> that's particularly valuable during <strong>monsoon-season afternoons (May-October) and hot-season midday heat (March-May)</strong>. The hours of <strong>10:30 to 19:30 daily</strong> accommodate <strong>post-school weekday play, weekend morning sessions, and post-shopping evening visits</strong>.</p>
 <p>For Pattaya families with children — and especially for families staying in central Pattaya hotels who want <strong>convenient mall-attached active recreation</strong> — JumpZ provides <strong>a safe, supervised, indoor trampoline experience</strong> that's now globally established as a youth-fitness category.</p>
 <h2 id="position-in-the-pattaya-family-kids-sport-market">Position in the Pattaya Family / Kids' Sport Market</h2>
 <p>Pattaya kids-and-youth recreational tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Trampoline park</strong></td><td><strong>JumpZ (Harbor Pattaya)</strong></td><td><strong>Indoor trampoline + games + AC</strong></td></tr><tr><td><strong>Climbing gym</strong></td><td>Deep Climbing Gym (also Harbor Pattaya), Bean Cow Climbing</td><td>Indoor climbing</td></tr><tr><td><strong>Multi-sport kids</strong></td><td>Manta Kids Pattaya</td><td>Premier multi-discipline</td></tr><tr><td><strong>Football academies</strong></td><td>AF Academy, FAST PRO, Planet, Pattaya City</td><td>Outdoor sport</td></tr><tr><td><strong>Water parks</strong></td><td>Cartoon Network Amazone, Ramayana, Pattaya Park</td><td>Outdoor water</td></tr><tr><td><strong>School sports</strong></td><td>Regents International</td><td>Premium school sports</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Trampoline park</strong></td><td><strong>JumpZ (Harbor Pattaya)</strong></td><td><strong>Indoor trampoline + games + AC</strong></td></tr><tr><td><strong>Climbing gym</strong></td><td>Deep Climbing Gym (also Harbor Pattaya), Bean Cow Climbing</td><td>Indoor climbing</td></tr><tr><td><strong>Multi-sport kids</strong></td><td><a href="/gyms/manta-kids-pattaya/">Manta Kids Pattaya</a></td><td>Premier multi-discipline</td></tr><tr><td><strong>Football academies</strong></td><td><a href="/gyms/af-academy-football/">AF Academy</a>, FAST PRO, Planet, Pattaya City</td><td>Outdoor sport</td></tr><tr><td><strong>Water parks</strong></td><td>Cartoon Network Amazone, Ramayana, Pattaya Park</td><td>Outdoor water</td></tr><tr><td><strong>School sports</strong></td><td>Regents International</td><td>Premium school sports</td></tr></tbody></table></div>
 <p>JumpZ's specific niche: <strong>indoor weather-immune trampoline / play activity</strong> — fills the gap that climbing and football don't address.</p>
 <h2 id="the-trampoline-park-concept">The Trampoline Park Concept</h2>
 <h3 id="modern-trampoline-park-format">Modern Trampoline Park Format</h3>
@@ -421,17 +421,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

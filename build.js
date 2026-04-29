@@ -645,7 +645,87 @@ function generateVenueFAQs(fm) {
   return faqs.slice(0, 5);
 }
 
+
+// Auto-link cross-venue mentions in body HTML.
+// When the venue body mentions another venue by name (e.g. "Sityodtong", "Fairtex Pattaya"),
+// wrap the FIRST occurrence in a link to that venue's page.
+// Skips: current venue (self-reference), text already inside <a>, text inside <h1-h6>,
+// and very short / common ambiguous names.
+function autoLinkVenues(html, currentSlug, allGyms) {
+  if (!html || !Array.isArray(allGyms)) return html;
+
+  // Build a list of [pattern, slug] pairs, longest names first so "Anytime Fitness Pattaya"
+  // matches before "Anytime Fitness".
+  const candidates = [];
+  for (const g of allGyms) {
+    if (!g || !g.id || g.id === currentSlug) continue;
+    const name = g.name || '';
+    if (!name) continue;
+    // Generate match candidates from the name. Always include the full name.
+    const variants = new Set([name]);
+    // Strip parenthetical (e.g. "Andaz Pattaya Jomtien Beach (Hyatt)" → "Andaz Pattaya Jomtien Beach")
+    const noParen = name.replace(/\s*\([^)]*\)\s*$/, '').trim();
+    if (noParen.length >= 6) variants.add(noParen);
+    // Strip everything after em-dash, en-dash, or pipe (e.g. "Hilton Pattaya — Fitness, Spa & Pool" → "Hilton Pattaya")
+    const noDash = noParen.replace(/\s*[–—―|\-]\s+.*$/, '').trim();
+    if (noDash.length >= 6) variants.add(noDash);
+    // Strip trailing "Pattaya" (e.g. "Sityodtong Pattaya" → "Sityodtong")
+    const noPattaya = noDash.replace(/\s+Pattaya$/i, '').trim();
+    if (noPattaya.length >= 6) variants.add(noPattaya);
+    for (const v of variants) {
+      const trimmed = String(v).trim();
+      if (trimmed.length < 6) continue; // too short, ambiguous
+      // Skip generic / risky terms
+      if (/^(Pattaya|Thailand|Jomtien|Naklua|Fitness|Yoga|Boxing|Beach|Public)$/i.test(trimmed)) continue;
+      candidates.push({ pattern: trimmed, slug: g.id });
+    }
+  }
+  // Sort longest first so multi-word matches are tried before substring matches
+  candidates.sort((a, b) => b.pattern.length - a.pattern.length);
+
+  // Track which slugs we've already linked to avoid duplicates per page
+  const linkedSlugs = new Set();
+
+  // We split HTML into safe and unsafe regions.
+  // Unsafe: anything inside <a>...</a> or any heading tag <h1>-<h6>...</h6>
+  // We process safe regions only.
+  const skipRe = /(<a\b[^>]*>[\s\S]*?<\/a>)|(<h[1-6]\b[^>]*>[\s\S]*?<\/h[1-6]>)/gi;
+  const parts = [];
+  let last = 0;
+  let m;
+  while ((m = skipRe.exec(html)) !== null) {
+    if (m.index > last) parts.push({ safe: true, text: html.slice(last, m.index) });
+    parts.push({ safe: false, text: m[0] });
+    last = m.index + m[0].length;
+  }
+  if (last < html.length) parts.push({ safe: true, text: html.slice(last) });
+
+  // Process safe parts in order
+  for (const part of parts) {
+    if (!part.safe) continue;
+    let text = part.text;
+    for (const c of candidates) {
+      if (linkedSlugs.has(c.slug)) continue;
+      // Word-boundary match (start with word boundary, end with word boundary)
+      const escaped = c.pattern.replace(/[.*+?^\${}()|[\]\\]/g, '\\$&');
+      const re = new RegExp('(^|[\\s\\(\\[\\>])(' + escaped + ')(?=[\\s,.;:!?\\)\\]\\<])', '');
+      const match = re.exec(text);
+      if (match) {
+        const before = text.slice(0, match.index + match[1].length);
+        const after = text.slice(match.index + match[0].length);
+        text = before + '<a href="/gyms/' + c.slug + '/">' + match[2] + '</a>' + after;
+        linkedSlugs.add(c.slug);
+      }
+    }
+    part.text = text;
+  }
+
+  return parts.map(p => p.text).join('');
+}
+
 function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
+  // Auto-link venue cross-references in body HTML
+  bodyHtml = autoLinkVenues(bodyHtml, slug, allGyms);
   const url = `${SITE}/gyms/${slug}/`;
   const title = `${fm.name} | Pattaya Gym Directory`;
   const firstPara = extractFirstParagraph(body || '');
@@ -936,17 +1016,27 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

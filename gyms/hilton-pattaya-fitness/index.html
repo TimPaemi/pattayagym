@@ -129,11 +129,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Hilton Pattaya is <strong>a 5-star international flagship hotel</strong> in central Pattaya whose <strong>integrated wellness facilities — 24-hour fitness center, 16th-floor outdoor infinity pool with panoramic Gulf of Thailand views, and the multi-award-winning eforea Spa</strong> — make it <strong>one of Pattaya's premium hotel-fitness destinations</strong>. The hotel is <strong>adjacent to Central Festival Pattaya Beach Mall</strong> on Beach Road, putting it <strong>at the heart of central Pattaya</strong> with the kind of accessibility that hotel-attached fitness facilities in less-central locations cannot match.</p>
-<p>The <strong>24-hour fitness center</strong> distinguishes Hilton from most Pattaya hotel gyms (which typically operate 06:00-22:00). For <strong>shift-working expats, jet-lagged travelers, late-night fitness enthusiasts, and pre-dawn early risers</strong>, the <strong>24/7 access at a 5-star tier</strong> is genuinely meaningful — most options at this hour-tier are commercial chains (Jetts, Fitness 7) or hardcore independents (Muscle Factory). Hilton delivers <strong>24/7 fitness inside a 5-star hotel context</strong> with the <strong>service standards, hygiene, and amenity polish</strong> that comes with the Hilton international brand.</p>
+<p>The <strong>24-hour fitness center</strong> distinguishes Hilton from most Pattaya hotel gyms (which typically operate 06:00-22:00). For <strong>shift-working expats, jet-lagged travelers, late-night fitness enthusiasts, and pre-dawn early risers</strong>, the <strong>24/7 access at a 5-star tier</strong> is genuinely meaningful — most options at this hour-tier are commercial chains (Jetts, <a href="/gyms/fitness-7/">Fitness 7</a>) or hardcore independents (<a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a>). Hilton delivers <strong>24/7 fitness inside a 5-star hotel context</strong> with the <strong>service standards, hygiene, and amenity polish</strong> that comes with the Hilton international brand.</p>
 <p>The <strong>16th-floor outdoor infinity pool with panoramic views</strong> is <strong>a Pattaya landmark</strong> in itself — featured in countless travel photos, attracting non-guests via day-pass programs, and providing <strong>the kind of elevated-pool experience</strong> that the Sky Aquarium Pool at Royal Cliff Hotels Group (FITZ Club's parent) competes with at the absolute Pattaya premium tier.</p>
 <h2 id="position-in-the-pattaya-hotel-fitness-market">Position in the Pattaya Hotel Fitness Market</h2>
 <p>Pattaya 5-star hotel fitness clubs:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Hotel</th><th>Fitness Distinction</th></tr></thead><tbody><tr><td><strong>Royal Cliff Hotels Group (FITZ Club)</strong></td><td>7 floodlit tennis + state-of-the-art gym + Sky Aquarium infinity pool</td></tr><tr><td><strong>Hilton Pattaya</strong></td><td><strong>24/7 fitness + 16th-floor infinity pool + eforea Spa multi-award</strong></td></tr><tr><td><strong>Cape Dara Resort</strong></td><td>Beach-cliff luxury with fitness + spa</td></tr><tr><td><strong>Cross Pattaya Pratamnak</strong></td><td>5-star with Cloud Club fitness + PLAYROOM</td></tr><tr><td><strong>Centara Grand Mirage Beach Resort</strong></td><td>Multi-pool waterpark resort</td></tr><tr><td><strong>Andaz Pattaya Jomtien Beach</strong></td><td>Wellness-positioned tropical retreat</td></tr><tr><td><strong>Manhattan Pattaya</strong></td><td>Mid-tier hotel gym + pool</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Hotel</th><th>Fitness Distinction</th></tr></thead><tbody><tr><td><strong>Royal Cliff Hotels Group (FITZ Club)</strong></td><td>7 floodlit tennis + state-of-the-art gym + Sky Aquarium infinity pool</td></tr><tr><td><strong>Hilton Pattaya</strong></td><td><strong>24/7 fitness + 16th-floor infinity pool + eforea Spa multi-award</strong></td></tr><tr><td><strong><a href="/gyms/cape-dara-resort/">Cape Dara Resort</a></strong></td><td>Beach-cliff luxury with fitness + spa</td></tr><tr><td><strong><a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a></strong></td><td>5-star with Cloud Club fitness + PLAYROOM</td></tr><tr><td><strong><a href="/gyms/centara-grand-mirage/">Centara Grand Mirage Beach Resort</a></strong></td><td>Multi-pool waterpark resort</td></tr><tr><td><strong><a href="/gyms/andaz-pattaya-jomtien/">Andaz Pattaya Jomtien Beach</a></strong></td><td>Wellness-positioned tropical retreat</td></tr><tr><td><strong>Manhattan Pattaya</strong></td><td>Mid-tier hotel gym + pool</td></tr></tbody></table></div>
 <p>Hilton's specific position: <strong>central-Pattaya 5-star with 24/7 fitness access</strong> — the most central premium-tier always-open option.</p>
 <h2 id="the-247-fitness-center">The 24/7 Fitness Center</h2>
 <h3 id="why-24-hour-hotel-fitness-matters">Why 24-Hour Hotel Fitness Matters</h3>
@@ -437,17 +437,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

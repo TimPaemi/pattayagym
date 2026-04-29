@@ -128,12 +128,12 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Dive Station Pattaya is <strong>one of Pattaya's SSI-certified dive operations</strong> — a smaller-scale dive shop offering <strong>full-day diving programs for both first-timers and certified divers</strong>, plus <strong>snorkeling trips for non-divers wanting to experience the Pattaya near-island reefs without the certification commitment</strong>. Where Pattaya's premium PADI operators (No Limit Divers, Real Divers, Aquanauts, Mermaid's) compete on <strong>PADI 5-Star credentials and instructor pipeline depth</strong>, Dive Station occupies <strong>the SSI tier</strong> — Scuba Schools International, PADI's main competitor and the world's second-largest dive certification body.</p>
+<p>Dive Station Pattaya is <strong>one of Pattaya's SSI-certified dive operations</strong> — a smaller-scale dive shop offering <strong>full-day diving programs for both first-timers and certified divers</strong>, plus <strong>snorkeling trips for non-divers wanting to experience the Pattaya near-island reefs without the certification commitment</strong>. Where Pattaya's premium PADI operators (<a href="/gyms/no-limit-divers/">No Limit Divers</a>, <a href="/gyms/real-divers-pattaya/">Real Divers</a>, Aquanauts, Mermaid's) compete on <strong>PADI 5-Star credentials and instructor pipeline depth</strong>, Dive Station occupies <strong>the SSI tier</strong> — Scuba Schools International, PADI's main competitor and the world's second-largest dive certification body.</p>
 <p>The format is straightforward: <strong>first-timers get a confined-water briefing followed by open-water dives</strong>, <strong>certified divers join 2-tank boat trips</strong>, and <strong>non-diving family members can join the same boat for snorkeling</strong>. <strong>Equipment hire is included</strong> for SSI certification courses, removing first-time-diver gear-fit concerns.</p>
 <p>For Pattaya divers comfortable with <strong>SSI certification (functionally interchangeable with PADI for most practical purposes)</strong> and wanting <strong>a smaller-operation experience without the IDC career-track polish of premium operators</strong>, Dive Station offers an accessible entry into Pattaya scuba.</p>
 <h2 id="position-in-the-pattaya-dive-market">Position in the Pattaya Dive Market</h2>
 <p>Pattaya's dive operators by certification body:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Body</th><th>Examples</th><th>Notes</th></tr></thead><tbody><tr><td><strong>PADI 5-Star IDC</strong></td><td>No Limit Divers, Real Divers</td><td>Top recreational + Instructor pipeline</td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Aquanauts, Mermaid's</td><td>Career Development Center</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td>Pattaya Dive Centre, Jomtien Dive, Seafari</td><td>Full recreational</td></tr><tr><td><strong>PADI Dive Center</strong></td><td>Adventure Divers (1998), Pattaya Scuba Adventures</td><td>Recreational + own boat</td></tr><tr><td><strong>SSI</strong></td><td><strong>Dive Station Pattaya</strong></td><td><strong>SSI certification operation</strong></td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Body</th><th>Examples</th><th>Notes</th></tr></thead><tbody><tr><td><strong>PADI 5-Star IDC</strong></td><td>No Limit Divers, Real Divers</td><td>Top recreational + Instructor pipeline</td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Aquanauts, Mermaid's</td><td>Career Development Center</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td><a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a>, Jomtien Dive, Seafari</td><td>Full recreational</td></tr><tr><td><strong>PADI Dive Center</strong></td><td><a href="/gyms/adventure-divers-pattaya/">Adventure Divers</a> (1998), <a href="/gyms/pattaya-scuba-adventures/">Pattaya Scuba Adventures</a></td><td>Recreational + own boat</td></tr><tr><td><strong>SSI</strong></td><td><strong>Dive Station Pattaya</strong></td><td><strong>SSI certification operation</strong></td></tr></tbody></table></div>
 <p>Dive Station's specific position: <strong>SSI alternative</strong> to the dominant PADI ecosystem.</p>
 <h2 id="what-ssi-is">What SSI Is</h2>
 <h3 id="ssi-vs-padi">SSI vs. PADI</h3>
@@ -409,17 +409,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

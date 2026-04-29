@@ -134,7 +134,7 @@
 <p>For visitors staying at Cross Pattaya Pratamnak — and for Pratamnak Hill residents who can access the facility through day passes or memberships — the property offers a <strong>distinctive blend of serious fitness, wellness yoga, and active recreation</strong> that no other Pattaya hotel quite matches.</p>
 <h2 id="position-in-the-pratamnak-hill-fitness-market">Position in the Pratamnak Hill Fitness Market</h2>
 <p>Pratamnak Hill is <strong>one of Pattaya's fitness-richest neighborhoods</strong>:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Facility</th><th>Type</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Cross Pattaya Pratamnak / Cloud Club</strong></td><td><strong>5-star hotel + recreation</strong></td><td><strong>Fitness + yoga + PLAYROOM</strong></td></tr><tr><td><strong>Manhattan Pattaya</strong></td><td>Mid-tier hotel gym</td><td>Pool-adjacent, 08:00-21:00 reservation</td></tr><tr><td><strong>Battle Conquer Gym</strong></td><td>Independent multi-disc</td><td>MT + sauna + cold plunge</td></tr><tr><td><strong>Muscle Factory</strong></td><td>Independent bodybuilding</td><td>"Largest gym in Pattaya"</td></tr><tr><td><strong>Pratumnak Fitness Park</strong></td><td>Outdoor public free</td><td>Calisthenics outdoor</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Facility</th><th>Type</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Cross Pattaya Pratamnak / Cloud Club</strong></td><td><strong>5-star hotel + recreation</strong></td><td><strong>Fitness + yoga + PLAYROOM</strong></td></tr><tr><td><strong>Manhattan Pattaya</strong></td><td>Mid-tier hotel gym</td><td>Pool-adjacent, 08:00-21:00 reservation</td></tr><tr><td><strong><a href="/gyms/battle-conquer-gym/">Battle Conquer Gym</a></strong></td><td>Independent multi-disc</td><td>MT + sauna + cold plunge</td></tr><tr><td><strong><a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a></strong></td><td>Independent bodybuilding</td><td>"Largest gym in Pattaya"</td></tr><tr><td><strong><a href="/gyms/pratumnak-fitness-park/">Pratumnak Fitness Park</a></strong></td><td>Outdoor public free</td><td>Calisthenics outdoor</td></tr></tbody></table></div>
 <p>Cross Pattaya occupies the <strong>5-star lifestyle wellness tier</strong> — premium hotel-integrated fitness with games-and-recreation extensions.</p>
 <h2 id="cloud-club-the-fitness-center">Cloud Club — The Fitness Center</h2>
 <h3 id="equipment-layout">Equipment & Layout</h3>
@@ -437,17 +437,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

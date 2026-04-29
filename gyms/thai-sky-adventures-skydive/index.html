@@ -134,7 +134,7 @@
 <p>The "only full-time SE Asia drop zone" positioning is meaningful: most Asian regions have <strong>occasional skydiving operations</strong> that run when conditions allow, but Thai Sky Adventures operates <strong>with year-round drop zone infrastructure, certified tandem instructors, professional aircraft, and continuous safety standards</strong> — putting it in a category usually reserved for the major skydiving destinations globally (Florida, California, Spain, Australia, New Zealand).</p>
 <h2 id="position-in-the-pattaya-adrenaline-activity-market">Position in the Pattaya Adrenaline Activity Market</h2>
 <p>Pattaya's adventure / adrenaline tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Top-tier extreme</strong></td><td><strong>Thai Sky Adventures Skydive</strong></td><td><strong>Tandem from 13,000 ft, 60s freefall</strong></td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>170m from 56th floor</td></tr><tr><td><strong>Karting</strong></td><td>EasyKart Pattaya, Pattaya Kart Speedway</td><td>70+ km/h Fast Kart</td></tr><tr><td><strong>Parasailing / jet ski</strong></td><td>Wave Pattaya, beach operators</td><td>100-200m altitude</td></tr><tr><td><strong>Bungee</strong> (if available)</td><td>Various adventure parks</td><td>Less established</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Top-tier extreme</strong></td><td><strong>Thai Sky Adventures Skydive</strong></td><td><strong>Tandem from 13,000 ft, 60s freefall</strong></td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>170m from 56th floor</td></tr><tr><td><strong>Karting</strong></td><td>EasyKart Pattaya, <a href="/gyms/pattaya-kart-speedway/">Pattaya Kart Speedway</a></td><td>70+ km/h Fast Kart</td></tr><tr><td><strong>Parasailing / jet ski</strong></td><td>Wave Pattaya, beach operators</td><td>100-200m altitude</td></tr><tr><td><strong>Bungee</strong> (if available)</td><td>Various adventure parks</td><td>Less established</td></tr></tbody></table></div>
 <p>Thai Sky Adventures' specific position: <strong>the apex adrenaline experience in Pattaya</strong> — there's nothing more extreme available in the city.</p>
 <h2 id="why-skydiving-in-thailand-is-special">Why Skydiving in Thailand Is Special</h2>
 <h3 id="tropical-visual-drama">Tropical Visual Drama</h3>
@@ -497,17 +497,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

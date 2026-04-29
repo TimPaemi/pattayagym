@@ -134,7 +134,7 @@
 <p>For travelers and Pattaya residents wanting <strong>serious Muay Thai training without melting in the heat</strong>, Battle Conquer is essentially the <strong>only option in the market</strong> that offers AC. The differentiator is real and the execution is well-reviewed.</p>
 <h2 id="what-makes-battle-conquer-different">What Makes Battle Conquer Different</h2>
 <h3 id="the-ac-decision">The AC Decision</h3>
-<p>Most Pattaya Muay Thai camps train in <strong>open-air pavilions</strong> — the traditional Thai aesthetic, ideal for ventilation but brutal during hot season (March-May, when temperatures regularly exceed 35°C with 80%+ humidity). Sityodtong, Petchrungruang, Sor Klinmee, Rambaa M16, and many other authentic camps are open-air. Even some premium camps (Fairtex, Kombat Group) have outdoor or partially-shaded ring areas.</p>
+<p>Most Pattaya Muay Thai camps train in <strong>open-air pavilions</strong> — the traditional Thai aesthetic, ideal for ventilation but brutal during hot season (March-May, when temperatures regularly exceed 35°C with 80%+ humidity). <a href="/gyms/sityodtong-pattaya/">Sityodtong</a>, Petchrungruang, Sor Klinmee, Rambaa M16, and many other authentic camps are open-air. Even some premium camps (Fairtex, Kombat Group) have outdoor or partially-shaded ring areas.</p>
 <p>Battle Conquer made the explicit decision to <strong>build their main Muay Thai training hall fully indoors and air-conditioned</strong>. The trade-off:</p>
 <ul>
 <li><strong>Plus</strong>: Year-round training comfort, no heat exhaustion concerns, hot-season visitors get full sessions</li>
@@ -472,17 +472,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

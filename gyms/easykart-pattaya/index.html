@@ -129,7 +129,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>EasyKart Pattaya Thepprasit is <strong>the newest go-kart racing facility in Pattaya</strong> — an outdoor multi-track venue offering <strong>a 350-meter beginner track plus an 800-meter racing track</strong> with <strong>multi-tier kart classes (Kids Kart, Regular Kart, Fast Kart, 2-Seater Kart)</strong> and a <strong>broad operating window from 10:00 to 01:00 daily</strong>. The 15-hour operating schedule is <strong>substantially longer than competitor Pattaya Kart Speedway</strong> (the older first-karting-in-Pattaya facility on Thepprasit Soi 9), making EasyKart <strong>the most accessible karting venue for evening and late-night enthusiasts</strong>.</p>
+<p>EasyKart Pattaya Thepprasit is <strong>the newest go-kart racing facility in Pattaya</strong> — an outdoor multi-track venue offering <strong>a 350-meter beginner track plus an 800-meter racing track</strong> with <strong>multi-tier kart classes (Kids Kart, Regular Kart, Fast Kart, 2-Seater Kart)</strong> and a <strong>broad operating window from 10:00 to 01:00 daily</strong>. The 15-hour operating schedule is <strong>substantially longer than competitor <a href="/gyms/pattaya-kart-speedway/">Pattaya Kart Speedway</a></strong> (the older first-karting-in-Pattaya facility on Thepprasit Soi 9), making EasyKart <strong>the most accessible karting venue for evening and late-night enthusiasts</strong>.</p>
 <p>The facility sits on <strong>Thepprasit Road</strong> — Pattaya's adventure-and-action corridor that also hosts <strong>Pattaya Kart Speedway, Pattaya Floating Market</strong>, and various tourist activities. EasyKart's specific position: <strong>modern infrastructure, multi-tier track system, accessible pricing (from ~฿480-598 per session), and family-friendly age range from 7-year-olds (Kids Kart) to adults (Fast Kart and 2-Seater for kids+adults together)</strong>.</p>
 <p>For Pattaya families, group bookings (bachelor parties, corporate events, birthday celebrations), thrill-seekers, and motorsport-curious visitors, EasyKart provides <strong>a structured outdoor karting experience with serious safety standards and modern equipment</strong> — a significant step up from the older Pattaya Kart Speedway in both infrastructure and operational professionalism.</p>
 <h2 id="position-in-the-pattaya-karting-market">Position in the Pattaya Karting Market</h2>
@@ -447,17 +447,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

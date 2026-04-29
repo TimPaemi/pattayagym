@@ -133,7 +133,7 @@
 <p>The chain network advantage means <strong>a KBA student certified in Pattaya can continue progressing at Hua Hin, Phuket, Samui, or Phangan</strong> during a longer Thailand trip — KBA's standardized teaching system and shared safety protocols carry across all locations.</p>
 <h2 id="position-in-the-pattaya-kiteboarding-market">Position in the Pattaya Kiteboarding Market</h2>
 <p>Pattaya's kiteboarding scene is anchored in <strong>Na Jomtien</strong>, with three main operators:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>School</th><th>Key Distinction</th></tr></thead><tbody><tr><td><strong>Kitesurf Pattaya</strong></td><td>South Jomtien, IKO-certified, $250 3-day beginner package</td></tr><tr><td><strong>KBA Pattaya</strong></td><td><strong>Thailand chain network, 5 disciplines including E-foil + Wingfoil</strong></td></tr><tr><td><strong>Clubloongchat Watersports</strong></td><td>Multi-sport (kite, wing, windsurf, sail, SUP) Na Jomtien</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>School</th><th>Key Distinction</th></tr></thead><tbody><tr><td><strong><a href="/gyms/kitesurf-pattaya/">Kitesurf Pattaya</a></strong></td><td>South Jomtien, IKO-certified, $250 3-day beginner package</td></tr><tr><td><strong>KBA Pattaya</strong></td><td><strong>Thailand chain network, 5 disciplines including E-foil + Wingfoil</strong></td></tr><tr><td><strong><a href="/gyms/clubloongchat-watersports/">Clubloongchat Watersports</a></strong></td><td>Multi-sport (kite, wing, windsurf, sail, SUP) Na Jomtien</td></tr></tbody></table></div>
 <p>KBA's specific advantage is the <strong>chain network + foil-discipline breadth</strong>. Students seeking progression across multiple Thai kiteboarding destinations benefit from the consistency.</p>
 <h2 id="the-kba-brand">The KBA Brand</h2>
 <h3 id="origins-and-network">Origins and Network</h3>
@@ -458,17 +458,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

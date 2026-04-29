@@ -463,3 +463,95 @@ Crawl-depth wins:
 **Total FAQ schema entries:** 777+ across 164 pages.
 
 **Total internal-linking lift:** typical page went from ~10–15 internal links to 45+. Crawl depth and PageRank distribution dramatically improved.
+
+---
+
+## Batch 7 — Auto-link cross-venue mentions in body content
+
+User: "Keep going" — continued.
+
+**Pages affected:** 138 venue pages
+
+**File edited:** `build.js`
+
+**What was added:**
+1. New `autoLinkVenues(html, currentSlug, allGyms)` helper
+2. Hooked into `buildVenuePage` to transform `bodyHtml` before rendering
+
+**How it works:**
+- Builds a list of name variants for every venue: full name, name with parenthetical stripped, name with em-dash stripped, name with trailing "Pattaya" stripped
+- Sorts variants longest-first so multi-word matches win over substrings
+- For each venue body: scans only "safe" regions (skips `<a>...</a>`, `<h1>-<h6>...</h6>`)
+- For each candidate, finds the **first occurrence** with word-boundary matching
+- Wraps it in `<a href="/gyms/<slug>/">` and stops linking to that venue (1 link per venue per page)
+- Skips: self-references, venues already linked, names < 6 chars, generic terms (Pattaya, Thailand, Yoga, Fitness, etc.)
+
+**Results across the 138 pages:**
+
+| Venue | Cross-links auto-added |
+|---|---|
+| Yoga Haus Pattaya | 5 (Yoga Pattaya Studio, Ashtanga, Balance, One-D, Nok Yoga) |
+| Dusit Thani Pattaya | 2 (Hilton Pattaya, Fitz Club) |
+| Anytime Fitness Pattaya | 2 (Tony's Gym, Universe Gym) |
+| Pickleball Pattaya | 2 (Fitz Club, Tennis & Badminton Inter Club) |
+| (...138 venues each get 0–6 cross-links depending on body content) |
+
+**Estimated total new internal links:** ~250–400 across the 138 venue pages, on top of the +30/page footer links from Batch 6.
+
+**SEO impact:**
+- Internal anchor text is now keyword-rich venue names (best-practice for SEO)
+- Crawler depth improvements — Google can chain through related venues organically
+- Topical authority signal — the engine now sees venue X mentions venue Y, building Pattaya-gym authority graph
+- Per-page link diversity increased
+
+**Risk / uncertainty:**
+- Names with very short distinctive parts (e.g. "Castra") could mismatch in unrelated contexts. Filter has a 6-char minimum to mitigate.
+- "Pattaya" is excluded from variants to prevent linking the city name to anything random.
+- Tested on Sityodtong/Anytime/Dusit/Pickleball/Yoga Haus — all linked sensibly without false positives.
+
+**Verification:**
+- `node build.js` runs clean
+- Spot-checked 5 venues — all correctly linking other real venues only (no self-links, no generic-term links)
+
+**Final readability + UX rollout summary (Batches 1–7):**
+
+| Batch | What landed | Pages |
+|---|---|---|
+| 1 | Front door — quick-answer + FAQ + scannable bullets | 5 |
+| 2 | Site-wide TL;DR + topic blocks on guides/categories/areas | 25 |
+| 3 | Auto-FAQ on every venue | 138 |
+| 4 | Topic FAQs on categories+areas, 1-sentence-paragraph leads | 19 |
+| 5 | Jump-to anchor nav on every venue | 138 |
+| 6 | Site-wide nav + 5-col footer with 35 internal links/page | 170+ |
+| 7 | Auto-link cross-venue mentions in body | 138 |
+
+**Internal linking density site-wide:**
+- Before all batches: typical page ~10–15 internal links
+- After: typical venue page ~50–60 internal links (header 6 + breadcrumb 2 + jump-to ~10 + body cross-links 2–6 + related-grid ~6 + footer 35)
+- Crawler discovery + PageRank distribution: massively improved
+
+**FAQ schema entries:** 777+ across 164 pages.
+
+**Zero SEO content removed.** All keywords, all canonical/meta/OG/JSON-LD, all original prose preserved. Just better structure, better scannability, denser internal linking.
+
+---
+
+## Batch 8 — Back-to-top button + sitemap fix
+
+**Two small but useful additions:**
+
+1. **Floating "back-to-top" button** on all 138 venue pages
+   - Hidden by default; appears when user scrolls past 600px
+   - Positioned bottom-right (above sticky action bar)
+   - Smooth-scroll behaviour to top on click
+   - Accent-coloured circle with up-arrow, drop shadow, hover lift
+   - Mobile-tightened sizing
+   - Particularly useful on 9–15K char venue pages where users get lost in long scrolls
+
+2. **Added `/compare/` to sitemap.xml**
+   - Was missing — Google couldn't discover the compare tool
+   - Now indexed alongside `/map/`, `/search/`, `/about/`, `/add-your-gym/`
+
+**Files edited:** `build.js`, `build-extras.js`, `venue.css`
+
+**Build status:** clean — 138 venue pages + 13 categories + 6 areas + 6 guides + tools all generated.

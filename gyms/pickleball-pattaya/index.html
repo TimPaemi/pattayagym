@@ -131,7 +131,7 @@
     <article class="venue-body">
       <p>Pickleball is the fastest-growing sport on the planet, and Pattaya — with its enormous, mostly-50+ expat retiree base — has become one of the largest, most active pickleball scenes in Thailand. <strong>Pickleball Pattaya</strong> on Pratumnak Soi 6 is the city's flagship dedicated facility: courts built specifically for pickleball, top-tier lighting for evening play, full equipment included, and beginner lessons from an English-speaking licensed coach. If you've never picked up a paddle, this is the easy on-ramp. If you already play and just need a court to drop into, this is the obvious answer.</p>
 <h2 id="position-in-pattaya-market">Position in Pattaya market</h2>
-<p>Pattaya does have several multi-sport racquet venues that share their courts with pickleball — <strong>Fitz Club</strong> (Royal Cliff, premium tier with brand-new CoolTop multi-purpose court), <strong>Pattaya Tennis & Badminton Inter Club</strong> (2 hard courts with permanent pickleball lines, both indoor and outdoor), and a handful of condo-resort communities painting lines onto their tennis courts. Those are great if you're a member or guest already, but they're shared infrastructure — booking windows are tight, court time competes with badminton and tennis, and the players on adjacent courts don't always understand pickleball culture.</p>
+<p>Pattaya does have several multi-sport racquet venues that share their courts with pickleball — <strong><a href="/gyms/fitz-club/">Fitz Club</a></strong> (Royal Cliff, premium tier with brand-new CoolTop multi-purpose court), <strong><a href="/gyms/pattaya-tennis-badminton-inter-club/">Pattaya Tennis & Badminton Inter Club</a></strong> (2 hard courts with permanent pickleball lines, both indoor and outdoor), and a handful of condo-resort communities painting lines onto their tennis courts. Those are great if you're a member or guest already, but they're shared infrastructure — booking windows are tight, court time competes with badminton and tennis, and the players on adjacent courts don't always understand pickleball culture.</p>
 <p><strong>Pickleball Pattaya is different</strong>: it's purpose-built for the sport. No fighting tennis players for time, no shared lines confusing your eye, no hunting for paddles. You roll up, the courts are exactly the right size, the nets are at exactly the right height, the lighting is engineered for the speed of a wiffleball, and everyone on site is there for the same reason as you. This is what dedicated pickleball venues feel like in the US/Canada — and it's now the standard in Pattaya thanks to this club.</p>
 <h2 id="location-pratumnak-hill">Location — Pratumnak Hill</h2>
 <p>Pratumnak Hill sits between Central Pattaya and Jomtien, north of the Pattaya/Jomtien border. It's the upmarket residential corridor — high-rise condos, hotel-condo hybrids, view-property developments. <strong>Pratumnak Soi 6</strong> is one of the quieter sois on the hill, well off the chaos of Walking Street and Beach Road, with relatively easy parking.</p>
@@ -339,17 +339,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

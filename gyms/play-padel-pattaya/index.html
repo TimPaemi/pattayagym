@@ -131,7 +131,7 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Play Padel Pattaya is <strong>the first dedicated padel facility in Pattaya AND the first indoor padel courts in all of Thailand</strong> — a genuinely pioneering venue for the world's fastest-growing racquet sport. Located on <strong>Kasetsin Soi 3 in Pratumnak</strong>, the facility features <strong>6 air-conditioning units per court and a 11.5-meter high roof</strong>, providing <strong>fully climate-controlled play regardless of outside weather</strong>. Padel — a hybrid of tennis and squash played in glass-walled courts with a perforated paddle — has exploded globally over the past decade (estimated 30M+ players worldwide as of 2025), and Play Padel brings that boom to Pattaya in a first-mover position.</p>
-<p>For travelers and Pattaya residents wanting <strong>the year-round comfort of indoor AC padel</strong> in Thailand's climate, Play Padel is essentially the only option in Pattaya. The competition (Prime Padel Pattaya, Pattaya Padel Club) is more recent and operates differently — Play Padel's <strong>first-mover + climate-controlled</strong> combination is its core differentiator.</p>
+<p>For travelers and Pattaya residents wanting <strong>the year-round comfort of indoor AC padel</strong> in Thailand's climate, Play Padel is essentially the only option in Pattaya. The competition (Prime Padel Pattaya, <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a>) is more recent and operates differently — Play Padel's <strong>first-mover + climate-controlled</strong> combination is its core differentiator.</p>
 <h2 id="why-padel-and-why-first-in-pattaya-matters">Why Padel — and Why First in Pattaya Matters</h2>
 <p><strong>Padel</strong> is the racquet sport revolution:</p>
 <ul>
@@ -196,7 +196,7 @@
 <li><strong>Off-peak discounts</strong> typically available</li>
 </ul>
 <h2 id="position-in-pattaya-padel-racquet-market">Position in Pattaya Padel / Racquet Market</h2>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Venue</th><th>Padel</th><th>Tennis</th><th>Squash</th><th>Other</th></tr></thead><tbody><tr><td><strong>Play Padel Pattaya</strong> (this)</td><td><strong>Yes (first + indoor + AC)</strong></td><td>No</td><td>No</td><td>—</td></tr><tr><td>Prime Padel Pattaya</td><td>Yes (newer)</td><td>No</td><td>No</td><td>—</td></tr><tr><td>Pattaya Padel Club</td><td>Yes</td><td>No</td><td>No</td><td>—</td></tr><tr><td>Fitz Club Royal Cliff</td><td>Pickleball + multi-sport</td><td>7 courts</td><td>2 AC courts</td><td>Multi</td></tr><tr><td>Pattaya Tennis & Badminton Inter Club</td><td>Pickleball</td><td>Yes</td><td>No</td><td>Badminton</td></tr><tr><td>Greta Sport Club</td><td>No</td><td>6 covered</td><td>No</td><td>—</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Venue</th><th>Padel</th><th>Tennis</th><th>Squash</th><th>Other</th></tr></thead><tbody><tr><td><strong>Play Padel Pattaya</strong> (this)</td><td><strong>Yes (first + indoor + AC)</strong></td><td>No</td><td>No</td><td>—</td></tr><tr><td>Prime Padel Pattaya</td><td>Yes (newer)</td><td>No</td><td>No</td><td>—</td></tr><tr><td>Pattaya Padel Club</td><td>Yes</td><td>No</td><td>No</td><td>—</td></tr><tr><td><a href="/gyms/fitz-club/">Fitz Club</a> Royal Cliff</td><td><a href="/gyms/pickleball-pattaya/">Pickleball</a> + multi-sport</td><td>7 courts</td><td>2 AC courts</td><td>Multi</td></tr><tr><td><a href="/gyms/pattaya-tennis-badminton-inter-club/">Pattaya Tennis & Badminton Inter Club</a></td><td>Pickleball</td><td>Yes</td><td>No</td><td>Badminton</td></tr><tr><td>Greta Sport Club</td><td>No</td><td>6 covered</td><td>No</td><td>—</td></tr></tbody></table></div>
 <p>Play Padel is the <strong>dedicated padel destination</strong> in Pattaya. Players seeking padel should default here.</p>
 <h2 id="pros" class="section-pros-cons">Pros</h2>
 <div class="callout callout-pros"><div class="callout-icon">✓</div><div class="callout-body">
@@ -383,17 +383,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

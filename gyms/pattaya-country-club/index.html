@@ -134,7 +134,7 @@
 <p>For golfers who want <strong>a quality 18-hole round without committing 50+ minutes of drive each way</strong>, Pattaya Country Club is the pragmatic choice in the Pattaya golf circuit.</p>
 <h2 id="position-in-the-pattaya-golf-market">Position in the Pattaya Golf Market</h2>
 <p>Pattaya's golf scene rated by distance from the city center:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Distance from Pattaya</th><th>Tier</th></tr></thead><tbody><tr><td><strong>Pattaya Country Club</strong></td><td><strong>15-25 min — closest</strong></td><td>Mid-tier value</td></tr><tr><td>Phoenix Gold</td><td>25-30 min</td><td>Mid-tier strategic</td></tr><tr><td>Chee Chan</td><td>25-30 min</td><td>Premium 2018</td></tr><tr><td>Treasure Hill</td><td>50 min</td><td>Value jungle</td></tr><tr><td>Mountain Shadow</td><td>41 min</td><td>Strategic mid-tier</td></tr><tr><td>Khao Kheow</td><td>35-40 min</td><td>Pete Dye premium</td></tr><tr><td>Bangpra International</td><td>35-45 min</td><td>Heritage value</td></tr><tr><td>Laem Chabang Int'l</td><td>40-50 min</td><td>Nicklaus premium</td></tr><tr><td>St Andrews 2000</td><td>45 min</td><td>Architectural drama</td></tr><tr><td>Pattana Sports Resort</td><td>40-45 min</td><td>27-hole resort</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Distance from Pattaya</th><th>Tier</th></tr></thead><tbody><tr><td><strong>Pattaya Country Club</strong></td><td><strong>15-25 min — closest</strong></td><td>Mid-tier value</td></tr><tr><td>Phoenix Gold</td><td>25-30 min</td><td>Mid-tier strategic</td></tr><tr><td>Chee Chan</td><td>25-30 min</td><td>Premium 2018</td></tr><tr><td>Treasure Hill</td><td>50 min</td><td>Value jungle</td></tr><tr><td>Mountain Shadow</td><td>41 min</td><td>Strategic mid-tier</td></tr><tr><td>Khao Kheow</td><td>35-40 min</td><td>Pete Dye premium</td></tr><tr><td>Bangpra International</td><td>35-45 min</td><td>Heritage value</td></tr><tr><td>Laem Chabang Int'l</td><td>40-50 min</td><td>Nicklaus premium</td></tr><tr><td>St Andrews 2000</td><td>45 min</td><td>Architectural drama</td></tr><tr><td><a href="/gyms/pattana-sports-resort/">Pattana Sports Resort</a></td><td>40-45 min</td><td>27-hole resort</td></tr></tbody></table></div>
 <p>Pattaya Country Club's <strong>proximity advantage</strong> is its primary selling point. Driver-time savings translate to <strong>earlier tee times, less fatigue, more flexibility</strong> — meaningful for vacation golfers.</p>
 <h2 id="the-1993-opening">The 1993 Opening</h2>
 <p>The course opened in <strong>1993</strong> — early in Pattaya's golf-tourism construction cycle. This places it:</p>
@@ -253,7 +253,7 @@
 <div class="callout callout-notbest"><div class="callout-icon">⤬</div><div class="callout-body">
 <ul>
 <li><strong>Architectural connoisseurs</strong> — Pete Dye / Nicklaus / Muirhead courses more distinguished</li>
-<li><strong>Premium-resort seekers</strong> — try Siam Country Club, Chee Chan</li>
+<li><strong>Premium-resort seekers</strong> — try <a href="/gyms/siam-country-club/">Siam Country Club</a>, Chee Chan</li>
 <li><strong>Strategic-design lovers</strong> — try Khao Kheow, Mountain Shadow</li>
 <li><strong>Tournament-grade course preference</strong> — try Asian Tour-host courses</li>
 <li><strong>Pure budget tier</strong> — Treasure Hill, Bangpra slightly cheaper</li>
@@ -399,17 +399,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

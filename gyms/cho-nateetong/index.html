@@ -133,7 +133,7 @@
 <p>For Pattaya residents and students seeking <strong>affordable authentic Muay Thai training without the resort-tier polish or the multi-discipline expansion of newer gyms</strong>, Cho Nateetong delivers traditional pad work at a price point dramatically below the resort camps (Fairtex ฿800/drop-in, Silk ฿300-600, Kombat Group ฿800+).</p>
 <h2 id="position-in-the-pattaya-muay-thai-market">Position in the Pattaya Muay Thai Market</h2>
 <p>Pattaya's Muay Thai camps spans clear tiers:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Price Tier</th></tr></thead><tbody><tr><td><strong>Resort luxury</strong></td><td>Fairtex, Silk, Kombat Group</td><td>฿฿฿฿</td></tr><tr><td><strong>Multi-discipline modern</strong></td><td>Battle Conquer, Venum, Rage, Fight Evo360</td><td>฿฿฿</td></tr><tr><td><strong>Authentic / lineage</strong></td><td>Sityodtong, Sor Klinmee, Petchrungruang, Sitpholek, Rambaa M16</td><td>฿฿</td></tr><tr><td><strong>Authentic budget</strong></td><td><strong>Cho Nateetong</strong>, Pattaya Thai Boxing & Fitness, WKO</td><td>฿</td></tr><tr><td><strong>Hostel-attached budget</strong></td><td>Pattaya Thai Boxing & Fitness</td><td>฿</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Price Tier</th></tr></thead><tbody><tr><td><strong>Resort luxury</strong></td><td>Fairtex, Silk, Kombat Group</td><td>฿฿฿฿</td></tr><tr><td><strong>Multi-discipline modern</strong></td><td>Battle Conquer, Venum, Rage, Fight Evo360</td><td>฿฿฿</td></tr><tr><td><strong>Authentic / lineage</strong></td><td><a href="/gyms/sityodtong-pattaya/">Sityodtong</a>, Sor Klinmee, Petchrungruang, Sitpholek, Rambaa M16</td><td>฿฿</td></tr><tr><td><strong>Authentic budget</strong></td><td><strong>Cho Nateetong</strong>, Pattaya Thai Boxing & Fitness, WKO</td><td>฿</td></tr><tr><td><strong>Hostel-attached budget</strong></td><td>Pattaya Thai Boxing & Fitness</td><td>฿</td></tr></tbody></table></div>
 <p>Cho Nateetong's specific position: <strong>authentic budget tier with integrated weight gym</strong> — affordable session rates with strength training as bonus.</p>
 <h2 id="the-sukhumvit-soi-34-setting">The Sukhumvit Soi 34 Setting</h2>
 <h3 id="geographic-context">Geographic Context</h3>
@@ -391,17 +391,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

@@ -128,7 +128,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Wave Pattaya is <strong>a multi-activity beach watersports operator covering the full menu of Pattaya beach adrenaline activities</strong> — parasailing, jet ski, banana boat, water skiing, wakeboarding, sea walker, kayaking, and stand-up paddleboarding. Where dedicated kitesurf schools (Kitesurf Pattaya, KBA, Clubloongchat) focus on a single discipline with structured certification, and where dive operators (No Limit Divers, Mermaid's, Pattaya Dive Centre) serve scuba-specific clientele, <strong>Wave Pattaya operates in the broader "tourist activity" tier — the place vacationers go for one-shot beach experiences without commitment</strong>.</p>
+<p>Wave Pattaya is <strong>a multi-activity beach watersports operator covering the full menu of Pattaya beach adrenaline activities</strong> — parasailing, jet ski, banana boat, water skiing, wakeboarding, sea walker, kayaking, and stand-up paddleboarding. Where dedicated kitesurf schools (<a href="/gyms/kitesurf-pattaya/">Kitesurf Pattaya</a>, KBA, Clubloongchat) focus on a single discipline with structured certification, and where dive operators (<a href="/gyms/no-limit-divers/">No Limit Divers</a>, Mermaid's, <a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a>) serve scuba-specific clientele, <strong>Wave Pattaya operates in the broader "tourist activity" tier — the place vacationers go for one-shot beach experiences without commitment</strong>.</p>
 <p>The operation runs from <strong>Pattaya Beach</strong> (north central) and <strong>Jomtien Beach</strong> (south, longer beach with more space for tow-sport operations). Each activity is <strong>bookable individually or as bundled packages</strong> — typical "all-day water sports adventure" packages combining parasailing + jet ski + banana boat in a single guided session.</p>
 <p>For travelers who want <strong>the classic Thai beach activity experience</strong> — parasailing photos with the Pattaya skyline, jet ski rides past Koh Larn, banana boat group laughs — <strong>Wave Pattaya provides organized access to all of it under one operator</strong>, with <strong>safety equipment, English-speaking guides, and structured pricing</strong> that mitigates some of the ad-hoc beach-vendor experience pitfalls.</p>
 <h2 id="position-in-the-pattaya-watersports-market">Position in the Pattaya Watersports Market</h2>
@@ -468,17 +468,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

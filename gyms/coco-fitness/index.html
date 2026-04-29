@@ -128,10 +128,10 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Coco Fitness is <strong>a central Pattaya commercial gym on the 4th floor of Mike's Mall</strong> with <strong>direct sea views over Pattaya Beach</strong> and one of the <strong>most accessible mid-budget pricing structures in central Pattaya</strong>. The gym is open <strong>daily from 07:00-23:00</strong> (16 hours, 7 days a week), accepts <strong>walk-ins at ฿299-300/day with towel and locker included</strong>, and offers <strong>monthly memberships at ฿1,399</strong> — putting it firmly in the <strong>value commercial tier</strong> alongside Universe Gym, SUN Fitness, and Fitness 7.</p>
+<p>Coco Fitness is <strong>a central Pattaya commercial gym on the 4th floor of Mike's Mall</strong> with <strong>direct sea views over Pattaya Beach</strong> and one of the <strong>most accessible mid-budget pricing structures in central Pattaya</strong>. The gym is open <strong>daily from 07:00-23:00</strong> (16 hours, 7 days a week), accepts <strong>walk-ins at ฿299-300/day with towel and locker included</strong>, and offers <strong>monthly memberships at ฿1,399</strong> — putting it firmly in the <strong>value commercial tier</strong> alongside <a href="/gyms/universe-gym/">Universe Gym</a>, SUN Fitness, and <a href="/gyms/fitness-7/">Fitness 7</a>.</p>
 <p>For travelers and Pattaya residents wanting <strong>a real commercial gym in the central Beach Road / tourist hub area</strong> at unbeatable prices, Coco Fitness is one of the most convenient options. The <strong>sea views are a genuine quality-of-life feature</strong> — running on the cardio machines while looking out over Pattaya Beach is something only a handful of Pattaya gyms offer.</p>
 <h2 id="position-in-the-pattaya-gym-market">Position in the Pattaya Gym Market</h2>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Gym</th><th>Monthly</th></tr></thead><tbody><tr><td><strong>Luxury</strong></td><td>Fitz Club (Royal Cliff)</td><td>฿5,000-12,000+</td></tr><tr><td><strong>Chain</strong></td><td>Jetts, True Fitness</td><td>฿2,500-4,500</td></tr><tr><td><strong>Mid-tier commercial</strong></td><td>Platinum, Castra</td><td>฿1,500-3,000</td></tr><tr><td><strong>Value commercial</strong></td><td><strong>Coco Fitness</strong>, Universe Gym, SUN Fitness, Fitness 7</td><td>฿1,000-1,800</td></tr><tr><td><strong>Budget no-frills</strong></td><td>Tony's Gym</td><td>฿800-1,500</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Gym</th><th>Monthly</th></tr></thead><tbody><tr><td><strong>Luxury</strong></td><td><a href="/gyms/fitz-club/">Fitz Club</a> (Royal Cliff)</td><td>฿5,000-12,000+</td></tr><tr><td><strong>Chain</strong></td><td>Jetts, <a href="/gyms/true-fitness-pattaya/">True Fitness</a></td><td>฿2,500-4,500</td></tr><tr><td><strong>Mid-tier commercial</strong></td><td>Platinum, Castra</td><td>฿1,500-3,000</td></tr><tr><td><strong>Value commercial</strong></td><td><strong>Coco Fitness</strong>, Universe Gym, SUN Fitness, Fitness 7</td><td>฿1,000-1,800</td></tr><tr><td><strong>Budget no-frills</strong></td><td><a href="/gyms/tonys-gym/">Tony's Gym</a></td><td>฿800-1,500</td></tr></tbody></table></div>
 <p>Coco Fitness sits in the <strong>value commercial</strong> tier with the best <strong>central / sea-view location</strong> of any gym in this tier.</p>
 <h2 id="location-mikes-mall-4th-floor">Location — Mike's Mall 4th Floor</h2>
 <ul>
@@ -383,17 +383,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

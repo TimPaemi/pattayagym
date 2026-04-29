@@ -129,12 +129,12 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Underwater World Pattaya is <strong>Pattaya's only aquarium</strong> — and crucially, <strong>the first modern aquarium in Thailand</strong>, opened in <strong>2003</strong>. The facility features <strong>a 105+ meter clear acrylic underwater tunnel</strong> with <strong>180-degree views</strong> that let visitors <strong>walk through the marine environment as if diving deep into the sea</strong>, plus <strong>5,000+ marine animals from regional species</strong> displayed across <strong>four themed zones (Coral Reef / Shark / Stingray / Giant of Siam)</strong> including <strong>the biggest jellyfish collection in Thailand</strong>.</p>
-<p>Beyond passive observation, Underwater World offers genuine <strong>shark and manta ray dive experiences</strong> for visitors with diving certifications who want to <strong>dive with the sharks and manta rays for the experience of a lifetime</strong>. This <strong>dive-with-sharks program</strong> distinguishes Underwater World from typical aquariums — it's not just a viewing facility but a <strong>legitimate dive experience venue</strong> that complements Pattaya's broader PADI dive ecosystem (No Limit Divers, Real Divers, Aquanauts, etc.).</p>
+<p>Beyond passive observation, Underwater World offers genuine <strong>shark and manta ray dive experiences</strong> for visitors with diving certifications who want to <strong>dive with the sharks and manta rays for the experience of a lifetime</strong>. This <strong>dive-with-sharks program</strong> distinguishes Underwater World from typical aquariums — it's not just a viewing facility but a <strong>legitimate dive experience venue</strong> that complements Pattaya's broader PADI dive ecosystem (<a href="/gyms/no-limit-divers/">No Limit Divers</a>, <a href="/gyms/real-divers-pattaya/">Real Divers</a>, Aquanauts, etc.).</p>
 <p>The facility sits <strong>on Sukhumvit Road in Pattaya</strong>, making it <strong>dramatically more accessible than the offshore-island PADI dive operators</strong> (whose boats depart from Bali Hai Pier requiring early morning starts and 30+ minute boat rides). Underwater World is <strong>walkable from many central / east Pattaya hotels</strong> and accessible via songthaew from anywhere in the city.</p>
 <p>For Pattaya visitors who want <strong>a guaranteed marine-life experience without depending on boat conditions</strong>, <strong>a controlled-environment dive with confirmed shark / manta sightings</strong>, or simply <strong>a family-friendly aquarium walkthrough</strong>, Underwater World is the unique option in the city.</p>
 <h2 id="position-in-the-pattaya-watersports-aquatic-market">Position in the Pattaya Watersports / Aquatic Market</h2>
 <p>Pattaya's aquatic experience tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Aquarium with shark dive</strong></td><td><strong>Underwater World Pattaya</strong></td><td><strong>First Thai modern aquarium 2003, 105m tunnel</strong></td></tr><tr><td><strong>Largest water park</strong></td><td>Ramayana Water Park (184,000 sqm)</td><td>Slide-focused, not animal-focused</td></tr><tr><td><strong>Themed water park</strong></td><td>Cartoon Network Amazone</td><td>Slide-focused</td></tr><tr><td><strong>Iconic destination pool</strong></td><td>Hard Rock Pool (2,000 sqm)</td><td>Lifestyle pool experience</td></tr><tr><td><strong>PADI dive operators</strong></td><td>No Limit Divers, Real Divers, Aquanauts, etc.</td><td>Open-water boat-based diving</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Type</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Aquarium with shark dive</strong></td><td><strong>Underwater World Pattaya</strong></td><td><strong>First Thai modern aquarium 2003, 105m tunnel</strong></td></tr><tr><td><strong>Largest water park</strong></td><td><a href="/gyms/ramayana-water-park/">Ramayana Water Park</a> (184,000 sqm)</td><td>Slide-focused, not animal-focused</td></tr><tr><td><strong>Themed water park</strong></td><td>Cartoon Network Amazone</td><td>Slide-focused</td></tr><tr><td><strong>Iconic destination pool</strong></td><td>Hard Rock Pool (2,000 sqm)</td><td>Lifestyle pool experience</td></tr><tr><td><strong>PADI dive operators</strong></td><td>No Limit Divers, Real Divers, Aquanauts, etc.</td><td>Open-water boat-based diving</td></tr></tbody></table></div>
 <p>Underwater World occupies <strong>the marine-aquarium-with-dive crossover</strong> niche — distinct from both pure water parks and pure dive operators.</p>
 <h2 id="the-2003-heritage">The 2003 Heritage</h2>
 <h3 id="first-modern-aquarium-in-thailand">First Modern Aquarium in Thailand</h3>
@@ -471,17 +471,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

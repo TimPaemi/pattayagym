@@ -147,7 +147,7 @@
 <li><strong>Distance to Jomtien Beach:</strong> 14.7 km (~9.1 miles)</li>
 <li><strong>1 minute</strong> from Three Kingdoms Park</li>
 <li><strong>8 minutes</strong> from Mabprachan Lake recreation area</li>
-<li><strong>10 minutes</strong> from Siam Country Club golf</li>
+<li><strong>10 minutes</strong> from <a href="/gyms/siam-country-club/">Siam Country Club</a> golf</li>
 </ul>
 <p>The location is deliberate — <strong>far enough out of central Pattaya to host a 1,500-acre estate, close enough that day visitors can drive in for a couple hours of activities.</strong></p>
 <h2 id="the-equestrian-operation">The Equestrian Operation</h2>
@@ -427,17 +427,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

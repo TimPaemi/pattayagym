@@ -139,7 +139,7 @@
 <p>For students curious about <strong>how Thai indigenous traditions inform yoga practice</strong> — and especially for travelers wanting yoga that feels <strong>culturally located in Thailand</strong> rather than imported wholesale from India or California — Nok Yoga is the authentic choice.</p>
 <h2 id="position-in-the-pattaya-yoga-market">Position in the Pattaya Yoga Market</h2>
 <p>Pattaya yoga studios differentiate clearly by tradition emphasis:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Studio</th><th>Tradition Focus</th></tr></thead><tbody><tr><td><strong>Yoga Pattaya Studio</strong></td><td>International — Ashtanga, Mysore, Hatha, Vinyasa, multilingual</td></tr><tr><td><strong>Ashtanga Yoga Pattaya</strong></td><td>Lineage-pure Indian Mysore method</td></tr><tr><td><strong>Yoga Haus</strong></td><td>Hot Yoga + Fit Ball (fitness-style)</td></tr><tr><td><strong>Balance Yoga Studio</strong></td><td>Yoga + sound healing (wellness)</td></tr><tr><td><strong>Nok Yoga Pattaya</strong></td><td><strong>Thai yoga + Thai stretching + breath meditation</strong></td></tr><tr><td><strong>One-D Yoga Studio</strong></td><td>Hatha + Vinyasa + Yin</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Studio</th><th>Tradition Focus</th></tr></thead><tbody><tr><td><strong><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a></strong></td><td>International — Ashtanga, Mysore, Hatha, Vinyasa, multilingual</td></tr><tr><td><strong><a href="/gyms/ashtanga-yoga-pattaya/">Ashtanga Yoga Pattaya</a></strong></td><td>Lineage-pure Indian Mysore method</td></tr><tr><td><strong><a href="/gyms/yoga-haus-pattaya/">Yoga Haus</a></strong></td><td>Hot Yoga + Fit Ball (fitness-style)</td></tr><tr><td><strong><a href="/gyms/balance-yoga-studio-pattaya/">Balance Yoga Studio</a></strong></td><td>Yoga + sound healing (wellness)</td></tr><tr><td><strong>Nok Yoga Pattaya</strong></td><td><strong>Thai yoga + Thai stretching + breath meditation</strong></td></tr><tr><td><strong><a href="/gyms/one-d-yoga-studio/">One-D Yoga Studio</a></strong></td><td>Hatha + Vinyasa + Yin</td></tr></tbody></table></div>
 <p>Nok Yoga's specific niche: <strong>Thai cultural integration</strong> in yoga practice.</p>
 <h2 id="traditional-thai-yoga-reusi-dat-ton-connection">Traditional Thai Yoga & Reusi Dat Ton Connection</h2>
 <p>Thailand has its own indigenous body-mind tradition that pre-dates the modern import of Indian yoga:</p>
@@ -417,17 +417,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

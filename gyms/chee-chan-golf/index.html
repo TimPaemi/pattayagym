@@ -134,7 +134,7 @@
 <p>For golfers who want the <strong>newest and most photographically iconic Pattaya golf experience</strong> — and especially for visitors who want to combine golf with a visit to the famous Khao Chi Chan cliff Buddha attraction — Chee Chan is the destination course.</p>
 <h2 id="position-in-the-pattaya-golf-market">Position in the Pattaya Golf Market</h2>
 <p>Chee Chan occupies a specific position in the modern era of Pattaya courses:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Era</th><th>Notable Course</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>2010s premier</strong></td><td>Siam Country Club Plantation (2008)</td><td>Schmidt-Curley design</td></tr><tr><td><strong>2010s premier</strong></td><td>Siam Waterside (2014)</td><td>Lake-themed design</td></tr><tr><td><strong>Late 2010s</strong></td><td><strong>Chee Chan Golf Resort (2018)</strong></td><td><strong>Khao Chi Chan visual + Golfplan design</strong></td></tr><tr><td><strong>2020s</strong></td><td>Various renovations + boutique developments</td><td>Continuing evolution</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Era</th><th>Notable Course</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>2010s premier</strong></td><td><a href="/gyms/siam-country-club/">Siam Country Club</a> Plantation (2008)</td><td>Schmidt-Curley design</td></tr><tr><td><strong>2010s premier</strong></td><td>Siam Waterside (2014)</td><td>Lake-themed design</td></tr><tr><td><strong>Late 2010s</strong></td><td><strong>Chee Chan Golf Resort (2018)</strong></td><td><strong>Khao Chi Chan visual + Golfplan design</strong></td></tr><tr><td><strong>2020s</strong></td><td>Various renovations + boutique developments</td><td>Continuing evolution</td></tr></tbody></table></div>
 <p>Chee Chan is <strong>the newest of the premier-tier courses</strong> — meaning the most modern infrastructure, the freshest agronomy, and the latest architectural thinking.</p>
 <h2 id="the-khao-chi-chan-buddha-the-courses-defining-feature">The Khao Chi Chan Buddha — The Course's Defining Feature</h2>
 <p>The course's name and visual identity come from <strong>Khao Chi Chan</strong> (เขาชีจรรย์), the sacred mountain dominating the Sattahip skyline:</p>
@@ -453,17 +453,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

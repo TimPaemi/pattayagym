@@ -131,12 +131,12 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Diamond Badminton is <strong>a dedicated badminton-only facility on Pattaya 3rd Road</strong> — South Pattaya — providing <strong>multiple indoor courts for the city's growing badminton community</strong>. The facility serves <strong>the Thai resident population, expat badminton enthusiasts, and casual badminton-curious players</strong> who want an accessible single-discipline venue rather than the multi-sport options at Pattaya Sports Club or Pattaya Tennis & Badminton Inter Club.</p>
+<p>Diamond Badminton is <strong>a dedicated badminton-only facility on Pattaya 3rd Road</strong> — South Pattaya — providing <strong>multiple indoor courts for the city's growing badminton community</strong>. The facility serves <strong>the Thai resident population, expat badminton enthusiasts, and casual badminton-curious players</strong> who want an accessible single-discipline venue rather than the multi-sport options at <a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a> or <a href="/gyms/pattaya-tennis-badminton-inter-club/">Pattaya Tennis & Badminton Inter Club</a>.</p>
 <p>Located at <strong>313/258, Pattaya 3rd Road, Bang Lamung District, Chonburi 20150</strong>, the venue is <strong>walkable from many South Pattaya hotels and condos</strong>, with a phone number (<strong>+66 91 721 8772</strong>) for booking. Specific operating hours are <strong>not consistently published online</strong> — direct contact is the standard approach for booking and rate confirmation.</p>
 <p>For Pattaya's badminton community — which includes a <strong>large Thai resident base, Chinese expat players, and South-East Asian visitors who play badminton at home</strong> — Diamond Badminton fills the <strong>dedicated single-sport facility role</strong> that supports league play, coaching, and casual hits.</p>
 <h2 id="position-in-the-pattaya-badminton-market">Position in the Pattaya Badminton Market</h2>
 <p>Pattaya badminton venues:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Venue</th><th>Type</th></tr></thead><tbody><tr><td><strong>Pattaya Tennis & Badminton Inter Club</strong></td><td>Multi-sport with indoor badminton</td></tr><tr><td><strong>Pattaya Sports Club</strong></td><td>Multi-sport with badminton</td></tr><tr><td><strong>Diamond Badminton</strong></td><td><strong>Dedicated single-sport facility</strong></td></tr><tr><td><strong>Euro Badminton</strong></td><td>Dedicated facility (East Pattaya)</td></tr><tr><td><strong>X-Zyte Badminton</strong></td><td>Dedicated facility</td></tr><tr><td><strong>Various hotel badminton courts</strong></td><td>Hotel-attached, guest-priority</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Venue</th><th>Type</th></tr></thead><tbody><tr><td><strong>Pattaya Tennis & Badminton Inter Club</strong></td><td>Multi-sport with indoor badminton</td></tr><tr><td><strong>Pattaya Sports Club</strong></td><td>Multi-sport with badminton</td></tr><tr><td><strong>Diamond Badminton</strong></td><td><strong>Dedicated single-sport facility</strong></td></tr><tr><td><strong><a href="/gyms/euro-badminton/">Euro Badminton</a></strong></td><td>Dedicated facility (East Pattaya)</td></tr><tr><td><strong>X-Zyte Badminton</strong></td><td>Dedicated facility</td></tr><tr><td><strong>Various hotel badminton courts</strong></td><td>Hotel-attached, guest-priority</td></tr></tbody></table></div>
 <p>Diamond Badminton's specific niche: <strong>dedicated single-sport venue in South Pattaya</strong> — convenient for residential and tourist populations on the south end.</p>
 <h2 id="why-badminton-in-pattaya">Why Badminton in Pattaya?</h2>
 <h3 id="sport-background">Sport Background</h3>
@@ -392,17 +392,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

@@ -135,10 +135,10 @@
 <li><strong>Paradise Lawn Bowls Jomtien</strong> — 8 outdoor floodlit artificial rinks, spacious clubhouse, advance bookings required</li>
 <li><strong>The Retreat Lawn Bowls Club</strong> — uniquely offers BOTH grass AND carpet rinks at the same location</li>
 </ul>
-<p>Together these clubs run <strong>the Pattaya Sports Club Lawn Bowls League</strong> — a year-round competitive structure that attracts <strong>international visiting bowlers from Australia, UK, New Zealand, and South Africa</strong> for major tournaments.</p>
+<p>Together these clubs run <strong>the <a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a> Lawn Bowls League</strong> — a year-round competitive structure that attracts <strong>international visiting bowlers from Australia, UK, New Zealand, and South Africa</strong> for major tournaments.</p>
 <h2 id="position-in-the-pattaya-sport-clubs-market">Position in the Pattaya Sport Clubs Market</h2>
 <p>Pattaya's social-sport clubs ranked by activity:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Club</th><th>Sport</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Pattaya Hash House Harriers</strong></td><td>Running</td><td>1984 founding</td></tr><tr><td><strong>Pattaya Sports Club</strong></td><td>Multi-sport</td><td>1992 founding, runs Lawn Bowls League</td></tr><tr><td><strong>Pattaya Lawn Bowls Clubs</strong></td><td><strong>Lawn Bowls</strong></td><td><strong>3 facilities, 14+ rinks, most active in Thailand</strong></td></tr><tr><td><strong>Pattaya Cycling Clubs</strong></td><td>Cycling</td><td>Multiple groups</td></tr><tr><td><strong>Pattaya Sai 3 Petanque</strong></td><td>Pétanque</td><td>French boules</td></tr><tr><td><strong>Jomtien Beach Volleyball</strong></td><td>Beach volleyball</td><td>Free pickup</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Club</th><th>Sport</th><th>Distinction</th></tr></thead><tbody><tr><td><strong><a href="/gyms/pattaya-hash-house/">Pattaya Hash House Harriers</a></strong></td><td>Running</td><td>1984 founding</td></tr><tr><td><strong>Pattaya Sports Club</strong></td><td>Multi-sport</td><td>1992 founding, runs Lawn Bowls League</td></tr><tr><td><strong>Pattaya Lawn Bowls Clubs</strong></td><td><strong>Lawn Bowls</strong></td><td><strong>3 facilities, 14+ rinks, most active in Thailand</strong></td></tr><tr><td><strong><a href="/gyms/pattaya-cycling-clubs/">Pattaya Cycling Clubs</a></strong></td><td>Cycling</td><td>Multiple groups</td></tr><tr><td><strong>Pattaya Sai 3 Petanque</strong></td><td>Pétanque</td><td>French boules</td></tr><tr><td><strong><a href="/gyms/jomtien-beach-volleyball/">Jomtien Beach Volleyball</a></strong></td><td>Beach volleyball</td><td>Free pickup</td></tr></tbody></table></div>
 <p>Lawn bowls' specific position: <strong>substantial dedicated infrastructure</strong> unique in Thailand.</p>
 <h2 id="what-lawn-bowls-is">What Lawn Bowls Is</h2>
 <h3 id="origins-england-13th-century">Origins (England, 13th century+)</h3>
@@ -421,17 +421,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

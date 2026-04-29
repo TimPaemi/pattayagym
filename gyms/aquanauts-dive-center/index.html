@@ -128,7 +128,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Aquanauts Dive Center is <strong>Pattaya's only British/Dutch-owned PADI 5-Star National Geographic Career Development Center</strong> — a high-credentialed dive operation training divers for <strong>13+ years</strong> with <strong>a complete instructor pipeline including full technical dive instructor courses</strong>. The combination of <strong>PADI 5-Star CDC tier (Career Development Center) plus PADI 5-Star National Geographic Dive Center designation</strong> puts Aquanauts in <strong>the same elite tier as Mermaid's Dive Center and No Limit Divers</strong> — but with <strong>British/Dutch ownership</strong> that's distinct in Pattaya's predominantly Thai- and Russian-owned dive market.</p>
+<p>Aquanauts Dive Center is <strong>Pattaya's only British/Dutch-owned PADI 5-Star National Geographic Career Development Center</strong> — a high-credentialed dive operation training divers for <strong>13+ years</strong> with <strong>a complete instructor pipeline including full technical dive instructor courses</strong>. The combination of <strong>PADI 5-Star CDC tier (Career Development Center) plus PADI 5-Star National Geographic Dive Center designation</strong> puts Aquanauts in <strong>the same elite tier as <a href="/gyms/mermaids-dive/">Mermaid's Dive Center</a> and <a href="/gyms/no-limit-divers/">No Limit Divers</a></strong> — but with <strong>British/Dutch ownership</strong> that's distinct in Pattaya's predominantly Thai- and Russian-owned dive market.</p>
 <p>The CDC + Nat Geo dual designation is meaningful:</p>
 <ul>
 <li><strong>PADI 5-Star CDC</strong> — Career Development Center status confirms full instructor training capability</li>
@@ -138,7 +138,7 @@
 <p>For divers wanting <strong>the most credentialed dive education available in Pattaya combined with European ownership transparency and Nat Geo conservation framing</strong>, Aquanauts is among the city's strongest choices.</p>
 <h2 id="position-in-the-pattaya-dive-market">Position in the Pattaya Dive Market</h2>
 <p>Pattaya's PADI dive operators ranked by tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>PADI 5-Star IDC</strong></td><td>No Limit Divers</td><td>Full instructor development</td></tr><tr><td><strong>PADI 5-Star CDC + Nat Geo</strong></td><td><strong>Aquanauts</strong></td><td><strong>British/Dutch owned, Career Dev + Nat Geo conservation</strong></td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Mermaid's Dive Center</td><td>Career Development Center</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td>Pattaya Dive Centre, Jomtien Dive Center, Seafari</td><td>Full recreational + DM</td></tr><tr><td><strong>PADI Dive Center (recreational)</strong></td><td>Adventure Divers (1998), Pattaya Scuba Adventures</td><td>Recreational + own boat</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>PADI 5-Star IDC</strong></td><td>No Limit Divers</td><td>Full instructor development</td></tr><tr><td><strong>PADI 5-Star CDC + Nat Geo</strong></td><td><strong>Aquanauts</strong></td><td><strong>British/Dutch owned, Career Dev + Nat Geo conservation</strong></td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Mermaid's Dive Center</td><td>Career Development Center</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td><a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a>, <a href="/gyms/jomtien-dive-center/">Jomtien Dive Center</a>, Seafari</td><td>Full recreational + DM</td></tr><tr><td><strong>PADI Dive Center (recreational)</strong></td><td><a href="/gyms/adventure-divers-pattaya/">Adventure Divers</a> (1998), <a href="/gyms/pattaya-scuba-adventures/">Pattaya Scuba Adventures</a></td><td>Recreational + own boat</td></tr></tbody></table></div>
 <p>Aquanauts' specific position: <strong>British/Dutch ownership + dual CDC + Nat Geo designation + technical diving</strong> — a meaningfully differentiated position in the Pattaya market.</p>
 <h2 id="the-britishdutch-ownership-distinction">The British/Dutch Ownership Distinction</h2>
 <h3 id="why-it-matters">Why It Matters</h3>
@@ -404,17 +404,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

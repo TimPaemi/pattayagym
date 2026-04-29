@@ -134,7 +134,7 @@
 <p>For golfers who appreciate <strong>strategic, design-led architecture from one of golf history's defining course architects</strong>, and for those wanting a course that <strong>hosts professional tournaments rather than just package tourists</strong>, Khao Kheow is among the most distinguished options in Pattaya.</p>
 <h2 id="position-in-the-pattaya-golf-market">Position in the Pattaya Golf Market</h2>
 <p>Pattaya/Eastern Seaboard's championship-tier courses include:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Designer</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Khao Kheow</strong></td><td><strong>Pete Dye</strong></td><td><strong>27 holes, Asian Tour host, island green</strong></td></tr><tr><td><strong>Laem Chabang International</strong></td><td>Jack Nicklaus</td><td>27 holes, Nicklaus Signature design</td></tr><tr><td><strong>Siam Country Club Old/New/Plantation</strong></td><td>Tom Wishon, Schmidt-Curley</td><td>LPGA Honda Tour host</td></tr><tr><td><strong>Burapha Golf Club</strong></td><td>Andy Dye, Stuart Owen</td><td>36 holes, value-tier</td></tr><tr><td><strong>St Andrews 2000</strong></td><td>Roger Packard</td><td>Links-style, hilltop</td></tr><tr><td><strong>Mountain Shadow</strong></td><td>Ron Fream</td><td>Renovated 2004, narrow strategic</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Course</th><th>Designer</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Khao Kheow</strong></td><td><strong>Pete Dye</strong></td><td><strong>27 holes, Asian Tour host, island green</strong></td></tr><tr><td><strong>Laem Chabang International</strong></td><td>Jack Nicklaus</td><td>27 holes, Nicklaus Signature design</td></tr><tr><td><strong><a href="/gyms/siam-country-club/">Siam Country Club</a> Old/New/Plantation</strong></td><td>Tom Wishon, Schmidt-Curley</td><td>LPGA Honda Tour host</td></tr><tr><td><strong><a href="/gyms/burapha-golf-club/">Burapha Golf Club</a></strong></td><td>Andy Dye, Stuart Owen</td><td>36 holes, value-tier</td></tr><tr><td><strong>St Andrews 2000</strong></td><td>Roger Packard</td><td>Links-style, hilltop</td></tr><tr><td><strong>Mountain Shadow</strong></td><td>Ron Fream</td><td>Renovated 2004, narrow strategic</td></tr></tbody></table></div>
 <p>Khao Kheow's specific positioning is <strong>"the Pete Dye experience"</strong> — a defining American golf design school not heavily represented in Asia.</p>
 <h2 id="course-designer-pete-dye">Course Designer — Pete Dye</h2>
 <p>The course's signature is its association with <strong>Pete Dye (1925-2020)</strong>, one of the most influential American golf course architects of the 20th century. Dye's portfolio includes:</p>
@@ -441,17 +441,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

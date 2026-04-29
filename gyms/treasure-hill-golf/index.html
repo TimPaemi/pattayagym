@@ -134,7 +134,7 @@
 <p>For golfers wanting a <strong>jungle-immersive Thai golf experience that feels removed from beach-resort touristry</strong>, with <strong>Yoshikazu Kato's classic Japanese course architect sensibility</strong>, Treasure Hill is a quietly distinguished option in the broader Pattaya golf circuit.</p>
 <h2 id="position-in-the-pattaya-golf-market">Position in the Pattaya Golf Market</h2>
 <p>Pattaya / Eastern Seaboard has <strong>20+ golf courses</strong> within a 1.5-hour drive, including:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Style</th></tr></thead><tbody><tr><td><strong>Premium championship</strong></td><td>Siam Country Club, Laem Chabang Int'l, St Andrews 2000</td><td>World-class designers, tournament hosts</td></tr><tr><td><strong>Mid-tier resort</strong></td><td>Burapha, Phoenix Gold, Khao Kheow, Pattana</td><td>Well-regarded, busy with package golfers</td></tr><tr><td><strong>Hidden character</strong></td><td><strong>Treasure Hill</strong>, Mountain Shadow, Chee Chan</td><td>Distinctive, less visited, scenic</td></tr><tr><td><strong>Driving range / 9-hole</strong></td><td>Various</td><td>Practice and casual</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Style</th></tr></thead><tbody><tr><td><strong>Premium championship</strong></td><td><a href="/gyms/siam-country-club/">Siam Country Club</a>, Laem Chabang Int'l, St Andrews 2000</td><td>World-class designers, tournament hosts</td></tr><tr><td><strong>Mid-tier resort</strong></td><td>Burapha, Phoenix Gold, Khao Kheow, Pattana</td><td>Well-regarded, busy with package golfers</td></tr><tr><td><strong>Hidden character</strong></td><td><strong>Treasure Hill</strong>, Mountain Shadow, Chee Chan</td><td>Distinctive, less visited, scenic</td></tr><tr><td><strong>Driving range / 9-hole</strong></td><td>Various</td><td>Practice and casual</td></tr></tbody></table></div>
 <p>Treasure Hill occupies the <strong>hidden character</strong> tier — it's not on the every-package golfer's must-play list, but <strong>knowledgeable golfers who've played the area for years often cite it as a favorite</strong> for its jungle aesthetic, signature hole, and lack of housing intrusion.</p>
 <h2 id="course-designer-yoshikazu-kato">Course Designer — Yoshikazu Kato</h2>
 <p>The course was designed by <strong>Yoshikazu Kato</strong>, a Japanese golf architect whose Thailand portfolio includes <strong>multiple Eastern Seaboard courses</strong>. Japanese golf course designers from the 1990s-2000s era characteristically:</p>
@@ -425,17 +425,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

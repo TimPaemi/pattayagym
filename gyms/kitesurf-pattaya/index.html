@@ -129,7 +129,7 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Kitesurf Pattaya is <strong>a long-running IKO (International Kiteboarding Organization)-certified kitesurfing school operating from the south end of Jomtien Beach</strong> — the calmer, less commercial stretch of Pattaya's main beach corridor that has emerged as <strong>the city's primary kitesurfing zone</strong>. The school's positioning is <strong>direct and accessible</strong>: a <strong>3-day beginner package starting at $250 USD</strong> that takes complete novices through the IKO Level 1-3 progression to <strong>basic independent water-start riding</strong>.</p>
-<p>The Jomtien stretch hosts multiple kitesurfing schools — alongside <strong>KBA Pattaya (at Blue Lagoon, slightly south)</strong> and <strong>Clubloongchat Watersports (at Na Jomtien)</strong> — but <strong>Kitesurf Pattaya occupies the central south-Jomtien position</strong> that's particularly accessible from Jomtien-area hotels and condos. The school's IKO certification means instruction follows <strong>the international standard for kitesurfing safety and progression</strong>, with certifications <strong>transferable to schools worldwide</strong> — a Kitesurf Pattaya graduate can rent equipment in Brazil, Cape Town, Tarifa, or Boracay using their IKO card.</p>
+<p>The Jomtien stretch hosts multiple kitesurfing schools — alongside <strong>KBA Pattaya (at Blue Lagoon, slightly south)</strong> and <strong><a href="/gyms/clubloongchat-watersports/">Clubloongchat Watersports</a> (at Na Jomtien)</strong> — but <strong>Kitesurf Pattaya occupies the central south-Jomtien position</strong> that's particularly accessible from Jomtien-area hotels and condos. The school's IKO certification means instruction follows <strong>the international standard for kitesurfing safety and progression</strong>, with certifications <strong>transferable to schools worldwide</strong> — a Kitesurf Pattaya graduate can rent equipment in Brazil, Cape Town, Tarifa, or Boracay using their IKO card.</p>
 <p>For travelers staying in Jomtien or central Pattaya who want <strong>a kitesurfing learning experience without traveling 20+ minutes south to Na Jomtien</strong>, Kitesurf Pattaya is the geographically convenient choice. The <strong>$250 beginner package</strong> is also among the <strong>best-value introductory programs</strong> in Thailand's kitesurfing scene.</p>
 <h2 id="position-in-the-pattaya-kitesurfing-market">Position in the Pattaya Kitesurfing Market</h2>
 <p>Pattaya's kitesurfing schools concentrate at south Jomtien and Na Jomtien:</p>
@@ -435,17 +435,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

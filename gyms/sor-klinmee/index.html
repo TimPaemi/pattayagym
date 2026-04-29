@@ -218,7 +218,7 @@
 <ul>
 <li><strong>Fairtex:</strong> ~฿12,000/month (~3x Sor Klinmee)</li>
 <li><strong>Battle Conquer:</strong> mid-tier between Sor Klinmee and Fairtex</li>
-<li><strong>Silk Muay Thai:</strong> ~฿25,500-33,000/month with all-inclusive packages</li>
+<li><strong><a href="/gyms/silk-muay-thai/">Silk Muay Thai</a>:</strong> ~฿25,500-33,000/month with all-inclusive packages</li>
 </ul>
 <p>For a student who wants <strong>direct access to a former pro fighter from a deep fighting family at a fraction of resort-camp prices</strong>, Sor Klinmee is unmatched value.</p>
 <h2 id="pros" class="section-pros-cons">Pros</h2>
@@ -417,17 +417,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

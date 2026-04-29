@@ -128,7 +128,7 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Pattaya Monkey Hash House Harriers ("Monkey Hash" or "PMH3") is <strong>the longer-form, more demanding sister kennel of the foundational Pattaya Hash House Harriers</strong> — a Hash House Harriers chapter that runs <strong>only on odd-numbered months (January, March, May, July, September, November) on the 3rd Saturday</strong>, with each run requiring participants to <strong>walk at least 8 kilometers over moderately difficult terrain in approximately 2 hours</strong>. Where the <strong>Pattaya Hash House Harriers (PH3)</strong> runs <strong>every Monday</strong> with a <strong>mainstream 5-10 km mixed-pace format</strong> suitable for runners, joggers, and walkers, <strong>Monkey Hash filters for the more committed segment</strong> of the Pattaya hashing community — those who want <strong>longer routes, harder terrain, and a more dedicated 6-times-per-year monthly tradition</strong>.</p>
+<p>Pattaya Monkey Hash House Harriers ("Monkey Hash" or "PMH3") is <strong>the longer-form, more demanding sister kennel of the foundational <a href="/gyms/pattaya-hash-house/">Pattaya Hash House Harriers</a></strong> — a Hash House Harriers chapter that runs <strong>only on odd-numbered months (January, March, May, July, September, November) on the 3rd Saturday</strong>, with each run requiring participants to <strong>walk at least 8 kilometers over moderately difficult terrain in approximately 2 hours</strong>. Where the <strong>Pattaya Hash House Harriers (PH3)</strong> runs <strong>every Monday</strong> with a <strong>mainstream 5-10 km mixed-pace format</strong> suitable for runners, joggers, and walkers, <strong>Monkey Hash filters for the more committed segment</strong> of the Pattaya hashing community — those who want <strong>longer routes, harder terrain, and a more dedicated 6-times-per-year monthly tradition</strong>.</p>
 <p>The bi-monthly schedule (every other month) and <strong>the explicit minimum 8km / 2-hour requirement</strong> mean Monkey Hash is <strong>fundamentally different in character from typical hashes</strong>. Most HHH chapters globally welcome casual walkers and slow joggers. Monkey Hash sets a clear bar: <strong>you need to be capable of moderate hiking-level activity for 2+ hours over varied Thai countryside terrain</strong>.</p>
 <p>For the <strong>Pattaya hashing community</strong>, Monkey Hash provides <strong>the deeper-engagement option</strong> alongside PH3's weekly mainstream gathering and Pattaya Jungle Hash's Sunday-jungle-focus offering. For <strong>visiting hashers from international kennels</strong> who happen to be in Pattaya during a Monkey Hash weekend, the run is <strong>a memorable Thai countryside adventure</strong> of meaningful athletic substance.</p>
 <h2 id="position-in-the-pattaya-hash-house-harriers-ecosystem">Position in the Pattaya Hash House Harriers Ecosystem</h2>
@@ -448,17 +448,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

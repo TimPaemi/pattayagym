@@ -129,12 +129,12 @@
 
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
-<p>Tarzan Adventure is <strong>Pattaya's premier outdoor jungle adventure park</strong> — a <strong>zipline-and-rope-challenge facility nestled between Nong Nooch Tropical Garden and the Golden Cliff Temple in Sattahip's hill country</strong>, offering <strong>a 25-platform full-course zipline experience</strong> plus alternative <strong>half-course and kids' course</strong> options. Beyond pure ziplining, the park integrates <strong>bridges, ladders, wire walks, abseiling stations, rope challenges, and jumping rope elements</strong> into a multi-element circuit that's part adventure, part fitness, part team-building.</p>
-<p>The location is genuinely scenic — <strong>mountain jungle with views of the Golden Cliff Temple (Khao Chi Chan, the famous gold-leafed Buddha image)</strong> during the zipline ride. Where Bira Circuit delivers motor racing thrill, EasyKart delivers go-karting, Pattaya Park Tower Jump delivers the 56th-floor zip line, and Thai Sky Adventures delivers tandem skydiving, <strong>Tarzan Adventure delivers the jungle ropes-course adrenaline experience</strong> — a meaningful complement to the city's adventure tourism stack.</p>
-<p>The park is partnered with <strong>Ramayana Water Park</strong> (also Sattahip), allowing combined-ticket adventure-and-water-park days. <strong>Multilingual staff serve English, Thai, Russian, Chinese, and Korean visitors</strong>, reflecting the park's broad tourist appeal.</p>
+<p>Tarzan Adventure is <strong>Pattaya's premier outdoor jungle adventure park</strong> — a <strong>zipline-and-rope-challenge facility nestled between <a href="/gyms/nongnooch-cultural-show/">Nong Nooch Tropical Garden</a> and the Golden Cliff Temple in Sattahip's hill country</strong>, offering <strong>a 25-platform full-course zipline experience</strong> plus alternative <strong>half-course and kids' course</strong> options. Beyond pure ziplining, the park integrates <strong>bridges, ladders, wire walks, abseiling stations, rope challenges, and jumping rope elements</strong> into a multi-element circuit that's part adventure, part fitness, part team-building.</p>
+<p>The location is genuinely scenic — <strong>mountain jungle with views of the Golden Cliff Temple (Khao Chi Chan, the famous gold-leafed Buddha image)</strong> during the zipline ride. Where <a href="/gyms/bira-circuit/">Bira Circuit</a> delivers motor racing thrill, EasyKart delivers go-karting, Pattaya Park Tower Jump delivers the 56th-floor zip line, and <a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a> delivers tandem skydiving, <strong>Tarzan Adventure delivers the jungle ropes-course adrenaline experience</strong> — a meaningful complement to the city's adventure tourism stack.</p>
+<p>The park is partnered with <strong><a href="/gyms/ramayana-water-park/">Ramayana Water Park</a></strong> (also Sattahip), allowing combined-ticket adventure-and-water-park days. <strong>Multilingual staff serve English, Thai, Russian, Chinese, and Korean visitors</strong>, reflecting the park's broad tourist appeal.</p>
 <h2 id="position-in-the-pattaya-adventure-market">Position in the Pattaya Adventure Market</h2>
 <p>Pattaya's adrenaline / adventure tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Style</th></tr></thead><tbody><tr><td><strong>Top-tier extreme</strong></td><td>Thai Sky Adventures Skydive</td><td>Tandem from 13,000 ft</td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>170m from 56th floor (urban)</td></tr><tr><td><strong>Jungle zipline / ropes</strong></td><td><strong>Tarzan Adventure</strong></td><td><strong>25-platform jungle course</strong></td></tr><tr><td><strong>Karting</strong></td><td>EasyKart, Pattaya Kart Speedway</td><td>Outdoor karts</td></tr><tr><td><strong>Motor racing</strong></td><td>Bira Circuit</td><td>FIA-certified track</td></tr><tr><td><strong>Shooting</strong></td><td>Pattaya Shooting Park, Dragon Shooting</td><td>Outdoor + indoor ranges</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Style</th></tr></thead><tbody><tr><td><strong>Top-tier extreme</strong></td><td>Thai Sky Adventures Skydive</td><td>Tandem from 13,000 ft</td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>170m from 56th floor (urban)</td></tr><tr><td><strong>Jungle zipline / ropes</strong></td><td><strong>Tarzan Adventure</strong></td><td><strong>25-platform jungle course</strong></td></tr><tr><td><strong>Karting</strong></td><td>EasyKart, <a href="/gyms/pattaya-kart-speedway/">Pattaya Kart Speedway</a></td><td>Outdoor karts</td></tr><tr><td><strong>Motor racing</strong></td><td>Bira Circuit</td><td>FIA-certified track</td></tr><tr><td><strong>Shooting</strong></td><td><a href="/gyms/pattaya-shooting-park/">Pattaya Shooting Park</a>, Dragon Shooting</td><td>Outdoor + indoor ranges</td></tr></tbody></table></div>
 <p>Tarzan's specific position: <strong>the jungle adventure experience</strong> — outdoors, scenic, varied elements, family-friendly with kids' course alongside adult full course.</p>
 <h2 id="the-25-platform-zipline-course">The 25-Platform Zipline Course</h2>
 <h3 id="how-it-works">How It Works</h3>
@@ -433,17 +433,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

@@ -130,10 +130,10 @@
       <h2 id="overview">Overview</h2>
 <p>Adventure Divers Pattaya is <strong>one of Pattaya's longest-running PADI dive operations</strong> — established in <strong>1998</strong> and continuously operating for <strong>27+ years</strong> with <strong>its own dedicated dive boat MV Saifon</strong> and <strong>a complete instructor pipeline from Discover Scuba Diving through PADI Open Water Scuba Instructor certification</strong>. Where newer dive centers may have superior infrastructure, <strong>Adventure Divers' nearly three decades of continuous operation</strong> translates to <strong>dive guides who have logged thousands of hours on every Pattaya near-island reef and far-island wreck</strong>, <strong>established crew relationships</strong>, and <strong>the kind of operational reliability that only comes from surviving multiple Thai economic cycles, dive industry shifts, and the COVID disruption</strong>.</p>
 <p>The boat — <strong>MV Saifon</strong> — is operated by <strong>an experienced captain and crew with intimate knowledge of every Pattaya dive site</strong>: the near-island reefs of Koh Larn / Koh Sak / Koh Krok (30-min boat ride, suitable for training and casual diving), and the far-island sites including the famous <strong>HTMS Khram wreck</strong> (74m WWII landing ship sunk as artificial reef in 2003, sitting at 30m depth with deck at 18-22m). The crew teaches in <strong>English, Russian, and Thai</strong> — covering the three primary tourist demographics in Pattaya.</p>
-<p>For Pattaya divers wanting <strong>established operational reliability with a long-tenured crew</strong>, Adventure Divers is among the city's most credible PADI choices alongside <strong>No Limit Divers (PADI 5-Star IDC), Mermaid's Dive Center (PADI 5-Star CDC)</strong>, and <strong>Pattaya Dive Centre (PADI 5-Star Dive Resort)</strong>.</p>
+<p>For Pattaya divers wanting <strong>established operational reliability with a long-tenured crew</strong>, Adventure Divers is among the city's most credible PADI choices alongside <strong><a href="/gyms/no-limit-divers/">No Limit Divers</a> (PADI 5-Star IDC), <a href="/gyms/mermaids-dive/">Mermaid's Dive Center</a> (PADI 5-Star CDC)</strong>, and <strong><a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a> (PADI 5-Star Dive Resort)</strong>.</p>
 <h2 id="position-in-the-pattaya-dive-market">Position in the Pattaya Dive Market</h2>
 <p>Pattaya's PADI dive operators tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>PADI 5-Star IDC</strong></td><td>No Limit Divers</td><td>Full instructor development</td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Mermaid's Dive Center</td><td>Career Development Center</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td>Pattaya Dive Centre, Jomtien Dive Center, Seafari</td><td>Full recreational + DM</td></tr><tr><td><strong>PADI Dive Center (recreational)</strong></td><td><strong>Adventure Divers</strong>, Pattaya Scuba Adventures</td><td>Established recreational + own boat</td></tr><tr><td><strong>Independent operators</strong></td><td>Various</td><td>Walk-up, less established</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>PADI 5-Star IDC</strong></td><td>No Limit Divers</td><td>Full instructor development</td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Mermaid's Dive Center</td><td>Career Development Center</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td>Pattaya Dive Centre, <a href="/gyms/jomtien-dive-center/">Jomtien Dive Center</a>, Seafari</td><td>Full recreational + DM</td></tr><tr><td><strong>PADI Dive Center (recreational)</strong></td><td><strong>Adventure Divers</strong>, <a href="/gyms/pattaya-scuba-adventures/">Pattaya Scuba Adventures</a></td><td>Established recreational + own boat</td></tr><tr><td><strong>Independent operators</strong></td><td>Various</td><td>Walk-up, less established</td></tr></tbody></table></div>
 <p>Adventure Divers' specific position: <strong>established 1998 PADI dive center with own boat</strong> — different from the IDC/CDC career-track operators, focused on <strong>dependable recreational diving and core PADI certifications</strong>.</p>
 <h2 id="the-1998-heritage">The 1998 Heritage</h2>
 <h3 id="why-27-years-matters">Why 27+ Years Matters</h3>
@@ -438,17 +438,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

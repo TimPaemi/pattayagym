@@ -133,7 +133,7 @@
 <p>For travelers who want <strong>the most credentialed pro-track diving education in the Pattaya region</strong>, who plan to <strong>work in the dive industry</strong>, or who simply want to be taught by <strong>Asia's senior PADI brass</strong>, No Limit Divers is the unambiguous top choice.</p>
 <h2 id="position-in-the-pattaya-dive-market">Position in the Pattaya Dive Market</h2>
 <p>Pattaya has multiple PADI shops, but they fall into clearly tiered groups:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Capability</th></tr></thead><tbody><tr><td><strong>Recreational entry-level</strong></td><td>Various Pattaya beach dive shops</td><td>Open Water, fun dives only</td></tr><tr><td><strong>Recreational + Advanced</strong></td><td>Mermaid's Dive Center, Aquanauts, Adventure Divers</td><td>OW, AOW, Rescue, fun dives</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td>Pattaya Dive Centre, Jomtien Dive Center, Seafari</td><td>Full recreational + DM with audit</td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Mermaid's Dive Center</td><td>Career Development Center designation</td></tr><tr><td><strong>PADI 5-Star IDC</strong></td><td><strong>No Limit Divers</strong></td><td><strong>Full Instructor Development Course in-house</strong></td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Capability</th></tr></thead><tbody><tr><td><strong>Recreational entry-level</strong></td><td>Various Pattaya beach dive shops</td><td>Open Water, fun dives only</td></tr><tr><td><strong>Recreational + Advanced</strong></td><td><a href="/gyms/mermaids-dive/">Mermaid's Dive Center</a>, Aquanauts, <a href="/gyms/adventure-divers-pattaya/">Adventure Divers</a></td><td>OW, AOW, Rescue, fun dives</td></tr><tr><td><strong>PADI 5-Star Dive Resort</strong></td><td><a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a>, <a href="/gyms/jomtien-dive-center/">Jomtien Dive Center</a>, Seafari</td><td>Full recreational + DM with audit</td></tr><tr><td><strong>PADI 5-Star CDC</strong></td><td>Mermaid's Dive Center</td><td>Career Development Center designation</td></tr><tr><td><strong>PADI 5-Star IDC</strong></td><td><strong>No Limit Divers</strong></td><td><strong>Full Instructor Development Course in-house</strong></td></tr></tbody></table></div>
 <p>The <strong>5-Star IDC tier</strong> is meaningfully different from a 5-Star Dive Resort or even 5-Star CDC. <strong>IDC affiliation</strong> means PADI has audited and certified the dive center to <strong>train new instructors</strong> — a multi-week curriculum culminating in an Instructor Examination (IE) that creates new PADI dive professionals.</p>
 <p>To run an IDC, the dive center must have:</p>
 <ul>
@@ -459,17 +459,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

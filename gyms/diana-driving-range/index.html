@@ -131,10 +131,10 @@
       <h2 id="overview">Overview</h2>
 <p>Diana Driving Range is <strong>one of Pattaya's most established dedicated outdoor driving ranges</strong> — a <strong>30-bay floodlit facility with 200-yard range depth</strong>, <strong>professional teaching pros for instruction</strong>, and <strong>an on-site restaurant</strong> for pre/post-practice fueling. Located in <strong>the Soi Diana area of Central Pattaya</strong> (Soi Diana Inn is one of central Pattaya's notable arterials connecting Beach Road and Soi Buakhao), Diana provides <strong>walkable practice access for tourists staying in central Pattaya hotels</strong> as well as <strong>established service for local Pattaya golfers</strong>.</p>
 <p>The 30-bay scale is meaningful — many Pattaya driving ranges offer 10-20 bays, and the 30-bay configuration ensures <strong>minimal waiting even at peak demand</strong>. The <strong>200-yard range depth</strong> is appropriate for <strong>all-club practice including driver work</strong> without ball-flight loss to back-stop netting. The <strong>floodlit configuration</strong> extends practice into evening hours — typically until 22:00 — which is <strong>the standard for serious Pattaya practice ranges</strong> but distinguishes Diana from morning-only or daylight-only options.</p>
-<p>For Pattaya tourists wanting <strong>walkable affordable practice</strong>, for Pattaya golfers seeking <strong>a higher bay-count alternative to single-purpose ranges</strong>, and for golfers wanting <strong>integrated restaurant amenities for full-day practice sessions</strong>, Diana Driving Range fills a meaningful niche between <strong>the most basic mat-bay ranges (Pattaya Golf Driving Range, 300 Yards Driving Range)</strong> and <strong>premium course-attached practice (Siam Country Club Waterside)</strong>.</p>
+<p>For Pattaya tourists wanting <strong>walkable affordable practice</strong>, for Pattaya golfers seeking <strong>a higher bay-count alternative to single-purpose ranges</strong>, and for golfers wanting <strong>integrated restaurant amenities for full-day practice sessions</strong>, Diana Driving Range fills a meaningful niche between <strong>the most basic mat-bay ranges (<a href="/gyms/pattaya-golf-driving-range/">Pattaya Golf Driving Range</a>, 300 Yards Driving Range)</strong> and <strong>premium course-attached practice (<a href="/gyms/siam-country-club/">Siam Country Club</a> Waterside)</strong>.</p>
 <h2 id="position-in-the-pattaya-practice-facility-market">Position in the Pattaya Practice Facility Market</h2>
 <p>Pattaya practice ranges tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium course-attached</strong></td><td>Siam Country Club Waterside, Burapha range</td><td>Real grass + championship integration</td></tr><tr><td><strong>Indoor / simulator</strong></td><td>Golf Hub Pattaya</td><td>TrackMan / GC Quad + AC</td></tr><tr><td><strong>Floodlit dedicated range</strong></td><td><strong>Diana Driving Range</strong></td><td><strong>30 bays + 200 yards + restaurant</strong></td></tr><tr><td><strong>Affordable mainstream</strong></td><td>Pattaya Golf Driving Range</td><td>Mat bays + value pricing</td></tr><tr><td><strong>Boutique</strong></td><td>300 Yards Driving Range</td><td>Independent operation</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Premium course-attached</strong></td><td>Siam Country Club Waterside, Burapha range</td><td>Real grass + championship integration</td></tr><tr><td><strong>Indoor / simulator</strong></td><td><a href="/gyms/golf-hub-pattaya/">Golf Hub Pattaya</a></td><td>TrackMan / GC Quad + AC</td></tr><tr><td><strong>Floodlit dedicated range</strong></td><td><strong>Diana Driving Range</strong></td><td><strong>30 bays + 200 yards + restaurant</strong></td></tr><tr><td><strong>Affordable mainstream</strong></td><td>Pattaya Golf Driving Range</td><td>Mat bays + value pricing</td></tr><tr><td><strong>Boutique</strong></td><td>300 Yards Driving Range</td><td>Independent operation</td></tr></tbody></table></div>
 <p>Diana's specific position: <strong>the most amenity-integrated dedicated range in central Pattaya</strong>.</p>
 <h2 id="the-30-bay-configuration">The 30-Bay Configuration</h2>
 <h3 id="why-30-bays-matters">Why 30 Bays Matters</h3>
@@ -438,17 +438,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

@@ -132,11 +132,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>TOS Tennis Club (also operated as <strong>TOS Tennis Academy</strong>) is <strong>the closest tennis facility to Jomtien Beach</strong> — a 2-court tennis venue tucked <strong>inside the Baan Suan Lalana residential development</strong> with <strong>swimming pool, locker room, and training gym</strong> integrated on-site. The location advantage is meaningful: where most Pattaya tennis facilities cluster in central Pattaya City or out toward Sattahip, TOS Tennis sits <strong>steps from Jomtien Beach in the south Pattaya beach belt</strong> where many traveling tennis players actually stay.</p>
-<p>The 2-court setup is <strong>the most modest in the Pattaya tennis scene</strong> — Greta has 6 covered courts, Tara has 3, Pattaya Tennis & Badminton Inter Club has 5. But the <strong>integrated swimming pool + locker room + training gym</strong> add <strong>a small-club lifestyle layer</strong> that pure tennis-only facilities don't offer. Players can train, shower, lift weights, swim, and recover in a single residential club setting.</p>
+<p>The 2-court setup is <strong>the most modest in the Pattaya tennis scene</strong> — Greta has 6 covered courts, Tara has 3, <a href="/gyms/pattaya-tennis-badminton-inter-club/">Pattaya Tennis & Badminton Inter Club</a> has 5. But the <strong>integrated swimming pool + locker room + training gym</strong> add <strong>a small-club lifestyle layer</strong> that pure tennis-only facilities don't offer. Players can train, shower, lift weights, swim, and recover in a single residential club setting.</p>
 <p>The current court conditions are <strong>fine for beginner play but would not be recommended for advanced play</strong> — the courts need resurfacing (planned at some point per the operators). For Jomtien-based travelers and Baan Suan Lalana residents who prioritize <strong>convenience, beach proximity, and integrated club amenities</strong> over premier-tier playing surfaces, TOS Tennis serves the niche.</p>
 <h2 id="position-in-the-pattaya-tennis-market">Position in the Pattaya Tennis Market</h2>
 <p>Pattaya tennis facility tiers ranked:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Indoor / covered premium</strong></td><td>Greta Sport Club</td><td>6 covered ITF Plexipave courts</td></tr><tr><td><strong>Premium hotel club</strong></td><td>FITZ Club at Royal Cliff</td><td>Royal Cliff hotel-integrated</td></tr><tr><td><strong>2022 modern multi-sport</strong></td><td>Tara Tennis Club</td><td>Fresh resurface + 3 courts + pickleball</td></tr><tr><td><strong>Multi-sport central</strong></td><td>Pattaya Tennis & Badminton Inter Club</td><td>5T + Badminton + Pickleball</td></tr><tr><td><strong>Foundational expat civic</strong></td><td>Pattaya Sports Club</td><td>Charity + community</td></tr><tr><td><strong>Beach-adjacent residential</strong></td><td><strong>TOS Tennis Club</strong></td><td><strong>Closest to Jomtien Beach + 2 courts + pool + gym</strong></td></tr><tr><td><strong>Outdoor club</strong></td><td>Pattaya Tennis Club</td><td>Outdoor floodlit</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Indoor / covered premium</strong></td><td>Greta Sport Club</td><td>6 covered ITF Plexipave courts</td></tr><tr><td><strong>Premium hotel club</strong></td><td>FITZ Club at Royal Cliff</td><td>Royal Cliff hotel-integrated</td></tr><tr><td><strong>2022 modern multi-sport</strong></td><td><a href="/gyms/tara-tennis-club/">Tara Tennis Club</a></td><td>Fresh resurface + 3 courts + pickleball</td></tr><tr><td><strong>Multi-sport central</strong></td><td>Pattaya Tennis & Badminton Inter Club</td><td>5T + Badminton + <a href="/gyms/pickleball-pattaya/">Pickleball</a></td></tr><tr><td><strong>Foundational expat civic</strong></td><td><a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a></td><td>Charity + community</td></tr><tr><td><strong>Beach-adjacent residential</strong></td><td><strong>TOS Tennis Club</strong></td><td><strong>Closest to Jomtien Beach + 2 courts + pool + gym</strong></td></tr><tr><td><strong>Outdoor club</strong></td><td><a href="/gyms/pattaya-tennis-club/">Pattaya Tennis Club</a></td><td>Outdoor floodlit</td></tr></tbody></table></div>
 <p>TOS Tennis's specific position: <strong>beach proximity + small-club lifestyle integration</strong> rather than tennis-quality leadership.</p>
 <h2 id="baan-suan-lalana-the-setting">Baan Suan Lalana — The Setting</h2>
 <h3 id="what-baan-suan-lalana-is">What Baan Suan Lalana Is</h3>
@@ -407,17 +407,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

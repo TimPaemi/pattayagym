@@ -129,7 +129,7 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Silk Muay Thai is <strong>Pattaya's premier boutique all-inclusive Muay Thai retreat camp</strong> — a smaller, design-conscious facility focused on <strong>personalized attention, modern amenities, and an integrated training-and-stay experience</strong>. The camp carries a <strong>near-perfect 4.9/5 rating</strong> across major review platforms, putting it among the <strong>top-rated combat sports facilities in Thailand by user score</strong>. The model is straightforward: <strong>book a package, live on-site in a modern private room, train twice a day, eat curated meals at the on-site restaurant, recover in the pool/sauna/spa, and emerge after a week or month transformed</strong>.</p>
-<p>For travelers wanting <strong>the wellness-retreat version of a Muay Thai training holiday</strong> — comfortable accommodation, integrated logistics, premium service standards — Silk is the most curated option in Pattaya. Where Sityodtong delivers raw authenticity and Fairtex delivers institutional scale, <strong>Silk delivers a design-forward, hospitality-grade Muay Thai vacation</strong>.</p>
+<p>For travelers wanting <strong>the wellness-retreat version of a Muay Thai training holiday</strong> — comfortable accommodation, integrated logistics, premium service standards — Silk is the most curated option in Pattaya. Where <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> delivers raw authenticity and Fairtex delivers institutional scale, <strong>Silk delivers a design-forward, hospitality-grade Muay Thai vacation</strong>.</p>
 <h2 id="position-in-the-pattaya-market">Position in the Pattaya Market</h2>
 <p>Pattaya's Muay Thai market spans:</p>
 <div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Vibe</th></tr></thead><tbody><tr><td><strong>Authentic budget</strong></td><td>Sor Klinmee, Petchrungruang, WKO</td><td>No-frills working camps</td></tr><tr><td><strong>Mid-tier modern</strong></td><td>Battle Conquer, Venum, Rage</td><td>Multi-discipline, clean, mid-priced</td></tr><tr><td><strong>Institutional resort</strong></td><td>Fairtex</td><td>Scale + brand + fighter pedigree</td></tr><tr><td><strong>All-inclusive multi-disc</strong></td><td>Kombat Group</td><td>Residential, multi-discipline, 5/5 TripAdvisor</td></tr><tr><td><strong>Boutique retreat</strong></td><td><strong>Silk Muay Thai</strong></td><td>Premium hospitality + Muay Thai integrated</td></tr></tbody></table></div>
@@ -406,17 +406,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

@@ -79,8 +79,8 @@
       </g></svg></div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">fitness</span>
-        <span class="open-badge open-now">● Open now</span>
         
+        <span class="open-badge open-closed">● Closed now</span>
         <span class="meta-dot">•</span>
         <span class="reading-meta">📖 10 min read</span>
         <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
@@ -177,7 +177,7 @@
 <h3 id="new-multi-sport-courts">New Multi-Sport Courts</h3>
 <p>Fitz Club has <strong>expanded with new multi-purpose CoolTop technology courts</strong> designed for:</p>
 <ul>
-<li><strong>Pickleball</strong> (rapidly growing globally — first-mover Pattaya facility)</li>
+<li><strong><a href="/gyms/pickleball-pattaya/">Pickleball</a></strong> (rapidly growing globally — first-mover Pattaya facility)</li>
 <li><strong>Futsal</strong></li>
 <li><strong>Basketball</strong></li>
 <li><strong>Badminton</strong></li>
@@ -335,7 +335,7 @@
 <ul>
 <li><strong>Pure budget sports seekers</strong> (cheaper public courts and gyms exist)</li>
 <li><strong>Travelers staying far from Pratumnak</strong> without convenient transport</li>
-<li><strong>Solo Muay Thai purists</strong> (better dedicated camps elsewhere — Fairtex, WKO, Sityodtong)</li>
+<li><strong>Solo Muay Thai purists</strong> (better dedicated camps elsewhere — Fairtex, WKO, <a href="/gyms/sityodtong-pattaya/">Sityodtong</a>)</li>
 <li><strong>Casual drop-ins</strong> who don't want the resort-hotel context</li>
 </ul>
 </div></div>
@@ -500,17 +500,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

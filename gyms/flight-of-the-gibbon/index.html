@@ -130,11 +130,11 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Flight of the Gibbon is <strong>the largest canopy zip-line tour in all of Thailand</strong> — a <strong>3-kilometer course with 24 platforms</strong> routed through <strong>the jungle canopy inside Khao Kheow Open Zoo (which itself sits inside the Chompoo Wildlife Sanctuary)</strong> approximately <strong>1 hour drive from Pattaya / 90 minutes from Bangkok</strong>. The course combines <strong>ziplines, double ziplines, abseiling stations, sky bridges, and spiral staircases</strong> into a <strong>2.5-hour guided experience</strong> with <strong>two Sky Rangers per group</strong> for safety and rainforest interpretation.</p>
-<p>The canopy setting is <strong>fundamentally different from Pattaya's other zipline options</strong> (Tarzan Adventure 25-platform jungle course, Pattaya Park Tower Jump 56th-floor cable). Flight of the Gibbon delivers <strong>a genuine rainforest canopy experience inside a protected wildlife sanctuary</strong> — including <strong>the rare possibility of spotting wild gibbons</strong> while ziplining. The location's protected status, the <strong>3 km course length</strong> (longer than Tarzan's 25 platforms), and the <strong>package inclusions (hotel pickup + Khao Kheow Open Safari Park tour + local Thai lunch)</strong> make it <strong>a full-day adventure-tourism experience</strong> rather than a short add-on activity.</p>
+<p>The canopy setting is <strong>fundamentally different from Pattaya's other zipline options</strong> (<a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure</a> 25-platform jungle course, Pattaya Park Tower Jump 56th-floor cable). Flight of the Gibbon delivers <strong>a genuine rainforest canopy experience inside a protected wildlife sanctuary</strong> — including <strong>the rare possibility of spotting wild gibbons</strong> while ziplining. The location's protected status, the <strong>3 km course length</strong> (longer than Tarzan's 25 platforms), and the <strong>package inclusions (hotel pickup + Khao Kheow Open Safari Park tour + local Thai lunch)</strong> make it <strong>a full-day adventure-tourism experience</strong> rather than a short add-on activity.</p>
 <p>For Pattaya visitors who want <strong>the most ambitious zipline experience available within day-trip distance</strong> — and especially those willing to <strong>pair the zipline with the world-class Khao Kheow Open Zoo</strong> (one of Thailand's best wildlife parks) — Flight of the Gibbon is genuinely the apex of regional canopy adventure.</p>
 <h2 id="position-in-the-pattaya-adventure-tourism-market">Position in the Pattaya Adventure Tourism Market</h2>
 <p>Pattaya's zipline / aerial adventure tier:</p>
-<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Largest canopy in Thailand</strong></td><td><strong>Flight of the Gibbon</strong></td><td><strong>3 km course, 24 platforms, inside Khao Kheow Zoo + wildlife sanctuary</strong></td></tr><tr><td><strong>Jungle ropes course</strong></td><td>Tarzan Adventure Pattaya</td><td>25 platforms, 50-foot rope bungee, near Buddha Mountain</td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>170m zip line from 56th floor, urban setting</td></tr><tr><td><strong>Tandem skydive</strong></td><td>Thai Sky Adventures</td><td>13,000 ft tandem skydiving</td></tr><tr><td><strong>Helicopter / paraglide</strong></td><td>Various operators</td><td>Aerial alternatives</td></tr></tbody></table></div>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Tier</th><th>Examples</th><th>Distinction</th></tr></thead><tbody><tr><td><strong>Largest canopy in Thailand</strong></td><td><strong>Flight of the Gibbon</strong></td><td><strong>3 km course, 24 platforms, inside Khao Kheow Zoo + wildlife sanctuary</strong></td></tr><tr><td><strong>Jungle ropes course</strong></td><td>Tarzan Adventure Pattaya</td><td>25 platforms, 50-foot rope bungee, near Buddha Mountain</td></tr><tr><td><strong>Tower zip line</strong></td><td>Pattaya Park Tower Jump</td><td>170m zip line from 56th floor, urban setting</td></tr><tr><td><strong>Tandem skydive</strong></td><td><a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a></td><td>13,000 ft tandem skydiving</td></tr><tr><td><strong>Helicopter / paraglide</strong></td><td>Various operators</td><td>Aerial alternatives</td></tr></tbody></table></div>
 <p>Flight of the Gibbon's specific position: <strong>the only protected-wildlife-sanctuary canopy course in the Pattaya catchment</strong> — wildlife-tourism + adventure crossover.</p>
 <h2 id="what-flight-of-the-gibbon-means">What "Flight of the Gibbon" Means</h2>
 <h3 id="the-brand-origins">The Brand Origins</h3>
@@ -164,7 +164,7 @@
 <li><strong>Open zoo concept</strong> — animals in expanded enclosures vs. cages</li>
 <li><strong>Multiple zones</strong> — wildlife sanctuary, recreation, research breeding</li>
 <li><strong>57 minutes from Pattaya</strong> typical drive</li>
-<li><strong>Combinable with Khao Kheow Country Club</strong> (Pete Dye golf nearby)</li>
+<li><strong>Combinable with <a href="/gyms/khao-kheow-country-club/">Khao Kheow Country Club</a></strong> (Pete Dye golf nearby)</li>
 </ul>
 <p>The Flight of the Gibbon course routes <strong>through the canopy of the surrounding rainforest</strong> — meaning:</p>
 <ul>
@@ -475,17 +475,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();

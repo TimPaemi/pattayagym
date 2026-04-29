@@ -79,8 +79,8 @@
       </g></svg></div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">watersports</span>
-        <span class="open-badge open-now">● Open now</span>
         
+        <span class="open-badge open-closed">● Closed now</span>
         <span class="meta-dot">•</span>
         <span class="reading-meta">📖 4 min read</span>
         <span class="meta-dot">•</span><span class="reading-meta">Verified 2026-04-27</span>
@@ -130,7 +130,7 @@
     <article class="venue-body">
       <h2 id="overview">Overview</h2>
 <p>Mermaid's Dive Centre is <strong>the most established PADI dive operation in Pattaya</strong> — running continuously since <strong>1990</strong> and the <strong>first dive center in Pattaya to be awarded PADI CDC (Career Development Centre) status</strong>, the highest tier of PADI affiliation. The operation now spans <strong>three locations</strong>: the original <strong>Jomtien Beach</strong> branch on <strong>Soi White House</strong>, a <strong>Pattaya Beach Road</strong> branch in central Pattaya, and a <strong>Bangkok branch at Amarin Plaza</strong> — making it the only multi-location dive operation between Bangkok and the Cambodian border.</p>
-<p>For travelers wanting <strong>the most institutionally credentialed Pattaya dive operation with 35+ years of operational history</strong>, Mermaid's is the consensus top choice. Its <strong>CDC status puts it ahead of even Pattaya Dive Centre (CDC) and Seafari (IDC)</strong> in PADI tiering historically — though all three are now CDC or top-tier credentialed.</p>
+<p>For travelers wanting <strong>the most institutionally credentialed Pattaya dive operation with 35+ years of operational history</strong>, Mermaid's is the consensus top choice. Its <strong>CDC status puts it ahead of even <a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a> (CDC) and Seafari (IDC)</strong> in PADI tiering historically — though all three are now CDC or top-tier credentialed.</p>
 <h2 id="heritage-35-years-of-pattaya-diving">Heritage — 35+ Years of Pattaya Diving</h2>
 <h3 id="founded-1990">Founded 1990</h3>
 <p>Mermaid's opened in <strong>1990</strong>, putting it among the <strong>oldest continuously operating PADI dive centers in Thailand</strong>. By 1990:</p>
@@ -387,17 +387,27 @@
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
+  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
   <script src="/share.js" defer></script>
   <script src="/compare.js" defer></script>
   <script>
   (function () {
     var bar = document.getElementById('pg-scroll-progress');
-    if (!bar) return;
+    var btn = document.getElementById('pg-back-to-top');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
     function update() {
       var h = document.documentElement;
       var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
+      if (btn) {
+        if (h.scrollTop > 600) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+      }
     }
     document.addEventListener('scroll', update, { passive: true });
     update();
