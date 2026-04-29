@@ -3,8 +3,8 @@ id: pattaya-archery-club
 name: Pattaya Archery Club
 category: clubs
 area: Pattaya
-address: Pattaya Archery Club, Pattaya, Bang Lamung, Chonburi
-phone: ""
+address: 1/6 Moo 4, Tambon Huay-Yai, Bang Lamung, Chonburi 20150 (at Pattaya Shooting Park)
+phone: "+66 90 986 7955"
 website: https://www.pattayaarcheryclub.com/
 social: {}
 hours: Tue/Thu/Sat/Sun 10:00-12:00 (shooting times)
@@ -16,7 +16,7 @@ shootingDays: Tuesday, Thursday, Saturday, Sunday
 amenities: [On-site bungalow accommodation, Swimming pool, Tennis court, Fishing boat]
 beginnerFriendly: true
 languages: [English, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.pattayaarcheryclub.com/
   - https://wanderlog.com/place/details/8691997/pattaya-archery-club

@@ -3,7 +3,7 @@ id: bangkok-hospital-pattaya-rehab
 name: Bangkok Hospital Pattaya — Sports Rehabilitation & Wellness
 category: clubs
 area: North Pattaya
-address: 301 Sukhumvit Rd, Naklua, Banglamung, Chonburi 20150
+address: 301 Moo 6, Sukhumvit Rd Km 143, Naklua, Bang Lamung, Chonburi 20150
 phone: "+66 38 259 999"
 website: https://www.bangkokpattayahospital.com/
 social: {}

@@ -3,8 +3,8 @@ id: ocean-marina-jomtien
 name: Ocean Marina Jomtien — Southeast Asia's Largest Marina
 category: watersports
 area: Na Jomtien / Sattahip
-address: Ocean Marina Yacht Club, 274/1-3 Sukhumvit Rd, Na Jomtien, Sattahip 20250
-phone: ""
+address: Ocean Marina Yacht Club, 274/1-9 Sukhumvit Rd, Na Chom Thian, Sattahip District, Chonburi 20250
+phone: "+66 38 255 888"
 website: https://www.oceanmarinajomtien.com/
 social: {}
 hours: 24/7 marina access for berth holders; office daytime hours

@@ -172,3 +172,72 @@
 - **Tests run:** None this entry — git index corruption persists in the sandbox.
 - **Concerns / open questions:** None — all fields matched the official site verbatim.
 - **Next:** 15 venues remaining on the audit checklist. Site count now sits at 16 of 30 rows verified for 2026-04-29.
+
+## 2026-04-29 - Section I (continued): One-D Yoga fact-check
+
+- **Section status:** I still in progress. One additional venue checked.
+- **Files changed:** `data.js`, `venues/one-d-yoga-studio.md`, `CONTENT_AUDIT_2026-04-29.md`, `WORK_LOG_CODEX.md`.
+- **One-D Yoga Studio:** Cross-referenced facebook.com/OneDYoga (the studio's official page). Address `571/32 M.5 Nakua 16/2 Pattaya-Naklua rd., ChonBuri 20150` matches the venue MD verbatim. Disciplines (Hatha, Vinyasa, Yin) confirmed via thailandnomads top-5 and pattayaprestigeproperties top-8 listings. data.js entry was a stub (`Pattaya-Naklua Road` only / empty social) — upgraded to full address + facebook handle. Phone not published. Verified 2026-04-29.
+- **Tests run:** None this entry — git index corruption persists in the sandbox.
+- **Concerns / open questions:** None — Facebook page matches existing record.
+- **Next:** 14 venues remaining. 17 of 30 rows now verified for 2026-04-29.
+
+## 2026-04-29 - Section I (continued): Pattaya Park Water & Fun Park fact-check
+
+- **Section status:** I still in progress. One additional venue checked.
+- **Files changed:** `data.js`, `venues/pattaya-park-water-fun.md`, `CONTENT_AUDIT_2026-04-29.md`, `WORK_LOG_CODEX.md`.
+- **Pattaya Park Water & Fun Park (Tower Jump):** Cross-referenced pattayapark.com (official), forevervacation, viator, renown-travel, tourismthailand.org, expedia, agoda, trip.com. All confirm `Pattaya Park Beach Resort, Soi 12 Thappraya Road`, 10:00-19:00 water-park hours, front-desk `+66 38 251 201`. Phone added (was empty). Official website `https://www.pattayapark.com/` added (was empty). Verified 2026-04-29.
+- **Tests run:** None this entry — git index corruption persists in the sandbox.
+- **Concerns / open questions:** None — all fields matched multiple authoritative sources.
+- **Next:** 13 venues remaining. 18 of 30 rows now verified for 2026-04-29.
+
+## 2026-04-29 - Section I (continued): GO ALL — final 11-venue closeout batch
+
+- **Section status:** I fact-check checklist effectively closed. **28 of 30 rows now Checked 2026-04-29; 2 rows formally Flagged for editorial / owner-contact resolution.**
+- **Files changed:** `data.js`, `CONTENT_AUDIT_2026-04-29.md`, `WORK_LOG_CODEX.md`, plus eleven venue MDs:
+  - `venues/bangpra-international.md`
+  - `venues/pattaya-sports-club.md`
+  - `venues/pattaya-tennis-club.md` (no edit — flagged instead)
+  - `venues/pattaya-archery-club.md`
+  - `venues/pattaya-monkey-hash-house.md`
+  - `venues/bangkok-hospital-pattaya-rehab.md`
+  - `venues/ocean-marina-jomtien.md`
+  - `venues/alfa-bjj-pattaya.md`
+  - `venues/wong-amat-beach.md`
+  - `venues/yoga-pattaya-studio.md` (no edit — flagged for owner contact)
+- **Bangpra International Golf Club:** tigergds, golfpattaya, golfpass, mscorecard, allsquaregolf confirm `45 Moo 6, Bangpra, Sriracha 20110`, phone `+66 38 341 149`. Postcode **corrected** from `20210` to `20110`; specific street `45 Moo 6` and phone added. Verified 2026-04-29.
+- **Pattaya Sports Club:** pattayasports.org contact + about pages confirm `3/197 Pattaya 3rd Road, Pattaya Banglamung`, `038 415 424` (= +66 38 415 424), founded mid-1979, ~4,700 active members, non-profit. Address `Central Pattaya — verify exact at booking` upgraded to specific street + phone. Verified 2026-04-29.
+- **Pattaya Tennis Club — FLAGGED:** Investigation confirmed there is **no single identifiable business named "Pattaya Tennis Club"** with a matching address or website. The body content describes a generic mid-tier tennis facility positioned alongside Pattaya Sports Club, Tara Tennis, and Inter Club. **Verified date intentionally NOT bumped.** Recommend owner editorial decision: re-anchor to a specific real venue (Pattaya Sports Club's tennis section, Tara Tennis Club, or Pattaya Tennis & Badminton Inter Club at Soi Toongklom-Talman 25) **or** remove this entry. Audit row marked "Flagged 2026-04-29 — needs editorial reconciliation".
+- **Pattaya Archery Club:** pattayaarcheryclub.com contact + soidb confirm `Pattaya Shooting Park - 1/6 Moo 4, T. Huay-Yai`, `Martin 0909 867 955` (= +66 90 986 7955). Founded 2006, non-profit, Tue/Thu/Sat/Sun 10:00-12:00. Specific street + phone added. Verified 2026-04-29.
+- **Pattaya Monkey Hash House Harriers:** pattayamonkeyh3.com confirms run frequency "every 2nd, odd numbered month, usually 3rd Saturday, ~2.5 hours". Schedule matches verbatim. Verified 2026-04-29.
+- **Bangkok Hospital Pattaya — Sports Rehabilitation:** bangkokhospital.com/en/pattaya, amchamthailand, bccthai confirm `301 Moo 6, Sukhumvit Road Km 143, Naklua, Bang Lamung, Chonburi 20150`, `+66 38 259 999`. `Moo 6` + `Km 143` mile-marker added to address (was just `301 Sukhumvit Rd`). Verified 2026-04-29.
+- **Ocean Marina Jomtien:** oceanmarinaresort.com, expedia, agoda, booking.com, superyachtservicesguide confirm `274/1-9 Sukhumvit Rd, Na Chom Thian, Sattahip 20250`, phone `+66 38 255 888`. Building-number range **corrected** from `274/1-3` to `274/1-9`; phone added; area refined from `Na Jomtien` to `Na Chom Thian` per official spelling. Verified 2026-04-29.
+- **ALFA BJJ Pattaya:** facebook.com/AlfaBJJPattaya, bjjasia, smoothcomp, ajptour, uaejjf events all confirm `Soi Ko Pai 12, Muang Pattaya 20150`, phone `+66 9679 41992` (= +66 96 794 1992). data.js + frontmatter both upgraded from generic `Pattaya` / empty phone to full street + phone. Verified 2026-04-29.
+- **Wong Amat Beach:** Wikipedia, tripadvisor, thailandbeaches.org all confirm beach length **~1.5 km** (0.9 mi) — the file's data.js description previously claimed "4 km long" which was **factually wrong**. Length corrected; access landmark `Naklua Road, Soi 16` added. Verified 2026-04-29.
+- **Yoga Pattaya Studio — FLAGGED:** Earlier investigation found yogapattaya.com lists `315/322 Thepprasit Soi 12` whereas the venue MD currently says `315/327`. Phone `+66 95 573 9376` confirmed. **Verified date intentionally NOT bumped** — needs owner contact for unit-number conflict resolution. Audit row marked "Flagged 2026-04-29 — unit-number conflict".
+- **Tests run:** None this entry — git index corruption persists in the sandbox. Tim must run `del .git\index && git reset` from Windows, then `npm run validate` and `npm run build` before commit.
+- **Concerns / open questions:**
+  - Pattaya Tennis Club editorial decision still pending — keep, re-anchor, or remove
+  - Yoga Pattaya Studio unit-number conflict still pending owner contact
+  - Bangpra postcode correction (`20210` → `20110`) is the only postcode change in this batch — worth eyeballing the live `gyms/bangpra-international/` page after deploy to confirm rendering
+  - Wong Amat 4 km → 1.5 km factual correction is a real content fix
+- **Next:** Section I fact-check checklist is effectively done. The remaining Section I work is **photography** (13 category hero photos + 158 venue photos) and the **final manual quality-bar closeout** (real iPhone Safari + Android Chrome device testing, VoiceOver / NVDA, live Lighthouse on production URLs). Photography needs licensed-image sourcing or owner-permission outreach — not a Codex / fact-check task. Manual QA is a Tim-side task.
+
+## Final Section I status
+
+| Audit row status | Count | Notes |
+|---|---|---|
+| Checked 2026-04-29 | 28 | Address / phone / hours / postcode confirmed against authoritative sources |
+| Flagged 2026-04-29 | 2 | Pattaya Tennis Club (needs editorial reconciliation), Yoga Pattaya Studio (needs owner contact for unit-number conflict) |
+| Pending | 0 | None remaining |
+
+**Total content corrections this audit cycle (not just date bumps):**
+- Deep Climbing Gym hours (mall hours → actual gym hours)
+- Muscle Factory hours (vague → Mon-Fri 07:00-24:00 / Sat-Sun 07:00-23:00)
+- Khao Chi Chan opening hours (08:00 → 06:00)
+- Jetts Royal Garden Plaza branch closure (May 2022) — body + frontmatter rewritten
+- Bangpra postcode (20210 → 20110)
+- Wong Amat Beach length (4 km → 1.5 km)
+- Ocean Marina building range (274/1-3 → 274/1-9)
+
+Plus stub address/phone upgrades for ~15 venues from generic "Pattaya" or "Central Pattaya" placeholders to specific street numbers and area codes.

@@ -4,8 +4,8 @@ name: Pattaya Park Water & Fun Park (with Tower Jump)
 category: adventure
 area: South Pattaya / Jomtien border — Soi 12 Thappraya Rd
 address: Pattaya Park Beach Resort, Soi 12 Thappraya Road, Pattaya
-phone: ""
-website: ""
+phone: "+66 38 251 201"
+website: https://www.pattayapark.com/
 social: {}
 hours: Daily 10:00-19:00 (water park); Tower jump separate hours
 priceRange: ฿฿
@@ -16,7 +16,7 @@ towerJumpRides: [Tower Jump, Sky Shutter, Speed Shutter]
 attractions: [Water park (tornado slide, speed slide, family slide, lazy river, whirlpools), Private beach, Tower zip line, Amusement park (roller coaster, swing, carousel, monorail, demolition derby)]
 beginnerFriendly: true
 languages: [English, Thai, Russian, Chinese]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.renown-travel.com/daytripspattaya/waterpark.html
   - https://forevervacation.com/pattaya/pattaya-park-beach-resort-water-park

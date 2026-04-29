@@ -15,7 +15,7 @@ disciplines: [Hatha Yoga, Vinyasa Flow, Yin Yoga, Private sessions, Workshops, R
 membershipOptions: [Drop-in classes, Monthly memberships, Long-term packages]
 beginnerFriendly: true
 languages: [English, Thai, Russian]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.facebook.com/OneDYoga/
   - https://www.thailandnomads.com/yoga-studios-pattaya/

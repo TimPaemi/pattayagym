@@ -3,8 +3,8 @@ id: bangpra-international
 name: Bangpra International Golf Club
 category: golf
 area: Sri Racha / Bang Phra (40 km north of Pattaya)
-address: Bangpra Golf Club, Bang Phra, Si Racha, Chonburi 20210
-phone: ""
+address: 45 Moo 6, Bang Phra, Si Racha, Chonburi 20110
+phone: "+66 38 341 149"
 website: ""
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30
@@ -17,7 +17,7 @@ holes: 18
 par: 72
 beginnerFriendly: true
 languages: [English, Thai, Japanese, Korean]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://eaglegolftours.com/course/bangpra-golf-club
   - https://www.golfsavers.com/thailand/pattaya-golf-courses/bangpra-international-golf-club

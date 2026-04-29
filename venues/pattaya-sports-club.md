@@ -3,8 +3,8 @@ id: pattaya-sports-club
 name: Pattaya Sports Club
 category: clubs
 area: Central Pattaya
-address: Pattaya Sports Club, Central Pattaya — verify exact at booking
-phone: ""
+address: 3/197 Pattaya 3rd Road, Bang Lamung, Chonburi 20150 (adjacent to Pattaya Driving Range)
+phone: "+66 38 415 424"
 website: https://pattayasports.org/
 social: {}
 hours: Varies by sport / event
@@ -17,7 +17,7 @@ disciplines: [Tennis, Pickleball, Badminton, Table Tennis, Coaching, Equipment S
 charitableMission: Yes — fundraising and community support is central
 beginnerFriendly: true
 languages: [English, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://pattayasports.org/
   - https://pattayasports.org/about-us/

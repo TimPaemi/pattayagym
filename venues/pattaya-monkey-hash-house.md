@@ -16,7 +16,7 @@ minDistance: 8 km moderate terrain
 parentMovement: Hash House Harriers (founded 1938, Kuala Lumpur)
 beginnerFriendly: false
 languages: [English, Thai]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://pattayamonkeyh3.com/
   - https://www.pattayah3.com/

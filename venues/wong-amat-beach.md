@@ -3,7 +3,7 @@ id: wong-amat-beach
 name: Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach
 category: swimming
 area: Naklua / North Pattaya
-address: Wong Amat Beach, Naklua, Bang Lamung, Chonburi 20150
+address: Wong Amat Beach (access via Naklua Road, Soi 16), Naklua, Bang Lamung, Chonburi 20150
 phone: ""
 website: ""
 social: {}
