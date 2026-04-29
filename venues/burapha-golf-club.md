@@ -21,7 +21,7 @@ distanceFromBangkok: 109 km (~1.5h)
 distanceFromPattaya: 35 minutes north by car
 beginnerFriendly: true
 languages: [English, Thai, Japanese support common in clubhouse]
-verified: 2026-04-27
+verified: 2026-04-29
 sources:
   - https://www.golfasian.com/golf-courses/thailand-golf-courses/pattaya/burapha-golf-club/
   - https://www.golf-tours-thailand.com/golf-courses/pattaya/burapha-golf-club/
@@ -423,4 +423,4 @@ For golfers wanting **tournament-pedigree fairways** to walk on, Burapha is uniq
 | Best dining | Verandah Lounge, Green Terrace, Garden Room Restaurant |
 | Practice | Full driving range, putting greens, chipping, bunker |
 | Resort accommodation | On-site |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2
