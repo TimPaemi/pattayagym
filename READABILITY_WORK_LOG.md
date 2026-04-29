@@ -254,3 +254,77 @@ The FAQ generator inspects tags + description to give specific answers when the 
 - 138 venue pages (Batch 3 — auto-FAQ)
 - = **169 of 170** site pages now have improved scannable structure + FAQ schema where applicable
 - Remaining: `/compare/`, `/map/`, `/404/` (tool/utility pages — minimal value to add reading aids)
+
+---
+
+## Batch 4 — More FAQs + paragraph breakdown (user override: "instead of too much text...keep going, more user friendly, keep SEO")
+
+User wants more aggressive text breakdown into FAQ/scannable format. Two parallel changes applied site-wide.
+
+### A) Topic FAQs added on category + area pages (19 pages)
+
+**13 category landing pages** now have `<section>` "Common questions about {category} in Pattaya" with **3-4 category-specific Q&A** + FAQPage schema. Examples:
+
+- `/category/muay-thai/` → best gym? cost? need experience? what to bring?
+- `/category/golf/` → best course? cost? booking? beginners?
+- `/category/yoga/` → where? cost? in English? what styles?
+- `/category/watersports/` → diving? kitesurfing season? jet ski safety? dive sites?
+- `/category/swimming/` → public pools? free options? kids' lessons? largest water park?
+- (full set: muay-thai, fitness, golf, yoga, racquet, watersports, swimming, climbing, kids-youth, adventure, crossfit, equestrian, clubs)
+
+**6 area landing pages** now have `<section>` "Common questions about {area}" with **3 area-specific Q&A** + FAQPage schema:
+
+- Jomtien — beach comparison, watersports, distance to central
+- Naklua — staying tips, sports available, transport
+- Pratamnak Hill — Muscle Factory + serious training scene, tourist accommodation
+- East Pattaya / Darkside — what it is, transport, equestrian + adventure venues
+- Central Pattaya — Walking Street training options, 24-hour gyms, hotel pools
+- Sattahip — premium destinations, day-trip logistics
+
+**Files edited:**
+- `build-extras.js` — added `CATEGORY_FAQS` data block (13 categories × 3-4 Qs), injected FAQ render + schema into `buildCategoryPage`
+- `build-discovery.js` — added `AREA_FAQS` data block (6 areas × 3 Qs), injected FAQ render + schema into `buildAreaPage`
+
+### B) Long paragraphs broken into 1-sentence chunks (24 pages)
+
+Long single-paragraph intros on guide, category, and area landing pages now render with **one sentence per paragraph** (reduced wall-of-text feel, easier scanning on mobile).
+
+Example — `/area/jomtien/` before:
+> "Jomtien Beach is the long sandy stretch south of Pattaya proper. Quieter than Walking Street, dominated by long-stay condos and a meaningful Russian residential community. The watersports scene (kitesurfing, diving, parasailing) is especially strong here."
+
+After: 3 separate `<p class="venue-lede">` blocks, second + third smaller (0.96rem) for visual hierarchy. No words removed. No keyword loss.
+
+**Files edited:**
+- `build-extras.js` — `buildCategoryPage` lede now splits on sentence boundaries
+- `build-discovery.js` — `buildAreaPage` and `buildGuidePage` lede same treatment
+
+### Cumulative FAQ schema count
+
+| Page type | Pages | Q's each | Total schema items |
+|---|---|---|---|
+| Homepage | 1 | 5 | 5 |
+| Guides | 6 | 3 | 18 |
+| Categories | 13 | 3-4 | ~46 |
+| Areas | 6 | 3 | 18 |
+| Venues | 138 | 5 | 690 |
+| **Total** | **164** | — | **~777 FAQ schema items** |
+
+Every one is contextual, keyword-rich, and built from real data — no thin/duplicate content.
+
+### Verification
+- `node build.js` runs clean
+- Spot-checked muay-thai, fitness, watersports categories → FAQ blocks rendering
+- Spot-checked jomtien, sattahip, central-pattaya areas → FAQ blocks rendering + 3-paragraph leded
+- Spot-checked best-muay-thai guide → 2-paragraph lede + existing top-3 + existing big FAQ
+- Spot-checked muay-thai category → 2-paragraph lede + existing top-3 + new topic FAQ
+- Spot-checked jomtien area → 3-paragraph lede + existing "best for" + new topic FAQ
+
+### What's still NOT touched
+- `/compare/`, `/map/`, `/404/` — pure tool/utility pages
+- Long body markdown of 138 venue pages — these are user-authored and already structured with H2/H3 + Pros/Cons callouts + Quick Reference Cards. Bottom auto-FAQ added in Batch 3.
+
+### Next suggestions (in priority)
+1. **Push to deploy** — significant cumulative readability gains pending live
+2. Optional: split longer venue body paragraphs (the markdown source files) — 2-3 line max per paragraph rule. Would touch ~50 of the 138 venue MD files where a paragraph runs 4+ lines.
+3. Optional: add a "Jump to" anchor menu near the top of each venue page for quick navigation (TL;DR → Pros/Cons → Quick Reference → FAQ).
+4. Submit updated sitemap to Google Search Console after deploy.

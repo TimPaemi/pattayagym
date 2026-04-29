@@ -14,6 +14,86 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
+// Category-specific FAQs — appended to each /category/<key>/ page.
+const CATEGORY_FAQS = {
+  'muay-thai': [
+    { q: 'What is the best Muay Thai gym in Pattaya?', a: 'Sityodtong (1959) and Fairtex (1971) are the most decorated heritage camps. Venum Training Camp is the modern flagship. Best choice depends on goal — fight prep, fitness, or beginner intro.' },
+    { q: 'How much does Muay Thai cost in Pattaya?', a: 'Drop-in classes ฿300–฿500. Monthly unlimited training ฿4,000–฿15,000. All-inclusive resort camps with accommodation ฿20,000–฿60,000/month.' },
+    { q: 'Do I need experience to train Muay Thai in Pattaya?', a: 'No. Most Pattaya camps explicitly welcome beginners and provide all gear. Pad-holders are patient with first-timers; the first 2-3 weeks teach fundamentals.' },
+    { q: 'What should I bring to Muay Thai training?', a: 'Hand wraps, mouth guard, water bottle, training clothes. Gloves and pads are usually provided. Most camps sell wraps and mouth guards on site.' }
+  ],
+  'fitness': [
+    { q: 'Which Pattaya gym is open 24 hours?', a: 'Anytime Fitness Pattaya (key-fob 24/7), Jetts Fitness, and Fitness 7 all run round the clock. Most 5-star hotel gyms (Hilton, Andaz, Mövenpick) also offer 24-hour fitness for guests.' },
+    { q: 'How much is a gym membership in Pattaya?', a: 'Budget gyms ฿1,500–฿3,000/month. Mid-tier no-contract chains (Anytime Fitness, Jetts) ฿2,000–฿4,000/month. Hotel club day-passes ฿500–฿1,500. Drop-in rates ฿150–฿400.' },
+    { q: 'Do Pattaya gyms have month-to-month options?', a: 'Yes — most chains and many independent gyms offer no-contract monthly memberships. Anytime Fitness and Jetts are explicitly contract-free.' },
+    { q: 'Are there female-friendly gyms in Pattaya?', a: 'Yes — chains like Anytime Fitness and hotel club gyms (Hilton, Andaz, Mövenpick, Royal Cliff Fitz Club) consistently rank well for safety and comfort. Most boutique studios are female-friendly by default.' }
+  ],
+  'golf': [
+    { q: 'What is the best golf course near Pattaya?', a: 'Siam Country Club Old Course is the headline championship layout. Phoenix Gold Golf, Burapha (36-hole, hosted Thailand Open), and Pattana Sports & Resort are all top-tier within 30–50 minutes of central Pattaya.' },
+    { q: 'How much does a round of golf cost in Pattaya?', a: 'Green fees range ฿1,500–฿5,000 weekday and ฿2,500–฿7,500 weekend, before caddie (฿500–฿800) and cart (฿800–฿1,500). Premium courses peak at ฿8,000+ per round.' },
+    { q: 'Do I need to book Pattaya tee times in advance?', a: 'Yes — strongly recommended, especially Nov–Feb peak season and weekends. Most courses also rent quality clubs and require caddies (Thai golf tradition).' },
+    { q: 'Can beginners play golf in Pattaya?', a: 'Yes — most courses welcome beginners outside of busy hours. Driving ranges and short courses are widely available. Many courses also offer lessons with English-speaking pros.' }
+  ],
+  'yoga': [
+    { q: 'Where can I do yoga in Pattaya?', a: 'Yoga Pattaya Studio, Yoga Haus, Ashtanga Yoga Pattaya, Nok Yoga, One-D, and Balance Yoga Studio are the established yoga venues, mostly in Jomtien and Central Pattaya.' },
+    { q: 'How much do yoga classes cost in Pattaya?', a: 'Drop-in classes ฿300–฿700. Class packs ฿2,500–฿5,000 for 10 sessions. Unlimited monthly memberships ฿3,500–฿6,000. Privates run ฿1,500–฿2,500/session.' },
+    { q: 'Are Pattaya yoga classes in English?', a: 'Most studios run classes in English. Yoga Pattaya, Yoga Haus, Ashtanga Yoga Pattaya, and One-D all teach predominantly in English with international clientele.' },
+    { q: 'What styles of yoga are taught in Pattaya?', a: 'All major styles — Hatha, Vinyasa Flow, Ashtanga (Mysore + led), Yin, Hot, and Restorative. Some studios also teach Pilates, Thai yoga stretching, and meditation.' }
+  ],
+  'racquet': [
+    { q: 'Where can I play tennis in Pattaya?', a: 'Pattaya Sports Club (founded 1992), Fitz Club at Royal Cliff (premier multi-court), Greta Sport Club (6 covered ITF Plexipave courts), Inter Club, Tennis Pattaya, and most 5-star resort courts.' },
+    { q: 'Is there pickleball in Pattaya?', a: 'Yes — Pickleball Pattaya on Pratumnak Soi 6 is the dedicated facility. Multi-sport venues like Inter Club and Fitz Club also have pickleball courts. Active 50+ expat community with leagues and tournaments.' },
+    { q: 'Where can I play badminton in Pattaya?', a: 'Euro Badminton (dedicated), Pattaya Tennis & Badminton Inter Club, and several condo/community courts. Indoor court hire ฿200–฿400/hour.' },
+    { q: 'Can I rent racquets at Pattaya courts?', a: 'Most venues provide loaner racquets and balls/shuttles. Confirm at booking, especially for tennis and squash where personal racquet preference matters.' }
+  ],
+  'watersports': [
+    { q: 'Where can I learn to scuba dive in Pattaya?', a: 'No Limit Divers (PADI 5-Star IDC), Adventure Divers, Aquanauts, Real Divers (British family-run IDC), Mermaid\'s Dive Centre, and Dive Station (SSI). Open-water certification ฿11,000–฿16,000.' },
+    { q: 'When is the best time for watersports in Pattaya?', a: 'Diving year-round, best visibility Nov–Apr. Kitesurfing best Nov–Mar. Sailing peaks Dec–Apr. Wakeboarding (Thai Wake Park) year-round.' },
+    { q: 'Can I jet ski safely in Pattaya?', a: 'Yes, but use reputable operators. Jet ski scams have been a Pattaya problem historically — book through hotels, established beachfront operators, or use cable wakeboarding (Thai Wake Park) for a safer alternative.' },
+    { q: 'Where to dive near Pattaya?', a: 'Coral Island (Koh Larn), Koh Sak, Koh Krok, Koh Khrok, and HTMS Khram (artificial reef wreck). Most operators run half-day and full-day boat trips with 2–3 dives.' }
+  ],
+  'swimming': [
+    { q: 'Where can the public swim in Pattaya?', a: 'Pattaya Public Pool (Jomtien) ฿20–฿100. Hard Rock Pool (largest free-form in SE Asia, day-pass). Cartoon Network Amazone water park. Most 5-star hotel pools offer day-pass access.' },
+    { q: 'Are there free pools in Pattaya?', a: 'Most public pools are very low-cost (฿20–฿100), not free. Pattaya Beach and Jomtien Beach are free for ocean swimming. Some condo pools open to non-residents on day-pass arrangements.' },
+    { q: 'Are there swim lessons for kids in Pattaya?', a: 'Yes — Hard Rock, Centara Mirage, Andaz, and several dedicated swim schools run kids\' programs. Group lessons typically ฿400–฿800/session.' },
+    { q: 'What is the largest water park in Pattaya?', a: 'Ramayana Water Park (184,000 sqm, 26 slides) is the largest in Pattaya area. Cartoon Network Amazone is the second-largest themed park. Centara Mirage has on-site water park access for hotel guests.' }
+  ],
+  'climbing': [
+    { q: 'Is there indoor climbing in Pattaya?', a: 'Yes — Deep Climbing Gym (10m wall, ocean theme, top of Harbour Mall) and Bean Cow Climbing Gym (bouldering + lead). Both offer day passes and rental gear.' },
+    { q: 'Can beginners climb at Pattaya gyms?', a: 'Yes — Deep Climbing has TrueBlue auto-belay routes for beginners; Bean Cow has graded boulder problems from absolute beginner upward. Both offer intro sessions and gear rental.' },
+    { q: 'How much does climbing cost in Pattaya?', a: 'Day pass ฿300–฿500. Shoes/harness rental ฿100–฿200 each. Class packs and monthly memberships available at both gyms.' },
+    { q: 'Is there outdoor climbing near Pattaya?', a: 'Khao Hin Lek Fai (Hua Hin area, day trip) is the closest outdoor crag. Krabi/Railay (10–12 hours south) is the world-famous Thai climbing destination. Bean Cow Climbing is bolting Eastern Seaboard outdoor routes in Rayong.' }
+  ],
+  'kids-youth': [
+    { q: 'Where can my kids play sport in Pattaya?', a: 'AF Academy (UEFA-A football), Kombat Group (kids\' Muay Thai), Fitz Club (kids\' tennis + swim), Pattaya Sports Club (multi-sport), and many resort kids\' clubs (Centara, Mövenpick).' },
+    { q: 'What age does my child need to be?', a: 'Most programs accept ages 4–6 minimum. Football academies typically start at 4–5; swimming at 3 with parent; Muay Thai kids\' classes at 6–7; multi-sport camps at 4+.' },
+    { q: 'Are there summer camps for kids in Pattaya?', a: 'Yes — major academies and international schools run multi-week summer camps each year. Football, swimming, and multi-sport are most common. Book by April for July–August spots.' },
+    { q: 'Are kids\' classes in English?', a: 'Many. AF Academy, Kombat Group, Fitz Club, and resort kids\' clubs all teach in English. Russian-speaking coaching is also widely available given Pattaya\'s expat demographics.' }
+  ],
+  'adventure': [
+    { q: 'What adventure activities can I do in Pattaya?', a: 'Tower zip lines (Tarzan Adventure, Pattaya Sky Walk), go-karting (Bira Circuit, EasyKart), tandem skydiving (Skydive Thailand, Rayong), ATV tours (Pong Village), Flight of the Gibbon canopy zipline, and helicopter tours.' },
+    { q: 'How much does skydiving in Pattaya cost?', a: 'Tandem skydive ฿11,000–฿14,000. Photos/videos extra. Skydive Thailand operates from Bang Saen / Rayong area, ~1 hour drive.' },
+    { q: 'Is hotel pickup included for Pattaya adventure tours?', a: 'Most adventure operators (ATV, zipline, skydive, water park) include hotel pickup from central Pattaya. Confirm at booking.' },
+    { q: 'Are these activities safe?', a: 'Reputable operators carry insurance and follow international safety protocols. Verify the operator\'s safety record (TripAdvisor, Google reviews) and avoid the cheapest unbranded options.' }
+  ],
+  'crossfit': [
+    { q: 'Is there CrossFit in Pattaya?', a: 'CrossFit Pattaya at The Jungle Gym is the main affiliated CrossFit box. The official CrossFit affiliate ecosystem is smaller in Pattaya than Bangkok or Phuket — confirm current affiliation status before signing up long-term.' },
+    { q: 'How much does CrossFit cost in Pattaya?', a: 'Drop-in ฿400–฿600. Monthly unlimited ฿3,500–฿5,500. Beginner fundamentals course typically ฿2,000–฿4,000 for 4–8 sessions.' },
+    { q: 'Do I need experience to start CrossFit?', a: 'No — most boxes require new members complete a fundamentals course (1–2 weeks) covering Olympic lifts, gymnastics movements, and pacing before joining regular WODs.' }
+  ],
+  'equestrian': [
+    { q: 'Where can I ride horses in Pattaya?', a: 'Thai Polo & Equestrian Club (Asia\'s largest polo + equestrian operation, 250 hectares, 250+ horses) and Horseshoe Point Resort (1,500 acres, multi-discipline equestrian + adventure resort).' },
+    { q: 'Can beginners take riding lessons?', a: 'Yes — both major venues offer lessons for first-time riders through advanced equestrians, plus polo introduction programs. Book in advance to confirm coach availability.' },
+    { q: 'Is there polo in Pattaya?', a: 'Yes — Thai Polo & Equestrian Club hosts professional polo tournaments and offers polo introduction days for spectators and participants. Pattaya is one of Southeast Asia\'s leading polo destinations.' }
+  ],
+  'clubs': [
+    { q: 'What sport clubs exist in Pattaya?', a: 'Pattaya Sports Club (1992 — multi-sport, foundational expat club), Hash House Harriers (1984 running), Pattaya Cricket Club (BCL competing), Pattaya Panthers RFC (rugby), Pattaya Archery Club (non-profit), and many more.' },
+    { q: 'How do I join a Pattaya sport club?', a: 'Most clubs welcome new members year-round. Contact via Facebook page or website. Most charge a small annual membership (฿1,000–฿5,000) plus per-event fees.' },
+    { q: 'Are Pattaya sport clubs welcoming to expats and tourists?', a: 'Yes — most are explicitly expat-founded or expat-friendly with English as default. Hash House Harriers and Pattaya Sports Club are the most international.' }
+  ]
+};
+
+
 
 function escHtml(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
@@ -151,7 +231,13 @@ ${header()}
     <div class="venue-hero-art" aria-hidden="true">${(global.getCategoryArt && global.getCategoryArt(cat.key)) || ''}</div>
     <span class="venue-cat-pill">${escHtml(cat.label)}</span>
     <h1 class="venue-h1">${escHtml(cat.label)} in Pattaya</h1>
-    <p class="venue-lede">${escHtml(intro)}</p>
+    ${(() => {
+      // Break long intro into 1-2 sentence paragraphs for scanability
+      const parts = String(intro).split(/(?<=[.!?])\s+(?=[A-Z])/).filter(Boolean);
+      if (parts.length <= 1) return `<p class="venue-lede">${escHtml(intro)}</p>`;
+      // 1 sentence per paragraph when 2+ sentences (most scannable)
+      return parts.map((c, i) => `<p class="venue-lede"${i > 0 ? ' style="margin-top: 10px; font-size: 0.96rem;"' : ''}>${escHtml(c)}</p>`).join('');
+    })()}
     <div class="venue-hero-meta">
       <span class="meta-chip meta-chip-accent">⭐ ${gymsInCat.length} venues verified</span>
       <span class="meta-chip">📅 Last updated ${new Date().toISOString().slice(0,10)}</span>
@@ -173,6 +259,19 @@ ${header()}
   <div class="cat-venue-grid">
     ${cards}
   </div>
+  ${(() => {
+    const faqs = (typeof CATEGORY_FAQS !== 'undefined' && CATEGORY_FAQS[cat.key]) || [];
+    if (!faqs.length) return '';
+    return `<section class="about" aria-labelledby="cat-faq-h" style="margin-top: 40px;">
+      <h2 id="cat-faq-h" style="font-size: 1.4rem; margin-bottom: 16px;">Common questions about ${escHtml(cat.label.toLowerCase())} in Pattaya</h2>
+      ${faqs.map(f => `<details class="faq-item"><summary>${escHtml(f.q)}</summary><p>${escHtml(f.a)}</p></details>`).join('')}
+    </section>
+    <script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+    })}</script>`;
+  })()}
+
   <div class="venue-cta-foot" style="margin-top:48px;">
     <h3>Comparing options?</h3>
     <p>Click "+ Add to compare" on any venue page, then visit /compare/ to see them side-by-side.</p>

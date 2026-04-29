@@ -78,6 +78,41 @@ function venueCard(g) {
 }
 
 // ============== AREA PAGES ==============
+
+// Area-specific FAQs — appended to each /area/<slug>/ page.
+const AREA_FAQS = {
+  'jomtien': [
+    { q: 'Is Jomtien Beach better than Pattaya Beach?', a: 'For long-stay residents and watersports — yes. Jomtien is calmer, longer (6km), with cleaner sand, kitesurfing-friendly winds, and a meaningful Russian and European long-stay community. Walking Street nightlife is in Pattaya proper to the north.' },
+    { q: 'What sports can I do in Jomtien?', a: 'Strong watersports scene — kitesurfing, parasailing, jet ski, scuba diving, sailing. Yoga studios cluster around Thepprasit. Fitness gyms and Muay Thai camps along Thappraya Road. Beach running and beach volleyball year-round.' },
+    { q: 'How far is Jomtien from central Pattaya?', a: '5–10 minutes by Bolt/Grab to Walking Street and Beach Road. Songthaew (baht bus) on Thappraya Road runs frequently for ฿10–฿20.' }
+  ],
+  'naklua': [
+    { q: 'Is Naklua a good area to stay?', a: 'Yes for quieter, more residential vibes — popular with long-stay expats wanting calm. Wong Amat Beach is family-friendly and less crowded than Pattaya Beach. Cape Dara Resort and Centara Grand Mirage anchor the luxury hotel scene.' },
+    { q: 'What sports are in Naklua?', a: 'Several yoga studios, fitness chains (Jetts, Anytime Fitness branches in nearby South Pattaya), 5-star hotel fitness (Cape Dara, Centara Grand Mirage), Muay Thai camps, and Wong Amat Beach for swimming and beach sports.' },
+    { q: 'How do I get to central Pattaya from Naklua?', a: '5–10 minutes by Bolt/Grab to Beach Road. Songthaew runs Pattaya-Naklua Road regularly. Walking distance varies by sub-area.' }
+  ],
+  'pratamnak': [
+    { q: 'What is Pratamnak Hill known for?', a: 'Pratamnak Hill is Pattaya\'s densest fitness neighborhood — Muscle Factory (largest hardcore gym in Thailand), Pickleball Pattaya (dedicated facility), free outdoor calisthenics park, and several combat sports facilities. Also home to luxurious sea-view condos and cliff-side hotels.' },
+    { q: 'Is Pratamnak good for serious training?', a: 'Yes — Muscle Factory is one of Thailand\'s most respected hardcore gyms, attracting national-level powerlifters and bodybuilders. Combat sports facilities and Pickleball Pattaya add to the serious training mix.' },
+    { q: 'Can I stay in Pratamnak as a tourist?', a: 'Yes — many short-term rental condos. Within 5–10 minutes of Pattaya Beach, Walking Street, and Jomtien. Great base for fitness-focused trips.' }
+  ],
+  'east-pattaya': [
+    { q: 'What is East Pattaya / Darkside?', a: '"Darkside" is the residential expat belt east of Sukhumvit Road — quieter, less touristy, mostly long-stay residents. Hosts the biggest equestrian (Horseshoe Point, Thai Polo) and adventure venues, plus the Klinmee family Muay Thai cluster.' },
+    { q: 'How do I get to East Pattaya?', a: '15–25 minutes by Bolt/Grab from central Pattaya, depending on traffic and sub-area. Public transport limited — most residents drive or rent scooters.' },
+    { q: 'What sports are in East Pattaya?', a: 'Equestrian (largest in Asia at Thai Polo), polo, ATV tours, archery (Pattaya Archery Club), value-tier community gyms (Castra), Mabprachan running route (4km loop), Muay Thai (Sit Klinmee family cluster).' }
+  ],
+  'central-pattaya': [
+    { q: 'Where to train near Walking Street / Beach Road?', a: 'Tony\'s Gym, Universe Gym, Fitness 7 (24-hour), Jetts Fitness Little Walk + Royal Garden, Pattaya Boxing World (walk-in Muay Thai), Deep Climbing + Bean Cow at Harbor Pattaya Mall, hotel fitness at Hilton Pattaya. Most central venues within 10 minutes\' walk of major hotels.' },
+    { q: 'Are there 24-hour gyms in central Pattaya?', a: 'Yes — Fitness 7 (Avenue Pattaya), Jetts Fitness Little Walk, and Hilton Pattaya fitness for guests. Pratamnak Soi 6 area (5 min away) adds Anytime Fitness 24/7 access.' },
+    { q: 'What about hotel pools and spas in central Pattaya?', a: 'Hilton Pattaya 16th-floor infinity pool + eforea Spa, Dusit Thani Pattaya Devarana Wellness, Hard Rock pool (largest free-form in SE Asia), Holiday Inn Beach Road, several boutique spas. Day-passes available at most.' }
+  ],
+  'sattahip': [
+    { q: 'What is Sattahip / Far South Pattaya known for?', a: 'Premium destinations — Greta Sport Club (6 covered ITF tennis courts), Ramayana Water Park (world\'s largest at 184,000 sqm with 26 slides), Cartoon Network Amazone, Chee Chan Golf Resort with Buddha mountain views, premium golf courses, and Khao Chi Chan (cliff Buddha image).' },
+    { q: 'How far is Sattahip from Pattaya?', a: '20–35 minutes by Bolt/Grab from central Pattaya, depending on sub-area. Most premium venues offer hotel pickup or transfers. Self-drive recommended for multi-stop days.' },
+    { q: 'Can I day-trip to Sattahip from Pattaya?', a: 'Yes — most visitors do. Combine 2–3 venues per day (e.g. Ramayana water park + Khao Chi Chan + Chee Chan Golf). Hotel pickup/Bolt round-trip ฿800–฿1,500 typical.' }
+  ]
+};
+
 const AREAS = [
   {
     slug: 'jomtien',
@@ -170,7 +205,11 @@ ${header()}
   <div class="venue-hero">
     <span class="venue-cat-pill">Pattaya Area</span>
     <h1 class="venue-h1">${escHtml(area.name)} — gyms &amp; sport venues</h1>
-    <p class="venue-lede">${escHtml(area.intro)}</p>
+    ${(() => {
+      const parts = String(area.intro).split(/(?<=[.!?])\s+(?=[A-Z])/).filter(Boolean);
+      if (parts.length <= 1) return `<p class="venue-lede">${escHtml(area.intro)}</p>`;
+      return parts.map((c, i) => `<p class="venue-lede"${i > 0 ? ' style="margin-top: 10px; font-size: 0.96rem;"' : ''}>${escHtml(c)}</p>`).join('');
+    })()}
     <div class="venue-hero-meta">
       <span class="meta-chip meta-chip-accent">⭐ ${matchingGyms.length} venues</span>
       <span class="meta-chip">📅 Updated ${new Date().toISOString().slice(0,10)}</span>
@@ -191,6 +230,19 @@ ${header()}
   })()}
   <div id="area-full"></div>
   ${sections || '<p style="margin-top:30px;color:var(--text-dim);">No verified venues found in this area yet.</p>'}
+  ${(() => {
+    const faqs = (typeof AREA_FAQS !== 'undefined' && AREA_FAQS[area.slug]) || [];
+    if (!faqs.length) return '';
+    return `<section class="about" aria-labelledby="area-faq-h" style="margin-top: 40px;">
+      <h2 id="area-faq-h" style="font-size: 1.4rem; margin-bottom: 16px;">Common questions about ${escHtml(area.name)}</h2>
+      ${faqs.map(f => `<details class="faq-item"><summary>${escHtml(f.q)}</summary><p>${escHtml(f.a)}</p></details>`).join('')}
+    </section>
+    <script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+    })}</script>`;
+  })()}
+
   <div class="venue-cta-foot" style="margin-top:48px;">
     <h3>Looking for something specific?</h3>
     <p>Browse by category, view the full map, or compare venues side-by-side.</p>
@@ -467,7 +519,11 @@ ${header()}
   <div class="venue-hero">
     <span class="venue-cat-pill">Guide</span>
     <h1 class="venue-h1">${escHtml(guide.h1)}</h1>
-    <p class="venue-lede">${escHtml(guide.intro)}</p>
+    ${(() => {
+      const parts = String(guide.intro).split(/(?<=[.!?])\s+(?=[A-Z])/).filter(Boolean);
+      if (parts.length <= 1) return `<p class="venue-lede">${escHtml(guide.intro)}</p>`;
+      return parts.map((c, i) => `<p class="venue-lede"${i > 0 ? ' style="margin-top: 10px; font-size: 0.96rem;"' : ''}>${escHtml(c)}</p>`).join('');
+    })()}
     <div class="venue-hero-meta">
       <span class="meta-chip meta-chip-accent">⭐ ${sorted.length} venues ranked</span>
       <span class="meta-chip">📅 Updated ${new Date().toISOString().slice(0,10)}</span>
