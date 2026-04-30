@@ -209,7 +209,31 @@ function pageFeedbackHtml(urlPath, title) {
   </section>`;
 }
 
-function commonHead(title, desc, canonical) {
+function commonHead(title, desc, canonical, schemaType) {
+  const baselineSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": schemaType || "WebPage",
+    "name": metaTitle(title),
+    "description": metaDesc(desc),
+    "url": canonical,
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Pattaya Gym",
+      "url": SITE + "/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": SITE + "/search/?q={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pattaya Gym",
+      "url": SITE + "/",
+      "logo": { "@type": "ImageObject", "url": DEFAULT_OG_IMAGE }
+    }
+  });
   return `<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0b0b0d" />
@@ -232,6 +256,7 @@ function commonHead(title, desc, canonical) {
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="${DEFAULT_OG_IMAGE}" />
 ${stylesheetTags(true)}
+<script type="application/ld+json">${baselineSchema}</script>
 <script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
 <script src="${assetHref('/shortcuts.js')}" defer></script>
 ${serviceWorkerRegistration()}

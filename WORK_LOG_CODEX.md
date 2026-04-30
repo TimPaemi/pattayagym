@@ -524,3 +524,44 @@ The remaining 166 warnings are venues with no publicly published phone/website (
 | Phone fields backfilled | — | 12 verified |
 | Website fields backfilled | — | 3 verified |
 | Real factual corrections | — | 7+ |
+
+## 2026-04-29 - Section N (continued): 100% JSON-LD schema coverage
+
+- **Section status:** Closed the last 11 pages without schema by upgrading both `commonHead()` functions (build-discovery.js + build-extras.js) to emit a baseline JSON-LD block automatically for every utility page. **JSON-LD coverage now 205/205 (100%).**
+- **Files changed:** `build-discovery.js`, `build-extras.js`, `WORK_LOG_CODEX.md`.
+- **Implementation:** Added optional 4th parameter `schemaType` to `commonHead(title, desc, canonical, schemaType)` in both build files. The function now always emits a `<script type="application/ld+json">` baseline schema block in `<head>` containing `@type` (defaults to "WebPage"), `name`, `description`, `url`, `inLanguage`, `isPartOf` referencing the WebSite Pattaya Gym with a `SearchAction potentialAction` (sitelinks search box hint to Google), and `publisher` Organization with logo.
+- **Why two files:** `build-discovery.js` builds category/area/guide/search/contact/press/methodology/stats pages. `build-extras.js` builds map/about/404 pages. Both have their own `commonHead()` definition; both needed the upgrade.
+- **Truncation event during this section:** `build-discovery.js` got truncated at the end (lost final 17 lines: sitemap update logic + `main()` call). Recovered via stitch — kept working tree first 2275 lines and appended HEAD lines 2251-2269. **No edits lost.**
+- **Verification post-build:**
+  - `node --check` on data.js, build-discovery.js, build-extras.js → SYNTAX OK
+  - `node validate.js` → **0 errors, 166 warnings**
+  - `node build.js` → **Generated 158 venue pages (158 deep + 0 stubs)**
+  - **JSON-LD coverage: 205/205 pages (100%)** (was 194/205)
+  - **JSON-LD blocks: 457 total** (was 410, +47 baseline schemas)
+  - **JSON-LD parse errors: 0** of 457 blocks
+- **Side effect:** Every page now surfaces a `SearchAction` sitelinks-search-box hint to Google, which can produce a search field in Google's SERP for the site brand.
+
+## End-of-session final metrics — fully shipped state
+
+| Metric | Session start | Session end |
+|---|---|---|
+| Validation warnings | 750 | **166** |
+| Validation errors | 0 | 0 |
+| Build output | 158 deep + 0 stubs | 158 deep + 0 stubs |
+| Pages with JSON-LD schema | 193/205 | **205/205 (100%)** |
+| Pages with optimal-length meta description (80-165ch) | ~171/205 | **205/205 (100%)** |
+| Pages with canonical URL | 205/205 | 205/205 |
+| Pages with og:image | 205/205 | 205/205 |
+| Section I fact-check rows checked | 3/30 | 28/30 |
+| Cross-page name mismatches | 55 | **0** |
+| Cross-page area mismatches | 109 | **0** |
+| MD frontmatter description/tags/mapsUrl coverage | 23/158 | **158/158** |
+| Phone fields backfilled this session | — | 12 verified |
+| Website fields backfilled this session | — | 3 verified |
+| Real factual corrections this session | — | 7+ |
+| Duplicate-content 301 redirects | 0 | 1 (af-academy-football → af-academy-pattaya) |
+| Total JSON-LD blocks | 410 | **457** |
+| JSON-LD parse errors | 0 | 0 |
+| Total internal hrefs validated | 13,335 | 13,335 |
+| Broken internal links | 0 | 0 |
+| Sitemap duplicate URLs | 0 | 0 |
