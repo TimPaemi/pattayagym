@@ -26,7 +26,7 @@ sources:
   - https://kiteflip.com/learn-kitesurfing-in-thailand-the-complete-guide/
   - https://www.trazy.com/experience/detail/pattaya-kiteboarding
   - https://www.ikointl.com/destination/kitesurfing-thailand
-description: Kiteboarding shop and school. International chain with Pattaya branch.
+description: "KBA Pattaya kiteboarding + foiling school at Blue Lagoon Na Jomtien. Pattaya branch of Thailand's leading multi-location chain (also Samui, Phuket, Hua Hin, Phangan)."
 mapsUrl: "https://maps.google.com/?q=KBA+Kiteboarding+Pattaya"
 tags: [kiteboarding, shop, school, chain]
 ---

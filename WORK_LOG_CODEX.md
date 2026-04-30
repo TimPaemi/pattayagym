@@ -411,3 +411,116 @@ All 18 critical venue MDs touched this session compared cleanly against HEAD lin
 **The remaining 181 warnings are now ALL "we genuinely don't know the phone/website" residuals** — pure data-gap warnings, not consistency issues. Filling them requires external venue contact / research, not data-cleanup work.
 
 **Recommendation for Tim's deploy:** stage data.js + venues/ + WORK_LOG_CODEX.md + the auto-regenerated `gyms/`, `area/`, `category/`, `guides/`, `map/`, `pattaya-sport-stats/`, `sitemap.xml`, `feed.xml`, `feed/` and push. The validation now sits at the **clean baseline** that future work should maintain (0 errors + only data-gap warnings).
+
+## 2026-04-29 - Section M (continued): Web-research phone/website backfill
+
+- **Section status:** Final web-research pass to backfill verified phone numbers and websites for venues with missing contact data.
+- **Files changed:** `data.js`, 12 venue MDs in `venues/`, `WORK_LOG_CODEX.md`.
+- **Method:** Web-searched 12 high-value venues with verifiable public contact info, then atomic Python writes to data.js + MD frontmatter.
+- **Phone numbers added (12 venues):**
+  - **Burapha Golf Club:** `+66 38 372 700` (already in MD, missing in data.js — synced)
+  - **Lumpinee Boxing Stadium:** `+66 80 045 9541` (Bangkok venue, official ticket office)
+  - **Rajadamnern Stadium:** `+66 2 281 4205` (Bangkok venue, official rajadamnern.com)
+  - **Khao Kheow Country Club:** `+66 38 318 000`
+  - **Phoenix Gold Golf:** `+66 84 873 5363` (per facebook.com/phoenixgoldgolfandcountryclub)
+  - **Laem Chabang International:** `+66 82 222 3031`
+  - **Anytime Fitness Pattaya (Bukis Point):** `+66 64 589 1174`
+  - **Coco Fitness:** `+66 93 383 3817`
+  - **CrossFit Pattaya @ Jungle Gym:** `+66 84 818 3994`
+  - **Pickleball Pattaya:** `+66 92 265 9516` (PR Pickleball Pattaya)
+  - **Play Padel Pattaya:** `+66 80 621 0000`
+  - **Treasure Hill Golf:** `+66 81 344 8002`
+- **Websites added (3 venues):**
+  - **Khao Kheow Country Club:** `http://www.khaokheowgolf.com/`
+  - **Phoenix Gold Golf:** `https://www.phoenixgoldgolf.com/`
+  - **Laem Chabang International:** `http://www.laemchabanggolf.com/`
+- **Verification post-backfill:**
+  - `node --check data.js` → SYNTAX OK
+  - `node validate.js` → **0 errors, 166 warnings** (down from 181 — **−15**)
+  - `node build.js` → **Generated 158 venue pages (158 deep + 0 stubs)**
+- **Sources cited:** lumpineestadium.com, rajadamnern.com, khaokheowgolf.com (official contact page), phoenixgoldgolf.com / facebook posts, laemchabanggolf.com, anytimefitness.com store locator, cocofitnesspattaya facebook, junglegympattaya.com, pickleballpattaya.com / globalpickleball.network, playpadelpattaya.com, treasure-hill golf official + golfdigg listing, easygolfbooking burapha listing.
+
+## End-of-session deploy state
+
+- **Validation:** 0 errors, 166 warnings (down from 750 — **−584, 78% reduction**)
+- **Build:** 158 venue pages (158 deep + 0 stubs)
+- **Section I:** 28/30 fact-check rows checked, 2 formally flagged
+- **Cross-page consistency:** 100% (0 name + 0 area mismatches)
+- **MD frontmatter coverage:** 158/158 have description + tags + mapsUrl; 12 newly added phones; 3 newly added websites
+- **Real factual corrections shipped:** 7+ (Jetts closure, hours fixes, postcodes, length corrections, etc.)
+- **Truncation events handled:** 2 lossless data.js recoveries via stitched HEAD restore
+- **Atomic Python rewrites used:** 7 batches across data.js, 1 batch across 135 MDs, 1 batch across 12 MDs — zero truncation in atomic rewrite mode
+
+The remaining 166 warnings are venues with no publicly published phone/website (independent gyms with FB-only presence, small clubs with informal contact, etc.) — filling these requires owner-direct outreach rather than web search.
+
+## 2026-04-29 - Section N: Full audit + SEO/visual/duplicate/link upgrades
+
+- **Section status:** Comprehensive site audit and corrective upgrades.
+- **Files changed:** `data.js`, `_redirects`, 34 venue MDs in `venues/`, `WORK_LOG_CODEX.md`.
+
+### Audit findings
+
+| Check | Result |
+|---|---|
+| Duplicate venue IDs | **0** ✅ |
+| Duplicate venue websites | **1** (af-academy-football + af-academy-pattaya — same business) |
+| Duplicate normalized names | **0** ✅ |
+| Broken internal links | **0** (false positives only — `//maps.google.com` protocol-relative + JS template literals) ✅ |
+| Total internal hrefs scanned | **13,335** |
+| Real URL paths | **205** |
+| Missing OG images | **0** of 205 ✅ |
+| Sitemap entries | **205** (0 duplicates) ✅ |
+| Pages with JSON-LD schema | 193 of 205 (12 utility pages: 404, about, add-your-gym, compare, contact, favorites, find-my-coach, guides, map, plan-my-trip, press, search) |
+| JSON-LD parse errors | **0** of 410 blocks ✅ |
+| Missing canonical URLs | **0** of 205 ✅ |
+| Pages with meta description too short (<80ch) | **34** at audit start, **0** after upgrade ✅ |
+| Pages with meta description too long (>165ch) | **0** ✅ |
+| Pages with no title | **0** ✅ |
+
+### Upgrades applied
+
+**1. Duplicate-content 301 redirect** (`_redirects`):
+   - Added: `/gyms/af-academy-football/ → /gyms/af-academy-pattaya/ 301`
+   - Added bare-path variant for safety
+   - Rationale: af-academy-football was an early stub of the same business (afacademy.pro/en); af-academy-pattaya is the deeper canonical record. 301 consolidates SEO authority on the canonical URL.
+
+**2. Meta description SEO optimization** (data.js + 34 venue MDs):
+   - Rewrote 25 stub-era short descriptions (49-78ch) to 130-160ch SEO-optimal length
+   - Plus 7 additional venues with sub-80ch descriptions
+   - Plus 2 final venues (tos-tennis, wave-pattaya) caught on second-pass scan
+   - **34 venue descriptions rewritten total** with venue-specific facts (location, hours, services, pricing, distinguishing features)
+   - **Result: 205/205 pages now in 80-165ch optimal SEO meta-description range**
+
+**3. Bonus: Pratumnak/Pratamnak audit** confirmed deliberate — 30 pages mix the two spellings, but every "Pratumnak" instance is part of an official venue/address name (Pratumnak Soi 5/6, Pratumnak Fitness Park, etc.). Editorial pattern is consistent with style guide. **No edits needed.**
+
+### Items NOT upgraded (out of scope / lower priority)
+
+- **12 utility pages without JSON-LD WebPage schema** (about, contact, etc.) — would require build-discovery.js modification. Not critical: pages still index via sitemap, primary venue/category/area/guide pages all carry full schema.
+- **af-academy-football static HTML still on disk** — _redirects intercepts before serving, so no SEO duplicate-content issue. Optionally Tim can later `git rm -r gyms/af-academy-football/` for hygiene; the live behavior is identical either way.
+
+### Verification post-upgrade
+
+- `node --check data.js` → SYNTAX OK
+- `node validate.js` → **0 errors, 166 warnings**
+- `node build.js` → **Generated 158 venue pages (158 deep + 0 stubs)**
+- All 205 HTML pages have title, meta description (80-165ch), canonical URL, OG image
+- Sitemap clean: 205 unique URLs, 0 duplicates
+- JSON-LD: 410 blocks, 0 parse errors
+
+### Final session metrics
+
+| Metric | Session start | Session end |
+|---|---|---|
+| Validation warnings | 750 | 166 |
+| Validation errors | 0 | 0 |
+| Build output | 158 deep + 0 stubs | 158 deep + 0 stubs |
+| Section I fact-check | 3/30 | 28/30 |
+| Cross-page name mismatches | 55 | 0 |
+| Cross-page area mismatches | 109 | 0 |
+| Meta descriptions in 80-165ch range | ~171/205 | **205/205** |
+| Sitemap duplicates | 0 | 0 |
+| Broken internal links | 0 | 0 |
+| Duplicate venue records | 1 (af-academy) | 1 (now 301-consolidated) |
+| Phone fields backfilled | — | 12 verified |
+| Website fields backfilled | — | 3 verified |
+| Real factual corrections | — | 7+ |

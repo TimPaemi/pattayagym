@@ -4,7 +4,7 @@ name: Pickleball Pattaya
 category: racquet
 area: Pratumnak Hill / Soi 6
 address: Pratumnak Soi 6, Pattaya
-phone: ""
+phone: +66 92 265 9516
 website: https://pickleballpattaya.com/
 social:
   facebook: PickleballPattaya
@@ -132,4 +132,4 @@ If you're new to Pattaya and want a shortcut to a friend group inside your first
 
 The fastest path: message Pickleball Pattaya through their Facebook page or website to book a court or a beginner lesson. Show up at the venue with workout-friendly shoes (court shoes ideal — not running shoes with high heel drops; the lateral movement in pickleball is hard on running soles). Paddles, balls, water, and the rest are sorted on site.
 
-For travellers: it's a 5–15 minute Bolt/Grab from any Pattaya hotel. Tell the driver "Pratumnak Soi 6 — Pickleball Pattaya". For residents: the easiest way into the community is to book one beginner lesson, then ask the coach when the next open-play session runs — you'll have a regular game inside two weeks.
+For travellers: it's a 5–15 minute Bolt/Grab from any Pattaya hotel. Tell the driver "Pratumnak Soi 6 — Pickleball Pattaya". For residents: the easiest way into the community is to book one beginner lesson, then ask the coach when the next open-play session

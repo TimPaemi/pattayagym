@@ -23,7 +23,7 @@ sources:
   - https://www.ikointl.com/destination/kitesurfing-thailand
   - https://www.clubloongchat.com/pattaya-water-sports-seasons
   - https://kitesurftheworld.com/kitespots/thailand/
-description: IKO-certified kitesurfing courses. Beginner package starts at $250 for 3 days.
+description: "IKO-certified kitesurfing school at south end of Jomtien Beach. 3-day beginner package from $250 includes equipment, instruction, and IKO Level 1-2 certification."
 mapsUrl: "https://maps.google.com/?q=Kitesurf+Pattaya"
 tags: [kitesurf, iko-certified, beginner-package]
 ---

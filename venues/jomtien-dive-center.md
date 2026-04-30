@@ -19,7 +19,7 @@ sources:
   - https://jomtiendivecenter.com/
   - https://jomtiendivecenter.com/prices/
   - https://th.asiafirms.com/chon-buri/jomtien-dive-center-pattaya-295995.html
-description: PADI 5-Star IDC. Highly rated by both customers and IDC candidates.
+description: "PADI 5-Star Instructor Development Center on Jomtien Beach offering full PADI course progression from Open Water through Divemaster + Instructor — long-trusted operator."
 mapsUrl: "https://maps.google.com/?q=Jomtien+Dive+Center"
 tags: [padi-5-star, jomtien, idc-rated]
 ---

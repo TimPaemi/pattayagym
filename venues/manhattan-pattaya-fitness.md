@@ -24,7 +24,7 @@ sources:
   - https://pattayaprestigeproperties.com/top-7-gyms-in-pattaya-in-2020/
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/gyms.html
   - https://www.tripadvisor.com/Attractions-g293919-Activities-c40-t129-Pattaya_Chonburi_Province.html
-description: Hotel-based fitness + swimming pool. Day pass available.
+description: "Manhattan Pattaya hotel gym on Pratamnak / Central Pattaya — fitness equipment, outdoor swimming pool, and day-pass access for non-guests within walking distance of beach."
 mapsUrl: "https://maps.google.com/?q=Manhattan+Pattaya"
 tags: [hotel-gym, pool, day-pass]
 ---

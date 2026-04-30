@@ -4,8 +4,8 @@ name: Khao Kheow Country Club
 category: golf
 area: Bang Phra / Si Racha (between Bangkok and Pattaya)
 address: Khao Kheow Country Club, Si Racha, Chonburi 20110
-phone: ""
-website: ""
+phone: +66 38 318 000
+website: "http://www.khaokheowgolf.com/"
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30
 priceRange: ฿฿฿
@@ -26,7 +26,7 @@ sources:
   - https://www.golflux.com/course/kha-kheow-country-club/
   - https://thaigolfholidays.co.uk/khao-kheow-country-club/
   - https://www.thailandtours.travel/thailand/pattaya/khao-kheow-golf-club-pattaya/
-description: Pattaya regional golf course. Stub — needs deep research.
+description: "Pete Dye-designed 27-hole championship course in Bang Phra / Si Racha — host of Asian Tour Thailand Open and one of Pattaya's most strategic, water-defined layouts."
 mapsUrl: "https://maps.google.com/?q=Khao+Kheow+Country+Club"
 tags: [regional]
 ---

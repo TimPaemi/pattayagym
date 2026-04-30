@@ -29,7 +29,7 @@ sources:
   - https://www.facebook.com/Seafaridivepattaya/
   - https://www.padi.com/dive-center/thailand/seafari-diving-center/
   - https://www.padi.com/diving-in/pattaya/
-description: British-owned PADI 5-Star IDC. 40+ years of diving experience in Thailand.
+description: "PADI dive center 2 minutes from Pattaya Beach Road behind Mike's Mall — full course progression from Open Water through Divemaster, plus daily fun-dives to Pattaya islands."
 mapsUrl: "https://maps.google.com/?q=Seafari+Dive+Pattaya"
 tags: [padi-5-star, british-owned, established]
 ---

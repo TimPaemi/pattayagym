@@ -26,7 +26,7 @@ sources:
   - https://www.instagram.com/tara_tennis_pattaya/
   - https://pattayasports.org/tennis/
   - https://www.instagram.com/explore/locations/105145302094084/tara-tennis-club-pattaya/
-description: Pattaya tennis club. Stub — needs deep research.
+description: "Newly resurfaced 2022 Pattaya tennis club with 3 hard courts including one covered roof for rain or sun protection. Coaching, hourly hire, social play."
 mapsUrl: "https://maps.google.com/?q=Tara+Tennis+Club+Pattaya"
 tags: [tennis]
 ---

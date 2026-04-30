@@ -29,7 +29,7 @@ sources:
   - https://hotel.hardrock.com/pattaya/experience.aspx
   - https://www.agoda.com/hard-rock-hotel-pattaya/hotel/pattaya-th.html
   - https://www.booking.com/hotel/th/hard-rock-pattaya.html
-description: World-famous free-form pool with artificial beach. Day pass option.
+description: "Hard Rock Hotel Pattaya iconic guitar-shaped 2,000 sqm free-form pool with artificial sand beach, swim-up bar, and day-pass access for non-guests on Beach Road."
 mapsUrl: "https://maps.google.com/?q=Hard+Rock+Pattaya+Pool"
 tags: [day-pass, famous, artificial-beach]
 ---

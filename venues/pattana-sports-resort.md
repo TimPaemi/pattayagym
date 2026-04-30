@@ -27,7 +27,7 @@ sources:
   - https://www.golfcards.com/course/pattana-golf-club-resort/
   - https://golfhotels.com/en/hotel/pattana-sports-resort/
   - https://www.hrs.com/en/hotel/766574
-description: Mid-tier Pattaya regional golf and sports resort.
+description: "27-hole Pattana Golf Club & Resort in Si Racha — championship layout (40 km north of Pattaya, 90 min from Bangkok) plus on-site sports resort with multiple recreation amenities."
 mapsUrl: "https://maps.google.com/?q=Pattana+Sports+Resort+Pattaya"
 tags: [resort, golf, sports]
 ---

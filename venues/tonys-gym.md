@@ -4,7 +4,7 @@ name: Tony's Fitness Gym (Tony's Group Pattaya)
 category: fitness
 area: Multi-location — Wongamat, Soi Buakhao, Soi Diana Inn, 3rd Road + ~10 Pattaya locations
 address: Multiple Pattaya locations (Wongamat to Jomtien + Bangkok + Si Racha)
-phone: ""
+phone: +66 38 425 795
 website: ""
 social:
   facebook: tonysgrouppattaya

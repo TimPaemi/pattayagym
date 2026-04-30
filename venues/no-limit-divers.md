@@ -28,7 +28,7 @@ sources:
   - https://www.padi.com/dive-center/thailand/no-limit-divers-2/
   - https://www.tripadvisor.com/Attraction_Review-g293919-d10077439-Reviews-No_Limit_Divers-Pattaya_Chonburi_Province.html
   - https://balancegurus.com/location/thailand/bang-lamung/no-limit-divers-dive-centre-pattaya
-description: PADI 5-Star IDC with PADI Internship Programs. Pattaya-based dive center.
+description: "PADI 5-Star Instructor Development Center based in Pattaya / Jomtien, offering full PADI internship programs from Open Water Diver through Course Director-level certification."
 mapsUrl: "https://maps.google.com/?q=No+Limit+Divers+Pattaya"
 tags: [padi-5-star, internship, instructor-track]
 ---

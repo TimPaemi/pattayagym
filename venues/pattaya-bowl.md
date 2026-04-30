@@ -21,7 +21,7 @@ sources:
   - https://aroundpattaya.com/list.php?CL=45
   - https://www.soidb.com/pattaya/bowling-alley/list.html
   - https://wanderlog.com/place/details/6383035/sf-strike-bowl-pattaya
-description: "North Pattaya ten-pin bowling alley. Late-night hours to 02:00. Family + group friendly."
+description: "Pattaya's classic North Pattaya bowling alley off Pattaya 2nd Road / Soi Regent Marina — modern lanes, casual pricing, hourly hire, plus arcade and food."
 mapsUrl: "https://maps.google.com/?q=Pattaya+Bowl"
 tags: [bowling, late-night, family, group-events]
 ---

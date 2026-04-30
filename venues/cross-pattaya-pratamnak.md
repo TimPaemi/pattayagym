@@ -24,7 +24,7 @@ sources:
   - https://www.booking.com/hotel/th/cross-pattaya-pratamnak.html
   - https://www.facebook.com/cross.pattayapratamnak/
   - https://www.traveloka.com/en-en/hotel/thailand/cross-pattaya-pratamnak-9000000988132
-description: Hotel fitness facility with day-pass option. Pool, gym, activities.
+description: "Pratamnak Hill hotel fitness club with Cloud Club gym, PLAYROOM kids zone, swimming pool, and day-pass access for non-guests. Walkable to Royal Cliff cluster."
 mapsUrl: "https://maps.google.com/?q=Cross+Pattaya+Pratamnak"
 tags: [hotel-gym, day-pass, pratumnak]
 ---

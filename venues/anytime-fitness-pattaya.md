@@ -4,14 +4,14 @@ name: Anytime Fitness Pattaya
 category: fitness
 area: Multiple (South Pattaya / Bukis Point + "Again" Pattaya)
 address: Bukis Point Mall (South Pattaya, Thappraya Rd) + Again Pattaya complex
-phone: ""
+phone: +66 64 589 1174
 website: https://www.anytimefitness.co.th/
 social:
   facebook: https://www.facebook.com/AnytimeFitnessTh/
   instagram: anytimefitness.southpattaya
 hours: 24/7 (manned hours vary by club; key-fob access around the clock)
 priceRange: ฿฿
-description: Global 24/7 gym franchise with two well-established Pattaya locations — Bukis Point Mall in South Pattaya and "Again Pattaya" mid-city. Cardio + strength + functional training, manned coaching hours, key-fob 24-hour access, 1-day free trial, and worldwide reciprocal access for travelling members. The grown-up no-bro alternative to the heavy meathead gyms.
+description: "Anytime Fitness 24/7 commercial gym in Pattaya — Bukis Point South Pattaya branch on Sukhumvit Rd plus Again Pattaya outpost. International chain access via single membership."
 tags:
   - 24-7
   - chain

@@ -30,7 +30,7 @@ sources:
   - https://www.where2golf.com/thailand/mountain-shadow-golf-club/
   - https://www.golflux.com/course/mountain-shadow-golf-club/
   - https://4moles.com/golf-courses/mountain-shadow-golf-club
-description: Pattaya regional golf course. Stub — needs deep research.
+description: "Ron Fream-designed 18-hole par-72 golf course halfway between Bangkok and Pattaya, built on a former mango plantation with four rare island greens and 6,722-yard layout."
 mapsUrl: "https://maps.google.com/?q=Mountain+Shadow+Country+Club"
 tags: [regional]
 ---

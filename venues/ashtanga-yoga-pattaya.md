@@ -24,7 +24,7 @@ sources:
   - https://www.laurenryoga.com/resources/what-is-mysore-style-ashtanga-yoga
   - https://www.sundogyogastudio.com/mysore-classes
   - https://ashtangayogasadhna.com/
-description: Traditional Ashtanga yoga with hands-on adjustments. Mysore-style focus.
+description: "Traditional Ashtanga yoga studio offering Mysore-style self-practice and led primary series classes with hands-on adjustments. Soi 12 Thepprasit / Jomtien."
 mapsUrl: "https://maps.google.com/?q=Ashtanga+Yoga+Pattaya"
 tags: [ashtanga, mysore, traditional]
 ---

@@ -22,7 +22,7 @@ sources:
   - https://aroundpattaya.com/detail.php?ID=439
   - https://aroundpattaya.com/list.php?CL=14
   - https://pattaya-pages.com/badminton-courts-in-pattaya-where-to-buy-badminton-equipment-in-pattaya/
-description: Badminton courts plus pool and eating area. East Pattaya.
+description: "East Pattaya multi-sport club on Soi Chaiyaphruek 2 with badminton courts, swimming pool, and on-site Thai-food restaurant — popular casual community venue."
 mapsUrl: "https://maps.google.com/?q=Euro+Badminton+Pattaya"
 tags: [badminton, pool, food]
 ---

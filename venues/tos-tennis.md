@@ -22,7 +22,7 @@ sources:
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/tennis-courts-and-clubs.html
   - https://www.globaltennisnetwork.com/tennis-courts/courts/city/6262-pattaya-city-thailand
   - https://aroundpattaya.com/list.php?CL=16
-description: Pattaya tennis facility. Stub — needs deep research.
+description: "TOS Tennis Club / TOS Tennis Academy at Baan Suan Lalana — Jomtien Beach side tennis facility (closest to Jomtien) with hard courts, coaching, and social play."
 mapsUrl: "https://maps.google.com/?q=Tos+Tennis+Pattaya"
 tags: [tennis]
 ---

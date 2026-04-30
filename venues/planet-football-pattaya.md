@@ -29,7 +29,7 @@ sources:
   - https://www.fastprofootball.com/
   - https://www.fastprofootball.com/kids-football-training-pattaya
   - https://thepattayanews.com/2026/04/01/pattaya-mayor-chairs-meeting-to-explore-team-work-with-liverpool-fc-international-academy-for-youth-football-development/
-description: Football academy for kids and youth in Pattaya.
+description: "Multi-tier football academy in Pattaya — soccer schools for beginners, development squads, competitive academy programs, and FC Planet senior team for ages 5+ to adults."
 mapsUrl: "https://maps.google.com/?q=Planet+Football+Pattaya"
 tags: [football, kids, youth]
 ---

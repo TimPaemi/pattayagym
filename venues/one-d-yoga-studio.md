@@ -24,7 +24,7 @@ sources:
   - https://www.pattayaup2u.com/2024/05/22/the-best-places-for-yoga-in-pattaya/
   - https://yogafinder.com/yoga.cfm?yogacountry=Thailand&yogacity=Pattaya
   - https://yogapattaya.com/
-description: "Various classes: traditional Hatha, Vinyasa Flow, Yin Yoga. Modern studio."
+description: "Modern multi-style yoga studio at 571/32 Naklua 16/2 offering daily Hatha, Vinyasa Flow, and Yin classes plus private sessions, workshops, and weekend / weeklong retreats."
 mapsUrl: "https://maps.google.com/?q=One-D+Yoga+Studio+Pattaya"
 tags: [hatha, vinyasa, yin, naklua]
 ---

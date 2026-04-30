@@ -29,7 +29,7 @@ sources:
   - https://www.where2golf.com/thailand/st-andrews-2000-golf-club/
   - https://www.tripadvisor.com/Attraction_Review-g2237272-d3814439-Reviews-St_Andrews_2000-Ban_Chang_Rayong_Province.html
   - https://www.golftripz.com/golf-course/st-andrews-2000-golf-course
-description: Pattaya golf course. Stub — needs deep research.
+description: "St. Andrews 2000 — championship 18-hole golf course in Ban Chang, Rayong (45 min from Pattaya) with mature parkland setting and full clubhouse facilities."
 mapsUrl: "https://maps.google.com/?q=St+Andrews+2000+Pattaya"
 tags: [championship]
 ---

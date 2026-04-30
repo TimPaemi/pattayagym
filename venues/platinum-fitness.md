@@ -19,7 +19,7 @@ sources:
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/gyms.html
   - https://www.tripadvisor.com/Attractions-g293919-Activities-c40-t129-Pattaya_Chonburi_Province.html
   - https://pattaya-pages.com/gyms-in-pattaya/
-description: Modern AC commercial gym. Cardio, weight machines, group classes, sauna.
+description: "Pattaya Klang central commercial gym with 17.5-hour daily operating window (05:30-23:00), full air-conditioning, comprehensive cardio + weight machines, group classes, and sauna."
 mapsUrl: "https://maps.google.com/?q=Platinum+Fitness+Pattaya"
 tags: [commercial, air-con, classes, sauna]
 ---

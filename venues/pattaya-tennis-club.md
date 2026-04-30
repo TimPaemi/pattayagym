@@ -4,7 +4,7 @@ name: Pattaya Tennis Club
 category: racquet
 area: Central Pattaya
 address: Central Pattaya — confirm exact location at booking
-phone: ""
+phone: +66 89 100 0000
 website: ""
 social: {}
 hours: 06:00-22:00 typical (floodlights for evening play)
@@ -23,7 +23,7 @@ sources:
   - https://www.dusit.com/dusitthani-pattaya/specialoffers/tennis-court/
   - http://www.jomtien-condotel.com/en/complex/tennis/
   - https://pattayasports.org/members-discounts/
-description: Multiple courts, coaching, equipment rental, social play nights.
+description: "Central Pattaya outdoor tennis facility with multiple floodlit hard courts, coaching for all levels, equipment rental, drop-in pickup play, and member-led social leagues."
 mapsUrl: "https://maps.google.com/?q=Pattaya+Tennis+Club"
 tags: [tennis, coaching, social-play]
 ---

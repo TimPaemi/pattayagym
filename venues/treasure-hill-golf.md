@@ -4,7 +4,7 @@ name: Treasure Hill Golf & Country Club
 category: golf
 area: Ban Bueng / Khao Khansong (60 km from Pattaya)
 address: 222 Moo 7, Klong Kiw, Ban Bueng, Chonburi 20220
-phone: ""
+phone: +66 81 344 8002
 website: ""
 social: {}
 hours: Open daily — first tee from sunrise; last tee typically 14:00-15:00 (call to confirm)

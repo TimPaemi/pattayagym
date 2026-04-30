@@ -23,7 +23,7 @@ sources:
   - https://pattayaprestigeproperties.com/squash-badminton-in-pattaya/
   - https://aroundpattaya.com/list.php?CL=14
   - https://pattaya-pages.com/badminton-courts-in-pattaya-where-to-buy-badminton-equipment-in-pattaya/
-description: Several courts available off Pattaya 3rd Road, South Pattaya.
+description: "South Pattaya badminton facility on Pattaya 3rd Road with multiple wood-floor courts available for hourly hire, plus equipment rental and casual play nights."
 mapsUrl: "https://maps.google.com/?q=Diamond+Badminton+Pattaya"
 tags: [badminton, south-pattaya]
 ---

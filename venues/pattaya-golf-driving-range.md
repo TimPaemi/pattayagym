@@ -25,7 +25,7 @@ sources:
   - https://www.1golf.eu/en/golf-courses/thailand/cities/pattaya/
   - https://aroundpattaya.com/detail.php?ID=233
   - https://www.facebook.com/300yardsDrivingRange/
-description: Standalone driving range with practice facilities.
+description: "Standalone Pattaya driving range with multi-tier hitting bays, putting green, short-game practice area, and equipment rental — ideal for warm-ups before championship rounds."
 mapsUrl: "https://maps.google.com/?q=Pattaya+Golf+Driving+Range"
 tags: [driving-range, practice]
 ---

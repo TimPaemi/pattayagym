@@ -24,7 +24,7 @@ sources:
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/golf/index.html
   - https://www.tripadvisor.com/Hotel_Feature-g293919-d6610434-zft9183-Pattaya_Country_Club.html
   - https://www.golflux.com/destination/pattaya-golf-courses/
-description: Local Pattaya golf course. Stub — needs deep research.
+description: "18-hole Pattaya Country Club at Khao Mai Kaeo — one of the closest golf courses to Pattaya proper with championship layout, mature parkland setting, and value-tier green fees."
 mapsUrl: "https://maps.google.com/?q=Pattaya+Country+Club"
 tags: [local]
 ---

@@ -5,7 +5,7 @@ category: racquet
 area: Soi Toongklom-Talman 25, Pattaya City
 address: Soi Toongklom-Talman 25, Pattaya City, Bang Lamung District, Chonburi 20150
 phone: ""
-website: ""
+website: "https://liga.tennis/venue/pattaya-badminton-tennis-inter-club"
 social:
   facebook: "Pattaya-Tennis-Badminton-Inter-Club-100063564184679"
 hours: Daily — typical 06:00-22:00

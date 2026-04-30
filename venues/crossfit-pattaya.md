@@ -4,7 +4,7 @@ name: CrossFit Pattaya @ The Jungle Gym
 category: crossfit
 area: Nong Prue / Central-East Pattaya
 address: 165/4 Moo 6, Nong Prue, Muang Pattaya, Bang Lamung District, Chonburi 20150
-phone: ""
+phone: +66 84 818 3994
 website: https://www.junglegympattaya.com/
 social:
   facebook: JungleGymPattaya

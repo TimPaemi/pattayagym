@@ -18,7 +18,7 @@ sources:
   - https://aseannow.com/topic/35050-public-swimming-pools/
   - https://www.tripadvisor.com/ShowTopic-g293919-i9439-k13105844-Free_public_access_to_swimming_pools-Pattaya_Chonburi_Province.html
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/swimming-lessons.html
-description: One of two public swimming pools in Pattaya. South Pattaya / Jomtien border.
+description: "One of Pattaya's two public swimming pools — operated by the city on the South Pattaya / Jomtien border with affordable lap-swim access, kids' pool, and changing facilities."
 mapsUrl: "https://maps.google.com/?q=Jomtien+Public+Pool+Pattaya"
 tags: [public, budget, jomtien]
 ---

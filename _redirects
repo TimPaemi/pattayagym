@@ -1,1 +1,8 @@
 https://www.pattaya-gym.com/* https://pattaya-gym.com/:splat 301
+
+# Duplicate-content consolidation: af-academy-football was an early stub that was later
+# superseded by the deeper af-academy-pattaya record (same business, same website
+# afacademy.pro/en, but af-academy-pattaya has the full address, phone, multi-location detail).
+# 301 redirect the stub URL to the canonical record to avoid SEO duplicate-content penalty.
+/gyms/af-academy-football/ /gyms/af-academy-pattaya/ 301
+/gyms/af-academy-football  /gyms/af-academy-pattaya/ 301

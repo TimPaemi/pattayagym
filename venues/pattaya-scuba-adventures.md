@@ -25,7 +25,7 @@ sources:
   - https://nolimitdive.com/ultimate-guide-to-pattaya-diving/
   - https://pattayapointer.com/guides/pattaya-scuba-diving-guide/
   - https://pattayadivers.com/scuba-diving-trips/
-description: PADI dive center offering courses and guided diving trips around Pattaya.
+description: "PADI dive center based in Pattaya with boat operations from Bali Hai Pier — full course progression, daily fun-dives to Pattaya islands, and guided trips for certified divers."
 mapsUrl: "https://maps.google.com/?q=Pattaya+Scuba+Adventures"
 tags: [padi, courses, guided-trips]
 ---

@@ -4,7 +4,7 @@ name: Play Padel Pattaya
 category: racquet
 area: Pratumnak / Kasetsin Soi 3
 address: Kasetsin Soi 3, Pratumnak, Pattaya, Chonburi
-phone: ""
+phone: +66 80 621 0000
 website: https://www.playpadelpattaya.com/
 social:
   facebook: playpadelpattaya
@@ -23,7 +23,7 @@ sources:
   - https://www.facebook.com/playpadelpattaya/
   - https://www.instagram.com/playpadelpattaya/
   - https://padellands.com/en/pistas-de-padel/otros-paises/thailand/
-description: "Dedicated padel club in Pratumnak. Pattaya's first dedicated padel venue."
+description: "Pattaya's first dedicated padel club at Kasetsin Soi 3, Pratumnak — also Thailand's first indoor padel courts with bookable hourly play, equipment rental, and clinics for all levels."
 mapsUrl: "https://maps.google.com/?q=Play+Padel+Pattaya"
 tags: [padel, first-mover, pratumnak]
 ---

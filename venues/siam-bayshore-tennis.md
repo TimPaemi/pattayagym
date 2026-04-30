@@ -27,7 +27,7 @@ sources:
   - https://www.golfsavers.com/thailand-golf-packages/pattaya-golf-holidays/hotel/siam-bayshore-resort-pattaya
   - https://siam-bayshore-resort.pattayahotels-thailand.com/en/
   - https://resortsonly.net/siam-bayshore-pattaya/
-description: 3 outdoor hard tennis courts. Hotel-based facility, day visitors welcome.
+description: "Siam Bayshore Resort tennis courts on Walking Street area / South Pattaya Beach Road — 3 outdoor hard courts open to hotel guests and day visitors."
 mapsUrl: "https://maps.google.com/?q=Siam+Bayshore+Resort+Pattaya"
 tags: [tennis, hotel, outdoor, 3-courts]
 ---
