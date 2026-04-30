@@ -41,6 +41,9 @@ sources:
   - http://www.global-training-report.com/wko.htm
   - https://www.muaythaicitizen.com/best-muay-thai-golden-era-fighters/
   - https://evolve-mma.com/blog/muay-thai-history-the-golden-era/
+description: Owner Sifu McInnes was first Westerner to ref Lumpinee (1993). Resident trainer Sakmongkol (231-20-4, 3x Lumpinee, 5x WMC). ~฿4,000/month.
+mapsUrl: "https://maps.google.com/?q=WKO+Pattaya+Klang"
+tags: [budget, legendary-trainer, central]
 ---
 
 # WKO Muay Thai & Fitness Pattaya (ISS Gym)
@@ -280,4 +283,4 @@ Almost no one stumbles into WKO as a first-time tourist. **Almost everyone who f
 | Disciplines | Muay Thai, Karate, K-1, MMA, Kung Fu, Boxing, Fitness |
 | Accommodation | None on-site; central Pattaya hotels walkable |
 | Best for | Long-stay expats; budget elite-trainer access; afternoon-only trainers |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

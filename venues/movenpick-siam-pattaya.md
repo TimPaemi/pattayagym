@@ -31,6 +31,9 @@ sources:
   - https://www.hotels.com/ho569445/movenpick-siam-hotel-na-jomtien-pattaya-sattahip-thailand/
   - https://www.booking.com/hotel/th/movenpick-siam-pattaya.html
   - https://www.expedia.com/Pattaya-Hotels-Movenpick-Siam-Hotel-Na-Jomtien-Pattaya.h13270275.Hotel-Information
+description: 5-star Swiss-hospitality (Accor). 24-hour 2nd-floor fitness with floor-to-ceiling windows. 262 rooms. Seafront + lagoon pools. Little Birds Kids Club.
+mapsUrl: "https://maps.google.com/?q=Movenpick+Siam+Pattaya"
+tags: [5-star, swiss, movenpick, accor, 24-hour, kids-club, na-jomtien]
 ---
 
 # Mövenpick Siam Hotel Na Jomtien Pattaya
@@ -231,4 +234,4 @@ Mövenpick Siam Na Jomtien is **upper-premium tier**:
 | Kids Club | Little Birds (underwater theme, ages 2-12) |
 | Spa | Full spa with treatments |
 | Languages | English, Thai, Russian, Chinese, German, French |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

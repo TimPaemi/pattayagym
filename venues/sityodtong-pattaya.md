@@ -43,6 +43,9 @@ sources:
   - https://fightchase.com/sityodtong-muay-thai-pattaya-thailand/
   - https://www.muaythaidb.com/gyms/Sityodtong/
   - https://samartpayakaroon.com/history-of-samart/
+description: Founded 1960 by Kru Yodtong. 57+ world champions including Samart Payakaroon. Trained Rob Kaman & Ramon Dekkers. Pilgrimage destination.
+mapsUrl: "https://maps.google.com/?q=Sityodtong+Pattaya"
+tags: [legendary, authentic, lineage, fighter-track]
 ---
 
 # Sityodtong Pattaya
@@ -297,4 +300,4 @@ If you want **resort-style training with breakfast buffet**, go to Fairtex or Si
 | Languages | English (variable), Thai |
 | Best time for personal attention | Weekday mornings 08:00-09:00 |
 | Most famous alumni | Samart Payakaroon, Kongtoranee, Rob Kaman, Ramon Dekkers |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

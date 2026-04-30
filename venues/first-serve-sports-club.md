@@ -22,6 +22,9 @@ sources:
   - https://www.firstservesportsclub.com/reviews-and-tesimonials
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/swimming-lessons.html
   - https://pattayasports.org/
+description: Swim teaching by Swimming Association of Thailand-trained instructors. All ages, English or Thai.
+mapsUrl: "https://maps.google.com/?q=First+Serve+Sports+Club+Pattaya"
+tags: [swim-coaching, all-ages, english]
 ---
 
 # First Serve Sports Club

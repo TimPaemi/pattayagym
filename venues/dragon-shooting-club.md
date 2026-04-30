@@ -21,6 +21,9 @@ sources:
   - https://www.dragonshootingclub.com/
   - https://pattayacitytourcoltd.com/blog/details/best-shooting-ranges-in-pattaya-for-an-unforgettable-experience
   - https://pattayacitytourcoltd.com/gun-shooting-ticket-price
+description: Largest indoor shooting range in Thailand. 20 standard + 3 private VIP lanes. Modern firearms. Fully air-conditioned.
+mapsUrl: "https://maps.google.com/?q=Dragon+Shooting+Club+Pattaya"
+tags: [shooting, indoor, largest-indoor, AC, vip-lanes]
 ---
 
 # Dragon Shooting Club Pattaya

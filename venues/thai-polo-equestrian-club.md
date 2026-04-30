@@ -33,6 +33,9 @@ sources:
   - http://siampolopark.com/location.html
   - https://www.thebigchilli.com/news/thai-polo-equestrian-club-pattaya-in-focus
   - https://hotmagazine.website/thailands-polo-and-equestrian-club/
+description: Largest multi-functional polo + equestrian in all Asia. 250 hectares. 3 polo fields + 2 practice. 250+ stables. Endurance + Derby. Argentinian vet GM.
+mapsUrl: "https://maps.google.com/?q=Thai+Polo+Equestrian+Club+Pattaya"
+tags: [polo, equestrian, largest-in-asia, international, derby, endurance]
 ---
 
 # Thai Polo & Equestrian Club
@@ -299,4 +302,4 @@ For non-members wanting to **try polo or take a lesson**, packages are available
 | Founders | Harald Link + Mrs Nunthinee Tanner |
 | Veterinary | Argentinian vet general management |
 | Distance from Pattaya | 25 minutes north (Mabprachan Reservoir area) |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

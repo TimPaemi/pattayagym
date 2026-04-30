@@ -29,6 +29,9 @@ sources:
   - https://www.ramayanawaterpark.com/partners/tarzan-adventure/
   - https://www.instagram.com/tarzanziplinepattaya/
   - https://www.thrillophilia.com/tours/zipline-at-tarzan-adventure-pattaya
+description: Pattaya jungle zipline park. 25-platform full course + half + kids. Bridges, ladders, abseil, ropes. Near Golden Cliff Temple.
+mapsUrl: "https://maps.google.com/?q=Tarzan+Adventure+Pattaya"
+tags: [zipline, adventure-park, jungle, family, sattahip]
 ---
 
 # Tarzan Adventure Pattaya (Zipline)
@@ -232,4 +235,4 @@ Zipline / ropes courses have **statistically rare but real injury risk**:
 | Languages | English, Thai, Russian, Chinese, Korean |
 | Other activities | Elephant riding, shooting range, Korean restaurant |
 | Setting | Mountain jungle near Golden Cliff Temple |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

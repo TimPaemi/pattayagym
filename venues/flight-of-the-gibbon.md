@@ -33,6 +33,9 @@ sources:
   - https://thebear.travel/67/Flight-of-the-Gibbon:-An-Action-Packed-Adventure-in-Pattaya
   - https://www.triptipedia.com/tour/tGdOOdB/flight-of-the-gibbon-zipline-experience-from-bangkok-and-pattaya
   - https://www.traveloka.com/en-th/activities/thailand/product/flight-of-the-gibbon-pattaya-zipline-2000643700840
+description: Largest canopy zipline in Thailand. 3 km course, 24 platforms. Inside Khao Kheow Open Zoo wildlife sanctuary. 2.5-hour zipline + zoo + lunch all-inclusive day.
+mapsUrl: "https://maps.google.com/?q=Flight+of+the+Gibbon+Pattaya"
+tags: [zipline, canopy, largest-thailand, wildlife-sanctuary, khao-kheow, all-inclusive]
 ---
 
 # Flight of the Gibbon — Khao Kheow Canopy Zipline
@@ -274,4 +277,4 @@ This is **premium-tier adventure pricing** but the **all-inclusive package** del
 | Distance from Pattaya | 1 hour |
 | Pricing | ~฿3,500-5,000 all-inclusive |
 | Languages | English, Thai, Russian, Chinese, Korean, Japanese |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-

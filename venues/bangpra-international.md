@@ -24,6 +24,9 @@ sources:
   - https://www.golfasian.com/golf-courses/thailand-golf-courses/pattaya/bangpra-golf-club/
   - https://pattayagolf.com/golf-courses/
   - https://www.golfholidays.com/thailand/pattaya/
+description: Opened 1958 — one of the first golf courses in the Pattaya region. 18 holes, par 72, 1988 renovation.
+mapsUrl: "https://maps.google.com/?q=Bangpra+International+Golf"
+tags: [regional, mid-tier, heritage-1958]
 ---
 
 # Bangpra International Golf Club
@@ -207,4 +210,4 @@ The clubhouse has the **lived-in patina of a 60+ year-old institution** — not 
 | Par | 72 |
 | Distance from Pattaya | 40 km / 35-45 min drive |
 | Green fee + cart + caddy | ~฿1,400-2,200 |
-| Verified | 2026-04-27 |
+| Verified | 2026-04

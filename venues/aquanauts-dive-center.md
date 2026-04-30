@@ -23,6 +23,9 @@ sources:
   - https://www.tripadvisor.com/Attraction_Review-g293919-d3604931-Reviews-Aquanauts_Dive_Center-Pattaya_Chonburi_Province.html
   - https://divescover.com/dive-center/aquanauts-cdc/16457
   - https://www.padi.com/diving-in/pattaya/
+description: Pattaya only British/Dutch-owned PADI 5-Star CDC + National Geographic Dive Center. 13+ years. Full tech instructor pipeline. Conservation focus.
+mapsUrl: "https://maps.google.com/?q=Aquanauts+Pattaya"
+tags: [padi-5-star-cdc, national-geographic, british-dutch, tech-diving, career-track]
 ---
 
 # Aquanauts Dive Center Pattaya

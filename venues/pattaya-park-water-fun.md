@@ -24,6 +24,9 @@ sources:
   - https://www.tngholidays.com/event/pattaya-park-tower-ticket
   - https://www.tripadvisor.com/Attraction_Review-g293919-d464603-Reviews-Pattaya_Water_Park-Pattaya_Chonburi_Province.html
   - https://excursionmania.com/ttd/1041/pattaya-water-park-at-pattaya-park-beach-resort-blg-1041
+description: Original Pattaya 1989 complex. Tower Jump (170m zip line from 56th floor) + water park + private beach + amusement park.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Park+Tower"
+tags: [tower-jump, water-park, beach, amusement, original, family]
 ---
 
 # Pattaya Park Water & Fun Park (with Tower Jump)
@@ -245,5 +248,4 @@ Pattaya Park is **substantially cheaper** than the newer premium water parks —
 | Tower Jump rides | Tower Jump + Sky Shutter + Speed Shutter |
 | Water park hours | 10:00-19:00 |
 | Attractions | Water park + Private beach + Amusement park + Tower Jump |
-| Languages | English, Thai, Russian, Chinese |
-| Verified | 2026-04-27 |
+| Languages | English, Thai, Russi

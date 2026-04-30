@@ -31,6 +31,9 @@ sources:
   - https://www.pattayaunlimited.com/pattaya-go-kart-tracks/
   - https://pattayakart.com/en/home/
   - https://www.tripadvisor.com/Attraction_Review-g293919-d4226849-Reviews-Pattaya_Kart_Speedway-Pattaya_Chonburi_Province.html
+description: "Newest go-kart facility in Pattaya. Outdoor 350m beginner + 800m racing tracks. Multi-tier classes: Kids/Regular/Fast/2-Seater. From 480 baht."
+mapsUrl: "https://maps.google.com/?q=EasyKart+Pattaya"
+tags: [karting, adventure, family, outdoor, thepprasit]
 ---
 
 # EasyKart Pattaya Thepprasit
@@ -232,5 +235,4 @@ Standard karting safety:
 | Max speeds | 35 km/h beginner / 55 km/h regular racing / 70+ km/h Fast |
 | Price | ~฿480-700/session |
 | Languages | English, Thai, Russian, Chinese |
-| Online booking | Klook, KKday, Tiqets, Expedia |
-| Verified | 2026-04-27 |
+| Online booking | Klook, KKday, Tiqets

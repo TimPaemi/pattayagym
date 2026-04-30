@@ -25,6 +25,9 @@ sources:
   - https://streetworkoutlist.com/cities/Pattaya--Thailand
   - https://calisthenics-parks.com/spots/11861-en-bodyweight-training-pattaya-calisthenics-workout
   - https://calisthenics-parks.com/countries/th-en-thailand
+description: Pattaya FREE outdoor public fitness park. Free weights + machines + cardio + calisthenics. Pratumnak Hill / Buddha Hill setting. Up to 75lb dumbbells.
+mapsUrl: "https://maps.google.com/?q=Pratumnak+Fitness+Park"
+tags: [free, outdoor, calisthenics, weights, public]
 ---
 
 # Pratumnak Fitness Park
@@ -251,4 +254,4 @@ The fitness park's adjacency to Buddha Hill creates:
 | Setting | Buddha Hill area / Phra Tamnak Mountain |
 | Hours | Public (typically dawn to ~22:00) |
 | Languages | Thai (primary), English |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

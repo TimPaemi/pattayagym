@@ -30,6 +30,9 @@ sources:
   - https://peoplepill.com/i/sudsakorn-sor-klinmee
   - https://www.tapology.com/fightcenter/fighters/238390-sudsakorn-sor-klinmee
   - https://siamkickfight.com/blogs/ringready/top-10-best-muay-thai-gyms-in-pattaya-for-beginners-and-pros
+description: Family-run authentic Thai camp, founded 2009 by Mit Klinmee. Home of Sudsakorn Sor Klinmee (278W/330F). Drop-ins ~฿200-300.
+mapsUrl: "https://maps.google.com/?q=Sor+Klinmee+Pattaya"
+tags: [authentic, family-run, budget, fighter-camp]
 ---
 
 # Sor Klinmee Muay Thai Gym
@@ -199,4 +202,4 @@ For a student who wants **direct access to a former pro fighter from a deep figh
 | Monthly | ~฿4,000-7,000 |
 | Hours | Mon-Sat morning + afternoon |
 | Languages | Thai (primary); basic English workable |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

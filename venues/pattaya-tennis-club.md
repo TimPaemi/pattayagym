@@ -23,6 +23,9 @@ sources:
   - https://www.dusit.com/dusitthani-pattaya/specialoffers/tennis-court/
   - http://www.jomtien-condotel.com/en/complex/tennis/
   - https://pattayasports.org/members-discounts/
+description: Multiple courts, coaching, equipment rental, social play nights.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Tennis+Club"
+tags: [tennis, coaching, social-play]
 ---
 
 # Pattaya Tennis Club
@@ -222,4 +225,4 @@ Whether Pattaya Tennis Club specifically offers pickleball — confirm at the cl
 | Coaching | Private + group available |
 | Equipment rental | Yes |
 | Court rental | ~฿200-400/hour |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

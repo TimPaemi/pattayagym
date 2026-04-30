@@ -34,6 +34,9 @@ sources:
   - https://www.top100golfcourses.com/golf-course/laem-chabang-international-bc
   - https://www.pattayagolfcourses.com/rates.htm
   - https://www.pattayagolf.net/golf.php?golf_id=14
+description: Jack Nicklaus design (1995). 27 holes. Widely considered the best golf course layout in Pattaya.
+mapsUrl: "https://maps.google.com/?q=Laem+Chabang+International+Country+Club"
+tags: [nicklaus, championship, 27-holes, best-in-pattaya]
 ---
 
 # Laem Chabang International Country Club
@@ -217,4 +220,4 @@ For the **golf-focused traveller with one round to play in Pattaya, this is the 
 | Caddy tip recommended | ~฿300 |
 | Awards | Annual World Golf Awards Best Course in Thailand nominee |
 | Reputation | Best layout in Pattaya region (consensus) |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

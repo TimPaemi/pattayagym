@@ -47,6 +47,9 @@ sources:
   - https://en.wikipedia.org/wiki/1979_PGA_Championship
   - https://asgca.org/architect/gpanks/
   - https://www.where2golf.com/golf-tournaments/thailand-open/
+description: 36 holes designed for natural beauty (lakes, hills, palms). Hosted 2010 Thailand Open. Top tournament venue.
+mapsUrl: "https://maps.google.com/?q=Burapha+Golf+Club"
+tags: [36-holes, tournament-host, championship]
 ---
 
 # Burapha Golf Club

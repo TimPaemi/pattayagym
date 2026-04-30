@@ -22,6 +22,9 @@ sources:
   - https://wanderlog.com/place/details/8691997/pattaya-archery-club
   - https://www.tripadvisor.com/AttractionProductReview-g293919-d17824804-Archery_10_Arrow_Shooting_Pattaya-Pattaya_Chonburi_Province.html
   - https://aroundpattaya.com/list.php?TY=9
+description: Non-profit archery club founded 2006. Beginner to expert. On-site bungalow accommodation, pool, tennis court, fishing boat. Affordable patient coaching.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Archery+Club"
+tags: [archery, non-profit, established-2006, stay-and-train, on-site-accommodation]
 ---
 
 # Pattaya Archery Club
@@ -223,5 +226,4 @@ This pricing is **dramatically cheaper than commercial archery ranges** in touri
 | Shooting days | Tuesday, Thursday, Saturday, Sunday |
 | Shooting hours | 10:00-12:00 |
 | On-site amenities | Bungalow accommodation, swimming pool, tennis court, fishing boat |
-| Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Languag

@@ -28,6 +28,9 @@ sources:
   - https://www.bkkkids.com/listing/manta-kids/
   - https://www.pattayamail.com/ourchildren/small-children-learn-swim-manta-academy-141663
   - https://zaubee.com/biz/manta-kids-pattaya-g8eijf2c
+description: Premier kids swim academy. Head coach is former Thai national swimmer. ASCTA-certified instructors. ฿9,900/quarter (10 sessions).
+mapsUrl: "https://maps.google.com/?q=Manta+Kids+Pattaya"
+tags: [kids, swim-academy, certified-coaches, national-coach]
 ---
 
 # Manta Kids Pattaya (IG Center)

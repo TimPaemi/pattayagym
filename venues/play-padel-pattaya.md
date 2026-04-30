@@ -23,6 +23,9 @@ sources:
   - https://www.facebook.com/playpadelpattaya/
   - https://www.instagram.com/playpadelpattaya/
   - https://padellands.com/en/pistas-de-padel/otros-paises/thailand/
+description: "Dedicated padel club in Pratumnak. Pattaya's first dedicated padel venue."
+mapsUrl: "https://maps.google.com/?q=Play+Padel+Pattaya"
+tags: [padel, first-mover, pratumnak]
 ---
 
 # Play Padel Pattaya
@@ -164,4 +167,4 @@ Play Padel is the **dedicated padel destination** in Pattaya. Players seeking pa
 | Court spec | 6 AC units/court, 11.5m roof, glass-walled |
 | Coaching | Licensed trainers available |
 | Booking | Daily, 1-hour slots, online |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

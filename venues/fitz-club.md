@@ -34,6 +34,9 @@ sources:
   - https://www.newswit.com/en/if9th8o7svh3xtqcrihaooc3rqk8axf0
   - https://www.newswit.com/en/iffof7sgf0r4a0o8ksknarnrpba8jurw
   - https://www.cvent.com/venues/pattaya/resort/royal-cliff-hotels-group/venue-e1f290d1-88b6-450f-90e4-3b4dcae74dd0
+description: "Award-winning luxury sports club: 7 tennis courts, 2 AC squash courts, table tennis, swimming, gym, professional coaching. Premium tier."
+mapsUrl: "https://maps.google.com/?q=Fitz+Club+Royal+Cliff+Pattaya"
+tags: [luxury, tennis, squash, swimming, gym, kids-coaching]
 ---
 
 # Fitz Club — Racquets, Health & Fitness (Royal Cliff Hotels Group)
@@ -298,4 +301,4 @@ Among long-stay expats and Pattaya residents, **Fitz Club membership signals a p
 | Spa | Cliff Spa (TripAdvisor Travellers' Choice 2024) |
 | First-Time Trial | Free (gym + pool + sauna + 1hr tennis/pickleball/squash) |
 | Tournaments | 18+ years annual Singles, ITF Masters, Mens Doubles, AssetWise Junior |
-| Verified | 2026-04-27 |
+| Verified | 2026-04

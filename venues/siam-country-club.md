@@ -38,6 +38,9 @@ sources:
   - https://www.taigolf.com/blog/8054/discover-siam-country-club-old-course-the-crown-jewel-of-thailand-golf-courses
   - https://voyages.golf/golf-course/siam-country-club-old-course/
   - https://www.1golf.eu/en/club/siam-country-club-pattaya-old-course/
+description: "Multiple championship courses: Old Course (1970, Top 100 world), Plantation, Waterside. Asia's premier golf destination."
+mapsUrl: "https://maps.google.com/?q=Siam+Country+Club+Pattaya"
+tags: [championship, top-100-world, multiple-courses, premier]
 ---
 
 # Siam Country Club Pattaya
@@ -221,4 +224,4 @@ Siam Country Club Old Course's tournament resume is the deepest in Thai golf:
 | Old Course green fee | ~฿3,550 weekday / ~฿4,350 weekend |
 | Twilight | ~฿1,000 |
 | Caddy | ฿480 (compulsory, included); tip ฿500+ |
-| Verified | 2026-04-27 |
+| Verified | 2026-

@@ -33,6 +33,9 @@ sources:
   - https://www.facebook.com/1653682564958973/
   - https://www.instagram.com/venumtrainingcamp/
   - https://8limbsus.com/muay-thai-thailand/venum-training-camp-thailand-pattaya
+description: Modern multi-discipline facility near Jomtien. Muay Thai, MMA, BJJ, Combat Fitness, S&C, kids program. 2 rings + cage/mat zone.
+mapsUrl: "https://maps.google.com/?q=Venum+Training+Camp+Pattaya"
+tags: [multi-discipline, modern, near-beach, kids]
 ---
 
 # Venum Training Camp Pattaya
@@ -194,4 +197,4 @@ The location choice reflects Zatout's intentional positioning — **a serious tr
 | Hours | Mon-Sat, MT 07:00-09:00 + 15:00-18:00 |
 | Distance to Jomtien | 1.8 km |
 | Languages | English, French, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

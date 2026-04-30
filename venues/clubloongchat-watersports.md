@@ -30,6 +30,9 @@ sources:
   - https://www.clubloongchat.com/windmeter
   - https://www.facebook.com/clubloongchat/
   - https://www.instagram.com/clubloongchat_pattaya/
+description: "Beachside watersports school: kitesurfing, wingfoiling, windsurfing, sailing, SUP. Expert lessons + rentals."
+mapsUrl: "https://maps.google.com/?q=Clubloongchat+Na+Jomtien"
+tags: [kitesurf, wingfoil, windsurf, sup, sailing]
 ---
 
 # Clubloongchat Watersports
@@ -230,4 +233,4 @@ The 40-year legacy is the differentiator. **Most Pattaya beach-watersports opera
 | Live wind metre | clubloongchat.com/windmeter |
 | Wind range | 7-30 knots; beginner ideal 8-15 knots |
 | Hours | Daily, wind/tide dependent |
-| Verified | 2026-04-27 |
+| Verified | 2026-04

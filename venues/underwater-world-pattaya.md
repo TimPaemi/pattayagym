@@ -31,6 +31,9 @@ sources:
   - https://yourthaiguide.com/underwater-world-pattaya-dive-into-marine-discovery/
   - https://www.tripadvisor.com/ShowUserReviews-g1226133-d1230359-r154728985-Underwater_World_Pattaya-Bang_Lamung_Chonburi_Province.html
   - https://underwaterworldpattaya.com/about-us/
+description: Pattaya only aquarium. First modern aquarium in Thailand (2003). 105m+ underwater tunnel. 5,000+ marine animals. 4 zones. Dive-with-sharks program for certified divers. Biggest jellyfish collection in Thailand.
+mapsUrl: "https://maps.google.com/?q=Underwater+World+Pattaya"
+tags: [aquarium, first-thailand, underwater-tunnel, shark-dive, jellyfish, family]
 ---
 
 # Underwater World Pattaya — Aquarium & Shark Dive
@@ -267,4 +270,4 @@ For divers who **specifically want guaranteed shark interaction**, Underwater Wo
 | Shark dive | Available for certified divers |
 | Adult admission | ~฿500-700 |
 | Languages | English, Thai, Russian, Chinese, Japanese, Korean |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

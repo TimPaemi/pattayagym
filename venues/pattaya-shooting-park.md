@@ -26,6 +26,9 @@ sources:
   - https://pattayacitytourcoltd.com/blog/details/best-shooting-ranges-in-pattaya-for-an-unforgettable-experience
   - https://www.headout.com/outdoor-activities/45-caliber-pattaya-shooting-park-experience-e-12997/
   - https://sunleisureworld.com/tour/1371/light-bullet-shooting-range-in-pattaya-4-guns-package
+description: Largest outdoor shooting range in Pattaya. Diverse firearms (.22, .38, .45, 9mm, shotguns). Free hotel pickup in most packages.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Shooting+Park"
+tags: [shooting, outdoor, firearms, adrenaline, largest-outdoor]
 ---
 
 # Pattaya Shooting Park
@@ -238,4 +241,4 @@ Free hotel pickup typically includes:
 | Pricing from | ~฿1,190 |
 | Hotel pickup | Free in most packages |
 | Languages | English, Thai, Russian, Chinese |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

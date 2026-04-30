@@ -26,6 +26,9 @@ sources:
   - https://www.pattayatriathlon.com/toyota-thailand-pattaya-triathlon-super-series-2019-by-mama/
   - https://www.runlah.com/en/teams/tlt
   - https://www.pattayamarathon.com/
+description: Most popular triathlon in Thailand. Thailand Tri-League series with Bangsaen + Pattaya + Sattahip. 1,500+ triathletes. Iconic Pattaya Hill run finish.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Triathlon"
+tags: [triathlon, tri-league, sprint-olympic, festival-weekend, trendy]
 ---
 
 # Pattaya Triathlon (Thailand Tri-League)

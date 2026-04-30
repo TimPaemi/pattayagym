@@ -30,6 +30,9 @@ sources:
   - https://whatsonsukhumvit.com/bangkok-cricket-guide/
   - https://www.britishclubbangkok.org/sports-n-activities/cricket/
   - https://www.facebook.com/pattaya.cricketclub/
+description: "Established 2010. Only Pattaya cricket club competing in Bangkok Cricket League. 3 teams: Stallions (1st XI), Thoroughbreds (over-45), Juniors. Nov-June season."
+mapsUrl: "https://maps.google.com/?q=Pattaya+Cricket+Club"
+tags: [cricket, established-2010, bcl, three-teams, british-south-asian]
 ---
 
 # Pattaya Cricket Club
@@ -247,5 +250,4 @@ This is **dramatically cheaper than UK / Australian / South African** cricket cl
 | Season | November-June |
 | Recognition | SAT / CAT officially recognized |
 | Annual dues | ~฿3,000-8,000 |
-| Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Languag

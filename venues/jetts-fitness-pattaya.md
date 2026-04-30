@@ -27,6 +27,9 @@ sources:
   - https://www.trainaway.fit/best-gyms-in-pattaya-with-day-passes
   - https://happyhuahin.com/listing/jetts-24-hour-fitness-market-village-hua-hin/
   - https://www.tripadvisor.com/ShowTopic-g293915-i3686-k12698579-Cheap_gym_in_Bangkok-Thailand.html
+description: 24/7 fitness chain. Royal Garden Plaza branch closed May 2022; Little Walk remains the only Pattaya club. No-contract memberships, modern equipment.
+mapsUrl: "https://maps.google.com/?q=Jetts+Fitness+Little+Walk+Pattaya"
+tags: [chain, 24-7, no-contract]
 ---
 
 # Jetts Fitness Pattaya
@@ -229,5 +232,4 @@ The 24/7 model is **especially valued by**:
 | Contract style | No lock-in (month-to-month) |
 | Brand origin | Australia (2007) |
 | Global reciprocal | Yes (international member access) |
-| Class brand | Les Mills BODYPUMP, BODYCOMBAT, BODYJAM + Zumba, Yoga, TRX |
-| Verified | 2026-04-29 |
+| Class brand | Les Mills BODYPUMP, BODYCOMBAT, BODYJAM

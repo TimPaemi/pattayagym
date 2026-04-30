@@ -25,6 +25,9 @@ sources:
   - https://www.klook.com/en-US/activity/43117-water-activity-koh-larn/
   - https://www.holidify.com/collections/watersports-in-pattaya
   - https://pattayacitytourcoltd.com/blog/details/experience-thrilling-water-sports-in-pattaya-activities-for-all-ages
+description: Multi-sport watersports operator. Various Pattaya beach activities.
+mapsUrl: "https://maps.google.com/?q=Wave+Pattaya"
+tags: [multi-sport, beach]
 ---
 
 # Wave Pattaya Watersports

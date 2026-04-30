@@ -19,6 +19,9 @@ sources:
   - https://jomtiendivecenter.com/
   - https://jomtiendivecenter.com/prices/
   - https://th.asiafirms.com/chon-buri/jomtien-dive-center-pattaya-295995.html
+description: PADI 5-Star IDC. Highly rated by both customers and IDC candidates.
+mapsUrl: "https://maps.google.com/?q=Jomtien+Dive+Center"
+tags: [padi-5-star, jomtien, idc-rated]
 ---
 
 # Jomtien Dive Center
@@ -172,4 +175,4 @@ Jomtien Dive Center runs trips to all the standard Pattaya dive sites:
 | Leader | Gary |
 | Course range | DSD → Open Water → Advanced → Divemaster → Instructor + Tec |
 | Indicative Open Water 1-on-1 | ~€400 / ~฿15-16K (2-day boat dives included) |
-| Verified | 2026-04-27 |
+| Verified | 2026-04

@@ -25,6 +25,9 @@ sources:
   - https://thepattayanews.com/2026/04/01/pattaya-mayor-chairs-meeting-to-explore-team-work-with-liverpool-fc-international-academy-for-youth-football-development/
   - https://www.piingacademy.com/
   - https://bangkokfcacademy.com/
+description: Bronze-level Academy License (Football Association of Thailand). Children ages 6-14.
+mapsUrl: "https://maps.google.com/?q=Pattaya+City+Football+Academy"
+tags: [football, bronze-license, ages-6-14]
 ---
 
 # Pattaya City Football Academy

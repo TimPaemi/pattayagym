@@ -18,6 +18,9 @@ sources:
   - https://pattayaprestigeproperties.com/top-8-yoga-schools-in-pattaya/
   - https://yogafinder.com/yoga.cfm?yogacountry=Thailand&yogacity=Pattaya
   - https://www.tripadvisor.com/Attractions-g293919-Activities-c40-t260-Pattaya_Chonburi_Province.html
+description: "Pattaya's most prominent hot yoga studio. Modern fitness-yoga vibe with Hot Yoga and Fit Ball. Walkable central."
+mapsUrl: "https://maps.google.com/?q=Yoga+Haus+Pattaya"
+tags: [hot-yoga, fit-ball, central, modern]
 ---
 
 # Yoga Haus Pattaya

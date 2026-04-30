@@ -22,6 +22,9 @@ sources:
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/tennis-courts-and-clubs.html
   - https://www.globaltennisnetwork.com/tennis-courts/courts/city/6262-pattaya-city-thailand
   - https://aroundpattaya.com/list.php?CL=16
+description: Pattaya tennis facility. Stub — needs deep research.
+mapsUrl: "https://maps.google.com/?q=Tos+Tennis+Pattaya"
+tags: [tennis]
 ---
 
 # TOS Tennis Club / TOS Tennis Academy
@@ -194,4 +197,4 @@ Direct contact recommended at **+66 89 108 4402** or **tostennis@hotmail.com** f
 | Amenities | Pool + locker + training gym |
 | Phone | 089-108-4402 |
 | Email | tostennis@hotmail.com |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

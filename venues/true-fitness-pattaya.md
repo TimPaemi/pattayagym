@@ -19,6 +19,9 @@ sources:
   - https://www.tripadvisor.com/Attractions-g293919-Activities-c40-t129-Pattaya_Chonburi_Province.html
   - https://www.trainaway.fit/best-gyms-in-pattaya-with-day-passes
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/gyms.html
+description: "Popular fitness chain: HIIT, yoga, spinning. Modern facility, group classes, nutrition counseling."
+mapsUrl: "https://maps.google.com/?q=True+Fitness+Pattaya"
+tags: [chain, classes, hiit, yoga]
 ---
 
 # True Fitness Pattaya

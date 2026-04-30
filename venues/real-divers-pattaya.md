@@ -31,6 +31,9 @@ sources:
   - https://www.real-divers.com/pattaya-dive-school/a-dive-center-near-me/
   - https://www.real-divers.com/pattaya-dive-sites-real-divers-padi-5-star-idc-center/
   - https://divingthailand.com/about-us/
+description: Pattaya only British family-run PADI 5-Star IDC. Chandler brothers since 2005. 12m speedboat. Pattaya near islands + Samae San specialty.
+mapsUrl: "https://maps.google.com/?q=Real+Divers+Pattaya"
+tags: [padi-5-star-idc, british-family, chandler, speedboat, samae-san]
 ---
 
 # Real Divers Pattaya

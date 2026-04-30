@@ -27,6 +27,9 @@ sources:
   - https://www.k12academics.com/national-directories/nord-anglia-schools/regents-international-school-pattaya-0
   - https://www.bkkkids.com/listing/regents-international-school-pattaya/
   - https://www.britishlearningcentre.com/regents-international-school-pattaya
+description: "International school sports programs: basketball, football, swimming, athletics, rugby, cricket. For school students."
+mapsUrl: "https://maps.google.com/?q=Regents+International+School+Pattaya"
+tags: [multi-sport, school, basketball, rugby, cricket]
 ---
 
 # Regents International School Pattaya (Sports)

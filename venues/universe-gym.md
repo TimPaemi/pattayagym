@@ -24,6 +24,9 @@ sources:
   - https://www.thailandnomads.com/best-gyms-in-pattaya/
   - https://pattayaprestigeproperties.com/top-7-gyms-in-pattaya-in-2020/
   - https://globalgymbunny.com/category/asia/thailand/pattaya/
+description: Excellent machine assortment, multiple membership packages. North Pattaya commercial gym for varying ability levels.
+mapsUrl: "https://maps.google.com/?q=Universe+Gym+Pattaya"
+tags: [commercial, machines, north-pattaya]
 ---
 
 # Universe Gym
@@ -178,4 +181,4 @@ The gym is **frequently included in "Top Gyms in Pattaya" lists** — typically 
 | Couples monthly | ฿2,100 |
 | Layout | 5 zones across 2 floors |
 | Equipment | Modern resistance + cardio + free weights + functional rig |
-| Verified | 2026-04-27 |
+| Verified | 2026

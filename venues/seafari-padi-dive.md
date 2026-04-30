@@ -29,6 +29,9 @@ sources:
   - https://www.facebook.com/Seafaridivepattaya/
   - https://www.padi.com/dive-center/thailand/seafari-diving-center/
   - https://www.padi.com/diving-in/pattaya/
+description: British-owned PADI 5-Star IDC. 40+ years of diving experience in Thailand.
+mapsUrl: "https://maps.google.com/?q=Seafari+Dive+Pattaya"
+tags: [padi-5-star, british-owned, established]
 ---
 
 # Seafari PADI Dive Centre
@@ -180,4 +183,4 @@ The wrecks are covered in **soft corals, sponges, sea fans** and host **batfish,
 | Course range | ฿7,500 entry → ฿20,200 advanced |
 | Promotion | Open Water + 50% off Advanced Course |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

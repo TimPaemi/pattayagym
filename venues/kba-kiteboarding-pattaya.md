@@ -26,6 +26,9 @@ sources:
   - https://kiteflip.com/learn-kitesurfing-in-thailand-the-complete-guide/
   - https://www.trazy.com/experience/detail/pattaya-kiteboarding
   - https://www.ikointl.com/destination/kitesurfing-thailand
+description: Kiteboarding shop and school. International chain with Pattaya branch.
+mapsUrl: "https://maps.google.com/?q=KBA+Kiteboarding+Pattaya"
+tags: [kiteboarding, shop, school, chain]
 ---
 
 # KBA Kiteboarding Asia Pattaya (Blue Lagoon)
@@ -250,4 +253,4 @@ The KBA Pattaya operation is at **Blue Lagoon, Na Jomtien** — south of central
 | Equipment rental | ฿4,000/day |
 | Best wind months | November-March |
 | Languages | English, Thai, Russian, German |
-| Verified | 2026-04-27 |
+| Ve

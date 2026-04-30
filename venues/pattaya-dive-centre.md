@@ -29,6 +29,9 @@ sources:
   - https://travel.padi.com/dive-course/pattaya/padi-advanced-open-water-diver-elearning-18471/
   - https://www.tripadvisor.ie/Attraction_Review-g293919-d2044374-Reviews-Pattaya_Dive_Centre-Pattaya_Chonburi_Province.html
   - https://www.facebook.com/Pattayadivecentrethailand/
+description: "Pattaya's only Beach Road PADI Dive Centre. 24+ years established. All PADI courses + Tec."
+mapsUrl: "https://maps.google.com/?q=Pattaya+Dive+Centre"
+tags: [padi, beach-road, tec, established]
 ---
 
 # Pattaya Dive Centre
@@ -193,4 +196,4 @@ The center benefits from David Wright's long-tenured leadership — consistent m
 | Languages | English, Thai |
 | Cert dive day trip | ~฿3,200 (2 dives) |
 | Discover Scuba Diving | ~฿4,500 |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

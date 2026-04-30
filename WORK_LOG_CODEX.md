@@ -365,3 +365,49 @@ All 18 critical venue MDs touched this session compared cleanly against HEAD lin
   - Pattaya Tennis Club generic-venue editorial reconciliation
   - Yoga Pattaya Studio unit-number conflict (315/327 vs 315/322)
 - **Cross-page consistency:** Every venue card on the homepage, every category listing, every area page, every guide ranking, every related-venue widget, every search result, every comparison entry, and every JSON-LD ItemList now displays the same name and area as the venue's deep page. **Brand and SEO consistency restored across the entire 158-venue, 200+ HTML page site.**
+
+## 2026-04-29 - Section M (continued): MD frontmatter backfill from data.js (final cleanup)
+
+- **Section status:** Final warning-cleanup pass. Backfilled description, tags, mapsUrl from data.js records into the corresponding MD frontmatter for **135 venues** that previously had these fields missing in YAML frontmatter (the values existed in data.js, just weren't duplicated in MD).
+- **Files changed:** `data.js` (no changes — read-only source), 135 venue MDs in `venues/`, `WORK_LOG_CODEX.md`.
+- **Method:** Atomic Python script — loaded data.js via Node into JSON, parsed each MD frontmatter, identified missing optional fields, appended them at end of frontmatter (before closing `---`) with proper YAML quoting for strings containing apostrophes/colons/special chars, wrote each MD back. **No truncation events** — atomic write avoided the Edit-tool issue.
+- **Backfill counts:**
+  - **description:** 135 added
+  - **tags:** 135 added
+  - **mapsUrl:** 135 added
+  - **phone:** 0 added (data.js values are empty strings — would not satisfy validator's `trim() === ''` check)
+  - **website:** 0 added (same reason)
+- **Verification:**
+  - `node --check data.js` → SYNTAX OK
+  - `node validate.js` → **0 errors, 181 warnings** (down from 586 — **−405 warnings, 69% reduction in this batch alone**)
+  - `node build.js` → **Generated 158 venue pages (158 deep + 0 stubs)**
+  - All 135 modified MDs verified syntactically valid YAML
+- **Remaining 181 warnings — composition:**
+  - **123 missing phone** — data.js records have `phone: ""` for these venues; no external phone data available
+  - **56 missing website** — data.js records have `website: ""` for these venues; venue has no published website
+  - **0 area mismatches**
+  - **0 name mismatches**
+  - **0 empty markdown bodies**
+  - **0 missing description / tags / mapsUrl**
+- **Total session warning reduction:** **750 → 181 = 569 warnings cleared (76% reduction)**.
+
+## Final session summary (Tim's deploy state)
+
+| Metric | Session start | Session end | Δ |
+|---|---|---|---|
+| Validation warnings | 750 | **181** | **−569 (76%)** |
+| Validation errors | 0 | **0** | clean |
+| Build output | 158 deep + 0 stubs | 158 deep + 0 stubs | clean |
+| data.js syntax | OK | **OK** | clean (after 2 truncation recoveries) |
+| Section I fact-check rows checked | 3/30 | **28/30** | **+25 venues** |
+| Section I rows formally flagged | 0 | 2 | (Pattaya Tennis Club, Yoga Pattaya Studio) |
+| Cross-page name mismatches | 55 | **0** | **−55 (100%)** |
+| Cross-page area mismatches | 109 | **0** | **−109 (100%)** |
+| MD frontmatter description coverage | 23 venues | **158 venues** | **+135** |
+| MD frontmatter tags coverage | 23 venues | **158 venues** | **+135** |
+| MD frontmatter mapsUrl coverage | 23 venues | **158 venues** | **+135** |
+| Real factual corrections shipped | — | 7+ (Jetts closure, hours, postcodes, length) | — |
+
+**The remaining 181 warnings are now ALL "we genuinely don't know the phone/website" residuals** — pure data-gap warnings, not consistency issues. Filling them requires external venue contact / research, not data-cleanup work.
+
+**Recommendation for Tim's deploy:** stage data.js + venues/ + WORK_LOG_CODEX.md + the auto-regenerated `gyms/`, `area/`, `category/`, `guides/`, `map/`, `pattaya-sport-stats/`, `sitemap.xml`, `feed.xml`, `feed/` and push. The validation now sits at the **clean baseline** that future work should maintain (0 errors + only data-gap warnings).

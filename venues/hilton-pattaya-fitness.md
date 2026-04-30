@@ -28,6 +28,9 @@ sources:
   - https://www.pattayahotels.info/hilton.en.html
   - https://luxuryescapes.com/us/partner/hilton-pattaya/dba7fed6-6652-4eed-9d93-a0b003ee5cde
   - https://hiltonpatt.beachresort.net/
+description: 5-star Hilton with 24-hour fitness center, 16th-floor outdoor infinity pool, eforea Spa multi-award-winning. Beach Road central. Day-pass available.
+mapsUrl: "https://maps.google.com/?q=Hilton+Pattaya"
+tags: [5-star, 24-hour, infinity-pool, hilton, eforea-spa, central]
 ---
 
 # Hilton Pattaya — Fitness Center, Spa & Pool
@@ -233,4 +236,4 @@ This **central-density location** is the most-walkable of any premium Pattaya 5-
 | Languages | English, Thai, Russian, Chinese, Japanese, Korean, Arabic |
 | Day pass | ~฿1,200-2,500 (verify) |
 | Adjacent to | Central Festival Pattaya Beach Mall |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

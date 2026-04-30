@@ -22,6 +22,9 @@ sources:
   - https://yogahotelguide.com/pattaya/
   - https://www.bookyogaretreats.com/all/d/asia-and-oceania/thailand/pattaya
   - https://mindtrip.ai/attraction/jomtien-beach-chonburi/yoga/at-4fwynYGA
+description: Range of yoga sessions for all levels in tranquil beach setting near Jomtien.
+mapsUrl: "https://maps.google.com/?q=Nok+Yoga+Pattaya"
+tags: [beach-yoga, jomtien, beginner-friendly]
 ---
 
 # Nok Yoga Pattaya
@@ -206,4 +209,4 @@ Pattaya yoga studio mid-tier pricing:
 | Drop-in | ~฿400-600 |
 | Monthly unlimited | ~฿3,500-5,000 |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

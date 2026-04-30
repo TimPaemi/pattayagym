@@ -24,6 +24,9 @@ sources:
   - http://www.pattayabikeandboattours.com/
   - https://www.pattayaadventure.com/mountain-bike-trails-pattaya
   - https://www.facebook.com/groups/PattayaExpatsClub/posts/10170188110240291/
+description: Multiple road and MTB clubs. Cuore Masters Team + Monkey Xtreme + Jomtien Cycling + Pattaya MTB. Free to ฿2,000/year.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Cycling+Clubs"
+tags: [cycling, road, mtb, weekend-rides, community]
 ---
 
 # Pattaya Cycling Clubs

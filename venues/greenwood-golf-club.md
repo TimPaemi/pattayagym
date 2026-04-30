@@ -27,6 +27,9 @@ sources:
   - https://birdie.in.th/en/golf-courses/thailand/chonburi/ban-bueng/greenwood-golf-club
   - https://www.golfsavers.com/thailand/pattaya-golf-courses/greenwood-golf-club
   - https://www.where2golf.com/thailand/greenwood-golf-club/
+description: 27-hole Peter Thomson + Dennis Wolveridge design. Tree-lined Chonburi hills. Australian Open Champion architect. Value pricing for premium architecture.
+mapsUrl: "https://maps.google.com/?q=Greenwood+Golf+Club+Chonburi"
+tags: [27-holes, peter-thomson, value, woodland, ban-bueng]
 ---
 
 # Greenwood Golf Club & Resort
@@ -220,4 +223,4 @@ This is **dramatically cheaper than premium Pattaya courses** (Siam Country Club
 | Green fee + cart + caddy | ~฿1,800-3,000 |
 | Resort | Greenwood Resort accommodation available |
 | Languages | English, Thai, Korean, Japanese |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

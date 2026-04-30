@@ -28,6 +28,9 @@ sources:
   - https://www.siamfightmag.com/en/rambaa-gym-2/
   - https://www.muaythaimap.com/gyms/rambaa-somdet-m16
   - https://dbpedia.org/page/Rambaa_Somdet
+description: "Personal camp of Rambaa M16 — Thailand's first MMA world champion (Shooto Flyweight 2009) + Muay Thai legend. Cage on site. 100m from Sor Klinmee."
+mapsUrl: "https://maps.google.com/?q=Rambaa+M16+Pattaya"
+tags: [mma, muay-thai, world-champion-coach, cage]
 ---
 
 # Rambaa Somdet M16 Muay Thai & MMA

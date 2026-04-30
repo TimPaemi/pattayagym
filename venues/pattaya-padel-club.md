@@ -23,6 +23,9 @@ sources:
   - https://www.youtube.com/watch?v=v6nIfMHHN6k
   - https://www.timeout.com/bangkok/sports-and-fitness/pad-thai-padel
   - https://www.instagram.com/thaipadelseries/
+description: Lakeside padel courts on Mabprachan Reservoir. Pattaya second padel facility alongside Play Padel.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Padel+Club"
+tags: [padel, lakeside, mabprachan, doubles]
 ---
 
 # Pattaya Padel Club
@@ -174,4 +177,4 @@ This is **comparable to tennis court rates in Pattaya** but the **per-person cos
 | Format | Doubles play (standard) |
 | Beginner-friendly | Yes |
 | Languages | English, Thai, Spanish |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

@@ -24,6 +24,9 @@ sources:
   - https://www.pattayaup2u.com/2024/05/22/the-best-places-for-yoga-in-pattaya/
   - https://yogafinder.com/yoga.cfm?yogacountry=Thailand&yogacity=Pattaya
   - https://yogapattaya.com/
+description: "Various classes: traditional Hatha, Vinyasa Flow, Yin Yoga. Modern studio."
+mapsUrl: "https://maps.google.com/?q=One-D+Yoga+Studio+Pattaya"
+tags: [hatha, vinyasa, yin, naklua]
 ---
 
 # One-D Yoga Studio
@@ -245,4 +248,4 @@ The Naklua location aligns with **Pattaya's wellness-tourism corridor** — quie
 | Drop-in | ~฿400-600 |
 | Monthly unlimited | ~฿4,000-6,000 |
 | Languages | English, Thai, Russian |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

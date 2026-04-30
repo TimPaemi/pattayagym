@@ -21,6 +21,9 @@ sources:
   - https://bounceinc.co.th/
   - https://www.angelplayground.com/best-trampoline-park-inthailand-a-853.html
   - https://www.bkkkids.com/listing/bounce-thailand/
+description: Pattaya main indoor trampoline park. 6th floor Harbor Pattaya Mall. Indoor AC family activity.
+mapsUrl: "https://maps.google.com/?q=JumpZ+Trampoline+Park+Pattaya"
+tags: [trampoline, kids, family, indoor, mall]
 ---
 
 # JumpZ Trampoline Park

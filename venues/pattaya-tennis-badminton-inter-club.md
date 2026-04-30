@@ -27,6 +27,9 @@ sources:
   - https://pattayasports.org/pickle-ball/
   - https://pattayasports.org/badminton/
   - https://www.youtube.com/watch?v=BAPxzOC8ZFE
+description: "Multiple courts: pickleball, badminton, tennis, table tennis. Multi-racquet facility."
+mapsUrl: "https://maps.google.com/?q=Pattaya+Tennis+Badminton+Inter+Club"
+tags: [tennis, badminton, pickleball, table-tennis]
 ---
 
 # Pattaya Tennis & Badminton Inter Club

@@ -30,6 +30,9 @@ sources:
   - https://www.thailandgolfers.com/golf-courses/pattaya/chee-chan-golf-resort/
   - https://www.fairwaysofeden.com/golf-courses-in-thailand/pattaya-golf-courses/chee-chan-golf-resort/
   - https://www.golfplan.com/chee-chan-golf-resort/
+description: Featured premium destination golf course in Pattaya region.
+mapsUrl: "https://maps.google.com/?q=Chee+Chan+Golf+Pattaya"
+tags: [premium, destination]
 ---
 
 # Chee Chan Golf Resort

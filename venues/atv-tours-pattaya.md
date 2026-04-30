@@ -28,6 +28,9 @@ sources:
   - https://www.viator.com/tours/Pattaya/ATV-Tour/d344-260064P5
   - https://www.viator.com/Pattaya-tours/4WD-ATV-and-Off-Road-Tours/d344-g9-c32
   - https://www.facebook.com/pattayaoffroad/
+description: Multiple ATV/Buggy/Enduro tour operators east of Pattaya. Polaris ATVs + 500cc CF MOTO + 660cc Buggies. Beginner to extreme tours. Hotel pickup free.
+mapsUrl: "https://maps.google.com/?q=ATV+Tours+Pattaya"
+tags: [atv, off-road, buggy, countryside, mabprachan, hotel-pickup]
 ---
 
 # ATV & Off-Road Tours Pattaya
@@ -223,4 +226,4 @@ ATV tour pricing varies by operator and tour length:
 | Standard tour | ~฿2,500-4,000 |
 | Hotel pickup | Free / included |
 | Languages | English, Thai, Russian, Chinese, Korean |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

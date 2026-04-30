@@ -29,6 +29,9 @@ sources:
   - https://www.tatnews.org/2017/05/top-10-running-events-thailand/
   - https://www.finishers.com/en/destinations/asia/thailand
   - https://www.ahotu.com/calendar/running/half-marathon/thailand
+description: Pattaya flagship annual road race since 1992. World Athletics International Standard. Fun Run / 10K / 21K / 42K. 15,000+ runners. Boston Qualifying valid.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Marathon"
+tags: [marathon, annual, world-athletics, established-1992, 15000-runners]
 ---
 
 # Pattaya Marathon (Amazing Thailand Pattaya Marathon)

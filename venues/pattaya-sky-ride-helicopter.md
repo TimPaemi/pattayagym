@@ -27,6 +27,9 @@ sources:
   - https://partybangkok.com/helicopter/
   - https://www.skydance.aero/
   - https://online-pattaya.com/pattaya-tours/helicopter-tours-in-pattaya
+description: Pattaya helicopter sightseeing + Bangkok-Pattaya charter (45-min). Airbus EC-135 + EC-130 aircraft. Up to 6 passengers. 129,200 THB Bangkok-Pattaya charter.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Sky+Ride+Helicopter"
+tags: [helicopter, charter, airbus, luxury, bangkok-transfer, aerial-sightseeing]
 ---
 
 # Pattaya Sky Ride — Helicopter Tours
@@ -247,4 +250,4 @@ Modern commercial helicopter operations have **excellent safety records**:
 | Bangkok-Pattaya charter | 129,200 THB (45-min flight) |
 | Cabin amenities | Leather seats, AC, headphones with mic |
 | Languages | English, Thai, Russian, Chinese |
-| Verified | 2026-04-27 |
+| Verified | 20

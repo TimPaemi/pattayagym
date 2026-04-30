@@ -25,6 +25,9 @@ sources:
   - https://www.lawnbowls.com/clubs/the-retreat-lawn-bowling-club
   - https://www.pattayamail.com/pattayasports/pattaya-lawn-bowls-league-sunshine-paradise-shine-psc-triumphs-442108
   - https://www.lawnbowlingthailand.com/lawn-bowling
+description: Three lawn bowls facilities. 14+ artificial rinks total. Banchang ฿250/day all-inclusive. Pattaya Sports Club League runs year-round.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Lawn+Bowls"
+tags: [lawn-bowls, british, commonwealth, three-facilities, covered-rinks]
 ---
 
 # Pattaya Lawn Bowls Clubs
@@ -223,4 +226,4 @@ For British and Commonwealth retirees in Pattaya, lawn bowls is **deeply cultura
 | League | Pattaya Sports Club Lawn Bowls League (year-round) |
 | Demographics | British / Commonwealth retirees |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

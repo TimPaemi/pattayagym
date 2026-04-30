@@ -28,6 +28,9 @@ sources:
   - https://pattaya-pages.com/gyms-in-pattaya/
   - https://www.instagram.com/explore/locations/2029447324027539/sun-fitness/
   - https://www.tiktok.com/discover/pattaya-sun-fitness
+description: 3-branch chain across Pattaya — single membership accesses all. Soi Buakhao + Naklua branches.
+mapsUrl: "https://maps.google.com/?q=SUN+Fitness+Buakao+Pattaya"
+tags: [chain, budget, late-hours, multi-location]
 ---
 
 # SUN Fitness Pattaya
@@ -214,3 +217,4 @@ The Naklua branch's **22:00 close** is slightly earlier — likely reflecting di
 | Naklua hours | Closes 22:00 |
 | Languages | English, Thai, Russian |
 | Verified | 2026-04-27 |
+   

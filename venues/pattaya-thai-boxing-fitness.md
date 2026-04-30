@@ -20,6 +20,9 @@ sources:
   - https://wanderlog.com/place/details/12482800/jomtien-thai-boxing-gym
   - https://thaiboxingpattaya.com/muay-thai-classes
   - https://www.muaythaipattaya.com/
+description: Walk-in budget gym in Jomtien. ~฿300 for equipment + 4-5 rounds of pads. Pro fighter Champ on roster. Air fans, no AC.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Thai+Boxing+Fitness+Jomtien"
+tags: [budget, walk-in, near-beach, casual]
 ---
 
 # Pattaya Thai Boxing & Fitness Gym (Jomtien)
@@ -162,4 +165,4 @@ The afternoon-only schedule is similar to WKO's model and means **morning traine
 | Accommodation | Hostel — mixed dorms + private beds |
 | Notable trainer | Champ (active pro fighter) |
 | Distance to beach | 200 metres |
-| Verified | 2026-04-27 |
+| Verified | 2026-0

@@ -23,6 +23,9 @@ sources:
   - https://www.ikointl.com/destination/kitesurfing-thailand
   - https://www.clubloongchat.com/pattaya-water-sports-seasons
   - https://kitesurftheworld.com/kitespots/thailand/
+description: IKO-certified kitesurfing courses. Beginner package starts at $250 for 3 days.
+mapsUrl: "https://maps.google.com/?q=Kitesurf+Pattaya"
+tags: [kitesurf, iko-certified, beginner-package]
 ---
 
 # Kitesurf Pattaya
@@ -228,4 +231,4 @@ Lessons typically scheduled **late morning through afternoon** to maximize wind 
 | Best wind season | November-March |
 | Languages | English, Thai, Russian |
 | Equipment | Included in beginner course |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-

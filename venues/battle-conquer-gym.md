@@ -32,6 +32,9 @@ sources:
   - https://www.tripadvisor.com/Attraction_Review-g2237177-d12787623-Reviews-Muay_Thai_Battle_Conquer-Bueng_Sam_Phan_Phetchabun_Province.html
   - https://www.tripaneer.com/battle-conquer-gym-pattaya/7-day-all-inclusive-muay-thai-beach-holiday-with-yoga-and-meditation-in-pattaya
   - https://southeastasiabackpacker.com/bookings/muay-thai-pattaya-battle-conquer/
+description: "Pattaya's only fully air-conditioned Muay Thai gym. Weight room, sauna, ice plunge. 7-day flexible scheduling, English-speaking trainers."
+mapsUrl: "https://maps.google.com/?q=Battle+Conquer+Gym+Pattaya"
+tags: [air-conditioned, near-beach, weight-room, ice-plunge]
 ---
 
 # Battle Conquer Gym Pattaya
@@ -269,4 +272,4 @@ Strong fit for **travellers staying near Pattaya Beach, hot-season visitors, fit
 | Weight room | Fully loaded, free weights + machines |
 | Café | On-site, smoothies + protein shakes |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified 

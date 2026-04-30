@@ -25,6 +25,9 @@ sources:
   - https://en.wikipedia.org/wiki/Pattaya_Boxing_World
   - https://thaiest.com/blog/muay-thai-pattaya
   - https://siamkickfight.com/blogs/ringready/top-10-best-muay-thai-gyms-in-pattaya-for-beginners-and-pros
+description: "Pattaya secondary Muay Thai fight stadium. Wed + Fri 20:00 real fights. Frank Sitpholek promoted. Multi-tier matchups (kids through pros). More authentic vs MAX."
+mapsUrl: "https://maps.google.com/?q=Pattaya+Boxing+World+Stadium"
+tags: [stadium, twice-weekly, frank-sitpholek, authentic, charity-gala]
 ---
 
 # Pattaya Boxing World Stadium
@@ -221,4 +224,4 @@ Pattaya Boxing World is **typically cheaper than MAX** — partly because it's t
 | Standard ticket | ~฿800-1,500 |
 | Ringside | ~฿2,000-3,500 |
 | Languages | English, Thai, Russian |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

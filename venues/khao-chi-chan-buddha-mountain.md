@@ -29,6 +29,9 @@ sources:
   - https://www.asiakingtravel.com/attraction/khao-chi-chan
   - https://www.thethaipass.com/attractions/khan-chi-chan-pattaya
   - https://www.vivutravel.com/thailand-holiday-destinations/pattaya-travel-guide/things-to-do-in-pattaya/khao-chi-chan-buddha-mountain
+description: FREE public walking + meditation site. Worlds largest cliff Buddha image (109m × 70m, 24-carat gold). 1995-96 royal Jubilee commission. Landscaped gardens.
+mapsUrl: "https://maps.google.com/?q=Khao+Chi+Chan+Buddha+Mountain"
+tags: [free, walking, meditation, cultural, buddha-mountain, sattahip]
 ---
 
 # Khao Chi Chan (Buddha Mountain)
@@ -234,4 +237,4 @@ This is **one of the few major Pattaya-area attractions with zero commercial ent
 | Distance from Pattaya | 20 km (~30-min drive) |
 | Activity type | Walking, meditation, contemplation, photography |
 | Languages | Thai (primary), English signage |
-| Verified | 2026-04-27 |
+| Verified | 202

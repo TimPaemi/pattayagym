@@ -19,6 +19,9 @@ sources:
   - https://www.afacademy.pro/en
   - https://www.bkkkids.com/blog/football-academies-for-kids-in-bangkok/
   - https://capedarapattaya.com/blog/family-activities-in-pattaya/
+description: "Football school for children. Coaches with international children's coaching experience. Indoor + outdoor fields."
+mapsUrl: "https://maps.google.com/?q=AF+Academy+Pattaya"
+tags: [football, kids, indoor, outdoor, international-coaches]
 ---
 
 # AF Academy Football School

@@ -30,6 +30,9 @@ sources:
   - https://thailand.worldplaces.me/review/85685014-jungle-gym-crossfit-pattaya.html
   - https://condosforsalepattaya.com/the-top-10-gyms-in-pattaya-your-ultimate-guide-to-fitness/
   - https://gymnavigator.com/gyms/110929/crossfit-pattaya-the-jungle-gym
+description: "Pattaya's only CrossFit affiliate. Multi-discipline: CrossFit + MMA + archery + dodgeball + slacklining. Coach Murray. UA & Decathlon partners."
+mapsUrl: "https://maps.google.com/?q=Jungle+Gym+Pattaya"
+tags: [crossfit-affiliate, multi-discipline, archery, english-coaches]
 ---
 
 # CrossFit Pattaya @ The Jungle Gym
@@ -200,4 +203,4 @@ The "Jungle Gym" branding hints at the eclectic facility:
 | Disciplines | CrossFit + MMA + dodgeball + archery + slacklining + yoga + nutrition + DNA testing + open gym |
 | Brand partners | Under Armour, Decathlon |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

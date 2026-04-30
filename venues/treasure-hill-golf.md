@@ -29,6 +29,9 @@ sources:
   - https://www.akgtravel.com/en/product/182194-178252/treasure-hill-golf-club
   - https://thaigerline.golf/pattaya-prices/
   - https://www.tripadvisor.com/Attraction_Review-g2237266-d7622508-Reviews-Treasure_Hill_Golf_And_Country_Club-Ban_Bueng_Chonburi_Province.html
+description: Par-72 course, established 1994. Popular for low green fees and enjoyable rounds.
+mapsUrl: "https://maps.google.com/?q=Treasure+Hill+Golf+Pattaya"
+tags: [par-72, value, est-1994]
 ---
 
 # Treasure Hill Golf & Country Club

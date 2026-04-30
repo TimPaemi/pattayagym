@@ -28,6 +28,9 @@ sources:
   - https://www.pattayamuaythaitickets.com/
   - https://www.renown-travel.com/daytripspattaya/maxmuaythai.html
   - https://www.pattayamuaythaitickets.com/home-1
+description: "Pattaya daily Muay Thai stadium near King Power on Sukhumvit Road. Tourist-friendly live fight cards, online ticketing, and current listings that vary between 19:00 and 19:45 starts by date."
+mapsUrl: "https://maps.google.com/?q=MAX+Muay+Thai+Stadium+Pattaya"
+tags: [stadium, daily-fights, spectator, max-championships, sukhumvit]
 ---
 
 # MAX Muay Thai Stadium Pattaya
@@ -245,5 +248,4 @@ Indicative pricing (varies by event, season, fighter card):
 | VIP tickets | ~฿3,000-5,000 |
 | Hosted | MAX World Championships |
 | Booking | pattayamuaythaitickets.com |
-| Languages | English, Thai, Russian, Chinese |
-| Verified | 2026-04-27 |
+| Languages | English, Thai, Russian, C

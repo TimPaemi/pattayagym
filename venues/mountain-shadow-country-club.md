@@ -30,6 +30,9 @@ sources:
   - https://www.where2golf.com/thailand/mountain-shadow-golf-club/
   - https://www.golflux.com/course/mountain-shadow-golf-club/
   - https://4moles.com/golf-courses/mountain-shadow-golf-club
+description: Pattaya regional golf course. Stub — needs deep research.
+mapsUrl: "https://maps.google.com/?q=Mountain+Shadow+Country+Club"
+tags: [regional]
 ---
 
 # Mountain Shadow Country Club

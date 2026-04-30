@@ -27,6 +27,9 @@ sources:
   - https://muaythaicampsinthailand.com/silk-muay-thai-gym/
   - https://southeastasiabackpacker.com/booking-category/muay-thai/
   - https://www.cleverthai.com/top-muay-thai-gyms-in-pattaya/
+description: Premium boutique camp. 4.9/5 rated. All-inclusive packages from ฿25,500/month with private room + pool/sauna/spa + meals.
+mapsUrl: "https://maps.google.com/?q=Silk+Muay+Thai+Pattaya"
+tags: [boutique, premium, accommodation, spa]
 ---
 
 # Silk Muay Thai
@@ -200,4 +203,4 @@ Silk attracts a **wellness-oriented, retreat-vacation demographic** — differen
 | 1-month package (2x/day + 2 meals) | ~฿33,000 |
 | Drop-in (no accom) | ~฿300-600 |
 | Languages | English, Thai, Russian |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-

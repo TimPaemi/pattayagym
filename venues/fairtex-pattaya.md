@@ -47,6 +47,9 @@ sources:
   - https://www.coachweb.com/exercises/3422/muay-thai-training-at-fairtex-pattaya
   - https://www.tapology.com/gyms/2249-fairtex-pattaya
   - https://smoothcomp.com/en/club/21600
+description: "World's largest Muay Thai resort camp. 9 rings, 17 trainers, on-site hotel & 25m pool. Champions: Yodsanklai, Stamp, Smilla Sundell, Saemapetch."
+mapsUrl: "https://maps.google.com/?q=Fairtex+Training+Center+Pattaya"
+tags: [world-class, accommodation, pool, english-friendly]
 ---
 
 # Fairtex Training Center Pattaya
@@ -445,4 +448,4 @@ If you're going for the **first time and value certainty**, Silk Muay Thai or Ko
 | Disciplines | Muay Thai, BJJ, MMA, S&C, Boxing |
 | Rings | 9 |
 | Trainers | 17 MT + 1 MMA HC + 1 BJJ + 1 MMA coordinator |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

@@ -28,6 +28,9 @@ sources:
   - https://www.tripadvisor.com/Attraction_Review-g293919-d10618296-Reviews-SF_Strike_Bowl-Pattaya_Chonburi_Province.html
   - https://en.wikipedia.org/wiki/SF_Group
   - https://www.soidb.com/pattaya/bowling-alley/sf-strike-central-festival.html
+description: Modern mall-attached bowling — 16 regular + 2 VIP lanes (separate partitioned space). Pool tables + sea-view smoking lounge + arcade. SF Group operator. 180 baht/game.
+mapsUrl: "https://maps.google.com/?q=SF+Strike+Bowl+Central+Festival+Pattaya"
+tags: [bowling, mall-attached, central-festival, vip-lanes, sf-group, family]
 ---
 
 # SF Strike Bowl Pattaya (Central Festival)

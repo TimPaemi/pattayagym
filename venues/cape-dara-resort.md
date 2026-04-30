@@ -1,6 +1,6 @@
 ---
 id: cape-dara-resort
-name: Cape Dara Resort — Luminous Spa, Pools & Fitness
+name: Cape Dara Resort
 category: fitness
 area: Naklua / North Pattaya — beach-cliff position
 address: Cape Dara Resort, 256 Dara Beach, Soi 20 Naklua Road, Naklua, Bang Lamung, Chonburi
@@ -29,6 +29,9 @@ sources:
   - https://cape-dara-resort.tophotelspattaya.com/en/
   - https://www.tripadvisor.com/Hotel_Review-g293919-d2554775-Reviews-Cape_Dara_Resort-Pattaya_Chonburi_Province.html
   - https://capedara.resorthotel.me/
+description: 5-star beach-cliff luxury. Infinity pool + Luminous Spa + mineral bath + sauna + steam + beauty centre + fitness with yoga classes.
+mapsUrl: "https://maps.google.com/?q=Cape+Dara+Resort+Pattaya"
+tags: [5-star, beach-cliff, infinity-pool, luminous-spa, mineral-bath, naklua]
 ---
 
 # Cape Dara Resort — Luminous Spa, Pools & Fitness
@@ -229,4 +232,4 @@ Pricing is **comparable to other Pattaya 5-stars** — slightly cheaper than And
 | Fitness | Fitness room with yoga classes |
 | Beach | Direct Dara Beach access |
 | Languages | English, Thai, Russian, Chinese |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

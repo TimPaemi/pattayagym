@@ -23,6 +23,9 @@ sources:
   - https://divingpattaya.com/listings/mermaids-dive-center-pattaya/
   - https://mermaidsdivecenter.tumblr.com/
   - https://pattayapointer.com/guides/jomtien-beach-complete-guide/
+description: PADI 5-Star IDC dive center. Day trips, courses beginner to instructor, technical diving.
+mapsUrl: "https://maps.google.com/?q=Mermaid's+Dive+Pattaya"
+tags: [padi-5-star, courses, day-trips]
 ---
 
 # Mermaid's Dive Center
@@ -165,4 +168,4 @@ The 35-year operational history shows in the **mature operation, well-trained cr
 | DSD (1 day) | ~฿4,000 (incl. equipment, lunch, transfer) |
 | Open Water 4-day | ~฿16,700 |
 | Advanced Open Water 2-day | ~฿15,000 |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

@@ -29,6 +29,9 @@ sources:
   - https://www.instagram.com/explore/locations/586417601552627/fitness-7-at-the-avenue-pattaya/
   - https://globalgymbunny.com/fitness-7-pattaya/
   - https://www.trainaway.fit/best-gyms-in-pattaya-with-day-passes
+description: 2000+ sqm, 24-hour gym in Avenue Pattaya. Cardio, weights, free weights, boxing ring, functional training areas.
+mapsUrl: "https://maps.google.com/?q=Fitness+7+Avenue+Pattaya"
+tags: [24-7, large, boxing-ring, central]
 ---
 
 # Fitness 7 Pattaya (The Avenue)
@@ -216,3 +219,4 @@ The free parking and free classes are meaningful cost reductions vs. competitors
 | Monthly | ~฿1,800-2,500 |
 | Languages | English, Thai, Russian |
 | Verified | 2026-04-27 |
+        

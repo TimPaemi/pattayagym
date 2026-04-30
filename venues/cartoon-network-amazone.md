@@ -25,6 +25,9 @@ sources:
   - https://www.tripadvisor.com/Attraction_Review-g3366878-d7180020-Reviews-Cartoon_Network_Amazone-Jomtien_Beach_Pattaya_Chonburi_Province.html
   - https://forevervacation.com/pattaya/cartoon-network-amazone-waterpark
   - https://www.trazy.com/experience/detail/pattaya-cartoon-network-amazone-waterpark
+description: World first themed waterpark. 18 slides across 3 zones. Polin Waterparks hardware. Rebranded 2022 to Sony Pictures IPs. 15km south of Pattaya.
+mapsUrl: "https://maps.google.com/?q=Cartoon+Network+Amazone+Pattaya"
+tags: [waterpark, slides, family, day-trip, themed]
 ---
 
 # Cartoon Network Amazone Waterpark / Columbia Pictures Aquaverse

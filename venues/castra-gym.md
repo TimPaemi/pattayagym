@@ -28,6 +28,9 @@ sources:
   - https://lakesidepropertypattaya.com/real-talk/top-5-gyms-in-east-pattaya/
   - https://www.tripadvisor.com/ShowUserReviews-g293919-d8865530-r611732620-Castra_Gym-Pattaya_Chonburi_Province.html
   - https://www.tripadvisor.com/ShowUserReviews-g293919-d8865530-r776785046-Castra_Gym-Pattaya_Chonburi_Province.html
+description: Relaxed atmosphere from bodybuilders to general fitness. East Pattaya location, less touristy.
+mapsUrl: "https://maps.google.com/?q=Castra+Gym+Pattaya"
+tags: [bodybuilding, relaxed, east-pattaya]
 ---
 
 # Castra Gym
@@ -237,3 +240,4 @@ The **Russian / Russian-speaking demographic** is significant — staff often ha
 | Air conditioned | Yes (whole facility) |
 | Languages | English, Thai, Russian |
 | Verified | 2026-04-27 |
+      

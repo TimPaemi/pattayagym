@@ -19,6 +19,9 @@ sources:
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/gyms.html
   - https://www.tripadvisor.com/Attractions-g293919-Activities-c40-t129-Pattaya_Chonburi_Province.html
   - https://pattaya-pages.com/gyms-in-pattaya/
+description: Modern AC commercial gym. Cardio, weight machines, group classes, sauna.
+mapsUrl: "https://maps.google.com/?q=Platinum+Fitness+Pattaya"
+tags: [commercial, air-con, classes, sauna]
 ---
 
 # Platinum Fitness Club
@@ -226,4 +229,4 @@ This makes Platinum **central walkable for tourist hotels** while serving reside
 | Day pass | ~฿300-500 |
 | Monthly | ~฿1,500-2,500 |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04

@@ -33,6 +33,9 @@ sources:
   - https://deemples.com/th-en/course/phoenix-gold-golf-country-club
   - https://www.pattayagolf.net/golf.php?golf_id=8
   - https://www.pattayagolfcourses.com/phoenix-gold-golf-country-club.htm
+description: Multiple loops with beginner-friendly options. Established Pattaya golf destination.
+mapsUrl: "https://maps.google.com/?q=Phoenix+Gold+Golf+Pattaya"
+tags: [beginner-friendly, multiple-loops]
 ---
 
 # Phoenix Gold Golf & Country Club

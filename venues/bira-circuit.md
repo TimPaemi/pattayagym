@@ -32,6 +32,9 @@ sources:
   - https://www.thailandholidayhomes.com/pattaya/attractions/sports/extreme-sports/bira-circuit-racing-in-pattaya.html
   - https://thailanddiscovery.info/track-day-at-the-bira-circuit-pattaya/
   - https://thebear.travel/474/Bira-Circuit:-Get-Your-Heart-Racing-in-Chonburi
+description: Thailand first FIA-standard motor racing circuit. 2.41 km. 30 pit garages. 30,000 spectator capacity. SEATCZC + Asian Formula 2000 host since 1990s. Named after Prince Birabongse - Thailand first F1 driver.
+mapsUrl: "https://maps.google.com/?q=Bira+Circuit+Pattaya"
+tags: [motor-racing, fia-standard, track-day, motorsport, first-thailand]
 ---
 
 # Bira Circuit

@@ -18,6 +18,9 @@ sources:
   - https://aseannow.com/topic/35050-public-swimming-pools/
   - https://www.tripadvisor.com/ShowTopic-g293919-i9439-k13105844-Free_public_access_to_swimming_pools-Pattaya_Chonburi_Province.html
   - https://www.private-scuba.com/diving/thailand/east/pattaya/sport/swimming-lessons.html
+description: One of two public swimming pools in Pattaya. Naklua location.
+mapsUrl: "https://maps.google.com/?q=Naklua+Public+Pool+Pattaya"
+tags: [public, budget, naklua]
 ---
 
 # Naklua Public Swimming Pool

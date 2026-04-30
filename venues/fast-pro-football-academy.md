@@ -26,6 +26,9 @@ sources:
   - https://www.afacademy.pro/en
   - https://www.pattayafootball.com/
   - https://www.piingacademy.com/
+description: UEFA-A licensed European football coach. Ages 4-15. Two locations. European-style technical + tactical + character training.
+mapsUrl: "https://maps.google.com/?q=FAST+PRO+Football+Academy+Pattaya"
+tags: [football, uefa-a, european-coach, kids, premium]
 ---
 
 # FAST PRO Football Academy Pattaya

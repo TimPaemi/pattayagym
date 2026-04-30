@@ -31,6 +31,9 @@ sources:
   - https://www.facebook.com/ragefightacademy/
   - https://www.youtube.com/@ragefightcamp
   - https://www.digitaljournal.com/pr/news/marketers-media/rage-fight-academy-mma-gym-and-camp-empowers-fitness-enthusiasts-to-pursue-their-dreams
+description: "Multi-discipline academy: Muay Thai, Boxing, BJJ, MMA, Cross Training. 3 rings + BJJ/MMA mats. Education Visa sponsor for long-stays."
+mapsUrl: "https://maps.google.com/?q=Rage+Fight+Academy+Pattaya"
+tags: [multi-discipline, bjj-strong, education-visa, near-beach]
 ---
 
 # Rage Fight Academy
@@ -176,4 +179,4 @@ This alone makes Rage one of Pattaya's most foreign-student-friendly camps.
 | Drop-in | ~฿500/session |
 | Monthly | ~฿8,500 |
 | Visa support | Yes — Education Visa sponsorship |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

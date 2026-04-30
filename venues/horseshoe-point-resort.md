@@ -35,6 +35,9 @@ sources:
   - https://pattayacitytourcoltd.com/horse-riding-ticket-price
   - https://www.expedia.com/Pattaya-Hotels-Horseshoe-Point-Pattaya.h16011463.Hotel-Information
   - https://www.kayak.com/Pattaya-Hotels-Horseshoe-Point-Pattaya.119988.ksp
+description: 1,500-acre equestrian + adventure mega-facility. International Riding School (est 1999). 5 indoor/outdoor arenas, 100+ horses (Lusitano, Appaloosa, Lipizzaner, Arabs, Warmbloods, Falabella, Thai pony). Polo. Paintball. Zipline. Mountain biking. Multi-sport field. Accommodation.
+mapsUrl: "https://maps.google.com/?q=Horseshoe+Point+Pattaya"
+tags: [equestrian, polo, paintball, zipline, mountain-biking, mega-facility, accommodation]
 ---
 
 # Horseshoe Point Resort & Country Club
@@ -233,4 +236,4 @@ Some reviews note that the **resort hotel side** is inconsistent in quality (som
 | Distance to Mabprachan Lake | ~10 min |
 | Accommodation | On-site (hotel + villas) |
 | Hours | Daily, riding school sessions throughout the day |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-

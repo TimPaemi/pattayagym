@@ -24,6 +24,9 @@ sources:
   - https://www.bkkkids.com/blog/football-academies-for-kids-in-bangkok/
   - https://www.pattayafootball.com/
   - https://thepattayanews.com/2026/04/01/pattaya-mayor-chairs-meeting-to-explore-team-work-with-liverpool-fc-international-academy-for-youth-football-development/
+description: From age 3 — youngest accepted in Pattaya football. Multi-location. Russian/English/Thai. Indoor + outdoor fields.
+mapsUrl: "https://maps.google.com/?q=AF+Academy+Pattaya"
+tags: [football, ages-3-up, multi-location, russian-language, kids]
 ---
 
 # AF Academy Football School Pattaya

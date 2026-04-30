@@ -27,6 +27,9 @@ sources:
   - https://pattayacitytourcoltd.com/kart-speedway-details
   - https://www.pattayaunlimited.com/pattaya-go-kart-tracks/
   - https://pattaya-kart-speedway.wheree.com/
+description: "First karting track in Pattaya — 1987, 35+ years. Two tracks (450m beginner + 750m pro). Multi-activity compound: ATV + paintball + bungee."
+mapsUrl: "https://maps.google.com/?q=Pattaya+Kart+Speedway"
+tags: [karting, first-pattaya, established-1987, multi-activity, atv, paintball]
 ---
 
 # Pattaya Kart Speedway

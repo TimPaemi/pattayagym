@@ -25,6 +25,9 @@ sources:
   - https://en.wikipedia.org/wiki/Hash_House_Harriers
   - https://www.gotothehash.net/history/hhhhistory.html
   - https://www.pattayamail.com/clubsinpattaya/hhh.shtml
+description: Pattaya hash variation. Runs every 2nd, odd-numbered month, usually 3rd Saturday. ~2.5h duration.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Monkey+Hash"
+tags: [monthly, social, longer-runs]
 ---
 
 # Pattaya Monkey Hash House Harriers
@@ -234,4 +237,4 @@ The terrain selection prioritises **moderate-difficulty trails** — meaning the
 | Parent movement | Hash House Harriers (1938, Kuala Lumpur) |
 | Sister kennels | PH3 (Mondays), Pattaya Jungle Hash (Sundays) |
 | Languages | English (primary), Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

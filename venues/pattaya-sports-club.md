@@ -25,6 +25,9 @@ sources:
   - https://pattayasports.org/join-us-now/
   - https://pattayasports.org/members-discounts/
   - https://primaltennis.com/pattaya-tennis-guide/
+description: Multi-sport sports club with tennis and other facilities. Non-profit, ~4,700 active members.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Sports+Club"
+tags: [multi-sport, tennis, social, non-profit]
 ---
 
 # Pattaya Sports Club
@@ -240,5 +243,4 @@ This ethos has persisted across generations of membership.
 | Coaching | Available |
 | Equipment shop | Member-discount |
 | Annual membership | ~฿5,000-15,000 |
-| Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Languages | Engli

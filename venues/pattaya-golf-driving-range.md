@@ -25,6 +25,9 @@ sources:
   - https://www.1golf.eu/en/golf-courses/thailand/cities/pattaya/
   - https://aroundpattaya.com/detail.php?ID=233
   - https://www.facebook.com/300yardsDrivingRange/
+description: Standalone driving range with practice facilities.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Golf+Driving+Range"
+tags: [driving-range, practice]
 ---
 
 # Pattaya Golf Driving Range
@@ -189,4 +192,4 @@ A typical session at Pattaya Golf Driving Range:
 | Surface | Mat bays |
 | Floodlit | Yes (evening play) |
 | Best for | Warm-up + practice + lessons + budget |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

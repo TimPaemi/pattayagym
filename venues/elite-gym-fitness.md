@@ -30,6 +30,9 @@ sources:
   - https://thepattayanews.com/2022/09/02/pattaya-elite-gym-and-fitness-officially-opens-for-business-with-23-million-baht-budget/
   - https://www.tripadvisor.com/Attraction_Review-g293919-d24176020-Reviews-Elite_Gym_And_Fitness_Pattaya-Pattaya_Chonburi_Province.html
   - https://www.facebook.com/pattayasports.org/posts/768474585494357/
+description: Modern facility with top-notch equipment. Integrates yoga and other fitness programs.
+mapsUrl: "https://maps.google.com/?q=Elite+Gym+Fitness+Pattaya"
+tags: [commercial, modern, yoga]
 ---
 
 # Elite Gym & Fitness Pattaya
@@ -236,4 +239,4 @@ Modern Sukhumvit-area gym pricing:
 | Day pass | ~฿300-500 |
 | Monthly | ~฿1,800-2,800 |
 | Languages | English, Thai, Russian |
-| Verified | 2026-04-27 |
+| Verified | 2026

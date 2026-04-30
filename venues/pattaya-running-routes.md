@@ -25,6 +25,9 @@ sources:
   - https://thai-fitness.com/2716/discover-10-places-to-run-in-pattaya/
   - https://www.tripadvisor.com/ShowTopic-g293919-i9439-k3117973-Running_in_Pattaya-Pattaya_Chonburi_Province.html
   - https://www.runlah.com/en/ptyt25
+description: Free public running guide. Pattaya Beach 5.8km, Jomtien Beach, Mabprachan 4km loop, Pratumnak Park, Nongprue 1km, Chaiyapruek 400m track.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Beach+running"
+tags: [running, free, beach-path, mabprachan, public-routes]
 ---
 
 # Pattaya Public Running Routes & Parks

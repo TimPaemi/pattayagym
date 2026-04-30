@@ -1,6 +1,6 @@
 ---
 id: centara-grand-mirage
-name: Centara Grand Mirage Beach Resort — Lost World Water Park & Fitness
+name: Centara Grand Mirage Beach Resort
 category: swimming
 area: Wong Amat Beach / North Pattaya
 address: Centara Grand Mirage Beach Resort, 277 Moo 5, Naklua, Bang Lamung, Chonburi 20150
@@ -33,6 +33,9 @@ sources:
   - https://centaragrandmiragebeachresort.com-pattaya.com/
   - https://cloud.centarahotelsresorts.com/hotel/centara-grand-mirage-beach-resort-pattaya
   - https://www.fivestaralliance.com/4star-hotels/pattaya/centara-grand-mirage-beach-resort
+description: 5-star Lost World themed family resort. On-site water park + 230m private beach + Spa Cenvaree (24 rooms) + rock climbing wall + 2 tennis + Pilates/aqua/kayaking.
+mapsUrl: "https://maps.google.com/?q=Centara+Grand+Mirage+Pattaya"
+tags: [5-star, lost-world, water-park, family, rock-climbing, spa-cenvaree]
 ---
 
 # Centara Grand Mirage Beach Resort — Lost World Water Park & Fitness
@@ -273,4 +276,4 @@ Centara pricing — premium family-resort tier:
 | Active fitness | Gym + 2 tennis courts + rock climbing wall |
 | Spa | Cenvaree — 24 treatment rooms + yoga pavilion |
 | Programs | Pilates, Latin aqua, rock climbing, kayaking |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

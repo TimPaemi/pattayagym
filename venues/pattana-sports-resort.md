@@ -27,6 +27,9 @@ sources:
   - https://www.golfcards.com/course/pattana-golf-club-resort/
   - https://golfhotels.com/en/hotel/pattana-sports-resort/
   - https://www.hrs.com/en/hotel/766574
+description: Mid-tier Pattaya regional golf and sports resort.
+mapsUrl: "https://maps.google.com/?q=Pattana+Sports+Resort+Pattaya"
+tags: [resort, golf, sports]
 ---
 
 # Pattana Sports Resort
@@ -240,4 +243,4 @@ Rates vary widely by tier and season. Stay-and-play packages typically offer the
 | Distance from Bangkok | 90 min drive |
 | Accommodation types | Hotel, Mansion, Villa, Apartments |
 | Restaurants | 3 (including Persimmon) |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

@@ -26,6 +26,9 @@ sources:
   - https://www.golflux.com/course/kha-kheow-country-club/
   - https://thaigolfholidays.co.uk/khao-kheow-country-club/
   - https://www.thailandtours.travel/thailand/pattaya/khao-kheow-golf-club-pattaya/
+description: Pattaya regional golf course. Stub — needs deep research.
+mapsUrl: "https://maps.google.com/?q=Khao+Kheow+Country+Club"
+tags: [regional]
 ---
 
 # Khao Kheow Country Club

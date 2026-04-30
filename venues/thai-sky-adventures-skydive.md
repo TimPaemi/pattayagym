@@ -29,6 +29,9 @@ sources:
   - https://thaiskyadventures.com/tandem-skydiving/
   - https://www.getyourguide.com/bangkok-l169/thailand-tandem-skydive-over-bangkok-pattaya-t818776/
   - https://www.thrillark.com/pattaya-tandem-skydiving-thai-sky-adventures-t-1483/
+description: Southeast Asia only full-time skydive drop zone. 25+ years. Tandem from 13,000 ft. 60s freefall at 200 km/h. Free Pattaya pickup.
+mapsUrl: "https://maps.google.com/?q=Thai+Sky+Adventures+Skydive"
+tags: [skydive, tandem, adrenaline, bucket-list, only-SE-Asia-full-time]
 ---
 
 # Thai Sky Adventures — Tandem Skydiving Pattaya
@@ -290,4 +293,4 @@ Skydiving is **inherently risky**:
 | Pickups | 07:00 or 10:00 AM Pattaya |
 | Pricing | ~฿9,000-13,000 |
 | Languages | English, Thai, Russian, Chinese |
-| Verified | 2026-04-27 |
+| Ve

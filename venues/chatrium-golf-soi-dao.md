@@ -31,6 +31,9 @@ sources:
   - https://www.chatrium.com/chatrium/golfsoidaochanthaburi/golf-course.html
   - https://www.golfpattaya.com/chatrium-golf-resort-soi-dao/
   - https://www.top100golfcourses.com/golf-course/soi-dao-highland
+description: 27-hole course, driving range, pro shop, three-floor clubhouse with hotel, pool, locker rooms, spa, restaurants.
+mapsUrl: "https://maps.google.com/?q=Chatrium+Golf+Resort+Soi+Dao"
+tags: [27-holes, resort, driving-range, spa]
 ---
 
 # Chatrium Golf Resort Soi Dao Chanthaburi
@@ -261,4 +264,4 @@ This **2-day or 3-day golf trip format** is the natural Chatrium experience.
 | Hotel | Adjacent Chatrium 4-star, 47 rooms |
 | Distance from Pattaya | 3 hours drive |
 | Signature hole | Par-3 14th |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

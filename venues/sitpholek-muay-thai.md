@@ -27,6 +27,9 @@ sources:
   - https://siamkickfight.com/blogs/ringready/top-10-best-muay-thai-gyms-in-pattaya-for-beginners-and-pros
   - https://www.myguidepattaya.com/fun-and-sports/sitpholek-muaythai-center--gym
   - http://fightpassport.com/muay-thai-training-journals/sor-klinmee-sitpholek-sityodtong-cho-nateetong-gym-pattaya/
+description: Pattaya Muay Thai camp mentioned in 2025 best-of lists. Stub — needs deep research.
+mapsUrl: "https://maps.google.com/?q=Sitpholek+Muay+Thai+Pattaya"
+tags: [authentic, stub]
 ---
 
 # Sitpholek - Institute of Muay Thai Techniques

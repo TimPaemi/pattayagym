@@ -23,6 +23,9 @@ sources:
   - https://pattayadivers.com/about/
   - https://pattayadivers.com/scuba-diving-trips/
   - https://www.padi.com/dive-center/thailand/adventure-divers-2/
+description: Established 1998. 27+ years operating. Own dive boat MV Saifon. Full PADI pipeline. HTMS Khram wreck specialist. English/Russian/Thai instruction.
+mapsUrl: "https://maps.google.com/?q=Adventure+Divers+Pattaya"
+tags: [padi, established-1998, own-boat, wreck-diving, trilingual]
 ---
 
 # Adventure Divers Pattaya

@@ -30,6 +30,9 @@ sources:
   - https://www.youtube.com/watch?v=OMDxt8YIY2M
   - https://muscle-factory-1.wheree.com/
   - https://pattaya-pages.com/gyms-in-pattaya/
+description: Largest hardcore gym in Pattaya. Multi-floor 3-story Pratamnak bodybuilding institution. Bangkok sister gym. Industrial fans, no AC.
+mapsUrl: "https://maps.google.com/?q=Muscle+Factory+Pattaya"
+tags: [hardcore, largest, bodybuilding, powerlifting, pratamnak]
 ---
 
 # Muscle Factory Pattaya
@@ -243,4 +246,4 @@ This is **mid-tier pricing** — value vs. commercial chains since you're gettin
 | Day pass | ~฿200-400 |
 | Monthly | ~฿1,500-2,500 |
 | Languages | English, Thai, Russian |
-| Verified | 2026-04-27 |
+| V

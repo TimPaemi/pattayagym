@@ -23,6 +23,9 @@ sources:
   - https://www.golfhubpattaya.com/
   - https://aroundpattaya.com/detail.php?ID=233
   - https://www.facebook.com/300yardsDrivingRange/
+description: 30-bay floodlit dedicated driving range. 200-yard depth. On-site restaurant. Soi Diana area central. Professional teaching pros.
+mapsUrl: "https://maps.google.com/?q=Diana+Driving+Range+Pattaya"
+tags: [driving-range, floodlit, 30-bays, central, restaurant]
 ---
 
 # Diana Driving Range Pattaya

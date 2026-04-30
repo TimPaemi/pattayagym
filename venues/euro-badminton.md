@@ -22,6 +22,9 @@ sources:
   - https://aroundpattaya.com/detail.php?ID=439
   - https://aroundpattaya.com/list.php?CL=14
   - https://pattaya-pages.com/badminton-courts-in-pattaya-where-to-buy-badminton-equipment-in-pattaya/
+description: Badminton courts plus pool and eating area. East Pattaya.
+mapsUrl: "https://maps.google.com/?q=Euro+Badminton+Pattaya"
+tags: [badminton, pool, food]
 ---
 
 # Euro Badminton
@@ -175,4 +178,4 @@ Confirm direct at venue.
 | Hours | Verify directly |
 | Hourly rate | ~฿100-250 |
 | Languages | Thai (primary), basic English |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

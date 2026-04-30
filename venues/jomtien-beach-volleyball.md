@@ -23,6 +23,9 @@ sources:
   - https://pattaya-pages.com/where-to-play-beach-volleyball-in-pattaya/
   - https://beach.volleybox.net/arenas?country=TH
   - https://www.facebook.com/groups/BVThailand/
+description: Pattaya beach volleyball community. Multiple Jomtien courts. Free pickup play. Mixed Thai-international.
+mapsUrl: "https://maps.google.com/?q=Jomtien+Beach+Volleyball"
+tags: [beach-volleyball, free, pickup-play, jomtien, community]
 ---
 
 # Jomtien Beach Volleyball Courts

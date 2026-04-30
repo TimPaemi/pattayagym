@@ -43,6 +43,9 @@ sources:
   - https://www.facebook.com/boxingpattaya/
   - https://www.tapology.com/fightcenter/fighters/309560-yodpiti-petchrungruang
   - https://muaythairecords.com/fighters/yodpt-petchrungruang
+description: "Pattaya's 2nd-oldest gym (1986). Three generations of family. Head coach Khru Nu (Lumpinee 2nd-place, 90 fights). Home of Sylvie von Duuglas-Ittu (270+ fights)."
+mapsUrl: "https://maps.google.com/?q=Petchrungruang+Gym+Pattaya"
+tags: [family-camp, authentic, sylvie, kids-program]
 ---
 
 # Petchrungruang Gym
@@ -296,4 +299,4 @@ Repeatedly described in reviews as **"the real thing,"** **"an authentic Thai fa
 | Sessions/day | 3 (kids + foreigners morning + afternoon) |
 | Languages | Thai (main); workable English with Khru Nu; Italian/Russian via foreign community |
 | Setting | Quiet residential off Soi 50 Sukhumvit, South Pattaya |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

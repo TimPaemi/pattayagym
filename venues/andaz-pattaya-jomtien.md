@@ -1,6 +1,6 @@
 ---
 id: andaz-pattaya-jomtien
-name: Andaz Pattaya Jomtien Beach (Hyatt) — Wellness, Fitness & Spa
+name: Andaz Pattaya Jomtien Beach (Hyatt)
 category: fitness
 area: Na Jomtien / Sattahip
 address: Andaz Pattaya Jomtien Beach, Na Jomtien, Sattahip District, Chonburi
@@ -31,6 +31,9 @@ sources:
   - https://www.hyatt.com/andaz/en-US/utpaz-hyatt-andaz-pattaya-jomtien-beach/hotel-info
   - https://www.tripadvisor.com/Hotel_Review-g2005201-d24148652-Reviews-Andaz_Pattaya_Jomtiem_Beach-Na_Chom_Thian_Sattahip_Chonburi_Province.html
   - https://www.virtuoso.com/travel/luxury-hotels/16791632/andaz-pattaya-jomtien-beach
+description: 5-star Hyatt Andaz boutique. 24-hour Technogym fitness + 3 pools (adult/beachfront/family) + Panpuri Spa with 6 rooms + Japanese onsen + Turkish + Finnish baths.
+mapsUrl: "https://maps.google.com/?q=Andaz+Pattaya+Jomtien"
+tags: [5-star, hyatt, andaz, 24-hour-technogym, panpuri-spa, onsen, wellness]
 ---
 
 # Andaz Pattaya Jomtien Beach — Wellness, Fitness & Spa
@@ -274,4 +277,4 @@ This is **firmly premium-tier** — among Pattaya's most expensive hotel options
 | Spa | Panpuri Spa (6 treatment rooms incl couples) |
 | Cultural baths | Japanese onsen + Turkish + Finnish |
 | Languages | English, Thai, Russian, Chinese, Japanese, Korean |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-2

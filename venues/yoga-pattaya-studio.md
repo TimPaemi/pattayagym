@@ -23,6 +23,9 @@ sources:
   - https://www.tripadvisor.com/Attraction_Review-g293919-d5774457-Reviews-Yoga_Pattaya-Pattaya_Chonburi_Province.html
   - https://www.facebook.com/yogapattaya/
   - https://www.thailandnomads.com/yoga-studios-pattaya/
+description: "Pattaya's first international yoga studio. Ashtanga, Mysore, Hatha, Vinyasa Flow, Stretching, Fitness Yoga. English/Russian/Thai."
+mapsUrl: "https://maps.google.com/?q=Yoga+Pattaya+Studio+Thepprasit"
+tags: [ashtanga, mysore, trilingual, established]
 ---
 
 # Yoga Pattaya Studio
@@ -130,4 +133,4 @@ Long-stay yoga practitioners • Russian-speaking visitors • Travellers wantin
 
 ## Not Best For
 
-Travellers staying centrally who don't want to commute to Thepprasit • Pure hot-yoga seekers (try Yoga Haus) • Casual one-off drop-in tourists wanting a 30-min sample (better at hotel resort programs)
+Travellers staying centrally who don't want to commute to Thepprasit • Pure hot-yoga seekers (try Yoga Haus) • Casual one-off drop-in tourists wanting a 30-min sample (better at hotel resort progr

@@ -28,6 +28,9 @@ sources:
   - https://www.tripadvisor.com/Attraction_Review-g293919-d23139710-Reviews-Ocean_Marina_Yacht_Club-Pattaya_Chonburi_Province.html
   - https://www.sail-world.com/club/759/Ocean-Marina-Yacht-Club
   - https://sailingschoolthailand.com/
+description: Thailand most experienced sailing school (20+ years). Based at Ocean Marina Jomtien — Southeast Asia largest marina (450+ berths). IYT certification + yacht charters.
+mapsUrl: "https://maps.google.com/?q=SailBreeze+Ocean+Marina+Pattaya"
+tags: [sailing, yacht-charter, iyt, largest-marina, 20-years]
 ---
 
 # SailBreeze Sailing School @ Ocean Marina Yacht Club
@@ -245,4 +248,4 @@ This positioning isn't marketing fluff — there's genuinely **no comparable sai
 | Courses | IYT Crew, Bareboat Skipper, Zero-to-Hero |
 | Charters | Hourly, Day, Multi-day, Bareboat or Skippered |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

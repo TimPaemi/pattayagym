@@ -21,6 +21,9 @@ sources:
   - https://www.golf-pattaya.com/pages/driving-range
   - https://buzzinpattaya.com/pattaya-golf-driving-range/
   - https://wanderlog.com/place/details/5953433/pattaya-golf-driving-range
+description: Only premium indoor simulator + club fitting in Pattaya. TrackMan / GC Quad launch monitor. AC year-round practice. Multiple locations.
+mapsUrl: "https://maps.google.com/?q=Golf+Hub+Pattaya"
+tags: [indoor, simulator, trackman, club-fitting, AC]
 ---
 
 # Golf Hub Pattaya

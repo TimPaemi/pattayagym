@@ -17,6 +17,9 @@ languages: [Russian, English, Thai]
 verified: 2026-04-27
 sources:
   - https://rusich.club/en/home_en/
+description: Russian-language football coaching for children ages 5-16.
+mapsUrl: "https://maps.google.com/?q=Rusich+Club+Pattaya"
+tags: [football, russian-language, ages-5-16]
 ---
 
 # Rusich Club Pattaya (HSIF Thailand)

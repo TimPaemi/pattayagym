@@ -21,6 +21,9 @@ sources:
   - https://www.trip.com/travel-guide/attraction/pattaya/cho-nateetong-thai-boxing-camp-55852039/
   - https://www.tripadvisor.in/Attraction_Review-g293919-d3208472-Reviews-Cho_Nateetong_Thai_Boxing_Camp-Pattaya_Chonburi_Province.html
   - https://www.tripadvisor.co.uk/Attraction_Review-g293919-d3208472-Reviews-Cho_Nateetong_Thai_Boxing_Camp-Pattaya_Chonburi_Province.html
+description: Authentic budget Pattaya Muay Thai camp. ~฿270 per session. Combined weight gym + dedicated Muay Thai area. Patient trainers with good pad time.
+mapsUrl: "https://maps.google.com/?q=Cho+Nateetong+Pattaya"
+tags: [budget, authentic, weight-gym-combined, sukhumvit, drop-in]
 ---
 
 # Cho Nateetong Thai Boxing Camp
@@ -179,4 +182,4 @@ The Cho Nateetong style appears to be:
 | Layout | Front weight room + back MT area |
 | Trainer style | Patient pad work, good pad time |
 | Languages | English (workable), Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

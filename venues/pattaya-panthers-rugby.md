@@ -27,6 +27,9 @@ sources:
   - https://www.bangkoksevens.com/
   - http://rugby7.com/roh_ban.asp
   - https://bangkokpatanainternational7s.cupmanager.net/
+description: Pattaya only rugby club. Contact + touch rugby formats. Annual Pattaya Tens tournament in May with international touring teams. Beginner-friendly.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Panthers+Rugby"
+tags: [rugby, social, pattaya-tens, contact-touch, british-commonwealth]
 ---
 
 # Pattaya Panthers Rugby Football Club
@@ -224,4 +227,4 @@ Typical social rugby club pricing:
 | Sport context | Bangkok rugby scene + Asian social tournaments |
 | Demographics | British / Commonwealth + multi-country expats |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

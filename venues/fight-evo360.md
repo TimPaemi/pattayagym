@@ -28,6 +28,9 @@ sources:
   - https://www.nowmuaythai.com/blog/the-best-muay-thai-gyms-in-pattaya-thailand
   - https://www.nowmuaythai.com/class/191-1-month-morning-muay-thai-fight-evo360
   - https://x.com/fight_evo360
+description: Combines traditional Muay Thai and boxing values with structured sports science and performance-based programming. Stub — needs deep research.
+mapsUrl: "https://maps.google.com/?q=FIGHT+EVO360+Pattaya"
+tags: [sport-science, performance, modern]
 ---
 
 # Fight EVO360 Muay Thai Gym
@@ -237,4 +240,4 @@ Fight EVO360 is **mid-tier performance-oriented pricing** — meaningfully more 
 | Trainers | Elite and championship-level MT + boxing |
 | Philosophy | Performance-structured athletic development |
 | Languages | English, Thai |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

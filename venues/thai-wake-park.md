@@ -26,6 +26,9 @@ sources:
   - https://www.siamatsiam.com/explore/why-wakeboarding-should-be-top-of-your-pattaya-to-do-list/
   - https://spotymag.spotyride.com/en/trip-where-to-do-wakeboard-in-thailand-this-winter/
   - https://www.surfertoday.com/wakeboarding/the-complete-list-of-cable-wakeboarding-parks/amp
+description: Pattaya only cable wakeboarding park. Two lakes (beginner + advanced). All equipment included.
+mapsUrl: "https://maps.google.com/?q=Thai+Wake+Park+Pattaya"
+tags: [cable-wake, wakeboarding, two-lakes, mabprachan]
 ---
 
 # Thai Wake Park Pattaya
@@ -248,4 +251,4 @@ Wakeboarding is **higher-risk than swimming**:
 | Full-day pass | ~฿2,000-2,800 |
 | Sister facility | Thai Wake Park Lumlukka (Bangkok) |
 | Languages | English, Thai, Russian |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

@@ -28,6 +28,9 @@ sources:
   - https://www.top-rated.online/cities/Pattaya+City/place/p/4270608/DEEP+Climbing+Gym+HARBOR+PATTAYA
   - https://theamateurclimber.com/climbing-gym-bangkok-thailand/
   - https://mindtrip.ai/attraction/pattaya-chonburi/deep-climbing-gym/at-FlLY4c1y
+description: "Pattaya's first indoor climbing gym. Air-conditioned, 10m wall, ocean theme. Top rope, auto-belay, lead, bouldering routes."
+mapsUrl: "https://maps.google.com/?q=Deep+Climbing+Gym+Pattaya"
+tags: [first-in-pattaya, air-con, 10m-wall, top-rope, lead, bouldering]
 ---
 
 # Deep Climbing Gym (Harbor Pattaya)
@@ -207,5 +210,4 @@ Honest critique:
 | Day pass (adult) | ฿480 / 3 hours |
 | Includes | Harness + climbing shoes |
 | Status | First indoor climbing gym in Pattaya |
-| Aesthetic | Deep blue ocean theme, AC |
-| Verified | 2026-04-27 |
+| Aesthetic | Deep blue ocea

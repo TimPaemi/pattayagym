@@ -24,6 +24,9 @@ sources:
   - https://www.booking.com/hotel/th/cross-pattaya-pratamnak.html
   - https://www.facebook.com/cross.pattayapratamnak/
   - https://www.traveloka.com/en-en/hotel/thailand/cross-pattaya-pratamnak-9000000988132
+description: Hotel fitness facility with day-pass option. Pool, gym, activities.
+mapsUrl: "https://maps.google.com/?q=Cross+Pattaya+Pratamnak"
+tags: [hotel-gym, day-pass, pratumnak]
 ---
 
 # Cross Pattaya Pratamnak
@@ -228,4 +231,4 @@ Direct contact recommended to verify current rates and availability.
 | Private yoga | Yes (24hr advance booking) |
 | Beach | Pratamnak beach opposite + hidden hill beach |
 | Languages | English, Thai, Russian, Chinese |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27 

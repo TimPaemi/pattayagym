@@ -18,6 +18,9 @@ languages: [English, Thai]
 verified: 2026-04-27
 sources:
   - https://divestationpattaya.com/
+description: SSI-certified dive operation. First-timer + certified + snorkeling on same boat. Continental European visitor friendly.
+mapsUrl: "https://maps.google.com/?q=Dive+Station+Pattaya"
+tags: [ssi, snorkeling, first-timer, european]
 ---
 
 # Dive Station Pattaya

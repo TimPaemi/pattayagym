@@ -26,6 +26,9 @@ sources:
   - https://business.thepattayanews.com/listing/bean-cow-climbing-gym-2/
   - https://www.facebook.com/beancowclimbing/
   - https://www.instagram.com/beancowclimbing/
+description: Family-friendly climbing gym. 8m wall. Top rope + lead climbing. CWA-certified teachers, belayer services, top rope safety classes.
+mapsUrl: "https://maps.google.com/?q=Bean+Cow+Climbing+Gym+Pattaya"
+tags: [family-friendly, cwa-certified, top-rope, lead, 8m-wall]
 ---
 
 # Bean Cow Climbing Gym & Community Center

@@ -26,6 +26,9 @@ sources:
   - https://livingnomads.com/2026/04/nong-nooch-tropical-garden-2/
   - https://www.kkday.com/en/product/137077
   - https://www.klook.com/en-US/activity/335-nong-nooch-tropical-garden-pattaya/
+description: "Southeast Asia largest botanical garden (600 acres). Daily 90-min cultural show: Thai dance + Muay Thai demo + sword fighting + elephant show."
+mapsUrl: "https://maps.google.com/?q=Nong+Nooch+Tropical+Garden"
+tags: [botanical-garden, cultural-show, muay-thai-demo, family, southeast-asia-largest]
 ---
 
 # Nong Nooch Tropical Garden — Cultural & Muay Thai Show

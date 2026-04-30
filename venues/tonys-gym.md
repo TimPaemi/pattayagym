@@ -21,6 +21,9 @@ sources:
   - https://www.facebook.com/tonysgrouppattaya/
   - https://www.top-rated.online/cities/Pattaya+City/place/p/4270590/tony's+fitness+group
   - https://inspirepattaya.com/pattaya/updated-price-list-tonys-fitness/
+description: Legendary old-school bodybuilding gym. Massive free-weights, no-frills, low monthly. A Pattaya institution.
+mapsUrl: "https://maps.google.com/?q=Tony's+Gym+Pattaya"
+tags: [bodybuilding, free-weights, budget, iconic]
 ---
 
 # Tony's Fitness Gym (Tony's Group Pattaya)
@@ -184,4 +187,4 @@ For first-time visitors, **check the 3rd Road flagship** as the gold-standard To
 | Lifetime member monthly | ~฿800 |
 | Tourist day | ~฿250 |
 | Tourist monthly | ~฿5,000 |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-

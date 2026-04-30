@@ -26,6 +26,9 @@ sources:
   - https://www.instagram.com/tara_tennis_pattaya/
   - https://pattayasports.org/tennis/
   - https://www.instagram.com/explore/locations/105145302094084/tara-tennis-club-pattaya/
+description: Pattaya tennis club. Stub — needs deep research.
+mapsUrl: "https://maps.google.com/?q=Tara+Tennis+Club+Pattaya"
+tags: [tennis]
 ---
 
 # Tara Tennis Club

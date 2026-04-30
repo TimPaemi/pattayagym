@@ -20,6 +20,9 @@ sources:
   - https://www.instagram.com/balanceyogapattaya/
   - https://yogafinder.com/yoga.cfm?yogacountry=Thailand&yogacity=Pattaya
   - https://shantikasound.com/sound_therapy_training_pattaya
+description: "Yoga + sound healing. Steps from the sea. 'Island of harmony in sunny Pattaya'."
+mapsUrl: "https://maps.google.com/?q=Balance+Yoga+Studio+Pattaya"
+tags: [yoga, sound-healing, wellness, near-sea]
 ---
 
 # Balance Yoga Studio Pattaya

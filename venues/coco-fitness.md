@@ -20,6 +20,9 @@ sources:
   - https://www.facebook.com/cocofitnesspattaya/
   - https://globalgymbunny.com/coco-fitness-pattaya/
   - https://www.gcation.com/gyms/coco-fitness
+description: Central Pattaya commercial gym on the 4th floor of Mike Shopping Mall. Sea-view cardio, walk-in day passes, towel and locker included, and value monthly pricing.
+mapsUrl: "https://maps.google.com/?q=Coco+Fitness+Pattaya+Mike+Shopping+Mall"
+tags: [commercial, beach-road, sea-view, day-pass, value, central-pattaya]
 ---
 
 # Coco Fitness
@@ -163,4 +166,4 @@ The review pattern suggests **excellent value gym with occasional service-qualit
 | View | Pattaya Beach sea views |
 | Sauna | Yes |
 | Personal trainers | Available |
-| Verified | 2026-04-27 |
+| Verified | 20

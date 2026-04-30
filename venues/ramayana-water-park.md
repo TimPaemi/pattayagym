@@ -30,6 +30,9 @@ sources:
   - https://yourthaiguide.com/ramayana-water-park-thailands-biggest-water-playground/
   - https://www.thethaipass.com/activities/thailand-pattaya/ramayana-water-park-pattaya
   - https://www.renown-travel.com/daytripspattaya/ramayanawaterpark.html
+description: "Largest water park in Thailand and Southeast Asia. 184,000 sqm. 26 slides / 34 lanes. 600m lazy river around natural hill. Double wave pool with 150m beach. TripAdvisor 2019 #1 Asia / #10 World."
+mapsUrl: "https://maps.google.com/?q=Ramayana+Water+Park"
+tags: [waterpark, largest, slides, family, day-trip]
 ---
 
 # Ramayana Water Park Pattaya
@@ -270,4 +273,4 @@ This puts Ramayana in **company with global water-park flagships**: Aquaventure 
 | TripAdvisor 2019 | #1 Asia / #10 World |
 | Distance from Pattaya | 20 km south |
 | Day pass | ~฿1,200-1,800 |
-| Verified | 2026-04-27 |
+| Verified | 2026-04-27

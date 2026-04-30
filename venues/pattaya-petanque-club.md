@@ -18,6 +18,9 @@ sources:
   - https://aroundpattaya.com/detail.php?ID=574
   - https://aroundpattaya.com/list.php?CL=57
   - https://www.pattayatrader.com/sporting-activities-in-pattaya/
+description: French-influenced petanque community. Central Pattaya Soi 3. All ages, drop-in friendly.
+mapsUrl: "https://maps.google.com/?q=Pattaya+Sai+3+Petanque"
+tags: [petanque, boules, french, social, community]
 ---
 
 # Pattaya Sai 3 Petanque Club

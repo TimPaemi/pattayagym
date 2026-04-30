@@ -30,6 +30,9 @@ sources:
   - https://www.triphobo.com/places/pattaya-thailand/greta-resort-and-sport-club
   - https://www.tripadvisor.com/Hotel_Review-g2005201-d16737020-Reviews-Greta_Resort_and_Sport_Club-Na_Chom_Thian_Sattahip_Chonburi_Province.html
   - https://www.tour.ltat.org/old-tournaments-accfact-MTQyOA==.html
+description: 6 covered tennis courts with rain protection. Beautifully constructed roofed tennis venue.
+mapsUrl: "https://maps.google.com/?q=Greta+Sport+Club+Pattaya"
+tags: [tennis, covered-courts, 6-courts]
 ---
 
 # Greta Sport Club Pattaya

@@ -27,6 +27,9 @@ sources:
   - https://www.pattayamail.com/clubsinpattaya/hhh.shtml
   - https://pattayajungle.com/
   - https://pattayamonkeyh3.com/
+description: "First Pattaya hash, mixed running club since 1984. World's largest weekly running club. 'Drinking club with a running problem'."
+mapsUrl: "https://maps.google.com/?q=Pattaya+Hash+House+Harriers"
+tags: [social, weekly, expat, est-1984]
 ---
 
 # Pattaya Hash House Harriers
@@ -220,3 +223,4 @@ The PH3 membership reflects Pattaya's expat community:
 | Membership style | Mixed — runners, joggers, walkers, all ages |
 | Languages | English (primary), Thai |
 | Verified | 2026-04-27 |
+       

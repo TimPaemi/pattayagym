@@ -47,6 +47,9 @@ sources:
   - https://www.espn.com/boxing/story/_/id/25199102
   - https://thethaiger.com/news/pattaya/pattaya-expat-dies-from-injuries-suffered-during-wbc-bangkok-fight
   - https://www.khaosodenglish.com/news/bangkok/2018/11/04/italian-muay-thai-boxer-dies-after-ko-in-bangkok/
+description: "All-inclusive multi-discipline camp. Christian Daghio's legacy (190 MT fights, 7x World Champ). Muay Thai+Boxing+MMA+BJJ+Krav. 6 rings. 5/5 TripAdvisor."
+mapsUrl: "https://maps.google.com/?q=Kombat+Group+Thailand"
+tags: [all-inclusive, multi-discipline, accommodation, premium]
 ---
 
 # Kombat Group Thailand
@@ -357,4 +360,4 @@ Where Fairtex offers institutional polish at the cost of attentive consistency, 
 | TripAdvisor | 5/5 (409 of 416 5-star) |
 | Languages | English, Italian, Spanish, Thai |
 | Setting | Rural Huai Yai, near Chak Nok Lake |
-| Verified | 2026-04-27 |
+| Verified | 2026-0
