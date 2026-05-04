@@ -4,7 +4,7 @@ name: Laem Chabang International Country Club
 category: golf
 area: Sriracha (30 min from Pattaya)
 address: Laem Chabang International Country Club, Sriracha district, Chonburi (109 km from Bangkok, 30 min from central Pattaya)
-phone: +66 82 222 3031-3
+phone: "+66 82 222 3031"
 website: https://www.laemchabanggolf.com/
 social:
   facebook: Laemchabanggolff

@@ -1003,6 +1003,143 @@ const GUIDES = [
       </ul>
     </article>`
   }
+  ,
+  {
+    slug: 'pattaya-russian-speaking-sport',
+    title: 'Pattaya Russian-Speaking Gyms, Camps & Sport Venues',
+    h1: 'Pattaya sport venues with Russian-speaking staff',
+    desc: 'Pattaya gyms, Muay Thai camps, kids football, yoga and dive operators with Russian-speaking instructors and staff. Built for the Russian expat community.',
+    intro: 'Pattaya hosts one of the largest Russian-speaking communities in Thailand. Many sport venues — particularly in Naklua, Pratamnak, Jomtien and Sukhumvit — explicitly support Russian-language coaching. This guide collects the venues where Russian is a stated working language, organised by sport.',
+    pickerKey: 'russian',
+    filter: g => {
+      const langs = (g.languages || []).join(' ').toLowerCase();
+      const desc = (g.description || '').toLowerCase();
+      const tags = (g.tags || []).join(' ').toLowerCase();
+      return /russian/.test(langs) || /russian/.test(desc) || /russian/.test(tags);
+    },
+    rank: g => {
+      const langs = (g.languages || []).join(' ').toLowerCase();
+      const desc = (g.description || '').toLowerCase();
+      let s = 0;
+      if (/russian/.test(langs)) s += 10;
+      if (/russian/.test(desc)) s += 5;
+      if (g.category === 'kids-youth' || g.category === 'muay-thai') s += 4;
+      if (g.category === 'fitness' || g.category === 'yoga') s += 3;
+      return s;
+    },
+    sections: [
+      { label: 'Top Russian-friendly picks', take: 4 },
+      { label: 'Russian-speaking Muay Thai & combat camps', take: 4 },
+      { label: 'Russian-speaking fitness, yoga & kids sport', take: 6 }
+    ],
+    faqs: [
+      { q: 'Which Pattaya gyms have Russian-speaking trainers?', a: 'Several: AF Academy (kids football), Rusich Club (HSIF Thailand), Elite Gym & Fitness, KBA Kiteboarding (some staff), Castra Gym in East Pattaya, and Muscle Factory all have Russian-speaking staff or members. Check each venue\'s languages field on its page.' },
+      { q: 'Is there a Russian football academy in Pattaya?', a: 'Yes — Rusich Club Pattaya (HSIF Thailand) runs Russian-language coaching for ages 5-16, and AF Academy markets explicitly to the Russian community in Naklua / Jomtien / Pratumnak / Central.' },
+      { q: 'Where are the largest Russian expat areas in Pattaya?', a: 'Naklua / North Pattaya is the historical centre. Pratamnak Hill and Jomtien have grown significantly. Sukhumvit-corridor condos also house large Russian-speaking communities.' }
+    ]
+  },
+  {
+    slug: 'pattaya-solo-female-fitness',
+    title: 'Pattaya for Solo Female Travelers — Sport & Fitness',
+    h1: 'Pattaya sport venues for solo female travelers',
+    desc: 'Pattaya gyms, Muay Thai camps, yoga studios, swimming pools and group classes with strong female-friendly signals — safety, women-only sessions, female trainers, and welcoming atmospheres.',
+    intro: 'Solo female travelers training in Pattaya have plenty of welcoming options — but knowing which venues have proven track records with female travelers, women-only group classes, or female trainers takes some research. This guide pulls together the most consistently female-friendly Pattaya sport venues, organised by category.',
+    pickerKey: 'solo-female',
+    filter: g => {
+      const tags = (g.tags || []).join(' ').toLowerCase();
+      const desc = (g.description || '').toLowerCase();
+      return /female|women|family|kids|yoga|swim|hotel|premium/.test(tags + ' ' + desc) || g.category === 'yoga' || g.category === 'swimming';
+    },
+    rank: g => {
+      const desc = (g.description || '').toLowerCase();
+      const tags = (g.tags || []).join(' ').toLowerCase();
+      let s = 0;
+      if (/female|women|female-friendly|girl/.test(desc + tags)) s += 12;
+      if (g.category === 'yoga') s += 8;
+      if (g.category === 'swimming') s += 5;
+      if (/family|kids/.test(tags + desc)) s += 4;
+      if (/hotel|5-star|premium|luxury/.test(tags + desc)) s += 3;
+      if (/safe|welcoming|community/.test(desc)) s += 2;
+      return s;
+    },
+    sections: [
+      { label: '🌸 Top solo-female-friendly picks', take: 5 },
+      { label: '🧘 Best yoga studios for women', take: 4 },
+      { label: '🏊 Best pools & swimming', take: 3 },
+      { label: '🥊 Female-friendly Muay Thai & combat', take: 3 }
+    ],
+    faqs: [
+      { q: 'Is Pattaya safe for solo female travelers training in gyms?', a: 'Generally yes — hotel-attached gyms, established yoga studios, and family-owned camps are very welcoming. Stick to verified venues with Western reviews and trust your read of each space.' },
+      { q: 'Which Pattaya Muay Thai gyms welcome women?', a: 'Sityodtong, Fairtex, Kombat Group, Rage Fight Academy, and Venum Training Camp all run women-friendly programs. Most camps now explicitly welcome female fighters and recreational students.' },
+      { q: 'Are there women-only fitness sessions in Pattaya?', a: 'A handful of yoga studios run female-only or trauma-informed sessions. Hotel gyms (Hilton, Centara, Andaz) provide the most reliably comfortable mainstream gym environments.' }
+    ]
+  },
+  {
+    slug: 'best-gyms-near-walking-street-pattaya',
+    title: 'Best Gyms Near Walking Street, Pattaya',
+    h1: 'Best gyms within walking distance of Walking Street',
+    desc: 'Pattaya gyms, Muay Thai camps, fitness clubs and pools within a 5-15 minute walk of Walking Street and South Pattaya — for tourists staying in the Beach Road / 2nd Road / Soi Buakhao corridor.',
+    intro: 'Walking Street is the centre of gravity for most short-stay Pattaya tourists. If your hotel is on Beach Road, 2nd Road, Soi Buakhao or LK Metro, you have surprisingly good gym access without needing a baht-bus or motorbike taxi. This guide picks the closest options by category.',
+    pickerKey: 'walking-street',
+    filter: g => {
+      const area = (g.area || '').toLowerCase();
+      const addr = (g.address || '').toLowerCase();
+      return /central pattaya|south pattaya|beach road|2nd road|second road|soi buakhao|lk metro|walking street|the avenue|pattaya klang|beach\b/.test(area + ' ' + addr);
+    },
+    rank: g => {
+      const area = (g.area || '').toLowerCase();
+      const addr = (g.address || '').toLowerCase();
+      let s = 0;
+      if (/walking street|beach road|2nd road|second road/.test(area + addr)) s += 14;
+      if (/central pattaya|south pattaya/.test(area + addr)) s += 8;
+      if (/the avenue|mike\'s mall|harbor pattaya/.test(area + addr)) s += 6;
+      if (g.priceRange === '฿' || g.priceRange === '฿฿') s += 3;
+      return s;
+    },
+    sections: [
+      { label: '🚶 Closest walkable gyms', take: 5 },
+      { label: '🥊 Closest Muay Thai camps', take: 3 },
+      { label: '🏊 Closest pools & beaches', take: 3 },
+      { label: '🎾 Closest racquet sports', take: 3 }
+    ],
+    faqs: [
+      { q: 'What is the closest gym to Walking Street?', a: 'Tony\'s Gym on Soi Diana, Fitness 7 at The Avenue Pattaya, and Coco Fitness at Mike\'s Mall are all within 5-10 minutes\' walk of Walking Street north end. Jetts at Little Walk and Universe Gym are 10-15 minutes.' },
+      { q: 'Can I walk from a Beach Road hotel to a Muay Thai camp?', a: 'Most authentic Muay Thai camps are 10-30 minutes by car/baht-bus from Beach Road. The closest walkable options are at hotel fitness centres (FITZ Club at Royal Cliff, Cape Dara) which run group Muay Thai-style cardio classes.' },
+      { q: 'Are the gyms near Walking Street safe at night?', a: 'Yes — Walking Street area is heavily policed and well-lit at night. Most 24/7 gyms (Jetts, Fitness 7) are inside malls with security. Female travellers report no issues with late-night sessions.' }
+    ]
+  },
+  {
+    slug: 'bangkok-day-trip-sport-pattaya',
+    title: 'Bangkok Day-Trip Sport Venues from Pattaya',
+    h1: 'Bangkok day-trip sport venues',
+    desc: 'Iconic Bangkok sport destinations within day-trip range of Pattaya — Lumpinee Boxing Stadium, Rajadamnern Stadium, world-class courses and venues. Travel times, ticket info, and itinerary tips.',
+    intro: 'Pattaya is 1.5-2 hours from Bangkok. For sport tourists wanting the bucket-list Thai experiences — fight night at Lumpinee or Rajadamnern, world-class Bangkok venues — a day trip is genuinely doable from a Pattaya base. This guide picks the best Bangkok sport day-trips with practical logistics.',
+    pickerKey: 'bangkok-day-trip',
+    filter: g => {
+      const area = (g.area || '').toLowerCase();
+      const desc = (g.description || '').toLowerCase();
+      return /bangkok/.test(area + ' ' + desc);
+    },
+    rank: g => {
+      const desc = (g.description || '').toLowerCase();
+      const tags = (g.tags || []).join(' ').toLowerCase();
+      let s = 0;
+      if (/legendary|iconic|world.?class|first|original|championship/.test(desc + tags)) s += 12;
+      if (/stadium|tournament|championship/.test(desc + tags)) s += 8;
+      if (g.category === 'muay-thai') s += 5;
+      return s;
+    },
+    sections: [
+      { label: '🏟 Top Bangkok bucket-list sport venues', take: 4 },
+      { label: '🥊 Bangkok stadium fight nights', take: 2 }
+    ],
+    faqs: [
+      { q: 'How long does it take to drive from Pattaya to Bangkok stadiums?', a: 'Bangkok is 1.5-2 hours from Pattaya by car or bus depending on traffic. A day-trip with afternoon arrival, evening fight night, and post-fight bus back to Pattaya is realistic and popular.' },
+      { q: 'Should I visit Lumpinee or Rajadamnern Stadium?', a: 'Both are essential. Rajadamnern (founded 1945) is the world\'s first Muay Thai stadium and runs fights every Mon-Sun. Lumpinee (Ramintra Road since 2014) is the modern flagship — Friday and Saturday cards. Many Pattaya visitors do both on different trips.' },
+      { q: 'Can I combine a Bangkok stadium night with a Pattaya stay?', a: 'Yes — most Pattaya hotels can book the round-trip transfer + tickets package. Tourist mini-buses run Pattaya → Bangkok stadium → Pattaya same-day for ~฿1,500-2,500 inclusive of tickets.' }
+    ]
+  }
+
 ];
 
 function buildGuidePage(guide, allGyms) {
