@@ -1521,7 +1521,7 @@ ${header()}
     <h1 class="venue-h1" style="margin-bottom:6px;">Find your gym</h1>
     <p class="venue-lede" style="margin: 0 auto 20px; max-width: 580px;">Search by venue name, neighborhood, sport, language, price tier, or feature. ${allGyms.length} verified venues.</p>
     <div class="search-input-wrap">
-      <input type="search" class="search-input" id="q" placeholder="Try: muay thai jomtien · cheap yoga · 24 hour gym · english pickleball" autofocus />
+      <input type="search" class="search-input" id="q" aria-label="Search Pattaya venues" placeholder="Try: muay thai jomtien · cheap yoga · 24 hour gym · english pickleball" autofocus />
       <span class="search-icon">🔍</span>
     </div>
     <div class="search-filters" id="filters">
@@ -1773,7 +1773,7 @@ ${header()}
     <h1 class="venue-h1" style="margin-bottom:6px;">Find your gym</h1>
     <p class="venue-lede" style="margin: 0 auto 20px; max-width: 580px;">Search by venue name, neighbourhood, sport, language, price tier, open-now status, or feature. ${allGyms.length} verified venues.</p>
     <div class="search-input-wrap">
-      <input type="search" class="search-input" id="q" placeholder="Try: muay thai jomtien, cheap yoga, 24 hour gym, english pickleball" autofocus />
+      <input type="search" class="search-input" id="q" aria-label="Search Pattaya venues" placeholder="Try: muay thai jomtien, cheap yoga, 24 hour gym, english pickleball" autofocus />
       <span class="search-icon" aria-hidden="true">&#128269;</span>
     </div>
     <div class="search-filters" id="filters">

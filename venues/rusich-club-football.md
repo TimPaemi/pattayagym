@@ -1,7 +1,7 @@
 ---
 id: rusich-club-football
 name: Rusich Club Pattaya (HSIF Thailand)
-category: clubs
+category: kids-youth
 area: Pattaya
 address: Rusich Club / HSIF Thailand, Pattaya
 phone: ""

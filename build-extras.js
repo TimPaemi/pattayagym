@@ -1061,9 +1061,11 @@ function main() {
   console.log('  [ROB] /robots.txt');
 
   // 5b. RSS feed of recently-verified venues
+  // NOTE: /feed.xml is intentionally NOT added to extraUrls (sitemap). RSS feeds belong in
+  // <link rel="alternate" type="application/rss+xml"> on every page (already wired in commonHead),
+  // not in the sitemap. Including XML feeds in sitemap.xml is non-standard and confuses crawlers.
   fs.writeFileSync(path.join(ROOT, 'feed.xml'), buildRss(GYMS, CATEGORIES));
   console.log('  [RSS] /feed.xml');
-  extraUrls.push('/feed.xml');
   const feedDir = path.join(ROOT, 'feed');
   ensureDir(feedDir);
   cleanupChildFiles(feedDir, activeCategories.map(key => `${key}.xml`), 'category RSS file');
