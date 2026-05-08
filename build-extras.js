@@ -1087,9 +1087,19 @@ function main() {
     const today = new Date().toISOString().slice(0, 10);
     const existing = fs.readFileSync(sitemapPath, 'utf8');
     // Inject extra URLs before closing tag, dedupe
+    function extrasPriority(u) {
+      if (u === '/map/') return { p: '0.9', f: 'weekly' };
+      if (u.startsWith('/category/')) return { p: '0.9', f: 'weekly' };
+      if (u === '/compare/') return { p: '0.6', f: 'monthly' };
+      if (u === '/about/') return { p: '0.5', f: 'monthly' };
+      return { p: '0.6', f: 'monthly' };
+    }
     const urlsToAdd = extraUrls
       .filter(u => existing.indexOf('<loc>' + SITE + u + '</loc>') < 0)
-      .map(u => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`)
+      .map(u => {
+        const meta = extrasPriority(u);
+        return `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>${meta.f}</changefreq><priority>${meta.p}</priority></url>`;
+      })
       .join('\n');
     if (urlsToAdd) {
       const updated = existing.replace('</urlset>', urlsToAdd + '\n</urlset>');

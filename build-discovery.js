@@ -2415,9 +2415,21 @@ function main() {
   if (fs.existsSync(sitemapPath)) {
     const today = new Date().toISOString().slice(0, 10);
     const existing = fs.readFileSync(sitemapPath, 'utf8');
+    function urlPriority(u) {
+      if (u === '/search/' || u === '/map/') return { p: '0.9', f: 'weekly' };
+      if (u.startsWith('/area/')) return { p: '0.9', f: 'weekly' };
+      if (u === '/guides/') return { p: '0.9', f: 'weekly' };
+      if (u.startsWith('/guides/')) return { p: '0.8', f: 'weekly' };
+      if (u === '/compare/' || u === '/favorites/' || u === '/find-my-coach/' || u === '/plan-my-trip/') return { p: '0.6', f: 'monthly' };
+      if (u === '/about/' || u === '/methodology/' || u === '/contact/' || u === '/press/' || u === '/pattaya-sport-stats/' || u === '/add-your-gym/') return { p: '0.5', f: 'monthly' };
+      return { p: '0.6', f: 'monthly' };
+    }
     const urlsToAdd = extraUrls
       .filter(u => existing.indexOf('<loc>' + SITE + u + '</loc>') < 0)
-      .map(u => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`)
+      .map(u => {
+        const meta = urlPriority(u);
+        return `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod><changefreq>${meta.f}</changefreq><priority>${meta.p}</priority></url>`;
+      })
       .join('\n');
     if (urlsToAdd) {
       const updated = existing.replace('</urlset>', urlsToAdd + '\n</urlset>');

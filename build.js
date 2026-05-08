@@ -1080,6 +1080,15 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   ${serviceWorkerRegistration()}
 
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
+  <script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: (catObj && catObj.label) || (fm.category || 'Venues'), item: SITE + '/category/' + (fm.category || '') + '/' },
+      { '@type': 'ListItem', position: 3, name: fm.name || slug, item: url }
+    ]
+  })}</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -1376,11 +1385,15 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
 }
 
 // ---------- Sitemap ----------
+// Priority + changefreq tuned for Google ranking signals:
+//   1.0 = homepage (max signal)
+//   0.8 = venue pages (the directory's primary value)
+//   homepage changefreq=daily, venues changefreq=weekly (verified date may bump)
 function buildSitemap(venues) {
   const today = new Date().toISOString().slice(0, 10);
   const urls = [
-    `<url><loc>${SITE}/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>`,
-    ...venues.map(v => `<url><loc>${SITE}/gyms/${v.slug}/</loc><lastmod>${v.fm.verified || today}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>`)
+    `<url><loc>${SITE}/</loc><lastmod>${today}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>`,
+    ...venues.map(v => `<url><loc>${SITE}/gyms/${v.slug}/</loc><lastmod>${v.fm.verified || today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`)
   ];
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  ${urls.join('\n  ')}\n</urlset>\n`;
 }

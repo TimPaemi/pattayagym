@@ -1612,60 +1612,139 @@ body { padding-top: 0; }
   }
 }
 
-/* === Footer credit — Pattaya Authority (subtle inline signature) === */
+/* === Footer credit — Pattaya Authority (matches site card aesthetic) === */
 .sf-builtby {
-  margin: 18px 0 0;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  font-size: 12px;
-  line-height: 1.7;
-  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 32px auto 8px;
+  padding: 26px 16px 6px;
   text-align: center;
-  letter-spacing: 0.15px;
-  opacity: 0.85;
 }
-.sf-builtby-link {
+.sf-builtby-kicker {
   color: var(--accent);
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.sf-builtby-card {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 520px;
+  padding: 18px 52px 18px 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 184, 0, 0.09), rgba(255, 255, 255, 0.035));
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 184, 0, 0);
-  padding: 0 1px 1px;
-  transition: border-color 0.2s ease, color 0.2s ease;
-  white-space: nowrap;
+  color: inherit;
+  text-align: left;
+  transition: transform 0.3s cubic-bezier(.2,.7,.2,1), border-color 0.3s ease, background 0.3s ease;
 }
-.sf-builtby-link:hover,
-.sf-builtby-link:focus-visible {
-  border-bottom-color: rgba(255, 184, 0, 0.6);
+.sf-builtby-card:hover,
+.sf-builtby-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 184, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 184, 0, 0.14), rgba(255, 255, 255, 0.05));
 }
-.sf-builtby-link:focus-visible {
+.sf-builtby-card:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline-offset: 3px;
+}
+.sf-builtby-badge {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(160deg, #ffd56a 0%, var(--accent) 55%, #d99500 100%);
+  color: #0b0b0d;
+  font-size: 18px;
+  font-weight: 950;
+  letter-spacing: 0.6px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.45) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.18) inset,
+    0 4px 10px rgba(0, 0, 0, 0.35);
+}
+.sf-builtby-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.sf-builtby-name {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1.05;
+}
+.sf-builtby-tagline {
+  font-size: 12.5px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--text-dim);
+  letter-spacing: 0.2px;
+  line-height: 1.35;
+  opacity: 0.9;
 }
 .sf-builtby-arrow {
-  display: inline-block;
-  font-size: 10px;
-  margin-left: 1px;
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 15px;
+  color: var(--accent);
   opacity: 0.7;
-  transform: translateY(-1px);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.25s cubic-bezier(.2,.7,.2,1), opacity 0.25s ease;
 }
-.sf-builtby-link:hover .sf-builtby-arrow,
-.sf-builtby-link:focus-visible .sf-builtby-arrow {
-  transform: translate(2px, -3px);
+.sf-builtby-card:hover .sf-builtby-arrow,
+.sf-builtby-card:focus-visible .sf-builtby-arrow {
+  transform: translate(3px, -3px);
   opacity: 1;
-}
-.sf-builtby-sep {
-  display: inline-block;
-  margin: 0 6px;
-  color: rgba(255, 184, 0, 0.45);
-  font-weight: 400;
 }
 @media (max-width: 600px) {
   .sf-builtby {
+    margin-top: 26px;
+    padding: 22px 12px 4px;
+    gap: 10px;
+  }
+  .sf-builtby-kicker {
+    font-size: 10.5px;
+    letter-spacing: 1.2px;
+  }
+  .sf-builtby-card {
+    max-width: 100%;
+    padding: 14px 42px 14px 14px;
+    gap: 13px;
+  }
+  .sf-builtby-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+  .sf-builtby-name {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .sf-builtby-tagline {
     font-size: 11.5px;
   }
-  .sf-builtby-sep {
-    margin: 0 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sf-builtby-card,
+  .sf-builtby-arrow {
+    transition: none !important;
   }
 }
