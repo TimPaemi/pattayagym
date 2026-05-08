@@ -1612,122 +1612,236 @@ body { padding-top: 0; }
   }
 }
 
-/* === Footer "Built by" credit (Pattaya Authority — Premium Web Design & SEO Studio) === */
+/* === Footer "Built by" — Pattaya Authority Plaque (premium agency credit) === */
 .sf-builtby {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 26px auto 4px;
-  padding: 22px 16px 6px;
-  border-top: 1px solid rgba(255, 184, 0, 0.18);
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(255, 184, 0, 0.06), transparent 70%);
+  gap: 14px;
+  margin: 38px auto 6px;
+  padding: 28px 16px 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   text-align: center;
+  position: relative;
 }
-.sf-builtby-label {
+.sf-builtby::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 184, 0, 0.55), transparent);
+}
+.sf-builtby-card {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 22px 14px 18px;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(255, 184, 0, 0.08) 0%, rgba(255, 184, 0, 0.02) 50%, rgba(255, 184, 0, 0.06) 100%),
+    rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(255, 184, 0, 0.32);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.3) inset,
+    0 8px 28px rgba(0, 0, 0, 0.4),
+    0 0 0 0 rgba(255, 184, 0, 0);
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.4s cubic-bezier(.2,.7,.2,1), box-shadow 0.4s ease, border-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.sf-builtby-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, transparent 0%, rgba(255, 184, 0, 0.55) 12%, transparent 30%, transparent 100%);
+  z-index: -1;
+  opacity: 0;
+  animation: pa-conic-spin 6s linear infinite;
+  transition: opacity 0.4s ease;
+}
+.sf-builtby-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  animation: pa-shimmer 7s ease-in-out infinite;
+  animation-delay: 2s;
+}
+@keyframes pa-shimmer {
+  0%, 80%, 100% { left: -60%; }
+  85%, 95% { left: 130%; }
+}
+@keyframes pa-conic-spin {
+  to { transform: rotate(360deg); }
+}
+.sf-builtby-card:hover,
+.sf-builtby-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(255, 184, 0, 0.6);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.3) inset,
+    0 14px 38px rgba(0, 0, 0, 0.5),
+    0 0 0 6px rgba(255, 184, 0, 0.1);
+}
+.sf-builtby-card:hover::before,
+.sf-builtby-card:focus-visible::before {
+  opacity: 1;
+}
+.sf-builtby-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.sf-builtby-mark {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  position: relative;
+  transition: transform 0.5s cubic-bezier(.2,.7,.2,1);
+}
+.sf-builtby-mark svg {
+  width: 100%;
+  height: 100%;
   display: block;
-  font-size: 10.5px;
+  filter: drop-shadow(0 0 6px rgba(255, 184, 0, 0.25));
+}
+.sf-builtby-card:hover .sf-builtby-mark {
+  transform: rotate(60deg);
+}
+.sf-builtby-divider {
+  flex-shrink: 0;
+  width: 1px;
+  align-self: stretch;
+  background: linear-gradient(180deg, transparent, rgba(255, 184, 0, 0.35), transparent);
+}
+.sf-builtby-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  text-align: left;
+}
+.sf-builtby-kicker {
+  font-size: 9.5px;
   letter-spacing: 2.4px;
   text-transform: uppercase;
   color: var(--text-muted);
   font-weight: 700;
-  margin: 0;
-  opacity: 0.85;
+  opacity: 0.75;
+  margin: 0 0 1px;
 }
-.sf-builtby-link {
+.sf-builtby-name {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  background: linear-gradient(180deg, #ffd56a 0%, var(--accent) 60%, #d99500 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent);
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 9px 18px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 184, 0, 0.14), rgba(255, 184, 0, 0.06));
-  border: 1px solid rgba(255, 184, 0, 0.4);
-  color: var(--accent);
-  font-size: 14.5px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  text-decoration: none;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.04) inset,
-    0 4px 12px rgba(0, 0, 0, 0.3),
-    0 0 0 0 rgba(255, 184, 0, 0);
-  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-  position: relative;
-  isolation: isolate;
+  line-height: 1.05;
 }
-.sf-builtby-link::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255, 184, 0, 0.35), rgba(255, 184, 0, 0));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-.sf-builtby-link:hover,
-.sf-builtby-link:focus-visible {
-  background: linear-gradient(180deg, rgba(255, 184, 0, 0.22), rgba(255, 184, 0, 0.1));
-  border-color: rgba(255, 184, 0, 0.7);
-  transform: translateY(-2px);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.08) inset,
-    0 8px 22px rgba(0, 0, 0, 0.45),
-    0 0 0 4px rgba(255, 184, 0, 0.12);
-}
-.sf-builtby-link:hover::before,
-.sf-builtby-link:focus-visible::before {
-  opacity: 1;
-}
-.sf-builtby-link:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-.sf-builtby-glyph {
+.sf-builtby-arrow {
   display: inline-block;
+  font-size: 14px;
   color: var(--accent);
-  font-size: 12px;
-  line-height: 1;
-  opacity: 0.95;
-  transform: translateY(-0.5px);
-}
-.sf-builtby-glyph.glyph-arrow {
-  font-size: 13px;
-  margin-left: 1px;
+  -webkit-text-fill-color: var(--accent);
   opacity: 0.7;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.3s cubic-bezier(.2,.7,.2,1), opacity 0.3s ease;
+  transform: translate(0, 0);
 }
-.sf-builtby-link:hover .sf-builtby-glyph.glyph-arrow,
-.sf-builtby-link:focus-visible .sf-builtby-glyph.glyph-arrow {
-  transform: translate(2px, -2px);
+.sf-builtby-card:hover .sf-builtby-arrow,
+.sf-builtby-card:focus-visible .sf-builtby-arrow {
+  transform: translate(3px, -3px);
   opacity: 1;
 }
 .sf-builtby-tagline {
-  display: block;
-  font-size: 12px;
+  font-size: 11.5px;
   color: var(--text-muted);
   font-weight: 500;
   letter-spacing: 0.3px;
-  margin: 0;
+  opacity: 0.85;
+  margin: 1px 0 0;
+}
+.sf-builtby-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  opacity: 0.55;
+  margin-top: 4px;
+}
+.sf-builtby-stamp::before,
+.sf-builtby-stamp::after {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: rgba(255, 184, 0, 0.35);
+}
+.sf-builtby-stamp .stamp-glyph {
+  color: var(--accent);
   opacity: 0.9;
+  font-size: 10px;
 }
 @media (max-width: 600px) {
   .sf-builtby {
-    margin-top: 22px;
-    padding: 18px 14px 4px;
-    gap: 8px;
+    margin-top: 30px;
+    padding: 22px 12px 4px;
+    gap: 12px;
   }
-  .sf-builtby-label {
-    font-size: 10px;
+  .sf-builtby-card {
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 18px;
+  }
+  .sf-builtby-divider {
+    display: none;
+  }
+  .sf-builtby-content {
+    align-items: center;
+    text-align: center;
+  }
+  .sf-builtby-mark {
+    width: 32px;
+    height: 32px;
+  }
+  .sf-builtby-name {
+    font-size: 15.5px;
+  }
+  .sf-builtby-stamp {
+    font-size: 9px;
     letter-spacing: 2px;
   }
-  .sf-builtby-link {
-    font-size: 13.5px;
-    padding: 8px 16px;
-  }
-  .sf-builtby-tagline {
-    font-size: 11.5px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sf-builtby-card::before,
+  .sf-builtby-card::after,
+  .sf-builtby-mark,
+  .sf-builtby-arrow {
+    animation: none !important;
+    transition: none !important;
   }
 }
