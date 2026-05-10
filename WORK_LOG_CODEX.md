@@ -565,3 +565,12 @@ The remaining 166 warnings are venues with no publicly published phone/website (
 | Total internal hrefs validated | 13,335 | 13,335 |
 | Broken internal links | 0 | 0 |
 | Sitemap duplicate URLs | 0 | 0 |
+
+
+## 2026-05-10 - Section M (audit): read-only Codex nuclear audit
+
+- **Section status:** M (audit) — read-only investigation only; no production code changed.
+- **Files changed:** `WORK_LOG_CODEX.md` and `AUDIT_CODEX_2026-05-10.md` only.
+- **Validation/build:** `npm run validate` exited 0 with **0 errors, 164 warnings** (111 missing phone, 53 missing website). `npm run build` was run in a temp copy to preserve the dirty working tree and confirmed **Generated 158 venue pages (158 deep + 0 stubs)**. Build idempotency passed with identical `gyms/` hashes across two runs.
+- **Top 3 findings:** (1) Category contract drift — 16 categories exist but MMA/BJJ/Boxing have 0 venues and no generated category pages, CrossFit has 1 venue. (2) Six internal links point to missing `/gyms/`. (3) 50 generated non-venue pages miss `og:locale`, `twitter:title`, and `twitter:description`; schema is generic on area/guide pages.
+- **Pointer:** next session can read `AUDIT_CODEX_2026-05-10.md` and execute the recommended fix order.

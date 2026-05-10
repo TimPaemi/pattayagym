@@ -1058,14 +1058,21 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <link rel="alternate" hreflang="x-default" href="${url}" />
   <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta http-equiv="x-dns-prefetch-control" content="on" />
   <link rel="dns-prefetch" href="//maps.google.com" />
+  <link rel="preconnect" href="https://plausible.io" crossorigin />
 
   <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Pattaya Gym" />
   <meta property="og:title" content="${escHtml(fm.name)}" />
   <meta property="og:description" content="${escHtml(desc)}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:image" content="${ogImage}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="${escHtml(fm.name || slug)} — Pattaya Gym" />
   <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -1088,6 +1095,20 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
       { '@type': 'ListItem', position: 2, name: (catObj && catObj.label) || (fm.category || 'Venues'), item: SITE + '/category/' + (fm.category || '') + '/' },
       { '@type': 'ListItem', position: 3, name: fm.name || slug, item: url }
     ]
+  })}</script>
+  <script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': url + '#webpage',
+    url: url,
+    name: (fm.name || slug) + ' | Pattaya Gym',
+    description: (fm.description || '').slice(0, 160),
+    inLanguage: 'en',
+    isPartOf: { '@type': 'WebSite', '@id': SITE + '/#website', name: 'Pattaya Gym Directory', url: SITE + '/' },
+    primaryImageOfPage: { '@type': 'ImageObject', url: SITE + '/og-image.png' },
+    breadcrumb: { '@id': url + '#breadcrumb' },
+    datePublished: fm.added || fm.verified || undefined,
+    dateModified: fm.verified || undefined
   })}</script>
 </head>
 <body>

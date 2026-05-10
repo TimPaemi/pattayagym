@@ -367,6 +367,7 @@ function commonHead(title, desc, canonical, schemaType) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0b0b0d" />
 <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
+<meta name="build-id" content="${LAST_BUILD_DATE}" />
 <link rel="manifest" href="/manifest.json" />
 <link rel="apple-touch-icon" href="/icon-180.png" />
 <title>${escHtml(metaTitle(title))}</title>
@@ -375,14 +376,24 @@ function commonHead(title, desc, canonical, schemaType) {
 <link rel="alternate" hreflang="en" href="${canonical}" />
 <link rel="alternate" hreflang="x-default" href="${canonical}" />
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <link rel="dns-prefetch" href="//maps.google.com" />
+<link rel="preconnect" href="https://plausible.io" crossorigin />
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Pattaya Gym" />
 <meta property="og:title" content="${escHtml(metaTitle(title))}" />
 <meta property="og:description" content="${escHtml(metaDesc(desc))}" />
 <meta property="og:url" content="${canonical}" />
 <meta property="og:image" content="${DEFAULT_OG_IMAGE}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:alt" content="Pattaya Gym — every sport venue in Pattaya, Thailand" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${escHtml(metaTitle(title))}" />
+<meta name="twitter:description" content="${escHtml(metaDesc(desc))}" />
 <meta name="twitter:image" content="${DEFAULT_OG_IMAGE}" />
 ${stylesheetTags(true)}
 <script type="application/ld+json">${baselineSchema}</script>
@@ -595,6 +606,15 @@ function buildMapPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead(title, desc, url)}
+
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Map", "item": SITE + "/map/" }
+    ]
+  })}</script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
 <style>
   .map-page { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
@@ -669,7 +689,7 @@ ${footer()}
   function popupHtml(m) {
     return '<h4>' + esc(m.name) + '</h4>' +
       '<p>' + esc(catLabel(m.category)) + (m.area ? ' - ' + esc(m.area) : '') + (m.priceRange ? ' - ' + esc(m.priceRange) : '') + '</p>' +
-      '<a href="/gyms/' + encodeURIComponent(m.id) + '/">View full page -></a>';
+      \`<a href="/gyms/\${encodeURIComponent(m.id)}/">View full page -></a>\`;
   }
   function markerLayer(m) {
     var color = catColor(m.category);
@@ -774,6 +794,14 @@ function buildAboutPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead(title, desc, url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": SITE + "/about/" }
+    ]
+  })}</script>
 </head>
 <body>
 ${header()}
@@ -854,7 +882,7 @@ function build404() {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-${commonHead('Page not found | Pattaya Gym', 'The page you\'re looking for doesn\'t exist. Browse our directory of every Pattaya gym, Muay Thai camp, dive operator, and sport venue.', `${SITE}/404`)}
+${commonHead('Page not found | Pattaya Gym', 'The page you\'re looking for doesn\'t exist. Browse our directory of every Pattaya gym, Muay Thai camp, dive operator, and sport venue.', `${SITE}/404.html`)}
 <meta name="robots" content="noindex" />
 </head>
 <body>

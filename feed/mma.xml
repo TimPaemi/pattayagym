@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Pattaya Gym Directory - MMA venues</title>
+  <link>https://pattaya-gym.com/</link>
+  <atom:link href="https://pattaya-gym.com/feed/mma.xml" rel="self" type="application/rss+xml" />
+  <description>Latest mma venues in the Pattaya Gym Directory.</description>
+  <language>en-US</language>
+  <lastBuildDate>Wed, 29 Apr 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Rambaa Somdet M16 Muay Thai &amp; MMA</title>
+    <link>https://pattaya-gym.com/gyms/rambaa-somdet-m16/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/rambaa-somdet-m16/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>MMA</category>
+    <description><![CDATA[Personal camp of Rambaa M16 — Thailand's first MMA world champion (Shooto Flyweight 2009) + Muay Thai legend. Cage on site. 100m from Sor Klinmee.]]></description>
+  </item>
+</channel>
+</rss>

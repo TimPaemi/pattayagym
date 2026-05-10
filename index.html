@@ -14,6 +14,7 @@
   <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="apple-touch-icon" href="/icon-180.png" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta http-equiv="x-dns-prefetch-control" content="on" />
   <link rel="dns-prefetch" href="//maps.google.com" />
 
@@ -23,6 +24,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pattaya-gym.com/" />
   <meta property="og:image" content="https://pattaya-gym.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Pattaya Gym — every sport venue in Pattaya, Thailand" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter -->
@@ -39,6 +44,7 @@
   <link rel="alternate" type="application/rss+xml" title="Pattaya Gym Directory — Recently Added" href="/feed.xml" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
+  <link rel="preconnect" href="https://plausible.io" crossorigin />
   <script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
   <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 
@@ -47,14 +53,38 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://pattaya-gym.com/#website",
     "name": "Pattaya Gym Directory",
-    "url": "https://pattaya-gym.com",
+    "url": "https://pattaya-gym.com/",
     "description": "Comprehensive directory of gyms, Muay Thai camps, and sports venues in Pattaya, Thailand.",
+    "inLanguage": "en",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://pattaya-gym.com/?q={search_term_string}",
+      "target": "https://pattaya-gym.com/search/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://pattaya-gym.com/#webpage",
+    "url": "https://pattaya-gym.com/",
+    "name": "Pattaya Gym Directory | Every Sport in Pattaya",
+    "description": "Every Muay Thai camp, CrossFit box, gym, and sports venue in Pattaya — one directory.",
+    "inLanguage": "en",
+    "isPartOf": { "@id": "https://pattaya-gym.com/#website" },
+    "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pattaya-gym.com/og-image.png" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pattaya Gym",
+    "url": "https://pattaya-gym.com/",
+    "logo": { "@type": "ImageObject", "url": "https://pattaya-gym.com/og-image.png" }
   }
   </script>
 </head>
@@ -318,24 +348,4 @@
     <div class="site-footer-base">
       <p>© <span id="year"></span> pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
       <p class="sf-disclaimer">Last updated: 2026-04-29. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-            <div class="sf-builtby">
-      <span class="sf-builtby-kicker">Designed, built &amp; maintained by</span>
-      <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-card" title="Pattaya Authority — Premium Web Design &amp; SEO Studio">
-        <span class="sf-builtby-badge" aria-hidden="true">PA</span>
-        <span class="sf-builtby-text">
-          <span class="sf-builtby-name">Pattaya Authority</span>
-          <span class="sf-builtby-tagline">Premium Web Design &amp; SEO Studio</span>
-        </span>
-        <span class="sf-builtby-arrow" aria-hidden="true">&#x2197;</span>
-      </a>
-    </div>
-    </div>
-  </footer>
-
-  <script src="/data.js?v=161" defer></script>
-  <script src="/favorites.js?v=161" defer></script>
-  <script src="/app.js?v=161" defer></script>
-  <script src="/recent.js?v=161" defer></script>
-  <script src="/shortcuts.js?v=161" defer></script>
-</body>
-</html>
+            <div class="sf-bu

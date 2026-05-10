@@ -210,7 +210,7 @@ function pageFeedbackHtml(urlPath, title) {
   </section>`;
 }
 
-function commonHead(title, desc, canonical, schemaType) {
+function commonHead(title, desc, canonical, schemaType, ogType) {
   const baselineSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": schemaType || "WebPage",
@@ -239,6 +239,7 @@ function commonHead(title, desc, canonical, schemaType) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0b0b0d" />
 <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
+<meta name="build-id" content="${LAST_BUILD_DATE}" />
 <link rel="manifest" href="/manifest.json" />
 <link rel="apple-touch-icon" href="/icon-180.png" />
 <title>${escHtml(metaTitle(title))}</title>
@@ -247,14 +248,24 @@ function commonHead(title, desc, canonical, schemaType) {
 <link rel="alternate" hreflang="en" href="${canonical}" />
 <link rel="alternate" hreflang="x-default" href="${canonical}" />
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <link rel="dns-prefetch" href="//maps.google.com" />
-<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://plausible.io" crossorigin />
+<meta property="og:type" content="${ogType || 'website'}" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Pattaya Gym" />
 <meta property="og:title" content="${escHtml(metaTitle(title))}" />
 <meta property="og:description" content="${escHtml(metaDesc(desc))}" />
 <meta property="og:url" content="${canonical}" />
 <meta property="og:image" content="${DEFAULT_OG_IMAGE}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:alt" content="Pattaya Gym — every sport venue in Pattaya, Thailand" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${escHtml(metaTitle(title))}" />
+<meta name="twitter:description" content="${escHtml(metaDesc(desc))}" />
 <meta name="twitter:image" content="${DEFAULT_OG_IMAGE}" />
 ${stylesheetTags(true)}
 <script type="application/ld+json">${baselineSchema}</script>
@@ -474,6 +485,20 @@ function buildAreaPage(area, allGyms, allCats) {
       { '@type': 'ListItem', position: 3, name: area.name, item: url }
     ]
   };
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Sport venues in ${area.name}, Pattaya`,
+    description: `Verified gyms, Muay Thai camps, dive operators, golf courses, and sport venues in ${area.name}.`,
+    numberOfItems: matchingGyms.length,
+    itemListOrder: 'https://schema.org/ItemListUnordered',
+    itemListElement: matchingGyms.slice(0, 50).map((g, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE}/gyms/${g.id}/`,
+      name: g.name
+    }))
+  };
 
   // Group by category for nicer layout
   const byCat = {};
@@ -490,7 +515,9 @@ function buildAreaPage(area, allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead(title, desc, url)}
+<link rel="alternate" type="application/rss+xml" title="Pattaya Gym — ${escHtml(area.name)} venues" href="/feed/area/${area.slug}.xml" />
 <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
+<script type="application/ld+json">${JSON.stringify(itemListSchema)}</script>
 </head>
 <body>
 ${header()}
@@ -1179,6 +1206,20 @@ function buildGuidePage(guide, allGyms) {
       url: `${SITE}/gyms/${g.id}/`, name: g.name
     }))
   };
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: guide.h1,
+    description: guideDesc,
+    url: url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    inLanguage: 'en',
+    image: DEFAULT_OG_IMAGE,
+    datePublished: '2026-01-01',
+    dateModified: new Date().toISOString().slice(0, 10),
+    author: { '@type': 'Organization', name: 'Pattaya Gym', url: `${SITE}/` },
+    publisher: { '@type': 'Organization', name: 'Pattaya Gym', url: `${SITE}/`, logo: { '@type': 'ImageObject', url: DEFAULT_OG_IMAGE } }
+  };
 
   // TL;DR — top 3 picks block
   const top3 = sorted.slice(0, 3);
@@ -1209,9 +1250,10 @@ function buildGuidePage(guide, allGyms) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-${commonHead(guideTitle, guideDesc, url)}
+${commonHead(guideTitle, guideDesc, url, undefined, 'article')}
 <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(itemListSchema)}</script>
+<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
 ${faqSchema}
 </head>
 <body>
@@ -1242,6 +1284,24 @@ ${header()}
   ${sectionsHtml.join('')}
   ${extraHtml}
   ${faqHtml}
+  ${(() => {
+    const related = GUIDES.filter(g => g.slug !== guide.slug).slice(0, 6);
+    if (!related.length) return '';
+    const picks = related.sort(() => Math.random() - 0.5).slice(0, 3);
+    return `
+  <section class="about" aria-labelledby="related-guides-h" style="margin-top: 48px;">
+    <h2 id="related-guides-h" style="font-size: 1.4rem; margin-bottom: 16px;">Related Pattaya guides</h2>
+    <div class="cat-venue-grid">
+      ${picks.map(g => `
+      <a href="/guides/${g.slug}/" class="cat-venue-card">
+        <div class="cv-head"><h3>${escHtml(g.h1)}</h3></div>
+        <p>${escHtml(g.desc)}</p>
+        <span class="cv-cta">Read guide →</span>
+      </a>`).join('')}
+    </div>
+    <p style="margin: 16px 0 0; font-size: 13px; color: var(--text-muted);"><a href="/guides/" style="color: var(--accent);">Browse all ${GUIDES.length} Pattaya guides →</a></p>
+  </section>`;
+  })()}
   <div class="venue-cta-foot" style="margin-top:48px;">
     <h3>Want to compare these side-by-side?</h3>
     <p>Click "+ Add to compare" on any venue page. Then visit /compare/ to see them in a single table.</p>
@@ -1270,11 +1330,35 @@ function buildGuidesIndex(allGyms) {
       <p>${escHtml(g.desc)}</p>
       <span class="cv-cta">Read guide →</span>
     </a>`).join('');
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Pattaya Gym Guides',
+    description: `Curated guides to Pattaya gyms, Muay Thai camps, dive operators and sport venues. ${GUIDES.length} guides built from a verified directory of ${allGyms.length} venues.`,
+    url: url,
+    inLanguage: 'en',
+    isPartOf: { '@type': 'WebSite', name: 'Pattaya Gym', url: `${SITE}/` },
+    hasPart: GUIDES.map(g => ({
+      '@type': 'Article',
+      headline: g.h1,
+      url: `${SITE}/guides/${g.slug}/`,
+      description: g.desc
+    }))
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Pattaya Gym Directory', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Guides', item: url }
+    ]
+  };
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 ${commonHead('Pattaya Gym Guides — Best of Pattaya by Category', 'Curated guides to the best Pattaya gyms, Muay Thai camps, dive operators, water parks, and sport venues — by budget, level, family fit, and more.', url)}
+<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
+<script type="application/ld+json">${JSON.stringify(collectionSchema)}</script>
 </head>
 <body>
 ${header()}
@@ -1342,6 +1426,14 @@ function buildMethodologyPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead('Research Methodology | Pattaya Gym', `How Pattaya Gym researches, verifies and updates ${allGyms.length} Pattaya gyms, Muay Thai camps, golf courses and sport venues.`, url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Research Methodology", "item": SITE + "/methodology/" }
+    ]
+  })}</script>
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body>
@@ -1423,6 +1515,14 @@ function buildStatsPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead('Pattaya Sport Tourism Stats | Pattaya Gym', `Live Pattaya sport tourism stats from ${allGyms.length} venues: top categories, areas, price tiers, free options and verification freshness.`, url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Pattaya Sport Stats", "item": SITE + "/pattaya-sport-stats/" }
+    ]
+  })}</script>
 <script type="application/ld+json">${JSON.stringify(schema)}</script>
 </head>
 <body>
@@ -1489,6 +1589,14 @@ function buildSearchPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead('Search Pattaya Gyms & Sport Venues', `Search ${allGyms.length}+ verified Pattaya gyms, Muay Thai camps, dive operators, golf courses, and sport venues by name, area, category, or feature.`, url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Search", "item": SITE + "/search/" }
+    ]
+  })}</script>
 <style>
   .search-input-wrap { position: relative; max-width: 720px; margin: 0 auto 24px; }
   .search-input {
@@ -1625,6 +1733,15 @@ function buildAddPage() {
 <html lang="en">
 <head>
 ${commonHead('Add Your Gym to Pattaya Gym Directory', 'Own a gym, Muay Thai camp, dive operator, or sport venue in Pattaya? Submit your listing for free verification and inclusion in the directory.', url)}
+
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Add Your Gym", "item": SITE + "/add-your-gym/" }
+    ]
+  })}</script>
 <style>
   .form-card { max-width: 640px; margin: 0 auto; padding: 32px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; }
   .form-row { margin-bottom: 18px; }
@@ -1744,6 +1861,14 @@ function buildSearchPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead('Search Pattaya Gyms & Sport Venues', `Search ${allGyms.length}+ verified Pattaya gyms, Muay Thai camps, dive operators, golf courses, and sport venues by name, area, category, price, hours, or language.`, url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Search", "item": SITE + "/search/" }
+    ]
+  })}</script>
 <style>
   .search-input-wrap { position: relative; max-width: 720px; margin: 0 auto 24px; }
   .search-input { width: 100%; padding: 18px 56px 18px 22px; border-radius: 14px; background: var(--card); border: 2px solid var(--border); color: var(--text); font-size: 17px; transition: border-color 0.2s, box-shadow 0.2s; }
@@ -1930,7 +2055,7 @@ ${footer()}
       return '<article class="sr-card">' +
         '<div class="card-head"><div class="sr-cat">'+esc(catLabel(g.category))+'</div>' +
         '<button class="favorite-btn card-favorite" data-pg-favorite-id="'+esc(g.id)+'" data-pg-favorite-name="'+esc(g.name)+'" data-pg-favorite-category="'+esc(g.category || '')+'" data-pg-favorite-area="'+esc(g.area || '')+'" data-pg-favorite-price="'+esc(g.priceRange || '')+'" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button></div>' +
-        '<h3><a href="/gyms/'+encodeURIComponent(g.id)+'/">'+highlight(g.name, q)+'</a></h3>' +
+        \`<h3><a href="/gyms/\${encodeURIComponent(g.id)}/">\${highlight(g.name, q)}</a></h3>\` +
         '<div class="sr-meta">'+(g.area?'Area: '+highlight(g.area,q)+' - ':'')+(g.priceRange?'Price: '+esc(g.priceRange)+' - ':'')+(g.hours?'Hours: '+esc(g.hours):'')+'</div>' +
         '<p>'+highlight(g.description||'', q)+'</p>' +
       '</article>';
@@ -1972,6 +2097,14 @@ function buildContactPage() {
 <html lang="en">
 <head>
 ${commonHead('Contact Pattaya Gym | Corrections and Partnerships', 'Contact Pattaya Gym to suggest venue edits, submit sports listings, share reader feedback, or ask about directory research and partnerships.', url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": SITE + "/contact/" }
+    ]
+  })}</script>
 <link rel="stylesheet" href="${assetHref('/styles.css')}" />
 <link rel="stylesheet" href="${assetHref('/venue.css')}" />
 </head>
@@ -2021,6 +2154,14 @@ function buildPressPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead('Press | Pattaya Gym Directory', 'Press information for Pattaya Gym, including directory facts, editorial scope, media contact details, and future coverage notes.', url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Press", "item": SITE + "/press/" }
+    ]
+  })}</script>
 <link rel="stylesheet" href="${assetHref('/styles.css')}" />
 <link rel="stylesheet" href="${assetHref('/venue.css')}" />
 </head>
@@ -2066,6 +2207,14 @@ function buildFavoritesPage(allGyms) {
 <html lang="en">
 <head>
 ${commonHead('Saved Pattaya Gyms | Pattaya Gym Favorites', 'View the Pattaya gyms, Muay Thai camps, golf courses, dive operators, and sport venues you saved while browsing the directory.', url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Favorites", "item": SITE + "/favorites/" }
+    ]
+  })}</script>
 </head>
 <body>
 ${header()}
@@ -2098,6 +2247,14 @@ function buildTripPlannerPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead('Plan My Pattaya Fitness Trip | Pattaya Gym', 'Build a simple Pattaya fitness itinerary from verified gyms, Muay Thai camps, pools, golf courses, dive operators, and family-friendly sport venues.', url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Plan My Trip", "item": SITE + "/plan-my-trip/" }
+    ]
+  })}</script>
 </head>
 <body>
 ${header()}
@@ -2197,7 +2354,7 @@ ${footer()}
     }).filter(function (x) { return x.s > 0; }).sort(function (a,b) { return b.s - a.s; }).slice(0, Math.min(8, Math.max(5, days)));
     results.innerHTML = picks.map(function (x) {
       var g = x.g;
-      return '<article class="tool-result-card"><h3><a href="/gyms/'+encodeURIComponent(g.id)+'/">'+esc(g.name)+'</a></h3><p>'+esc(catLabel(g.category))+(g.area?' - '+esc(g.area):'')+(g.priceRange?' - '+esc(g.priceRange):'')+'</p><p>'+esc(g.description || '')+'</p><button class="favorite-btn" data-pg-favorite-id="'+esc(g.id)+'" data-pg-favorite-name="'+esc(g.name)+'" data-pg-favorite-category="'+esc(g.category || '')+'" data-pg-favorite-area="'+esc(g.area || '')+'" data-pg-favorite-price="'+esc(g.priceRange || '')+'" aria-pressed="false"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button></article>';
+      return \`<article class="tool-result-card"><h3><a href="/gyms/\${encodeURIComponent(g.id)}/">\${esc(g.name)}</a></h3><p>\${esc(catLabel(g.category))}\${g.area?' - '+esc(g.area):''}\${g.priceRange?' - '+esc(g.priceRange):''}</p><p>\${esc(g.description || '')}</p><button class="favorite-btn" data-pg-favorite-id="\${esc(g.id)}" data-pg-favorite-name="\${esc(g.name)}" data-pg-favorite-category="\${esc(g.category || '')}" data-pg-favorite-area="\${esc(g.area || '')}" data-pg-favorite-price="\${esc(g.priceRange || '')}" aria-pressed="false"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button></article>\`;
     }).join('');
     schedule.innerHTML = [
       'Morning: primary training session near your base area.',
@@ -2225,6 +2382,14 @@ function buildCoachFinderPage(allGyms, allCats) {
 <html lang="en">
 <head>
 ${commonHead('Find My Pattaya Coach | Muay Thai, MMA and Boxing', 'Use Pattaya Gym venue metadata to shortlist Muay Thai, MMA, BJJ, and boxing gyms by discipline, language, beginner fit, and female-friendly signals.', url)}
+<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Pattaya Gym Directory", "item": SITE + "/" },
+      { "@type": "ListItem", "position": 2, "name": "Find My Coach", "item": SITE + "/find-my-coach/" }
+    ]
+  })}</script>
 </head>
 <body>
 ${header()}
@@ -2315,7 +2480,7 @@ ${footer()}
     }
     results.innerHTML = picks.map(function (x) {
       var g = x.g;
-      return '<article class="tool-result-card"><h3><a href="/gyms/'+encodeURIComponent(g.id)+'/">'+esc(g.name)+'</a></h3><p>'+esc(catLabel(g.category))+(g.area?' - '+esc(g.area):'')+(g.priceRange?' - '+esc(g.priceRange):'')+'</p><p>'+esc(g.description || '')+'</p><button class="favorite-btn" data-pg-favorite-id="'+esc(g.id)+'" data-pg-favorite-name="'+esc(g.name)+'" data-pg-favorite-category="'+esc(g.category || '')+'" data-pg-favorite-area="'+esc(g.area || '')+'" data-pg-favorite-price="'+esc(g.priceRange || '')+'" aria-pressed="false"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button></article>';
+      return \`<article class="tool-result-card"><h3><a href="/gyms/\${encodeURIComponent(g.id)}/">\${esc(g.name)}</a></h3><p>\${esc(catLabel(g.category))}\${g.area?' - '+esc(g.area):''}\${g.priceRange?' - '+esc(g.priceRange):''}</p><p>\${esc(g.description || '')}</p><button class="favorite-btn" data-pg-favorite-id="\${esc(g.id)}" data-pg-favorite-name="\${esc(g.name)}" data-pg-favorite-category="\${esc(g.category || '')}" data-pg-favorite-area="\${esc(g.area || '')}" data-pg-favorite-price="\${esc(g.priceRange || '')}" aria-pressed="false"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button></article>\`;
     }).join('');
     if (window.PG && PG.favorites) { PG.favorites.bindButtons(results); PG.favorites.refreshAllButtons(); }
   }
@@ -2330,6 +2495,48 @@ ${footer()}
 }
 
 // ============== MAIN ==============
+
+function buildAreaRss(area, allGyms) {
+  const lower = (s) => String(s||'').toLowerCase();
+  const matching = allGyms.filter(g => {
+    const haystack = lower(g.area + ' ' + g.address);
+    return area.keywords.some(k => haystack.indexOf(k) >= 0);
+  });
+  const sorted = matching.slice().sort((a, b) =>
+    String(b.verified || '').localeCompare(String(a.verified || ''))
+  ).slice(0, 30);
+  const feedUrl = `${SITE}/feed/area/${area.slug}.xml`;
+  const feedTitle = `Pattaya Gym Directory - ${area.name} venues`;
+  const feedDesc = `Latest gyms, Muay Thai, dive, golf, and sport venues in ${area.name}, Pattaya.`;
+  const latestVerified = sorted.map(g => g.verified).filter(Boolean).sort().reverse()[0] || LAST_BUILD_DATE;
+  const items = sorted.map(g => {
+    const url = `${SITE}/gyms/${g.id}/`;
+    const pubDate = new Date((g.verified || latestVerified) + 'T00:00:00Z').toUTCString();
+    const desc = (g.description || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+    return `  <item>
+    <title>${escHtml(g.name || '')}</title>
+    <link>${url}</link>
+    <guid isPermaLink="true">${url}</guid>
+    <pubDate>${pubDate}</pubDate>
+    <description><![CDATA[${desc}]]></description>
+  </item>`;
+  }).join('\n');
+  const lastBuild = new Date(latestVerified + 'T00:00:00Z').toUTCString();
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>${escHtml(feedTitle)}</title>
+  <link>${SITE}/area/${area.slug}/</link>
+  <atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />
+  <description>${escHtml(feedDesc)}</description>
+  <language>en-us</language>
+  <lastBuildDate>${lastBuild}</lastBuildDate>
+${items}
+</channel>
+</rss>
+`;
+}
+
 function main() {
   const { GYMS, CATEGORIES } = loadGymsFromDataJs();
   const extraUrls = [];
@@ -2437,6 +2644,15 @@ function main() {
       console.log('  [SMP] sitemap.xml updated (+' + extraUrls.length + ' urls)');
     }
   }
+
+  // Per-area RSS feeds
+  const feedAreaDir = path.join(ROOT, 'feed', 'area');
+  if (!fs.existsSync(path.join(ROOT, 'feed'))) fs.mkdirSync(path.join(ROOT, 'feed'));
+  if (!fs.existsSync(feedAreaDir)) fs.mkdirSync(feedAreaDir);
+  AREAS.forEach(area => {
+    fs.writeFileSync(path.join(feedAreaDir, `${area.slug}.xml`), buildAreaRss(area, GYMS));
+    console.log('  [RSS-AREA] /feed/area/' + area.slug + '.xml');
+  });
 
   console.log('\nDiscovery built: ' + AREAS.length + ' area pages + ' + GUIDES.length + ' guides + search + add form + methodology + stats + contact + press + Section J tools');
 }

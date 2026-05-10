@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Pattaya Gym Directory - BJJ / Grappling venues</title>
+  <link>https://pattaya-gym.com/</link>
+  <atom:link href="https://pattaya-gym.com/feed/bjj.xml" rel="self" type="application/rss+xml" />
+  <description>Latest bjj / grappling venues in the Pattaya Gym Directory.</description>
+  <language>en-US</language>
+  <lastBuildDate>Wed, 29 Apr 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>ALFA BJJ Pattaya</title>
+    <link>https://pattaya-gym.com/gyms/alfa-bjj-pattaya/</link>
+    <guid isPermaLink="true">https://pattaya-gym.com/gyms/alfa-bjj-pattaya/</guid>
+    <pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate>
+    <category>BJJ / Grappling</category>
+    <description><![CDATA[Pattaya’s first ever dedicated Brazilian Jiu-Jitsu gym. Standalone BJJ academy with Gi + No-Gi classes, all levels welcome. Pure-BJJ environment distinct from multi-discipline MMA gyms.]]></description>
+  </item>
+</channel>
+</rss>
