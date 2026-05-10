@@ -245,7 +245,7 @@ For a **single child + sports access**, the tuition pays for **education plus wh
 
 ## Not Best For
 
-- **Short-stay families** (<6 months)
+- **Short-stay families** (under 6 months)
 - **Pure budget seekers** — Thai schools dramatically cheaper
 - **Pure local-Thai immersion** preferences — Thai schools deliver this
 - **Single-sport specialty** preferences — go to dedicated academies (FAST PRO Football, Manta Kids)

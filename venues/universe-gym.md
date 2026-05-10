@@ -77,10 +77,8 @@ Universe Gym is **multi-level** and divided into **at least five distinct traini
 
 ### Ground Floor Areas (Two)
 
-1. **Main floor** — most modern equipment
-   - **Resistance machines** (full circuit)
-   - **Cardio equipment** (treadmills, ellipticals, bikes, rowers, stair climbers)
-2. **Free weight area** — Olympic barbells, plates, full dumbbell rack, benches
+- **Main floor** — most modern equipment, full circuit of resistance machines, plus cardio (treadmills, ellipticals, bikes, rowers, stair climbers)
+- **Free weight area** — Olympic barbells, plates, full dumbbell rack, benches
 
 ### Upstairs Areas (Three)
 

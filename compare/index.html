@@ -267,4 +267,10 @@
 
     // Sync localStorage with the URL ids so the floating widget reflects this view
     try {
-      var current = venues.map(function (v) { return { id: v.
+      var current = venues.map(function (v) { return { id: v.id, name: v.name }; });
+      try { localStorage.setItem('pg-compare', JSON.stringify(current)); } catch (e) {}
+    } catch (e) {}
+  })();
+  </script>
+</body>
+</html>
