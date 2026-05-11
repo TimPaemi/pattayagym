@@ -1,10 +1,59 @@
+# pattaya-gym.com — humans.txt
+# We are humans, building things for humans.
+
 /* TEAM */
-Site: Pattaya Gym Directory
-Contact: hello@pattaya-gym.com
-Location: Pattaya, Chonburi, Thailand
+  Editor / Founder: Tim Paemi
+  Site:             https://timpaemi.com/
+  Contact:          hello@pattaya-gym.com
+  Location:         Pattaya, Chonburi, Thailand
+  Coordinates:      12.93°N, 100.88°E
+
+/* THANKS */
+  Every gym owner, trainer, fighter, instructor, and diver who answered
+  our research questions — you make this directory worth maintaining.
+
+  Special thanks to the 16 partners listed on mrweoutside.com — many of
+  the gyms here exist because of the community you built.
 
 /* SITE */
-URL: https://pattaya-gym.com/
-Purpose: Independent directory of gyms and sport venues in Pattaya.
-Stack: Static HTML, CSS, JavaScript, Node.js build scripts.
-Standards: SEO, WCAG 2.1 AA, fast static delivery on Cloudflare Pages.
+  URL:        https://pattaya-gym.com/
+  Built:      2026
+  Purpose:    Independent, source-cited directory of every gym and sport
+              venue in Pattaya, Thailand. No paid placements. No sponsors.
+              No affiliate-only listings.
+
+/* STACK */
+  Static HTML + CSS + vanilla JavaScript (no framework)
+  Node.js build chain (build.js + build-discovery.js + build-extras.js)
+  YAML frontmatter + Markdown content
+  Leaflet.js (interactive map)
+  JetBrains Mono + Inter Tight (typography)
+  Buttondown (newsletter — currently disabled)
+  Plausible Analytics (privacy-first, no cookies, no tracking)
+  Cloudflare Pages (hosting + edge cache)
+  GitHub Actions (CI: validate + html-validate + Lighthouse)
+
+/* SCHEMA */
+  Schema.org JSON-LD: LocalBusiness, BreadcrumbList, WebPage, FAQPage,
+  ItemList, Article, CollectionPage, Organization, Speakable, Place,
+  PostalAddress, GeoCoordinates, ContactPoint, OpeningHoursSpecification
+
+/* AI-FRIENDLY */
+  /llms.txt              — curated content map for AI agents
+  /api/venues.json       — full directory (CC BY 4.0)
+  /api/categories.json   — by sport
+  /api/areas.json        — by location
+  /feed.json             — JSON Feed 1.1
+  /openapi.yaml          — OpenAPI 3.1 schema
+  /.well-known/ai-plugin.json — ChatGPT plugin manifest
+
+/* STANDARDS */
+  HTML5, CSS3 (variable fonts, container queries, prefers-reduced-motion)
+  WCAG 2.1 AA target
+  Open Graph + Twitter Cards (with image:width/height/alt)
+  RFC 9116 (security.txt)
+  jsonfeed.org 1.1
+
+/* CREDITS */
+  Designed, built and maintained by Pattaya Authority
+  https://pattaya-authority.com/

@@ -1,5 +1,18 @@
+# Pattaya Gym Directory — security.txt
+# Independent directory of Pattaya, Thailand sport venues.
+# pattaya-gym.com
+
 Contact: mailto:hello@pattaya-gym.com
-Expires: 2027-04-29T23:59:59Z
+Expires: 2027-12-31T23:59:59Z
 Preferred-Languages: en
 Canonical: https://pattaya-gym.com/.well-known/security.txt
 Policy: https://pattaya-gym.com/.well-known/security.txt
+Acknowledgments: https://pattaya-gym.com/about/
+
+# Disclosure policy:
+#  - Report security issues to hello@pattaya-gym.com
+#  - We aim to respond within 72 hours
+#  - We do not run a bug bounty but we publicly acknowledge responsible reporters at /about/
+#  - Please give us 30 days to respond before public disclosure
+#  - In-scope: pattaya-gym.com and all subdomains
+#  - Out of scope: third-party services we link to (Plausible, Buttondown, etc.)

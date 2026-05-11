@@ -689,11 +689,17 @@ function parseOpeningHoursSpecification(hours) {
   return ranges.length ? ranges : undefined;
 }
 
+const WIKIDATA_QIDS = {
+  'lumpinee-boxing-stadium': 'Q1378411',
+  'rajadamnern-stadium': 'Q1374988'
+};
+
 function buildVenueSchema(fm, slug, url, desc) {
   const image = `${SITE}/og/${slug}.png`;
   const sameAs = [
     fm.social && fm.social.facebook && `https://facebook.com/${fm.social.facebook}`,
-    fm.social && fm.social.instagram && `https://instagram.com/${fm.social.instagram}`
+    fm.social && fm.social.instagram && `https://instagram.com/${fm.social.instagram}`,
+    WIKIDATA_QIDS[slug] && `https://www.wikidata.org/wiki/${WIKIDATA_QIDS[slug]}`
   ].filter(Boolean);
 
   const schema = {
@@ -1028,6 +1034,10 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0b0b0d" />
   <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
+  <meta name="application-name" content="Pattaya Gym" />
+  <meta name="msapplication-TileColor" content="#0b0b0d" />
+  <meta name="msapplication-TileImage" content="/icon-192.png" />
+  <meta name="color-scheme" content="dark" />
   <link rel="manifest" href="/manifest.json" />
   <link rel="apple-touch-icon" href="/icon-180.png" />
   <title>${escHtml(title)}</title>

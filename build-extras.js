@@ -337,6 +337,10 @@ function commonHead(title, desc, canonical, schemaType) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0b0b0d" />
 <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
+<meta name="application-name" content="Pattaya Gym" />
+<meta name="msapplication-TileColor" content="#0b0b0d" />
+<meta name="msapplication-TileImage" content="/icon-192.png" />
+<meta name="color-scheme" content="dark" />
 <meta name="build-id" content="${LAST_BUILD_DATE}" />
 <link rel="manifest" href="/manifest.json" />
 <link rel="apple-touch-icon" href="/icon-180.png" />
@@ -347,6 +351,7 @@ function commonHead(title, desc, canonical, schemaType) {
 <link rel="alternate" hreflang="x-default" href="${canonical}" />
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 <link rel="alternate" type="application/json" title="Pattaya Gym Directory API" href="/api/venues.json" />
+<link rel="alternate" type="application/feed+json" title="Pattaya Gym — JSON Feed" href="/feed.json" />
 <link rel="alternate" type="text/markdown" title="Pattaya Gym for LLMs" href="/llms.txt" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
@@ -866,6 +871,17 @@ ${header()}
   <div style="font-size: 8rem; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 12px;">404</div>
   <h1 class="venue-h1" style="font-size: 1.8rem;">Lost in Pattaya?</h1>
   <p class="venue-lede" style="max-width: 520px; margin-left: auto; margin-right: auto;">The page you're looking for doesn't exist. Maybe it moved, maybe we typoed a slug somewhere — either way, here's where to go next.</p>
+  <div style="max-width: 720px; margin: 36px auto 0; text-align: left;">
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-low); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;">// Did you mean?</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px;">
+      <a href="/category/muay-thai/" style="display:block;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-decoration:none;color:var(--text-hi);font-family:'JetBrains Mono',monospace;font-size:13px;">Muay Thai →</a>
+      <a href="/category/fitness/" style="display:block;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-decoration:none;color:var(--text-hi);font-family:'JetBrains Mono',monospace;font-size:13px;">Fitness gyms →</a>
+      <a href="/category/golf/" style="display:block;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-decoration:none;color:var(--text-hi);font-family:'JetBrains Mono',monospace;font-size:13px;">Golf courses →</a>
+      <a href="/category/watersports/" style="display:block;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-decoration:none;color:var(--text-hi);font-family:'JetBrains Mono',monospace;font-size:13px;">Watersports / Dive →</a>
+      <a href="/search/" style="display:block;padding:14px 16px;background:rgba(255,184,0,0.06);border:1px solid rgba(255,184,0,0.22);border-radius:6px;text-decoration:none;color:var(--gold-2,#ffd84a);font-family:'JetBrains Mono',monospace;font-size:13px;">Open search →</a>
+      <a href="/map/" style="display:block;padding:14px 16px;background:rgba(255,184,0,0.06);border:1px solid rgba(255,184,0,0.22);border-radius:6px;text-decoration:none;color:var(--gold-2,#ffd84a);font-family:'JetBrains Mono',monospace;font-size:13px;">Open map →</a>
+    </div>
+  </div>
   <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 32px 0;">
     <a class="btn btn-primary" href="/">📋 Browse the directory</a>
     <a class="btn btn-secondary" href="/map/">📍 View map</a>
@@ -1211,6 +1227,84 @@ function buildVenuesApi(allGyms, allCats) {
 }
 
 
+function buildJsonFeed(allGyms, allCats) {
+  const sorted = allGyms.slice().sort((a, b) => String(b.verified || '').localeCompare(String(a.verified || ''))).slice(0, 30);
+  const items = sorted.map(g => ({
+    id: `${SITE}/gyms/${g.id}/`,
+    url: `${SITE}/gyms/${g.id}/`,
+    title: g.name || '',
+    content_text: g.description || '',
+    date_published: (g.verified || LAST_BUILD_DATE) + 'T00:00:00Z',
+    tags: [g.category, g.area].filter(Boolean)
+  }));
+  return JSON.stringify({
+    version: 'https://jsonfeed.org/version/1.1',
+    title: 'Pattaya Gym Directory — Recently Added',
+    home_page_url: SITE + '/',
+    feed_url: SITE + '/feed.json',
+    description: 'Latest verified gyms, Muay Thai camps, dive operators, golf courses and sport venues added to the Pattaya Gym Directory.',
+    icon: SITE + '/og-image.png',
+    favicon: SITE + '/icon-180.png',
+    language: 'en',
+    authors: [{ name: 'Pattaya Gym Directory', url: SITE + '/' }],
+    items
+  }, null, 2);
+}
+
+function buildCategoriesApi(allGyms, allCats) {
+  const data = allCats.map(c => {
+    const list = allGyms.filter(g => g.category === c.key);
+    return {
+      key: c.key,
+      label: c.label,
+      url: `${SITE}/category/${c.key}/`,
+      venueCount: list.length,
+      venues: list.map(g => ({ id: g.id, name: g.name, url: `${SITE}/gyms/${g.id}/`, area: g.area || null, priceRange: g.priceRange || null }))
+    };
+  });
+  return JSON.stringify({
+    name: 'Pattaya Gym Directory — categories',
+    url: SITE + '/',
+    generated: LAST_BUILD_DATE,
+    license: 'CC BY 4.0',
+    count: data.length,
+    categories: data
+  }, null, 2);
+}
+
+function buildAreasApi(allGyms) {
+  const areas = [
+    { slug: 'jomtien', name: 'Jomtien', keywords: ['jomtien','na jomtien','na chom thian'] },
+    { slug: 'naklua', name: 'Naklua', keywords: ['naklua','na kluea'] },
+    { slug: 'pratamnak', name: 'Pratamnak Hill', keywords: ['pratamnak','pratumnak','phra tamnak','buddha hill'] },
+    { slug: 'east-pattaya', name: 'East Pattaya / Darkside', keywords: ['east pattaya','darkside','mabprachan','khao talo','khao mai kaeo'] },
+    { slug: 'central-pattaya', name: 'Central Pattaya', keywords: ['central pattaya','walking street','beach road','soi buakhao','pattaya 2nd','pattaya 3rd','pattaya klang','the avenue'] },
+    { slug: 'sattahip', name: 'Sattahip / Far South', keywords: ['sattahip','ban chang'] }
+  ];
+  const data = areas.map(a => {
+    const list = allGyms.filter(g => {
+      const hay = ((g.area || '') + ' ' + (g.address || '')).toLowerCase();
+      return a.keywords.some(k => hay.indexOf(k) >= 0);
+    });
+    return {
+      slug: a.slug,
+      name: a.name,
+      url: `${SITE}/area/${a.slug}/`,
+      venueCount: list.length,
+      venues: list.map(g => ({ id: g.id, name: g.name, url: `${SITE}/gyms/${g.id}/`, category: g.category, priceRange: g.priceRange || null }))
+    };
+  });
+  return JSON.stringify({
+    name: 'Pattaya Gym Directory — areas',
+    url: SITE + '/',
+    generated: LAST_BUILD_DATE,
+    license: 'CC BY 4.0',
+    count: data.length,
+    areas: data
+  }, null, 2);
+}
+
+
 function main() {
   const { GYMS, CATEGORIES } = loadGymsFromDataJs();
   const extraUrls = [];
@@ -1264,6 +1358,12 @@ function main() {
   ensureDir(path.join(ROOT, 'api'));
   fs.writeFileSync(path.join(ROOT, 'api', 'venues.json'), buildVenuesApi(GYMS, CATEGORIES));
   console.log('  [API] /api/venues.json');
+  fs.writeFileSync(path.join(ROOT, 'api', 'categories.json'), buildCategoriesApi(GYMS, CATEGORIES));
+  console.log('  [API] /api/categories.json');
+  fs.writeFileSync(path.join(ROOT, 'api', 'areas.json'), buildAreasApi(GYMS));
+  console.log('  [API] /api/areas.json');
+  fs.writeFileSync(path.join(ROOT, 'feed.json'), buildJsonFeed(GYMS, CATEGORIES));
+  console.log('  [JF]  /feed.json');
 
   // 5b. RSS feed of recently-verified venues
   // NOTE: /feed.xml is intentionally NOT added to extraUrls (sitemap). RSS feeds belong in

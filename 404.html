@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0b0b0d" />
 <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
+<meta name="application-name" content="Pattaya Gym" />
+<meta name="msapplication-TileColor" content="#0b0b0d" />
+<meta name="msapplication-TileImage" content="/icon-192.png" />
+<meta name="color-scheme" content="dark" />
 <meta name="build-id" content="2026-05-11" />
 <link rel="manifest" href="/manifest.json" />
 <link rel="apple-touch-icon" href="/icon-180.png" />
@@ -15,6 +19,7 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/404.html" />
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
 <link rel="alternate" type="application/json" title="Pattaya Gym Directory API" href="/api/venues.json" />
+<link rel="alternate" type="application/feed+json" title="Pattaya Gym — JSON Feed" href="/feed.json" />
 <link rel="alternate" type="text/markdown" title="Pattaya Gym for LLMs" href="/llms.txt" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
@@ -88,6 +93,17 @@
   <div style="font-size: 8rem; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 12px;">404</div>
   <h1 class="venue-h1" style="font-size: 1.8rem;">Lost in Pattaya?</h1>
   <p class="venue-lede" style="max-width: 520px; margin-left: auto; margin-right: auto;">The page you're looking for doesn't exist. Maybe it moved, maybe we typoed a slug somewhere — either way, here's where to go next.</p>
+  <div style="max-width: 720px; margin: 36px auto 0; text-align: left;">
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-low); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;">// Did you mean?</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px;">
+      <a href="/category/muay-thai/" style="display:block;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-decoration:none;color:var(--text-hi);font-family:'JetBrains Mono',monospace;font-size:13px;">Muay Thai →</a>
+      <a href="/category/fitness/" style="display:block;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-decoration:none;color:var(--text-hi);font-family:'JetBrains Mono',monospace;font-size:13px;">Fitness gyms →</a>
+      <a href="/category/golf/" style="display:block;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-decoration:none;color:var(--text-hi);font-family:'JetBrains Mono',monospace;font-size:13px;">Golf courses →</a>
+      <a href="/category/watersports/" style="display:block;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:6px;text-decoration:none;color:var(--text-hi);font-family:'JetBrains Mono',monospace;font-size:13px;">Watersports / Dive →</a>
+      <a href="/search/" style="display:block;padding:14px 16px;background:rgba(255,184,0,0.06);border:1px solid rgba(255,184,0,0.22);border-radius:6px;text-decoration:none;color:var(--gold-2,#ffd84a);font-family:'JetBrains Mono',monospace;font-size:13px;">Open search →</a>
+      <a href="/map/" style="display:block;padding:14px 16px;background:rgba(255,184,0,0.06);border:1px solid rgba(255,184,0,0.22);border-radius:6px;text-decoration:none;color:var(--gold-2,#ffd84a);font-family:'JetBrains Mono',monospace;font-size:13px;">Open map →</a>
+    </div>
+  </div>
   <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 32px 0;">
     <a class="btn btn-primary" href="/">📋 Browse the directory</a>
     <a class="btn btn-secondary" href="/map/">📍 View map</a>

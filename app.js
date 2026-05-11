@@ -246,3 +246,22 @@
     }
   }, true);
 })();
+
+
+// ============ Deep-link search support: /?q=xxx auto-populates search ============
+(function () {
+  if (typeof window === 'undefined') return;
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var q = params.get('q');
+    if (!q) return;
+    document.addEventListener('DOMContentLoaded', function () {
+      var search = document.getElementById('search');
+      if (!search) return;
+      search.value = q;
+      search.dispatchEvent(new Event('input', { bubbles: true }));
+      var dir = document.getElementById('directory');
+      if (dir) dir.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  } catch (e) {}
+})();

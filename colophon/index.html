@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colophon — Pattaya Gym Directory</title>
+  <meta name="description" content="How pattaya-gym.com is built — the design system, type stack, schema strategy, and AI-readable endpoints behind Pattaya's most comprehensive sport directory." />
+  <link rel="canonical" href="https://pattaya-gym.com/colophon/" />
+  <link rel="alternate" hreflang="en" href="https://pattaya-gym.com/colophon/" />
+  <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/colophon/" />
+  <meta name="theme-color" content="#0b0b0d" />
+  <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
+  <meta name="application-name" content="Pattaya Gym" />
+  <meta name="msapplication-TileColor" content="#0b0b0d" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="/icon-180.png" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Colophon — Pattaya Gym Directory" />
+  <meta property="og:description" content="How pattaya-gym.com is built — design system, type stack, schema strategy, AI endpoints." />
+  <meta property="og:url" content="https://pattaya-gym.com/colophon/" />
+  <meta property="og:image" content="https://pattaya-gym.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Pattaya Gym" />
+  <link rel="preload" href="/styles.css?v=162" as="style" />
+  <link rel="stylesheet" href="/styles.css?v=162" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://pattaya-gym.com/colophon/",
+    "name": "Colophon — Pattaya Gym Directory",
+    "description": "Design system, type stack, schema strategy and AI endpoints powering pattaya-gym.com.",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "Pattaya Gym", "url": "https://pattaya-gym.com/" }
+  }
+  </script>
+  <style>
+    body { background: var(--ed-bg, #050507); color: var(--ed-text-hi, #f7f7f8); font-family: "Inter Tight", -apple-system, sans-serif; margin: 0; }
+    .col-wrap { max-width: 880px; margin: 0 auto; padding: 80px 32px 96px; }
+    .col-mono { font-family: "JetBrains Mono", monospace; font-size: 12px; color: rgba(255,184,0,0.85); letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 16px; }
+    .col-h1 { font-family: "Inter Tight"; font-weight: 900; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 0.95; letter-spacing: -0.04em; text-transform: uppercase; margin: 0 0 24px; }
+    .col-lead { font-family: "JetBrains Mono"; font-size: 13.5px; line-height: 1.7; color: rgba(228,228,232,0.78); max-width: 640px; margin: 0 0 56px; }
+    .col-section { margin-bottom: 56px; }
+    .col-section h2 { font-family: "Inter Tight"; font-weight: 800; font-size: 1.6rem; letter-spacing: -0.02em; text-transform: uppercase; margin: 0 0 20px; }
+    .col-section h2::before { content: "// "; color: #ff7a3a; font-family: "JetBrains Mono"; font-size: 14px; }
+    .col-section p, .col-section li { font-family: "JetBrains Mono"; font-size: 13px; line-height: 1.75; color: rgba(228,228,232,0.78); }
+    .col-section ul { padding-left: 18px; margin: 0; }
+    .col-section li { margin-bottom: 6px; }
+    .col-section code, .col-section strong { color: #ffd84a; font-weight: 500; }
+    .col-grid { display: grid; grid-template-columns: 140px 1fr; gap: 12px 24px; }
+    .col-grid dt { font-family: "JetBrains Mono"; font-size: 11px; color: rgba(150,150,156,0.6); letter-spacing: 0.08em; text-transform: uppercase; padding-top: 2px; }
+    .col-grid dd { font-family: "JetBrains Mono"; font-size: 13px; color: #f7f7f8; margin: 0; }
+    .col-swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 6px; border: 1px solid rgba(255,255,255,0.14); }
+    a { color: #ffd84a; text-decoration: none; border-bottom: 1px solid rgba(255,184,0,0.32); }
+    a:hover { color: #ffe79b; }
+  </style>
+</head>
+<body>
+  <nav class="nav" role="navigation">
+    <a href="/" class="brand"><span class="brand-mark">P</span><span class="brand-text">PATTAYA <strong>GYM</strong></span></a>
+    <ul class="nav-links">
+      <li><a href="/#directory">Directory</a></li>
+      <li><a href="/guides/">Guides</a></li>
+      <li><a href="/map/">Map</a></li>
+      <li><a href="/search/">Search</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="col-wrap">
+    <p class="col-mono">// COLOPHON · BUILD NOTES</p>
+    <h1 class="col-h1">How this site is built.</h1>
+    <p class="col-lead">Pattaya Gym Directory is a static, framework-free, AI-readable directory of every sport venue in Pattaya, Thailand. Here's the stack, the type, the schema, and the endpoints.</p>
+
+    <section class="col-section">
+      <h2>Type</h2>
+      <dl class="col-grid">
+        <dt>Display</dt><dd>Inter Tight Variable · weights 400–900 · -0.04em tracking</dd>
+        <dt>Mono / Labels</dt><dd>JetBrains Mono · weights 400–500 · 0.06–0.12em tracking</dd>
+        <dt>Body</dt><dd>Inter Tight 400/500 · 1.6 line-height</dd>
+        <dt>Hosting</dt><dd>Google Fonts via <code>media="print" onload</code> non-blocking swap</dd>
+      </dl>
+    </section>
+
+    <section class="col-section">
+      <h2>Palette</h2>
+      <dl class="col-grid">
+        <dt>Gold</dt><dd><span class="col-swatch" style="background:#ffb800"></span>#ffb800 → <span class="col-swatch" style="background:#ffd84a"></span>#ffd84a → <span class="col-swatch" style="background:#b97e00"></span>#b97e00</dd>
+        <dt>Copper</dt><dd><span class="col-swatch" style="background:#ff7a3a"></span>#ff7a3a (eyebrow labels)</dd>
+        <dt>Canvas</dt><dd><span class="col-swatch" style="background:#050507"></span>#050507 → <span class="col-swatch" style="background:#0a0a0d"></span>#0a0a0d</dd>
+        <dt>Text</dt><dd>#f7f7f8 → rgba(228,228,232,.72) → rgba(150,150,156,.6)</dd>
+        <dt>Hairlines</dt><dd>rgba(255,255,255,.08) and .14</dd>
+      </dl>
+    </section>
+
+    <section class="col-section">
+      <h2>Stack</h2>
+      <ul>
+        <li><strong>Static HTML</strong> + CSS3 + vanilla JavaScript (no framework, no bundler, no JS framework dependencies)</li>
+        <li><strong>Build chain:</strong> Node.js (build.js → build-extras.js → build-discovery.js), ~4500 lines hand-rolled</li>
+        <li><strong>Content:</strong> YAML frontmatter + Markdown body, one file per venue (<code>venues/&lt;id&gt;.md</code>)</li>
+        <li><strong>Data:</strong> JS array literal in <code>data.js</code> (158 venues, 15 categories)</li>
+        <li><strong>Map:</strong> Leaflet.js with custom dark theme</li>
+        <li><strong>Analytics:</strong> Plausible (privacy-first, no cookies, instrumented with custom events)</li>
+        <li><strong>Hosting:</strong> Cloudflare Pages (auto-deploy from <code>main</code> branch)</li>
+        <li><strong>CI:</strong> GitHub Actions — npm validate + npm build + html-validate across 21 page types + Lighthouse CI</li>
+      </ul>
+    </section>
+
+    <section class="col-section">
+      <h2>Schema</h2>
+      <p>JSON-LD structured data on every page. Types in use:</p>
+      <ul>
+        <li><code>LocalBusiness</code> (with category-specific subtype: <code>SportsClub</code>, <code>HealthClub</code>, <code>GolfCourse</code>, <code>SportsActivityLocation</code>)</li>
+        <li><code>BreadcrumbList</code>, <code>WebPage</code>, <code>WebSite</code>, <code>Organization</code></li>
+        <li><code>FAQPage</code> on venue + guide pages</li>
+        <li><code>ItemList</code> on category + area + guide pages</li>
+        <li><code>Article</code> + <code>Speakable</code> on guides (voice-assistant ready)</li>
+        <li><code>CollectionPage</code> on guides index</li>
+        <li><code>Place</code>, <code>PostalAddress</code>, <code>GeoCoordinates</code>, <code>ContactPoint</code></li>
+        <li><code>OpeningHoursSpecification</code> parsed from human-readable strings</li>
+      </ul>
+    </section>
+
+    <section class="col-section">
+      <h2>AI-readable endpoints</h2>
+      <ul>
+        <li><a href="/llms.txt"><code>/llms.txt</code></a> — curated content map for AI agents</li>
+        <li><a href="/api/venues.json"><code>/api/venues.json</code></a> — full directory, CC BY 4.0 licensed</li>
+        <li><a href="/api/categories.json"><code>/api/categories.json</code></a> — by sport</li>
+        <li><a href="/api/areas.json"><code>/api/areas.json</code></a> — by location</li>
+        <li><a href="/feed.json"><code>/feed.json</code></a> — JSON Feed 1.1</li>
+        <li><a href="/feed.xml"><code>/feed.xml</code></a> — RSS 2.0 (+ 13 category + 6 area RSS feeds)</li>
+        <li><a href="/openapi.yaml"><code>/openapi.yaml</code></a> — OpenAPI 3.1 typed schema</li>
+        <li><a href="/.well-known/ai-plugin.json"><code>/.well-known/ai-plugin.json</code></a> — ChatGPT plugin manifest</li>
+        <li><a href="/sitemap.xml"><code>/sitemap.xml</code></a> + sitemap-index with 5 topical splits</li>
+      </ul>
+    </section>
+
+    <section class="col-section">
+      <h2>Standards</h2>
+      <ul>
+        <li>HTML5 · CSS3 (variable fonts, <code>prefers-reduced-motion</code>, <code>color-scheme: dark</code>)</li>
+        <li>Schema.org JSON-LD 1.0</li>
+        <li>Open Graph + Twitter Cards with <code>og:image:width/height/alt</code></li>
+        <li>RFC 9116 — <code>security.txt</code></li>
+        <li>JSON Feed 1.1</li>
+        <li>OpenAPI 3.1</li>
+        <li>llms.txt 0.1 — emerging AI-content standard</li>
+        <li>Target: WCAG 2.1 AA</li>
+      </ul>
+    </section>
+
+    <section class="col-section">
+      <h2>Editorial promise</h2>
+      <p>Every venue is researched and source-cited from public information. No paid placements. No sponsored listings. No affiliate-only entries. Listings update when public facts change.</p>
+    </section>
+
+    <section class="col-section">
+      <h2>Credit</h2>
+      <p>Designed, built and maintained by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener">Pattaya Authority</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener">Tim Paemi</a> ★</p>
+    </section>
+  </main>
+</body>
+</html>

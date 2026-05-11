@@ -1,0 +1,1016 @@
+{
+  "name": "Pattaya Gym Directory — areas",
+  "url": "https://pattaya-gym.com/",
+  "generated": "2026-05-11",
+  "license": "CC BY 4.0",
+  "count": 6,
+  "areas": [
+    {
+      "slug": "jomtien",
+      "name": "Jomtien",
+      "url": "https://pattaya-gym.com/area/jomtien/",
+      "venueCount": 37,
+      "venues": [
+        {
+          "id": "venum-training-camp",
+          "name": "Venum Training Camp Pattaya",
+          "url": "https://pattaya-gym.com/gyms/venum-training-camp/",
+          "category": "muay-thai",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "rage-fight-academy",
+          "name": "Rage Fight Academy",
+          "url": "https://pattaya-gym.com/gyms/rage-fight-academy/",
+          "category": "muay-thai",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-thai-boxing-fitness",
+          "name": "Pattaya Thai Boxing & Fitness Gym (Jomtien)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-thai-boxing-fitness/",
+          "category": "muay-thai",
+          "priceRange": "฿"
+        },
+        {
+          "id": "fight-evo360",
+          "name": "Fight EVO360 Muay Thai Gym",
+          "url": "https://pattaya-gym.com/gyms/fight-evo360/",
+          "category": "muay-thai",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "yoga-pattaya-studio",
+          "name": "Yoga Pattaya Studio",
+          "url": "https://pattaya-gym.com/gyms/yoga-pattaya-studio/",
+          "category": "yoga",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "ashtanga-yoga-pattaya",
+          "name": "Ashtanga Yoga Pattaya",
+          "url": "https://pattaya-gym.com/gyms/ashtanga-yoga-pattaya/",
+          "category": "yoga",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "nok-yoga-pattaya",
+          "name": "Nok Yoga Pattaya",
+          "url": "https://pattaya-gym.com/gyms/nok-yoga-pattaya/",
+          "category": "yoga",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "balance-yoga-studio-pattaya",
+          "name": "Balance Yoga Studio Pattaya",
+          "url": "https://pattaya-gym.com/gyms/balance-yoga-studio-pattaya/",
+          "category": "yoga",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "chee-chan-golf",
+          "name": "Chee Chan Golf Resort",
+          "url": "https://pattaya-gym.com/gyms/chee-chan-golf/",
+          "category": "golf",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "greta-sport-club",
+          "name": "Greta Sport Club Pattaya (at Greta Resort)",
+          "url": "https://pattaya-gym.com/gyms/greta-sport-club/",
+          "category": "racquet",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "tos-tennis",
+          "name": "TOS Tennis Club / TOS Tennis Academy",
+          "url": "https://pattaya-gym.com/gyms/tos-tennis/",
+          "category": "racquet",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-public-pool-jomtien",
+          "name": "Jomtien Public Swimming Pool",
+          "url": "https://pattaya-gym.com/gyms/pattaya-public-pool-jomtien/",
+          "category": "swimming",
+          "priceRange": "฿"
+        },
+        {
+          "id": "mermaids-dive",
+          "name": "Mermaid's Dive Center",
+          "url": "https://pattaya-gym.com/gyms/mermaids-dive/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "no-limit-divers",
+          "name": "No Limit Divers",
+          "url": "https://pattaya-gym.com/gyms/no-limit-divers/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "jomtien-dive-center",
+          "name": "Jomtien Dive Center",
+          "url": "https://pattaya-gym.com/gyms/jomtien-dive-center/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "clubloongchat-watersports",
+          "name": "Clubloongchat Watersports",
+          "url": "https://pattaya-gym.com/gyms/clubloongchat-watersports/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "kitesurf-pattaya",
+          "name": "Kitesurf Pattaya",
+          "url": "https://pattaya-gym.com/gyms/kitesurf-pattaya/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "kba-kiteboarding-pattaya",
+          "name": "KBA Kiteboarding Asia Pattaya (Blue Lagoon)",
+          "url": "https://pattaya-gym.com/gyms/kba-kiteboarding-pattaya/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "wave-pattaya",
+          "name": "Wave Pattaya Watersports",
+          "url": "https://pattaya-gym.com/gyms/wave-pattaya/",
+          "category": "watersports",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "cartoon-network-amazone",
+          "name": "Cartoon Network Amazone Waterpark (now Columbia Pictures Aquaverse)",
+          "url": "https://pattaya-gym.com/gyms/cartoon-network-amazone/",
+          "category": "swimming",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "ramayana-water-park",
+          "name": "Ramayana Water Park Pattaya",
+          "url": "https://pattaya-gym.com/gyms/ramayana-water-park/",
+          "category": "swimming",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "af-academy-pattaya",
+          "name": "AF Academy Football School Pattaya",
+          "url": "https://pattaya-gym.com/gyms/af-academy-pattaya/",
+          "category": "kids-youth",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-park-water-fun",
+          "name": "Pattaya Park Water & Fun Park (with Tower Jump)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-park-water-fun/",
+          "category": "adventure",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "sailbreeze-ocean-marina",
+          "name": "SailBreeze Sailing School @ Ocean Marina Yacht Club",
+          "url": "https://pattaya-gym.com/gyms/sailbreeze-ocean-marina/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "ocean-marina-jomtien",
+          "name": "Ocean Marina Jomtien — Southeast Asia's Largest Marina",
+          "url": "https://pattaya-gym.com/gyms/ocean-marina-jomtien/",
+          "category": "watersports",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "pattaya-cycling-clubs",
+          "name": "Pattaya Cycling Clubs (Cuore Masters / Monkey Xtreme / Jomtien Cycling)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-cycling-clubs/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "jomtien-beach-volleyball",
+          "name": "Jomtien Beach Volleyball Courts",
+          "url": "https://pattaya-gym.com/gyms/jomtien-beach-volleyball/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "tarzan-adventure-pattaya",
+          "name": "Tarzan Adventure Pattaya (Zipline)",
+          "url": "https://pattaya-gym.com/gyms/tarzan-adventure-pattaya/",
+          "category": "adventure",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-lawn-bowls",
+          "name": "Pattaya Lawn Bowls Clubs (Banchang / Paradise / The Retreat)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-lawn-bowls/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "khao-chi-chan-buddha-mountain",
+          "name": "Khao Chi Chan (Buddha Mountain) — Walking & Meditation",
+          "url": "https://pattaya-gym.com/gyms/khao-chi-chan-buddha-mountain/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "nongnooch-cultural-show",
+          "name": "Nong Nooch Tropical Garden — Thai Cultural & Muay Thai Show",
+          "url": "https://pattaya-gym.com/gyms/nongnooch-cultural-show/",
+          "category": "clubs",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-running-routes",
+          "name": "Pattaya Public Running Routes & Parks (Beach + Mabprachan + City Parks)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-running-routes/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "pattaya-beach-public-aerobics",
+          "name": "Pattaya Beach Public Aerobics — Open-Air Free Fitness",
+          "url": "https://pattaya-gym.com/gyms/pattaya-beach-public-aerobics/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "andaz-pattaya-jomtien",
+          "name": "Andaz Pattaya Jomtien Beach (Hyatt)",
+          "url": "https://pattaya-gym.com/gyms/andaz-pattaya-jomtien/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "pattaya-marriott-resort",
+          "name": "Pattaya Marriott Resort and Spa",
+          "url": "https://pattaya-gym.com/gyms/pattaya-marriott-resort/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "renaissance-pattaya-resort",
+          "name": "Renaissance Pattaya Resort & Spa",
+          "url": "https://pattaya-gym.com/gyms/renaissance-pattaya-resort/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "movenpick-siam-pattaya",
+          "name": "Mövenpick Siam Hotel Na Jomtien Pattaya",
+          "url": "https://pattaya-gym.com/gyms/movenpick-siam-pattaya/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        }
+      ]
+    },
+    {
+      "slug": "naklua",
+      "name": "Naklua",
+      "url": "https://pattaya-gym.com/area/naklua/",
+      "venueCount": 14,
+      "venues": [
+        {
+          "id": "fairtex-pattaya",
+          "name": "Fairtex Training Center Pattaya",
+          "url": "https://pattaya-gym.com/gyms/fairtex-pattaya/",
+          "category": "muay-thai",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "sityodtong-pattaya",
+          "name": "Sityodtong Pattaya",
+          "url": "https://pattaya-gym.com/gyms/sityodtong-pattaya/",
+          "category": "muay-thai",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "sun-fitness-buakao",
+          "name": "SUN Fitness Pattaya (3 branches)",
+          "url": "https://pattaya-gym.com/gyms/sun-fitness-buakao/",
+          "category": "fitness",
+          "priceRange": "฿"
+        },
+        {
+          "id": "one-d-yoga-studio",
+          "name": "One-D Yoga Studio",
+          "url": "https://pattaya-gym.com/gyms/one-d-yoga-studio/",
+          "category": "yoga",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "nok-yoga-pattaya",
+          "name": "Nok Yoga Pattaya",
+          "url": "https://pattaya-gym.com/gyms/nok-yoga-pattaya/",
+          "category": "yoga",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-public-pool-naklua",
+          "name": "Naklua Public Swimming Pool",
+          "url": "https://pattaya-gym.com/gyms/pattaya-public-pool-naklua/",
+          "category": "swimming",
+          "priceRange": "฿"
+        },
+        {
+          "id": "deep-climbing-gym",
+          "name": "Deep Climbing Gym (Harbor Pattaya)",
+          "url": "https://pattaya-gym.com/gyms/deep-climbing-gym/",
+          "category": "climbing",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "af-academy-pattaya",
+          "name": "AF Academy Football School Pattaya",
+          "url": "https://pattaya-gym.com/gyms/af-academy-pattaya/",
+          "category": "kids-youth",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-bike-boat-tours",
+          "name": "Pattaya Bike and Boat Tours",
+          "url": "https://pattaya-gym.com/gyms/pattaya-bike-boat-tours/",
+          "category": "adventure",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "wong-amat-beach",
+          "name": "Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach",
+          "url": "https://pattaya-gym.com/gyms/wong-amat-beach/",
+          "category": "swimming",
+          "priceRange": "฿"
+        },
+        {
+          "id": "centara-grand-mirage",
+          "name": "Centara Grand Mirage Beach Resort",
+          "url": "https://pattaya-gym.com/gyms/centara-grand-mirage/",
+          "category": "swimming",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "cape-dara-resort",
+          "name": "Cape Dara Resort",
+          "url": "https://pattaya-gym.com/gyms/cape-dara-resort/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "bangkok-hospital-pattaya-rehab",
+          "name": "Bangkok Hospital Pattaya — Sports Rehabilitation & Wellness",
+          "url": "https://pattaya-gym.com/gyms/bangkok-hospital-pattaya-rehab/",
+          "category": "clubs",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "sanctuary-of-truth",
+          "name": "Sanctuary of Truth — Wood Temple & Cultural-Sport Park",
+          "url": "https://pattaya-gym.com/gyms/sanctuary-of-truth/",
+          "category": "clubs",
+          "priceRange": "฿฿"
+        }
+      ]
+    },
+    {
+      "slug": "pratamnak",
+      "name": "Pratamnak Hill",
+      "url": "https://pattaya-gym.com/area/pratamnak/",
+      "venueCount": 13,
+      "venues": [
+        {
+          "id": "fitz-club",
+          "name": "Fitz Club — Racquets, Health & Fitness (Royal Cliff Hotels Group)",
+          "url": "https://pattaya-gym.com/gyms/fitz-club/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "sun-fitness-buakao",
+          "name": "SUN Fitness Pattaya (3 branches)",
+          "url": "https://pattaya-gym.com/gyms/sun-fitness-buakao/",
+          "category": "fitness",
+          "priceRange": "฿"
+        },
+        {
+          "id": "cross-pattaya-pratamnak",
+          "name": "Cross Pattaya Pratamnak (Cloud Club + PLAYROOM)",
+          "url": "https://pattaya-gym.com/gyms/cross-pattaya-pratamnak/",
+          "category": "fitness",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "manhattan-pattaya-fitness",
+          "name": "Manhattan Pattaya (Hotel Gym)",
+          "url": "https://pattaya-gym.com/gyms/manhattan-pattaya-fitness/",
+          "category": "fitness",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pickleball-pattaya",
+          "name": "Pickleball Pattaya",
+          "url": "https://pattaya-gym.com/gyms/pickleball-pattaya/",
+          "category": "racquet",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "play-padel-pattaya",
+          "name": "Play Padel Pattaya",
+          "url": "https://pattaya-gym.com/gyms/play-padel-pattaya/",
+          "category": "racquet",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "muscle-factory-pattaya",
+          "name": "Muscle Factory Pattaya",
+          "url": "https://pattaya-gym.com/gyms/muscle-factory-pattaya/",
+          "category": "fitness",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "af-academy-pattaya",
+          "name": "AF Academy Football School Pattaya",
+          "url": "https://pattaya-gym.com/gyms/af-academy-pattaya/",
+          "category": "kids-youth",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pratumnak-fitness-park",
+          "name": "Pratumnak Fitness Park (Free Outdoor Calisthenics)",
+          "url": "https://pattaya-gym.com/gyms/pratumnak-fitness-park/",
+          "category": "fitness",
+          "priceRange": "฿"
+        },
+        {
+          "id": "royal-varuna-yacht-club",
+          "name": "Royal Varuna Yacht Club",
+          "url": "https://pattaya-gym.com/gyms/royal-varuna-yacht-club/",
+          "category": "watersports",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "pattaya-running-routes",
+          "name": "Pattaya Public Running Routes & Parks (Beach + Mabprachan + City Parks)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-running-routes/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "big-buddha-hill-wat-phra-yai",
+          "name": "Big Buddha Hill (Wat Phra Yai) — Pratamnak Landmark + Stair Climb",
+          "url": "https://pattaya-gym.com/gyms/big-buddha-hill-wat-phra-yai/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "intercontinental-pattaya",
+          "name": "InterContinental Pattaya Resort",
+          "url": "https://pattaya-gym.com/gyms/intercontinental-pattaya/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        }
+      ]
+    },
+    {
+      "slug": "east-pattaya",
+      "name": "East Pattaya / Darkside",
+      "url": "https://pattaya-gym.com/area/east-pattaya/",
+      "venueCount": 22,
+      "venues": [
+        {
+          "id": "kombat-group-thailand",
+          "name": "Kombat Group Thailand",
+          "url": "https://pattaya-gym.com/gyms/kombat-group-thailand/",
+          "category": "muay-thai",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "sor-klinmee",
+          "name": "Sor Klinmee Muay Thai Gym",
+          "url": "https://pattaya-gym.com/gyms/sor-klinmee/",
+          "category": "muay-thai",
+          "priceRange": "฿"
+        },
+        {
+          "id": "rambaa-somdet-m16",
+          "name": "Rambaa Somdet M16 Muay Thai & MMA",
+          "url": "https://pattaya-gym.com/gyms/rambaa-somdet-m16/",
+          "category": "mma",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "sanit-sport-club",
+          "name": "Sanit Sport Club",
+          "url": "https://pattaya-gym.com/gyms/sanit-sport-club/",
+          "category": "muay-thai",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "crossfit-pattaya",
+          "name": "CrossFit Pattaya @ The Jungle Gym",
+          "url": "https://pattaya-gym.com/gyms/crossfit-pattaya/",
+          "category": "crossfit",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "castra-gym",
+          "name": "Castra Gym",
+          "url": "https://pattaya-gym.com/gyms/castra-gym/",
+          "category": "fitness",
+          "priceRange": "฿"
+        },
+        {
+          "id": "siam-country-club",
+          "name": "Siam Country Club Pattaya",
+          "url": "https://pattaya-gym.com/gyms/siam-country-club/",
+          "category": "golf",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "pattaya-country-club",
+          "name": "Pattaya Country Club",
+          "url": "https://pattaya-gym.com/gyms/pattaya-country-club/",
+          "category": "golf",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "euro-badminton",
+          "name": "Euro Badminton",
+          "url": "https://pattaya-gym.com/gyms/euro-badminton/",
+          "category": "racquet",
+          "priceRange": "฿"
+        },
+        {
+          "id": "manta-kids-pattaya",
+          "name": "Manta Kids Pattaya (IG Center)",
+          "url": "https://pattaya-gym.com/gyms/manta-kids-pattaya/",
+          "category": "swimming",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "bean-cow-climbing-gym",
+          "name": "Bean Cow Climbing Gym & Community Center",
+          "url": "https://pattaya-gym.com/gyms/bean-cow-climbing-gym/",
+          "category": "climbing",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-hash-house",
+          "name": "Pattaya Hash House Harriers",
+          "url": "https://pattaya-gym.com/gyms/pattaya-hash-house/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "horseshoe-point-resort",
+          "name": "Horseshoe Point Resort & Country Club",
+          "url": "https://pattaya-gym.com/gyms/horseshoe-point-resort/",
+          "category": "equestrian",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "golf-hub-pattaya",
+          "name": "Golf Hub Pattaya (Indoor Simulator + Club Fitting)",
+          "url": "https://pattaya-gym.com/gyms/golf-hub-pattaya/",
+          "category": "golf",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "thai-polo-equestrian-club",
+          "name": "Thai Polo & Equestrian Club",
+          "url": "https://pattaya-gym.com/gyms/thai-polo-equestrian-club/",
+          "category": "equestrian",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "pattaya-shooting-park",
+          "name": "Pattaya Shooting Park",
+          "url": "https://pattaya-gym.com/gyms/pattaya-shooting-park/",
+          "category": "adventure",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "thai-wake-park",
+          "name": "Thai Wake Park Pattaya",
+          "url": "https://pattaya-gym.com/gyms/thai-wake-park/",
+          "category": "watersports",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-padel-club",
+          "name": "Pattaya Padel Club (Mabprachan Lake)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-padel-club/",
+          "category": "racquet",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-cycling-clubs",
+          "name": "Pattaya Cycling Clubs (Cuore Masters / Monkey Xtreme / Jomtien Cycling)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-cycling-clubs/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "cho-nateetong",
+          "name": "Cho Nateetong Thai Boxing Camp",
+          "url": "https://pattaya-gym.com/gyms/cho-nateetong/",
+          "category": "muay-thai",
+          "priceRange": "฿"
+        },
+        {
+          "id": "pattaya-running-routes",
+          "name": "Pattaya Public Running Routes & Parks (Beach + Mabprachan + City Parks)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-running-routes/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "atv-tours-pattaya",
+          "name": "ATV & Off-Road Tours Pattaya (Multi-Operator)",
+          "url": "https://pattaya-gym.com/gyms/atv-tours-pattaya/",
+          "category": "adventure",
+          "priceRange": "฿฿฿"
+        }
+      ]
+    },
+    {
+      "slug": "central-pattaya",
+      "name": "Central Pattaya",
+      "url": "https://pattaya-gym.com/area/central-pattaya/",
+      "venueCount": 37,
+      "venues": [
+        {
+          "id": "wko-muay-thai",
+          "name": "WKO Muay Thai & Fitness Pattaya (ISS Gym)",
+          "url": "https://pattaya-gym.com/gyms/wko-muay-thai/",
+          "category": "muay-thai",
+          "priceRange": "฿"
+        },
+        {
+          "id": "battle-conquer-gym",
+          "name": "Battle Conquer Gym Pattaya",
+          "url": "https://pattaya-gym.com/gyms/battle-conquer-gym/",
+          "category": "muay-thai",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-thai-boxing-fitness",
+          "name": "Pattaya Thai Boxing & Fitness Gym (Jomtien)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-thai-boxing-fitness/",
+          "category": "muay-thai",
+          "priceRange": "฿"
+        },
+        {
+          "id": "tonys-gym",
+          "name": "Tony's Fitness Gym (Tony's Group Pattaya)",
+          "url": "https://pattaya-gym.com/gyms/tonys-gym/",
+          "category": "fitness",
+          "priceRange": "฿"
+        },
+        {
+          "id": "platinum-fitness",
+          "name": "Platinum Fitness Club",
+          "url": "https://pattaya-gym.com/gyms/platinum-fitness/",
+          "category": "fitness",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "coco-fitness",
+          "name": "Coco Fitness",
+          "url": "https://pattaya-gym.com/gyms/coco-fitness/",
+          "category": "fitness",
+          "priceRange": "฿"
+        },
+        {
+          "id": "jetts-fitness-pattaya",
+          "name": "Jetts Fitness Pattaya",
+          "url": "https://pattaya-gym.com/gyms/jetts-fitness-pattaya/",
+          "category": "fitness",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "fitness-7",
+          "name": "Fitness 7 Pattaya (The Avenue)",
+          "url": "https://pattaya-gym.com/gyms/fitness-7/",
+          "category": "fitness",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "true-fitness-pattaya",
+          "name": "True Fitness Pattaya",
+          "url": "https://pattaya-gym.com/gyms/true-fitness-pattaya/",
+          "category": "fitness",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "sun-fitness-buakao",
+          "name": "SUN Fitness Pattaya (3 branches)",
+          "url": "https://pattaya-gym.com/gyms/sun-fitness-buakao/",
+          "category": "fitness",
+          "priceRange": "฿"
+        },
+        {
+          "id": "manhattan-pattaya-fitness",
+          "name": "Manhattan Pattaya (Hotel Gym)",
+          "url": "https://pattaya-gym.com/gyms/manhattan-pattaya-fitness/",
+          "category": "fitness",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "yoga-haus-pattaya",
+          "name": "Yoga Haus Pattaya",
+          "url": "https://pattaya-gym.com/gyms/yoga-haus-pattaya/",
+          "category": "yoga",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-tennis-club",
+          "name": "Pattaya Tennis Club",
+          "url": "https://pattaya-gym.com/gyms/pattaya-tennis-club/",
+          "category": "racquet",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "greta-sport-club",
+          "name": "Greta Sport Club Pattaya (at Greta Resort)",
+          "url": "https://pattaya-gym.com/gyms/greta-sport-club/",
+          "category": "racquet",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "siam-bayshore-tennis",
+          "name": "Siam Bayshore Resort Pattaya Tennis Courts",
+          "url": "https://pattaya-gym.com/gyms/siam-bayshore-tennis/",
+          "category": "racquet",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "diamond-badminton",
+          "name": "Diamond Badminton",
+          "url": "https://pattaya-gym.com/gyms/diamond-badminton/",
+          "category": "racquet",
+          "priceRange": "฿"
+        },
+        {
+          "id": "pattaya-sports-club",
+          "name": "Pattaya Sports Club",
+          "url": "https://pattaya-gym.com/gyms/pattaya-sports-club/",
+          "category": "clubs",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "bounce-pattaya",
+          "name": "BOUNCE Pattaya — Trampoline Park",
+          "url": "https://pattaya-gym.com/gyms/bounce-pattaya/",
+          "category": "kids-youth",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "hard-rock-pool",
+          "name": "Hard Rock Pool Pattaya",
+          "url": "https://pattaya-gym.com/gyms/hard-rock-pool/",
+          "category": "swimming",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "mermaids-dive",
+          "name": "Mermaid's Dive Center",
+          "url": "https://pattaya-gym.com/gyms/mermaids-dive/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "pattaya-dive-centre",
+          "name": "Pattaya Dive Centre",
+          "url": "https://pattaya-gym.com/gyms/pattaya-dive-centre/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "seafari-padi-dive",
+          "name": "Seafari PADI Dive Centre",
+          "url": "https://pattaya-gym.com/gyms/seafari-padi-dive/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "deep-climbing-gym",
+          "name": "Deep Climbing Gym (Harbor Pattaya)",
+          "url": "https://pattaya-gym.com/gyms/deep-climbing-gym/",
+          "category": "climbing",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "af-academy-football",
+          "name": "AF Academy Football School",
+          "url": "https://pattaya-gym.com/gyms/af-academy-football/",
+          "category": "kids-youth",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "golf-hub-pattaya",
+          "name": "Golf Hub Pattaya (Indoor Simulator + Club Fitting)",
+          "url": "https://pattaya-gym.com/gyms/golf-hub-pattaya/",
+          "category": "golf",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "af-academy-pattaya",
+          "name": "AF Academy Football School Pattaya",
+          "url": "https://pattaya-gym.com/gyms/af-academy-pattaya/",
+          "category": "kids-youth",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "diana-driving-range",
+          "name": "Diana Driving Range Pattaya",
+          "url": "https://pattaya-gym.com/gyms/diana-driving-range/",
+          "category": "golf",
+          "priceRange": "฿"
+        },
+        {
+          "id": "pattaya-bowl",
+          "name": "Pattaya Bowl (Soi Regent Marina)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-bowl/",
+          "category": "clubs",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "jumpz-trampoline-park",
+          "name": "JumpZ Trampoline Park",
+          "url": "https://pattaya-gym.com/gyms/jumpz-trampoline-park/",
+          "category": "kids-youth",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "adventure-divers-pattaya",
+          "name": "Adventure Divers Pattaya",
+          "url": "https://pattaya-gym.com/gyms/adventure-divers-pattaya/",
+          "category": "watersports",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-marathon",
+          "name": "Pattaya Marathon (Amazing Thailand Pattaya Marathon)",
+          "url": "https://pattaya-gym.com/gyms/pattaya-marathon/",
+          "category": "clubs",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "pattaya-beach-public-aerobics",
+          "name": "Pattaya Beach Public Aerobics — Open-Air Free Fitness",
+          "url": "https://pattaya-gym.com/gyms/pattaya-beach-public-aerobics/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "hilton-pattaya-fitness",
+          "name": "Hilton Pattaya — Fitness Center, Spa & Pool",
+          "url": "https://pattaya-gym.com/gyms/hilton-pattaya-fitness/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "dusit-thani-pattaya",
+          "name": "Dusit Thani Pattaya — Devarana Wellness",
+          "url": "https://pattaya-gym.com/gyms/dusit-thani-pattaya/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "sf-strike-bowl",
+          "name": "SF Strike Bowl Pattaya (Central Festival)",
+          "url": "https://pattaya-gym.com/gyms/sf-strike-bowl/",
+          "category": "clubs",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "megabreak-pool-hall",
+          "name": "Megabreak Pool Hall Pattaya",
+          "url": "https://pattaya-gym.com/gyms/megabreak-pool-hall/",
+          "category": "clubs",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "holiday-inn-pattaya",
+          "name": "Holiday Inn Pattaya",
+          "url": "https://pattaya-gym.com/gyms/holiday-inn-pattaya/",
+          "category": "fitness",
+          "priceRange": "฿฿฿"
+        }
+      ]
+    },
+    {
+      "slug": "sattahip",
+      "name": "Sattahip / Far South",
+      "url": "https://pattaya-gym.com/area/sattahip/",
+      "venueCount": 14,
+      "venues": [
+        {
+          "id": "chee-chan-golf",
+          "name": "Chee Chan Golf Resort",
+          "url": "https://pattaya-gym.com/gyms/chee-chan-golf/",
+          "category": "golf",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "st-andrews-2000",
+          "name": "St. Andrews 2000 Pattaya",
+          "url": "https://pattaya-gym.com/gyms/st-andrews-2000/",
+          "category": "golf",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "greta-sport-club",
+          "name": "Greta Sport Club Pattaya (at Greta Resort)",
+          "url": "https://pattaya-gym.com/gyms/greta-sport-club/",
+          "category": "racquet",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "kba-kiteboarding-pattaya",
+          "name": "KBA Kiteboarding Asia Pattaya (Blue Lagoon)",
+          "url": "https://pattaya-gym.com/gyms/kba-kiteboarding-pattaya/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "cartoon-network-amazone",
+          "name": "Cartoon Network Amazone Waterpark (now Columbia Pictures Aquaverse)",
+          "url": "https://pattaya-gym.com/gyms/cartoon-network-amazone/",
+          "category": "swimming",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "ramayana-water-park",
+          "name": "Ramayana Water Park Pattaya",
+          "url": "https://pattaya-gym.com/gyms/ramayana-water-park/",
+          "category": "swimming",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "sailbreeze-ocean-marina",
+          "name": "SailBreeze Sailing School @ Ocean Marina Yacht Club",
+          "url": "https://pattaya-gym.com/gyms/sailbreeze-ocean-marina/",
+          "category": "watersports",
+          "priceRange": "฿฿฿"
+        },
+        {
+          "id": "ocean-marina-jomtien",
+          "name": "Ocean Marina Jomtien — Southeast Asia's Largest Marina",
+          "url": "https://pattaya-gym.com/gyms/ocean-marina-jomtien/",
+          "category": "watersports",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "tarzan-adventure-pattaya",
+          "name": "Tarzan Adventure Pattaya (Zipline)",
+          "url": "https://pattaya-gym.com/gyms/tarzan-adventure-pattaya/",
+          "category": "adventure",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "khao-chi-chan-buddha-mountain",
+          "name": "Khao Chi Chan (Buddha Mountain) — Walking & Meditation",
+          "url": "https://pattaya-gym.com/gyms/khao-chi-chan-buddha-mountain/",
+          "category": "clubs",
+          "priceRange": "฿"
+        },
+        {
+          "id": "nongnooch-cultural-show",
+          "name": "Nong Nooch Tropical Garden — Thai Cultural & Muay Thai Show",
+          "url": "https://pattaya-gym.com/gyms/nongnooch-cultural-show/",
+          "category": "clubs",
+          "priceRange": "฿฿"
+        },
+        {
+          "id": "andaz-pattaya-jomtien",
+          "name": "Andaz Pattaya Jomtien Beach (Hyatt)",
+          "url": "https://pattaya-gym.com/gyms/andaz-pattaya-jomtien/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "pattaya-marriott-resort",
+          "name": "Pattaya Marriott Resort and Spa",
+          "url": "https://pattaya-gym.com/gyms/pattaya-marriott-resort/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        },
+        {
+          "id": "renaissance-pattaya-resort",
+          "name": "Renaissance Pattaya Resort & Spa",
+          "url": "https://pattaya-gym.com/gyms/renaissance-pattaya-resort/",
+          "category": "fitness",
+          "priceRange": "฿฿฿฿"
+        }
+      ]
+    }
+  ]
+}
