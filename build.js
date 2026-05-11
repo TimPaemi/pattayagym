@@ -1275,6 +1275,8 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <meta name="twitter:title" content="${escHtml(fm.name)}" />
   <meta name="twitter:description" content="${escHtml(desc)}" />
   <meta name="twitter:image" content="${ogImage}" />
+  <meta name="thumbnail" content="${ogImage}" />
+  <link rel="image_src" href="${ogImage}" />
 
   ${stylesheetTags(true)}
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />

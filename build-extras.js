@@ -375,6 +375,8 @@ function commonHead(title, desc, canonical, schemaType) {
 <meta name="twitter:title" content="${escHtml(metaTitle(title))}" />
 <meta name="twitter:description" content="${escHtml(metaDesc(desc))}" />
 <meta name="twitter:image" content="${DEFAULT_OG_IMAGE}" />
+<meta name="thumbnail" content="${DEFAULT_OG_IMAGE}" />
+<link rel="image_src" href="${DEFAULT_OG_IMAGE}" />
 ${stylesheetTags(true)}
 <script type="application/ld+json">${baselineSchema}</script>
 <script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
@@ -509,7 +511,7 @@ ${header()}
       return parts.map((c, i) => `<p class="venue-lede"${i > 0 ? ' style="margin-top: 10px; font-size: 0.96rem;"' : ''}>${escHtml(c)}</p>`).join('');
     })()}
     <div class="venue-hero-meta">
-      <span class="meta-chip meta-chip-accent">⭐ ${gymsInCat.length} venues verified</span>
+      <span class="meta-chip meta-chip-accent">${gymsInCat.length} venues verified</span><span class="meta-chip" style="font-family:'JetBrains Mono',monospace;font-size:11px;">// Updated ${new Date().toISOString().slice(0,10)}</span>
       <span class="meta-chip">📅 Last updated ${new Date().toISOString().slice(0,10)}</span>
     </div>
   </div>
@@ -898,6 +900,7 @@ function build404() {
 <head>
 ${commonHead('Page not found | Pattaya Gym', 'The page you\'re looking for doesn\'t exist. Browse our directory of every Pattaya gym, Muay Thai camp, dive operator, and sport venue.', `${SITE}/404.html`)}
 <meta name="robots" content="noindex" />
+<script defer>document.addEventListener('DOMContentLoaded',function(){if(window.plausible)window.plausible('404',{props:{path:location.pathname}});});</script>
 </head>
 <body>
 ${header()}

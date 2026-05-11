@@ -17,6 +17,50 @@ const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
 
+function autoLinkVenues(html, currentSlug, allGyms) {
+  if (!html || !Array.isArray(allGyms)) return html;
+  const candidates = [];
+  for (const g of allGyms) {
+    if (!g || !g.id || g.id === currentSlug) continue;
+    const name = g.name || '';
+    if (!name) continue;
+    const variants = new Set([name]);
+    const noParen = name.replace(/\s*\([^)]*\)\s*$/, '').trim();
+    if (noParen.length >= 6) variants.add(noParen);
+    const noDash = noParen.replace(/\s*[\u2013\u2014\u2015|\-]\s+.*$/, '').trim();
+    if (noDash.length >= 6) variants.add(noDash);
+    const noPattaya = noDash.replace(/\s+Pattaya$/i, '').trim();
+    if (noPattaya.length >= 6) variants.add(noPattaya);
+    for (const v of variants) {
+      const trimmed = String(v).trim();
+      if (trimmed.length < 6) continue;
+      if (/^(Pattaya|Thailand|Jomtien|Naklua|Fitness|Yoga|Boxing|Beach|Public)$/i.test(trimmed)) continue;
+      candidates.push({ pattern: trimmed, slug: g.id });
+    }
+  }
+  candidates.sort((a, b) => b.pattern.length - a.pattern.length);
+  let out = html;
+  const linkedSlugs = new Set();
+  for (const c of candidates) {
+    if (linkedSlugs.has(c.slug)) continue;
+    const escaped = c.pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp('(?<![\\w/-])' + escaped + '(?![\\w/-])', 'i');
+    // Skip if pattern is inside an existing <a> or heading
+    const split = out.split(/(<a\b[^>]*>[\s\S]*?<\/a>|<h[1-6][^>]*>[\s\S]*?<\/h[1-6]>)/i);
+    for (let i = 0; i < split.length; i++) {
+      if (i % 2 === 1) continue;
+      if (linkedSlugs.has(c.slug)) break;
+      const match = split[i].match(re);
+      if (match) {
+        split[i] = split[i].replace(re, '<a href="/gyms/' + c.slug + '/">' + match[0] + '</a>');
+        linkedSlugs.add(c.slug);
+      }
+    }
+    out = split.join('');
+  }
+  return out;
+}
+
 function escHtml(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 }
@@ -247,6 +291,8 @@ function commonHead(title, desc, canonical, schemaType, ogType) {
 <meta name="twitter:title" content="${escHtml(metaTitle(title))}" />
 <meta name="twitter:description" content="${escHtml(metaDesc(desc))}" />
 <meta name="twitter:image" content="${DEFAULT_OG_IMAGE}" />
+<meta name="thumbnail" content="${DEFAULT_OG_IMAGE}" />
+<link rel="image_src" href="${DEFAULT_OG_IMAGE}" />
 ${stylesheetTags(true)}
 <script type="application/ld+json">${baselineSchema}</script>
 <script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
@@ -517,7 +563,7 @@ ${header()}
     })()}
     <div class="venue-hero-meta">
       <span class="meta-chip meta-chip-accent">⭐ ${matchingGyms.length} venues</span>
-      <span class="meta-chip">📅 Updated ${new Date().toISOString().slice(0,10)}</span>
+      <span class="meta-chip" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.04em;">// Updated ${new Date().toISOString().slice(0,10)}</span>
       <span class="meta-chip">🏷 ${Object.keys(byCat).length} categories</span>
     </div>
   </div>
@@ -1260,12 +1306,12 @@ ${header()}
     })()}
     <div class="venue-hero-meta">
       <span class="meta-chip meta-chip-accent">⭐ ${sorted.length} venues ranked</span>
-      <span class="meta-chip">📅 Updated ${new Date().toISOString().slice(0,10)}</span>
+      <span class="meta-chip" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.04em;">// Updated ${new Date().toISOString().slice(0,10)}</span>
     </div>
   </div>
   ${tldrHtml}
   <div id="full-list"></div>
-  ${sectionsHtml.join('')}
+  ${autoLinkVenues(sectionsHtml.join(''), guide.slug, allGyms)}
   ${extraHtml}
   ${faqHtml}
   ${(() => {
