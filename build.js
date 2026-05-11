@@ -792,18 +792,68 @@ function generateVenueFAQs(fm) {
     });
   }
 
-  // Q3 — pricing (if price tier present)
+  // Q3 — pricing (category-aware, since '฿฿' means different things across sports)
   if (price) {
-    const priceMap = {
-      '฿': 'budget tier (typically under ฿2,000/month or low drop-in rates)',
-      '฿฿': 'mid-tier pricing (typically ฿2,000–฿5,000/month or moderate drop-in)',
-      '฿฿฿': 'premium tier (typically ฿5,000–฿15,000/month or higher drop-in)',
-      '฿฿฿฿': 'luxury tier (typically ฿15,000+/month or 5-star resort pricing)'
+    const priceByCategory = {
+      'muay-thai': {
+        '฿':    'budget (฿200-500 drop-in, ฿4,000-8,000/month walk-in camp)',
+        '฿฿':   'mid-tier (฿500-1,200 drop-in, ฿8,000-15,000/month)',
+        '฿฿฿':  'premium (฿1,000-2,000 drop-in, ฿15,000-30,000/month with English-speaking trainers)',
+        '฿฿฿฿': 'luxury / resort camp (฿30,000+/month, often with accommodation included)'
+      },
+      'fitness': {
+        '฿':    'budget (฿100-300 day-pass, ฿1,200-2,000/month)',
+        '฿฿':   'mid-tier (฿300-600 day-pass, ฿2,000-4,500/month)',
+        '฿฿฿':  'premium (฿600-1,500 day-pass, ฿4,500-8,000/month, boutique or hotel)',
+        '฿฿฿฿': 'luxury (5-star hotel gym, often members-or-guests-only, ฿8,000+/month)'
+      },
+      'golf': {
+        '฿':    'budget (under ฿1,000 green fees weekday)',
+        '฿฿':   'mid-tier (฿1,500-2,500 weekday, ฿2,500-3,500 weekend)',
+        '฿฿฿':  'premium (฿2,500-4,500, championship-grade)',
+        '฿฿฿฿': 'top-tier (฿4,500+, tournament-host courses, often resort-bundled)'
+      },
+      'yoga': {
+        '฿':    'budget (under ฿400/class, ฿2,000-3,000 monthly pass)',
+        '฿฿':   'mid-tier (฿400-700/class, ฿3,000-5,000 monthly)',
+        '฿฿฿':  'premium (boutique studio, ฿700+/class, retreat packages)',
+        '฿฿฿฿': 'luxury studio or destination retreat'
+      },
+      'racquet': {
+        '฿':    'public courts or budget bookings (฿100-300/hour)',
+        '฿฿':   'mid-tier club (฿300-700/hour)',
+        '฿฿฿':  'premium club or hotel courts (฿700-1,500/hour, coaches included)',
+        '฿฿฿฿': 'luxury / private-club access only'
+      },
+      'watersports': {
+        '฿':    'budget rental or beginner intro (฿500-1,500/session)',
+        '฿฿':   'mid-tier (฿1,500-3,500 single dive, scuba course intro)',
+        '฿฿฿':  'premium dive operator, full PADI courses (฿3,500-12,000)',
+        '฿฿฿฿': 'luxury liveaboard / private charter (฿12,000+)'
+      },
+      'swimming': {
+        '฿':    'public pool or community access (฿50-150)',
+        '฿฿':   'hotel day-pass or pool club (฿200-700)',
+        '฿฿฿':  'premium hotel or waterpark (฿700-1,800)',
+        '฿฿฿฿': 'luxury 5-star resort, often guests-only'
+      },
+      'adventure': {
+        '฿':    'budget activity (under ฿800)',
+        '฿฿':   'mid-tier (฿800-2,500 — karts, ATV, ziplines)',
+        '฿฿฿':  'premium (฿2,500-7,000 — skydiving, helicopter)',
+        '฿฿฿฿': 'luxury / charter (฿7,000+)'
+      }
     };
-    const explained = priceMap[price] || 'see venue page for current rates';
+    const map = priceByCategory[cat] || {
+      '฿': 'budget tier',
+      '฿฿': 'mid-tier',
+      '฿฿฿': 'premium tier',
+      '฿฿฿฿': 'luxury tier'
+    };
+    const explained = map[price] || 'see venue page for current rates';
     faqs.push({
       q: `How much does ${name} cost?`,
-      a: `${name} is in the ${price} tier — ${explained}. For exact current rates, contact the venue directly.`
+      a: `${name} is in the ${price} ${cat ? cat.replace('-', ' ') + ' ' : ''}price tier — ${explained}. Exact current rates change with season and group size; contact the venue to confirm.`
     });
   }
 
@@ -897,9 +947,163 @@ function generateVenueFAQs(fm) {
       : `Pattaya is an international tourist city, and most venues have at least one English-speaking staff member. Contact ${name} ahead of your visit if you need language confirmation.`
   });
 
-  return faqs.slice(0, 5);
+  // Q6 — accommodation / on-site (only if tags suggest it)
+  if (has('accommodation') || has('on-site hotel') || has('all-inclusive') || has('hotel')) {
+    faqs.push({
+      q: `Does ${name} offer on-site accommodation?`,
+      a: `Yes — ${name} provides on-site or partner accommodation. This makes it a strong fit for full-immersion training camps and longer-stay visitors. Contact the venue for room types, pricing and minimum stay.`
+    });
+  }
+
+  // Q7 — kids / family (only if relevant)
+  if (has('kid') || has('family') || has('child') || has('all-age')) {
+    faqs.push({
+      q: `Is ${name} suitable for kids or families?`,
+      a: `${name} has signals of family-friendly accommodation in its profile — kids' programs, family pricing, or all-age access. Confirm minimum age and any parental-supervision requirements when booking.`
+    });
+  }
+
+  // Q8 — payment / contracts (fitness specific, drop-in friendly)
+  if ((cat === 'fitness' || cat === 'crossfit' || cat === 'yoga') && (has('drop-in') || has('no-contract') || has('day-pass'))) {
+    faqs.push({
+      q: `Can I drop in to ${name} for a single session?`,
+      a: `Yes — ${name} accepts drop-in or day-pass visitors. Walk-in rates are typically ฿200–฿600 depending on the venue tier. Bring valid ID for first-visit registration.`
+    });
+  }
+
+  // Q9 — fight-prep / pro track (Muay Thai with pro signals)
+  if (cat === 'muay-thai' && (has('fighter-track') || has('pro') || has('professional') || has('champion'))) {
+    faqs.push({
+      q: `Does ${name} train professional or competitive fighters?`,
+      a: `Yes — ${name} has a fighter-track program with professional or competitive-level coaching. Multi-session days, real sparring rounds and ring time are part of the program. Ask about visa-supported long-stay options.`
+    });
+  }
+
+  // Q10 — booking method
+  if (fm.website || (fm.social && (fm.social.facebook || fm.social.instagram))) {
+    const channels = [];
+    if (fm.phone) channels.push('phone (' + fmt(fm.phone) + ')');
+    if (fm.website) channels.push('their website');
+    if (fm.social && fm.social.facebook) channels.push('Facebook DM');
+    if (fm.social && fm.social.instagram) channels.push('Instagram DM');
+    faqs.push({
+      q: `How do I book or contact ${name}?`,
+      a: `${name} is reachable via ${channels.slice(0, 3).join(', ')}. Most Pattaya venues respond fastest to Facebook or Instagram messages. For same-day visits, call ahead to confirm session times.`
+    });
+  }
+
+  return faqs.slice(0, 8);
 }
 
+
+
+// ============================================================
+// "Best for / Not best for" block driven by venue tags
+// ============================================================
+function buildBestForBlock(fm) {
+  const tags = (fm.tags || []).map(t => String(t).toLowerCase());
+  const cat = fm.category || '';
+  const has = (s) => tags.some(t => t.indexOf(s) >= 0);
+  const desc = (fm.description || '').toLowerCase();
+  const descHas = (s) => desc.indexOf(s) >= 0;
+
+  const bestFor = [];
+  const notBestFor = [];
+
+  // Audience signals
+  if (has('beginner') || descHas('beginner') || has('first-time') || has('intro')) bestFor.push('Beginners and first-timers');
+  if (has('all-level') || has('family')) bestFor.push('All experience levels');
+  if (has('pro') || has('fighter-track') || has('champion') || has('competitive')) bestFor.push('Competitive athletes and pro-track training');
+  if (has('kid') || has('child') || has('youth')) bestFor.push('Kids and youth programs');
+  if (has('female-friendly') || has('women')) bestFor.push('Female-friendly environment');
+  if (has('english') || has('international') || has('expat')) bestFor.push('English-speaking travellers and long-stay expats');
+  if (has('russian')) bestFor.push('Russian-speaking visitors');
+  if (has('budget')) bestFor.push('Budget-conscious training');
+  if (has('luxury') || has('premium') || has('5-star')) bestFor.push('Premium / 5-star experience');
+  if (has('walk-in') || has('drop-in') || has('day-pass')) bestFor.push('Drop-in and short-stay visitors');
+  if (has('accommodation') || has('all-inclusive') || has('on-site hotel')) bestFor.push('Full-immersion training stays with on-site accommodation');
+  if (has('hotel') && fm.category === 'fitness') bestFor.push('Hotel guests and short-term stays');
+  if (has('24-7') || has('24-hour') || has('24/7')) bestFor.push('Late-night or early-morning training');
+  if (has('near-beach') || descHas('beach')) bestFor.push('Beach-adjacent training and lifestyle');
+  if (has('multi-discipline')) bestFor.push('Multi-discipline cross-training');
+  if (has('private-coach') || has('private')) bestFor.push('Private one-on-one coaching');
+
+  // Counter-signals
+  if (has('budget')) notBestFor.push('Visitors looking for luxury-resort amenities');
+  if (has('luxury') || has('premium') || has('5-star')) notBestFor.push('Budget-conscious training plans');
+  if (has('pro') || has('fighter-track')) notBestFor.push('Total first-timers without prior conditioning');
+  if (has('kid') || has('child')) notBestFor.push('Adults-only training environments');
+  if (cat === 'muay-thai' && has('budget')) notBestFor.push('Travellers needing on-site hotel-style accommodation');
+  if (cat === 'golf' && (has('championship') || has('tournament'))) notBestFor.push('Casual or first-time golfers without prior course experience');
+  if (has('membership-only')) notBestFor.push('Walk-in or drop-in visitors');
+
+  // Dedupe + cap
+  const uniq = (a) => Array.from(new Set(a)).slice(0, 6);
+  const bf = uniq(bestFor);
+  const nbf = uniq(notBestFor);
+
+  if (!bf.length && !nbf.length) return '';
+
+  let html = '<section class="venue-fit" aria-label="Who this venue is best for" style="margin: 32px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">';
+  if (bf.length) {
+    html += '<div style="background: rgba(255,184,0,0.04); border: 1px solid rgba(255,184,0,0.22); border-radius: 8px; padding: 18px 20px;">';
+    html += '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: rgba(255,216,74,0.85); letter-spacing: 0.10em; margin: 0 0 12px; text-transform: uppercase; font-weight: 500;">// Best for</p>';
+    html += '<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: rgba(228,228,232,0.85);">';
+    bf.forEach(b => { html += '<li>' + escHtml(b) + '</li>'; });
+    html += '</ul></div>';
+  }
+  if (nbf.length) {
+    html += '<div style="background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 18px 20px;">';
+    html += '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: rgba(150,150,156,0.72); letter-spacing: 0.10em; margin: 0 0 12px; text-transform: uppercase; font-weight: 500;">// Not best for</p>';
+    html += '<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: rgba(180,180,184,0.7);">';
+    nbf.forEach(b => { html += '<li>' + escHtml(b) + '</li>'; });
+    html += '</ul></div>';
+  }
+  html += '</section>';
+  return html;
+}
+
+// ============================================================
+// Visible "Last verified" line for venue body
+// ============================================================
+function buildLastUpdatedNote(fm) {
+  const d = fm.verified || fm.added;
+  if (!d) return '';
+  return '<p class="venue-verified-note" style="font-family: \'JetBrains Mono\', monospace; font-size: 12px; color: rgba(150,150,156,0.6); margin: 32px 0 0; letter-spacing: 0.02em;">// Last verified: ' + escHtml(d) + ' · Independent directory · No paid placements · <a href="/methodology/" style="color: rgba(255,216,74,0.85); text-decoration: none; border-bottom: 1px solid rgba(255,184,0,0.32);">Research methodology</a></p>';
+}
+
+
+// ============================================================
+// Nearby venues — same area, different category (cross-discipline cross-link)
+// ============================================================
+function buildNearbyVenuesBlock(fm, allGyms) {
+  if (!fm.area || !Array.isArray(allGyms)) return '';
+  const myArea = String(fm.area).toLowerCase();
+  // Match by area keywords (jomtien, naklua, pratamnak, etc.)
+  const areaKeys = ['jomtien','naklua','pratamnak','pratumnak','sattahip','central pattaya','east pattaya','soi buakhao','walking street','beach road','mabprachan','khao talo','huay yai','huai yai','wong amat','na jomtien'];
+  const myKeyword = areaKeys.find(k => myArea.indexOf(k) >= 0);
+  if (!myKeyword) return '';
+  const nearby = allGyms.filter(g => {
+    if (!g || g.id === fm.id) return false;
+    if (g.category === fm.category) return false; // exclude same category (already shown as "Related")
+    const ga = ((g.area || '') + ' ' + (g.address || '')).toLowerCase();
+    return ga.indexOf(myKeyword) >= 0;
+  }).slice(0, 6);
+  if (!nearby.length) return '';
+  let html = '<section class="nearby-venues" aria-label="Other sport venues nearby" style="margin: 48px 0 0;">';
+  html += '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 12px; color: rgba(255,122,58,0.85); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px;">// OTHER SPORT VENUES NEARBY</p>';
+  html += '<h2 style="font-family: \'Inter Tight\', sans-serif; font-weight: 900; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 20px;">Different sport, same area.</h2>';
+  html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px;">';
+  for (const g of nearby) {
+    html += '<a href="/gyms/' + escHtml(g.id) + '/" style="display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:18px 18px 16px;transition:transform 0.25s,border-color 0.25s,background 0.25s;">';
+    html += '<span style="font-family:\'JetBrains Mono\',monospace;font-size:10px;color:rgba(255,216,74,0.85);letter-spacing:0.10em;text-transform:uppercase;">' + escHtml(g.category || '') + '</span>';
+    html += '<h3 style="font-family:\'Inter Tight\',sans-serif;font-weight:700;font-size:1.05rem;line-height:1.2;letter-spacing:-0.015em;margin:0;color:#f7f7f8;">' + escHtml(g.name) + '</h3>';
+    if (g.area) html += '<p style="font-family:\'JetBrains Mono\',monospace;font-size:11.5px;color:rgba(228,228,232,0.72);margin:0;line-height:1.5;">' + escHtml(g.area) + '</p>';
+    html += '</a>';
+  }
+  html += '</div></section>';
+  return html;
+}
 
 // Auto-link cross-venue mentions in body HTML.
 // When the venue body mentions another venue by name (e.g. "Sityodtong", "Fairtex Pattaya"),
@@ -1182,6 +1386,8 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
 
       <article class="venue-body">
         ${bodyHtml}
+        ${buildBestForBlock(fm)}
+        ${buildLastUpdatedNote(fm)}
       </article>
     </div>
 
@@ -1194,6 +1400,8 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
         ${fm.mapsUrl ? `<a class="btn btn-secondary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">⭐ Leave a Google review</a>` : ''}
       </div>
     </div>
+
+    ${buildNearbyVenuesBlock(fm, allGyms)}
 
     ${related.length ? `<section class="related-venues">
       <h2>More ${escHtml(catLabel)} venues in Pattaya</h2>

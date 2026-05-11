@@ -384,6 +384,39 @@ ${serviceWorkerRegistration()}
 }
 
 // ============== CATEGORY LANDING PAGES ==============
+function buildCategoryGuidesLinks(catKey) {
+  const guides = {
+    'muay-thai':   [['best-muay-thai-pattaya','Best Muay Thai gyms'],['best-for-beginners-pattaya','Best for beginners'],['cheapest-gyms-pattaya','Cheapest gyms'],['female-friendly-gyms-pattaya','Female-friendly venues']],
+    'fitness':     [['24-hour-gyms-pattaya','24-hour gyms'],['cheapest-gyms-pattaya','Cheapest gyms'],['pattaya-digital-nomad-fitness','Digital nomad fitness'],['female-friendly-gyms-pattaya','Female-friendly']],
+    'golf':        [['best-golf-courses-pattaya','Best golf courses'],['luxury-sports-clubs-pattaya','Luxury sports clubs']],
+    'yoga':        [['female-friendly-gyms-pattaya','Female-friendly venues'],['pattaya-seniors-low-impact-sport','Seniors low-impact'],['pattaya-solo-female-fitness','Solo female']],
+    'watersports': [['best-dive-operators-pattaya','Best dive operators'],['family-friendly-pattaya','Family-friendly']],
+    'racquet':     [['family-friendly-pattaya','Family-friendly'],['luxury-sports-clubs-pattaya','Luxury sports clubs']],
+    'swimming':    [['family-friendly-pattaya','Family-friendly'],['pattaya-gyms-childcare-family-pools','Childcare + family pools']],
+    'climbing':    [['family-friendly-pattaya','Family-friendly'],['best-for-beginners-pattaya','Best for beginners']],
+    'kids-youth':  [['family-friendly-pattaya','Family-friendly'],['pattaya-gyms-childcare-family-pools','Childcare + family pools']],
+    'clubs':       [['pattaya-digital-nomad-fitness','Digital nomad fitness'],['pattaya-seniors-low-impact-sport','Seniors low-impact']],
+    'adventure':   [['family-friendly-pattaya','Family-friendly'],['bangkok-day-trip-sport-pattaya','Bangkok day-trip sport']],
+    'equestrian':  [['luxury-sports-clubs-pattaya','Luxury sports clubs']],
+    'mma':         [['best-muay-thai-pattaya','Best Muay Thai gyms'],['best-for-beginners-pattaya','Best for beginners']],
+    'bjj':         [['best-muay-thai-pattaya','Best Muay Thai gyms'],['best-for-beginners-pattaya','Best for beginners']],
+    'crossfit':    [['cheapest-gyms-pattaya','Cheapest gyms'],['best-for-beginners-pattaya','Best for beginners']]
+  };
+  const list = guides[catKey] || [['best-muay-thai-pattaya','Best Muay Thai gyms'],['best-for-beginners-pattaya','Best for beginners']];
+  let html = '<section style="margin: 56px 0 0;">';
+  html += '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 12px; color: #ff7a3a; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px;">// CURATED GUIDES</p>';
+  html += '<h2 style="font-family: \'Inter Tight\', sans-serif; font-weight: 900; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 20px;">Hand-picked guides for this category.</h2>';
+  html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px;">';
+  list.forEach(([slug,title]) => {
+    html += '<a href="/guides/' + slug + '/" style="display:block;text-decoration:none;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:18px 20px;transition:border-color 0.25s,background 0.25s;">';
+    html += '<span style="font-family:\'JetBrains Mono\',monospace;font-size:10px;color:rgba(255,216,74,0.85);letter-spacing:0.10em;text-transform:uppercase;margin-right:8px;">Guide →</span>';
+    html += '<span style="font-family:\'Inter Tight\',sans-serif;font-weight:600;font-size:14.5px;color:#f7f7f8;">' + title + '</span>';
+    html += '</a>';
+  });
+  html += '</div></section>';
+  return html;
+}
+
 function buildCategoryPage(cat, gymsInCat, allCats) {
   const url = `${SITE}/category/${cat.key}/`;
   const title = `${cat.label} in Pattaya — ${gymsInCat.length} venues compared | Pattaya Gym`;
@@ -518,6 +551,7 @@ ${header()}
       <a class="btn btn-secondary" href="/">Browse all categories</a>
     </div>
   </div>
+${buildCategoryGuidesLinks(cat.key)}
 </main>
 ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
