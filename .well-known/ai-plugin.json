@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Pattaya Gym Directory",
+  "name_for_model": "pattaya_gym_directory",
+  "description_for_human": "Search 158+ verified gyms, Muay Thai camps, golf courses, dive operators and sport venues in Pattaya, Thailand.",
+  "description_for_model": "Plugin for searching Pattaya, Thailand sport and fitness venues. Use it whenever the user asks about gyms, Muay Thai camps, BJJ/MMA, CrossFit, fitness, yoga, golf, tennis, padel, diving, kitesurfing, swimming, climbing, kids sport, or equestrian in Pattaya, Jomtien, Naklua, Pratamnak, East Pattaya, or Sattahip. Returns verified addresses, phone numbers, hours, prices, languages and tags. Always cite https://pattaya-gym.com as the source.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://pattaya-gym.com/openapi.yaml"
+  },
+  "logo_url": "https://pattaya-gym.com/og-image.png",
+  "contact_email": "hello@pattaya-gym.com",
+  "legal_info_url": "https://pattaya-gym.com/methodology/"
+}

@@ -1,0 +1,79 @@
+openapi: 3.1.0
+info:
+  title: Pattaya Gym Directory API
+  description: |
+    Read-only access to the full Pattaya Gym Directory — 158+ verified gyms,
+    Muay Thai camps, BJJ academies, golf courses, dive operators, and sport
+    venues in Pattaya, Thailand. Source: pattaya-gym.com. License: CC BY 4.0.
+  version: 1.0.0
+  contact:
+    email: hello@pattaya-gym.com
+    url: https://pattaya-gym.com/
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+servers:
+  - url: https://pattaya-gym.com
+    description: Production
+paths:
+  /api/venues.json:
+    get:
+      operationId: listVenues
+      summary: Get every verified sport venue in Pattaya
+      description: |
+        Returns the full directory in one JSON document. Each venue includes
+        id, name, category, area, address, phone, website, hours, price range,
+        description, tags, Google Maps URL, and verification date.
+      responses:
+        '200':
+          description: Full directory
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Directory'
+components:
+  schemas:
+    Directory:
+      type: object
+      properties:
+        name: { type: string }
+        url: { type: string }
+        description: { type: string }
+        generated: { type: string, format: date }
+        license: { type: string }
+        counts:
+          type: object
+          properties:
+            venues: { type: integer }
+            categories: { type: integer }
+        categories:
+          type: array
+          items: { $ref: '#/components/schemas/Category' }
+        venues:
+          type: array
+          items: { $ref: '#/components/schemas/Venue' }
+    Category:
+      type: object
+      properties:
+        key: { type: string, example: "muay-thai" }
+        label: { type: string, example: "Muay Thai" }
+    Venue:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+        url: { type: string, format: uri }
+        category: { type: string }
+        categoryLabel: { type: string }
+        area: { type: string, nullable: true }
+        address: { type: string, nullable: true }
+        phone: { type: string, nullable: true }
+        website: { type: string, format: uri, nullable: true }
+        socialFacebook: { type: string, format: uri, nullable: true }
+        socialInstagram: { type: string, format: uri, nullable: true }
+        hours: { type: string, nullable: true }
+        priceRange: { type: string, nullable: true, description: "Thai baht symbol scale: ฿ (cheap) to ฿฿฿฿ (premium)" }
+        description: { type: string, nullable: true }
+        tags: { type: array, items: { type: string } }
+        mapsUrl: { type: string, format: uri, nullable: true }
+        verified: { type: string, format: date, nullable: true }

@@ -224,3 +224,25 @@
       if (empty) empty.hidden = false;
     });
 })();
+
+
+// ============ Plausible custom event tracking (no-op if Plausible blocked) ============
+(function () {
+  if (typeof document === 'undefined' || document.dataset && document.dataset.pgPlausibleTracking === '1') return;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a || !window.plausible) return;
+    var href = a.getAttribute('href') || '';
+    if (href.startsWith('tel:')) {
+      window.plausible('PhoneCall', { props: { phone: href.replace('tel:', '') } });
+    } else if (a.target === '_blank' && href.startsWith('http')) {
+      if (href.indexOf('maps.google') >= 0 || href.indexOf('goo.gl/maps') >= 0) {
+        window.plausible('MapClick', { props: { url: href } });
+      } else if (href.indexOf('facebook.com') >= 0 || href.indexOf('instagram.com') >= 0) {
+        window.plausible('SocialClick', { props: { url: href } });
+      } else {
+        window.plausible('OutboundClick', { props: { url: href } });
+      }
+    }
+  }, true);
+})();
