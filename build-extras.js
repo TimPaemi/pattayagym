@@ -231,38 +231,7 @@ function header() {
 </header>`;
 }
 
-function newsletterFooterHtml() {
-  return `<div class="footer-newsletter">
-    <div class="newsletter-card">
-      <div>
-        <p class="newsletter-kicker">Stay current</p>
-        <h2>Get Pattaya gym updates by email.</h2>
-        <p>Fresh listings, corrected hours, and new guide notes from the directory.</p>
-      </div>
-      <form class="newsletter-form" action="${NEWSLETTER_ACTION}" method="post">
-        <input type="hidden" name="embed" value="1" />
-        <input type="hidden" name="tag" value="website-footer" />
-        <div class="newsletter-field">
-          <label for="footer-email">Email address *</label>
-          <input id="footer-email" name="email" type="email" autocomplete="email" required aria-required="true" placeholder="you@example.com" />
-        </div>
-        <div class="newsletter-field">
-          <label for="footer-first-name">First name <span aria-hidden="true">(optional)</span></label>
-          <input id="footer-first-name" name="metadata__first-name" type="text" autocomplete="given-name" placeholder="Alex" />
-        </div>
-        <div>
-          <p class="frequency-label" id="footer-frequency-label">Frequency</p>
-          <div class="frequency-options" role="radiogroup" aria-labelledby="footer-frequency-label">
-            <label><input type="radio" name="metadata__frequency" value="weekly" checked /> Weekly</label>
-            <label><input type="radio" name="metadata__frequency" value="monthly" /> Monthly</label>
-            <label><input type="radio" name="metadata__frequency" value="major-updates" /> Major updates</label>
-          </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>`;
-}
+function newsletterFooterHtml() { return ""; }
 
 function footer() {
   return `<footer class="site-footer" role="contentinfo">
@@ -333,7 +302,8 @@ function footer() {
   <div class="site-footer-base">
     <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
     <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby">Designed, built &amp; maintained by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link" title="Pattaya Authority — Premium Web Design &amp; SEO Studio">Pattaya Authority<span class="sf-builtby-arrow" aria-hidden="true">&#x2197;</span></a> <span class="sf-builtby-sep">·</span> Premium Web Design &amp; SEO Studio</p>
+          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
+          
   </div>
 </footer>`;
 }
@@ -376,9 +346,14 @@ function commonHead(title, desc, canonical, schemaType) {
 <link rel="alternate" hreflang="en" href="${canonical}" />
 <link rel="alternate" hreflang="x-default" href="${canonical}" />
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
+<link rel="alternate" type="application/json" title="Pattaya Gym Directory API" href="/api/venues.json" />
+<link rel="alternate" type="text/markdown" title="Pattaya Gym for LLMs" href="/llms.txt" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <link rel="dns-prefetch" href="//maps.google.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
 <link rel="preconnect" href="https://plausible.io" crossorigin />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
@@ -958,10 +933,169 @@ ${items}
 }
 
 function buildRobots() {
-  return `User-agent: *
+  return `# Pattaya Gym Directory — open to all good-faith crawlers
+# Independent directory · No paid placements · pattaya-gym.com
+
+User-agent: *
+Allow: /
+Disallow: /uploads/
+Disallow: /og/
+Crawl-delay: 1
+
+# === Search engines ===
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# === AI / LLM crawlers (explicitly allowed for training + retrieval) ===
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
 Allow: /
 
 Sitemap: ${SITE}/sitemap.xml
+Sitemap: ${SITE}/sitemap-index.xml
+Sitemap: ${SITE}/sitemap-venues.xml
+Sitemap: ${SITE}/sitemap-categories.xml
+Sitemap: ${SITE}/sitemap-areas.xml
+Sitemap: ${SITE}/sitemap-guides.xml
+Sitemap: ${SITE}/sitemap-core.xml
+`;
+}
+
+function buildLlmsTxt() {
+  return `# Pattaya Gym Directory
+> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 158 venues, 15 categories, 6 areas — no paid placements, source-cited research.
+
+This llms.txt file provides AI agents and language-model crawlers with a curated map of the most useful, high-signal pages on pattaya-gym.com.
+
+## Core directory
+
+- [Home](${SITE}/): Full directory with search, filters, featured venues
+- [Search](${SITE}/search/): Full-text search across all 158 venues
+- [Map](${SITE}/map/): Interactive map of every Pattaya sport venue
+- [Compare](${SITE}/compare/): Side-by-side comparison of any 2–4 venues
+- [Find My Coach](${SITE}/find-my-coach/): Coach matchmaker by discipline + language
+- [Plan My Trip](${SITE}/plan-my-trip/): Build a Pattaya fitness itinerary
+
+## Areas of Pattaya
+
+- [Jomtien Beach](${SITE}/area/jomtien/): Beach-front gyms, dive operators, kitesurfing
+- [Naklua / North Pattaya](${SITE}/area/naklua/): Quieter residential, yoga, fitness chains
+- [Pratamnak Hill](${SITE}/area/pratamnak/): Densest fitness neighborhood, Muscle Factory, outdoor calisthenics
+- [Central Pattaya](${SITE}/area/central-pattaya/): 24-hour gyms, hotel pools, walk-in Muay Thai
+- [East Pattaya / Darkside](${SITE}/area/east-pattaya/): Mabprachan, equestrian, value-tier community gyms
+- [Sattahip / Far South](${SITE}/area/sattahip/): Marinas, dive sites, waterparks
+
+## Sport categories
+
+- [Muay Thai camps](${SITE}/category/muay-thai/): 21 verified camps including Fairtex, Sityodtong, Kombat Group
+- [Fitness / Gym](${SITE}/category/fitness/): 25 venues — 24-hour chains, hotel gyms, boutique
+- [Golf](${SITE}/category/golf/): 17 courses including Siam Country Club, Laem Chabang, Phoenix Gold
+- [Yoga / Pilates](${SITE}/category/yoga/): 6 studios
+- [Tennis / Padel / Squash](${SITE}/category/racquet/): 11 venues
+- [Watersports / Diving](${SITE}/category/watersports/): 20 dive operators + kitesurf + yacht clubs
+- [Swimming](${SITE}/category/swimming/): 9 pools + waterparks
+- [Climbing](${SITE}/category/climbing/): 2 climbing gyms
+- [Running / Cycling Clubs](${SITE}/category/clubs/): 23 groups
+- [Kids / Youth Sports](${SITE}/category/kids-youth/): 9 football academies + trampoline parks
+- [Equestrian](${SITE}/category/equestrian/): 2 facilities including Thai Polo & Equestrian Club
+- [Adventure / Multi-Sport](${SITE}/category/adventure/): 12 venues — skydiving, karts, ATV, ziplines
+- [MMA](${SITE}/category/mma/): 1 verified MMA camp
+- [BJJ / Grappling](${SITE}/category/bjj/): 1 verified BJJ academy
+- [CrossFit / Functional](${SITE}/category/crossfit/): 1 affiliate
+
+## Curated guides
+
+- [Best Muay Thai gyms in Pattaya](${SITE}/guides/best-muay-thai-pattaya/)
+- [Best dive operators](${SITE}/guides/best-dive-operators-pattaya/)
+- [Best golf courses](${SITE}/guides/best-golf-courses-pattaya/)
+- [Cheapest gyms](${SITE}/guides/cheapest-gyms-pattaya/)
+- [Luxury sports clubs](${SITE}/guides/luxury-sports-clubs-pattaya/)
+- [24-hour gyms](${SITE}/guides/24-hour-gyms-pattaya/)
+- [Family-friendly venues](${SITE}/guides/family-friendly-pattaya/)
+- [Best for beginners](${SITE}/guides/best-for-beginners-pattaya/)
+- [Digital nomad fitness](${SITE}/guides/pattaya-digital-nomad-fitness/)
+- [Female-friendly venues](${SITE}/guides/female-friendly-gyms-pattaya/)
+- [Childcare, kids sport and pools](${SITE}/guides/pattaya-gyms-childcare-family-pools/)
+- [Seniors 65+ low-impact sport](${SITE}/guides/pattaya-seniors-low-impact-sport/)
+- [Thai gym terms cheat sheet](${SITE}/guides/thai-gym-terms-pattaya/)
+- [Russian-speaking sport venues](${SITE}/guides/pattaya-russian-speaking-sport/)
+- [Solo female fitness in Pattaya](${SITE}/guides/pattaya-solo-female-fitness/)
+- [Gyms near Walking Street](${SITE}/guides/best-gyms-near-walking-street-pattaya/)
+- [Bangkok day-trip sport from Pattaya](${SITE}/guides/bangkok-day-trip-sport-pattaya/)
+
+## Methodology + about
+
+- [About this site](${SITE}/about/): Editorial principles, independence policy
+- [Research methodology](${SITE}/methodology/): How venues are verified, sources, update cadence
+- [Pattaya sport tourism stats](${SITE}/pattaya-sport-stats/): Authoritative numbers
+- [Contact](${SITE}/contact/): Submit corrections, partnerships
+- [Press](${SITE}/press/): Press kit, citations, media inquiries
+
+## Data feeds (machine-readable)
+
+- [Master sitemap](${SITE}/sitemap.xml)
+- [RSS — recently added](${SITE}/feed.xml)
+- [Category RSS feeds](${SITE}/feed/): Per-category /feed/<category>.xml
+- [Area RSS feeds](${SITE}/feed/area/): Per-area /feed/area/<slug>.xml
+
+## Editorial promise
+
+Every listing on pattaya-gym.com is researched and source-cited from public information.
+No paid placements, no sponsored listings, no affiliate-only entries.
+Independent directory operated since 2026. Built and maintained in Pattaya, Thailand.
+Coordinates: 12.93°N, 100.88°E.
+
+Last update: ${LAST_BUILD_DATE}
 `;
 }
 
@@ -1040,6 +1174,43 @@ function appendCategoryCss() {
 }
 
 // ============== MAIN ==============
+function buildVenuesApi(allGyms, allCats) {
+  const today = new Date().toISOString().slice(0, 10);
+  const catLabel = (k) => { const c = allCats.find(x => x.key === k); return c ? c.label : k; };
+  const venues = allGyms.map(g => ({
+    id: g.id,
+    name: g.name,
+    url: `${SITE}/gyms/${g.id}/`,
+    category: g.category,
+    categoryLabel: catLabel(g.category),
+    area: g.area || null,
+    address: g.address || null,
+    phone: g.phone || null,
+    website: g.website || null,
+    socialFacebook: (g.social && g.social.facebook) ? `https://facebook.com/${g.social.facebook}` : null,
+    socialInstagram: (g.social && g.social.instagram) ? `https://instagram.com/${g.social.instagram}` : null,
+    hours: g.hours || null,
+    priceRange: g.priceRange || null,
+    description: g.description || null,
+    tags: g.tags || [],
+    mapsUrl: g.mapsUrl || null,
+    verified: g.verified || null
+  }));
+  const data = {
+    name: 'Pattaya Gym Directory',
+    url: SITE + '/',
+    description: 'Independently-verified directory of every gym, Muay Thai camp, BJJ academy, golf course, dive operator, watersports, climbing, yoga and sport venue in Pattaya, Thailand.',
+    generated: today,
+    license: 'CC BY 4.0',
+    attribution: 'Source: pattaya-gym.com (independent directory, no paid placements)',
+    counts: { venues: venues.length, categories: allCats.length },
+    categories: allCats.map(c => ({ key: c.key, label: c.label })),
+    venues: venues
+  };
+  return JSON.stringify(data, null, 2);
+}
+
+
 function main() {
   const { GYMS, CATEGORIES } = loadGymsFromDataJs();
   const extraUrls = [];
@@ -1085,9 +1256,14 @@ function main() {
   fs.writeFileSync(path.join(ROOT, '404.html'), build404());
   console.log('  [404] /404.html');
 
-  // 5. Robots
+  // 5. Robots + llms.txt
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), buildRobots());
   console.log('  [ROB] /robots.txt');
+  fs.writeFileSync(path.join(ROOT, 'llms.txt'), buildLlmsTxt());
+  console.log('  [LLM] /llms.txt');
+  ensureDir(path.join(ROOT, 'api'));
+  fs.writeFileSync(path.join(ROOT, 'api', 'venues.json'), buildVenuesApi(GYMS, CATEGORIES));
+  console.log('  [API] /api/venues.json');
 
   // 5b. RSS feed of recently-verified venues
   // NOTE: /feed.xml is intentionally NOT added to extraUrls (sitemap). RSS feeds belong in

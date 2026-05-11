@@ -1748,3 +1748,522 @@ body { padding-top: 0; }
     transition: none !important;
   }
 }
+
+
+/* ============ Editorial 'Built by' credit line (site-wide) ============ */
+.sf-builtby {
+  margin: 24px 0 0 !important;
+  padding: 16px 0 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--text-muted) !important;
+  font-family: "JetBrains Mono", "SF Mono", ui-monospace, monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+.sf-builtby-rule {
+  flex: 1; min-width: 40px; max-width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent);
+}
+.sf-builtby-text {
+  color: var(--text-muted) !important;
+  font-family: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-align: center;
+  white-space: nowrap;
+}
+.sf-builtby-link {
+  color: #ffd84a !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,184,0,0.32);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.sf-builtby-link:hover {
+  color: #ffe79b !important;
+  border-color: #ffd84a;
+}
+.sf-builtby-star { color: #ffd84a; margin-left: 4px; }
+@media (max-width: 720px) {
+  .sf-builtby-rule { display: none; }
+  .sf-builtby-text { white-space: normal; line-height: 1.7; }
+}
+#recently-viewed { display: none !important; }
+
+
+/* ============================================================
+   PATTAYA GYM — SITE-WIDE EDITORIAL OVERLAY
+   Propagates the homepage empire voice to every page.
+   Inter Tight display + JetBrains Mono labels + hairline cards.
+   ============================================================ */
+:root {
+  --ed-gold: #ffb800;
+  --ed-gold-2: #ffd84a;
+  --ed-gold-deep: #b97e00;
+  --ed-gold-line: rgba(255, 184, 0, 0.24);
+  --ed-copper: #ff7a3a;
+  --ed-bg: #050507;
+  --ed-bg-2: #0a0a0d;
+  --ed-hairline: rgba(255, 255, 255, 0.08);
+  --ed-hairline-2: rgba(255, 255, 255, 0.14);
+  --ed-text-hi: #f7f7f8;
+  --ed-text-mid: rgba(228, 228, 232, 0.72);
+  --ed-text-low: rgba(150, 150, 156, 0.6);
+  --ed-display: "Inter Tight", -apple-system, "Segoe UI", sans-serif;
+  --ed-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+}
+
+body {
+  background: var(--ed-bg) !important;
+  color: var(--ed-text-hi);
+  font-family: var(--ed-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============ Nav ============ */
+.nav {
+  background: rgba(5, 5, 7, 0.7) !important;
+  backdrop-filter: blur(20px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+  border-bottom: 1px solid var(--ed-hairline) !important;
+  padding: 18px 32px !important;
+  max-width: none !important;
+}
+.nav .brand-mark {
+  background: linear-gradient(135deg, var(--ed-gold) 0%, var(--ed-gold-2) 100%) !important;
+  box-shadow: 0 8px 20px -4px rgba(255,184,0,0.40), 0 0 0 1px rgba(255,184,0,0.28) inset !important;
+  color: #1a1100 !important;
+  font-weight: 900 !important;
+}
+.nav .brand { font-family: var(--ed-display) !important; font-weight: 800 !important; letter-spacing: 0.06em !important; font-size: 14px !important; }
+.brand-text strong { color: var(--ed-gold-2) !important; font-weight: 800 !important; }
+.nav-links { gap: 4px !important; }
+.nav-links a {
+  color: var(--ed-text-mid) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color: var(--ed-text-hi) !important; background: rgba(255,255,255,0.04) !important; }
+
+/* ============ Venue / category / area / guide page hero ============ */
+.venue-page {
+  max-width: 1100px !important;
+}
+.venue-breadcrumb {
+  font-family: var(--ed-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ed-text-low);
+}
+.venue-breadcrumb a { color: var(--ed-text-mid); text-decoration: none; }
+.venue-breadcrumb a:hover { color: var(--ed-gold-2); }
+
+.venue-hero {
+  position: relative;
+  padding: 56px 32px 48px !important;
+  margin: 0 0 48px !important;
+  background:
+    radial-gradient(ellipse 700px 400px at 12% 20%, rgba(255,184,0,0.08), transparent 70%),
+    radial-gradient(ellipse 500px 300px at 88% 80%, rgba(255,122,58,0.04), transparent 70%),
+    var(--ed-bg-2) !important;
+  border: 1px solid var(--ed-hairline) !important;
+  border-radius: 8px !important;
+}
+.venue-h1 {
+  font-family: var(--ed-display) !important;
+  font-weight: 900 !important;
+  font-size: clamp(2rem, 5vw, 3.6rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -0.04em !important;
+  text-transform: uppercase;
+  margin: 16px 0 18px !important;
+  color: var(--ed-text-hi);
+}
+.venue-lede {
+  font-family: var(--ed-mono) !important;
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  color: var(--ed-text-mid) !important;
+  max-width: 720px;
+}
+.venue-cat-pill {
+  font-family: var(--ed-mono) !important;
+  font-size: 10px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  padding: 6px 12px !important;
+  background: var(--ed-gold) !important;
+  color: #1a1100 !important;
+  border-radius: 999px !important;
+  border-color: var(--ed-gold) !important;
+  font-weight: 700 !important;
+}
+.meta-chip {
+  font-family: var(--ed-mono) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.04em !important;
+  background: rgba(255,255,255,0.03) !important;
+  border: 1px solid var(--ed-hairline) !important;
+  color: var(--ed-text-mid) !important;
+  padding: 6px 12px !important;
+}
+.meta-chip-accent {
+  background: var(--ed-gold) !important;
+  color: #1a1100 !important;
+  border-color: var(--ed-gold) !important;
+  font-weight: 700 !important;
+}
+
+/* ============ Cards (cat-venue-card, .card, .recent-card, etc) ============ */
+.cat-venue-card, .recent-card, .spot-card, .card {
+  background: var(--ed-bg-2) !important;
+  border: 1px solid var(--ed-hairline) !important;
+  border-radius: 6px !important;
+  transition: transform 0.3s, border-color 0.3s, background 0.3s !important;
+}
+.cat-venue-card:hover, .recent-card:hover, .spot-card:hover, .card:hover {
+  transform: translateY(-3px);
+  border-color: var(--ed-gold-line) !important;
+  background: rgba(15, 15, 18, 0.95) !important;
+}
+.cat-venue-card .cv-head h3, .cat-venue-card h3, .recent-card h3, .spot-card h3 {
+  font-family: var(--ed-display) !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: -0.015em !important;
+}
+.cv-pill, .card-tag, .spot-card span, .recent-card span {
+  font-family: var(--ed-mono) !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase;
+}
+.cv-pill-tag { background: rgba(255,255,255,0.04) !important; border-color: var(--ed-hairline) !important; color: var(--ed-text-mid) !important; }
+
+/* ============ Section headings ============ */
+h1, h2, h3 { font-family: var(--ed-display); letter-spacing: -0.02em; }
+.section-title {
+  font-family: var(--ed-display) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.035em !important;
+  text-transform: uppercase;
+}
+.venue-page h2 {
+  font-family: var(--ed-display) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  margin-top: 48px;
+}
+
+/* ============ Buttons ============ */
+.btn {
+  font-family: var(--ed-mono) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase;
+  border-radius: 4px !important;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--ed-gold) 0%, var(--ed-gold-2) 100%) !important;
+  color: #1a1100 !important;
+  box-shadow: 0 8px 20px -6px rgba(255,184,0,0.35);
+}
+.btn-secondary {
+  background: transparent !important;
+  border: 1px solid var(--ed-hairline-2) !important;
+  color: var(--ed-text-hi) !important;
+}
+
+/* ============ Footer ============ */
+.site-footer {
+  background: var(--ed-bg) !important;
+  border-top: 1px solid var(--ed-hairline) !important;
+  margin-top: 96px;
+}
+.site-footer-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 64px 32px 32px !important;
+  display: grid !important;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr !important;
+  gap: 40px !important;
+}
+.sf-col .sf-heading {
+  font-family: var(--ed-mono) !important;
+  font-size: 11px !important;
+  color: var(--ed-text-low) !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  margin: 0 0 16px !important;
+  font-weight: 500 !important;
+}
+.sf-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+.sf-col ul li { margin: 0 0 10px !important; }
+.sf-col ul li a {
+  font-family: var(--ed-display);
+  font-size: 13px !important;
+  color: var(--ed-text-mid) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.sf-col ul li a:hover { color: var(--ed-gold-2) !important; }
+.sf-brand-col .sf-brand {
+  font-family: var(--ed-display);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px;
+}
+.sf-tag {
+  font-family: var(--ed-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ed-text-mid);
+  max-width: 280px;
+}
+.site-footer-base {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px 32px 48px !important;
+  border-top: 1px solid var(--ed-hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.site-footer-base p {
+  font-family: var(--ed-mono);
+  font-size: 11.5px !important;
+  color: var(--ed-text-low) !important;
+  margin: 0 !important;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 900px) {
+  .site-footer-inner { grid-template-columns: 1fr 1fr !important; gap: 32px !important; padding: 48px 18px 24px !important; }
+}
+@media (max-width: 600px) {
+  .site-footer-inner { grid-template-columns: 1fr !important; }
+}
+
+/* ============ FAQ items polish ============ */
+details.faq-item {
+  background: var(--ed-bg-2) !important;
+  border: 1px solid var(--ed-hairline) !important;
+  border-radius: 6px !important;
+  padding: 16px 20px !important;
+  margin-bottom: 8px !important;
+}
+details.faq-item summary {
+  font-family: var(--ed-display) !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  color: var(--ed-text-hi) !important;
+}
+details.faq-item p {
+  font-family: var(--ed-mono) !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  color: var(--ed-text-mid) !important;
+}
+
+/* ============ Tables (venue at-a-glance) ============ */
+.venue-page table {
+  background: var(--ed-bg-2) !important;
+  border: 1px solid var(--ed-hairline) !important;
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+.venue-page table th, .venue-page table td {
+  font-family: var(--ed-mono);
+  font-size: 12.5px;
+  border-color: var(--ed-hairline);
+}
+
+/* ============ TL;DR + callouts ============ */
+.tldr, .callout {
+  background: var(--ed-bg-2) !important;
+  border: 1px solid var(--ed-hairline) !important;
+  border-radius: 6px !important;
+}
+.tldr-title {
+  font-family: var(--ed-display) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ============ Eyebrow / kicker labels in venue body ============ */
+.featured-card-kicker, .reviews-kicker, .newsletter-kicker, .feedback-kicker {
+  font-family: var(--ed-mono) !important;
+  font-size: 11px !important;
+  color: var(--ed-gold-2) !important;
+  letter-spacing: 0.10em !important;
+  text-transform: uppercase;
+  font-weight: 500 !important;
+}
+
+
+/* ============ Subtle scroll-fade motion (respects reduced-motion) ============ */
+@media (prefers-reduced-motion: no-preference) {
+  main > section, main > article, main > .venue-content-shell,
+  .three-ways, .quick-answer, .spotlight, .featured-month, .directory, .categories {
+    animation: ed-fade-up 0.7s ease-out both;
+    animation-delay: 60ms;
+  }
+  @keyframes ed-fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* ============ Section dividers + spacing rhythm ============ */
+main { padding-bottom: 0; }
+main > section + section {
+  margin-top: 80px;
+}
+@media (max-width: 720px) {
+  main > section + section { margin-top: 48px; }
+}
+
+/* ============ Venue hero accent — gold top line on the hero card ============ */
+.venue-hero {
+  position: relative;
+}
+.venue-hero::after {
+  content: "";
+  position: absolute; left: 32px; top: 0;
+  width: 56px; height: 2px;
+  background: linear-gradient(90deg, var(--ed-gold), transparent);
+}
+
+/* ============ Selection color ============ */
+::selection {
+  background: rgba(255, 184, 0, 0.35);
+  color: #fff;
+}
+
+/* ============ Scrollbar ============ */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--ed-bg); }
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  border: 2px solid var(--ed-bg);
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(255,184,0,0.32); }
+
+/* ============ Focus visible (a11y refinement) ============ */
+:focus-visible {
+  outline: 2px solid var(--ed-gold-2) !important;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============ Code-style key labels in venue-page tables/lists ============ */
+.venue-page strong:not(.tldr-list strong):not(.fact-row strong) {
+  color: var(--ed-text-hi);
+  font-weight: 600;
+}
+
+/* ============ Map hero (replace orange theme to match) ============ */
+.map-page #pg-map {
+  border-radius: 8px !important;
+  border: 1px solid var(--ed-hairline) !important;
+}
+.ml-pill {
+  font-family: var(--ed-mono) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase;
+  border-radius: 4px !important;
+}
+
+/* ============ Compare table polish ============ */
+.cmp-table-wrap {
+  border: 1px solid var(--ed-hairline) !important;
+  border-radius: 6px !important;
+  background: var(--ed-bg-2) !important;
+}
+.cmp-table th {
+  font-family: var(--ed-mono) !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.10em !important;
+}
+
+/* ============ Search results polish (search/index.html) ============ */
+.sr-card {
+  background: var(--ed-bg-2) !important;
+  border: 1px solid var(--ed-hairline) !important;
+  border-radius: 6px !important;
+  transition: transform 0.3s, border-color 0.3s, background 0.3s;
+}
+.sr-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ed-gold-line) !important;
+  background: rgba(15, 15, 18, 0.95) !important;
+}
+.sr-card h3 a { color: var(--ed-text-hi) !important; }
+.sr-card .sr-cat {
+  font-family: var(--ed-mono) !important;
+  font-size: 10px !important;
+  color: var(--ed-gold-2) !important;
+  letter-spacing: 0.12em !important;
+}
+.sr-card .sr-meta {
+  font-family: var(--ed-mono) !important;
+  font-size: 11px !important;
+  color: var(--ed-text-mid) !important;
+}
+
+/* ============ Search input editorial ============ */
+.search-input-wrap .search-input {
+  font-family: var(--ed-mono) !important;
+  font-size: 14.5px !important;
+  background: rgba(15,15,18,0.75) !important;
+  border: 1px solid var(--ed-hairline-2) !important;
+  border-radius: 6px !important;
+}
+.search-input-wrap .search-input:focus {
+  border-color: var(--ed-gold-line) !important;
+  box-shadow: 0 0 0 4px rgba(255,184,0,0.08) !important;
+}
+.sf-pill {
+  font-family: var(--ed-mono) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+  border-radius: 4px !important;
+}
+.sf-pill.active {
+  background: var(--ed-gold) !important;
+  color: #1a1100 !important;
+  border-color: var(--ed-gold) !important;
+}
+
+/* ============ TOC / Jump-to nav polish ============ */
+.jump-to {
+  background: var(--ed-bg-2) !important;
+  border: 1px solid var(--ed-hairline) !important;
+  border-radius: 6px !important;
+}
+.jump-to-label, .jump-pill {
+  font-family: var(--ed-mono) !important;
+  font-size: 11px !important;
+  letter-spacing: 0.06em !important;
+}
+.jump-pill { background: transparent !important; border: 0 !important; }
+.jump-pill:hover { color: var(--ed-gold-2) !important; }

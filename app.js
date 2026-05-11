@@ -63,21 +63,20 @@
     const titleHtml = `<a href="/gyms/${g.id}/" style="color:inherit;text-decoration:none;">${escapeHtml(g.name)}</a>`;
     const favoriteBtn = `<button class="favorite-btn card-favorite" data-pg-favorite-id="${escapeHtml(g.id)}" data-pg-favorite-name="${escapeHtml(g.name)}" data-pg-favorite-category="${escapeHtml(g.category)}" data-pg-favorite-area="${escapeHtml(g.area || "")}" data-pg-favorite-price="${escapeHtml(g.priceRange || "")}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>`;
     return `
-      <article class="card">
+      <a class="card" href="/gyms/${g.id}/">
         <div class="card-head">
           <span class="card-cat">${catLabel(g.category)}</span>
           ${favoriteBtn}
         </div>
-        <h3>${titleHtml}</h3>
+        <h3>${escapeHtml(g.name)}</h3>
         <div class="card-meta">
-          ${g.area ? `<span>📍 ${escapeHtml(g.area)}</span>` : ""}
-          ${g.priceRange ? `<span>💰 ${escapeHtml(g.priceRange)}</span>` : ""}
-          ${g.hours ? `<span>🕐 ${escapeHtml(g.hours)}</span>` : ""}
+          ${g.area ? `<span>${escapeHtml(g.area)}</span>` : ""}
+          ${g.priceRange ? `<span>${escapeHtml(g.priceRange)}</span>` : ""}
+          ${g.hours ? `<span>${escapeHtml(g.hours)}</span>` : ""}
         </div>
         <p class="card-desc">${escapeHtml(g.description || "")}</p>
-        ${tags ? `<div class="card-tags">${tags}</div>` : ""}
-        ${actions.length ? `<div class="card-actions">${actions.join("")}</div>` : ""}
-      </article>
+        <span class="card-arrow">View venue →</span>
+      </a>
     `;
   };
 

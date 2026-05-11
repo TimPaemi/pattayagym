@@ -1,0 +1,84 @@
+# Pattaya Gym Directory
+> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 158 venues, 15 categories, 6 areas — no paid placements, source-cited research.
+
+This llms.txt file provides AI agents and language-model crawlers with a curated map of the most useful, high-signal pages on pattaya-gym.com.
+
+## Core directory
+
+- [Home](https://pattaya-gym.com/): Full directory with search, filters, featured venues
+- [Search](https://pattaya-gym.com/search/): Full-text search across all 158 venues
+- [Map](https://pattaya-gym.com/map/): Interactive map of every Pattaya sport venue
+- [Compare](https://pattaya-gym.com/compare/): Side-by-side comparison of any 2–4 venues
+- [Find My Coach](https://pattaya-gym.com/find-my-coach/): Coach matchmaker by discipline + language
+- [Plan My Trip](https://pattaya-gym.com/plan-my-trip/): Build a Pattaya fitness itinerary
+
+## Areas of Pattaya
+
+- [Jomtien Beach](https://pattaya-gym.com/area/jomtien/): Beach-front gyms, dive operators, kitesurfing
+- [Naklua / North Pattaya](https://pattaya-gym.com/area/naklua/): Quieter residential, yoga, fitness chains
+- [Pratamnak Hill](https://pattaya-gym.com/area/pratamnak/): Densest fitness neighborhood, Muscle Factory, outdoor calisthenics
+- [Central Pattaya](https://pattaya-gym.com/area/central-pattaya/): 24-hour gyms, hotel pools, walk-in Muay Thai
+- [East Pattaya / Darkside](https://pattaya-gym.com/area/east-pattaya/): Mabprachan, equestrian, value-tier community gyms
+- [Sattahip / Far South](https://pattaya-gym.com/area/sattahip/): Marinas, dive sites, waterparks
+
+## Sport categories
+
+- [Muay Thai camps](https://pattaya-gym.com/category/muay-thai/): 21 verified camps including Fairtex, Sityodtong, Kombat Group
+- [Fitness / Gym](https://pattaya-gym.com/category/fitness/): 25 venues — 24-hour chains, hotel gyms, boutique
+- [Golf](https://pattaya-gym.com/category/golf/): 17 courses including Siam Country Club, Laem Chabang, Phoenix Gold
+- [Yoga / Pilates](https://pattaya-gym.com/category/yoga/): 6 studios
+- [Tennis / Padel / Squash](https://pattaya-gym.com/category/racquet/): 11 venues
+- [Watersports / Diving](https://pattaya-gym.com/category/watersports/): 20 dive operators + kitesurf + yacht clubs
+- [Swimming](https://pattaya-gym.com/category/swimming/): 9 pools + waterparks
+- [Climbing](https://pattaya-gym.com/category/climbing/): 2 climbing gyms
+- [Running / Cycling Clubs](https://pattaya-gym.com/category/clubs/): 23 groups
+- [Kids / Youth Sports](https://pattaya-gym.com/category/kids-youth/): 9 football academies + trampoline parks
+- [Equestrian](https://pattaya-gym.com/category/equestrian/): 2 facilities including Thai Polo & Equestrian Club
+- [Adventure / Multi-Sport](https://pattaya-gym.com/category/adventure/): 12 venues — skydiving, karts, ATV, ziplines
+- [MMA](https://pattaya-gym.com/category/mma/): 1 verified MMA camp
+- [BJJ / Grappling](https://pattaya-gym.com/category/bjj/): 1 verified BJJ academy
+- [CrossFit / Functional](https://pattaya-gym.com/category/crossfit/): 1 affiliate
+
+## Curated guides
+
+- [Best Muay Thai gyms in Pattaya](https://pattaya-gym.com/guides/best-muay-thai-pattaya/)
+- [Best dive operators](https://pattaya-gym.com/guides/best-dive-operators-pattaya/)
+- [Best golf courses](https://pattaya-gym.com/guides/best-golf-courses-pattaya/)
+- [Cheapest gyms](https://pattaya-gym.com/guides/cheapest-gyms-pattaya/)
+- [Luxury sports clubs](https://pattaya-gym.com/guides/luxury-sports-clubs-pattaya/)
+- [24-hour gyms](https://pattaya-gym.com/guides/24-hour-gyms-pattaya/)
+- [Family-friendly venues](https://pattaya-gym.com/guides/family-friendly-pattaya/)
+- [Best for beginners](https://pattaya-gym.com/guides/best-for-beginners-pattaya/)
+- [Digital nomad fitness](https://pattaya-gym.com/guides/pattaya-digital-nomad-fitness/)
+- [Female-friendly venues](https://pattaya-gym.com/guides/female-friendly-gyms-pattaya/)
+- [Childcare, kids sport and pools](https://pattaya-gym.com/guides/pattaya-gyms-childcare-family-pools/)
+- [Seniors 65+ low-impact sport](https://pattaya-gym.com/guides/pattaya-seniors-low-impact-sport/)
+- [Thai gym terms cheat sheet](https://pattaya-gym.com/guides/thai-gym-terms-pattaya/)
+- [Russian-speaking sport venues](https://pattaya-gym.com/guides/pattaya-russian-speaking-sport/)
+- [Solo female fitness in Pattaya](https://pattaya-gym.com/guides/pattaya-solo-female-fitness/)
+- [Gyms near Walking Street](https://pattaya-gym.com/guides/best-gyms-near-walking-street-pattaya/)
+- [Bangkok day-trip sport from Pattaya](https://pattaya-gym.com/guides/bangkok-day-trip-sport-pattaya/)
+
+## Methodology + about
+
+- [About this site](https://pattaya-gym.com/about/): Editorial principles, independence policy
+- [Research methodology](https://pattaya-gym.com/methodology/): How venues are verified, sources, update cadence
+- [Pattaya sport tourism stats](https://pattaya-gym.com/pattaya-sport-stats/): Authoritative numbers
+- [Contact](https://pattaya-gym.com/contact/): Submit corrections, partnerships
+- [Press](https://pattaya-gym.com/press/): Press kit, citations, media inquiries
+
+## Data feeds (machine-readable)
+
+- [Master sitemap](https://pattaya-gym.com/sitemap.xml)
+- [RSS — recently added](https://pattaya-gym.com/feed.xml)
+- [Category RSS feeds](https://pattaya-gym.com/feed/): Per-category /feed/<category>.xml
+- [Area RSS feeds](https://pattaya-gym.com/feed/area/): Per-area /feed/area/<slug>.xml
+
+## Editorial promise
+
+Every listing on pattaya-gym.com is researched and source-cited from public information.
+No paid placements, no sponsored listings, no affiliate-only entries.
+Independent directory operated since 2026. Built and maintained in Pattaya, Thailand.
+Coordinates: 12.93°N, 100.88°E.
+
+Last update: 2026-05-11

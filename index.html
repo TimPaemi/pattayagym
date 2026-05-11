@@ -39,9 +39,11 @@
   <style>:root{color-scheme:dark;--bg:#0b0b0d;--card:#151518;--text:#f5f5f5;--text-dim:#d0d0d0;--text-muted:#9b9b9b;--accent:#ffb800;--border:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,sans-serif;line-height:1.6}a{color:inherit}.hero{min-height:80vh;display:flex;flex-direction:column;position:relative;overflow:hidden;background:linear-gradient(135deg,#0b0b0d 0%,#18191f 100%)}.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 32px;max-width:1200px;margin:0 auto;width:100%;background:rgba(11,11,13,.92);backdrop-filter:blur(12px);border-bottom:1px solid transparent}.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:900}.brand-mark{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--accent);color:#000}.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0}.nav-links a{text-decoration:none;color:var(--text-dim);font-weight:700}.hero-content{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 32px;max-width:900px;margin:0 auto}.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.05;margin:0 0 20px;font-weight:950}.hero .lead{max-width:700px;color:var(--text-dim);font-size:clamp(1rem,1.5vw,1.2rem);margin-bottom:32px}.search-wrap{position:relative;width:100%;max-width:600px;margin-bottom:40px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}.card{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 16px;border-radius:10px;text-decoration:none;font-weight:800}.btn-primary{background:var(--accent);color:#000}.site-footer{border-top:1px solid var(--border);background:#080809}img{max-width:100%;height:auto}@media(max-width:720px){.nav{overflow-x:auto;padding:14px 16px}.nav-links{gap:14px;overflow-x:auto}.hero-content{padding:60px 18px}.grid{grid-template-columns:1fr}}</style>
   <style>*{margin:0;padding:0}.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--accent);margin-bottom:16px}.accent{color:var(--accent)}#search{width:100%;padding:18px 50px 18px 24px;font-size:16px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:50px;color:var(--text);outline:none}#search-clear{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;display:none}.hero-stats{display:flex;gap:48px;flex-wrap:wrap;justify-content:center}.hero-stats>div{display:flex;flex-direction:column;align-items:center}.hero-stats strong{font-size:2.2rem;font-weight:900;color:var(--accent)}.hero-stats span{font-size:12px;letter-spacing:1.5px;color:var(--text-muted);text-transform:uppercase}@media(max-width:720px){.hero-stats{gap:28px}.hero-stats strong{font-size:1.6rem}}</style>
   <style>.brand{font-size:18px;font-weight:800;letter-spacing:1px;color:var(--text)}.brand-mark{border-radius:8px;font-size:22px}.nav-links a{font-size:14px;font-weight:500;color:var(--text-dim)}.hero h1{font-weight:900;letter-spacing:-1px}</style>
-  <link rel="preload" href="/styles.css?v=161" as="style" />
-  <link rel="stylesheet" href="/styles.css?v=161" />
+  <link rel="preload" href="/styles.css?v=162" as="style" />
+  <link rel="stylesheet" href="/styles.css?v=162" />
   <link rel="alternate" type="application/rss+xml" title="Pattaya Gym Directory — Recently Added" href="/feed.xml" />
+  <link rel="alternate" type="application/json" title="Pattaya Gym Directory API" href="/api/venues.json" />
+  <link rel="alternate" type="text/markdown" title="Pattaya Gym for LLMs" href="/llms.txt" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://plausible.io" crossorigin />
@@ -82,11 +84,909 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Pattaya Gym",
+    "@id": "https://pattaya-gym.com/#organization",
+    "name": "Pattaya Gym Directory",
+    "alternateName": "Pattaya Gym",
     "url": "https://pattaya-gym.com/",
-    "logo": { "@type": "ImageObject", "url": "https://pattaya-gym.com/og-image.png" }
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pattaya-gym.com/og-image.png",
+      "width": 1200,
+      "height": 630
+    },
+    "slogan": "Every gym and sport in Pattaya, Thailand — independently verified.",
+    "foundingDate": "2026-01-01",
+    "areaServed": [
+      { "@type": "City", "name": "Pattaya", "containedInPlace": { "@type": "Country", "name": "Thailand" } },
+      { "@type": "AdministrativeArea", "name": "Chonburi Province" },
+      { "@type": "Place", "name": "Jomtien" },
+      { "@type": "Place", "name": "Naklua" },
+      { "@type": "Place", "name": "Pratamnak Hill" },
+      { "@type": "Place", "name": "Sattahip" }
+    ],
+    "knowsAbout": [
+      "Muay Thai", "Mixed Martial Arts", "Brazilian Jiu-Jitsu", "CrossFit",
+      "Fitness training", "Yoga", "Golf", "Tennis", "Padel", "Pickleball",
+      "Scuba diving", "Kitesurfing", "Sailing", "Rock climbing", "Swimming",
+      "Football", "Equestrian sport", "Sport tourism in Thailand",
+      "Pattaya", "Chonburi", "Jomtien", "Naklua", "Pratamnak"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@pattaya-gym.com",
+      "contactType": "Editorial",
+      "availableLanguage": ["English"]
+    },
+    "publishingPrinciples": "https://pattaya-gym.com/methodology/",
+    "ethicsPolicy": "https://pattaya-gym.com/methodology/"
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <style id="premium-skin">
+  /* ============================================================
+     PATTAYA GYM — EDITORIAL SKIN
+     Voice: pattaya-authority empire. Massive display type, mono 
+     labels, hairline cards, gold accent, pure black canvas.
+     ============================================================ */
+  :root {
+    --gold: #ffb800;
+    --gold-2: #ffd84a;
+    --gold-deep: #b97e00;
+    --gold-soft: rgba(255, 184, 0, 0.10);
+    --gold-line: rgba(255, 184, 0, 0.24);
+    --copper: #ff7a3a;
+    --bg: #050507;
+    --bg-2: #0a0a0d;
+    --surface: rgba(255, 255, 255, 0.025);
+    --surface-2: rgba(255, 255, 255, 0.04);
+    --hairline: rgba(255, 255, 255, 0.08);
+    --hairline-2: rgba(255, 255, 255, 0.14);
+    --text-hi: #f7f7f8;
+    --text-mid: rgba(228, 228, 232, 0.72);
+    --text-low: rgba(150, 150, 156, 0.6);
+    --display: "Inter Tight", -apple-system, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  }
+
+  body {
+    background: var(--bg) !important;
+    color: var(--text-hi);
+    font-family: var(--display);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ============ Mono label utility ============ */
+  .mono-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-low);
+    text-transform: uppercase;
+  }
+  .mono-tag .gold,
+  .mono-tag .accent { color: var(--gold-2); }
+  .mono-tag .dim { color: var(--text-low); }
+  .mono-tag::before { content: "// "; color: var(--gold-2); }
+
+  /* ============ Hero ============ */
+  .hero {
+    min-height: auto;
+    background:
+      radial-gradient(ellipse 900px 600px at 18% 22%, rgba(255, 184, 0, 0.10), transparent 70%),
+      radial-gradient(ellipse 700px 500px at 85% 78%, rgba(255, 122, 58, 0.05), transparent 70%),
+      var(--bg);
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 0;
+  }
+
+  /* Nav */
+  .nav {
+    background: rgba(5, 5, 7, 0.7);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border-bottom: 1px solid var(--hairline);
+    padding: 18px 32px;
+    max-width: none;
+    position: sticky; top: 0; z-index: 50;
+  }
+  .nav .brand { font-family: var(--display); font-weight: 800; letter-spacing: 0.06em; font-size: 14px; }
+  .nav .brand-mark {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-2) 100%);
+    box-shadow: 0 8px 20px -4px rgba(255,184,0,0.40), 0 0 0 1px rgba(255,184,0,0.28) inset;
+    color: #1a1100; font-weight: 900;
+  }
+  .brand-text strong { color: var(--gold-2); font-weight: 800; }
+  .nav-links { gap: 4px; }
+  .nav-links a {
+    color: var(--text-mid);
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-links a:hover { color: var(--text-hi); background: var(--surface-2); }
+
+  /* Hero content */
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 32px 96px;
+    text-align: center;
+    display: block;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0 0 48px;
+    display: inline-block;
+  }
+  .eyebrow::before { content: "// "; color: var(--gold-2); }
+  .eyebrow::after  { content: ""; }
+
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(3rem, 9vw, 7.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+    color: var(--text-hi);
+  }
+  .hero h1 .accent {
+    background: linear-gradient(180deg, #ffe79b 0%, var(--gold) 55%, var(--gold-deep) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    display: inline-block;
+  }
+
+  .hero .lead {
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-mid);
+    max-width: 640px;
+    margin: 0 auto 56px;
+    font-weight: 400;
+  }
+  .hero .lead strong { color: var(--gold-2); font-weight: 500; }
+
+  /* Search */
+  .search-wrap {
+    max-width: 680px;
+    margin: 0 auto 80px;
+    position: relative;
+    background: rgba(15, 15, 18, 0.75);
+    border: 1px solid var(--hairline-2);
+    border-radius: 6px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  .search-wrap:focus-within {
+    border-color: var(--gold-line);
+    box-shadow: 0 0 0 4px rgba(255,184,0,0.08), 0 24px 60px -16px rgba(0,0,0,0.55);
+  }
+  #search {
+    width: 100%; padding: 22px 56px 22px 26px;
+    border: 0; outline: 0; background: transparent;
+    color: var(--text-hi);
+    font-family: var(--mono);
+    font-size: 14.5px;
+    border-radius: 6px;
+  }
+  #search::placeholder { color: var(--text-low); }
+  #search-clear {
+    position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+    width: 28px; height: 28px; border-radius: 50%; border: 0;
+    background: var(--surface-2); color: var(--text-mid); cursor: pointer; display: none;
+  }
+
+  /* Stats */
+  .hero-stats {
+    display: flex; justify-content: center; gap: 0;
+    margin: 0 auto 0; padding: 32px 0 0;
+    border-top: 1px solid var(--hairline);
+    max-width: 680px;
+  }
+  .hero-stats > div {
+    flex: 1; padding: 16px 8px;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    border-right: 1px solid var(--hairline);
+  }
+  .hero-stats > div:last-child { border-right: 0; }
+  .hero-stats strong {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(1.6rem, 2.4vw, 2rem);
+    color: var(--text-hi); line-height: 1; letter-spacing: -0.02em;
+  }
+  .hero-stats span {
+    font-family: var(--mono);
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 0.12em; color: var(--text-low);
+    text-transform: uppercase;
+  }
+
+  .last-updated {
+    text-align: center; margin: 24px 0 0;
+    font-family: var(--mono); font-size: 11px; color: var(--text-low);
+    letter-spacing: 0.05em;
+  }
+  .last-updated::before { content: "// "; color: var(--gold-2); }
+
+  /* ============ Featured (editorial cards) ============ */
+  .featured-month {
+    width: min(1200px, 100%) !important;
+    margin: 80px auto 0 !important;
+    padding: 0 32px !important;
+    border: 0 !important;
+    background: transparent !important;
+    text-align: left;
+  }
+  .featured-month::before {
+    content: "// EDITOR'S PICKS";
+    display: block;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--copper);
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .featured-kicker {
+    display: none !important;
+  }
+  .featured-month-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 24px;
+  }
+  .featured-card {
+    background: var(--bg-2) !important;
+    border: 1px solid var(--hairline) !important;
+    border-radius: 4px !important;
+    padding: 28px !important;
+    min-height: 220px !important;
+    transition: transform 0.3s ease, border-color 0.3s, background 0.3s !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    position: relative;
+    color: var(--text-hi) !important;
+    text-decoration: none !important;
+  }
+  .featured-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-line) !important;
+    background: rgba(15, 15, 18, 0.9) !important;
+  }
+  .featured-card .featured-card-kicker,
+  .featured-card [class*="kicker"] {
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    color: var(--gold-2) !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase;
+    margin: 0 !important;
+    font-weight: 500 !important;
+  }
+  .featured-card h3, .featured-card .featured-card-title {
+    color: var(--text-hi) !important;
+    font-family: var(--display) !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
+    margin: 4px 0 0 !important;
+  }
+  .featured-card p, .featured-card .featured-card-area {
+    color: var(--text-mid) !important;
+    font-family: var(--mono) !important;
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+  }
+
+  /* ============ "What's in this directory" -> editorial 3-cards ============ */
+  .quick-answer {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 64px 32px 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .quick-answer::before {
+    content: "// THE DIRECTORY";
+    display: block;
+    font-family: var(--mono); font-size: 12px;
+    color: var(--copper); letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .quick-answer .section-title {
+    font-family: var(--display) !important;
+    font-weight: 900 !important;
+    font-size: clamp(2.4rem, 5vw, 4.2rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+    text-transform: uppercase;
+    margin: 0 0 48px !important;
+    color: var(--text-hi);
+    max-width: 16ch;
+  }
+  .qa-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+  }
+  .qa-list li {
+    background: var(--bg-2);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 28px 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-mid);
+    transition: border-color 0.25s, transform 0.25s, background 0.25s;
+    position: relative;
+  }
+  .qa-list li:hover {
+    border-color: var(--gold-line);
+    transform: translateY(-2px);
+    background: rgba(15, 15, 18, 0.9);
+  }
+  .qa-list li strong {
+    display: block;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-hi);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .qa-list li a {
+    color: var(--gold-2);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,184,0,0.3);
+    transition: border-color 0.2s;
+  }
+  .qa-list li a:hover { border-color: var(--gold-2); }
+
+  /* ============ Spotlight / Recently added ============ */
+  .spotlight {
+    max-width: 1200px;
+    margin: 96px auto 0;
+    padding: 0 32px;
+  }
+  .spotlight-head { margin-bottom: 24px; }
+  .spotlight-head::before {
+    content: "// RECENTLY ADDED · VERIFIED";
+    display: block;
+    font-family: var(--mono); font-size: 12px;
+    color: var(--copper); letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .spotlight-head .section-title {
+    font-family: var(--display) !important;
+    font-weight: 900 !important;
+    font-size: clamp(2.4rem, 5vw, 4.2rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+    text-transform: uppercase;
+    margin: 0 0 8px !important;
+  }
+  .spotlight-sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-low);
+    letter-spacing: 0.02em;
+  }
+  .spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .spot-card {
+    background: var(--bg-2) !important;
+    border: 1px solid var(--hairline) !important;
+    border-radius: 4px !important;
+    padding: 24px !important;
+    transition: border-color 0.3s, transform 0.3s, background 0.3s !important;
+    text-decoration: none !important;
+    color: var(--text-hi) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .spot-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-line) !important;
+    background: rgba(15, 15, 18, 0.9) !important;
+  }
+
+  /* ============ Cards site-wide ============ */
+  .card, .cat-venue-card, .recent-card {
+    background: var(--bg-2) !important;
+    border: 1px solid var(--hairline) !important;
+    border-radius: 4px !important;
+    transition: transform 0.3s, border-color 0.3s, background 0.3s !important;
+  }
+  .card:hover, .cat-venue-card:hover, .recent-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-line) !important;
+    background: rgba(15, 15, 18, 0.9) !important;
+  }
+
+  /* ============ Directory section ============ */
+  .directory {
+    max-width: 1300px;
+    margin: 96px auto 0;
+    padding: 0 32px;
+  }
+  .directory::before {
+    content: "// FULL DIRECTORY · 158 VENUES";
+    display: block;
+    font-family: var(--mono); font-size: 12px;
+    color: var(--copper); letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .directory-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .directory .section-title {
+    font-family: var(--display) !important;
+    font-weight: 900 !important;
+    font-size: clamp(2.4rem, 5vw, 4.2rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+    text-transform: uppercase;
+    margin: 0 !important;
+  }
+  .result-count {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-low);
+    letter-spacing: 0.02em;
+  }
+  .result-count #result-count { color: var(--gold-2); font-weight: 500; }
+
+  /* ============ Categories ============ */
+  .categories {
+    max-width: 1300px;
+    margin: 96px auto 0;
+    padding: 0 32px;
+  }
+  .categories::before {
+    content: "// BROWSE BY SPORT";
+    display: block;
+    font-family: var(--mono); font-size: 12px;
+    color: var(--copper); letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .categories .section-title {
+    font-family: var(--display) !important;
+    font-weight: 900 !important;
+    font-size: clamp(2.4rem, 5vw, 4.2rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+    text-transform: uppercase;
+    margin: 0 0 32px !important;
+  }
+
+  /* ============ Newsletter ============ */
+  .newsletter {
+    max-width: 1200px;
+    margin: 96px auto 0;
+    padding: 0 32px;
+  }
+  .newsletter-card {
+    background: linear-gradient(135deg, rgba(255,184,0,0.06) 0%, rgba(255,122,58,0.02) 100%) !important;
+    border: 1px solid var(--gold-line) !important;
+    border-radius: 6px !important;
+    padding: 48px !important;
+  }
+  .newsletter-kicker {
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    color: var(--gold-2) !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase;
+  }
+  .newsletter-kicker::before { content: "// "; }
+  .newsletter h2 {
+    font-family: var(--display) !important;
+    font-weight: 900 !important;
+    font-size: clamp(1.6rem, 3vw, 2.4rem) !important;
+    letter-spacing: -0.025em !important;
+    text-transform: uppercase;
+  }
+
+  /* ============ Section title polish (catch-all) ============ */
+  .section-title {
+    font-family: var(--display);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  /* ============ Buttons ============ */
+  .btn {
+    font-family: var(--mono) !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase;
+    border-radius: 4px !important;
+    transition: background 0.2s, transform 0.2s !important;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-2) 100%) !important;
+    color: #1a1100 !important;
+    box-shadow: 0 8px 20px -6px rgba(255,184,0,0.35);
+  }
+  .btn-primary:hover { transform: translateY(-1px); }
+
+  /* ============ Mobile ============ */
+  @media (max-width: 900px) {
+    .featured-month-grid { grid-template-columns: 1fr !important; }
+    .qa-list { grid-template-columns: 1fr !important; }
+    .spotlight-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 720px) {
+    .nav { padding: 14px 16px; }
+    .hero-content { padding: 60px 18px 60px; }
+    .hero h1 { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+    .search-wrap { margin-bottom: 56px; }
+    .hero-stats { padding-top: 24px; }
+    .hero-stats strong { font-size: 1.4rem; }
+    .spotlight-grid { grid-template-columns: 1fr; }
+    .quick-answer, .spotlight, .directory, .categories, .newsletter, .featured-month {
+      padding-left: 18px !important; padding-right: 18px !important;
+    }
+    .newsletter-card { padding: 28px !important; }
+  }
+
+  /* ============ Three Ways In (editorial cards) ============ */
+  .three-ways {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 96px 32px 0;
+  }
+  .tw-eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--copper);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+  }
+  .tw-title {
+    font-family: var(--display);
+    font-weight: 900;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin: 0 0 48px;
+    color: var(--text-hi);
+  }
+  .tw-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .tw-card {
+    background: var(--bg-2);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 32px 28px 28px;
+    text-decoration: none;
+    color: var(--text-hi);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    min-height: 260px;
+  }
+  .tw-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-line);
+    background: rgba(15, 15, 18, 0.9);
+  }
+  .tw-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-low);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .tw-card h3 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 1.6rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--text-hi);
+  }
+  .tw-card p {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--text-mid);
+    margin: 0;
+    flex: 1;
+  }
+  .tw-cta {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold-2);
+    letter-spacing: 0.04em;
+    margin-top: 6px;
+  }
+  @media (max-width: 900px) {
+    .tw-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============ Directory cards — editorial clickable ============ */
+  .grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+    gap: 16px !important;
+  }
+  a.card, .grid > .card {
+    display: flex !important;
+    flex-direction: column !important;
+    background: var(--bg-2) !important;
+    border: 1px solid var(--hairline) !important;
+    border-radius: 6px !important;
+    padding: 24px !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+    color: var(--text-hi) !important;
+    transition: transform 0.3s, border-color 0.3s, background 0.3s !important;
+    position: relative;
+    min-height: 240px;
+  }
+  a.card:hover, .grid > .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-line) !important;
+    background: rgba(15, 15, 18, 0.95) !important;
+  }
+  .card .card-head {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  }
+  .card .card-cat {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--gold-2);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--gold-line);
+    border-radius: 999px;
+  }
+  .card .favorite-btn {
+    background: transparent !important;
+    border: 1px solid var(--hairline) !important;
+    border-radius: 6px !important;
+    padding: 6px 10px !important;
+    color: var(--text-low) !important;
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .card .favorite-btn:hover { color: var(--gold-2) !important; border-color: var(--gold-line) !important; }
+  .card .fav-btn-label { font-size: 10px; }
+  .card h3 {
+    font-family: var(--display) !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
+    margin: 0 !important;
+    color: var(--text-hi) !important;
+  }
+  .card .card-meta {
+    display: flex; flex-direction: column; gap: 4px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-mid);
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+  .card .card-meta span::before { content: "· "; color: var(--text-low); }
+  .card .card-meta span:first-child::before { content: ""; }
+  .card .card-desc {
+    font-family: var(--display) !important;
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    color: var(--text-mid) !important;
+    margin: 0 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card .card-arrow {
+    margin-top: auto;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--gold-2);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding-top: 6px;
+  }
+
+  /* Spotlight (recently added) — kill emoji pin/dollar icons that look old */
+  .spot-card .spot-area::before,
+  .spot-card .spot-price::before { content: ""; }
+
+  /* ============ Footer cleanup ============ */
+  .site-footer {
+    background: var(--bg) !important;
+    border-top: 1px solid var(--hairline) !important;
+    margin-top: 96px;
+  }
+  .site-footer-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 64px 32px 32px !important;
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr !important;
+    gap: 40px !important;
+  }
+  .sf-col .sf-heading {
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    color: var(--text-low) !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase;
+    margin: 0 0 16px !important;
+    font-weight: 500 !important;
+  }
+  .sf-col ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .sf-col ul li {
+    margin: 0 0 10px !important;
+  }
+  .sf-col ul li a {
+    font-family: var(--display);
+    font-size: 13px !important;
+    color: var(--text-mid) !important;
+    text-decoration: none !important;
+    transition: color 0.2s;
+    font-weight: 500;
+  }
+  .sf-col ul li a:hover { color: var(--gold-2) !important; }
+  .sf-brand-col .sf-brand {
+    font-family: var(--display);
+    font-size: 14px; font-weight: 800; letter-spacing: 0.06em;
+    margin-bottom: 12px;
+  }
+  .sf-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-mid);
+    max-width: 280px;
+  }
+  .site-footer-base {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 24px 32px 48px !important;
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .site-footer-base p {
+    font-family: var(--mono);
+    font-size: 11.5px !important;
+    color: var(--text-low) !important;
+    margin: 0 !important;
+    letter-spacing: 0.02em;
+  }
+  .site-footer-base .sf-builtby {
+    color: var(--text-low) !important;
+    font-size: 11px !important;
+  }
+  .site-footer-base .sf-builtby a {
+    color: var(--text-mid) !important;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--hairline);
+  }
+  .site-footer-base .sf-builtby a:hover { color: var(--gold-2) !important; border-color: var(--gold-line); }
+
+  @media (max-width: 900px) {
+    .site-footer-inner { grid-template-columns: 1fr 1fr !important; gap: 32px !important; padding: 48px 18px 24px !important; }
+  }
+  @media (max-width: 600px) {
+    .site-footer-inner { grid-template-columns: 1fr !important; }
+  }
+
+  /* ============ Editorial 'Built by' credit line ============ */
+  .sf-builtby {
+    margin: 24px 0 0 !important;
+    padding: 16px 0 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--text-low) !important;
+    font-family: var(--mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }
+  .sf-builtby-rule {
+    flex: 1; min-width: 40px; max-width: 140px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hairline-2), transparent);
+  }
+  .sf-builtby-text {
+    color: var(--text-low) !important;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.10em;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .sf-builtby-link {
+    color: var(--gold-2) !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,184,0,0.32);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .sf-builtby-link:hover {
+    color: #ffe79b !important;
+    border-color: var(--gold-2);
+  }
+  .sf-builtby-star { color: var(--gold-2); margin-left: 4px; }
+  @media (max-width: 720px) {
+    .sf-builtby-rule { display: none; }
+    .sf-builtby-text { white-space: normal; line-height: 1.7; }
+  }
+
+  /* Hide any leftover Recently Viewed sections from older cached pages */
+  #recently-viewed { display: none !important; }
+  </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -107,9 +1007,9 @@
     </nav>
 
     <div class="hero-content">
-      <p class="eyebrow">THE COMPLETE PATTAYA SPORTS GUIDE</p>
-      <h1>Every Gym &amp; Sport in <span class="accent">Pattaya</span></h1>
-      <p class="lead">From world-class Muay Thai camps to CrossFit boxes, BJJ academies, golf clubs, watersports and more — the most comprehensive sports directory in Pattaya, Thailand.</p>
+      <p class="eyebrow">PATTAYA · 2026 EDITION · 158 VENUES VERIFIED</p>
+      <h1>Every Gym.<br/>Every Sport.<br/><span class="accent">Pattaya.</span></h1>
+      <p class="lead"><strong>158 venues</strong> across 15 categories, 6 areas — verified, source-cited, <strong>no paid placements</strong>. The most complete Pattaya sports directory.</p>
       <div class="search-wrap">
         <input id="search" type="search" aria-label="Search Pattaya gyms, sports, and areas" placeholder="Search gyms, sports, areas (e.g. Muay Thai Jomtien)" autocomplete="off" />
         <button id="search-clear" aria-label="Clear">×</button>
@@ -128,6 +1028,30 @@
   </header>
 
   <main id="main" role="main">
+    <section id="three-ways" class="three-ways">
+      <p class="tw-eyebrow">// START HERE</p>
+      <h2 class="tw-title">Three Ways In.</h2>
+      <div class="tw-grid">
+        <a href="/guides/" class="tw-card">
+          <div class="tw-num">01 / FIRST-TIMER</div>
+          <h3>New to Pattaya?</h3>
+          <p>17 curated guides — best Muay Thai camps, dive operators, golf courses, beginner-friendly venues, family-friendly picks, and 24-hour gyms.</p>
+          <span class="tw-cta">Read the guides →</span>
+        </a>
+        <a href="/search/" class="tw-card">
+          <div class="tw-num">02 / SEARCH</div>
+          <h3>Find My Gym.</h3>
+          <p>Full-text search across 158 venues. Filter by area, category, price, hours, language. Every listing has verified contact details.</p>
+          <span class="tw-cta">Open search →</span>
+        </a>
+        <a href="/map/" class="tw-card">
+          <div class="tw-num">03 / BROWSE</div>
+          <h3>158 Venues.</h3>
+          <p>Every category, every area. Interactive map with category filters, or browse by sport. No sponsors, no paid placements.</p>
+          <span class="tw-cta">Open the map →</span>
+        </a>
+      </div>
+    </section>
     <section id="quick-answer" class="quick-answer" aria-labelledby="qa-h2">
       <h2 id="qa-h2" class="section-title">What's in this directory</h2>
       <ul class="qa-list">
@@ -144,54 +1068,6 @@
         <span class="spotlight-sub">Latest venues we've researched and added to the directory.</span>
       </div>
       <div id="spotlight-grid" class="spotlight-grid"></div>
-    </section>
-
-    <section id="recently-viewed" class="recently-viewed" hidden aria-labelledby="recently-viewed-title">
-      <div class="recent-head">
-        <h2 id="recently-viewed-title" class="section-title">Recently viewed</h2>
-        <p>Your last Pattaya venue pages on this device.</p>
-      </div>
-      <div id="recently-viewed-grid" class="recent-grid"></div>
-    </section>
-
-    <section id="newsletter" class="newsletter" aria-labelledby="newsletter-title">
-      <div class="newsletter-card">
-        <div>
-          <p class="newsletter-kicker">Pattaya training updates</p>
-          <h2 id="newsletter-title">Get the directory updates worth knowing.</h2>
-          <p>New venues, changed hours, seasonal training notes, and the best fresh guides. No spam, no paid placements.</p>
-        </div>
-        <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/pattaya-gym" method="post">
-          <input type="hidden" name="embed" value="1" />
-          <input type="hidden" name="tag" value="website-homepage" />
-          <div class="newsletter-field">
-            <label for="newsletter-email">Email address *</label>
-            <input id="newsletter-email" name="email" type="email" autocomplete="email" required aria-required="true" placeholder="you@example.com" />
-          </div>
-          <div class="newsletter-field">
-            <label for="newsletter-first-name">First name <span aria-hidden="true">(optional)</span></label>
-            <input id="newsletter-first-name" name="metadata__first-name" type="text" autocomplete="given-name" placeholder="Alex" />
-          </div>
-          <div>
-            <p class="frequency-label" id="newsletter-frequency-label">Frequency</p>
-            <div class="frequency-options" role="radiogroup" aria-labelledby="newsletter-frequency-label">
-              <label><input type="radio" name="metadata__frequency" value="weekly" checked /> Weekly</label>
-              <label><input type="radio" name="metadata__frequency" value="monthly" /> Monthly</label>
-              <label><input type="radio" name="metadata__frequency" value="major-updates" /> Major updates</label>
-            </div>
-          </div>
-          <button class="btn btn-primary" type="submit">Subscribe</button>
-          <p class="newsletter-note">Powered by Buttondown. You can unsubscribe from any email.</p>
-        </form>
-      </div>
-    </section>
-
-    <section id="reader-feedback" class="reviews" aria-labelledby="reader-feedback-title">
-      <p class="reviews-kicker">Reader feedback</p>
-      <h2 id="reader-feedback-title" class="section-title">What readers say about the directory</h2>
-      <p>Published testimonials are loaded from a manual reviews file so claims stay auditable.</p>
-      <div id="reviews-grid" class="review-grid"></div>
-      <p id="reviews-empty" class="reviews-empty" hidden>Public reader testimonials will appear here once the owner has real quotes with permission to publish.</p>
     </section>
 
     <section id="categories" class="categories">

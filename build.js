@@ -572,38 +572,7 @@ function serviceWorkerRegistration() {
   return `<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>`;
 }
 
-function newsletterFooterHtml() {
-  return `<div class="footer-newsletter">
-    <div class="newsletter-card">
-      <div>
-        <p class="newsletter-kicker">Stay current</p>
-        <h2>Get Pattaya gym updates by email.</h2>
-        <p>Fresh listings, corrected hours, and new guide notes from the directory.</p>
-      </div>
-      <form class="newsletter-form" action="${NEWSLETTER_ACTION}" method="post">
-        <input type="hidden" name="embed" value="1" />
-        <input type="hidden" name="tag" value="website-footer" />
-        <div class="newsletter-field">
-          <label for="footer-email">Email address *</label>
-          <input id="footer-email" name="email" type="email" autocomplete="email" required aria-required="true" placeholder="you@example.com" />
-        </div>
-        <div class="newsletter-field">
-          <label for="footer-first-name">First name <span aria-hidden="true">(optional)</span></label>
-          <input id="footer-first-name" name="metadata__first-name" type="text" autocomplete="given-name" placeholder="Alex" />
-        </div>
-        <div>
-          <p class="frequency-label" id="footer-frequency-label">Frequency</p>
-          <div class="frequency-options" role="radiogroup" aria-labelledby="footer-frequency-label">
-            <label><input type="radio" name="metadata__frequency" value="weekly" checked /> Weekly</label>
-            <label><input type="radio" name="metadata__frequency" value="monthly" /> Monthly</label>
-            <label><input type="radio" name="metadata__frequency" value="major-updates" /> Major updates</label>
-          </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>`;
-}
+function newsletterFooterHtml() { return ""; }
 
 function pageFeedbackHtml(urlPath, title) {
   const safeTitle = title || 'Pattaya Gym page';
@@ -754,6 +723,16 @@ function buildVenueSchema(fm, slug, url, desc) {
     openingHours: fm.hours || undefined,
     openingHoursSpecification: parseOpeningHoursSpecification(fm.hours),
     sameAs: sameAs.length ? sameAs : undefined,
+    dateModified: fm.verified || undefined,
+    keywords: (fm.tags || []).join(', ') || undefined,
+    availableLanguage: ['English', 'Thai'],
+    paymentAccepted: 'Cash, Credit Card',
+    currenciesAccepted: 'THB',
+    containedInPlace: {
+      '@type': 'Place',
+      name: fm.area || 'Pattaya',
+      containedInPlace: { '@type': 'City', name: 'Pattaya', address: { '@type': 'PostalAddress', addressCountry: 'TH' } }
+    },
     makesOffer: {
       '@type': 'Offer',
       itemOffered: {
@@ -1061,6 +1040,9 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta http-equiv="x-dns-prefetch-control" content="on" />
   <link rel="dns-prefetch" href="//maps.google.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
   <link rel="preconnect" href="https://plausible.io" crossorigin />
 
   <meta property="og:type" content="article" />
@@ -1193,14 +1175,6 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
       </article>
     </div>
 
-    <section id="recently-viewed" class="recently-viewed venue-recent" hidden aria-labelledby="recently-viewed-title">
-      <div class="recent-head">
-        <h2 id="recently-viewed-title">Recently viewed</h2>
-        <p>Your last Pattaya venue pages on this device.</p>
-      </div>
-      <div id="recently-viewed-grid" class="recent-grid"></div>
-    </section>
-
     <div class="venue-cta-foot">
       <h3>Visited or trained at ${escHtml(fm.name)}?</h3>
       <p>Help other Pattaya travellers find the right gym — share this page or tell us what we got wrong.</p>
@@ -1318,7 +1292,8 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
     <div class="site-footer-base">
       <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
       <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby">Designed, built &amp; maintained by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link" title="Pattaya Authority — Premium Web Design &amp; SEO Studio">Pattaya Authority<span class="sf-builtby-arrow" aria-hidden="true">&#x2197;</span></a> <span class="sf-builtby-sep">·</span> Premium Web Design &amp; SEO Studio</p>
+          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
+          
     </div>
   </footer>
 

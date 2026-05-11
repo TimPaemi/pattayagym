@@ -83,38 +83,7 @@ function header() {
 </header>`;
 }
 
-function newsletterFooterHtml() {
-  return `<div class="footer-newsletter">
-    <div class="newsletter-card">
-      <div>
-        <p class="newsletter-kicker">Stay current</p>
-        <h2>Get Pattaya gym updates by email.</h2>
-        <p>Fresh listings, corrected hours, and new guide notes from the directory.</p>
-      </div>
-      <form class="newsletter-form" action="${NEWSLETTER_ACTION}" method="post">
-        <input type="hidden" name="embed" value="1" />
-        <input type="hidden" name="tag" value="website-footer" />
-        <div class="newsletter-field">
-          <label for="footer-email">Email address *</label>
-          <input id="footer-email" name="email" type="email" autocomplete="email" required aria-required="true" placeholder="you@example.com" />
-        </div>
-        <div class="newsletter-field">
-          <label for="footer-first-name">First name <span aria-hidden="true">(optional)</span></label>
-          <input id="footer-first-name" name="metadata__first-name" type="text" autocomplete="given-name" placeholder="Alex" />
-        </div>
-        <div>
-          <p class="frequency-label" id="footer-frequency-label">Frequency</p>
-          <div class="frequency-options" role="radiogroup" aria-labelledby="footer-frequency-label">
-            <label><input type="radio" name="metadata__frequency" value="weekly" checked /> Weekly</label>
-            <label><input type="radio" name="metadata__frequency" value="monthly" /> Monthly</label>
-            <label><input type="radio" name="metadata__frequency" value="major-updates" /> Major updates</label>
-          </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Subscribe</button>
-      </form>
-    </div>
-  </div>`;
-}
+function newsletterFooterHtml() { return ""; }
 
 function footer() {
   return `<footer class="site-footer" role="contentinfo">
@@ -185,7 +154,8 @@ function footer() {
   <div class="site-footer-base">
     <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
     <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby">Designed, built &amp; maintained by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link" title="Pattaya Authority — Premium Web Design &amp; SEO Studio">Pattaya Authority<span class="sf-builtby-arrow" aria-hidden="true">&#x2197;</span></a> <span class="sf-builtby-sep">·</span> Premium Web Design &amp; SEO Studio</p>
+          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
+          
   </div>
 </footer>`;
 }
@@ -248,9 +218,14 @@ function commonHead(title, desc, canonical, schemaType, ogType) {
 <link rel="alternate" hreflang="en" href="${canonical}" />
 <link rel="alternate" hreflang="x-default" href="${canonical}" />
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
+<link rel="alternate" type="application/json" title="Pattaya Gym Directory API" href="/api/venues.json" />
+<link rel="alternate" type="text/markdown" title="Pattaya Gym for LLMs" href="/llms.txt" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta http-equiv="x-dns-prefetch-control" content="on" />
 <link rel="dns-prefetch" href="//maps.google.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
 <link rel="preconnect" href="https://plausible.io" crossorigin />
 <meta property="og:type" content="${ogType || 'website'}" />
 <meta property="og:locale" content="en_US" />
@@ -1209,6 +1184,10 @@ function buildGuidePage(guide, allGyms) {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.venue-h1', '.venue-lede', '.tldr', '#tldr-h']
+    },
     headline: guide.h1,
     description: guideDesc,
     url: url,
