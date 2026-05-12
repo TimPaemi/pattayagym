@@ -2214,3 +2214,434 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 100;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
 }
+
+/* ================================================================
+   VENUE PAGE POLISH v2 — tighter hierarchy, less visual noise
+   ================================================================ */
+
+/* Hero — flush left, no max-width crunch */
+.venue-page {
+  background: var(--ink);
+  max-width: none;
+  padding: 0;
+}
+.venue-page .venue-breadcrumb,
+.venue-page .venue-hero,
+.venue-page .tldr-card,
+.venue-page .venue-content-shell,
+.venue-page .venue-cta-foot,
+.venue-page .nearby-venues,
+.venue-page .related-venues,
+.venue-page .about,
+.venue-page .page-feedback,
+.venue-page .venue-footer {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tighter, single-row meta line at top of hero */
+.venue-hero .venue-meta-line {
+  padding: 14px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+  gap: 6px 18px;
+  flex-wrap: wrap;
+}
+.venue-hero .venue-meta-line .meta-dot {
+  display: none;
+}
+.venue-hero .venue-cat-pill {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--coral);
+  font-family: var(--mono);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+}
+
+/* Action stack: primary 3 prominent, social/utility tucked smaller */
+.venue-actions {
+  gap: 8px 10px;
+  align-items: stretch;
+}
+.venue-actions .btn,
+.venue-actions a.btn,
+.venue-actions button.btn {
+  padding: 14px 22px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+.venue-actions .btn-secondary[href*="facebook"],
+.venue-actions .btn-secondary[href*="instagram"],
+.venue-actions .btn-ghost[href*="facebook"],
+.venue-actions .btn-ghost[href*="instagram"],
+.venue-actions .btn[href^="tel:"],
+.venue-actions .favorite-btn,
+.venue-actions .compare-btn {
+  padding: 12px 16px;
+  font-size: 11px;
+  border-color: var(--line);
+  background: transparent;
+  color: var(--bone);
+  opacity: 0.85;
+}
+.venue-actions .btn[href^="tel:"]:hover,
+.venue-actions .favorite-btn:hover,
+.venue-actions .compare-btn:hover {
+  opacity: 1;
+  border-color: var(--gold);
+  color: var(--gold);
+  background: transparent;
+}
+
+/* Share bar — inline strip, no card */
+.share-bar {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+  margin-top: 32px;
+  background: transparent;
+  border-radius: 0;
+  gap: 8px;
+}
+.share-bar .share-btn {
+  background: transparent;
+  border-color: var(--line);
+  padding: 8px 12px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+.share-bar .share-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.share-bar .share-label {
+  color: var(--gold);
+  margin-right: auto;
+}
+.share-bar .share-label::before { content: "// "; color: var(--coral); }
+
+/* TL;DR card — bigger, editorial */
+.tldr-card {
+  margin: 48px auto;
+  padding: 36px 40px;
+  background: var(--ink-2);
+  border-left: 4px solid var(--gold);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  position: relative;
+}
+.tldr-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background:
+    linear-gradient(135deg, transparent 50%, var(--gold) 50%);
+  opacity: 0.18;
+}
+.tldr-tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.tldr-tag::before { content: "// "; color: var(--coral); }
+.tldr-card p {
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--bone);
+}
+
+/* Hero meta chips — flatter */
+.meta-chip {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--bone);
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 2px;
+  opacity: 0.92;
+}
+.meta-chip-accent {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(212, 167, 44, 0.06);
+}
+
+/* Venue body — editorial column */
+.venue-body {
+  max-width: 760px;
+  padding: 0;
+  font-size: 17px;
+}
+.venue-content-shell {
+  padding: 60px 32px 80px;
+}
+.venue-body h2 {
+  margin: 64px 0 20px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  font-size: clamp(24px, 2.6vw, 32px);
+}
+.venue-body h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.venue-body h3 { font-size: 19px; }
+.venue-body strong { color: var(--bone); font-weight: 700; }
+
+/* "Visited or trained at" CTA — bolder */
+.venue-cta-foot {
+  background: var(--ink-2);
+  margin-top: 80px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.venue-cta-foot h3 {
+  font-size: clamp(32px, 5vw, 56px);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+/* Related venues — coral accent on cards */
+.related-venues h2 {
+  font-size: clamp(32px, 5vw, 56px);
+  margin-bottom: 40px;
+}
+.related-card { padding: 36px 28px; min-height: 200px; display: flex; flex-direction: column; }
+.related-card h3 { margin-top: auto; }
+
+/* Nearby venues — editorial */
+.nearby-venues h2 { font-size: clamp(24px, 3vw, 36px); }
+.nearby-card { padding: 28px; }
+.nearby-card h3 { font-size: 20px; }
+
+/* FAQ on venue page — bigger gap, less cramped */
+.about {
+  padding: 80px 32px;
+  border-top: 1px solid var(--line);
+}
+.about h2 {
+  font-size: clamp(32px, 5vw, 56px);
+  margin-bottom: 32px;
+}
+
+/* Sticky bottom mobile actions — editorial style */
+.sticky-actions {
+  background: var(--ink);
+  border-top: 1px solid var(--gold);
+}
+.sa-btn {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+.sa-primary {
+  background: var(--gold);
+  color: var(--ink);
+  margin: 4px 8px;
+  border-radius: 0;
+}
+.sa-primary:hover { color: var(--ink); }
+.sa-ico { font-size: 16px; }
+
+/* Scroll progress — thinner, more elegant */
+.scroll-progress { height: 1px; }
+
+/* Back to top — square, editorial */
+.back-to-top {
+  border-radius: 0;
+  width: 48px;
+  height: 48px;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Page feedback — minimal */
+.page-feedback-card {
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 40px;
+}
+.page-feedback-card h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+/* Venue footer (sources) — compact mono */
+.venue-footer {
+  padding: 32px 32px 48px;
+  font-size: 10px;
+}
+.venue-footer::before { content: "// "; color: var(--coral); }
+
+/* ============ CATEGORY/AREA/GUIDE POLISH ============ */
+.category-hero, .area-hero, .guide-hero {
+  padding: 100px 32px 80px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.category-hero::before, .area-hero::before, .guide-hero::before {
+  content: '// ';
+  color: var(--coral);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  display: block;
+  margin-bottom: 24px;
+}
+.category-hero h1, .area-hero h1, .guide-hero h1 {
+  font-size: clamp(48px, 10vw, 140px);
+  line-height: 0.88;
+  margin-bottom: 32px;
+}
+
+/* Category venue grid — same editorial cards */
+.cat-venue-grid, .gym-list, .area-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  max-width: 1320px;
+  margin: 0 auto 80px;
+}
+.cat-venue-card, .gym-list > a, .area-list > a {
+  background: var(--ink);
+  padding: 36px 32px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  transition: background 0.2s;
+}
+.cat-venue-card:hover, .gym-list > a:hover, .area-list > a:hover {
+  background: var(--ink-2);
+}
+.cat-venue-card h2, .cat-venue-card h3,
+.gym-list h2, .gym-list h3,
+.area-list h2, .area-list h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  line-height: 1.05;
+  color: var(--bone);
+}
+
+/* Guides — editorial long-form */
+.guide-body, article.guide-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 60px 32px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-dim);
+}
+.guide-body h2 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 64px 0 20px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  color: var(--bone);
+}
+.guide-body h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.guide-body h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 36px 0 12px;
+  color: var(--bone);
+}
+.guide-body a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.guide-body a:hover { color: var(--gold-2); }
+.guide-body blockquote {
+  border-left: 3px solid var(--gold);
+  padding-left: 24px;
+  margin: 32px 0;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--bone);
+}
+
+/* Search page — bigger search box */
+.search-page-wrap {
+  max-width: 1100px;
+  padding: 100px 32px;
+}
+.search-page-wrap h1 {
+  font-size: clamp(48px, 8vw, 96px);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+.search-page-wrap input[type="search"],
+.search-page-wrap #search {
+  padding: 24px 28px;
+  font-size: 20px;
+  border-width: 2px;
+}
+
+/* ============ MOBILE TIGHTENING ============ */
+@media (max-width: 720px) {
+  .venue-hero { padding: 32px 20px 48px; }
+  .venue-h1 { font-size: clamp(32px, 9vw, 56px); }
+  .venue-meta-line { font-size: 10px; gap: 4px 12px; }
+  .venue-actions .btn,
+  .venue-actions a.btn,
+  .venue-actions button.btn {
+    padding: 13px 16px;
+    font-size: 11px;
+    flex: 1 1 calc(50% - 5px);
+    min-width: 0;
+  }
+  .venue-actions .btn-primary,
+  .venue-actions .btn[href*="maps"]:first-child {
+    flex: 1 1 100%;
+  }
+  .share-bar { padding: 14px 0; flex-wrap: wrap; }
+  .share-bar .share-btn { font-size: 10px; padding: 7px 10px; }
+  .tldr-card { padding: 24px 24px; margin: 32px 20px; }
+  .venue-content-shell { padding: 40px 20px 60px; }
+  .venue-body { font-size: 16px; }
+  .venue-cta-foot { padding: 48px 20px; }
+  .related-venues, .nearby-venues, .about, .page-feedback {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .category-hero, .area-hero, .guide-hero {
+    padding: 60px 20px 48px;
+  }
+  .cat-venue-grid, .gym-list, .area-list {
+    grid-template-columns: 1fr;
+  }
+  .cat-venue-card, .gym-list > a, .area-list > a {
+    padding: 28px 24px;
+    min-height: 0;
+  }
+}
