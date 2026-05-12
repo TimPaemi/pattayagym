@@ -14,7 +14,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '206';
+const ASSET_VERSION = '209';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -228,7 +228,8 @@ function header() {
       <li><a href="/compare/">Compare</a></li>
       <li><a href="/about/">About</a></li>
     </ul>
-  </nav>
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+        </nav>
 </header>`;
 }
 
@@ -562,7 +563,7 @@ ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
 <script src="${assetHref('/favorites.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -798,7 +799,7 @@ ${footer()}
   map.on('moveend zoomend', renderMarkers);
   renderMarkers();
 </script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -891,7 +892,7 @@ ${header()}
 ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -930,7 +931,7 @@ ${header()}
   <p style="margin-top: 32px; color: var(--text-muted); font-size: 13px;">Popular categories: <a href="/category/muay-thai/" style="color: var(--accent);">Muay Thai</a> · <a href="/category/fitness/" style="color: var(--accent);">Fitness gyms</a> · <a href="/category/golf/" style="color: var(--accent);">Golf</a> · <a href="/category/watersports/" style="color: var(--accent);">Watersports</a> · <a href="/category/yoga/" style="color: var(--accent);">Yoga</a></p>
 </main>
 ${footer()}
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }

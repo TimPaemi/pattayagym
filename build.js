@@ -17,7 +17,7 @@ const OUT_DIR = path.join(ROOT, 'gyms');
 const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '206';
+const ASSET_VERSION = '209';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -1328,6 +1328,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
         <li><a href="/compare/">Compare</a></li>
         <li><a href="/about/">About</a></li>
       </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     </nav>
   </header>
 
@@ -1600,7 +1601,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
     update();
   })();
   </script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }

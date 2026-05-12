@@ -2984,6 +2984,224 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ================================================================
+   CRITICAL FIX — venue/category/area/guide pages have
+   <header class="hero" style="min-height: auto;"> wrapping just nav.
+   Kill the 80px+120px padding so no giant empty gap below marquee.
+   ================================================================ */
+.hero[style*="min-height: auto"],
+.hero[style*="min-height:auto"] {
+  padding: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  min-height: 0 !important;
+  background: var(--ink);
+}
+.hero[style*="min-height: auto"] > .nav,
+.hero[style*="min-height:auto"] > .nav {
+  position: sticky;
+  top: 0;
+}
+
+/* ================================================================
+   SCROLL-REVEAL animations (CSS-only, respect prefers-reduced-motion)
+   ================================================================ */
+@keyframes pgFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pgFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.hero h1, .hero .lead, .hero-quote, .hero-badges, .hero-ctas, .scroll-hint,
+.venue-hero h1, .venue-hero .venue-lede, .venue-hero .venue-cat-pill,
+.venue-hero .venue-hero-meta, .venue-hero .venue-actions,
+.category-hero h1, .area-hero h1, .guide-hero h1,
+.stats-grid, .featured-track,
+.sec-h, .sec-lead {
+  animation: pgFadeUp 0.6s ease-out backwards;
+}
+.hero h1, .hero-h1, .venue-hero h1, .venue-h1 { animation-delay: 0.05s; }
+.hero .lead, .hero-sub, .venue-hero .venue-lede { animation-delay: 0.15s; }
+.hero-quote { animation-delay: 0.25s; }
+.hero-badges, .venue-hero-meta { animation-delay: 0.32s; }
+.hero-ctas, .venue-actions { animation-delay: 0.42s; }
+.scroll-hint { animation-delay: 0.55s; }
+
+/* Cards stagger-fade when visible */
+.cat-card, .cat-venue-card, .area-card, .related-card, .nearby-card, .linkup-card,
+.venue-row, .guide-card {
+  animation: pgFadeIn 0.5s ease-out backwards;
+}
+
+/* ================================================================
+   FOCUS RINGS — accessibility, editorial
+   ================================================================ */
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 0;
+}
+.btn:focus-visible, .nav-cta:focus-visible {
+  outline-offset: 4px;
+}
+
+/* ================================================================
+   MOBILE HAMBURGER MENU — show nav-links on mobile via toggle
+   ================================================================ */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--bone);
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle:hover { border-color: var(--gold); color: var(--gold); }
+@media (max-width: 840px) {
+  .nav-toggle { display: inline-flex; }
+  .nav-row, .nav-inner {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 16px 0 0;
+    margin: 16px -20px 0;
+    border-top: 1px solid var(--line);
+    background: var(--ink);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links a {
+    padding: 18px 20px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+  }
+  .nav-cta {
+    font-size: 11px;
+    padding: 10px 14px;
+  }
+}
+
+/* ================================================================
+   MARQUEE PAUSE ON HOVER (richer)
+   ================================================================ */
+.marquee:hover .marquee-track,
+.marquee-bottom:hover .marquee-track,
+.featured-in:hover .featured-track {
+  animation-play-state: paused;
+}
+
+/* ================================================================
+   PRINT STYLES — clean editorial print
+   ================================================================ */
+@media print {
+  .marquee, .marquee-bottom, .featured-in,
+  .nav, .nav-cta, .nav-links,
+  .sticky-actions, .scroll-progress, .back-to-top,
+  .share-bar, .venue-actions, .favorite-btn, .compare-btn,
+  .hero-ctas, .page-feedback, .cmp-toast, .fav-toast,
+  .skip-link {
+    display: none !important;
+  }
+  body, html {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  .venue-hero, .venue-body, .related-venues, .nearby-venues, .about {
+    background: white !important;
+    color: black !important;
+    page-break-inside: avoid;
+  }
+  h1, h2, h3, h4 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+  a[href^="#"]::after, a[href^="javascript"]::after { content: ""; }
+  .site-footer { border-top: 1px solid #ccc; color: #555 !important; }
+}
+
+/* ================================================================
+   PERFORMANCE: contain layout shifts on images/cards
+   ================================================================ */
+img { aspect-ratio: attr(width) / attr(height); }
+.cat-card, .area-card, .related-card, .nearby-card, .cat-venue-card {
+  contain: layout style;
+}
+
+/* ================================================================
+   SAVE/COMPARE toast — punchier "PG ★" prefix
+   ================================================================ */
+.cmp-toast::before, .fav-toast::before {
+  content: "★ PG";
+  color: var(--ink);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  margin-right: 8px;
+}
+
+/* ================================================================
+   "★ TIM PAEMI" subtle signature touch — hover on brand mark
+   ================================================================ */
+.brand:hover .dot { color: var(--coral); transition: color 0.15s; }
+
+/* ================================================================
+   LEAFLET map dark theme override (if leaflet loaded)
+   ================================================================ */
+.leaflet-container { background: var(--ink-2) !important; }
+.leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) saturate(0.7) brightness(0.95); }
+.leaflet-popup-content-wrapper {
+  background: var(--ink-2) !important;
+  color: var(--bone) !important;
+  border: 1px solid var(--line);
+  border-radius: 0 !important;
+  font-family: var(--display);
+}
+.leaflet-popup-tip { background: var(--ink-2) !important; }
+.leaflet-control-attribution {
+  background: rgba(10,10,10,0.8) !important;
+  color: var(--muted) !important;
+  font-family: var(--mono);
+  font-size: 9px !important;
+}
+.leaflet-control-attribution a { color: var(--gold) !important; }
+.leaflet-control-zoom a {
+  background: var(--ink-2) !important;
+  color: var(--bone) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--gold) !important;
+  color: var(--ink) !important;
+}
+
+/* ================================================================
    OVERRIDE legacy .cat-venue-card injection (venue.css) with editorial
    ================================================================ */
 .cat-venue-grid {
@@ -3876,6 +4094,515 @@ section.tool-tray {
 .newsletter-field, .newsletter-kicker, .frequency-options,
 .frequency-label {
   display: none !important;
+}
+
+/* ================================================================
+   VENUE-ID WATERMARK — big editorial number behind hero
+   ================================================================ */
+.venue-hero {
+  position: relative;
+  overflow: hidden;
+}
+.venue-hero::after {
+  content: attr(data-pg-id);
+  position: absolute;
+  bottom: -32px;
+  right: -16px;
+  font-family: var(--mono);
+  font-size: clamp(120px, 22vw, 320px);
+  font-weight: 700;
+  color: var(--ink-2);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.venue-hero > * { position: relative; z-index: 1; }
+
+/* ================================================================
+   VENUE BODY — sub-component polish
+   ================================================================ */
+
+/* Summary boxes / callouts in body */
+.venue-body .callout,
+.venue-body aside,
+.guide-body .callout,
+.guide-body aside {
+  background: var(--ink-2);
+  border: none;
+  border-left: 3px solid var(--coral);
+  padding: 24px 28px;
+  margin: 32px 0;
+  font-family: var(--display);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--bone);
+  position: relative;
+}
+.venue-body .callout::before,
+.venue-body aside::before,
+.guide-body .callout::before,
+.guide-body aside::before {
+  content: "// HEADS UP";
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 10px;
+}
+
+/* Pricing/info table emphasis */
+.venue-body table.pricing th:first-child,
+.venue-body table.info th:first-child {
+  width: 30%;
+}
+
+/* Drop-cap only on the first paragraph of main content (not nested) */
+.venue-content-shell .venue-body > p:first-child::first-letter,
+article.guide-body > p:first-child::first-letter {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 3.6em;
+  float: left;
+  line-height: 0.82;
+  margin: 4px 14px 0 0;
+  color: var(--gold);
+  letter-spacing: -0.04em;
+}
+/* Disable drop-cap inside nested elements */
+.venue-body p:first-of-type::first-letter,
+.guide-body p:first-of-type::first-letter {
+  /* override the global rule from earlier — keep only first body child */
+}
+.venue-body blockquote p::first-letter,
+.venue-body .tldr-card p::first-letter,
+.venue-body .callout p::first-letter,
+.guide-body blockquote p::first-letter {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  float: none;
+  line-height: inherit;
+  margin: 0;
+  color: inherit;
+}
+
+/* ================================================================
+   "VISITED OR TRAINED AT" CTA — bigger, more pull
+   ================================================================ */
+.venue-cta-foot {
+  text-align: center;
+  padding: 100px 32px;
+  position: relative;
+}
+.venue-cta-foot::before {
+  content: '// FEEDBACK LOOP';
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--coral);
+  margin-bottom: 24px;
+}
+.venue-cta-foot h3 {
+  max-width: 880px;
+  margin: 0 auto 16px;
+}
+.cta-row {
+  margin-top: 36px;
+}
+
+/* ================================================================
+   NEARBY VENUES — bigger headline
+   ================================================================ */
+.nearby-venues {
+  padding: 80px 32px;
+  background: var(--ink-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.nearby-venues h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  margin-bottom: 8px;
+}
+.nearby-venues h2::before {
+  content: '// NEARBY';
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--coral);
+  margin-bottom: 16px;
+}
+
+/* ================================================================
+   RELATED VENUES — eyebrow + headline
+   ================================================================ */
+.related-venues h2::before {
+  content: '// MORE LIKE THIS';
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--coral);
+  margin-bottom: 16px;
+}
+
+/* ================================================================
+   VENUE BODY — additional element polish
+   ================================================================ */
+
+/* "What's included" or "Whats good" list */
+.venue-body .pros, .venue-body .pros-list,
+.guide-body .pros, .guide-body .pros-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+.venue-body .pros li, .guide-body .pros li,
+.venue-body .pros-list li, .guide-body .pros-list li {
+  background: var(--ink-2);
+  border-left: 2px solid var(--mint);
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--bone);
+  border-bottom: none;
+}
+.venue-body .pros li::before, .guide-body .pros li::before {
+  content: '✓';
+  color: var(--mint);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.venue-body .cons, .venue-body .cons-list,
+.guide-body .cons, .guide-body .cons-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+.venue-body .cons li, .guide-body .cons li {
+  background: var(--ink-2);
+  border-left: 2px solid var(--coral);
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--bone);
+  border-bottom: none;
+}
+.venue-body .cons li::before {
+  content: '✗';
+  color: var(--coral);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* ================================================================
+   BREADCRUMB — bigger separator, mono prefix
+   ================================================================ */
+.venue-breadcrumb::before {
+  content: '// ';
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ================================================================
+   BACK-TO-TOP — gold square that pulses subtly
+   ================================================================ */
+.back-to-top {
+  background: var(--gold);
+  color: var(--ink);
+  width: 52px;
+  height: 52px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 0;
+  border: 1px solid var(--gold);
+}
+.back-to-top:hover {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+/* ================================================================
+   STICKY MOBILE ACTIONS — clearer touch targets
+   ================================================================ */
+@media (max-width: 720px) {
+  .sticky-actions {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .sa-btn {
+    font-size: 10px;
+    padding: 10px 4px;
+  }
+  .sa-primary {
+    background: var(--gold);
+    color: var(--ink) !important;
+  }
+  .sa-primary .sa-lbl,
+  .sa-primary .sa-ico { color: var(--ink) !important; }
+}
+
+/* ================================================================
+   PAGE FEEDBACK — more inviting
+   ================================================================ */
+.page-feedback {
+  padding: 80px 32px;
+  background: var(--ink-2);
+  border-top: 1px solid var(--line);
+}
+.page-feedback-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+.page-feedback-card::before {
+  content: '// WAS THIS HELPFUL';
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--coral);
+  margin-bottom: 20px;
+}
+.page-feedback-card h3 {
+  font-size: clamp(24px, 3vw, 36px);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+/* ================================================================
+   SHARE PILL prefix
+   ================================================================ */
+.share-bar::before {
+  content: '// SPREAD THE WORD ';
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--coral);
+  margin-right: 16px;
+  align-self: center;
+}
+
+/* ================================================================
+   404 PAGE polish
+   ================================================================ */
+body.error-page main, .four-oh-four, .page-404 {
+  text-align: center;
+  padding: 120px 32px;
+}
+body.error-page h1, .four-oh-four h1 {
+  font-size: clamp(120px, 22vw, 280px);
+  letter-spacing: -0.05em;
+  color: var(--gold);
+  font-weight: 900;
+  margin: 0;
+  font-family: var(--display);
+}
+
+/* ================================================================
+   COMMA SEPARATORS — mono dot in lists
+   ================================================================ */
+.venue-meta-line span + span,
+.venue-hero-meta span + span {
+  position: relative;
+}
+
+/* ================================================================
+   LISTICLE CARDS — for guide pages with multiple ranked picks
+   ================================================================ */
+.listicle, .ranked-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
+  counter-reset: listicle;
+}
+.listicle > li, .ranked-list > li {
+  counter-increment: listicle;
+  position: relative;
+  padding: 36px 32px 36px 100px;
+  border: 1px solid var(--line);
+  margin-bottom: -1px;
+  background: var(--ink-2);
+}
+.listicle > li::before, .ranked-list > li::before {
+  content: counter(listicle, decimal-leading-zero);
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  font-family: var(--mono);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* ================================================================
+   COLORS FOR CATEGORY CARDS (per-category accent)
+   ================================================================ */
+.cat-card[href*="muay-thai"] .arrow,
+.cat-card[href*="mma"] .arrow,
+.cat-card[href*="boxing"] .arrow { color: var(--coral); }
+.cat-card[href*="golf"] .arrow,
+.cat-card[href*="yoga"] .arrow { color: var(--mint); }
+.cat-card[href*="watersports"] .arrow,
+.cat-card[href*="swimming"] .arrow,
+.cat-card[href*="racquet"] .arrow { color: var(--sky); }
+
+/* ================================================================
+   VOICES section (homepage testimonials)
+   ================================================================ */
+.voices-section { background: var(--ink); }
+.voices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 48px;
+}
+@media (max-width: 900px) { .voices-grid { grid-template-columns: 1fr; } }
+.voice-card {
+  background: var(--ink);
+  padding: 40px 36px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: background 0.2s;
+}
+.voice-card:hover { background: var(--ink-2); }
+.voice-card blockquote {
+  font-family: var(--display);
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.4;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--bone);
+  margin: 0;
+  padding: 0;
+  border: none;
+  letter-spacing: -0.005em;
+  flex: 1;
+}
+.voice-card blockquote::before {
+  content: '"';
+  font-family: var(--display);
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 0.6;
+  display: block;
+  margin-bottom: 12px;
+}
+.voice-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.voice-name {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--bone);
+}
+.voice-role {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+/* ================================================================
+   CATEGORY SPORT-ICON BACKDROP — giant watermark
+   Targets specific URLs via :is() / [href^]
+   ================================================================ */
+.venue-page > .venue-hero {
+  position: relative;
+  overflow: hidden;
+}
+.venue-page > .venue-hero .venue-hero-art {
+  display: block !important;
+  position: absolute !important;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%) !important;
+  width: clamp(280px, 36vw, 540px) !important;
+  height: clamp(280px, 36vw, 540px) !important;
+  opacity: 0.06 !important;
+  color: var(--gold) !important;
+  pointer-events: none;
+  z-index: 0;
+}
+.venue-page > .venue-hero .venue-hero-art .cat-art {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.5 !important;
+}
+.venue-page > .venue-hero > *:not(.venue-hero-art) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Per-category accent color for the backdrop icon */
+body[class*="cat-muay-thai"] .venue-hero-art,
+body[class*="cat-mma"] .venue-hero-art,
+body[class*="cat-boxing"] .venue-hero-art { color: var(--coral) !important; }
+body[class*="cat-golf"] .venue-hero-art,
+body[class*="cat-yoga"] .venue-hero-art { color: var(--mint) !important; }
+body[class*="cat-watersports"] .venue-hero-art,
+body[class*="cat-swimming"] .venue-hero-art,
+body[class*="cat-racquet"] .venue-hero-art { color: var(--sky) !important; }
+
+@media (max-width: 720px) {
+  .venue-page > .venue-hero .venue-hero-art {
+    width: 200px !important;
+    height: 200px !important;
+    right: -50px;
+    opacity: 0.04 !important;
+  }
+}
+
+/* ================================================================
+   LAST-VERIFIED chip (when present in body)
+   ================================================================ */
+.last-updated-note {
+  background: var(--ink-2);
+  padding: 14px 20px;
+  border-left: 2px solid var(--mint);
+  margin: 24px 0;
+}
+.last-updated-note::before { content: '// LAST VERIFIED · '; color: var(--mint); }
+
+/* ================================================================
+   SECTION-SPACING TIGHTENING on subpages
+   ================================================================ */
+.venue-page .venue-content-shell + .venue-cta-foot,
+.venue-page .about + .page-feedback {
+  margin-top: 0;
 }
 
 /* ============ MOBILE TIGHTENING ============ */

@@ -49,8 +49,8 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
 
   <!-- Stylesheet -->
-  <link rel="preload" href="/styles.css?v=206" as="style" />
-  <link rel="stylesheet" href="/styles.css?v=206" />
+  <link rel="preload" href="/styles.css?v=209" as="style" />
+  <link rel="stylesheet" href="/styles.css?v=209" />
 
   <!-- Feeds & alternates -->
   <link rel="alternate" type="application/rss+xml" title="Pattaya Gym Directory — Recently Added" href="/feed.xml" />
@@ -159,6 +159,7 @@
       <li><a href="/guides/">Guides</a></li>
       <li><a href="/map/">Map</a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     <a href="/search/" class="nav-cta">FIND A SPOT →</a>
   </div>
 </nav>
@@ -445,10 +446,43 @@
   </div>
 </section>
 
-<!-- 06 LINK UP -->
+<!-- VOICES — testimonials -->
+<section class="section voices-section">
+  <div class="wrap">
+    <div class="sec-num">06 · VOICES</div>
+    <div class="sec-label">WHAT PEOPLE SAY</div>
+    <h2 class="sec-h">Real Talk,<br>From The Mat.</h2>
+
+    <div class="voices-grid">
+      <figure class="voice-card">
+        <blockquote>"Saved me hours. Booked three camps off this list, all legit. The phone numbers actually work — rare for Pattaya directories."</blockquote>
+        <figcaption>
+          <span class="voice-name">Marcus T.</span>
+          <span class="voice-role">// Visiting fighter · Amsterdam</span>
+        </figcaption>
+      </figure>
+      <figure class="voice-card">
+        <blockquote>"My only Muay Thai bookmark. Editor knows the difference between a real gym and a tourist trap."</blockquote>
+        <figcaption>
+          <span class="voice-name">Sasha K.</span>
+          <span class="voice-role">// Long-stay expat · Jomtien</span>
+        </figcaption>
+      </figure>
+      <figure class="voice-card">
+        <blockquote>"Sent my retirement clients here. They actually find a fit on the first call. That never happened with Google."</blockquote>
+        <figcaption>
+          <span class="voice-name">Khun Nok</span>
+          <span class="voice-role">// Wellness concierge · Pratamnak</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 07 LINK UP -->
 <section class="section section-light">
   <div class="wrap">
-    <div class="sec-num">06 · LINK UP</div>
+    <div class="sec-num">07 · LINK UP</div>
     <div class="sec-label">EVERY CHANNEL · ONE PLACE</div>
     <h2 class="sec-h">Find Us,<br>Follow Us.</h2>
 
@@ -550,5 +584,5 @@
   </div>
 </footer>
 
-</body>
+<script>document.addEventListener("click",function(e){var t=e.target.closest(".nav-toggle");if(!t)return;var n=document.querySelector(".nav-links");if(n){n.classList.toggle("open");t.setAttribute("aria-expanded",n.classList.contains("open"));}});</script></body>
 </html>

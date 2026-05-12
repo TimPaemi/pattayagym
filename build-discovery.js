@@ -12,7 +12,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '206';
+const ASSET_VERSION = '209';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -124,7 +124,8 @@ function header() {
       <li><a href="/compare/">Compare</a></li>
       <li><a href="/about/">About</a></li>
     </ul>
-  </nav>
+          <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+        </nav>
 </header>`;
 }
 
@@ -612,7 +613,7 @@ ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
 <script src="${assetHref('/favorites.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -1350,7 +1351,7 @@ ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
 <script src="${assetHref('/favorites.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -1427,7 +1428,7 @@ ${header()}
   <div class="cat-venue-grid">${cards}</div>
 </main>
 ${footer()}
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -1512,7 +1513,7 @@ ${header()}
   </article>
 </main>
 ${footer()}
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -1611,7 +1612,7 @@ ${header()}
   </article>
 </main>
 ${footer()}
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -1755,7 +1756,7 @@ ${footer()}
   render();
 })();
 </script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -1883,7 +1884,7 @@ ${header()}
   <p style="text-align: center; color: var(--text-muted); font-size: 13px; max-width: 540px; margin: 24px auto;">Form opens your email client. Or email <a href="mailto:hello@pattaya-gym.com" style="color: var(--accent);">hello@pattaya-gym.com</a> directly with the same details.</p>
 </main>
 ${footer()}
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -2120,7 +2121,7 @@ ${footer()}
   render(false);
 })();
 </script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -2177,7 +2178,7 @@ ${header()}
   </section>
 </main>
 ${footer()}
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -2230,7 +2231,7 @@ ${header()}
   </section>
 </main>
 ${footer()}
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -2270,7 +2271,7 @@ ${header()}
 ${footer()}
 <script src="${assetHref('/data.js')}"></script>
 <script src="${assetHref('/favorites.js')}"></script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -2405,7 +2406,7 @@ ${footer()}
   render();
 })();
 </script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
@@ -2523,7 +2524,7 @@ ${footer()}
   render();
 })();
 </script>
-</body>
+<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
 </html>
 `;
 }
