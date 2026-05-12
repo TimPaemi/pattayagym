@@ -2607,6 +2607,693 @@ h1, h2, h3, h4, h5, h6 {
   border-width: 2px;
 }
 
+/* ================================================================
+   VENUE BODY TYPOGRAPHY POLISH — where readers spend time
+   ================================================================ */
+
+/* Body text — softer rhythm, bigger leading */
+.venue-body, .guide-body {
+  letter-spacing: 0.005em;
+}
+.venue-body p, .guide-body p {
+  margin: 0 0 22px 0;
+  color: var(--text-dim);
+}
+.venue-body p:first-of-type, .guide-body p:first-of-type {
+  font-size: 1.08em;
+  color: var(--bone);
+}
+.venue-body p:first-of-type::first-letter,
+.guide-body p:first-of-type::first-letter {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 3.2em;
+  float: left;
+  line-height: 0.85;
+  margin: 6px 12px 0 0;
+  color: var(--gold);
+  letter-spacing: -0.04em;
+}
+
+/* Lists — checkbox style */
+.venue-body ul, .guide-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+.venue-body ul li, .guide-body ul li {
+  position: relative;
+  padding: 8px 0 8px 28px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1.55;
+}
+.venue-body ul li::before, .guide-body ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: var(--gold);
+  font-weight: 700;
+  font-family: var(--display);
+}
+.venue-body ul li:last-child, .guide-body ul li:last-child { border-bottom: none; }
+
+.venue-body ol, .guide-body ol {
+  list-style: none;
+  counter-reset: pg-ol;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+.venue-body ol li, .guide-body ol li {
+  counter-increment: pg-ol;
+  position: relative;
+  padding: 10px 0 10px 56px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1.55;
+}
+.venue-body ol li::before, .guide-body ol li::before {
+  content: counter(pg-ol, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--coral);
+}
+
+/* Tables — editorial pricing/schedule */
+.venue-body table, .guide-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-family: var(--display);
+  font-size: 15px;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+}
+.venue-body th, .venue-body td,
+.guide-body th, .guide-body td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.venue-body tr:last-child td,
+.guide-body tr:last-child td { border-bottom: none; }
+.venue-body th, .guide-body th {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.venue-body td:first-child, .guide-body td:first-child {
+  font-weight: 700;
+  color: var(--bone);
+}
+.venue-body tr:hover td, .guide-body tr:hover td {
+  background: rgba(212, 167, 44, 0.04);
+}
+
+/* Blockquote — bigger, editorial pullquote */
+.venue-body blockquote, .guide-body blockquote {
+  border: none;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 32px 0;
+  margin: 40px 0;
+  font-style: italic;
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.35;
+  color: var(--bone);
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  position: relative;
+}
+.venue-body blockquote::before, .guide-body blockquote::before {
+  content: "//";
+  display: block;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-style: normal;
+  color: var(--coral);
+  letter-spacing: 0.18em;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+/* Code/key info inline highlight */
+.venue-body code, .guide-body code {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 2px 8px;
+  background: var(--ink-3);
+  border: 1px solid var(--line);
+  color: var(--gold);
+  border-radius: 2px;
+}
+
+/* Image w/ caption */
+.venue-body figure, .guide-body figure {
+  margin: 36px 0;
+}
+.venue-body figure img, .guide-body figure img {
+  border-radius: 2px;
+  border: 1px solid var(--line);
+  margin: 0;
+}
+.venue-body figcaption, .guide-body figcaption {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 14px 0 0;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+.venue-body figcaption::before, .guide-body figcaption::before {
+  content: "// ";
+  color: var(--coral);
+}
+
+/* Horizontal rule = editorial divider */
+.venue-body hr, .guide-body hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 48px 0;
+  position: relative;
+}
+.venue-body hr::after, .guide-body hr::after {
+  content: "★";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  background: var(--ink);
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+/* Inline links — gold underline */
+.venue-body a:not(.btn), .guide-body a:not(.btn) {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.15s;
+}
+.venue-body a:not(.btn):hover, .guide-body a:not(.btn):hover {
+  color: var(--gold-2);
+  text-decoration-thickness: 2px;
+}
+
+/* "Last verified" pill — visible status */
+.last-verified, .verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  background: rgba(95, 201, 164, 0.08);
+  border: 1px solid var(--mint);
+  color: var(--mint);
+  border-radius: 999px;
+}
+.last-verified::before, .verified-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 8px var(--mint);
+}
+
+/* Breadcrumbs — top of venue page */
+.venue-breadcrumb {
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--line);
+}
+.venue-breadcrumb a {
+  color: var(--bone);
+  opacity: 0.7;
+  transition: opacity 0.15s, color 0.15s;
+}
+.venue-breadcrumb a:hover { opacity: 1; color: var(--gold); }
+.venue-breadcrumb .bc-sep { color: var(--gold); margin: 0 12px; opacity: 1; }
+
+/* Nav micro-polish: underline animation */
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  position: relative;
+  padding: 4px 0;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s;
+}
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* Hover lift on all card-types */
+.cat-card, .area-card, .related-card, .nearby-card, .linkup-card, .guide-card, .cat-venue-card {
+  position: relative;
+  overflow: hidden;
+}
+.cat-card::after, .area-card::after, .related-card::after, .nearby-card::after, .linkup-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+.cat-card:hover::after, .area-card:hover::after,
+.related-card:hover::after, .nearby-card:hover::after,
+.linkup-card:hover::after { width: 100%; }
+
+/* Selection highlight = gold */
+*::selection { background: var(--gold); color: var(--ink); }
+
+/* Compare/favorites toast — bigger, editorial */
+.cmp-toast, .fav-toast {
+  bottom: 110px;
+  padding: 18px 28px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  border: 2px solid var(--ink);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+.cmp-toast::before, .fav-toast::before {
+  content: "★ ";
+  color: var(--ink);
+}
+
+/* "Jump to" TOC links — editorial pills */
+.jump-pill {
+  border-left: 2px solid transparent;
+  transition: border-color 0.15s, color 0.15s, padding-left 0.15s;
+}
+.jump-pill:hover, .jump-pill.is-active {
+  border-left-color: var(--gold);
+  padding-left: 12px;
+}
+
+/* Open-status badges — more visible */
+.open-badge.open-now {
+  position: relative;
+  padding-left: 22px;
+}
+.open-badge.open-now::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 10px var(--mint);
+  animation: livepulse 1.6s ease-in-out infinite;
+}
+
+/* venue page first paragraph emphasis */
+.venue-content-shell .venue-body > p:first-child,
+.venue-content-shell .venue-body > .content > p:first-child {
+  font-size: 1.15em;
+  line-height: 1.55;
+}
+
+/* Best-for / not-best-for split */
+.best-for-block + .best-for-block { margin-top: 16px; }
+.best-for-block ul { margin-bottom: 0; }
+.best-for-block li { border-bottom: none; padding: 6px 0; padding-left: 28px; }
+
+/* "Open hours" / "Address" section blocks */
+.venue-info-block, .venue-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin: 32px 0;
+}
+.venue-info-block > div, .venue-details-grid > div {
+  background: var(--ink-2);
+  padding: 24px;
+}
+.venue-info-block h4, .venue-details-grid h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 10px 0;
+}
+.venue-info-block h4::before, .venue-details-grid h4::before {
+  content: '// '; color: var(--coral);
+}
+
+/* ================================================================
+   OVERRIDE legacy .cat-venue-card injection (venue.css) with editorial
+   ================================================================ */
+.cat-venue-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)) !important;
+  gap: 1px !important;
+  background: var(--line) !important;
+  border: 1px solid var(--line);
+  margin: 0 auto 80px !important;
+  max-width: 1320px;
+}
+.cat-venue-card {
+  background: var(--ink) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 36px 32px !important;
+  gap: 14px !important;
+  min-height: 200px;
+  transition: background 0.2s !important;
+}
+.cat-venue-card:hover {
+  background: var(--ink-2) !important;
+  border-color: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+.cat-venue-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s;
+}
+.cat-venue-card { position: relative; overflow: hidden; }
+.cat-venue-card:hover::after { width: 100%; }
+.cat-venue-card .cv-head h3 {
+  font-family: var(--display) !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: var(--bone) !important;
+  line-height: 1 !important;
+  margin-bottom: 8px;
+}
+.cat-venue-card .cv-meta {
+  font-family: var(--mono);
+  font-size: 11px !important;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral) !important;
+}
+.cat-venue-card p {
+  font-family: var(--display);
+  font-size: 14px !important;
+  color: var(--muted) !important;
+  line-height: 1.55 !important;
+  -webkit-line-clamp: 3;
+}
+.cat-venue-card .cv-tags { margin-top: 12px; }
+.cat-venue-card .cv-pill, .cv-pill {
+  background: transparent !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  color: var(--bone) !important;
+  font-family: var(--mono) !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+  padding: 4px 10px !important;
+}
+.cat-venue-card .cv-pill-tag, .cv-pill-tag {
+  background: var(--ink-2) !important;
+  border-color: var(--line) !important;
+  color: var(--muted) !important;
+}
+.cat-venue-card .cv-cta, .cv-cta {
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: var(--gold) !important;
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.cat-venue-card .cv-cta::after {
+  content: "→";
+  transition: transform 0.15s;
+}
+.cat-venue-card:hover .cv-cta::after { transform: translateX(6px); }
+
+/* ================================================================
+   CATEGORY/AREA/GUIDE LEGACY OVERRIDES — kill 2018 chrome
+   ================================================================ */
+
+/* The "Quick answer" / "TL;DR" section (different from .tldr-card) */
+.tldr, section.tldr {
+  background: var(--ink-2);
+  border: none;
+  border-left: 4px solid var(--gold);
+  border-radius: 0;
+  padding: 36px 40px;
+  margin: 40px auto;
+  max-width: 1320px;
+  position: relative;
+}
+.tldr::before {
+  content: "// QUICK ANSWER";
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.tldr-title, .tldr h2 {
+  font-family: var(--display) !important;
+  font-weight: 900 !important;
+  font-size: clamp(20px, 2.4vw, 28px) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: var(--bone) !important;
+  margin: 0 0 20px 0 !important;
+  line-height: 1.05 !important;
+}
+.tldr-list, .tldr ol {
+  list-style: none !important;
+  counter-reset: pg-tldr;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.tldr-list li, .tldr ol li {
+  counter-increment: pg-tldr;
+  position: relative;
+  padding: 14px 0 14px 56px !important;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--display);
+  font-size: 16px;
+  color: var(--bone);
+  list-style: none !important;
+}
+.tldr-list li::before, .tldr ol li::before {
+  content: counter(pg-tldr, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--coral);
+}
+.tldr-list li:last-child, .tldr ol li:last-child { border-bottom: none; }
+.tldr-list li strong, .tldr ol li strong {
+  font-weight: 700;
+}
+.tldr-list li a, .tldr ol li a,
+.tldr-list li strong a, .tldr ol li strong a {
+  color: var(--gold) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.tldr-list li a:hover { color: var(--gold-2) !important; }
+.tldr p {
+  font-family: var(--mono);
+  font-size: 11px !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 20px 0 0 0 !important;
+}
+.tldr p a {
+  color: var(--gold) !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+/* In-card "Save" favorite button — compact icon only */
+.cat-venue-card .favorite-btn,
+.cv-head .favorite-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 10px !important;
+  font-size: 0 !important;
+  background: transparent !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  color: var(--muted) !important;
+  min-height: 0 !important;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.cat-venue-card .favorite-btn .fav-btn-label,
+.cv-head .favorite-btn .fav-btn-label {
+  display: none;
+}
+.cat-venue-card .favorite-btn .fav-heart,
+.cv-head .favorite-btn .fav-heart {
+  font-size: 14px !important;
+  color: var(--muted) !important;
+}
+.cat-venue-card .favorite-btn:hover .fav-heart {
+  color: var(--coral) !important;
+}
+.cat-venue-card .favorite-btn[aria-pressed="true"] {
+  background: var(--coral) !important;
+  border-color: var(--coral) !important;
+}
+.cat-venue-card .favorite-btn[aria-pressed="true"] .fav-heart {
+  color: var(--bone) !important;
+}
+.cat-venue-card .cv-head {
+  position: relative;
+  padding-right: 48px;
+}
+.cat-venue-card .cv-head h3 a {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+/* Category-page H2 hierarchy ("All Muay Thai venues" etc.) */
+.venue-page h2#full-list,
+.venue-page > h2,
+main.venue-page > h2 {
+  font-family: var(--display) !important;
+  font-weight: 900 !important;
+  font-size: clamp(28px, 5vw, 48px) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: var(--bone) !important;
+  margin: 80px 32px 32px 32px !important;
+  max-width: 1320px;
+  padding: 0;
+}
+.venue-page h2#full-list::before {
+  content: "// ";
+  color: var(--coral);
+  font-family: var(--mono);
+  font-size: 12px;
+  vertical-align: middle;
+  letter-spacing: 0.18em;
+}
+
+/* Category page venue-hero specific overrides */
+.venue-page > .venue-hero {
+  margin: 0 auto;
+  padding: 80px 32px 60px;
+  max-width: 1320px;
+  background: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.venue-page .venue-hero .venue-cat-pill {
+  display: inline-block;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--coral) !important;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.venue-page .venue-hero .venue-cat-pill::before {
+  content: "// ";
+  color: var(--gold);
+}
+.venue-page .venue-hero .venue-h1 {
+  padding-right: 0 !important;
+  font-size: clamp(48px, 9vw, 120px) !important;
+  line-height: 0.9 !important;
+  margin: 0 0 28px 0 !important;
+}
+.venue-page .venue-hero .venue-lede {
+  font-family: var(--display);
+  font-size: clamp(17px, 1.4vw, 21px) !important;
+  line-height: 1.5;
+  color: var(--text-dim);
+  max-width: 720px;
+  margin: 0 0 20px 0;
+}
+
+/* "View full page ->" CTA — replace -> with arrow icon styling */
+.cv-cta {
+  align-self: flex-start;
+}
+
+/* TLDR list spacing if rendered inline */
+.tldr-list { display: block; }
+
+/* Guide-body inline TLDR */
+.guide-body .tldr {
+  margin: 32px 0;
+}
+
 /* ============ MOBILE TIGHTENING ============ */
 @media (max-width: 720px) {
   .venue-hero { padding: 32px 20px 48px; }
