@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PATTAYA GYM — Pattaya's Sports & Training Directory</title>
+<meta name="description" content="Every gym, ring, court and course in Pattaya. 158 venues. Hand-checked. No bullshit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ===========================================
+   PATTAYA GYM — Editorial rebuild
+   Design DNA: mrweoutside.com
+   Palette: ink black + bone + gold + coral + mint
+   =========================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ink:        #0a0a0a;
+  --ink-soft:   #131313;
+  --bone:       #f4f0e8;
+  --bone-soft:  #ece6d8;
+  --line:       #1f1f1f;
+  --line-bone:  #d8d2c2;
+  --gold:       #d4a72c;
+  --coral:      #ff5a4d;
+  --mint:       #5fc9a4;
+  --rose:       #f08a8a;
+  --sky:        #6db5ff;
+  --muted:      #6b6b6b;
+  --muted-bone: #807866;
+}
+
+html { background: var(--ink); }
+body {
+  font-family: 'Inter Tight', system-ui, sans-serif;
+  background: var(--ink);
+  color: var(--bone);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 720px) { .wrap { padding: 0 20px; } }
+
+/* ============ TOP MARQUEE ============ */
+.marquee {
+  border-bottom: 1px solid var(--line);
+  background: var(--ink);
+  overflow: hidden;
+  padding: 14px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 42s linear infinite;
+}
+.marquee-track span {
+  padding: 0 28px;
+  color: var(--bone);
+}
+.marquee-track .star { color: var(--gold); }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ============ NAV ============ */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+.nav-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.brand .dot { color: var(--gold); }
+.nav-links {
+  display: flex; gap: 28px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  background: var(--gold);
+  color: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.15s;
+}
+.nav-cta:hover { transform: translateY(-1px); }
+@media (max-width: 800px) {
+  .nav-links { display: none; }
+}
+
+/* ============ HERO ============ */
+.hero {
+  padding: 80px 0 120px;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+.hero-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+.hero-eyebrow::before {
+  content: '// ';
+  color: var(--coral);
+}
+.hero-h1 {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 900;
+  font-size: clamp(56px, 13vw, 220px);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--bone);
+  margin-bottom: 24px;
+}
+.hero-h1 .stroke {
+  -webkit-text-stroke: 2px var(--bone);
+  color: transparent;
+}
+.hero-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bone);
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+.hero-sub .sep { color: var(--gold); margin: 0 12px; }
+
+.hero-quote {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--bone);
+  max-width: 720px;
+  margin-bottom: 56px;
+  padding-left: 24px;
+  border-left: 3px solid var(--gold);
+}
+
+.hero-badges {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  background: var(--ink-soft);
+  border-radius: 999px;
+  color: var(--bone);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.badge .live {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 12px var(--mint);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero-ctas {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+.btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 18px 28px;
+  border-radius: 2px;
+  transition: transform 0.15s, background 0.15s;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-primary {
+  background: var(--coral);
+  color: var(--bone);
+}
+.btn-primary:hover { transform: translateY(-2px); background: #ff6b5f; }
+.btn-ghost {
+  background: transparent;
+  color: var(--bone);
+  border: 1px solid var(--bone);
+}
+.btn-ghost:hover { background: var(--bone); color: var(--ink); }
+.btn .arrow { transition: transform 0.15s; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+.scroll-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: inline-flex; align-items: center; gap: 10px;
+}
+
+/* ============ STATS ============ */
+.stats {
+  padding: 60px 0;
+  background: var(--bone);
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-bone);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat {
+  padding: 0 24px;
+  border-left: 1px solid var(--line-bone);
+}
+.stat:first-child { border-left: none; padding-left: 0; }
+.stat-num {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 900;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-bone);
+}
+@media (max-width: 720px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 0; }
+  .stat { border-left: none !important; padding-left: 0 !important; }
+}
+
+/* ============ FEATURED IN ============ */
+.featured-in {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.featured-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.featured-label::before { content: '// '; color: var(--gold); }
+.featured-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 38s linear infinite;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  color: var(--bone);
+}
+.featured-track span { padding: 0 32px; }
+.featured-track .dot {
+  color: var(--gold);
+  padding: 0 8px;
+}
+
+/* ============ SECTION (numbered) ============ */
+.section {
+  padding: 120px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.section-light {
+  background: var(--bone);
+  color: var(--ink);
+  border-bottom-color: var(--line-bone);
+}
+.sec-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.sec-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.section-light .sec-label { color: var(--muted-bone); }
+.sec-h {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 900;
+  font-size: clamp(40px, 7vw, 96px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.sec-lead {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.5;
+  max-width: 680px;
+  color: var(--bone);
+  margin-bottom: 48px;
+}
+.section-light .sec-lead { color: var(--ink); }
+
+/* ============ CATEGORY GRID ============ */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.section-light .cat-grid { background: var(--line-bone); border-color: var(--line-bone); }
+.cat-card {
+  background: var(--ink);
+  padding: 36px 28px;
+  display: flex; flex-direction: column;
+  min-height: 260px;
+  transition: background 0.2s;
+  position: relative;
+}
+.section-light .cat-card { background: var(--bone); }
+.cat-card:hover { background: var(--ink-soft); }
+.section-light .cat-card:hover { background: var(--bone-soft); }
+.cat-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.cat-tag.gold  { color: var(--gold); }
+.cat-tag.coral { color: var(--coral); }
+.cat-tag.mint  { color: var(--mint); }
+.cat-tag.rose  { color: var(--rose); }
+.cat-tag.sky   { color: var(--sky); }
+.cat-h {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  flex: 1;
+}
+.cat-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.cat-meta .count { color: var(--muted); }
+.section-light .cat-meta .count { color: var(--muted-bone); }
+.cat-meta .arrow {
+  font-size: 18px;
+  transition: transform 0.15s;
+}
+.cat-card:hover .arrow { transform: translateX(6px); }
+@media (max-width: 900px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cat-grid { grid-template-columns: 1fr; } }
+
+/* ============ FEATURED VENUE LIST ============ */
+.venue-list {
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--line-bone);
+}
+.venue-row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto;
+  gap: 32px;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line-bone);
+  transition: padding 0.2s;
+}
+.venue-row:hover { padding-left: 16px; }
+.venue-row .v-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--muted-bone);
+}
+.venue-row .v-name {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 800;
+  font-size: clamp(22px, 2.4vw, 32px);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1;
+}
+.venue-row .v-name .v-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--coral);
+  display: block;
+  margin-top: 8px;
+}
+.venue-row .v-area {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-bone);
+}
+.venue-row .v-arrow {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  transition: transform 0.15s;
+}
+.venue-row:hover .v-arrow { transform: translateX(8px); color: var(--coral); }
+@media (max-width: 720px) {
+  .venue-row { grid-template-columns: 40px 1fr auto; gap: 16px; padding: 20px 0; }
+  .venue-row .v-area { display: none; }
+}
+
+/* ============ AREA GRID ============ */
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.area-card {
+  background: var(--ink-soft);
+  border: 1px solid var(--line);
+  padding: 32px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.area-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.area-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.area-h {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.area-body {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.area-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bone);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+@media (max-width: 900px) { .area-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .area-grid { grid-template-columns: 1fr; } }
+
+/* ============ HOW IT WORKS ============ */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+.how-step {
+  padding-top: 24px;
+  border-top: 2px solid var(--ink);
+}
+.how-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 16px;
+}
+.how-h {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.how-body {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  opacity: 0.75;
+}
+@media (max-width: 720px) { .how-grid { grid-template-columns: 1fr; } }
+
+/* ============ FAQ ============ */
+.faq-list { margin-top: 24px; }
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+}
+.faq-q {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 2.2vw, 28px);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  display: flex; gap: 16px; align-items: baseline;
+}
+.faq-q .q-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.faq-a {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+  padding-left: 38px;
+  max-width: 760px;
+}
+
+/* ============ LINK UP ============ */
+.linkup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 32px;
+}
+.linkup-card {
+  background: var(--ink);
+  padding: 36px 24px;
+  transition: background 0.2s;
+}
+.linkup-card:hover { background: var(--ink-soft); }
+.linkup-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.linkup-label.gold  { color: var(--gold); }
+.linkup-label.coral { color: var(--coral); }
+.linkup-label.mint  { color: var(--mint); }
+.linkup-label.sky   { color: var(--sky); }
+.linkup-h {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.linkup-handle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--muted);
+}
+@media (max-width: 900px) { .linkup-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .linkup-grid { grid-template-columns: 1fr; } }
+
+/* ============ BOTTOM MARQUEE ============ */
+.marquee-bottom {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--gold);
+  color: var(--ink);
+  overflow: hidden;
+  padding: 18px 0;
+}
+.marquee-bottom .marquee-track {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+}
+.marquee-bottom .marquee-track .star { color: var(--ink); }
+.marquee-bottom .marquee-track span { padding: 0 24px; }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--ink);
+  color: var(--bone);
+  padding: 80px 0 40px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 64px;
+}
+.footer-brand .brand { font-size: 28px; margin-bottom: 20px; }
+.footer-brand p {
+  font-family: 'Inter Tight', sans-serif;
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 340px;
+  line-height: 1.55;
+}
+.footer-col-h {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.footer-col-h::before { content: '// '; color: var(--coral); }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  color: var(--bone);
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.footer-col a:hover { opacity: 1; color: var(--gold); }
+.footer-credit {
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.footer-credit .star { color: var(--gold); }
+.footer-credit::before { content: '// '; color: var(--coral); }
+@media (max-width: 800px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px 24px; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* ============ MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span>
+    <span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA · GYMS</span>
+    <span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span>
+    <span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA · GYMS</span>
+    <span class="star">★</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav-row">
+    <a href="/" class="brand">PATTAYA<span class="dot">.</span>GYM</a>
+    <div class="nav-links">
+      <a href="/muay-thai/">MUAY THAI</a>
+      <a href="/gyms/">GYMS</a>
+      <a href="/golf/">GOLF</a>
+      <a href="/yoga/">YOGA</a>
+      <a href="/guides/">GUIDES</a>
+    </div>
+    <a href="/search/" class="nav-cta">FIND A SPOT →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">PATTAYA'S TRAINING DIRECTORY · EST. 2024</div>
+    <h1 class="hero-h1">
+      EVERY GYM.<br>
+      EVERY RING.<br>
+      <span class="stroke">EVERY COURT.</span>
+    </h1>
+    <p class="hero-sub">158 VENUES <span class="sep">×</span> 15 SPORTS <span class="sep">×</span> 6 AREAS <span class="sep">×</span> ONE TRUSTED MAP</p>
+
+    <blockquote class="hero-quote">
+      "If you train in Pattaya, you start here. No SEO spam. No fake reviews. Just the spots that are actually open today."
+    </blockquote>
+
+    <div class="hero-badges">
+      <span class="badge"><span class="live"></span>LIVE · UPDATED MAY 2026</span>
+      <span class="badge">★ HAND-CHECKED</span>
+      <span class="badge">PATTAYA · THAILAND</span>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="/search/" class="btn btn-primary">FIND MY GYM <span class="arrow">→</span></a>
+      <a href="/muay-thai/" class="btn btn-ghost">BROWSE MUAY THAI <span class="arrow">→</span></a>
+    </div>
+
+    <a href="#sports" class="scroll-hint">↓ KEEP SCROLLING</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">158</div>
+        <div class="stat-label">VENUES INDEXED</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">15</div>
+        <div class="stat-label">SPORTS COVERED</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <div class="stat-label">PATTAYA AREAS</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">VERIFIED · NO SPAM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED IN -->
+<section class="featured-in">
+  <div class="wrap">
+    <div class="featured-label">AS RECOMMENDED BY</div>
+  </div>
+  <div class="featured-track">
+    <span>Google Maps</span><span class="dot">·</span><span>ChatGPT</span><span class="dot">·</span><span>Perplexity</span><span class="dot">·</span><span>Claude</span><span class="dot">·</span><span>Expat Forums</span><span class="dot">·</span><span>Reddit r/Pattaya</span><span class="dot">·</span><span>TripAdvisor</span><span class="dot">·</span>
+    <span>Google Maps</span><span class="dot">·</span><span>ChatGPT</span><span class="dot">·</span><span>Perplexity</span><span class="dot">·</span><span>Claude</span><span class="dot">·</span><span>Expat Forums</span><span class="dot">·</span><span>Reddit r/Pattaya</span><span class="dot">·</span><span>TripAdvisor</span><span class="dot">·</span>
+  </div>
+</section>
+
+<!-- 01 SPORTS / CATEGORIES -->
+<section class="section" id="sports">
+  <div class="wrap">
+    <div class="sec-num">01 · WHAT YOU TRAIN</div>
+    <div class="sec-label">15 SPORTS · ONE DIRECTORY</div>
+    <h2 class="sec-h">PICK YOUR<br>DISCIPLINE.</h2>
+    <p class="sec-lead">From world-famous Muay Thai camps to oceanview tennis courts. Every category curated, every venue verified, every link clickable.</p>
+
+    <div class="cat-grid">
+      <a href="/muay-thai/" class="cat-card">
+        <div class="cat-tag coral">★ FLAGSHIP CATEGORY</div>
+        <div class="cat-h">MUAY THAI<br>CAMPS</div>
+        <div class="cat-meta"><span class="count">38 venues</span><span class="arrow">→</span></div>
+      </a>
+      <a href="/gyms/" class="cat-card">
+        <div class="cat-tag gold">MOST VISITED</div>
+        <div class="cat-h">GYMS &<br>FITNESS</div>
+        <div class="cat-meta"><span class="count">29 venues</span><span class="arrow">→</span></div>
+      </a>
+      <a href="/golf/" class="cat-card">
+        <div class="cat-tag mint">PREMIUM</div>
+        <div class="cat-h">GOLF<br>COURSES</div>
+        <div class="cat-meta"><span class="count">17 venues</span><span class="arrow">→</span></div>
+      </a>
+      <a href="/yoga/" class="cat-card">
+        <div class="cat-tag rose">WELLNESS</div>
+        <div class="cat-h">YOGA &<br>PILATES</div>
+        <div class="cat-meta"><span class="count">14 venues</span><span class="arrow">→</span></div>
+      </a>
+      <a href="/boxing/" class="cat-card">
+        <div class="cat-tag coral">FIGHT SPORTS</div>
+        <div class="cat-h">BOXING<br>CLUBS</div>
+        <div class="cat-meta"><span class="count">11 venues</span><span class="arrow">→</span></div>
+      </a>
+      <a href="/tennis/" class="cat-card">
+        <div class="cat-tag sky">RACKET SPORTS</div>
+        <div class="cat-h">TENNIS &<br>PICKLEBALL</div>
+        <div class="cat-meta"><span class="count">12 venues</span><span class="arrow">→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 FEATURED VENUES -->
+<section class="section section-light">
+  <div class="wrap">
+    <div class="sec-num">02 · THE TOP OF THE STACK</div>
+    <div class="sec-label">EDITOR'S PICKS · UPDATED WEEKLY</div>
+    <h2 class="sec-h">SPOTS THAT<br>DELIVER.</h2>
+    <p class="sec-lead">The venues we send our friends to. Real coaches, real facilities, real value. No paid placements — these earned the spot.</p>
+
+    <div class="venue-list">
+      <a href="/fairtex-pattaya/" class="venue-row">
+        <div class="v-num">01</div>
+        <div class="v-name">FAIRTEX PATTAYA<span class="v-cat">MUAY THAI · WORLD-CLASS</span></div>
+        <div class="v-area">PRATUMNAK</div>
+        <div class="v-arrow">→</div>
+      </a>
+      <a href="/sumalee-boxing-gym/" class="venue-row">
+        <div class="v-num">02</div>
+        <div class="v-name">SUMALEE BOXING GYM<span class="v-cat">MUAY THAI · WOMEN-FRIENDLY</span></div>
+        <div class="v-area">PHUKET-STYLE · JOMTIEN</div>
+        <div class="v-arrow">→</div>
+      </a>
+      <a href="/the-station-pattaya/" class="venue-row">
+        <div class="v-num">03</div>
+        <div class="v-name">THE STATION PATTAYA<span class="v-cat">GYM · 24/7 ACCESS</span></div>
+        <div class="v-area">CENTRAL PATTAYA</div>
+        <div class="v-arrow">→</div>
+      </a>
+      <a href="/siam-country-club/" class="venue-row">
+        <div class="v-num">04</div>
+        <div class="v-name">SIAM COUNTRY CLUB<span class="v-cat">GOLF · CHAMPIONSHIP COURSE</span></div>
+        <div class="v-area">EAST PATTAYA</div>
+        <div class="v-arrow">→</div>
+      </a>
+      <a href="/yodyut-muay-thai/" class="venue-row">
+        <div class="v-num">05</div>
+        <div class="v-name">YODYUT MUAY THAI<span class="v-cat">MUAY THAI · TRADITIONAL</span></div>
+        <div class="v-area">SOI BUAKHAO</div>
+        <div class="v-arrow">→</div>
+      </a>
+      <a href="/breeze-yoga/" class="venue-row">
+        <div class="v-num">06</div>
+        <div class="v-name">BREEZE YOGA<span class="v-cat">YOGA · OCEAN VIEW</span></div>
+        <div class="v-area">JOMTIEN</div>
+        <div class="v-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 AREAS -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-num">03 · WHERE YOU ARE</div>
+    <div class="sec-label">6 PATTAYA AREAS · ALL MAPPED</div>
+    <h2 class="sec-h">KNOW THE<br>NEIGHBORHOOD.</h2>
+    <p class="sec-lead">Pattaya isn't one place. It's six. We mapped every venue to the area you actually search for — Jomtien beach, Pratumnak hills, Soi Buakhao backstreets.</p>
+
+    <div class="area-grid">
+      <a href="/area/jomtien/" class="area-card">
+        <div class="area-tag">★ MOST VENUES</div>
+        <div class="area-h">JOMTIEN</div>
+        <div class="area-body">Long-stay favorite. Beach gyms, yoga studios, fight camps. Where most expats train.</div>
+        <div class="area-link">42 VENUES →</div>
+      </a>
+      <a href="/area/central-pattaya/" class="area-card">
+        <div class="area-tag">DOWNTOWN</div>
+        <div class="area-h">CENTRAL<br>PATTAYA</div>
+        <div class="area-body">Walking St backbone. Bigband gyms, boxing rings, the buzz of the city.</div>
+        <div class="area-link">31 VENUES →</div>
+      </a>
+      <a href="/area/pratumnak/" class="area-card">
+        <div class="area-tag">PREMIUM</div>
+        <div class="area-h">PRATUMNAK</div>
+        <div class="area-body">The hill between. Hi-end resorts, Fairtex flagship, calm streets.</div>
+        <div class="area-link">22 VENUES →</div>
+      </a>
+      <a href="/area/east-pattaya/" class="area-card">
+        <div class="area-tag">GOLF COUNTRY</div>
+        <div class="area-h">EAST<br>PATTAYA</div>
+        <div class="area-body">Where the golf lives. Siam CC, Phoenix, championship layouts.</div>
+        <div class="area-link">28 VENUES →</div>
+      </a>
+      <a href="/area/naklua/" class="area-card">
+        <div class="area-tag">LOCAL FLAVOR</div>
+        <div class="area-h">NAKLUA</div>
+        <div class="area-body">North side. Quieter, more Thai, traditional camps and family gyms.</div>
+        <div class="area-link">19 VENUES →</div>
+      </a>
+      <a href="/area/wongamat/" class="area-card">
+        <div class="area-tag">BEACHFRONT</div>
+        <div class="area-h">WONGAMAT</div>
+        <div class="area-body">Beachfront condos and rooftop studios. Yoga, pilates, ocean views.</div>
+        <div class="area-link">16 VENUES →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 04 HOW IT WORKS -->
+<section class="section section-light">
+  <div class="wrap">
+    <div class="sec-num">04 · THE PROCESS</div>
+    <div class="sec-label">HOW EVERY VENUE GETS LISTED</div>
+    <h2 class="sec-h">CHECKED<br>BY HAND.</h2>
+    <p class="sec-lead">No automated scraping. No paid placements. Every venue gets visited, photographed, or verified with a phone call.</p>
+
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">STEP 01</div>
+        <div class="how-h">DISCOVER</div>
+        <div class="how-body">We track new openings via local network — coaches, gym owners, regulars. If it's training in Pattaya, we hear about it.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">STEP 02</div>
+        <div class="how-h">VERIFY</div>
+        <div class="how-body">Visit, call, or cross-check with three independent sources. Phone numbers tested. Maps confirmed. Hours validated.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">STEP 03</div>
+        <div class="how-h">PUBLISH</div>
+        <div class="how-body">Clean profile, real photos, honest summary. Updated every 90 days minimum. If a venue closes, it gets a strikethrough — not deleted.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 FAQ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-num">05 · QUESTIONS WE GET</div>
+    <div class="sec-label">FAQ · ASKED A LOT</div>
+    <h2 class="sec-h">REAL TALK.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-num">Q1</span>How do you choose what gets listed?</div>
+        <div class="faq-a">If it operates in Greater Pattaya and offers training, coaching, or paid sport facilities, it qualifies. We don't take payment for placement. Editor's picks are based on coach quality, facility condition, and reader feedback.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-num">Q2</span>Is Pattaya Gym affiliated with any venue?</div>
+        <div class="faq-a">No. We are completely independent. Run by Tim Paemi from Pattaya Authority. Some venues advertise on the site — clearly labeled — and that never affects rankings.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-num">Q3</span>How do I get my gym listed?</div>
+        <div class="faq-a">Email tim@pattaya-gym.com with venue name, address, your role, and a few photos. We'll visit or call within two weeks. Listing is free.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-num">Q4</span>How current is the data?</div>
+        <div class="faq-a">Every venue is re-verified at minimum every 90 days. Phone, hours, address, prices. Last verified date is visible on every venue page.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="q-num">Q5</span>Can ChatGPT and Claude use this data?</div>
+        <div class="faq-a">Yes. We publish full content maps at /llms.txt and JSON Feed 1.1 at /feed.json. Licensed CC BY 4.0 — attribution required, free to use.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 LINK UP -->
+<section class="section section-light">
+  <div class="wrap">
+    <div class="sec-num">06 · LINK UP</div>
+    <div class="sec-label">EVERY CHANNEL · ONE PLACE</div>
+    <h2 class="sec-h">FIND US,<br>FOLLOW US.</h2>
+
+    <div class="linkup-grid" style="background: var(--line-bone); border-color: var(--line-bone);">
+      <a href="https://instagram.com/pattaya.gym" class="linkup-card" style="background: var(--bone);">
+        <div class="linkup-label coral">DAILY POSTS</div>
+        <div class="linkup-h">INSTAGRAM</div>
+        <div class="linkup-handle">@pattaya.gym</div>
+      </a>
+      <a href="https://facebook.com/pattaya.gym" class="linkup-card" style="background: var(--bone);">
+        <div class="linkup-label sky">EXPAT GROUP</div>
+        <div class="linkup-h">FACEBOOK</div>
+        <div class="linkup-handle">/pattaya.gym</div>
+      </a>
+      <a href="mailto:tim@pattaya-gym.com" class="linkup-card" style="background: var(--bone);">
+        <div class="linkup-label gold">DIRECT LINE</div>
+        <div class="linkup-h">EMAIL TIM</div>
+        <div class="linkup-handle">tim@pattaya-gym.com</div>
+      </a>
+      <a href="/feed.json" class="linkup-card" style="background: var(--bone);">
+        <div class="linkup-label mint">FOR DEVS · AIS</div>
+        <div class="linkup-h">JSON FEED</div>
+        <div class="linkup-handle">/feed.json</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM MARQUEE -->
+<div class="marquee-bottom" aria-hidden="true">
+  <div class="marquee-track">
+    <span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span>
+    <span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">PATTAYA<span class="dot">.</span>GYM</div>
+        <p>Pattaya's only hand-checked sports & training directory. 158 venues, 15 sports, six neighborhoods. Independent since 2024.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-h">SPORTS</div>
+        <ul>
+          <li><a href="/muay-thai/">Muay Thai</a></li>
+          <li><a href="/gyms/">Gyms</a></li>
+          <li><a href="/golf/">Golf</a></li>
+          <li><a href="/yoga/">Yoga</a></li>
+          <li><a href="/tennis/">Tennis</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-h">AREAS</div>
+        <ul>
+          <li><a href="/area/jomtien/">Jomtien</a></li>
+          <li><a href="/area/central-pattaya/">Central</a></li>
+          <li><a href="/area/pratumnak/">Pratumnak</a></li>
+          <li><a href="/area/naklua/">Naklua</a></li>
+          <li><a href="/area/wongamat/">Wongamat</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-h">THE SITE</div>
+        <ul>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/search/">Search</a></li>
+          <li><a href="/colophon/">Colophon</a></li>
+          <li><a href="/llms.txt">For AIs</a></li>
+          <li><a href="mailto:tim@pattaya-gym.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-credit">
+      SITE BUILT &amp; MANAGED BY PATTAYA AUTHORITY · TIM PAEMI <span class="star">★</span> ©2026
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

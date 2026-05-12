@@ -14,7 +14,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '161';
+const ASSET_VERSION = '200';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -1260,7 +1260,7 @@ function buildVenuesApi(allGyms, allCats) {
     categories: allCats.map(c => ({ key: c.key, label: c.label })),
     venues: venues
   };
-  return JSON.stringify(data, null, 2);
+  return JSON.stringify(data);
 }
 
 
@@ -1285,7 +1285,7 @@ function buildJsonFeed(allGyms, allCats) {
     language: 'en',
     authors: [{ name: 'Pattaya Gym Directory', url: SITE + '/' }],
     items
-  }, null, 2);
+  });
 }
 
 function buildCategoriesApi(allGyms, allCats) {
