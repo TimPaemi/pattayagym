@@ -23,8 +23,8 @@ body { margin: 0; }
   --mint:        #5fc9a4;
   --rose:        #f08a8a;
   --sky:         #6db5ff;
-  --muted:       #6b6b6b;
-  --muted-bone:  #807866;
+  --muted:       #8a8a8a;
+  --muted-bone:  #6f6755;
 
   /* legacy aliases — many existing pages reference these */
   --bg:          #0a0a0a;
@@ -37,7 +37,7 @@ body { margin: 0; }
   --text-hi:     #f4f0e8;
   --text-dim:    #b8b3a6;
   --text-mid:    rgba(244, 240, 232, 0.72);
-  --text-muted:  #807866;
+  --text-muted:  #6f6755;
   --text-low:    rgba(150, 150, 156, 0.6);
   --accent:      #d4a72c;
   --copper:      #ff5a4d;
