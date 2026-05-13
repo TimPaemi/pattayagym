@@ -4914,7 +4914,529 @@ body[class*="cat-racquet"] .venue-hero-art { color: var(--sky) !important; }
   .contact-cta-arrow { align-self: flex-end; }
 }
 
-/* ============ MOBILE TIGHTENING ============ */
+/* ================================================================
+   MOBILE — HEAVY OVERRIDE PASS
+   Site is live. Mobile must be flawless. Every block re-tuned.
+   ================================================================ */
+
+@media (max-width: 720px) {
+
+  /* === CORE TYPE SCALE — softer, more breathing room === */
+  body { font-size: 15px; line-height: 1.6; }
+
+  /* === NAV — compact, no overlap === */
+  .nav { padding: 10px 0; }
+  .nav-row, .nav-inner {
+    padding: 0 16px;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  .brand { font-size: 16px; flex-shrink: 0; }
+  .nav-cta {
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: 0.10em;
+    flex-shrink: 0;
+  }
+  .nav-toggle { width: 40px; height: 40px; font-size: 14px; flex-shrink: 0; }
+
+  /* When mobile menu is open, push it BELOW nav cleanly */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background: var(--ink);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    z-index: 49;
+  }
+  .nav-links li { border-bottom: 1px solid var(--line); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a { padding: 16px 20px; font-size: 13px; }
+
+  /* === TOP MARQUEE — shorter on mobile === */
+  .marquee { padding: 10px 0; font-size: 10px; letter-spacing: 0.14em; }
+  .marquee-track span { padding: 0 16px; }
+
+  /* === HERO (homepage) === */
+  .hero { padding: 48px 0 64px; }
+  .hero-content { padding: 0 20px; }
+  .hero h1, .hero-h1 {
+    font-size: clamp(40px, 13vw, 64px);
+    line-height: 0.92;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+  }
+  .hero .lead, .hero-sub {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  .hero-sub .sep { margin: 0 6px; }
+  .hero-quote {
+    font-size: 18px;
+    line-height: 1.4;
+    padding-left: 16px;
+    margin-bottom: 36px;
+    border-left-width: 2px;
+  }
+  .hero-badges { gap: 8px; margin-bottom: 32px; }
+  .badge { font-size: 9px; padding: 6px 10px; letter-spacing: 0.10em; gap: 6px; }
+  .hero-ctas {
+    gap: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 40px;
+  }
+  .hero-ctas .btn { width: 100%; padding: 14px 18px; font-size: 12px; }
+  .scroll-hint { font-size: 10px; }
+
+  /* === SECTIONS — tighter, breathing room === */
+  .section, section.section { padding: 56px 0; }
+  .wrap, .container { padding: 0 20px; }
+  .sec-num { font-size: 10px; margin-bottom: 14px; }
+  .sec-label { font-size: 11px; margin-bottom: 12px; }
+  .sec-h, .section h2, h2.section-h {
+    font-size: clamp(28px, 10vw, 44px);
+    line-height: 0.95;
+    margin: 0 0 20px 0;
+  }
+  .sec-lead { font-size: 15px; line-height: 1.5; margin-bottom: 32px; }
+
+  /* === STATS — single row of 2x2 with breathing === */
+  .stats { padding: 40px 0; }
+  .stats-grid { gap: 28px 16px; padding: 0 20px; }
+  .stat { padding: 0; }
+  .stat-num { font-size: clamp(40px, 14vw, 64px); margin-bottom: 4px; }
+  .stat-label { font-size: 9px; letter-spacing: 0.12em; }
+
+  /* === FEATURED-IN ticker === */
+  .featured-in { padding: 28px 0; }
+  .featured-label { font-size: 10px; padding: 0 20px; margin-bottom: 16px; }
+  .featured-track { font-size: 18px; }
+  .featured-track span { padding: 0 16px; }
+
+  /* === CATEGORY GRID — 1col === */
+  .cat-grid { grid-template-columns: 1fr; }
+  .cat-card { min-height: 0; padding: 28px 22px; }
+  .cat-tag { font-size: 10px; margin-bottom: 16px; }
+  .cat-h { font-size: 26px; margin-bottom: 12px; }
+  .cat-meta .count { font-size: 11px; }
+
+  /* === VENUE LIST (numbered horizontal) === */
+  .venue-list { border-top: none; }
+  .venue-row {
+    grid-template-columns: 36px 1fr 24px;
+    gap: 14px;
+    padding: 20px 0;
+    align-items: center;
+  }
+  .venue-row .v-num { font-size: 11px; }
+  .venue-row .v-name { font-size: 18px; letter-spacing: -0.01em; }
+  .venue-row .v-cat { font-size: 9px; margin-top: 4px; letter-spacing: 0.10em; }
+  .venue-row .v-area { display: none; }
+  .venue-row .v-arrow { font-size: 18px; }
+
+  /* === AREA + RELATED + NEARBY GRIDS === */
+  .area-grid { grid-template-columns: 1fr; gap: 16px; }
+  .area-card { padding: 24px 22px; }
+  .area-h { font-size: 26px; }
+  .area-body { font-size: 14px; }
+  .related-grid { grid-template-columns: 1fr; }
+  .related-card { padding: 24px 22px; min-height: 0; }
+
+  /* === HOW IT WORKS === */
+  .how-grid, .steps-grid { gap: 20px; margin-top: 32px; }
+  .how-step, .step-card { padding-top: 18px; }
+  .how-h, .step-h { font-size: 22px; }
+  .how-body, .step-body { font-size: 14px; }
+
+  /* === FAQ === */
+  .faq-list { margin-top: 16px; }
+  .faq-item, details.faq { padding: 18px 0; }
+  .faq-q, details.faq summary { font-size: 16px; gap: 10px; }
+  .faq-q .q-num { font-size: 11px; }
+  .faq-a, details.faq > *:not(summary) {
+    font-size: 14px;
+    padding-left: 30px;
+    line-height: 1.55;
+  }
+
+  /* === LINKUP / CONTACT === */
+  .linkup-grid { grid-template-columns: 1fr; }
+  .linkup-card { padding: 24px 22px; }
+  .linkup-h { font-size: 18px; }
+  .contact-cta {
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px 22px;
+    align-items: flex-start;
+  }
+  .contact-cta-addr { font-size: 18px; }
+
+  /* === VOICES === */
+  .voices-grid { grid-template-columns: 1fr; }
+  .voice-card { padding: 28px 22px; gap: 18px; }
+  .voice-card blockquote { font-size: 17px; line-height: 1.45; }
+  .voice-card blockquote::before { font-size: 44px; line-height: 0.6; margin-bottom: 6px; }
+
+  /* === LATEST === */
+  .latest-grid { grid-template-columns: 1fr; }
+  .latest-card .cv-img { aspect-ratio: 16 / 9; }
+  .latest-meta { padding: 16px 20px 6px; font-size: 10px; }
+  .latest-card h3 { font-size: 19px; padding: 0 20px 10px; }
+  .latest-card p { font-size: 14px; padding: 0 20px 22px; }
+
+  /* === BOTTOM MARQUEE === */
+  .marquee-bottom { padding: 14px 0; }
+  .marquee-bottom .marquee-track { font-size: 17px; }
+  .marquee-bottom .marquee-track span { padding: 0 16px; }
+
+  /* === FOOTER === */
+  .site-footer, footer.site-footer { padding: 56px 0 32px; }
+  .footer-grid, .footer-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 20px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-brand .brand { font-size: 22px; }
+  .footer-brand p { font-size: 14px; }
+  .footer-col-h, .footer h5 { font-size: 10px; margin-bottom: 14px; }
+  .footer-col a, .footer a { font-size: 13px; }
+  .footer-col li { margin-bottom: 8px; }
+  .footer-credit, .sf-builtby { font-size: 9px; padding: 24px 20px 0; }
+  .site-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 20px;
+    padding: 0 20px;
+  }
+  .sf-brand-col { grid-column: 1 / -1; }
+  .sf-tag { font-size: 14px; }
+  .sf-heading { font-size: 10px; }
+  .sf-col a { font-size: 13px; padding: 0; min-height: 0; }
+  .site-footer-base { padding: 22px 20px 0; font-size: 10px; }
+
+  /* === BREADCRUMB === */
+  .breadcrumb, .breadcrumbs, .venue-breadcrumb {
+    padding: 14px 20px;
+    font-size: 9px;
+    letter-spacing: 0.10em;
+  }
+  .breadcrumb .sep, .venue-breadcrumb .bc-sep { margin: 0 6px; }
+
+  /* === VENUE HERO IMAGE === */
+  .venue-hero-img {
+    margin: 0 -20px 24px;
+    width: calc(100% + 40px);
+  }
+  .venue-hero-img::before {
+    top: 12px;
+    left: 16px;
+    font-size: 9px;
+    padding: 5px 10px;
+  }
+
+  /* === VENUE HERO === */
+  .venue-page > .venue-hero {
+    padding: 32px 20px 40px;
+  }
+  .venue-page .venue-hero .venue-cat-pill {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    margin-bottom: 20px;
+  }
+  .venue-page .venue-hero .venue-h1,
+  .venue-h1 {
+    font-size: clamp(32px, 11vw, 56px) !important;
+    line-height: 0.94 !important;
+    margin: 0 0 18px 0 !important;
+  }
+  .venue-page .venue-hero .venue-lede,
+  .venue-lede {
+    font-size: 15px !important;
+    line-height: 1.5;
+    margin-bottom: 24px !important;
+  }
+  .venue-meta-line {
+    padding: 12px 0;
+    margin-bottom: 20px;
+    font-size: 10px !important;
+    gap: 6px 12px;
+    letter-spacing: 0.10em;
+  }
+  .venue-hero-meta { gap: 6px; margin-bottom: 20px; }
+  .meta-chip { font-size: 10px; padding: 6px 10px; letter-spacing: 0.10em; }
+  .open-badge { font-size: 9px; padding: 4px 8px; }
+  .reading-meta { font-size: 10px; }
+
+  /* === VENUE ACTIONS — stacked, full-width primary === */
+  .venue-actions {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .venue-actions .btn,
+  .venue-actions a.btn,
+  .venue-actions button.btn {
+    padding: 12px 14px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.10em !important;
+    flex: 1 1 calc(50% - 4px) !important;
+    min-width: 0;
+    min-height: 42px;
+    gap: 6px;
+  }
+  .venue-actions .btn-primary {
+    flex: 1 1 100% !important;
+  }
+  .favorite-btn, .compare-btn {
+    font-size: 10px !important;
+    padding: 10px 12px !important;
+    min-height: 42px !important;
+  }
+
+  /* === SHARE BAR === */
+  .share-bar {
+    padding: 14px 0;
+    margin-top: 20px;
+    gap: 6px;
+  }
+  .share-bar::before {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+    font-size: 9px;
+  }
+  .share-label { font-size: 9px; margin-right: 4px; }
+  .share-btn {
+    font-size: 9px !important;
+    padding: 7px 10px !important;
+    letter-spacing: 0.10em;
+  }
+
+  /* === TLDR === */
+  .tldr, section.tldr {
+    padding: 24px 22px;
+    margin: 28px 0;
+    border-left-width: 3px;
+  }
+  .tldr::before { font-size: 10px; margin-bottom: 10px; }
+  .tldr-title, .tldr h2 {
+    font-size: 20px !important;
+    margin-bottom: 14px !important;
+  }
+  .tldr-list li, .tldr ol li {
+    padding: 12px 0 12px 44px !important;
+    font-size: 15px;
+  }
+  .tldr-list li::before, .tldr ol li::before {
+    top: 12px;
+    font-size: 11px;
+  }
+  .tldr-card {
+    padding: 24px 22px;
+    margin: 28px 20px;
+    border-left-width: 3px;
+  }
+  .tldr-card p { font-size: 16px; line-height: 1.5; }
+  .tldr-card::before { width: 40px; height: 40px; }
+
+  /* === CONTENT SHELL === */
+  .venue-content-shell {
+    padding: 32px 20px 48px;
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+  }
+  .venue-body { font-size: 16px; line-height: 1.7; }
+  .venue-body h2 {
+    font-size: 22px;
+    margin: 40px 0 14px;
+    padding-top: 24px;
+  }
+  .venue-body h3 { font-size: 17px; margin: 24px 0 10px; }
+  .venue-body p { font-size: 15px; margin-bottom: 16px; }
+  .venue-body p:first-of-type::first-letter,
+  .guide-body p:first-of-type::first-letter,
+  .venue-content-shell .venue-body > p:first-child::first-letter {
+    font-size: 2.6em;
+    margin: 4px 10px 0 0;
+  }
+  .venue-body ul li, .guide-body ul li,
+  .venue-body ol li, .guide-body ol li {
+    font-size: 15px; padding-left: 24px;
+  }
+  .venue-body blockquote, .guide-body blockquote {
+    font-size: 18px;
+    padding: 22px 0;
+    margin: 28px 0;
+  }
+  .venue-body table, .guide-body table { font-size: 13px; }
+  .venue-body th, .venue-body td,
+  .guide-body th, .guide-body td { padding: 12px 14px; }
+
+  /* === JUMP-TO TOC === */
+  .jump-to {
+    position: static;
+    padding: 16px 0;
+    margin-bottom: 24px;
+  }
+  .jump-pill { font-size: 10px; padding: 6px 0; }
+
+  /* === VENUE CTA FOOT === */
+  .venue-cta-foot {
+    padding: 56px 20px 56px;
+  }
+  .venue-cta-foot::before { font-size: 10px; margin-bottom: 16px; }
+  .venue-cta-foot h3 { font-size: 28px; margin-bottom: 12px; }
+  .venue-cta-foot p { font-size: 15px; margin-bottom: 22px; }
+  .cta-row .btn { padding: 12px 16px; font-size: 10px; }
+
+  /* === NEARBY, RELATED, ABOUT === */
+  .nearby-venues, .related-venues, .about {
+    padding: 56px 20px;
+  }
+  .nearby-venues h2, .related-venues h2, .about h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  .nearby-grid {
+    grid-template-columns: 1fr;
+  }
+  .nearby-card { padding: 18px 20px; }
+  .nearby-card h3 { font-size: 17px; }
+
+  /* === CATEGORY/AREA/GUIDE HERO === */
+  .category-hero, .area-hero, .guide-hero {
+    padding: 48px 20px 40px;
+    margin: 0 auto;
+  }
+  .category-hero h1, .area-hero h1, .guide-hero h1 {
+    font-size: clamp(36px, 12vw, 56px);
+    line-height: 0.95;
+    margin-bottom: 16px;
+  }
+  .category-hero p, .area-hero p, .guide-hero p { font-size: 15px; }
+
+  .cat-venue-grid, .gym-list, .area-list {
+    grid-template-columns: 1fr !important;
+    margin: 0 20px 56px !important;
+    max-width: none;
+  }
+  .cat-venue-card {
+    padding: 0 0 24px 0 !important;
+    min-height: 0;
+  }
+  .cat-venue-card .cv-img {
+    margin: 0 0 18px 0 !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 9;
+  }
+  .cat-venue-card .cv-head,
+  .cat-venue-card .cv-meta,
+  .cat-venue-card p,
+  .cat-venue-card .cv-tags,
+  .cat-venue-card .cv-cta {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  .cat-venue-card .cv-head { padding-right: 64px !important; }
+  .cat-venue-card .cv-head h3 { font-size: 19px !important; }
+  .cat-venue-card .favorite-btn,
+  .cv-head .favorite-btn {
+    top: 12px !important;
+    right: 18px !important;
+    width: 32px;
+    height: 32px;
+  }
+  .cv-meta { font-size: 10px !important; }
+  .cv-pill { font-size: 9px !important; padding: 3px 8px !important; }
+  .cv-cta { font-size: 10px !important; }
+
+  /* === STICKY MOBILE ACTIONS === */
+  .sticky-actions {
+    padding: 6px 0 calc(6px + env(safe-area-inset-bottom));
+  }
+  .sa-btn { font-size: 9px; padding: 8px 4px; gap: 3px; }
+  .sa-ico { font-size: 15px; }
+
+  /* === SCROLL PROGRESS / BACK TO TOP === */
+  .back-to-top {
+    right: 12px;
+    bottom: 78px;
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  /* === COMPARE / TOOL PAGES === */
+  .compare-page .hero h1 { font-size: 38px; }
+  .compare-page .lede { font-size: 15px; }
+  .planner-card, .form-card {
+    padding: 28px 22px;
+    margin: 24px 20px;
+  }
+  .planner-card h2, .form-card h2 { font-size: 22px; }
+  .tool-grid { gap: 8px; grid-template-columns: 1fr; }
+  .tool-grid label { padding: 14px 16px; font-size: 11px; }
+  .tool-results { padding: 0 20px; margin: 40px auto; }
+  .tool-result-card { padding: 20px 22px; }
+  .tool-result-card h3 { font-size: 18px; }
+
+  /* === MAP PAGE === */
+  .map-layout {
+    padding: 0 20px 40px;
+    min-height: 0;
+  }
+  .map-panel { max-height: 320px; }
+  .map-cluster, #map, .leaflet-container { min-height: 380px; }
+  .map-legend { bottom: 16px; right: 16px; padding: 12px 14px; }
+
+  /* === SEARCH === */
+  .search-page-wrap { padding: 56px 20px; }
+  .search-page-wrap h1 { font-size: 36px; }
+  .search-page-wrap input[type="search"],
+  .search-page-wrap #search { padding: 18px 22px; font-size: 16px; }
+
+  /* === BODY PADDING for sticky actions === */
+  body { padding-bottom: 70px; }
+
+  /* === ANIMATIONS — reduce on mobile to avoid jank === */
+  .hero h1, .hero-h1, .venue-h1, .venue-hero h1 { animation-duration: 0.4s; }
+}
+
+@media (max-width: 480px) {
+  /* === ULTRA-SMALL phones (iPhone SE, etc.) === */
+  .hero h1, .hero-h1 { font-size: 36px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px 12px; }
+  .stat-num { font-size: 44px; }
+  .venue-page .venue-hero .venue-h1, .venue-h1 {
+    font-size: 28px !important;
+  }
+  .sec-h, .section h2 { font-size: 26px; }
+  .hero-quote { font-size: 16px; }
+  .venue-cta-foot h3 { font-size: 24px; }
+  .nav-cta { font-size: 9px; padding: 6px 10px; letter-spacing: 0.08em; }
+  .brand { font-size: 14px; }
+}
+
+@media (max-width: 360px) {
+  /* === Smallest devices === */
+  .hero h1, .hero-h1, .venue-h1 { font-size: 30px !important; }
+  .nav-cta { display: none; }
+  .nav-toggle { width: 36px; height: 36px; }
+  .brand { font-size: 13px; }
+}
+
+/* ============ DESKTOP — sticky nav offset for anchor jumps ============ */
+html { scroll-padding-top: 80px; }
+@media (max-width: 720px) { html { scroll-padding-top: 60px; } }
+
+/* ============ LEGACY MOBILE TIGHTENING (kept) ============ */
 @media (max-width: 720px) {
   .venue-hero { padding: 32px 20px 48px; }
   .venue-h1 { font-size: clamp(32px, 9vw, 56px); }
