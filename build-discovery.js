@@ -12,7 +12,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '211';
+const ASSET_VERSION = '214';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -109,7 +109,7 @@ function header() {
   })();
   </script>
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
 <header class="hero" style="min-height: auto;" role="banner">
   <nav class="nav" role="navigation" aria-label="Primary navigation">
     <a href="/" class="brand">
@@ -133,7 +133,7 @@ function newsletterFooterHtml() { return ""; }
 
 function footer() {
   return `
-  <div class="marquee-bottom" aria-hidden="true"><div class="marquee-track"><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span></div></div>
+  <div class="marquee-bottom" aria-hidden="true"><div class="marquee-track"><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span></div></div>
   <footer class="site-footer" role="contentinfo">
   <div class="site-footer-inner">
     <div class="sf-col sf-brand-col">
@@ -221,8 +221,8 @@ function pageFeedbackHtml(urlPath, title) {
         <p>Send a one-click note so we know which guides need more research.</p>
       </div>
       <div class="feedback-actions">
-        <a class="btn" href="mailto:hello@pattaya-gym.com?subject=${goodSubject}&body=${body}">Helpful</a>
-        <a class="btn" href="mailto:hello@pattaya-gym.com?subject=${badSubject}&body=${body}">Needs work</a>
+        <a class="btn" href="mailto:info@pattaya-gym.com?subject=${goodSubject}&body=${body}">Helpful</a>
+        <a class="btn" href="mailto:info@pattaya-gym.com?subject=${badSubject}&body=${body}">Needs work</a>
       </div>
     </div>
   </section>`;
@@ -1510,7 +1510,7 @@ ${header()}
     </table>
 
     <h2>Corrections and transparency</h2>
-    <p>Venue details in Pattaya change quickly. If you spot outdated hours, a closed business, a wrong phone number or a better source, send the correction to <a href="mailto:hello@pattaya-gym.com?subject=Directory%20correction">hello@pattaya-gym.com</a>. We prioritise corrections that include an official source URL or a current photo of posted hours.</p>
+    <p>Venue details in Pattaya change quickly. If you spot outdated hours, a closed business, a wrong phone number or a better source, send the correction to <a href="mailto:info@pattaya-gym.com?subject=Directory%20correction">info@pattaya-gym.com</a>. We prioritise corrections that include an official source URL or a current photo of posted hours.</p>
   </article>
 </main>
 ${footer()}
@@ -1824,7 +1824,7 @@ ${header()}
     </ol>
   </section>
 
-  <form class="form-card" action="mailto:hello@pattaya-gym.com" method="post" enctype="text/plain">
+  <form class="form-card" action="mailto:info@pattaya-gym.com" method="post" enctype="text/plain">
     <div class="form-row">
       <label for="name">Venue name *</label>
       <input id="name" name="name" type="text" required aria-required="true" placeholder="e.g. Tiger Muay Thai Pattaya" />
@@ -1882,7 +1882,7 @@ ${header()}
     </div>
     <button class="form-submit" type="submit">Send submission →</button>
   </form>
-  <p style="text-align: center; color: var(--text-muted); font-size: 13px; max-width: 540px; margin: 24px auto;">Form opens your email client. Or email <a href="mailto:hello@pattaya-gym.com" style="color: var(--accent);">hello@pattaya-gym.com</a> directly with the same details.</p>
+  <p style="text-align: center; color: var(--text-muted); font-size: 13px; max-width: 540px; margin: 24px auto;">Form opens your email client. Or email <a href="mailto:info@pattaya-gym.com" style="color: var(--accent);">info@pattaya-gym.com</a> directly with the same details.</p>
 </main>
 ${footer()}
 <script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
@@ -2151,8 +2151,8 @@ ${header()}
   <section class="contact-panel" aria-labelledby="contact-title">
     <p class="newsletter-kicker">Contact the editor</p>
     <h1 id="contact-title">Send a correction, venue lead, or partnership note.</h1>
-    <p>Email is the fastest route: <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>. Venue owners can also use the structured <a href="/add-your-gym/">add-your-gym form</a>.</p>
-    <form class="newsletter-form" action="mailto:hello@pattaya-gym.com" method="post" enctype="text/plain">
+    <p>Email is the fastest route: <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>. Venue owners can also use the structured <a href="/add-your-gym/">add-your-gym form</a>.</p>
+    <form class="newsletter-form" action="mailto:info@pattaya-gym.com" method="post" enctype="text/plain">
       <div class="newsletter-field">
         <label for="contact-name">Name *</label>
         <input id="contact-name" name="name" type="text" autocomplete="name" required aria-required="true" />
@@ -2228,7 +2228,7 @@ ${header()}
     <h2>Corrections policy</h2>
     <p>Venue details change quickly in Pattaya. Send corrections with the source URL, venue name, and date checked; accepted updates are reflected on the relevant page with a visible last-updated or last-verified timestamp.</p>
     <h2>Media contact</h2>
-    <p>Email <a href="mailto:hello@pattaya-gym.com?subject=Press%20request%20for%20Pattaya%20Gym">hello@pattaya-gym.com</a> for interview requests, corrections, or data questions.</p>
+    <p>Email <a href="mailto:info@pattaya-gym.com?subject=Press%20request%20for%20Pattaya%20Gym">info@pattaya-gym.com</a> for interview requests, corrections, or data questions.</p>
   </section>
 </main>
 ${footer()}

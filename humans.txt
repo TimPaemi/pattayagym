@@ -4,7 +4,7 @@
 /* TEAM */
   Editor / Founder: Tim Paemi
   Site:             https://timpaemi.com/
-  Contact:          hello@pattaya-gym.com
+  Contact:          info@pattaya-gym.com
   Location:         Pattaya, Chonburi, Thailand
   Coordinates:      12.93°N, 100.88°E
 

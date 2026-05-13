@@ -17,7 +17,7 @@ const OUT_DIR = path.join(ROOT, 'gyms');
 const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '211';
+const ASSET_VERSION = '214';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -589,8 +589,8 @@ function pageFeedbackHtml(urlPath, title) {
         <p>Send a one-click note so we know which pages need more research.</p>
       </div>
       <div class="feedback-actions">
-        <a class="btn" href="mailto:hello@pattaya-gym.com?subject=${goodSubject}&body=${body}">Helpful</a>
-        <a class="btn" href="mailto:hello@pattaya-gym.com?subject=${badSubject}&body=${body}">Needs work</a>
+        <a class="btn" href="mailto:info@pattaya-gym.com?subject=${goodSubject}&body=${body}">Helpful</a>
+        <a class="btn" href="mailto:info@pattaya-gym.com?subject=${badSubject}&body=${body}">Needs work</a>
       </div>
     </div>
   </section>`;
@@ -1313,7 +1313,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
   <header class="hero" style="min-height: auto;" role="banner">
     <nav class="nav" role="navigation" aria-label="Primary navigation">
       <a href="/" class="brand">
@@ -1403,7 +1403,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
       <p>Help other Pattaya travellers find the right gym — share this page or tell us what we got wrong.</p>
       <div class="cta-row">
         <button class="btn btn-primary" onclick="PG.share('whatsapp')">💬 Share on WhatsApp</button>
-        <a class="btn btn-secondary" href="mailto:hello@pattaya-gym.com?subject=${encodeURIComponent('Edit suggestion: ' + fm.name)}">✏️ Suggest an edit</a>
+        <a class="btn btn-secondary" href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Edit suggestion: ' + fm.name)}">✏️ Suggest an edit</a>
         ${fm.mapsUrl ? `<a class="btn btn-secondary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">⭐ Leave a Google review</a>` : ''}
       </div>
     </div>
@@ -1439,7 +1439,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
     ${pageFeedbackHtml(`/gyms/${slug}/`, fm.name || slug)}
 
     <footer class="venue-footer">
-      <p>Last verified: <strong>${escHtml(fm.verified || 'N/A')}</strong>. Listing researched from public sources. Errors? Email <a href="mailto:hello@pattaya-gym.com">hello@pattaya-gym.com</a>.</p>
+      <p>Last verified: <strong>${escHtml(fm.verified || 'N/A')}</strong>. Listing researched from public sources. Errors? Email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
       ${sources.length ? `<details>
         <summary>Research sources (${sources.length})</summary>
         <ul>
@@ -1450,7 +1450,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
   </main>
 
   
-  <div class="marquee-bottom" aria-hidden="true"><div class="marquee-track"><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span></div></div>
+  <div class="marquee-bottom" aria-hidden="true"><div class="marquee-track"><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span></div></div>
   <footer class="site-footer" role="contentinfo">
     <div class="site-footer-inner">
       <div class="sf-col sf-brand-col">
@@ -1697,7 +1697,7 @@ function buildStubBody(g, cats) {
   lines.push('');
   lines.push('This is a basic listing for **' + g.name + '**. A full deep-dive page is in progress.');
   lines.push('');
-  lines.push('Email **hello@pattaya-gym.com** with corrections, photos, or details.');
+  lines.push('Email **info@pattaya-gym.com** with corrections, photos, or details.');
   return lines.join('\n');
 }
 
