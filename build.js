@@ -17,7 +17,7 @@ const OUT_DIR = path.join(ROOT, 'gyms');
 const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '214';
+const ASSET_VERSION = '215';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -1150,7 +1150,7 @@ function autoLinkVenues(html, currentSlug, allGyms) {
   // We split HTML into safe and unsafe regions.
   // Unsafe: anything inside <a>...</a> or any heading tag <h1>-<h6>...</h6>
   // We process safe regions only.
-  const skipRe = /(<a\b[^>]*>[\s\S]*?<\/a>)|(<h[1-6]\b[^>]*>[\s\S]*?<\/h[1-6]>)/gi;
+  const skipRe = /(<a\b[^>]*>[\s\S]*?<\/a>)|(<h[1-6]\b[^>]*>[\s\S]*?<\/h[1-6]>)|(<script\b[\s\S]*?<\/script>)|(<style\b[\s\S]*?<\/style>)|(<[^>]+>)/gi;
   const parts = [];
   let last = 0;
   let m;

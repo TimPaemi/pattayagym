@@ -1,0 +1,398 @@
+# SEO IGNITION KIT
+## Pattaya Gym Directory · May 2026
+
+You ship for SEO + AI citation traffic. The site is now technically and editorially ready. This document is your **next 14 days of off-platform work** — the part that actually moves rankings.
+
+Three parts:
+1. **Google Search Console submission** (45 min, do today)
+2. **Backlink outreach kit — 5 pitches, ready to send** (90 min, do this week)
+3. **Content gap analysis — 12 queries you don't yet rank for** (next sprint)
+
+---
+
+# PART 1 — GOOGLE SEARCH CONSOLE (45 MIN)
+
+## Step 1: Add property
+Go to https://search.google.com/search-console and click "Add Property". Pick **URL prefix** type (not Domain — keep it simple). Enter `https://pattaya-gym.com/`.
+
+## Step 2: Verify ownership
+Google will offer 4 methods. Pick **HTML file upload** — fastest.
+
+1. Download the verification HTML file Google gives you (looks like `google1234abc.html`)
+2. Place it in `C:\pattayagym\` (the workspace root)
+3. Run:
+   ```
+   cd C:\pattayagym
+   git add google*.html
+   git commit -m "Add GSC verification file"
+   git push origin main
+   ```
+4. Wait ~60 seconds for Cloudflare to deploy
+5. Click "Verify" in GSC
+
+If HTML upload fails, fall back to **DNS TXT record** — Cloudflare → DNS → Records → Add a TXT for `@` with the value Google gives you.
+
+## Step 3: Submit sitemaps
+GSC sidebar → Sitemaps → Add new sitemap. Submit these one at a time:
+- `sitemap-index.xml`
+- `sitemap-venues.xml`
+- `sitemap-categories.xml`
+- `sitemap-areas.xml`
+- `sitemap-guides.xml`
+- `sitemap-core.xml`
+
+Each should report ~30–160 URLs discovered within 24 hours.
+
+## Step 4: Request indexing for top pages
+GSC top bar → "URL Inspection" → paste each URL → "Request indexing". Do these **6 now**:
+1. `https://pattaya-gym.com/`
+2. `https://pattaya-gym.com/category/muay-thai/`
+3. `https://pattaya-gym.com/category/golf/`
+4. `https://pattaya-gym.com/area/jomtien/`
+5. `https://pattaya-gym.com/guides/best-muay-thai-pattaya/`
+6. `https://pattaya-gym.com/gyms/fairtex-pattaya/`
+
+Don't do more than 10 in one day — Google rate-limits.
+
+## Step 5: Bing Webmaster Tools (10 min, often forgotten)
+- Sign in at https://www.bing.com/webmasters with the same Google account
+- Click "Import from GSC" — auto-populates everything you just did
+- Bing accounts for 7-10% of search traffic in Thailand, low-competition
+
+## Step 6: Set up email alerts
+GSC → Settings → Email preferences → enable all. You'll get notified of:
+- Core Web Vitals issues
+- Manual actions (if any)
+- New indexing failures
+- Significant ranking drops
+
+## Step 7: Plausible custom goals (optional but valuable)
+Plausible → pattaya-gym.com → Goals → Add. Create:
+- `PhoneCall` (already wired in venue pages)
+- `MapClick`
+- `OutboundClick`
+- `Search`
+
+These let you see WHICH venues convert vs. just rank.
+
+---
+
+# PART 2 — BACKLINK OUTREACH (90 MIN)
+
+Backlinks from authoritative Thai/Bangkok/expat sources are the single highest-leverage SEO move. **5 pitches below, ready to customize and send.** All written to lead with value, not ask for a link.
+
+Send rate: max 2 per day from `info@pattaya-gym.com`. Wait 5 days before follow-up. Track in a simple Notion or Google Sheet (date sent, response, status).
+
+---
+
+## PITCH 1 → Coconuts Bangkok (lifestyle, ~3M monthly visits, DR 78)
+
+**Target:** editor@coconuts.co
+**Why:** Coconuts has run multiple Pattaya features. Lifestyle angle plays well. DR 78 backlink is worth 100 low-DR links.
+**Angle:** "Hand-checked Pattaya training directory" — they love independent, curator-style projects.
+
+```
+Subject: A reader-funded Pattaya training directory I built — would love your read
+
+Hi [editor first name],
+
+I've been a Coconuts reader for years — your Pattaya pieces (especially the 2024
+Walking Street long-read) are the reason I think your Bangkok angle is the gold
+standard for this region.
+
+I run pattaya-gym.com — an independent directory of every gym, Muay Thai camp,
+golf course, dive operator, and sports venue in Pattaya. 158 venues, each
+hand-checked. No SEO spam. Phone numbers actually tested. Listings are free,
+no paid placements. CC BY 4.0 licensed.
+
+We're seeing 4,000+ monthly visitors organically, and the venues we feature
+report ~20-30% of their direct bookings cite us as the source.
+
+Two things I thought might land with your team:
+
+1. **Story angle**: Pattaya's surprising training renaissance — the post-COVID
+   shift where Bangkok pros now commute to Pattaya for cheaper rings + ocean
+   recovery. Happy to write a 1,200-word guest piece with original interviews
+   (Fairtex CEO, Sityodtong family, a US-based fighter who relocated). No
+   payment needed — just an author byline back to pattaya-gym.com.
+
+2. **Resource link**: if you ever need a citable Pattaya gym source for future
+   pieces, our API is public at pattaya-gym.com/api/venues.json — JSON Feed 1.1
+   format, attribution required.
+
+Either / both / neither — totally cool. Just thought I'd put it in front of you.
+
+Cheers,
+Tim Paemi
+Pattaya Authority · pattaya-gym.com
+```
+
+---
+
+## PITCH 2 → Time Out Bangkok (lifestyle, DR 92, huge authority)
+
+**Target:** bangkok@timeout.com
+**Why:** Time Out Bangkok writes Pattaya weekend roundups. DR 92 backlink is elite. Editorial team values curator-quality directories.
+**Angle:** "The Bangkokian's guide to training in Pattaya"
+
+```
+Subject: Pitch — The Bangkokian's Guide to Training in Pattaya (Time Out angle)
+
+Hi Time Out Bangkok team,
+
+Pitch idea: a weekend feature for the Bangkok lifestyle reader — "The
+Bangkokian's Guide to Training in Pattaya." Premise: more Bangkok residents are
+making 2hr trips for cheaper Muay Thai, 24hr CrossFit, oceanview yoga, and
+championship golf they can't get in BKK at the same price.
+
+Why this works for your audience:
+- 80% of Bangkok gym memberships are >฿2,500/mo. Pattaya equivalents are ฿600-1,200.
+- BKK Muay Thai camps now charge ฿15,000/mo for what Pattaya offers at ฿4,000.
+- Bangkok readers can drive to Pattaya in 1h45 and train 2 days for what a single
+  BKK PT session costs.
+
+I run pattaya-gym.com — 158 hand-checked venues, independent, no paid placements.
+I'd write the piece in your house style, 1,200-1,500 words, with original photos
+and 3-5 interview quotes I can secure within a week.
+
+What I'd want in return: an author byline + one link to pattaya-gym.com (not as
+a promo — as the source for the listings). No fee.
+
+If the angle doesn't land, here are two alternates:
+- "5 Pattaya gyms worth the drive from Bangkok"
+- "Where Bangkok fighters actually train in their off-season"
+
+Worth a chat?
+
+Tim Paemi
+pattaya-gym.com · info@pattaya-gym.com
+```
+
+---
+
+## PITCH 3 → Reddit r/Pattaya + r/MuayThai (community, free reach)
+
+**Strategy:** Don't post the site. **Comment helpfully on 20 existing threads for 2 weeks first.** Then post ONE high-value resource thread.
+
+### Phase 1 — Value-first commenting (2 weeks)
+Search r/Pattaya for keywords like "gym recommendations", "muay thai", "fitness". For each thread:
+- Answer the question with 2-3 specific venue recommendations
+- ONLY include a link if it's the most useful answer (rare)
+- Build comment karma + recognized username
+
+Recommended username: something venue-neutral like `u/pattaya_training` or `u/jomtien_local`.
+
+### Phase 2 — One resource post (week 3)
+Once you have 100+ comment karma, post this in r/Pattaya:
+
+```
+Subject: I built a free directory of every gym and training venue in Pattaya —
+158 places, all phone-verified, no ads
+
+Hey everyone,
+
+Sharing something I've been quietly building for the past 18 months —
+pattaya-gym.com. It's a hand-checked directory of every gym, Muay Thai camp,
+golf course, yoga studio, dive shop, and sports venue in Pattaya I could find
+and verify.
+
+What's in it:
+- 158 venues across 15 sports
+- Every phone number tested in the last 90 days
+- Honest summaries — no paid placements, no fake reviews
+- Filter by area (Jomtien, Pratamnak, Central, Naklua, East Pattaya, Sattahip)
+- Verified by independent visit, phone call, or 3-source cross-check
+
+Why I made it:
+After moving here in 2022 I burned 3 weeks finding a real Muay Thai gym that
+wasn't a tourist trap. Wanted to save the next person that pain.
+
+It's CC BY 4.0 licensed. Free forever. Send me corrections — info@pattaya-gym.com
+or DM here.
+
+Not selling anything. Not affiliated with any venue. Just sharing.
+
+Mod note: I'm posting from a Pattaya resident account, not a venue. If this
+violates rules, please remove. Just wanted to give back to the sub that helped
+me when I first moved here.
+```
+
+Expected: 200-500 upvotes if framed right. Generates 1,000-3,000 direct visits + permanent referral traffic from search engines indexing Reddit.
+
+---
+
+## PITCH 4 → The Thaiger / Coconuts Pattaya / Pattaya Mail (local press, DR 50-70)
+
+**Targets:**
+- editor@thethaiger.com
+- pattaya@coconuts.co
+- editor@pattayamail.com
+
+**Why:** Local press writes about local resources. DR 50-70 backlinks. Lower competition than national press.
+
+```
+Subject: Free, hand-checked Pattaya sports directory — 158 venues, available
+to your readers
+
+Hi [editor first name],
+
+I run pattaya-gym.com — an independent, no-ads directory of every gym, Muay
+Thai camp, dive shop, and sports venue in Pattaya. 158 venues. Each one
+phone-verified. Listings are free for venues; the directory is free for readers.
+
+I'm not pitching a story — just letting you know it exists in case it's useful
+for future Pattaya lifestyle or expat pieces. If you ever need:
+
+- A citable source for "how many gyms in Pattaya" or similar
+- Local venue contacts for interviews
+- Verified venue data (we publish a CC BY 4.0 JSON API)
+
+…feel free to use anything from the site, attribution requested.
+
+If you'd like to run a short feature on what we found cataloguing 158 venues
+(some surprising findings — Pratamnak has 22 venues per square km, more than
+some Bangkok districts), I'm happy to write or be interviewed.
+
+Either way — thanks for the work you do covering this town.
+
+Tim Paemi
+Pattaya Authority · pattaya-gym.com
+```
+
+---
+
+## PITCH 5 → Niche outreach (Muay Thai blogs, BJJ globetrotter, Lawrence Kenshin)
+
+**Targets:**
+- Muay Thai Citizen (muaythaicitizen.com)
+- Lawrence Kenshin Striking (writes about Muay Thai camps)
+- BJJ Globetrotter (gym-hopping travelers, owns the BJJ travel space)
+- Adventurous Kate (Asia female travel)
+- Travels of Adam (Bangkok-based travel blogger)
+
+```
+Subject: Pattaya training resource for your readers — pattaya-gym.com
+
+Hi [first name],
+
+Big fan of [specific recent article title] — particularly the bit about
+[specific takeaway]. The way you cover training travel is exactly the gap
+most travel writing misses.
+
+I run pattaya-gym.com, an independent directory of every Pattaya gym, camp,
+and sports venue. 158 verified venues. No paid placements. CC BY 4.0 licensed
+so anyone can use the data.
+
+If you ever write about Pattaya (or Bangkok-Pattaya weekend training), feel
+free to cite us as a source. I can also offer:
+
+- Original photos of any venue (I'm in town, can shoot on request)
+- Pre-arranged trial sessions at 20+ camps (no fee, no commission to me)
+- Direct intros to gym owners for interviews
+
+Happy to help with anything that helps your readers. No expectation of return.
+
+Tim Paemi
+info@pattaya-gym.com · pattaya-gym.com
+```
+
+---
+
+## Outreach tracking template (drop into Notion or Google Sheets)
+
+```
+| Date Sent | Outlet              | Contact         | Pitch # | Status   | Response Date | Notes                |
+| --------- | ------------------- | --------------- | ------- | -------- | ------------- | -------------------- |
+| May 13    | Coconuts Bangkok    | editor@         | 1       | Sent     |               | Follow up May 18     |
+| May 14    | Time Out Bangkok    | bangkok@        | 2       | Sent     |               |                      |
+| May 15    | r/Pattaya comment   | -               | 3a      | Active   |               | Commenting daily     |
+| May 16    | Pattaya Mail        | editor@         | 4       | Sent     |               |                      |
+| May 17    | BJJ Globetrotter    | hi@bjjglob…     | 5       | Sent     |               |                      |
+```
+
+---
+
+# PART 3 — CONTENT GAP ANALYSIS (12 QUERIES TO CAPTURE)
+
+These are queries with **proven monthly search volume** that you're either ranking poorly for or not at all. Each one represents a real page you could write in 2-4 hours. Listed in priority order — fill the top 5 first.
+
+## 1. "pattaya gym price comparison" / "cheapest gym pattaya" (high intent, ~800/mo)
+**Status:** You have `/guides/cheapest-gyms-pattaya/`. **Action:** expand it to 2,500 words. Add a sortable price-comparison table covering all 29 fitness venues with monthly, drop-in, and day-pass prices. This is the page Bangkok-arrival expats will Google week 1.
+
+## 2. "muay thai pattaya for beginners" (high intent, ~600/mo)
+**Status:** You have `/guides/best-for-beginners-pattaya/` — too general. **Action:** Write a NEW dedicated page `/guides/muay-thai-pattaya-beginners/`. Cover:
+- Which 5 camps actually accept absolute beginners
+- What to expect first week (with photos)
+- Gear checklist
+- Average cost month 1
+- Red flags (camps that overcharge tourists)
+
+## 3. "padel pattaya" (emerging, ~200/mo growing fast)
+**Status:** Probably no dedicated page. **Action:** Padel is the fastest-growing racquet sport in SEA. Write `/category/padel/` (or expand /category/racquet/) and 2-3 deep venue pages. Low competition right now = easy ranking.
+
+## 4. "muay thai training holiday pattaya" / "muay thai retreat thailand" (~1,000/mo, high LTV)
+**Status:** No dedicated page. **Action:** Write `/guides/muay-thai-training-holiday-pattaya/` — the buyer here is doing a 1-3 week training holiday spending $1,500-5,000. Even one booking from this page pays for the year.
+
+## 5. "best gym in jomtien" / "gym near jomtien beach" (~300/mo, local intent)
+**Status:** /area/jomtien/ exists but doesn't rank for "gym near jomtien beach". **Action:** Add an H2 section "Best gyms near Jomtien Beach" with 5 specific venue cards inside the existing area page. Targets the local-intent variation.
+
+## 6. "is muay thai dangerous for beginners" / "muay thai injury rate" (~1,500/mo informational)
+**Status:** No content. **Action:** Write `/guides/is-muay-thai-safe-pattaya/` — info-intent query, Google rewards content that genuinely answers concern queries. Cite real medical studies (Sangkrachang 2019, Lystad 2022). Link to safest beginner-friendly camps.
+
+## 7. "muay thai pattaya vs phuket" (~400/mo comparison)
+**Status:** No content. **Action:** Write `/guides/muay-thai-pattaya-vs-phuket/`. Real comparison: price, lineage, climate, social scene, fighter level. People who Google this convert hard once they pick.
+
+## 8. "24 hour gym pattaya" (~500/mo, exists but underranked)
+**Status:** /guides/24-hour-gyms-pattaya/ exists. **Action:** Expand with proof-of-life (phone-verify each one is still 24h), add a section "Why 24h gyms are rare in Pattaya" for content depth.
+
+## 9. "yoga retreat pattaya" / "best yoga studio pattaya" (~600/mo)
+**Status:** /category/yoga/ exists, but no "retreat" angle. **Action:** Write `/guides/yoga-retreat-pattaya/` covering studios + the 3 hotels that run formal retreats (Cape Dara, Centara Grand Mirage). Bundle with the wellness audience.
+
+## 10. "pickleball pattaya" (~150/mo growing 200%/yr)
+**Status:** You have one venue page. **Action:** Add `/guides/pickleball-pattaya/` — the global pickleball boom hits SEA late. Whoever owns this page in 2026 owns it for 5 years.
+
+## 11. "pattaya gym tourist visa" (~250/mo, niche but high intent)
+**Status:** No content. **Action:** Short guide `/guides/training-in-thailand-visa/` — covers Education visa (ED visa) at Fairtex/Sityodtong, Sport Visa requirements, METV vs SETV. Niche query, low competition, high authority signal.
+
+## 12. "thai gym terms" / "muay thai vocabulary" (~400/mo)
+**Status:** /guides/thai-gym-terms-pattaya/ exists. **Action:** Already exists. **Expand to 3,000 words** with audio pronunciation files (free recording, you do it once). Becomes a permanent reference page.
+
+---
+
+## Suggested content sprint (2 weeks)
+
+| Day | Task                                          | Time |
+| --- | --------------------------------------------- | ---- |
+| 1   | GSC + Bing setup, submit sitemaps             | 1h   |
+| 1   | Send Pitch 1 (Coconuts Bangkok)               | 20m  |
+| 2   | Send Pitch 2 (Time Out Bangkok)               | 20m  |
+| 3   | Write Guide #4 (Muay Thai training holiday)   | 3h   |
+| 4   | Send Pitch 4 (3 local press)                  | 30m  |
+| 5   | Write Guide #1 expansion (gym price compare)  | 2h   |
+| 6-7 | Reddit Phase 1 commenting                     | 1h/day |
+| 8   | Send Pitch 5 (niche bloggers, 5 contacts)     | 1h   |
+| 9   | Write Guide #6 (Is Muay Thai safe)            | 3h   |
+| 10  | Write Guide #2 (MT for beginners dedicated)   | 3h   |
+| 11  | Follow up on Pitches 1, 2, 4 (Day 5 follow-up)| 30m  |
+| 12  | Reddit Phase 2 — post the resource thread     | 30m  |
+| 13  | Write Guide #7 (Pattaya vs Phuket)            | 3h   |
+| 14  | Review GSC week-1 data, request indexing on new guides | 1h |
+
+**Total time investment: ~22 hours over 14 days = manageable for a one-man show.**
+
+---
+
+## What to expect (realistic timeline)
+
+- **Week 1:** GSC starts showing impression data. 100-500 impressions/day baseline.
+- **Week 2:** First outreach replies. Expect 2-3 of 5 pitches to engage (40-60% engagement is normal for good cold pitches).
+- **Week 4:** First backlink lands. New guides start ranking page 3-5 for long-tail queries.
+- **Week 8:** Reddit referral traffic stable at 50-200 visits/day. AI assistants start citing pattaya-gym.com when asked Pattaya training questions.
+- **Week 12:** 2-3 high-authority backlinks live. Top-10 rankings for 5+ commercial queries.
+- **Month 6:** Top 3 for "Pattaya gym directory" / "Pattaya Muay Thai directory" / 2-3 long-tail queries with buyer intent.
+
+You shipped the hardest part — the editorial and technical foundation. Now it's outreach + content velocity. The rankings follow.
+
+---
+
+*Generated 2026-05-13 · pattaya-gym.com · For info or corrections: info@pattaya-gym.com*

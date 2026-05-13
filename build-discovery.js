@@ -12,7 +12,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '214';
+const ASSET_VERSION = '215';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -46,7 +46,7 @@ function autoLinkVenues(html, currentSlug, allGyms) {
     const escaped = c.pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const re = new RegExp('(?<![\\w/-])' + escaped + '(?![\\w/-])', 'i');
     // Skip if pattern is inside an existing <a> or heading
-    const split = out.split(/(<a\b[^>]*>[\s\S]*?<\/a>|<h[1-6][^>]*>[\s\S]*?<\/h[1-6]>)/i);
+    const split = out.split(/(<a\b[^>]*>[\s\S]*?<\/a>|<h[1-6][^>]*>[\s\S]*?<\/h[1-6]>|<script\b[\s\S]*?<\/script>|<style\b[\s\S]*?<\/style>|<[^>]+>)/i);
     for (let i = 0; i < split.length; i++) {
       if (i % 2 === 1) continue;
       if (linkedSlugs.has(c.slug)) break;
