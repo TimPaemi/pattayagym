@@ -17,7 +17,7 @@ const OUT_DIR = path.join(ROOT, 'gyms');
 const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '209';
+const ASSET_VERSION = '211';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -1342,6 +1342,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </div>
 
       <div class="venue-hero">
+      <figure class="venue-hero-img" aria-hidden="true"><img src="/og/${slug}.png" alt="" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630" onerror="this.parentElement.style.display='none'"></figure>
       <div class="venue-hero-art" aria-hidden="true">${getCategoryArt(fm.category)}</div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">${escHtml(cat)}</span>
