@@ -14,7 +14,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '217';
+const ASSET_VERSION = '218';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -298,6 +298,9 @@ function footer() {
         <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
         <li><a href="/add-your-gym/">Add your gym</a></li>
         <li><a href="/contact/">Contact</a></li>
+          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener">WhatsApp +66</a></li>
+          <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE @timpaemi</a></li>
         <li><a href="/press/">Press</a></li>
       </ul>
     </div>

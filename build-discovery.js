@@ -12,7 +12,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '217';
+const ASSET_VERSION = '218';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
@@ -194,6 +194,9 @@ function footer() {
         <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
         <li><a href="/add-your-gym/">Add your gym</a></li>
         <li><a href="/contact/">Contact</a></li>
+          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener">WhatsApp +66</a></li>
+          <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE @timpaemi</a></li>
         <li><a href="/press/">Press</a></li>
       </ul>
     </div>
@@ -1824,64 +1827,7 @@ ${header()}
     </ol>
   </section>
 
-  <form class="form-card" action="mailto:info@pattaya-gym.com" method="post" enctype="text/plain">
-    <div class="form-row">
-      <label for="name">Venue name *</label>
-      <input id="name" name="name" type="text" required aria-required="true" placeholder="e.g. Tiger Muay Thai Pattaya" />
-    </div>
-    <div class="form-row">
-      <label for="category">Category *</label>
-      <select id="category" name="category" required aria-required="true">
-        <option value="">Select…</option>
-        <option>Muay Thai</option>
-        <option>MMA</option>
-        <option>BJJ / Grappling</option>
-        <option>Boxing</option>
-        <option>CrossFit / Functional</option>
-        <option>Fitness / Gym</option>
-        <option>Yoga / Pilates</option>
-        <option>Golf</option>
-        <option>Tennis / Padel / Squash</option>
-        <option>Swimming</option>
-        <option>Watersports / Diving</option>
-        <option>Climbing</option>
-        <option>Running / Cycling Clubs</option>
-        <option>Kids / Youth Sports</option>
-        <option>Equestrian</option>
-        <option>Adventure / Multi-Sport</option>
-      </select>
-    </div>
-    <div class="form-row">
-      <label for="address">Full address *</label>
-      <input id="address" name="address" type="text" required aria-required="true" placeholder="123 Soi Buakhao, Pattaya, Chonburi 20150" />
-    </div>
-    <div class="form-row">
-      <label for="website">Website</label>
-      <input id="website" name="website" type="url" placeholder="https://..." />
-    </div>
-    <div class="form-row">
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" placeholder="+66 ..." />
-    </div>
-    <div class="form-row">
-      <label for="hours">Operating hours</label>
-      <input id="hours" name="hours" type="text" placeholder="Mon-Fri 09:00-22:00, Sat-Sun 10:00-18:00" />
-    </div>
-    <div class="form-row">
-      <label for="pricing">Pricing</label>
-      <input id="pricing" name="pricing" type="text" placeholder="e.g. 400 baht drop-in, 4,000 baht/month" />
-    </div>
-    <div class="form-row">
-      <label for="distinction">What makes your venue distinctive?</label>
-      <span class="hint" id="distinction-hint">Awards, lineage, equipment, trainers, certifications — what would the directory page highlight?</span>
-      <textarea id="distinction" name="distinction" aria-describedby="distinction-hint" placeholder="e.g. Only PADI 5-Star IDC dive shop in Pattaya"></textarea>
-    </div>
-    <div class="form-row">
-      <label for="contact">Your name &amp; email *</label>
-      <input id="contact" name="contact" type="text" required aria-required="true" placeholder="Tim · tim@gym.com" />
-    </div>
-    <button class="form-submit" type="submit">Send submission →</button>
-  </form>
+  <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
   <p style="text-align: center; color: var(--text-muted); font-size: 13px; max-width: 540px; margin: 24px auto;">Form opens your email client. Or email <a href="mailto:info@pattaya-gym.com" style="color: var(--accent);">info@pattaya-gym.com</a> directly with the same details.</p>
 </main>
 ${footer()}
@@ -2152,30 +2098,7 @@ ${header()}
     <p class="newsletter-kicker">Contact the editor</p>
     <h1 id="contact-title">Send a correction, venue lead, or partnership note.</h1>
     <p>Email is the fastest route: <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>. Venue owners can also use the structured <a href="/add-your-gym/">add-your-gym form</a>.</p>
-    <form class="newsletter-form" action="mailto:info@pattaya-gym.com" method="post" enctype="text/plain">
-      <div class="newsletter-field">
-        <label for="contact-name">Name *</label>
-        <input id="contact-name" name="name" type="text" autocomplete="name" required aria-required="true" />
-      </div>
-      <div class="newsletter-field">
-        <label for="contact-email">Email *</label>
-        <input id="contact-email" name="email" type="email" autocomplete="email" required aria-required="true" />
-      </div>
-      <div class="newsletter-field">
-        <label for="contact-topic">Topic</label>
-        <select id="contact-topic" name="topic">
-          <option>Venue correction</option>
-          <option>New venue lead</option>
-          <option>Reader feedback</option>
-          <option>Press or partnership</option>
-        </select>
-      </div>
-      <div class="newsletter-field">
-        <label for="contact-message">Message *</label>
-        <textarea id="contact-message" name="message" rows="6" required aria-required="true" placeholder="Include the page URL or venue name if this is a correction."></textarea>
-      </div>
-      <button class="btn btn-primary" type="submit">Open email draft</button>
-    </form>
+    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
   </section>
 </main>
 ${footer()}
@@ -2302,39 +2225,7 @@ ${header()}
     <p class="venue-lede">Choose your stay length, training goal, budget, and preferred area. The planner returns 5-8 venues plus a simple daily rhythm you can adjust.</p>
   </div>
   <div class="tool-grid">
-    <form class="planner-card" id="trip-form">
-      <label for="trip-days">Trip length
-        <select id="trip-days">
-          <option value="3">3 days</option>
-          <option value="7" selected>1 week</option>
-          <option value="14">2 weeks</option>
-          <option value="30">1 month</option>
-        </select>
-      </label>
-      <label for="trip-goal">Primary goal
-        <select id="trip-goal">
-          <option value="fitness">General fitness</option>
-          <option value="muay-thai">Muay Thai training</option>
-          <option value="family">Family-friendly sport</option>
-          <option value="low-impact">Low-impact / seniors</option>
-          <option value="watersports">Watersports and diving</option>
-          <option value="golf">Golf-focused trip</option>
-        </select>
-      </label>
-      <label for="trip-budget">Budget
-        <select id="trip-budget">
-          <option value="all">Any budget</option>
-          <option value="฿">Budget</option>
-          <option value="฿฿" selected>Mid-range</option>
-          <option value="฿฿฿">Premium</option>
-          <option value="฿฿฿฿">Luxury</option>
-        </select>
-      </label>
-      <label for="trip-area">Area preference
-        <select id="trip-area"><option value="all">Any area</option></select>
-      </label>
-      <button class="btn btn-primary" type="submit">Build itinerary</button>
-    </form>
+    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
     <section class="tool-results" aria-live="polite">
       <h2 style="margin-top:0;">Recommended venues</h2>
       <div class="tool-results-list" id="trip-results"></div>
@@ -2437,39 +2328,7 @@ ${header()}
     <p class="venue-lede">This is a rule-based shortlist from venue metadata, not a live trainer roster. Confirm current coaches, language fit, and sparring expectations with the gym before booking.</p>
   </div>
   <div class="tool-grid">
-    <form class="planner-card" id="coach-form">
-      <label for="coach-discipline">Discipline
-        <select id="coach-discipline">
-          <option value="muay-thai">Muay Thai</option>
-          <option value="boxing">Boxing</option>
-          <option value="mma">MMA</option>
-          <option value="bjj">BJJ / grappling</option>
-        </select>
-      </label>
-      <label for="coach-language">Preferred language
-        <select id="coach-language">
-          <option value="all">Any language</option>
-          <option value="english">English</option>
-          <option value="thai">Thai</option>
-          <option value="russian">Russian</option>
-        </select>
-      </label>
-      <label for="coach-style">Training style
-        <select id="coach-style">
-          <option value="beginner">Beginner-friendly</option>
-          <option value="fight">Fight preparation</option>
-          <option value="fitness">Fitness and conditioning</option>
-          <option value="private">Private coaching</option>
-        </select>
-      </label>
-      <label for="coach-gender">Coach preference
-        <select id="coach-gender">
-          <option value="all">No preference</option>
-          <option value="female">Female-friendly signals</option>
-        </select>
-      </label>
-      <button class="btn btn-primary" type="submit">Find matches</button>
-    </form>
+    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
     <section class="tool-results" aria-live="polite">
       <h2 style="margin-top:0;">Best-fit camps and gyms</h2>
       <div class="tool-results-list" id="coach-results"></div>

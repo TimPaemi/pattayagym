@@ -9,7 +9,7 @@
 <meta name="msapplication-TileColor" content="#0b0b0d" />
 <meta name="msapplication-TileImage" content="/icon-192.png" />
 <meta name="color-scheme" content="dark" />
-<meta name="build-id" content="2026-05-13" />
+<meta name="build-id" content="2026-05-14" />
 <link rel="manifest" href="/manifest.json" />
 <link rel="apple-touch-icon" href="/icon-180.png" />
 <title>Add Your Gym to Pattaya Gym Directory</title>
@@ -49,13 +49,13 @@
 <style>@media(min-width:1100px){.venue-content-shell.has-toc{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;align-items:start}.venue-content-shell.has-toc .jump-to{position:sticky;top:96px;max-height:calc(100vh - 120px);overflow-y:auto}}</style>
 <style>.skip-link{position:absolute;left:-9999px;top:0;z-index:1000;background:#d4a72c;color:#0a0a0a;padding:12px 18px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}.skip-link:focus{left:8px;top:8px}:focus-visible{outline:2px solid #d4a72c;outline-offset:3px}</style>
 
-<link rel="preload" href="/styles.css?v=217" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link rel="stylesheet" href="/styles.css?v=217" /></noscript>
-<link rel="preload" href="/venue.css?v=217" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link rel="stylesheet" href="/venue.css?v=217" /></noscript>
+<link rel="preload" href="/styles.css?v=218" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/styles.css?v=218" /></noscript>
+<link rel="preload" href="/venue.css?v=218" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/venue.css?v=218" /></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Add Your Gym to Pattaya Gym Directory","description":"Own a gym, Muay Thai camp, dive operator, or sport venue in Pattaya? Submit your listing for free verification and inclusion in the directory.","url":"https://pattaya-gym.com/add-your-gym/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Pattaya Gym","url":"https://pattaya-gym.com/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://pattaya-gym.com/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}},"publisher":{"@type":"Organization","name":"Pattaya Gym","url":"https://pattaya-gym.com/","logo":{"@type":"ImageObject","url":"https://pattaya-gym.com/og-image.png"}}}</script>
 <script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
-<script src="/shortcuts.js?v=217" defer></script>
+<script src="/shortcuts.js?v=218" defer></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
 
@@ -138,64 +138,7 @@
     </ol>
   </section>
 
-  <form class="form-card" action="mailto:info@pattaya-gym.com" method="post" enctype="text/plain">
-    <div class="form-row">
-      <label for="name">Venue name *</label>
-      <input id="name" name="name" type="text" required aria-required="true" placeholder="e.g. Tiger Muay Thai Pattaya" />
-    </div>
-    <div class="form-row">
-      <label for="category">Category *</label>
-      <select id="category" name="category" required aria-required="true">
-        <option value="">Select…</option>
-        <option>Muay Thai</option>
-        <option>MMA</option>
-        <option>BJJ / Grappling</option>
-        <option>Boxing</option>
-        <option>CrossFit / Functional</option>
-        <option>Fitness / Gym</option>
-        <option>Yoga / Pilates</option>
-        <option>Golf</option>
-        <option>Tennis / Padel / Squash</option>
-        <option>Swimming</option>
-        <option>Watersports / Diving</option>
-        <option>Climbing</option>
-        <option>Running / Cycling Clubs</option>
-        <option>Kids / Youth Sports</option>
-        <option>Equestrian</option>
-        <option>Adventure / Multi-Sport</option>
-      </select>
-    </div>
-    <div class="form-row">
-      <label for="address">Full address *</label>
-      <input id="address" name="address" type="text" required aria-required="true" placeholder="123 Soi Buakhao, Pattaya, Chonburi 20150" />
-    </div>
-    <div class="form-row">
-      <label for="website">Website</label>
-      <input id="website" name="website" type="url" placeholder="https://..." />
-    </div>
-    <div class="form-row">
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" placeholder="+66 ..." />
-    </div>
-    <div class="form-row">
-      <label for="hours">Operating hours</label>
-      <input id="hours" name="hours" type="text" placeholder="Mon-Fri 09:00-22:00, Sat-Sun 10:00-18:00" />
-    </div>
-    <div class="form-row">
-      <label for="pricing">Pricing</label>
-      <input id="pricing" name="pricing" type="text" placeholder="e.g. 400 baht drop-in, 4,000 baht/month" />
-    </div>
-    <div class="form-row">
-      <label for="distinction">What makes your venue distinctive?</label>
-      <span class="hint" id="distinction-hint">Awards, lineage, equipment, trainers, certifications — what would the directory page highlight?</span>
-      <textarea id="distinction" name="distinction" aria-describedby="distinction-hint" placeholder="e.g. Only PADI 5-Star IDC dive shop in Pattaya"></textarea>
-    </div>
-    <div class="form-row">
-      <label for="contact">Your name &amp; email *</label>
-      <input id="contact" name="contact" type="text" required aria-required="true" placeholder="Tim · tim@gym.com" />
-    </div>
-    <button class="form-submit" type="submit">Send submission →</button>
-  </form>
+  <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
   <p style="text-align: center; color: var(--text-muted); font-size: 13px; max-width: 540px; margin: 24px auto;">Form opens your email client. Or email <a href="mailto:info@pattaya-gym.com" style="color: var(--accent);">info@pattaya-gym.com</a> directly with the same details.</p>
 </main>
 
@@ -260,6 +203,9 @@
         <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
         <li><a href="/add-your-gym/">Add your gym</a></li>
         <li><a href="/contact/">Contact</a></li>
+          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener">WhatsApp +66</a></li>
+          <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE @timpaemi</a></li>
         <li><a href="/press/">Press</a></li>
       </ul>
     </div>
@@ -267,7 +213,7 @@
   
   <div class="site-footer-base">
     <p>© 2026 pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
-    <p class="sf-disclaimer">Last updated: 2026-05-13. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
+    <p class="sf-disclaimer">Last updated: 2026-05-14. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
           <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
           
   </div>
