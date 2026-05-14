@@ -4,7 +4,7 @@ name: Burapha Golf Club
 category: golf
 area: Sriracha (35 min from Pattaya)
 address: 281 Moo 4, Tumbol Bung, Sriracha District, Chonburi 20230, Thailand
-phone: +66 38 372 700
+phone: "+66 38 372 700"
 website: https://www.facebook.com/p/Burapha-Golf-Resort-Thailand-100057382482955/
 social:
   facebook: Burapha-Golf-Resort-Thailand

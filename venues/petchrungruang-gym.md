@@ -4,7 +4,7 @@ name: Petchrungruang Gym
 category: muay-thai
 area: South Pattaya / Sukhumvit
 address: Off Soi Sukhumvit-Pattaya 50 (after Heavy Duty building, near Paint Ball Park), South Pattaya, Bang Lamung, Chonburi
-phone: +66 86 147 3166 (Mr. Piyawath)
+phone: "+66 86 147 3166"
 email: petchrungruanggym@gmail.com
 website: http://petchrungruang.com/
 social:

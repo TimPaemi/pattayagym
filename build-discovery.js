@@ -12,11 +12,9 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '218';
+const ASSET_VERSION = '221';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
-const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
-
 function autoLinkVenues(html, currentSlug, allGyms) {
   if (!html || !Array.isArray(allGyms)) return html;
   const candidates = [];
@@ -298,6 +296,7 @@ function commonHead(title, desc, canonical, schemaType, ogType) {
 <meta name="twitter:title" content="${escHtml(metaTitle(title))}" />
 <meta name="twitter:description" content="${escHtml(metaDesc(desc))}" />
 <meta name="twitter:image" content="${DEFAULT_OG_IMAGE}" />
+<meta name="twitter:image:src" content="${DEFAULT_OG_IMAGE}" />
 <meta name="thumbnail" content="${DEFAULT_OG_IMAGE}" />
 <link rel="image_src" href="${DEFAULT_OG_IMAGE}" />
 ${stylesheetTags(true)}
@@ -1326,7 +1325,7 @@ ${header()}
   ${(() => {
     const related = GUIDES.filter(g => g.slug !== guide.slug).slice(0, 6);
     if (!related.length) return '';
-    const picks = related.sort(() => Math.random() - 0.5).slice(0, 3);
+    const picks = related.slice(0, 3);
     return `
   <section class="about" aria-labelledby="related-guides-h" style="margin-top: 48px;">
     <h2 id="related-guides-h" style="font-size: 1.4rem; margin-bottom: 16px;">Related Pattaya guides</h2>

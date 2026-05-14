@@ -4,7 +4,7 @@ name: Rajadamnern Stadium (Bangkok day-trip)
 category: muay-thai
 area: Bangkok — Ratchadamnoen Nok Avenue (1.5–2 hr from Pattaya)
 address: 8 Ratchadamnoen Nok Ave, Wat Sommanat, Pom Prap Sattru Phai, Bangkok 10100
-phone: +66 2 281 4205
+phone: "+66 2 281 4205"
 website: https://rajadamnern.com/
 social: {}
 hours: Almost nightly — Mon/Wed/Fri/Sat/Sun (varies by week)

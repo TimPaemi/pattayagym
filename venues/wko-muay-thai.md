@@ -4,7 +4,7 @@ name: WKO Muay Thai & Fitness Pattaya (ISS Gym)
 category: muay-thai
 area: Central Pattaya / Pattaya Klang
 address: 503/16 Moo 9, Pattaya Klang Road, Nong Prue, Bang Lamung District, Chonburi 20150
-phone: +66 87 137 0841
+phone: "+66 87 137 0841"
 website: https://world-kumite.org/
 secondaryWebsite: https://iss-boxing-gym.com/
 social:

@@ -4,7 +4,7 @@ name: Horseshoe Point Resort & Country Club
 category: equestrian
 area: Mabprachan Reservoir / East Pattaya
 address: 100 Moo 9, Pong, Bang Lamung District, Chonburi 20150, Thailand (near Mabprachan Reservoir)
-phone: +66 38 253 599
+phone: "+66 38 253 599"
 website: ""
 social: {}
 hours: Daily — riding school sessions throughout the day, restaurants and other facilities daily

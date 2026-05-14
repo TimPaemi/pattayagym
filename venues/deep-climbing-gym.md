@@ -4,7 +4,7 @@ name: Deep Climbing Gym (Harbor Pattaya)
 category: climbing
 area: Na Kluea / North Pattaya — Harbor Pattaya Mall, 8th Floor
 address: Harbor Pattaya, Floor 8, 190/25 Moo 9, Pattaya Klang Rd, Na Kluea, Bang Lamung, Chonburi 20150
-phone: +66 89 332 1000
+phone: "+66 89 332 1000"
 website: ""
 social:
   facebook: deeppattaya

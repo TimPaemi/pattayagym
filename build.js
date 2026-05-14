@@ -17,12 +17,10 @@ const OUT_DIR = path.join(ROOT, 'gyms');
 const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '218';
+const ASSET_VERSION = '221';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
-const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
-
 // ---------- Frontmatter parser ----------
 function parseFrontmatter(text) {
   const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -753,7 +751,7 @@ function buildVenueSchema(fm, slug, url, desc) {
     additionalProperty: [{
       '@type': 'PropertyValue',
       name: 'geo_accuracy',
-      value: 'Approximate Pattaya centroid; TODO replace with venue-specific latitude and longitude.'
+      value: 'Approximate Pattaya centroid. Coordinates pending field survey.'
     }]
   };
 
@@ -1277,6 +1275,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <meta name="twitter:title" content="${escHtml(fm.name)}" />
   <meta name="twitter:description" content="${escHtml(desc)}" />
   <meta name="twitter:image" content="${ogImage}" />
+  <meta name="twitter:image:src" content="${ogImage}" />
   <meta name="thumbnail" content="${ogImage}" />
   <link rel="image_src" href="${ogImage}" />
 

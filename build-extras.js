@@ -14,10 +14,9 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '218';
+const ASSET_VERSION = '221';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
-const NEWSLETTER_ACTION = 'https://buttondown.com/api/emails/embed-subscribe/pattaya-gym';
 // Category-specific FAQs — appended to each /category/<key>/ page.
 const CATEGORY_FAQS = {
   'muay-thai': [
@@ -382,6 +381,7 @@ function commonHead(title, desc, canonical, schemaType) {
 <meta name="twitter:title" content="${escHtml(metaTitle(title))}" />
 <meta name="twitter:description" content="${escHtml(metaDesc(desc))}" />
 <meta name="twitter:image" content="${DEFAULT_OG_IMAGE}" />
+<meta name="twitter:image:src" content="${DEFAULT_OG_IMAGE}" />
 <meta name="thumbnail" content="${DEFAULT_OG_IMAGE}" />
 <link rel="image_src" href="${DEFAULT_OG_IMAGE}" />
 ${stylesheetTags(true)}
@@ -1062,6 +1062,15 @@ Allow: /
 User-agent: Diffbot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 Sitemap: ${SITE}/sitemap.xml
 Sitemap: ${SITE}/sitemap-index.xml
 Sitemap: ${SITE}/sitemap-venues.xml
@@ -1457,7 +1466,7 @@ function main() {
     }
   }
 
-  console.log('\nExtras built: ' + catCount + ' category pages + map + about + 404 + robots.txt');
+    console.log('\nExtras built: ' + catCount + ' category pages + map + about + 404 + robots.txt');
 }
 
 main();

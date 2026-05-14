@@ -4,7 +4,7 @@ name: Pickleball Pattaya
 category: racquet
 area: Pratumnak Hill / Soi 6
 address: Pratumnak Soi 6, Pattaya
-phone: +66 92 265 9516
+phone: "+66 92 265 9516"
 website: https://pickleballpattaya.com/
 social:
   facebook: PickleballPattaya

@@ -4,7 +4,7 @@ name: Tara Tennis Club
 category: racquet
 area: Pattaya
 address: Pattaya, Chonburi (verify exact at booking)
-phone: "+66 95 141 0568 / +66 87 908 9800"
+phone: "+66 95 141 0568"
 website: ""
 social:
   facebook: taratennisclub

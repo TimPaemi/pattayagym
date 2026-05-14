@@ -4,7 +4,7 @@ name: Mermaid's Dive Center
 category: watersports
 area: Jomtien (Soi White House) + Pattaya Beach Road + Bangkok (Amarin Plaza)
 address: Soi White House, Jomtien Beach Road, Pattaya (main); plus Pattaya Beach Road branch and Bangkok branch
-phone: +66 38 303 333
+phone: "+66 38 303 333"
 website: https://www.mermaidsdivecenter.com/
 social:
   facebook: mermaidsdive

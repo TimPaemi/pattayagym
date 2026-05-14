@@ -4,7 +4,7 @@ name: Fitz Club — Racquets, Health & Fitness (Royal Cliff Hotels Group)
 category: fitness
 area: Pratumnak Hill
 address: Royal Cliff Hotels Group, Pratumnak Hill, Pattaya, Chonburi
-phone: +66 38 250 421 ext. 2621
+phone: "+66 38 250 421"
 email: fitz@royalcliff.com
 line: "@royalcliff"
 website: https://www.royalcliff.com/facilities/fitz-club/

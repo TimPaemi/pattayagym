@@ -4,7 +4,7 @@ name: Yoga Pattaya Studio
 category: yoga
 area: Thepprasit / Jomtien
 address: 315/327 Thepprasit Soi 12, Pattaya, Chonburi
-phone: +66 95 573 9376
+phone: "+66 95 573 9376"
 email: yoga.pattaya@gmail.com
 website: https://yogapattaya.com/
 social:

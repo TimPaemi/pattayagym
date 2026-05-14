@@ -4,7 +4,7 @@ name: Kombat Group Thailand
 category: muay-thai
 area: Huai Yai / East Pattaya (rural, near Chak Nok Lake)
 address: 49/1 Moo 4, Soi Chaknok 19, Huai Yai, Bang Lamung District, Chonburi 20150, Thailand
-phone: +66 81 099 9333
+phone: "+66 81 099 9333"
 website: https://www.kombatgroup.com/
 social:
   facebook: kombatgroup

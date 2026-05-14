@@ -66,6 +66,15 @@ Allow: /
 User-agent: Diffbot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 Sitemap: https://pattaya-gym.com/sitemap.xml
 Sitemap: https://pattaya-gym.com/sitemap-index.xml
 Sitemap: https://pattaya-gym.com/sitemap-venues.xml

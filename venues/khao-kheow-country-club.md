@@ -4,7 +4,7 @@ name: Khao Kheow Country Club
 category: golf
 area: Bang Phra / Si Racha (between Bangkok and Pattaya)
 address: Khao Kheow Country Club, Si Racha, Chonburi 20110
-phone: +66 38 318 000
+phone: "+66 38 318 000"
 website: "http://www.khaokheowgolf.com/"
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30

@@ -217,4 +217,3 @@ The Naklua branch's **22:00 close** is slightly earlier — likely reflecting di
 | Naklua hours | Closes 22:00 |
 | Languages | English, Thai, Russian |
 | Verified | 2026-04-27 |
-   

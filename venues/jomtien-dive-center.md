@@ -4,7 +4,7 @@ name: Jomtien Dive Center
 category: watersports
 area: Jomtien Beach
 address: Jomtien Beach, Pattaya, Chonburi
-phone: +66 33 144 007
+phone: "+66 33 144 007"
 website: https://jomtiendivecenter.com/
 social:
   facebook: jomtiendivecenter

@@ -4,7 +4,7 @@ name: Phoenix Gold Golf & Country Club
 category: golf
 area: Huay Yai (south of Pattaya)
 address: Huay Yai, south of Pattaya, Chonburi
-phone: +66 84 873 5363
+phone: "+66 84 873 5363"
 website: https://www.phoenixgoldgolf.com/
 social: {}
 hours: Daily — tee times throughout the day

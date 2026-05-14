@@ -240,4 +240,3 @@ The **Russian / Russian-speaking demographic** is significant — staff often ha
 | Air conditioned | Yes (whole facility) |
 | Languages | English, Thai, Russian |
 | Verified | 2026-04-27 |
-      

@@ -4,7 +4,7 @@ name: Anytime Fitness Pattaya
 category: fitness
 area: Multiple (South Pattaya / Bukis Point + "Again" Pattaya)
 address: Bukis Point Mall (South Pattaya, Thappraya Rd) + Again Pattaya complex
-phone: +66 64 589 1174
+phone: "+66 64 589 1174"
 website: https://www.anytimefitness.co.th/
 social:
   facebook: https://www.facebook.com/AnytimeFitnessTh/

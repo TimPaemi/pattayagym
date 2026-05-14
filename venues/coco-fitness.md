@@ -4,7 +4,7 @@ name: Coco Fitness
 category: fitness
 area: Mike's Mall, Central Pattaya / Beach
 address: 4th floor, Mike Shopping Mall, 262 Beach Road, Pattaya 20150
-phone: +66 93 383 3817
+phone: "+66 93 383 3817"
 website: ""
 social:
   facebook: cocofitnesspattaya

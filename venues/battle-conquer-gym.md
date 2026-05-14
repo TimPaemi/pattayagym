@@ -4,7 +4,7 @@ name: Battle Conquer Gym Pattaya
 category: muay-thai
 area: Central Pattaya / near Pattaya Beach
 address: Central Pattaya, near Pattaya Beach, Bang Lamung, Chonburi 20150
-phone: +66 98 085 3053
+phone: "+66 98 085 3053"
 phoneAlt: +66 62 423 5297
 website: https://battleconquerpattaya.com/
 secondaryWebsite: https://muaythaibattleconquer.com/

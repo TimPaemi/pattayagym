@@ -4,7 +4,7 @@ name: Play Padel Pattaya
 category: racquet
 area: Pratumnak / Kasetsin Soi 3
 address: Kasetsin Soi 3, Pratumnak, Pattaya, Chonburi
-phone: +66 80 621 0000
+phone: "+66 80 621 0000"
 website: https://www.playpadelpattaya.com/
 social:
   facebook: playpadelpattaya

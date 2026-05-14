@@ -4,7 +4,7 @@ name: Sityodtong Pattaya
 category: muay-thai
 area: Naklua / Nong Prue
 address: 36/7 Moo 6, Nong Prue, Bang Lamung District, Chonburi 20150, Thailand (Soi Khao Talo area)
-phone: +66 38 251 489
+phone: "+66 38 251 489"
 website: https://sityodtongthailand.com/
 social:
   facebook: sityodtongmuaythai

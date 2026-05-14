@@ -4,7 +4,7 @@ name: Fairtex Training Center Pattaya
 category: muay-thai
 area: Naklua / North Pattaya
 address: 99/9 Moo 5, North Pattaya Rd, Naklua, Bang Lamung District, Chonburi 20150, Thailand
-phone: +66 86 308 7031
+phone: "+66 86 308 7031"
 phoneHotel: +66 38 253 888
 email: training@fairtex-pattaya.com
 website: https://fairtextrainingcenter.com/

@@ -4,7 +4,7 @@ name: Siam Country Club Pattaya
 category: golf
 area: East Pattaya / Pong, Bang Lamung
 address: 50 Moo 9, Pong, Bang Lamung District, Chonburi 20150, Thailand
-phone: +66 38 909 700
+phone: "+66 38 909 700"
 website: https://siamcountryclub.com/
 social: {}
 hours: Daily — tee times throughout the day

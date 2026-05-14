@@ -223,4 +223,3 @@ The PH3 membership reflects Pattaya's expat community:
 | Membership style | Mixed — runners, joggers, walkers, all ages |
 | Languages | English (primary), Thai |
 | Verified | 2026-04-27 |
-       

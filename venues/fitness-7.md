@@ -219,4 +219,3 @@ The free parking and free classes are meaningful cost reductions vs. competitors
 | Monthly | ~฿1,800-2,500 |
 | Languages | English, Thai, Russian |
 | Verified | 2026-04-27 |
-        

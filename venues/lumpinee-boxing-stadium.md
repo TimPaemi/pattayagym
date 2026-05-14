@@ -4,7 +4,7 @@ name: Lumpinee Boxing Stadium (Bangkok day-trip)
 category: muay-thai
 area: Bangkok — Ramintra Road (1.5–2 hrs from Pattaya)
 address: 6 Ramintra Rd, Anusawari, Bang Khen, Bangkok 10220
-phone: +66 80 045 9541
+phone: "+66 80 045 9541"
 website: https://lumpineestadium.com/
 social: {}
 hours: Fight nights Friday + Saturday (no daily hours)

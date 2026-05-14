@@ -4,7 +4,7 @@ name: Pattaya Tennis Club
 category: racquet
 area: Central Pattaya
 address: Central Pattaya — confirm exact location at booking
-phone: +66 89 100 0000
+phone: "+66 89 100 0000"
 website: ""
 social: {}
 hours: 06:00-22:00 typical (floodlights for evening play)
