@@ -17,7 +17,7 @@ const OUT_DIR = path.join(ROOT, 'gyms');
 const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '221';
+const ASSET_VERSION = '222';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -1309,6 +1309,9 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     datePublished: fm.added || fm.verified || undefined,
     dateModified: fm.verified || undefined
   })}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>

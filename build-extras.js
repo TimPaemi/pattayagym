@@ -14,7 +14,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '221';
+const ASSET_VERSION = '222';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 // Category-specific FAQs — appended to each /category/<key>/ page.
@@ -498,6 +498,9 @@ ${commonHead(title, desc, url)}
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym - ${escHtml(cat.label)} feed" href="/feed/${escHtml(cat.key)}.xml" />
 <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(itemListSchema)}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 ${header()}
@@ -652,6 +655,9 @@ ${commonHead(title, desc, url)}
   .leaflet-container { background: #1a1a1a; }
   @media (max-width: 880px) { #pg-map { min-height: 440px; } }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 ${header()}
@@ -826,6 +832,9 @@ ${commonHead(title, desc, url)}
       { "@type": "ListItem", "position": 2, "name": "About", "item": SITE + "/about/" }
     ]
   })}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 ${header()}
@@ -909,6 +918,9 @@ function build404() {
 ${commonHead('Page not found | Pattaya Gym', 'The page you\'re looking for doesn\'t exist. Browse our directory of every Pattaya gym, Muay Thai camp, dive operator, and sport venue.', `${SITE}/404.html`)}
 <meta name="robots" content="noindex" />
 <script defer>document.addEventListener('DOMContentLoaded',function(){if(window.plausible)window.plausible('404',{props:{path:location.pathname}});});</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 ${header()}
