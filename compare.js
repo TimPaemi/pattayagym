@@ -75,7 +75,7 @@ PG.compare = {
       var label = x.name.length > 20 ? x.name.slice(0, 18) + '...' : x.name;
       return '<span class="pg-cw-pill">' +
         '<span>' + self.esc(label) + '</span>' +
-        '<button class="pg-cw-x" data-pg-compare-remove="' + self.esc(x.id) + '" aria-label="Remove ' + self.esc(x.name) + '">x</button>' +
+        '<button type="button" class="pg-cw-x" data-pg-compare-remove="' + self.esc(x.id) + '" aria-label="Remove ' + self.esc(x.name) + '">x</button>' +
         '</span>';
     }).join('');
 
@@ -83,7 +83,7 @@ PG.compare = {
       '<div class="pg-cw-inner">' +
         '<div class="pg-cw-header">' +
           '<strong>Compare (' + list.length + ')</strong>' +
-          '<button class="pg-cw-clear" data-pg-compare-clear="1" title="Clear all">Clear</button>' +
+          '<button type="button" class="pg-cw-clear" data-pg-compare-clear="1" title="Clear all">Clear</button>' +
         '</div>' +
         '<div class="pg-cw-list">' + pills + '</div>' +
         (list.length >= 2
@@ -124,13 +124,13 @@ PG.compare = {
       return;
     }
     if (!others.length) {
-      box.innerHTML = '<strong>Compare this venue.</strong> <button class="btn btn-secondary" data-add-current-compare="1">Add to compare</button>';
+      box.innerHTML = '<strong>Compare this venue.</strong> <button type="button" class="btn btn-secondary" data-add-current-compare="1">Add to compare</button>';
     } else {
       box.innerHTML = '<label for="compare-to-select">Compare this venue with</label>' +
         '<select id="compare-to-select">' +
         others.map(function (x) { return '<option value="' + this.esc(x.id) + '">' + this.esc(x.name) + '</option>'; }, this).join('') +
         '</select>' +
-        '<button class="btn btn-secondary" data-add-current-compare="1">Add this venue</button>';
+        '<button type="button" class="btn btn-secondary" data-add-current-compare="1">Add this venue</button>';
     }
     var btn = box.querySelector('[data-add-current-compare]');
     if (btn) {

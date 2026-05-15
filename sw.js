@@ -1,22 +1,17 @@
-const CACHE_NAME = 'pattaya-gym-v221-20260514';
+const CACHE_NAME = 'pattaya-gym-v222-20260515';
 const CORE_ASSETS = [
-  '/',
-  '/styles.css?v=221',
-  '/venue.css?v=221',
-  '/app.js?v=221',
-  '/data.js?v=221',
-  '/share.js?v=221',
-  '/compare.js?v=221',
-  '/favorites.js?v=221',
-  '/recent.js?v=221',
-  '/shortcuts.js?v=221',
-  '/search/',
-  '/favorites/',
-  '/plan-my-trip/',
-  '/find-my-coach/',
-  '/guides/',
-  '/map/',
-  '/compare/',
+  '/styles.css?v=222',
+  '/venue.css?v=222',
+  '/app.js?v=222',
+  '/app.bundle.js?v=222',
+  '/data.js?v=222',
+  '/share.js?v=222',
+  '/compare.js?v=222',
+  '/favorites.js?v=222',
+  '/recent.js?v=222',
+  '/shortcuts.js?v=222',
+  '/site-ui.js?v=222',
+  '/analytics.js?v=222',
   '/og-image.png',
   '/manifest.json',
   '/icon-180.png',
@@ -49,11 +44,7 @@ self.addEventListener('fetch', event => {
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
-        .then(response => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
-          return response;
-        })
+        .then(response => response)
         .catch(() => caches.match(request).then(cached => cached || caches.match('/')))
     );
     return;
@@ -62,7 +53,7 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(request).then(cached => {
       const refresh = fetch(request).then(response => {
-        if (response && response.ok) {
+        if (response && response.ok && isCacheableAsset(url)) {
           const copy = response.clone();
           caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
         }
@@ -72,3 +63,9 @@ self.addEventListener('fetch', event => {
     })
   );
 });
+
+function isCacheableAsset(url) {
+  return url.searchParams.has('v') ||
+    /^\/(?:og|icons?)\//.test(url.pathname) ||
+    /\.(?:png|jpg|jpeg|webp|svg|ico|css|js|json|woff2?)$/i.test(url.pathname);
+}

@@ -6,3 +6,20 @@ https://www.pattaya-gym.com/* https://pattaya-gym.com/:splat 301
 # 301 redirect the stub URL to the canonical record to avoid SEO duplicate-content penalty.
 /gyms/af-academy-football/ /gyms/af-academy-pattaya/ 301
 /gyms/af-academy-football  /gyms/af-academy-pattaya/ 301
+
+# Legacy homepage links retained in editorial HTML. Keep them resolving without
+# touching homepage body copy/structure.
+/gyms/sumalee-boxing-gym/ /category/muay-thai/ 301
+/gyms/sumalee-boxing-gym  /category/muay-thai/ 301
+/gyms/the-station-pattaya/ /category/fitness/ 301
+/gyms/the-station-pattaya  /category/fitness/ 301
+/gyms/yodyut-muay-thai/ /category/muay-thai/ 301
+/gyms/yodyut-muay-thai  /category/muay-thai/ 301
+/gyms/breeze-yoga/ /category/yoga/ 301
+/gyms/breeze-yoga  /category/yoga/ 301
+/guides/best-muay-thai-gyms-pattaya/ /guides/best-muay-thai-pattaya/ 301
+/guides/best-muay-thai-gyms-pattaya  /guides/best-muay-thai-pattaya/ 301
+/guides/luxury-gyms-pattaya/ /guides/luxury-sports-clubs-pattaya/ 301
+/guides/luxury-gyms-pattaya  /guides/luxury-sports-clubs-pattaya/ 301
+/guides/digital-nomad-friendly/ /guides/pattaya-digital-nomad-fitness/ 301
+/guides/digital-nomad-friendly  /guides/pattaya-digital-nomad-fitness/ 301

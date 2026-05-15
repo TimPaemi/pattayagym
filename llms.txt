@@ -74,6 +74,13 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 - [Category RSS feeds](https://pattaya-gym.com/feed/): Per-category /feed/<category>.xml
 - [Area RSS feeds](https://pattaya-gym.com/feed/area/): Per-area /feed/area/<slug>.xml
 
+## Example AI queries
+
+- "Find beginner-friendly Muay Thai gyms in Pattaya with English-speaking coaches."
+- "Compare golf courses near Pattaya by travel time, prestige, and visitor suitability."
+- "Which Pattaya gyms are best for digital nomads staying near Jomtien or Pratamnak?"
+- "Plan a family-friendly Pattaya sport itinerary with pools, youth football, and indoor activities."
+
 ## Editorial promise
 
 Every listing on pattaya-gym.com is researched and source-cited from public information.
@@ -81,4 +88,4 @@ No paid placements, no sponsored listings, no affiliate-only entries.
 Independent directory operated since 2026. Built and maintained in Pattaya, Thailand.
 Coordinates: 12.93°N, 100.88°E.
 
-Last update: 2026-05-14
+Last update: 2026-05-15

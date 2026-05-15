@@ -1,5 +1,5 @@
 /*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=300, must-revalidate
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
@@ -7,7 +7,7 @@
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://plausible.io https://unpkg.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://plausible.io https://www.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-fpy9apfuPcBxsmF99tlSuOrR9HAmPEw0vaZ01TiW8qA=' 'sha256-p9ahJLIN7BI41tcjQ5gXzZbeaUSwIJkFUusnNvEn5W4=' 'sha256-h/cWsaPxfrK21hIsLmVuYCfIdiMhTf/jSnBATt9nqK4=' 'sha256-lvHsiLra83R8yvx4bp2iTvlNubR23va1poopY7zUddw=' 'sha256-PiVj7mJQnGBWuuunKVGMNXXW1EIZkuectbUabF8RmMk=' 'sha256-0XBAfPQz7LSvVCyNAdQc7IYBfl4Sovf2q9vAWYD1JFk=' https://plausible.io https://unpkg.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://plausible.io https://www.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
 
 /api/*
   Cache-Control: public, max-age=3600, s-maxage=86400
@@ -31,6 +31,9 @@
 /app.js
   Cache-Control: public, max-age=31536000, immutable
 
+/app.bundle.js
+  Cache-Control: public, max-age=31536000, immutable
+
 /data.js
   Cache-Control: public, max-age=31536000, immutable
 
@@ -41,4 +44,25 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /compare.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/favorites.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/recent.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/shortcuts.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/site-ui.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/analytics.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/og/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/og-image.png
   Cache-Control: public, max-age=31536000, immutable

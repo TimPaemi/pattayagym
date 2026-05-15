@@ -152,11 +152,20 @@ function clipAtWord(s, max) {
 }
 
 function metaTitle(s) {
-  return clipAtWord(s, 60);
+  let title = clipAtWord(cleanText(s).replace(/&/g, 'and').replace(/[?']/g, '').replace(/[??]/g, '-'), 58);
+  if (title.length < 30) {
+    if (/^Press \| Pattaya Gym Directory$/i.test(title)) title = 'Press Kit | Pattaya Gym Directory';
+    else if (/Pattaya Gym/i.test(title)) title = clipAtWord(title + ' Official', 58);
+    else title = clipAtWord(title + ' | Pattaya Gym', 58);
+  }
+  return title;
 }
 
 function metaDesc(s) {
-  return clipAtWord(s, 158);
+  const base = clipAtWord(s, 145);
+  if (base.length >= 100) return base;
+  const expanded = (base ? base.replace(/[.\s]+$/, '') + '. ' : '') + 'Find verified Pattaya sport venues, maps, hours, price ranges and contact details on Pattaya Gym Directory.';
+  return clipAtWord(expanded, 155);
 }
 
 function criticalCss() {
@@ -169,8 +178,8 @@ function desktopTocCriticalCss() {
 
 function asyncStylesheet(file) {
   const href = assetHref(file);
-  return `<link rel="preload" href="${href}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link rel="stylesheet" href="${href}" /></noscript>`;
+  return `<link rel="preload" href="${href}" as="style" />
+<link rel="stylesheet" href="${href}" />`;
 }
 
 function accessibilityCriticalCss() {
@@ -186,7 +195,15 @@ ${includeVenueCss ? asyncStylesheet('/venue.css') : ''}`;
 }
 
 function serviceWorkerRegistration() {
-  return `<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>`;
+  return `<script src="${assetHref('/site-ui.js')}" defer></script>`;
+}
+
+function finalizeHtml(html) {
+  return String(html)
+    .replace(/<button\b(?![^>]*\btype=)/g, '<button type="button"')
+    .replace(/\s+onerror="this\.parentElement\.style\.display='none'"/g, ' data-fallback-hide="parent"')
+    .replace(/\s+onload="this\.media='all'"/g, '')
+    .replace(/\s+onload="this\.onload=null;this\.rel='stylesheet'"/g, '');
 }
 
 function loadGymsFromDataJs() {
@@ -197,21 +214,7 @@ function loadGymsFromDataJs() {
 }
 
 function header() {
-  return `<script>
-  (function () {
-    function update() {
-      var n = document.querySelector('.hero .nav');
-      if (!n) return;
-      if (document.documentElement.scrollTop > 30) n.classList.add('scrolled');
-      else n.classList.remove('scrolled');
-    }
-    document.addEventListener('DOMContentLoaded', function () {
-      document.addEventListener('scroll', update, { passive: true });
-      update();
-    });
-  })();
-  </script>
-<a href="#main" class="skip-link">Skip to main content</a>
+  return `<a href="#main" class="skip-link">Skip to main content</a>
 <div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
 <header class="hero" style="min-height: auto;" role="banner">
   <nav class="nav" role="navigation" aria-label="Primary navigation">
@@ -364,7 +367,7 @@ function commonHead(title, desc, canonical, schemaType) {
 <link rel="dns-prefetch" href="//maps.google.com" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
 <link rel="preconnect" href="https://plausible.io" crossorigin />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
@@ -455,7 +458,7 @@ function buildCategoryPage(cat, gymsInCat, allCats) {
 
   const cards = gymsInCat.map(g => `
     <article class="cat-venue-card">
-      <a class="cv-img" href="/gyms/${escHtml(g.id)}/" aria-hidden="true" tabindex="-1"><img src="/og/${escHtml(g.id)}.png" alt="" loading="lazy" decoding="async" width="600" height="315" onerror="this.parentElement.style.display='none'"></a>
+      <a class="cv-img" href="/gyms/${escHtml(g.id)}/" aria-hidden="true" tabindex="-1"><img src="/og/${escHtml(g.id)}.png" alt="" loading="lazy" decoding="async" width="600" height="315" data-fallback-hide="parent"></a>
       <div class="cv-head">
         <h3><a href="/gyms/${escHtml(g.id)}/">${escHtml(g.name)}</a></h3>
         <button class="favorite-btn" data-pg-favorite-id="${escHtml(g.id)}" data-pg-favorite-name="${escHtml(g.name)}" data-pg-favorite-category="${escHtml(g.category)}" data-pg-favorite-area="${escHtml(g.area || '')}" data-pg-favorite-price="${escHtml(g.priceRange || '')}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>
@@ -494,13 +497,13 @@ function buildCategoryPage(cat, gymsInCat, allCats) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-${commonHead(title, desc, url)}
+${commonHead(title, desc, url, 'CollectionPage')}
 <link rel="alternate" type="application/rss+xml" title="Pattaya Gym - ${escHtml(cat.label)} feed" href="/feed/${escHtml(cat.key)}.xml" />
 <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
 <script type="application/ld+json">${JSON.stringify(itemListSchema)}</script>
 <!-- Google tag (gtag.js) -->
+<script src="${assetHref('/analytics.js')}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 ${header()}
@@ -570,7 +573,7 @@ ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
 <script src="${assetHref('/favorites.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
-<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
+</body>
 </html>
 `;
 }
@@ -656,8 +659,8 @@ ${commonHead(title, desc, url)}
   @media (max-width: 880px) { #pg-map { min-height: 440px; } }
 </style>
 <!-- Google tag (gtag.js) -->
+<script src="${assetHref('/analytics.js')}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 ${header()}
@@ -809,7 +812,7 @@ ${footer()}
   map.on('moveend zoomend', renderMarkers);
   renderMarkers();
 </script>
-<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
+</body>
 </html>
 `;
 }
@@ -833,8 +836,8 @@ ${commonHead(title, desc, url)}
     ]
   })}</script>
 <!-- Google tag (gtag.js) -->
+<script src="${assetHref('/analytics.js')}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 ${header()}
@@ -905,7 +908,7 @@ ${header()}
 ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
 <script src="${assetHref('/compare.js')}" defer></script>
-<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
+</body>
 </html>
 `;
 }
@@ -919,8 +922,8 @@ ${commonHead('Page not found | Pattaya Gym', 'The page you\'re looking for doesn
 <meta name="robots" content="noindex" />
 <script defer>document.addEventListener('DOMContentLoaded',function(){if(window.plausible)window.plausible('404',{props:{path:location.pathname}});});</script>
 <!-- Google tag (gtag.js) -->
+<script src="${assetHref('/analytics.js')}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 ${header()}
@@ -947,7 +950,7 @@ ${header()}
   <p style="margin-top: 32px; color: var(--text-muted); font-size: 13px;">Popular categories: <a href="/category/muay-thai/" style="color: var(--accent);">Muay Thai</a> · <a href="/category/fitness/" style="color: var(--accent);">Fitness gyms</a> · <a href="/category/golf/" style="color: var(--accent);">Golf</a> · <a href="/category/watersports/" style="color: var(--accent);">Watersports</a> · <a href="/category/yoga/" style="color: var(--accent);">Yoga</a></p>
 </main>
 ${footer()}
-<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
+</body>
 </html>
 `;
 }
@@ -1170,6 +1173,13 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 - [Category RSS feeds](${SITE}/feed/): Per-category /feed/<category>.xml
 - [Area RSS feeds](${SITE}/feed/area/): Per-area /feed/area/<slug>.xml
 
+## Example AI queries
+
+- "Find beginner-friendly Muay Thai gyms in Pattaya with English-speaking coaches."
+- "Compare golf courses near Pattaya by travel time, prestige, and visitor suitability."
+- "Which Pattaya gyms are best for digital nomads staying near Jomtien or Pratamnak?"
+- "Plan a family-friendly Pattaya sport itinerary with pools, youth football, and indoor activities."
+
 ## Editorial promise
 
 Every listing on pattaya-gym.com is researched and source-cited from public information.
@@ -1388,7 +1398,7 @@ function main() {
     const dir = path.join(ROOT, 'category', cat.key);
     if (!fs.existsSync(path.dirname(dir))) fs.mkdirSync(path.dirname(dir));
     if (!fs.existsSync(dir)) fs.mkdirSync(dir);
-    fs.writeFileSync(path.join(dir, 'index.html'), buildCategoryPage(cat, gymsInCat, CATEGORIES));
+    fs.writeFileSync(path.join(dir, 'index.html'), finalizeHtml(buildCategoryPage(cat, gymsInCat, CATEGORIES)));
     extraUrls.push(`/category/${cat.key}/`);
     catCount++;
     console.log('  [CAT] /category/' + cat.key + '/  (' + gymsInCat.length + ' venues)');
@@ -1396,13 +1406,13 @@ function main() {
 
   // 2. Map
   if (!fs.existsSync(path.join(ROOT, 'map'))) fs.mkdirSync(path.join(ROOT, 'map'));
-  fs.writeFileSync(path.join(ROOT, 'map', 'index.html'), buildMapPage(GYMS, CATEGORIES));
+  fs.writeFileSync(path.join(ROOT, 'map', 'index.html'), finalizeHtml(buildMapPage(GYMS, CATEGORIES)));
   extraUrls.push('/map/');
   console.log('  [MAP] /map/');
 
   // 3. About
   if (!fs.existsSync(path.join(ROOT, 'about'))) fs.mkdirSync(path.join(ROOT, 'about'));
-  fs.writeFileSync(path.join(ROOT, 'about', 'index.html'), buildAboutPage(GYMS, CATEGORIES));
+  fs.writeFileSync(path.join(ROOT, 'about', 'index.html'), finalizeHtml(buildAboutPage(GYMS, CATEGORIES)));
   extraUrls.push('/about/');
   console.log('  [ABT] /about/');
 
@@ -1413,7 +1423,7 @@ function main() {
   }
 
   // 4. 404
-  fs.writeFileSync(path.join(ROOT, '404.html'), build404());
+  fs.writeFileSync(path.join(ROOT, '404.html'), finalizeHtml(build404()));
   console.log('  [404] /404.html');
 
   // 5. Robots + llms.txt

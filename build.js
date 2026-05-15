@@ -93,6 +93,23 @@ function escHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 }
 
+function telHref(phone) {
+  const raw = String(phone || '').trim();
+  if (!raw) return '';
+
+  const candidates = raw.match(/\+?\d[\d\s().-]{6,}\d/g) || [];
+
+  for (const candidate of candidates) {
+    let digits = candidate.replace(/[^\d+]/g, '');
+    if (digits.startsWith('00')) digits = '+' + digits.slice(2);
+    if (digits.startsWith('0')) digits = '+66' + digits.slice(1);
+    if (!digits.startsWith('+') && digits.startsWith('66')) digits = '+' + digits;
+    if (/^\+\d{7,15}$/.test(digits)) return digits;
+  }
+
+  return '';
+}
+
 function markThaiText(html) {
   return String(html).replace(/([\u0E00-\u0E3E\u0E40-\u0E7F][\u0E00-\u0E7F\s]*[\u0E00-\u0E3E\u0E40-\u0E7F])/g, '<span lang="th">$1</span>');
 }
@@ -337,13 +354,7 @@ function detectOpenStatus(hoursStr) {
   }
   if (!ranges.length) return null;
   // Use Bangkok time (UTC+7)
-  const now = new Date(Date.now() + 7 * 3600 * 1000);
-  const minutes = now.getUTCHours() * 60 + now.getUTCMinutes();
-  const open = ranges.some(r => {
-    if (r.to <= r.from) return minutes >= r.from || minutes <= r.to; // crossing midnight
-    return minutes >= r.from && minutes <= r.to;
-  });
-  return open ? 'open' : 'closed';
+  return null;
 }
 
 // Auto TL;DR — first 2 sentences (~280 chars max), preserves bold from md
@@ -532,12 +543,20 @@ function clipAtWord(s, max) {
 
 function venueMetaTitle(name) {
   const suffix = ' | Pattaya Gym';
-  const base = cleanText(name).replace(/\s+\([^)]{8,}\)/g, '');
+  let base = cleanText(name)
+    .replace(/&/g, 'and')
+    .replace(/[?']/g, '')
+    .replace(/[??]/g, '-')
+    .replace(/\s+\([^)]{8,}\)/g, '');
+  if ((base + suffix).length < 30) base += /pattaya/i.test(base) ? ' Venue' : ' Pattaya';
   return clipAtWord(base, 60 - suffix.length) + suffix;
 }
 
 function metaDesc(s) {
-  return clipAtWord(s, 158);
+  const base = clipAtWord(s, 145);
+  if (base.length >= 100) return base;
+  const expanded = (base ? base.replace(/[.\s]+$/, '') + '. ' : '') + 'Find verified addresses, maps, hours, price range and contact details for training in Pattaya.';
+  return clipAtWord(expanded, 155);
 }
 
 function criticalCss() {
@@ -552,8 +571,8 @@ function desktopTocCriticalCss() {
 
 function asyncStylesheet(file) {
   const href = assetHref(file);
-  return `<link rel="preload" href="${href}" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="${href}" /></noscript>`;
+  return `<link rel="preload" href="${href}" as="style" />
+  <link rel="stylesheet" href="${href}" />`;
 }
 
 function accessibilityCriticalCss() {
@@ -569,7 +588,15 @@ function stylesheetTags(includeVenueCss = true) {
 }
 
 function serviceWorkerRegistration() {
-  return `<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>`;
+  return `<script src="${assetHref('/site-ui.js')}" defer></script>`;
+}
+
+function finalizeHtml(html) {
+  return String(html)
+    .replace(/<button\b(?![^>]*\btype=)/g, '<button type="button"')
+    .replace(/\s+onerror="this\.parentElement\.style\.display='none'"/g, ' data-fallback-hide="parent"')
+    .replace(/\s+onload="this\.media='all'"/g, '')
+    .replace(/\s+onload="this\.onload=null;this\.rel='stylesheet'"/g, '');
 }
 
 function newsletterFooterHtml() { return ""; }
@@ -598,10 +625,10 @@ function schemaTypesForCategory(cat) {
   const key = String(cat || '').toLowerCase();
   const byCategory = {
     'muay-thai': ['LocalBusiness', 'SportsActivityLocation', 'SportsClub'],
-    fitness: ['LocalBusiness', 'HealthClub', 'ExerciseGym'],
-    crossfit: ['LocalBusiness', 'HealthClub', 'ExerciseGym'],
-    golf: ['LocalBusiness', 'GolfCourse'],
-    yoga: ['LocalBusiness', 'HealthAndBeautyBusiness'],
+    fitness: ['LocalBusiness', 'SportsActivityLocation', 'HealthClub', 'ExerciseGym'],
+    crossfit: ['LocalBusiness', 'SportsActivityLocation', 'HealthClub', 'ExerciseGym'],
+    golf: ['LocalBusiness', 'SportsActivityLocation', 'GolfCourse'],
+    yoga: ['LocalBusiness', 'SportsActivityLocation', 'HealthAndBeautyBusiness'],
     climbing: ['LocalBusiness', 'SportsActivityLocation'],
     watersports: ['LocalBusiness', 'SportsActivityLocation'],
     swimming: ['LocalBusiness', 'SportsActivityLocation'],
@@ -609,7 +636,7 @@ function schemaTypesForCategory(cat) {
     'kids-youth': ['LocalBusiness', 'SportsActivityLocation'],
     equestrian: ['LocalBusiness', 'SportsActivityLocation'],
     adventure: ['LocalBusiness', 'SportsActivityLocation'],
-    clubs: ['LocalBusiness', 'SportsClub']
+    clubs: ['LocalBusiness', 'SportsActivityLocation', 'SportsClub']
   };
   return byCategory[key] || ['LocalBusiness', 'SportsActivityLocation'];
 }
@@ -711,7 +738,7 @@ function buildVenueSchema(fm, slug, url, desc) {
     url: fm.website || url,
     mainEntityOfPage: url,
     image,
-    telephone: fm.phone || undefined,
+    telephone: telHref(fm.phone) || fm.phone || undefined,
     priceRange: mapPriceRangeToDollars(fm.priceRange),
     address: {
       '@type': 'PostalAddress',
@@ -1226,6 +1253,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   const schema = buildVenueSchema(fm, slug, url, desc);
 
   const social = fm.social || {};
+  const phoneHref = telHref(fm.phone);
   const socialLinks = [
     social.facebook && `<a href="https://facebook.com/${social.facebook}" rel="noopener" target="_blank">Facebook</a>`,
     social.instagram && `<a href="https://instagram.com/${social.instagram}" rel="noopener" target="_blank">Instagram</a>`
@@ -1256,7 +1284,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
   <link rel="dns-prefetch" href="//maps.google.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="preconnect" href="https://plausible.io" crossorigin />
 
   <meta property="og:type" content="article" />
@@ -1310,8 +1338,8 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     dateModified: fm.verified || undefined
   })}</script>
 <!-- Google tag (gtag.js) -->
+<script src="${assetHref('/analytics.js')}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -1344,7 +1372,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </div>
 
       <div class="venue-hero">
-      <figure class="venue-hero-img" aria-hidden="true"><img src="/og/${slug}.png" alt="" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630" onerror="this.parentElement.style.display='none'"></figure>
+      <figure class="venue-hero-img" aria-hidden="true"><img src="/og/${slug}.png" alt="" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630" data-fallback-hide="parent"></figure>
       <div class="venue-hero-art" aria-hidden="true">${getCategoryArt(fm.category)}</div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">${escHtml(cat)}</span>
@@ -1367,21 +1395,21 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
         ${fm.mapsUrl ? `<a class="btn btn-primary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">📍 View on Google Maps</a>` : ''}
         ${fm.mapsUrl ? `<a class="btn btn-secondary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">⭐ Read Google Reviews</a>` : ''}
         ${fm.website ? `<a class="btn btn-secondary" href="${escHtml(fm.website)}" target="_blank" rel="noopener">🔗 Official Website</a>` : ''}
-        ${fm.phone ? `<a class="btn btn-secondary" href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}">📞 ${escHtml(fm.phone)}</a>` : ''}
+        ${phoneHref ? `<a class="btn btn-secondary" href="tel:${escHtml(phoneHref)}">📞 ${escHtml(fm.phone)}</a>` : ''}
         ${social.facebook ? `<a class="btn btn-ghost" href="https://facebook.com/${escHtml(social.facebook)}" target="_blank" rel="noopener">Facebook</a>` : ''}
         ${social.instagram ? `<a class="btn btn-ghost" href="https://instagram.com/${escHtml(social.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ''}
-        <button class="favorite-btn" data-pg-favorite-id="${escHtml(slug)}" data-pg-favorite-name="${escHtml(fm.name)}" data-pg-favorite-category="${escHtml(fm.category || '')}" data-pg-favorite-area="${escHtml(fm.area || '')}" data-pg-favorite-price="${escHtml(fm.priceRange || '')}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>
-        <button class="compare-btn" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}"><span class="cmp-btn-label">+ Add to compare</span></button>
+        <button type="button" class="favorite-btn" data-pg-favorite-id="${escHtml(slug)}" data-pg-favorite-name="${escHtml(fm.name)}" data-pg-favorite-category="${escHtml(fm.category || '')}" data-pg-favorite-area="${escHtml(fm.area || '')}" data-pg-favorite-price="${escHtml(fm.priceRange || '')}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>
+        <button type="button" class="compare-btn" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}"><span class="cmp-btn-label">+ Add to compare</span></button>
       </div>
 
       <div class="share-bar">
         <span class="share-label">Share</span>
-        <button class="share-btn share-wa" onclick="PG.share('whatsapp')" aria-label="Share on WhatsApp"><span class="share-ico" aria-hidden="true">💬</span> WhatsApp</button>
-        <button class="share-btn share-fb" onclick="PG.share('facebook')" aria-label="Share on Facebook"><span class="share-ico" aria-hidden="true">f</span> Facebook</button>
-        <button class="share-btn share-tw" onclick="PG.share('twitter')" aria-label="Share on X"><span class="share-ico" aria-hidden="true">𝕏</span> X</button>
-        <button class="share-btn share-line" onclick="PG.share('line')" aria-label="Share on LINE"><span class="share-ico" aria-hidden="true">L</span> LINE</button>
-        <button class="share-btn share-tg" onclick="PG.share('telegram')" aria-label="Share on Telegram"><span class="share-ico" aria-hidden="true">✈</span> Telegram</button>
-        <button class="share-btn share-copy" onclick="PG.share('copy')" aria-label="Copy link"><span class="share-ico" aria-hidden="true">🔗</span> Copy link</button>
+        <button type="button" class="share-btn share-wa" data-share-target="whatsapp" aria-label="Share on WhatsApp"><span class="share-ico" aria-hidden="true">💬</span> WhatsApp</button>
+        <button type="button" class="share-btn share-fb" data-share-target="facebook" aria-label="Share on Facebook"><span class="share-ico" aria-hidden="true">f</span> Facebook</button>
+        <button type="button" class="share-btn share-tw" data-share-target="twitter" aria-label="Share on X"><span class="share-ico" aria-hidden="true">𝕏</span> X</button>
+        <button type="button" class="share-btn share-line" data-share-target="line" aria-label="Share on LINE"><span class="share-ico" aria-hidden="true">L</span> LINE</button>
+        <button type="button" class="share-btn share-tg" data-share-target="telegram" aria-label="Share on Telegram"><span class="share-ico" aria-hidden="true">✈</span> Telegram</button>
+        <button type="button" class="share-btn share-copy" data-share-target="copy" aria-label="Copy link"><span class="share-ico" aria-hidden="true">🔗</span> Copy link</button>
       </div>
     </div>
 
@@ -1404,7 +1432,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
       <h3>Visited or trained at ${escHtml(fm.name)}?</h3>
       <p>Help other Pattaya travellers find the right gym — share this page or tell us what we got wrong.</p>
       <div class="cta-row">
-        <button class="btn btn-primary" onclick="PG.share('whatsapp')">💬 Share on WhatsApp</button>
+        <button type="button" class="btn btn-primary" data-share-target="whatsapp">💬 Share on WhatsApp</button>
         <a class="btn btn-secondary" href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Edit suggestion: ' + fm.name)}">✏️ Suggest an edit</a>
         ${fm.mapsUrl ? `<a class="btn btn-secondary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener">⭐ Leave a Google review</a>` : ''}
       </div>
@@ -1534,80 +1562,36 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
     ${fm.mapsUrl ? `<a class="sa-btn sa-primary" href="${escHtml(fm.mapsUrl)}" target="_blank" rel="noopener" aria-label="Open in Google Maps">
       <span class="sa-ico">📍</span><span class="sa-lbl">Map</span>
     </a>` : ''}
-    ${fm.phone ? `<a class="sa-btn" href="tel:${escHtml(String(fm.phone).replace(/\s/g,''))}" aria-label="Call ${escHtml(fm.name)}">
+    ${phoneHref ? `<a class="sa-btn" href="tel:${escHtml(phoneHref)}" aria-label="Call ${escHtml(fm.name)}">
       <span class="sa-ico">📞</span><span class="sa-lbl">Call</span>
     </a>` : ''}
     ${fm.website ? `<a class="sa-btn" href="${escHtml(fm.website)}" target="_blank" rel="noopener" aria-label="Visit website">
       <span class="sa-ico">🔗</span><span class="sa-lbl">Site</span>
     </a>` : ''}
-    <button class="sa-btn sa-compare" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}" aria-label="Add to compare">
+    <button type="button" class="sa-btn sa-compare" data-pg-compare-id="${escHtml(slug)}" data-pg-compare-name="${escHtml(fm.name)}" aria-label="Add to compare">
       <span class="sa-ico">⊕</span><span class="sa-lbl cmp-btn-label">Compare</span>
     </button>
-    <button class="sa-btn" onclick="PG.share('native')" aria-label="Share this page">
+    <button type="button" class="sa-btn" data-share-target="native" aria-label="Share this page">
       <span class="sa-ico">↗</span><span class="sa-lbl">Share</span>
     </button>
   </nav>
 
   <div class="scroll-progress" id="pg-scroll-progress"></div>
-  <button class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
+  <button type="button" class="back-to-top" id="pg-back-to-top" aria-label="Back to top">↑</button>
 
-  <script>window.PG_CURRENT_VENUE=${JSON.stringify({
+  <script type="application/json" id="pg-current-venue">${JSON.stringify({
     id: slug,
     name: fm.name || slug,
     category: fm.category || '',
     area: fm.area || '',
     priceRange: fm.priceRange || '',
     href: `/gyms/${slug}/`
-  })};</script>
+  }).replace(/</g, '\\u003c')}</script>
   <script src="${assetHref('/share.js')}" defer></script>
   <script src="${assetHref('/favorites.js')}" defer></script>
   <script src="${assetHref('/compare.js')}" defer></script>
   <script src="${assetHref('/recent.js')}" defer></script>
-  <script>
-  (function () {
-    // Sticky nav scrolled-state
-    var navEl = document.querySelector('.hero .nav');
-    var bar = document.getElementById('pg-scroll-progress');
-    var btn = document.getElementById('pg-back-to-top');
-    var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.jump-pill'));
-    var tocHeadings = tocLinks.map(function (link) {
-      var id = link.getAttribute('href') ? link.getAttribute('href').slice(1) : '';
-      return id ? document.getElementById(id) : null;
-    });
-    if (btn) {
-      btn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-    function updateToc() {
-      if (!tocLinks.length) return;
-      var activeIndex = 0;
-      for (var i = 0; i < tocHeadings.length; i++) {
-        if (tocHeadings[i] && tocHeadings[i].getBoundingClientRect().top <= 150) activeIndex = i;
-      }
-      tocLinks.forEach(function (link, index) {
-        link.classList.toggle('is-active', index === activeIndex);
-      });
-    }
-    function update() {
-      var h = document.documentElement;
-      var scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-      if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
-      if (btn) {
-        if (h.scrollTop > 600) btn.classList.add('visible');
-        else btn.classList.remove('visible');
-      }
-      if (navEl) {
-        if (h.scrollTop > 30) navEl.classList.add('scrolled');
-        else navEl.classList.remove('scrolled');
-      }
-      updateToc();
-    }
-    document.addEventListener('scroll', update, { passive: true });
-    update();
-  })();
-  </script>
-<script>document.addEventListener('click',function(e){var t=e.target.closest('.nav-toggle');if(!t)return;var n=document.querySelector('.nav-links');if(n){n.classList.toggle('open');t.setAttribute('aria-expanded',n.classList.contains('open'));}});</script></body>
+</body>
 </html>
 `;
 }
@@ -1752,7 +1736,7 @@ function runBuild() {
     const html = buildVenuePage(slug, fm, bodyHtml, body, GYMS, CATEGORIES);
     const venueDir = path.join(OUT_DIR, slug);
     ensureDir(venueDir);
-    fs.writeFileSync(path.join(venueDir, 'index.html'), html);
+    fs.writeFileSync(path.join(venueDir, 'index.html'), finalizeHtml(html));
 
     venues.push({ slug, fm });
     const tag = mdFiles.has(slug) ? 'DEEP' : 'stub';

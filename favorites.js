@@ -164,7 +164,7 @@ PG.favorites = {
         (g.description ? '<p>' + this.esc(g.description) + '</p>' : '') +
         '<div class="card-actions">' +
           '<a class="primary" href="/gyms/' + this.esc(item.id) + '/">View Details</a>' +
-          '<button class="favorite-btn is-saved" data-pg-favorite-id="' + this.esc(item.id) + '" data-pg-favorite-name="' + this.esc(g.name || item.name) + '" aria-pressed="true"><span class="fav-heart" aria-hidden="true">&#9829;</span><span class="fav-btn-label">Saved</span></button>' +
+          '<button type="button" class="favorite-btn is-saved" data-pg-favorite-id="' + this.esc(item.id) + '" data-pg-favorite-name="' + this.esc(g.name || item.name) + '" aria-pressed="true"><span class="fav-heart" aria-hidden="true">&#9829;</span><span class="fav-btn-label">Saved</span></button>' +
         '</div>' +
       '</article>';
     }, this).join('');

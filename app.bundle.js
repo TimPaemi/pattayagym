@@ -321,7 +321,7 @@ PG.favorites = {
         (g.description ? '<p>' + this.esc(g.description) + '</p>' : '') +
         '<div class="card-actions">' +
           '<a class="primary" href="/gyms/' + this.esc(item.id) + '/">View Details</a>' +
-          '<button class="favorite-btn is-saved" data-pg-favorite-id="' + this.esc(item.id) + '" data-pg-favorite-name="' + this.esc(g.name || item.name) + '" aria-pressed="true"><span class="fav-heart" aria-hidden="true">&#9829;</span><span class="fav-btn-label">Saved</span></button>' +
+          '<button type="button" class="favorite-btn is-saved" data-pg-favorite-id="' + this.esc(item.id) + '" data-pg-favorite-name="' + this.esc(g.name || item.name) + '" aria-pressed="true"><span class="fav-heart" aria-hidden="true">&#9829;</span><span class="fav-btn-label">Saved</span></button>' +
         '</div>' +
       '</article>';
     }, this).join('');
@@ -417,7 +417,7 @@ PG.compare = {
       var label = x.name.length > 20 ? x.name.slice(0, 18) + '...' : x.name;
       return '<span class="pg-cw-pill">' +
         '<span>' + self.esc(label) + '</span>' +
-        '<button class="pg-cw-x" data-pg-compare-remove="' + self.esc(x.id) + '" aria-label="Remove ' + self.esc(x.name) + '">x</button>' +
+        '<button type="button" class="pg-cw-x" data-pg-compare-remove="' + self.esc(x.id) + '" aria-label="Remove ' + self.esc(x.name) + '">x</button>' +
         '</span>';
     }).join('');
 
@@ -425,7 +425,7 @@ PG.compare = {
       '<div class="pg-cw-inner">' +
         '<div class="pg-cw-header">' +
           '<strong>Compare (' + list.length + ')</strong>' +
-          '<button class="pg-cw-clear" data-pg-compare-clear="1" title="Clear all">Clear</button>' +
+          '<button type="button" class="pg-cw-clear" data-pg-compare-clear="1" title="Clear all">Clear</button>' +
         '</div>' +
         '<div class="pg-cw-list">' + pills + '</div>' +
         (list.length >= 2
@@ -466,13 +466,13 @@ PG.compare = {
       return;
     }
     if (!others.length) {
-      box.innerHTML = '<strong>Compare this venue.</strong> <button class="btn btn-secondary" data-add-current-compare="1">Add to compare</button>';
+      box.innerHTML = '<strong>Compare this venue.</strong> <button type="button" class="btn btn-secondary" data-add-current-compare="1">Add to compare</button>';
     } else {
       box.innerHTML = '<label for="compare-to-select">Compare this venue with</label>' +
         '<select id="compare-to-select">' +
         others.map(function (x) { return '<option value="' + this.esc(x.id) + '">' + this.esc(x.name) + '</option>'; }, this).join('') +
         '</select>' +
-        '<button class="btn btn-secondary" data-add-current-compare="1">Add this venue</button>';
+        '<button type="button" class="btn btn-secondary" data-add-current-compare="1">Add this venue</button>';
     }
     var btn = box.querySelector('[data-add-current-compare]');
     if (btn) {
@@ -536,12 +536,12 @@ document.addEventListener('DOMContentLoaded', function () { PG.compare.init(); }
       acc[g.category] = (acc[g.category] || 0) + 1;
       return acc;
     }, {});
-    const all = `<button class="chip ${activeCategory === "all" ? "active" : ""}" data-cat="all">All <span class="count">${gyms.length}</span></button>`;
+    const all = `<button type="button" class="chip ${activeCategory === "all" ? "active" : ""}" data-cat="all">All <span class="count">${gyms.length}</span></button>`;
     const rest = cats
       .map((c) => {
         const n = counts[c.key] || 0;
         const active = activeCategory === c.key ? "active" : "";
-        return `<button class="chip ${active}" data-cat="${c.key}"><span>${c.emoji}</span> ${c.label} <span class="count">${n}</span></button>`;
+        return `<button type="button" class="chip ${active}" data-cat="${c.key}"><span>${c.emoji}</span> ${c.label} <span class="count">${n}</span></button>`;
       })
       .join("");
     chips.innerHTML = all + rest;
@@ -558,6 +558,17 @@ document.addEventListener('DOMContentLoaded', function () { PG.compare.init(); }
   const escapeHtml = (s) =>
     String(s || "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+
+  const cleanTel = (phone) => {
+    const raw = String(phone || '');
+    const match = raw.match(/(?:\+66|0)[0-9\s().-]{8,18}/);
+    let value = (match ? match[0] : raw).replace(/[^0-9+]/g, '');
+    if (value.startsWith('00')) value = '+' + value.slice(2);
+    if (value.startsWith('0')) value = '+66' + value.slice(1);
+    if (value.startsWith('66')) value = '+' + value;
+    return /^\+66\d{8,9}$/.test(value) ? value : '';
+  };
+
   const catLabel = (key) => {
     const c = cats.find((x) => x.key === key);
     return c ? `${c.emoji} ${c.label}` : key;
@@ -570,9 +581,10 @@ document.addEventListener('DOMContentLoaded', function () { PG.compare.init(); }
     actions.push(`<a class="primary" href="/gyms/${g.id}/">View Details</a>`);
     if (g.mapsUrl) actions.push(`<a href="${g.mapsUrl}" target="_blank" rel="noopener">Map</a>`);
     if (g.website) actions.push(`<a href="${g.website}" target="_blank" rel="noopener">Website</a>`);
-    if (g.phone) actions.push(`<a href="tel:${g.phone.replace(/\s/g, "")}">Call</a>`);
+    const phoneHref = cleanTel(g.phone);
+    if (phoneHref) actions.push(`<a href="tel:${phoneHref}">Call</a>`);
     const titleHtml = `<a href="/gyms/${g.id}/" style="color:inherit;text-decoration:none;">${escapeHtml(g.name)}</a>`;
-    const favoriteBtn = `<button class="favorite-btn card-favorite" data-pg-favorite-id="${escapeHtml(g.id)}" data-pg-favorite-name="${escapeHtml(g.name)}" data-pg-favorite-category="${escapeHtml(g.category)}" data-pg-favorite-area="${escapeHtml(g.area || "")}" data-pg-favorite-price="${escapeHtml(g.priceRange || "")}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>`;
+    const favoriteBtn = `<button type="button" class="favorite-btn card-favorite" data-pg-favorite-id="${escapeHtml(g.id)}" data-pg-favorite-name="${escapeHtml(g.name)}" data-pg-favorite-category="${escapeHtml(g.category)}" data-pg-favorite-area="${escapeHtml(g.area || "")}" data-pg-favorite-price="${escapeHtml(g.priceRange || "")}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>`;
     return `
       <a class="card" href="/gyms/${g.id}/">
         <div class="card-head">
