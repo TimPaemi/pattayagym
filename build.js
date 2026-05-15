@@ -10,6 +10,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const shared = require('./_shared');
 
 const ROOT = __dirname;
 const VENUES_DIR = path.join(ROOT, 'venues');
@@ -17,7 +18,7 @@ const OUT_DIR = path.join(ROOT, 'gyms');
 const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '226';
+const ASSET_VERSION = '227';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -599,9 +600,6 @@ function finalizeHtml(html) {
     .replace(/\s+onload="this\.onload=null;this\.rel='stylesheet'"/g, '');
 }
 
-function newsletterFooterHtml() { return ""; }
-
-function pageFeedbackHtml() { return ""; }
 
 function schemaTypesForCategory(cat) {
   const key = String(cat || '').toLowerCase();
@@ -1324,22 +1322,7 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
-  <header class="hero" style="min-height: auto;" role="banner">
-    <nav class="nav" role="navigation" aria-label="Primary navigation">
-      <a href="/" class="brand">PATTAYA<span class="dot">.</span>GYM</a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="/category/muay-thai/">Muay Thai</a></li>
-        <li><a href="/category/fitness/">Gyms</a></li>
-        <li><a href="/category/golf/">Golf</a></li>
-        <li><a href="/category/yoga/">Yoga</a></li>
-        <li><a href="/guides/">Guides</a></li>
-        <li><a href="/map/">Map</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    </nav>
-  </header>
+  ${shared.header()}
 
   <main id="main" class="venue-page" role="main">
     <div class="venue-breadcrumb">
@@ -1351,7 +1334,6 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </div>
 
       <div class="venue-hero">
-      <div class="venue-hero-art" aria-hidden="true">${getCategoryArt(fm.category)}</div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">${escHtml(cat)}</span>
 ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open now</span>\n' : ''}${openStatus === 'closed' ? '        <span class="open-badge open-closed">● Closed now</span>\n' : ''}        <span class="meta-dot">•</span>
@@ -1362,11 +1344,11 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
       ${firstPara ? `<p class="venue-lede">${escHtml(firstPara.slice(0, 240))}${firstPara.length > 240 ? '…' : ''}</p>` : ''}
 
       <div class="venue-hero-meta">
-        ${fm.area ? `<span class="meta-chip">📍 ${escHtml(fm.area)}</span>` : ''}
-        ${fm.priceRange ? `<span class="meta-chip">💰 ${escHtml(fm.priceRange)}</span>` : ''}
-        ${fm.hours ? `<span class="meta-chip">🕐 ${escHtml(fm.hours)}</span>` : ''}
-        ${languagesStr ? `<span class="meta-chip">🗣 ${escHtml(languagesStr)}</span>` : ''}
-        ${fm.distinction ? `<span class="meta-chip meta-chip-accent">⭐ ${escHtml(fm.distinction)}</span>` : ''}
+        ${fm.area ? `<span class="meta-chip">Area: ${escHtml(fm.area)}</span>` : ''}
+        ${fm.priceRange ? `<span class="meta-chip">Price: ${escHtml(fm.priceRange)}</span>` : ''}
+        ${fm.hours ? `<span class="meta-chip">Hours: ${escHtml(fm.hours)}</span>` : ''}
+        ${languagesStr ? `<span class="meta-chip">Languages: ${escHtml(languagesStr)}</span>` : ''}
+        ${fm.distinction ? `<span class="meta-chip meta-chip-accent">${escHtml(fm.distinction)}</span>` : ''}
       </div>
 
       <div class="venue-actions">
@@ -1458,82 +1440,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
   </main>
 
   
-  <div class="marquee-bottom" aria-hidden="true"><div class="marquee-track"><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span></div></div>
-  <footer class="site-footer" role="contentinfo">
-    <div class="site-footer-inner">
-      <div class="sf-col sf-brand-col">
-        <div class="sf-brand"><span class="brand-mark small">P</span><span class="sf-brand-text">PATTAYA <strong>GYM</strong></span></div>
-        <p class="sf-tag">The most comprehensive directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand.</p>
-      </div>
-      <div class="sf-col">
-        <p class="sf-heading">Sport categories</p>
-        <ul>
-          <li><a href="/category/muay-thai/">Muay Thai camps</a></li>
-          <li><a href="/category/fitness/">Fitness gyms</a></li>
-          <li><a href="/category/golf/">Golf courses</a></li>
-          <li><a href="/category/yoga/">Yoga studios</a></li>
-          <li><a href="/category/watersports/">Watersports &amp; diving</a></li>
-          <li><a href="/category/racquet/">Racquet sports</a></li>
-          <li><a href="/category/swimming/">Swimming pools</a></li>
-          <li><a href="/category/adventure/">Adventure</a></li>
-        </ul>
-      </div>
-      <div class="sf-col">
-        <p class="sf-heading">Areas of Pattaya</p>
-        <ul>
-          <li><a href="/area/jomtien/">Jomtien Beach</a></li>
-          <li><a href="/area/naklua/">Naklua / North Pattaya</a></li>
-          <li><a href="/area/pratamnak/">Pratamnak Hill</a></li>
-          <li><a href="/area/central-pattaya/">Central Pattaya</a></li>
-          <li><a href="/area/east-pattaya/">East Pattaya / Darkside</a></li>
-          <li><a href="/area/sattahip/">Sattahip / Far South</a></li>
-        </ul>
-      </div>
-      <div class="sf-col">
-        <p class="sf-heading">Best-of guides</p>
-        <ul>
-          <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
-          <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
-          <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
-          <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
-          <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
-          <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
-          <li><a href="/guides/family-friendly-pattaya/">Family-friendly</a></li>
-          <li><a href="/guides/best-for-beginners-pattaya/">Best for beginners</a></li>
-          <li><a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a></li>
-          <li><a href="/guides/female-friendly-gyms-pattaya/">Female-friendly venues</a></li>
-          <li><a href="/guides/pattaya-seniors-low-impact-sport/">Seniors 65+ sport guide</a></li>
-        </ul>
-      </div>
-      <div class="sf-col">
-        <p class="sf-heading">Tools &amp; site</p>
-        <ul>
-          <li><a href="/search/">Search venues</a></li>
-          <li><a href="/favorites/">Saved favorites</a></li>
-          <li><a href="/map/">Interactive map</a></li>
-          <li><a href="/compare/">Compare venues</a></li>
-          <li><a href="/plan-my-trip/">Plan my trip</a></li>
-          <li><a href="/find-my-coach/">Find my coach</a></li>
-          <li><a href="/about/">About this site</a></li>
-          <li><a href="/methodology/">Research methodology</a></li>
-          <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
-          <li><a href="/add-your-gym/">Add your gym</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener">WhatsApp +66</a></li>
-          <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE @timpaemi</a></li>
-          <li><a href="/press/">Press</a></li>
-        </ul>
-      </div>
-    </div>
-    ${newsletterFooterHtml()}
-    <div class="site-footer-base">
-      <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
-      <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
-          
-    </div>
-  </footer>
+  ${shared.footer({ lastBuildDate: LAST_BUILD_DATE })}
 
   <!-- Sticky bottom action bar (mobile thumb-reach) -->
   <nav class="sticky-actions" aria-label="Quick actions">

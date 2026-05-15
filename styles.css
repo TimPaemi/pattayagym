@@ -169,9 +169,6 @@ img, svg, video { max-width: 100%; display: block; height: auto; }
   text-decoration: none;
 }
 .brand .dot { color: var(--gold); }
-.brand-mark {
-  display: none; /* legacy yellow square — kill */
-}
 .nav-links {
   display: flex;
   gap: 28px;
@@ -1249,7 +1246,6 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
 /* ============ KILL LEGACY BLOAT ============ */
-#newsletter, .newsletter, [id="newsletter"],
 #reader-feedback, .reader-feedback,
 #recently-viewed, .recently-viewed,
 .hero-bg-blur, .glow, .shimmer {
@@ -1923,50 +1919,6 @@ h1, h2, h3, h4, h5, h6 {
   .back-to-top { right: 16px; bottom: 90px; }
 }
 
-/* --- page feedback box (the green/red thumbs section) --- */
-.page-feedback {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 40px 32px;
-}
-.page-feedback-card {
-  background: var(--ink-2);
-  border: 1px solid var(--line);
-  padding: 32px;
-  text-align: center;
-}
-.page-feedback-card h3 {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
-  margin: 0 0 12px 0;
-  color: var(--bone);
-}
-.page-feedback-card p {
-  font-family: var(--display);
-  font-size: 14px;
-  color: var(--muted);
-  margin: 0 0 16px 0;
-}
-.page-feedback a {
-  display: inline-block;
-  margin: 4px;
-  padding: 10px 18px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--bone);
-  text-decoration: none;
-  transition: border-color 0.15s, color 0.15s;
-}
-.page-feedback a:hover { border-color: var(--gold); color: var(--gold); }
-
 /* --- best-for block (auto-generated) --- */
 .best-for-block, .bestfor-block {
   background: var(--ink-2);
@@ -2233,7 +2185,6 @@ h1, h2, h3, h4, h5, h6 {
 .venue-page .nearby-venues,
 .venue-page .related-venues,
 .venue-page .about,
-.venue-page .page-feedback,
 .venue-page .venue-footer {
   max-width: 1320px;
   margin-left: auto;
@@ -3502,7 +3453,7 @@ main.venue-page > h2 {
   margin: 0 0 20px 0;
 }
 
-/* "View full page ->" CTA — replace -> with arrow icon styling */
+/* Category card CTA treatment */
 .cv-cta {
   align-self: flex-start;
 }
@@ -4092,13 +4043,6 @@ section.tool-tray {
   border-color: var(--coral) !important;
 }
 
-/* ============ NEWSLETTER REMNANTS in compare/footer ============ */
-.footer-newsletter, .newsletter-card, .newsletter-form,
-.newsletter-field, .newsletter-kicker, .frequency-options,
-.frequency-label {
-  display: none !important;
-}
-
 /* ================================================================
    VENUE-ID WATERMARK — big editorial number behind hero
    ================================================================ */
@@ -4359,117 +4303,6 @@ article.guide-body > p:first-child::first-letter {
 }
 
 /* ================================================================
-   PAGE FEEDBACK — more inviting
-   ================================================================ */
-.page-feedback {
-  padding: 80px 32px;
-  background: var(--ink-2);
-  border-top: 1px solid var(--line);
-}
-.page-feedback-card {
-  max-width: 720px;
-  margin: 0 auto;
-  background: transparent;
-  border: none;
-  text-align: center;
-}
-.page-feedback-card::before {
-  content: '// WAS THIS HELPFUL';
-  display: block;
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--coral);
-  margin-bottom: 20px;
-}
-.page-feedback-card h3 {
-  font-size: clamp(24px, 3vw, 36px);
-  margin-bottom: 16px;
-  text-transform: uppercase;
-}
-
-/* ================================================================
-   SHARE PILL prefix
-   ================================================================ */
-.share-bar::before {
-  content: '// SPREAD THE WORD ';
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  color: var(--coral);
-  margin-right: 16px;
-  align-self: center;
-}
-
-/* ================================================================
-   404 PAGE polish
-   ================================================================ */
-body.error-page main, .four-oh-four, .page-404 {
-  text-align: center;
-  padding: 120px 32px;
-}
-body.error-page h1, .four-oh-four h1 {
-  font-size: clamp(120px, 22vw, 280px);
-  letter-spacing: -0.05em;
-  color: var(--gold);
-  font-weight: 900;
-  margin: 0;
-  font-family: var(--display);
-}
-
-/* ================================================================
-   COMMA SEPARATORS — mono dot in lists
-   ================================================================ */
-.venue-meta-line span + span,
-.venue-hero-meta span + span {
-  position: relative;
-}
-
-/* ================================================================
-   LISTICLE CARDS — for guide pages with multiple ranked picks
-   ================================================================ */
-.listicle, .ranked-list {
-  list-style: none;
-  padding: 0;
-  margin: 32px 0;
-  counter-reset: listicle;
-}
-.listicle > li, .ranked-list > li {
-  counter-increment: listicle;
-  position: relative;
-  padding: 36px 32px 36px 100px;
-  border: 1px solid var(--line);
-  margin-bottom: -1px;
-  background: var(--ink-2);
-}
-.listicle > li::before, .ranked-list > li::before {
-  content: counter(listicle, decimal-leading-zero);
-  position: absolute;
-  left: 32px;
-  top: 32px;
-  font-family: var(--mono);
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-
-/* ================================================================
-   COLORS FOR CATEGORY CARDS (per-category accent)
-   ================================================================ */
-.cat-card[href*="muay-thai"] .arrow,
-.cat-card[href*="mma"] .arrow,
-.cat-card[href*="boxing"] .arrow { color: var(--coral); }
-.cat-card[href*="golf"] .arrow,
-.cat-card[href*="yoga"] .arrow { color: var(--mint); }
-.cat-card[href*="watersports"] .arrow,
-.cat-card[href*="swimming"] .arrow,
-.cat-card[href*="racquet"] .arrow { color: var(--sky); }
-
-/* ================================================================
    VOICES section (homepage testimonials)
    ================================================================ */
 .voices-section { background: var(--ink); }
@@ -4604,56 +4437,8 @@ body[class*="cat-racquet"] .venue-hero-art { color: var(--sky) !important; }
    SECTION-SPACING TIGHTENING on subpages
    ================================================================ */
 .venue-page .venue-content-shell + .venue-cta-foot,
-.venue-page .about + .page-feedback {
+.venue-page .about {
   margin-top: 0;
-}
-
-/* ================================================================
-   CARD IMAGE — OG image at top of venue cards
-   ================================================================ */
-.cv-img {
-  display: block;
-  width: calc(100% + 64px);
-  margin: -36px -32px 24px;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: var(--ink-3);
-  position: relative;
-  text-decoration: none;
-}
-.cv-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease, filter 0.3s ease;
-  filter: grayscale(0.25) contrast(1.05);
-}
-.cat-venue-card:hover .cv-img img {
-  transform: scale(1.04);
-  filter: grayscale(0) contrast(1.1);
-}
-.cv-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(10,10,10,0.5) 100%);
-  pointer-events: none;
-}
-.cat-venue-card { padding-top: 0 !important; }
-
-/* Related/nearby cards — same treatment if they have images */
-.related-card .cv-img,
-.nearby-card .cv-img {
-  margin: -28px -28px 20px;
-  width: calc(100% + 56px);
-}
-
-@media (max-width: 720px) {
-  .cv-img {
-    margin: -28px -24px 18px;
-    width: calc(100% + 48px);
-  }
 }
 
 /* ================================================================
@@ -4717,71 +4502,6 @@ body[class*="cat-racquet"] .venue-hero-art { color: var(--sky) !important; }
 }
 
 /* ================================================================
-   CMP-TABLE — venue images in compare
-   ================================================================ */
-.cmp-venue-head .cv-img {
-  margin: 0 0 16px 0;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-
-/* ================================================================
-   VENUE HERO IMAGE — full-bleed 16:9 above the venue title
-   ================================================================ */
-.venue-hero-img {
-  margin: 0 -32px 32px;
-  width: calc(100% + 64px);
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: var(--ink-3);
-  position: relative;
-  border: 0;
-  padding: 0;
-}
-.venue-hero-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: grayscale(0.15) contrast(1.05);
-  transition: filter 0.3s;
-}
-.venue-hero-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10,10,10,0) 40%, rgba(10,10,10,0.45) 100%);
-  pointer-events: none;
-}
-.venue-hero-img::before {
-  content: "// FROM THE VENUE";
-  position: absolute;
-  top: 20px;
-  left: 24px;
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(10,10,10,0.7);
-  padding: 6px 12px;
-  z-index: 2;
-  backdrop-filter: blur(8px);
-}
-@media (max-width: 720px) {
-  .venue-hero-img {
-    margin: 0 -20px 24px;
-    width: calc(100% + 40px);
-  }
-}
-
-/* Push the venue-hero-art watermark behind the image properly */
-.venue-page > .venue-hero {
-  padding-top: 0 !important;
-}
-
-/* ================================================================
    HOMEPAGE // LATEST section
    ================================================================ */
 .latest-grid {
@@ -4805,20 +4525,6 @@ body[class*="cat-racquet"] .venue-hero-art { color: var(--sky) !important; }
   position: relative;
 }
 .latest-card:hover { background: var(--bone-2); }
-.latest-card .cv-img {
-  margin: 0;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: var(--ink-3);
-}
-.latest-card .cv-img img {
-  filter: grayscale(0.2) contrast(1.05);
-  transition: transform 0.4s, filter 0.3s;
-}
-.latest-card:hover .cv-img img {
-  transform: scale(1.04);
-  filter: grayscale(0) contrast(1.1);
-}
 .latest-meta {
   font-family: var(--mono);
   font-size: 11px;
@@ -5176,7 +4882,6 @@ body[class*="cat-racquet"] .venue-hero-art { color: var(--sky) !important; }
 
   /* === LATEST === */
   .latest-grid { grid-template-columns: 1fr; }
-  .latest-card .cv-img { aspect-ratio: 16 / 9; }
   .latest-meta { padding: 16px 20px 6px; font-size: 10px; }
   .latest-card h3 { font-size: 19px; padding: 0 20px 10px; }
   .latest-card p { font-size: 14px; padding: 0 20px 22px; }
@@ -5221,16 +4926,6 @@ body[class*="cat-racquet"] .venue-hero-art { color: var(--sky) !important; }
   .breadcrumb .sep, .venue-breadcrumb .bc-sep { margin: 0 6px; }
 
   /* === VENUE HERO IMAGE === */
-  .venue-hero-img {
-    margin: 0 -20px 24px;
-    width: calc(100% + 40px);
-  }
-  .venue-hero-img::before {
-    top: 12px;
-    left: 16px;
-    font-size: 9px;
-    padding: 5px 10px;
-  }
 
   /* === VENUE HERO === */
   .venue-page > .venue-hero {
@@ -5421,11 +5116,6 @@ body[class*="cat-racquet"] .venue-hero-art { color: var(--sky) !important; }
     padding: 0 0 24px 0 !important;
     min-height: 0;
   }
-  .cat-venue-card .cv-img {
-    margin: 0 0 18px 0 !important;
-    width: 100% !important;
-    aspect-ratio: 16 / 9;
-  }
   .cat-venue-card .cv-head,
   .cat-venue-card .cv-meta,
   .cat-venue-card p,
@@ -5549,7 +5239,7 @@ html { scroll-padding-top: 80px; }
   .venue-content-shell { padding: 40px 20px 60px; }
   .venue-body { font-size: 16px; }
   .venue-cta-foot { padding: 48px 20px; }
-  .related-venues, .nearby-venues, .about, .page-feedback {
+  .related-venues, .nearby-venues, .about {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -5624,12 +5314,6 @@ html { scroll-padding-top: 80px; }
   display: none !important;
 }
 
-/* Hide the .venue-hero-img and .cv-img (OG-image-as-card) defensively
-   in case any page still renders them */
-.venue-hero-img, .cat-venue-card .cv-img, .latest-card .cv-img,
-.cmp-venue-head .cv-img, a.cv-img {
-  display: none !important;
-}
 
 /* Restore card padding now that there's no leading image */
 .cat-venue-card {
@@ -5649,36 +5333,462 @@ html { scroll-padding-top: 80px; }
   .marquee-bottom .marquee-track { font-size: 15px; }
 }
 
-/* About page breadcrumb tightening — kill duplicate eyebrow */
-body.about-page .venue-hero .venue-cat-pill,
-.venue-page > .venue-hero > .venue-cat-pill:first-child + .venue-h1 {
-  /* if pill matches breadcrumb tail, suppress */
-}
-
-/* "Curated guides for this category" headline — bigger */
-.category-guides-h, .curated-guides-h {
-  font-family: var(--display) !important;
-  font-weight: 900 !important;
-  font-size: clamp(28px, 4vw, 44px) !important;
-  text-transform: 
-
 /* ================================================================
-   HORIZONTAL OVERFLOW KILL — defensive against oversize headlines
+   VISUAL DISASTER REPAIR ? stable editorial chassis
    ================================================================ */
-html, body {
-  overflow-x: hidden !important;
-  max-width: 100vw;
+:root {
+  --wrap: 1280px;
+  --page-pad: 32px;
+  --section-y: 96px;
 }
-.venue-page, main, .wrap, .container, .hero, .section, .venue-hero, .category-hero, .area-hero, .guide-hero {
-  max-width: 100vw;
+
+html, body, .venue-page, main {
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
-h1, h2, h3, .venue-h1, .hero h1, .hero-h1, .sec-h, .category-hero h1, .area-hero h1, .guide-hero h1 {
-  word-wrap: break-word;
+*, *::before, *::after { box-sizing: border-box; min-width: 0; }
+img, video, svg, canvas, iframe { max-width: 100%; }
+
+.wrap, .container, .hero-content, .nav-row, .site-footer-inner, .site-footer-base,
+.category-hero, .area-hero, .guide-hero, .venue-breadcrumb, .venue-hero,
+.venue-content-shell, .venue-cta-foot, .nearby-venues, .related-venues, .about,
+.category-guides-section, .search-page-wrap, .map-layout, .tool-results {
+  max-width: var(--wrap);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
+}
+
+.section, section.section, .channels-section { padding: var(--section-y) 0; }
+.section-light { background: var(--bone); color: var(--ink); }
+.section-dark, .venue-page, main { background: var(--ink); color: var(--bone); }
+
+body {
+  font-size: 16px;
+  line-height: 1.62;
+  text-rendering: optimizeLegibility;
+}
+p, li { overflow-wrap: break-word; }
+.mono, .mono-tag, .eyebrow, .sec-num, .sec-label, .guide-card-kicker {
+  font-size: clamp(11px, 0.8vw, 12px);
+  line-height: 1.35;
+}
+.eyebrow::before, .sec-num::before, .sec-label::before, .guide-card-kicker::before { color: var(--coral); }
+
+h1, h2, h3, .hero h1, .hero-h1, .venue-h1, .sec-h,
+.category-hero h1, .area-hero h1, .guide-hero h1 {
+  max-width: 100%;
   overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+  letter-spacing: 0;
+}
+.hero h1, .hero-h1 { font-size: clamp(40px, 8.5vw, 136px) !important; line-height: 0.9; }
+.category-hero h1, .area-hero h1, .guide-hero h1, .venue-h1,
+.venue-hero h1 { font-size: clamp(36px, 6vw, 88px) !important; line-height: 0.94 !important; }
+.sec-h, .section h2 { font-size: clamp(30px, 5vw, 72px) !important; line-height: 0.96; }
+h3 { line-height: 1.08; }
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  width: 100%;
+  padding: 0;
+  background: rgba(10, 10, 10, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  overflow: visible;
+}
+.nav-row {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+.brand, .sf-brand .brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  font-family: var(--display);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
+  color: var(--bone);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.brand .dot { color: var(--gold); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li { margin: 0; border: 0; }
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0;
+  font-size: 11px;
+  line-height: 1;
+}
+.nav-toggle {
+  display: none;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--bone);
+  place-items: center;
+}
+.nav-cta {
+  min-height: 44px;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.marquee {
+  padding: 10px 0;
+  font-size: 11px;
+  line-height: 1;
+  background: var(--ink);
+}
+.marquee-bottom {
+  background: var(--bone);
+  color: var(--ink);
+  border-top: 1px solid var(--line-bone);
+  border-bottom: 1px solid var(--line-bone);
+  padding: 12px 0;
+}
+.marquee-bottom .marquee-track {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+.marquee-bottom .star { color: var(--gold); }
+
+.cat-card, .cat-venue-card, .related-card, .nearby-card, .linkup-card,
+.area-card, .latest-card, .voice-card, .guide-card, .category-guide-card,
+.gym-list > a, .area-list > a, .channel, .compare-empty, .cmp-table-wrap,
+.planner-card, .form-card, .tool-result-card {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--bone);
+}
+.cat-card, .cat-venue-card, .related-card, .nearby-card, .linkup-card,
+.area-card, .latest-card, .voice-card, .guide-card, .category-guide-card,
+.gym-list > a, .area-list > a {
+  padding: 28px;
+  min-height: 0;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+.cat-card:hover, .cat-venue-card:hover, .related-card:hover, .nearby-card:hover,
+.linkup-card:hover, .area-card:hover, .latest-card:hover, .voice-card:hover,
+.guide-card:hover, .category-guide-card:hover, .gym-list > a:hover, .area-list > a:hover {
+  background: var(--ink-2) !important;
+  border-color: var(--gold) !important;
+  transform: none !important;
+}
+.cat-card::after, .cat-venue-card::after, .area-card::after,
+.related-card::after, .nearby-card::after, .linkup-card::after,
+.latest-card::after { display: none !important; }
+.cv-head { display: flex; align-items: flex-start; gap: 16px; justify-content: space-between; }
+.cv-head h3, .related-card h3, .nearby-card h3, .latest-card h3,
+.area-card h3, .guide-card h3 { font-size: clamp(18px, 2vw, 26px) !important; }
+.cv-meta, .venue-meta-line, .venue-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+}
+.cv-meta { display: block; font-size: 11px !important; line-height: 1.45; }
+.cv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.cv-pill, .filter-pill, .badge, .meta-chip, .open-badge {
+  border-radius: 0 !important;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+}
+.cv-cta, .guide-card-cta { color: var(--gold); font-family: var(--mono); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+
+.cat-venue-card, .latest-card { padding-top: 28px !important; }
+
+.category-guides-section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+.category-guides-h {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(30px, 4.8vw, 60px);
+  line-height: 0.98;
+  text-transform: uppercase;
+  margin: 0 0 28px;
+}
+.category-guides {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin: 0;
+  padding: 0;
+}
+.category-guide-card {
+  display: flex;
+  min-height: 168px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  text-decoration: none;
+}
+.category-guide-card strong {
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.guide-card-kicker { color: var(--gold); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.16em; }
+
+.site-footer {
+  background: var(--ink);
+  border-top: 1px solid var(--line);
+  padding: 72px 0 34px;
+}
+.site-footer-inner {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.5fr) repeat(4, minmax(0, 1fr));
+  gap: 36px;
+  margin-bottom: 52px;
+}
+.sf-brand { margin: 0 0 18px; }
+.sf-heading { margin-top: 0; }
+.site-footer-base {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  text-align: left;
+}
+.sf-builtby {
+  color: var(--bone);
+  letter-spacing: 0.12em;
+}
+
+.favorite-btn, .compare-btn, .share-btn, .btn, .sa-btn,
+a.btn, button, input, select, textarea, .channel, .nav-cta {
+  min-height: 44px;
+}
+.skip-link { min-height: 44px; }
+.brand, .sf-brand .brand, .scroll-hint, .back-link, .cv-cta, .guide-card-cta,
+.venue-breadcrumb a, .cat-venue-card h3 a, .related-card h3 a,
+.nearby-card h3 a, .latest-card h3 a, .category-guide-card {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.category-guide-card { display: flex; align-items: flex-start; }
+.venue-breadcrumb { row-gap: 8px; }
+.leaflet-marker-icon.pg-cluster-wrap {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+.marquee { overflow: hidden; }
+.marquee-track { will-change: transform; }
+.back-to-top.is-visible, .back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Final mobile touch-target hardening */
+.site-footer a, .tldr-list a, .tldr p > a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.cat-venue-card .favorite-btn,
+.cv-head .favorite-btn {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border-radius: 0 !important;
+}
+.leaflet-marker-icon.pg-pin,
+.leaflet-marker-icon.pg-cluster-wrap,
+.leaflet-control-zoom a {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+.leaflet-control-zoom a {
+  width: 44px !important;
+  height: 44px !important;
+  line-height: 44px !important;
+}
+@media (max-width: 720px) {
+  .venue-hero-art { display: none !important; }
+  .tldr-list a, .tldr p > a { width: fit-content; }
+}
+
+@media (max-width: 1024px) {
+  :root { --page-pad: 24px; --section-y: 76px; }
+  .nav-links { gap: 18px; }
+  .category-guides { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-footer-inner { grid-template-columns: 1fr 1fr; }
+  .sf-brand-col { grid-column: 1 / -1; }
+}
+
+@media (max-width: 840px) {
+  .nav-row {
+    min-height: 62px;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: var(--page-pad);
+    right: var(--page-pad);
+    width: auto;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--ink);
+    border: 1px solid var(--line);
+    z-index: 90;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links li:last-child a { border-bottom: 0; }
+  .nav-toggle { display: inline-grid; }
+  .nav-cta { padding: 0 12px; font-size: 10px; letter-spacing: 0.1em; }
+}
+
+@media (max-width: 720px) {
+  :root { --page-pad: 20px; --section-y: 60px; }
+  body { font-size: 15px; line-height: 1.62; padding-bottom: 72px; }
+  .hero h1, .hero-h1 { font-size: clamp(38px, 12vw, 56px) !important; }
+  .category-hero h1, .area-hero h1, .guide-hero h1, .venue-h1,
+  .venue-hero h1 { font-size: clamp(34px, 10.8vw, 48px) !important; }
+  .sec-h, .section h2 { font-size: clamp(28px, 9vw, 40px) !important; }
+  h2 { font-size: 28px; }
+  .nav-row { min-height: 58px; }
+  .brand, .sf-brand .brand { font-size: 15px; }
+  .nav-toggle { width: 44px; height: 44px; flex-basis: 44px; }
+  .nav-cta { min-width: 92px; justify-content: center; }
+  .hero, .venue-hero, .category-hero, .area-hero, .guide-hero { padding-top: 48px; padding-bottom: 48px; }
+  .cat-venue-grid, .gym-list, .area-list, .related-grid, .nearby-grid,
+  .latest-grid, .area-grid, .voices-grid, .channels { grid-template-columns: 1fr !important; }
+  .cat-card, .cat-venue-card, .related-card, .nearby-card, .linkup-card,
+  .area-card, .latest-card, .voice-card, .guide-card, .category-guide-card,
+  .gym-list > a, .area-list > a { padding: 22px !important; }
+  .category-guides { grid-template-columns: 1fr; }
+  .category-guide-card { min-height: 132px; }
+  .venue-meta-line, .venue-hero-meta { flex-direction: column; align-items: flex-start; }
+  .sticky-actions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    min-height: 64px;
+  }
+  .sa-btn { min-height: 52px; }
+  .site-footer { padding-top: 56px; }
+  .site-footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .site-footer-base { font-size: 10px; }
+}
+
+@media (max-width: 360px) {
+  :root { --page-pad: 16px; }
+  .brand, .sf-brand .brand { font-size: 13px; }
+  .nav-cta { min-width: 76px; padding: 0 8px; font-size: 9px; }
+  .hero h1, .hero-h1, .venue-h1 { font-size: 36px !important; }
+}
+
+
+/* Final cascade lock: keep decorative art and mobile targets sane. */
+.venue-page > .venue-hero .venue-hero-art {
+  right: var(--page-pad) !important;
+  width: min(360px, 28vw) !important;
+  height: min(360px, 28vw) !important;
+}
+.site-footer a,
+.venue-breadcrumb a {
+  min-width: 44px;
+}
+@media (max-width: 840px) {
+  .venue-page > .venue-hero .venue-hero-art { display: none !important; }
+}
+@media (max-width: 720px) {
+  .venue-actions .btn,
+  .share-bar .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    min-height: 46px !important;
+  }
+  .venue-body a:not(.btn),
+  .guide-body a:not(.btn),
+  .tldr-list a,
+  .tldr p > a {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+
+/* Final tap target floor for body/footer text links on phones. */
+@media (max-width: 720px) {
+  main a:not(.btn):not(.brand):not(.nav-cta),
+  .site-footer a,
+  .venue-breadcrumb a {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+}
+
+
+/* Final overflow guard for long citation URLs and floating controls. */
+.venue-body a,
+.guide-body a,
+.tldr a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
   max-width: 100%;
 }
-/* Force any clamped H1 to never exceed reasonable max */
-.venue-h1 { font-size: clamp(32px, 7vw, 72px) !important; }
-.hero h1, .hero-h1 { font-size: clamp(40px, 9vw, 140px) !important; }
-.sec-h { font-size: clamp(32px, 6vw, 80px) !important; }
+.back-to-top {
+  width: 44px !important;
+  min-width: 44px !important;
+}
+
+
+@media (max-width: 720px) {
+  .venue-body a,
+  .guide-body a,
+  .tldr a {
+    max-width: calc(100vw - (2 * var(--page-pad)) - 4px);
+  }
+}

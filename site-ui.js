@@ -68,7 +68,7 @@
   function initVenueUi() {
     hydrateCurrentVenue();
 
-    var navEl = doc.querySelector('.hero .nav');
+    var navEl = doc.querySelector('.nav');
     var bar = doc.getElementById('pg-scroll-progress');
     var btn = doc.getElementById('pg-back-to-top');
     var tocLinks = Array.prototype.slice.call(doc.querySelectorAll('.jump-pill'));
@@ -99,7 +99,7 @@
       var range = h.scrollHeight - h.clientHeight;
       var scrolled = range > 0 ? h.scrollTop / range : 0;
       if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
-      if (btn) btn.classList.toggle('visible', h.scrollTop > 600);
+      if (btn) btn.classList.toggle('is-visible', h.scrollTop > 600);
       if (navEl) navEl.classList.toggle('scrolled', h.scrollTop > 30);
       updateToc();
     }

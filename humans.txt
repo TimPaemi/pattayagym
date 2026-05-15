@@ -28,7 +28,6 @@
   YAML frontmatter + Markdown content
   Leaflet.js (interactive map)
   JetBrains Mono + Inter Tight (typography)
-  Buttondown (newsletter — currently disabled)
   Plausible Analytics (privacy-first, no cookies, no tracking)
   Cloudflare Pages (hosting + edge cache)
   GitHub Actions (CI: validate + html-validate + Lighthouse)
