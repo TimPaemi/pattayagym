@@ -17,7 +17,7 @@ const OUT_DIR = path.join(ROOT, 'gyms');
 const DATA_FILE = path.join(ROOT, 'data.js');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '222';
+const ASSET_VERSION = '224';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const PATTAYA_GEO = { latitude: 12.9236, longitude: 100.8825 };
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
@@ -601,25 +601,7 @@ function finalizeHtml(html) {
 
 function newsletterFooterHtml() { return ""; }
 
-function pageFeedbackHtml(urlPath, title) {
-  const safeTitle = title || 'Pattaya Gym page';
-  const goodSubject = encodeURIComponent(`Helpful page: ${safeTitle}`);
-  const badSubject = encodeURIComponent(`Needs work: ${safeTitle}`);
-  const body = encodeURIComponent(`Page: ${SITE}${urlPath || '/'}\nWhat helped or what should change?\n`);
-  return `<section class="page-feedback" aria-labelledby="page-feedback-title">
-    <div class="page-feedback-card">
-      <div>
-        <p class="feedback-kicker">Editorial feedback</p>
-        <h2 id="page-feedback-title">Did this page help?</h2>
-        <p>Send a one-click note so we know which pages need more research.</p>
-      </div>
-      <div class="feedback-actions">
-        <a class="btn" href="mailto:info@pattaya-gym.com?subject=${goodSubject}&body=${body}">Helpful</a>
-        <a class="btn" href="mailto:info@pattaya-gym.com?subject=${badSubject}&body=${body}">Needs work</a>
-      </div>
-    </div>
-  </section>`;
-}
+function pageFeedbackHtml() { return ""; }
 
 function schemaTypesForCategory(cat) {
   const key = String(cat || '').toLowerCase();
@@ -1372,7 +1354,6 @@ function buildVenuePage(slug, fm, bodyHtml, body, allGyms, allCats) {
     </div>
 
       <div class="venue-hero">
-      <figure class="venue-hero-img" aria-hidden="true"><img src="/og/${slug}.png" alt="" loading="eager" fetchpriority="high" decoding="async" width="1200" height="630" data-fallback-hide="parent"></figure>
       <div class="venue-hero-art" aria-hidden="true">${getCategoryArt(fm.category)}</div>
       <div class="venue-meta-line">
         <span class="venue-cat-pill">${escHtml(cat)}</span>
@@ -1466,7 +1447,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
       })}</script>`;
     })()}
 
-    ${pageFeedbackHtml(`/gyms/${slug}/`, fm.name || slug)}
+    
 
     <footer class="venue-footer">
       <p>Last verified: <strong>${escHtml(fm.verified || 'N/A')}</strong>. Listing researched from public sources. Errors? Email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>

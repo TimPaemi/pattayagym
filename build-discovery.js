@@ -12,7 +12,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '222';
+const ASSET_VERSION = '224';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 function autoLinkVenues(html, currentSlug, allGyms) {
@@ -296,7 +296,6 @@ ${serviceWorkerRegistration()}
 function venueCard(g) {
   const tags = (g.tags || []).slice(0, 3).map(t => `<span class="cv-pill cv-pill-tag">${escHtml(t)}</span>`).join('');
   return `<article class="cat-venue-card">
-      <a class="cv-img" href="/gyms/${escHtml(g.id)}/" aria-hidden="true" tabindex="-1"><img src="/og/${escHtml(g.id)}.png" alt="" loading="lazy" decoding="async" width="600" height="315" data-fallback-hide="parent"></a>
       <div class="cv-head">
       <h3><a href="/gyms/${escHtml(g.id)}/">${escHtml(g.name)}</a></h3>
       <button class="favorite-btn" data-pg-favorite-id="${escHtml(g.id)}" data-pg-favorite-name="${escHtml(g.name)}" data-pg-favorite-category="${escHtml(g.category || '')}" data-pg-favorite-area="${escHtml(g.area || '')}" data-pg-favorite-price="${escHtml(g.priceRange || '')}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>
