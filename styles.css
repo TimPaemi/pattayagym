@@ -2470,6 +2470,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--line);
   max-width: 1320px;
   margin: 0 auto 80px;
+  /* Indent so the grid aligns with surrounding headlines that have 32px padding */
+  width: calc(100% - 64px);
 }
 .cat-venue-card, .gym-list > a, .area-list > a {
   background: var(--ink);
@@ -3400,9 +3402,10 @@ main.venue-page > h2 {
   letter-spacing: -0.02em !important;
   text-transform: uppercase !important;
   color: var(--bone) !important;
-  margin: 80px 32px 32px 32px !important;
+  margin: 80px auto 32px auto !important;
   max-width: 1320px;
-  padding: 0;
+  padding: 0 32px !important;
+  box-sizing: border-box;
 }
 .venue-page h2#full-list::before {
   content: "// ";
@@ -5680,4 +5683,41 @@ a.btn, button, input, select, textarea, .channel, .nav-cta {
     padding: 0 18px;
     border-bottom: 1px solid var(--line);
   }
+}
+
+
+/* ================================================================
+   EMERGENCY ALIGNMENT FIX — every direct child of .venue-page centers
+   ================================================================ */
+.venue-page > * {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.venue-page > section.tldr,
+.venue-page > .tldr,
+.venue-page > .venue-hero,
+.venue-page > .venue-breadcrumb,
+.venue-page > h2,
+.venue-page > .cat-venue-grid,
+.venue-page > .nearby-venues,
+.venue-page > .related-venues,
+.venue-page > .about,
+.venue-page > .page-feedback,
+.venue-page > .venue-footer {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: max(32px, env(safe-area-inset-left));
+  padding-right: max(32px, env(safe-area-inset-right));
+  box-sizing: border-box;
+}
+/* Full-width sections that bleed: */
+.venue-page > .marquee,
+.venue-page > .marquee-bottom,
+.venue-page > .hero {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
 }
