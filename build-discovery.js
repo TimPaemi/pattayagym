@@ -13,7 +13,7 @@ const shared = require('./_shared');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '227';
+const ASSET_VERSION = '229';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 function autoLinkVenues(html, currentSlug, allGyms) {
