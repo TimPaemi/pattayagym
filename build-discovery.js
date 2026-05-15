@@ -12,7 +12,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '224';
+const ASSET_VERSION = '225';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 function autoLinkVenues(html, currentSlug, allGyms) {
@@ -96,18 +96,15 @@ function header() {
 <div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
 <header class="hero" style="min-height: auto;" role="banner">
   <nav class="nav" role="navigation" aria-label="Primary navigation">
-    <a href="/" class="brand">
-      <span class="brand-mark">P</span>
-      <span class="brand-text">PATTAYA <strong>GYM</strong></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="/#directory">Directory</a></li>
-      <li><a href="/guides/">Guides</a></li>
-      <li><a href="/map/">Map</a></li>
-      <li><a href="/search/">Search</a></li>
-      <li><a href="/compare/">Compare</a></li>
-      <li><a href="/about/">About</a></li>
-    </ul>
+    <a href="/" class="brand">PATTAYA<span class="dot">.</span>GYM</a>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="/category/muay-thai/">Muay Thai</a></li>
+        <li><a href="/category/fitness/">Gyms</a></li>
+        <li><a href="/category/golf/">Golf</a></li>
+        <li><a href="/category/yoga/">Yoga</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/map/">Map</a></li>
+      </ul>
           <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
         </nav>
 </header>`;
@@ -195,25 +192,7 @@ function footer() {
 </footer>`;
 }
 
-function pageFeedbackHtml(urlPath, title) {
-  const safeTitle = title || 'Pattaya Gym page';
-  const goodSubject = encodeURIComponent(`Helpful page: ${safeTitle}`);
-  const badSubject = encodeURIComponent(`Needs work: ${safeTitle}`);
-  const body = encodeURIComponent(`Page: ${SITE}${urlPath || '/'}\nWhat helped or what should change?\n`);
-  return `<section class="page-feedback" aria-labelledby="page-feedback-title">
-    <div class="page-feedback-card">
-      <div>
-        <p class="feedback-kicker">Editorial feedback</p>
-        <h2 id="page-feedback-title">Did this page help?</h2>
-        <p>Send a one-click note so we know which guides need more research.</p>
-      </div>
-      <div class="feedback-actions">
-        <a class="btn" href="mailto:info@pattaya-gym.com?subject=${goodSubject}&body=${body}">Helpful</a>
-        <a class="btn" href="mailto:info@pattaya-gym.com?subject=${badSubject}&body=${body}">Needs work</a>
-      </div>
-    </div>
-  </section>`;
-}
+function pageFeedbackHtml() { return ""; }
 
 function commonHead(title, desc, canonical, schemaType, ogType) {
   const baselineSchema = JSON.stringify({
@@ -1364,7 +1343,7 @@ ${header()}
       <a class="btn btn-secondary" href="/map/">View on map</a>
     </div>
   </div>
-  ${pageFeedbackHtml(`/guides/${guide.slug}/`, guide.h1)}
+  
 </main>
 ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
