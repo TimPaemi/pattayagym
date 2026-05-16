@@ -408,8 +408,8 @@ function buildCategoryGuidesLinks(catKey) {
   };
   const list = guides[catKey] || [['best-muay-thai-pattaya','Best Muay Thai gyms'],['best-for-beginners-pattaya','Best for beginners']];
   let html = '<section style="margin: 56px 0 0;">';
-  html += '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 12px; color: #ff7a3a; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px;">// CURATED GUIDES</p>';
-  html += '<h2 style="font-family: \'Inter Tight\', sans-serif; font-weight: 900; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 20px;">Hand-picked guides for this category.</h2>';
+  html += '<p style="font-size: 12px; color: #C84A0A; font-weight: 600; margin: 0 0 12px;">Curated guides</p>';
+  html += '<h2 style="font-weight: 800; font-size: clamp(1.5rem, 3vw, 1.9rem); line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 24px; color: #0A1220;">Hand-picked guides for this category</h2>';
   html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px;">';
   list.forEach(([slug,title]) => {
     html += '<a href="/guides/' + slug + '/" style="display:block;text-decoration:none;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:18px 20px;transition:border-color 0.25s,background 0.25s;">';

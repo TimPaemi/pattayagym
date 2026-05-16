@@ -797,21 +797,47 @@ main.venue-page > h2 {
 
 /* Curated guides section on category pages */
 .category-guides-section, .curated-guides {
-  padding: var(--s-10) 0;
+  padding: var(--s-10) var(--pad);
+  max-width: var(--max);
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 .category-guides-h, .curated-guides-h {
   font-weight: 800;
   font-size: clamp(22px, 6vw, 30px);
-  text-transform: none;
+  text-transform: none !important;
   letter-spacing: -0.03em;
-  margin: 0 0 var(--s-5);
+  margin: 0 0 var(--s-5) !important;
   color: var(--ink);
+  font-family: var(--font);
 }
 .category-guides {
   display: grid; gap: 12px;
   grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
 }
 @media (min-width: 900px) { .category-guides { grid-template-columns: repeat(4, 1fr); } }
+/* Eyebrow / curated guides label */
+.curated-guides-section .sec-num,
+.category-guides-section .sec-num,
+[class*="curated-guides"] .sec-num {
+  display: block;
+  font-family: var(--font);
+  font-size: 12px;
+  color: var(--orange);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-bottom: 8px;
+}
+/* Force individual guide card text-transform fixes */
+.category-guide-card, .guide-card-kicker, .guide-card strong {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
 .category-guide-card, .guide-card-kicker {
   text-transform: none; letter-spacing: 0;
   font-weight: 700;

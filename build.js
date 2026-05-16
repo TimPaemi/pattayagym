@@ -1056,14 +1056,14 @@ function buildBestForBlock(fm) {
   let html = '<section class="venue-fit" aria-label="Who this venue is best for" style="margin: 32px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">';
   if (bf.length) {
     html += '<div style="background: rgba(255,184,0,0.04); border: 1px solid rgba(255,184,0,0.22); border-radius: 8px; padding: 18px 20px;">';
-    html += '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: rgba(255,216,74,0.85); letter-spacing: 0.10em; margin: 0 0 12px; text-transform: uppercase; font-weight: 500;">// Best for</p>';
+    html += '<p style="font-size: 12px; color: #059669; font-weight: 600; margin: 0 0 8px;">Best for</p>';
     html += '<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: rgba(228,228,232,0.85);">';
     bf.forEach(b => { html += '<li>' + escHtml(b) + '</li>'; });
     html += '</ul></div>';
   }
   if (nbf.length) {
     html += '<div style="background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 18px 20px;">';
-    html += '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 11px; color: rgba(150,150,156,0.72); letter-spacing: 0.10em; margin: 0 0 12px; text-transform: uppercase; font-weight: 500;">// Not best for</p>';
+    html += '<p style="font-size: 12px; color: #dc2626; font-weight: 600; margin: 0 0 8px;">Not best for</p>';
     html += '<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.7; color: rgba(180,180,184,0.7);">';
     nbf.forEach(b => { html += '<li>' + escHtml(b) + '</li>'; });
     html += '</ul></div>';
@@ -1100,8 +1100,8 @@ function buildNearbyVenuesBlock(fm, allGyms) {
   }).slice(0, 6);
   if (!nearby.length) return '';
   let html = '<section class="nearby-venues" aria-label="Other sport venues nearby" style="margin: 48px 0 0;">';
-  html += '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 12px; color: rgba(255,122,58,0.85); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px;">// OTHER SPORT VENUES NEARBY</p>';
-  html += '<h2 style="font-family: \'Inter Tight\', sans-serif; font-weight: 900; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.05; letter-spacing: -0.025em; text-transform: uppercase; margin: 0 0 20px;">Different sport, same area.</h2>';
+  html += '<p style="font-size: 12px; color: #C84A0A; font-weight: 600; margin: 0 0 12px;">Other sport venues nearby</p>';
+  html += '<h2 style="font-weight: 800; font-size: clamp(1.5rem, 3vw, 1.9rem); line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 24px; color: #0A1220;">Different sport, same area</h2>';
   html += '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px;">';
   for (const g of nearby) {
     html += '<a href="/gyms/' + escHtml(g.id) + '/" style="display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:18px 18px 16px;transition:transform 0.25s,border-color 0.25s,background 0.25s;">';
