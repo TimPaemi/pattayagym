@@ -5839,3 +5839,202 @@ a.btn-secondary {
   color: var(--ink) !important;
   border-color: var(--gold) !important;
 }
+
+
+/* ================================================================
+   SECTION RHYTHM — alternating ink/bone backgrounds on subpages
+   So category/area/guide/venue pages don't read as monotone black
+   ================================================================ */
+
+/* TLDR "Quick answer" — bone band (contrast against black hero above) */
+.venue-page section.tldr,
+.venue-page > .tldr {
+  background: var(--bone) !important;
+  color: var(--ink) !important;
+  border-left: 4px solid var(--coral) !important;
+  margin: 0 !important;
+  max-width: none !important;
+  padding: 56px max(32px, calc((100vw - 1320px) / 2)) !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid var(--line-bone) !important;
+}
+.venue-page section.tldr::before,
+.venue-page > .tldr::before {
+  color: var(--coral) !important;
+}
+.venue-page section.tldr .tldr-title,
+.venue-page section.tldr h2,
+.venue-page > .tldr h2 {
+  color: var(--ink) !important;
+}
+.venue-page section.tldr li,
+.venue-page section.tldr ol li,
+.venue-page > .tldr li {
+  color: var(--ink) !important;
+  border-bottom-color: var(--line-bone) !important;
+}
+.venue-page section.tldr li a,
+.venue-page section.tldr li strong a,
+.venue-page > .tldr li a {
+  color: #b8920f !important;  /* darker gold for contrast on bone */
+}
+.venue-page section.tldr p,
+.venue-page > .tldr p {
+  color: var(--muted-bone) !important;
+}
+.venue-page section.tldr p a,
+.venue-page > .tldr p a {
+  color: #b8920f !important;
+}
+
+/* "Comparing options" CTA strip — bone band after FAQ */
+.venue-page .compare-cta,
+.venue-page > .compare-cta {
+  background: var(--bone) !important;
+  color: var(--ink) !important;
+  padding: 64px max(32px, calc((100vw - 1320px) / 2)) !important;
+  text-align: center;
+  max-width: none !important;
+  margin: 0 !important;
+  border-bottom: 1px solid var(--line-bone) !important;
+}
+.venue-page .compare-cta h3 {
+  color: var(--ink) !important;
+  font-size: clamp(28px, 4vw, 44px) !important;
+}
+
+/* "Visited or trained at" CTA — bone variant for venue pages */
+.venue-cta-foot {
+  background: var(--bone) !important;
+  color: var(--ink) !important;
+  border: none !important;
+  padding: 100px max(32px, calc((100vw - 1320px) / 2)) !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+.venue-cta-foot::before {
+  color: var(--coral) !important;
+}
+.venue-cta-foot h3 {
+  color: var(--ink) !important;
+}
+.venue-cta-foot p {
+  color: var(--muted-bone) !important;
+}
+.venue-cta-foot .btn-primary {
+  background: var(--coral) !important;
+  color: #ffffff !important;
+}
+.venue-cta-foot .btn-secondary {
+  background: var(--ink) !important;
+  color: var(--bone) !important;
+  border-color: var(--ink) !important;
+}
+.venue-cta-foot .btn-secondary:hover {
+  background: var(--gold) !important;
+  color: var(--ink) !important;
+}
+
+/* "Common questions" FAQ block — bone band on subpages */
+.venue-page .about,
+.venue-page .common-questions,
+.venue-page > .about {
+  background: var(--bone) !important;
+  color: var(--ink) !important;
+  padding: 80px max(32px, calc((100vw - 1320px) / 2)) !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border-bottom: 1px solid var(--line-bone) !important;
+}
+.venue-page .about h2,
+.venue-page .common-questions h2 {
+  color: var(--ink) !important;
+}
+.venue-page .about details.faq,
+.venue-page .common-questions details.faq,
+.venue-page .about .faq-item,
+.venue-page .common-questions .faq-item,
+.venue-page .about > details,
+.venue-page .common-questions > details {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--line-bone) !important;
+}
+.venue-page .about details.faq summary,
+.venue-page .common-questions details.faq summary,
+.venue-page .about .faq-item summary,
+.venue-page .common-questions .faq-item summary,
+.venue-page .about > details summary,
+.venue-page .common-questions > details summary {
+  background: transparent !important;
+  color: var(--ink) !important;
+}
+.venue-page .about details.faq summary::after,
+.venue-page .common-questions details.faq summary::after,
+.venue-page .about > details summary::after,
+.venue-page .common-questions > details summary::after {
+  color: #b8920f !important;
+}
+.venue-page .about details.faq > *:not(summary),
+.venue-page .common-questions details.faq > *:not(summary),
+.venue-page .about .faq-item p,
+.venue-page .common-questions .faq-item p,
+.venue-page .about > details > *:not(summary),
+.venue-page .common-questions > details > *:not(summary) {
+  background: transparent !important;
+  color: var(--muted-bone) !important;
+}
+
+/* Curated guides section — keep ink (creates rhythm after bone above) */
+.venue-page .curated-guides,
+.venue-page > .curated-guides,
+.venue-page .category-guides {
+  background: var(--ink) !important;
+}
+.curated-guides-h, .category-guides-h {
+  color: var(--bone) !important;
+}
+
+/* Nearby + Related venues — keep ink */
+.venue-page .nearby-venues,
+.venue-page .related-venues {
+  background: var(--ink) !important;
+  color: var(--bone) !important;
+  padding: 80px max(32px, calc((100vw - 1320px) / 2)) !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+.venue-page .nearby-venues h2,
+.venue-page .related-venues h2 {
+  color: var(--bone) !important;
+}
+
+/* Page feedback already hidden — defensive */
+.venue-page .page-feedback { display: none !important; }
+
+/* Force button visibility on any bg */
+.btn, button.btn, a.btn {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.btn-primary, .btn.btn-primary {
+  background: var(--coral) !important;
+  color: #ffffff !important;
+  border-color: var(--coral) !important;
+}
+.btn-secondary, .btn.btn-secondary {
+  background: var(--gold) !important;
+  color: var(--ink) !important;
+  border-color: var(--gold) !important;
+}
+.btn-ghost, .btn.btn-ghost {
+  background: transparent !important;
+  border: 1px solid var(--bone) !important;
+  color: var(--bone) !important;
+}
+.section-light .btn-ghost,
+.bone .btn-ghost {
+  border-color: var(--ink) !important;
+  color: var(--ink) !important;
+}
