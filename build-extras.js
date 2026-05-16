@@ -14,7 +14,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '235';
+const ASSET_VERSION = '236';
 const DEFAULT_OG_IMAGE = `${SITE}/og-image.png`;
 const LAST_BUILD_DATE = new Date().toISOString().slice(0, 10);
 // Category-specific FAQs — appended to each /category/<key>/ page.
