@@ -1,578 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pattaya Gym Directory | Every Sport in Pattaya</title>
-  <meta name="description" content="Find Pattaya gyms, Muay Thai camps, golf courses, yoga studios, dive shops and sport venues with prices, maps, hours and verified local notes." />
-  <meta name="keywords" content="Pattaya gyms, Muay Thai Pattaya, CrossFit Pattaya, MMA Pattaya, BJJ Pattaya, fitness Pattaya, yoga Pattaya, sports Pattaya, Pattaya training, Thailand gym directory" />
-  <meta name="author" content="Pattaya Gym Directory" />
-  <link rel="canonical" href="https://pattaya-gym.com/" />
-  <link rel="alternate" hreflang="en" href="https://pattaya-gym.com/" />
-  <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
-  <meta name="application-name" content="Pattaya Gym" />
-  <meta name="msapplication-TileColor" content="#0a0a0a" />
-  <meta name="msapplication-TileImage" content="/icon-192.png" />
-  <meta name="color-scheme" content="dark" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="apple-touch-icon" href="/icon-180.png" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta http-equiv="x-dns-prefetch-control" content="on" />
-  <link rel="dns-prefetch" href="//maps.google.com" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pattaya Gym — Every gym, ring and court in Pattaya</title>
+<meta name="description" content="The most complete directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand. 158 venues, hand-checked, no fake reviews.">
+<meta name="theme-color" content="#0057B8">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Pattaya Gym Directory — Every Gym & Sport in Pattaya" />
-  <meta property="og:description" content="Find Muay Thai camps, CrossFit boxes, MMA gyms, fitness centers, yoga studios, golf clubs, watersports and more in Pattaya, Thailand." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pattaya-gym.com/" />
-  <meta property="og:image" content="https://pattaya-gym.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="Pattaya Gym — every sport venue in Pattaya, Thailand" />
-  <meta property="og:locale" content="en_US" />
+<link rel="preload" href="/styles.css?v=300" as="style">
+<link rel="stylesheet" href="/styles.css?v=300">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pattaya Gym Directory" />
-  <meta name="twitter:image" content="https://pattaya-gym.com/og-image.png" />
-  <meta name="twitter:image:src" content="https://pattaya-gym.com/og-image.png" />
-  <meta name="twitter:description" content="Every Muay Thai camp, CrossFit box, gym, and sports venue in Pattaya — one directory." />
-  <meta name="thumbnail" content="https://pattaya-gym.com/og-image.png" />
-  <link rel="image_src" href="https://pattaya-gym.com/og-image.png" />
+<meta property="og:title" content="Pattaya Gym — Every gym, ring and court in Pattaya">
+<meta property="og:description" content="158 verified venues. Hand-checked, no fake reviews, no SEO spam.">
+<meta property="og:image" content="https://pattaya-gym.com/og-image.png">
+<meta property="og:url" content="https://pattaya-gym.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230057B8'/%3E%3Ctext x='50%25' y='56%25' font-family='Inter,sans-serif' font-size='30' font-weight='800' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 
-  <!-- Stylesheet -->
-  <link rel="preload" href="/styles.css?v=237" as="style" />
-  <link rel="stylesheet" href="/styles.css?v=237" />
-
-  <!-- Feeds & alternates -->
-  <link rel="alternate" type="application/rss+xml" title="Pattaya Gym Directory — Recently Added" href="/feed.xml" />
-  <link rel="alternate" type="application/json" title="Pattaya Gym Directory API" href="/api/venues.json" />
-  <link rel="alternate" type="text/markdown" title="Pattaya Gym for LLMs" href="/llms.txt" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230a0a0a'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23d4a72c' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
-
-  <!-- Analytics + SW -->
-  <link rel="preconnect" href="https://plausible.io" crossorigin />
-  <script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
-  <script src="/site-ui.js?v=224" defer></script>
-
-  <!-- Schema.org structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://pattaya-gym.com/#website",
-    "name": "Pattaya Gym Directory",
-    "url": "https://pattaya-gym.com/",
-    "description": "Comprehensive directory of gyms, Muay Thai camps, and sports venues in Pattaya, Thailand.",
-    "inLanguage": "en",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://pattaya-gym.com/search/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://pattaya-gym.com/#webpage",
-    "url": "https://pattaya-gym.com/",
-    "name": "Pattaya Gym Directory | Every Sport in Pattaya",
-    "description": "Every Muay Thai camp, CrossFit box, gym, and sports venue in Pattaya — one directory.",
-    "inLanguage": "en",
-    "isPartOf": { "@id": "https://pattaya-gym.com/#website" },
-    "primaryImageOfPage": { "@type": "ImageObject", "url": "https://pattaya-gym.com/og-image.png" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://pattaya-gym.com/#organization",
-    "name": "Pattaya Gym Directory",
-    "alternateName": "Pattaya Gym",
-    "url": "https://pattaya-gym.com/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://pattaya-gym.com/og-image.png",
-      "width": 1200,
-      "height": 630
-    },
-    "slogan": "Every gym and sport in Pattaya, Thailand — independently verified.",
-    "foundingDate": "2026-01-01",
-    "areaServed": [
-      { "@type": "City", "name": "Pattaya", "containedInPlace": { "@type": "Country", "name": "Thailand" } },
-      { "@type": "AdministrativeArea", "name": "Chonburi Province" },
-      { "@type": "Place", "name": "Jomtien" },
-      { "@type": "Place", "name": "Naklua" },
-      { "@type": "Place", "name": "Pratamnak Hill" },
-      { "@type": "Place", "name": "Sattahip" }
-    ],
-    "knowsAbout": [
-      "Muay Thai", "Mixed Martial Arts", "Brazilian Jiu-Jitsu", "CrossFit",
-      "Fitness training", "Yoga", "Golf", "Tennis", "Padel", "Pickleball",
-      "Scuba diving", "Kitesurfing", "Sailing", "Rock climbing", "Swimming",
-      "Football", "Equestrian sport", "Sport tourism in Thailand",
-      "Pattaya", "Chonburi", "Jomtien", "Naklua", "Pratamnak"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "info@pattaya-gym.com",
-      "contactType": "Editorial",
-      "availableLanguage": ["English"]
-    },
-    "publishingPrinciples": "https://pattaya-gym.com/methodology/",
-    "ethicsPolicy": "https://pattaya-gym.com/methodology/"
-  }
-  </script>
-<!-- Google tag (gtag.js) -->
-<script src="/analytics.js?v=224"></script>
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-F5F6KD3XFZ');
+</script>
 </head>
 <body>
 
-<!-- TOP MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div>
-</div>
+<a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- NAV -->
-<nav class="nav">
+<header class="nav" role="banner">
   <div class="nav-row">
-    <a href="/" class="brand">PATTAYA<span class="dot">.</span>GYM</a>
-    <ul class="nav-links">
-      <li><a href="/category/muay-thai/">Muay Thai</a></li>
-      <li><a href="/category/fitness/">Gyms</a></li>
-      <li><a href="/category/golf/">Golf</a></li>
-      <li><a href="/category/yoga/">Yoga</a></li>
-      <li><a href="/guides/">Guides</a></li>
-      <li><a href="/map/">Map</a></li>
-    </ul>
-    <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    <a href="/search/" class="nav-cta">FIND A SPOT →</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">Pattaya's Training Directory · Est. 2024</div>
-    <h1>
-      Every Gym.<br>
-      Every Ring.<br>
-      <span class="stroke">Every Court.</span>
-    </h1>
-    <p class="lead">158 Venues <span class="sep">×</span> 15 Sports <span class="sep">×</span> 6 Areas <span class="sep">×</span> One Trusted Map</p>
-
-    <blockquote class="hero-quote">
-      "If you train in Pattaya, you start here. No SEO spam. No fake reviews. Just the spots that are actually open today."
-    </blockquote>
-
-    <div class="hero-badges">
-      <span class="badge"><span class="live"></span>LIVE · UPDATED MAY 2026</span>
-      <span class="badge">★ HAND-CHECKED</span>
-      <span class="badge">PATTAYA · THAILAND</span>
-    </div>
-
-    <div class="hero-ctas">
-      <a href="/search/" class="btn btn-primary">FIND MY GYM <span class="arrow">→</span></a>
-      <a href="/category/muay-thai/" class="btn btn-ghost">BROWSE MUAY THAI <span class="arrow">→</span></a>
-    </div>
-
-    <a href="#sports" class="scroll-hint">↓ KEEP SCROLLING</a>
+    <a href="/" class="brand">Pattaya<span class="dot">.</span>Gym</a>
+    <nav class="nav-actions" aria-label="Primary">
+      <a href="/search/" class="icon-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      </a>
+      <a href="#menu" class="icon-btn icon-btn--ink" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </a>
+    </nav>
   </div>
 </header>
 
-<!-- STATS -->
-<section class="stats" aria-label="Directory stats">
-  <div class="stats-grid">
-    <div class="stat">
-      <div class="stat-num">158</div>
-      <div class="stat-label">VENUES INDEXED</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">15</div>
-      <div class="stat-label">SPORTS COVERED</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">6</div>
-      <div class="stat-label">PATTAYA AREAS</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">VERIFIED · NO SPAM</div>
-    </div>
-  </div>
-</section>
+<main id="main">
 
-<!-- TRUST STRIP — factual sources -->
-<section class="featured-in" aria-label="Sources">
-  <div class="featured-label">EDITORIAL POLICY · INDEPENDENT · NO PAID PLACEMENTS</div>
-  <div class="featured-track">
-    <span>158 venues hand-checked</span><span class="dot">·</span><span>Phone-verified every 90 days</span><span class="dot">·</span><span>Source-cited research</span><span class="dot">·</span><span>CC BY 4.0 licensed data</span><span class="dot">·</span><span>No paid placements ever</span><span class="dot">·</span>
-    <span>158 venues hand-checked</span><span class="dot">·</span><span>Phone-verified every 90 days</span><span class="dot">·</span><span>Source-cited research</span><span class="dot">·</span><span>CC BY 4.0 licensed data</span><span class="dot">·</span><span>No paid placements ever</span><span class="dot">·</span>
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">
+        <span class="live-dot" aria-hidden="true"></span>
+        158 venues live · updated weekly
+      </span>
+      <h1 class="hero-h1">Find your gym in&nbsp;Pattaya.</h1>
+      <p class="hero-lede">Every gym, ring, and court — hand-checked, no fake reviews, no SEO spam. Just the spots that are actually open today.</p>
 
-<!-- 01 SPORTS / CATEGORIES -->
-<section class="section" id="sports">
-  <div class="wrap">
-    <div class="sec-num">01 · WHAT YOU TRAIN</div>
-    <div class="sec-label">15 SPORTS · ONE DIRECTORY</div>
-    <h2 class="sec-h">Pick Your<br>Discipline.</h2>
-    <p class="sec-lead">From world-famous Muay Thai camps to oceanview tennis courts. Every category curated, every venue verified, every link clickable.</p>
+      <form class="search" role="search" action="/search/" method="get">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input class="search-input" type="search" name="q" placeholder="Try &quot;muay thai jomtien&quot;" aria-label="Search venues">
+        <button class="search-btn" type="submit">Search</button>
+      </form>
 
-    <div class="cat-grid">
-      <a href="/category/muay-thai/" class="cat-card">
-        <div class="cat-tag coral">★ FLAGSHIP CATEGORY</div>
-        <div class="cat-h">Muay Thai<br>Camps</div>
-        <div class="cat-meta"><span class="count">38 venues</span><span class="arrow">→</span></div>
-      </a>
-      <a href="/category/fitness/" class="cat-card">
-        <div class="cat-tag gold">MOST VISITED</div>
-        <div class="cat-h">Gyms &amp;<br>Fitness</div>
-        <div class="cat-meta"><span class="count">29 venues</span><span class="arrow">→</span></div>
-      </a>
-      <a href="/category/golf/" class="cat-card">
-        <div class="cat-tag mint">PREMIUM</div>
-        <div class="cat-h">Golf<br>Courses</div>
-        <div class="cat-meta"><span class="count">17 venues</span><span class="arrow">→</span></div>
-      </a>
-      <a href="/category/yoga/" class="cat-card">
-        <div class="cat-tag rose">WELLNESS</div>
-        <div class="cat-h">Yoga &amp;<br>Pilates</div>
-        <div class="cat-meta"><span class="count">14 venues</span><span class="arrow">→</span></div>
-      </a>
-      <a href="/category/mma/" class="cat-card">
-        <div class="cat-tag coral">FIGHT SPORTS</div>
-        <div class="cat-h">MMA &amp;<br>Boxing</div>
-        <div class="cat-meta"><span class="count">11 venues</span><span class="arrow">→</span></div>
-      </a>
-      <a href="/category/racquet/" class="cat-card">
-        <div class="cat-tag sky">RACKET SPORTS</div>
-        <div class="cat-h">Tennis &amp;<br>Pickleball</div>
-        <div class="cat-meta"><span class="count">12 venues</span><span class="arrow">→</span></div>
-      </a>
-      <a href="/category/watersports/" class="cat-card">
-        <div class="cat-tag sky">OCEAN-FRONT</div>
-        <div class="cat-h">Watersports<br>&amp; Diving</div>
-        <div class="cat-meta"><span class="count">9 venues</span><span class="arrow">→</span></div>
-      </a>
-      <a href="/category/swimming/" class="cat-card">
-        <div class="cat-tag mint">YEAR-ROUND</div>
-        <div class="cat-h">Swimming<br>Pools</div>
-        <div class="cat-meta"><span class="count">8 venues</span><span class="arrow">→</span></div>
-      </a>
-      <a href="/category/climbing/" class="cat-card">
-        <div class="cat-tag rose">INDOOR</div>
-        <div class="cat-h">Rock<br>Climbing</div>
-        <div class="cat-meta"><span class="count">4 venues</span><span class="arrow">→</span></div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- 02 FEATURED VENUES -->
-<section class="section section-light">
-  <div class="wrap">
-    <div class="sec-num">02 · THE TOP OF THE STACK</div>
-    <div class="sec-label">EDITOR'S PICKS · UPDATED WEEKLY</div>
-    <h2 class="sec-h">Spots That<br>Deliver.</h2>
-    <p class="sec-lead">The venues we send our friends to. Real coaches, real facilities, real value. No paid placements — these earned the spot.</p>
-
-    <div class="venue-list">
-      <a href="/gyms/fairtex-pattaya/" class="venue-row">
-        <div class="v-num">01</div>
-        <div><div class="v-name">Fairtex Pattaya</div><span class="v-cat">Muay Thai · World-Class Camp</span></div>
-        <div class="v-area">PRATAMNAK</div>
-        <div class="v-arrow">→</div>
-      </a>
-      <a href="/gyms/sityodtong-pattaya/" class="venue-row">
-        <div class="v-num">02</div>
-        <div><div class="v-name">Sityodtong Pattaya</div><span class="v-cat">Muay Thai · Legendary Lineage</span></div>
-        <div class="v-area">JOMTIEN</div>
-        <div class="v-arrow">→</div>
-      </a>
-      <a href="/gyms/jetts-fitness-pattaya/" class="venue-row">
-        <div class="v-num">03</div>
-        <div><div class="v-name">Jetts Fitness Pattaya</div><span class="v-cat">Gym · 24/7 Access · Global Chain</span></div>
-        <div class="v-area">CENTRAL</div>
-        <div class="v-arrow">→</div>
-      </a>
-      <a href="/gyms/siam-country-club/" class="venue-row">
-        <div class="v-num">04</div>
-        <div><div class="v-name">Siam Country Club</div><span class="v-cat">Golf · Championship Course</span></div>
-        <div class="v-area">EAST PATTAYA</div>
-        <div class="v-arrow">→</div>
-      </a>
-      <a href="/gyms/petchrungruang-gym/" class="venue-row">
-        <div class="v-num">05</div>
-        <div><div class="v-name">Petchrungruang Gym</div><span class="v-cat">Muay Thai · Champion Producer</span></div>
-        <div class="v-area">SOI BUAKHAO</div>
-        <div class="v-arrow">→</div>
-      </a>
-      <a href="/gyms/yoga-pattaya-studio/" class="venue-row">
-        <div class="v-num">06</div>
-        <div><div class="v-name">Yoga Pattaya Studio</div><span class="v-cat">Yoga · Pattaya Central</span></div>
-        <div class="v-area">JOMTIEN</div>
-        <div class="v-arrow">→</div>
-      </a>
-    </div>
-
-    <div style="margin-top: 48px; display: flex; gap: 16px; flex-wrap: wrap;">
-      <a href="/search/" class="btn btn-secondary">BROWSE ALL 158 VENUES <span class="arrow">→</span></a>
-      <a href="/guides/" class="btn btn-ghost" style="border-color: var(--ink); color: var(--ink);">READ THE GUIDES <span class="arrow">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- 03 AREAS -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-num">03 · WHERE YOU ARE</div>
-    <div class="sec-label">6 PATTAYA AREAS · ALL MAPPED</div>
-    <h2 class="sec-h">Know The<br>Neighborhood.</h2>
-    <p class="sec-lead">Pattaya isn't one place. It's six. We mapped every venue to the area you actually search for — Jomtien beach, Pratamnak hills, Soi Buakhao backstreets.</p>
-
-    <div class="area-grid">
-      <a href="/area/jomtien/" class="area-card">
-        <div class="area-tag">★ MOST VENUES</div>
-        <div class="area-h">Jomtien</div>
-        <div class="area-body">Long-stay favorite. Beach gyms, yoga studios, fight camps. Where most expats train.</div>
-        <div class="area-link">42 VENUES →</div>
-      </a>
-      <a href="/area/central-pattaya/" class="area-card">
-        <div class="area-tag">DOWNTOWN</div>
-        <div class="area-h">Central<br>Pattaya</div>
-        <div class="area-body">Walking St backbone. Big-band gyms, boxing rings, the buzz of the city.</div>
-        <div class="area-link">31 VENUES →</div>
-      </a>
-      <a href="/area/pratamnak/" class="area-card">
-        <div class="area-tag">PREMIUM</div>
-        <div class="area-h">Pratamnak</div>
-        <div class="area-body">The hill between. Hi-end resorts, Fairtex flagship, calm streets.</div>
-        <div class="area-link">22 VENUES →</div>
-      </a>
-      <a href="/area/east-pattaya/" class="area-card">
-        <div class="area-tag">GOLF COUNTRY</div>
-        <div class="area-h">East<br>Pattaya</div>
-        <div class="area-body">Where the golf lives. Siam CC, Phoenix, championship layouts.</div>
-        <div class="area-link">28 VENUES →</div>
-      </a>
-      <a href="/area/naklua/" class="area-card">
-        <div class="area-tag">LOCAL FLAVOR</div>
-        <div class="area-h">Naklua</div>
-        <div class="area-body">North side. Quieter, more Thai. Traditional camps and family gyms.</div>
-        <div class="area-link">19 VENUES →</div>
-      </a>
-      <a href="/area/sattahip/" class="area-card">
-        <div class="area-tag">SOUTH COAST</div>
-        <div class="area-h">Sattahip</div>
-        <div class="area-body">Beachfront, military-base calm. Diving operators and the U-Tapao runway.</div>
-        <div class="area-link">16 VENUES →</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- 04 HOW IT WORKS -->
-<section class="section section-light">
-  <div class="wrap">
-    <div class="sec-num">04 · THE PROCESS</div>
-    <div class="sec-label">HOW EVERY VENUE GETS LISTED</div>
-    <h2 class="sec-h">Checked<br>By Hand.</h2>
-    <p class="sec-lead">No automated scraping. No paid placements. Every venue gets visited, photographed, or verified with a phone call.</p>
-
-    <div class="how-grid">
-      <div class="how-step">
-        <div class="how-num">STEP 01</div>
-        <div class="how-h">Discover</div>
-        <div class="how-body">We track new openings via local network — coaches, gym owners, regulars. If it's training in Pattaya, we hear about it.</div>
-      </div>
-      <div class="how-step">
-        <div class="how-num">STEP 02</div>
-        <div class="how-h">Verify</div>
-        <div class="how-body">Visit, call, or cross-check with three independent sources. Phone numbers tested. Maps confirmed. Hours validated.</div>
-      </div>
-      <div class="how-step">
-        <div class="how-num">STEP 03</div>
-        <div class="how-h">Publish</div>
-        <div class="how-body">Clean profile, real photos, honest summary. Updated every 90 days minimum. If a venue closes, it gets a strikethrough — not deleted.</div>
+      <div class="quick-chips" role="list">
+        <a class="chip" href="/search/?filter=near" role="listitem">Near me</a>
+        <a class="chip" href="/search/?filter=open" role="listitem">Open now</a>
+        <a class="chip" href="/guides/best-for-beginners-pattaya/" role="listitem">Beginners</a>
+        <a class="chip" href="/guides/cheapest-gyms-pattaya/" role="listitem">Budget</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 05 FAQ -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-num">05 · QUESTIONS WE GET</div>
-    <div class="sec-label">FAQ · ASKED A LOT</div>
-    <h2 class="sec-h">Real Talk.</h2>
-
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-num">Q1</span><span>How do you choose what gets listed?</span></div>
-        <div class="faq-a">If it operates in Greater Pattaya and offers training, coaching, or paid sport facilities, it qualifies. We don't take payment for placement. Editor's picks are based on coach quality, facility condition, and reader feedback.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-num">Q2</span><span>Is Pattaya Gym affiliated with any venue?</span></div>
-        <div class="faq-a">No. We are completely independent — run by Tim Paemi from Pattaya Authority. Some venues advertise on the site (clearly labeled) and that never affects rankings.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-num">Q3</span><span>How do I get my gym listed?</span></div>
-        <div class="faq-a">Email info@pattaya-gym.com with venue name, address, your role, and a few photos. We'll visit or call within two weeks. Listing is free.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-num">Q4</span><span>How current is the data?</span></div>
-        <div class="faq-a">Every venue is re-verified at minimum every 90 days. Phone, hours, address, prices. Last-verified date is visible on every venue page.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span class="q-num">Q5</span><span>Can ChatGPT and Claude use this data?</span></div>
-        <div class="faq-a">Yes. We publish full content maps at /llms.txt and JSON Feed 1.1 at /feed.json. Licensed CC BY 4.0 — attribution required, free to use.</div>
-      </div>
+  <div class="stats">
+    <div class="stats-card">
+      <div class="stat"><div class="stat-num">158</div><div class="stat-lbl">Venues</div></div>
+      <div class="stat"><div class="stat-num">15</div><div class="stat-lbl">Sports</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-lbl">Areas</div></div>
     </div>
   </div>
-</section>
 
-<!-- LATEST -->
-<section class="section section-light latest-section">
-  <div class="wrap">
-    <div class="sec-num">06 · WHAT'S NEW</div>
-    <div class="sec-label">RECENTLY VERIFIED · UPDATED MAY 2026</div>
-    <h2 class="sec-h">Fresh<br>From The Mat.</h2>
-    <p class="sec-lead">Latest venues to clear our hand-check process. New listings, re-verified contacts, freshly photographed.</p>
+  <section class="section">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2 class="sec-title">Pick your sport</h2>
+        <p class="sec-sub">15 disciplines covered across Pattaya</p>
+      </header>
 
-    <div class="latest-grid">
-      <a class="latest-card" href="/gyms/anytime-fitness-pattaya/">
-        <div class="latest-meta">// FITNESS · CENTRAL PATTAYA</div>
-        <h3>Anytime Fitness Pattaya</h3>
-        <p>24/7 access, 4,000+ global club network. Modern equipment, A/C, ฿฿฿.</p>
+      <div class="cats">
+        <a class="cat" href="/category/muay-thai/">
+          <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7c0-2 1.5-3 3.5-3h3c3 0 4.5 2 4.5 4v4"/><rect x="5" y="10" width="14" height="10" rx="3"/></svg></div>
+          <div class="cat-name">Muay Thai</div>
+          <div class="cat-count">38 camps</div>
+        </a>
+        <a class="cat" href="/category/fitness/">
+          <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C84A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="3" height="6" rx="1"/><rect x="19" y="9" width="3" height="6" rx="1"/><rect x="6" y="7" width="3" height="10" rx="1"/><rect x="15" y="7" width="3" height="10" rx="1"/><path d="M9 12h6"/></svg></div>
+          <div class="cat-name">Fitness</div>
+          <div class="cat-count">29 gyms</div>
+        </a>
+        <a class="cat" href="/category/golf/">
+          <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v16"/><path d="M10 4l9 3-9 3z" fill="#059669"/><circle cx="10" cy="20" r="2" fill="#059669"/></svg></div>
+          <div class="cat-name">Golf</div>
+          <div class="cat-count">17 courses</div>
+        </a>
+        <a class="cat" href="/category/yoga/">
+          <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c-2 4-2 7 0 11 2-3 2-7 0-11z"/><path d="M12 15c-5 1-7 5-7 5 4 1 7 0 7-5z"/><path d="M12 15c5 1 7 5 7 5-4 1-7 0-7-5z"/></svg></div>
+          <div class="cat-name">Yoga</div>
+          <div class="cat-count">14 studios</div>
+        </a>
+        <a class="cat" href="/category/watersports/">
+          <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></div>
+          <div class="cat-name">Watersports</div>
+          <div class="cat-count">11 venues</div>
+        </a>
+        <a class="cat" href="/category/mma/">
+          <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1e40af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="5"/><circle cx="16" cy="16" r="5"/></svg></div>
+          <div class="cat-name">MMA &amp; Boxing</div>
+          <div class="cat-count">11 venues</div>
+        </a>
+        <a class="cat" href="/category/racquet/">
+          <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"/><path d="M13 13l7 7"/></svg></div>
+          <div class="cat-name">Racquet</div>
+          <div class="cat-count">12 venues</div>
+        </a>
+        <a class="cat" href="/category/swimming/">
+          <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2-1 3-1 5 0s3 1 5 0 3-1 5 0 3 1 3 0"/><path d="M3 20c2-1 3-1 5 0s3 1 5 0 3-1 5 0 3 1 3 0"/><circle cx="14" cy="9" r="2"/></svg></div>
+          <div class="cat-name">Swimming</div>
+          <div class="cat-count">9 pools</div>
+        </a>
+      </div>
+
+      <a class="cats-cta" href="/category/">
+        See all 15 sports
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
       </a>
-      <a class="latest-card" href="/gyms/lumpinee-boxing-stadium/">
-        <div class="latest-meta">// MUAY THAI · BANGKOK DAY-TRIP</div>
-        <h3>Lumpinee Boxing Stadium</h3>
-        <p>The Wembley of Muay Thai. World's most prestigious ring. Bangkok day-trip.</p>
-      </a>
-      <a class="latest-card" href="/gyms/pickleball-pattaya/">
-        <div class="latest-meta">// RACQUET · EAST PATTAYA</div>
-        <h3>Pickleball Pattaya</h3>
-        <p>Dedicated pickleball facility. Coaching, leagues, year-round indoor courts.</p>
-      </a>
-      <a class="latest-card" href="/gyms/dusit-thani-pattaya/">
-        <div class="latest-meta">// WELLNESS · 5-STAR</div>
-        <h3>Dusit Thani Pattaya</h3>
-        <p>Devarana Wellness spa, beach gym, 25m pool. Premium hotel access.</p>
-      </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 08 CONTACT -->
-<section class="section section-light contact-strip">
-  <div class="wrap">
-    <div class="sec-num">07 · CONTACT</div>
-    <div class="sec-label">ONE LINE · ONE INBOX</div>
-    <h2 class="sec-h">Got A Tip?<br>Drop A Line.</h2>
-    <p class="sec-lead">Editorial corrections, new venue submissions, partnership notes, press requests — all go to one address.</p>
-    <div class="channels">
-  <a class="channel channel-email" href="mailto:info@pattaya-gym.com">
-    <span class="channel-label">// EMAIL</span>
-    <span class="channel-addr">info@pattaya-gym.com</span>
-    <span class="channel-arrow">→</span>
-  </a>
-  <a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener">
-    <span class="channel-label">// WHATSAPP</span>
-    <span class="channel-addr">+66 96 728 6999</span>
-    <span class="channel-arrow">→</span>
-  </a>
-  <a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">
-    <span class="channel-label">// LINE</span>
-    <span class="channel-addr">@timpaemi</span>
-    <span class="channel-arrow">→</span>
-  </a>
-</div>
-  </div>
-</section>
+  <section class="section section--alt">
+    <div class="wrap">
+      <header class="sec-head" style="display:flex; align-items:baseline; justify-content:space-between; gap:16px;">
+        <div>
+          <h2 class="sec-title">Top picks</h2>
+          <p class="sec-sub">Verified this month</p>
+        </div>
+        <a class="sec-link" href="/guides/">See all</a>
+      </header>
 
-<!-- BOTTOM MARQUEE -->
-<div class="marquee-bottom" aria-hidden="true">
-  <div class="marquee-track"><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span></div>
-</div>
+      <div class="venues">
+        <a class="venue" href="/gyms/fairtex-pattaya/">
+          <div class="venue-head">
+            <div class="venue-icon venue-icon--mt"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7c0-2 1.5-3 3.5-3h3c3 0 4.5 2 4.5 4v4"/><rect x="5" y="10" width="14" height="10" rx="3"/></svg></div>
+            <div class="venue-body">
+              <div class="venue-name">Fairtex Pattaya</div>
+              <div class="venue-meta">Pratamnak · ฿฿฿ · Daily 6–21</div>
+            </div>
+            <div class="rating"><svg width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3 7 7 .5-5.5 4.5L18 22l-6-4-6 4 1.5-8L2 9.5 9 9z"/></svg>4.9</div>
+          </div>
+          <div class="tags">
+            <span class="tag tag--brand">Muay Thai</span>
+            <span class="tag">Pro coaches</span>
+            <span class="tag">Beginner OK</span>
+          </div>
+        </a>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="/" class="brand">PATTAYA<span class="dot">.</span>GYM</a>
-      <p>Pattaya's only hand-checked sports &amp; training directory. 158 venues, 15 sports, six neighborhoods. Independent since 2024.</p>
+        <a class="venue" href="/gyms/tonys-gym/">
+          <div class="venue-head">
+            <div class="venue-icon venue-icon--fit"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="3" height="6" rx="1"/><rect x="19" y="9" width="3" height="6" rx="1"/><rect x="6" y="7" width="3" height="10" rx="1"/><rect x="15" y="7" width="3" height="10" rx="1"/><path d="M9 12h6"/></svg></div>
+            <div class="venue-body">
+              <div class="venue-name">Tony's Fitness Gym</div>
+              <div class="venue-meta">10 locations · ฿ · 6–23</div>
+            </div>
+            <div class="rating"><svg width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3 7 7 .5-5.5 4.5L18 22l-6-4-6 4 1.5-8L2 9.5 9 9z"/></svg>4.7</div>
+          </div>
+          <div class="tags">
+            <span class="tag tag--brand">Fitness</span>
+            <span class="tag">Free weights</span>
+            <span class="tag">Budget</span>
+          </div>
+        </a>
+
+        <a class="venue" href="/gyms/siam-country-club/">
+          <div class="venue-head">
+            <div class="venue-icon venue-icon--golf"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v16"/><path d="M10 4l9 3-9 3z" fill="currentColor"/><circle cx="10" cy="20" r="2" fill="currentColor"/></svg></div>
+            <div class="venue-body">
+              <div class="venue-name">Siam Country Club</div>
+              <div class="venue-meta">Pattaya East · ฿฿฿฿</div>
+            </div>
+            <div class="rating"><svg width="13" height="13" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3 7 7 .5-5.5 4.5L18 22l-6-4-6 4 1.5-8L2 9.5 9 9z"/></svg>4.8</div>
+          </div>
+          <div class="tags">
+            <span class="tag tag--brand">Golf</span>
+            <span class="tag">Championship</span>
+            <span class="tag">36 holes</span>
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h5 class="footer-col-h">Sports</h5>
-      <ul>
-        <li><a href="/category/muay-thai/">Muay Thai</a></li>
-        <li><a href="/category/fitness/">Gyms &amp; Fitness</a></li>
-        <li><a href="/category/golf/">Golf</a></li>
-        <li><a href="/category/yoga/">Yoga &amp; Pilates</a></li>
-        <li><a href="/category/racquet/">Tennis &amp; Pickleball</a></li>
-        <li><a href="/category/watersports/">Watersports</a></li>
-        <li><a href="/category/mma/">MMA</a></li>
-        <li><a href="/category/swimming/">Swimming</a></li>
-      </ul>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2 class="sec-title">Why Pattaya Gym</h2>
+        <p class="sec-sub">Three things you won't find elsewhere</p>
+      </header>
+
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <div>
+            <div class="benefit-name">Hand-checked weekly</div>
+            <div class="benefit-text">Every venue verified for hours, pricing, and whether the doors actually open.</div>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3 9 8 10 5-1 8-5 8-10V6z"/></svg></div>
+          <div>
+            <div class="benefit-name">No paid placements</div>
+            <div class="benefit-text">Independent directory. No gym pays to rank higher. Ranking reflects merit only.</div>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="benefit-name">Built for Pattaya</div>
+            <div class="benefit-text">By someone who trains here. Every recommendation is local-tested.</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h5 class="footer-col-h">Areas</h5>
-      <ul>
-        <li><a href="/area/jomtien/">Jomtien</a></li>
-        <li><a href="/area/central-pattaya/">Central Pattaya</a></li>
-        <li><a href="/area/pratamnak/">Pratamnak</a></li>
-        <li><a href="/area/naklua/">Naklua</a></li>
-        <li><a href="/area/east-pattaya/">East Pattaya</a></li>
-        <li><a href="/area/sattahip/">Sattahip</a></li>
-      </ul>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="contact">
+        <div class="contact-body">
+          <div class="contact-eyebrow">★ Talk to us</div>
+          <h2 class="contact-title">Need help picking the right gym?</h2>
+          <p class="contact-sub">Tell us your level and we'll match you in under 24h.</p>
+
+          <div class="channels">
+            <a class="channel" href="mailto:info@pattaya-gym.com">
+              <div>
+                <div class="channel-label">EMAIL</div>
+                <div class="channel-value">info@pattaya-gym.com</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="channel" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener">
+              <div>
+                <div class="channel-label">WHATSAPP</div>
+                <div class="channel-value">+66 96 728 6999</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="channel" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">
+              <div>
+                <div class="channel-label">LINE</div>
+                <div class="channel-value">@timpaemi</div>
+              </div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h5 class="footer-col-h">Best-Of Guides</h5>
-      <ul>
-        <li><a href="/guides/best-muay-thai-gyms-pattaya/">Best Muay Thai</a></li>
-        <li><a href="/guides/best-golf-courses-pattaya/">Best Golf Courses</a></li>
-        <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest Gyms</a></li>
-        <li><a href="/guides/luxury-gyms-pattaya/">Luxury Gyms</a></li>
-        <li><a href="/guides/24-hour-gyms-pattaya/">24-Hour Gyms</a></li>
-        <li><a href="/guides/female-friendly-gyms-pattaya/">Women-Friendly</a></li>
-        <li><a href="/guides/digital-nomad-friendly/">Digital Nomads</a></li>
-        <li><a href="/guides/">All Guides →</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5 class="footer-col-h">The Site</h5>
-      <ul>
-        <li><a href="/search/">Search Venues</a></li>
-        <li><a href="/map/">Interactive Map</a></li>
-        <li><a href="/compare/">Compare Venues</a></li>
-        <li><a href="/find-my-coach/">Find My Coach</a></li>
-        <li><a href="/plan-my-trip/">Plan My Trip</a></li>
-        <li><a href="/methodology/">How We Verify</a></li>
-        <li><a href="/add-your-gym/">Add Your Gym</a></li>
-        <li><a href="/colophon/">Colophon</a></li>
-        <li><a href="/llms.txt">For AIs &amp; LLMs</a></li>
-        <li><a href="mailto:info@pattaya-gym.com">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="sf-builtby">
-    SITE BUILT &amp; MANAGED BY <a href="https://pattaya-authority.com" rel="noopener">PATTAYA AUTHORITY</a> · TIM PAEMI <span class="star">★</span> ©2026
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">Pattaya<span style="color:#C84A0A;">.</span>Gym</div>
+    <p class="footer-tag">158 venues. Hand-checked. Updated weekly. The most complete training directory in Pattaya, Thailand.</p>
+    <div class="footer-base">© 2026 Pattaya Authority · Tim Paemi</div>
   </div>
 </footer>
 

@@ -15,13 +15,6 @@
     }
   }
 
-  function registerServiceWorker() {
-    if (!('serviceWorker' in navigator)) return;
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/sw.js').catch(function () {});
-    });
-  }
-
   function bindMediaFallback() {
     doc.addEventListener('error', function (event) {
       var img = event.target;
@@ -109,7 +102,6 @@
   }
 
   hydrateCurrentVenue();
-  registerServiceWorker();
   bindMediaFallback();
   bindDelegatedClicks();
 
