@@ -119,3 +119,20 @@
     initVenueUi();
   }
 })();
+
+
+/* === FAQ single-open accordion === */
+(function () {
+  document.addEventListener('toggle', function (e) {
+    if (e.target.tagName !== 'DETAILS') return;
+    // Only auto-close siblings within the same FAQ container
+    var container = e.target.closest('.about, .common-questions, .venue-faq, .faq-list');
+    if (!container) return;
+    if (e.target.open) {
+      var siblings = container.querySelectorAll('details');
+      siblings.forEach(function (d) {
+        if (d !== e.target && d.open) d.open = false;
+      });
+    }
+  }, true);
+})();

@@ -5721,3 +5721,121 @@ a.btn, button, input, select, textarea, .channel, .nav-cta {
   padding-left: 0;
   padding-right: 0;
 }
+
+
+/* ================================================================
+   FAQ ACCORDION — editorial dark theme + single-open
+   ================================================================ */
+details.faq, .faq-item, details[class*="faq"], .common-questions details, .about > details {
+  background: var(--ink-2) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 0 -1px 0 !important;
+  color: var(--bone) !important;
+  list-style: none;
+}
+details.faq summary, .faq-item summary, .common-questions details summary, .about > details summary {
+  background: var(--ink-2) !important;
+  color: var(--bone) !important;
+  padding: 22px 56px 22px 28px !important;
+  cursor: pointer;
+  list-style: none !important;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(15px, 1.5vw, 18px);
+  letter-spacing: -0.005em;
+  position: relative;
+  border: none !important;
+}
+details.faq summary::-webkit-details-marker,
+.faq-item summary::-webkit-details-marker,
+.common-questions details summary::-webkit-details-marker { display: none !important; }
+details.faq summary::marker,
+.faq-item summary::marker,
+.common-questions details summary::marker { content: ""; }
+details.faq summary::after,
+.faq-item summary::after,
+.common-questions details summary::after,
+.about > details summary::after {
+  content: '+';
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--mono);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  transition: transform 0.2s;
+}
+details.faq[open] summary::after,
+.faq-item[open] summary::after,
+.common-questions details[open] summary::after,
+.about > details[open] summary::after {
+  content: '×';
+  transform: translateY(-50%) rotate(0);
+}
+details.faq[open], .faq-item[open], .common-questions details[open], .about > details[open] {
+  background: var(--ink-2) !important;
+}
+details.faq > *:not(summary),
+.faq-item > *:not(summary),
+.common-questions details > *:not(summary),
+.about > details > *:not(summary) {
+  background: var(--ink-2) !important;
+  color: var(--text-dim) !important;
+  padding: 0 28px 24px 28px !important;
+  margin: 0 !important;
+  font-family: var(--display);
+  font-size: 15px;
+  line-height: 1.6;
+  border: none !important;
+}
+.faq-item p, details.faq p, .common-questions p { color: var(--text-dim) !important; }
+
+/* Container for FAQ block */
+.about, .common-questions, .venue-faq {
+  background: var(--ink) !important;
+}
+.about h2, .common-questions h2, .venue-faq h2 {
+  color: var(--bone) !important;
+}
+
+/* ================================================================
+   SECTION RHYTHM — alternate bg, no two bone-bg in a row
+   ================================================================ */
+.contact-strip, .channels-section {
+  background: var(--ink) !important;
+  color: var(--bone) !important;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.contact-strip .sec-num,
+.channels-section .sec-num { color: var(--gold) !important; }
+.contact-strip .sec-h,
+.channels-section .sec-h { color: var(--bone) !important; }
+.contact-strip .sec-lead,
+.channels-section .sec-lead { color: var(--text-dim) !important; }
+
+/* ================================================================
+   BUTTON CONTRAST FIX — .btn-primary on bone bg fails WCAG
+   ================================================================ */
+.btn-primary, .btn.btn-primary, a.btn-primary, button.btn-primary {
+  background: var(--coral) !important;
+  color: #ffffff !important;  /* full white for max contrast on coral */
+  border-color: var(--coral) !important;
+}
+.btn-primary:hover, .btn.btn-primary:hover {
+  background: #d8473a !important;  /* darker coral, still WCAG */
+  color: #ffffff !important;
+}
+
+/* Compare/Suggest edit/Leave review buttons on venue page */
+.venue-actions .btn-secondary,
+a.btn-secondary {
+  background: var(--gold) !important;
+  color: var(--ink) !important;
+  border-color: var(--gold) !important;
+}
