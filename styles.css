@@ -5657,3 +5657,39 @@ body.about-page .venue-hero .venue-cat-pill,
   letter-spacing: -0.02em;
   margin: 0 0 24px 0 !important;
 }
+
+/* ================================================================
+   SUBPAGE CENTERING — universal chassis for .venue-page children
+   Mirrors the homepage .wrap pattern (1320px max, auto margins, 32px pad).
+   Without this, non-allowlisted direct children (.tool-grid, .channels,
+   .tldr section, h2#full-list, etc.) drift left or full-bleed.
+   ================================================================ */
+.venue-page > * {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: max(32px, env(safe-area-inset-left));
+  padding-right: max(32px, env(safe-area-inset-right));
+  box-sizing: border-box;
+}
+/* Full-bleed opt-outs */
+.venue-page > .marquee,
+.venue-page > .marquee-bottom,
+.venue-page > .full-bleed {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* Override the legacy left-pin on the category "All X Venues" heading */
+.venue-page h2#full-list,
+.venue-page > h2,
+main.venue-page > h2 {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* The .channels grid on /find-my-coach/ has max-width:1100px; margin:32px 0
+   which pins it left. Center it explicitly. */
+.venue-page .channels {
+  margin-left: auto;
+  margin-right: auto;
+}
