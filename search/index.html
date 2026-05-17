@@ -10,8 +10,8 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/search/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=404" as="style">
-<link rel="stylesheet" href="/styles.css?v=404">
+<link rel="preload" href="/styles.css?v=405" as="style">
+<link rel="stylesheet" href="/styles.css?v=405">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
@@ -58,57 +58,54 @@
 </nav>
 <main id="main">
 
-<section class="section" style="padding-top:var(--s-8);">
-  <div class="wrap">
-    <article class="venue-body" style="max-width:880px; margin:0 auto;">
+<section class="search-hero">
+  <div class="eyebrow"><span class="num">01</span> Search 158 venues</div>
+  <h1>Find your <span class="accent">gym.</span></h1>
+  <p class="lede">Search 158 verified Pattaya venues by name, sport, area, price, or "open now". Live filter — no page reload.</p>
 
-
-<section class="section" style="padding-top:var(--s-8);">
-  <div class="wrap">
-    <article class="venue-body" style="max-width:880px; margin:0 auto;">
-<div class="venue-hero" style="text-align: center; padding: 36px 28px;">
-    <span class="venue-cat-pill">Search</span>
-    <h1 class="venue-h1" style="margin-bottom:6px;">Find your gym</h1>
-    <p class="venue-lede" style="margin: 0 auto 20px; max-width: 580px;">Search by venue name, neighbourhood, sport, language, price tier, open-now status, or feature. 158 verified venues.</p>
-    <div class="search-input-wrap">
-      <input type="search" class="search-input" id="q" aria-label="Search Pattaya venues" placeholder="Try: muay thai jomtien, cheap yoga, 24 hour gym, english pickleball" autofocus />
-      <span class="search-icon" aria-hidden="true">&#128269;</span>
-    </div>
-    <div class="search-filters" id="filters">
-      <button type="button" class="sf-pill active" data-cat="all">All categories</button>
-      <button type="button" class="sf-pill" data-cat="muay-thai">Muay Thai</button><button type="button" class="sf-pill" data-cat="mma">MMA</button><button type="button" class="sf-pill" data-cat="bjj">BJJ / Grappling</button><button type="button" class="sf-pill" data-cat="crossfit">CrossFit / Functional</button><button type="button" class="sf-pill" data-cat="fitness">Fitness / Gym</button><button type="button" class="sf-pill" data-cat="yoga">Yoga / Pilates</button><button type="button" class="sf-pill" data-cat="golf">Golf</button><button type="button" class="sf-pill" data-cat="racquet">Tennis / Padel / Squash</button><button type="button" class="sf-pill" data-cat="swimming">Swimming</button><button type="button" class="sf-pill" data-cat="watersports">Watersports / Diving</button><button type="button" class="sf-pill" data-cat="climbing">Climbing</button><button type="button" class="sf-pill" data-cat="clubs">Running / Cycling Clubs</button><button type="button" class="sf-pill" data-cat="kids-youth">Kids / Youth Sports</button><button type="button" class="sf-pill" data-cat="equestrian">Equestrian</button><button type="button" class="sf-pill" data-cat="adventure">Adventure / Multi-Sport</button>
-    </div>
-    <div class="search-filter-panel" aria-label="Search filters">
-      <label for="area-filter">Area
-        <select id="area-filter"><option value="all">All areas</option></select>
-      </label>
-      <label for="price-filter">Price
-        <select id="price-filter">
-          <option value="all">All prices</option>
-          <option value="฿">฿ budget</option>
-          <option value="฿฿">฿฿ mid-range</option>
-          <option value="฿฿฿">฿฿฿ premium</option>
-          <option value="฿฿฿฿">฿฿฿฿ luxury</option>
-        </select>
-      </label>
-      <label for="language-filter">Language
-        <select id="language-filter"><option value="all">Any language</option></select>
-      </label>
-      <label class="search-check" for="open-filter"><input id="open-filter" type="checkbox" /> <span>Open now</span></label>
-    </div>
+  <div class="search-input-wrap">
+    <input type="search" class="search-input" id="q" aria-label="Search Pattaya venues" placeholder="Try: muay thai jomtien, cheap yoga, 24-hour gym, padel..." autofocus />
+    <span class="search-icon" aria-hidden="true">&#128269;</span>
   </div>
-  <p class="search-stats" id="stats"></p>
-  <h2 id="search-results-title" style="max-width:720px;margin:0 auto 12px;font-size:1.1rem;">Search results</h2>
-  <div id="search-results"></div>
 
-    </article>
+  <div class="search-filters" id="filters">
+    <button type="button" class="sf-pill active" data-cat="all">All</button>
+    <button type="button" class="sf-pill" data-cat="muay-thai">Muay Thai</button>
+    <button type="button" class="sf-pill" data-cat="mma">MMA</button>
+    <button type="button" class="sf-pill" data-cat="bjj">BJJ</button>
+    <button type="button" class="sf-pill" data-cat="crossfit">CrossFit</button>
+    <button type="button" class="sf-pill" data-cat="fitness">Fitness</button>
+    <button type="button" class="sf-pill" data-cat="yoga">Yoga</button>
+    <button type="button" class="sf-pill" data-cat="golf">Golf</button>
+    <button type="button" class="sf-pill" data-cat="racquet">Racquet</button>
+    <button type="button" class="sf-pill" data-cat="swimming">Swimming</button>
+    <button type="button" class="sf-pill" data-cat="watersports">Watersports</button>
+    <button type="button" class="sf-pill" data-cat="climbing">Climbing</button>
+    <button type="button" class="sf-pill" data-cat="clubs">Run / Cycle</button>
+    <button type="button" class="sf-pill" data-cat="kids-youth">Kids</button>
+    <button type="button" class="sf-pill" data-cat="equestrian">Equestrian</button>
+    <button type="button" class="sf-pill" data-cat="adventure">Adventure</button>
   </div>
-</section>
 
-
-    </article>
+  <div class="search-filter-panel" aria-label="Search filters">
+    <label for="area-filter">Area
+      <select id="area-filter"><option value="all">All areas</option></select>
+    </label>
+    <label for="price-filter">Price
+      <select id="price-filter">
+        <option value="all">All prices</option>
+        <option value="฿">฿ budget</option>
+        <option value="฿฿">฿฿ mid-range</option>
+        <option value="฿฿฿">฿฿฿ premium</option>
+        <option value="฿฿฿฿">฿฿฿฿ luxury</option>
+      </select>
+    </label>
+    <label class="search-check" for="open-filter"><input id="open-filter" type="checkbox" /> <span>Open now</span></label>
   </div>
 </section>
+
+<p class="search-stats" id="stats">Loading venues…</p>
+<div class="search-results" id="search-results"></div>
 
 </main>
 <section class="pa-network">
@@ -142,6 +139,8 @@
     <span>12.92°N · 100.87°E · Pattaya Villa</span>
   </div>
 </footer>
+<script src="/data.js?v=405"></script>
+<script src="/search-page.js?v=405" defer></script>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script>
