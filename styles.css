@@ -87,8 +87,15 @@ button { background: none; border: 0; cursor: pointer; padding: 0; }
 a { color: inherit; text-decoration: none; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, h4, h5, h6, p { margin: 0; }
-*::-webkit-scrollbar { display: none; }
-* { scrollbar-width: none; -ms-overflow-style: none; }
+/* Hide scrollbars only on internal horizontal-scroll strips (filter chips, marquees) */
+.row-scroll::-webkit-scrollbar,
+.marquee::-webkit-scrollbar,
+.nearby-row::-webkit-scrollbar,
+.quick-chips::-webkit-scrollbar { display: none; }
+.row-scroll,
+.marquee,
+.nearby-row,
+.quick-chips { scrollbar-width: none; -ms-overflow-style: none; }
 :focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: var(--r-md); }
 ::selection { background: var(--pink); color: var(--bg); }
 
