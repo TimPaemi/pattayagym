@@ -20,8 +20,9 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '401';
+const ASSET_VERSION = '402';
 const TODAY = new Date().toISOString().slice(0, 10);
+const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
 // ---------- Load data ----------
 const { CATEGORIES, GYMS } = require('./data.js');
@@ -335,6 +336,7 @@ function footer() {
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
+    <span style="color:var(--cyan);">★ Last updated · ${BUILD_TIMESTAMP}</span>
     <span>12.92°N · 100.87°E · Pattaya Villa</span>
   </div>
 </footer>
