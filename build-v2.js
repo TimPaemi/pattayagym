@@ -268,6 +268,22 @@ function paNetwork() {
 </section>`;
 }
 
+function backToTop() {
+  return `<button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+(function(){
+  var btn = document.querySelector('.back-to-top');
+  if (!btn) return;
+  function check() {
+    if (window.scrollY > 600) btn.classList.add('is-visible');
+    else btn.classList.remove('is-visible');
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+})();
+</script>`;
+}
+
 function footer() {
   return `<footer class="footer" role="contentinfo">
   <div class="footer-grid">
@@ -315,6 +331,7 @@ function footer() {
     <span>12.92°N · 100.87°E · Pattaya Villa</span>
   </div>
 </footer>
+${backToTop()}
 </body>
 </html>`;
 }
@@ -739,6 +756,386 @@ function areaPage(slug, label, venues) {
     + footer();
 }
 
+// ---------- Utility / info page ----------
+function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent, accentClass, lede, bodyHtml, showContactCard = false }) {
+  const url = `${SITE}/${slug}/`;
+
+  const contactBlock = showContactCard ? `
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">★</span> Talk to us</div>
+    <h2 class="h-section">Reach us <span class="accent-mint">direct.</span></h2>
+    <div class="channels-grid">
+      <a href="mailto:info@pattaya-gym.com" class="channel-card is-email">
+        <span class="channel-card-arrow">↗</span>
+        <div class="channel-card-tag">// Email</div>
+        <h4 class="channel-card-name">info@pattaya-gym.com</h4>
+        <div class="channel-card-sub">Reply within 24h</div>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener" class="channel-card is-wa">
+        <span class="channel-card-arrow">↗</span>
+        <div class="channel-card-tag">★ Fastest</div>
+        <h4 class="channel-card-name">whatsapp</h4>
+        <div class="channel-card-sub">+66 96 728 6999</div>
+      </a>
+      <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener" class="channel-card is-line">
+        <span class="channel-card-arrow">↗</span>
+        <div class="channel-card-tag">// LINE</div>
+        <h4 class="channel-card-name">@timpaemi</h4>
+        <div class="channel-card-sub">Daily check</div>
+      </a>
+      <a href="https://pattaya-authority.com/" target="_blank" rel="noopener" class="channel-card is-agency">
+        <span class="channel-card-arrow">↗</span>
+        <div class="channel-card-tag">★ Our agency</div>
+        <h4 class="channel-card-name">pattaya authority</h4>
+        <div class="channel-card-sub">pattaya-authority.com</div>
+      </a>
+    </div>
+  </div>
+</section>` : '';
+
+  return head({ title, desc, url })
+    + topMarquee(TOP_MARQUEE)
+    + nav()
+    + breadcrumb([
+        { label: 'Home', href: '/' },
+        { label: eyebrow }
+      ])
+    + `
+<main id="main">
+
+<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
+  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+    <div class="hero-kicker">// ${esc(eyebrow)}</div>
+    <h1 class="hero-h1" style="font-size:clamp(40px,9vw,100px); text-align:left;">
+      ${esc(headlineLead)}<br>
+      <span class="${accentClass}">${esc(headlineAccent)}.</span>
+    </h1>
+    <p class="hero-lede" style="text-align:left; margin-left:0; margin-right:0; margin-top:var(--s-5); font-size:clamp(16px,2vw,19px);">${lede}</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <article class="venue-body" style="max-width:760px; margin:0;">
+      ${bodyHtml}
+    </article>
+  </div>
+</section>
+
+${contactBlock}
+
+</main>
+`
+    + paNetwork()
+    + bottomMarquee(BOTTOM_MARQUEE)
+    + footer();
+}
+
+const UTILITY_PAGES = [
+  {
+    slug: 'about',
+    title: 'About Pattaya.Gym — Independent directory, hand-checked weekly',
+    desc: 'Pattaya.Gym is the most complete directory of gyms, Muay Thai camps, and sport venues in Pattaya. Independent. Hand-checked. No paid placements.',
+    eyebrow: 'About',
+    headlineLead: 'Independent.',
+    headlineAccent: 'One purpose',
+    accentClass: 'accent-pink',
+    lede: 'Pattaya.Gym is the most complete directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand. Every venue is personally verified. No paid placements. No fake reviews. No SEO spam.',
+    showContactCard: true,
+    bodyHtml: `
+<h2>Why this site exists</h2>
+<p>Most directories you find for Pattaya gyms are scraped, paid-for, or both. Search results are dominated by sites that have never set foot in any of the venues they rank.</p>
+<p>Pattaya.Gym is the opposite. Every venue is visited or verified directly. Every hours field is checked. Every phone number is dialed. If a venue closes or changes hands, the page updates within 7 days.</p>
+
+<h2>How venues are ranked</h2>
+<p>No money changes hands. Ranking is based on consistent quality, current operation, breadth of facility, instructor caliber, and community reputation. Gyms with closed doors or stale information get demoted automatically.</p>
+
+<h2>What we operate</h2>
+<p>Pattaya.Gym is one project of <strong>TimPaemi Co., Ltd.</strong> alongside three other sites — <a href="https://pattaya-authority.com/" target="_blank" rel="noopener">Pattaya Authority</a> (flagship nightlife agency), <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener">Pattaya Restaurant Guide</a>, and <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener">Pattaya Visa Help</a>. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
+
+<h2>Who runs this</h2>
+<p>Pattaya.Gym is operated by <strong>Tim Paemi</strong>, an independent operator and long-time Pattaya resident, alongside his wife and co-founder. The site is self-funded and has no commercial relationship with any listed venue.</p>
+
+<h2>Editorial policy</h2>
+<ul>
+<li>If a venue closes, gets new ownership, or changes hours, the page is updated within 7 days.</li>
+<li>If a venue refuses to respond to verification requests over 30 days, it gets marked stale and ranking-suppressed.</li>
+<li>No sponsored placements. No affiliate links to listed venues. No commission on bookings.</li>
+<li>Editorial reviews and rankings reflect merit, not budget.</li>
+</ul>
+`
+  },
+  {
+    slug: 'contact',
+    title: 'Contact Pattaya.Gym — Email, WhatsApp, LINE',
+    desc: 'Three ways to reach Pattaya.Gym. Email info@pattaya-gym.com, WhatsApp +66 96 728 6999, or LINE @timpaemi. We reply to every message personally.',
+    eyebrow: 'Contact',
+    headlineLead: 'Reach us',
+    headlineAccent: 'direct',
+    accentClass: 'accent-mint',
+    lede: 'Three ways to reach us. We reply to every message personally, usually within 24h. No bots. No auto-responders. Real humans in Pattaya.',
+    showContactCard: true,
+    bodyHtml: `
+<h2>What we can help with</h2>
+<ul>
+<li>Recommending the right gym for your level, sport, and budget</li>
+<li>Verifying current hours, pricing, or coach roster at any listed venue</li>
+<li>Adding your gym, camp, or sport venue to the directory — free, no fees</li>
+<li>Correcting outdated information on any venue page</li>
+<li>Press, partnership, or media inquiries</li>
+</ul>
+
+<h2>What we won't do</h2>
+<p>We don't book classes for you, take payment, or operate as an intermediary. You contact the gym directly — we just help you find the right one. No commission on bookings. No affiliate kickbacks.</p>
+
+<h2>Response times</h2>
+<ul>
+<li><strong>WhatsApp:</strong> fastest — usually within 1–4h during Pattaya daytime hours (GMT+7)</li>
+<li><strong>LINE:</strong> daily check, typically same-day reply</li>
+<li><strong>Email:</strong> within 24h, often much faster</li>
+</ul>
+
+<h2>Where we are</h2>
+<p>Operated from our villa in Pattaya City, Bang Lamung District, Chonburi 20150, Thailand. Coordinates 12.92°N, 100.87°E.</p>
+`
+  },
+  {
+    slug: 'methodology',
+    title: 'Methodology — How Pattaya.Gym verifies venues',
+    desc: 'The full research methodology behind Pattaya.Gym. How venues are sourced, verified, ranked, and updated. No paid placements. No scraping.',
+    eyebrow: 'Methodology',
+    headlineLead: 'How we',
+    headlineAccent: 'verify',
+    accentClass: 'accent-cyan',
+    lede: 'The full research methodology behind every entry. How venues are sourced, verified, ranked, and kept current. Transparency over polish.',
+    showContactCard: false,
+    bodyHtml: `
+<h2>Sourcing</h2>
+<p>We source venues from a mix of local knowledge, on-foot exploration, community recommendations, and English/Thai search. Every entry traces back to at least one of:</p>
+<ul>
+<li>Direct visit by us or a trusted local</li>
+<li>Verified primary source (the venue's own website or social, dated within 12 months)</li>
+<li>Community recommendation from a long-term Pattaya resident</li>
+</ul>
+<p>We do <strong>not</strong> scrape Google Maps, TripAdvisor, or other directories without verification.</p>
+
+<h2>Verification</h2>
+<p>Each venue is checked for:</p>
+<ul>
+<li><strong>Is it open?</strong> — phone or in-person confirmation</li>
+<li><strong>Stated hours match reality</strong> — cross-checked with current customers when possible</li>
+<li><strong>Price tier accurate</strong> — entry-level pricing confirmed via published rate or direct quote</li>
+<li><strong>Category appropriate</strong> — venue actually does the sport it claims</li>
+<li><strong>Quality of facility</strong> — equipment, cleanliness, instructor presence</li>
+</ul>
+
+<h2>Ranking</h2>
+<p>Within a category, venues rank by composite score: facility depth, instructor caliber, customer feedback signal, longevity, breadth of programs offered, and operational reliability (how often doors are open as advertised). No paid weighting.</p>
+
+<h2>Updates</h2>
+<p>Verified date appears on every venue page. If a venue hasn't been re-verified in 90+ days, it gets queued. If we hear of a closure or major change, the page updates within 7 days. If we can't reach a venue across 30 days of attempts, it's marked stale and ranking-suppressed.</p>
+
+<h2>Removals</h2>
+<p>Venues are removed when:</p>
+<ul>
+<li>Permanent closure confirmed</li>
+<li>Operations relocated outside Pattaya / Eastern Seaboard</li>
+<li>Owner explicitly requests removal in writing</li>
+</ul>
+`
+  },
+  {
+    slug: 'press',
+    title: 'Press — Pattaya.Gym media kit and contact',
+    desc: 'Press, media, and partnership inquiries for Pattaya.Gym and the TimPaemi Co. agency network.',
+    eyebrow: 'Press',
+    headlineLead: 'Press &',
+    headlineAccent: 'media',
+    accentClass: 'accent-yellow',
+    lede: 'Press, media, and partnership inquiries for Pattaya.Gym and the broader TimPaemi Co. agency network.',
+    showContactCard: true,
+    bodyHtml: `
+<h2>The agency</h2>
+<p>Pattaya.Gym is one of four projects operated by <strong>TimPaemi Co., Ltd.</strong>, a Pattaya-based agency focused on long-term local market positioning.</p>
+
+<h2>Sister projects</h2>
+<ul>
+<li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener"><strong>Pattaya Authority</strong></a> — flagship nightlife agency, one of the leading operators in Pattaya. Brand strategy, content production, venue partnerships.</li>
+<li><strong>Pattaya.Gym</strong> (this site) — fitness directory. Every gym, every camp, every court in Pattaya.</li>
+<li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener"><strong>Pattaya Restaurant Guide</strong></a> — independent restaurant guide. Editorial reviews, real visits, honest takes.</li>
+<li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener"><strong>Pattaya Visa Help</strong></a> — visa and long-stay support for foreigners in Pattaya.</li>
+</ul>
+
+<h2>Reach</h2>
+<ul>
+<li>5M+ combined social followers across the agency network</li>
+<li>500M+ total platform views across YouTube, TikTok, Instagram, Facebook</li>
+<li>60+ social media accounts under cross-platform automation</li>
+<li>Live streams 6–8 hours per night from our Pattaya villa</li>
+</ul>
+
+<h2>Press inquiries</h2>
+<p>For interviews, partnership briefings, agency-level engagements, or media access — email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a> with subject line beginning "Press:" and we'll route appropriately within 24h.</p>
+`
+  },
+  {
+    slug: 'add-your-gym',
+    title: 'Add your gym to Pattaya.Gym — free listing',
+    desc: 'Get your gym, camp, or sport venue listed on Pattaya.Gym. Free. No fees. No commission. Send us the details and we verify.',
+    eyebrow: 'Add your gym',
+    headlineLead: 'List your',
+    headlineAccent: 'venue',
+    accentClass: 'accent-pink',
+    lede: 'Get your gym, camp, or sport venue added to Pattaya.Gym. Free. No fees. No commission. Send us the details — we verify and publish.',
+    showContactCard: true,
+    bodyHtml: `
+<h2>What we need from you</h2>
+<ul>
+<li><strong>Venue name</strong> — exactly as you want it displayed</li>
+<li><strong>Category</strong> — what sport(s) you cover</li>
+<li><strong>Address</strong> — full street address + Google Maps link if possible</li>
+<li><strong>Hours</strong> — current operating schedule, weekday and weekend</li>
+<li><strong>Price range</strong> — drop-in fee, weekly pass, monthly membership</li>
+<li><strong>Contact</strong> — phone, email, website, social media handles</li>
+<li><strong>1-3 sentence description</strong> — what makes you different</li>
+</ul>
+
+<h2>What happens next</h2>
+<ol>
+<li>We verify the venue exists, hours are accurate, and contact info works</li>
+<li>We visit or call to confirm — usually within 7 days</li>
+<li>We write a neutral entry based on our verification, not your marketing copy</li>
+<li>The page goes live with a "verified" date</li>
+<li>We re-verify every 90 days going forward</li>
+</ol>
+
+<h2>What we charge</h2>
+<p><strong>Nothing.</strong> Listings are free. We do not accept money for placement, ranking, or featured status. The agency network funds the directory, not the venues.</p>
+
+<h2>What we won't do</h2>
+<ul>
+<li>Publish marketing copy verbatim — we write neutral entries</li>
+<li>Boost ranking for payment — ranking reflects merit only</li>
+<li>Hide negative info — if something's outdated, broken, or sketchy, we say so</li>
+<li>Cross-promote unrelated businesses</li>
+</ul>
+
+<p style="margin-top:var(--s-6);"><strong>Send the details to <a href="mailto:info@pattaya-gym.com?subject=Add%20my%20gym">info@pattaya-gym.com</a></strong> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%20want%20to%20add%20my%20gym%20to%20pattaya-gym.com" target="_blank" rel="noopener">+66 96 728 6999</a> with "Add my gym" in the message.</p>
+`
+  },
+  {
+    slug: 'colophon',
+    title: 'Colophon — How Pattaya.Gym is built',
+    desc: 'The technical setup behind Pattaya.Gym. Static HTML, Node.js build, Cloudflare Pages. Built in-house by the founders of TimPaemi.',
+    eyebrow: 'Colophon',
+    headlineLead: 'How this',
+    headlineAccent: 'is built',
+    accentClass: 'accent-mint',
+    lede: 'The technical and editorial setup behind Pattaya.Gym. No frameworks, no CMS, no bloat. Just markdown content rendered by a small Node.js build script.',
+    showContactCard: false,
+    bodyHtml: `
+<h2>Stack</h2>
+<ul>
+<li><strong>Content:</strong> Markdown files with YAML frontmatter, one per venue</li>
+<li><strong>Build:</strong> Node.js script (no dependencies) that reads markdown and emits static HTML</li>
+<li><strong>Styling:</strong> Single CSS file with native CSS custom properties — no frameworks</li>
+<li><strong>Hosting:</strong> Cloudflare Pages, deployed automatically from GitHub on every push</li>
+<li><strong>Domain:</strong> pattaya-gym.com — registered direct, DNS via Cloudflare</li>
+<li><strong>Analytics:</strong> Google Analytics — privacy-respecting, no cross-site tracking</li>
+</ul>
+
+<h2>Typography</h2>
+<ul>
+<li><strong>Display:</strong> Space Grotesk — for headlines and brand</li>
+<li><strong>Body:</strong> Inter — for paragraphs and UI</li>
+<li><strong>Mono:</strong> JetBrains Mono — for labels, marquees, and metadata</li>
+</ul>
+
+<h2>Colors</h2>
+<p>Pure black background. Five accent colors: hot pink, cyan, yellow, mint, red. White for primary text, muted grays for hierarchy. No gradients except the multi-color brand identity.</p>
+
+<h2>Performance</h2>
+<ul>
+<li>Static HTML files — no server-side rendering, no database queries</li>
+<li>One CSS file, one font request, zero blocking JavaScript</li>
+<li>Cloudflare CDN — global edge caching</li>
+<li>Sub-2-second LCP on mobile 4G in most regions</li>
+</ul>
+
+<h2>Open source</h2>
+<p>The site source lives on GitHub. The content (venue markdown) is curated by us and not currently open. The build script is small and could be adapted — get in touch if you're building something similar.</p>
+
+<h2>Built by</h2>
+<p>Site engineered, operated, and maintained in-house by the founders of TimPaemi Co., Ltd. — Pattaya, Thailand.</p>
+`
+  },
+  {
+    slug: 'pattaya-sport-stats',
+    title: 'Pattaya sport stats — 158 venues across 15 sports',
+    desc: 'The numbers behind Pattaya as a training destination. 158 hand-checked venues, 15 sports, 6 areas. Updated weekly.',
+    eyebrow: 'Stats',
+    headlineLead: 'Pattaya',
+    headlineAccent: 'by the numbers',
+    accentClass: 'accent-yellow',
+    lede: 'The training landscape of Pattaya in numbers. 158 hand-checked venues across 15 sports and 6 distinct areas. One of the world\'s deepest single-city Muay Thai scenes.',
+    showContactCard: false,
+    bodyHtml: `
+<h2>Top-line</h2>
+<ul>
+<li><strong>158</strong> verified venues</li>
+<li><strong>15</strong> sport categories</li>
+<li><strong>6</strong> distinct geographic areas</li>
+<li><strong>Weekly</strong> verification cycle</li>
+<li><strong>0</strong> paid placements</li>
+</ul>
+
+<h2>By sport (top categories)</h2>
+<ul>
+<li><strong>Muay Thai:</strong> 38 camps — Pattaya has one of the world's largest concentrations of authentic Muay Thai. From Sityodtong-lineage traditional gyms to Fairtex-style premium resorts.</li>
+<li><strong>Fitness gyms:</strong> 29 venues — from Muscle Factory hardcore bodybuilding to Hilton Pattaya 5-star clubs.</li>
+<li><strong>Golf:</strong> 17 courses — premium Eastern Seaboard golf, from Siam Country Club championship to Bangpra valley layouts.</li>
+<li><strong>Yoga & Pilates:</strong> 14 studios — Ashtanga, Vinyasa, Hot, traditional Hatha. Beachfront classes to Naklua wellness centers.</li>
+<li><strong>Racquet sports:</strong> 12 venues — tennis, padel, badminton, pickleball.</li>
+<li><strong>MMA / BJJ / Combat:</strong> 11 venues — beyond Muay Thai.</li>
+<li><strong>Watersports / Diving:</strong> 11 operators — PADI, SSI, kitesurfing, sailing.</li>
+<li><strong>Swimming:</strong> 9 pools — public, hotel, training pools.</li>
+</ul>
+
+<h2>By area</h2>
+<ul>
+<li><strong>Jomtien Beach</strong> — South Pattaya beachfront, family-friendly</li>
+<li><strong>Naklua / North Pattaya</strong> — quieter, Wong Amat Beach, mid/upper market</li>
+<li><strong>Pratamnak Hill</strong> — premium hill between Pattaya and Jomtien</li>
+<li><strong>Central Pattaya</strong> — the original Pattaya, Beach Road, Walking Street</li>
+<li><strong>East Pattaya / Darkside</strong> — inland east, expat residential, serious gyms</li>
+<li><strong>Sattahip / Far South</strong> — quietest end, toward U-Tapao</li>
+</ul>
+
+<h2>What's not here</h2>
+<p>Pattaya.Gym focuses on training venues — gyms, camps, courts, courses, studios, dive operators. We don't cover entertainment venues, restaurants, nightlife, or visa services. For those, see our sister sites.</p>
+`
+  },
+  {
+    slug: '404',
+    title: 'Page not found — Pattaya.Gym',
+    desc: 'That page doesn\'t exist on Pattaya.Gym. Browse 158 venues, 15 sports, or use search.',
+    eyebrow: '404',
+    headlineLead: 'Page',
+    headlineAccent: 'not found',
+    accentClass: 'accent-pink',
+    lede: 'That URL doesn\'t exist on Pattaya.Gym. It may have moved, or you may have followed a stale link. Use the buttons below to navigate, or browse the directory.',
+    showContactCard: false,
+    bodyHtml: `
+<p><a href="/">Back to homepage →</a></p>
+<p><a href="/search/">Search 158 venues →</a></p>
+<p><a href="/category/muay-thai/">Browse Muay Thai →</a></p>
+<p><a href="/category/fitness/">Browse fitness gyms →</a></p>
+<p><a href="/contact/">Contact us →</a></p>
+`
+  }
+];
+
 // ---------- Sitemap ----------
 function generateSitemap() {
   const urls = [
@@ -797,10 +1194,23 @@ function main() {
     stats.areas++;
   }
 
+  // Utility pages (about, contact, methodology, press, add-your-gym, colophon, stats, 404)
+  let utilCount = 0;
+  for (const pg of UTILITY_PAGES) {
+    const html = utilityPage(pg);
+    if (pg.slug === '404') {
+      writeFile(path.join(ROOT, '404.html'), html);
+    } else {
+      writeFile(path.join(ROOT, pg.slug, 'index.html'), html);
+    }
+    utilCount++;
+  }
+  stats.utility = utilCount;
+
   // Sitemap
   generateSitemap();
 
-  console.log(`✓ Built ${stats.venues} venues · ${stats.categories} categories · ${stats.areas} areas`);
+  console.log(`✓ Built ${stats.venues} venues · ${stats.categories} categories · ${stats.areas} areas · ${stats.utility} info pages`);
   console.log(`✓ Sitemap: ${GYMS.length + CATEGORIES.length + Object.keys(AREA_MAP).length + 6} URLs`);
 }
 
