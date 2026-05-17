@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '405';
+const ASSET_VERSION = '406';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -344,9 +344,14 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Pattaya.Gym">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@PattayaGym">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
 <meta name="twitter:image" content="${ogImage}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="//maps.google.com">
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23000'/%3E%3Ctext x='50%25' y='62%25' font-family='Inter,sans-serif' font-size='40' font-weight='800' fill='%23ff2e7e' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 ${ldBlocks}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>

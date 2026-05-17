@@ -1153,7 +1153,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   height: 48px;
   border-radius: 999px;
   background: var(--pink);
-  color: #fff;
+  color: #000;
   border: 0;
   display: inline-flex;
   align-items: center;
