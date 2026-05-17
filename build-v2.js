@@ -364,8 +364,13 @@ function venuePage(g, fm, body) {
   };
   const accent = accentColors[g.category] || { color: 'pink', class: 'accent-pink' };
 
-  // Split venue name for headline (last word gets accent)
-  const nameWords = g.name.split(/\s+/);
+  // Strip parenthetical from headline name (e.g. "Foo (Bar / Baz)" -> "Foo" + subtitle "(Bar / Baz)")
+  const parenMatch = g.name.match(/^(.+?)\s*[\(（]([^)）]+)[\)）]\s*$/);
+  const displayName = parenMatch ? parenMatch[1].trim() : g.name;
+  const subtitleName = parenMatch ? parenMatch[2].trim() : null;
+
+  // Split for headline accent — last word gets the accent color
+  const nameWords = displayName.split(/\s+/);
   const lastWord = nameWords.pop();
   const firstWords = nameWords.join(' ');
 
@@ -389,6 +394,21 @@ function venuePage(g, fm, body) {
 
   const bodyHtml = mdToHtml(body);
 
+  // Build info rows for the data grid (only show populated fields)
+  const infoFields = [
+    g.address && { lbl: 'Address', val: g.address, link: g.mapsUrl, color: 'mint' },
+    g.area && { lbl: 'Area', val: g.area, color: 'cyan' },
+    g.hours && { lbl: 'Hours', val: g.hours, color: 'cyan' },
+    g.priceRange && { lbl: 'Price', val: g.priceRange, color: 'yellow' },
+    g.phone && { lbl: 'Phone', val: g.phone, link: 'tel:' + g.phone.replace(/\s+/g,''), color: 'pink' },
+    g.website && { lbl: 'Website', val: g.website.replace(/^https?:\/\//, '').replace(/\/$/, ''), link: g.website, color: 'cyan' },
+    (fm.founded || g.founded) && { lbl: 'Founded', val: fm.founded || g.founded, color: 'yellow' },
+    (fm.trainerHeadcount || g.trainerHeadcount) && { lbl: 'Trainers', val: fm.trainerHeadcount || g.trainerHeadcount, color: 'pink' },
+    (fm.minimumAge || g.minimumAge) && { lbl: 'Min age', val: fm.minimumAge || g.minimumAge, color: 'cyan' },
+    (fm.languages || g.languages) && { lbl: 'Languages', val: Array.isArray(fm.languages || g.languages) ? (fm.languages || g.languages).join(', ') : (fm.languages || g.languages), color: 'mint' },
+    g.verified && { lbl: 'Last verified', val: g.verified, color: 'pink' }
+  ].filter(Boolean);
+
   return head({ title, desc, url, ogImage, jsonLd })
     + topMarquee(TOP_MARQUEE)
     + nav()
@@ -400,58 +420,73 @@ function venuePage(g, fm, body) {
     + `
 <main id="main">
 
-<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-10); text-align:left;">
+<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
   <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
-    <div class="hero-kicker">// ${esc(catLabel)} · ${esc(g.area || 'Pattaya')}${g.priceRange ? ' · ' + esc(g.priceRange) : ''}</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,9vw,110px); text-align:left;">
-      ${esc(firstWords)}<br>
-      <span class="${accent.class}">${esc(lastWord)}.</span>
+    <div class="hero-kicker">// ${esc(catLabel)}${g.area ? ' · ' + esc(g.area.split(/[—\/,]/)[0].trim()) : ''}${g.priceRange ? ' · ' + esc(g.priceRange) : ''}</div>
+    <h1 class="hero-h1" style="font-size:clamp(40px,9vw,100px); text-align:left;">
+      ${firstWords ? esc(firstWords) + '<br>' : ''}<span class="${accent.class}">${esc(lastWord)}.</span>
     </h1>
-    ${g.description ? `<p class="hero-lede" style="text-align:left; margin-left:0; margin-right:0;">${esc(g.description)}</p>` : ''}
-    ${g.hours ? `<p class="hero-meta" style="text-align:left;">${esc(g.hours)}</p>` : ''}
-    <div class="btn-row" style="justify-content:flex-start;">
-      ${g.phone ? `<a href="tel:${esc(g.phone.replace(/\s+/g,''))}" class="btn btn-primary">▶ Call</a>` : ''}
-      <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-secondary">● Email us</a>
-      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener" class="btn btn-tertiary">WhatsApp →</a>
+    ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
+    ${g.description ? `<p class="hero-lede" style="text-align:left; margin-left:0; margin-right:0; margin-top:var(--s-5); font-size:clamp(16px,2vw,19px);">${esc(g.description)}</p>` : ''}
+    <div class="btn-row" style="justify-content:flex-start; margin-top:var(--s-6);">
+      ${g.phone ? `<a href="tel:${esc(g.phone.replace(/\s+/g,''))}" class="btn btn-primary">▶ Call gym</a>` : ''}
+      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener" class="btn btn-secondary">● WhatsApp us</a>
+      <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary">Email →</a>
       ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener" class="btn btn-ghost">📍 Map</a>` : ''}
       ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener" class="btn btn-ghost">Website →</a>` : ''}
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:var(--s-6);">
+${infoFields.length ? `
+<section class="section" style="padding-top:var(--s-4); padding-bottom:var(--s-8);">
   <div class="wrap">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-card-icon">⏱</div>
-        <div class="stat-card-num c-cyan" style="font-size:14px; letter-spacing:0;">${esc(g.hours || 'Call to confirm')}</div>
-        <div class="stat-card-lbl">Hours</div>
+    <div class="eyebrow"><span class="num">★</span> Venue info</div>
+    <div style="display:grid; grid-template-columns:1fr; gap:0; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--surface);">
+      ${infoFields.map((f, i) => `
+      <div style="display:grid; grid-template-columns:130px 1fr; gap:var(--s-4); padding:var(--s-4) var(--s-5);${i < infoFields.length-1 ? ' border-bottom:1px solid var(--line);' : ''}">
+        <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); font-weight:600; letter-spacing:0.10em; text-transform:uppercase;">${esc(f.lbl)}</div>
+        <div style="font-size:14px; color:var(--text); font-weight:500; line-height:1.5;${f.color === 'pink' ? ' color:var(--pink);' : ''}${f.color === 'cyan' ? ' color:var(--cyan);' : ''}${f.color === 'mint' ? ' color:var(--mint);' : ''}${f.color === 'yellow' ? ' color:var(--yellow);' : ''}">
+          ${f.link ? `<a href="${esc(f.link)}"${f.link.startsWith('http') ? ' target="_blank" rel="noopener"' : ''} style="color:inherit; text-decoration:underline; text-decoration-color:rgba(255,255,255,0.2); text-underline-offset:3px;">${esc(f.val)}</a>` : esc(f.val)}
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-card-icon">💰</div>
-        <div class="stat-card-num c-yellow">${esc(g.priceRange || '—')}</div>
-        <div class="stat-card-lbl">Price tier</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card-icon">📍</div>
-        <div class="stat-card-num c-mint" style="font-size:14px; letter-spacing:0;">${esc(g.area || 'Pattaya')}</div>
-        <div class="stat-card-lbl">Area</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card-icon">✓</div>
-        <div class="stat-card-num c-pink">${g.verified ? esc(g.verified) : 'Tracked'}</div>
-        <div class="stat-card-lbl">Last verified</div>
-      </div>
+      `).join('')}
     </div>
   </div>
 </section>
+` : ''}
 
 ${bodyHtml ? `
 <section class="section" style="padding-top:0;">
   <div class="wrap">
-    <article class="venue-body" style="max-width:760px; margin:0 auto; font-size:16px; line-height:1.75; color:var(--text-2);">
+    <div class="eyebrow"><span class="num">★</span> About this venue</div>
+    <article class="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
       ${bodyHtml}
     </article>
+  </div>
+</section>
+` : `
+<section class="section" style="padding-top:0; padding-bottom:var(--s-8);">
+  <div class="wrap" style="max-width:760px;">
+    <div class="eyebrow"><span class="num">★</span> Know more about this venue?</div>
+    <div style="background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--cyan); border-radius:var(--r-lg); padding:var(--s-6);">
+      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0 0 var(--s-4);">This is a <strong style="color:var(--text);">verified entry</strong> in the Pattaya.Gym directory. We've personally confirmed the venue exists and operates. If you've trained here and can share more details — coaches, prices, schedule, what makes it different — we want to know.</p>
+      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0;">Help us deepen this listing: <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Update: ' + g.name)}" style="color:var(--cyan); font-weight:600;">email us</a> · <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Update for ' + g.name)}" target="_blank" rel="noopener" style="color:var(--mint); font-weight:600;">WhatsApp</a> · or <a href="/contact/" style="color:var(--pink); font-weight:600;">contact form</a>.</p>
+    </div>
+  </div>
+</section>
+`}
+
+${(g.social && (g.social.facebook || g.social.instagram)) ? `
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">★</span> Social</div>
+    <div class="channels-grid">
+      ${g.social.facebook ? `<a href="https://facebook.com/${esc(g.social.facebook)}" target="_blank" rel="noopener" class="channel-card is-fb"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Facebook</div><h4 class="channel-card-name">${esc(g.social.facebook)}</h4><div class="channel-card-sub">facebook.com</div></a>` : ''}
+      ${g.social.instagram ? `<a href="https://instagram.com/${esc(g.social.instagram)}" target="_blank" rel="noopener" class="channel-card is-ig"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Instagram</div><h4 class="channel-card-name">@${esc(g.social.instagram)}</h4><div class="channel-card-sub">instagram.com</div></a>` : ''}
+      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener" class="channel-card is-yt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Website</div><h4 class="channel-card-name">Official site</h4><div class="channel-card-sub">${esc(g.website.replace(/^https?:\/\//, '').replace(/\/.*$/, '').slice(0, 28))}</div></a>` : ''}
+      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener" class="channel-card is-tt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Google Maps</div><h4 class="channel-card-name">View on map</h4><div class="channel-card-sub">Directions · location</div></a>` : ''}
+    </div>
   </div>
 </section>
 ` : ''}
