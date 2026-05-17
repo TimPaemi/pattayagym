@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '400';
+const ASSET_VERSION = '401';
 const TODAY = new Date().toISOString().slice(0, 10);
 
 // ---------- Load data ----------
@@ -269,17 +269,24 @@ function paNetwork() {
 }
 
 function backToTop() {
-  return `<button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  return `<div class="progress-bar" aria-hidden="true"></div>
+<button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
 (function(){
   var btn = document.querySelector('.back-to-top');
-  if (!btn) return;
-  function check() {
-    if (window.scrollY > 600) btn.classList.add('is-visible');
-    else btn.classList.remove('is-visible');
+  var bar = document.querySelector('.progress-bar');
+  function update() {
+    var doc = document.documentElement;
+    var sh = doc.scrollHeight - doc.clientHeight;
+    var pct = sh > 0 ? (window.scrollY / sh) * 100 : 0;
+    if (bar) bar.style.width = pct + '%';
+    if (btn) {
+      if (window.scrollY > 600) btn.classList.add('is-visible');
+      else btn.classList.remove('is-visible');
+    }
   }
-  window.addEventListener('scroll', check, { passive: true });
-  check();
+  window.addEventListener('scroll', update, { passive: true });
+  update();
 })();
 </script>`;
 }

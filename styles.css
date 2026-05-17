@@ -95,37 +95,59 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
 
 /* ============ INFINITE MARQUEE ============ */
 .marquee {
-  background: var(--bg);
+  background: var(--surface);
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   overflow: hidden;
-  padding: 9px 0;
+  padding: 11px 0;
 }
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 42s linear infinite;
+  animation: marquee 28s linear infinite;
   will-change: transform;
 }
 .marquee-set {
   display: flex;
-  gap: 32px;
-  padding-right: 32px;
+  gap: 28px;
+  padding-right: 28px;
   flex-shrink: 0;
   font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   white-space: nowrap;
   align-items: center;
 }
 .marquee-set > span { flex: 0 0 auto; }
-.marquee-set .star { color: var(--yellow); }
+.marquee-set .star { color: var(--yellow); font-weight: 900; }
+.marquee-set > span:nth-of-type(8n+1) { color: var(--text); }
+.marquee-set > span:nth-of-type(8n+3) { color: var(--pink); }
+.marquee-set > span:nth-of-type(8n+5) { color: var(--cyan); }
+.marquee-set > span:nth-of-type(8n+7) { color: var(--mint); }
+.marquee-set > span:nth-of-type(8n+9) { color: var(--yellow); }
+.marquee-set > span:nth-of-type(8n+11) { color: var(--text); }
+.marquee-set > span:nth-of-type(8n+13) { color: var(--orange); }
+.marquee-set > span:nth-of-type(8n+15) { color: var(--cyan); }
 @keyframes marquee {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(-50%, 0, 0); }
 }
 .marquee:hover .marquee-track { animation-play-state: paused; }
+
+/* ============ READING PROGRESS BAR ============ */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--pink), var(--cyan), var(--yellow), var(--mint));
+  z-index: 100;
+  transition: width 50ms linear;
+  pointer-events: none;
+}
 
 /* Bottom marquee variant */
 .marquee-bottom { border-top: 1px solid var(--line); border-bottom: 0; }
@@ -809,20 +831,44 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
 .venue-body h1, .venue-body h2 {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(24px, 4vw, 32px);
-  line-height: 1.1;
-  letter-spacing: -0.025em;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: var(--text);
-  margin: var(--s-10) 0 var(--s-3);
+  margin: var(--s-12) 0 var(--s-5);
   text-transform: none;
   position: relative;
-  padding-left: var(--s-4);
-  border-left: 3px solid var(--cyan);
+  padding-top: var(--s-6);
+  padding-left: 0;
+  border-top: 2px solid var(--line);
+  border-left: 0;
+  counter-increment: chapter;
 }
-.venue-body > h2:nth-of-type(4n+1) { border-left-color: var(--pink); }
-.venue-body > h2:nth-of-type(4n+2) { border-left-color: var(--cyan); }
-.venue-body > h2:nth-of-type(4n+3) { border-left-color: var(--yellow); }
-.venue-body > h2:nth-of-type(4n+4) { border-left-color: var(--mint); }
+.venue-body h2::before {
+  content: "Chapter " counter(chapter, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: var(--s-3);
+}
+.venue-body { counter-reset: chapter; }
+.venue-body > h2:nth-of-type(4n+1)::before { color: var(--pink); }
+.venue-body > h2:nth-of-type(4n+2)::before { color: var(--cyan); }
+.venue-body > h2:nth-of-type(4n+3)::before { color: var(--yellow); }
+.venue-body > h2:nth-of-type(4n+4)::before { color: var(--mint); }
+.venue-body > h2:nth-of-type(4n+1) { border-top-color: rgba(255,46,126,0.3); }
+.venue-body > h2:nth-of-type(4n+2) { border-top-color: rgba(78,224,255,0.3); }
+.venue-body > h2:nth-of-type(4n+3) { border-top-color: rgba(253,224,71,0.3); }
+.venue-body > h2:nth-of-type(4n+4) { border-top-color: rgba(95,255,160,0.3); }
+.venue-body > h2:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: var(--s-6);
+}
 .venue-body h3 {
   font-family: var(--font-display);
   font-weight: 700;
