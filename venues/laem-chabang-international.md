@@ -5,14 +5,14 @@ category: golf
 area: Sriracha (30 min from Pattaya)
 address: Laem Chabang International Country Club, Sriracha district, Chonburi (109 km from Bangkok, 30 min from central Pattaya)
 phone: "+66 82 222 3031"
-website: https://www.laemchabanggolf.com/
+website: "https://www.laemchabanggolf.com/"
 social:
   facebook: Laemchabanggolff
-hours: Daily — tee times available throughout the day
+hours: "Daily — tee times available throughout the day"
 priceRange: ฿฿฿฿
 designer: Jack Nicklaus
 opened: 1995 (one of 6 Nicklaus designs in Thailand 1991-1994)
-holes: 27 (3 nines: Lake, Mountain, Valley)
+holes: "27 (3 nines: Lake, Mountain, Valley)"
 landSize: 700 acres / 283 hectares
 caddyFeeMandatory: ฿450 (compulsory) + ~฿300 tip recommended
 reputation: Widely considered the best golf course layout in Pattaya region

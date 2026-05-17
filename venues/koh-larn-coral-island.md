@@ -1,15 +1,15 @@
 ---
 id: koh-larn-coral-island
-name: Koh Larn (Coral Island) — Pattaya's Day-Trip Beach Destination
+name: "Koh Larn (Coral Island) — Pattaya's Day-Trip Beach Destination"
 category: watersports
-area: Offshore — 7 km west of Pattaya (30-min ferry)
+area: "Offshore — 7 km west of Pattaya (30-min ferry)"
 address: Koh Larn, Banglamung District, Chonburi 20150 (ferry from Bali Hai Pier, Pattaya)
 phone: ""
 website: ""
 social: {}
-hours: Beaches: 09:00–17:00 (most operators); island access via ferry from 07:00
+hours: "Beaches: 09:00–17:00 (most operators); island access via ferry from 07:00"
 priceRange: ฿฿
-description: Pattaya's primary day-trip beach island — 7 km offshore, 30-min ferry from Bali Hai Pier. Six main beaches (Tawaen, Samae, Tien, Nual, Ta Yai, La). Parasailing, banana boats, jet ski, snorkeling, intro scuba diving, beach volleyball. Genuinely clearer water and whiter sand than mainland Pattaya beaches. The classic Pattaya day-trip.
+description: "Pattaya's primary day-trip beach island — 7 km offshore, 30-min ferry from Bali Hai Pier. Six main beaches (Tawaen, Samae, Tien, Nual, Ta Yai, La). Parasailing, banana boats, jet ski, snorkeling, intro scuba diving, beach volleyball. Genuinely clearer water and whiter sand than mainland Pattaya beaches. The classic Pattaya day-trip."
 tags:
   - day-trip
   - island
@@ -25,7 +25,7 @@ tags:
   - white-sand
   - bali-hai-pier
   - tawaen-beach
-mapsUrl: https://maps.google.com/?q=Koh+Larn+Pattaya
+mapsUrl: "https://maps.google.com/?q=Koh+Larn+Pattaya"
 verified: 2026-04-29
 ---
 

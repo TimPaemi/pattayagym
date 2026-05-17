@@ -5,15 +5,15 @@ category: clubs
 area: Pattaya Beach (full marathon route along the bay)
 address: Pattaya Beach Road, Pattaya, Bang Lamung, Chonburi
 phone: ""
-website: https://www.pattayamarathon.com/
+website: "https://www.pattayamarathon.com/"
 social: {}
-hours: Annual event — every July (race day: Sunday)
+hours: "Annual event — every July (race day: Sunday)"
 priceRange: ฿฿
-distinction: World Athletics International Standard Road Race — Pattaya's flagship running event since 1992
+distinction: "World Athletics International Standard Road Race — Pattaya's flagship running event since 1992"
 firstHeld: 1992
 operator: Thailand Tri-League (SportMaster)
 distances: [Fun Run, 10 km, 21 km Half Marathon, 42 km Full Marathon]
-worldAthleticsRated: Yes — World Athletics International Standard Road Race
+worldAthleticsRated: "Yes — World Athletics International Standard Road Race"
 yearlyParticipants: 15000+ across all distances
 beginnerFriendly: true
 languages: [English, Thai, Russian, Chinese, Japanese]

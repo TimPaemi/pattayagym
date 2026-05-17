@@ -3,19 +3,19 @@ id: planet-football-pattaya
 name: Planet Football Pattaya (FC Planet)
 category: kids-youth
 area: Pattaya
-address: Pattaya — confirm exact at booking
+address: "Pattaya — confirm exact at booking"
 phone: ""
-website: https://www.pattayafootball.com/
+website: "https://www.pattayafootball.com/"
 social:
   instagram: planetfootballpattaya
   facebook: FCPLANETACADEMY
-hours: Academy training: 3 weekday sessions 17:00-19:00; weekend matches
+hours: "Academy training: 3 weekday sessions 17:00-19:00; weekend matches"
 priceRange: ฿฿
-distinction: Established 2009 — full football academy with FC Planet competitive team in local leagues
+distinction: "Established 2009 — full football academy with FC Planet competitive team in local leagues"
 opened: 2009
 clubTeam: FC Planet
-academyTrainingSchedule: 3 weekday sessions 17:00-19:00
-hostsLeagues: Yes — local + regional tournaments
+academyTrainingSchedule: "3 weekday sessions 17:00-19:00"
+hostsLeagues: "Yes — local + regional tournaments"
 beginnerFriendly: true
 languages: [English, Thai]
 verified: 2026-04-27

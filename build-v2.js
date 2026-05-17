@@ -66,6 +66,20 @@ function esc(s) {
 
 function safeMkdir(p) { fs.mkdirSync(p, { recursive: true }); }
 
+// Normalize a display phone string to a dialable tel: value.
+// Strips extensions ("ext. 2621"), parentheticals ("(Mr. Piyawath)"),
+// and multi-number lists (takes the first number before / or ;).
+function phoneToTel(phone) {
+  if (!phone) return '';
+  const first = String(phone).split(/[\/;,]/)[0];
+  const cleaned = first
+    .replace(/\bext\.?\s*\d+/gi, '')
+    .replace(/\([^)]*\)/g, '')
+    .replace(/[^+\d]/g, '');
+  return cleaned;
+}
+
+
 function writeFile(filePath, content) {
   safeMkdir(path.dirname(filePath));
   fs.writeFileSync(filePath, content, 'utf8');
@@ -119,8 +133,10 @@ function parseHoursSpec(hoursStr) {
   // Skip if the string mentions exceptions we can't represent cleanly
   if (/closed|except|verify|by\s*appointment|tbd|n\/a|call\s*ahead|seasonal|members?\s*only/i.test(hoursStr)) return [];
   const DAY = { mon:'Monday', tue:'Tuesday', wed:'Wednesday', thu:'Thursday', fri:'Friday', sat:'Saturday', sun:'Sunday' };
-  const segments = String(hoursStr).split(/[;,]/).map(s => s.trim()).filter(Boolean);
+  // Split on ; , and & — but & inherits days from previous segment
+  const segments = String(hoursStr).split(/[;,]|&/).map(s => s.trim()).filter(Boolean);
   const out = [];
+  let lastDays = null;
   for (const seg of segments) {
     // Match patterns like "Mon-Fri 06:00-22:00" or "Sat 08:00-20:00" or "Daily 24/7"
     // Word boundaries on day tokens so "Sundays" doesn't match as "Sun".
@@ -128,20 +144,28 @@ function parseHoursSpec(hoursStr) {
     const timeRe = /(\d{1,2}):?(\d{2})\s*[-\u2013\u2014]\s*(\d{1,2}):?(\d{2})/;
     const dm = seg.match(daysRe);
     const tm = seg.match(timeRe);
-    if (!dm) continue;
+    if (!dm && !lastDays) continue;
     let days = [];
     const dayFromKey = (s) => DAY[s.toLowerCase().slice(0, 3)];
-    if (/daily|everyday/i.test(dm[1])) {
+    if (dm && /daily|everyday/i.test(dm[1])) {
       days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-    } else if (dm[2]) {
+    } else if (dm && dm[2]) {
       const order = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
       const a = order.indexOf(dayFromKey(dm[1]));
       const b = order.indexOf(dayFromKey(dm[2]));
       if (a >= 0 && b >= 0 && a <= b) days = order.slice(a, b + 1);
-    } else {
+    } else if (dm) {
       days = [dayFromKey(dm[1])].filter(Boolean);
     }
-    if (!days.length) continue;
+    if (!days.length) {
+      // No day matched in this segment — fall back to days from previous segment ("&" continuation)
+      if (lastDays) {
+        days = lastDays;
+      } else {
+        continue;
+      }
+    }
+    lastDays = days;
     // 24/7 case
     if (/24\s*\/\s*7|all day/i.test(seg)) {
       out.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: days, opens: '00:00', closes: '23:59' });
@@ -372,7 +396,7 @@ function nav() {
 
 function paNetwork() {
   return `<section class="pa-network">
-  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
     <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
   </a>
   <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
@@ -382,9 +406,9 @@ function paNetwork() {
 
 function backToTop() {
   return `<div class="progress-bar" aria-hidden="true"></div>
-<button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script>
-(function(){
+ (function(){
   var btn = document.querySelector('.back-to-top');
   var bar = document.querySelector('.progress-bar');
   function update() {
@@ -397,6 +421,7 @@ function backToTop() {
       else btn.classList.remove('is-visible');
     }
   }
+  if (btn) btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
   window.addEventListener('scroll', update, { passive: true });
   update();
 })();
@@ -417,7 +442,7 @@ function footer() {
       </div>
     </div>
     <div class="footer-col">
-      <h4>// The site</h4>
+      <div class="footer-col-h">// The site</div>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
@@ -427,27 +452,27 @@ function footer() {
       </ul>
     </div>
     <div class="footer-col">
-      <h4>// Projects</h4>
+      <div class="footer-col-h">// Projects</div>
       <ul>
-        <li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener">Pattaya Authority</a></li>
-        <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener">Restaurant Guide</a></li>
+        <li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li>
+        <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li>
         <li><a href="/">Pattaya.Gym</a></li>
-        <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener">Visa Help</a></li>
+        <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>// Direct</h4>
+      <div class="footer-col-h">// Direct</div>
       <ul>
         <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
-        <li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener">WhatsApp · +66 96 728 6999</a></li>
-        <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE · @timpaemi</a></li>
+        <li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li>
+        <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li>
         <li><a href="/contact/">Contact page</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span style="color:var(--cyan);">★ Last updated · ${BUILD_TIMESTAMP}</span>
+    <span style="color:var(--cyan);">★ Last updated · ${BUILD_TIMESTAMP} · v${ASSET_VERSION}</span>
     <span>12.92°N · 100.87°E · Pattaya Villa</span>
   </div>
 </footer>
@@ -477,7 +502,7 @@ function venuePage(g, fm, body) {
   const cat = CATEGORIES.find(c => c.key === g.category);
   const catLabel = cat ? cat.label : g.category;
   const url = `${SITE}/gyms/${g.id}/`;
-  const title = `${g.name} — ${catLabel} in Pattaya | Pattaya.Gym`;
+  const title = `${g.name} | Pattaya.Gym`;
   const desc = (g.description || '').slice(0, 158);
   const ogImage = `${SITE}/og/${g.id}.png`;
 
@@ -531,7 +556,7 @@ function venuePage(g, fm, body) {
     image: ogImage,
     priceRange: fm.priceRange || g.priceRange || undefined,
     address: address || undefined,
-    telephone: fm.phone || g.phone || undefined,
+    telephone: (fm.phone || g.phone) ? (phoneToTel(fm.phone || g.phone) || (fm.phone || g.phone)) : undefined,
     email: fm.email || undefined,
     geo: (fm.lat && fm.lng) ? { '@type': 'GeoCoordinates', latitude: Number(fm.lat), longitude: Number(fm.lng) } : undefined,
     openingHoursSpecification: hoursSpec.length ? hoursSpec : undefined,
@@ -577,7 +602,7 @@ function venuePage(g, fm, body) {
     v.area && !v.address && { lbl: 'Area', val: v.area, color: 'cyan' },
     v.hours && { lbl: 'Hours', val: v.hours, color: 'cyan' },
     v.priceRange && { lbl: 'Price', val: v.priceRange, color: 'yellow' },
-    v.phone && { lbl: 'Phone', val: v.phone, link: 'tel:' + v.phone.replace(/\s+/g,''), color: 'pink' },
+    v.phone && { lbl: 'Phone', val: v.phone, link: 'tel:' + phoneToTel(v.phone), color: 'pink' },
     v.email && { lbl: 'Email', val: v.email, link: 'mailto:' + v.email, color: 'cyan' },
     v.website && { lbl: 'Website', val: v.website.replace(/^https?:\/\//, '').replace(/\/$/, ''), link: v.website, color: 'cyan' },
     v.founded && { lbl: 'Founded', val: v.founded, color: 'yellow' },
@@ -609,11 +634,11 @@ function venuePage(g, fm, body) {
     ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
     ${g.description ? `<p class="hero-lede" style="text-align:left; margin-left:0; margin-right:0; margin-top:var(--s-5); font-size:clamp(16px,2vw,19px);">${esc(g.description)}</p>` : ''}
     <div class="btn-row" style="justify-content:flex-start; margin-top:var(--s-6);">
-      ${g.phone ? `<a href="tel:${esc(g.phone.replace(/\s+/g,''))}" class="btn btn-primary">▶ Call gym</a>` : ''}
-      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener" class="btn btn-secondary">● WhatsApp us</a>
+      ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
+      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">● WhatsApp us</a>
       <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary">Email →</a>
-      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener" class="btn btn-ghost">📍 Map</a>` : ''}
-      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener" class="btn btn-ghost">Website →</a>` : ''}
+      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">📍 Map</a>` : ''}
+      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Website →</a>` : ''}
     </div>
   </div>
 </section>
@@ -627,7 +652,7 @@ ${infoFields.length ? `
       <div style="display:grid; grid-template-columns:130px 1fr; gap:var(--s-4); padding:var(--s-4) var(--s-5);${i < infoFields.length-1 ? ' border-bottom:1px solid var(--line);' : ''}">
         <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); font-weight:600; letter-spacing:0.10em; text-transform:uppercase;">${esc(f.lbl)}</div>
         <div style="font-size:14px; color:var(--text); font-weight:500; line-height:1.5;${f.color === 'pink' ? ' color:var(--pink);' : ''}${f.color === 'cyan' ? ' color:var(--cyan);' : ''}${f.color === 'mint' ? ' color:var(--mint);' : ''}${f.color === 'yellow' ? ' color:var(--yellow);' : ''}">
-          ${f.link ? `<a href="${esc(f.link)}"${f.link.startsWith('http') ? ' target="_blank" rel="noopener"' : ''} style="color:inherit; text-decoration:underline; text-decoration-color:rgba(255,255,255,0.2); text-underline-offset:3px;">${esc(f.val)}</a>` : esc(f.val)}
+          ${f.link ? `<a href="${esc(f.link)}"${f.link.startsWith('http') ? ' target="_blank" rel="noopener noreferrer"' : ''} style="color:inherit; text-decoration:underline; text-decoration-color:rgba(255,255,255,0.2); text-underline-offset:3px;">${esc(f.val)}</a>` : esc(f.val)}
         </div>
       </div>
       `).join('')}
@@ -677,7 +702,7 @@ ${bodyHtml ? `
     <div class="eyebrow"><span class="num">★</span> Know more about this venue?</div>
     <div style="background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--cyan); border-radius:var(--r-lg); padding:var(--s-6);">
       <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0 0 var(--s-4);">This is a <strong style="color:var(--text);">verified entry</strong> in the Pattaya.Gym directory. We've personally confirmed the venue exists and operates. If you've trained here and can share more details — coaches, prices, schedule, what makes it different — we want to know.</p>
-      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0;">Help us deepen this listing: <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Update: ' + g.name)}" style="color:var(--cyan); font-weight:600;">email us</a> · <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Update for ' + g.name)}" target="_blank" rel="noopener" style="color:var(--mint); font-weight:600;">WhatsApp</a> · or <a href="/contact/" style="color:var(--pink); font-weight:600;">contact form</a>.</p>
+      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0;">Help us deepen this listing: <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Update: ' + g.name)}" style="color:var(--cyan); font-weight:600;">email us</a> · <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Update for ' + g.name)}" target="_blank" rel="noopener noreferrer" style="color:var(--mint); font-weight:600;">WhatsApp</a> · or <a href="/contact/" style="color:var(--pink); font-weight:600;">contact form</a>.</p>
     </div>
   </div>
 </section>
@@ -688,10 +713,10 @@ ${(g.social && (g.social.facebook || g.social.instagram)) ? `
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> Social</div>
     <div class="channels-grid">
-      ${g.social.facebook ? `<a href="https://facebook.com/${esc(g.social.facebook)}" target="_blank" rel="noopener" class="channel-card is-fb"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Facebook</div><h4 class="channel-card-name">${esc(g.social.facebook)}</h4><div class="channel-card-sub">facebook.com</div></a>` : ''}
-      ${g.social.instagram ? `<a href="https://instagram.com/${esc(g.social.instagram)}" target="_blank" rel="noopener" class="channel-card is-ig"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Instagram</div><h4 class="channel-card-name">@${esc(g.social.instagram)}</h4><div class="channel-card-sub">instagram.com</div></a>` : ''}
-      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener" class="channel-card is-yt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Website</div><h4 class="channel-card-name">Official site</h4><div class="channel-card-sub">${esc(g.website.replace(/^https?:\/\//, '').replace(/\/.*$/, '').slice(0, 28))}</div></a>` : ''}
-      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener" class="channel-card is-tt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Google Maps</div><h4 class="channel-card-name">View on map</h4><div class="channel-card-sub">Directions · location</div></a>` : ''}
+      ${g.social.facebook ? `<a href="https://facebook.com/${esc(g.social.facebook)}" target="_blank" rel="noopener noreferrer" class="channel-card is-fb"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Facebook</div><h4 class="channel-card-name">${esc(g.social.facebook)}</h4><div class="channel-card-sub">facebook.com</div></a>` : ''}
+      ${g.social.instagram ? `<a href="https://instagram.com/${esc(g.social.instagram)}" target="_blank" rel="noopener noreferrer" class="channel-card is-ig"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Instagram</div><h4 class="channel-card-name">@${esc(g.social.instagram)}</h4><div class="channel-card-sub">instagram.com</div></a>` : ''}
+      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="channel-card is-yt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Website</div><h4 class="channel-card-name">Official site</h4><div class="channel-card-sub">${esc(g.website.replace(/^https?:\/\//, '').replace(/\/.*$/, '').slice(0, 28))}</div></a>` : ''}
+      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="channel-card is-tt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Google Maps</div><h4 class="channel-card-name">View on map</h4><div class="channel-card-sub">Directions · location</div></a>` : ''}
     </div>
   </div>
 </section>
@@ -719,24 +744,24 @@ ${(g.tags && g.tags.length) ? `
         <h4 class="channel-card-name">info@pattaya-gym.com</h4>
         <div class="channel-card-sub">Reply within 24h</div>
       </a>
-      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener" class="channel-card is-wa">
+      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="channel-card is-wa">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Fastest</div>
         <h4 class="channel-card-name">whatsapp</h4>
         <div class="channel-card-sub">+66 96 728 6999</div>
       </a>
-      <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener" class="channel-card is-line">
+      <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
         <h4 class="channel-card-name">@timpaemi</h4>
         <div class="channel-card-sub">Daily check</div>
       </a>
-      ${g.phone ? `<a href="tel:${esc(g.phone.replace(/\s+/g,''))}" class="channel-card is-agency">
+      ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Direct line</div>
         <h4 class="channel-card-name">Call gym</h4>
         <div class="channel-card-sub">${esc(g.phone)}</div>
-      </a>` : `<a href="https://pattaya-authority.com/" target="_blank" rel="noopener" class="channel-card is-agency">
+      </a>` : `<a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Our agency</div>
         <h4 class="channel-card-name">pattaya authority</h4>
@@ -776,7 +801,7 @@ ${related.length ? `
 // ---------- Category page ----------
 function categoryPage(cat, venues) {
   const url = `${SITE}/category/${cat.key}/`;
-  const title = `${cat.label} in Pattaya — ${venues.length} venues hand-checked | Pattaya.Gym`;
+  const title = `${cat.label} in Pattaya | Pattaya.Gym`;
   const desc = `Every ${cat.label.toLowerCase()} venue in Pattaya. ${venues.length} hand-checked entries. No paid placements. Updated weekly.`;
 
   const accentColors = {
@@ -879,7 +904,7 @@ function categoryPage(cat, venues) {
 // ---------- Area page ----------
 function areaPage(slug, label, venues) {
   const url = `${SITE}/area/${slug}/`;
-  const title = `${label} — gyms & sport venues in Pattaya | Pattaya.Gym`;
+  const title = `${label}, Pattaya — sport venues | Pattaya.Gym`;
   const desc = `Every gym, camp, and sport venue in ${label}, Pattaya. ${venues.length} hand-checked entries. No paid placements.`;
 
   const itemList = {
@@ -989,19 +1014,19 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
         <h4 class="channel-card-name">info@pattaya-gym.com</h4>
         <div class="channel-card-sub">Reply within 24h</div>
       </a>
-      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener" class="channel-card is-wa">
+      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener noreferrer" class="channel-card is-wa">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Fastest</div>
         <h4 class="channel-card-name">whatsapp</h4>
         <div class="channel-card-sub">+66 96 728 6999</div>
       </a>
-      <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener" class="channel-card is-line">
+      <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
         <h4 class="channel-card-name">@timpaemi</h4>
         <div class="channel-card-sub">Daily check</div>
       </a>
-      <a href="https://pattaya-authority.com/" target="_blank" rel="noopener" class="channel-card is-agency">
+      <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Our agency</div>
         <h4 class="channel-card-name">pattaya authority</h4>
@@ -1069,7 +1094,7 @@ const UTILITY_PAGES = [
 <p>No money changes hands. Ranking is based on consistent quality, current operation, breadth of facility, instructor caliber, and community reputation. Gyms with closed doors or stale information get demoted automatically.</p>
 
 <h2>What we operate</h2>
-<p>Pattaya.Gym is one project of <strong>TimPaemi Co., Ltd.</strong> alongside three other sites — <a href="https://pattaya-authority.com/" target="_blank" rel="noopener">Pattaya Authority</a> (flagship nightlife agency), <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener">Pattaya Restaurant Guide</a>, and <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener">Pattaya Visa Help</a>. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
+<p>Pattaya.Gym is one project of <strong>TimPaemi Co., Ltd.</strong> alongside three other sites — <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> (flagship nightlife agency), <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a>, and <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
 
 <h2>Who runs this</h2>
 <p>Pattaya.Gym is operated by <strong>Tim Paemi</strong>, an independent operator and long-time Pattaya resident, alongside his wife and co-founder. The site is self-funded and has no commercial relationship with any listed venue.</p>
@@ -1178,10 +1203,10 @@ const UTILITY_PAGES = [
 
 <h2>Sister projects</h2>
 <ul>
-<li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener"><strong>Pattaya Authority</strong></a> — flagship nightlife agency, one of the leading operators in Pattaya. Brand strategy, content production, venue partnerships.</li>
+<li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer"><strong>Pattaya Authority</strong></a> — flagship nightlife agency, one of the leading operators in Pattaya. Brand strategy, content production, venue partnerships.</li>
 <li><strong>Pattaya.Gym</strong> (this site) — fitness directory. Every gym, every camp, every court in Pattaya.</li>
-<li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener"><strong>Pattaya Restaurant Guide</strong></a> — independent restaurant guide. Editorial reviews, real visits, honest takes.</li>
-<li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener"><strong>Pattaya Visa Help</strong></a> — visa and long-stay support for foreigners in Pattaya.</li>
+<li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer"><strong>Pattaya Restaurant Guide</strong></a> — independent restaurant guide. Editorial reviews, real visits, honest takes.</li>
+<li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer"><strong>Pattaya Visa Help</strong></a> — visa and long-stay support for foreigners in Pattaya.</li>
 </ul>
 
 <h2>Reach</h2>
@@ -1238,7 +1263,7 @@ const UTILITY_PAGES = [
 <li>Cross-promote unrelated businesses</li>
 </ul>
 
-<p style="margin-top:var(--s-6);"><strong>Send the details to <a href="mailto:info@pattaya-gym.com?subject=Add%20my%20gym">info@pattaya-gym.com</a></strong> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%20want%20to%20add%20my%20gym%20to%20pattaya-gym.com" target="_blank" rel="noopener">+66 96 728 6999</a> with "Add my gym" in the message.</p>
+<p style="margin-top:var(--s-6);"><strong>Send the details to <a href="mailto:info@pattaya-gym.com?subject=Add%20my%20gym">info@pattaya-gym.com</a></strong> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%20want%20to%20add%20my%20gym%20to%20pattaya-gym.com" target="_blank" rel="noopener noreferrer">+66 96 728 6999</a> with "Add my gym" in the message.</p>
 `
   },
   {
@@ -1355,6 +1380,16 @@ const UTILITY_PAGES = [
 
 // ---------- Sitemap ----------
 function generateSitemap() {
+  const GUIDE_SLUGS = [
+    '24-hour-gyms-pattaya','bangkok-day-trip-sport-pattaya','best-dive-operators-pattaya',
+    'best-for-beginners-pattaya','best-golf-courses-pattaya','best-gyms-near-walking-street-pattaya',
+    'best-muay-thai-pattaya','cheapest-gyms-pattaya','family-friendly-pattaya',
+    'female-friendly-gyms-pattaya','luxury-sports-clubs-pattaya','pattaya-digital-nomad-fitness',
+    'pattaya-gyms-childcare-family-pools','pattaya-russian-speaking-sport',
+    'pattaya-seniors-low-impact-sport','pattaya-solo-female-fitness','thai-gym-terms-pattaya'
+  ];
+  const TOOL_SLUGS = ['compare','map','plan-my-trip','find-my-coach','favorites'];
+  const UTILITY_EXTRA = ['add-your-gym','colophon','press','pattaya-sport-stats'];
   const urls = [
     `${SITE}/`,
     `${SITE}/about/`,
@@ -1362,6 +1397,9 @@ function generateSitemap() {
     `${SITE}/methodology/`,
     `${SITE}/guides/`,
     `${SITE}/search/`,
+    ...UTILITY_EXTRA.map(s => `${SITE}/${s}/`),
+    ...TOOL_SLUGS.map(s => `${SITE}/${s}/`),
+    ...GUIDE_SLUGS.map(s => `${SITE}/guides/${s}/`),
     ...CATEGORIES.map(c => `${SITE}/category/${c.key}/`),
     ...Object.keys(AREA_MAP).map(a => `${SITE}/area/${a}/`),
     ...GYMS.map(g => `${SITE}/gyms/${g.id}/`)

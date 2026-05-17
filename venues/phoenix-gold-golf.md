@@ -5,13 +5,13 @@ category: golf
 area: Huay Yai (south of Pattaya)
 address: Huay Yai, south of Pattaya, Chonburi
 phone: "+66 84 873 5363"
-website: https://www.phoenixgoldgolf.com/
+website: "https://www.phoenixgoldgolf.com/"
 social: {}
-hours: Daily — tee times throughout the day
+hours: "Daily — tee times throughout the day"
 priceRange: ฿฿฿
 opened: 1993
 designer: Dennis Griffiths
-holes: 27 (3 nines: Mountain, Lakes, Ocean)
+holes: "27 (3 nines: Mountain, Lakes, Ocean)"
 caddyTipRecommended: ฿400
 greenFeeWeekday: ~฿3,000 (18 holes)
 cartFee: ฿700/person (compulsory, paid at pro shop)
