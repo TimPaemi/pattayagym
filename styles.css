@@ -59,7 +59,12 @@
 /* ============ RESET ============ */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-html { background: var(--bg); -webkit-text-size-adjust: 100%; }
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
   font-family: var(--font-body);
@@ -67,7 +72,8 @@ body {
   color: var(--text); background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 img, svg, video { display: block; max-width: 100%; height: auto; }
 button, input, select, textarea { font: inherit; color: inherit; }
@@ -125,12 +131,16 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
 .marquee-bottom { border-top: 1px solid var(--line); border-bottom: 0; }
 
 /* ============ NAV ============ */
-.nav {
-  position: sticky; top: 0; z-index: 50;
+.nav, header.nav, nav.nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
   background: rgba(0,0,0,0.85);
   backdrop-filter: blur(18px) saturate(140%);
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   border-bottom: 1px solid var(--line);
+  will-change: transform;
 }
 .nav-row {
   max-width: var(--max);
@@ -991,6 +1001,65 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   font-size: 10px; font-weight: 600;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--hint);
+}
+
+/* ============ JUMP-TO NAV (auto-generated TOC pills) ============ */
+.jump-nav {
+  margin: 0 0 var(--s-8);
+  padding: var(--s-5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+.jump-nav-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: var(--s-3);
+}
+.jump-nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.jump-nav-pills a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color var(--t-fast) var(--easing), color var(--t-fast) var(--easing), background var(--t-fast) var(--easing);
+}
+.jump-nav-pills a:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(78,224,255,0.08);
+}
+.jump-nav-pills a .n {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Better body spacing — give sections more breathing room */
+.venue-body > h2 {
+  scroll-margin-top: 90px;
+}
+.venue-body > h2 + p,
+.venue-body > h2 + ul,
+.venue-body > h2 + ol {
+  margin-top: var(--s-3);
 }
 
 /* ============ BACK TO TOP ============ */

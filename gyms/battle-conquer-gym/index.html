@@ -128,7 +128,7 @@
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> About this venue</div>
-    <article class="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
+    <article class="venue-body" id="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
       <h2>Battle Conquer Gym Pattaya</h2>
 <h2>Overview</h2>
 <p>Battle Conquer Gym holds a <strong>unique position in the Pattaya Muay Thai market</strong>: it is the <strong>only fully air-conditioned Muay Thai gym in the city</strong>. In a country where Muay Thai training has historically been an open-air, sweat-drenched, heat-tested experience, Battle Conquer made a deliberate strategic decision to <strong>modernize the environment without compromising the training</strong>. The result is <strong>authentic Thai Muay Thai pedagogy delivered inside a comfortable air-conditioned space</strong>, paired with a <strong>fully equipped weight room</strong>, a <strong>sauna</strong>, and an <strong>ice-cold plunge pool</strong> — recovery infrastructure rare even in much more expensive Pattaya camps.</p>
@@ -198,6 +198,32 @@ The gym's positioning of <strong>modern facility + traditional training + wellne
     </article>
   </div>
 </section>
+<script>
+(function(){
+  var body = document.getElementById('venue-body');
+  if (!body) return;
+  var heads = body.querySelectorAll('h2');
+  if (heads.length < 3) return;
+  var nav = document.createElement('div');
+  nav.className = 'jump-nav';
+  var label = document.createElement('div');
+  label.className = 'jump-nav-label';
+  label.textContent = '★ On this page · ' + heads.length + ' sections';
+  nav.appendChild(label);
+  var pills = document.createElement('div');
+  pills.className = 'jump-nav-pills';
+  heads.forEach(function(h, i){
+    var id = h.id || ('s-' + i);
+    h.id = id;
+    var a = document.createElement('a');
+    a.href = '#' + id;
+    a.innerHTML = '<span class="n">' + String(i+1).padStart(2,'0') + '</span><span>' + h.textContent + '</span>';
+    pills.appendChild(a);
+  });
+  nav.appendChild(pills);
+  body.insertBefore(nav, body.firstChild);
+})();
+</script>
 
 
 

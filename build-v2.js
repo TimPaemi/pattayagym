@@ -500,11 +500,37 @@ ${bodyHtml ? `
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> About this venue</div>
-    <article class="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
+    <article class="venue-body" id="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
       ${bodyHtml}
     </article>
   </div>
 </section>
+<script>
+(function(){
+  var body = document.getElementById('venue-body');
+  if (!body) return;
+  var heads = body.querySelectorAll('h2');
+  if (heads.length < 3) return;
+  var nav = document.createElement('div');
+  nav.className = 'jump-nav';
+  var label = document.createElement('div');
+  label.className = 'jump-nav-label';
+  label.textContent = '★ On this page · ' + heads.length + ' sections';
+  nav.appendChild(label);
+  var pills = document.createElement('div');
+  pills.className = 'jump-nav-pills';
+  heads.forEach(function(h, i){
+    var id = h.id || ('s-' + i);
+    h.id = id;
+    var a = document.createElement('a');
+    a.href = '#' + id;
+    a.innerHTML = '<span class="n">' + String(i+1).padStart(2,'0') + '</span><span>' + h.textContent + '</span>';
+    pills.appendChild(a);
+  });
+  nav.appendChild(pills);
+  body.insertBefore(nav, body.firstChild);
+})();
+</script>
 ` : `
 <section class="section" style="padding-top:0; padding-bottom:var(--s-8);">
   <div class="wrap" style="max-width:760px;">

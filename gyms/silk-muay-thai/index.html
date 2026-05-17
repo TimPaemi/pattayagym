@@ -121,7 +121,7 @@
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> About this venue</div>
-    <article class="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
+    <article class="venue-body" id="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
       <h2>Silk Muay Thai</h2>
 <h2>Overview</h2>
 <p>Silk Muay Thai is <strong>Pattaya's premier boutique all-inclusive Muay Thai retreat camp</strong> — a smaller, design-conscious facility focused on <strong>personalized attention, modern amenities, and an integrated training-and-stay experience</strong>. The camp carries a <strong>near-perfect 4.9/5 rating</strong> across major review platforms, putting it among the <strong>top-rated combat sports facilities in Thailand by user score</strong>. The model is straightforward: <strong>book a package, live on-site in a modern private room, train twice a day, eat curated meals at the on-site restaurant, recover in the pool/sauna/spa, and emerge after a week or month transformed</strong>.</p>
@@ -177,6 +177,32 @@ Silk attracts a <strong>wellness-oriented, retreat-vacation demographic</strong>
     </article>
   </div>
 </section>
+<script>
+(function(){
+  var body = document.getElementById('venue-body');
+  if (!body) return;
+  var heads = body.querySelectorAll('h2');
+  if (heads.length < 3) return;
+  var nav = document.createElement('div');
+  nav.className = 'jump-nav';
+  var label = document.createElement('div');
+  label.className = 'jump-nav-label';
+  label.textContent = '★ On this page · ' + heads.length + ' sections';
+  nav.appendChild(label);
+  var pills = document.createElement('div');
+  pills.className = 'jump-nav-pills';
+  heads.forEach(function(h, i){
+    var id = h.id || ('s-' + i);
+    h.id = id;
+    var a = document.createElement('a');
+    a.href = '#' + id;
+    a.innerHTML = '<span class="n">' + String(i+1).padStart(2,'0') + '</span><span>' + h.textContent + '</span>';
+    pills.appendChild(a);
+  });
+  nav.appendChild(pills);
+  body.insertBefore(nav, body.firstChild);
+})();
+</script>
 
 
 

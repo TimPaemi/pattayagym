@@ -121,7 +121,7 @@
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> About this venue</div>
-    <article class="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
+    <article class="venue-body" id="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
       <h2>Sor Klinmee Muay Thai Gym</h2>
 <h2>Overview</h2>
 <p>Sor Klinmee is <strong>a small, family-owned, working-fighter Muay Thai camp in East Pattaya</strong> with <strong>one of the deepest fighting-family legacies in modern Thai combat sports</strong>. Founded in <strong>2009</strong> by <strong>Mit Klinmee</strong> — better known as <strong>Tappaya Sit-Or</strong>, his ring name during his championship fighting career — the gym is the home of <strong>Sudsakorn Sor Klinmee</strong>, one of Thailand's most accomplished Muay Thai exporters with a remarkable <strong>330-fight career</strong> (278 wins, 48 losses, 4 draws). It is also part of the <strong>broader Sit-Or / Klinmee fighting dynasty</strong> — a multi-generation family that includes <strong>Tappaya himself, his brother Yokthai Sit-Or, nephew Rambaa "M16" Somdet</strong> (Thailand's first MMA world champion), and <strong>Sinsamut Klinmee</strong> (Sudsakorn's younger brother, currently in ONE Championship).</p>
@@ -174,6 +174,32 @@ For a student who wants <strong>direct access to a former pro fighter from a dee
     </article>
   </div>
 </section>
+<script>
+(function(){
+  var body = document.getElementById('venue-body');
+  if (!body) return;
+  var heads = body.querySelectorAll('h2');
+  if (heads.length < 3) return;
+  var nav = document.createElement('div');
+  nav.className = 'jump-nav';
+  var label = document.createElement('div');
+  label.className = 'jump-nav-label';
+  label.textContent = '★ On this page · ' + heads.length + ' sections';
+  nav.appendChild(label);
+  var pills = document.createElement('div');
+  pills.className = 'jump-nav-pills';
+  heads.forEach(function(h, i){
+    var id = h.id || ('s-' + i);
+    h.id = id;
+    var a = document.createElement('a');
+    a.href = '#' + id;
+    a.innerHTML = '<span class="n">' + String(i+1).padStart(2,'0') + '</span><span>' + h.textContent + '</span>';
+    pills.appendChild(a);
+  });
+  nav.appendChild(pills);
+  body.insertBefore(nav, body.firstChild);
+})();
+</script>
 
 
 
