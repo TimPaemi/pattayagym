@@ -1,101 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#0b0b0d" />
-<meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
-<meta name="application-name" content="Pattaya Gym" />
-<meta name="msapplication-TileColor" content="#0b0b0d" />
-<meta name="msapplication-TileImage" content="/icon-192.png" />
-<meta name="color-scheme" content="dark" />
-<meta name="build-id" content="2026-05-16" />
-<link rel="manifest" href="/manifest.json" />
-<link rel="apple-touch-icon" href="/icon-180.png" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Map of All Pattaya Gyms and Sport Venues | Pattaya Gym</title>
-<meta name="description" content="Interactive map of every gym, Muay Thai camp, dive operator, golf course, and sport venue in Pattaya, Thailand. 158 verified venues with..." />
-<link rel="canonical" href="https://pattaya-gym.com/map/" />
-<link rel="alternate" hreflang="en" href="https://pattaya-gym.com/map/" />
-<link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/map/" />
-<link rel="alternate" type="application/rss+xml" title="Pattaya Gym — Recently Added" href="/feed.xml" />
-<link rel="alternate" type="application/json" title="Pattaya Gym Directory API" href="/api/venues.json" />
-<link rel="alternate" type="application/feed+json" title="Pattaya Gym — JSON Feed" href="/feed.json" />
-<link rel="alternate" type="text/markdown" title="Pattaya Gym for LLMs" href="/llms.txt" />
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<meta http-equiv="x-dns-prefetch-control" content="on" />
-<link rel="dns-prefetch" href="//maps.google.com" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" />
-<link rel="preconnect" href="https://plausible.io" crossorigin />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:site_name" content="Pattaya Gym" />
-<meta property="og:title" content="Map of All Pattaya Gyms and Sport Venues | Pattaya Gym" />
-<meta property="og:description" content="Interactive map of every gym, Muay Thai camp, dive operator, golf course, and sport venue in Pattaya, Thailand. 158 verified venues with..." />
-<meta property="og:url" content="https://pattaya-gym.com/map/" />
-<meta property="og:image" content="https://pattaya-gym.com/og-image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:alt" content="Pattaya Gym — every sport venue in Pattaya, Thailand" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Map of All Pattaya Gyms and Sport Venues | Pattaya Gym" />
-<meta name="twitter:description" content="Interactive map of every gym, Muay Thai camp, dive operator, golf course, and sport venue in Pattaya, Thailand. 158 verified venues with..." />
-<meta name="twitter:image" content="https://pattaya-gym.com/og-image.png" />
-<meta name="twitter:image:src" content="https://pattaya-gym.com/og-image.png" />
-<meta name="thumbnail" content="https://pattaya-gym.com/og-image.png" />
-<link rel="image_src" href="https://pattaya-gym.com/og-image.png" />
-<style>:root{color-scheme:dark}html{background:#0a0a0a}body{margin:0;background:#0a0a0a;color:#f4f0e8;font-family:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}*,*::before,*::after{box-sizing:border-box}a{color:inherit;text-decoration:none}img,svg,video{max-width:100%;display:block;height:auto}</style>
-<style>@media(min-width:1100px){.venue-content-shell.has-toc{display:grid;grid-template-columns:240px minmax(0,1fr);gap:48px;align-items:start}.venue-content-shell.has-toc .jump-to{position:sticky;top:96px;max-height:calc(100vh - 120px);overflow-y:auto}}</style>
-<style>.skip-link{position:absolute;left:-9999px;top:0;z-index:1000;background:#d4a72c;color:#0a0a0a;padding:12px 18px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}.skip-link:focus{left:8px;top:8px}:focus-visible{outline:2px solid #d4a72c;outline-offset:3px}</style>
-<link rel="preload" href="/styles.css?v=237" as="style" />
-<link rel="stylesheet" href="/styles.css?v=237" />
-<link rel="preload" href="/venue.css?v=237" as="style" />
-<link rel="stylesheet" href="/venue.css?v=237" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Map of All Pattaya Gyms and Sport Venues | Pattaya Gym","description":"Interactive map of every gym, Muay Thai camp, dive operator, golf course, and sport venue in Pattaya, Thailand. 158 verified venues with...","url":"https://pattaya-gym.com/map/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"Pattaya Gym","url":"https://pattaya-gym.com/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://pattaya-gym.com/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}},"publisher":{"@type":"Organization","name":"Pattaya Gym","url":"https://pattaya-gym.com/","logo":{"@type":"ImageObject","url":"https://pattaya-gym.com/og-image.png"}}}</script>
-<script defer data-domain="pattaya-gym.com" src="https://plausible.io/js/script.js"></script>
-<script src="/shortcuts.js?v=237" defer></script>
-<script src="/site-ui.js?v=237" defer></script>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='52' text-anchor='middle' fill='%23ffb800' font-family='sans-serif' font-weight='900'%3EP%3C/text%3E%3C/svg%3E" />
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Pattaya Gym Directory","item":"https://pattaya-gym.com/"},{"@type":"ListItem","position":2,"name":"Map","item":"https://pattaya-gym.com/map/"}]}</script>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-<style>
-  .map-page { max-width: 1200px; margin: 0 auto; padding: 24px 16px 80px; }
-  #pg-map { height: 70vh; min-height: 500px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
-  .map-legend { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0; }
-  .ml-pill { padding: 5px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--card); color: var(--text-dim); }
-  .ml-pill.active { background: var(--accent); color: #000; border-color: var(--accent); }
-  .leaflet-popup-content h4 { margin: 0 0 4px; font-size: 14px; color: var(--accent); }
-  .leaflet-popup-content p { margin: 0 0 6px; font-size: 12px; color: #555; }
-  .leaflet-popup-content a { color: var(--accent); font-weight: 700; font-size: 12px; }
-  .leaflet-container { background: #1a1a1a; }
-  @media (max-width: 880px) { #pg-map { min-height: 440px; } }
-</style>
-<!-- Google tag (gtag.js) -->
-<script src="/analytics.js?v=237"></script>
+<meta name="description" content="Interactive map of every gym, Muay Thai camp, dive operator, golf course, and sport venue in Pattaya, Thailand. 158 verified venues with...">
+<link rel="canonical" href="https://pattaya-gym.com/map/">
+<link rel="alternate" hreflang="en" href="https://pattaya-gym.com/map/">
+<link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/map/">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="preload" href="/styles.css?v=404" as="style">
+<link rel="stylesheet" href="/styles.css?v=404">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<meta property="og:title" content="Map of All Pattaya Gyms and Sport Venues | Pattaya Gym">
+<meta property="og:description" content="Interactive map of every gym, Muay Thai camp, dive operator, golf course, and sport venue in Pattaya, Thailand. 158 verified venues with...">
+<meta property="og:image" content="https://pattaya-gym.com/og-image.png">
+<meta property="og:url" content="https://pattaya-gym.com/map/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Pattaya.Gym">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Map of All Pattaya Gyms and Sport Venues | Pattaya Gym">
+<meta name="twitter:description" content="Interactive map of every gym, Muay Thai camp, dive operator, golf course, and sport venue in Pattaya, Thailand. 158 verified venues with...">
+<meta name="twitter:image" content="https://pattaya-gym.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23000'/%3E%3Ctext x='50%25' y='62%25' font-family='Inter,sans-serif' font-size='40' font-weight='800' fill='%23ff2e7e' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://pattaya-gym.com/map/#webpage", "https://pattaya-gym.com/map/": "https://pattaya-gym.com/map/", "url": "https://pattaya-gym.com/map/", "name": "Map of All Pattaya Gyms and Sport Venues | Pattaya Gym", "description": "Interactive map of every gym, Muay Thai camp, dive operator, golf course, and sport venue in Pattaya, Thailand. 158 verified venues with...", "inLanguage": "en", "isPartOf": {"@id": "https://pattaya-gym.com/#website"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pattaya-gym.com/"}, {"@type": "ListItem", "position": 2, "name": "Pattaya gym map \u2014 158 venues", "item": "https://pattaya-gym.com/map/"}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to main content</a>
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-set"><span>★ EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>158 VENUES</span><span class="star">·</span><span>HAND-CHECKED</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>PATTAYA · THAILAND</span><span class="star">·</span><span>UPDATED WEEKLY</span><span class="star">·</span></div>
+    <div class="marquee-set" aria-hidden="true"><span>★ EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>158 VENUES</span><span class="star">·</span><span>HAND-CHECKED</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>PATTAYA · THAILAND</span><span class="star">·</span><span>UPDATED WEEKLY</span><span class="star">·</span></div>
+  </div>
+</div>
 <header class="nav" role="banner">
   <div class="nav-row">
-    <a href="/" class="brand">Pattaya<span class="dot">.</span>Gym</a>
-    <div class="nav-actions" aria-label="Primary">
-      <a href="/search/" class="icon-btn" aria-label="Search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></a>
-      <a href="/" class="icon-btn icon-btn--ink" aria-label="Home"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg></a>
-    </div>
+    <a href="/" class="brand">pattaya<span class="dot">.</span>gym</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/category/muay-thai/">Muay Thai</a>
+      <a href="/category/fitness/">Fitness</a>
+      <a href="/category/golf/">Golf</a>
+      <a href="/guides/">Guides</a>
+      <a href="/search/">Search</a>
+    </nav>
+    <a href="/search/" class="nav-cta">★ Find a gym</a>
   </div>
 </header>
-<main id="main" class="venue-page map-page" role="main">
-  <div class="venue-breadcrumb">
-    <a href="/">Directory</a>
-    <span class="bc-sep">›</span>
-    <span>Map</span>
-  </div>
-  <h1 class="venue-h1" style="font-size: 2rem; margin-bottom: 8px;">Map of all 158 Pattaya venues</h1>
+<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
+  <a href="/" style="color:var(--muted);">Home</a> <span style="color:var(--hint); margin:0 8px;">/</span> <span style="color:var(--text); font-weight:600;">Pattaya gym map — 158 venues</span>
+</nav>
+<main id="main">
+
+<section class="section" style="padding-top:var(--s-8);">
+  <div class="wrap">
+    <article class="venue-body" style="max-width:880px; margin:0 auto;">
+<h1 class="venue-h1" style="font-size: 2rem; margin-bottom: 8px;">Map of all 158 Pattaya venues</h1>
   <p class="venue-lede" style="margin-bottom: 16px;">Filter by category, click any pin to see details, then jump to the full venue page or directions.</p>
   <div class="map-legend" id="map-legend">
     <button type="button" class="ml-pill active" data-cat="all">All (158)</button>
@@ -112,203 +78,42 @@
     </aside>
   </div>
   <p style="margin-top: 16px; font-size: 13px; color: var(--text-muted);">Pin positions are approximate (clustered by neighborhood) — click any pin to see exact venue details and one-click Google Maps directions.</p>
-</main>
 
-  <div class="marquee-bottom" aria-hidden="true"><div class="marquee-track"><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span></div></div>
-  <footer class="site-footer" role="contentinfo">
-  <div class="site-footer-inner">
-    <div class="sf-col sf-brand-col">
-      <div class="sf-brand"><span class="brand-mark small">P</span><span class="sf-brand-text">PATTAYA <strong>GYM</strong></span></div>
-      <p class="sf-tag">The most comprehensive directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand.</p>
-    </div>
-    <div class="sf-col">
-      <p class="sf-heading">Sport categories</p>
-      <ul>
-        <li><a href="/category/muay-thai/">Muay Thai camps</a></li>
-        <li><a href="/category/fitness/">Fitness gyms</a></li>
-        <li><a href="/category/golf/">Golf courses</a></li>
-        <li><a href="/category/yoga/">Yoga studios</a></li>
-        <li><a href="/category/watersports/">Watersports &amp; diving</a></li>
-        <li><a href="/category/racquet/">Racquet sports</a></li>
-        <li><a href="/category/swimming/">Swimming pools</a></li>
-        <li><a href="/category/adventure/">Adventure</a></li>
-      </ul>
-    </div>
-    <div class="sf-col">
-      <p class="sf-heading">Areas of Pattaya</p>
-      <ul>
-        <li><a href="/area/jomtien/">Jomtien Beach</a></li>
-        <li><a href="/area/naklua/">Naklua / North Pattaya</a></li>
-        <li><a href="/area/pratamnak/">Pratamnak Hill</a></li>
-        <li><a href="/area/central-pattaya/">Central Pattaya</a></li>
-        <li><a href="/area/east-pattaya/">East Pattaya / Darkside</a></li>
-        <li><a href="/area/sattahip/">Sattahip / Far South</a></li>
-      </ul>
-    </div>
-    <div class="sf-col">
-      <p class="sf-heading">Best-of guides</p>
-      <ul>
-        <li><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai gyms</a></li>
-        <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a></li>
-        <li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a></li>
-        <li><a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a></li>
-        <li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a></li>
-        <li><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a></li>
-        <li><a href="/guides/family-friendly-pattaya/">Family-friendly</a></li>
-        <li><a href="/guides/best-for-beginners-pattaya/">Best for beginners</a></li>
-        <li><a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a></li>
-        <li><a href="/guides/female-friendly-gyms-pattaya/">Female-friendly venues</a></li>
-        <li><a href="/guides/pattaya-seniors-low-impact-sport/">Seniors 65+ sport guide</a></li>
-      </ul>
-    </div>
-    <div class="sf-col">
-      <p class="sf-heading">Tools &amp; site</p>
-      <ul>
-        <li><a href="/search/">Search venues</a></li>
-        <li><a href="/favorites/">Saved favorites</a></li>
-        <li><a href="/map/">Interactive map</a></li>
-        <li><a href="/compare/">Compare venues</a></li>
-        <li><a href="/plan-my-trip/">Plan my trip</a></li>
-        <li><a href="/find-my-coach/">Find my coach</a></li>
-        <li><a href="/about/">About this site</a></li>
-        <li><a href="/methodology/">Research methodology</a></li>
-        <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
-        <li><a href="/add-your-gym/">Add your gym</a></li>
-        <li><a href="/contact/">Contact</a></li>
-          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener">WhatsApp +66</a></li>
-          <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE @timpaemi</a></li>
-        <li><a href="/press/">Press</a></li>
-      </ul>
-    </div>
+    </article>
   </div>
-  
-  <div class="site-footer-base">
-    <p>© 2026 pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
-    <p class="sf-disclaimer">Last updated: 2026-05-16. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
-          
+</section>
+
+</main>
+<section class="pa-network">
+  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
+    <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
+  </a>
+  <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
+  <p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p>
+</section>
+<div class="marquee marquee-bottom" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-set"><span>★ PATTAYA VILLA</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>100% HAND-CHECKED</span><span class="star">·</span><span>EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>★ LIVE 158 VENUES</span><span class="star">·</span><span>UPDATED WEEKLY</span><span class="star">·</span></div>
+    <div class="marquee-set" aria-hidden="true"><span>★ PATTAYA VILLA</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>100% HAND-CHECKED</span><span class="star">·</span><span>EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>★ LIVE 158 VENUES</span><span class="star">·</span><span>UPDATED WEEKLY</span><span class="star">·</span></div>
+  </div>
+</div>
+<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
+      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
+      <p style="font-size:13px; color:var(--muted); margin:var(--s-4) 0 0;">— Tim & Paemi, founders</p>
+      <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div>
+    </div>
+    <div class="footer-col"><h4>// The site</h4><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li></ul></div>
+    <div class="footer-col"><h4>// Projects</h4><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div>
+    <div class="footer-col"><h4>// Direct</h4><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div>
+  </div>
+  <div class="footer-base">
+    <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
+    <span style="color:var(--cyan);">★ Last updated · 2026-05-17 · v404</span>
+    <span>12.92°N · 100.87°E · Pattaya Villa</span>
   </div>
 </footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script>
-  var MARKERS = [{"id":"fairtex-pattaya","name":"Fairtex Training Center Pattaya","category":"muay-thai","area":"Naklua / North Pattaya","priceRange":"฿฿฿","lat":12.9671,"lng":100.8974},{"id":"sityodtong-pattaya","name":"Sityodtong Pattaya","category":"muay-thai","area":"Naklua / Nong Prue","priceRange":"฿฿","lat":12.95715,"lng":100.8816},{"id":"wko-muay-thai","name":"WKO Muay Thai & Fitness Pattaya (ISS Gym)","category":"muay-thai","area":"Central Pattaya / Pattaya Klang","priceRange":"฿","lat":12.92975,"lng":100.885},{"id":"kombat-group-thailand","name":"Kombat Group Thailand","category":"muay-thai","area":"Huai Yai / East Pattaya (rural, near Chak Nok Lake)","priceRange":"฿฿฿","lat":12.9323,"lng":100.93645},{"id":"battle-conquer-gym","name":"Battle Conquer Gym Pattaya","category":"muay-thai","area":"Central Pattaya / near Pattaya Beach","priceRange":"฿฿","lat":12.936,"lng":100.88465000000001},{"id":"sor-klinmee","name":"Sor Klinmee Muay Thai Gym","category":"muay-thai","area":"Nong Prue / East Pattaya (Soi Khao Talo area)","priceRange":"฿","lat":12.9392,"lng":100.937},{"id":"petchrungruang-gym","name":"Petchrungruang Gym","category":"muay-thai","area":"South Pattaya / Sukhumvit","priceRange":"฿","lat":12.92605,"lng":100.8818},{"id":"rambaa-somdet-m16","name":"Rambaa Somdet M16 Muay Thai & MMA","category":"mma","area":"Nong Prue / East Pattaya (100m from Sor Klinmee)","priceRange":"฿฿","lat":12.9424,"lng":100.9425},{"id":"venum-training-camp","name":"Venum Training Camp Pattaya","category":"muay-thai","area":"Soi Khopai / off Thepprasit Road (1.8 km from Jomtien Beach)","priceRange":"฿฿","lat":12.8835,"lng":100.8745},{"id":"alfa-bjj-pattaya","name":"ALFA BJJ Pattaya","category":"bjj","area":"Pattaya","priceRange":"฿฿","lat":12.9257,"lng":100.87950000000001},{"id":"sanit-sport-club","name":"Sanit Sport Club","category":"muay-thai","area":"Mabprachan Reservoir / East Pattaya","priceRange":"฿฿","lat":12.938049999999999,"lng":100.93665},{"id":"lumpinee-boxing-stadium","name":"Lumpinee Boxing Stadium (Bangkok day-trip)","category":"muay-thai","area":"Bangkok — Ramintra Road (1.5–2 hrs from Pattaya)","priceRange":"฿฿฿","lat":12.92275,"lng":100.8754},{"id":"rajadamnern-stadium","name":"Rajadamnern Stadium (Bangkok day-trip)","category":"muay-thai","area":"Bangkok — Ratchadamnoen Nok Avenue (1.5–2 hr from Pattaya)","priceRange":"฿฿฿","lat":12.92845,"lng":100.87865000000001},{"id":"rage-fight-academy","name":"Rage Fight Academy","category":"muay-thai","area":"Thappraya Road / South Pattaya (5 min from Dongtan & Jomtien beaches)","priceRange":"฿฿","lat":12.885950000000001,"lng":100.87295},{"id":"silk-muay-thai","name":"Silk Muay Thai","category":"muay-thai","area":"Pattaya","priceRange":"฿฿฿","lat":12.93145,"lng":100.88665},{"id":"pattaya-thai-boxing-fitness","name":"Pattaya Thai Boxing & Fitness Gym (Jomtien)","category":"muay-thai","area":"Jomtien Beach (Soi 7, 200m from beach)","priceRange":"฿","lat":12.8991,"lng":100.8864},{"id":"fight-evo360","name":"Fight EVO360 Muay Thai Gym","category":"muay-thai","area":"Thepprasit Road / Jomtien","priceRange":"฿฿","lat":12.8858,"lng":100.87075},{"id":"sitpholek-muay-thai","name":"Sitpholek - Institute of Muay Thai Techniques","category":"muay-thai","area":"Pattaya","priceRange":"฿฿","lat":12.92805,"lng":100.8789},{"id":"crossfit-pattaya","name":"CrossFit Pattaya @ The Jungle Gym","category":"crossfit","area":"Nong Prue / Central-East Pattaya","priceRange":"฿฿","lat":12.931799999999999,"lng":100.93495},{"id":"tonys-gym","name":"Tony's Fitness Gym (Tony's Group Pattaya)","category":"fitness","area":"Multi-location — Wongamat, Soi Buakhao, Soi Diana Inn, 3rd Road + ~10 Pattaya locations","priceRange":"฿","lat":12.92355,"lng":100.87355000000001},{"id":"platinum-fitness","name":"Platinum Fitness Club","category":"fitness","area":"Pattaya Klang / Central Pattaya","priceRange":"฿฿","lat":12.93135,"lng":100.88555000000001},{"id":"coco-fitness","name":"Coco Fitness","category":"fitness","area":"Mike's Mall, Central Pattaya / Beach","priceRange":"฿","lat":12.92915,"lng":100.8875},{"id":"universe-gym","name":"Universe Gym","category":"fitness","area":"Welcome Town / North Pattaya","priceRange":"฿฿","lat":12.93595,"lng":100.8919},{"id":"fitz-club","name":"Fitz Club — Racquets, Health & Fitness (Royal Cliff Hotels Group)","category":"fitness","area":"Pratumnak Hill","priceRange":"฿฿฿฿","lat":12.9235,"lng":100.87765},{"id":"elite-gym-fitness","name":"Elite Gym & Fitness Pattaya","category":"fitness","area":"Sukhumvit Road (between Soi 42 and 44, opposite Soi 65)","priceRange":"฿฿","lat":12.9356,"lng":100.89055},{"id":"jetts-fitness-pattaya","name":"Jetts Fitness Pattaya","category":"fitness","area":"Little Walk Mall (Sukhumvit / Pattaya Klang)","priceRange":"฿฿","lat":12.9225,"lng":100.87945},{"id":"anytime-fitness-pattaya","name":"Anytime Fitness Pattaya","category":"fitness","area":"Multiple (South Pattaya / Bukis Point + \"Again\" Pattaya)","priceRange":"฿฿","lat":12.93135,"lng":100.88535},{"id":"fitness-7","name":"Fitness 7 Pattaya (The Avenue)","category":"fitness","area":"The Avenue Pattaya / Central Pattaya (parallel to Beach Road)","priceRange":"฿฿","lat":12.9291,"lng":100.88205},{"id":"true-fitness-pattaya","name":"True Fitness Pattaya","category":"fitness","area":"Central Pattaya / mall-attached","priceRange":"฿฿฿","lat":12.9192,"lng":100.8816},{"id":"castra-gym","name":"Castra Gym","category":"fitness","area":"Khao Talo / East Pattaya (\"Darkside\")","priceRange":"฿","lat":12.9454,"lng":100.94024999999999},{"id":"sun-fitness-buakao","name":"SUN Fitness Pattaya (3 branches)","category":"fitness","area":"Pratamnak + Soi Buakhao + Naklua (3 branches)","priceRange":"฿","lat":12.96125,"lng":100.88105},{"id":"cross-pattaya-pratamnak","name":"Cross Pattaya Pratamnak (Cloud Club + PLAYROOM)","category":"fitness","area":"Pratamnak Hill","priceRange":"฿฿฿","lat":12.92365,"lng":100.88090000000001},{"id":"manhattan-pattaya-fitness","name":"Manhattan Pattaya (Hotel Gym)","category":"fitness","area":"Pratamnak / Central Pattaya","priceRange":"฿฿","lat":12.9221,"lng":100.87655000000001},{"id":"yoga-pattaya-studio","name":"Yoga Pattaya Studio","category":"yoga","area":"Thepprasit / Jomtien","priceRange":"฿฿","lat":12.8972,"lng":100.8806},{"id":"yoga-haus-pattaya","name":"Yoga Haus Pattaya","category":"yoga","area":"Pattaya Klang / Central Pattaya","priceRange":"฿฿","lat":12.930950000000001,"lng":100.88915},{"id":"ashtanga-yoga-pattaya","name":"Ashtanga Yoga Pattaya","category":"yoga","area":"Pattaya — Soi 12 Thepprasit / Jomtien","priceRange":"฿฿","lat":12.890550000000001,"lng":100.8842},{"id":"one-d-yoga-studio","name":"One-D Yoga Studio","category":"yoga","area":"Pattaya-Naklua Road / Naklua","priceRange":"฿฿","lat":12.96175,"lng":100.89},{"id":"nok-yoga-pattaya","name":"Nok Yoga Pattaya","category":"yoga","area":"Naklua / Pattaya-Naklua Road (near Jomtien Beach for some sessions)","priceRange":"฿฿","lat":12.8835,"lng":100.87125},{"id":"balance-yoga-studio-pattaya","name":"Balance Yoga Studio Pattaya","category":"yoga","area":"Near sea — Pattaya / Jomtien beach-adjacent","priceRange":"฿฿","lat":12.89785,"lng":100.879},{"id":"siam-country-club","name":"Siam Country Club Pattaya","category":"golf","area":"East Pattaya / Pong, Bang Lamung","priceRange":"฿฿฿฿","lat":12.9412,"lng":100.94794999999999},{"id":"laem-chabang-international","name":"Laem Chabang International Country Club","category":"golf","area":"Sriracha (30 min from Pattaya)","priceRange":"฿฿฿฿","lat":12.92805,"lng":100.876},{"id":"phoenix-gold-golf","name":"Phoenix Gold Golf & Country Club","category":"golf","area":"Huay Yai (south of Pattaya)","priceRange":"฿฿฿","lat":12.93425,"lng":100.8917},{"id":"burapha-golf-club","name":"Burapha Golf Club","category":"golf","area":"Sriracha (35 min from Pattaya)","priceRange":"฿฿฿","lat":12.936350000000001,"lng":100.88205},{"id":"treasure-hill-golf","name":"Treasure Hill Golf & Country Club","category":"golf","area":"Ban Bueng / Khao Khansong (60 km from Pattaya)","priceRange":"฿฿","lat":12.9278,"lng":100.88090000000001},{"id":"chee-chan-golf","name":"Chee Chan Golf Resort","category":"golf","area":"Na Jomtien / Sattahip","priceRange":"฿฿฿฿","lat":12.894250000000001,"lng":100.88625},{"id":"chatrium-golf-soi-dao","name":"Chatrium Golf Resort Soi Dao Chanthaburi","category":"golf","area":"Khao Soi Dao Mountains, Chanthaburi (3 hours from Pattaya)","priceRange":"฿฿฿","lat":12.80225,"lng":102.1187},{"id":"pattana-sports-resort","name":"Pattana Golf Club & Resort (Pattana Sports Resort)","category":"golf","area":"Si Racha (40 km north of Pattaya, 90 min from Bangkok)","priceRange":"฿฿฿","lat":13.16905,"lng":100.917},{"id":"st-andrews-2000","name":"St. Andrews 2000 Pattaya","category":"golf","area":"Ban Chang, Rayong (45 min from Pattaya)","priceRange":"฿฿฿","lat":12.72025,"lng":101.07534999999999},{"id":"khao-kheow-country-club","name":"Khao Kheow Country Club","category":"golf","area":"Bang Phra / Si Racha (between Bangkok and Pattaya)","priceRange":"฿฿฿","lat":13.1762,"lng":100.91955},{"id":"bangpra-international","name":"Bangpra International Golf Club","category":"golf","area":"Sri Racha / Bang Phra (40 km north of Pattaya)","priceRange":"฿฿฿","lat":13.1808,"lng":100.9244},{"id":"mountain-shadow-country-club","name":"Mountain Shadow Country Club","category":"golf","area":"Halfway between Bangkok and Pattaya / Si Racha","priceRange":"฿฿฿","lat":13.1733,"lng":100.9094},{"id":"pattaya-country-club","name":"Pattaya Country Club","category":"golf","area":"Khao Mai Kaeo (one of the closest courses to Pattaya proper)","priceRange":"฿฿","lat":12.9259,"lng":100.8721},{"id":"pattaya-golf-driving-range","name":"Pattaya Golf Driving Range","category":"golf","area":"Pattaya","priceRange":"฿","lat":12.92145,"lng":100.8788},{"id":"pattaya-tennis-club","name":"Pattaya Tennis Club","category":"racquet","area":"Central Pattaya","priceRange":"฿฿","lat":12.93395,"lng":100.88645000000001},{"id":"greta-sport-club","name":"Greta Sport Club Pattaya (at Greta Resort)","category":"racquet","area":"Na Jomtien / Sattahip (18 km south of central Pattaya / Walking Street)","priceRange":"฿฿","lat":12.93165,"lng":100.882},{"id":"tara-tennis-club","name":"Tara Tennis Club","category":"racquet","area":"Pattaya","priceRange":"฿฿","lat":12.93655,"lng":100.88935000000001},{"id":"tos-tennis","name":"TOS Tennis Club / TOS Tennis Academy","category":"racquet","area":"Baan Suan Lalana — Jomtien Beach (closest to Jomtien)","priceRange":"฿฿","lat":12.8872,"lng":100.8747},{"id":"siam-bayshore-tennis","name":"Siam Bayshore Resort Pattaya Tennis Courts","category":"racquet","area":"Walking Street area / South Pattaya Beach Road","priceRange":"฿฿฿","lat":12.920900000000001,"lng":100.872},{"id":"euro-badminton","name":"Euro Badminton","category":"racquet","area":"Soi Chaiyaphruek 2 / East Pattaya","priceRange":"฿","lat":12.939499999999999,"lng":100.93335},{"id":"diamond-badminton","name":"Diamond Badminton","category":"racquet","area":"South Pattaya (Pattaya 3rd Road)","priceRange":"฿","lat":12.92005,"lng":100.8788},{"id":"pattaya-tennis-badminton-inter-club","name":"Pattaya Tennis & Badminton Inter Club","category":"racquet","area":"Soi Toongklom-Talman 25, Pattaya City","priceRange":"฿฿","lat":12.92515,"lng":100.87815},{"id":"pickleball-pattaya","name":"Pickleball Pattaya","category":"racquet","area":"Pratumnak Hill / Soi 6","priceRange":"฿฿","lat":12.9268,"lng":100.88065},{"id":"play-padel-pattaya","name":"Play Padel Pattaya","category":"racquet","area":"Pratumnak / Kasetsin Soi 3","priceRange":"฿฿฿","lat":12.919599999999999,"lng":100.8764},{"id":"pattaya-sports-club","name":"Pattaya Sports Club","category":"clubs","area":"Central Pattaya","priceRange":"฿฿","lat":12.923350000000001,"lng":100.88165000000001},{"id":"manta-kids-pattaya","name":"Manta Kids Pattaya (IG Center)","category":"swimming","area":"Huayyai / East Pattaya","priceRange":"฿฿","lat":12.9339,"lng":100.9324},{"id":"bounce-pattaya","name":"BOUNCE Pattaya — Trampoline Park","category":"kids-youth","area":"Harbor Pattaya Mall — 6F / Central Pattaya","priceRange":"฿฿","lat":12.935550000000001,"lng":100.88835},{"id":"first-serve-sports-club","name":"First Serve Sports Club","category":"swimming","area":"Pattaya","priceRange":"฿฿","lat":12.93465,"lng":100.8857},{"id":"hard-rock-pool","name":"Hard Rock Pool Pattaya","category":"swimming","area":"Hard Rock Hotel Pattaya — Central Pattaya Beach Road","priceRange":"฿฿฿","lat":12.9207,"lng":100.87575000000001},{"id":"pattaya-public-pool-naklua","name":"Naklua Public Swimming Pool","category":"swimming","area":"Naklua / North Pattaya","priceRange":"฿","lat":12.9685,"lng":100.89795},{"id":"pattaya-public-pool-jomtien","name":"Jomtien Public Swimming Pool","category":"swimming","area":"Between South Pattaya and Jomtien","priceRange":"฿","lat":12.8902,"lng":100.87905},{"id":"mermaids-dive","name":"Mermaid's Dive Center","category":"watersports","area":"Jomtien (Soi White House) + Pattaya Beach Road + Bangkok (Amarin Plaza)","priceRange":"฿฿฿","lat":12.894350000000001,"lng":100.8861},{"id":"pattaya-dive-centre","name":"Pattaya Dive Centre","category":"watersports","area":"Pattaya Beach Road (between Soi 10 and Soi 11)","priceRange":"฿฿฿","lat":12.93655,"lng":100.8889},{"id":"seafari-padi-dive","name":"Seafari PADI Dive Centre","category":"watersports","area":"Behind Mike's Mall — 2 min from Pattaya Beach Road","priceRange":"฿฿฿","lat":12.91975,"lng":100.87925},{"id":"pattaya-scuba-adventures","name":"Pattaya Scuba Adventures","category":"watersports","area":"Pattaya / boat operations from Bali Hai Pier","priceRange":"฿฿฿","lat":12.92985,"lng":100.88565},{"id":"no-limit-divers","name":"No Limit Divers","category":"watersports","area":"Pattaya / Jomtien","priceRange":"฿฿฿","lat":12.88575,"lng":100.8763},{"id":"jomtien-dive-center","name":"Jomtien Dive Center","category":"watersports","area":"Jomtien Beach","priceRange":"฿฿฿","lat":12.89235,"lng":100.882},{"id":"clubloongchat-watersports","name":"Clubloongchat Watersports","category":"watersports","area":"Na Jomtien Beach","priceRange":"฿฿฿","lat":12.89,"lng":100.87665},{"id":"kitesurf-pattaya","name":"Kitesurf Pattaya","category":"watersports","area":"South end of Jomtien Beach","priceRange":"฿฿฿","lat":12.8972,"lng":100.8866},{"id":"kba-kiteboarding-pattaya","name":"KBA Kiteboarding Asia Pattaya (Blue Lagoon)","category":"watersports","area":"Na Jomtien / Sattahip — Blue Lagoon","priceRange":"฿฿฿","lat":12.882850000000001,"lng":100.8741},{"id":"wave-pattaya","name":"Wave Pattaya Watersports","category":"watersports","area":"Pattaya Beach / Jomtien Beach","priceRange":"฿฿","lat":12.898200000000001,"lng":100.8841},{"id":"deep-climbing-gym","name":"Deep Climbing Gym (Harbor Pattaya)","category":"climbing","area":"Na Kluea / North Pattaya — Harbor Pattaya Mall, 8th Floor","priceRange":"฿฿","lat":12.9296,"lng":100.89160000000001},{"id":"bean-cow-climbing-gym","name":"Bean Cow Climbing Gym & Community Center","category":"climbing","area":"Huay Yai / East Pattaya","priceRange":"฿฿","lat":12.9461,"lng":100.94749999999999},{"id":"pattaya-hash-house","name":"Pattaya Hash House Harriers","category":"clubs","area":"Pattaya / East Pattaya / various run locations","priceRange":"฿","lat":12.9339,"lng":100.93645},{"id":"pattaya-monkey-hash-house","name":"Pattaya Monkey Hash House Harriers","category":"clubs","area":"Various (run starting points across Pattaya region)","priceRange":"฿","lat":12.9289,"lng":100.87310000000001},{"id":"af-academy-football","name":"AF Academy Football School","category":"kids-youth","area":"South Pattaya (outdoor field) + Central Pattaya (indoor field)","priceRange":"฿฿","lat":12.9321,"lng":100.88365},{"id":"pattaya-city-football-academy","name":"Pattaya City Football Academy","category":"kids-youth","area":"Pattaya","priceRange":"฿฿","lat":12.929450000000001,"lng":100.89125},{"id":"planet-football-pattaya","name":"Planet Football Pattaya (FC Planet)","category":"kids-youth","area":"Pattaya","priceRange":"฿฿","lat":12.925650000000001,"lng":100.8811},{"id":"rusich-club-football","name":"Rusich Club Pattaya (HSIF Thailand)","category":"kids-youth","area":"Pattaya","priceRange":"฿฿","lat":12.93525,"lng":100.88745},{"id":"regents-international-school-pattaya","name":"Regents International School Pattaya (Sports)","category":"kids-youth","area":"Pattaya / Eastern Seaboard","priceRange":"฿฿฿฿","lat":12.930950000000001,"lng":100.88685000000001},{"id":"horseshoe-point-resort","name":"Horseshoe Point Resort & Country Club","category":"equestrian","area":"Mabprachan Reservoir / East Pattaya","priceRange":"฿฿฿","lat":12.94575,"lng":100.9439},{"id":"muscle-factory-pattaya","name":"Muscle Factory Pattaya","category":"fitness","area":"Pratamnak Hill","priceRange":"฿฿","lat":12.91105,"lng":100.86695},{"id":"cartoon-network-amazone","name":"Cartoon Network Amazone Waterpark (now Columbia Pictures Aquaverse)","category":"swimming","area":"Na Jomtien / Sattahip — 15 km south of Pattaya","priceRange":"฿฿฿","lat":12.88855,"lng":100.87545},{"id":"easykart-pattaya","name":"EasyKart Pattaya Thepprasit (Outdoor Go Kart Track)","category":"adventure","area":"Thepprasit Road","priceRange":"฿฿","lat":12.89605,"lng":100.88955},{"id":"fast-pro-football-academy","name":"FAST PRO Football Academy Pattaya","category":"kids-youth","area":"Two locations — Horseshoe Point Pattaya + IP Soccer Club Pattaya","priceRange":"฿฿฿","lat":12.92085,"lng":100.8746},{"id":"golf-hub-pattaya","name":"Golf Hub Pattaya (Indoor Simulator + Club Fitting)","category":"golf","area":"Soi Buakhao + East Pattaya (multiple locations)","priceRange":"฿฿","lat":12.92925,"lng":100.89354999999999},{"id":"ramayana-water-park","name":"Ramayana Water Park Pattaya","category":"swimming","area":"Na Jomtien / Sattahip — 20 km south of Pattaya","priceRange":"฿฿฿","lat":12.88635,"lng":100.87650000000001},{"id":"af-academy-pattaya","name":"AF Academy Football School Pattaya","category":"kids-youth","area":"Naklua + Jomtien + Pratumnak + Central Pattaya (multiple training locations)","priceRange":"฿฿","lat":12.92895,"lng":100.87985},{"id":"diana-driving-range","name":"Diana Driving Range Pattaya","category":"golf","area":"Soi Diana / Central Pattaya","priceRange":"฿","lat":12.92345,"lng":100.88105},{"id":"pratumnak-fitness-park","name":"Pratumnak Fitness Park (Free Outdoor Calisthenics)","category":"fitness","area":"Pratumnak Soi 5 / Buddha Hill","priceRange":"฿","lat":12.91225,"lng":100.8682},{"id":"pattaya-bowl","name":"Pattaya Bowl (Soi Regent Marina)","category":"clubs","area":"North Pattaya — Pattaya 2nd Road / Soi Regent Marina","priceRange":"฿฿","lat":12.923350000000001,"lng":100.87435},{"id":"pattaya-park-water-fun","name":"Pattaya Park Water & Fun Park (with Tower Jump)","category":"adventure","area":"South Pattaya / Jomtien border — Soi 12 Thappraya Rd","priceRange":"฿฿","lat":12.89415,"lng":100.8813},{"id":"thai-sky-adventures-skydive","name":"Thai Sky Adventures (Tandem Skydiving Pattaya)","category":"adventure","area":"Dropzone 25 km north of Pattaya / Rayong direction","priceRange":"฿฿฿฿","lat":12.922600000000001,"lng":100.87745000000001},{"id":"thai-polo-equestrian-club","name":"Thai Polo & Equestrian Club","category":"equestrian","area":"Banglamung / Mabprachan Lake (25 min north of Pattaya)","priceRange":"฿฿฿฿","lat":12.9528,"lng":100.9808},{"id":"bira-circuit","name":"Bira Circuit (FIA-Standard Motor Racing Track)","category":"adventure","area":"Banglamung — 15 km northeast of Pattaya","priceRange":"฿฿฿","lat":13.0577,"lng":100.94245},{"id":"jumpz-trampoline-park","name":"JumpZ Trampoline Park","category":"kids-youth","area":"Harbor Pattaya Shopping Mall — Central Pattaya Road","priceRange":"฿฿","lat":12.93825,"lng":100.88715},{"id":"pattaya-shooting-park","name":"Pattaya Shooting Park","category":"adventure","area":"Soi Khao Mai Kaew / East Pattaya","priceRange":"฿฿","lat":12.94435,"lng":100.9466},{"id":"dragon-shooting-club","name":"Dragon Shooting Club Pattaya","category":"adventure","area":"Pattaya — confirm exact at booking","priceRange":"฿฿","lat":12.9377,"lng":100.8829},{"id":"thai-wake-park","name":"Thai Wake Park Pattaya","category":"watersports","area":"East Pattaya near Mabprachan Lake","priceRange":"฿฿","lat":12.944899999999999,"lng":100.94515},{"id":"pattaya-padel-club","name":"Pattaya Padel Club (Mabprachan Lake)","category":"racquet","area":"Mabprachan Lake / East Pattaya","priceRange":"฿฿","lat":12.9467,"lng":100.94745},{"id":"sailbreeze-ocean-marina","name":"SailBreeze Sailing School @ Ocean Marina Yacht Club","category":"watersports","area":"Na Jomtien — Ocean Marina Jomtien","priceRange":"฿฿฿","lat":12.8987,"lng":100.8863},{"id":"royal-varuna-yacht-club","name":"Royal Varuna Yacht Club","category":"watersports","area":"Pratamnak Hill","priceRange":"฿฿฿฿","lat":12.9151,"lng":100.87065},{"id":"ocean-marina-jomtien","name":"Ocean Marina Jomtien — Southeast Asia's Largest Marina","category":"watersports","area":"Na Jomtien / Sattahip","priceRange":"฿฿฿฿","lat":12.888300000000001,"lng":100.87505},{"id":"pattaya-cycling-clubs","name":"Pattaya Cycling Clubs (Cuore Masters / Monkey Xtreme / Jomtien Cycling)","category":"clubs","area":"Various — meet points across Pattaya / East Pattaya / Jomtien","priceRange":"฿","lat":12.8919,"lng":100.882},{"id":"pattaya-bike-boat-tours","name":"Pattaya Bike and Boat Tours","category":"adventure","area":"Naklua / North Pattaya","priceRange":"฿฿","lat":12.96065,"lng":100.88545},{"id":"pattaya-petanque-club","name":"Pattaya Sai 3 Petanque Club","category":"clubs","area":"Soi 3 Pattaya — central","priceRange":"฿","lat":12.936250000000001,"lng":100.8905},{"id":"jomtien-beach-volleyball","name":"Jomtien Beach Volleyball Courts","category":"clubs","area":"Jomtien Beach","priceRange":"฿","lat":12.88025,"lng":100.86995},{"id":"adventure-divers-pattaya","name":"Adventure Divers Pattaya","category":"watersports","area":"Central Pattaya — boat operates from Bali Hai Pier","priceRange":"฿฿","lat":12.924050000000001,"lng":100.87635},{"id":"tarzan-adventure-pattaya","name":"Tarzan Adventure Pattaya (Zipline)","category":"adventure","area":"Na Chom Thian / Sattahip — between Nong Nooch and Golden Cliff Temple","priceRange":"฿฿","lat":12.673399999999999,"lng":100.90490000000001},{"id":"pattaya-lawn-bowls","name":"Pattaya Lawn Bowls Clubs (Banchang / Paradise / The Retreat)","category":"clubs","area":"Banchang + Jomtien + multiple","priceRange":"฿","lat":12.894250000000001,"lng":100.8787},{"id":"max-muay-thai-stadium","name":"MAX Muay Thai Stadium Pattaya","category":"muay-thai","area":"Sukhumvit Road — next to King Power Pattaya","priceRange":"฿฿฿","lat":12.9314,"lng":100.89105},{"id":"pattaya-kart-speedway","name":"Pattaya Kart Speedway","category":"adventure","area":"Thepprasit Road Soi 9","priceRange":"฿฿","lat":12.895000000000001,"lng":100.88185},{"id":"aquanauts-dive-center","name":"Aquanauts Dive Center Pattaya","category":"watersports","area":"Pattaya — boat departures from Bali Hai Pier","priceRange":"฿฿","lat":12.9341,"lng":100.8895},{"id":"real-divers-pattaya","name":"Real Divers Pattaya","category":"watersports","area":"Pattaya — boat departures from Bali Hai Pier","priceRange":"฿฿","lat":12.92935,"lng":100.8895},{"id":"dive-station-pattaya","name":"Dive Station Pattaya","category":"watersports","area":"Pattaya — boat departures from Bali Hai Pier","priceRange":"฿฿","lat":12.9345,"lng":100.88975},{"id":"cho-nateetong","name":"Cho Nateetong Thai Boxing Camp","category":"muay-thai","area":"Sukhumvit 34 / East Pattaya","priceRange":"฿","lat":12.937299999999999,"lng":100.93565},{"id":"khao-chi-chan-buddha-mountain","name":"Khao Chi Chan (Buddha Mountain) — Walking & Meditation","category":"clubs","area":"Na Chom Thian / Sattahip — 20 km southeast of Pattaya","priceRange":"฿","lat":12.6613,"lng":100.89645},{"id":"pattaya-marathon","name":"Pattaya Marathon (Amazing Thailand Pattaya Marathon)","category":"clubs","area":"Pattaya Beach (full marathon route along the bay)","priceRange":"฿฿","lat":12.93235,"lng":100.88625},{"id":"pattaya-triathlon","name":"Pattaya Triathlon (Thailand Tri-League)","category":"clubs","area":"Pattaya Beach + Sukhumvit Highway + Pattaya Hill","priceRange":"฿฿฿","lat":12.933200000000001,"lng":100.88975},{"id":"pattaya-boxing-world","name":"Pattaya Boxing World Stadium","category":"muay-thai","area":"Pattaya","priceRange":"฿฿฿","lat":12.937050000000001,"lng":100.8841},{"id":"nongnooch-cultural-show","name":"Nong Nooch Tropical Garden — Thai Cultural & Muay Thai Show","category":"clubs","area":"Na Chom Thian / Sattahip — 20 km south of Pattaya","priceRange":"฿฿","lat":12.6624,"lng":100.89955},{"id":"greenwood-golf-club","name":"Greenwood Golf Club & Resort (formerly Noble Place)","category":"golf","area":"Ban Bueng, Chonburi (1 hour from Pattaya, toward Chonburi)","priceRange":"฿฿","lat":12.9388,"lng":100.88465000000001},{"id":"pattaya-running-routes","name":"Pattaya Public Running Routes & Parks (Beach + Mabprachan + City Parks)","category":"clubs","area":"Multiple — Pattaya Beach, Jomtien Beach, Mabprachan, Pratumnak Park, Nongprue Park","priceRange":"฿","lat":12.89625,"lng":100.887},{"id":"pattaya-beach-public-aerobics","name":"Pattaya Beach Public Aerobics — Open-Air Free Fitness","category":"clubs","area":"Pattaya Beach Boardwalk + Jomtien Beach","priceRange":"฿","lat":12.89065,"lng":100.88555},{"id":"wong-amat-beach","name":"Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach","category":"swimming","area":"Naklua / North Pattaya","priceRange":"฿","lat":12.960849999999999,"lng":100.8844},{"id":"big-buddha-hill-wat-phra-yai","name":"Big Buddha Hill (Wat Phra Yai) — Pratamnak Landmark + Stair Climb","category":"clubs","area":"Pratamnak Hill","priceRange":"฿","lat":12.9081,"lng":100.8669},{"id":"koh-larn-coral-island","name":"Koh Larn (Coral Island) — Pattaya's Day-Trip Beach Destination","category":"watersports","area":"Offshore — 7 km west of Pattaya (30-min ferry)","priceRange":"฿฿","lat":13.0458,"lng":100.93635},{"id":"pattaya-archery-club","name":"Pattaya Archery Club","category":"clubs","area":"Pattaya","priceRange":"฿฿","lat":12.9215,"lng":100.88005000000001},{"id":"pattaya-cricket-club","name":"Pattaya Cricket Club","category":"clubs","area":"Pattaya — home ground varies","priceRange":"฿฿","lat":12.93295,"lng":100.88555000000001},{"id":"atv-tours-pattaya","name":"ATV & Off-Road Tours Pattaya (Multi-Operator)","category":"adventure","area":"30 min east of Pattaya — Pong Village near Lake Mabprachan + various","priceRange":"฿฿฿","lat":12.9458,"lng":100.9642},{"id":"hilton-pattaya-fitness","name":"Hilton Pattaya — Fitness Center, Spa & Pool","category":"fitness","area":"Central Pattaya — Beach Road / Central Festival Mall","priceRange":"฿฿฿฿","lat":12.9201,"lng":100.881},{"id":"andaz-pattaya-jomtien","name":"Andaz Pattaya Jomtien Beach (Hyatt)","category":"fitness","area":"Na Jomtien / Sattahip","priceRange":"฿฿฿฿","lat":12.887,"lng":100.8735},{"id":"pattaya-marriott-resort","name":"Pattaya Marriott Resort and Spa","category":"fitness","area":"Na Jomtien","priceRange":"฿฿฿฿","lat":12.88235,"lng":100.8691},{"id":"renaissance-pattaya-resort","name":"Renaissance Pattaya Resort & Spa","category":"fitness","area":"Na Jomtien","priceRange":"฿฿฿฿","lat":12.88885,"lng":100.8742},{"id":"centara-grand-mirage","name":"Centara Grand Mirage Beach Resort","category":"swimming","area":"Wong Amat Beach / North Pattaya","priceRange":"฿฿฿฿","lat":12.962349999999999,"lng":100.895},{"id":"cape-dara-resort","name":"Cape Dara Resort","category":"fitness","area":"Naklua / North Pattaya — beach-cliff position","priceRange":"฿฿฿฿","lat":12.9584,"lng":100.88135},{"id":"movenpick-siam-pattaya","name":"Mövenpick Siam Hotel Na Jomtien Pattaya","category":"fitness","area":"Na Jomtien","priceRange":"฿฿฿฿","lat":12.891,"lng":100.8852},{"id":"dusit-thani-pattaya","name":"Dusit Thani Pattaya — Devarana Wellness","category":"fitness","area":"North Pattaya / Beach Road headland","priceRange":"฿฿฿฿","lat":12.92675,"lng":100.8776},{"id":"flight-of-the-gibbon","name":"Flight of the Gibbon — Khao Kheow Canopy Zipline","category":"adventure","area":"Khao Kheow / Si Racha (1 hour from Pattaya, 90 min from Bangkok)","priceRange":"฿฿฿","lat":13.1687,"lng":100.90965000000001},{"id":"underwater-world-pattaya","name":"Underwater World Pattaya — Aquarium & Shark Dive Experience","category":"watersports","area":"Pattaya — Sukhumvit Road","priceRange":"฿฿","lat":12.92655,"lng":100.8773},{"id":"pattaya-sky-ride-helicopter","name":"Pattaya Sky Ride — Helicopter Tours & Bangkok-Pattaya Charter","category":"adventure","area":"Pattaya — landing pads at Royal Cliff Beach + various","priceRange":"฿฿฿฿","lat":12.93195,"lng":100.88755},{"id":"pattaya-panthers-rugby","name":"Pattaya Panthers Rugby Football Club","category":"clubs","area":"Pattaya","priceRange":"฿฿","lat":12.921000000000001,"lng":100.87255},{"id":"sf-strike-bowl","name":"SF Strike Bowl Pattaya (Central Festival)","category":"clubs","area":"Central Festival Pattaya Beach Mall — 6th Floor","priceRange":"฿฿","lat":12.92515,"lng":100.88000000000001},{"id":"megabreak-pool-hall","name":"Megabreak Pool Hall Pattaya","category":"clubs","area":"Soi Diana (Soi 13) / Central Pattaya","priceRange":"฿฿","lat":12.921100000000001,"lng":100.87465},{"id":"bangkok-hospital-pattaya-rehab","name":"Bangkok Hospital Pattaya — Sports Rehabilitation & Wellness","category":"clubs","area":"North Pattaya","priceRange":"฿฿฿฿","lat":12.9642,"lng":100.89185},{"id":"pattaya-floating-market","name":"Pattaya Floating Market — Muay Talay & Cultural Activities","category":"clubs","area":"Sukhumvit Road / South Pattaya","priceRange":"฿฿","lat":12.9285,"lng":100.87725},{"id":"sanctuary-of-truth","name":"Sanctuary of Truth — Wood Temple & Cultural-Sport Park","category":"clubs","area":"Naklua / North Pattaya","priceRange":"฿฿","lat":12.9663,"lng":100.8986},{"id":"intercontinental-pattaya","name":"InterContinental Pattaya Resort","category":"fitness","area":"Pratamnak Hill","priceRange":"฿฿฿฿","lat":12.9141,"lng":100.8724},{"id":"holiday-inn-pattaya","name":"Holiday Inn Pattaya","category":"fitness","area":"Beach Road / Central Pattaya","priceRange":"฿฿฿","lat":12.92095,"lng":100.87585}];
-  var CATS = [{"key":"muay-thai","label":"Muay Thai","emoji":"MT"},{"key":"mma","label":"MMA","emoji":"MMA"},{"key":"bjj","label":"BJJ / Grappling","emoji":"BJJ"},{"key":"crossfit","label":"CrossFit / Functional","emoji":"CF"},{"key":"fitness","label":"Fitness / Gym","emoji":"GYM"},{"key":"yoga","label":"Yoga / Pilates","emoji":"YOGA"},{"key":"golf","label":"Golf","emoji":"GOLF"},{"key":"racquet","label":"Tennis / Padel / Squash","emoji":"TEN"},{"key":"swimming","label":"Swimming","emoji":"SW"},{"key":"watersports","label":"Watersports / Diving","emoji":"WAVE"},{"key":"climbing","label":"Climbing","emoji":"CL"},{"key":"clubs","label":"Running / Cycling Clubs","emoji":"RUN"},{"key":"kids-youth","label":"Kids / Youth Sports","emoji":"KID"},{"key":"equestrian","label":"Equestrian","emoji":"HORSE"},{"key":"adventure","label":"Adventure / Multi-Sport","emoji":"ADV"}];
-  var map = L.map('pg-map', { scrollWheelZoom: false }).setView([12.93, 100.92], 11);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-  var activeCat = 'all';
-  var activeLayers = [];
-  var markerById = {};
-  var panelList = document.getElementById('map-panel-list');
-  var panelCount = document.getElementById('map-panel-count');
-  function esc(s) {
-    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
-    });
-  }
-  function catLabel(k) {
-    var cat = CATS.find(function(c){return c.key===k;});
-    return cat ? cat.label : k;
-  }
-  function catColor(k) {
-    var palette = { 'muay-thai':'#f87171','fitness':'#ffb800','golf':'#22c55e','yoga':'#a855f7','racquet':'#3b82f6','watersports':'#06b6d4','swimming':'#0ea5e9','climbing':'#ef4444','clubs':'#f59e0b','kids-youth':'#ec4899','equestrian':'#a16207','crossfit':'#84cc16','adventure':'#fb923c','mma':'#dc2626','bjj':'#7c3aed','boxing':'#fde047' };
-    return palette[k] || '#ffb800';
-  }
-  function popupHtml(m) {
-    return '<h4>' + esc(m.name) + '</h4>' +
-      '<p>' + esc(catLabel(m.category)) + (m.area ? ' - ' + esc(m.area) : '') + (m.priceRange ? ' - ' + esc(m.priceRange) : '') + '</p>' +
-      `<a href="/gyms/${encodeURIComponent(m.id)}/">View full page -></a>`;
-  }
-  function markerLayer(m) {
-    var color = catColor(m.category);
-    var ico = L.divIcon({
-      html: '<div style="background:' + color + ';border:2px solid #000;width:22px;height:22px;border-radius:50%;box-shadow:0 0 0 1px ' + color + '80;"></div>',
-      className: 'pg-pin',
-      iconSize: [22,22],
-      iconAnchor: [11,11]
-    });
-    var mk = L.marker([m.lat, m.lng], { icon: ico });
-    mk._pgId = m.id;
-    mk.bindPopup(popupHtml(m));
-    markerById[m.id] = mk;
-    return mk;
-  }
-  function clusterLayer(items) {
-    var lat = items.reduce(function(sum, m){ return sum + m.lat; }, 0) / items.length;
-    var lng = items.reduce(function(sum, m){ return sum + m.lng; }, 0) / items.length;
-    var layer = L.marker([lat, lng], {
-      icon: L.divIcon({
-        html: '<div class="map-cluster">' + items.length + '</div>',
-        className: 'pg-cluster-wrap',
-        iconSize: [36,36],
-        iconAnchor: [18,18]
-      })
-    });
-    layer.bindPopup('<h4>' + items.length + ' venues in this area</h4><p>Zoom in to split this cluster.</p>');
-    layer.on('click', function () { map.flyTo([lat, lng], Math.max(map.getZoom() + 2, 13)); });
-    return layer;
-  }
-  function filteredMarkers() {
-    return MARKERS.filter(function (m) { return activeCat === 'all' || m.category === activeCat; });
-  }
-  function visibleLayers(list) {
-    if (map.getZoom() >= 13) return list.map(markerLayer);
-    var buckets = {};
-    list.forEach(function (m) {
-      var key = Math.round(m.lat * 22) + ':' + Math.round(m.lng * 22);
-      buckets[key] = buckets[key] || [];
-      buckets[key].push(m);
-    });
-    return Object.keys(buckets).map(function (key) {
-      return buckets[key].length > 1 ? clusterLayer(buckets[key]) : markerLayer(buckets[key][0]);
-    });
-  }
-  function renderPanel() {
-    var bounds = map.getBounds();
-    var list = filteredMarkers().filter(function (m) {
-      return bounds.contains([m.lat, m.lng]);
-    }).sort(function (a, b) {
-      return a.name.localeCompare(b.name);
-    });
-    panelCount.textContent = list.length + ' visible of ' + filteredMarkers().length + ' matching venues';
-    panelList.innerHTML = list.slice(0, 80).map(function (m) {
-      return '<button type="button" class="map-panel-item" data-map-id="' + esc(m.id) + '">' +
-        '<strong>' + esc(m.name) + '</strong>' +
-        '<span>' + esc(catLabel(m.category)) + (m.area ? ' - ' + esc(m.area) : '') + (m.priceRange ? ' - ' + esc(m.priceRange) : '') + '</span>' +
-      '</button>';
-    }).join('');
-  }
-  function renderMarkers() {
-    activeLayers.forEach(function (layer) { map.removeLayer(layer); });
-    markerById = {};
-    activeLayers = visibleLayers(filteredMarkers());
-    activeLayers.forEach(function (layer) { layer.addTo(map); });
-    renderPanel();
-  }
-  document.querySelectorAll('.ml-pill').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('.ml-pill').forEach(function(b){b.classList.remove('active');});
-      btn.classList.add('active');
-      activeCat = btn.dataset.cat;
-      renderMarkers();
-    });
-  });
-  panelList.addEventListener('click', function (event) {
-    var btn = event.target.closest('[data-map-id]');
-    if (!btn) return;
-    var marker = MARKERS.find(function (m) { return m.id === btn.dataset.mapId; });
-    if (!marker) return;
-    map.flyTo([marker.lat, marker.lng], 14);
-    setTimeout(function () {
-      renderMarkers();
-      if (markerById[marker.id]) markerById[marker.id].openPopup();
-    }, 450);
-  });
-  map.on('moveend zoomend', renderMarkers);
-  renderMarkers();
-</script>
 </body>
 </html>

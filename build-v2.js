@@ -71,6 +71,103 @@ function writeFile(filePath, content) {
   fs.writeFileSync(filePath, content, 'utf8');
 }
 
+// ---------- Schema.org helpers ----------
+// Map data.js category -> schema.org LocalBusiness subtype
+function localBusinessType(category) {
+  const map = {
+    'muay-thai':    ['LocalBusiness', 'SportsActivityLocation'],
+    'mma':          ['LocalBusiness', 'SportsActivityLocation'],
+    'bjj':          ['LocalBusiness', 'SportsActivityLocation'],
+    'crossfit':     ['LocalBusiness', 'ExerciseGym'],
+    'fitness':      ['LocalBusiness', 'ExerciseGym', 'HealthClub'],
+    'yoga':         ['LocalBusiness', 'HealthClub'],
+    'golf':         ['LocalBusiness', 'GolfCourse', 'SportsActivityLocation'],
+    'racquet':      ['LocalBusiness', 'SportsActivityLocation'],
+    'swimming':     ['LocalBusiness', 'SportsActivityLocation'],
+    'watersports':  ['LocalBusiness', 'SportsActivityLocation'],
+    'climbing':     ['LocalBusiness', 'SportsActivityLocation'],
+    'clubs':        ['LocalBusiness', 'SportsClub'],
+    'kids-youth':   ['LocalBusiness', 'SportsActivityLocation'],
+    'equestrian':   ['LocalBusiness', 'SportsActivityLocation'],
+    'adventure':    ['LocalBusiness', 'SportsActivityLocation']
+  };
+  return map[category] || ['LocalBusiness'];
+}
+
+// Turn free-text address into a PostalAddress object (best-effort).
+function parsePostalAddress(addr) {
+  if (!addr) return null;
+  const a = String(addr).trim();
+  if (!a || /^pattaya[\s—-]/i.test(a) && a.length < 12) return null; // ignore "Pattaya — verify"
+  // Pull a postal code if present (5 digits)
+  const zipMatch = a.match(/\b(\d{5})\b/);
+  const postalCode = zipMatch ? zipMatch[1] : undefined;
+  return {
+    '@type': 'PostalAddress',
+    streetAddress: a,
+    addressLocality: 'Pattaya',
+    addressRegion: 'Chon Buri',
+    postalCode,
+    addressCountry: 'TH'
+  };
+}
+
+// Convert "Mon-Fri 06:00-22:00; Sat-Sun 08:00-20:00" into openingHoursSpecification.
+// Returns array; empty array if not parseable.
+function parseHoursSpec(hoursStr) {
+  if (!hoursStr) return [];
+  // Skip if the string mentions exceptions we can't represent cleanly
+  if (/closed|except|verify|by\s*appointment|tbd|n\/a|call\s*ahead|seasonal|members?\s*only/i.test(hoursStr)) return [];
+  const DAY = { mon:'Monday', tue:'Tuesday', wed:'Wednesday', thu:'Thursday', fri:'Friday', sat:'Saturday', sun:'Sunday' };
+  const segments = String(hoursStr).split(/[;,]/).map(s => s.trim()).filter(Boolean);
+  const out = [];
+  for (const seg of segments) {
+    // Match patterns like "Mon-Fri 06:00-22:00" or "Sat 08:00-20:00" or "Daily 24/7"
+    // Word boundaries on day tokens so "Sundays" doesn't match as "Sun".
+    const daysRe = /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun|Daily|Everyday)\b(?:\s*[-\u2013\u2014]\s*\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\b)?/i;
+    const timeRe = /(\d{1,2}):?(\d{2})\s*[-\u2013\u2014]\s*(\d{1,2}):?(\d{2})/;
+    const dm = seg.match(daysRe);
+    const tm = seg.match(timeRe);
+    if (!dm) continue;
+    let days = [];
+    const dayFromKey = (s) => DAY[s.toLowerCase().slice(0, 3)];
+    if (/daily|everyday/i.test(dm[1])) {
+      days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+    } else if (dm[2]) {
+      const order = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+      const a = order.indexOf(dayFromKey(dm[1]));
+      const b = order.indexOf(dayFromKey(dm[2]));
+      if (a >= 0 && b >= 0 && a <= b) days = order.slice(a, b + 1);
+    } else {
+      days = [dayFromKey(dm[1])].filter(Boolean);
+    }
+    if (!days.length) continue;
+    // 24/7 case
+    if (/24\s*\/\s*7|all day/i.test(seg)) {
+      out.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: days, opens: '00:00', closes: '23:59' });
+      continue;
+    }
+    if (!tm) continue;
+    const opens = `${tm[1].padStart(2,'0')}:${tm[2]}`;
+    const closes = `${tm[3].padStart(2,'0')}:${tm[4]}`;
+    out.push({ '@type': 'OpeningHoursSpecification', dayOfWeek: days, opens, closes });
+  }
+  return out;
+}
+
+// BreadcrumbList from an array of { label, href? } items + page url for the last.
+function breadcrumbJsonLd(items, pageUrl) {
+  return {
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.label,
+      item: it.href ? `${SITE}${it.href}` : (i === items.length - 1 ? pageUrl : undefined)
+    }))
+  };
+}
+
 // ---------- Frontmatter parser ----------
 function parseFrontmatter(text) {
   const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -192,6 +289,12 @@ function mdToHtml(md) {
 const ASSET = `?v=${ASSET_VERSION}`;
 
 function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null }) {
+  // Allow jsonLd to be a single object OR an array of objects (one <script> per item).
+  const ldBlocks = jsonLd
+    ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd])
+        .map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`)
+        .join('\n')
+    : '';
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -199,9 +302,11 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
+<link rel="canonical" href="${url}">
+<link rel="alternate" hreflang="en" href="${url}">
+<link rel="alternate" hreflang="x-default" href="${url}">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="canonical" href="${url}">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -212,13 +317,19 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <meta property="og:image" content="${ogImage}">
 <meta property="og:url" content="${url}">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Pattaya.Gym">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${ogImage}">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23000'/%3E%3Ctext x='50%25' y='62%25' font-family='Inter,sans-serif' font-size='40' font-weight='800' fill='%23ff2e7e' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
-${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
+${ldBlocks}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
-<body>`;
+<body>
+<a class="skip-link" href="#main">Skip to content</a>`;
 }
 
 function topMarquee(items) {
@@ -403,20 +514,40 @@ function venuePage(g, fm, body) {
   // Related venues (same category, different venue, up to 3)
   const related = GYMS.filter(x => x.category === g.category && x.id !== g.id).slice(0, 3);
 
-  // JSON-LD
-  const jsonLd = {
+  // JSON-LD — rich LocalBusiness + BreadcrumbList graph
+  const lbType = localBusinessType(g.category);
+  const address = parsePostalAddress(fm.address || g.address);
+  // Prefer data.js short form for parsing (frontmatter often contains prose); fall back to fm if data.js empty.
+  let hoursSpec = parseHoursSpec(g.hours);
+  if (!hoursSpec.length) hoursSpec = parseHoursSpec(fm.hours);
+  const sameAs = [g.website, fm.website, fm.social?.facebook ? `https://facebook.com/${fm.social.facebook}` : null, fm.social?.instagram ? `https://instagram.com/${fm.social.instagram}` : null, g.social?.facebook ? `https://facebook.com/${g.social.facebook}` : null, g.social?.instagram ? `https://instagram.com/${g.social.instagram}` : null].filter((v, i, a) => v && a.indexOf(v) === i);
+  const localBusiness = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': lbType.length === 1 ? lbType[0] : lbType,
+    '@id': `${url}#business`,
     name: g.name,
     description: g.description,
-    address: g.address || undefined,
-    telephone: g.phone || undefined,
     url: url,
     image: ogImage,
-    priceRange: g.priceRange || undefined,
-    openingHours: g.hours || undefined,
-    sameAs: [g.website, g.social?.facebook ? `https://facebook.com/${g.social.facebook}` : null, g.social?.instagram ? `https://instagram.com/${g.social.instagram}` : null].filter(Boolean)
+    priceRange: fm.priceRange || g.priceRange || undefined,
+    address: address || undefined,
+    telephone: fm.phone || g.phone || undefined,
+    email: fm.email || undefined,
+    geo: (fm.lat && fm.lng) ? { '@type': 'GeoCoordinates', latitude: Number(fm.lat), longitude: Number(fm.lng) } : undefined,
+    openingHoursSpecification: hoursSpec.length ? hoursSpec : undefined,
+    openingHours: (!hoursSpec.length && (fm.hours || g.hours)) ? (fm.hours || g.hours) : undefined,
+    areaServed: { '@type': 'City', name: 'Pattaya' },
+    sameAs: sameAs.length ? sameAs : undefined
   };
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    ...breadcrumbJsonLd([
+      { label: 'Home', href: '/' },
+      { label: catLabel, href: `/category/${g.category}/` },
+      { label: g.name }
+    ], url)
+  };
+  const jsonLd = [localBusiness, breadcrumbLd];
 
   const bodyHtml = mdToHtml(body);
 
@@ -658,10 +789,12 @@ function categoryPage(cat, venues) {
   };
   const accent = accentColors[cat.key] || 'accent-pink';
 
-  const jsonLd = {
+  const itemList = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: `${cat.label} in Pattaya`,
+    numberOfItems: venues.length,
+    itemListOrder: 'https://schema.org/ItemListOrderDescending',
     itemListElement: venues.map((v, i) => ({
       '@type': 'ListItem',
       position: i + 1,
@@ -669,6 +802,14 @@ function categoryPage(cat, venues) {
       name: v.name
     }))
   };
+  const crumbsLd = {
+    '@context': 'https://schema.org',
+    ...breadcrumbJsonLd([
+      { label: 'Home', href: '/' },
+      { label: cat.label }
+    ], `${SITE}/category/${cat.key}/`)
+  };
+  const jsonLd = [itemList, crumbsLd];
 
   return head({ title, desc, url, jsonLd })
     + topMarquee(TOP_MARQUEE)
@@ -741,7 +882,28 @@ function areaPage(slug, label, venues) {
   const title = `${label} — gyms & sport venues in Pattaya | Pattaya.Gym`;
   const desc = `Every gym, camp, and sport venue in ${label}, Pattaya. ${venues.length} hand-checked entries. No paid placements.`;
 
-  return head({ title, desc, url })
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Sport venues in ${label}`,
+    numberOfItems: venues.length,
+    itemListElement: venues.map((v, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE}/gyms/${v.id}/`,
+      name: v.name
+    }))
+  };
+  const crumbsLd = {
+    '@context': 'https://schema.org',
+    ...breadcrumbJsonLd([
+      { label: 'Home', href: '/' },
+      { label: label }
+    ], url)
+  };
+  const jsonLd = [itemList, crumbsLd];
+
+  return head({ title, desc, url, jsonLd })
     + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([
@@ -794,6 +956,26 @@ function areaPage(slug, label, venues) {
 // ---------- Utility / info page ----------
 function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent, accentClass, lede, bodyHtml, showContactCard = false }) {
   const url = `${SITE}/${slug}/`;
+  // Pick a sensible @type per known slug
+  const pageType = ({ 'about':'AboutPage', 'contact':'ContactPage', 'methodology':'AboutPage', 'press':'WebPage', 'add-your-gym':'WebPage', 'colophon':'AboutPage', 'pattaya-sport-stats':'WebPage', '404':'WebPage' })[slug] || 'WebPage';
+  const webPageLd = {
+    '@context': 'https://schema.org',
+    '@type': pageType,
+    '@id': `${url}#webpage`,
+    url: url,
+    name: title,
+    description: desc,
+    inLanguage: 'en',
+    isPartOf: { '@id': `${SITE}/#website` }
+  };
+  const crumbsLd = {
+    '@context': 'https://schema.org',
+    ...breadcrumbJsonLd([
+      { label: 'Home', href: '/' },
+      { label: eyebrow }
+    ], url)
+  };
+  const utilJsonLd = [webPageLd, crumbsLd];
 
   const contactBlock = showContactCard ? `
 <section class="section">
@@ -829,7 +1011,7 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
   </div>
 </section>` : '';
 
-  return head({ title, desc, url })
+  return head({ title, desc, url, jsonLd: utilJsonLd })
     + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([
