@@ -5,9 +5,10 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "node build.js",
+    "build": "node build-v2.js",
+    "build:legacy": "node build.js",
     "validate": "node validate.js",
-    "watch": "node build.js --watch",
+    "watch": "node build-v2.js --watch",
     "serve": "npx http-server . -p 8080",
     "ui:build": "npm --prefix packages/ui run build",
     "ui:preview": "npm --prefix packages/ui run preview",
