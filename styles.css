@@ -87,27 +87,38 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
 .c-mint { color: var(--mint); text-shadow: var(--glow-mint); }
 .c-red { color: var(--red); text-shadow: var(--glow-red); }
 
-/* ============ TOP MARQUEE ============ */
+/* ============ INFINITE MARQUEE ============ */
 .marquee {
   background: var(--bg);
   border-bottom: 1px solid var(--line);
   overflow: hidden;
   padding: 9px 0;
-  white-space: nowrap;
 }
 .marquee-track {
-  display: inline-flex; gap: 32px; align-items: center;
+  display: flex;
+  width: max-content;
+  animation: marquee 42s linear infinite;
+  will-change: transform;
+}
+.marquee-set {
+  display: flex;
+  gap: 32px;
+  padding-right: 32px;
+  flex-shrink: 0;
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  animation: marquee 38s linear infinite;
   white-space: nowrap;
+  align-items: center;
 }
-.marquee-track > span { flex: 0 0 auto; }
-.marquee-track .star { color: var(--yellow); }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-set > span { flex: 0 0 auto; }
+.marquee-set .star { color: var(--yellow); }
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
 .marquee:hover .marquee-track { animation-play-state: paused; }
 
 /* Bottom marquee variant */
@@ -288,13 +299,12 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
 }
 .hero-h1 .accent-dot {
   display: inline-block;
-  width: 0.55em;
-  height: 0.55em;
+  width: 0.18em;
+  height: 0.18em;
   background: var(--cyan);
-  border-radius: 14%;
+  border-radius: 50%;
   vertical-align: 0.05em;
-  margin-left: 0.04em;
-  margin-right: 0.04em;
+  margin-left: 0.03em;
   box-shadow: var(--glow-cyan);
 }
 .hero-h1 .accent-pink { color: var(--pink); text-shadow: var(--glow-pink); }
