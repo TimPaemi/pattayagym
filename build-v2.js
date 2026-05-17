@@ -394,19 +394,42 @@ function venuePage(g, fm, body) {
 
   const bodyHtml = mdToHtml(body);
 
+  // Prefer frontmatter (rich) over data.js (basic). Fallback chain: fm → g.
+  const v = {
+    address: fm.address || g.address,
+    area: fm.area || g.area,
+    hours: fm.hours || g.hours,
+    priceRange: fm.priceRange || g.priceRange,
+    phone: fm.phone || g.phone,
+    email: fm.email || null,
+    website: fm.website || g.website,
+    mapsUrl: fm.mapsUrl || g.mapsUrl,
+    founded: fm.founded || g.founded,
+    founders: fm.founders || g.founders,
+    currentDirector: fm.currentDirector || null,
+    trainerHeadcount: fm.trainerHeadcount || g.trainerHeadcount,
+    minimumAge: fm.minimumAge || g.minimumAge,
+    languages: fm.languages || g.languages,
+    verified: fm.verified || g.verified,
+    social: fm.social || g.social || {}
+  };
+
   // Build info rows for the data grid (only show populated fields)
   const infoFields = [
-    g.address && { lbl: 'Address', val: g.address, link: g.mapsUrl, color: 'mint' },
-    g.area && { lbl: 'Area', val: g.area, color: 'cyan' },
-    g.hours && { lbl: 'Hours', val: g.hours, color: 'cyan' },
-    g.priceRange && { lbl: 'Price', val: g.priceRange, color: 'yellow' },
-    g.phone && { lbl: 'Phone', val: g.phone, link: 'tel:' + g.phone.replace(/\s+/g,''), color: 'pink' },
-    g.website && { lbl: 'Website', val: g.website.replace(/^https?:\/\//, '').replace(/\/$/, ''), link: g.website, color: 'cyan' },
-    (fm.founded || g.founded) && { lbl: 'Founded', val: fm.founded || g.founded, color: 'yellow' },
-    (fm.trainerHeadcount || g.trainerHeadcount) && { lbl: 'Trainers', val: fm.trainerHeadcount || g.trainerHeadcount, color: 'pink' },
-    (fm.minimumAge || g.minimumAge) && { lbl: 'Min age', val: fm.minimumAge || g.minimumAge, color: 'cyan' },
-    (fm.languages || g.languages) && { lbl: 'Languages', val: Array.isArray(fm.languages || g.languages) ? (fm.languages || g.languages).join(', ') : (fm.languages || g.languages), color: 'mint' },
-    g.verified && { lbl: 'Last verified', val: g.verified, color: 'pink' }
+    v.address && { lbl: 'Address', val: v.address, link: v.mapsUrl, color: 'mint' },
+    v.area && !v.address && { lbl: 'Area', val: v.area, color: 'cyan' },
+    v.hours && { lbl: 'Hours', val: v.hours, color: 'cyan' },
+    v.priceRange && { lbl: 'Price', val: v.priceRange, color: 'yellow' },
+    v.phone && { lbl: 'Phone', val: v.phone, link: 'tel:' + v.phone.replace(/\s+/g,''), color: 'pink' },
+    v.email && { lbl: 'Email', val: v.email, link: 'mailto:' + v.email, color: 'cyan' },
+    v.website && { lbl: 'Website', val: v.website.replace(/^https?:\/\//, '').replace(/\/$/, ''), link: v.website, color: 'cyan' },
+    v.founded && { lbl: 'Founded', val: v.founded, color: 'yellow' },
+    v.founders && { lbl: 'Founders', val: Array.isArray(v.founders) ? v.founders.join(', ') : v.founders, color: 'pink' },
+    v.currentDirector && { lbl: 'Director', val: v.currentDirector, color: 'mint' },
+    v.trainerHeadcount && { lbl: 'Trainers', val: v.trainerHeadcount, color: 'pink' },
+    v.minimumAge && { lbl: 'Min age', val: v.minimumAge, color: 'cyan' },
+    v.languages && { lbl: 'Languages', val: Array.isArray(v.languages) ? v.languages.join(', ') : v.languages, color: 'mint' },
+    v.verified && { lbl: 'Last verified', val: v.verified, color: 'pink' }
   ].filter(Boolean);
 
   return head({ title, desc, url, ogImage, jsonLd })
