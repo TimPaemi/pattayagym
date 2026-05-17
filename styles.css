@@ -283,11 +283,18 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   text-transform: uppercase;
 }
 .hero-h1 .accent-block {
+  color: var(--cyan);
+  text-shadow: var(--glow-cyan);
+}
+.hero-h1 .accent-dot {
   display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
   background: var(--cyan);
-  color: var(--bg);
-  padding: 0 var(--s-3);
-  margin-right: 4px;
+  border-radius: 14%;
+  vertical-align: 0.05em;
+  margin-left: 0.04em;
+  margin-right: 0.04em;
   box-shadow: var(--glow-cyan);
 }
 .hero-h1 .accent-pink { color: var(--pink); text-shadow: var(--glow-pink); }
@@ -729,6 +736,47 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
 .channel-card-arrow {
   position: absolute; top: var(--s-3); right: var(--s-3);
   font-size: 14px; color: var(--muted);
+}
+
+/* ============ PA NETWORK BADGE ============ */
+.pa-network {
+  padding: var(--s-12) var(--pad);
+  text-align: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.pa-network-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(253,224,71,0.05);
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  padding: 10px 22px;
+  border-radius: var(--r-md);
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: var(--s-6);
+}
+.pa-network-h {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(36px, 7vw, 64px);
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  margin: 0 0 var(--s-3);
+  text-transform: uppercase;
+}
+.pa-network-h .accent { color: var(--pink); text-shadow: var(--glow-pink); }
+.pa-network-sub {
+  font-family: var(--font-mono);
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 /* ============ FOOTER ============ */
