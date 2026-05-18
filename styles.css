@@ -1682,6 +1682,34 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   font-weight: 700;
 }
 
+/* Live open/closed pill — JS swaps text + adds .is-open or .is-closed */
+.trust-pill.is-open-status {
+  font-variant-numeric: tabular-nums;
+}
+.trust-pill.is-open-status.is-open {
+  background: rgba(95, 255, 160, 0.12);
+  border-color: rgba(95, 255, 160, 0.40);
+  color: var(--mint);
+  font-weight: 700;
+}
+.trust-pill.is-open-status.is-closed {
+  background: rgba(255, 61, 61, 0.10);
+  border-color: rgba(255, 61, 61, 0.30);
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* Share button — uses .btn .btn-ghost styles already; add active feedback */
+.share-venue-btn {
+  cursor: pointer;
+  transition: all var(--t-fast) var(--easing);
+}
+.share-venue-btn:hover {
+  background: rgba(78, 224, 255, 0.08);
+  border-color: rgba(78, 224, 255, 0.30);
+  color: var(--cyan);
+}
+
 /* Sources block under venue body */
 .venue-sources {
   border-top: 1px solid rgba(255, 255, 255, 0.08);

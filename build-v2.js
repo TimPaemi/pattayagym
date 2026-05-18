@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '408';
+const ASSET_VERSION = '409';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -695,6 +695,7 @@ function venuePage(g, fm, body) {
     ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
     ${g.verified ? `<div class="trust-bar" aria-label="Verification status">
       ${g.featured ? `<span class="trust-pill is-editors-pick" title="Editor's Pick — hand-selected as a top venue in this category">★ Editor's Pick</span>` : ''}
+      ${hoursSpec.length ? `<span class="trust-pill is-open-status" data-hours-spec='${JSON.stringify(hoursSpec).replace(/'/g, '&#39;')}'>● Checking hours…</span>` : ''}
       <span class="trust-pill is-verified" title="Hand-checked by Tim Paemi">★ Verified by Tim · ${esc(g.verified)}</span>
       <span class="trust-pill">100% Hand-checked</span>
       <span class="trust-pill">No paid placement</span>
@@ -707,6 +708,7 @@ function venuePage(g, fm, body) {
       <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary">Email →</a>
       ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">📍 Map</a>` : ''}
       ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Website →</a>` : ''}
+      <button type="button" class="btn btn-ghost share-venue-btn" data-share-title="${esc(g.name)}" data-share-url="${url}">↗ Share</button>
     </div>
   </div>
 </section>
@@ -782,6 +784,104 @@ ${bodyHtml ? `
       }).join('')
     + '</div></div>';
   mount.innerHTML = html;
+})();
+</script>
+<script>
+ (function(){
+  // OPEN-NOW INDICATOR
+  // Reads each .is-open-status pill's data-hours-spec attribute (parsed openingHoursSpecification),
+  // compares against current Pattaya time, and replaces text with "● Open · closes HH:MM" or
+  // "○ Closed · opens HH:MM (Mon/Tue/...)".
+  var DAY_NAMES = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function pattayaNow() {
+    var n = new Date();
+    return new Date(n.getTime() + n.getTimezoneOffset() * 60000 + 7 * 3600000);
+  }
+  function minutesOfDay(hhmm) {
+    var p = String(hhmm).split(':');
+    return parseInt(p[0], 10) * 60 + parseInt(p[1] || '0', 10);
+  }
+  function nextOpening(spec, now) {
+    // Find the next opening time across the next 7 days starting from now
+    var todayDow = DAY_NAMES[now.getDay()];
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+    // Same-day opening still ahead?
+    for (var i = 0; i < spec.length; i++) {
+      if (spec[i].dayOfWeek.indexOf(todayDow) >= 0 && minutesOfDay(spec[i].opens) > nowMin) {
+        return { day: 'today', time: spec[i].opens };
+      }
+    }
+    // Walk forward 1-7 days
+    for (var d = 1; d <= 7; d++) {
+      var future = new Date(now.getTime() + d * 86400000);
+      var futDow = DAY_NAMES[future.getDay()];
+      for (var i = 0; i < spec.length; i++) {
+        if (spec[i].dayOfWeek.indexOf(futDow) >= 0) {
+          return { day: (d === 1 ? 'tomorrow' : futDow), time: spec[i].opens };
+        }
+      }
+    }
+    return null;
+  }
+  function isOpenNow(spec, now) {
+    var dow = DAY_NAMES[now.getDay()];
+    var nowMin = now.getHours() * 60 + now.getMinutes();
+    for (var i = 0; i < spec.length; i++) {
+      var rule = spec[i];
+      if (rule.dayOfWeek.indexOf(dow) === -1) continue;
+      if (minutesOfDay(rule.opens) <= nowMin && nowMin < minutesOfDay(rule.closes)) {
+        return { closes: rule.closes };
+      }
+    }
+    return null;
+  }
+  var pills = document.querySelectorAll('.is-open-status');
+  pills.forEach(function(pill){
+    var raw = pill.getAttribute('data-hours-spec');
+    if (!raw) return;
+    var spec;
+    try { spec = JSON.parse(raw.replace(/&#39;/g, "'")); } catch(e){ return; }
+    if (!Array.isArray(spec) || spec.length === 0) return;
+    var now = pattayaNow();
+    var open = isOpenNow(spec, now);
+    if (open) {
+      pill.textContent = '● Open · closes ' + open.closes;
+      pill.classList.add('is-open');
+    } else {
+      var next = nextOpening(spec, now);
+      if (next) {
+        var label = next.day === 'today' ? 'today' : (next.day === 'tomorrow' ? 'tomorrow' : next.day);
+        pill.textContent = '○ Closed · opens ' + next.time + ' (' + label + ')';
+      } else {
+        pill.textContent = '○ Closed';
+      }
+      pill.classList.add('is-closed');
+    }
+  });
+})();
+</script>
+<script>
+ (function(){
+  // WEB SHARE API
+  var btns = document.querySelectorAll('.share-venue-btn');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var title = btn.getAttribute('data-share-title') || document.title;
+      var url = btn.getAttribute('data-share-url') || window.location.href;
+      if (navigator.share) {
+        navigator.share({ title: title, url: url, text: 'Pattaya gym pick: ' + title }).catch(function(){});
+      } else if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(function(){
+          var orig = btn.textContent;
+          btn.textContent = '✓ Link copied';
+          setTimeout(function(){ btn.textContent = orig; }, 2000);
+        });
+      } else {
+        // Final fallback — prompt
+        window.prompt('Copy link:', url);
+      }
+    });
+  });
 })();
 </script>
 <script>
@@ -1222,6 +1322,24 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
     ], url)
   };
   const utilJsonLd = [webPageLd, crumbsLd];
+  // E-E-A-T: Person schema for Tim on the /about/ page (operator + author of every guide).
+  if (slug === 'about') {
+    utilJsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': `${SITE}/about/#tim-paemi`,
+      name: 'Tim Paemi',
+      jobTitle: 'Operator & founding editor',
+      url: `${SITE}/about/`,
+      worksFor: { '@id': `${SITE}/#organization` },
+      knowsAbout: ['Muay Thai', 'Pattaya', 'Fitness', 'Sport tourism Thailand', 'Local directory editorial'],
+      sameAs: [
+        'https://pattaya-authority.com/',
+        'https://pattaya-restaurant-guide.com/',
+        'https://pattayavisahelp.com/'
+      ]
+    });
+  }
 
   const contactBlock = showContactCard ? `
 <section class="section">
