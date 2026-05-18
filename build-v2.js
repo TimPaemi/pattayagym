@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '410';
+const ASSET_VERSION = '411';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -1618,6 +1618,178 @@ ${contactBlock}
     + footer();
 }
 
+// ---------- Pattaya Sport Stats dashboard body builder ----------
+// Round 15: real interactive-feeling dashboard with server-rendered SVG.
+// No JS, no charting library, no external deps. Pure inline SVG from GYMS data.
+function buildSportStatsBody() {
+  // === Compute stats from data ===
+  const total = GYMS.length;
+  const catCounts = {};
+  for (const g of GYMS) catCounts[g.category] = (catCounts[g.category] || 0) + 1;
+  const catRows = CATEGORIES
+    .map(c => ({ key: c.key, label: c.label, count: catCounts[c.key] || 0 }))
+    .sort((a, b) => b.count - a.count);
+
+  const areaCounts = {};
+  for (const slug of Object.keys(AREA_MAP)) areaCounts[slug] = 0;
+  let unmappedArea = 0;
+  for (const g of GYMS) {
+    const s = areaSlugFor(g.area);
+    if (s) areaCounts[s]++; else unmappedArea++;
+  }
+  const areaRows = Object.keys(AREA_LABELS)
+    .map(s => ({ slug: s, label: AREA_LABELS[s], count: areaCounts[s] }))
+    .sort((a, b) => b.count - a.count);
+
+  const priceCounts = { '฿': 0, '฿฿': 0, '฿฿฿': 0, '฿฿฿฿': 0, '—': 0 };
+  for (const g of GYMS) {
+    const p = g.priceRange || '—';
+    if (priceCounts[p] !== undefined) priceCounts[p]++; else priceCounts['—']++;
+  }
+
+  const today = new Date();
+  let fresh30 = 0, fresh60 = 0, older = 0;
+  for (const g of GYMS) {
+    if (!g.verified) { older++; continue; }
+    const age = Math.round((today.getTime() - new Date(g.verified).getTime()) / 86400000);
+    if (age <= 30) fresh30++;
+    else if (age <= 60) fresh60++;
+    else older++;
+  }
+
+  const phoneCount = GYMS.filter(g => g.phone && g.phone.length > 4).length;
+  const websiteCount = GYMS.filter(g => g.website && g.website.length > 8).length;
+  let geoCount = 0;
+  try {
+    const geoMap = VENUE_GEO || {};
+    geoCount = GYMS.filter(g => geoMap[g.id] && geoMap[g.id].lat).length;
+  } catch (e) { geoCount = 0; }
+  const detailCount = GYMS.filter(g => g.detailFile).length;
+  const sourcesCount = 0; // editorial — would need to parse each MD; leave for now
+
+  // === Chart helpers ===
+  const ACCENT_COLORS = ['#ff2e7e', '#4ee0ff', '#fde047', '#5fffa0', '#ff3d3d', '#a855f7', '#22d3ee', '#f97316', '#eab308', '#ec4899', '#10b981', '#3b82f6', '#8b5cf6', '#f43f5e', '#06b6d4'];
+  function pct(n, d) { return d > 0 ? Math.round((n / d) * 100) : 0; }
+  function bar(value, max, w, color) {
+    const px = Math.max(2, Math.round((value / max) * w));
+    return `<rect x="0" y="0" width="${px}" height="22" rx="3" fill="${color}"/>`;
+  }
+
+  // Horizontal bar chart for categories
+  const catChartMax = Math.max(...catRows.map(r => r.count));
+  const catChartHTML = `
+<svg viewBox="0 0 600 ${catRows.length * 32 + 10}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Venues by sport category" style="width:100%; height:auto; max-width:600px; display:block; margin:0 auto;">
+  ${catRows.map((r, i) => `
+  <g transform="translate(180, ${i * 32 + 5})">
+    <text x="-10" y="16" text-anchor="end" font-family="Inter, sans-serif" font-size="13" fill="#c4c4c4" font-weight="500">${esc(r.label)}</text>
+    ${bar(r.count, catChartMax, 320, ACCENT_COLORS[i % ACCENT_COLORS.length])}
+    <text x="${Math.max(2, Math.round((r.count / catChartMax) * 320)) + 8}" y="16" font-family="Inter, sans-serif" font-size="13" fill="#f5f5f5" font-weight="700">${r.count}</text>
+  </g>`).join('')}
+</svg>`;
+
+  // Horizontal bar chart for areas
+  const areaChartMax = Math.max(...areaRows.map(r => r.count));
+  const areaChartHTML = `
+<svg viewBox="0 0 600 ${areaRows.length * 36 + 10}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Venues by area" style="width:100%; height:auto; max-width:600px; display:block; margin:0 auto;">
+  ${areaRows.map((r, i) => `
+  <g transform="translate(220, ${i * 36 + 5})">
+    <text x="-10" y="18" text-anchor="end" font-family="Inter, sans-serif" font-size="14" fill="#c4c4c4" font-weight="500">${esc(r.label)}</text>
+    <rect x="0" y="2" width="${Math.max(2, Math.round((r.count / areaChartMax) * 280))}" height="26" rx="3" fill="${ACCENT_COLORS[(i + 1) % ACCENT_COLORS.length]}"/>
+    <text x="${Math.max(2, Math.round((r.count / areaChartMax) * 280)) + 8}" y="20" font-family="Inter, sans-serif" font-size="14" fill="#f5f5f5" font-weight="700">${r.count}</text>
+  </g>`).join('')}
+</svg>`;
+
+  // Donut for price tier distribution
+  const priceEntries = Object.entries(priceCounts).filter(([k, v]) => v > 0);
+  const priceTotal = priceEntries.reduce((s, [, v]) => s + v, 0);
+  let priceCumulative = 0;
+  const priceColors = { '฿': '#5fffa0', '฿฿': '#4ee0ff', '฿฿฿': '#fde047', '฿฿฿฿': '#ff2e7e', '—': '#666' };
+  const donutR = 65;
+  const donutCirc = 2 * Math.PI * donutR;
+  const donutPaths = priceEntries.map(([tier, n]) => {
+    const dash = (n / priceTotal) * donutCirc;
+    const offset = priceCumulative;
+    priceCumulative += dash;
+    return `<circle cx="100" cy="100" r="${donutR}" fill="none" stroke="${priceColors[tier]}" stroke-width="26" stroke-dasharray="${dash} ${donutCirc - dash}" stroke-dashoffset="${-offset}" transform="rotate(-90 100 100)" />`;
+  }).join('');
+  const donutHTML = `
+<div style="display:grid; grid-template-columns:1fr; gap:var(--s-4); align-items:center; justify-items:center;">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Venues by price tier" style="width:200px; height:200px;">
+    ${donutPaths}
+    <text x="100" y="98" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="32" font-weight="700" fill="#f5f5f5">${total}</text>
+    <text x="100" y="120" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#888" letter-spacing="2">VENUES</text>
+  </svg>
+  <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr; gap:8px; font-family:var(--font-mono); font-size:12px;">
+    ${priceEntries.map(([tier, n]) => `<li style="display:flex; align-items:center; gap:10px;"><span style="display:inline-block; width:14px; height:14px; border-radius:3px; background:${priceColors[tier]};"></span> <strong style="color:var(--text);">${tier}</strong> <span style="color:var(--muted);">${n} venues · ${pct(n, priceTotal)}%</span></li>`).join('')}
+  </ul>
+</div>`;
+
+  // Schema completeness gauges
+  function gauge(label, n, total, color) {
+    const p = pct(n, total);
+    const dash = (p / 100) * 314.16;
+    return `<div style="text-align:center;">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="width:100px; height:100px;">
+        <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10"/>
+        <circle cx="60" cy="60" r="50" fill="none" stroke="${color}" stroke-width="10" stroke-linecap="round" stroke-dasharray="${dash} 314.16" transform="rotate(-90 60 60)"/>
+        <text x="60" y="58" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="24" font-weight="700" fill="#f5f5f5">${p}%</text>
+        <text x="60" y="76" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#888">${n}/${total}</text>
+      </svg>
+      <p style="font-family:var(--font-mono); font-size:11px; color:var(--muted); margin:8px 0 0; letter-spacing:0.06em; text-transform:uppercase;">${esc(label)}</p>
+    </div>`;
+  }
+
+  return `
+<h2>Top-line</h2>
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:16px; margin:var(--s-5) 0;">
+  <div style="background:rgba(255,46,126,0.08); border:1px solid rgba(255,46,126,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#ff2e7e;">${total}</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Venues hand-checked</div></div>
+  <div style="background:rgba(78,224,255,0.08); border:1px solid rgba(78,224,255,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#4ee0ff;">${CATEGORIES.length}</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Sport categories</div></div>
+  <div style="background:rgba(253,224,71,0.08); border:1px solid rgba(253,224,71,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#fde047;">${Object.keys(AREA_LABELS).length}</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Geographic areas</div></div>
+  <div style="background:rgba(95,255,160,0.08); border:1px solid rgba(95,255,160,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#5fffa0;">0</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Paid placements</div></div>
+</div>
+
+<h2>Venues by sport</h2>
+<p>Every one of the 15 sport categories has at least one venue. Muay Thai dominates by count — Pattaya has one of the world's largest concentrations of authentic Muay Thai gyms, from Sityodtong-lineage traditional camps to Fairtex-style premium resorts.</p>
+${catChartHTML}
+
+<h2>Venues by neighborhood</h2>
+<p>Six distinct Pattaya neighborhoods, each with its own training character. Click any area for a full neighborhood guide.</p>
+${areaChartHTML}
+
+<h2>Price tier distribution</h2>
+<p>Pattaya covers every price band — from ฿100/day Tony's Gym to ฿฿฿฿ Royal Cliff Fitz Club. Strong middle-market: most venues sit at ฿฿ or ฿฿฿ tier.</p>
+${donutHTML}
+
+<h2>Verification freshness</h2>
+<p>Every venue has a <strong>verified date</strong> — the last time we hand-checked hours, prices, and operating status. Target: re-verify the full directory every 30 days. Current breakdown:</p>
+<ul style="font-family:var(--font-mono); font-size:14px;">
+  <li><strong style="color:#5fffa0;">${fresh30}</strong> venues verified within 30 days <span style="color:var(--muted);">(${pct(fresh30, total)}% of directory)</span></li>
+  <li><strong style="color:#fde047;">${fresh60}</strong> venues verified 30-60 days ago</li>
+  <li><strong style="color:#ff3d3d;">${older}</strong> venues older than 60 days <span style="color:var(--muted);">(refresh queue)</span></li>
+</ul>
+
+<h2>Schema completeness</h2>
+<p>Machine-readable completeness — how much of each venue's data is structured. Higher = better Google rich-result eligibility and easier AI search extraction.</p>
+<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:24px; margin:var(--s-5) 0; justify-items:center;">
+  ${gauge('Body content', detailCount, total, '#5fffa0')}
+  ${gauge('Geo coordinates', geoCount, total, '#4ee0ff')}
+  ${gauge('Phone number', phoneCount, total, '#fde047')}
+  ${gauge('Website', websiteCount, total, '#ff2e7e')}
+</div>
+
+<h2>What's <em>not</em> here</h2>
+<p>Pattaya.Gym focuses exclusively on training venues — gyms, camps, courts, courses, studios, dive operators, sport landmarks. We do <strong>not</strong> cover entertainment venues, restaurants, nightlife, or visa services. For those, see our sister sites:</p>
+<ul>
+  <li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> — our flagship nightlife &amp; lifestyle agency</li>
+  <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> — independent restaurant directory</li>
+  <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> — long-stay visa support</li>
+</ul>
+
+<h2>About these numbers</h2>
+<p>This page is regenerated on every site build from <a href="/api/venues.json">live data</a>. The numbers update automatically — no manual edits. Machine-readable equivalent at <a href="/status.json">/status.json</a>. Full methodology at <a href="/methodology/">/methodology/</a>.</p>
+`;
+}
+
 const UTILITY_PAGES = [
   {
     slug: 'about',
@@ -1866,41 +2038,7 @@ const UTILITY_PAGES = [
     accentClass: 'accent-yellow',
     lede: 'The training landscape of Pattaya in numbers. 158 hand-checked venues across 15 sports and 6 distinct areas. One of the world\'s deepest single-city Muay Thai scenes.',
     showContactCard: false,
-    bodyHtml: `
-<h2>Top-line</h2>
-<ul>
-<li><strong>158</strong> verified venues</li>
-<li><strong>15</strong> sport categories</li>
-<li><strong>6</strong> distinct geographic areas</li>
-<li><strong>Weekly</strong> verification cycle</li>
-<li><strong>0</strong> paid placements</li>
-</ul>
-
-<h2>By sport (top categories)</h2>
-<ul>
-<li><strong>Muay Thai:</strong> 38 camps — Pattaya has one of the world's largest concentrations of authentic Muay Thai. From Sityodtong-lineage traditional gyms to Fairtex-style premium resorts.</li>
-<li><strong>Fitness gyms:</strong> 29 venues — from Muscle Factory hardcore bodybuilding to Hilton Pattaya 5-star clubs.</li>
-<li><strong>Golf:</strong> 17 courses — premium Eastern Seaboard golf, from Siam Country Club championship to Bangpra valley layouts.</li>
-<li><strong>Yoga & Pilates:</strong> 14 studios — Ashtanga, Vinyasa, Hot, traditional Hatha. Beachfront classes to Naklua wellness centers.</li>
-<li><strong>Racquet sports:</strong> 12 venues — tennis, padel, badminton, pickleball.</li>
-<li><strong>MMA / BJJ / Combat:</strong> 11 venues — beyond Muay Thai.</li>
-<li><strong>Watersports / Diving:</strong> 11 operators — PADI, SSI, kitesurfing, sailing.</li>
-<li><strong>Swimming:</strong> 9 pools — public, hotel, training pools.</li>
-</ul>
-
-<h2>By area</h2>
-<ul>
-<li><strong>Jomtien Beach</strong> — South Pattaya beachfront, family-friendly</li>
-<li><strong>Naklua / North Pattaya</strong> — quieter, Wong Amat Beach, mid/upper market</li>
-<li><strong>Pratamnak Hill</strong> — premium hill between Pattaya and Jomtien</li>
-<li><strong>Central Pattaya</strong> — the original Pattaya, Beach Road, Walking Street</li>
-<li><strong>East Pattaya / Darkside</strong> — inland east, expat residential, serious gyms</li>
-<li><strong>Sattahip / Far South</strong> — quietest end, toward U-Tapao</li>
-</ul>
-
-<h2>What's not here</h2>
-<p>Pattaya.Gym focuses on training venues — gyms, camps, courts, courses, studios, dive operators. We don't cover entertainment venues, restaurants, nightlife, or visa services. For those, see our sister sites.</p>
-`
+    bodyHtml: buildSportStatsBody()
   },
   {
     slug: '404',
