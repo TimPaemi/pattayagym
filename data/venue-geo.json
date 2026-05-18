@@ -1,0 +1,882 @@
+{
+  "fairtex-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:15.373Z"
+  },
+  "sityodtong-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:17.337Z"
+  },
+  "wko-muay-thai": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:18.954Z"
+  },
+  "kombat-group-thailand": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:20.805Z"
+  },
+  "battle-conquer-gym": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:22.301Z"
+  },
+  "sor-klinmee": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:24.266Z"
+  },
+  "petchrungruang-gym": {
+    "lat": 12.9305323,
+    "lng": 100.8969528,
+    "accuracy": "residential",
+    "osm_type": "way",
+    "osm_id": 146721360,
+    "source": "nominatim",
+    "display": "Sukhumvit Pattaya Soi 42, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Soi Sukhumvit-Pattaya 50, Bang Lamung, Pattaya, Thailand"
+  },
+  "rambaa-somdet-m16": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:27.615Z"
+  },
+  "venum-training-camp": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:29.567Z"
+  },
+  "alfa-bjj-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:31.621Z"
+  },
+  "sanit-sport-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:33.486Z"
+  },
+  "lumpinee-boxing-stadium": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:35.241Z"
+  },
+  "rajadamnern-stadium": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:36.748Z"
+  },
+  "rage-fight-academy": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:38.196Z"
+  },
+  "silk-muay-thai": {
+    "lat": 12.9135434,
+    "lng": 100.877274,
+    "accuracy": "hotel",
+    "osm_type": "node",
+    "osm_id": 13099491868,
+    "source": "nominatim",
+    "display": "LOST PATTAYA LAND, 417/9, Soi Mallo, Pattaya City, Huai Yai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Pattaya, Bang Lamung, Pattaya, Thailand"
+  },
+  "pattaya-thai-boxing-fitness": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:41.712Z"
+  },
+  "fight-evo360": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:43.362Z"
+  },
+  "sitpholek-muay-thai": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:45.229Z"
+  },
+  "crossfit-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:46.776Z"
+  },
+  "tonys-gym": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:48.274Z"
+  },
+  "platinum-fitness": {
+    "lat": 12.9328606,
+    "lng": 100.8971437,
+    "accuracy": "driving_school",
+    "osm_type": "node",
+    "osm_id": 3421135950,
+    "source": "nominatim",
+    "display": "Pattaya Klang Driving School, Pattaya Klang Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Pattaya Klang, Central Pattaya, Pattaya, Thailand"
+  },
+  "coco-fitness": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:51.278Z"
+  },
+  "universe-gym": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:53.239Z"
+  },
+  "fitz-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:55.096Z"
+  },
+  "elite-gym-fitness": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:57.055Z"
+  },
+  "jetts-fitness-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:43:59.016Z"
+  },
+  "anytime-fitness-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:00.868Z"
+  },
+  "fitness-7": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:02.726Z"
+  },
+  "true-fitness-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:04.582Z"
+  },
+  "castra-gym": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:06.043Z"
+  },
+  "sun-fitness-buakao": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:07.448Z"
+  },
+  "cross-pattaya-pratamnak": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:09.314Z"
+  },
+  "manhattan-pattaya-fitness": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:10.768Z"
+  },
+  "yoga-pattaya-studio": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:12.352Z"
+  },
+  "yoga-haus-pattaya": {
+    "lat": 12.9334134,
+    "lng": 100.8948078,
+    "accuracy": "hotel",
+    "osm_type": "way",
+    "osm_id": 1447179055,
+    "source": "nominatim",
+    "display": "HOP INN Central Pattaya, Pattaya Klang Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Pattaya Klang Road, Central Pattaya, Pattaya, Thailand"
+  },
+  "ashtanga-yoga-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:15.987Z"
+  },
+  "one-d-yoga-studio": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:17.556Z"
+  },
+  "nok-yoga-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:18.950Z"
+  },
+  "balance-yoga-studio-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:20.350Z"
+  },
+  "siam-country-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:22.306Z"
+  },
+  "laem-chabang-international": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:24.156Z"
+  },
+  "phoenix-gold-golf": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:25.640Z"
+  },
+  "burapha-golf-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:27.498Z"
+  },
+  "treasure-hill-golf": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:29.558Z"
+  },
+  "chee-chan-golf": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:30.668Z"
+  },
+  "chatrium-golf-soi-dao": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:32.511Z"
+  },
+  "pattana-sports-resort": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:33.621Z"
+  },
+  "st-andrews-2000": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:34.742Z"
+  },
+  "khao-kheow-country-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:35.851Z"
+  },
+  "bangpra-international": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:37.501Z"
+  },
+  "mountain-shadow-country-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:38.611Z"
+  },
+  "pattaya-country-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:40.470Z"
+  },
+  "pattaya-golf-driving-range": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:42.422Z"
+  },
+  "pattaya-tennis-club": {
+    "lat": 12.934694,
+    "lng": 100.8834771,
+    "accuracy": "mall",
+    "osm_type": "way",
+    "osm_id": 151000011,
+    "source": "nominatim",
+    "display": "Central Pattaya, Pattaya Sai Nueng Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
+    "query": "Central Pattaya, Pattaya, Thailand"
+  },
+  "greta-sport-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:45.833Z"
+  },
+  "tara-tennis-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:47.314Z"
+  },
+  "tos-tennis": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:49.163Z"
+  },
+  "siam-bayshore-tennis": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:50.581Z"
+  },
+  "euro-badminton": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:51.994Z"
+  },
+  "diamond-badminton": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:53.947Z"
+  },
+  "pattaya-tennis-badminton-inter-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:55.802Z"
+  },
+  "pickleball-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:57.348Z"
+  },
+  "play-padel-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:44:59.296Z"
+  },
+  "pattaya-sports-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:00.842Z"
+  },
+  "manta-kids-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:02.194Z"
+  },
+  "bounce-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:03.766Z"
+  },
+  "first-serve-sports-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:05.627Z"
+  },
+  "hard-rock-pool": {
+    "lat": 12.9392035,
+    "lng": 100.8854378,
+    "accuracy": "hotel",
+    "osm_type": "way",
+    "osm_id": 1211319342,
+    "source": "nominatim",
+    "display": "Hard Rock Hotel Pattaya, 429, Pattaya Sai Nueng Road, Na Kluea Subdistrict, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Hard Rock Hotel Pattaya, Pattaya, Thailand"
+  },
+  "pattaya-public-pool-naklua": {
+    "lat": 12.9598939,
+    "lng": 100.8938262,
+    "accuracy": "town",
+    "osm_type": "node",
+    "osm_id": 13617000090,
+    "source": "nominatim",
+    "display": "Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
+    "query": "Naklua, Pattaya, Pattaya, Thailand"
+  },
+  "pattaya-public-pool-jomtien": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:11.192Z"
+  },
+  "mermaids-dive": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:13.054Z"
+  },
+  "pattaya-dive-centre": {
+    "lat": 12.9498868,
+    "lng": 100.8860088,
+    "accuracy": "secondary",
+    "osm_type": "way",
+    "osm_id": 350135615,
+    "source": "nominatim",
+    "display": "Pattaya Sai Nueng Road, Na Kluea Subdistrict, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
+    "query": "Beach Road, Pattaya, Pattaya, Thailand"
+  },
+  "seafari-padi-dive": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:16.139Z"
+  },
+  "pattaya-scuba-adventures": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:17.552Z"
+  },
+  "no-limit-divers": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:18.995Z"
+  },
+  "jomtien-dive-center": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:20.859Z"
+  },
+  "clubloongchat-watersports": {
+    "lat": 12.8927793,
+    "lng": 100.8784321,
+    "accuracy": "residential",
+    "osm_type": "way",
+    "osm_id": 345987603,
+    "source": "nominatim",
+    "display": "The Grand AD Jomtien Beach Pattaya, Pattaya City, Huai Yai, Bang Lamung District, Chon Buri Province, Thailand",
+    "query": "Na Jomtien Beach, Pattaya, Thailand"
+  },
+  "kitesurf-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:23.750Z"
+  },
+  "kba-kiteboarding-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:25.629Z"
+  },
+  "wave-pattaya": {
+    "lat": 12.936583,
+    "lng": 100.8859605,
+    "accuracy": "hotel",
+    "osm_type": "way",
+    "osm_id": 1210196040,
+    "source": "nominatim",
+    "display": "Pattaya Beach, Pattaya Klang Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
+    "query": "Pattaya Beach, Pattaya, Thailand"
+  },
+  "deep-climbing-gym": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:29.567Z"
+  },
+  "bean-cow-climbing-gym": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:31.741Z"
+  },
+  "pattaya-hash-house": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:33.594Z"
+  },
+  "pattaya-monkey-hash-house": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:35.463Z"
+  },
+  "af-academy-football": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:37.318Z"
+  },
+  "pattaya-city-football-academy": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:38.724Z"
+  },
+  "planet-football-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:40.584Z"
+  },
+  "rusich-club-football": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:41.957Z"
+  },
+  "regents-international-school-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:43.813Z"
+  },
+  "horseshoe-point-resort": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:45.302Z"
+  },
+  "muscle-factory-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:46.832Z"
+  },
+  "cartoon-network-amazone": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:48.402Z"
+  },
+  "easykart-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:50.566Z"
+  },
+  "fast-pro-football-academy": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:52.435Z"
+  },
+  "golf-hub-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:54.288Z"
+  },
+  "ramayana-water-park": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:56.245Z"
+  },
+  "af-academy-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:58.205Z"
+  },
+  "diana-driving-range": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:45:59.672Z"
+  },
+  "pratumnak-fitness-park": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:01.431Z"
+  },
+  "pattaya-bowl": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:03.488Z"
+  },
+  "pattaya-park-water-fun": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:05.450Z"
+  },
+  "thai-sky-adventures-skydive": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:08.017Z"
+  },
+  "thai-polo-equestrian-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:09.367Z"
+  },
+  "bira-circuit": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:11.319Z"
+  },
+  "jumpz-trampoline-park": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:12.861Z"
+  },
+  "pattaya-shooting-park": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:14.926Z"
+  },
+  "dragon-shooting-club": {
+    "lat": 12.911114,
+    "lng": 100.85642,
+    "accuracy": "hotel",
+    "osm_type": "way",
+    "osm_id": 242794605,
+    "source": "nominatim",
+    "display": "Nova Pattaya - Sea View, 352/55, Phra Tamnak 5, Pattaya City, Huai Yai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Pattaya, Bang Lamung, Chonburi, Pattaya, Thailand"
+  },
+  "thai-wake-park": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:17.853Z"
+  },
+  "pattaya-padel-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:19.258Z"
+  },
+  "sailbreeze-ocean-marina": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:20.828Z"
+  },
+  "royal-varuna-yacht-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:22.901Z"
+  },
+  "ocean-marina-jomtien": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:24.959Z"
+  },
+  "pattaya-cycling-clubs": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:26.386Z"
+  },
+  "pattaya-bike-boat-tours": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:28.015Z"
+  },
+  "pattaya-petanque-club": {
+    "lat": 12.9086581,
+    "lng": 100.9000849,
+    "accuracy": "residential",
+    "osm_type": "way",
+    "osm_id": 181437854,
+    "source": "nominatim",
+    "display": "Soi 3, Permsiri Residence, Pattaya City, Huai Yai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Soi 3, Pattaya, Pattaya, Thailand"
+  },
+  "jomtien-beach-volleyball": {
+    "lat": 12.8772661,
+    "lng": 100.8843719,
+    "accuracy": "beach",
+    "osm_type": "way",
+    "osm_id": 1297672173,
+    "source": "nominatim",
+    "display": "Jomtien Beach, Ban Na Chom Thian, Pattaya City, Huai Yai, Bang Lamung District, Chon Buri Province, Thailand",
+    "query": "Jomtien Beach, Pattaya, Pattaya, Thailand"
+  },
+  "adventure-divers-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:32.625Z"
+  },
+  "tarzan-adventure-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:34.679Z"
+  },
+  "pattaya-lawn-bowls": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:36.549Z"
+  },
+  "max-muay-thai-stadium": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:38.510Z"
+  },
+  "pattaya-kart-speedway": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:40.482Z"
+  },
+  "aquanauts-dive-center": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:41.595Z"
+  },
+  "real-divers-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:43.564Z"
+  },
+  "dive-station-pattaya": {
+    "lat": 12.9288604,
+    "lng": 100.8682968,
+    "accuracy": "ferry_terminal",
+    "osm_type": "node",
+    "osm_id": 1199397671,
+    "source": "nominatim",
+    "display": "Pattaya Bali Hai Pier, Chalermphrakiat Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
+    "query": "Pattaya — Bali Hai Pier, Pattaya, Thailand"
+  },
+  "cho-nateetong": {
+    "lat": 12.9428604,
+    "lng": 100.9005367,
+    "accuracy": "residential",
+    "osm_type": "way",
+    "osm_id": 698449232,
+    "source": "nominatim",
+    "display": "Sukhumvit Pattaya Soi 34, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Sukhumvit Soi 34, Pattaya, Pattaya, Thailand"
+  },
+  "khao-chi-chan-buddha-mountain": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:48.338Z"
+  },
+  "pattaya-marathon": {
+    "lat": 12.9256246,
+    "lng": 100.8716307,
+    "accuracy": "pedestrian",
+    "osm_type": "way",
+    "osm_id": 31981734,
+    "source": "nominatim",
+    "display": "Pattaya Sai Nueng Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
+    "query": "Pattaya Beach Road, Pattaya, Pattaya, Thailand"
+  },
+  "pattaya-triathlon": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:51.589Z"
+  },
+  "pattaya-boxing-world": {
+    "lat": 12.955052,
+    "lng": 100.9087954,
+    "accuracy": "stadium",
+    "osm_type": "way",
+    "osm_id": 323013052,
+    "source": "nominatim",
+    "display": "Pattaya Boxing World, Sukhumvit Road, Na Kluea Subdistrict, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
+    "query": "Pattaya Boxing World, Pattaya, Pattaya, Thailand"
+  },
+  "nongnooch-cultural-show": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:55.514Z"
+  },
+  "greenwood-golf-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:57.488Z"
+  },
+  "pattaya-running-routes": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:46:59.334Z"
+  },
+  "pattaya-beach-public-aerobics": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:00.760Z"
+  },
+  "wong-amat-beach": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:02.824Z"
+  },
+  "big-buddha-hill-wat-phra-yai": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:04.256Z"
+  },
+  "koh-larn-coral-island": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:06.135Z"
+  },
+  "pattaya-archery-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:08.502Z"
+  },
+  "pattaya-cricket-club": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:10.093Z"
+  },
+  "atv-tours-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:12.055Z"
+  },
+  "hilton-pattaya-fitness": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:13.610Z"
+  },
+  "andaz-pattaya-jomtien": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:15.478Z"
+  },
+  "pattaya-marriott-resort": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:17.540Z"
+  },
+  "renaissance-pattaya-resort": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:19.085Z"
+  },
+  "centara-grand-mirage": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:21.245Z"
+  },
+  "cape-dara-resort": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:23.305Z"
+  },
+  "movenpick-siam-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:24.767Z"
+  },
+  "dusit-thani-pattaya": {
+    "lat": 12.9319678,
+    "lng": 100.8796439,
+    "accuracy": "secondary",
+    "osm_type": "way",
+    "osm_id": 350135618,
+    "source": "nominatim",
+    "display": "Pattaya Sai Nueng Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
+    "query": "240/2 Pattaya Beach Road, Pattaya 20150, Pattaya, Thailand"
+  },
+  "flight-of-the-gibbon": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:27.713Z"
+  },
+  "underwater-world-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:29.333Z"
+  },
+  "pattaya-sky-ride-helicopter": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:31.208Z"
+  },
+  "pattaya-panthers-rugby": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:33.067Z"
+  },
+  "sf-strike-bowl": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:34.673Z"
+  },
+  "megabreak-pool-hall": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:36.227Z"
+  },
+  "bangkok-hospital-pattaya-rehab": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:38.288Z"
+  },
+  "pattaya-floating-market": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:39.940Z"
+  },
+  "sanctuary-of-truth": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:42.303Z"
+  },
+  "intercontinental-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:44.268Z"
+  },
+  "holiday-inn-pattaya": {
+    "failed": true,
+    "source": "nominatim",
+    "attempted_at": "2026-05-18T00:47:45.886Z"
+  }
+}
