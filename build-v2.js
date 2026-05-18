@@ -108,14 +108,32 @@ function localBusinessType(category) {
   return map[category] || ['LocalBusiness'];
 }
 
+// Map area context to a fallback Thai postal code when address doesn't include one.
+// Chon Buri Province postal codes:
+//   20150 — Bang Lamung district (covers Pattaya City, Naklua, Pratamnak, Jomtien, Central Pattaya, East Pattaya, Huai Yai)
+//   20250 — Sattahip district (covers Sattahip, Bang Saray, Na Jomtien, U-Tapao, Bang Sare)
+//   20110 — Sriracha district (covers Laem Chabang, Sriracha)
+//   20230 — Bo Win (industrial estates near Sriracha)
+function postalCodeForArea(areaStr) {
+  if (!areaStr) return undefined;
+  const s = String(areaStr).toLowerCase();
+  if (/sattahip|na\s*jomtien|bang\s*saray|bang\s*sare|u-tapao|sattahip|chak\s*ngaeo/i.test(s)) return '20250';
+  if (/sriracha|laem\s*chabang/i.test(s)) return '20110';
+  if (/bo\s*win/i.test(s)) return '20230';
+  // Default to Bang Lamung district (covers all of Pattaya proper)
+  if (/jomtien|naklua|pratamnak|pratumnak|central|walking|wongamat|huai\s*yai|nong\s*prue|mabprachan|darkside|east\s*pattaya|south\s*pattaya|north\s*pattaya|pattaya/i.test(s)) return '20150';
+  return undefined;
+}
+
 // Turn free-text address into a PostalAddress object (best-effort).
-function parsePostalAddress(addr) {
+// `areaContext` is the venue's area string — used for postal-code fallback when address lacks a zip.
+function parsePostalAddress(addr, areaContext) {
   if (!addr) return null;
   const a = String(addr).trim();
   if (!a || /^pattaya[\s—-]/i.test(a) && a.length < 12) return null; // ignore "Pattaya — verify"
   // Pull a postal code if present (5 digits)
   const zipMatch = a.match(/\b(\d{5})\b/);
-  const postalCode = zipMatch ? zipMatch[1] : undefined;
+  const postalCode = zipMatch ? zipMatch[1] : postalCodeForArea(areaContext);
   return {
     '@type': 'PostalAddress',
     streetAddress: a,
@@ -546,7 +564,7 @@ function venuePage(g, fm, body) {
 
   // JSON-LD — rich LocalBusiness + BreadcrumbList graph
   const lbType = localBusinessType(g.category);
-  const address = parsePostalAddress(fm.address || g.address);
+  const address = parsePostalAddress(fm.address || g.address, fm.area || g.area);
   // Prefer data.js short form for parsing (frontmatter often contains prose); fall back to fm if data.js empty.
   let hoursSpec = parseHoursSpec(g.hours);
   if (!hoursSpec.length) hoursSpec = parseHoursSpec(fm.hours);
@@ -718,10 +736,10 @@ ${(g.social && (g.social.facebook || g.social.instagram)) ? `
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> Social</div>
     <div class="channels-grid">
-      ${g.social.facebook ? `<a href="https://facebook.com/${esc(g.social.facebook)}" target="_blank" rel="noopener noreferrer" class="channel-card is-fb"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Facebook</div><h4 class="channel-card-name">${esc(g.social.facebook)}</h4><div class="channel-card-sub">facebook.com</div></a>` : ''}
-      ${g.social.instagram ? `<a href="https://instagram.com/${esc(g.social.instagram)}" target="_blank" rel="noopener noreferrer" class="channel-card is-ig"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Instagram</div><h4 class="channel-card-name">@${esc(g.social.instagram)}</h4><div class="channel-card-sub">instagram.com</div></a>` : ''}
-      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="channel-card is-yt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Website</div><h4 class="channel-card-name">Official site</h4><div class="channel-card-sub">${esc(g.website.replace(/^https?:\/\//, '').replace(/\/.*$/, '').slice(0, 28))}</div></a>` : ''}
-      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="channel-card is-tt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Google Maps</div><h4 class="channel-card-name">View on map</h4><div class="channel-card-sub">Directions · location</div></a>` : ''}
+      ${g.social.facebook ? `<a href="https://facebook.com/${esc(g.social.facebook)}" target="_blank" rel="noopener noreferrer" class="channel-card is-fb"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Facebook</div><h3 class="channel-card-name">${esc(g.social.facebook)}</h3><div class="channel-card-sub">facebook.com</div></a>` : ''}
+      ${g.social.instagram ? `<a href="https://instagram.com/${esc(g.social.instagram)}" target="_blank" rel="noopener noreferrer" class="channel-card is-ig"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Instagram</div><h3 class="channel-card-name">@${esc(g.social.instagram)}</h3><div class="channel-card-sub">instagram.com</div></a>` : ''}
+      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="channel-card is-yt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Website</div><h3 class="channel-card-name">Official site</h3><div class="channel-card-sub">${esc(g.website.replace(/^https?:\/\//, '').replace(/\/.*$/, '').slice(0, 28))}</div></a>` : ''}
+      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="channel-card is-tt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Google Maps</div><h3 class="channel-card-name">View on map</h3><div class="channel-card-sub">Directions · location</div></a>` : ''}
     </div>
   </div>
 </section>
@@ -746,30 +764,30 @@ ${(g.tags && g.tags.length) ? `
       <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="channel-card is-email">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// Email</div>
-        <h4 class="channel-card-name">info@pattaya-gym.com</h4>
+        <h3 class="channel-card-name">info@pattaya-gym.com</h4>
         <div class="channel-card-sub">Reply within 24h</div>
       </a>
       <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="channel-card is-wa">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Fastest</div>
-        <h4 class="channel-card-name">whatsapp</h4>
+        <h3 class="channel-card-name">whatsapp</h4>
         <div class="channel-card-sub">+66 96 728 6999</div>
       </a>
       <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
-        <h4 class="channel-card-name">@timpaemi</h4>
+        <h3 class="channel-card-name">@timpaemi</h4>
         <div class="channel-card-sub">Daily check</div>
       </a>
       ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Direct line</div>
-        <h4 class="channel-card-name">Call gym</h4>
+        <h3 class="channel-card-name">Call gym</h4>
         <div class="channel-card-sub">${esc(g.phone)}</div>
       </a>` : `<a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Our agency</div>
-        <h4 class="channel-card-name">pattaya authority</h4>
+        <h3 class="channel-card-name">pattaya authority</h4>
         <div class="channel-card-sub">pattaya-authority.com</div>
       </a>`}
     </div>
@@ -983,6 +1001,113 @@ function areaPage(slug, label, venues) {
     + footer();
 }
 
+// ---------- Combined category-area landing page ----------
+// URL: /area/<area-slug>/<category-key>/
+// Targets long-tail queries like "Muay Thai in Jomtien Pattaya".
+function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
+  const url = `${SITE}/area/${areaSlug}/${cat.key}/`;
+  const catLabel = cat.label;
+  const title = `${catLabel} in ${areaLabel}, Pattaya | Pattaya.Gym`;
+  const desc = `${venues.length} ${catLabel.toLowerCase()} ${venues.length === 1 ? 'venue' : 'venues'} in ${areaLabel}, Pattaya. Hand-checked. No paid placements. Independent directory.`;
+
+  const accentColors = {
+    'muay-thai':'accent-pink','mma':'accent-pink','bjj':'accent-pink',
+    'fitness':'accent-yellow','crossfit':'accent-yellow',
+    'golf':'accent-mint',
+    'yoga':'accent-cyan','racquet':'accent-cyan','swimming':'accent-cyan','watersports':'accent-cyan',
+    'climbing':'accent-mint','clubs':'accent-mint','kids-youth':'accent-yellow',
+    'equestrian':'accent-mint','adventure':'accent-mint'
+  };
+  const accent = accentColors[cat.key] || 'accent-pink';
+
+  const itemList = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `${catLabel} in ${areaLabel}, Pattaya`,
+    numberOfItems: venues.length,
+    itemListElement: venues.map((v, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${SITE}/gyms/${v.id}/`,
+      name: v.name
+    }))
+  };
+  const crumbsLd = {
+    '@context': 'https://schema.org',
+    ...breadcrumbJsonLd([
+      { label: 'Home', href: '/' },
+      { label: areaLabel, href: `/area/${areaSlug}/` },
+      { label: catLabel }
+    ], url)
+  };
+  const jsonLd = [itemList, crumbsLd];
+
+  return head({ title, desc, url, jsonLd })
+    + topMarquee(TOP_MARQUEE)
+    + nav()
+    + breadcrumb([
+        { label: 'Home', href: '/' },
+        { label: areaLabel, href: `/area/${areaSlug}/` },
+        { label: catLabel }
+      ])
+    + `
+<main id="main">
+
+<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
+  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+    <div class="hero-kicker">// ${esc(catLabel)} · ${esc(areaLabel)} · ${venues.length} venue${venues.length === 1 ? '' : 's'}</div>
+    <h1 class="hero-h1" style="font-size:clamp(36px,8vw,96px); text-align:left;">
+      <span class="${accent}">${esc(catLabel)}</span><br>
+      <span style="color:var(--text-2); font-weight:600;">in ${esc(areaLabel)}.</span>
+    </h1>
+    <p class="hero-lede" style="text-align:left; margin-left:0;">${venues.length} hand-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Updated weekly. The complete local list.</p>
+    <p class="hero-meta" style="text-align:left;">${venues.length} venues · ${esc(areaLabel)} · Pattaya · Updated ${TODAY}</p>
+    <div class="btn-row" style="margin-top:var(--s-5);">
+      <a href="/category/${cat.key}/" class="btn btn-secondary">● All ${esc(catLabel.toLowerCase())} in Pattaya</a>
+      <a href="/area/${areaSlug}/" class="btn btn-tertiary">All ${esc(areaLabel)} venues →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">01</span> The list</div>
+    <h2 class="h-section">Every ${esc(catLabel.toLowerCase())} venue in <span class="${accent}">${esc(areaLabel)}.</span></h2>
+    <div class="numlist">
+      ${venues.map((v, i) => `
+      <a href="/gyms/${v.id}/" class="numcard" style="text-decoration:none; color:inherit;">
+        <div class="numcard-head">
+          <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
+          <div class="numcard-title">// ${esc(v.name)}</div>
+        </div>
+        <p class="numcard-body"><strong style="color:var(--text);">${esc(v.priceRange || '')}</strong>${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
+      </a>
+      `).join('')}
+      ${venues.length === 0 ? `<p style="color:var(--muted);">No ${esc(catLabel.toLowerCase())} venues currently listed in ${esc(areaLabel)}. Try <a href="/category/${cat.key}/" style="color:var(--cyan);">all ${esc(catLabel.toLowerCase())} in Pattaya</a> or <a href="/area/${areaSlug}/" style="color:var(--cyan);">all venues in ${esc(areaLabel)}</a>.</p>` : ''}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:var(--s-4);">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">02</span> Browse more</div>
+    <h2 class="h-section">Looking elsewhere in <span class="accent-cyan">Pattaya?</span></h2>
+    <p class="lede">Browse this sport in other neighborhoods, or explore everything ${esc(areaLabel)} offers.</p>
+    <div class="btn-row">
+      <a href="/category/${cat.key}/" class="btn btn-primary">▶ All ${esc(catLabel)} in Pattaya</a>
+      <a href="/area/${areaSlug}/" class="btn btn-secondary">● All sports in ${esc(areaLabel)}</a>
+      <a href="/search/?cat=${cat.key}" class="btn btn-tertiary">Filter search →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+`
+    + paNetwork()
+    + bottomMarquee(BOTTOM_MARQUEE)
+    + footer();
+}
+
 // ---------- Utility / info page ----------
 function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent, accentClass, lede, bodyHtml, showContactCard = false }) {
   const url = `${SITE}/${slug}/`;
@@ -1016,25 +1141,25 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
       <a href="mailto:info@pattaya-gym.com" class="channel-card is-email">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// Email</div>
-        <h4 class="channel-card-name">info@pattaya-gym.com</h4>
+        <h3 class="channel-card-name">info@pattaya-gym.com</h4>
         <div class="channel-card-sub">Reply within 24h</div>
       </a>
       <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener noreferrer" class="channel-card is-wa">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Fastest</div>
-        <h4 class="channel-card-name">whatsapp</h4>
+        <h3 class="channel-card-name">whatsapp</h4>
         <div class="channel-card-sub">+66 96 728 6999</div>
       </a>
       <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
-        <h4 class="channel-card-name">@timpaemi</h4>
+        <h3 class="channel-card-name">@timpaemi</h4>
         <div class="channel-card-sub">Daily check</div>
       </a>
       <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Our agency</div>
-        <h4 class="channel-card-name">pattaya authority</h4>
+        <h3 class="channel-card-name">pattaya authority</h4>
         <div class="channel-card-sub">pattaya-authority.com</div>
       </a>
     </div>
@@ -1409,6 +1534,13 @@ function generateSitemap() {
     ...Object.keys(AREA_MAP).map(a => `${SITE}/area/${a}/`),
     ...GYMS.map(g => `${SITE}/gyms/${g.id}/`)
   ];
+  // Combined category-area URLs (one per non-empty pairing) — long-tail surface
+  for (const slug of Object.keys(AREA_MAP)) {
+    for (const cat of CATEGORIES) {
+      const has = GYMS.some(g => areaSlugFor(g.area) === slug && g.category === cat.key);
+      if (has) urls.push(`${SITE}/area/${slug}/${cat.key}/`);
+    }
+  }
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}
@@ -1454,6 +1586,21 @@ function main() {
     stats.areas++;
   }
 
+  // Combined category-area landing pages — long-tail SEO targets
+  // URL: /area/<area-slug>/<category-key>/
+  // Only generate when venues exist; otherwise skip (avoid thin empty pages)
+  let categoryAreaCount = 0;
+  for (const slug of Object.keys(AREA_MAP)) {
+    for (const cat of CATEGORIES) {
+      const venues = GYMS.filter(g => areaSlugFor(g.area) === slug && g.category === cat.key);
+      if (venues.length === 0) continue; // skip empty combos
+      const html = categoryAreaPage(slug, AREA_LABELS[slug], cat, venues);
+      writeFile(path.join(ROOT, 'area', slug, cat.key, 'index.html'), html);
+      categoryAreaCount++;
+    }
+  }
+  stats.categoryArea = categoryAreaCount;
+
   // Utility pages (about, contact, methodology, press, add-your-gym, colophon, stats, 404)
   let utilCount = 0;
   for (const pg of UTILITY_PAGES) {
@@ -1470,8 +1617,9 @@ function main() {
   // Sitemap
   generateSitemap();
 
-  console.log(`✓ Built ${stats.venues} venues · ${stats.categories} categories · ${stats.areas} areas · ${stats.utility} info pages`);
-  console.log(`✓ Sitemap: ${GYMS.length + CATEGORIES.length + Object.keys(AREA_MAP).length + 6} URLs`);
+  console.log(`✓ Built ${stats.venues} venues · ${stats.categories} categories · ${stats.areas} areas · ${stats.categoryArea} category-area · ${stats.utility} info pages`);
+  // Sitemap count comes from generateSitemap() — accurate without manual addition
+
 }
 
 main();
