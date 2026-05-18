@@ -38,6 +38,74 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 16, date: '2026-05-18', tag: 'v412',
+    title: 'Real side-by-side /compare/ tool',
+    summary: 'The /compare/ page was the last remaining honest-stub tool from Round 7. Round 16 turns it into a real, fully-functional, client-side comparison tool — pick up to 4 venues, see them side-by-side across 12 attributes, share the URL.',
+    bullets: [
+      '/compare/ now embeds a 158-venue summary JSON and renders a side-by-side comparison table on demand.',
+      'Up to 4 venues compared at once (slots a/b/c/d) with bookmarkable, shareable ?a=&b=&c=&d= URLs.',
+      '12 comparison rows: name · editors-pick · sport · area · price · hours · phone · website · maps · tags · description · verified-date.',
+      '3 preset buttons (premium Muay Thai, hotel gyms, budget camps) for instant exploration.',
+      'Web Share API + clipboard fallback on the Share button.',
+      'rebuild-tool-stubs.js skips /compare/ now that it has its own real builder.',
+      'Asset version bumped 411 → 412.'
+    ]
+  },
+  {
+    n: 15, date: '2026-05-18', tag: 'v411',
+    title: 'Live Pattaya Sport Stats dashboard',
+    summary: '/pattaya-sport-stats/ was ~150 words of static bullets. Now it is a server-rendered SVG dashboard regenerated on every build — proof of breadth and transparency competitors do not have.',
+    bullets: [
+      '4 big stat tiles: venues / categories / areas / paid placements.',
+      'Horizontal bar chart of 15 categories ranked by venue count (15-color accent rotation).',
+      'Horizontal bar chart of 6 neighborhoods ranked by venue count.',
+      'SVG donut chart of price-tier distribution (฿/฿฿/฿฿฿/฿฿฿฿) with legend.',
+      'Verification-freshness breakdown (within 30 / 30-60 / older).',
+      '4 schema-completeness ring gauges (body / geo / phone / website).',
+      'All inline SVG — no JS, no charting library, no external dependencies. Asset version 410 → 411.'
+    ]
+  },
+  {
+    n: 14, date: '2026-05-18', tag: 'v410',
+    title: 'Per-area neighborhood guide depth',
+    summary: 'Codex V3 P1-6 finding closed — every area page now has a real ~2000-word neighborhood guide instead of a sparse venue list. 6 areas covered in editorial depth.',
+    bullets: [
+      'AREA_CONTENT map keyed by area slug: summary, intro, best-for, transport, landmarks, starter picks.',
+      'areaPage() rewritten to render rich, opinionated neighborhood guides above the venue grid.',
+      '6 areas covered: Jomtien, Naklua, Pratamnak, Central Pattaya, East Pattaya, Sattahip.',
+      'Sattahip page went from 104 words to ~2100 words — same uplift across all 6 areas.',
+      'Channel-card h3/h4 markup mismatches from earlier rounds fixed across 5 variants.',
+      'Asset version bumped 409 → 410.'
+    ]
+  },
+  {
+    n: 13, date: '2026-05-18', tag: 'v409',
+    title: 'Open-now indicator + Share + Person schema',
+    summary: 'Live operational signals on every venue page + cleaner social sharing + richer authorship signal for E-E-A-T.',
+    bullets: [
+      'Live "Open now / Closed" pill on every venue page driven by data-hours-spec attribute and visitor local time.',
+      'Recently-verified feed surfaces the freshest hand-checks at the top of the site.',
+      'Web Share API button on every venue page with clipboard fallback for unsupported browsers.',
+      'Person schema for Tim Paemi on /about/ — explicit author entity for E-E-A-T.',
+      'Asset version bumped 408 → 409.'
+    ]
+  },
+  {
+    n: 12, date: '2026-05-18', tag: 'v408',
+    title: 'Community trust + ops tooling',
+    summary: 'Sources, editor-pick badges, recently-viewed memory + machine-readable site state + operational tooling for the long tail.',
+    bullets: [
+      'Per-venue Sources block populated from each venue\'s front-matter for full citation transparency.',
+      '"Spot an error?" mailto link on every venue — explicit invitation to crowdsource corrections.',
+      'Editor\'s Pick trust pill surfaces hand-selected favorites in the trust bar.',
+      'Recently-viewed (localStorage, last 8) at the top of every venue page.',
+      '/status.json — machine-readable site identity, build version, schema completeness, freshness, endpoints, policies.',
+      'scripts/ping-sitemap.js — pings Google + Bing on every push.',
+      'scripts/stale-venues.js — CSV report of venues whose verified date is > 30 days.',
+      'Asset version bumped 407 → 408.'
+    ]
+  },
+  {
     n: 11, date: '2026-05-18', tag: 'v407',
     title: 'Trust + usability polish',
     summary: 'Per-venue verified-by-Tim badge, trust signals row, guide bylines, reading-time estimator, Pattaya local-time widget, print stylesheet, public changelog page (this one), larger footer version badge, /methodology/ cross-links from every ranking surface.',

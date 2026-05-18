@@ -200,21 +200,8 @@ const STUBS = [
       {url: '/category/muay-thai/', title: 'Browse by sport', desc: '15 sports including Muay Thai, fitness, golf, yoga, watersports, climbing, racquet sports.'}
     ]
   },
-  {
-    slug: 'compare',
-    title: 'Compare Pattaya gyms — side by side',
-    desc: 'Side-by-side gym comparison is being rebuilt. For now, browse venues by sport or area, or use the live search to filter by price, hours, and features.',
-    crumb: 'Compare',
-    eyebrow: 'Compare · Coming back',
-    accent: 'accent-yellow',
-    h1: 'Compare <span class="accent-yellow">venues.</span>',
-    intro: 'The side-by-side comparison tool is being rebuilt for V2. Each venue page already shows hours, price, contact, and key features at a glance — so you can open two venue tabs and compare visually.',
-    alts: [
-      {url: '/search/', title: 'Filter by what you need', desc: 'Live search filters venues by price, sport, area, or features so the shortlist is automatic.'},
-      {url: '/category/muay-thai/', title: 'Top picks by sport', desc: 'Each category page ranks the top venues with our editorial picks at the top.'},
-      {url: '/about/', title: 'How we rank venues', desc: 'Read our methodology — no paid placements, hand-checked weekly, independent.'}
-    ]
-  },
+  // NOTE: 'compare' is now built by scripts/build-compare-page.js as a real functional tool.
+  // Do NOT add it back here — that would overwrite the real /compare/ page with a stub.
   {
     slug: 'plan-my-trip',
     title: 'Plan your Pattaya training trip',

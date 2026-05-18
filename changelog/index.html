@@ -10,8 +10,8 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/changelog/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=411" as="style">
-<link rel="stylesheet" href="/styles.css?v=411">
+<link rel="preload" href="/styles.css?v=412" as="style">
+<link rel="stylesheet" href="/styles.css?v=412">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
@@ -41,7 +41,7 @@
 
 <section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
   <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
-    <div class="hero-kicker">// Public changelog · v411 · Updated 2026-05-18</div>
+    <div class="hero-kicker">// Public changelog · v412 · Updated 2026-05-18</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">
       Every <span class="accent-pink">change.</span>
     </h1>
@@ -49,8 +49,8 @@
       Public log of every update shipped to <strong>pattaya-gym.com</strong>. We believe in operational transparency — every round of fixes is documented here with date, version tag, and scope. No silent changes.
     </p>
     <div class="trust-bar">
-      <span class="trust-pill is-verified">★ 11 rounds shipped</span>
-      <span class="trust-pill">Latest: v411 · 2026-05-18</span>
+      <span class="trust-pill is-verified">★ 16 rounds shipped</span>
+      <span class="trust-pill">Latest: v412 · 2026-05-18</span>
       <span class="trust-pill">158/158 venues live</span>
       <a href="/methodology/" class="trust-pill is-link">Methodology →</a>
     </div>
@@ -60,10 +60,85 @@
 <section class="section" style="padding-top:var(--s-4);">
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span> Release history</div>
-    <h2 class="h-section">From <span class="accent-cyan">round 1</span> to <span class="accent-pink">round 11.</span></h2>
+    <h2 class="h-section">From <span class="accent-cyan">round 1</span> to <span class="accent-pink">round 16.</span></h2>
     <p class="lede">All rounds are tagged in git with a <code>main-pre-round&lt;N&gt;</code> rollback point. Most-recent-first.</p>
     <div style="max-width:880px; margin:var(--s-6) 0;">
       
+<article class="changelog-entry" style="border-left:3px solid var(--pink); padding:var(--s-3) 0 var(--s-5) var(--s-5); margin-bottom:var(--s-6);">
+  <header style="margin-bottom:var(--s-3);">
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">
+      <span style="color:var(--cyan);">Round 16</span>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <time datetime="2026-05-18">2026-05-18</time>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <span class="trust-pill" style="display:inline; padding:3px 8px;">v412</span>
+    </div>
+    <h2 style="font-family:var(--font-display); font-size:clamp(20px, 3vw, 28px); font-weight:700; margin:0; color:var(--text);">Real side-by-side /compare/ tool</h2>
+  </header>
+  <p style="color:var(--text-2); margin:0 0 var(--s-3); line-height:1.6;">The /compare/ page was the last remaining honest-stub tool from Round 7. Round 16 turns it into a real, fully-functional, client-side comparison tool — pick up to 4 venues, see them side-by-side across 12 attributes, share the URL.</p>
+  <ul style="color:var(--text-2); padding-left:24px; margin:0; line-height:1.7;"><li>/compare/ now embeds a 158-venue summary JSON and renders a side-by-side comparison table on demand.</li><li>Up to 4 venues compared at once (slots a/b/c/d) with bookmarkable, shareable ?a=&amp;b=&amp;c=&amp;d= URLs.</li><li>12 comparison rows: name · editors-pick · sport · area · price · hours · phone · website · maps · tags · description · verified-date.</li><li>3 preset buttons (premium Muay Thai, hotel gyms, budget camps) for instant exploration.</li><li>Web Share API + clipboard fallback on the Share button.</li><li>rebuild-tool-stubs.js skips /compare/ now that it has its own real builder.</li><li>Asset version bumped 411 → 412.</li></ul>
+</article>
+
+<article class="changelog-entry" style="border-left:3px solid var(--pink); padding:var(--s-3) 0 var(--s-5) var(--s-5); margin-bottom:var(--s-6);">
+  <header style="margin-bottom:var(--s-3);">
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">
+      <span style="color:var(--cyan);">Round 15</span>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <time datetime="2026-05-18">2026-05-18</time>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <span class="trust-pill" style="display:inline; padding:3px 8px;">v411</span>
+    </div>
+    <h2 style="font-family:var(--font-display); font-size:clamp(20px, 3vw, 28px); font-weight:700; margin:0; color:var(--text);">Live Pattaya Sport Stats dashboard</h2>
+  </header>
+  <p style="color:var(--text-2); margin:0 0 var(--s-3); line-height:1.6;">/pattaya-sport-stats/ was ~150 words of static bullets. Now it is a server-rendered SVG dashboard regenerated on every build — proof of breadth and transparency competitors do not have.</p>
+  <ul style="color:var(--text-2); padding-left:24px; margin:0; line-height:1.7;"><li>4 big stat tiles: venues / categories / areas / paid placements.</li><li>Horizontal bar chart of 15 categories ranked by venue count (15-color accent rotation).</li><li>Horizontal bar chart of 6 neighborhoods ranked by venue count.</li><li>SVG donut chart of price-tier distribution (฿/฿฿/฿฿฿/฿฿฿฿) with legend.</li><li>Verification-freshness breakdown (within 30 / 30-60 / older).</li><li>4 schema-completeness ring gauges (body / geo / phone / website).</li><li>All inline SVG — no JS, no charting library, no external dependencies. Asset version 410 → 411.</li></ul>
+</article>
+
+<article class="changelog-entry" style="border-left:3px solid var(--pink); padding:var(--s-3) 0 var(--s-5) var(--s-5); margin-bottom:var(--s-6);">
+  <header style="margin-bottom:var(--s-3);">
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">
+      <span style="color:var(--cyan);">Round 14</span>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <time datetime="2026-05-18">2026-05-18</time>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <span class="trust-pill" style="display:inline; padding:3px 8px;">v410</span>
+    </div>
+    <h2 style="font-family:var(--font-display); font-size:clamp(20px, 3vw, 28px); font-weight:700; margin:0; color:var(--text);">Per-area neighborhood guide depth</h2>
+  </header>
+  <p style="color:var(--text-2); margin:0 0 var(--s-3); line-height:1.6;">Codex V3 P1-6 finding closed — every area page now has a real ~2000-word neighborhood guide instead of a sparse venue list. 6 areas covered in editorial depth.</p>
+  <ul style="color:var(--text-2); padding-left:24px; margin:0; line-height:1.7;"><li>AREA_CONTENT map keyed by area slug: summary, intro, best-for, transport, landmarks, starter picks.</li><li>areaPage() rewritten to render rich, opinionated neighborhood guides above the venue grid.</li><li>6 areas covered: Jomtien, Naklua, Pratamnak, Central Pattaya, East Pattaya, Sattahip.</li><li>Sattahip page went from 104 words to ~2100 words — same uplift across all 6 areas.</li><li>Channel-card h3/h4 markup mismatches from earlier rounds fixed across 5 variants.</li><li>Asset version bumped 409 → 410.</li></ul>
+</article>
+
+<article class="changelog-entry" style="border-left:3px solid var(--pink); padding:var(--s-3) 0 var(--s-5) var(--s-5); margin-bottom:var(--s-6);">
+  <header style="margin-bottom:var(--s-3);">
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">
+      <span style="color:var(--cyan);">Round 13</span>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <time datetime="2026-05-18">2026-05-18</time>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <span class="trust-pill" style="display:inline; padding:3px 8px;">v409</span>
+    </div>
+    <h2 style="font-family:var(--font-display); font-size:clamp(20px, 3vw, 28px); font-weight:700; margin:0; color:var(--text);">Open-now indicator + Share + Person schema</h2>
+  </header>
+  <p style="color:var(--text-2); margin:0 0 var(--s-3); line-height:1.6;">Live operational signals on every venue page + cleaner social sharing + richer authorship signal for E-E-A-T.</p>
+  <ul style="color:var(--text-2); padding-left:24px; margin:0; line-height:1.7;"><li>Live &quot;Open now / Closed&quot; pill on every venue page driven by data-hours-spec attribute and visitor local time.</li><li>Recently-verified feed surfaces the freshest hand-checks at the top of the site.</li><li>Web Share API button on every venue page with clipboard fallback for unsupported browsers.</li><li>Person schema for Tim Paemi on /about/ — explicit author entity for E-E-A-T.</li><li>Asset version bumped 408 → 409.</li></ul>
+</article>
+
+<article class="changelog-entry" style="border-left:3px solid var(--pink); padding:var(--s-3) 0 var(--s-5) var(--s-5); margin-bottom:var(--s-6);">
+  <header style="margin-bottom:var(--s-3);">
+    <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">
+      <span style="color:var(--cyan);">Round 12</span>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <time datetime="2026-05-18">2026-05-18</time>
+      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <span class="trust-pill" style="display:inline; padding:3px 8px;">v408</span>
+    </div>
+    <h2 style="font-family:var(--font-display); font-size:clamp(20px, 3vw, 28px); font-weight:700; margin:0; color:var(--text);">Community trust + ops tooling</h2>
+  </header>
+  <p style="color:var(--text-2); margin:0 0 var(--s-3); line-height:1.6;">Sources, editor-pick badges, recently-viewed memory + machine-readable site state + operational tooling for the long tail.</p>
+  <ul style="color:var(--text-2); padding-left:24px; margin:0; line-height:1.7;"><li>Per-venue Sources block populated from each venue&#39;s front-matter for full citation transparency.</li><li>&quot;Spot an error?&quot; mailto link on every venue — explicit invitation to crowdsource corrections.</li><li>Editor&#39;s Pick trust pill surfaces hand-selected favorites in the trust bar.</li><li>Recently-viewed (localStorage, last 8) at the top of every venue page.</li><li>/status.json — machine-readable site identity, build version, schema completeness, freshness, endpoints, policies.</li><li>scripts/ping-sitemap.js — pings Google + Bing on every push.</li><li>scripts/stale-venues.js — CSV report of venues whose verified date is &gt; 30 days.</li><li>Asset version bumped 407 → 408.</li></ul>
+</article>
+
 <article class="changelog-entry" style="border-left:3px solid var(--pink); padding:var(--s-3) 0 var(--s-5) var(--s-5); margin-bottom:var(--s-6);">
   <header style="margin-bottom:var(--s-3);">
     <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">
@@ -243,7 +318,7 @@
 </section>
 
 </main>
-<section class="pa-network"><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section><div class="marquee marquee-bottom" aria-hidden="true"><div class="marquee-track"><div class="marquee-set"><span>★ PATTAYA VILLA</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>100% HAND-CHECKED</span><span class="star">·</span><span>EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>★ LIVE 158 VENUES</span><span class="star">·</span><span>UPDATED WEEKLY</span><span class="star">·</span></div><div class="marquee-set" aria-hidden="true"><span>★ PATTAYA VILLA</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>100% HAND-CHECKED</span><span class="star">·</span><span>EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>★ LIVE 158 VENUES</span><span class="star">·</span><span>UPDATED WEEKLY</span><span class="star">·</span></div></div></div><footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p style="font-size:13px; color:var(--muted); margin:var(--s-4) 0 0;">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built 2026-05-18 16:20 UTC · <a href="/changelog/">v411</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+<section class="pa-network"><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section><div class="marquee marquee-bottom" aria-hidden="true"><div class="marquee-track"><div class="marquee-set"><span>★ PATTAYA VILLA</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>100% HAND-CHECKED</span><span class="star">·</span><span>EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>★ LIVE 158 VENUES</span><span class="star">·</span><span>UPDATED WEEKLY</span><span class="star">·</span></div><div class="marquee-set" aria-hidden="true"><span>★ PATTAYA VILLA</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>100% HAND-CHECKED</span><span class="star">·</span><span>EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>★ LIVE 158 VENUES</span><span class="star">·</span><span>UPDATED WEEKLY</span><span class="star">·</span></div></div></div><footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p style="font-size:13px; color:var(--muted); margin:var(--s-4) 0 0;">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built 2026-05-18 16:45 UTC · <a href="/changelog/">v412</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script>
