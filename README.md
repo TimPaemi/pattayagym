@@ -1,162 +1,139 @@
 # pattaya-gym.com
 
-`pattaya-gym.com` is a static directory for gyms, Muay Thai camps, sport clubs, dive operators, golf courses, kids' academies, hotel fitness clubs, sports medicine venues, and sport-related landmarks around Pattaya, Thailand.
+`pattaya-gym.com` is a 158-venue independent directory for gyms, Muay Thai camps, fitness clubs, golf courses, yoga studios, dive operators, racquet sports, kids' academies, hotel sport facilities, and sport-related landmarks across Pattaya, Thailand.
 
-The site is content-first: every venue has a stable URL, a data record, a Markdown source page, generated schema, internal links, social metadata, and sitemap coverage.
+The site is content-first: every venue has a stable URL, a data record in `data.js`, a Markdown body in `venues/*.md`, schema.org structured data, internal links, social metadata, and full sitemap coverage. No paid placements. Hand-checked weekly.
+
+Operated by **TimPaemi Co., Ltd.** as one of four sister directories (Pattaya Authority, Pattaya Restaurant Guide, Pattaya Visa Help, Pattaya.Gym).
 
 ## Tech Stack
 
-- Static HTML, CSS, and JavaScript. No React, Next.js, Vite, or bundled frontend framework.
-- Custom Node.js build chain: `build.js` -> `build-extras.js` -> `build-discovery.js`.
-- Source data in `data.js` and `venues/*.md`.
-- Generated output committed to the repo for Cloudflare Pages.
-- Hosted on Cloudflare Pages from GitHub repo `TimPaemi/pattayagym`, branch `main`.
+- Static HTML, CSS, vanilla JavaScript. No bundler, no framework.
+- Node.js build chain — single canonical generator: **`build-v2.js`**.
+- Source data in `data.js` (158 venues + 15 categories + 6 areas) and `venues/*.md`.
+- Geocoded coordinates cached in `data/venue-geo.json` (Nominatim/OSM).
+- Output is committed to the repo and deployed via Cloudflare Pages.
+- Hosted on Cloudflare Pages from `TimPaemi/pattayagym`, branch `main`.
+- Asset version is bumped via a single constant `ASSET_VERSION` in `build-v2.js`.
 
 ## Local Setup
 
-Install Node.js 22 or newer. Then run:
+Install Node.js 22 or newer. Then:
 
 ```cmd
 npm install
-npm run validate
 npm run build
 npm run serve
 ```
 
 Open `http://localhost:8080/`.
 
-If dependencies are not installed yet and you only need a quick static preview, this also works:
-
-```cmd
-python -m http.server 8080
-```
-
 ## NPM Scripts
 
-- `npm run validate` - runs `node validate.js` against `data.js` and `venues/*.md`.
-- `npm run build` - validates, generates venue pages, then chains extras and discovery pages.
-- `npm run watch` - reruns the build when `data.js`, `venues/*.md`, or build scripts change.
-- `npm run serve` - serves the repo at `http://localhost:8080/`.
-- `npm run html:validate` - runs the basic CI HTML sample validator.
+- `npm run build` → `node build-v2.js`. Regenerates 158 venue pages, 15 category pages, 6 area pages, ~80 combined category-area pages, 8 utility pages, sitemap.xml.
+- `npm run build:legacy` → `node build.js`. The pre-V2 build chain. Kept for emergency rollback only.
+- `npm run validate` → `node validate.js`. Pre-build structural validation of `data.js` and `venues/*.md`.
+- `npm run watch` → re-runs build-v2 on file changes.
+- `npm run serve` → `npx http-server . -p 8080`.
+- `npm run html:validate` → `npx html-validate` against the page sample.
 
 ## File Map
 
-- `index.html` - static homepage shell.
-- `data.js` - `GYMS` venue records and `CATEGORIES`.
-- `venues/<id>.md` - long-form venue source pages with YAML frontmatter.
-- `build.js` - venue page generator, sitemap base, validation gate, cleanup, watch mode.
-- `build-extras.js` - category pages, map, about, 404, robots, RSS feeds.
-- `build-discovery.js` - area pages, guides, search, add-your-gym, methodology, stats, contact, press, favorites, planning tools.
-- `styles.css` - global site styles.
-- `venue.css` - generated-page and venue-page styles.
-- `app.js` - homepage directory, search, featured venues, reviews.
-- `share.js`, `compare.js`, `favorites.js`, `recent.js`, `shortcuts.js` - client-side utilities.
-- `og-image.png`, `og/*.png` - root and per-venue Open Graph images.
-- `_headers`, `_redirects` - Cloudflare Pages headers and redirects.
-- `WORK_LOG_CODEX.md` - implementation log and verification notes.
-- `CONTENT_AUDIT_2026-04-29.md` - content audit and manual fact-check checklist.
+### Source
+
+- `index.html` — homepage (hand-maintained, not generated; V2 design)
+- `data.js` — `GYMS` + `CATEGORIES` records
+- `venues/<id>.md` — long-form venue source with YAML frontmatter
+- `data/venue-geo.json` — lat/lng cache populated by `GEOCODE_VENUES.cmd`
+- `styles.css` — V2 stylesheet (black bg, multi-color neon)
+- `_headers`, `_redirects` — Cloudflare Pages config
+
+### Builder + scripts
+
+- `build-v2.js` — canonical generator
+- `search-page.js` — client-side search for `/search/`
+- `scripts/verify-deploy.js` — pre-push integrity check (HTML tail, NUL bytes, CSS braces, CSP hash coverage)
+- `scripts/geocode-venues.js` — one-time Nominatim geocoder; populates `data/venue-geo.json`
+- `scripts/rebuild-tool-stubs.js` — rebuilds `/map/`, `/compare/`, `/plan-my-trip/`, `/find-my-coach/`, `/favorites/` as honest V2 static stubs
+- `scripts/inject-guide-schema.js` — injects Article + FAQPage JSON-LD into the 17 guide pages
+- `scripts/bump-legacy-assets.js` — syncs the 23 legacy-migrated pages (guides + tools) to current ASSET_VERSION
+
+### Generated (output, committed)
+
+- `gyms/<id>/index.html` — 158 venue pages
+- `category/<key>/index.html` — 15 category pages
+- `area/<slug>/index.html` — 6 area pages
+- `area/<slug>/<category>/index.html` — ~80 combined area-category long-tail pages
+- `about/`, `contact/`, `methodology/`, `press/`, `add-your-gym/`, `colophon/`, `pattaya-sport-stats/`, `404.html` — utility pages
+- `guides/<slug>/index.html` — 17 long-form guide pages (chrome-wrapped from legacy)
+- `sitemap.xml` — 285+ URLs with `<priority>` and `<changefreq>`
+- `og/<id>.png` — per-venue 1200×630 OG images
+
+### Deploy automation
+
+- `PUSH_ROUND<N>.cmd` — each round of fixes has its own .cmd. Latest is the one to run.
+- `GEOCODE_VENUES.cmd` — runs the one-time Nominatim geocoder (~3 min for 158 venues)
 
 ## Adding A Venue
 
-1. Create `venues/<id>.md`.
-2. Add a matching object to `GYMS` in `data.js`.
-3. Keep the `id` identical in the filename, frontmatter, and data record.
-4. Use an existing venue page as the structure model.
-5. Run:
+1. Create `venues/<id>.md` with YAML frontmatter (see existing venues for structure).
+2. Add a matching object to `GYMS` in `data.js`. Keep `id` identical across filename, frontmatter, and data record.
+3. Set `detailFile: "venues/<id>.md"` in the data record so the body content links.
+4. Run `node build-v2.js` and `node scripts/verify-deploy.js` to confirm clean output.
+5. (Optional but recommended) Run `node scripts/geocode-venues.js` so the new venue gets lat/lng added to its LocalBusiness schema.
+6. Commit source AND generated output together.
 
-```cmd
-npm run validate
-npm run build
-```
+**Do not rename existing venue IDs, category keys, area slugs, or guide slugs without a 301 redirect plan.** URLs are indexed; renames cost crawl equity.
 
-6. Spot-check `gyms/<id>/index.html`.
-7. Commit the source and generated output together.
+## Deployment Workflow
 
-Do not rename existing venue IDs, category keys, area slugs, or guide slugs. Those URLs are indexed and must remain stable.
+Each fix round uses a `PUSH_ROUND<N>.cmd` script. The pattern is:
 
-## Validation
+1. Cleanup `.git/index.lock`
+2. Confirm branch is `redesign-2026`
+3. `node --check` syntax on every JS file
+4. Run `node build-v2.js` (full regeneration)
+5. Run helper scripts (`bump-legacy-assets.js`, `rebuild-tool-stubs.js`, `inject-guide-schema.js`)
+6. Run `node scripts/verify-deploy.js` — **hard gate** that fails fast on truncation, NUL bytes, brace imbalance, or missing CSP hashes
+7. `git commit` with detailed multi-line message
+8. `git push origin redesign-2026`
+9. Tag `main-pre-roundN` rollback point at current `origin/main`
+10. `git push origin redesign-2026:main` — refspec push (avoids the `checkout main` self-destruct that earlier rounds hit)
 
-`validate.js` fails the build for structural data errors:
+Production deploys automatically when `main` updates on GitHub.
 
-- Missing `data.js` or `venues/`.
-- Duplicate venue IDs or category keys.
-- Missing required venue fields: `id`, `name`, `category`, `area`, `verified`.
-- Markdown frontmatter missing required fields.
-- Filename/frontmatter ID mismatch.
-- Unknown category keys.
-- Data records without Markdown pages, or Markdown pages without data records.
+### Cloudflare cache behavior
 
-It also reports warnings for missing optional fields and source wording differences. Warnings are intentionally non-blocking because many existing venue pages use richer editorial wording in Markdown than in the compact data record.
+`_headers` uses `Cache-Control: public, max-age=3600, must-revalidate` (NOT `immutable`) on CSS/JS so version bumps via `?v=` actually invalidate the edge cache. If you ever need to force a refresh anyway: Cloudflare dashboard → Caching → Configuration → Purge Everything.
 
-## Build Behaviour
+## SEO + Schema
 
-`node build.js` is intended to be idempotent. It:
+- Sitemap: `/sitemap.xml` (285+ URLs, priority + changefreq emitted per URL)
+- Robots: `/robots.txt` — allows all major search + AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
+- Per-venue: `LocalBusiness` + subtype (`SportsActivityLocation` / `ExerciseGym` / `HealthClub` / `GolfCourse` / `SportsClub`) + `BreadcrumbList` + (where data exists) `geo`, `openingHoursSpecification`, `PostalAddress`, `telephone`, `sameAs`
+- Homepage: `WebSite` + `Organization` + `SearchAction`
+- Category/area pages: `ItemList` + `BreadcrumbList`
+- Combined category-area pages: `ItemList` + 3-level `BreadcrumbList`
+- Guides: `Article` + (where Q/A heading patterns exist) `FAQPage`
+- Utility: `WebPage` / `AboutPage` / `ContactPage` + `BreadcrumbList`
 
-- Runs validation first.
-- Removes stale generated venue/category/area/guide/feed outputs that no longer match source data.
-- Generates 158 venue pages from Markdown.
-- Writes `sitemap.xml`.
-- Runs extras and discovery generation.
-- Fails with a non-zero exit code if any stage throws.
+Total: 400+ JSON-LD blocks, 0 parse errors.
 
-Expected successful build line:
+## CSP
 
-```text
-Generated 158 venue pages (158 deep + 0 stubs)
-```
-
-## Deployment
-
-Push to `main`. Cloudflare Pages deploys automatically.
-
-After a deploy, check:
-
-- `https://pattaya-gym.com/`
-- `https://pattaya-gym.com/sitemap.xml`
-- `https://pattaya-gym.com/feed.xml`
-- A representative venue page, category page, and guide page.
-
-`_redirects` contains the host-specific `www.pattaya-gym.com` to `pattaya-gym.com` redirect. Keep it host-specific to avoid an apex redirect loop.
-
-## CI
-
-GitHub Actions runs on PRs and pushes to `main`:
-
-- `npm install --ignore-scripts`
-- `npm run validate`
-- `npm run build`
-- `npm run html:validate`
-- Lighthouse CI against homepage, Fairtex venue page, Muay Thai category, and search.
-
-Lighthouse CI uploads reports as workflow artifacts and comments temporary report links on pull requests.
-
-## SEO And Search
-
-- Sitemap: `https://pattaya-gym.com/sitemap.xml`
-- Robots: `https://pattaya-gym.com/robots.txt`
-- RSS: `https://pattaya-gym.com/feed.xml`
-- Category RSS: `https://pattaya-gym.com/feed/<category>.xml`
-- Google Search Console verification meta tag: not configured in this repo yet.
-- Bing Webmaster Tools verification meta tag: not configured in this repo yet.
-
-Submit the sitemap manually after major deploys until Search Console/Bing automation is configured.
+`_headers` Content-Security-Policy restricts inline scripts to specific SHA-256 hashes. The `scripts/verify-deploy.js` guard computes hashes of every inline `<script>` on every shipped HTML and fails the push if any are missing from the CSP allow-list. This prevents the "CSP blocks the production script" trap.
 
 ## Analytics
 
-All pages include Plausible for `pattaya-gym.com`. Analytics records once the domain exists in the Plausible account.
+Google Analytics (`G-F5F6KD3XFZ`) on every page. Cloudflare Web Analytics also active via Cloudflare Pages auto-inject. No tracking cookies otherwise.
 
-## Social Images
+## Style + Editorial
 
-Run this after changing venue names, categories, or adding venues:
+- `EDITORIAL_STYLE_GUIDE.md` — voice, venue structure, spelling, source standards
+- `SCHEMA_REFERENCE.md` — category-to-schema-type mapping
+- `CONTRIBUTING.md` — before-you-edit checklist
+- Pratamnak / Pratumnak: both spellings are intentional. Pratumnak in official venue names, Pratamnak in prose.
 
-```cmd
-powershell -ExecutionPolicy Bypass -File scripts\generate-og-images.ps1
-```
+## Status
 
-It creates `og-image.png` plus one `og/<venue-id>.png` image per venue.
-
-## Style And Editorial References
-
-- Use `EDITORIAL_STYLE_GUIDE.md` for voice, venue structure, British-English spelling, source standards, and cross-linking rules.
-- Use `SCHEMA_REFERENCE.md` for structured-data rules and category-to-schema mapping.
-- Use `CONTRIBUTING.md` before making broad edits.
+Site is live at `https://pattaya-gym.com/`. Eight rounds of post-V2 fixes shipped through `2026-05-17`. Latest audit: `AUDIT_NUCLEAR_V3.md`. See `NEXT_STEPS.md` for the off-page playbook (Google Search Console, Google Business Profile, backlink outreach, content expansion).
