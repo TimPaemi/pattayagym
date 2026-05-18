@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '413';
+const ASSET_VERSION = '414';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -326,9 +326,9 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <meta name="color-scheme" content="dark">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
+<link rel="preload" href="/fonts/inter-400.woff2?v=414" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=414" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${ogImage}">
@@ -394,7 +394,7 @@ function nav() {
 
 function paNetwork() {
   return `<section class="pa-network">
-  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
+  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link">
     <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
   </a>
   <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
@@ -432,7 +432,7 @@ function footer() {
     <div>
       <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
       <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
-      <p style="font-size:13px; color:var(--muted); margin:var(--s-4) 0 0;">— Tim &amp; Paemi, founders</p>
+      <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
       <div class="footer-meta">
         TimPaemi Co., Ltd.<br>
         Pattaya City, Bang Lamung District<br>
@@ -503,11 +503,11 @@ function breadcrumb(items) {
   // items: [{label, href}], last has no href
   const parts = items.map((it, i) => {
     const isLast = i === items.length - 1;
-    if (isLast) return `<span style="color:var(--text); font-weight:600;">${esc(it.label)}</span>`;
-    return `<a href="${it.href}" style="color:var(--muted);">${esc(it.label)}</a>`;
+    if (isLast) return `<span class="u-text-bold">${esc(it.label)}</span>`;
+    return `<a href="${it.href}" class="u-muted">${esc(it.label)}</a>`;
   });
   return `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
-  ${parts.join(' <span style="color:var(--hint); margin:0 8px;">/</span> ')}
+  ${parts.join(' <span class="u-crumb-sep">/</span> ')}
 </nav>`;
 }
 
@@ -651,10 +651,10 @@ function venuePage(g, fm, body) {
     + `
 <main id="main">
 
-<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+<section class="hero u-pt-10-pb-8">
+  <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// ${esc(catLabel)}${g.area ? ' · ' + esc(g.area.split(/[—\/,]/)[0].trim()) : ''}${g.priceRange ? ' · ' + esc(g.priceRange) : ''}</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,9vw,100px); text-align:left;">
+    <h1 class="hero-h1 u-h-fluid">
       ${firstWords ? esc(firstWords) + '<br>' : ''}<span class="${accent.class}">${esc(lastWord)}.</span>
     </h1>
     ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
@@ -666,8 +666,8 @@ function venuePage(g, fm, body) {
       <span class="trust-pill">No paid placement</span>
       <a href="/methodology/" class="trust-pill is-link" title="How we rank venues">How we rank →</a>
     </div>` : ''}
-    ${g.description ? `<p class="hero-lede" style="text-align:left; margin-left:0; margin-right:0; margin-top:var(--s-5); font-size:clamp(16px,2vw,19px);">${esc(g.description)}</p>` : ''}
-    <div class="btn-row" style="justify-content:flex-start; margin-top:var(--s-6);">
+    ${g.description ? `<p class="hero-lede u-lede-h">${esc(g.description)}</p>` : ''}
+    <div class="btn-row u-btn-row-left">
       ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
       <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">● WhatsApp us</a>
       <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary">Email →</a>
@@ -679,7 +679,7 @@ function venuePage(g, fm, body) {
 </section>
 
 ${infoFields.length ? `
-<section class="section" style="padding-top:var(--s-4); padding-bottom:var(--s-8);">
+<section class="section u-pt-4-pb-8">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> Venue info</div>
     <div style="display:grid; grid-template-columns:1fr; gap:0; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--surface);">
@@ -687,7 +687,7 @@ ${infoFields.length ? `
       <div style="display:grid; grid-template-columns:130px 1fr; gap:var(--s-4); padding:var(--s-4) var(--s-5);${i < infoFields.length-1 ? ' border-bottom:1px solid var(--line);' : ''}">
         <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); font-weight:600; letter-spacing:0.10em; text-transform:uppercase;">${esc(f.lbl)}</div>
         <div style="font-size:14px; color:var(--text); font-weight:500; line-height:1.5;${f.color === 'pink' ? ' color:var(--pink);' : ''}${f.color === 'cyan' ? ' color:var(--cyan);' : ''}${f.color === 'mint' ? ' color:var(--mint);' : ''}${f.color === 'yellow' ? ' color:var(--yellow);' : ''}">
-          ${f.link ? `<a href="${esc(f.link)}"${f.link.startsWith('http') ? ' target="_blank" rel="noopener noreferrer"' : ''} style="color:inherit; text-decoration:underline; text-decoration-color:rgba(255,255,255,0.2); text-underline-offset:3px;">${esc(f.val)}</a>` : esc(f.val)}
+          ${f.link ? `<a href="${esc(f.link)}"${f.link.startsWith('http') ? ' target="_blank" rel="noopener noreferrer"' : ''} class="u-deemphasized">${esc(f.val)}</a>` : esc(f.val)}
         </div>
       </div>
       `).join('')}
@@ -697,21 +697,21 @@ ${infoFields.length ? `
 ` : ''}
 
 ${bodyHtml ? `
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> About this venue</div>
-    <article class="venue-body" id="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
+    <article class="venue-body u-prose" id="venue-body">
       ${bodyHtml}
     </article>
     ${Array.isArray(fm.sources) && fm.sources.length ? `
-    <div class="venue-sources" style="max-width:760px; margin:var(--s-8) 0 0;">
-      <div class="eyebrow" style="margin-bottom:var(--s-3);"><span class="num">★</span> Sources we checked</div>
-      <p style="color:var(--muted); font-size:13px; margin:0 0 var(--s-3);">Every claim on this page is verified against the venue's own sources. If something looks wrong, <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inaccurate info: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I noticed the following on /gyms/' + g.id + '/ that needs updating:\\n\\n')}" style="color:var(--cyan);">tell us</a> and we'll re-check as fast as we can.</p>
+    <div class="venue-sources u-max-760-mt-8">
+      <div class="eyebrow u-mb-3"><span class="num">★</span> Sources we checked</div>
+      <p class="u-info-card">Every claim on this page is verified against the venue's own sources. If something looks wrong, <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inaccurate info: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I noticed the following on /gyms/' + g.id + '/ that needs updating:\\n\\n')}" class="u-cyan">tell us</a> and we'll re-check as fast as we can.</p>
       <ul class="venue-source-list">
         ${fm.sources.map(s => `<li><a href="${esc(s)}" target="_blank" rel="noopener noreferrer">${esc(s.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></li>`).join('')}
       </ul>
     </div>` : ''}
-    <div class="venue-report-info" style="max-width:760px; margin:var(--s-6) 0 0;">
+    <div class="venue-report-info u-max-760-mt-6">
       <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Suggest update: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I have an update for /gyms/' + g.id + '/:\\n\\n(your update here)\\n\\nSource link (if any):\\n\\nThanks!')}" class="report-info-link">
         <span class="report-info-icon">✎</span>
         <span class="report-info-text">Spot an error or have an update? <strong>Tell us</strong> — we'll re-check as fast as we can.</span>
@@ -877,10 +877,10 @@ ${bodyHtml ? `
 </script>
 ` : `
 <section class="section" style="padding-top:0; padding-bottom:var(--s-8);">
-  <div class="wrap" style="max-width:760px;">
+  <div class="wrap u-max-760">
     <div class="eyebrow"><span class="num">★</span> Know more about this venue?</div>
     <div style="background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--cyan); border-radius:var(--r-lg); padding:var(--s-6);">
-      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0 0 var(--s-4);">This is a <strong style="color:var(--text);">verified entry</strong> in the Pattaya.Gym directory. We've personally confirmed the venue exists and operates. If you've trained here and can share more details — coaches, prices, schedule, what makes it different — we want to know.</p>
+      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0 0 var(--s-4);">This is a <strong class="u-text">verified entry</strong> in the Pattaya.Gym directory. We've personally confirmed the venue exists and operates. If you've trained here and can share more details — coaches, prices, schedule, what makes it different — we want to know.</p>
       <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0;">Help us deepen this listing: <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Update: ' + g.name)}" style="color:var(--cyan); font-weight:600;">email us</a> · <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Update for ' + g.name)}" target="_blank" rel="noopener noreferrer" style="color:var(--mint); font-weight:600;">WhatsApp</a> · or <a href="/contact/" style="color:var(--pink); font-weight:600;">contact form</a>.</p>
     </div>
   </div>
@@ -888,7 +888,7 @@ ${bodyHtml ? `
 `}
 
 ${(g.social && (g.social.facebook || g.social.instagram)) ? `
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> Social</div>
     <div class="channels-grid">
@@ -902,10 +902,10 @@ ${(g.social && (g.social.facebook || g.social.instagram)) ? `
 ` : ''}
 
 ${(g.tags && g.tags.length) ? `
-<section class="section" style="padding-top:0;">
-  <div class="wrap" style="max-width:760px;">
+<section class="section u-pt-0">
+  <div class="wrap u-max-760">
     <div class="eyebrow"><span class="num">★</span> Tags</div>
-    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <div class="u-tags-row">
       ${g.tags.map(t => `<span style="background:var(--surface); border:1px solid var(--line); color:var(--text-2); padding:6px 14px; border-radius:var(--r-pill); font-family:var(--font-mono); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">${esc(t)}</span>`).join('')}
     </div>
   </div>
@@ -957,7 +957,7 @@ ${related.length ? `
     <h2 class="h-section">Other <span class="${accent.class}">${esc(catLabel.toLowerCase())}.</span></h2>
     <div class="numlist">
       ${related.map((r, i) => `
-      <a href="/gyms/${r.id}/" class="numcard" style="text-decoration:none; color:inherit;">
+      <a href="/gyms/${r.id}/" class="numcard u-plain-link">
         <div class="numcard-head">
           <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
           <h3 class="numcard-title">// ${esc(r.name)}</h3>
@@ -1026,24 +1026,24 @@ function categoryPage(cat, venues) {
 <main id="main">
 
 <section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-10); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+  <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Sport · ${venues.length} venues in Pattaya</div>
     <h1 class="hero-h1" style="font-size:clamp(48px,11vw,140px); text-align:left;">
       <span class="${accent}">${esc(cat.label)}.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0;">Every <strong>${esc(cat.label.toLowerCase())}</strong> venue worth knowing in Pattaya. <strong>${venues.length} entries</strong> hand-checked. No paid placements. Verified on a rolling schedule. Closures and changes are re-checked as fast as we hear about them.</p>
-    <p class="hero-meta" style="text-align:left;">${venues.length} venues · Updated ${TODAY} · Pattaya · Thailand</p>
+    <p class="hero-lede u-text-left-ml0">Every <strong>${esc(cat.label.toLowerCase())}</strong> venue worth knowing in Pattaya. <strong>${venues.length} entries</strong> hand-checked. No paid placements. Verified on a rolling schedule. Closures and changes are re-checked as fast as we hear about them.</p>
+    <p class="hero-meta u-text-left">${venues.length} venues · Updated ${TODAY} · Pattaya · Thailand</p>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span> Quick pick</div>
     <h2 class="h-section">Where to <span class="${accent}">start.</span></h2>
-    <p class="lede">${venues.length ? `Our top 3 picks from <strong style="color:var(--text);">${venues.length} ${cat.label.toLowerCase()} venues</strong>. Full list below.` : 'No venues currently listed.'}</p>
+    <p class="lede">${venues.length ? `Our top 3 picks from <strong class="u-text">${venues.length} ${cat.label.toLowerCase()} venues</strong>. Full list below.` : 'No venues currently listed.'}</p>
     <div class="numlist">
       ${venues.slice(0, 3).map((v, i) => `
-      <a href="/gyms/${v.id}/" class="numcard" style="text-decoration:none; color:inherit;">
+      <a href="/gyms/${v.id}/" class="numcard u-plain-link">
         <div class="numcard-head">
           <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
           <h3 class="numcard-title">// ${esc(v.name)}</h3>
@@ -1061,12 +1061,12 @@ function categoryPage(cat, venues) {
     <h2 class="h-section">Every <span class="accent-mint">venue.</span> Hand-<span class="accent-pink">checked.</span></h2>
     <div class="numlist">
       ${venues.map((v, i) => `
-      <a href="/gyms/${v.id}/" class="numcard" style="text-decoration:none; color:inherit;">
+      <a href="/gyms/${v.id}/" class="numcard u-plain-link">
         <div class="numcard-head">
           <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
           <h3 class="numcard-title">// ${esc(v.name)}</h3>
         </div>
-        <p class="numcard-body">${v.area ? `<strong style="color:var(--text);">${esc(v.area)}</strong>` : ''}${v.priceRange ? ` · ${esc(v.priceRange)}` : ''}${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
+        <p class="numcard-body">${v.area ? `<strong class="u-text">${esc(v.area)}</strong>` : ''}${v.priceRange ? ` · ${esc(v.priceRange)}` : ''}${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
       </a>
       `).join('')}
     </div>
@@ -1262,29 +1262,29 @@ ${(() => {
     .slice(0, 6)
     .map(([key, count]) => ({ key, count, label: (CATEGORIES.find(c => c.key === key) || {}).label || key }));
 
-  return `<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+  return `<section class="hero u-pt-10-pb-8">
+  <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Neighborhood · ${venues.length} venues · ${topCats.length} sports</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,10vw,120px); text-align:left;">
       <span class="${accent}">${esc(label)}.</span>
     </h1>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:780px;">${content ? esc(content.summary) : `Every venue we track in <strong>${esc(label)}</strong>. ${venues.length} hand-checked entries across all sports.`}</p>
-    <p class="hero-meta" style="text-align:left;">${venues.length} venues · ${esc(label)} · Pattaya · Updated ${TODAY}</p>
+    <p class="hero-meta u-text-left">${venues.length} venues · ${esc(label)} · Pattaya · Updated ${TODAY}</p>
   </div>
 </section>
 
 ${content ? `
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <article class="venue-body" style="max-width:880px; margin:0;">
-      <div class="eyebrow" style="margin-bottom:var(--s-3);"><span class="num">01</span> About this neighborhood</div>
+      <div class="eyebrow u-mb-3"><span class="num">01</span> About this neighborhood</div>
       <h2 class="h-section">What ${esc(label)} <span class="${accent}">is for.</span></h2>
       ${content.intro}
     </article>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> Best for</div>
     <h2 class="h-section">When to pick <span class="${accent}">${esc(label)}.</span></h2>
@@ -1302,10 +1302,10 @@ ${content ? `
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
-  <div class="wrap" style="max-width:var(--max); margin:0 auto;">
+<section class="section u-pt-0">
+  <div class="wrap u-wrap-max">
     <article class="venue-body" style="max-width:880px; margin:0;">
-      <div class="eyebrow" style="margin-bottom:var(--s-3);"><span class="num">03</span> Transport &amp; access</div>
+      <div class="eyebrow u-mb-3"><span class="num">03</span> Transport &amp; access</div>
       <h2 class="h-section">How to <span class="accent-cyan">get there.</span></h2>
       <p>${esc(content.transport)}</p>
 
@@ -1321,7 +1321,7 @@ ${content ? `
 </section>
 ` : ''}
 
-<section class="section" style="padding-top:var(--s-4);">
+<section class="section u-pt-4">
   <div class="wrap">
     <div class="eyebrow"><span class="num">0${content ? '6' : '1'}</span> By sport</div>
     <h2 class="h-section">Sports in <span class="accent-mint">${esc(label)}.</span></h2>
@@ -1340,16 +1340,16 @@ ${content ? `
       ${venues.map((v, i) => {
         const cat = CATEGORIES.find(c => c.key === v.category);
         return `
-      <a href="/gyms/${v.id}/" class="numcard" style="text-decoration:none; color:inherit;">
+      <a href="/gyms/${v.id}/" class="numcard u-plain-link">
         <div class="numcard-head">
           <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
           <h3 class="numcard-title">// ${esc(v.name)}</h3>
         </div>
-        <p class="numcard-body">${cat ? `<strong style="color:var(--text);">${esc(cat.label)}</strong> · ` : ''}${esc(v.priceRange || '')}${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
+        <p class="numcard-body">${cat ? `<strong class="u-text">${esc(cat.label)}</strong> · ` : ''}${esc(v.priceRange || '')}${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
       </a>
       `;
       }).join('')}
-      ${venues.length === 0 ? '<p style="color:var(--muted);">No venues currently listed in this area.</p>' : ''}
+      ${venues.length === 0 ? '<p class="u-muted">No venues currently listed in this area.</p>' : ''}
     </div>
   </div>
 </section>
@@ -1414,16 +1414,16 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
     + `
 <main id="main">
 
-<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+<section class="hero u-pt-10-pb-8">
+  <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// ${esc(catLabel)} · ${esc(areaLabel)} · ${venues.length} venue${venues.length === 1 ? '' : 's'}</div>
-    <h1 class="hero-h1" style="font-size:clamp(36px,8vw,96px); text-align:left;">
+    <h1 class="hero-h1 u-h-fluid-sm">
       <span class="${accent}">${esc(catLabel)}</span><br>
       <span style="color:var(--text-2); font-weight:600;">in ${esc(areaLabel)}.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0;">${venues.length} hand-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Verified on a rolling schedule. The complete local list.</p>
-    <p class="hero-meta" style="text-align:left;">${venues.length} venues · ${esc(areaLabel)} · Pattaya · Updated ${TODAY}</p>
-    <div class="btn-row" style="margin-top:var(--s-5);">
+    <p class="hero-lede u-text-left-ml0">${venues.length} hand-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Verified on a rolling schedule. The complete local list.</p>
+    <p class="hero-meta u-text-left">${venues.length} venues · ${esc(areaLabel)} · Pattaya · Updated ${TODAY}</p>
+    <div class="btn-row u-mt-5">
       <a href="/category/${cat.key}/" class="btn btn-secondary">● All ${esc(catLabel.toLowerCase())} in Pattaya</a>
       <a href="/area/${areaSlug}/" class="btn btn-tertiary">All ${esc(areaLabel)} venues →</a>
     </div>
@@ -1436,20 +1436,20 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
     <h2 class="h-section">Every ${esc(catLabel.toLowerCase())} venue in <span class="${accent}">${esc(areaLabel)}.</span></h2>
     <div class="numlist">
       ${venues.map((v, i) => `
-      <a href="/gyms/${v.id}/" class="numcard" style="text-decoration:none; color:inherit;">
+      <a href="/gyms/${v.id}/" class="numcard u-plain-link">
         <div class="numcard-head">
           <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
           <div class="numcard-title">// ${esc(v.name)}</div>
         </div>
-        <p class="numcard-body"><strong style="color:var(--text);">${esc(v.priceRange || '')}</strong>${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
+        <p class="numcard-body"><strong class="u-text">${esc(v.priceRange || '')}</strong>${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
       </a>
       `).join('')}
-      ${venues.length === 0 ? `<p style="color:var(--muted);">No ${esc(catLabel.toLowerCase())} venues currently listed in ${esc(areaLabel)}. Try <a href="/category/${cat.key}/" style="color:var(--cyan);">all ${esc(catLabel.toLowerCase())} in Pattaya</a> or <a href="/area/${areaSlug}/" style="color:var(--cyan);">all venues in ${esc(areaLabel)}</a>.</p>` : ''}
+      ${venues.length === 0 ? `<p class="u-muted">No ${esc(catLabel.toLowerCase())} venues currently listed in ${esc(areaLabel)}. Try <a href="/category/${cat.key}/" class="u-cyan">all ${esc(catLabel.toLowerCase())} in Pattaya</a> or <a href="/area/${areaSlug}/" class="u-cyan">all venues in ${esc(areaLabel)}</a>.</p>` : ''}
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:var(--s-4);">
+<section class="section u-pt-4">
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> Browse more</div>
     <h2 class="h-section">Looking elsewhere in <span class="accent-cyan">Pattaya?</span></h2>
@@ -1555,18 +1555,18 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
     + `
 <main id="main">
 
-<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+<section class="hero u-pt-10-pb-8">
+  <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// ${esc(eyebrow)}</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,9vw,100px); text-align:left;">
+    <h1 class="hero-h1 u-h-fluid">
       ${esc(headlineLead)}<br>
       <span class="${accentClass}">${esc(headlineAccent)}.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0; margin-right:0; margin-top:var(--s-5); font-size:clamp(16px,2vw,19px);">${lede}</p>
+    <p class="hero-lede u-lede-h">${lede}</p>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <article class="venue-body" style="max-width:760px; margin:0;">
       ${bodyHtml}
@@ -1685,7 +1685,7 @@ function buildSportStatsBody() {
     <text x="100" y="120" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#888" letter-spacing="2">VENUES</text>
   </svg>
   <ul style="list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr; gap:8px; font-family:var(--font-mono); font-size:12px;">
-    ${priceEntries.map(([tier, n]) => `<li style="display:flex; align-items:center; gap:10px;"><span style="display:inline-block; width:14px; height:14px; border-radius:3px; background:${priceColors[tier]};"></span> <strong style="color:var(--text);">${tier}</strong> <span style="color:var(--muted);">${n} venues · ${pct(n, priceTotal)}%</span></li>`).join('')}
+    ${priceEntries.map(([tier, n]) => `<li style="display:flex; align-items:center; gap:10px;"><span style="display:inline-block; width:14px; height:14px; border-radius:3px; background:${priceColors[tier]};"></span> <strong class="u-text">${tier}</strong> <span class="u-muted">${n} venues · ${pct(n, priceTotal)}%</span></li>`).join('')}
   </ul>
 </div>`;
 
@@ -1728,9 +1728,9 @@ ${donutHTML}
 <h2>Verification freshness</h2>
 <p>Every venue has a <strong>verified date</strong> — the last time we hand-checked hours, prices, and operating status. Target: re-verify the full directory every 30 days. Current breakdown:</p>
 <ul style="font-family:var(--font-mono); font-size:14px;">
-  <li><strong style="color:#5fffa0;">${fresh30}</strong> venues verified within 30 days <span style="color:var(--muted);">(${pct(fresh30, total)}% of directory)</span></li>
+  <li><strong style="color:#5fffa0;">${fresh30}</strong> venues verified within 30 days <span class="u-muted">(${pct(fresh30, total)}% of directory)</span></li>
   <li><strong style="color:#fde047;">${fresh60}</strong> venues verified 30-60 days ago</li>
-  <li><strong style="color:#ff3d3d;">${older}</strong> venues older than 60 days <span style="color:var(--muted);">(refresh queue)</span></li>
+  <li><strong style="color:#ff3d3d;">${older}</strong> venues older than 60 days <span class="u-muted">(refresh queue)</span></li>
 </ul>
 
 <h2>Schema completeness</h2>
@@ -1944,7 +1944,7 @@ const UTILITY_PAGES = [
 <li>Cross-promote unrelated businesses</li>
 </ul>
 
-<p style="margin-top:var(--s-6);"><strong>Send the details to <a href="mailto:info@pattaya-gym.com?subject=Add%20my%20gym">info@pattaya-gym.com</a></strong> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%20want%20to%20add%20my%20gym%20to%20pattaya-gym.com" target="_blank" rel="noopener noreferrer">+66 96 728 6999</a> with "Add my gym" in the message.</p>
+<p class="u-mt-6"><strong>Send the details to <a href="mailto:info@pattaya-gym.com?subject=Add%20my%20gym">info@pattaya-gym.com</a></strong> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%20want%20to%20add%20my%20gym%20to%20pattaya-gym.com" target="_blank" rel="noopener noreferrer">+66 96 728 6999</a> with "Add my gym" in the message.</p>
 `
   },
   {
@@ -2047,7 +2047,7 @@ const UTILITY_PAGES = [
 <ul>
 <li><strong>Cloudflare Pages</strong> hosts the site. Cloudflare receives a request log per page view (IP, user agent, URL) for routing and DDoS protection. Logs are managed under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</li>
 <li><strong>Google Analytics 4</strong> processes the analytics events described above under <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
-<li><strong>Google Fonts</strong> serves the page typefaces from <code>fonts.googleapis.com</code>. Google states it does not log identifying information for font requests. We may self-host fonts in a future release to remove this hop entirely.</li>
+<li><strong>Fonts</strong> are self-hosted from <code>/fonts/</code> on our own domain (Round 18). No third-party font CDN is contacted on page load.</li>
 </ul>
 <p>No other third-party services are loaded on the site.</p>
 

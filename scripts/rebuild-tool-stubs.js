@@ -71,7 +71,7 @@ function nav() {
 
 function paNetwork() {
   return `<section class="pa-network">
-  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
+  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link">
     <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
   </a>
   <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
@@ -85,7 +85,7 @@ function footer() {
     <div>
       <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
       <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
-      <p style="font-size:13px; color:var(--muted); margin:var(--s-4) 0 0;">— Tim &amp; Paemi, founders</p>
+      <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
       <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div>
     </div>
     <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li></ul></div>
@@ -94,7 +94,7 @@ function footer() {
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span style="color:var(--cyan);">★ Last updated · ${BUILD_TIMESTAMP} · v${ASSET_VERSION}</span>
+    <span class="u-cyan">★ Last updated · ${BUILD_TIMESTAMP} · v${ASSET_VERSION}</span>
     <span>12.92°N · 100.87°E · Pattaya Villa</span>
   </div>
 </footer>
@@ -148,9 +148,9 @@ function head(title, desc, url) {
 <meta name="color-scheme" content="dark">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
+<link rel="preload" href="/fonts/inter-400.woff2?v=414" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=414" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -179,7 +179,7 @@ function head(title, desc, url) {
 
 function breadcrumb(label) {
   return `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
-  <a href="/" style="color:var(--muted);">Home</a> <span style="color:var(--hint); margin:0 8px;">/</span> <span style="color:var(--text); font-weight:600;">${esc(label)}</span>
+  <a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">${esc(label)}</span>
 </nav>`;
 }
 
@@ -252,7 +252,7 @@ const STUBS = [
 function render(stub) {
   const url = `${SITE}/${stub.slug}/`;
   const altCards = stub.alts.map(a => `
-      <a href="${a.url}" class="numcard" style="text-decoration:none; color:inherit;">
+      <a href="${a.url}" class="numcard u-plain-link">
         <div class="numcard-head">
           <span class="numcard-num">→</span>
           <h3 class="numcard-title">// ${esc(a.title)}</h3>
@@ -268,13 +268,13 @@ function render(stub) {
 <main id="main">
 
 <section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+  <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// ${esc(stub.eyebrow)}</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,9vw,108px); text-align:left;">
       ${stub.h1}
     </h1>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width: 680px;">${stub.intro}</p>
-    <div class="btn-row" style="margin-top:var(--s-6);">
+    <div class="btn-row u-mt-6">
       <a href="/search/" class="btn btn-primary">▶ Use search instead</a>
       <a href="/guides/" class="btn btn-secondary">● Browse guides</a>
       <a href="/" class="btn btn-tertiary">Back to home →</a>
@@ -291,11 +291,11 @@ function render(stub) {
   </div>
 </section>
 
-<section class="section" style="padding-top:var(--s-4);">
+<section class="section u-pt-4">
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> When this returns</div>
     <h2 class="h-section">No <span class="accent-cyan">paid placements.</span> No <span class="accent-pink">fake reviews.</span></h2>
-    <p class="lede">When the ${esc(stub.crumb.toLowerCase())} tool ships, it will follow the same rules as the rest of Pattaya.Gym — no paid placements, no fake reviews, no SEO spam. Subscribe via our RSS or check back monthly. The venue data the tool will pull from is already complete and live at <a href="/search/" style="color:var(--cyan);">/search/</a>.</p>
+    <p class="lede">When the ${esc(stub.crumb.toLowerCase())} tool ships, it will follow the same rules as the rest of Pattaya.Gym — no paid placements, no fake reviews, no SEO spam. Subscribe via our RSS or check back monthly. The venue data the tool will pull from is already complete and live at <a href="/search/" class="u-cyan">/search/</a>.</p>
   </div>
 </section>
 

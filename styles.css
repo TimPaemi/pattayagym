@@ -1,3 +1,23 @@
+/* Round 18 — self-hosted fonts (Codex F14.1). Removes the third-party
+   request to fonts.googleapis.com on every page load. WOFF2 files live in
+   /fonts/ and are immutable-cached by /_headers. Space Grotesk uses the
+   variable-weight font (covers 300-700; font-weight:800 declarations in CSS
+   resolve to the heaviest available weight). */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/space-grotesk.woff2?v=414") format("woff2-variations");
+}
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=414") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=414") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=414") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=414") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/jetbrains-mono-500.woff2?v=414") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/jetbrains-mono-600.woff2?v=414") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/jetbrains-mono-700.woff2?v=414") format("woff2"); }
+
 /* ================================================================
    PATTAYA.GYM v2 — TimPaemi-inspired design system
    Black bg · multi-color accents · neon glow · marquee strips
@@ -1865,3 +1885,46 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   white-space: nowrap;
   border: 0;
 }
+
+/* ============================================================
+   Round 18 - utility classes (Codex F10.1).
+   These replace the most-repeated inline style="..." patterns
+   so we can shrink the inline-style surface from ~11,200 to a
+   smaller number and shrink the CSP gap toward strict.
+   ============================================================ */
+.u-plain-link   { text-decoration: none; color: inherit; }
+.u-crumb-sep    { color: var(--hint); margin: 0 8px; }
+.u-muted        { color: var(--muted); }
+.u-text         { color: var(--text); }
+.u-text-bold    { color: var(--text); font-weight: 600; }
+.u-cyan         { color: var(--cyan); }
+.u-mint         { color: var(--mint); }
+.u-pink         { color: var(--pink); }
+.u-yellow       { color: var(--yellow); }
+.u-pt-0         { padding-top: 0; }
+.u-pt-4         { padding-top: var(--s-4); }
+.u-pt-4-pb-8    { padding-top: var(--s-4); padding-bottom: var(--s-8); }
+.u-pt-10-pb-8   { padding-top: var(--s-10); padding-bottom: var(--s-8); text-align: left; }
+.u-wrap-max     { max-width: var(--max); margin: 0 auto; }
+.u-mb-3         { margin-bottom: var(--s-3); }
+.u-mt-5         { margin-top: var(--s-5); }
+.u-mt-6         { margin-top: var(--s-6); }
+.u-max-760      { max-width: 760px; }
+.u-max-760-mt-6 { max-width: 760px; margin: var(--s-6) 0 0; }
+.u-max-760-mt-8 { max-width: 760px; margin: var(--s-8) 0 0; }
+.u-prose        { max-width: 760px; margin: 0; font-size: 16px; line-height: 1.75; color: var(--text-2); }
+.u-info-row     { display: grid; grid-template-columns: 130px 1fr; gap: var(--s-4); padding: var(--s-4) var(--s-5); }
+.u-tags-row     { display: flex; flex-wrap: wrap; gap: 8px; }
+.u-btn-row-left { justify-content: flex-start; margin-top: var(--s-6); }
+.u-lede-h       { text-align: left; margin-left: 0; margin-right: 0; margin-top: var(--s-5); font-size: clamp(16px, 2vw, 19px); }
+.u-h-fluid      { font-size: clamp(40px, 9vw, 100px); text-align: left; }
+.u-h-fluid-sm   { font-size: clamp(36px, 8vw, 96px); text-align: left; }
+.u-text-left    { text-align: left; }
+.u-text-left-ml0{ text-align: left; margin-left: 0; }
+.u-info-card    { color: var(--muted); font-size: 13px; margin: 0 0 var(--s-3); }
+.u-info-row-cyan   { font-size: 14px; color: var(--cyan);   font-weight: 500; line-height: 1.5; }
+.u-info-row-mint   { font-size: 14px; color: var(--mint);   font-weight: 500; line-height: 1.5; }
+.u-info-row-pink   { font-size: 14px; color: var(--pink);   font-weight: 500; line-height: 1.5; }
+.u-info-row-yellow { font-size: 14px; color: var(--yellow); font-weight: 500; line-height: 1.5; }
+.u-deemphasized { color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.2); text-underline-offset: 3px; }
+.u-foot-meta    { font-size: 13px; color: var(--muted); margin: var(--s-4) 0 0; }

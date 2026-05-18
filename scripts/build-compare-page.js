@@ -53,8 +53,8 @@ const venueSummary = GYMS.map(g => ({
 
 const VENUE_JSON = JSON.stringify(venueSummary);
 
-const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED WEEKLY'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','100% HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED WEEKLY'];
+const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','100% HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
 
 function marquee(items, bot) {
   const cls = bot ? 'marquee marquee-bottom' : 'marquee';
@@ -83,9 +83,9 @@ const html = `<!DOCTYPE html>
 <meta name="color-scheme" content="dark">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
+<link rel="preload" href="/fonts/inter-400.woff2?v=414" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=414" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -111,13 +111,13 @@ const html = `<!DOCTYPE html>
 ${marquee(TOP_MARQUEE, false)}
 <header class="nav" role="banner"><div class="nav-row"><a href="/" class="brand">pattaya<span class="dot">.</span>gym</a><nav class="nav-links" aria-label="Primary"><a href="/category/muay-thai/">Muay Thai</a><a href="/category/fitness/">Fitness</a><a href="/category/golf/">Golf</a><a href="/guides/">Guides</a><a href="/search/">Search</a></nav><a href="/search/" class="nav-cta">★ Find a gym</a></div></header>
 <nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
-  <a href="/" style="color:var(--muted);">Home</a> <span style="color:var(--hint); margin:0 8px;">/</span> <span style="color:var(--text); font-weight:600;">Compare</span>
+  <a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Compare</span>
 </nav>
 
 <main id="main">
 
 <section class="hero" style="padding-top:var(--s-8); padding-bottom:var(--s-4); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+  <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Side-by-side · Up to 4 venues · Bookmarkable URLs</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">
       Compare <span class="accent-yellow">venues.</span>
@@ -126,7 +126,7 @@ ${marquee(TOP_MARQUEE, false)}
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span> Pick venues</div>
     <h2 class="h-section">Add up to 4 <span class="accent-cyan">venues.</span></h2>
@@ -140,7 +140,7 @@ ${marquee(TOP_MARQUEE, false)}
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> Side-by-side</div>
     <h2 class="h-section">Compare <span class="accent-pink">live.</span></h2>
@@ -151,7 +151,7 @@ ${marquee(TOP_MARQUEE, false)}
   </div>
 </section>
 
-<section class="section" style="padding-top:var(--s-4);">
+<section class="section u-pt-4">
   <div class="wrap">
     <div class="eyebrow"><span class="num">03</span> Examples</div>
     <h2 class="h-section">Try a <span class="accent-mint">preset.</span></h2>
@@ -166,9 +166,9 @@ ${marquee(TOP_MARQUEE, false)}
 
 </main>
 
-<section class="pa-network"><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>
+<section class="pa-network"><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>
 ${marquee(BOTTOM_MARQUEE, true)}
-<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p style="font-size:13px; color:var(--muted); margin:var(--s-4) 0 0;">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
@@ -243,17 +243,17 @@ ${marquee(BOTTOM_MARQUEE, true)}
     announce('Comparing ' + venues.length + ' venues: ' + venues.map(function(v){return v.name;}).join(', ') + '.');
     var rows = [
       { key: 'name', label: 'Name', render: function(v){ return '<a href="/gyms/' + escapeHtml(v.id) + '/" style="color:var(--cyan); font-weight:700; text-decoration:none; border-bottom:1px dotted rgba(78,224,255,0.35);">' + escapeHtml(v.name) + '</a>'; } },
-      { key: 'editors', label: 'Editor\\'s Pick', render: function(v){ return v.featured ? '<span style="color:var(--yellow); font-weight:700;">★ Yes</span>' : '<span style="color:var(--muted);">—</span>'; } },
+      { key: 'editors', label: 'Editor\\'s Pick', render: function(v){ return v.featured ? '<span style="color:var(--yellow); font-weight:700;">★ Yes</span>' : '<span class="u-muted">—</span>'; } },
       { key: 'cat', label: 'Sport', render: function(v){ return '<a href="/category/' + escapeHtml(v.category) + '/" style="color:var(--text); text-decoration:none;">' + escapeHtml(v.categoryLabel) + '</a>'; } },
       { key: 'area', label: 'Area', render: function(v){ return escapeHtml(v.area || '—'); } },
-      { key: 'price', label: 'Price', render: function(v){ return v.priceRange ? '<strong style="color:var(--yellow);">' + escapeHtml(v.priceRange) + '</strong>' : '<span style="color:var(--muted);">—</span>'; } },
-      { key: 'hours', label: 'Hours', render: function(v){ return v.hours ? escapeHtml(v.hours) : '<span style="color:var(--muted);">—</span>'; } },
-      { key: 'phone', label: 'Phone', render: function(v){ return v.phone ? '<a href="tel:' + escapeHtml(v.phone.replace(/[^+0-9]/g,'')) + '" style="color:var(--pink); text-decoration:none;">' + escapeHtml(v.phone) + '</a>' : '<span style="color:var(--muted);">unpublished</span>'; } },
-      { key: 'web', label: 'Website', render: function(v){ return v.website ? '<a href="' + escapeHtml(v.website) + '" target="_blank" rel="noopener noreferrer" style="color:var(--cyan); text-decoration:underline; text-decoration-color:rgba(78,224,255,0.3);">official ↗</a>' : '<span style="color:var(--muted);">—</span>'; } },
-      { key: 'map', label: 'Map', render: function(v){ return v.mapsUrl ? '<a href="' + escapeHtml(v.mapsUrl) + '" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:none;">📍 directions</a>' : '<span style="color:var(--muted);">—</span>'; } },
-      { key: 'tags', label: 'Tags', render: function(v){ return (v.tags && v.tags.length) ? v.tags.slice(0, 4).map(function(t){ return '<span style="display:inline-block; background:rgba(255,255,255,0.06); padding:2px 8px; border-radius:999px; font-size:11px; margin:2px 4px 2px 0;">' + escapeHtml(t) + '</span>'; }).join('') : '<span style="color:var(--muted);">—</span>'; } },
-      { key: 'desc', label: 'Description', render: function(v){ return v.description ? escapeHtml(v.description) + (v.description.length >= 240 ? '…' : '') : '<span style="color:var(--muted);">—</span>'; } },
-      { key: 'verified', label: 'Verified', render: function(v){ return v.verified ? '<span style="color:var(--cyan); font-family:var(--font-mono); font-size:12px;">★ ' + escapeHtml(v.verified) + '</span>' : '<span style="color:var(--muted);">—</span>'; } }
+      { key: 'price', label: 'Price', render: function(v){ return v.priceRange ? '<strong style="color:var(--yellow);">' + escapeHtml(v.priceRange) + '</strong>' : '<span class="u-muted">—</span>'; } },
+      { key: 'hours', label: 'Hours', render: function(v){ return v.hours ? escapeHtml(v.hours) : '<span class="u-muted">—</span>'; } },
+      { key: 'phone', label: 'Phone', render: function(v){ return v.phone ? '<a href="tel:' + escapeHtml(v.phone.replace(/[^+0-9]/g,'')) + '" style="color:var(--pink); text-decoration:none;">' + escapeHtml(v.phone) + '</a>' : '<span class="u-muted">unpublished</span>'; } },
+      { key: 'web', label: 'Website', render: function(v){ return v.website ? '<a href="' + escapeHtml(v.website) + '" target="_blank" rel="noopener noreferrer" style="color:var(--cyan); text-decoration:underline; text-decoration-color:rgba(78,224,255,0.3);">official ↗</a>' : '<span class="u-muted">—</span>'; } },
+      { key: 'map', label: 'Map', render: function(v){ return v.mapsUrl ? '<a href="' + escapeHtml(v.mapsUrl) + '" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:none;">📍 directions</a>' : '<span class="u-muted">—</span>'; } },
+      { key: 'tags', label: 'Tags', render: function(v){ return (v.tags && v.tags.length) ? v.tags.slice(0, 4).map(function(t){ return '<span style="display:inline-block; background:rgba(255,255,255,0.06); padding:2px 8px; border-radius:999px; font-size:11px; margin:2px 4px 2px 0;">' + escapeHtml(t) + '</span>'; }).join('') : '<span class="u-muted">—</span>'; } },
+      { key: 'desc', label: 'Description', render: function(v){ return v.description ? escapeHtml(v.description) + (v.description.length >= 240 ? '…' : '') : '<span class="u-muted">—</span>'; } },
+      { key: 'verified', label: 'Verified', render: function(v){ return v.verified ? '<span style="color:var(--cyan); font-family:var(--font-mono); font-size:12px;">★ ' + escapeHtml(v.verified) + '</span>' : '<span class="u-muted">—</span>'; } }
     ];
     var html = '<table class="compare-table"><thead><tr><th></th>';
     for (var i = 0; i < venues.length; i++) html += '<th>Venue ' + (i+1) + '</th>';

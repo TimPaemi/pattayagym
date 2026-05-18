@@ -38,6 +38,19 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 18, date: '2026-05-18', tag: 'v414',
+    title: 'Self-hosted fonts + 56% inline-style reduction',
+    summary: 'Two big engineering wins from the Round 17 Codex audit backlog. Removed every third-party font request and shrank the inline-style surface so a future strict CSP becomes realistic.',
+    bullets: [
+      'F14.1 — Google Fonts removed from every page. Self-hosted Space Grotesk (variable), Inter (400/500/600/700), JetBrains Mono (500/600/700) in /fonts/ with font-display: swap. CSP no longer allowlists fonts.googleapis.com or fonts.gstatic.com.',
+      'F10.1 — Inline style="..." count dropped from 11,212 to 4,905 (-56%) by adding 30+ utility classes covering the most-repeated patterns. Builds the foundation for removing \'unsafe-inline\' from style-src in a future round.',
+      'Privacy page updated to drop the "may self-host in future" caveat — fonts are now self-hosted.',
+      'New /fonts/* immutable cache rule in _headers.',
+      'verify-deploy.js still passes the hardened gate (NUL/BOM scan + sitemap URL check).',
+      'Asset version bumped 413 -> 414.'
+    ]
+  },
+  {
     n: 17, date: '2026-05-18', tag: 'v413',
     title: 'Codex Nuclear V4 audit — 5 P1 fixes + 10 P2 wins',
     summary: 'Closed every P1 finding from the Codex Round 17 audit plus 10 quick P2 wins. The single biggest improvement: generated venue HTML went from 210 html-validate errors to 0 by replacing the regex Markdown converter with markdown-it.',
@@ -276,9 +289,9 @@ const head = `<!DOCTYPE html>
 <meta name="color-scheme" content="dark">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
+<link rel="preload" href="/fonts/inter-400.woff2?v=414" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=414" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -304,11 +317,11 @@ const head = `<!DOCTYPE html>
 
 const nav = `<header class="nav" role="banner"><div class="nav-row"><a href="/" class="brand">pattaya<span class="dot">.</span>gym</a><nav class="nav-links" aria-label="Primary"><a href="/category/muay-thai/">Muay Thai</a><a href="/category/fitness/">Fitness</a><a href="/category/golf/">Golf</a><a href="/guides/">Guides</a><a href="/search/">Search</a></nav><a href="/search/" class="nav-cta">★ Find a gym</a></div></header>`;
 
-const breadcrumb = `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" style="color:var(--muted);">Home</a> <span style="color:var(--hint); margin:0 8px;">/</span> <span style="color:var(--text); font-weight:600;">Changelog</span></nav>`;
+const breadcrumb = `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Changelog</span></nav>`;
 
-const pa = `<section class="pa-network"><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>`;
+const pa = `<section class="pa-network"><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>`;
 
-const footer = `<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p style="font-size:13px; color:var(--muted); margin:var(--s-4) 0 0;">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+const footer = `<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script>
@@ -348,12 +361,12 @@ const footer = `<footer class="footer" role="contentinfo"><div class="footer-gri
 
 const rounds = ROUNDS.map(r => `
 <article class="changelog-entry" style="border-left:3px solid var(--pink); padding:var(--s-3) 0 var(--s-5) var(--s-5); margin-bottom:var(--s-6);">
-  <header style="margin-bottom:var(--s-3);">
+  <header class="u-mb-3">
     <div style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">
-      <span style="color:var(--cyan);">Round ${r.n}</span>
-      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <span class="u-cyan">Round ${r.n}</span>
+      <span class="u-crumb-sep">·</span>
       <time datetime="${esc(r.date)}">${esc(r.date)}</time>
-      <span style="color:var(--hint); margin:0 8px;">·</span>
+      <span class="u-crumb-sep">·</span>
       <span class="trust-pill" style="display:inline; padding:3px 8px;">${esc(r.tag)}</span>
     </div>
     <h2 style="font-family:var(--font-display); font-size:clamp(20px, 3vw, 28px); font-weight:700; margin:0; color:var(--text);">${esc(r.title)}</h2>
@@ -367,7 +380,7 @@ const html = head + marquee(TOP, false) + nav + breadcrumb + `
 <main id="main">
 
 <section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+  <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Public changelog · v${ASSET_VERSION} · Updated ${TODAY}</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">
       Every <span class="accent-pink">change.</span>
@@ -384,7 +397,7 @@ const html = head + marquee(TOP, false) + nav + breadcrumb + `
   </div>
 </section>
 
-<section class="section" style="padding-top:var(--s-4);">
+<section class="section u-pt-4">
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span> Release history</div>
     <h2 class="h-section">From <span class="accent-cyan">round 1</span> to <span class="accent-pink">round ${ROUNDS[0].n}.</span></h2>
@@ -395,12 +408,12 @@ const html = head + marquee(TOP, false) + nav + breadcrumb + `
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section u-pt-0">
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> Why a public changelog</div>
     <h2 class="h-section">Operating in the <span class="accent-yellow">open.</span></h2>
-    <p class="lede" style="max-width:760px;">Most directories silently update. Pattaya.Gym tells you what changed and when. Every venue page also shows a <strong>verified date</strong> in the hero — that's when we last hand-checked it. If something goes stale, you know.</p>
-    <p class="lede" style="max-width:760px;">Independent. No paid placements. No fake reviews. <a href="/methodology/" style="color:var(--cyan);">Full methodology →</a></p>
+    <p class="lede u-max-760">Most directories silently update. Pattaya.Gym tells you what changed and when. Every venue page also shows a <strong>verified date</strong> in the hero — that's when we last hand-checked it. If something goes stale, you know.</p>
+    <p class="lede u-max-760">Independent. No paid placements. No fake reviews. <a href="/methodology/" class="u-cyan">Full methodology →</a></p>
   </div>
 </section>
 
