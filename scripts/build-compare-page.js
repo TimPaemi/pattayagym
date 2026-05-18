@@ -144,6 +144,8 @@ ${marquee(TOP_MARQUEE, false)}
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> Side-by-side</div>
     <h2 class="h-section">Compare <span class="accent-pink">live.</span></h2>
+    <!-- Round 17 — Codex F12.1: announce selection/result changes to assistive tech -->
+    <div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
     <div id="compare-table-mount" style="overflow-x:auto;"></div>
     <p id="compare-empty" style="color:var(--muted); display:none;">Pick at least 2 venues above to compare.</p>
   </div>
@@ -226,15 +228,19 @@ ${marquee(BOTTOM_MARQUEE, true)}
   // Render side-by-side table
   var tableMount = document.getElementById('compare-table-mount');
   var emptyMsg = document.getElementById('compare-empty');
+  var statusEl = document.getElementById('compare-status');
+  function announce(msg) { if (statusEl) statusEl.textContent = msg; }
   function renderTable() {
     var ids = getSelected().filter(Boolean);
     var venues = ids.map(venueById).filter(Boolean);
     if (venues.length < 2) {
       tableMount.innerHTML = '';
       emptyMsg.style.display = 'block';
+      announce(venues.length === 0 ? 'No venues selected for comparison.' : 'One venue selected. Pick at least one more to compare.');
       return;
     }
     emptyMsg.style.display = 'none';
+    announce('Comparing ' + venues.length + ' venues: ' + venues.map(function(v){return v.name;}).join(', ') + '.');
     var rows = [
       { key: 'name', label: 'Name', render: function(v){ return '<a href="/gyms/' + escapeHtml(v.id) + '/" style="color:var(--cyan); font-weight:700; text-decoration:none; border-bottom:1px dotted rgba(78,224,255,0.35);">' + escapeHtml(v.name) + '</a>'; } },
       { key: 'editors', label: 'Editor\\'s Pick', render: function(v){ return v.featured ? '<span style="color:var(--yellow); font-weight:700;">★ Yes</span>' : '<span style="color:var(--muted);">—</span>'; } },

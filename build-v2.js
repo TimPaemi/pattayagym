@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '412';
+const ASSET_VERSION = '413';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -271,72 +271,35 @@ function parseFrontmatter(text) {
   return { fm, body };
 }
 
-// ---------- Minimal markdown -> HTML ----------
+// ---------- Markdown -> HTML (markdown-it; produces valid HTML5) ----------
+// Round 17 fix for F02.1 (Codex): replace bespoke regex converter that produced
+// 210 html-validate errors (stray </p>, malformed lists, missing th scope) with
+// a real CommonMark parser. Configured with tables + linkify off + typographer
+// off so the output is deterministic and equivalent to the prior intent.
+const MarkdownIt = require('markdown-it');
+const _md = new MarkdownIt({
+  html: false,
+  xhtmlOut: false,
+  breaks: false,
+  linkify: false,
+  typographer: false
+});
+// Demote top-level # to <h2> (we reserve <h1> for the page hero) and add
+// scope="col" to every <th>, matching Codex F02.2 fix.
+_md.renderer.rules.heading_open = function (tokens, idx) {
+  const t = tokens[idx];
+  if (t.tag === 'h1') t.tag = 'h2';
+  return `<${t.tag}>`;
+};
+_md.renderer.rules.heading_close = function (tokens, idx) {
+  const t = tokens[idx];
+  if (t.tag === 'h1') t.tag = 'h2';
+  return `</${t.tag}>`;
+};
+_md.renderer.rules.th_open = function () { return '<th scope="col">'; };
 function mdToHtml(md) {
   if (!md) return '';
-  let html = md;
-
-  // Code blocks (preserve)
-  const codeBlocks = [];
-  html = html.replace(/```([\s\S]*?)```/g, (m, code) => {
-    codeBlocks.push(code);
-    return `<<<CODEBLOCK${codeBlocks.length - 1}>>>`;
-  });
-
-  // Headings
-  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-  html = html.replace(/^# (.+)$/gm, '<h2>$1</h2>'); // demote h1
-
-  // Bold + italic
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-  html = html.replace(/(^|[\s(])\*([^*\n]+)\*([\s).,!?]|$)/g, '$1<em>$2</em>$3');
-
-  // Links
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
-
-  // Lists (very basic)
-  html = html.replace(/(^|\n)((?:- .+\n?)+)/g, (m, lead, items) => {
-    const lis = items.trim().split(/\n/).map(l => `<li>${l.replace(/^- /, '').trim()}</li>`).join('');
-    return `${lead}<ul>${lis}</ul>`;
-  });
-  html = html.replace(/(^|\n)((?:\d+\. .+\n?)+)/g, (m, lead, items) => {
-    const lis = items.trim().split(/\n/).map(l => `<li>${l.replace(/^\d+\.\s*/, '').trim()}</li>`).join('');
-    return `${lead}<ol>${lis}</ol>`;
-  });
-
-  // Tables (pipe syntax)
-  html = html.replace(/(^|\n)(\|[^\n]+\|\n\|[\s\-:|]+\|\n(?:\|[^\n]+\|\n?)+)/g, (m, lead, table) => {
-    const rows = table.trim().split('\n');
-    const header = rows[0].split('|').slice(1, -1).map(c => c.trim());
-    const body = rows.slice(2).map(r => r.split('|').slice(1, -1).map(c => c.trim()));
-    let h = '<table><thead><tr>';
-    header.forEach(c => h += `<th>${c}</th>`);
-    h += '</tr></thead><tbody>';
-    body.forEach(row => {
-      h += '<tr>';
-      row.forEach(c => h += `<td>${c}</td>`);
-      h += '</tr>';
-    });
-    h += '</tbody></table>';
-    return `${lead}${h}`;
-  });
-
-  // Paragraphs (only wrap loose lines)
-  html = html.split(/\n{2,}/).map(block => {
-    const trimmed = block.trim();
-    if (!trimmed) return '';
-    if (/^<(h[1-6]|ul|ol|table|blockquote|pre|p|div)[\s>]/.test(trimmed)) return trimmed;
-    if (/^<<<CODEBLOCK\d+>>>$/.test(trimmed)) return trimmed;
-    return `<p>${trimmed.replace(/\n/g, '<br>')}</p>`;
-  }).join('\n');
-
-  // Restore code blocks
-  html = html.replace(/<<<CODEBLOCK(\d+)>>>/g, (m, i) => {
-    return `<pre><code>${esc(codeBlocks[i].trim())}</code></pre>`;
-  });
-
-  return html;
+  return _md.render(md).trim();
 }
 
 // ---------- Shared HTML components ----------
@@ -533,8 +496,8 @@ ${backToTop()}
 }
 
 // Standard top/bottom marquee items
-const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', '158 VENUES', 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED WEEKLY'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', '100% HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', '★ LIVE 158 VENUES', 'UPDATED WEEKLY'];
+const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', '158 VENUES', 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', '100% HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', '★ LIVE 158 VENUES', 'UPDATED ROLLING'];
 
 function breadcrumb(items) {
   // items: [{label, href}], last has no href
@@ -611,12 +574,14 @@ function venuePage(g, fm, body) {
     email: fm.email || undefined,
     geo: (function() {
       // Priority: 1) frontmatter override, 2) Nominatim geocode cache, 3) none
+      // Round 17 — Codex F04.1: round to 6 decimals (~11cm precision).
+      const round6 = n => Number(Number(n).toFixed(6));
       if (fm.lat && fm.lng) {
-        return { '@type': 'GeoCoordinates', latitude: Number(fm.lat), longitude: Number(fm.lng) };
+        return { '@type': 'GeoCoordinates', latitude: round6(fm.lat), longitude: round6(fm.lng) };
       }
       const cached = VENUE_GEO[g.id];
       if (cached && cached.lat && cached.lng && !cached.failed && cached._flag !== 'outside_pattaya_region') {
-        return { '@type': 'GeoCoordinates', latitude: Number(cached.lat), longitude: Number(cached.lng) };
+        return { '@type': 'GeoCoordinates', latitude: round6(cached.lat), longitude: round6(cached.lng) };
       }
       return undefined;
     })(),
@@ -741,7 +706,7 @@ ${bodyHtml ? `
     ${Array.isArray(fm.sources) && fm.sources.length ? `
     <div class="venue-sources" style="max-width:760px; margin:var(--s-8) 0 0;">
       <div class="eyebrow" style="margin-bottom:var(--s-3);"><span class="num">★</span> Sources we checked</div>
-      <p style="color:var(--muted); font-size:13px; margin:0 0 var(--s-3);">Every claim on this page is verified against the venue's own sources. If something looks wrong, <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inaccurate info: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I noticed the following on /gyms/' + g.id + '/ that needs updating:\\n\\n')}" style="color:var(--cyan);">tell us</a> and we'll re-check within 7 days.</p>
+      <p style="color:var(--muted); font-size:13px; margin:0 0 var(--s-3);">Every claim on this page is verified against the venue's own sources. If something looks wrong, <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inaccurate info: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I noticed the following on /gyms/' + g.id + '/ that needs updating:\\n\\n')}" style="color:var(--cyan);">tell us</a> and we'll re-check as fast as we can.</p>
       <ul class="venue-source-list">
         ${fm.sources.map(s => `<li><a href="${esc(s)}" target="_blank" rel="noopener noreferrer">${esc(s.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></li>`).join('')}
       </ul>
@@ -749,7 +714,7 @@ ${bodyHtml ? `
     <div class="venue-report-info" style="max-width:760px; margin:var(--s-6) 0 0;">
       <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Suggest update: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I have an update for /gyms/' + g.id + '/:\\n\\n(your update here)\\n\\nSource link (if any):\\n\\nThanks!')}" class="report-info-link">
         <span class="report-info-icon">✎</span>
-        <span class="report-info-text">Spot an error or have an update? <strong>Tell us</strong> — we'll re-check within 7 days.</span>
+        <span class="report-info-text">Spot an error or have an update? <strong>Tell us</strong> — we'll re-check as fast as we can.</span>
       </a>
     </div>
     <div id="recently-viewed-mount" data-current-id="${esc(g.id)}" data-current-name="${esc(g.name)}"></div>
@@ -1016,7 +981,7 @@ ${related.length ? `
 function categoryPage(cat, venues) {
   const url = `${SITE}/category/${cat.key}/`;
   const title = `${cat.label} in Pattaya | Pattaya.Gym`;
-  const desc = `Every ${cat.label.toLowerCase()} venue in Pattaya. ${venues.length} hand-checked entries. No paid placements. Updated weekly.`;
+  const desc = `Every ${cat.label.toLowerCase()} venue in Pattaya. ${venues.length} hand-checked entries. No paid placements. Verified on a rolling schedule.`;
 
   const accentColors = {
     'muay-thai': 'accent-pink', 'mma': 'accent-pink', 'bjj': 'accent-pink',
@@ -1066,7 +1031,7 @@ function categoryPage(cat, venues) {
     <h1 class="hero-h1" style="font-size:clamp(48px,11vw,140px); text-align:left;">
       <span class="${accent}">${esc(cat.label)}.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0;">Every <strong>${esc(cat.label.toLowerCase())}</strong> venue worth knowing in Pattaya. <strong>${venues.length} entries</strong> hand-checked. No paid placements. Updated weekly. If a venue closes, the page updates within 7 days.</p>
+    <p class="hero-lede" style="text-align:left; margin-left:0;">Every <strong>${esc(cat.label.toLowerCase())}</strong> venue worth knowing in Pattaya. <strong>${venues.length} entries</strong> hand-checked. No paid placements. Verified on a rolling schedule. Closures and changes are re-checked as fast as we hear about them.</p>
     <p class="hero-meta" style="text-align:left;">${venues.length} venues · Updated ${TODAY} · Pattaya · Thailand</p>
   </div>
 </section>
@@ -1456,7 +1421,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
       <span class="${accent}">${esc(catLabel)}</span><br>
       <span style="color:var(--text-2); font-weight:600;">in ${esc(areaLabel)}.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0;">${venues.length} hand-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Updated weekly. The complete local list.</p>
+    <p class="hero-lede" style="text-align:left; margin-left:0;">${venues.length} hand-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Verified on a rolling schedule. The complete local list.</p>
     <p class="hero-meta" style="text-align:left;">${venues.length} venues · ${esc(areaLabel)} · Pattaya · Updated ${TODAY}</p>
     <div class="btn-row" style="margin-top:var(--s-5);">
       <a href="/category/${cat.key}/" class="btn btn-secondary">● All ${esc(catLabel.toLowerCase())} in Pattaya</a>
@@ -1793,7 +1758,7 @@ ${donutHTML}
 const UTILITY_PAGES = [
   {
     slug: 'about',
-    title: 'About Pattaya.Gym — Independent directory, hand-checked weekly',
+    title: 'About Pattaya.Gym — Independent, hand-checked directory',
     desc: 'Pattaya.Gym is the most complete directory of gyms, Muay Thai camps, and sport venues in Pattaya. Independent. Hand-checked. No paid placements.',
     eyebrow: 'About',
     headlineLead: 'Independent.',
@@ -1804,7 +1769,7 @@ const UTILITY_PAGES = [
     bodyHtml: `
 <h2>Why this site exists</h2>
 <p>Most directories you find for Pattaya gyms are scraped, paid-for, or both. Search results are dominated by sites that have never set foot in any of the venues they rank.</p>
-<p>Pattaya.Gym is the opposite. Every venue is visited or verified directly. Every hours field is checked. Every phone number is dialed. If a venue closes or changes hands, the page updates within 7 days.</p>
+<p>Pattaya.Gym is the opposite. Every venue is visited or verified directly. Every hours field is checked. Every phone number is dialed. When a venue closes or changes hands, the page is updated as soon as we hear about it — usually within days.</p>
 
 <h2>How venues are ranked</h2>
 <p>No money changes hands. Ranking is based on consistent quality, current operation, breadth of facility, instructor caliber, and community reputation. Gyms with closed doors or stale information get demoted automatically.</p>
@@ -1817,7 +1782,7 @@ const UTILITY_PAGES = [
 
 <h2>Editorial policy</h2>
 <ul>
-<li>If a venue closes, gets new ownership, or changes hours, the page is updated within 7 days.</li>
+<li>If a venue closes, gets new ownership, or changes hours, the page is updated as soon as we hear about it.</li>
 <li>If a venue refuses to respond to verification requests over 30 days, it gets marked stale and ranking-suppressed.</li>
 <li>No sponsored placements. No affiliate links to listed venues. No commission on bookings.</li>
 <li>Editorial reviews and rankings reflect merit, not budget.</li>
@@ -1892,7 +1857,7 @@ const UTILITY_PAGES = [
 <p>Within a category, venues rank by composite score: facility depth, instructor caliber, customer feedback signal, longevity, breadth of programs offered, and operational reliability (how often doors are open as advertised). No paid weighting.</p>
 
 <h2>Updates</h2>
-<p>Verified date appears on every venue page. If a venue hasn't been re-verified in 90+ days, it gets queued. If we hear of a closure or major change, the page updates within 7 days. If we can't reach a venue across 30 days of attempts, it's marked stale and ranking-suppressed.</p>
+<p>A verified date appears on every venue page. Re-verification is rolling rather than rigid: priority queue first (popular venues, recent reports, venues that have moved or changed format), background queue second. When we hear of a closure or major change we re-check and update as fast as we reasonably can — typically within days, never longer than a couple of weeks. If we can't reach a venue across 30 days of attempts, it's marked stale and ranking-suppressed. Public reports of errors or closures can be sent to <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
 
 <h2>Removals</h2>
 <p>Venues are removed when:</p>
@@ -1962,7 +1927,7 @@ const UTILITY_PAGES = [
 <h2>What happens next</h2>
 <ol>
 <li>We verify the venue exists, hours are accurate, and contact info works</li>
-<li>We visit or call to confirm — usually within 7 days</li>
+<li>We visit or call to confirm — typically within a few days, never longer than two weeks</li>
 <li>We write a neutral entry based on our verification, not your marketing copy</li>
 <li>The page goes live with a "verified" date</li>
 <li>We re-verify every 90 days going forward</li>
@@ -2000,7 +1965,7 @@ const UTILITY_PAGES = [
 <li><strong>Styling:</strong> Single CSS file with native CSS custom properties — no frameworks</li>
 <li><strong>Hosting:</strong> Cloudflare Pages, deployed automatically from GitHub on every push</li>
 <li><strong>Domain:</strong> pattaya-gym.com — registered direct, DNS via Cloudflare</li>
-<li><strong>Analytics:</strong> Google Analytics — privacy-respecting, no cross-site tracking</li>
+<li><strong>Analytics:</strong> Google Analytics 4 — aggregate traffic measurement only, no advertising features, no demographic/Signals profiles, shortest available retention; see <a href="/privacy/">/privacy/</a> for full cookie and localStorage details</li>
 </ul>
 
 <h2>Typography</h2>
@@ -2031,7 +1996,7 @@ const UTILITY_PAGES = [
   {
     slug: 'pattaya-sport-stats',
     title: 'Pattaya sport stats — 158 venues across 15 sports',
-    desc: 'The numbers behind Pattaya as a training destination. 158 hand-checked venues, 15 sports, 6 areas. Updated weekly.',
+    desc: 'The numbers behind Pattaya as a training destination. 158 hand-checked venues, 15 sports, 6 areas. Verified on a rolling schedule.',
     eyebrow: 'Stats',
     headlineLead: 'Pattaya',
     headlineAccent: 'by the numbers',
@@ -2039,6 +2004,62 @@ const UTILITY_PAGES = [
     lede: 'The training landscape of Pattaya in numbers. 158 hand-checked venues across 15 sports and 6 distinct areas. One of the world\'s deepest single-city Muay Thai scenes.',
     showContactCard: false,
     bodyHtml: buildSportStatsBody()
+  },
+  {
+    // Round 17 — Codex F20.1 fix. GA + localStorage + AI crawlers are live but no
+    // privacy disclosure existed. This page documents what we collect, how long
+    // we keep it, and how EU/UK/Thai readers can exercise their rights.
+    slug: 'privacy',
+    title: 'Privacy policy — Pattaya.Gym',
+    desc: 'How Pattaya.Gym handles visitor data: Google Analytics, localStorage, AI crawler access, and your GDPR/PDPA rights. Independent, no advertising, no resale.',
+    eyebrow: 'Privacy',
+    headlineLead: 'Your data,',
+    headlineAccent: 'plain English',
+    accentClass: 'accent-mint',
+    lede: 'Pattaya.Gym is an independent directory. We sell no ads, we share no profiles, and we keep our data collection minimal. Here is exactly what happens when you visit.',
+    showContactCard: false,
+    bodyHtml: `
+<p><strong>Last updated:</strong> 2026-05-18. <strong>Operator:</strong> TimPaemi Co., Ltd., Pattaya City, Thailand. <strong>Contact:</strong> <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
+
+<h2>What we collect, in plain English</h2>
+<p>We collect three classes of data and nothing else:</p>
+<ol>
+<li><strong>Aggregate analytics (Google Analytics 4).</strong> Page views, device class, country-level location, and referrer. We use this to see which guides and venues people actually read so we can write more of what helps. We do not enable Google Signals, advertising features, demographic profiles, or cross-site identity stitching. GA4 retention is set to the shortest available window (2 months for event data, 14 months for user data).</li>
+<li><strong>Browser localStorage on venue pages.</strong> A small list of the last 8 venues you opened, stored only in your browser, so we can show a "Recently viewed" strip on venue pages. The key is <code>pattaya-gym:recently-viewed</code>. This never leaves your device and we cannot read it from the server.</li>
+<li><strong>URL parameters on /compare/.</strong> When you compare venues, the picks are encoded in the URL itself (<code>?a=&amp;b=&amp;c=&amp;d=</code>) so the comparison is bookmarkable and shareable. The URL is the data; we store nothing about your comparison server-side.</li>
+</ol>
+
+<h2>What we do not do</h2>
+<ul>
+<li>No first-party login. No user accounts. No password storage.</li>
+<li>No advertising of any kind. No retargeting pixels. No affiliate trackers. We have never been paid to feature, rank, or hide any venue.</li>
+<li>No cross-site tracking. No fingerprinting. No data brokers. We do not sell, rent, or trade visitor data — there is nothing to sell.</li>
+<li>No newsletter or marketing email collection on the site itself.</li>
+</ul>
+
+<h2>Cookies</h2>
+<p>The only cookies set on this domain are the Google Analytics 4 cookies (<code>_ga</code>, <code>_ga_*</code>). They identify a browser anonymously for analytics counting. They are not used for advertising. You can block them with any ad blocker, with browser tracking-protection settings, or with the global privacy control. The site works completely without analytics enabled.</p>
+
+<h2>AI and LLM crawler policy</h2>
+<p>Our <a href="/robots.txt">robots.txt</a> explicitly allows the major AI/LLM crawlers (GPTBot, ClaudeBot, PerplexityBot, CCBot, Google-Extended, Applebot-Extended, Meta-ExternalAgent, Bytespider, cohere-ai, Diffbot, Amazonbot, and others) to retrieve our content for training and live retrieval. This is a deliberate editorial choice: a public, accurate Pattaya directory is more useful inside AI tools than locked away from them. We do not provide any private user data to these crawlers — only the same HTML pages a human browser sees.</p>
+
+<h2>Third parties</h2>
+<ul>
+<li><strong>Cloudflare Pages</strong> hosts the site. Cloudflare receives a request log per page view (IP, user agent, URL) for routing and DDoS protection. Logs are managed under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</li>
+<li><strong>Google Analytics 4</strong> processes the analytics events described above under <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</li>
+<li><strong>Google Fonts</strong> serves the page typefaces from <code>fonts.googleapis.com</code>. Google states it does not log identifying information for font requests. We may self-host fonts in a future release to remove this hop entirely.</li>
+</ul>
+<p>No other third-party services are loaded on the site.</p>
+
+<h2>Your rights — GDPR (EU/UK) and PDPA (Thailand)</h2>
+<p>If you are in the EU, UK, or Thailand (or anywhere with similar legislation), you have the right to: request access to whatever data we hold on you (which is functionally nothing beyond aggregate GA counts you cannot be re-identified from), request deletion, request correction, withdraw consent, and lodge a complaint with your national data-protection authority. Email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a> and we will respond within 30 days. Because we do not run accounts, most requests are satisfied simply by you clearing your browser data — but we will confirm in writing if you ask.</p>
+
+<h2>Children</h2>
+<p>This is a general-interest sport directory. We do not knowingly collect data from anyone under 13.</p>
+
+<h2>Changes</h2>
+<p>Material changes to this policy will be announced in the <a href="/changelog/">site changelog</a>. The "last updated" date above always reflects the most recent revision.</p>
+`
   },
   {
     slug: '404',
@@ -2062,20 +2083,15 @@ const UTILITY_PAGES = [
 
 // ---------- Sitemap ----------
 function generateSitemap() {
-  const GUIDE_SLUGS = [
-    '24-hour-gyms-pattaya','bangkok-day-trip-sport-pattaya','best-dive-operators-pattaya',
-    'best-for-beginners-pattaya','best-golf-courses-pattaya','best-gyms-near-walking-street-pattaya',
-    'best-muay-thai-pattaya','cheapest-gyms-pattaya','family-friendly-pattaya',
-    'female-friendly-gyms-pattaya','luxury-sports-clubs-pattaya','pattaya-digital-nomad-fitness',
-    'pattaya-gyms-childcare-family-pools','pattaya-russian-speaking-sport',
-    'pattaya-seniors-low-impact-sport','pattaya-solo-female-fitness','thai-gym-terms-pattaya',
-    // Round 10 — 3 new long-tail guides
-    'english-speaking-muay-thai-pattaya',
-    'muay-thai-camps-with-accommodation-pattaya',
-    'gym-day-pass-pattaya'
-  ];
+  // Round 17 fix (Codex F07.1): GUIDE_SLUGS is now derived from disk so the
+  // sitemap can never advertise URLs that don't exist locally.
+  const guidesDir = path.join(__dirname, 'guides');
+  const GUIDE_SLUGS = fs.readdirSync(guidesDir, { withFileTypes: true })
+    .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
+    .map(e => e.name)
+    .sort();
   const TOOL_SLUGS = ['compare','map','plan-my-trip','find-my-coach','favorites'];
-  const UTILITY_EXTRA = ['add-your-gym','colophon','press','pattaya-sport-stats','changelog'];
+  const UTILITY_EXTRA = ['add-your-gym','colophon','press','pattaya-sport-stats','changelog','privacy'];
   const urls = [
     `${SITE}/`,
     `${SITE}/about/`,

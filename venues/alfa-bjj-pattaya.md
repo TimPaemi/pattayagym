@@ -1,7 +1,7 @@
 ---
 id: alfa-bjj-pattaya
 name: ALFA BJJ Pattaya
-category: muay-thai
+category: bjj
 area: Pattaya
 address: Soi Ko Pai 12, Muang Pattaya, Bang Lamung, Chonburi 20150
 phone: "+66 96 794 1992"

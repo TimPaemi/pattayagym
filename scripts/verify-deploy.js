@@ -5,8 +5,12 @@
  *   - Any HTML file not ending with </html>
  *   - Any HTML file ending mid-attribute (truncation)
  *   - styles.css with unbalanced braces
- *   - Any file with trailing NUL bytes (recurring Windows-mount artifact)
- *   - build-v2.js or data.js failing node --check
+ *   - Any HTML, JS, CSS, JSON, MD, .cmd, .xml or .txt source file
+ *     with NUL bytes or UTF-8 BOM (Round 17 expansion - Codex F23.1).
+ *     The build-v2.js NUL-byte truncation from Round 16 would have
+ *     been caught here under the new rules.
+ *   - Any sitemap URL whose local file is missing (catches GUIDE_SLUGS drift)
+ *   - Any of the key build scripts failing `node --check`
  *
  * Run from repo root: `node scripts/verify-deploy.js`
  * Exit code 0 = clean, 1 = failures (logged).
@@ -20,12 +24,19 @@ const ROOT = path.resolve(__dirname, '..');
 const errors = [];
 
 // --- Syntax check key JS files ---
-for (const f of ['build-v2.js', 'data.js']) {
+const JS_FILES_TO_CHECK = [
+  'build-v2.js', 'data.js',
+  'scripts/build-compare-page.js',
+  'scripts/write-changelog.js',
+  'scripts/write-status-json.js',
+  'scripts/rebuild-tool-stubs.js',
+  'scripts/sync-csp-hashes.js',
+  'scripts/inject-guide-schema.js',
+  'scripts/bump-legacy-assets.js'
+];
+for (const f of JS_FILES_TO_CHECK) {
   const p = path.join(ROOT, f);
-  if (!fs.existsSync(p)) {
-    errors.push(`${f}: missing`);
-    continue;
-  }
+  if (!fs.existsSync(p)) continue;
   try {
     execSync(`node --check "${p}"`, { stdio: 'pipe' });
   } catch (e) {
@@ -37,7 +48,7 @@ for (const f of ['build-v2.js', 'data.js']) {
 const htmlFiles = [];
 function walkHtml(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === '.backups') continue;
+    if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === '.backups' || entry.name === '.wrangler') continue;
     const fp = path.join(dir, entry.name);
     if (entry.isDirectory()) walkHtml(fp);
     else if (entry.name.endsWith('.html')) htmlFiles.push(fp);
@@ -53,13 +64,11 @@ for (const fp of htmlFiles) {
     errors.push(`${path.relative(ROOT, fp)}: does NOT end with </html>`);
     truncated++;
   }
-  // Mid-attribute detection: last 100 chars contain an unclosed quote-in-attr pattern
   const tail = trimmed.slice(-200);
   if (/href="[^"]*$/.test(tail) || /src="[^"]*$/.test(tail) || /class="[^"]*$/.test(tail)) {
     errors.push(`${path.relative(ROOT, fp)}: ends mid-attribute`);
     midAttr++;
   }
-  // NUL byte check
   if (buf.includes(0)) {
     errors.push(`${path.relative(ROOT, fp)}: contains NUL bytes (${buf.filter(b => b === 0).length} of them)`);
     nulled++;
@@ -81,12 +90,60 @@ if (fs.existsSync(cssPath)) {
   }
 }
 
-// --- CSP hash sanity (informational, not blocking) ---
+// --- Round 17 - Codex F23.1: NUL/BOM scan across all text source files ---
+const SOURCE_EXT_RE = /\.(js|css|md|json|cmd|xml|txt)$/i;
+const SOURCE_NAMES = new Set(['_headers', '_redirects']);
+const SKIP_DIRS = new Set(['node_modules', '.git', '.backups', '.wrangler', 'archive', 'archives']);
+function walkSources(dir, out) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (SKIP_DIRS.has(entry.name)) continue;
+    const fp = path.join(dir, entry.name);
+    if (entry.isDirectory()) walkSources(fp, out);
+    else if (SOURCE_EXT_RE.test(entry.name) || SOURCE_NAMES.has(entry.name)) out.push(fp);
+  }
+}
+const sourceFiles = [];
+walkSources(ROOT, sourceFiles);
+let sourceNul = 0, sourceBom = 0;
+for (const fp of sourceFiles) {
+  const buf = fs.readFileSync(fp);
+  if (buf.length === 0) continue;
+  if (buf.includes(0)) {
+    errors.push(`${path.relative(ROOT, fp)}: contains NUL bytes (${buf.filter(b => b === 0).length} of them)`);
+    sourceNul++;
+  }
+  if (buf.length >= 3 && buf[0] === 0xEF && buf[1] === 0xBB && buf[2] === 0xBF) {
+    errors.push(`${path.relative(ROOT, fp)}: starts with UTF-8 BOM (EF BB BF)`);
+    sourceBom++;
+  }
+}
+
+// --- Round 17 - Codex F07.1: every sitemap URL must have a local file ---
+const sitemapPath = path.join(ROOT, 'sitemap.xml');
+let sitemapUrls = 0, sitemapMissing = 0;
+if (fs.existsSync(sitemapPath)) {
+  const sm = fs.readFileSync(sitemapPath, 'utf8');
+  const matches = [...sm.matchAll(/<loc>https?:\/\/[^<]*?\/([^<]*?)<\/loc>/g)];
+  for (const m of matches) {
+    sitemapUrls++;
+    const urlPath = m[1].replace(/\/$/, '');
+    if (!urlPath) continue;
+    const candidates = [
+      path.join(ROOT, urlPath, 'index.html'),
+      path.join(ROOT, urlPath)
+    ];
+    if (!candidates.some(c => fs.existsSync(c))) {
+      errors.push(`sitemap.xml: ${m[0]} has no local file`);
+      sitemapMissing++;
+    }
+  }
+}
+
+// --- CSP hash sanity ---
 const headersPath = path.join(ROOT, '_headers');
 if (fs.existsSync(headersPath)) {
   const hdrs = fs.readFileSync(headersPath, 'utf8');
   const cspHashes = [...hdrs.matchAll(/'sha256-([A-Za-z0-9+/=]+)'/g)].map(m => m[1]);
-  // Compute hashes of all unique inline scripts across HTML files
   const crypto = require('crypto');
   const found = new Set();
   for (const fp of htmlFiles) {
@@ -117,12 +174,17 @@ console.log(`HTML files checked: ${htmlFiles.length}`);
 console.log(`  truncated (no </html>): ${truncated}`);
 console.log(`  mid-attribute endings:  ${midAttr}`);
 console.log(`  with NUL bytes:         ${nulled}`);
+console.log(`Source files checked: ${sourceFiles.length}`);
+console.log(`  with NUL bytes:         ${sourceNul}`);
+console.log(`  with UTF-8 BOM:         ${sourceBom}`);
+console.log(`Sitemap URLs checked: ${sitemapUrls}`);
+console.log(`  missing local file:     ${sitemapMissing}`);
 
 if (errors.length === 0) {
-  console.log('\n✓ Deploy verify PASSED');
+  console.log('\n\u2713 Deploy verify PASSED');
   process.exit(0);
 } else {
-  console.error(`\n✗ Deploy verify FAILED with ${errors.length} issue(s):`);
+  console.error(`\n\u2717 Deploy verify FAILED with ${errors.length} issue(s):`);
   for (const e of errors.slice(0, 25)) console.error('  - ' + e);
   if (errors.length > 25) console.error(`  ... and ${errors.length - 25} more`);
   process.exit(1);

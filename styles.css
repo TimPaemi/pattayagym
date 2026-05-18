@@ -1369,7 +1369,14 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   transition: border-color var(--t-fast) var(--easing);
 }
 .search-filter-panel select:hover { border-color: rgba(255,255,255,0.18); }
-.search-filter-panel select:focus { outline: none; border-color: var(--cyan); }
+/* Round 17 — Codex F12.2: restore a visible WCAG 2.4.13 focus indicator
+   instead of only shifting border colour by 1px. */
+.search-filter-panel select:focus { outline: none; }
+.search-filter-panel select:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+  border-color: var(--cyan);
+}
 .search-check {
   display: inline-flex;
   align-items: center;
@@ -1844,4 +1851,17 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   section.section, section.hero {
     page-break-inside: avoid;
   }
+}
+
+/* Round 17 — visually-hidden but still announced by assistive tech */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

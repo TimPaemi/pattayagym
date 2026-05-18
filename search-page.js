@@ -71,11 +71,32 @@
     if (state.area !== 'all' && areaSlug(g.area) !== state.area) return false;
     // Price (exact match on ฿/฿฿/฿฿฿/฿฿฿฿)
     if (state.price !== 'all' && g.priceRange !== state.price) return false;
-    // Open now (basic — flags any venue whose hours mention "24" or "daily" until proper parsing lands)
+    // Open now — Round 17 (Codex F01.1). The previous heuristic flagged any
+    // venue with "Daily" in its hours as always-open, which is wrong for
+    // "Daily 09:00-18:00". This parses HH:MM-HH:MM windows out of the hours
+    // string and checks them against current Pattaya time (ICT = UTC+7). The
+    // regex shortcut for 24/7 is kept because that one is unambiguous.
     if (state.openNow) {
       var h = (g.hours || '').toLowerCase();
-      var alwaysOpen = /24\/7|24\s*hour|daily/i.test(h);
-      if (!alwaysOpen) return false;
+      if (/24\s*\/?\s*7|24\s*hour/i.test(h)) {
+        // always open — pass
+      } else {
+        var now = new Date();
+        var ictNow = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (7 * 3600000));
+        var nowMin = ictNow.getHours() * 60 + ictNow.getMinutes();
+        var windows = [];
+        var re = /(\d{1,2}):(\d{2})\s*[-–]\s*(\d{1,2}):(\d{2})/g;
+        var m;
+        while ((m = re.exec(h))) windows.push([+m[1]*60 + +m[2], +m[3]*60 + +m[4]]);
+        if (!windows.length) return false; // no parseable hours → conservative
+        var openNow = false;
+        for (var wi = 0; wi < windows.length; wi++) {
+          var s = windows[wi][0], e = windows[wi][1];
+          if (e <= s) { if (nowMin >= s || nowMin < e) { openNow = true; break; } } // overnight
+          else if (nowMin >= s && nowMin < e) { openNow = true; break; }
+        }
+        if (!openNow) return false;
+      }
     }
     // Text query (case-insensitive substring across name + area + category + tags + description)
     if (state.q) {

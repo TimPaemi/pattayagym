@@ -39,8 +39,8 @@ function esc(s) {
     .replace(/'/g, '&#39;');
 }
 
-const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED WEEKLY'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','100% HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED WEEKLY'];
+const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','100% HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
 
 function marquee(items, bottom) {
   const cls = bottom ? 'marquee marquee-bottom' : 'marquee';
@@ -244,7 +244,7 @@ const STUBS = [
     alts: [
       {url: '/search/', title: 'Build a shortlist', desc: 'Live search makes it easy to filter to 3-5 venues that match your criteria.'},
       {url: '/category/muay-thai/', title: 'Top picks by sport', desc: 'Each category page surfaces the top 3 venues at the top with full editorial picks below.'},
-      {url: '/about/', title: 'How we rank', desc: 'Our methodology — independent, hand-checked, no paid placements, updated weekly.'}
+      {url: '/about/', title: 'How we rank', desc: 'Our methodology — independent, hand-checked, no paid placements, re-verified on a rolling schedule.'}
     ]
   }
 ];

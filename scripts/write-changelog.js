@@ -27,8 +27,8 @@ function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
-const TOP = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED WEEKLY'];
-const BOT = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','100% HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED WEEKLY'];
+const TOP = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
+const BOT = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','100% HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
 
 function marquee(items, bot) {
   const cls = bot ? 'marquee marquee-bottom' : 'marquee';
@@ -37,6 +37,28 @@ function marquee(items, bot) {
 }
 
 const ROUNDS = [
+  {
+    n: 17, date: '2026-05-18', tag: 'v413',
+    title: 'Codex Nuclear V4 audit — 5 P1 fixes + 10 P2 wins',
+    summary: 'Closed every P1 finding from the Codex Round 17 audit plus 10 quick P2 wins. The single biggest improvement: generated venue HTML went from 210 html-validate errors to 0 by replacing the regex Markdown converter with markdown-it.',
+    bullets: [
+      'F02.1 — Replaced bespoke regex mdToHtml with markdown-it; generated venue HTML now passes html-validate cleanly (210 → 0 structural errors).',
+      'F07.1 — Sitemap GUIDE_SLUGS is now derived from disk so the sitemap can no longer advertise URLs whose local files do not exist.',
+      'F20.1 — New /privacy/ page: Google Analytics 4, localStorage keys, AI crawler policy, GDPR/PDPA rights, full disclosure.',
+      'F21.1 — Softened every "updated weekly" / "within 7 days" claim across homepage, marquees, generated pages, methodology, and about. Honest copy matching actual rolling-verification cadence.',
+      'F23.1 — Hardened verify-deploy.js: NUL/BOM scan now covers every text source file; every sitemap URL must resolve to a local file.',
+      'F01.1 — Search "Open now" filter now parses real HH:MM windows against ICT.',
+      'F01.2 — Fixed 2 venue Markdown front-matter category mismatches (ALFA → bjj, Rambaa → mma).',
+      'F04.1 — Geo coordinates in LocalBusiness JSON-LD rounded to 6 decimals.',
+      'F05.2 — robots.txt now explicitly allows /og/ so Google/Twitter can fetch per-venue OG images.',
+      'F07.3 — Deleted stray extensionless junk files from repo root, added .wrangler/ to .gitignore.',
+      'F12.1 — ARIA live regions on search stats and compare status.',
+      'F12.2 — Visible 3px focus-visible outline on search filter selects.',
+      'F19.2 — Added browsing-topics=() to Permissions-Policy.',
+      'F20.2 — Replaced overstated "privacy-respecting" GA copy with precise statement linking to /privacy/.',
+      'Asset version bumped 412 → 413.'
+    ]
+  },
   {
     n: 16, date: '2026-05-18', tag: 'v412',
     title: 'Real side-by-side /compare/ tool',

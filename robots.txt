@@ -3,8 +3,8 @@
 
 User-agent: *
 Allow: /
+Allow: /og/
 Disallow: /uploads/
-Disallow: /og/
 Crawl-delay: 1
 
 # === Search engines ===

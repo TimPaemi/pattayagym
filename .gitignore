@@ -44,3 +44,18 @@ pattayagym_*.tar.gz
 zirZ3Bwy
 zii7NKzl
 $null
+
+# Cloudflare Wrangler local state (Round 17 — Codex F07.3)
+.wrangler/
+wrangler-account.json
+
+# Empty extensionless garbage files that periodically appear (Round 17 — Codex F07.3)
+# PUSH_ROUND17.cmd has a sweep step that deletes these; this just keeps any
+# newly-created ones from being committed by accident.
+30
+Venue
+af-academy-pattaya
+git
+kids-youth
+kids-youth)
+main
