@@ -27,6 +27,18 @@ const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') 
 // ---------- Load data ----------
 const { CATEGORIES, GYMS } = require('./data.js');
 
+// ---------- Load venue geo cache (optional — populated by scripts/geocode-venues.js) ----------
+let VENUE_GEO = {};
+try {
+  const geoPath = path.join(__dirname, 'data', 'venue-geo.json');
+  if (fs.existsSync(geoPath)) {
+    VENUE_GEO = JSON.parse(fs.readFileSync(geoPath, 'utf8'));
+  }
+} catch (e) {
+  // Cache is optional — build continues without geo if missing/corrupt
+  VENUE_GEO = {};
+}
+
 // Area normalization — map data.js free-text area to URL slug
 const AREA_MAP = {
   'jomtien': /jomtien/i,
@@ -581,7 +593,17 @@ function venuePage(g, fm, body) {
     address: address || undefined,
     telephone: (fm.phone || g.phone) ? (phoneToTel(fm.phone || g.phone) || (fm.phone || g.phone)) : undefined,
     email: fm.email || undefined,
-    geo: (fm.lat && fm.lng) ? { '@type': 'GeoCoordinates', latitude: Number(fm.lat), longitude: Number(fm.lng) } : undefined,
+    geo: (function() {
+      // Priority: 1) frontmatter override, 2) Nominatim geocode cache, 3) none
+      if (fm.lat && fm.lng) {
+        return { '@type': 'GeoCoordinates', latitude: Number(fm.lat), longitude: Number(fm.lng) };
+      }
+      const cached = VENUE_GEO[g.id];
+      if (cached && cached.lat && cached.lng && !cached.failed && cached._flag !== 'outside_pattaya_region') {
+        return { '@type': 'GeoCoordinates', latitude: Number(cached.lat), longitude: Number(cached.lng) };
+      }
+      return undefined;
+    })(),
     openingHoursSpecification: hoursSpec.length ? hoursSpec : undefined,
     openingHours: (!hoursSpec.length && (fm.hours || g.hours)) ? (fm.hours || g.hours) : undefined,
     areaServed: { '@type': 'City', name: 'Pattaya' },
@@ -1541,9 +1563,29 @@ function generateSitemap() {
       if (has) urls.push(`${SITE}/area/${slug}/${cat.key}/`);
     }
   }
+  // Sitemap priority + changefreq per URL pattern (Codex V3 P2-3 polish)
+  function priorityFor(u) {
+    if (u === `${SITE}/`) return '1.0';
+    if (u.startsWith(`${SITE}/category/`) || u.startsWith(`${SITE}/area/`)) {
+      // Combined area+category landing pages are highest-leverage long-tail surface
+      if (u.split('/').filter(Boolean).length >= 5) return '0.85';
+      return '0.9';
+    }
+    if (u.startsWith(`${SITE}/guides/`) && u.length > `${SITE}/guides/`.length + 1) return '0.8';
+    if (u.startsWith(`${SITE}/gyms/`)) return '0.7';
+    if (u === `${SITE}/search/` || u === `${SITE}/guides/`) return '0.7';
+    return '0.5';
+  }
+  function changefreqFor(u) {
+    if (u === `${SITE}/`) return 'daily';
+    if (u.startsWith(`${SITE}/category/`) || u.startsWith(`${SITE}/area/`)) return 'weekly';
+    if (u.startsWith(`${SITE}/gyms/`)) return 'weekly';
+    if (u.startsWith(`${SITE}/guides/`)) return 'monthly';
+    return 'monthly';
+  }
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(u => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}
+${urls.map(u => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>${changefreqFor(u)}</changefreq><priority>${priorityFor(u)}</priority></url>`).join('\n')}
 </urlset>`;
   writeFile(path.join(ROOT, 'sitemap.xml'), xml);
 }
