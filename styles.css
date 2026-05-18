@@ -1553,3 +1553,161 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   min-height: 48px;
   contain: layout;
 }
+
+/* ============ Round 11: trust signals + bylines + time widget ============ */
+
+/* Per-venue verified bar — sits under hero h1 */
+.trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: var(--s-4) 0 var(--s-2);
+  align-items: center;
+}
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(95, 255, 160, 0.08);
+  border: 1px solid rgba(95, 255, 160, 0.25);
+  color: var(--mint);
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.trust-pill.is-verified {
+  background: rgba(78, 224, 255, 0.10);
+  border-color: rgba(78, 224, 255, 0.35);
+  color: var(--cyan);
+}
+.trust-pill.is-link {
+  background: rgba(255, 46, 126, 0.08);
+  border-color: rgba(255, 46, 126, 0.25);
+  color: var(--pink);
+  text-decoration: none;
+  transition: background var(--t-fast) var(--easing);
+}
+.trust-pill.is-link:hover {
+  background: var(--pink);
+  color: #000;
+}
+
+/* Guide page byline — appears after h1 */
+.guide-byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: center;
+  margin: var(--s-3) 0 var(--s-5);
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.guide-byline a {
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(78, 224, 255, 0.35);
+}
+.guide-byline a:hover {
+  border-bottom-color: var(--cyan);
+}
+.guide-byline-author {
+  color: var(--text);
+  font-weight: 600;
+}
+.guide-byline-time {
+  color: var(--yellow);
+}
+.guide-byline-dot {
+  color: var(--hint);
+  user-select: none;
+}
+.guide-byline-link {
+  color: var(--pink) !important;
+  font-weight: 600;
+}
+
+/* Pattaya time widget — small clock in footer */
+.pattaya-time {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.pattaya-time-value {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+/* Larger footer version badge — replaces previous version text */
+.footer-version-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: var(--cyan);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.footer-version-badge::before {
+  content: "★";
+  color: var(--yellow);
+}
+.footer-version-badge a {
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(78, 224, 255, 0.3);
+}
+.footer-version-badge a:hover {
+  border-bottom-style: solid;
+}
+
+/* ============ Print stylesheet ============ */
+@media print {
+  .marquee, .marquee-bottom,
+  .nav, .pa-network,
+  .footer, .back-to-top,
+  .progress-bar, .skip-link,
+  .btn-row, .nav-cta {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .hero-h1, h1, h2, h3, h4,
+  .venue-body, .venue-body * {
+    color: #000 !important;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 10px;
+    color: #666;
+  }
+  .trust-bar, .guide-byline {
+    border-color: #000 !important;
+  }
+  .trust-pill {
+    border: 1px solid #000 !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+  section.section, section.hero {
+    page-break-inside: avoid;
+  }
+}

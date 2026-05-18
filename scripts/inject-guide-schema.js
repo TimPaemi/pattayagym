@@ -156,12 +156,36 @@ for (const guide of readGuidePages()) {
     }
   }
 
-  if (blocks.length === 0) { skipped++; continue; }
+  if (blocks.length > 0) {
+    // Inject schema before </head>
+    const headInjection = blocks.join('\n') + '\n';
+    html = html.replace(/<\/head>/i, headInjection + '</head>');
+  } else {
+    skipped++;
+  }
 
-  // Inject before </head>
-  const headInjection = blocks.join('\n') + '\n';
-  html = html.replace(/<\/head>/i, headInjection + '</head>');
+  // 3) Visible byline + reading time after the first <h1>, only inject once.
+  if (!/<div class="guide-byline"/.test(html)) {
+    // Compute reading time from body word count (200 wpm)
+    const mainMatch = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
+    const bodyHtml = mainMatch ? mainMatch[1] : html;
+    const plain = bodyHtml.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    const words = plain.split(' ').filter(Boolean).length;
+    const readingMin = Math.max(2, Math.round(words / 200));
+    const byline = `<div class="guide-byline">
+  <span class="guide-byline-author">By <a href="/about/">Tim Paemi</a></span>
+  <span class="guide-byline-dot">·</span>
+  <span class="guide-byline-time">${readingMin} min read</span>
+  <span class="guide-byline-dot">·</span>
+  <span class="guide-byline-date">Updated <time datetime="${pubDate}">${pubDate}</time></span>
+  <span class="guide-byline-dot">·</span>
+  <a href="/methodology/" class="guide-byline-link">How we rank →</a>
+</div>`;
+    // Insert byline immediately after the first </h1>
+    html = html.replace(/(<\/h1>)/, '$1\n' + byline);
+  }
+
   fs.writeFileSync(guide.path, html, 'utf8');
 }
 
-console.log(`Guide schema enrichment: Article added to ${articleAdded} guides; FAQPage added to ${faqAdded} guides; ${skipped} already had both`);
+console.log(`Guide schema enrichment: Article added to ${articleAdded} guides; FAQPage added to ${faqAdded} guides; ${skipped} already had both. Bylines + reading time added/refreshed.`);

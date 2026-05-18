@@ -10,8 +10,8 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/area/naklua/fitness/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=406" as="style">
-<link rel="stylesheet" href="/styles.css?v=406">
+<link rel="preload" href="/styles.css?v=407" as="style">
+<link rel="stylesheet" href="/styles.css?v=407">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
@@ -195,8 +195,8 @@
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span style="color:var(--cyan);">★ Last updated · 2026-05-18 00:57 UTC · v406</span>
-    <span>12.92°N · 100.87°E · Pattaya Villa</span>
+    <span class="footer-version-badge">Built 2026-05-18 15:14 UTC · <a href="/changelog/">v407</a></span>
+    <span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span>
   </div>
 </footer>
 <div class="progress-bar" aria-hidden="true"></div>
@@ -218,6 +218,22 @@
   if (btn) btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
   window.addEventListener('scroll', update, { passive: true });
   update();
+})();
+</script>
+<script>
+ (function(){
+  var el = document.getElementById('pt-clock');
+  if (!el) return;
+  function tick() {
+    var now = new Date();
+    // ICT is UTC+7, fixed offset (no DST)
+    var ict = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (7 * 3600000));
+    var hh = String(ict.getHours()).padStart(2, '0');
+    var mm = String(ict.getMinutes()).padStart(2, '0');
+    el.textContent = hh + ':' + mm;
+  }
+  tick();
+  setInterval(tick, 30000);
 })();
 </script>
 </body>

@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '406';
+const ASSET_VERSION = '407';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -507,11 +507,27 @@ function footer() {
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span style="color:var(--cyan);">★ Last updated · ${BUILD_TIMESTAMP} · v${ASSET_VERSION}</span>
-    <span>12.92°N · 100.87°E · Pattaya Villa</span>
+    <span class="footer-version-badge">Built ${BUILD_TIMESTAMP} · <a href="/changelog/">v${ASSET_VERSION}</a></span>
+    <span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span>
   </div>
 </footer>
 ${backToTop()}
+<script>
+ (function(){
+  var el = document.getElementById('pt-clock');
+  if (!el) return;
+  function tick() {
+    var now = new Date();
+    // ICT is UTC+7, fixed offset (no DST)
+    var ict = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (7 * 3600000));
+    var hh = String(ict.getHours()).padStart(2, '0');
+    var mm = String(ict.getMinutes()).padStart(2, '0');
+    el.textContent = hh + ':' + mm;
+  }
+  tick();
+  setInterval(tick, 30000);
+})();
+</script>
 </body>
 </html>`;
 }
@@ -677,6 +693,12 @@ function venuePage(g, fm, body) {
       ${firstWords ? esc(firstWords) + '<br>' : ''}<span class="${accent.class}">${esc(lastWord)}.</span>
     </h1>
     ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
+    ${g.verified ? `<div class="trust-bar" aria-label="Verification status">
+      <span class="trust-pill is-verified" title="Hand-checked by Tim Paemi">★ Verified by Tim · ${esc(g.verified)}</span>
+      <span class="trust-pill">100% Hand-checked</span>
+      <span class="trust-pill">No paid placement</span>
+      <a href="/methodology/" class="trust-pill is-link" title="How we rank venues">How we rank →</a>
+    </div>` : ''}
     ${g.description ? `<p class="hero-lede" style="text-align:left; margin-left:0; margin-right:0; margin-top:var(--s-5); font-size:clamp(16px,2vw,19px);">${esc(g.description)}</p>` : ''}
     <div class="btn-row" style="justify-content:flex-start; margin-top:var(--s-6);">
       ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
@@ -1538,10 +1560,14 @@ function generateSitemap() {
     'best-muay-thai-pattaya','cheapest-gyms-pattaya','family-friendly-pattaya',
     'female-friendly-gyms-pattaya','luxury-sports-clubs-pattaya','pattaya-digital-nomad-fitness',
     'pattaya-gyms-childcare-family-pools','pattaya-russian-speaking-sport',
-    'pattaya-seniors-low-impact-sport','pattaya-solo-female-fitness','thai-gym-terms-pattaya'
+    'pattaya-seniors-low-impact-sport','pattaya-solo-female-fitness','thai-gym-terms-pattaya',
+    // Round 10 — 3 new long-tail guides
+    'english-speaking-muay-thai-pattaya',
+    'muay-thai-camps-with-accommodation-pattaya',
+    'gym-day-pass-pattaya'
   ];
   const TOOL_SLUGS = ['compare','map','plan-my-trip','find-my-coach','favorites'];
-  const UTILITY_EXTRA = ['add-your-gym','colophon','press','pattaya-sport-stats'];
+  const UTILITY_EXTRA = ['add-your-gym','colophon','press','pattaya-sport-stats','changelog'];
   const urls = [
     `${SITE}/`,
     `${SITE}/about/`,
