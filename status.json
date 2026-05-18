@@ -1,0 +1,66 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataCatalog",
+  "name": "pattaya-gym.com — operational status",
+  "url": "https://pattaya-gym.com/status.json",
+  "description": "Public health + completeness metrics for pattaya-gym.com. Machine-readable trust signal updated on every build.",
+  "site": {
+    "name": "Pattaya.Gym",
+    "url": "https://pattaya-gym.com",
+    "operator": "TimPaemi Co., Ltd.",
+    "location": "Pattaya, Chon Buri, Thailand",
+    "independent": true,
+    "paidPlacements": false,
+    "handChecked": true,
+    "updateCadence": "weekly"
+  },
+  "build": {
+    "version": "v408",
+    "asset_version": "408",
+    "last_built_utc": "2026-05-18T15:21:46.478Z",
+    "last_built_date": "2026-05-18"
+  },
+  "catalog": {
+    "venues_total": 158,
+    "venues_with_body_content": 158,
+    "categories": 15,
+    "areas": 6,
+    "html_pages_shipped": 258,
+    "sitemap_urls": 260
+  },
+  "schema_completeness": {
+    "venues_with_verified_date": 158,
+    "venues_with_phone": 47,
+    "venues_with_website": 105,
+    "venues_with_geo_coordinates": 18,
+    "completeness_percent_geo": 11,
+    "completeness_percent_phone": 30
+  },
+  "freshness": {
+    "oldest_verified_date": "2026-04-27",
+    "newest_verified_date": "2026-04-29",
+    "oldest_verified_age_days": 21,
+    "target_max_age_days": 30
+  },
+  "endpoints": {
+    "sitemap": "https://pattaya-gym.com/sitemap.xml",
+    "robots": "https://pattaya-gym.com/robots.txt",
+    "rss": "https://pattaya-gym.com/feed.json",
+    "api_venues": "https://pattaya-gym.com/api/venues.json",
+    "api_categories": "https://pattaya-gym.com/api/categories.json",
+    "api_areas": "https://pattaya-gym.com/api/areas.json",
+    "openapi": "https://pattaya-gym.com/openapi.yaml",
+    "llms_txt": "https://pattaya-gym.com/llms.txt",
+    "changelog": "https://pattaya-gym.com/changelog/",
+    "methodology": "https://pattaya-gym.com/methodology/",
+    "contact": "https://pattaya-gym.com/contact/"
+  },
+  "policies": {
+    "paid_placements": "never",
+    "fake_reviews": "never",
+    "seo_spam": "never",
+    "update_cadence": "venues re-verified on a rolling weekly schedule",
+    "correction_sla_days": 7,
+    "methodology_url": "https://pattaya-gym.com/methodology/"
+  }
+}

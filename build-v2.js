@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '407';
+const ASSET_VERSION = '408';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -694,6 +694,7 @@ function venuePage(g, fm, body) {
     </h1>
     ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
     ${g.verified ? `<div class="trust-bar" aria-label="Verification status">
+      ${g.featured ? `<span class="trust-pill is-editors-pick" title="Editor's Pick — hand-selected as a top venue in this category">★ Editor's Pick</span>` : ''}
       <span class="trust-pill is-verified" title="Hand-checked by Tim Paemi">★ Verified by Tim · ${esc(g.verified)}</span>
       <span class="trust-pill">100% Hand-checked</span>
       <span class="trust-pill">No paid placement</span>
@@ -735,8 +736,54 @@ ${bodyHtml ? `
     <article class="venue-body" id="venue-body" style="max-width:760px; margin:0; font-size:16px; line-height:1.75; color:var(--text-2);">
       ${bodyHtml}
     </article>
+    ${Array.isArray(fm.sources) && fm.sources.length ? `
+    <div class="venue-sources" style="max-width:760px; margin:var(--s-8) 0 0;">
+      <div class="eyebrow" style="margin-bottom:var(--s-3);"><span class="num">★</span> Sources we checked</div>
+      <p style="color:var(--muted); font-size:13px; margin:0 0 var(--s-3);">Every claim on this page is verified against the venue's own sources. If something looks wrong, <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inaccurate info: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I noticed the following on /gyms/' + g.id + '/ that needs updating:\\n\\n')}" style="color:var(--cyan);">tell us</a> and we'll re-check within 7 days.</p>
+      <ul class="venue-source-list">
+        ${fm.sources.map(s => `<li><a href="${esc(s)}" target="_blank" rel="noopener noreferrer">${esc(s.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></li>`).join('')}
+      </ul>
+    </div>` : ''}
+    <div class="venue-report-info" style="max-width:760px; margin:var(--s-6) 0 0;">
+      <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Suggest update: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I have an update for /gyms/' + g.id + '/:\\n\\n(your update here)\\n\\nSource link (if any):\\n\\nThanks!')}" class="report-info-link">
+        <span class="report-info-icon">✎</span>
+        <span class="report-info-text">Spot an error or have an update? <strong>Tell us</strong> — we'll re-check within 7 days.</span>
+      </a>
+    </div>
+    <div id="recently-viewed-mount" data-current-id="${esc(g.id)}" data-current-name="${esc(g.name)}"></div>
   </div>
 </section>
+<script>
+ (function(){
+  var KEY = 'pgym_recent_v1';
+  var mount = document.getElementById('recently-viewed-mount');
+  if (!mount) return;
+  var currentId = mount.getAttribute('data-current-id');
+  var currentName = mount.getAttribute('data-current-name');
+  var list;
+  try {
+    list = JSON.parse(localStorage.getItem(KEY) || '[]');
+    if (!Array.isArray(list)) list = [];
+  } catch (e) { list = []; }
+  // Push current to front; dedupe; cap at 8
+  list = [{ id: currentId, name: currentName, ts: Date.now() }]
+    .concat(list.filter(function(x){ return x && x.id !== currentId; }))
+    .slice(0, 8);
+  try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) {}
+  // Render OTHER recently-viewed (excluding current)
+  var others = list.filter(function(x){ return x.id !== currentId; }).slice(0, 6);
+  if (others.length === 0) return;
+  var html = '<div class="recently-viewed">'
+    + '<div class="recently-viewed-h">// You also viewed</div>'
+    + '<div class="recently-viewed-list">'
+    + others.map(function(v){
+        var safe = v.name.replace(/[<>"&]/g, function(c){ return { '<':'&lt;','>':'&gt;','"':'&quot;','&':'&amp;' }[c]; });
+        return '<a class="recently-viewed-item" href="/gyms/' + encodeURIComponent(v.id) + '/">' + safe + '</a>';
+      }).join('')
+    + '</div></div>';
+  mount.innerHTML = html;
+})();
+</script>
 <script>
 (function(){
   var body = document.getElementById('venue-body');

@@ -1673,6 +1673,112 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   border-bottom-style: solid;
 }
 
+/* ============ Round 12: Sources, Report-info, Editor's Pick, Recently-viewed ============ */
+
+.trust-pill.is-editors-pick {
+  background: rgba(253, 224, 71, 0.10);
+  border-color: rgba(253, 224, 71, 0.35);
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+/* Sources block under venue body */
+.venue-sources {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--s-5);
+}
+.venue-source-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+.venue-source-list li {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  border-left: 2px solid var(--cyan);
+}
+.venue-source-list a {
+  color: var(--cyan);
+  text-decoration: none;
+  word-break: break-all;
+}
+.venue-source-list a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* Report-info link under venue body */
+.venue-report-info .report-info-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(255, 46, 126, 0.05);
+  border: 1px solid rgba(255, 46, 126, 0.20);
+  border-radius: 10px;
+  color: var(--text-2);
+  text-decoration: none;
+  font-size: 14px;
+  transition: background var(--t-fast) var(--easing), border-color var(--t-fast) var(--easing);
+}
+.venue-report-info .report-info-link:hover {
+  background: rgba(255, 46, 126, 0.12);
+  border-color: rgba(255, 46, 126, 0.40);
+}
+.report-info-icon {
+  font-size: 18px;
+  color: var(--pink);
+}
+.report-info-text strong {
+  color: var(--pink);
+}
+
+/* Recently-viewed venues strip — appears bottom of venue pages via JS */
+.recently-viewed {
+  margin: var(--s-6) 0;
+  padding: var(--s-5) var(--s-4);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.recently-viewed-h {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 var(--s-3);
+}
+.recently-viewed-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.recently-viewed-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(78, 224, 255, 0.06);
+  border: 1px solid rgba(78, 224, 255, 0.20);
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all var(--t-fast) var(--easing);
+}
+.recently-viewed-item:hover {
+  background: rgba(78, 224, 255, 0.12);
+  border-color: rgba(78, 224, 255, 0.40);
+}
+
 /* ============ Print stylesheet ============ */
 @media print {
   .marquee, .marquee-bottom,
