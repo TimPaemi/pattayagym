@@ -1500,3 +1500,56 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
   .search-filter-panel select { flex: 1; }
   .search-results { grid-template-columns: 1fr; padding: 0 16px; }
 }
+
+/* ============ Round 7: CLS / layout reservations ============ */
+/* Codex Nuclear V3 P1-2: reserve space on elements that shift during font/asset load.
+   Targets: homepage 0.343, search 0.490 CLS on mobile. */
+
+/* Reserve marquee height so it doesn't pop in after font swap */
+.marquee {
+  min-height: 50px;
+  contain: layout style paint;
+}
+.marquee-track {
+  contain: layout;
+}
+
+/* Reserve hero button row height so .btn-row doesn't shift when fonts swap */
+.btn-row {
+  min-height: 56px;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  .btn-row { min-height: 120px; }
+}
+
+/* Reserve result card height — Lighthouse flagged .result-card-desc as shifting */
+.result-card {
+  min-height: 220px;
+  contain: layout;
+}
+
+/* Reserve PA Network section height — flagged as biggest shift node on /search/ */
+.pa-network {
+  min-height: 240px;
+  contain: layout style;
+}
+
+/* Reserve nav row height — .nav-cta shift was flagged on category page */
+.nav-row {
+  min-height: 56px;
+}
+.nav-cta {
+  contain: layout;
+}
+
+/* Reserve hero h1 height roughly so font swap doesn't trigger a big paint shift */
+.hero-h1 {
+  contain: layout style;
+}
+
+/* Footer credit / build version line — small but shifts on slow networks */
+.footer-base {
+  min-height: 48px;
+  contain: layout;
+}
