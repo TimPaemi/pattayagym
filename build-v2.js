@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '409';
+const ASSET_VERSION = '410';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -955,30 +955,30 @@ ${(g.tags && g.tags.length) ? `
       <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="channel-card is-email">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// Email</div>
-        <h3 class="channel-card-name">info@pattaya-gym.com</h4>
+        <h3 class="channel-card-name">info@pattaya-gym.com</h3>
         <div class="channel-card-sub">Reply within 24h</div>
       </a>
       <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="channel-card is-wa">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Fastest</div>
-        <h3 class="channel-card-name">whatsapp</h4>
+        <h3 class="channel-card-name">whatsapp</h3>
         <div class="channel-card-sub">+66 96 728 6999</div>
       </a>
       <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
-        <h3 class="channel-card-name">@timpaemi</h4>
+        <h3 class="channel-card-name">@timpaemi</h3>
         <div class="channel-card-sub">Daily check</div>
       </a>
       ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Direct line</div>
-        <h3 class="channel-card-name">Call gym</h4>
+        <h3 class="channel-card-name">Call gym</h3>
         <div class="channel-card-sub">${esc(g.phone)}</div>
       </a>` : `<a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Our agency</div>
-        <h3 class="channel-card-name">pattaya authority</h4>
+        <h3 class="channel-card-name">pattaya authority</h3>
         <div class="channel-card-sub">pattaya-authority.com</div>
       </a>`}
     </div>
@@ -1116,6 +1116,140 @@ function categoryPage(cat, venues) {
 }
 
 // ---------- Area page ----------
+// ---------- Per-area editorial depth ----------
+// Codex Nuclear V3 P1-6: area pages were thin (Sattahip 104 words, East Pattaya 231).
+// This map gives each area a real neighborhood guide: best-for, transport, landmarks, starter venues.
+const AREA_CONTENT = {
+  'jomtien': {
+    accent: 'accent-cyan',
+    summary: 'South Pattaya beachfront. Family-friendly, long-stay-friendly, and the strongest concentration of watersports and yoga in the city.',
+    intro: `<p>Jomtien Beach is the southern half of greater Pattaya — a 6 km strip of beachfront stretching from Pratamnak Hill down to Na Jomtien. The vibe is calmer than Central Pattaya: long-stay condos rather than short-stay hotels, families and digital nomads rather than nightlife tourists, and a much higher density of yoga studios, watersports operators, and beachfront fitness than anywhere else in the city.</p><p>If you're booking a 1-3 month Pattaya stay and want to combine training with beach access and walkable food/shopping, Jomtien is the default neighborhood.</p>`,
+    bestFor: [
+      { label: 'Watersports & diving', why: 'Beachfront access to kitesurfing, paddleboarding, jet skis, parasailing, and the boats that run to Koh Larn.' },
+      { label: 'Yoga & Pilates', why: 'Highest concentration of dedicated yoga studios in Pattaya, including several with beach-view rooftops.' },
+      { label: 'Family fitness', why: 'Hotel resort gyms (Andaz, Movenpick, Holiday Inn) plus family pools, swimming clubs, kids classes.' },
+      { label: 'Long-stay digital nomads', why: 'Walkable beach + condo zone, slower pace, plenty of co-working coffee.' }
+    ],
+    transport: 'Jomtien Beach Road runs north-south along the beach; Thappraya Road and the Pattaya Klang baht-bus (songthaew) route run parallel inland. The Soi numbering goes south from the Dolphin Roundabout. The baht-bus from Central Pattaya to Jomtien is ~฿10-20.',
+    landmarks: [
+      'Jomtien Beach (6 km public beach, free access)',
+      'Pattaya Park Tower',
+      'Dolphin Roundabout (the northern gateway to Jomtien)',
+      'Ocean Marina Yacht Club (Sattahip end)',
+      'Boat departures to Koh Larn from Bali Hai Pier (technically Central, but the natural ferry origin for Jomtien stays)'
+    ],
+    starterPicks: 'If you want the easiest first day: start at a Jomtien beachfront yoga studio for a morning class, then a Muay Thai session at one of the nearby camps, then dinner on the beach. Most accommodation here is walkable to all three.'
+  },
+
+  'naklua': {
+    accent: 'accent-cyan',
+    summary: 'North-end Pattaya. Quieter than Central, beachfront at Wong Amat, mixed expat residential and upper-mid-market hotels. Strong Muay Thai presence.',
+    intro: `<p>Naklua is everything north of the Naklua-Pattaya bay line — the original fishing-village end of Pattaya before the city expanded south. It still feels different: narrower streets, more Thai-owned shops, a quieter beach (Wong Amat), and fewer tourists per square metre than Central Pattaya.</p><p>For Muay Thai trainers specifically, this is the most-loaded neighborhood in Pattaya — Fairtex, Sityodtong, and several smaller authentic camps all train here. Long-stay couples, female trainers, and tourists looking for a calmer base often pick Naklua over the noisier south.</p>`,
+    bestFor: [
+      { label: 'Muay Thai (especially long-stay)', why: 'Fairtex resort camp, Sityodtong (1960 legacy), Petchrungruang family camp — three of Pattaya\'s most-respected Muay Thai gyms within a few km of each other.' },
+      { label: 'Beach + quiet', why: 'Wong Amat Beach is calmer than Pattaya Beach. Good for families with kids and for trainers who want to recover by the water.' },
+      { label: 'Resort training', why: 'Mid-upper hotels (Cape Dara, Centara Grand Mirage) cluster here with full fitness/spa amenities.' }
+    ],
+    transport: 'Naklua Road is the main north-south spine; the baht-bus from Central Pattaya runs the length of it. North Pattaya Road connects to Sukhumvit. Bus station Pattaya Nuea is in this area, serving Bangkok-bound minivans and buses.',
+    landmarks: [
+      'Wong Amat Beach (quiet family beach)',
+      'Sanctuary of Truth (carved wooden temple)',
+      'Lan Po Naklua market (Thai-style fresh market)',
+      'Mum Aroi seafood pier',
+      'Naklua bus terminal (Bangkok routes)'
+    ],
+    starterPicks: 'If Muay Thai is the trip, start at Fairtex or Sityodtong depending on whether you want the resort experience or the lineage experience. Stay at one of the Naklua hotels for walkable training + beach + market food access.'
+  },
+
+  'pratamnak': {
+    accent: 'accent-mint',
+    summary: 'The premium hill between Pattaya and Jomtien. Hilton, Royal Cliff, Mövenpick — Pattaya\'s 5-star cluster. Quiet, high-end, view-heavy.',
+    intro: `<p>Pratamnak Hill (also spelled Pratumnak — both are correct) is the elevated ridge separating Central Pattaya from Jomtien Beach. It\'s where the highest-end resorts cluster: Hilton, Royal Cliff Hotels Group (Fitz Club), Mövenpick Siam, Centara Grand Mirage. The streets are quiet, the views are panoramic over Pattaya Bay, and the vibe is much more "wellness retreat" than "tourist strip".</p><p>For sport, this is the luxury end of Pattaya — top-tier fitness clubs with multiple racquet sport courts, full-service spas, championship-class swimming, and on-call personal trainers for any discipline. Day passes and short stays are pricier but the experience is materially different from the chain gyms downtown.</p>`,
+    bestFor: [
+      { label: 'Luxury fitness clubs', why: 'Fitz Club at Royal Cliff — 7 tennis courts, 2 AC squash courts, swimming, weights, professional coaching.' },
+      { label: 'Hotel fitness + spa', why: 'Hilton Pattaya, Andaz Jomtien (Pratamnak side), Royal Cliff — 5-star fitness as part of resort stay.' },
+      { label: 'Family resort sport', why: 'Centara Grand Mirage Beach Resort family-friendly with multiple pools, kids clubs, sport amenities.' },
+      { label: 'View training', why: 'Big Buddha Hill (Wat Phra Yai) is on Pratamnak — the staircase climb is a free public cardio session with the best view in Pattaya.' }
+    ],
+    transport: 'Pratamnak Soi 4, Pratamnak Soi 5, and Pratamnak Soi 6 run up the hill. Best accessed by taxi/Grab; the songthaew network is thinner here. The hill is between Beach Road (Central Pattaya) and Jomtien Beach Road — both are 5-10 min by car.',
+    landmarks: [
+      'Big Buddha Hill / Wat Phra Yai (free staircase climb, panoramic Pattaya view)',
+      'Khao Phra Tamnak viewpoint',
+      'Royal Cliff Hotels Group (luxury cluster)',
+      'Cosy Beach (small, hotel-adjacent)',
+      'Buddha Hill viewpoint at the south end'
+    ],
+    starterPicks: 'If the trip is wellness/luxury: book Hilton Pattaya, use the Fitz Club day pass for racquet sports + swimming, climb Big Buddha Hill at sunrise. That\'s a complete Pratamnak day.'
+  },
+
+  'central-pattaya': {
+    accent: 'accent-pink',
+    summary: 'The original Pattaya. Beach Road, Walking Street, Soi Buakhao. Loud, central, walkable, with the deepest pool of budget and mid-market gyms.',
+    intro: `<p>Central Pattaya is the loud, dense, walkable heart of the city — Beach Road, Walking Street, Soi Buakhao, the Pattaya Klang corridor. It\'s where the original tourist economy is, and where the highest density of budget and mid-market gyms cluster. If you\'re here for 3-7 nights and want to walk to training from your hotel, this is the neighborhood.</p><p>For Muay Thai specifically, Central has WKO (the legendary budget camp), Battle Conquer (the air-conditioned option), Tony\'s Gym (cheapest weights room in Pattaya), and Pattaya Boxing World. For commercial fitness, every major chain (Anytime, Jetts, Fitness 7, Muscle Factory) has a Central Pattaya branch.</p>`,
+    bestFor: [
+      { label: 'Short-stay tourists', why: 'Hotel walkable to gym, beach, food, transport. Maximum convenience for 3-7 night trips.' },
+      { label: 'Budget Muay Thai', why: 'WKO (~฿4,000/month), Tony\'s Gym (cheapest), Pattaya Thai Boxing Fitness — solid technique at low prices.' },
+      { label: '24-hour gym access', why: 'Anytime Fitness, Jetts Fitness, Fitness 7 — chain gyms with extended or 24h access.' },
+      { label: 'Mid-tier commercial fitness', why: 'Elite Gym, Castra, Manhattan Pattaya Fitness — well-equipped, reasonable prices, English-friendly.' }
+    ],
+    transport: 'Beach Road and Second Road run north-south along the beach corridor. Pattaya Klang (Central Road) runs east. Soi Buakhao runs north-south one block inland. The baht-bus loop covers all of this for ฿10-20.',
+    landmarks: [
+      'Walking Street (south end of Beach Road)',
+      'Bali Hai Pier (boats to Koh Larn)',
+      'Pattaya Beach (main public beach)',
+      'Soi Buakhao (mid-market food + nightlife strip)',
+      'Central Festival Pattaya Beach (mall)',
+      'Big-C Pattaya Klang'
+    ],
+    starterPicks: 'If the trip is short and the goal is one-stop convenience: stay near Soi Buakhao, train at WKO or Battle Conquer in the morning, lift at Anytime Fitness in the afternoon, eat anywhere within a 10-minute walk.'
+  },
+
+  'east-pattaya': {
+    accent: 'accent-mint',
+    summary: 'Inland East / "Darkside". Mabprachan Lake, Pong, Nong Prue. Expat residential, cheaper rent, more serious gyms per square km than anywhere else in Pattaya.',
+    intro: `<p>East Pattaya — locally called "Darkside" because it\'s east of the railway line — is the inland expat residential half of the city. Mabprachan Lake is the geographic center; the surrounding villages (Pong, Nong Prue, Huai Yai) are where many long-term foreign residents live because rent and houses are 30-50% cheaper than the beach side.</p><p>Sport-wise, East Pattaya punches above its weight. Several of the best-respected serious Muay Thai gyms are here (Sanit Sport Club, Kombat Group at Huai Yai). Most of the elite golf courses (Phoenix Gold, Treasure Hill, Burapha) are in the East Pattaya / Sriracha border region. And there\'s less tourist friction — gyms here cater to people who actually live in Pattaya.</p>`,
+    bestFor: [
+      { label: 'Serious Muay Thai (long-stay)', why: 'Sanit Sport Club (multi-zone), Kombat Group (all-inclusive), several smaller authentic camps. Less tourist polish, more training depth.' },
+      { label: 'Golf', why: 'Phoenix Gold, Treasure Hill, Burapha Golf, Mountain Shadow — all within East Pattaya / nearby borders.' },
+      { label: 'Family expat residential sport', why: 'Regents International School Pattaya (sports facilities), large house pools for swim clubs, equestrian (Thai Polo Equestrian Club, Horseshoe Point) all in this area.' },
+      { label: 'Adventure / multi-sport', why: 'ATV tours, Tarzan Adventure ziplines, Flight of the Gibbon — outdoor adventure cluster is east-inland.' }
+    ],
+    transport: 'Sukhumvit-Pattaya highway is the main north-south spine; Tepprasit Road is the major east-west connection from beach to inland. Mabprachan Lake circle road loops around the eastern center. A car or scooter is much more practical than baht-bus.',
+    landmarks: [
+      'Mabprachan Lake (residential expat center)',
+      'Sukhumvit Road (Highway 3)',
+      'Tepprasit Road (connects beach to inland)',
+      'Huai Yai (rural, near Chak Nok Lake — Kombat Group territory)',
+      'Pong / Nong Prue villages',
+      'Si Racha-Pattaya highway (Highway 7) for Bangkok access'
+    ],
+    starterPicks: 'If you\'re doing a 1-3 month training stay and want lower rent + serious training: rent a house near Mabprachan Lake, train at Sanit Sport Club or commute to Kombat Group, and use East Pattaya golf courses for cross-training.'
+  },
+
+  'sattahip': {
+    accent: 'accent-yellow',
+    summary: 'The quietest end. South of Jomtien toward U-Tapao Airport and the naval base. Dive operators, premium golf, Bang Saray, family-escape beaches.',
+    intro: `<p>Sattahip is the southern district that includes Bang Saray, Na Jomtien, and the area around U-Tapao Pattaya International Airport. It\'s genuinely quiet — much less developed than Pattaya proper, with cleaner beaches, a working Royal Thai Navy base, and the kind of beachfront village pace that Pattaya hasn\'t had in 30 years.</p><p>For sport, this is the diving and golf end of Pattaya. The largest marina in Southeast Asia (Ocean Marina Yacht Club) is here. Several of the premium dive operators run trips from Bang Saray. Top-tier golf courses (Pattana Sports Resort, St. Andrews 2000, Chee Chan) are mid-Sattahip. And for families wanting a beach escape from Pattaya energy, Bang Saray and Sai Kaew are the quiet beach options.</p>`,
+    bestFor: [
+      { label: 'Diving', why: 'Bang Saray is the launching point for many dive trips. Pattaya Scuba Adventures, Seafari, Mermaid\'s Dive Center all operate from this area.' },
+      { label: 'Premium golf', why: 'Pattana Sports Resort, St. Andrews 2000, Chatrium Golf Soi Dao, Chee Chan — top-tier courses within a 30-min drive.' },
+      { label: 'Sailing & marina', why: 'Ocean Marina Yacht Club (largest in SE Asia), Royal Varuna Yacht Club. Sailing courses, charter, regattas.' },
+      { label: 'Family beach escape', why: 'Bang Saray Beach and Sai Kaew Beach are 30-40 min from Central Pattaya but feel a decade older. Good for kids.' },
+      { label: 'Airport-adjacent stays', why: 'U-Tapao Airport is in Sattahip. If you\'re flying into Pattaya for a sport-focused trip, Sattahip is a 10-min drive vs 60-min into Central Pattaya.' }
+    ],
+    transport: 'Sukhumvit south continues from Pattaya to Sattahip. U-Tapao airport access road. A car or motorbike is essential — baht-bus coverage here is thin to nonexistent. Buses to Sattahip run from Pattaya Klang and Bangkok.',
+    landmarks: [
+      'Bang Saray Beach (quiet village + beach)',
+      'Sai Kaew Beach (military beach, public access, very clean)',
+      'Ocean Marina Yacht Club',
+      'U-Tapao Pattaya International Airport',
+      'Royal Thai Navy base + Sattahip Naval Officers Club',
+      'Khao Chi Chan Buddha Mountain (carved gold Buddha on a cliff)'
+    ],
+    starterPicks: 'If the trip is diving or golf, base in Bang Saray, dive from there, and use the proximity to the premium golf courses. If you\'re flying into U-Tapao for a Muay Thai trip and want a quiet start, spend the first 2 days in Sattahip before moving north to a Pattaya camp.'
+  }
+};
+
 function areaPage(slug, label, venues) {
   const url = `${SITE}/area/${slug}/`;
   const title = `${label}, Pattaya — sport venues | Pattaya.Gym`;
@@ -1152,21 +1286,91 @@ function areaPage(slug, label, venues) {
     + `
 <main id="main">
 
-<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-10); text-align:left;">
+${(() => {
+  const content = AREA_CONTENT[slug] || null;
+  const accent = content ? content.accent : 'accent-cyan';
+  // Top-3 sport categories in this area (by venue count)
+  const catCounts = {};
+  for (const v of venues) catCounts[v.category] = (catCounts[v.category] || 0) + 1;
+  const topCats = Object.entries(catCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6)
+    .map(([key, count]) => ({ key, count, label: (CATEGORIES.find(c => c.key === key) || {}).label || key }));
+
+  return `<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
   <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
-    <div class="hero-kicker">// Area · ${venues.length} venues</div>
+    <div class="hero-kicker">// Neighborhood · ${venues.length} venues · ${topCats.length} sports</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,10vw,120px); text-align:left;">
-      <span class="accent-cyan">${esc(label)}.</span>
+      <span class="${accent}">${esc(label)}.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0;">Every venue we track in <strong>${esc(label)}</strong>. ${venues.length} hand-checked entries across all sports — gyms, camps, golf, yoga, watersports.</p>
-    <p class="hero-meta" style="text-align:left;">${venues.length} venues · Pattaya · Updated ${TODAY}</p>
+    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:780px;">${content ? esc(content.summary) : `Every venue we track in <strong>${esc(label)}</strong>. ${venues.length} hand-checked entries across all sports.`}</p>
+    <p class="hero-meta" style="text-align:left;">${venues.length} venues · ${esc(label)} · Pattaya · Updated ${TODAY}</p>
   </div>
 </section>
 
-<section class="section">
+${content ? `
+<section class="section" style="padding-top:0;">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">01</span> All venues</div>
-    <h2 class="h-section">Every venue in <span class="accent-yellow">${esc(label)}.</span></h2>
+    <article class="venue-body" style="max-width:880px; margin:0;">
+      <div class="eyebrow" style="margin-bottom:var(--s-3);"><span class="num">01</span> About this neighborhood</div>
+      <h2 class="h-section">What ${esc(label)} <span class="${accent}">is for.</span></h2>
+      ${content.intro}
+    </article>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">02</span> Best for</div>
+    <h2 class="h-section">When to pick <span class="${accent}">${esc(label)}.</span></h2>
+    <div class="numlist">
+      ${content.bestFor.map((b, i) => `
+      <div class="numcard">
+        <div class="numcard-head">
+          <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
+          <h3 class="numcard-title">// ${esc(b.label)}</h3>
+        </div>
+        <p class="numcard-body">${esc(b.why)}</p>
+      </div>
+      `).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="max-width:var(--max); margin:0 auto;">
+    <article class="venue-body" style="max-width:880px; margin:0;">
+      <div class="eyebrow" style="margin-bottom:var(--s-3);"><span class="num">03</span> Transport &amp; access</div>
+      <h2 class="h-section">How to <span class="accent-cyan">get there.</span></h2>
+      <p>${esc(content.transport)}</p>
+
+      <div class="eyebrow" style="margin:var(--s-6) 0 var(--s-3);"><span class="num">04</span> Landmarks &amp; orientation</div>
+      <h2 class="h-section">Where you <span class="accent-yellow">are.</span></h2>
+      <ul>${content.landmarks.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
+
+      <div class="eyebrow" style="margin:var(--s-6) 0 var(--s-3);"><span class="num">05</span> Starter pick</div>
+      <h2 class="h-section">If you're <span class="accent-pink">new here.</span></h2>
+      <p>${esc(content.starterPicks)}</p>
+    </article>
+  </div>
+</section>
+` : ''}
+
+<section class="section" style="padding-top:var(--s-4);">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">0${content ? '6' : '1'}</span> By sport</div>
+    <h2 class="h-section">Sports in <span class="accent-mint">${esc(label)}.</span></h2>
+    <p class="lede">Jump straight to the combined category-area page for any sport in ${esc(label)}.</p>
+    <div class="btn-row" style="flex-wrap:wrap; gap:8px; margin-top:var(--s-4);">
+      ${topCats.map(c => `<a href="/area/${slug}/${c.key}/" class="btn btn-ghost" style="font-size:13px;">${esc(c.label)} <span style="color:var(--muted); font-weight:400;">(${c.count})</span></a>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:var(--s-6);">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">0${content ? '7' : '2'}</span> Every venue</div>
+    <h2 class="h-section">All ${venues.length} venues in <span class="accent-yellow">${esc(label)}.</span></h2>
     <div class="numlist">
       ${venues.map((v, i) => {
         const cat = CATEGORIES.find(c => c.key === v.category);
@@ -1185,7 +1389,8 @@ function areaPage(slug, label, venues) {
   </div>
 </section>
 
-</main>
+</main>`;
+})()}
 `
     + paNetwork()
     + bottomMarquee(BOTTOM_MARQUEE)
@@ -1350,25 +1555,25 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
       <a href="mailto:info@pattaya-gym.com" class="channel-card is-email">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// Email</div>
-        <h3 class="channel-card-name">info@pattaya-gym.com</h4>
+        <h3 class="channel-card-name">info@pattaya-gym.com</h3>
         <div class="channel-card-sub">Reply within 24h</div>
       </a>
       <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener noreferrer" class="channel-card is-wa">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Fastest</div>
-        <h3 class="channel-card-name">whatsapp</h4>
+        <h3 class="channel-card-name">whatsapp</h3>
         <div class="channel-card-sub">+66 96 728 6999</div>
       </a>
       <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
-        <h3 class="channel-card-name">@timpaemi</h4>
+        <h3 class="channel-card-name">@timpaemi</h3>
         <div class="channel-card-sub">Daily check</div>
       </a>
       <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Our agency</div>
-        <h3 class="channel-card-name">pattaya authority</h4>
+        <h3 class="channel-card-name">pattaya authority</h3>
         <div class="channel-card-sub">pattaya-authority.com</div>
       </a>
     </div>
