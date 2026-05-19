@@ -1,58 +1,74 @@
 {
   "fairtex-pattaya": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:15.373Z"
+    "lat": 12.9515,
+    "lng": 100.8899,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "sityodtong-pattaya": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:17.337Z"
+    "lat": 12.916,
+    "lng": 100.879,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "wko-muay-thai": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:18.954Z"
+    "lat": 12.929,
+    "lng": 100.909,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "kombat-group-thailand": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:20.805Z"
+    "lat": 12.932473,
+    "lng": 100.884808,
+    "display_name": "Made In Thailand Night Plaza, \u0e16\u0e19\u0e19\u0e1e\u0e31\u0e17\u0e22\u0e32\u0e2a\u0e32\u0e22\u0e2a\u0e2d\u0e07, \u0e19\u0e32\u0e40\u0e01\u0e25\u0e37\u0e2d, \u0e40\u0e21\u0e37\u0e2d\u0e07\u0e1e\u0e31\u0e17\u0e22\u0e32, \u0e2b\u0e19\u0e2d\u0e07\u0e1b\u0e25\u0e32\u0e44\u0e2b\u0e25, \u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e25\u0e30\u0e21\u0e38\u0e07, \u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e0a\u0e25\u0e1a\u0e38\u0e23\u0e35, 20210, \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22",
+    "osm_type": "way",
+    "osm_id": 167314167,
+    "source": "nominatim-v2",
+    "strategy": "area_centroid",
+    "_flag": "area_centroid",
+    "attempted_at": "2026-05-19T03:50:29.786Z"
   },
   "battle-conquer-gym": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:22.301Z"
+    "lat": 12.914311,
+    "lng": 100.866558,
+    "display_name": "Battle & Conquer Gym, \u0e1e\u0e23\u0e30\u0e15\u0e33\u0e2b\u0e19\u0e31\u0e01 4 \u0e0b\u0e2d\u0e22 1, \u0e40\u0e21\u0e37\u0e2d\u0e07\u0e1e\u0e31\u0e17\u0e22\u0e32, \u0e2b\u0e49\u0e27\u0e22\u0e43\u0e2b\u0e0d\u0e48, \u0e2d\u0e33\u0e40\u0e20\u0e2d\u0e1a\u0e32\u0e07\u0e25\u0e30\u0e21\u0e38\u0e07, \u0e08\u0e31\u0e07\u0e2b\u0e27\u0e31\u0e14\u0e0a\u0e25\u0e1a\u0e38\u0e23\u0e35, 20260, \u0e1b\u0e23\u0e30\u0e40\u0e17\u0e28\u0e44\u0e17\u0e22",
+    "osm_type": "node",
+    "osm_id": 12069515998,
+    "source": "nominatim-v2",
+    "strategy": "name+pattaya",
+    "attempted_at": "2026-05-19T03:50:33.447Z"
   },
   "sor-klinmee": {
     "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:24.266Z"
+    "source": "nominatim-v2",
+    "attempted_at": "2026-05-19T03:50:37.997Z"
   },
   "petchrungruang-gym": {
-    "lat": 12.9305323,
-    "lng": 100.8969528,
-    "accuracy": "residential",
-    "osm_type": "way",
-    "osm_id": 146721360,
-    "source": "nominatim",
-    "display": "Sukhumvit Pattaya Soi 42, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
-    "query": "Soi Sukhumvit-Pattaya 50, Bang Lamung, Pattaya, Thailand"
+    "lat": 12.928,
+    "lng": 100.91,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "rambaa-somdet-m16": {
     "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:27.615Z"
+    "source": "nominatim-v2",
+    "attempted_at": "2026-05-19T03:50:42.366Z"
   },
   "venum-training-camp": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:29.567Z"
+    "lat": 12.9404,
+    "lng": 100.9233,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "alfa-bjj-pattaya": {
     "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:31.621Z"
+    "source": "nominatim-v2",
+    "attempted_at": "2026-05-19T03:50:51.296Z"
   },
   "sanit-sport-club": {
     "failed": true,
@@ -65,9 +81,11 @@
     "attempted_at": "2026-05-18T00:43:35.241Z"
   },
   "rajadamnern-stadium": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:36.748Z"
+    "lat": 12.93,
+    "lng": 100.887,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "rage-fight-academy": {
     "failed": true,
@@ -75,14 +93,11 @@
     "attempted_at": "2026-05-18T00:43:38.196Z"
   },
   "silk-muay-thai": {
-    "lat": 12.9135434,
-    "lng": 100.877274,
-    "accuracy": "hotel",
-    "osm_type": "node",
-    "osm_id": 13099491868,
-    "source": "nominatim",
-    "display": "LOST PATTAYA LAND, 417/9, Soi Mallo, Pattaya City, Huai Yai, Bang Lamung District, Chon Buri Province, 20150, Thailand",
-    "query": "Pattaya, Bang Lamung, Pattaya, Thailand"
+    "lat": 12.921,
+    "lng": 100.918,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-thai-boxing-fitness": {
     "failed": true,
@@ -95,9 +110,11 @@
     "attempted_at": "2026-05-18T00:43:43.362Z"
   },
   "sitpholek-muay-thai": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:45.229Z"
+    "lat": 12.92,
+    "lng": 100.918,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "crossfit-pattaya": {
     "failed": true,
@@ -130,9 +147,11 @@
     "attempted_at": "2026-05-18T00:43:53.239Z"
   },
   "fitz-club": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:43:55.096Z"
+    "lat": 12.892,
+    "lng": 100.852,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "elite-gym-fitness": {
     "failed": true,
@@ -145,9 +164,11 @@
     "attempted_at": "2026-05-18T00:43:59.016Z"
   },
   "anytime-fitness-pattaya": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:00.868Z"
+    "lat": 12.9269,
+    "lng": 100.8804,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "fitness-7": {
     "failed": true,
@@ -215,9 +236,11 @@
     "attempted_at": "2026-05-18T00:44:20.350Z"
   },
   "siam-country-club": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:22.306Z"
+    "lat": 12.9114,
+    "lng": 101.0341,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "laem-chabang-international": {
     "failed": true,
@@ -225,19 +248,25 @@
     "attempted_at": "2026-05-18T00:44:24.156Z"
   },
   "phoenix-gold-golf": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:25.640Z"
+    "lat": 12.965,
+    "lng": 101.011,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "burapha-golf-club": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:27.498Z"
+    "lat": 12.945,
+    "lng": 100.964,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "treasure-hill-golf": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:29.558Z"
+    "lat": 12.989,
+    "lng": 101.024,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "chee-chan-golf": {
     "failed": true,
@@ -250,24 +279,32 @@
     "attempted_at": "2026-05-18T00:44:32.511Z"
   },
   "pattana-sports-resort": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:33.621Z"
+    "lat": 12.8714,
+    "lng": 100.962,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "st-andrews-2000": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:34.742Z"
+    "lat": 12.976,
+    "lng": 101.047,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "khao-kheow-country-club": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:35.851Z"
+    "lat": 13.221,
+    "lng": 101.082,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "bangpra-international": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:37.501Z"
+    "lat": 13.215,
+    "lng": 100.948,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "mountain-shadow-country-club": {
     "failed": true,
@@ -275,9 +312,11 @@
     "attempted_at": "2026-05-18T00:44:38.611Z"
   },
   "pattaya-country-club": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:44:40.470Z"
+    "lat": 12.965,
+    "lng": 101.03,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-golf-driving-range": {
     "failed": true,
@@ -385,9 +424,11 @@
     "attempted_at": "2026-05-18T00:45:11.192Z"
   },
   "mermaids-dive": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:45:13.054Z"
+    "lat": 12.9111,
+    "lng": 100.8786,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-dive-centre": {
     "lat": 12.9498868,
@@ -440,14 +481,11 @@
     "attempted_at": "2026-05-18T00:45:25.629Z"
   },
   "wave-pattaya": {
-    "lat": 12.936583,
-    "lng": 100.8859605,
-    "accuracy": "hotel",
-    "osm_type": "way",
-    "osm_id": 1210196040,
-    "source": "nominatim",
-    "display": "Pattaya Beach, Pattaya Klang Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
-    "query": "Pattaya Beach, Pattaya, Thailand"
+    "lat": 12.964,
+    "lng": 100.891,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "deep-climbing-gym": {
     "failed": true,
@@ -505,9 +543,11 @@
     "attempted_at": "2026-05-18T00:45:46.832Z"
   },
   "cartoon-network-amazone": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:45:48.402Z"
+    "lat": 12.8642,
+    "lng": 100.9162,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "easykart-pattaya": {
     "failed": true,
@@ -525,9 +565,11 @@
     "attempted_at": "2026-05-18T00:45:54.288Z"
   },
   "ramayana-water-park": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:45:56.245Z"
+    "lat": 12.7882,
+    "lng": 100.9986,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "af-academy-pattaya": {
     "failed": true,
@@ -550,9 +592,11 @@
     "attempted_at": "2026-05-18T00:46:03.488Z"
   },
   "pattaya-park-water-fun": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:46:05.450Z"
+    "lat": 12.8857,
+    "lng": 100.8908,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "thai-sky-adventures-skydive": {
     "failed": true,
@@ -590,9 +634,11 @@
     "query": "Pattaya, Bang Lamung, Chonburi, Pattaya, Thailand"
   },
   "thai-wake-park": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:46:17.853Z"
+    "lat": 12.943,
+    "lng": 100.94,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-padel-club": {
     "failed": true,
@@ -605,14 +651,18 @@
     "attempted_at": "2026-05-18T00:46:20.828Z"
   },
   "royal-varuna-yacht-club": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:46:22.901Z"
+    "lat": 12.887,
+    "lng": 100.858,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "ocean-marina-jomtien": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:46:24.959Z"
+    "lat": 12.829,
+    "lng": 100.918,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-cycling-clubs": {
     "failed": true,
@@ -660,14 +710,18 @@
     "attempted_at": "2026-05-18T00:46:36.549Z"
   },
   "max-muay-thai-stadium": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:46:38.510Z"
+    "lat": 12.94,
+    "lng": 100.886,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-kart-speedway": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:46:40.482Z"
+    "lat": 12.962,
+    "lng": 100.937,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "aquanauts-dive-center": {
     "failed": true,
@@ -687,7 +741,7 @@
     "osm_id": 1199397671,
     "source": "nominatim",
     "display": "Pattaya Bali Hai Pier, Chalermphrakiat Road, Na Kluea, Pattaya City, Nong Pla Lai, Bang Lamung District, Chon Buri Province, 20210, Thailand",
-    "query": "Pattaya — Bali Hai Pier, Pattaya, Thailand"
+    "query": "Pattaya \u2014 Bali Hai Pier, Pattaya, Thailand"
   },
   "cho-nateetong": {
     "lat": 12.9428604,
@@ -730,9 +784,11 @@
     "query": "Pattaya Boxing World, Pattaya, Pattaya, Thailand"
   },
   "nongnooch-cultural-show": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:46:55.514Z"
+    "lat": 12.7622,
+    "lng": 100.9738,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "greenwood-golf-club": {
     "failed": true,
@@ -755,9 +811,11 @@
     "attempted_at": "2026-05-18T00:47:02.824Z"
   },
   "big-buddha-hill-wat-phra-yai": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:04.256Z"
+    "lat": 12.905,
+    "lng": 100.8736,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "koh-larn-coral-island": {
     "failed": true,
@@ -785,34 +843,46 @@
     "attempted_at": "2026-05-18T00:47:13.610Z"
   },
   "andaz-pattaya-jomtien": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:15.478Z"
+    "lat": 12.864,
+    "lng": 100.911,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-marriott-resort": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:17.540Z"
+    "lat": 12.927,
+    "lng": 100.8762,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "renaissance-pattaya-resort": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:19.085Z"
+    "lat": 12.825,
+    "lng": 100.911,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "centara-grand-mirage": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:21.245Z"
+    "lat": 12.972,
+    "lng": 100.901,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "cape-dara-resort": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:23.305Z"
+    "lat": 12.971,
+    "lng": 100.9,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "movenpick-siam-pattaya": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:24.767Z"
+    "lat": 12.819,
+    "lng": 100.901,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "dusit-thani-pattaya": {
     "lat": 12.9319678,
@@ -830,9 +900,11 @@
     "attempted_at": "2026-05-18T00:47:27.713Z"
   },
   "underwater-world-pattaya": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:29.333Z"
+    "lat": 12.892,
+    "lng": 100.871,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-sky-ride-helicopter": {
     "failed": true,
@@ -865,9 +937,11 @@
     "attempted_at": "2026-05-18T00:47:39.940Z"
   },
   "sanctuary-of-truth": {
-    "failed": true,
-    "source": "nominatim",
-    "attempted_at": "2026-05-18T00:47:42.303Z"
+    "lat": 12.9642,
+    "lng": 100.8902,
+    "source": "manual",
+    "set_at": "2026-05-19T03:51:46.360348Z",
+    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "intercontinental-pattaya": {
     "failed": true,

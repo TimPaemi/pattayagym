@@ -159,14 +159,25 @@
     grid.innerHTML = html;
   }
 
+  function track(name, params){ try { if (window.gtag) window.gtag('event', name, params || {}); } catch(e){} }
+  var lastTrackedState = '';
   function run() {
     var results = window.GYMS.filter(matches);
-    // Sort: featured first, then alphabetical
     results.sort(function (a, b) {
       if (!!a.featured !== !!b.featured) return a.featured ? -1 : 1;
       return (a.name || '').localeCompare(b.name || '');
     });
     render(results);
+    // Round 20 - GA4 filter_apply event (debounced via state-hash)
+    var snap = JSON.stringify(state);
+    if (snap !== lastTrackedState) {
+      lastTrackedState = snap;
+      track('filter_apply', {
+        q: state.q || '', cat: state.cat, area: state.area,
+        price: state.price, open_now: state.openNow ? 1 : 0,
+        result_count: results.length
+      });
+    }
   }
 
   function clearAll() {

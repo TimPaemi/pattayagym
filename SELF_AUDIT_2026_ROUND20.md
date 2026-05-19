@@ -1,0 +1,873 @@
+# Pattaya.Gym Self-Audit — Round 20 (Nuclear v2)
+
+**Generated:** 2026-05-18  
+**Pages scanned:** 259  
+**Markdown sources scanned:** 158  
+**JSON-LD blocks parsed:** 551  
+**External links inspected:** 4652  
+**Total findings:** 275  
+
+## Severity summary
+
+| Severity | Count |
+|---|---:|
+| **P1** | 1 |
+| **P2** | 150 |
+| **P3** | 124 |
+
+## Findings by dimension
+
+| Dimension | Findings |
+|---|---:|
+| 13.BrokenLinks | 1 |
+| 15.SisterDist | 7 |
+| 16.SchemaDepth | 251 |
+| 22.CSP | 1 |
+| 24.Analytics | 1 |
+| 25.InlineStyle | 1 |
+| 3.Titles | 3 |
+| 4.Desc | 10 |
+
+## html-validate aggregate
+
+- Pages with errors: **0**  
+- Total errors: **0**  
+- Total warnings: **0**  
+
+## Sister-network link distribution
+
+| Sister site | Total outbound links |
+|---|---:|
+| timpaemi.com | 242 |
+| pattaya-authority.com | 639 |
+| pattaya-restaurant-guide.com | 264 |
+| pattayavisahelp.com | 264 |
+| pattayastream.com | 242 |
+| pattaya-coffee.com | 242 |
+| pattaya-school-guide.com | 242 |
+
+
+## All findings grouped by severity
+
+### P1 — 1 items
+
+- **[13.BrokenLinks]** Broken internal link: https://api.whatsapp.com/send/
+  - file: `/gyms/pattaya-monkey-hash-house/`
+  - detail: referenced from: ['/gyms/pattaya-monkey-hash-house/', '/gyms/muscle-factory-pattaya/', '/gyms/fight-evo360/']
+  - fix: Fix URL
+
+### P2 — 150 items
+
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/adventure-divers-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/af-academy-football/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/af-academy-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/alfa-bjj-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/andaz-pattaya-jomtien/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/anytime-fitness-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/aquanauts-dive-center/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/ashtanga-yoga-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/atv-tours-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/balance-yoga-studio-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/bangkok-hospital-pattaya-rehab/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/bangpra-international/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/battle-conquer-gym/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/bean-cow-climbing-gym/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/big-buddha-hill-wat-phra-yai/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/bira-circuit/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/bounce-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/burapha-golf-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/cape-dara-resort/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/cartoon-network-amazone/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/castra-gym/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/centara-grand-mirage/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/chatrium-golf-soi-dao/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/chee-chan-golf/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/coco-fitness/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/cross-pattaya-pratamnak/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/crossfit-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/deep-climbing-gym/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/diamond-badminton/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/diana-driving-range/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/easykart-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/elite-gym-fitness/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/euro-badminton/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/fairtex-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/fast-pro-football-academy/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/fight-evo360/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/first-serve-sports-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/fitness-7/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/fitz-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/flight-of-the-gibbon/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/golf-hub-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/greenwood-golf-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/greta-sport-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/hilton-pattaya-fitness/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/holiday-inn-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/horseshoe-point-resort/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/intercontinental-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/jetts-fitness-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/jomtien-dive-center/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/jumpz-trampoline-park/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/kba-kiteboarding-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/khao-chi-chan-buddha-mountain/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/khao-kheow-country-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/kitesurf-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/koh-larn-coral-island/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/kombat-group-thailand/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/laem-chabang-international/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/lumpinee-boxing-stadium/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/manhattan-pattaya-fitness/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/manta-kids-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/max-muay-thai-stadium/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/megabreak-pool-hall/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/mermaids-dive/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/mountain-shadow-country-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/movenpick-siam-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/muscle-factory-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/no-limit-divers/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/nok-yoga-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/nongnooch-cultural-show/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/ocean-marina-jomtien/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/one-d-yoga-studio/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattana-sports-resort/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-archery-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-beach-public-aerobics/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-bike-boat-tours/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-bowl/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-city-football-academy/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-country-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-cricket-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-cycling-clubs/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-floating-market/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-golf-driving-range/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-hash-house/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-kart-speedway/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-lawn-bowls/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-marriott-resort/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-monkey-hash-house/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-padel-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-panthers-rugby/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-park-water-fun/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-public-pool-jomtien/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-running-routes/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-scuba-adventures/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-shooting-park/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-sky-ride-helicopter/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-sports-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-tennis-badminton-inter-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-thai-boxing-fitness/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pattaya-triathlon/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/phoenix-gold-golf/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pickleball-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/planet-football-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/play-padel-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/pratumnak-fitness-park/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/rage-fight-academy/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/rajadamnern-stadium/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/ramayana-water-park/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/rambaa-somdet-m16/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/real-divers-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/regents-international-school-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/renaissance-pattaya-resort/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/royal-varuna-yacht-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/rusich-club-football/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/sailbreeze-ocean-marina/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/sanctuary-of-truth/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/sanit-sport-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/seafari-padi-dive/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/sf-strike-bowl/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/siam-bayshore-tennis/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/siam-country-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/sitpholek-muay-thai/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/sityodtong-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/sor-klinmee/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/st-andrews-2000/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/sun-fitness-buakao/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/tara-tennis-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/tarzan-adventure-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/thai-polo-equestrian-club/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/thai-sky-adventures-skydive/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/thai-wake-park/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/tonys-gym/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/tos-tennis/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/treasure-hill-golf/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/true-fitness-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/underwater-world-pattaya/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/universe-gym/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/venum-training-camp/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/wko-muay-thai/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/wong-amat-beach/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[16.SchemaDepth]** LocalBusiness missing geo (latitude/longitude)
+  - file: `gyms/yoga-pattaya-studio/index.html`
+  - fix: Run scripts/geocode-venues.js or add manually
+- **[4.Desc]** meta description 195 chars (>160)
+  - file: `find-my-coach/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 162 chars (>160)
+  - file: `gyms/kba-kiteboarding-pattaya/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 162 chars (>160)
+  - file: `gyms/khao-kheow-country-club/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 162 chars (>160)
+  - file: `gyms/pattana-sports-resort/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 166 chars (>160)
+  - file: `gyms/pattaya-public-pool-jomtien/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 162 chars (>160)
+  - file: `gyms/pattaya-public-pool-naklua/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 162 chars (>160)
+  - file: `gyms/petchrungruang-gym/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 162 chars (>160)
+  - file: `gyms/pickleball-pattaya/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 166 chars (>160)
+  - file: `gyms/play-padel-pattaya/index.html`
+  - fix: Use truncateDesc()
+- **[4.Desc]** meta description 162 chars (>160)
+  - file: `gyms/seafari-padi-dive/index.html`
+  - fix: Use truncateDesc()
+
+### P3 — 124 items
+
+- **[15.SisterDist]** timpaemi.com: total 242 outbound links across all pages
+- **[15.SisterDist]** pattaya-authority.com: total 639 outbound links across all pages
+- **[15.SisterDist]** pattaya-restaurant-guide.com: total 264 outbound links across all pages
+- **[15.SisterDist]** pattayavisahelp.com: total 264 outbound links across all pages
+- **[15.SisterDist]** pattayastream.com: total 242 outbound links across all pages
+- **[15.SisterDist]** pattaya-coffee.com: total 242 outbound links across all pages
+- **[15.SisterDist]** pattaya-school-guide.com: total 242 outbound links across all pages
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/adventure-divers-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/af-academy-football/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/andaz-pattaya-jomtien/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/aquanauts-dive-center/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/ashtanga-yoga-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/atv-tours-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/balance-yoga-studio-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/bean-cow-climbing-gym/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/big-buddha-hill-wat-phra-yai/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/bira-circuit/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/bounce-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/cape-dara-resort/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/cartoon-network-amazone/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/castra-gym/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/centara-grand-mirage/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/chatrium-golf-soi-dao/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/chee-chan-golf/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/cho-nateetong/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/clubloongchat-watersports/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/cross-pattaya-pratamnak/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/diana-driving-range/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/dive-station-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/dragon-shooting-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/dusit-thani-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/euro-badminton/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/fast-pro-football-academy/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/fight-evo360/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/first-serve-sports-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/fitness-7/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/flight-of-the-gibbon/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/golf-hub-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/greenwood-golf-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/greta-sport-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/hard-rock-pool/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/hilton-pattaya-fitness/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/intercontinental-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/jetts-fitness-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/jomtien-beach-volleyball/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/jumpz-trampoline-park/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/khao-chi-chan-buddha-mountain/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/kitesurf-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/koh-larn-coral-island/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/manhattan-pattaya-fitness/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/manta-kids-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/megabreak-pool-hall/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/mountain-shadow-country-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/movenpick-siam-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/no-limit-divers/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/nok-yoga-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/nongnooch-cultural-show/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/one-d-yoga-studio/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattana-sports-resort/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-beach-public-aerobics/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-bowl/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-boxing-world/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-city-football-academy/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-country-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-cricket-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-cycling-clubs/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-dive-centre/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-floating-market/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-golf-driving-range/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-hash-house/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-kart-speedway/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-lawn-bowls/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-marathon/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-marriott-resort/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-monkey-hash-house/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-padel-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-panthers-rugby/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-petanque-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-public-pool-jomtien/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-public-pool-naklua/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-running-routes/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-scuba-adventures/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-shooting-park/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-sky-ride-helicopter/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-tennis-badminton-inter-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-thai-boxing-fitness/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pattaya-triathlon/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/planet-football-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/pratumnak-fitness-park/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/rage-fight-academy/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/ramayana-water-park/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/rambaa-somdet-m16/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/real-divers-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/regents-international-school-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/royal-varuna-yacht-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/rusich-club-football/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/sailbreeze-ocean-marina/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/sanctuary-of-truth/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/sanit-sport-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/seafari-padi-dive/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/sf-strike-bowl/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/siam-bayshore-tennis/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/silk-muay-thai/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/sitpholek-muay-thai/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/sor-klinmee/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/st-andrews-2000/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/sun-fitness-buakao/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/tarzan-adventure-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/thai-polo-equestrian-club/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/thai-sky-adventures-skydive/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/thai-wake-park/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/true-fitness-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/underwater-world-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/universe-gym/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/venum-training-camp/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/wave-pattaya/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/wong-amat-beach/index.html`
+  - fix: Add telephone
+- **[16.SchemaDepth]** LocalBusiness missing optional field: telephone
+  - file: `gyms/yoga-haus-pattaya/index.html`
+  - fix: Add telephone
+- **[22.CSP]** 4 CSP hashes no longer match any inline script
+  - file: `_headers`
+  - fix: Prune from CSP after confirming no legacy pages need them
+- **[24.Analytics]** GA4 loaded but NO custom events tracked
+  - fix: Add gtag('event','share_venue',...) on key actions (compare, share, filter)
+- **[25.InlineStyle]** 119 inline style attrs on one page
+  - file: `changelog/index.html`
+  - fix: Refactor to utility classes
+- **[3.Titles]** <title> only 23 chars
+  - file: `favorites/index.html`
+  - detail: Your saved Pattaya gyms
+  - fix: Expand toward 50-65
+- **[3.Titles]** <title> only 23 chars
+  - file: `find-my-coach/index.html`
+  - detail: Find your Pattaya coach
+  - fix: Expand toward 50-65
+- **[3.Titles]** <title> only 24 chars
+  - file: `gyms/castra-gym/index.html`
+  - detail: Castra Gym | Pattaya.Gym
+  - fix: Expand toward 50-65

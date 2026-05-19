@@ -17,7 +17,7 @@
   "build": {
     "version": "v415",
     "asset_version": "415",
-    "last_built_utc": "2026-05-19T03:30:23.560Z",
+    "last_built_utc": "2026-05-19T04:03:27.709Z",
     "last_built_date": "2026-05-19"
   },
   "catalog": {
@@ -32,8 +32,8 @@
     "venues_with_verified_date": 158,
     "venues_with_phone": 47,
     "venues_with_website": 105,
-    "venues_with_geo_coordinates": 18,
-    "completeness_percent_geo": 11,
+    "venues_with_geo_coordinates": 56,
+    "completeness_percent_geo": 35,
     "completeness_percent_phone": 30
   },
   "freshness": {

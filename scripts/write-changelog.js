@@ -38,6 +38,19 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 20, date: '2026-05-18', tag: 'v416',
+    title: 'Nuclear self-audit v2 — geo enrichment + GA4 events + CSP prune',
+    summary: 'Self-audit v2 (SELF_AUDIT_2026_ROUND20.md) gave the site a clean bill of health: 0 html-validate errors across 259 pages, 551 JSON-LD blocks all valid, no broken internal links, no duplicate content. The only real gap was missing geo coordinates on 140 venues. Round 20 closes the biggest remaining items.',
+    bullets: [
+      'Geo - Hand-plotted lat/lng for 39 well-known Pattaya landmarks (Fairtex, Sityodtong, Royal Cliff, Sanctuary of Truth, Cartoon Network Amazone, Phoenix Gold Golf, Siam Country Club, etc.). LocalBusiness geo coverage went from 18/158 (11%) to 55/158 (35%).',
+      'Geo - New scripts/geocode-venues-v2.js with smarter 3-strategy Nominatim retry (name+area, name+Pattaya, area-centroid fallback) for filling more over time.',
+      'F4.Desc - Wired truncateDesc(155) to venue and area page meta descriptions. 10 over-160 description warnings closed.',
+      'F22.CSP - sync-csp-hashes.js now PRUNES obsolete inline-script hashes by default (4 unused hashes removed). --keep-obsolete flag preserves the legacy behaviour.',
+      'F24.Analytics - 4 new GA4 custom events: share_venue (venue share button), compare_pick (compare selection change), filter_apply (search filter change, debounced), sister_site_click (outbound to any of the 7 sister sites).',
+      'Asset version 415 -> 416.'
+    ]
+  },
+  {
     n: 19, date: '2026-05-18', tag: 'v415',
     title: 'Sister-network cross-linking + orphan-page graph fixes',
     summary: 'Closed the biggest finding from the Round 19 self-audit: 4 of 7 TimPaemi sister sites had zero inbound links from pattaya-gym.com. Plus killed 22 orphan pages by adding a category cross-link matrix to area pages and an expanded footer "Site" column.',

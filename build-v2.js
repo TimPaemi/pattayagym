@@ -535,7 +535,7 @@ function venuePage(g, fm, body) {
   const catLabel = cat ? cat.label : g.category;
   const url = `${SITE}/gyms/${g.id}/`;
   const title = `${g.name} | Pattaya.Gym`;
-  const desc = (g.description || '').slice(0, 158);
+  const desc = truncateDesc(g.description || '', 155);
   const ogImage = `${SITE}/og/${g.id}.png`;
 
   // Color accent based on category
@@ -1236,7 +1236,7 @@ const AREA_CONTENT = {
 function areaPage(slug, label, venues) {
   const url = `${SITE}/area/${slug}/`;
   const title = `${label}, Pattaya — sport venues | Pattaya.Gym`;
-  const desc = `Every gym, camp, and sport venue in ${label}, Pattaya. ${venues.length} hand-checked entries. No paid placements.`;
+  const desc = truncateDesc(`Every gym, camp, and sport venue in ${label}, Pattaya. ${venues.length} hand-checked entries. No paid placements.`);
 
   const itemList = {
     '@context': 'https://schema.org',

@@ -84,8 +84,8 @@ const html = `<!DOCTYPE html>
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
 <!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
-<link rel="preload" href="/fonts/inter-400.woff2?v=414" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=414" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2?v=416" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=416" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -146,6 +146,7 @@ ${marquee(TOP_MARQUEE, false)}
     <h2 class="h-section">Compare <span class="accent-pink">live.</span></h2>
     <!-- Round 17 — Codex F12.1: announce selection/result changes to assistive tech -->
     <div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
     <div id="compare-table-mount" style="overflow-x:auto;"></div>
     <p id="compare-empty" style="color:var(--muted); display:none;">Pick at least 2 venues above to compare.</p>
   </div>
@@ -184,14 +185,17 @@ ${marquee(BOTTOM_MARQUEE, true)}
     var params = new URLSearchParams(window.location.search);
     return slots.map(function(k){ return params.get(k) || ''; });
   }
+  function track(name, params){ try { if (window.gtag) window.gtag('event', name, params || {}); } catch(e){} }
   function setSelected(arr) {
     var params = new URLSearchParams();
+    var picked = [];
     for (var i = 0; i < arr.length; i++) {
-      if (arr[i]) params.set(slots[i], arr[i]);
+      if (arr[i]) { params.set(slots[i], arr[i]); picked.push(arr[i]); }
     }
     var qs = params.toString();
     var newUrl = window.location.pathname + (qs ? '?' + qs : '');
     history.replaceState(null, '', newUrl);
+    track('compare_pick', { count: picked.length, venues: picked.join('|') });
   }
   function escapeHtml(s) {
     return String(s == null ? '' : s).replace(/[<>&"']/g, function(c){ return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c]; });

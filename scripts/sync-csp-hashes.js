@@ -14,11 +14,12 @@
  *   5. Compute union (or diff) — write back _headers with all current hashes
  *
  * Idempotent. Safe to run multiple times.
- * Adds new hashes. Does NOT remove existing ones (some may be needed for
- * legacy migrated pages that the walker doesn't visit).
+ * Adds new hashes. Removes obsolete ones (Round 20 - Codex F22.CSP).
+ * Pass --keep-obsolete to preserve the legacy behaviour.
  *
  * Run: node scripts/sync-csp-hashes.js
  */
+const KEEP_OBSOLETE = process.argv.includes('--keep-obsolete');
 
 const fs = require('fs');
 const path = require('path');
@@ -56,17 +57,13 @@ const current = new Set(
   [...hdrs.matchAll(/'sha256-([A-Za-z0-9+/=]+)'/g)].map(m => m[1])
 );
 
-// Union of current + found
-const union = new Set([...current, ...found]);
 const added = [...found].filter(h => !current.has(h));
 const obsoleteByCurrentScan = [...current].filter(h => !found.has(h));
+const union = KEEP_OBSOLETE ? new Set([...current, ...found]) : new Set(found);
+const removed = KEEP_OBSOLETE ? [] : obsoleteByCurrentScan;
 
-if (added.length === 0) {
+if (added.length === 0 && removed.length === 0) {
   console.log(`CSP hashes already in sync. ${scanned} HTML files scanned, ${found.size} unique inline scripts found, ${current.size} hashes in _headers.`);
-  if (obsoleteByCurrentScan.length > 0) {
-    console.log(`Note: ${obsoleteByCurrentScan.length} hash(es) in CSP weren't found in current scan (kept anyway in case they're needed for legacy/migrated pages):`);
-    for (const h of obsoleteByCurrentScan) console.log(`    ${h}`);
-  }
   process.exit(0);
 }
 
@@ -94,7 +91,11 @@ console.log(`  Previously in CSP:     ${current.size}`);
 console.log(`  Now in CSP:            ${union.size}`);
 console.log(`  Newly added:           ${added.length}`);
 for (const h of added) console.log(`    + sha256-${h}`);
-if (obsoleteByCurrentScan.length > 0) {
-  console.log(`  Kept (not in current scan but possibly needed for legacy pages):`);
+if (removed.length > 0) {
+  console.log(`  Pruned (no longer match any inline script): ${removed.length}`);
+  for (const h of removed) console.log(`    - sha256-${h}`);
+}
+if (KEEP_OBSOLETE && obsoleteByCurrentScan.length > 0) {
+  console.log(`  Kept (--keep-obsolete): ${obsoleteByCurrentScan.length}`);
   for (const h of obsoleteByCurrentScan) console.log(`    ~ sha256-${h}`);
 }
