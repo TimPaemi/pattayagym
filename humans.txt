@@ -57,3 +57,12 @@
 /* CREDITS */
   Designed, built and maintained by Pattaya Authority
   https://pattaya-authority.com/
+
+/* SISTER NETWORK */
+TimPaemi (parent):       https://timpaemi.com/
+Pattaya Authority:       https://pattaya-authority.com/
+Pattaya Restaurant Guide:https://pattaya-restaurant-guide.com/
+Pattaya Visa Help:       https://pattayavisahelp.com/
+Pattaya Stream:          https://pattayastream.com/
+Pattaya Coffee Guide:    https://pattaya-coffee.com/
+Pattaya School Guide:    https://pattaya-school-guide.com/

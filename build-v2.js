@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '414';
+const ASSET_VERSION = '415';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -302,6 +302,20 @@ function mdToHtml(md) {
   return _md.render(md).trim();
 }
 
+// ---------- Round 19 helpers: title/desc length safety (Codex F05.1) ----------
+function truncateTitle(s, max = 65) {
+  if (!s || s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 30 ? cut.slice(0, lastSpace) : cut).trimEnd();
+}
+function truncateDesc(s, max = 155) {
+  if (!s || s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trimEnd();
+}
+
 // ---------- Shared HTML components ----------
 const ASSET = `?v=${ASSET_VERSION}`;
 
@@ -317,7 +331,7 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>${esc(title)}</title>
+<title>${esc(truncateTitle(title))}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
 <link rel="alternate" hreflang="en" href="${url}">
@@ -452,10 +466,14 @@ function footer() {
     <div class="footer-col">
       <div class="footer-col-h">// Projects</div>
       <ul>
+        <li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi (parent)</a></li>
         <li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li>
-        <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li>
         <li><a href="/">Pattaya.Gym</a></li>
+        <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li>
+        <li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Coffee Guide</a></li>
+        <li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">School Guide</a></li>
         <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li>
+        <li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Stream</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -981,7 +999,7 @@ ${related.length ? `
 function categoryPage(cat, venues) {
   const url = `${SITE}/category/${cat.key}/`;
   const title = `${cat.label} in Pattaya | Pattaya.Gym`;
-  const desc = `Every ${cat.label.toLowerCase()} venue in Pattaya. ${venues.length} hand-checked entries. No paid placements. Verified on a rolling schedule.`;
+  const desc = truncateDesc(`Every ${cat.label.toLowerCase()} venue in Pattaya. ${venues.length} hand-checked entries. No paid placements. Verified on a rolling schedule.`);
 
   const accentColors = {
     'muay-thai': 'accent-pink', 'mma': 'accent-pink', 'bjj': 'accent-pink',
@@ -1354,6 +1372,23 @@ ${content ? `
   </div>
 </section>
 
+${(() => {
+  // Round 19 — Codex F08.1: cross-link matrix to surface the category-area
+  // combinations (e.g. /area/jomtien/muay-thai/). Without this block the 15
+  // category-area pages were orphans in the link graph.
+  const here = (slug || '').toLowerCase();
+  const byCategory = {};
+  for (const v of venues) {
+    if (!v.category) continue;
+    (byCategory[v.category] = byCategory[v.category] || []).push(v);
+  }
+  const sportLinks = CATEGORIES
+    .filter(c => byCategory[c.key] && byCategory[c.key].length > 0)
+    .map(c => `<a href="/area/${here}/${c.key}/" class="u-plain-link" style="display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border:1px solid rgba(255,255,255,0.12); border-radius:999px; font-size:13px; background:rgba(255,255,255,0.02); transition:border-color var(--t-fast);"><span style="color:var(--cyan); font-weight:700;">${byCategory[c.key].length}</span> <span class="u-muted">${esc(c.label)}</span></a>`)
+    .join('');
+  return sportLinks ? `<section class="section u-pt-0"><div class="wrap"><div class="eyebrow"><span class="num">03</span> Browse this area by sport</div><h2 class="h-section">Every sport in <span class="accent-cyan">${esc(label)}.</span></h2><p class="lede">Each tag below opens a focused page listing every venue of that sport in ${esc(label)}.</p><div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:var(--s-5);">${sportLinks}</div></div></section>` : '';
+})()}
+
 </main>`;
 })()}
 `
@@ -1368,8 +1403,8 @@ ${content ? `
 function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
   const url = `${SITE}/area/${areaSlug}/${cat.key}/`;
   const catLabel = cat.label;
-  const title = `${catLabel} in ${areaLabel}, Pattaya | Pattaya.Gym`;
-  const desc = `${venues.length} ${catLabel.toLowerCase()} ${venues.length === 1 ? 'venue' : 'venues'} in ${areaLabel}, Pattaya. Hand-checked. No paid placements. Independent directory.`;
+  const title = truncateTitle(`${catLabel} in ${areaLabel}, Pattaya | Pattaya.Gym`);
+  const desc = truncateDesc(`${venues.length} ${catLabel.toLowerCase()} ${venues.length === 1 ? 'venue' : 'venues'} in ${areaLabel}, Pattaya. Hand-checked. No paid placements. Independent directory.`);
 
   const accentColors = {
     'muay-thai':'accent-pink','mma':'accent-pink','bjj':'accent-pink',
@@ -1504,9 +1539,13 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
       worksFor: { '@id': `${SITE}/#organization` },
       knowsAbout: ['Muay Thai', 'Pattaya', 'Fitness', 'Sport tourism Thailand', 'Local directory editorial'],
       sameAs: [
+        'https://timpaemi.com/',
         'https://pattaya-authority.com/',
         'https://pattaya-restaurant-guide.com/',
-        'https://pattayavisahelp.com/'
+        'https://pattayavisahelp.com/',
+        'https://pattayastream.com/',
+        'https://pattaya-coffee.com/',
+        'https://pattaya-school-guide.com/'
       ]
     });
   }
@@ -1745,9 +1784,13 @@ ${donutHTML}
 <h2>What's <em>not</em> here</h2>
 <p>Pattaya.Gym focuses exclusively on training venues — gyms, camps, courts, courses, studios, dive operators, sport landmarks. We do <strong>not</strong> cover entertainment venues, restaurants, nightlife, or visa services. For those, see our sister sites:</p>
 <ul>
-  <li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> — our flagship nightlife &amp; lifestyle agency</li>
+  <li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a> — parent brand</li>
+  <li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> — flagship media agency</li>
   <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> — independent restaurant directory</li>
   <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> — long-stay visa support</li>
+  <li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Stream</a> — Pattaya content channel</li>
+  <li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee Guide</a> — independent coffee directory</li>
+  <li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a> — independent school directory</li>
 </ul>
 
 <h2>About these numbers</h2>
@@ -1775,7 +1818,7 @@ const UTILITY_PAGES = [
 <p>No money changes hands. Ranking is based on consistent quality, current operation, breadth of facility, instructor caliber, and community reputation. Gyms with closed doors or stale information get demoted automatically.</p>
 
 <h2>What we operate</h2>
-<p>Pattaya.Gym is one project of <strong>TimPaemi Co., Ltd.</strong> alongside three other sites — <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> (flagship nightlife agency), <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a>, and <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
+<p>Pattaya.Gym is one of seven sister sites operated by <strong>TimPaemi Co., Ltd.</strong>. The full network: <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">timpaemi.com</a> (main brand), <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> (flagship media agency), <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a>, <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>, <a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Stream</a>, <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee Guide</a>, and <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a>. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
 
 <h2>Who runs this</h2>
 <p>Pattaya.Gym is operated by <strong>Tim Paemi</strong>, an independent operator and long-time Pattaya resident, alongside his wife and co-founder. The site is self-funded and has no commercial relationship with any listed venue.</p>
@@ -2050,6 +2093,9 @@ const UTILITY_PAGES = [
 <li><strong>Fonts</strong> are self-hosted from <code>/fonts/</code> on our own domain (Round 18). No third-party font CDN is contacted on page load.</li>
 </ul>
 <p>No other third-party services are loaded on the site.</p>
+
+<h2>Our sister network</h2>
+<p>Pattaya.Gym is one of several independent directories operated by <strong>TimPaemi Co., Ltd.</strong>. Each runs on the same independence and editorial standards. The full network: <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">timpaemi.com</a> (main brand), <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">pattaya-authority.com</a> (media agency), <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">pattaya-restaurant-guide.com</a>, <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">pattayavisahelp.com</a>, <a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">pattayastream.com</a>, <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">pattaya-coffee.com</a>, <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">pattaya-school-guide.com</a>. Each site has its own privacy policy.</p>
 
 <h2>Your rights — GDPR (EU/UK) and PDPA (Thailand)</h2>
 <p>If you are in the EU, UK, or Thailand (or anywhere with similar legislation), you have the right to: request access to whatever data we hold on you (which is functionally nothing beyond aggregate GA counts you cannot be re-identified from), request deletion, request correction, withdraw consent, and lodge a complaint with your national data-protection authority. Email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a> and we will respond within 30 days. Because we do not run accounts, most requests are satisfied simply by you clearing your browser data — but we will confirm in writing if you ask.</p>
