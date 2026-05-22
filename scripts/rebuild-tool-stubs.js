@@ -40,7 +40,7 @@ function esc(s) {
 }
 
 const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','100% HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
 
 function marquee(items, bottom) {
   const cls = bottom ? 'marquee marquee-bottom' : 'marquee';
@@ -88,7 +88,7 @@ function footer() {
       <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
       <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div>
     </div>
-    <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/pattaya-sport-stats/">Sport stats</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/press/">Press</a></li><li><a href="/add-your-gym/">Add your venue</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/pattaya-sport-stats/">Sport stats</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/press/">Press</a></li><li><a href="/add-your-gym/">Add your venue</a></li></ul></div>
     <div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi (parent)</a></li><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Coffee Guide</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">School Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Stream</a></li></ul></div>
     <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div>
   </div>
@@ -121,7 +121,7 @@ function footer() {
 </script>`;
 }
 
-function head(title, desc, url) {
+function head(title, desc, url, noindex) {
   const webpage = {
     '@context':'https://schema.org','@type':'WebPage','@id':`${url}#webpage`,
     url, name: title, description: desc, inLanguage: 'en',
@@ -149,8 +149,8 @@ function head(title, desc, url) {
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
 <!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
-<link rel="preload" href="/fonts/inter-400.woff2?v=414" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=414" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -163,7 +163,7 @@ function head(title, desc, url) {
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
 <meta name="twitter:image" content="${SITE}/og-image.png">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="robots" content="${noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}">
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//maps.google.com">
 <link rel="dns-prefetch" href="//www.googletagmanager.com">
@@ -203,7 +203,7 @@ const STUBS = [
   // NOTE: 'compare' is now built by scripts/build-compare-page.js as a real functional tool.
   // Do NOT add it back here — that would overwrite the real /compare/ page with a stub.
   {
-    slug: 'plan-my-trip',
+    slug: 'plan-my-trip', noindex: true,
     title: 'Plan your Pattaya training trip',
     desc: 'A trip planner that suggests a daily training schedule by sport, dates, and area is on the roadmap. For now, use the guides and search to plan manually.',
     crumb: 'Plan a trip',
@@ -218,7 +218,7 @@ const STUBS = [
     ]
   },
   {
-    slug: 'find-my-coach',
+    slug: 'find-my-coach', noindex: true,
     title: 'Find your Pattaya coach',
     desc: 'A coach finder by sport, language, level, and area is on the roadmap. Until it ships, browse venues by category and check each one for English-speaking, women-only, or beginner-friendly trainers.',
     crumb: 'Find a coach',
@@ -233,7 +233,7 @@ const STUBS = [
     ]
   },
   {
-    slug: 'favorites',
+    slug: 'favorites', noindex: true,
     title: 'Your saved Pattaya gyms',
     desc: 'A local-storage favorites tool is being rebuilt. For now, bookmark your shortlist in your browser, or use the search filter and category pages to build a list.',
     crumb: 'Favorites',
@@ -260,7 +260,7 @@ function render(stub) {
         <p class="numcard-body">${esc(a.desc)}</p>
       </a>`).join('');
 
-  return head(stub.title, stub.desc, url)
+  return head(stub.title, stub.desc, url, stub.noindex)
     + marquee(TOP_MARQUEE, false)
     + nav()
     + breadcrumb(stub.crumb)

@@ -64,6 +64,54 @@
     openNow: false
   };
 
+  // Round 21 (Codex P2-5): open-now test that honors weekday + seasonal text.
+  function isOpenNow(hoursStr) {
+    var h = (hoursStr || '').toLowerCase();
+    if (!h) return false;
+    if (/24\s*\/?\s*7|24\s*hour/.test(h)) return true;
+    var now = new Date();
+    var ict = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (7 * 3600000));
+    var dow = ict.getDay();
+    var month = ict.getMonth();
+    var DAYS = ['sun','mon','tue','wed','thu','fri','sat'];
+    var MON = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+    var sm = h.match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s*[-–]\s*(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b/);
+    if (sm) {
+      var ma = MON.indexOf(sm[1]), mb = MON.indexOf(sm[2]);
+      if (ma >= 0 && mb >= 0) {
+        var inSeason = ma <= mb ? (month >= ma && month <= mb) : (month >= ma || month <= mb);
+        if (!inSeason) return false;
+      }
+    }
+    if (!/\bdaily\b|every\s*day|everyday/.test(h)) {
+      var tokens = h.match(/\b(mon|tue|wed|thu|fri|sat|sun)\b(?:\s*[-–]\s*\b(mon|tue|wed|thu|fri|sat|sun)\b)?/g);
+      if (tokens && tokens.length) {
+        var allowed = {};
+        for (var t = 0; t < tokens.length; t++) {
+          var rg = tokens[t].match(/(mon|tue|wed|thu|fri|sat|sun)(?:\s*[-–]\s*(mon|tue|wed|thu|fri|sat|sun))?/);
+          var ds = DAYS.indexOf(rg[1]);
+          if (rg[2]) {
+            var de = DAYS.indexOf(rg[2]);
+            for (var d = ds; ; d = (d + 1) % 7) { allowed[d] = true; if (d === de) break; }
+          } else { allowed[ds] = true; }
+        }
+        if (!allowed[dow]) return false;
+      }
+    }
+    var nowMin = ict.getHours() * 60 + ict.getMinutes();
+    var windows = [];
+    var re = /(\d{1,2}):(\d{2})\s*[-–]\s*(\d{1,2}):(\d{2})/g;
+    var mm;
+    while ((mm = re.exec(h))) windows.push([+mm[1] * 60 + +mm[2], +mm[3] * 60 + +mm[4]]);
+    if (!windows.length) return false;
+    for (var wi = 0; wi < windows.length; wi++) {
+      var ws = windows[wi][0], we = windows[wi][1];
+      if (we <= ws) { if (nowMin >= ws || nowMin < we) return true; }
+      else if (nowMin >= ws && nowMin < we) return true;
+    }
+    return false;
+  }
+
   function matches(g) {
     // Category
     if (state.cat !== 'all' && g.category !== state.cat) return false;
@@ -71,33 +119,9 @@
     if (state.area !== 'all' && areaSlug(g.area) !== state.area) return false;
     // Price (exact match on ฿/฿฿/฿฿฿/฿฿฿฿)
     if (state.price !== 'all' && g.priceRange !== state.price) return false;
-    // Open now — Round 17 (Codex F01.1). The previous heuristic flagged any
-    // venue with "Daily" in its hours as always-open, which is wrong for
-    // "Daily 09:00-18:00". This parses HH:MM-HH:MM windows out of the hours
-    // string and checks them against current Pattaya time (ICT = UTC+7). The
-    // regex shortcut for 24/7 is kept because that one is unambiguous.
-    if (state.openNow) {
-      var h = (g.hours || '').toLowerCase();
-      if (/24\s*\/?\s*7|24\s*hour/i.test(h)) {
-        // always open — pass
-      } else {
-        var now = new Date();
-        var ictNow = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (7 * 3600000));
-        var nowMin = ictNow.getHours() * 60 + ictNow.getMinutes();
-        var windows = [];
-        var re = /(\d{1,2}):(\d{2})\s*[-–]\s*(\d{1,2}):(\d{2})/g;
-        var m;
-        while ((m = re.exec(h))) windows.push([+m[1]*60 + +m[2], +m[3]*60 + +m[4]]);
-        if (!windows.length) return false; // no parseable hours → conservative
-        var openNow = false;
-        for (var wi = 0; wi < windows.length; wi++) {
-          var s = windows[wi][0], e = windows[wi][1];
-          if (e <= s) { if (nowMin >= s || nowMin < e) { openNow = true; break; } } // overnight
-          else if (nowMin >= s && nowMin < e) { openNow = true; break; }
-        }
-        if (!openNow) return false;
-      }
-    }
+    // Open now - Round 21 (Codex P2-5): honors weekday + seasonal
+    // constraints in addition to HH:MM windows.
+    if (state.openNow && !isOpenNow(g.hours)) return false;
     // Text query (case-insensitive substring across name + area + category + tags + description)
     if (state.q) {
       var q = state.q.toLowerCase();

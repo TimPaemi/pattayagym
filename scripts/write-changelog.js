@@ -28,7 +28,7 @@ function esc(s) {
 }
 
 const TOP = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
-const BOT = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','100% HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
+const BOT = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
 
 function marquee(items, bot) {
   const cls = bot ? 'marquee marquee-bottom' : 'marquee';
@@ -37,6 +37,20 @@ function marquee(items, bot) {
 }
 
 const ROUNDS = [
+  {
+    n: 21, date: '2026-05-21', tag: 'v417',
+    title: 'Codex nuclear audit Round 21 - release-state consolidation',
+    summary: 'Codex Round 21 audit found 0 critical issues but flagged release-state drift as the top problem: asset version, font preloads, status.json, the changelog and API metadata did not all agree. Round 21 makes every version marker consistent and closes the rest of the P1/P2 findings.',
+    bullets: [
+      'P1-1 Version - One canonical asset version (417) across build-v2.js, every generated page, font preloads, status.json, API endpoints and the changelog. Round 20\'s intended 416 bump did not fully propagate (font preloads were stranded on 414/416); Round 21 corrects it. verify-deploy.js now fails the build on any stale ?v= asset reference.',
+      'P1-3 Tools - Find My Coach, Plan My Trip and Favorites are honest roadmap pages, so they are now noindex,follow and removed from llms.txt core tools and the sitemap until they ship as real tools.',
+      'P1-4 Trust - Softened over-strong verification copy (\'every phone dialed\', \'100% hand-checked\') into accurate language that matches the data.',
+      'P1-5 Linking - New /sports/ hub links all 15 categories so BJJ and every other sport is reachable from the homepage crawl graph, not just the sitemap.',
+      'P2 - Fixed dangling-pipe category-area titles, enriched short meta descriptions, unified the sister-network footer across 20 pages, removed a duplicate compare-status live region, taught the search open-now filter to honor weekday + seasonal hours, trimmed 3 unused third-party origins from the CSP, and upgraded 7 venue links to HTTPS.',
+      'New scripts/write-data-endpoints.js regenerates the JSON API + feed on every build so machine-readable freshness never drifts again.',
+      'Asset version 415 -> 417.'
+    ]
+  },
   {
     n: 20, date: '2026-05-18', tag: 'v416',
     title: 'Nuclear self-audit v2 — geo enrichment + GA4 events + CSP prune',
@@ -316,8 +330,8 @@ const head = `<!DOCTYPE html>
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
 <!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
-<link rel="preload" href="/fonts/inter-400.woff2?v=414" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=414" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -347,7 +361,7 @@ const breadcrumb = `<nav aria-label="Breadcrumb" style="max-width:var(--max); ma
 
 const pa = `<section class="pa-network"><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>`;
 
-const footer = `<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/pattaya-sport-stats/">Sport stats</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/press/">Press</a></li><li><a href="/add-your-gym/">Add your venue</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi (parent)</a></li><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Coffee Guide</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">School Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Stream</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+const footer = `<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/pattaya-sport-stats/">Sport stats</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/press/">Press</a></li><li><a href="/add-your-gym/">Add your venue</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi (parent)</a></li><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Coffee Guide</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">School Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Stream</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script>

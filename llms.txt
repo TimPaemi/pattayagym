@@ -7,10 +7,9 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 
 - [Home](https://pattaya-gym.com/): Full directory with search, filters, featured venues
 - [Search](https://pattaya-gym.com/search/): Full-text search across all 158 venues
-- [Map](https://pattaya-gym.com/map/): Interactive map of every Pattaya sport venue
+- [Map](https://pattaya-gym.com/map/): Browse every Pattaya sport venue by area and neighbourhood
 - [Compare](https://pattaya-gym.com/compare/): Side-by-side comparison of any 2–4 venues
-- [Find My Coach](https://pattaya-gym.com/find-my-coach/): Coach matchmaker by discipline + language
-- [Plan My Trip](https://pattaya-gym.com/plan-my-trip/): Build a Pattaya fitness itinerary
+- [All sports](https://pattaya-gym.com/sports/): Hub linking all 15 sport categories
 
 ## Areas of Pattaya
 
@@ -88,7 +87,7 @@ No paid placements, no sponsored listings, no affiliate-only entries.
 Independent directory operated since 2026. Built and maintained in Pattaya, Thailand.
 Coordinates: 12.93°N, 100.88°E.
 
-Last update: 2026-05-16
+Last update: 2026-05-21
 
 ## Sister sites (TimPaemi Co. network)
 - https://timpaemi.com/                      (parent brand)

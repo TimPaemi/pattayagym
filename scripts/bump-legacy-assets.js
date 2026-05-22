@@ -43,6 +43,11 @@ for (const slug of ['search', 'compare', 'map', 'plan-my-trip', 'find-my-coach',
   const p = path.join(ROOT, slug, 'index.html');
   if (fs.existsSync(p)) LEGACY_PAGES.push(p);
 }
+// Round 21 - hand-maintained root homepage also carries asset-version refs.
+{
+  const rootIndex = path.join(ROOT, 'index.html');
+  if (fs.existsSync(rootIndex)) LEGACY_PAGES.push(rootIndex);
+}
 
 let bumped = 0;
 let already = 0;
@@ -52,6 +57,8 @@ for (const fp of LEGACY_PAGES) {
   // Bump any ?v=NNN to current (only for stylesheet/script refs, not for query-strings on links)
   src = src.replace(/(\/(styles|venue)\.css\?v=)\d+/g, `$1${CURRENT}`);
   src = src.replace(/(\/(app|app\.bundle|site-ui|data|search-page|compare|favorites|recent|shortcuts|share|analytics)\.js\?v=)\d+/g, `$1${CURRENT}`);
+  // Round 21 - also bump self-hosted font preloads.
+  src = src.replace(/(\/fonts\/[a-z0-9-]+\.woff2\?v=)\d+/g, `$1${CURRENT}`);
   // Bump footer version marker — match patterns like "v404", "v405" inside the cyan span
   src = src.replace(/(★ Last updated · [^·]+ · v)\d+/g, `$1${CURRENT}`);
   if (src === orig) { already++; continue; }

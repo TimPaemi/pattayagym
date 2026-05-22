@@ -86,7 +86,7 @@ const status = {
     independent: true,
     paidPlacements: false,
     handChecked: true,
-    updateCadence: 'weekly'
+    updateCadence: 'rolling'
   },
 
   // Build version + timestamp

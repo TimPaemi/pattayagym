@@ -169,6 +169,37 @@ if (fs.existsSync(headersPath)) {
   }
 }
 
+// --- Round 21 (Codex P1-1 / P2-6): asset-version consistency ---
+let versionDrift = 0;
+{
+  const bv2 = fs.readFileSync(path.join(ROOT, 'build-v2.js'), 'utf8');
+  const avMatch = bv2.match(/const ASSET_VERSION\s*=\s*['"](\d+)['"]/);
+  const ASSET_VERSION = avMatch ? avMatch[1] : null;
+  if (ASSET_VERSION) {
+    for (const fp of htmlFiles) {
+      const html = fs.readFileSync(fp, 'utf8');
+      const stale = [...new Set([...html.matchAll(/\.(?:css|js|woff2)\?v=(\d+)/g)].map(m => m[1]))].filter(v => v !== ASSET_VERSION);
+      if (stale.length) {
+        errors.push(`${path.relative(ROOT, fp)}: stale asset version ?v=${stale.join(',')} (expected ${ASSET_VERSION})`);
+        versionDrift++;
+      }
+    }
+  }
+}
+
+// --- Round 21 (Codex P2-4 / P2-6): duplicate id attributes ---
+let dupIdFiles = 0;
+for (const fp of htmlFiles) {
+  const html = fs.readFileSync(fp, 'utf8');
+  const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map(m => m[1]);
+  const seen = {}, dups = [];
+  for (const id of ids) { if (seen[id]) { if (dups.indexOf(id) < 0) dups.push(id); } else seen[id] = true; }
+  if (dups.length) {
+    errors.push(`${path.relative(ROOT, fp)}: duplicate id(s) ${dups.join(', ')}`);
+    dupIdFiles++;
+  }
+}
+
 // --- Report ---
 console.log(`HTML files checked: ${htmlFiles.length}`);
 console.log(`  truncated (no </html>): ${truncated}`);
@@ -178,6 +209,8 @@ console.log(`Source files checked: ${sourceFiles.length}`);
 console.log(`  with NUL bytes:         ${sourceNul}`);
 console.log(`  with UTF-8 BOM:         ${sourceBom}`);
 console.log(`Sitemap URLs checked: ${sitemapUrls}`);
+console.log(`Asset-version drift files: ${versionDrift}`);
+console.log(`Duplicate-id files:        ${dupIdFiles}`);
 console.log(`  missing local file:     ${sitemapMissing}`);
 
 if (errors.length === 0) {

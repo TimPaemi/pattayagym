@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '415';
+const ASSET_VERSION = '417';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -304,10 +304,13 @@ function mdToHtml(md) {
 
 // ---------- Round 19 helpers: title/desc length safety (Codex F05.1) ----------
 function truncateTitle(s, max = 65) {
-  if (!s || s.length <= max) return s;
+  if (!s) return s;
+  // Round 21 - Codex P2-1: never leave a dangling separator at the end of a title.
+  const strip = t => t.replace(/[\s|:,·–-]+$/, '').trimEnd();
+  if (s.length <= max) return strip(s);
   const cut = s.slice(0, max - 1);
   const lastSpace = cut.lastIndexOf(' ');
-  return (lastSpace > 30 ? cut.slice(0, lastSpace) : cut).trimEnd();
+  return strip((lastSpace > 30 ? cut.slice(0, lastSpace) : cut).trimEnd());
 }
 function truncateDesc(s, max = 155) {
   if (!s || s.length <= max) return s;
@@ -341,8 +344,8 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
 <!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
-<link rel="preload" href="/fonts/inter-400.woff2?v=414" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=414" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${ogImage}">
@@ -460,6 +463,7 @@ function footer() {
         <li><a href="/about/">About</a></li>
         <li><a href="/methodology/">Methodology</a></li>
         <li><a href="/guides/">Guides</a></li>
+        <li><a href="/sports/">All sports</a></li>
         <li><a href="/search/">Search</a></li>
       </ul>
     </div>
@@ -515,7 +519,7 @@ ${backToTop()}
 
 // Standard top/bottom marquee items
 const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', '158 VENUES', 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', '100% HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', '★ LIVE 158 VENUES', 'UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', '★ LIVE 158 VENUES', 'UPDATED ROLLING'];
 
 function breadcrumb(items) {
   // items: [{label, href}], last has no href
@@ -999,7 +1003,7 @@ ${related.length ? `
 function categoryPage(cat, venues) {
   const url = `${SITE}/category/${cat.key}/`;
   const title = `${cat.label} in Pattaya | Pattaya.Gym`;
-  const desc = truncateDesc(`Every ${cat.label.toLowerCase()} venue in Pattaya. ${venues.length} hand-checked entries. No paid placements. Verified on a rolling schedule.`);
+  const desc = truncateDesc(`Every ${cat.label.toLowerCase()} venue in Pattaya — ${venues.length} hand-checked ${venues.length === 1 ? 'entry' : 'entries'} with hours, prices, location and contact details. Independent directory, no paid placements, verified on a rolling schedule.`);
 
   const accentColors = {
     'muay-thai': 'accent-pink', 'mma': 'accent-pink', 'bjj': 'accent-pink',
@@ -1236,7 +1240,7 @@ const AREA_CONTENT = {
 function areaPage(slug, label, venues) {
   const url = `${SITE}/area/${slug}/`;
   const title = `${label}, Pattaya — sport venues | Pattaya.Gym`;
-  const desc = truncateDesc(`Every gym, camp, and sport venue in ${label}, Pattaya. ${venues.length} hand-checked entries. No paid placements.`);
+  const desc = truncateDesc(`Every gym, Muay Thai camp, and sport venue in ${label}, Pattaya — ${venues.length} hand-checked entries with hours, prices and contact details. Independent directory, no paid placements.`);
 
   const itemList = {
     '@context': 'https://schema.org',
@@ -1403,8 +1407,9 @@ ${(() => {
 function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
   const url = `${SITE}/area/${areaSlug}/${cat.key}/`;
   const catLabel = cat.label;
-  const title = truncateTitle(`${catLabel} in ${areaLabel}, Pattaya | Pattaya.Gym`);
-  const desc = truncateDesc(`${venues.length} ${catLabel.toLowerCase()} ${venues.length === 1 ? 'venue' : 'venues'} in ${areaLabel}, Pattaya. Hand-checked. No paid placements. Independent directory.`);
+  const core = `${catLabel} in ${areaLabel}, Pattaya`;
+  const title = core.length <= 49 ? `${core} | Pattaya.Gym` : truncateTitle(core);
+  const desc = truncateDesc(`Every ${catLabel.toLowerCase()} venue in ${areaLabel}, Pattaya — ${venues.length} hand-checked ${venues.length === 1 ? 'option' : 'options'} with hours, prices and contact details. Independent directory, no paid placements, verified on a rolling schedule.`);
 
   const accentColors = {
     'muay-thai':'accent-pink','mma':'accent-pink','bjj':'accent-pink',
@@ -1807,18 +1812,18 @@ const UTILITY_PAGES = [
     headlineLead: 'Independent.',
     headlineAccent: 'One purpose',
     accentClass: 'accent-pink',
-    lede: 'Pattaya.Gym is the most complete directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand. Every venue is personally verified. No paid placements. No fake reviews. No SEO spam.',
+    lede: 'Pattaya.Gym is the most complete directory of gyms, Muay Thai camps, and sport venues in Pattaya, Thailand. Every venue is independently researched and source-cited. No paid placements. No fake reviews. No SEO spam.',
     showContactCard: true,
     bodyHtml: `
 <h2>Why this site exists</h2>
 <p>Most directories you find for Pattaya gyms are scraped, paid-for, or both. Search results are dominated by sites that have never set foot in any of the venues they rank.</p>
-<p>Pattaya.Gym is the opposite. Every venue is visited or verified directly. Every hours field is checked. Every phone number is dialed. When a venue closes or changes hands, the page is updated as soon as we hear about it — usually within days.</p>
+<p>Pattaya.Gym is the opposite. Every venue is researched from public sources, official channels, and on-the-ground local knowledge. We cross-check hours, phone numbers, and locations against each venue's own listings wherever they are published — and where a detail cannot be confirmed yet, we flag it for follow-up rather than guessing. When a venue closes or changes hands, the page is updated as soon as we hear about it.</p>
 
 <h2>How venues are ranked</h2>
 <p>No money changes hands. Ranking is based on consistent quality, current operation, breadth of facility, instructor caliber, and community reputation. Gyms with closed doors or stale information get demoted automatically.</p>
 
 <h2>What we operate</h2>
-<p>Pattaya.Gym is one of seven sister sites operated by <strong>TimPaemi Co., Ltd.</strong>. The full network: <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">timpaemi.com</a> (main brand), <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> (flagship media agency), <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a>, <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>, <a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Stream</a>, <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee Guide</a>, and <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a>. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
+<p>Pattaya.Gym is part of the independent network of Pattaya guides operated by <strong>TimPaemi Co., Ltd.</strong>. The full network: <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">timpaemi.com</a> (main brand), <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> (flagship media agency), <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a>, <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>, <a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Stream</a>, <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee Guide</a>, and <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a>. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
 
 <h2>Who runs this</h2>
 <p>Pattaya.Gym is operated by <strong>Tim Paemi</strong>, an independent operator and long-time Pattaya resident, alongside his wife and co-founder. The site is self-funded and has no commercial relationship with any listed venue.</p>
@@ -2127,6 +2132,54 @@ const UTILITY_PAGES = [
   }
 ];
 
+// ---------- All-sports hub (Round 21 - Codex P1-5: de-orphan BJJ + every category) ----------
+function sportsHubPage() {
+  const url = `${SITE}/sports/`;
+  const title = 'All sports in Pattaya - 15 categories | Pattaya.Gym';
+  const desc = truncateDesc('Browse every sport in Pattaya: Muay Thai, fitness, golf, yoga, BJJ, MMA, watersports, climbing, racquet sports, running clubs and more. 158 hand-checked venues across 15 categories.');
+  const cards = CATEGORIES.map(c => {
+    const n = GYMS.filter(g => g.category === c.key).length;
+    return `<a href="/category/${c.key}/" class="numcard u-plain-link">
+        <div class="numcard-head"><span class="numcard-num">${String(n).padStart(2,'0')}</span><h3 class="numcard-title">// ${esc(c.label)}</h3></div>
+        <p class="numcard-body">${n} ${n === 1 ? 'venue' : 'venues'} in Pattaya. Hand-checked, no paid placements.</p>
+      </a>`;
+  }).join('\n      ');
+  const itemList = {
+    '@context': 'https://schema.org', '@type': 'ItemList',
+    name: 'Sport categories in Pattaya', numberOfItems: CATEGORIES.length,
+    itemListElement: CATEGORIES.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/category/${c.key}/`, name: c.label }))
+  };
+  const crumbsLd = { '@context': 'https://schema.org', ...breadcrumbJsonLd([{ label: 'Home', href: '/' }, { label: 'All sports' }], url) };
+  return head({ title, desc, url, jsonLd: [itemList, crumbsLd] })
+    + topMarquee(TOP_MARQUEE)
+    + nav()
+    + breadcrumb([{ label: 'Home', href: '/' }, { label: 'All sports' }])
+    + `
+<main id="main">
+
+<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
+  <div class="hero-inner u-wrap-max">
+    <div class="hero-kicker">// Every sport &middot; 15 categories &middot; 158 venues</div>
+    <h1 class="hero-h1" style="font-size:clamp(44px,10vw,128px); text-align:left;">All <span class="accent-cyan">sports.</span></h1>
+    <p class="hero-lede u-text-left-ml0">Every sport and training discipline in Pattaya - from Muay Thai and BJJ to golf, diving, climbing and running clubs. Pick a category to see every hand-checked venue.</p>
+  </div>
+</section>
+
+<section class="section u-pt-0">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">01</span> 15 categories</div>
+    <h2 class="h-section">Browse by <span class="accent-pink">sport.</span></h2>
+    <div class="numlist">${cards}</div>
+  </div>
+</section>
+
+</main>
+`
+    + paNetwork()
+    + bottomMarquee(BOTTOM_MARQUEE)
+    + footer();
+}
+
 // ---------- Sitemap ----------
 function generateSitemap() {
   // Round 17 fix (Codex F07.1): GUIDE_SLUGS is now derived from disk so the
@@ -2136,8 +2189,8 @@ function generateSitemap() {
     .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
     .map(e => e.name)
     .sort();
-  const TOOL_SLUGS = ['compare','map','plan-my-trip','find-my-coach','favorites'];
-  const UTILITY_EXTRA = ['add-your-gym','colophon','press','pattaya-sport-stats','changelog','privacy'];
+  const TOOL_SLUGS = ['compare','map'];
+  const UTILITY_EXTRA = ['sports','add-your-gym','colophon','press','pattaya-sport-stats','changelog','privacy'];
   const urls = [
     `${SITE}/`,
     `${SITE}/about/`,
@@ -2251,6 +2304,9 @@ function main() {
     utilCount++;
   }
   stats.utility = utilCount;
+
+  // All-sports hub (Round 21 - Codex P1-5)
+  writeFile(path.join(ROOT, 'sports', 'index.html'), sportsHubPage());
 
   // Sitemap
   generateSitemap();
