@@ -76,9 +76,3 @@ User-agent: facebookexternalhit
 Allow: /
 
 Sitemap: https://pattaya-gym.com/sitemap.xml
-Sitemap: https://pattaya-gym.com/sitemap-index.xml
-Sitemap: https://pattaya-gym.com/sitemap-venues.xml
-Sitemap: https://pattaya-gym.com/sitemap-categories.xml
-Sitemap: https://pattaya-gym.com/sitemap-areas.xml
-Sitemap: https://pattaya-gym.com/sitemap-guides.xml
-Sitemap: https://pattaya-gym.com/sitemap-core.xml

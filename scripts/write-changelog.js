@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 22, date: '2026-05-22', tag: 'v418',
+    title: 'Self-audit Round 22 - sitemap consolidation + nav hub link',
+    summary: 'Post-Round-21 self-audit. The site passed every structural check (260 pages, 0 truncation, 0 asset-version drift, 0 duplicate IDs). Two real issues remained: robots.txt was still advertising stale legacy sitemaps, and the new /sports/ hub was not in the primary navigation.',
+    bullets: [
+      'Sitemaps - robots.txt advertised 7 sitemaps, but 6 were stale legacy files (sitemap-index / -venues / -categories / -areas / -guides / -core), last generated 11+ days ago by the retired build-extras.js. Google was being fed stale, conflicting sitemap data. robots.txt now advertises only the single live sitemap.xml (256 URLs, regenerated every build); the 6 stale files are deleted.',
+      'verify-deploy.js now fails the build if robots.txt advertises any sitemap file that does not exist on disk - so this class of drift cannot recur.',
+      'Nav - the /sports/ all-categories hub (added in Round 21) is now in the primary navigation on every generated page, not just the footer.',
+      'Asset version 417 -> 418.'
+    ]
+  },
+  {
     n: 21, date: '2026-05-21', tag: 'v417',
     title: 'Codex nuclear audit Round 21 - release-state consolidation',
     summary: 'Codex Round 21 audit found 0 critical issues but flagged release-state drift as the top problem: asset version, font preloads, status.json, the changelog and API metadata did not all agree. Round 21 makes every version marker consistent and closes the rest of the P1/P2 findings.',
@@ -355,7 +366,7 @@ const head = `<!DOCTYPE html>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>`;
 
-const nav = `<header class="nav" role="banner"><div class="nav-row"><a href="/" class="brand">pattaya<span class="dot">.</span>gym</a><nav class="nav-links" aria-label="Primary"><a href="/category/muay-thai/">Muay Thai</a><a href="/category/fitness/">Fitness</a><a href="/category/golf/">Golf</a><a href="/guides/">Guides</a><a href="/search/">Search</a></nav><a href="/search/" class="nav-cta">★ Find a gym</a></div></header>`;
+const nav = `<header class="nav" role="banner"><div class="nav-row"><a href="/" class="brand">pattaya<span class="dot">.</span>gym</a><nav class="nav-links" aria-label="Primary"><a href="/category/muay-thai/">Muay Thai</a><a href="/category/fitness/">Fitness</a><a href="/category/golf/">Golf</a><a href="/sports/">All sports</a><a href="/guides/">Guides</a><a href="/search/">Search</a></nav><a href="/search/" class="nav-cta">★ Find a gym</a></div></header>`;
 
 const breadcrumb = `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Changelog</span></nav>`;
 

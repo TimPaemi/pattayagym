@@ -61,6 +61,7 @@ function nav() {
       <a href="/category/muay-thai/">Muay Thai</a>
       <a href="/category/fitness/">Fitness</a>
       <a href="/category/golf/">Golf</a>
+      <a href="/sports/">All sports</a>
       <a href="/guides/">Guides</a>
       <a href="/search/">Search</a>
     </nav>

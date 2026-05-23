@@ -15,10 +15,10 @@
     "updateCadence": "rolling"
   },
   "build": {
-    "version": "v417",
-    "asset_version": "417",
-    "last_built_utc": "2026-05-22T07:00:26.364Z",
-    "last_built_date": "2026-05-22"
+    "version": "v418",
+    "asset_version": "418",
+    "last_built_utc": "2026-05-23T23:09:15.363Z",
+    "last_built_date": "2026-05-23"
   },
   "catalog": {
     "venues_total": 158,
@@ -32,14 +32,14 @@
     "venues_with_verified_date": 158,
     "venues_with_phone": 47,
     "venues_with_website": 105,
-    "venues_with_geo_coordinates": 56,
-    "completeness_percent_geo": 35,
+    "venues_with_geo_coordinates": 95,
+    "completeness_percent_geo": 60,
     "completeness_percent_phone": 30
   },
   "freshness": {
     "oldest_verified_date": "2026-04-27",
     "newest_verified_date": "2026-04-29",
-    "oldest_verified_age_days": 25,
+    "oldest_verified_age_days": 26,
     "target_max_age_days": 30
   },
   "endpoints": {

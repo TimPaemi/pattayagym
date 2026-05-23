@@ -169,6 +169,20 @@ if (fs.existsSync(headersPath)) {
   }
 }
 
+// --- Round 22: robots.txt must only advertise sitemaps that exist on disk ---
+{
+  const robotsPath = path.join(ROOT, 'robots.txt');
+  if (fs.existsSync(robotsPath)) {
+    const robots = fs.readFileSync(robotsPath, 'utf8');
+    for (const m of robots.matchAll(/^Sitemap:\s*https?:\/\/[^/]+\/(.+?)\s*$/gim)) {
+      const rel = m[1].trim();
+      if (rel && !fs.existsSync(path.join(ROOT, rel))) {
+        errors.push(`robots.txt advertises a sitemap with no local file: ${rel}`);
+      }
+    }
+  }
+}
+
 // --- Round 21 (Codex P1-1 / P2-6): asset-version consistency ---
 let versionDrift = 0;
 {

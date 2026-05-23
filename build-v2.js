@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '417';
+const ASSET_VERSION = '418';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -402,6 +402,7 @@ function nav() {
       <a href="/category/fitness/">Fitness</a>
       <a href="/category/golf/">Golf</a>
       <a href="/category/yoga/">Yoga</a>
+      <a href="/sports/">All sports</a>
       <a href="/guides/">Guides</a>
     </nav>
     <a href="/search/" class="nav-cta">★ Find a gym</a>

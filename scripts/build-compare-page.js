@@ -109,7 +109,7 @@ const html = `<!DOCTYPE html>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 ${marquee(TOP_MARQUEE, false)}
-<header class="nav" role="banner"><div class="nav-row"><a href="/" class="brand">pattaya<span class="dot">.</span>gym</a><nav class="nav-links" aria-label="Primary"><a href="/category/muay-thai/">Muay Thai</a><a href="/category/fitness/">Fitness</a><a href="/category/golf/">Golf</a><a href="/guides/">Guides</a><a href="/search/">Search</a></nav><a href="/search/" class="nav-cta">★ Find a gym</a></div></header>
+<header class="nav" role="banner"><div class="nav-row"><a href="/" class="brand">pattaya<span class="dot">.</span>gym</a><nav class="nav-links" aria-label="Primary"><a href="/category/muay-thai/">Muay Thai</a><a href="/category/fitness/">Fitness</a><a href="/category/golf/">Golf</a><a href="/sports/">All sports</a><a href="/guides/">Guides</a><a href="/search/">Search</a></nav><a href="/search/" class="nav-cta">★ Find a gym</a></div></header>
 <nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
   <a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Compare</span>
 </nav>
