@@ -38,6 +38,41 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 25, date: '2026-05-23', tag: 'v421',
+    title: 'Area-page FAQs - completing the answer-engine layer',
+    summary: 'Round 24 added FAQ sections and FAQPage schema to the 15 sport category pages. Round 25 completes that work by extending it to the 6 neighbourhood / area pages, which are real landing pages for queries such as gyms in Jomtien.',
+    bullets: [
+      'New data/area-faqs.js: 24 hand-authored Q&A pairs across all 6 areas (Jomtien, Naklua, Pratamnak, East Pattaya / Darkside, Central Pattaya, Sattahip) - whether the area suits a training base, what sports it is best for, how to get around, and who it best suits.',
+      'Each area page now renders the same accessible FAQ accordion (native HTML details element, no JavaScript) and emits FAQPage JSON-LD. Structured Q&A now covers every category page, every area page, and every guide.',
+      'Answers are grounded in the per-area editorial content already on the site - accurate, no fabrication.',
+      'Asset version 420 -> 421.'
+    ]
+  },
+  {
+    n: 24, date: '2026-05-23', tag: 'v420',
+    title: 'Category FAQs - answer-engine-ready content on all 15 sport pages',
+    summary: 'Extended every sport category page with a hand-authored FAQ section and FAQPage structured data. Category pages are where head-term search intent lands (for example \'muay thai pattaya\'), and a structured FAQ is the single most effective format for being quoted by AI answer engines such as ChatGPT, Claude and Perplexity.',
+    bullets: [
+      'New data/category-faqs.js: around 50 hand-authored, genuinely useful question-and-answer pairs across all 15 sport categories - cost, beginners, booking, seasons, areas and category-specific questions.',
+      'Each category page now renders an accessible FAQ accordion (native HTML details element, no JavaScript) and emits FAQPage JSON-LD, making the Q&A eligible for FAQ rich results and easy for AI crawlers to extract and cite.',
+      'Honest content - no fabricated prices (rates that go stale are never republished); answers point to the venue pages and the Plan My Trip tool for specifics.',
+      'New .faq-list / .faq-item CSS for the dark-theme accordion.',
+      'Asset version 419 -> 420.'
+    ]
+  },
+  {
+    n: 23, date: '2026-05-23', tag: 'v419',
+    title: 'Plan My Trip - a real, data-driven trip planner',
+    summary: 'Extended the site with a genuine new tool. /plan-my-trip/ had been an honest \'being rebuilt\' stub since Round 7; it is now a real, working, client-side trip planner built on the 158-venue dataset.',
+    bullets: [
+      'New scripts/build-plan-page.js generates /plan-my-trip/ as a real tool: the visitor answers four questions (sport, trip length, budget, travel style) and gets a tailored plan - a ranked base venue, a training structure keyed to trip length, complementary venues for rest days, and practical notes.',
+      'Honest by design - it uses only data the venue set genuinely supports: category, price tier, editor picks, and three reliable tag clusters (family-friendly, stay-and-train, drop-in). The free-text area field is messy (130+ variants) so it is deliberately not used as a filter.',
+      'Pure client-side, no external dependencies; bookmarkable and shareable ?sport=&length=&budget=&style= URLs; ranks on fit only - no paid placements.',
+      'The page is now indexable (it was noindex) and is back in llms.txt and the sitemap. rebuild-tool-stubs.js no longer overwrites it with a stub.',
+      'Asset version 418 -> 419.'
+    ]
+  },
+  {
     n: 22, date: '2026-05-22', tag: 'v418',
     title: 'Self-audit Round 22 - sitemap consolidation + nav hub link',
     summary: 'Post-Round-21 self-audit. The site passed every structural check (260 pages, 0 truncation, 0 asset-version drift, 0 duplicate IDs). Two real issues remained: robots.txt was still advertising stale legacy sitemaps, and the new /sports/ hub was not in the primary navigation.',

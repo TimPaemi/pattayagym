@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '418';
+const ASSET_VERSION = '421';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -317,6 +317,82 @@ function truncateDesc(s, max = 155) {
   const cut = s.slice(0, max - 1);
   const lastSpace = cut.lastIndexOf(' ');
   return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trimEnd();
+}
+
+// ---------- Category FAQ content (Round 24) ----------
+const CATEGORY_FAQS = (function () {
+  try { return require('./data/category-faqs.js'); }
+  catch (e) { return {}; }
+})();
+function categoryFaqLd(cat) {
+  const faqs = CATEGORY_FAQS[cat.key];
+  if (!faqs || !faqs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${SITE}/category/${cat.key}/#faq`,
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a }
+    }))
+  };
+}
+function categoryFaqHtml(cat) {
+  const faqs = CATEGORY_FAQS[cat.key];
+  if (!faqs || !faqs.length) return '';
+  const items = faqs.map(f =>
+    `<details class="faq-item"><summary>${esc(f.q)}</summary><div class="faq-a"><p>${esc(f.a)}</p></div></details>`
+  ).join('\n      ');
+  return `
+<section class="section u-pt-0">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">03</span> Common questions</div>
+    <h2 class="h-section">${esc(cat.label)} in Pattaya \u2014 <span class="accent-cyan">FAQ.</span></h2>
+    <div class="faq-list">
+      ${items}
+    </div>
+  </div>
+</section>
+`;
+}
+
+// ---------- Area FAQ content (Round 25) ----------
+const AREA_FAQS = (function () {
+  try { return require('./data/area-faqs.js'); }
+  catch (e) { return {}; }
+})();
+function areaFaqLd(slug, label) {
+  const faqs = AREA_FAQS[slug];
+  if (!faqs || !faqs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${SITE}/area/${slug}/#faq`,
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a }
+    }))
+  };
+}
+function areaFaqHtml(slug, label) {
+  const faqs = AREA_FAQS[slug];
+  if (!faqs || !faqs.length) return '';
+  const items = faqs.map(f =>
+    `<details class="faq-item"><summary>${esc(f.q)}</summary><div class="faq-a"><p>${esc(f.a)}</p></div></details>`
+  ).join('\n      ');
+  return `
+<section class="section u-pt-0">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">04</span> Common questions</div>
+    <h2 class="h-section">${esc(label)} \u2014 <span class="accent-cyan">FAQ.</span></h2>
+    <div class="faq-list">
+      ${items}
+    </div>
+  </div>
+</section>
+`;
 }
 
 // ---------- Shared HTML components ----------
@@ -1036,7 +1112,9 @@ function categoryPage(cat, venues) {
       { label: cat.label }
     ], `${SITE}/category/${cat.key}/`)
   };
-  const jsonLd = [itemList, crumbsLd];
+  const faqLd = categoryFaqLd(cat);
+  const faqHtml = categoryFaqHtml(cat);
+  const jsonLd = faqLd ? [itemList, crumbsLd, faqLd] : [itemList, crumbsLd];
 
   return head({ title, desc, url, jsonLd })
     + topMarquee(TOP_MARQUEE)
@@ -1095,7 +1173,7 @@ function categoryPage(cat, venues) {
     </div>
   </div>
 </section>
-
+${faqHtml}
 </main>
 `
     + paNetwork()
@@ -1262,7 +1340,9 @@ function areaPage(slug, label, venues) {
       { label: label }
     ], url)
   };
-  const jsonLd = [itemList, crumbsLd];
+  const faqLd = areaFaqLd(slug, label);
+  const faqHtml = areaFaqHtml(slug, label);
+  const jsonLd = faqLd ? [itemList, crumbsLd, faqLd] : [itemList, crumbsLd];
 
   return head({ title, desc, url, jsonLd })
     + topMarquee(TOP_MARQUEE)
@@ -1393,7 +1473,7 @@ ${(() => {
     .join('');
   return sportLinks ? `<section class="section u-pt-0"><div class="wrap"><div class="eyebrow"><span class="num">03</span> Browse this area by sport</div><h2 class="h-section">Every sport in <span class="accent-cyan">${esc(label)}.</span></h2><p class="lede">Each tag below opens a focused page listing every venue of that sport in ${esc(label)}.</p><div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:var(--s-5);">${sportLinks}</div></div></section>` : '';
 })()}
-
+${faqHtml}
 </main>`;
 })()}
 `
@@ -2190,7 +2270,7 @@ function generateSitemap() {
     .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
     .map(e => e.name)
     .sort();
-  const TOOL_SLUGS = ['compare','map'];
+  const TOOL_SLUGS = ['compare','map','plan-my-trip'];
   const UTILITY_EXTRA = ['sports','add-your-gym','colophon','press','pattaya-sport-stats','changelog','privacy'];
   const urls = [
     `${SITE}/`,

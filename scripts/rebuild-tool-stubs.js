@@ -203,21 +203,8 @@ const STUBS = [
   },
   // NOTE: 'compare' is now built by scripts/build-compare-page.js as a real functional tool.
   // Do NOT add it back here — that would overwrite the real /compare/ page with a stub.
-  {
-    slug: 'plan-my-trip', noindex: true,
-    title: 'Plan your Pattaya training trip',
-    desc: 'A trip planner that suggests a daily training schedule by sport, dates, and area is on the roadmap. For now, use the guides and search to plan manually.',
-    crumb: 'Plan a trip',
-    eyebrow: 'Trip planner · Coming back',
-    accent: 'accent-pink',
-    h1: 'Plan your training <span class="accent-pink">trip.</span>',
-    intro: 'The trip-planner tool that suggests a daily training schedule is being rebuilt for V2. Until it returns, our guides cover every common scenario — beginners, families, female-friendly, digital nomads, day-trippers, and more.',
-    alts: [
-      {url: '/guides/best-muay-thai-pattaya/', title: 'Best Muay Thai picks', desc: 'Hand-picked Muay Thai camps in Pattaya from authentic budget to premium resort camps.'},
-      {url: '/guides/best-for-beginners-pattaya/', title: 'For beginners', desc: 'Best gyms and camps if you have never trained Muay Thai or visited Pattaya before.'},
-      {url: '/guides/family-friendly-pattaya/', title: 'Family-friendly', desc: 'Pattaya sport venues with childcare, family pools, kid-friendly classes, and beach access.'}
-    ]
-  },
+  // NOTE: 'plan-my-trip' is now built by scripts/build-plan-page.js as a real
+  // functional trip planner. Do NOT add it back here - that would overwrite it.
   {
     slug: 'find-my-coach', noindex: true,
     title: 'Find your Pattaya coach',
