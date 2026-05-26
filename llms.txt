@@ -90,11 +90,14 @@ Coordinates: 12.93°N, 100.88°E.
 
 Last update: 2026-05-21
 
-## Sister sites (TimPaemi Co. network)
-- https://timpaemi.com/                      (parent brand)
-- https://pattaya-authority.com/             (flagship media agency)
-- https://pattaya-restaurant-guide.com/      (restaurant directory)
-- https://pattayavisahelp.com/               (long-stay visa support)
-- https://pattayastream.com/                 (Pattaya content channel)
-- https://pattaya-coffee.com/                (coffee directory)
-- https://pattaya-school-guide.com/          (school directory)
+## Sister sites (TimPaemi / Pattaya Authority network)
+- https://pattaya-authority.com/              (flagship media agency)
+- https://timpaemi.com/                       (parent brand)
+- https://pattaya-restaurant-guide.com/       (independent restaurant directory)
+- https://pattayavisahelp.com/                (long-stay visa support)
+- https://pattaya-school-guide.com/           (independent school directory)
+- https://pattaya-coffee.com/                 (independent coffee directory)
+- https://pattayastream.com/                  (Pattaya content channel)
+- https://pattaya-medical.com/                (Pattaya medical directory)
+- https://pattayapets.com/                    (Pattaya pet services directory)
+- https://pattaya-vehicle-rentals.com/        (Pattaya car & bike rental directory)

@@ -1522,6 +1522,18 @@ body.nav-open { overflow: hidden; }
 }
 /* Round 26 - trust-pill link variant tap target */
 .trust-pill.is-link { min-height: 44px; padding: 10px 14px; box-sizing: border-box; }
+/* Round 27 - footer Projects col 2-column layout for the 10+ site network */
+.footer-projects {
+  columns: 2;
+  column-gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-projects li { break-inside: avoid; padding-bottom: 4px; }
+@media (max-width: 640px) {
+  .footer-projects { columns: 1; }
+}
 .search-check {
   display: inline-flex;
   align-items: center;
