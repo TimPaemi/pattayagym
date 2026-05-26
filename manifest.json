@@ -1,10 +1,21 @@
 {
   "name": "Pattaya Gym Directory",
   "short_name": "Pattaya Gym",
+  "id": "/",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0b0b0d",
   "theme_color": "#0b0b0d",
+  "description": "Independent directory of every gym, Muay Thai camp, golf course, dive operator, watersports, climbing, yoga and sport venue in Pattaya, Thailand. 158 hand-checked venues. No paid placements.",
+  "categories": [
+    "sports",
+    "travel",
+    "lifestyle"
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "orientation": "any",
   "icons": [
     {
       "src": "/icon-192.png",

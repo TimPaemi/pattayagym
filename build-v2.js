@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '421';
+const ASSET_VERSION = '422';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -422,6 +422,7 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
 <link rel="preload" href="/fonts/inter-400.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/space-grotesk.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrains-mono-500.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${ogImage}">
@@ -481,9 +482,26 @@ function nav() {
       <a href="/sports/">All sports</a>
       <a href="/guides/">Guides</a>
     </nav>
+    <button type="button" class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile"><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span></button>
     <a href="/search/" class="nav-cta">★ Find a gym</a>
   </div>
-</header>`;
+</header>
+<div class="nav-mobile" id="nav-mobile" hidden role="navigation" aria-label="Mobile menu">
+  <a href="/" class="nav-mobile-link">Home</a>
+  <a href="/category/muay-thai/" class="nav-mobile-link">Muay Thai</a>
+  <a href="/category/fitness/" class="nav-mobile-link">Fitness</a>
+  <a href="/category/golf/" class="nav-mobile-link">Golf</a>
+  <a href="/sports/" class="nav-mobile-link">All sports</a>
+  <a href="/guides/" class="nav-mobile-link">Guides</a>
+  <a href="/plan-my-trip/" class="nav-mobile-link">Plan my trip</a>
+  <a href="/compare/" class="nav-mobile-link">Compare</a>
+  <a href="/search/" class="nav-mobile-link">Search</a>
+  <a href="/about/" class="nav-mobile-link">About</a>
+  <a href="/methodology/" class="nav-mobile-link">Methodology</a>
+  <a href="/changelog/" class="nav-mobile-link">Changelog</a>
+  <a href="/search/" class="nav-mobile-cta">★ Find a gym</a>
+</div>
+<script>(function(){var b=document.querySelector('.nav-burger'),m=document.getElementById('nav-mobile');if(!b||!m)return;function o(){m.hidden=false;b.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');var f=m.querySelector('a');if(f)f.focus();}function c(){m.hidden=true;b.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');b.focus();}b.addEventListener('click',function(){if(m.hidden)o();else c();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c();});m.addEventListener('click',function(e){if(e.target.tagName==='A')c();});})();</script>`;
 }
 
 function paNetwork() {
