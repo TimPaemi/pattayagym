@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '423';
+const ASSET_VERSION = '424';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -543,6 +543,7 @@ function footer() {
   <div class="footer-grid">
     <div>
       <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
+      <div class="footer-slogan">Built in Pattaya. For Pattaya.</div>
       <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
       <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
       <div class="footer-meta">
@@ -569,7 +570,6 @@ function footer() {
         <li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li>
         <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li>
         <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li>
-        <li><a href="/">Pattaya Gym</a></li>
         <li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li>
         <li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li>
         <li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li>

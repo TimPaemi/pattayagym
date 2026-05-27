@@ -1534,6 +1534,16 @@ body.nav-open { overflow: hidden; }
 @media (max-width: 640px) {
   .footer-projects { columns: 1; }
 }
+/* Round 28 - Pattaya Authority network tagline (under the wordmark) */
+.footer-slogan {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin: 4px 0 var(--s-3);
+}
 .search-check {
   display: inline-flex;
   align-items: center;
