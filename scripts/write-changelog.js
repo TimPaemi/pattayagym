@@ -38,6 +38,19 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 29, date: '2026-05-24', tag: 'v425',
+    title: 'Homepage \'What we operate\' rebuilt as the 11-property network grid',
+    summary: 'The homepage verticals section was factually wrong (\'four verticals\') after the network expanded to 11. Round 29 rebuilds it as an accurate, scalable 11-tile network grid - one agency + ten verticals, each with its own tile.',
+    bullets: [
+      'Headline updated: \'One agency. Four verticals.\' -> \'One agency. Ten verticals.\'',
+      'Intro rewritten to reflect 10 editorial verticals + the flagship Pattaya Authority agency, not 4 sites.',
+      'Grid expanded from 4 big cards to 11 compact network tiles with auto-fit layout (responsive: 1 col mobile, 2 col tablet, 3-4 col desktop). Each tile carries its vertical label, brand wordmark with accent dot, domain, and a one-line value prop.',
+      'Tiles cycle through the four existing project-card accent colours (pink / yellow / cyan / mint) for visual rhythm without new CSS classes per vertical.',
+      'New tiles: TimPaemi (parent brand), Pattaya School Guide, Pattaya Coffee, Pattaya Villa Stream, Pattaya Medical, PattayaPets, Pattaya Vehicle Rentals. Existing four (Authority, Gym, Restaurant Guide, Visa Help) retained.',
+      'Asset version 424 -> 425.'
+    ]
+  },
+  {
     n: 28, date: '2026-05-24', tag: 'v424',
     title: 'Network tagline + footer self-exclusion (Pattaya Authority alignment)',
     summary: 'Pattaya Authority network adopted a unified tagline across all owned sites. Round 28 applies the network footer prompt: the tagline appears under the brand wordmark in every footer, in Organization.slogan in the homepage JSON-LD, and the self-link is removed from the Projects sister-site list (a site should not link to itself in its network list).',

@@ -1544,6 +1544,14 @@ body.nav-open { overflow: hidden; }
   color: var(--cyan);
   margin: 4px 0 var(--s-3);
 }
+/* Round 29 - 11-tile network grid (the homepage "What we operate" section) */
+.projects-grid.is-network {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.projects-grid.is-network .project-card { padding: var(--s-5); }
+.projects-grid.is-network .project-card-name { font-size: clamp(22px, 2.4vw, 30px); }
+.projects-grid.is-network .project-card-desc { font-size: 14px; line-height: 1.55; }
 .search-check {
   display: inline-flex;
   align-items: center;
