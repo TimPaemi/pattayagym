@@ -46,6 +46,11 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Best gym in Jomtien</span>
         <span class="intent-card-desc">Beach-side MT, fitness, yoga, pools</span>
       </a>
+      <a href="/guides/best-gym-naklua-pratamnak-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Naklua &amp; Pratamnak</span>
+        <span class="intent-card-title">North &amp; hilltop gyms</span>
+        <span class="intent-card-desc">Fairtex, Muscle Factory, padel, Wong Amat</span>
+      </a>
       <a href="/guides/pattaya-vs-phuket-muay-thai-training/" class="intent-card">
         <span class="intent-card-tag">// Compare cities</span>
         <span class="intent-card-title">Pattaya vs Phuket training</span>

@@ -15,9 +15,9 @@
     "updateCadence": "rolling"
   },
   "build": {
-    "version": "v435",
-    "asset_version": "435",
-    "last_built_utc": "2026-05-29T02:32:46.333Z",
+    "version": "v436",
+    "asset_version": "436",
+    "last_built_utc": "2026-05-29T02:35:42.400Z",
     "last_built_date": "2026-05-29"
   },
   "catalog": {
@@ -25,8 +25,8 @@
     "venues_with_body_content": 158,
     "categories": 15,
     "areas": 6,
-    "html_pages_shipped": 268,
-    "sitemap_urls": 265
+    "html_pages_shipped": 269,
+    "sitemap_urls": 266
   },
   "schema_completeness": {
     "venues_with_verified_date": 158,

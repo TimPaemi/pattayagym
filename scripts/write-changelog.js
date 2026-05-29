@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 40, date: '2026-05-29', tag: 'v436',
+    title: 'Naklua & Pratamnak area guide + ranked → editorial funnel links',
+    summary: 'Closes the area-guide gap after Jomtien: Fairtex/Sityodtong north and Muscle Factory/padel hilltop in one editorial page. Ranked Muay Thai and budget guides now surface beginner, trip-length, and day-pass editorials in Related.',
+    bullets: [
+      'New guide: /guides/best-gym-naklua-pratamnak-pattaya/ (~1,500 words).',
+      'inject-ranked-editorial-funnel.js on 6 ranked guides (best MT, beginners, cheapest, Walking St, female-friendly, 24h).',
+      'Homepage intent router + guides hub; 26 guides total.',
+      'Asset version 435 -> 436.'
+    ]
+  },
+  {
     n: 39, date: '2026-05-29', tag: 'v435',
     title: 'Trip-length guide — train Muay Thai Pattaya 1 week vs 1 month',
     summary: 'Completes the planner funnel after city compare, holiday, and beginners: realistic goals, camp picks, budgets, schedules, and visa notes for 7-day vs 30-day stays.',

@@ -46,9 +46,11 @@ const SLUG_TITLES = {
   'best-gym-jomtien-pattaya': 'Best gym Jomtien',
   'pattaya-vs-phuket-muay-thai-training': 'Pattaya vs Phuket MT',
   'train-muay-thai-pattaya-1-week-1-month': '1 week vs 1 month',
+  'best-gym-naklua-pratamnak-pattaya': 'Naklua & Pratamnak',
 };
 
 const TLDR_ADD = [
+  { slug: 'best-gym-naklua-pratamnak-pattaya', html: '<li><strong>Staying Naklua or Pratamnak?</strong> → <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Best gym Naklua &amp; Pratamnak</a></li>' },
   { slug: 'train-muay-thai-pattaya-1-week-1-month', html: '<li><strong>1 week or 1 month?</strong> → <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">Train Muay Thai — trip length guide</a></li>' },
   { slug: 'muay-thai-pattaya-beginners', html: '<li><strong>Never trained MT before?</strong> → <a href="/guides/muay-thai-pattaya-beginners/">Muay Thai for beginners</a></li>' },
   { slug: 'best-gym-jomtien-pattaya', html: '<li><strong>Staying in Jomtien?</strong> → <a href="/guides/best-gym-jomtien-pattaya/">Best gym in Jomtien</a></li>' },
@@ -56,6 +58,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'best-gym-naklua-pratamnak-pattaya', card: `<a href="/guides/best-gym-naklua-pratamnak-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Best gym in Naklua &amp; Pratamnak</h3><span class="cv-pill">Area</span></div>
+      <p>Fairtex, Sityodtong, Muscle Factory, padel, Wong Amat — north &amp; hilltop venues.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'train-muay-thai-pattaya-1-week-1-month', card: `<a href="/guides/train-muay-thai-pattaya-1-week-1-month/" class="cat-venue-card">
       <div class="cv-head"><h3>Train Muay Thai: 1 week vs 1 month</h3><span class="cv-pill">Trip length</span></div>
       <p>Which camps, budgets, and schedules fit a 7-day trip vs a 4-week block.</p>
