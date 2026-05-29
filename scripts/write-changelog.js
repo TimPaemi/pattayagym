@@ -38,6 +38,18 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 38, date: '2026-05-29', tag: 'v434',
+    title: 'Deepen Round 37 guides — full editorial depth (~1,500 words each)',
+    summary: 'Round 37 shipped thin SEO outlines by mistake. Round 38 rewrites all three guides to match Round 32 editorial standard: long venue write-ups, 6 FAQs, pricing tables, bylines.',
+    bullets: [
+      'muay-thai-pattaya-beginners expanded to 7 camps with full paragraphs.',
+      'best-gym-jomtien-pattaya expanded with geography, weekly rhythm, venue depth.',
+      'pattaya-vs-phuket expanded with decision tree and honest bias disclosure.',
+      'deepen-round37-guides.js + guide-bodies/ module; editorial shell gains byline block.',
+      'Asset version 433 -> 434.'
+    ]
+  },
+  {
     n: 37, date: '2026-05-29', tag: 'v433',
     title: 'Three high-intent SEO guides — beginners, Jomtien, Pattaya vs Phuket',
     summary: 'Round 37 adds the next keyword cluster from the SEO gap analysis: dedicated Muay Thai beginners, Jomtien area gym guide, and Pattaya vs Phuket training comparison.',

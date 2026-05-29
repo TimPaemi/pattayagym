@@ -153,8 +153,17 @@ ${nav()}
   <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
     <div class="hero-kicker">// ${esc(g.kicker)}</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">${g.h1}</h1>
+<div class="guide-byline">
+  <span class="guide-byline-author">By <a href="/about/">Tim Paemi</a></span>
+  <span class="guide-byline-dot">·</span>
+  <span class="guide-byline-time">${esc(g.readTime || '7 min read')}</span>
+  <span class="guide-byline-dot">·</span>
+  <span class="guide-byline-date">Updated <time datetime="${meta.TODAY}">${meta.TODAY}</time></span>
+  <span class="guide-byline-dot">·</span>
+  <a href="/methodology/" class="guide-byline-link">How we rank →</a>
+</div>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">${g.lede}</p>
-    <p class="hero-meta" style="text-align:left;">Updated ${meta.TODAY} · Pattaya · 158 venues hand-checked</p>
+    <p class="hero-meta" style="text-align:left;">Pattaya · 158 venues hand-checked · <a href="/compare/">Compare gyms</a></p>
   </div>
 </section>
 <section class="section" style="padding-top:var(--s-4);">
