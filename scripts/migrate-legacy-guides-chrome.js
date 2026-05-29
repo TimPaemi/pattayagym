@@ -184,6 +184,115 @@ function parseMeta(html) {
   return { title, desc, url, crumb };
 }
 
+/** Editorial hero spec per ranked guide (matches write-new-guides.js). */
+const RANKED_HERO = {
+  'best-muay-thai-pattaya': { kicker: 'Guide · Muay Thai · ranked picks', h1: 'Best <span class="accent-pink">Muay Thai.</span>' },
+  'cheapest-gyms-pattaya': { kicker: 'Guide · Budget fitness · ranked picks', h1: 'Cheapest <span class="accent-yellow">gyms.</span>' },
+  'luxury-sports-clubs-pattaya': { kicker: 'Guide · Luxury clubs · ranked picks', h1: 'Luxury <span class="accent-cyan">sports clubs.</span>' },
+  '24-hour-gyms-pattaya': { kicker: 'Guide · 24/7 access · ranked picks', h1: '24/7 <span class="accent-yellow">gyms.</span>' },
+  'family-friendly-pattaya': { kicker: 'Guide · Family sport · ranked picks', h1: 'Family-friendly <span class="accent-mint">venues.</span>' },
+  'best-for-beginners-pattaya': { kicker: 'Guide · Beginners · ranked picks', h1: 'Best for <span class="accent-mint">beginners.</span>' },
+  'best-dive-operators-pattaya': { kicker: 'Guide · Scuba · ranked picks', h1: 'Best <span class="accent-cyan">dive operators.</span>' },
+  'best-golf-courses-pattaya': { kicker: 'Guide · Golf · ranked picks', h1: 'Best <span class="accent-yellow">golf courses.</span>' },
+  'pattaya-digital-nomad-fitness': { kicker: 'Guide · Digital nomads · ranked picks', h1: 'Nomad <span class="accent-cyan">fitness.</span>' },
+  'female-friendly-gyms-pattaya': { kicker: 'Guide · Women-friendly · ranked picks', h1: 'Female-friendly <span class="accent-pink">venues.</span>' },
+  'pattaya-gyms-childcare-family-pools': { kicker: 'Guide · Kids & pools · ranked picks', h1: 'Childcare & <span class="accent-mint">family pools.</span>' },
+  'pattaya-seniors-low-impact-sport': { kicker: 'Guide · Seniors 65+ · ranked picks', h1: 'Low-impact <span class="accent-mint">sport.</span>' },
+  'thai-gym-terms-pattaya': { kicker: 'Guide · Thai phrases · cheat sheet', h1: 'Thai gym <span class="accent-yellow">terms.</span>' },
+  'pattaya-russian-speaking-sport': { kicker: 'Guide · Russian-speaking · ranked picks', h1: 'Russian-speaking <span class="accent-cyan">sport.</span>' },
+  'pattaya-solo-female-fitness': { kicker: 'Guide · Solo female · ranked picks', h1: 'Solo female <span class="accent-pink">fitness.</span>' },
+  'best-gyms-near-walking-street-pattaya': { kicker: 'Guide · Walking Street · walkable gyms', h1: 'Gyms near <span class="accent-pink">Walking Street.</span>' },
+  'bangkok-day-trip-sport-pattaya': { kicker: 'Guide · Bangkok day-trip · bucket list', h1: 'Bangkok <span class="accent-cyan">day-trips.</span>' },
+};
+
+function needsHeroUpgrade(html, slug, isHub) {
+  if (isHub) return html.includes('venue-cat-pill') || !html.includes('accent-cyan">guides.');
+  if (!RANKED_HERO[slug]) return false;
+  return (
+    html.includes('venue-hero-meta') ||
+    html.includes('hero-kicker">// Guide</div>') ||
+    !/<span class="accent-/.test(html)
+  );
+}
+
+function parseHeroParts(inner) {
+  const bylineMatch = inner.match(/<div class="guide-byline">[\s\S]*?<\/div>/);
+  const byline = bylineMatch ? bylineMatch[0] : '';
+  const ledeRe = /<p class="(?:venue-lede|hero-lede)"[^>]*>([\s\S]*?)<\/p>/g;
+  const ledes = [];
+  let m;
+  while ((m = ledeRe.exec(inner))) ledes.push(m[1]);
+  const countMatch = inner.match(/(\d+)\s+venues ranked/);
+  const dateMatch = byline.match(/datetime="([^"]+)"/) || inner.match(/Updated[^>]*>([\d-]+)</);
+  const date = dateMatch ? dateMatch[1] : new Date().toISOString().slice(0, 10);
+  return { byline, ledes, venueCount: countMatch ? countMatch[1] : null, date };
+}
+
+function buildEditorialHero(slug, parts) {
+  const spec = RANKED_HERO[slug];
+  if (!spec) return '';
+  const metaBits = [];
+  if (parts.venueCount) metaBits.push(`⭐ ${parts.venueCount} venues ranked`);
+  metaBits.push(`Updated ${parts.date}`);
+  metaBits.push('Pattaya · 158 venues hand-checked');
+  const ledeHtml = parts.ledes
+    .map((text, i) => {
+      const extra = i > 0 ? ' margin-top:10px; font-size:0.96rem;' : '';
+      return `    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;${extra}">${text}</p>`;
+    })
+    .join('\n');
+  return `<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
+  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+    <div class="hero-kicker">// ${esc(spec.kicker)}</div>
+    <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">${spec.h1}</h1>
+${parts.byline}
+${ledeHtml}
+    <p class="hero-meta" style="text-align:left;">${esc(metaBits.join(' · '))}</p>
+  </div>
+</section>`;
+}
+
+function buildHubHero() {
+  return `<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
+  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+    <div class="hero-kicker">// Guides hub · 20 guides · 158 venues</div>
+    <h1 class="hero-h1" style="font-size:clamp(40px,8vw,72px); text-align:left;">Pattaya gym <span class="accent-cyan">guides.</span></h1>
+    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">Curated picks across budget tiers, experience levels, family-friendliness, and 24-hour access. All guides are built from the same verified directory of 158 venues.</p>
+    <p class="hero-meta" style="text-align:left;">Hand-checked · No paid placements · Updated weekly</p>
+  </div>
+</section>`;
+}
+
+function stripHeroAndWrappers(inner) {
+  let s = inner.replace(/<section class="hero"[\s\S]*?<\/section>\s*/i, '');
+  s = s.replace(/<div class="venue-hero">[\s\S]*?<\/div>\s*/i, '');
+  s = dedupeMainWrappers(s);
+  s = s.replace(/^<section class="section"[^>]*>\s*<div class="wrap">\s*<article class="venue-body"[^>]*>\s*/i, '');
+  s = s.replace(/\s*<\/article>\s*<\/div>\s*<\/section>\s*$/i, '');
+  return s.trim();
+}
+
+function wrapRankedBody(body) {
+  return `<section class="section" style="padding-top:var(--s-4);">
+  <div class="wrap">
+    <article class="venue-body" style="max-width:880px; margin:0 auto;">
+${body}
+    </article>
+  </div>
+</section>`;
+}
+
+function rebuildRankedMain(inner, slug) {
+  const parts = parseHeroParts(inner);
+  const body = stripHeroAndWrappers(inner);
+  return buildEditorialHero(slug, parts) + '\n' + wrapRankedBody(body);
+}
+
+function rebuildHubMain(inner) {
+  const body = stripHeroAndWrappers(inner);
+  return buildHubHero() + '\n' + wrapRankedBody(body);
+}
+
 function dedupeMainWrappers(inner) {
   let s = inner;
   const dupOpen =
@@ -198,88 +307,12 @@ function dedupeMainWrappers(inner) {
   return s.trim();
 }
 
-function extractVenueHeroBlock(inner) {
-  const start = inner.indexOf('<div class="venue-hero">');
-  if (start < 0) return null;
-  const afterOpen = start + '<div class="venue-hero">'.length;
-  const endMarker = inner.slice(afterOpen).search(/<\/div>\s*(?=\s*<section class="tldr"|<section class="tldr"|<div id="full-list"|<h2)/);
-  if (endMarker < 0) return null;
-  const end = afterOpen + endMarker;
-  return {
-    content: inner.slice(afterOpen, end),
-    before: inner.slice(0, start),
-    after: inner.slice(end + '</div>'.length).replace(/^\s+/, ''),
-  };
-}
-
-function repairHeroSplit(html) {
-  if (!html.includes('class="venue-lede"')) return html;
-  const re =
-    /(<section class="hero"[\s\S]*?<div class="guide-byline">[\s\S]*?<\/div>)\s*<\/section>\s*<section class="section"[^>]*><div class="wrap"><article[^>]*>\s*((?:<p class="venue-lede"[\s\S]*?<div class="venue-hero-meta">[\s\S]*?<\/div>)\s*(?:<\/div>\s*)?)(?=\s*<section class="tldr"|<h2)/;
-  return html.replace(re, (_, heroPart, orphan) => {
-    const fixed = orphan
-      .replace(/<p class="venue-lede" style="([^"]*)">/g, '<p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px; $1">')
-    .replace(/class="venue-lede"/g, 'class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;"')
-      .replace(/(class="hero-lede" style="[^"]*")\s+style="/g, '$1; ')
-      .replace(/\s*<\/div>\s*$/i, '')
-      .trim();
-    return `${heroPart}\n${fixed}\n  </div>\n</section>\n<section class="section" style="padding-top:var(--s-4);"><div class="wrap"><article class="venue-body" style="max-width:880px; margin:0 auto;">\n`;
-  });
-}
-
-function upgradeVenueHero(inner) {
-  if (!inner.includes('venue-hero')) return repairHeroSplit(inner);
-  if (inner.includes('class="hero"') && !inner.includes('class="venue-lede"')) return inner;
-
-  const block = extractVenueHeroBlock(inner);
-  if (!block) return repairHeroSplit(inner);
-
-  let heroContent = block.content
-    .replace(/<span class="venue-cat-pill">[^<]*<\/span>\s*/i, '')
-    .replace(/<h1 class="venue-h1">/i, '<h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">')
-    .replace(/<p class="venue-lede" style="([^"]*)">/g, '<p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px; $1">')
-    .replace(/class="venue-lede"/g, 'class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;"');
-
-  const countMatch = heroContent.match(/(\d+)\s+venues ranked/i);
-  const kicker = countMatch ? `// Guide · ${countMatch[1]} venues ranked` : '// Guide';
-
-  const hero = `<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
-    <div class="hero-kicker">${esc(kicker)}</div>
-    ${heroContent.trim()}
-  </div>
-</section>`;
-
-  let body = block.after.trim();
-  body = dedupeMainWrappers(body);
-
-  if (!body.startsWith('<section class="section"')) {
-    body = `<section class="section" style="padding-top:var(--s-4);"><div class="wrap"><article class="venue-body" style="max-width:880px; margin:0 auto;">${body}</article></div></section>`;
-  }
-
-  return repairHeroSplit(hero + '\n' + body);
-}
-
-function upgradeHubHero(inner) {
-  if (!inner.includes('venue-h1') || inner.includes('class="hero"')) return inner;
-  return inner.replace(
-    /<div class="venue-hero">([\s\S]*?)<\/div>/,
-    (_, body) => `<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
-    <div class="hero-kicker">// Guides hub</div>
-    ${body.replace(/class="venue-h1"/g, 'class="hero-h1" style="font-size:clamp(40px,8vw,72px); text-align:left;"').replace(/class="venue-lede"/g, 'class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;"')}
-  </div>
-</section>`
-  );
-}
-
 function migratePage(filePath, slug, isHub) {
   let html = fs.readFileSync(filePath, 'utf8');
-  if (html.includes('class="venue-lede"') && html.includes('class="hero"')) {
-    /* repair pass */
-  } else if (html.includes('nav-mobile') && html.includes('/fonts/space-grotesk-700.woff2') && html.includes('site-ui.js') && !html.includes('fonts.googleapis.com')) {
-    if (!isHub && html.includes('class="hero"') && !html.includes('venue-hero')) return 'skip';
-    if (isHub && html.includes('hero-kicker')) return 'skip';
+  const mustRun = needsHeroUpgrade(html, slug, isHub);
+  if (!mustRun && html.includes('nav-mobile') && html.includes('site-ui.js') && !html.includes('fonts.googleapis.com')) {
+    if (isHub && html.includes('accent-cyan">guides.')) return 'skip';
+    if (!isHub && html.includes('hero-meta') && /<span class="accent-/.test(html)) return 'skip';
   }
 
   const { title, desc, url, crumb } = parseMeta(html);
@@ -292,16 +325,12 @@ function migratePage(filePath, slug, isHub) {
   }
 
   let inner = html.slice(mainStart + '<main id="main">'.length, mainEnd);
-  inner = dedupeMainWrappers(inner);
-  if (isHub) inner = upgradeHubHero(inner);
-  else inner = upgradeVenueHero(inner);
+  inner = isHub ? rebuildHubMain(inner) : rebuildRankedMain(inner, slug);
 
   const hasFavorites = inner.includes('favorite-btn');
   const crumbHtml = isHub
     ? `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" style="color:var(--muted);">Home</a> <span style="color:var(--hint); margin:0 8px;">/</span> <span style="color:var(--text); font-weight:600;">Guides</span></nav>`
     : breadcrumb(crumb);
-
-  inner = repairHeroSplit(inner);
 
   const out =
     buildHead(title, desc, url, jsonLd) +

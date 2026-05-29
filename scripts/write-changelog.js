@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 34, date: '2026-05-28', tag: 'v430',
+    title: 'Ranked guides — full editorial hero parity with Round 32 originals',
+    summary: 'Round 33 only swapped nav/fonts; this round rebuilds every ranked guide hero to match the editorial template: accent headline, rich kicker, hero-meta line, and clean section structure.',
+    bullets: [
+      'migrate-legacy-guides-chrome.js v2: per-slug accent H1, kicker, hero-meta (replaces venue-hero-meta chips).',
+      'Guides hub rebuilt: Pattaya gym guides. with accent-cyan, hero outside broken nested wrappers.',
+      '17 ranked guides + hub updated; 3 editorial guides unchanged.',
+      'Asset version 429 -> 430.'
+    ]
+  },
+  {
     n: 33, date: '2026-05-28', tag: 'v429',
     title: 'Legacy guide design unification — V2 chrome + hero on all ranked guides',
     summary: 'Ranked/list guides now share the same shell as Round 32 editorial guides: mobile nav, deferred analytics, self-hosted fonts, and large hero typography — while keeping venue cards, TL;DR, and FAQs intact.',
