@@ -14,6 +14,9 @@ const EDITORIAL = new Set([
   'muay-thai-camps-with-accommodation-pattaya',
   'gym-day-pass-pattaya',
   'muay-thai-training-holiday-pattaya',
+  'muay-thai-pattaya-beginners',
+  'best-gym-jomtien-pattaya',
+  'pattaya-vs-phuket-muay-thai-training',
 ]);
 
 function polish(html, isHub) {

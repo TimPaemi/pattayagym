@@ -26,6 +26,9 @@ const EDITORIAL_SLUGS = new Set([
   'muay-thai-camps-with-accommodation-pattaya',
   'gym-day-pass-pattaya',
   'muay-thai-training-holiday-pattaya',
+  'muay-thai-pattaya-beginners',
+  'best-gym-jomtien-pattaya',
+  'pattaya-vs-phuket-muay-thai-training',
 ]);
 
 const buildSrc = fs.readFileSync(path.join(ROOT, 'build-v2.js'), 'utf8');

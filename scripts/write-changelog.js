@@ -38,6 +38,18 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 37, date: '2026-05-29', tag: 'v433',
+    title: 'Three high-intent SEO guides — beginners, Jomtien, Pattaya vs Phuket',
+    summary: 'Round 37 adds the next keyword cluster from the SEO gap analysis: dedicated Muay Thai beginners, Jomtien area gym guide, and Pattaya vs Phuket training comparison.',
+    bullets: [
+      '/guides/muay-thai-pattaya-beginners/ — absolute beginner camps, gear, costs, red flags.',
+      '/guides/best-gym-jomtien-pattaya/ — Jomtien MT, fitness, yoga, pools with area hub links.',
+      '/guides/pattaya-vs-phuket-muay-thai-training/ — comparison table + who should pick which city.',
+      'editorial-guide-shell.js shared writer; homepage intent router updated to 24 guides.',
+      'Asset version 432 -> 433.'
+    ]
+  },
+  {
     n: 36, date: '2026-05-29', tag: 'v432',
     title: 'SEO machine — training holiday guide, price table, outreach CSV, homepage intent router, network hub',
     summary: 'Turns Pattaya.Gym into the traffic anchor of the Pattaya Authority network: high-intent content, comparison tooling surfaced on homepage, venue backlink export, and cross-site network linking sitewide.',

@@ -12,6 +12,13 @@ const INDEX = path.join(ROOT, 'index.html');
 const INTENT_MARKER = 'id="start-here"';
 const NETWORK_MARKER = 'id="pattaya-network"';
 
+function guideCount() {
+  const guidesDir = path.join(ROOT, 'guides');
+  return fs.readdirSync(guidesDir, { withFileTypes: true })
+    .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
+    .length;
+}
+
 const INTENT_BLOCK = `
 <section class="section intent-router" id="start-here">
   <div class="wrap">
@@ -24,10 +31,20 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Muay Thai 1–4 week trip</span>
         <span class="intent-card-desc">Stay-and-train camps, budgets, daily schedule</span>
       </a>
-      <a href="/guides/english-speaking-muay-thai-pattaya/" class="intent-card">
-        <span class="intent-card-tag">// First time</span>
-        <span class="intent-card-title">English-speaking Muay Thai</span>
-        <span class="intent-card-desc">10 camps where you need zero Thai</span>
+      <a href="/guides/muay-thai-pattaya-beginners/" class="intent-card">
+        <span class="intent-card-tag">// Absolute beginner</span>
+        <span class="intent-card-title">Muay Thai for beginners</span>
+        <span class="intent-card-desc">First week, gear, costs, red flags</span>
+      </a>
+      <a href="/guides/best-gym-jomtien-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Jomtien</span>
+        <span class="intent-card-title">Best gym in Jomtien</span>
+        <span class="intent-card-desc">Beach-side MT, fitness, yoga, pools</span>
+      </a>
+      <a href="/guides/pattaya-vs-phuket-muay-thai-training/" class="intent-card">
+        <span class="intent-card-tag">// Compare cities</span>
+        <span class="intent-card-title">Pattaya vs Phuket training</span>
+        <span class="intent-card-desc">Which city fits your holiday</span>
       </a>
       <a href="/guides/cheapest-gyms-pattaya/" class="intent-card">
         <span class="intent-card-tag">// Budget</span>
@@ -56,7 +73,7 @@ const INTENT_BLOCK = `
       </a>
       <a href="/guides/" class="intent-card intent-card-all">
         <span class="intent-card-tag">// All guides</span>
-        <span class="intent-card-title">Browse 21 guides</span>
+        <span class="intent-card-title">Browse __GUIDE_COUNT__ guides</span>
         <span class="intent-card-desc">Ranked picks by budget, area, sport</span>
       </a>
     </div>
@@ -88,6 +105,8 @@ const NETWORK_BLOCK = `
 
 let html = fs.readFileSync(INDEX, 'utf8');
 
+const INTENT = INTENT_BLOCK.replace('__GUIDE_COUNT__', String(guideCount()));
+
 if (html.includes(INTENT_MARKER)) {
   html = html.replace(/<section class="section intent-router"[\s\S]*?<\/section>\s*/m, '');
 }
@@ -98,9 +117,9 @@ if (html.includes(NETWORK_MARKER)) {
 const heroEnd = '</section>\n\n<section class="section" id="who">';
 const heroEndBroken = '</section>\n\n<section class="section" id="who"\n  <div class="wrap">';
 if (html.includes(heroEndBroken)) {
-  html = html.replace(heroEndBroken, `</section>\n${INTENT_BLOCK}\n${NETWORK_BLOCK}\n<section class="section" id="who">\n  <div class="wrap">`);
+  html = html.replace(heroEndBroken, `</section>\n${INTENT}\n${NETWORK_BLOCK}\n<section class="section" id="who">\n  <div class="wrap">`);
 } else if (html.includes(heroEnd)) {
-  html = html.replace(heroEnd, `</section>\n${INTENT_BLOCK}\n${NETWORK_BLOCK}\n<section class="section" id="who">`);
+  html = html.replace(heroEnd, `</section>\n${INTENT}\n${NETWORK_BLOCK}\n<section class="section" id="who">`);
 } else {
   console.error('Homepage anchor not found');
   process.exit(1);

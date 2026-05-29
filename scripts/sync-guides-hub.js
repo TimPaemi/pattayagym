@@ -42,7 +42,34 @@ const SLUG_TITLES = {
   'muay-thai-camps-with-accommodation-pattaya': 'Stay-and-train',
   'gym-day-pass-pattaya': 'Day pass',
   'muay-thai-training-holiday-pattaya': 'Training holiday',
+  'muay-thai-pattaya-beginners': 'Muay Thai beginners',
+  'best-gym-jomtien-pattaya': 'Best gym Jomtien',
+  'pattaya-vs-phuket-muay-thai-training': 'Pattaya vs Phuket MT',
 };
+
+const TLDR_ADD = [
+  { slug: 'muay-thai-pattaya-beginners', html: '<li><strong>Never trained MT before?</strong> → <a href="/guides/muay-thai-pattaya-beginners/">Muay Thai for beginners</a></li>' },
+  { slug: 'best-gym-jomtien-pattaya', html: '<li><strong>Staying in Jomtien?</strong> → <a href="/guides/best-gym-jomtien-pattaya/">Best gym in Jomtien</a></li>' },
+  { slug: 'pattaya-vs-phuket-muay-thai-training', html: '<li><strong>Pattaya or Phuket?</strong> → <a href="/guides/pattaya-vs-phuket-muay-thai-training/">Pattaya vs Phuket training</a></li>' },
+];
+
+const CARD_ADD = [
+  { slug: 'muay-thai-pattaya-beginners', card: `<a href="/guides/muay-thai-pattaya-beginners/" class="cat-venue-card">
+      <div class="cv-head"><h3>Muay Thai in Pattaya for beginners</h3><span class="cv-pill">High intent</span></div>
+      <p>Absolute beginners: 5 camps, gear list, costs, tourist-trap red flags.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
+  { slug: 'best-gym-jomtien-pattaya', card: `<a href="/guides/best-gym-jomtien-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Best gym in Jomtien Pattaya</h3><span class="cv-pill">Area</span></div>
+      <p>Muay Thai, fitness, yoga, pools near Jomtien Beach — not mis-tagged central listings.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
+  { slug: 'pattaya-vs-phuket-muay-thai-training', card: `<a href="/guides/pattaya-vs-phuket-muay-thai-training/" class="cat-venue-card">
+      <div class="cv-head"><h3>Pattaya vs Phuket for Muay Thai</h3><span class="cv-pill">Compare</span></div>
+      <p>Which city wins for training holidays — cost, camps, beaches, fights.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
+];
 
 function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -57,18 +84,18 @@ const slugs = fs.readdirSync(guidesDir, { withFileTypes: true })
 let html = fs.readFileSync(HUB, 'utf8');
 html = html.replace(/\/\/ Guides hub · \d+ guides/g, `// Guides hub · ${slugs.length} guides`);
 
-const tldrLine = '<li><strong>Training holiday 1–4 weeks?</strong> → <a href="/guides/muay-thai-training-holiday-pattaya/">Muay Thai training holiday</a></li>';
-if (!html.includes('muay-thai-training-holiday-pattaya')) {
-  html = html.replace('</ul>\n  </section>\n\n  <h2 class="guide-rank-section">All guides</h2>', `${tldrLine}\n    </ul>\n  </section>\n\n  <h2 class="guide-rank-section">All guides</h2>`);
+for (const { slug, html: line } of TLDR_ADD) {
+  if (!html.includes(slug)) {
+    html = html.replace('</ul>\n  </section>\n\n  <h2 class="guide-rank-section">All guides</h2>', `${line}\n    </ul>\n  </section>\n\n  <h2 class="guide-rank-section">All guides</h2>`);
+  }
 }
 
-const holidayCard = `<a href="/guides/muay-thai-training-holiday-pattaya/" class="cat-venue-card">
-      <div class="cv-head"><h3>Muay Thai training holiday in Pattaya</h3><span class="cv-pill">High intent</span></div>
-      <p>Plan a 1–4 week stay-and-train trip: camps, budgets, daily schedule, visa notes — compare vs Phuket.</p>
-      <span class="cv-cta">Read guide →</span>
-    </a>\n    `;
-if (!html.includes('muay-thai-training-holiday-pattaya')) {
-  html = html.replace('<div class="cat-venue-grid guide-hub-grid">\n    <a href="/guides/english-speaking', `<div class="cat-venue-grid guide-hub-grid">\n    ${holidayCard}<a href="/guides/english-speaking`);
+let cardInsert = '';
+for (const { slug, card } of CARD_ADD) {
+  if (!html.includes(slug)) cardInsert += card;
+}
+if (cardInsert) {
+  html = html.replace('<div class="cat-venue-grid guide-hub-grid">\n    <a href="/guides/', `<div class="cat-venue-grid guide-hub-grid">\n    ${cardInsert}<a href="/guides/`);
 }
 
 const itemList = slugs.map((slug, i) => ({

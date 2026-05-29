@@ -25,6 +25,7 @@ node scripts/write-status-json.js
 node scripts/write-changelog.js
 node scripts/write-data-endpoints.js
 node scripts/inject-guide-schema.js
+node scripts/write-round37-guides.js
 node scripts/write-training-holiday-guide.js
 node scripts/inject-cheapest-price-table.js
 node scripts/export-venue-outreach.js
