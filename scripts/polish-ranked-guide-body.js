@@ -13,6 +13,7 @@ const EDITORIAL = new Set([
   'english-speaking-muay-thai-pattaya',
   'muay-thai-camps-with-accommodation-pattaya',
   'gym-day-pass-pattaya',
+  'muay-thai-training-holiday-pattaya',
 ]);
 
 function polish(html, isHub) {

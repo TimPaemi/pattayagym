@@ -8,15 +8,15 @@
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("/fonts/space-grotesk.woff2?v=431") format("woff2-variations");
+  src: url("/fonts/space-grotesk.woff2?v=432") format("woff2-variations");
 }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=431") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=431") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=431") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=431") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=431") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=431") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=431") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=432") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=432") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=432") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=432") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=432") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=432") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=432") format("woff2"); }
 
 /* ================================================================
    PATTAYA.GYM v2 — TimPaemi-inspired design system
@@ -2218,6 +2218,163 @@ a.cat-venue-card:hover .cv-cta {
   .cat-venue-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============ SEO machine: intent router, network hub, price tables ============ */
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--s-4);
+  margin-top: var(--s-6);
+}
+.intent-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-5);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--t-fast) var(--easing), transform var(--t-fast) var(--easing);
+}
+.intent-card:hover {
+  border-color: rgba(78, 224, 255, 0.45);
+  transform: translateY(-2px);
+}
+.intent-card-tool {
+  border-color: rgba(255, 46, 126, 0.25);
+}
+.intent-card-tool:hover {
+  border-color: rgba(255, 46, 126, 0.5);
+}
+.intent-card-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.intent-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.intent-card-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.intent-card-all .intent-card-title {
+  color: var(--cyan);
+}
+
+.network-grid,
+.pa-network-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+  max-width: 900px;
+}
+.network-card,
+.pa-network-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--s-3) var(--s-4);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color var(--t-fast) var(--easing);
+}
+.network-card:hover,
+.pa-network-card:hover {
+  border-color: rgba(255, 46, 126, 0.4);
+}
+.pa-network-card-here {
+  border-color: rgba(78, 224, 255, 0.35);
+}
+.network-card-name,
+.pa-network-card-name {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+.network-card-desc,
+.pa-network-card-desc {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pa-network {
+  text-align: center;
+}
+.pa-network-grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guide-price-note {
+  font-size: 14px;
+  color: var(--text-2);
+  margin-bottom: var(--s-4);
+}
+.guide-price-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 var(--s-8);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.guide-price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.guide-price-table caption {
+  padding: var(--s-3) var(--s-4);
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.guide-price-table th,
+.guide-price-table td {
+  padding: var(--s-3) var(--s-4);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.guide-price-table th {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  background: rgba(78, 224, 255, 0.04);
+}
+.guide-price-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+.guide-price-table a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+.guide-price-table a:hover {
+  color: var(--cyan);
+}
+
+.intent-featured .cv-pill {
+  flex-shrink: 0;
 }
 
 /* ============ Print stylesheet ============ */

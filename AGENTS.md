@@ -25,6 +25,11 @@ node scripts/write-status-json.js
 node scripts/write-changelog.js
 node scripts/write-data-endpoints.js
 node scripts/inject-guide-schema.js
+node scripts/write-training-holiday-guide.js
+node scripts/inject-cheapest-price-table.js
+node scripts/export-venue-outreach.js
+node scripts/inject-homepage-seo.js
+node scripts/sync-guides-hub.js
 node scripts/migrate-legacy-guides-chrome.js
 node scripts/polish-ranked-guide-body.js
 node scripts/bump-legacy-assets.js

@@ -38,6 +38,20 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 36, date: '2026-05-29', tag: 'v432',
+    title: 'SEO machine — training holiday guide, price table, outreach CSV, homepage intent router, network hub',
+    summary: 'Turns Pattaya.Gym into the traffic anchor of the Pattaya Authority network: high-intent content, comparison tooling surfaced on homepage, venue backlink export, and cross-site network linking sitewide.',
+    bullets: [
+      'New guide: /guides/muay-thai-training-holiday-pattaya/ (~1k/mo intent).',
+      'Cheapest-gyms guide: auto-generated fitness price comparison table from venue data.',
+      'outreach/venue-outreach.csv — 100+ venues with websites + badge-listed.svg for backlink campaign.',
+      'Homepage intent router (8 cards) + Pattaya network hub linking all TimPaemi properties.',
+      'pa-network grid on every build-v2 page footer zone; guides hub updated.',
+      'Scripts: write-training-holiday-guide, inject-cheapest-price-table, export-venue-outreach, inject-homepage-seo, sync-guides-hub.',
+      'Asset version 431 -> 432.'
+    ]
+  },
+  {
     n: 35, date: '2026-05-28', tag: 'v431',
     title: 'Ranked guide body polish — TL;DR, venue cards, section styling in styles.css',
     summary: 'Guide pages never loaded venue.css, so ranked cards and TL;DR blocks were effectively unstyled. Round 35 adds full guide-body CSS to styles.css and polishes all ranked guide markup.',

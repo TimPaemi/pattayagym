@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '431';
+const ASSET_VERSION = '432';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -519,7 +519,16 @@ function paNetwork() {
     <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
   </a>
   <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
-  <p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p>
+  <p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p>
+  <nav class="pa-network-grid" aria-label="Pattaya Authority network">
+    <a href="https://pattaya-authority.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Authority</span><span class="pa-network-card-desc">Network hub</span></a>
+    <a href="https://pattaya-restaurant-guide.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Restaurants</span><span class="pa-network-card-desc">Eat · drink</span></a>
+    <a href="https://pattayavisahelp.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Visa Help</span><span class="pa-network-card-desc">Long-stay</span></a>
+    <a href="https://pattaya-school-guide.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Schools</span><span class="pa-network-card-desc">Families</span></a>
+    <a href="https://pattaya-coffee.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Coffee</span><span class="pa-network-card-desc">Remote work</span></a>
+    <a href="https://pattaya-medical.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Medical</span><span class="pa-network-card-desc">Clinics</span></a>
+    <a href="${SITE}/guides/" class="pa-network-card pa-network-card-here"><span class="pa-network-card-name">Pattaya.Gym</span><span class="pa-network-card-desc">You are here</span></a>
+  </nav>
 </section>`;
 }
 
