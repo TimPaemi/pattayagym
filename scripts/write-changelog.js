@@ -38,6 +38,20 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 31, date: '2026-05-29', tag: 'v427',
+    title: 'Performance + accessibility audit — deferred analytics, site-ui.js, contrast fixes',
+    summary: 'Full Lighthouse audit (homepage + venue). Round 31 targets LCP, console errors, color contrast, and link distinguishability without changing editorial content or URLs.',
+    bullets: [
+      'GA4 moved out of <head> — gtag + analytics.js load deferred at end of body so they no longer compete with LCP font/CSS.',
+      'Inline nav/scroll/clock scripts consolidated into cached /site-ui.js (one file, defer, CSP-safe). Removes ~3 duplicate inline scripts per page.',
+      'Font preload trimmed to Space Grotesk only (LCP display face). Inter + JetBrains load on demand via CSS @font-face.',
+      'Font URLs in styles.css synced to ASSET_VERSION on every build. JetBrains Mono uses font-display: optional.',
+      'Button contrast fixed: btn-secondary/btn-tertiary now pass WCAG AA. u-cyan / venue-source links underlined for link-in-text-block.',
+      'CSP updated for Cloudflare Web Analytics beacon (fixes console CSP violation). favicon.svg served as static file. feed.json alternate link added.',
+      'Asset version 426 -> 427.'
+    ]
+  },
+  {
     n: 29, date: '2026-05-24', tag: 'v425',
     title: 'Homepage \'What we operate\' rebuilt as the 11-property network grid',
     summary: 'The homepage verticals section was factually wrong (\'four verticals\') after the network expanded to 11. Round 29 rebuilds it as an accurate, scalable 11-tile network grid - one agency + ten verticals, each with its own tile.',
@@ -426,10 +440,8 @@ const head = `<!DOCTYPE html>
 <meta name="color-scheme" content="dark">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
-<!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
-<link rel="preload" href="/fonts/inter-400.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/space-grotesk.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrains-mono-500.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
+<link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -444,11 +456,9 @@ const head = `<!DOCTYPE html>
 <meta name="twitter:image" content="${SITE}/og-image.png">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23000'/%3E%3Ctext x='50%25' y='62%25' font-family='Inter,sans-serif' font-size='40' font-weight='800' fill='%23ff2e7e' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">${JSON.stringify(webpage)}</script>
 <script type="application/ld+json">${JSON.stringify(crumbs)}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>`;
@@ -468,8 +478,7 @@ const nav = `<header class="nav" role="banner"><div class="nav-row"><a href="/" 
   <a href="/methodology/" class="nav-mobile-link">Methodology</a>
   <a href="/changelog/" class="nav-mobile-link">Changelog</a>
   <a href="/search/" class="nav-mobile-cta">★ Find a gym</a>
-</nav>
-<script>(function(){var b=document.querySelector('.nav-burger'),m=document.getElementById('nav-mobile');if(!b||!m)return;function o(){m.hidden=false;b.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');var f=m.querySelector('a');if(f)f.focus();}function c(){m.hidden=true;b.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');b.focus();}b.addEventListener('click',function(){if(m.hidden)o();else c();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c();});m.addEventListener('click',function(e){if(e.target.tagName==='A')c();});})();</script>`;
+</nav>`;
 
 const breadcrumb = `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Changelog</span></nav>`;
 
@@ -478,40 +487,9 @@ const pa = `<section class="pa-network"><a href="https://pattaya-authority.com/"
 const footer = `<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/pattaya-sport-stats/">Sport stats</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/press/">Press</a></li><li><a href="/add-your-gym/">Add your venue</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script>
- (function(){
-  var btn = document.querySelector('.back-to-top');
-  var bar = document.querySelector('.progress-bar');
-  function update() {
-    var doc = document.documentElement;
-    var sh = doc.scrollHeight - doc.clientHeight;
-    var pct = sh > 0 ? (window.scrollY / sh) * 100 : 0;
-    if (bar) bar.style.width = pct + '%';
-    if (btn) {
-      if (window.scrollY > 600) btn.classList.add('is-visible');
-      else btn.classList.remove('is-visible');
-    }
-  }
-  if (btn) btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-})();
-</script>
-<script>
- (function(){
-  var el = document.getElementById('pt-clock');
-  if (!el) return;
-  function tick() {
-    var now = new Date();
-    var ict = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (7 * 3600000));
-    var hh = String(ict.getHours()).padStart(2, '0');
-    var mm = String(ict.getMinutes()).padStart(2, '0');
-    el.textContent = hh + ':' + mm;
-  }
-  tick();
-  setInterval(tick, 30000);
-})();
-</script>`;
+<script defer src="/site-ui.js${ASSET}"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script defer src="/analytics.js${ASSET}"></script>`;
 
 const rounds = ROUNDS.map(r => `
 <article class="changelog-entry" style="border-left:3px solid var(--pink); padding:var(--s-3) 0 var(--s-5) var(--s-5); margin-bottom:var(--s-6);">

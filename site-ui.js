@@ -1,4 +1,4 @@
-/* Shared non-rendering UI hooks for CSP-safe pages. */
+/* Shared UI: mobile nav, scroll progress, back-to-top, footer clock, venue hooks. */
 (function () {
   'use strict';
 
@@ -58,12 +58,44 @@
     });
   }
 
-  function initVenueUi() {
-    hydrateCurrentVenue();
+  function bindMobileNav() {
+    var burger = doc.querySelector('.nav-burger');
+    var menu = doc.getElementById('nav-mobile');
+    if (!burger || !menu) return;
 
-    var navEl = doc.querySelector('.hero .nav');
-    var bar = doc.getElementById('pg-scroll-progress');
-    var btn = doc.getElementById('pg-back-to-top');
+    function openMenu() {
+      menu.hidden = false;
+      burger.setAttribute('aria-expanded', 'true');
+      doc.body.classList.add('nav-open');
+      var first = menu.querySelector('a');
+      if (first) first.focus();
+    }
+
+    function closeMenu() {
+      menu.hidden = true;
+      burger.setAttribute('aria-expanded', 'false');
+      doc.body.classList.remove('nav-open');
+      burger.focus();
+    }
+
+    burger.addEventListener('click', function () {
+      if (menu.hidden) openMenu();
+      else closeMenu();
+    });
+
+    doc.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !menu.hidden) closeMenu();
+    });
+
+    menu.addEventListener('click', function (event) {
+      if (event.target.tagName === 'A') closeMenu();
+    });
+  }
+
+  function bindScrollUi() {
+    var navEl = doc.querySelector('.hero .nav') || doc.querySelector('.nav');
+    var bar = doc.getElementById('pg-scroll-progress') || doc.querySelector('.progress-bar');
+    var btn = doc.getElementById('pg-back-to-top') || doc.querySelector('.back-to-top');
     var tocLinks = Array.prototype.slice.call(doc.querySelectorAll('.jump-pill'));
     var tocHeadings = tocLinks.map(function (link) {
       var id = link.getAttribute('href') ? link.getAttribute('href').slice(1) : '';
@@ -88,12 +120,16 @@
     }
 
     function update() {
-      var h = doc.documentElement;
-      var range = h.scrollHeight - h.clientHeight;
-      var scrolled = range > 0 ? h.scrollTop / range : 0;
+      var root = doc.documentElement;
+      var range = root.scrollHeight - root.clientHeight;
+      var scrolled = range > 0 ? root.scrollTop / range : 0;
       if (bar) bar.style.width = (Math.max(0, Math.min(1, scrolled)) * 100) + '%';
-      if (btn) btn.classList.toggle('visible', h.scrollTop > 600);
-      if (navEl) navEl.classList.toggle('scrolled', h.scrollTop > 30);
+      if (btn) {
+        var visible = root.scrollTop > 600;
+        btn.classList.toggle('visible', visible);
+        btn.classList.toggle('is-visible', visible);
+      }
+      if (navEl) navEl.classList.toggle('scrolled', root.scrollTop > 30);
       updateToc();
     }
 
@@ -101,13 +137,30 @@
     update();
   }
 
-  hydrateCurrentVenue();
-  bindMediaFallback();
-  bindDelegatedClicks();
+  function bindFooterClock() {
+    var el = doc.getElementById('pt-clock');
+    if (!el) return;
+    function tick() {
+      var now = new Date();
+      var ict = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (7 * 3600000));
+      el.textContent = String(ict.getHours()).padStart(2, '0') + ':' + String(ict.getMinutes()).padStart(2, '0');
+    }
+    tick();
+    setInterval(tick, 30000);
+  }
+
+  function init() {
+    hydrateCurrentVenue();
+    bindMediaFallback();
+    bindDelegatedClicks();
+    bindMobileNav();
+    bindScrollUi();
+    bindFooterClock();
+  }
 
   if (doc.readyState === 'loading') {
-    doc.addEventListener('DOMContentLoaded', initVenueUi);
+    doc.addEventListener('DOMContentLoaded', init);
   } else {
-    initVenueUi();
+    init();
   }
 })();

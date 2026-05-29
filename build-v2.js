@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '426';
+const ASSET_VERSION = '427';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -398,6 +398,13 @@ function areaFaqHtml(slug, label) {
 // ---------- Shared HTML components ----------
 const ASSET = `?v=${ASSET_VERSION}`;
 
+function syncCssFontVersion() {
+  const cssPath = path.join(ROOT, 'styles.css');
+  let css = fs.readFileSync(cssPath, 'utf8');
+  const updated = css.replace(/\/fonts\/([a-z0-9-]+\.woff2)\?v=\d+/g, `/fonts/$1?v=${ASSET_VERSION}`);
+  if (updated !== css) fs.writeFileSync(cssPath, updated, 'utf8');
+}
+
 function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null }) {
   // Allow jsonLd to be a single object OR an array of objects (one <script> per item).
   const ldBlocks = jsonLd
@@ -419,10 +426,9 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <meta name="color-scheme" content="dark">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
-<!-- Round 18 - self-hosted fonts (Codex F14.1). No third-party request. -->
-<link rel="preload" href="/fonts/inter-400.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
+<!-- Self-hosted fonts — preload only the LCP display face -->
 <link rel="preload" href="/fonts/space-grotesk.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/jetbrains-mono-500.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
+<link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${ogImage}">
@@ -439,10 +445,8 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//maps.google.com">
 <link rel="dns-prefetch" href="//www.googletagmanager.com">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23000'/%3E%3Ctext x='50%25' y='62%25' font-family='Inter,sans-serif' font-size='40' font-weight='800' fill='%23ff2e7e' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 ${ldBlocks}
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>`;
@@ -500,8 +504,13 @@ function nav() {
   <a href="/methodology/" class="nav-mobile-link">Methodology</a>
   <a href="/changelog/" class="nav-mobile-link">Changelog</a>
   <a href="/search/" class="nav-mobile-cta">★ Find a gym</a>
-</nav>
-<script>(function(){var b=document.querySelector('.nav-burger'),m=document.getElementById('nav-mobile');if(!b||!m)return;function o(){m.hidden=false;b.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');var f=m.querySelector('a');if(f)f.focus();}function c(){m.hidden=true;b.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');b.focus();}b.addEventListener('click',function(){if(m.hidden)o();else c();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c();});m.addEventListener('click',function(e){if(e.target.tagName==='A')c();});})();</script>`;
+</nav>`;
+}
+
+function pageScripts() {
+  return `<script defer src="/site-ui.js${ASSET}"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script defer src="/analytics.js${ASSET}"></script>`;
 }
 
 function paNetwork() {
@@ -516,26 +525,7 @@ function paNetwork() {
 
 function backToTop() {
   return `<div class="progress-bar" aria-hidden="true"></div>
-<button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script>
- (function(){
-  var btn = document.querySelector('.back-to-top');
-  var bar = document.querySelector('.progress-bar');
-  function update() {
-    var doc = document.documentElement;
-    var sh = doc.scrollHeight - doc.clientHeight;
-    var pct = sh > 0 ? (window.scrollY / sh) * 100 : 0;
-    if (bar) bar.style.width = pct + '%';
-    if (btn) {
-      if (window.scrollY > 600) btn.classList.add('is-visible');
-      else btn.classList.remove('is-visible');
-    }
-  }
-  if (btn) btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-})();
-</script>`;
+<button class="back-to-top" type="button" aria-label="Back to top">↑</button>`;
 }
 
 function footer() {
@@ -595,22 +585,7 @@ function footer() {
   </div>
 </footer>
 ${backToTop()}
-<script>
- (function(){
-  var el = document.getElementById('pt-clock');
-  if (!el) return;
-  function tick() {
-    var now = new Date();
-    // ICT is UTC+7, fixed offset (no DST)
-    var ict = new Date(now.getTime() + (now.getTimezoneOffset() * 60000) + (7 * 3600000));
-    var hh = String(ict.getHours()).padStart(2, '0');
-    var mm = String(ict.getMinutes()).padStart(2, '0');
-    el.textContent = hh + ':' + mm;
-  }
-  tick();
-  setInterval(tick, 30000);
-})();
-</script>
+${pageScripts()}
 </body>
 </html>`;
 }
@@ -2349,6 +2324,7 @@ ${urls.map(u => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>${
 
 // ---------- Main ----------
 function main() {
+  syncCssFontVersion();
   const stats = { venues: 0, categories: 0, areas: 0, skipped: 0 };
 
   // Venue pages
