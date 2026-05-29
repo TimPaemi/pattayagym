@@ -38,6 +38,19 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 33, date: '2026-05-28', tag: 'v429',
+    title: 'Legacy guide design unification — V2 chrome + hero on all ranked guides',
+    summary: 'Ranked/list guides now share the same shell as Round 32 editorial guides: mobile nav, deferred analytics, self-hosted fonts, and large hero typography — while keeping venue cards, TL;DR, and FAQs intact.',
+    bullets: [
+      'New script: migrate-legacy-guides-chrome.js — 17 ranked guides + /guides/ hub upgraded.',
+      'Preserves cat-venue-grid rankings, favorite buttons, FAQ blocks, and existing JSON-LD.',
+      'Fixes duplicate section wrappers and split-hero markup from the old venue-hero layout.',
+      'Editorial guides (English MT, stay-and-train, day pass) unchanged.',
+      'Added to AGENTS.md build gate and PUSH pipeline.',
+      'Asset version 428 -> 429.'
+    ]
+  },
+  {
     n: 32, date: '2026-05-28', tag: 'v428',
     title: 'High-intent editorial guides — English Muay Thai, stay-and-train, day pass + Walking Street deepen',
     summary: 'Ships the three Codex-flagged long-tail guides that were scripted but never published, plus a Walking Street distance/Soi reference section for tourists staying Beach Road.',
