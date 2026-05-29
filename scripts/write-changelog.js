@@ -38,6 +38,19 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 32, date: '2026-05-28', tag: 'v428',
+    title: 'High-intent editorial guides — English Muay Thai, stay-and-train, day pass + Walking Street deepen',
+    summary: 'Ships the three Codex-flagged long-tail guides that were scripted but never published, plus a Walking Street distance/Soi reference section for tourists staying Beach Road.',
+    bullets: [
+      'New guide: /guides/english-speaking-muay-thai-pattaya/ — 10 Tier-A English-fluent camps with venue links + FAQ schema.',
+      'New guide: /guides/muay-thai-camps-with-accommodation-pattaya/ — 8 stay-and-train camps with pricing tiers and booking checklist.',
+      'New guide: /guides/gym-day-pass-pattaya/ — 12 walk-in gyms with day/weekly pass pricing.',
+      'Deepened /guides/best-gyms-near-walking-street-pattaya/ — walking minutes from Bali Hai Pier + Soi Diana/Buakhao/LK Metro reference.',
+      'Guides hub updated with new cards + tldr links. Sitemap auto-includes new slugs from disk.',
+      'Asset version 427 -> 428.'
+    ]
+  },
+  {
     n: 31, date: '2026-05-29', tag: 'v427',
     title: 'Performance + accessibility audit — deferred analytics, site-ui.js, contrast fixes',
     summary: 'Full Lighthouse audit (homepage + venue). Round 31 targets LCP, console errors, color contrast, and link distinguishability without changing editorial content or URLs.',

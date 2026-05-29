@@ -53,7 +53,36 @@ function marquee(items, bottom) {
 }
 
 function nav() {
-  return `<header class="nav" role="banner"><div class="nav-row"><a href="/" class="brand">pattaya<span class="dot">.</span>gym</a><nav class="nav-links" aria-label="Primary"><a href="/category/muay-thai/">Muay Thai</a><a href="/category/fitness/">Fitness</a><a href="/category/golf/">Golf</a><a href="/guides/">Guides</a><a href="/search/">Search</a></nav><a href="/search/" class="nav-cta">★ Find a gym</a></div></header>`;
+  return `<header class="nav" role="banner">
+  <div class="nav-row">
+    <a href="/" class="brand">pattaya<span class="dot">.</span>gym</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/category/muay-thai/">Muay Thai</a>
+      <a href="/category/fitness/">Fitness</a>
+      <a href="/category/golf/">Golf</a>
+      <a href="/category/yoga/">Yoga</a>
+      <a href="/sports/">All sports</a>
+      <a href="/guides/">Guides</a>
+    </nav>
+    <button type="button" class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile"><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span></button>
+    <a href="/search/" class="nav-cta">★ Find a gym</a>
+  </div>
+</header>
+<nav class="nav-mobile" id="nav-mobile" hidden aria-label="Mobile menu">
+  <a href="/" class="nav-mobile-link">Home</a>
+  <a href="/category/muay-thai/" class="nav-mobile-link">Muay Thai</a>
+  <a href="/category/fitness/" class="nav-mobile-link">Fitness</a>
+  <a href="/category/golf/" class="nav-mobile-link">Golf</a>
+  <a href="/sports/" class="nav-mobile-link">All sports</a>
+  <a href="/guides/" class="nav-mobile-link">Guides</a>
+  <a href="/plan-my-trip/" class="nav-mobile-link">Plan my trip</a>
+  <a href="/compare/" class="nav-mobile-link">Compare</a>
+  <a href="/search/" class="nav-mobile-link">Search</a>
+  <a href="/about/" class="nav-mobile-link">About</a>
+  <a href="/methodology/" class="nav-mobile-link">Methodology</a>
+  <a href="/changelog/" class="nav-mobile-link">Changelog</a>
+  <a href="/search/" class="nav-mobile-cta">★ Find a gym</a>
+</nav>`;
 }
 
 function paNetwork() {
@@ -61,28 +90,26 @@ function paNetwork() {
 }
 
 function footer() {
-  return `<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p style="font-size:13px; color:var(--muted); margin:var(--s-4) 0 0;">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span style="color:var(--cyan);">★ Last updated · ${BUILD_TS} · v${ASSET_VERSION}</span><span>12.92°N · 100.87°E · Pattaya Villa</span></div></footer>
+  return `<footer class="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
+      <div class="footer-slogan">Built in Pattaya. For Pattaya.</div>
+      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
+      <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
+      <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div>
+    </div>
+    <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div>
+  </div>
+  <div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span style="color:var(--cyan);">★ Last updated · ${BUILD_TS} · v${ASSET_VERSION}</span><span>12.92°N · 100.87°E · Pattaya Villa</span></div>
+</footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script>
- (function(){
-  var btn = document.querySelector('.back-to-top');
-  var bar = document.querySelector('.progress-bar');
-  function update() {
-    var doc = document.documentElement;
-    var sh = doc.scrollHeight - doc.clientHeight;
-    var pct = sh > 0 ? (window.scrollY / sh) * 100 : 0;
-    if (bar) bar.style.width = pct + '%';
-    if (btn) {
-      if (window.scrollY > 600) btn.classList.add('is-visible');
-      else btn.classList.remove('is-visible');
-    }
-  }
-  if (btn) btn.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-})();
-</script>`;
+<script defer src="/site-ui.js${ASSET}"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script defer src="/analytics.js${ASSET}"></script>`;
 }
 
 function head(title, desc, url) {
@@ -101,10 +128,9 @@ function head(title, desc, url) {
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
+<link rel="preload" href="/fonts/space-grotesk-700.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css${ASSET}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -121,11 +147,8 @@ function head(title, desc, url) {
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//maps.google.com">
 <link rel="dns-prefetch" href="//www.googletagmanager.com">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23000'/%3E%3Ctext x='50%25' y='62%25' font-family='Inter,sans-serif' font-size='40' font-weight='800' fill='%23ff2e7e' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">${JSON.stringify(webpage)}</script>
 <script type="application/ld+json">${JSON.stringify(crumbs)}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F5F6KD3XFZ');</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>`;
@@ -477,5 +500,4 @@ ${g.body}
   console.log(`  /guides/${g.slug}/ written (${(html.length/1024).toFixed(1)} KB)`);
 }
 console.log(`\nWrote ${written} new guide pages.`);
-console.log(`Next: add the 3 slugs to GUIDE_SLUGS array in build-v2.js generateSitemap(),`);
-console.log(`then run node build-v2.js and node scripts/inject-guide-schema.js to add Article + FAQPage schema.`);
+console.log(`Next: node build-v2.js (sitemap auto-picks guides/ slugs), then node scripts/inject-guide-schema.js.`);
