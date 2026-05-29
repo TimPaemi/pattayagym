@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '425';
+const ASSET_VERSION = '426';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -486,7 +486,7 @@ function nav() {
     <a href="/search/" class="nav-cta">★ Find a gym</a>
   </div>
 </header>
-<div class="nav-mobile" id="nav-mobile" hidden role="navigation" aria-label="Mobile menu">
+<nav class="nav-mobile" id="nav-mobile" hidden aria-label="Mobile menu">
   <a href="/" class="nav-mobile-link">Home</a>
   <a href="/category/muay-thai/" class="nav-mobile-link">Muay Thai</a>
   <a href="/category/fitness/" class="nav-mobile-link">Fitness</a>
@@ -500,7 +500,7 @@ function nav() {
   <a href="/methodology/" class="nav-mobile-link">Methodology</a>
   <a href="/changelog/" class="nav-mobile-link">Changelog</a>
   <a href="/search/" class="nav-mobile-cta">★ Find a gym</a>
-</div>
+</nav>
 <script>(function(){var b=document.querySelector('.nav-burger'),m=document.getElementById('nav-mobile');if(!b||!m)return;function o(){m.hidden=false;b.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');var f=m.querySelector('a');if(f)f.focus();}function c(){m.hidden=true;b.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');b.focus();}b.addEventListener('click',function(){if(m.hidden)o();else c();});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)c();});m.addEventListener('click',function(e){if(e.target.tagName==='A')c();});})();</script>`;
 }
 

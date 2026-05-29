@@ -15,10 +15,10 @@
     "updateCadence": "rolling"
   },
   "build": {
-    "version": "v425",
-    "asset_version": "425",
-    "last_built_utc": "2026-05-27T09:06:49.284Z",
-    "last_built_date": "2026-05-27"
+    "version": "v426",
+    "asset_version": "426",
+    "last_built_utc": "2026-05-29T00:59:03.719Z",
+    "last_built_date": "2026-05-29"
   },
   "catalog": {
     "venues_total": 158,
@@ -39,7 +39,7 @@
   "freshness": {
     "oldest_verified_date": "2026-04-27",
     "newest_verified_date": "2026-04-29",
-    "oldest_verified_age_days": 30,
+    "oldest_verified_age_days": 32,
     "target_max_age_days": 30
   },
   "endpoints": {
