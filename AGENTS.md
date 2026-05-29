@@ -26,6 +26,7 @@ node scripts/write-changelog.js
 node scripts/write-data-endpoints.js
 node scripts/inject-guide-schema.js
 node scripts/migrate-legacy-guides-chrome.js
+node scripts/polish-ranked-guide-body.js
 node scripts/bump-legacy-assets.js
 node scripts/sync-csp-hashes.js
 node scripts/verify-deploy.js

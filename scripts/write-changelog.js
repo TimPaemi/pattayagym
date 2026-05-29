@@ -38,6 +38,19 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 35, date: '2026-05-28', tag: 'v431',
+    title: 'Ranked guide body polish — TL;DR, venue cards, section styling in styles.css',
+    summary: 'Guide pages never loaded venue.css, so ranked cards and TL;DR blocks were effectively unstyled. Round 35 adds full guide-body CSS to styles.css and polishes all ranked guide markup.',
+    bullets: [
+      'TL;DR blocks: cyan gradient panel, proper list typography, no bogus Chapter counters.',
+      'Venue cards: grid layout, hover lift, mono meta, pill tags — now in styles.css (was orphaned in venue.css).',
+      'Section headings before card grids use guide-rank-section styling instead of editorial chapter H2.',
+      'Compare CTA, related guides, and FAQ blocks get dedicated guide-* classes.',
+      'polish-ranked-guide-body.js strips inline styles and normalizes HTML across 18 pages.',
+      'Asset version 430 -> 431.'
+    ]
+  },
+  {
     n: 34, date: '2026-05-28', tag: 'v430',
     title: 'Ranked guides — full editorial hero parity with Round 32 originals',
     summary: 'Round 33 only swapped nav/fonts; this round rebuilds every ranked guide hero to match the editorial template: accent headline, rich kicker, hero-meta line, and clean section structure.',

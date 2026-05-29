@@ -15,9 +15,9 @@
     "updateCadence": "rolling"
   },
   "build": {
-    "version": "v429",
-    "asset_version": "429",
-    "last_built_utc": "2026-05-29T01:42:33.412Z",
+    "version": "v431",
+    "asset_version": "431",
+    "last_built_utc": "2026-05-29T01:53:37.523Z",
     "last_built_date": "2026-05-29"
   },
   "catalog": {
