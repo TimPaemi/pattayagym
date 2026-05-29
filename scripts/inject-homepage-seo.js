@@ -26,10 +26,15 @@ const INTENT_BLOCK = `
     <h2 class="h-section">Find your <span class="accent-cyan">intent.</span></h2>
     <p class="lede">Curated guides and tools — pick the trip you are actually planning.</p>
     <div class="intent-grid">
+      <a href="/guides/train-muay-thai-pattaya-1-week-1-month/" class="intent-card">
+        <span class="intent-card-tag">// Trip length</span>
+        <span class="intent-card-title">1 week vs 1 month training</span>
+        <span class="intent-card-desc">Camps, budgets, schedules per stay</span>
+      </a>
       <a href="/guides/muay-thai-training-holiday-pattaya/" class="intent-card">
         <span class="intent-card-tag">// Training holiday</span>
-        <span class="intent-card-title">Muay Thai 1–4 week trip</span>
-        <span class="intent-card-desc">Stay-and-train camps, budgets, daily schedule</span>
+        <span class="intent-card-title">Muay Thai training holiday</span>
+        <span class="intent-card-desc">Stay-and-train packages &amp; daily rhythm</span>
       </a>
       <a href="/guides/muay-thai-pattaya-beginners/" class="intent-card">
         <span class="intent-card-tag">// Absolute beginner</span>

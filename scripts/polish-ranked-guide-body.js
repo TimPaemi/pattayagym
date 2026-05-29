@@ -17,6 +17,7 @@ const EDITORIAL = new Set([
   'muay-thai-pattaya-beginners',
   'best-gym-jomtien-pattaya',
   'pattaya-vs-phuket-muay-thai-training',
+  'train-muay-thai-pattaya-1-week-1-month',
 ]);
 
 function polish(html, isHub) {

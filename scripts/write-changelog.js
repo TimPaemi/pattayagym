@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 39, date: '2026-05-29', tag: 'v435',
+    title: 'Trip-length guide — train Muay Thai Pattaya 1 week vs 1 month',
+    summary: 'Completes the planner funnel after city compare, holiday, and beginners: realistic goals, camp picks, budgets, schedules, and visa notes for 7-day vs 30-day stays.',
+    bullets: [
+      'New guide: /guides/train-muay-thai-pattaya-1-week-1-month/ (~1,500 words, full editorial).',
+      'Homepage intent router + guides hub card and TL;DR link.',
+      '25 guides total; sitemap auto-includes new slug on build.',
+      'Asset version 434 -> 435.'
+    ]
+  },
+  {
     n: 38, date: '2026-05-29', tag: 'v434',
     title: 'Deepen Round 37 guides — full editorial depth (~1,500 words each)',
     summary: 'Round 37 shipped thin SEO outlines by mistake. Round 38 rewrites all three guides to match Round 32 editorial standard: long venue write-ups, 6 FAQs, pricing tables, bylines.',
