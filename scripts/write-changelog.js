@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 41, date: '2026-05-29', tag: 'v437',
+    title: 'Internal linking — category/area strips, venue guide blocks, funnel expansion',
+    summary: 'Closes the taxonomy orphan gap from the SEO audit: every category and area page surfaces editorial guides; 158 venue pages link to relevant trip planners; remaining ranked guides get editorial funnel cards; guide count footer fixed to 26.',
+    bullets: [
+      'inject-internal-linking-r41.js — 15 category strips, 6 area hubs, 45 area×category strips.',
+      '158 venue pages: contextual guide link block (MT, fitness, dive, family, area guides).',
+      '11 more ranked guides get editorial-funnel-r41 cards; Browse all 26 fixes.',
+      'Asset version 436 -> 437.'
+    ]
+  },
+  {
     n: 40, date: '2026-05-29', tag: 'v436',
     title: 'Naklua & Pratamnak area guide + ranked → editorial funnel links',
     summary: 'Closes the area-guide gap after Jomtien: Fairtex/Sityodtong north and Muscle Factory/padel hilltop in one editorial page. Ranked Muay Thai and budget guides now surface beginner, trip-length, and day-pass editorials in Related.',

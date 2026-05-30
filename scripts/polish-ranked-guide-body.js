@@ -60,8 +60,12 @@ function polish(html, isHub) {
       /<h2 style="margin: 36px 0 18px[^"]*">All guides<\/h2>\s*<div class="cat-venue-grid">/,
       '<h2 class="guide-rank-section">All guides</h2>\n  <div class="cat-venue-grid guide-hub-grid">'
     );
-    out = out.replace(/Browse all \d+ Pattaya guides/g, 'Browse all 20 Pattaya guides');
   }
+
+  const guideCount = fs.readdirSync(path.join(ROOT, 'guides'), { withFileTypes: true })
+    .filter(e => e.isDirectory() && fs.existsSync(path.join(ROOT, 'guides', e.name, 'index.html')))
+    .length;
+  out = out.replace(/Browse all \d+ Pattaya guides/g, `Browse all ${guideCount} Pattaya guides`);
 
   return out === orig ? null : out;
 }
