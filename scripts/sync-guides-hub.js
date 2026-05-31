@@ -61,9 +61,11 @@ const SLUG_TITLES = {
   'climbing-pattaya': 'Climbing Pattaya',
   'adventure-pattaya': 'Adventure Pattaya',
   'kids-youth-sport-pattaya': 'Kids & youth sport',
+  'diving-watersports-pattaya': 'Diving & watersports',
 };
 
 const TLDR_ADD = [
+  { slug: 'diving-watersports-pattaya', html: '<li><strong>Dive or kite in Pattaya?</strong> → <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports in Pattaya</a></li>' },
   { slug: 'kids-youth-sport-pattaya', html: '<li><strong>Sport for kids?</strong> → <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport in Pattaya</a></li>' },
   { slug: 'adventure-pattaya', html: '<li><strong>Zipline or skydive?</strong> → <a href="/guides/adventure-pattaya/">Adventure in Pattaya</a></li>' },
   { slug: 'climbing-pattaya', html: '<li><strong>Indoor climbing?</strong> → <a href="/guides/climbing-pattaya/">Climbing in Pattaya</a></li>' },
@@ -86,6 +88,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'diving-watersports-pattaya', card: `<a href="/guides/diving-watersports-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Diving &amp; watersports in Pattaya</h3><span class="cv-pill">Watersports</span></div>
+      <p>Bali Hai scuba, Jomtien kite, Ocean Marina sailing, Koh Larn — all water lanes mapped.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'kids-youth-sport-pattaya', card: `<a href="/guides/kids-youth-sport-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Kids &amp; youth sport in Pattaya</h3><span class="cv-pill">Kids</span></div>
       <p>AF Academy football from age 3, BOUNCE trampoline, Harbor Mall stack, Rusich, FAST PRO.</p>

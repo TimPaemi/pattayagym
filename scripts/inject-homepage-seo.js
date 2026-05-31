@@ -96,6 +96,11 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Swimming &amp; pools</span>
         <span class="intent-card-desc">Hotel pools, water parks, lap swim</span>
       </a>
+      <a href="/guides/diving-watersports-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Diving</span>
+        <span class="intent-card-title">Diving &amp; watersports</span>
+        <span class="intent-card-desc">Scuba, kite, sailing, Koh Larn islands</span>
+      </a>
       <a href="/guides/climbing-pattaya/" class="intent-card">
         <span class="intent-card-tag">// Climbing</span>
         <span class="intent-card-title">Climbing in Pattaya</span>
@@ -187,15 +192,13 @@ if (html.includes(NETWORK_MARKER)) {
   html = html.replace(/<section class="section network-hub"[\s\S]*?<\/section>\s*/m, '');
 }
 
-const heroEnd = '</section>\n\n<section class="section" id="who">';
-const heroEndBroken = '</section>\n\n<section class="section" id="who"\n  <div class="wrap">';
-if (html.includes(heroEndBroken)) {
-  html = html.replace(heroEndBroken, `</section>\n${INTENT}\n${NETWORK_BLOCK}\n<section class="section" id="who">\n  <div class="wrap">`);
-} else if (html.includes(heroEnd)) {
-  html = html.replace(heroEnd, `</section>\n${INTENT}\n${NETWORK_BLOCK}\n<section class="section" id="who">`);
-} else {
+const whoAnchor = '<section class="section" id="who">';
+const whoMatch = html.match(/<section class="section" id="who">/);
+if (!whoMatch || whoMatch.index == null) {
   console.error('Homepage anchor not found');
   process.exit(1);
 }
+const nl = html.includes('\r\n') ? '\r\n' : '\n';
+html = html.slice(0, whoMatch.index) + INTENT + nl + NETWORK_BLOCK + nl + html.slice(whoMatch.index);
 fs.writeFileSync(INDEX, html, 'utf8');
 console.log('Homepage: intent router + network hub injected.');

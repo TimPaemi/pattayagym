@@ -36,6 +36,7 @@ const EDITORIAL = new Set([
   'climbing-pattaya',
   'adventure-pattaya',
   'kids-youth-sport-pattaya',
+  'diving-watersports-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
@@ -81,9 +82,14 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'swimming-pools-pattaya', title: 'Swimming & pools', desc: 'Hotel pools, water parks, lap swim.' },
   ],
   'best-dive-operators-pattaya': [
-    { slug: 'adventure-pattaya', title: 'Adventure in Pattaya', desc: 'Surface adventure between dive days.' },
-    { slug: 'best-gym-sattahip-pattaya', title: 'South pier corridor', desc: 'Na Jomtien marina and dive launch points.' },
+    { slug: 'diving-watersports-pattaya', title: 'Diving & watersports', desc: 'Scuba, kite, sailing, Koh Larn lanes.' },
+    { slug: 'best-gym-sattahip-pattaya', title: 'Ocean Marina south', desc: 'Na Jomtien marina and dive launch.' },
     { slug: 'best-gym-jomtien-pattaya', title: 'Jomtien base', desc: 'Stay south, taxi to Bali Hai pier.' },
+  ],
+  'swimming-pools-pattaya': [
+    { slug: 'diving-watersports-pattaya', title: 'Diving & watersports', desc: 'Scuba and ocean days vs pool laps.' },
+    { slug: 'family-friendly-pattaya', title: 'Family-friendly', desc: 'Pool days and beach sport with kids.' },
+    { slug: 'best-gym-sattahip-pattaya', title: 'Na Jomtien & Sattahip', desc: 'Resort pools south of Jomtien.' },
   ],
   'bangkok-day-trip-sport-pattaya': [
     { slug: 'adventure-pattaya', title: 'Adventure in Pattaya', desc: 'Skydive and zipline before BKK stadium trips.' },

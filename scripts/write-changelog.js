@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 53, date: '2026-05-31', tag: 'v449',
+    title: 'Diving & watersports editorial guide + scuba/kite mesh',
+    summary: 'Round 53 adds a dedicated diving and watersports guide — Bali Hai pier scuba belt, Jomtien kite schools, Ocean Marina sailing, Koh Larn — cross-linked to ranked dive operators and south corridor guides.',
+    bullets: [
+      'New: /guides/diving-watersports-pattaya/ — scuba, kite, wake, sailing, island day trips.',
+      'Watersports category strips, 5 area×category intros, dive-operator funnel refresh.',
+      'Homepage intent: Diving & watersports card between swimming and climbing.',
+      '41 guides total. Asset 448 -> 449.'
+    ]
+  },
+  {
     n: 52, date: '2026-05-31', tag: 'v448',
     title: 'Kids & youth sport editorial guide + family mesh',
     summary: 'Round 52 adds a dedicated kids/youth sport guide — football academies from age 3, Harbor Mall trampoline stack, Muay Thai for kids cross-links — completing the family editorial cluster.',

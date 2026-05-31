@@ -128,8 +128,8 @@ function faqsForVenue(g) {
     out.push({
       q: `Does ${name} run PADI or watersport courses?`,
       a: hasTag(g, 'padi') || hasTag(g, 'dive')
-        ? `Check course schedule directly — Open Water typically runs 3–4 days in Pattaya. <a href="/guides/best-dive-operators-pattaya/">Best dive operators</a>.`
-        : `Confirm lesson types and equipment rental on booking. Watersports hub: <a href="/category/watersports/">all watersports</a>.`,
+        ? `Check course schedule directly — Open Water typically runs 3–4 days in Pattaya. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a> · <a href="/guides/best-dive-operators-pattaya/">Best dive operators</a>.`
+        : `Confirm lesson types and equipment rental on booking. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports Pattaya</a>.`,
     });
     out.push({
       q: `Where is ${name}?`,

@@ -69,6 +69,11 @@ const CUSTOM = {
   'central-pattaya|kids-youth': 'Harbor Mall stacks BOUNCE trampoline, JumpZ, and Deep Climbing on upper floors — Pattaya\'s densest kids indoor belt. <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a> · <a href="/guides/climbing-pattaya/">Climbing</a>.',
   'jomtien|kids-youth': 'AF Academy and FAST PRO run football programmes across Jomtien locations — after-school rhythm for relocating families. <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a>.',
   'naklua|kids-youth': 'AF Academy trains from Naklua north through multi-location sessions — youngest football intake from age 3 in Pattaya. <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a>.',
+  'jomtien|watersports': 'Jomtien Beach runs Mermaid\'s, Jomtien Dive Center, and south-end kite schools — Bali Hai pier boats a short taxi north. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a> · <a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a>.',
+  'sattahip|watersports': 'Ocean Marina and KBA Blue Lagoon anchor Pattaya\'s south watersport belt — sailing, kite, and yacht charter. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a> · <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.',
+  'central-pattaya|watersports': 'Beach Road dive shops and Bali Hai pier departures — central base for morning boat schedules. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a> · <a href="/guides/best-dive-operators-pattaya/">Best dive operators</a>.',
+  'pratamnak|watersports': 'Royal Varuna Yacht Club on Pratamnak Hill — RYA sailing, regattas Jan–Mar, prestige junior programmes. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a>.',
+  'east-pattaya|watersports': 'Thai Wake Park near Mabprachan is Pattaya\'s cable wakeboarding option — no wind required. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
 };
 
 function introText(areaSlug, catKey, count) {
