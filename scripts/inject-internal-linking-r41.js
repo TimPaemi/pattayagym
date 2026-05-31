@@ -109,9 +109,9 @@ const CATEGORY_STRIPS = {
     { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly', desc: 'Kids adventure options' },
   ],
   clubs: [
-    { slug: 'pattaya-seniors-low-impact-sport', tag: 'Seniors', title: 'Seniors low-impact', desc: 'Gentle sport options' },
-    { slug: 'bangkok-day-trip-sport-pattaya', tag: 'Day trip', title: 'Bangkok day-trip sport', desc: 'Stadiums from Pattaya' },
-    { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly', desc: 'Clubs and parks for families' },
+    { slug: 'running-cycling-clubs-pattaya', tag: 'Clubs', title: 'Running & cycling clubs', desc: 'Hash, routes, beach aerobics' },
+    { slug: 'pattaya-digital-nomad-fitness', tag: 'Nomad', title: 'Digital nomad fitness', desc: 'Long-stay social sport rhythm' },
+    { slug: 'pattaya-seniors-low-impact-sport', tag: 'Seniors', title: 'Seniors low-impact', desc: 'Bowls, petanque, gentle sport' },
   ],
   'kids-youth': [
     { slug: 'kids-youth-sport-pattaya', tag: 'Kids', title: 'Kids & youth sport', desc: 'Football, trampoline, MT for kids' },
@@ -304,6 +304,10 @@ function venueGuideLinks(gym) {
     links.push({ slug: 'kids-youth-sport-pattaya', label: 'Kids & youth sport Pattaya' });
     links.push({ slug: 'family-friendly-pattaya', label: 'Family-friendly Pattaya' });
     links.push({ slug: 'pattaya-gyms-childcare-family-pools', label: 'Childcare & family pools' });
+  } else if (cat === 'clubs') {
+    links.push({ slug: 'running-cycling-clubs-pattaya', label: 'Running & cycling clubs' });
+    links.push({ slug: 'pattaya-digital-nomad-fitness', label: 'Digital nomad fitness' });
+    links.push({ slug: 'pattaya-seniors-low-impact-sport', label: 'Seniors low-impact sport' });
   } else {
     links.push({ slug: 'best-for-beginners-pattaya', label: 'Best for beginners' });
   }
@@ -388,9 +392,9 @@ const FUNNEL_R41 = {
     { slug: 'gym-day-pass-pattaya', title: 'Gym day pass', desc: 'Try a gym today without membership.' },
   ],
   'pattaya-digital-nomad-fitness': [
+    { slug: 'running-cycling-clubs-pattaya', title: 'Running & cycling clubs', desc: 'Hash, beach aerobics, social sport.' },
     { slug: 'gym-day-pass-pattaya', title: 'Gym day pass', desc: 'Flexible drop-ins.' },
     { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Monthly budget table.' },
-    { slug: 'train-muay-thai-pattaya-1-week-1-month', title: '1 week vs 1 month', desc: 'Trip-length training.' },
   ],
   'thai-gym-terms-pattaya': [
     { slug: 'english-speaking-muay-thai-pattaya', title: 'English-speaking MT', desc: 'Camps with clear coaching.' },
@@ -413,9 +417,9 @@ const FUNNEL_R41 = {
     { slug: 'best-golf-courses-pattaya', title: 'Best golf courses', desc: 'Pattaya courses vs BKK.' },
   ],
   'pattaya-seniors-low-impact-sport': [
+    { slug: 'running-cycling-clubs-pattaya', title: 'Running & cycling clubs', desc: 'Bowls, petanque, gentle hash options.' },
     { slug: 'family-friendly-pattaya', title: 'Family-friendly', desc: 'Gentle sport with family.' },
     { slug: 'pattaya-solo-female-fitness', title: 'Solo female fitness', desc: 'Low-pressure gym culture.' },
-    { slug: 'best-for-beginners-pattaya', title: 'Best for beginners', desc: 'Intro-friendly venues.' },
   ],
   'pattaya-russian-speaking-sport': [
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai beginners', desc: 'Many camps train Russians daily.' },
@@ -438,7 +442,7 @@ const EDITORIAL = new Set([
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
   'is-muay-thai-safe-pattaya', 'best-gym-central-pattaya', 'yoga-retreat-pattaya',
-  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya',   'climbing-pattaya', 'adventure-pattaya', 'kids-youth-sport-pattaya', 'diving-watersports-pattaya',
+  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya',   'climbing-pattaya', 'adventure-pattaya', 'kids-youth-sport-pattaya', 'diving-watersports-pattaya', 'running-cycling-clubs-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

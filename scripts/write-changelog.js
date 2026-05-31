@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 54, date: '2026-05-31', tag: 'v450',
+    title: 'Running & cycling clubs editorial guide + social sport mesh',
+    summary: 'Round 54 adds a dedicated running/cycling/clubs guide — hash house harriers, public routes, beach aerobics, cricket, rugby, lawn bowls — cross-linked to digital nomad and seniors ranked guides.',
+    bullets: [
+      'New: /guides/running-cycling-clubs-pattaya/ — hash, cycling, aerobics, team clubs, marathon.',
+      'Clubs category strips, 5 area×category intros, venue FAQ links, nomad/seniors funnels.',
+      'Homepage intent: Running & cycling clubs card for social sport seekers.',
+      '42 guides total. Asset 449 -> 450.'
+    ]
+  },
+  {
     n: 53, date: '2026-05-31', tag: 'v449',
     title: 'Diving & watersports editorial guide + scuba/kite mesh',
     summary: 'Round 53 adds a dedicated diving and watersports guide — Bali Hai pier scuba belt, Jomtien kite schools, Ocean Marina sailing, Koh Larn — cross-linked to ranked dive operators and south corridor guides.',

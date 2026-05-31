@@ -235,7 +235,7 @@ function faqsForVenue(g) {
   } else if (cat === 'clubs') {
     out.push({
       q: `Can visitors use ${name} without membership?`,
-      a: `Social and sports clubs vary on guest access — call for day-pass or sponsor-member rules. <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a>.`,
+      a: `Social and sports clubs vary on guest access — call for day-pass or sponsor-member rules. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a> · <a href="/guides/pattaya-seniors-low-impact-sport/">Seniors low-impact</a>.`,
     });
     out.push({
       q: `What facilities does ${name} offer?`,

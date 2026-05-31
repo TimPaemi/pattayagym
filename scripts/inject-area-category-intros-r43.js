@@ -74,6 +74,11 @@ const CUSTOM = {
   'central-pattaya|watersports': 'Beach Road dive shops and Bali Hai pier departures — central base for morning boat schedules. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a> · <a href="/guides/best-dive-operators-pattaya/">Best dive operators</a>.',
   'pratamnak|watersports': 'Royal Varuna Yacht Club on Pratamnak Hill — RYA sailing, regattas Jan–Mar, prestige junior programmes. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a>.',
   'east-pattaya|watersports': 'Thai Wake Park near Mabprachan is Pattaya\'s cable wakeboarding option — no wind required. <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
+  'jomtien|clubs': 'Jomtien beach volleyball pickup and weekend cycling meetups — social sport without gym contracts. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a> · <a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a>.',
+  'central-pattaya|clubs': 'Pattaya Hash House Harriers and Pattaya Sports Club anchor central social sport — Monday runs and 3rd Road events. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a>.',
+  'pratamnak|clubs': 'Big Buddha Hill stair climb and Royal Varuna regatta season — cardio landmarks on the hill. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a>.',
+  'east-pattaya|clubs': 'Cycling clubs meet east and Mabprachan belt on weekend mornings — pair with Darkside gym days. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
+  'sattahip|clubs': 'Khao Chi Chan walking site and Pattaya Triathlon south corridor — free routes and race events. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a> · <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.',
 };
 
 function introText(areaSlug, catKey, count) {

@@ -136,6 +136,16 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Camps with accommodation</span>
         <span class="intent-card-desc">All-inclusive packages on-site</span>
       </a>
+      <a href="/guides/pattaya-digital-nomad-fitness/" class="intent-card">
+        <span class="intent-card-tag">// Nomad</span>
+        <span class="intent-card-title">Digital nomad fitness</span>
+        <span class="intent-card-desc">Long-stay rhythm, gyms + social sport</span>
+      </a>
+      <a href="/guides/running-cycling-clubs-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Clubs</span>
+        <span class="intent-card-title">Running &amp; cycling clubs</span>
+        <span class="intent-card-desc">Hash, beach aerobics, cricket, rugby</span>
+      </a>
       <a href="/compare/" class="intent-card intent-card-tool">
         <span class="intent-card-tag">// Tool</span>
         <span class="intent-card-title">Compare 158 venues</span>

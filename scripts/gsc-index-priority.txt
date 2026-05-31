@@ -1,13 +1,13 @@
 # GSC URL Inspection queue — request indexing (~10/day max)
-# Updated Round 53 · v449
+# Updated Round 54 · v450
 
-https://pattaya-gym.com/guides/diving-watersports-pattaya/
-https://pattaya-gym.com/category/watersports/
-https://pattaya-gym.com/guides/best-dive-operators-pattaya/
-https://pattaya-gym.com/gyms/adventure-divers-pattaya/
-https://pattaya-gym.com/gyms/ocean-marina-jomtien/
-https://pattaya-gym.com/gyms/kba-kiteboarding-pattaya/
-https://pattaya-gym.com/area/jomtien/watersports/
-https://pattaya-gym.com/area/sattahip/watersports/
-https://pattaya-gym.com/guides/best-gym-jomtien-pattaya/
+https://pattaya-gym.com/guides/running-cycling-clubs-pattaya/
+https://pattaya-gym.com/category/clubs/
+https://pattaya-gym.com/gyms/pattaya-hash-house/
+https://pattaya-gym.com/gyms/pattaya-cycling-clubs/
+https://pattaya-gym.com/gyms/pattaya-beach-public-aerobics/
+https://pattaya-gym.com/guides/pattaya-digital-nomad-fitness/
+https://pattaya-gym.com/guides/pattaya-seniors-low-impact-sport/
+https://pattaya-gym.com/area/jomtien/clubs/
+https://pattaya-gym.com/gyms/pattaya-marathon/
 https://pattaya-gym.com/guides/

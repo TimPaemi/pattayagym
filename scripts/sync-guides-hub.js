@@ -62,9 +62,11 @@ const SLUG_TITLES = {
   'adventure-pattaya': 'Adventure Pattaya',
   'kids-youth-sport-pattaya': 'Kids & youth sport',
   'diving-watersports-pattaya': 'Diving & watersports',
+  'running-cycling-clubs-pattaya': 'Running & cycling clubs',
 };
 
 const TLDR_ADD = [
+  { slug: 'running-cycling-clubs-pattaya', html: '<li><strong>Hash or cycling club?</strong> → <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs in Pattaya</a></li>' },
   { slug: 'diving-watersports-pattaya', html: '<li><strong>Dive or kite in Pattaya?</strong> → <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports in Pattaya</a></li>' },
   { slug: 'kids-youth-sport-pattaya', html: '<li><strong>Sport for kids?</strong> → <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport in Pattaya</a></li>' },
   { slug: 'adventure-pattaya', html: '<li><strong>Zipline or skydive?</strong> → <a href="/guides/adventure-pattaya/">Adventure in Pattaya</a></li>' },
@@ -88,6 +90,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'running-cycling-clubs-pattaya', card: `<a href="/guides/running-cycling-clubs-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Running &amp; cycling clubs in Pattaya</h3><span class="cv-pill">Clubs</span></div>
+      <p>Hash runs, cycling meetups, beach aerobics, cricket, rugby, lawn bowls — social sport mapped.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'diving-watersports-pattaya', card: `<a href="/guides/diving-watersports-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Diving &amp; watersports in Pattaya</h3><span class="cv-pill">Watersports</span></div>
       <p>Bali Hai scuba, Jomtien kite, Ocean Marina sailing, Koh Larn — all water lanes mapped.</p>
