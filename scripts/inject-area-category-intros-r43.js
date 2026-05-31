@@ -61,6 +61,11 @@ const CUSTOM = {
   'sattahip|golf': 'Chee Chan Golf and Bang Saray courses sit on the Sattahip corridor — Buddha Mountain views. <a href="/guides/best-golf-courses-pattaya/">Best golf courses</a>.',
   'naklua|climbing': 'Deep Climbing Gym on Harbor Mall floor 8 is Pattaya\'s flagship indoor wall — AC, 10m routes, mall parking. <a href="/guides/climbing-pattaya/">Climbing guide</a>.',
   'east-pattaya|climbing': 'Bean Cow in Huay Yai runs CWA-certified instruction on an 8m wall — family-friendly Darkside option. <a href="/guides/climbing-pattaya/">Climbing guide</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
+  'sattahip|adventure': 'Tarzan Adventure zipline sits between Nong Nooch and Golden Cliff Temple — Pattaya\'s main jungle course south of Jomtien. <a href="/guides/adventure-pattaya/">Adventure guide</a> · <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.',
+  'central-pattaya|adventure': 'Pattaya Park Tower Jump and Thepprasit karting cluster — adrenaline without leaving the city belt. <a href="/guides/adventure-pattaya/">Adventure guide</a>.',
+  'jomtien|adventure': 'Pattaya Park Tower Jump and EasyKart Thepprasit are the Jomtien-border adventure belt — tower zip line plus outdoor karting until late. <a href="/guides/adventure-pattaya/">Adventure guide</a>.',
+  'naklua|adventure': 'Pattaya Bike and Boat Tours runs quiet countryside cycling from Naklua — the non-adrenaline adventure pick. <a href="/guides/adventure-pattaya/">Adventure guide</a>.',
+  'east-pattaya|adventure': 'ATV tours east of Mabprachan and Pattaya Shooting Park on Soi Khao Mai Kaew — Darkside mud and ranges. <a href="/guides/adventure-pattaya/">Adventure guide</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
 };
 
 function introText(areaSlug, catKey, count) {

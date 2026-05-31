@@ -28,7 +28,7 @@ module.exports = `
 
 <ul>
 <li><a href="/gyms/centara-grand-mirage/">Centara Grand Mirage</a> — hotel rock wall + water park; resort guest experience, not a climbing gym.</li>
-<li><a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure</a> — jungle zipline and adventure park south at Sattahip; outdoor thrills, not route climbing. <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.</li>
+<li><a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure</a> — jungle zipline and adventure park south at Sattahip; outdoor thrills, not route climbing. <a href="/guides/adventure-pattaya/">Adventure guide</a> · <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.</li>
 <li><a href="/gyms/crossfit-pattaya/">CrossFit Pattaya @ Jungle Gym</a> — slacklining on the same campus; grip and balance cross-training.</li>
 </ul>
 

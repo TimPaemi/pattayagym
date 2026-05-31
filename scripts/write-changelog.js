@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 51, date: '2026-05-31', tag: 'v447',
+    title: 'Adventure editorial guide + zipline/skydive mesh',
+    summary: 'Round 51 adds a dedicated adventure guide covering all 12 operators — skydive, zipline, karting, ATV, tower jump, shooting — with category cross-links, area intros, and homepage intent.',
+    bullets: [
+      'New: /guides/adventure-pattaya/ — Thai Sky, Tarzan, Flight of the Gibbon, karting, ATV, shooting.',
+      'Adventure category strips, 5 area×category intros, venue FAQ links, family/dive/BKK funnel cards.',
+      'Homepage intent: Adventure card alongside climbing and swimming.',
+      '39 guides total. Asset 446 -> 447.'
+    ]
+  },
+  {
     n: 50, date: '2026-05-31', tag: 'v446',
     title: 'Climbing editorial guide + category mesh',
     summary: 'Round 50 adds a dedicated climbing guide covering Deep Climbing Gym at Harbor Mall and Bean Cow in Huay Yai, cross-links the climbing category and family/beginner funnels, and adds homepage intent.',

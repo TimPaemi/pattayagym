@@ -34,6 +34,7 @@ const EDITORIAL = new Set([
   'swimming-pools-pattaya',
   'tennis-badminton-pattaya',
   'climbing-pattaya',
+  'adventure-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
@@ -69,14 +70,19 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Price table — monthly and walk-in tiers.' },
   ],
   'family-friendly-pattaya': [
+    { slug: 'adventure-pattaya', title: 'Adventure in Pattaya', desc: 'Zipline, karting, skydive, family days.' },
     { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Deep Harbor Mall and Bean Cow family walls.' },
     { slug: 'swimming-pools-pattaya', title: 'Swimming & pools', desc: 'Hotel pools, water parks, lap swim.' },
-    { slug: 'best-gym-sattahip-pattaya', title: 'Na Jomtien & Sattahip', desc: 'Water parks, resort pools, marina family days.' },
   ],
   'best-dive-operators-pattaya': [
+    { slug: 'adventure-pattaya', title: 'Adventure in Pattaya', desc: 'Surface adventure between dive days.' },
     { slug: 'best-gym-sattahip-pattaya', title: 'South pier corridor', desc: 'Na Jomtien marina and dive launch points.' },
     { slug: 'best-gym-jomtien-pattaya', title: 'Jomtien base', desc: 'Stay south, taxi to Bali Hai pier.' },
-    { slug: 'family-friendly-pattaya', title: 'Family-friendly', desc: 'Combine dive days with kid activities.' },
+  ],
+  'bangkok-day-trip-sport-pattaya': [
+    { slug: 'adventure-pattaya', title: 'Adventure in Pattaya', desc: 'Skydive and zipline before BKK stadium trips.' },
+    { slug: 'best-muay-thai-pattaya', title: 'Best Muay Thai', desc: 'Includes Lumpinee day-trip from Pattaya.' },
+    { slug: 'best-golf-courses-pattaya', title: 'Best golf courses', desc: 'Championship Pattaya golf.' },
   ],
 };
 

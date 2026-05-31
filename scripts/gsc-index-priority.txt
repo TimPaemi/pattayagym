@@ -1,13 +1,13 @@
 # GSC URL Inspection queue — request indexing (~10/day max)
-# Updated Round 50 · v446
+# Updated Round 51 · v447
 
+https://pattaya-gym.com/guides/adventure-pattaya/
+https://pattaya-gym.com/category/adventure/
+https://pattaya-gym.com/gyms/thai-sky-adventures-skydive/
+https://pattaya-gym.com/gyms/tarzan-adventure-pattaya/
+https://pattaya-gym.com/gyms/flight-of-the-gibbon/
+https://pattaya-gym.com/area/sattahip/adventure/
 https://pattaya-gym.com/guides/climbing-pattaya/
-https://pattaya-gym.com/category/climbing/
-https://pattaya-gym.com/gyms/deep-climbing-gym/
-https://pattaya-gym.com/gyms/bean-cow-climbing-gym/
-https://pattaya-gym.com/area/naklua/climbing/
-https://pattaya-gym.com/area/east-pattaya/climbing/
 https://pattaya-gym.com/guides/family-friendly-pattaya/
-https://pattaya-gym.com/guides/best-for-beginners-pattaya/
-https://pattaya-gym.com/guides/tennis-badminton-pattaya/
+https://pattaya-gym.com/gyms/easykart-pattaya/
 https://pattaya-gym.com/guides/

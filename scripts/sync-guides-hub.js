@@ -59,9 +59,11 @@ const SLUG_TITLES = {
   'swimming-pools-pattaya': 'Swimming & pools',
   'tennis-badminton-pattaya': 'Tennis & badminton',
   'climbing-pattaya': 'Climbing Pattaya',
+  'adventure-pattaya': 'Adventure Pattaya',
 };
 
 const TLDR_ADD = [
+  { slug: 'adventure-pattaya', html: '<li><strong>Zipline or skydive?</strong> → <a href="/guides/adventure-pattaya/">Adventure in Pattaya</a></li>' },
   { slug: 'climbing-pattaya', html: '<li><strong>Indoor climbing?</strong> → <a href="/guides/climbing-pattaya/">Climbing in Pattaya</a></li>' },
   { slug: 'tennis-badminton-pattaya', html: '<li><strong>Tennis or badminton?</strong> → <a href="/guides/tennis-badminton-pattaya/">Tennis &amp; badminton in Pattaya</a></li>' },
   { slug: 'swimming-pools-pattaya', html: '<li><strong>Pool day or lap swim?</strong> → <a href="/guides/swimming-pools-pattaya/">Swimming &amp; pools in Pattaya</a></li>' },
@@ -82,6 +84,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'adventure-pattaya', card: `<a href="/guides/adventure-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Adventure in Pattaya</h3><span class="cv-pill">Adventure</span></div>
+      <p>Skydive, Tarzan zipline, karting, ATV, tower jump, shooting — all 12 operators mapped.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'climbing-pattaya', card: `<a href="/guides/climbing-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Climbing in Pattaya</h3><span class="cv-pill">Climbing</span></div>
       <p>Deep at Harbor Mall vs Bean Cow Huay Yai — real walls, hotel walls, family picks.</p>

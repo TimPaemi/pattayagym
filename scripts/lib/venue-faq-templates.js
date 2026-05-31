@@ -209,11 +209,11 @@ function faqsForVenue(g) {
   } else if (cat === 'adventure') {
     out.push({
       q: `How do I book ${name}?`,
-      a: `Adventure venues often require advance booking in peak season — use contact buttons on this page or WhatsApp us for help.`,
+      a: `Adventure venues often require advance booking in peak season — use contact buttons on this page or WhatsApp us for help. <a href="/guides/adventure-pattaya/">Adventure in Pattaya</a>.`,
     });
     out.push({
       q: `Are there age or weight limits at ${name}?`,
-      a: `Confirm restrictions directly — zipline, skydive, and ATV operators enforce safety limits. <a href="/guides/family-friendly-pattaya/">Family-friendly guide</a> for kid-friendly adventure.`,
+      a: `Confirm restrictions directly — zipline, skydive, and ATV operators enforce safety limits. <a href="/guides/adventure-pattaya/">Adventure guide</a> · <a href="/guides/family-friendly-pattaya/">Family-friendly</a>.`,
     });
     out.push({
       q: `Where is ${name}?`,
