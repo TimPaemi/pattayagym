@@ -55,9 +55,11 @@ const SLUG_TITLES = {
   'best-gym-east-pattaya': 'Best gym East Pattaya',
   'best-gym-sattahip-pattaya': 'Na Jomtien & Sattahip',
   'bjj-mma-pattaya': 'BJJ & MMA',
+  'crossfit-pattaya': 'CrossFit Pattaya',
 };
 
 const TLDR_ADD = [
+  { slug: 'crossfit-pattaya', html: '<li><strong>CrossFit WODs?</strong> → <a href="/guides/crossfit-pattaya/">CrossFit in Pattaya</a></li>' },
   { slug: 'bjj-mma-pattaya', html: '<li><strong>BJJ or MMA?</strong> → <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA in Pattaya</a></li>' },
   { slug: 'best-gym-sattahip-pattaya', html: '<li><strong>Staying south / U-Tapao?</strong> → <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien &amp; Sattahip gyms</a></li>' },
   { slug: 'best-gym-east-pattaya', html: '<li><strong>Training on the Darkside?</strong> → <a href="/guides/best-gym-east-pattaya/">Best gym in East Pattaya</a></li>' },
@@ -74,6 +76,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'crossfit-pattaya', card: `<a href="/guides/crossfit-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>CrossFit in Pattaya</h3><span class="cv-pill">CrossFit</span></div>
+      <p>Jungle Gym affiliate on the Darkside — plus chain-gym and combat S&amp;C alternatives.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'bjj-mma-pattaya', card: `<a href="/guides/bjj-mma-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>BJJ &amp; MMA in Pattaya</h3><span class="cv-pill">Combat</span></div>
       <p>ALFA BJJ, Venum, Rage, Kombat Group, Rambaa M16 — Gi, No-Gi, cage gyms.</p>

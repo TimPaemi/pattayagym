@@ -74,9 +74,9 @@ const CATEGORY_STRIPS = {
     { slug: '24-hour-gyms-pattaya', tag: '24h', title: '24-hour gyms', desc: 'Late-night training' },
   ],
   crossfit: [
+    { slug: 'crossfit-pattaya', tag: 'CrossFit', title: 'CrossFit Pattaya', desc: 'Jungle Gym affiliate + alternatives' },
+    { slug: 'best-gym-east-pattaya', tag: 'East', title: 'East Pattaya gyms', desc: 'Darkside training belt' },
     { slug: 'cheapest-gyms-pattaya', tag: 'Budget', title: 'Cheapest gyms', desc: 'Price comparison table' },
-    { slug: 'gym-day-pass-pattaya', tag: 'Day pass', title: 'Gym day pass', desc: 'Drop-in options' },
-    { slug: 'best-for-beginners-pattaya', tag: 'Beginner', title: 'Best for beginners', desc: 'First-time friendly gyms' },
   ],
   yoga: [
     { slug: 'yoga-retreat-pattaya', tag: 'Retreat', title: 'Yoga retreat Pattaya', desc: 'Studios and wellness weeks' },
@@ -259,6 +259,10 @@ function venueGuideLinks(gym) {
     links.push({ slug: 'gym-day-pass-pattaya', label: 'Gym day pass Pattaya' });
     links.push({ slug: 'best-muay-thai-pattaya', label: 'Best Muay Thai ranked list' });
   } else if (cat === 'fitness' || cat === 'crossfit') {
+    if (cat === 'crossfit') {
+      links.push({ slug: 'crossfit-pattaya', label: 'CrossFit Pattaya guide' });
+      links.push({ slug: 'best-gym-east-pattaya', label: 'East Pattaya gyms' });
+    }
     links.push({ slug: 'cheapest-gyms-pattaya', label: 'Cheapest gyms + price table' });
     links.push({ slug: 'gym-day-pass-pattaya', label: 'Gym day pass' });
     links.push({ slug: '24-hour-gyms-pattaya', label: '24-hour gyms' });
@@ -319,13 +323,22 @@ function venueSection(links) {
 function injectVenue(html, links) {
   if (html.includes(VENUE_MARKER)) return null;
   const block = venueSection(links);
+  const norm = s => s.replace(/\r\n/g, '\n');
+  const htmlNorm = norm(html);
   const anchors = [
+    '<section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">',
     '<section class="section u-pt-0">\n  <div class="wrap">\n    <div class="eyebrow"><span class="num">★</span> Social</div>',
     '<section class="section">\n  <div class="wrap">\n    <div class="eyebrow"><span class="num">★</span> Contact channels</div>',
     '<section class="section">\n  <div class="wrap">\n    <div class="eyebrow"><span class="num">★</span> Same sport</div>',
   ];
   for (const a of anchors) {
-    if (html.includes(a)) return html.replace(a, block + '\n' + a);
+    const aNorm = norm(a);
+    const idx = htmlNorm.indexOf(aNorm);
+    if (idx >= 0) {
+      const before = html.slice(0, idx);
+      const after = html.slice(idx);
+      return before + block + '\n' + after;
+    }
   }
   const mainEnd = html.lastIndexOf('</main>');
   if (mainEnd > 0) return html.slice(0, mainEnd) + block + '\n' + html.slice(mainEnd);
@@ -399,7 +412,7 @@ const EDITORIAL = new Set([
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
   'is-muay-thai-safe-pattaya', 'best-gym-central-pattaya', 'yoga-retreat-pattaya',
-  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',
+  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya', 'crossfit-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

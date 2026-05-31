@@ -1,13 +1,13 @@
 # GSC URL Inspection queue — request indexing (~10/day max)
-# Updated Round 46 · v442
+# Updated Round 47 · v443
 
+https://pattaya-gym.com/guides/crossfit-pattaya/
+https://pattaya-gym.com/category/crossfit/
+https://pattaya-gym.com/gyms/fairtex-pattaya/
+https://pattaya-gym.com/gyms/kombat-group-thailand/
+https://pattaya-gym.com/gyms/crossfit-pattaya/
+https://pattaya-gym.com/gyms/jetts-fitness-pattaya/
 https://pattaya-gym.com/guides/bjj-mma-pattaya/
-https://pattaya-gym.com/category/bjj/
-https://pattaya-gym.com/category/mma/
-https://pattaya-gym.com/guides/best-muay-thai-pattaya/
-https://pattaya-gym.com/guides/best-golf-courses-pattaya/
-https://pattaya-gym.com/guides/bangkok-day-trip-sport-pattaya/
-https://pattaya-gym.com/guides/pattaya-russian-speaking-sport/
-https://pattaya-gym.com/guides/pattaya-seniors-low-impact-sport/
 https://pattaya-gym.com/gyms/alfa-bjj-pattaya/
+https://pattaya-gym.com/gyms/andaz-pattaya-jomtien/
 https://pattaya-gym.com/guides/

@@ -50,7 +50,7 @@ const CUSTOM = {
   'pratamnak|racquet': 'Pratamnak is Pattaya\'s padel and pickleball hub — Play Padel, Pickleball Pattaya, Fitz Club tennis. <a href="/guides/padel-pickleball-pattaya/">Padel &amp; pickleball guide</a>.',
   'east-pattaya|muay-thai': 'East Pattaya and Huai Yai hold Kombat Group and Sor Klinmee — rural camp settings away from Beach Road noise. <a href="/guides/best-gym-east-pattaya/">East Pattaya gym guide</a> · <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Stay-and-train camps</a>.',
   'east-pattaya|fitness': 'Nong Prue and Khao Talo run Castra Gym and Sanit Sport Club\'s fitness wing — less tourist traffic than central chains. <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a>.',
-  'east-pattaya|crossfit': 'Pattaya\'s only CrossFit affiliate lives east at Jungle Gym Nong Prue. <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a>.',
+  'east-pattaya|crossfit': 'Pattaya\'s only CrossFit affiliate lives east at Jungle Gym Nong Prue. <a href="/guides/crossfit-pattaya/">CrossFit Pattaya guide</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
   'east-pattaya|mma': 'Rambaa Somdet M16 and Kombat Group anchor East Pattaya MMA — cage training 100m from Sor Klinmee. <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA guide</a>.',
   'east-pattaya|bjj': 'Kombat Group runs full BJJ programme on the Darkside; Rambaa M16 for MMA transitions. <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA guide</a>.',
   'jomtien|mma': 'Venum Training Camp and Rage Fight Academy stack MT, BJJ, and MMA near Jomtien Beach. <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA guide</a>.',

@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 47, date: '2026-05-31', tag: 'v443',
+    title: 'CrossFit guide, venue FAQ on 25 top venues, homepage BJJ/CrossFit intents',
+    summary: 'Round 47 adds CrossFit editorial, programmatic FAQ blocks with FAQPage schema on 25 flagship venue pages, homepage intent cards for BJJ/MMA and CrossFit, and CRLF-safe venue guide injection.',
+    bullets: [
+      'New: /guides/crossfit-pattaya/ — Jungle Gym affiliate + functional fitness alternatives.',
+      'inject-venue-faq-r47.js — FAQ + FAQPage schema on 25 top venues (featured + guide anchors).',
+      'Homepage intent router: BJJ/MMA and CrossFit cards.',
+      '35 guides total. Asset 442 -> 443.'
+    ]
+  },
+  {
     n: 46, date: '2026-05-31', tag: 'v442',
     title: 'BJJ & MMA editorial guide + complete ranked deepen pass',
     summary: 'Round 46 adds the first dedicated BJJ/MMA editorial guide and finishes editorial depth blocks on all remaining ranked guides — best Muay Thai, Walking Street, golf, childcare, Russian, seniors, Bangkok day trips.',
