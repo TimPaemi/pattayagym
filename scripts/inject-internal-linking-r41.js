@@ -80,9 +80,9 @@ const CATEGORY_STRIPS = {
     { slug: 'bangkok-day-trip-sport-pattaya', tag: 'Day trip', title: 'Bangkok day-trip sport', desc: 'Stadiums and courses near BKK' },
   ],
   racquet: [
+    { slug: 'padel-pickleball-pattaya', tag: 'Padel', title: 'Padel & pickleball', desc: 'Every court in Pattaya ranked' },
     { slug: 'luxury-sports-clubs-pattaya', tag: 'Luxury', title: 'Luxury clubs + tennis', desc: 'Fitz Club and resort courts' },
     { slug: 'best-gym-naklua-pratamnak-pattaya', tag: 'Pratamnak', title: 'Pratamnak racquet hub', desc: 'Padel and pickleball on the hill' },
-    { slug: 'cheapest-gyms-pattaya', tag: 'Budget', title: 'Cheapest gyms', desc: 'Budget fitness nearby' },
   ],
   swimming: [
     { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly', desc: 'Pools and beaches for kids' },
@@ -221,6 +221,7 @@ function venueGuideLinks(gym) {
   if (cat === 'muay-thai' || cat === 'mma' || cat === 'bjj') {
     links.push({ slug: 'muay-thai-pattaya-beginners', label: 'Muay Thai for beginners' });
     links.push({ slug: 'muay-thai-training-holiday-pattaya', label: 'Training holiday guide' });
+    links.push({ slug: 'training-thailand-visa-pattaya', label: 'Training & visa guide' });
     if (tags.includes('accommodation') || tags.includes('all-inclusive')) {
       links.push({ slug: 'muay-thai-camps-with-accommodation-pattaya', label: 'Camps with accommodation' });
     }
@@ -240,6 +241,7 @@ function venueGuideLinks(gym) {
     links.push({ slug: 'thai-gym-terms-pattaya', label: 'Thai gym terms' });
     links.push({ slug: 'pattaya-digital-nomad-fitness', label: 'Digital nomad fitness' });
   } else if (cat === 'racquet') {
+    links.push({ slug: 'padel-pickleball-pattaya', label: 'Padel & pickleball Pattaya' });
     links.push({ slug: 'best-gym-naklua-pratamnak-pattaya', label: 'Pratamnak padel & pickleball' });
     links.push({ slug: 'luxury-sports-clubs-pattaya', label: 'Luxury racquet clubs' });
   } else if (cat === 'swimming' || cat === 'watersports') {
@@ -360,7 +362,10 @@ const EDITORIAL = new Set([
   'english-speaking-muay-thai-pattaya', 'muay-thai-camps-with-accommodation-pattaya',
   'gym-day-pass-pattaya', 'muay-thai-training-holiday-pattaya', 'muay-thai-pattaya-beginners',
   'best-gym-jomtien-pattaya', 'pattaya-vs-phuket-muay-thai-training',
-  'train-muay-thai-pattaya-1-week-1-month', 'best-gym-naklua-pratamnak-pattaya',
+  'train-muay-thai-pattaya-1-week-1-month',   'best-gym-naklua-pratamnak-pattaya',
+  'padel-pickleball-pattaya',
+  'training-thailand-visa-pattaya',
+  'thai-gym-terms-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

@@ -51,6 +51,16 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">North &amp; hilltop gyms</span>
         <span class="intent-card-desc">Fairtex, Muscle Factory, padel, Wong Amat</span>
       </a>
+      <a href="/guides/padel-pickleball-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Racquet</span>
+        <span class="intent-card-title">Padel &amp; pickleball</span>
+        <span class="intent-card-desc">Courts on Pratamnak &amp; Mabprachan</span>
+      </a>
+      <a href="/guides/training-thailand-visa-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Long-stay</span>
+        <span class="intent-card-title">Training &amp; visa</span>
+        <span class="intent-card-desc">ED visa, tourist stay, camp paths</span>
+      </a>
       <a href="/guides/pattaya-vs-phuket-muay-thai-training/" class="intent-card">
         <span class="intent-card-tag">// Compare cities</span>
         <span class="intent-card-title">Pattaya vs Phuket training</span>

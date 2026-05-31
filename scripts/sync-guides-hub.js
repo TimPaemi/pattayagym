@@ -47,9 +47,13 @@ const SLUG_TITLES = {
   'pattaya-vs-phuket-muay-thai-training': 'Pattaya vs Phuket MT',
   'train-muay-thai-pattaya-1-week-1-month': '1 week vs 1 month',
   'best-gym-naklua-pratamnak-pattaya': 'Naklua & Pratamnak',
+  'padel-pickleball-pattaya': 'Padel & pickleball',
+  'training-thailand-visa-pattaya': 'Training & visa',
 };
 
 const TLDR_ADD = [
+  { slug: 'padel-pickleball-pattaya', html: '<li><strong>Padel or pickleball?</strong> → <a href="/guides/padel-pickleball-pattaya/">Padel &amp; pickleball in Pattaya</a></li>' },
+  { slug: 'training-thailand-visa-pattaya', html: '<li><strong>Long-stay training visa?</strong> → <a href="/guides/training-thailand-visa-pattaya/">Train in Thailand — visa guide</a></li>' },
   { slug: 'best-gym-naklua-pratamnak-pattaya', html: '<li><strong>Staying Naklua or Pratamnak?</strong> → <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Best gym Naklua &amp; Pratamnak</a></li>' },
   { slug: 'train-muay-thai-pattaya-1-week-1-month', html: '<li><strong>1 week or 1 month?</strong> → <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">Train Muay Thai — trip length guide</a></li>' },
   { slug: 'muay-thai-pattaya-beginners', html: '<li><strong>Never trained MT before?</strong> → <a href="/guides/muay-thai-pattaya-beginners/">Muay Thai for beginners</a></li>' },
@@ -58,6 +62,16 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'padel-pickleball-pattaya', card: `<a href="/guides/padel-pickleball-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Padel &amp; pickleball in Pattaya</h3><span class="cv-pill">Racquet</span></div>
+      <p>Play Padel, Pickleball Pattaya, Mabprachan lakeside — courts and booking.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
+  { slug: 'training-thailand-visa-pattaya', card: `<a href="/guides/training-thailand-visa-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Train in Thailand — visa guide</h3><span class="cv-pill">Long-stay</span></div>
+      <p>ED visa, tourist stay, camp sponsorship — Pattaya training paths.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'best-gym-naklua-pratamnak-pattaya', card: `<a href="/guides/best-gym-naklua-pratamnak-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Best gym in Naklua &amp; Pratamnak</h3><span class="cv-pill">Area</span></div>
       <p>Fairtex, Sityodtong, Muscle Factory, padel, Wong Amat — north &amp; hilltop venues.</p>

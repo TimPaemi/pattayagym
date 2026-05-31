@@ -15,18 +15,18 @@
     "updateCadence": "rolling"
   },
   "build": {
-    "version": "v437",
-    "asset_version": "437",
-    "last_built_utc": "2026-05-30T01:05:05.836Z",
-    "last_built_date": "2026-05-30"
+    "version": "v438",
+    "asset_version": "438",
+    "last_built_utc": "2026-05-31T00:50:20.365Z",
+    "last_built_date": "2026-05-31"
   },
   "catalog": {
     "venues_total": 158,
     "venues_with_body_content": 158,
     "categories": 15,
     "areas": 6,
-    "html_pages_shipped": 269,
-    "sitemap_urls": 266
+    "html_pages_shipped": 271,
+    "sitemap_urls": 268
   },
   "schema_completeness": {
     "venues_with_verified_date": 158,
@@ -39,7 +39,7 @@
   "freshness": {
     "oldest_verified_date": "2026-04-27",
     "newest_verified_date": "2026-04-29",
-    "oldest_verified_age_days": 33,
+    "oldest_verified_age_days": 34,
     "target_max_age_days": 30
   },
   "endpoints": {

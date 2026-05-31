@@ -1,0 +1,14 @@
+# GSC URL Inspection queue — request indexing (~10/day max)
+# Paste into Search Console → URL Inspection → Request indexing
+# Updated Round 42 · v438
+
+https://pattaya-gym.com/guides/padel-pickleball-pattaya/
+https://pattaya-gym.com/guides/training-thailand-visa-pattaya/
+https://pattaya-gym.com/guides/thai-gym-terms-pattaya/
+https://pattaya-gym.com/category/racquet/
+https://pattaya-gym.com/area/pratamnak/racquet/
+https://pattaya-gym.com/guides/best-gym-naklua-pratamnak-pattaya/
+https://pattaya-gym.com/guides/train-muay-thai-pattaya-1-week-1-month/
+https://pattaya-gym.com/guides/muay-thai-pattaya-beginners/
+https://pattaya-gym.com/category/muay-thai/
+https://pattaya-gym.com/guides/

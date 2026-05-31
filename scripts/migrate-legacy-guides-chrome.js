@@ -31,6 +31,9 @@ const EDITORIAL_SLUGS = new Set([
   'pattaya-vs-phuket-muay-thai-training',
   'train-muay-thai-pattaya-1-week-1-month',
   'best-gym-naklua-pratamnak-pattaya',
+  'padel-pickleball-pattaya',
+  'training-thailand-visa-pattaya',
+  'thai-gym-terms-pattaya',
 ]);
 
 const buildSrc = fs.readFileSync(path.join(ROOT, 'build-v2.js'), 'utf8');

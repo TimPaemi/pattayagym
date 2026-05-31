@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 42, date: '2026-05-30', tag: 'v438',
+    title: 'Padel/pickleball + training visa guides, Thai terms editorial rebuild, sister-site links',
+    summary: 'Round 42 fills racquet and long-stay keyword gaps and rebuilds thai-gym-terms as full editorial. Editorial shell gains in-content Pattaya network links (visa, medical, restaurants).',
+    bullets: [
+      'New: /guides/padel-pickleball-pattaya/ and /guides/training-thailand-visa-pattaya/.',
+      'Rebuild: /guides/thai-gym-terms-pattaya/ — phrase tables, MT class words, FAQ.',
+      'editorial-guide-shell.js sister-context block for cross-network SEO mesh.',
+      '28 guides total; gsc-index-priority.txt for indexing queue. Asset 437 -> 438.'
+    ]
+  },
+  {
     n: 41, date: '2026-05-29', tag: 'v437',
     title: 'Internal linking — category/area strips, venue guide blocks, funnel expansion',
     summary: 'Closes the taxonomy orphan gap from the SEO audit: every category and area page surfaces editorial guides; 158 venue pages link to relevant trip planners; remaining ranked guides get editorial funnel cards; guide count footer fixed to 26.',

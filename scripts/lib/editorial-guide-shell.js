@@ -87,6 +87,24 @@ function paNetwork() {
 </section>`;
 }
 
+function sisterContextBlock(links) {
+  if (!links || !links.length) return '';
+  const items = links.map(l => {
+    const ext = l.external ? ' target="_blank" rel="noopener noreferrer"' : '';
+    return `<li><a href="${l.url}"${ext}>${esc(l.label)}</a> — ${esc(l.desc)}</li>`;
+  }).join('\n        ');
+  return `
+<section class="section sister-context u-pt-0" aria-labelledby="sister-context-h">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> Pattaya network</div>
+    <h2 id="sister-context-h" class="h-section">Go <span class="accent-cyan">deeper.</span></h2>
+    <ul class="venue-guide-link-list">
+        ${items}
+    </ul>
+  </div>
+</section>`;
+}
+
 function footer(meta) {
   return `<footer class="footer" role="contentinfo">
   <div class="footer-grid">
@@ -173,6 +191,7 @@ ${g.body}
     </article>
   </div>
 </section>
+${sisterContextBlock(g.sisterLinks)}
 </main>
 ${paNetwork()}
 ${marquee(BOTTOM_MARQUEE, true)}
@@ -187,4 +206,4 @@ ${footer(meta)}
   return html.length;
 }
 
-module.exports = { writeEditorialGuide, getBuildMeta, ROOT };
+module.exports = { writeEditorialGuide, getBuildMeta, ROOT, sisterContextBlock };
