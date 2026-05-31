@@ -48,7 +48,9 @@ const CUSTOM = {
   'naklua|muay-thai': 'Naklua is Fairtex and Sityodtong territory — resort camps and lineage gyms on North Pattaya Road. <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua &amp; Pratamnak guide</a>.',
   'pratamnak|fitness': 'Pratamnak Hill is Muscle Factory and SUN Fitness — bodybuilding culture with sea-view condos. <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Pratamnak gym guide</a>.',
   'pratamnak|racquet': 'Pratamnak is Pattaya\'s padel and pickleball hub — Play Padel, Pickleball Pattaya, Fitz Club tennis. <a href="/guides/padel-pickleball-pattaya/">Padel &amp; pickleball guide</a>.',
-  'east-pattaya|muay-thai': 'East Pattaya and Huai Yai hold Kombat Group and Sor Klinmee — rural camp settings away from Beach Road noise. <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Stay-and-train camps</a>.',
+  'east-pattaya|muay-thai': 'East Pattaya and Huai Yai hold Kombat Group and Sor Klinmee — rural camp settings away from Beach Road noise. <a href="/guides/best-gym-east-pattaya/">East Pattaya gym guide</a> · <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Stay-and-train camps</a>.',
+  'east-pattaya|fitness': 'Nong Prue and Khao Talo run Castra Gym and Sanit Sport Club\'s fitness wing — less tourist traffic than central chains. <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a>.',
+  'east-pattaya|crossfit': 'Pattaya\'s only CrossFit affiliate lives east at Jungle Gym Nong Prue. <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a>.',
 };
 
 function introText(areaSlug, catKey, count) {

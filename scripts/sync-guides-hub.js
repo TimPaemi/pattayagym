@@ -52,9 +52,11 @@ const SLUG_TITLES = {
   'is-muay-thai-safe-pattaya': 'Is Muay Thai safe?',
   'best-gym-central-pattaya': 'Best gym Central',
   'yoga-retreat-pattaya': 'Yoga retreat',
+  'best-gym-east-pattaya': 'Best gym East Pattaya',
 };
 
 const TLDR_ADD = [
+  { slug: 'best-gym-east-pattaya', html: '<li><strong>Training on the Darkside?</strong> → <a href="/guides/best-gym-east-pattaya/">Best gym in East Pattaya</a></li>' },
   { slug: 'is-muay-thai-safe-pattaya', html: '<li><strong>Worried about safety?</strong> → <a href="/guides/is-muay-thai-safe-pattaya/">Is Muay Thai safe in Pattaya?</a></li>' },
   { slug: 'best-gym-central-pattaya', html: '<li><strong>Staying central / Beach Road?</strong> → <a href="/guides/best-gym-central-pattaya/">Best gym in Central Pattaya</a></li>' },
   { slug: 'yoga-retreat-pattaya', html: '<li><strong>Yoga retreat week?</strong> → <a href="/guides/yoga-retreat-pattaya/">Yoga retreat in Pattaya</a></li>' },
@@ -68,6 +70,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'best-gym-east-pattaya', card: `<a href="/guides/best-gym-east-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Best gym in East Pattaya (Darkside)</h3><span class="cv-pill">Area</span></div>
+      <p>Kombat Group, Sor Klinmee, Sanit Mabprachan, Jungle Gym CrossFit.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'is-muay-thai-safe-pattaya', card: `<a href="/guides/is-muay-thai-safe-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Is Muay Thai safe in Pattaya?</h3><span class="cv-pill">Safety</span></div>
       <p>Injuries, red flags, women training alone, medical backup — honest answers.</p>

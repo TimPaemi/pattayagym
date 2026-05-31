@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 44, date: '2026-05-31', tag: 'v440',
+    title: 'East Pattaya (Darkside) area guide + deepen beginners/family/female ranked guides',
+    summary: 'Round 44 completes the area editorial set with East Pattaya — Kombat Group, Mabprachan, Nong Prue — and adds editorial depth blocks to three high-traffic ranked guides.',
+    bullets: [
+      'New: /guides/best-gym-east-pattaya/ — Huai Yai, Mabprachan, Darkside camps and lake sport.',
+      'deepen-round44-ranked.js — best-for-beginners, family-friendly, female-friendly guides.',
+      'East area hub, venue links, and area×category intros wired to new guide.',
+      '32 guides total. Asset 439 -> 440.'
+    ]
+  },
+  {
     n: 43, date: '2026-05-31', tag: 'v439',
     title: 'MT safety guide, Central Pattaya area hub, yoga retreat, network expansion',
     summary: 'Round 43 closes the last major area gap (Central Pattaya), answers the high-intent safety query, adds yoga retreat editorial, deepens 24h/cheapest ranked guides, and enriches 45 area×category pages.',

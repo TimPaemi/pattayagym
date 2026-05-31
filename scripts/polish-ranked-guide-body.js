@@ -25,6 +25,7 @@ const EDITORIAL = new Set([
   'is-muay-thai-safe-pattaya',
   'best-gym-central-pattaya',
   'yoga-retreat-pattaya',
+  'best-gym-east-pattaya',
 ]);
 
 function polish(html, isHub) {

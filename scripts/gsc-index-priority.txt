@@ -1,14 +1,13 @@
 # GSC URL Inspection queue — request indexing (~10/day max)
-# Paste into Search Console → URL Inspection → Request indexing
-# Updated Round 43 · v439
+# Updated Round 44 · v440
 
+https://pattaya-gym.com/guides/best-gym-east-pattaya/
+https://pattaya-gym.com/area/east-pattaya/muay-thai/
+https://pattaya-gym.com/area/east-pattaya/
+https://pattaya-gym.com/guides/best-for-beginners-pattaya/
+https://pattaya-gym.com/guides/family-friendly-pattaya/
+https://pattaya-gym.com/guides/female-friendly-gyms-pattaya/
+https://pattaya-gym.com/gyms/kombat-group-thailand/
 https://pattaya-gym.com/guides/is-muay-thai-safe-pattaya/
-https://pattaya-gym.com/guides/best-gym-central-pattaya/
-https://pattaya-gym.com/guides/yoga-retreat-pattaya/
-https://pattaya-gym.com/area/central-pattaya/muay-thai/
-https://pattaya-gym.com/area/central-pattaya/fitness/
-https://pattaya-gym.com/guides/muay-thai-pattaya-beginners/
-https://pattaya-gym.com/category/yoga/
-https://pattaya-gym.com/guides/24-hour-gyms-pattaya/
-https://pattaya-gym.com/guides/cheapest-gyms-pattaya/
+https://pattaya-gym.com/guides/muay-thai-camps-with-accommodation-pattaya/
 https://pattaya-gym.com/guides/

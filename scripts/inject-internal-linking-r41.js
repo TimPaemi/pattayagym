@@ -144,9 +144,9 @@ const AREA_HUB_STRIPS = {
     { slug: 'gym-day-pass-pattaya', tag: 'Day pass', title: 'Gym day pass', desc: 'Short-stay drop-ins' },
   ],
   'east-pattaya': [
-    { slug: 'best-muay-thai-pattaya', tag: 'Muay Thai', title: 'Best Muay Thai', desc: 'Kombat Group and east-side camps' },
+    { slug: 'best-gym-east-pattaya', tag: 'Area guide', title: 'Best gym East Pattaya', desc: 'Kombat Group, Mabprachan, Darkside' },
+    { slug: 'muay-thai-camps-with-accommodation-pattaya', tag: 'Stay & train', title: 'Camps with rooms', desc: 'All-inclusive east camps' },
     { slug: 'muay-thai-training-holiday-pattaya', tag: 'Holiday', title: 'Training holiday', desc: 'Rural camp stays' },
-    { slug: 'cheapest-gyms-pattaya', tag: 'Budget', title: 'Cheapest gyms', desc: 'Budget options city-wide' },
   ],
   sattahip: [
     { slug: 'best-gym-jomtien-pattaya', tag: 'Jomtien', title: 'Jomtien & Na Jomtien', desc: 'Nearest beach gyms' },
@@ -178,6 +178,13 @@ function areaCategoryStrip(areaSlug, catKey) {
         ...MT_FUNNEL.slice(0, 1),
       ];
     }
+    if (areaSlug === 'east-pattaya') {
+      return [
+        { slug: 'best-gym-east-pattaya', tag: 'East', title: 'East Pattaya / Darkside', desc: 'Kombat Group, Sor Klinmee' },
+        { slug: 'muay-thai-camps-with-accommodation-pattaya', tag: 'Stay & train', title: 'Camps with rooms', desc: 'Huai Yai packages' },
+        ...MT_FUNNEL.slice(0, 1),
+      ];
+    }
   }
   if (areaSlug === 'pratamnak' && (catKey === 'fitness' || catKey === 'racquet')) {
     return [
@@ -187,6 +194,9 @@ function areaCategoryStrip(areaSlug, catKey) {
   }
   if (areaSlug === 'jomtien' && CATEGORY_STRIPS[catKey]) {
     return [{ slug: 'best-gym-jomtien-pattaya', tag: 'Jomtien', title: 'Jomtien area guide', desc: 'All sports in Jomtien' }, ...base.slice(0, 2)];
+  }
+  if (areaSlug === 'east-pattaya' && CATEGORY_STRIPS[catKey]) {
+    return [{ slug: 'best-gym-east-pattaya', tag: 'East', title: 'East Pattaya guide', desc: 'Darkside camps & Mabprachan' }, ...base.slice(0, 2)];
   }
   return base.slice(0, 3);
 }
@@ -260,6 +270,7 @@ function venueGuideLinks(gym) {
   if (area === 'jomtien') links.push({ slug: 'best-gym-jomtien-pattaya', label: 'Best gym in Jomtien' });
   if (area === 'naklua' || area === 'pratamnak') links.push({ slug: 'best-gym-naklua-pratamnak-pattaya', label: 'Naklua & Pratamnak gyms' });
   if (area === 'central-pattaya') links.push({ slug: 'best-gym-central-pattaya', label: 'Best gym Central Pattaya' });
+  if (area === 'east-pattaya') links.push({ slug: 'best-gym-east-pattaya', label: 'Best gym East Pattaya' });
 
   const seen = new Set();
   const uniq = [];

@@ -27,15 +27,15 @@ const EDITORIAL = new Set([
   'is-muay-thai-safe-pattaya',
   'best-gym-central-pattaya',
   'yoga-retreat-pattaya',
+  'best-gym-east-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
 const FUNNEL_BY_GUIDE = {
   'best-muay-thai-pattaya': [
     { slug: 'is-muay-thai-safe-pattaya', title: 'Is Muay Thai safe?', desc: 'Injury risks, red flags, and medical backup in Pattaya.' },
+    { slug: 'best-gym-east-pattaya', title: 'East Pattaya camps', desc: 'Kombat Group, Sor Klinmee, Mabprachan.' },
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai for beginners', desc: 'First week, gear, costs, and red flags before you pick a camp.' },
-    { slug: 'train-muay-thai-pattaya-1-week-1-month', title: '1 week vs 1 month training', desc: 'Trip-length camps, budgets, and realistic goals.' },
-    { slug: 'muay-thai-training-holiday-pattaya', title: 'Training holiday', desc: 'Stay-and-train rhythm for 1–4 week visits.' },
   ],
   'best-for-beginners-pattaya': [
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai for beginners', desc: 'Dedicated beginner camps and pad-round expectations.' },
