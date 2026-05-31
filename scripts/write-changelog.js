@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 55, date: '2026-05-31', tag: 'v451',
+    title: 'Equestrian & polo editorial guide — all 15 categories covered',
+    summary: 'Round 55 adds the final category editorial guide — Horseshoe Point vs Thai Polo Club on the Mabprachan belt — completing dedicated guides for all 15 sport categories.',
+    bullets: [
+      'New: /guides/equestrian-pattaya/ — riding school, polo fields, booking, Mabprachan day trips.',
+      'Equestrian category strips, east area×category intro, golf/luxury funnel cards.',
+      'Homepage intent: Equestrian & polo + luxury sports clubs cards.',
+      '43 guides total. Asset 450 -> 451. All 15 categories now have editorial guides.'
+    ]
+  },
+  {
     n: 54, date: '2026-05-31', tag: 'v450',
     title: 'Running & cycling clubs editorial guide + social sport mesh',
     summary: 'Round 54 adds a dedicated running/cycling/clubs guide — hash house harriers, public routes, beach aerobics, cricket, rugby, lawn bowls — cross-linked to digital nomad and seniors ranked guides.',

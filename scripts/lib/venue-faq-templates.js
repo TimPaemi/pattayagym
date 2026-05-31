@@ -222,7 +222,7 @@ function faqsForVenue(g) {
   } else if (cat === 'equestrian') {
     out.push({
       q: `Do I need riding experience at ${name}?`,
-      a: `Many equestrian venues offer beginner trail rides and lessons — confirm horse assignment and helmet policy on booking.`,
+      a: `Many equestrian venues offer beginner trail rides and lessons — confirm horse assignment and helmet policy on booking. <a href="/guides/equestrian-pattaya/">Equestrian &amp; polo Pattaya</a>.`,
     });
     out.push({
       q: `How do I book ${name}?`,

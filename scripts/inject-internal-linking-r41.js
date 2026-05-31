@@ -119,9 +119,9 @@ const CATEGORY_STRIPS = {
     { slug: 'pattaya-gyms-childcare-family-pools', tag: 'Childcare', title: 'Childcare & pools', desc: 'Parent training windows' },
   ],
   equestrian: [
+    { slug: 'equestrian-pattaya', tag: 'Equestrian', title: 'Equestrian & polo', desc: 'Horseshoe Point, Thai Polo Club' },
     { slug: 'luxury-sports-clubs-pattaya', tag: 'Luxury', title: 'Luxury sports clubs', desc: 'Premium sport venues' },
-    { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly', desc: 'Kids and parents' },
-    { slug: 'bangkok-day-trip-sport-pattaya', tag: 'Day trip', title: 'Bangkok day trips', desc: 'Sport outside Pattaya' },
+    { slug: 'best-golf-courses-pattaya', tag: 'Golf', title: 'Best golf courses', desc: 'Pair polo with a round' },
   ],
   adventure: [
     { slug: 'adventure-pattaya', tag: 'Adventure', title: 'Adventure in Pattaya', desc: 'Zipline, skydive, karting, ATV' },
@@ -308,6 +308,10 @@ function venueGuideLinks(gym) {
     links.push({ slug: 'running-cycling-clubs-pattaya', label: 'Running & cycling clubs' });
     links.push({ slug: 'pattaya-digital-nomad-fitness', label: 'Digital nomad fitness' });
     links.push({ slug: 'pattaya-seniors-low-impact-sport', label: 'Seniors low-impact sport' });
+  } else if (cat === 'equestrian') {
+    links.push({ slug: 'equestrian-pattaya', label: 'Equestrian & polo Pattaya' });
+    links.push({ slug: 'luxury-sports-clubs-pattaya', label: 'Luxury sports clubs' });
+    links.push({ slug: 'best-golf-courses-pattaya', label: 'Best golf courses' });
   } else {
     links.push({ slug: 'best-for-beginners-pattaya', label: 'Best for beginners' });
   }
@@ -377,9 +381,9 @@ const FUNNEL_R41 = {
     { slug: 'best-gym-jomtien-pattaya', title: 'Jomtien base', desc: 'Stay south, taxi to Bali Hai pier.' },
   ],
   'best-golf-courses-pattaya': [
+    { slug: 'equestrian-pattaya', title: 'Equestrian & polo', desc: 'Mabprachan horse estates near golf belt.' },
     { slug: 'luxury-sports-clubs-pattaya', title: 'Luxury sports clubs', desc: 'Resort golf and tennis tier.' },
     { slug: 'bangkok-day-trip-sport-pattaya', title: 'Bangkok day trips', desc: 'Courses and stadiums near BKK.' },
-    { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Budget gym between rounds.' },
   ],
   'family-friendly-pattaya': [
     { slug: 'kids-youth-sport-pattaya', title: 'Kids & youth sport', desc: 'Football academies, trampoline, MT for kids.' },
@@ -402,9 +406,9 @@ const FUNNEL_R41 = {
     { slug: 'best-muay-thai-pattaya', title: 'Best Muay Thai', desc: 'Ranked camp list.' },
   ],
   'luxury-sports-clubs-pattaya': [
+    { slug: 'equestrian-pattaya', title: 'Equestrian & polo', desc: 'Horseshoe Point and Thai Polo Club.' },
     { slug: 'tennis-badminton-pattaya', title: 'Tennis & badminton', desc: 'Fitz Club and resort courts.' },
     { slug: 'best-golf-courses-pattaya', title: 'Best golf courses', desc: 'Championship Pattaya golf.' },
-    { slug: 'best-gym-naklua-pratamnak-pattaya', title: 'Pratamnak luxury cluster', desc: 'Fitz Club and hilltop gyms.' },
   ],
   'pattaya-solo-female-fitness': [
     { slug: 'female-friendly-gyms-pattaya', title: 'Female-friendly gyms', desc: 'Ranked women-friendly venues.' },
@@ -442,7 +446,7 @@ const EDITORIAL = new Set([
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
   'is-muay-thai-safe-pattaya', 'best-gym-central-pattaya', 'yoga-retreat-pattaya',
-  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya',   'climbing-pattaya', 'adventure-pattaya', 'kids-youth-sport-pattaya', 'diving-watersports-pattaya', 'running-cycling-clubs-pattaya',
+  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya',   'climbing-pattaya', 'adventure-pattaya', 'kids-youth-sport-pattaya', 'diving-watersports-pattaya', 'running-cycling-clubs-pattaya', 'equestrian-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

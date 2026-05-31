@@ -79,6 +79,7 @@ const CUSTOM = {
   'pratamnak|clubs': 'Big Buddha Hill stair climb and Royal Varuna regatta season — cardio landmarks on the hill. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a>.',
   'east-pattaya|clubs': 'Cycling clubs meet east and Mabprachan belt on weekend mornings — pair with Darkside gym days. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
   'sattahip|clubs': 'Khao Chi Chan walking site and Pattaya Triathlon south corridor — free routes and race events. <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs</a> · <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.',
+  'east-pattaya|equestrian': 'Horseshoe Point and Thai Polo Club sit on the Mabprachan belt — Asia-scale polo fields and 1,500-acre riding school east of Pattaya. <a href="/guides/equestrian-pattaya/">Equestrian &amp; polo guide</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
 };
 
 function introText(areaSlug, catKey, count) {

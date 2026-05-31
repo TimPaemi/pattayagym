@@ -36,6 +36,7 @@ const EDITORIAL = new Set([
   'kids-youth-sport-pattaya',
   'diving-watersports-pattaya',
   'running-cycling-clubs-pattaya',
+  'equestrian-pattaya',
 ]);
 
 function polish(html, isHub) {

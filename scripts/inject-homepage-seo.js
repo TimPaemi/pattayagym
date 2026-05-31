@@ -136,6 +136,16 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Camps with accommodation</span>
         <span class="intent-card-desc">All-inclusive packages on-site</span>
       </a>
+      <a href="/guides/luxury-sports-clubs-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Luxury</span>
+        <span class="intent-card-title">Luxury sports clubs</span>
+        <span class="intent-card-desc">Fitz Club, resort golf, premium tier</span>
+      </a>
+      <a href="/guides/equestrian-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Equestrian</span>
+        <span class="intent-card-title">Equestrian &amp; polo</span>
+        <span class="intent-card-desc">Horseshoe Point, Thai Polo Club</span>
+      </a>
       <a href="/guides/pattaya-digital-nomad-fitness/" class="intent-card">
         <span class="intent-card-tag">// Nomad</span>
         <span class="intent-card-title">Digital nomad fitness</span>

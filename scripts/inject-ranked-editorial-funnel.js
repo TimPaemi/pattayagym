@@ -38,6 +38,7 @@ const EDITORIAL = new Set([
   'kids-youth-sport-pattaya',
   'diving-watersports-pattaya',
   'running-cycling-clubs-pattaya',
+  'equestrian-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
