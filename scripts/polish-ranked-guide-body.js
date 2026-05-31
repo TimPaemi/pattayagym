@@ -33,6 +33,7 @@ const EDITORIAL = new Set([
   'tennis-badminton-pattaya',
   'climbing-pattaya',
   'adventure-pattaya',
+  'kids-youth-sport-pattaya',
 ]);
 
 function polish(html, isHub) {

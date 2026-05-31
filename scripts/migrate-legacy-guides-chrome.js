@@ -45,6 +45,7 @@ const EDITORIAL_SLUGS = new Set([
   'tennis-badminton-pattaya',
   'climbing-pattaya',
   'adventure-pattaya',
+  'kids-youth-sport-pattaya',
 ]);
 
 const buildSrc = fs.readFileSync(path.join(ROOT, 'build-v2.js'), 'utf8');

@@ -60,9 +60,11 @@ const SLUG_TITLES = {
   'tennis-badminton-pattaya': 'Tennis & badminton',
   'climbing-pattaya': 'Climbing Pattaya',
   'adventure-pattaya': 'Adventure Pattaya',
+  'kids-youth-sport-pattaya': 'Kids & youth sport',
 };
 
 const TLDR_ADD = [
+  { slug: 'kids-youth-sport-pattaya', html: '<li><strong>Sport for kids?</strong> → <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport in Pattaya</a></li>' },
   { slug: 'adventure-pattaya', html: '<li><strong>Zipline or skydive?</strong> → <a href="/guides/adventure-pattaya/">Adventure in Pattaya</a></li>' },
   { slug: 'climbing-pattaya', html: '<li><strong>Indoor climbing?</strong> → <a href="/guides/climbing-pattaya/">Climbing in Pattaya</a></li>' },
   { slug: 'tennis-badminton-pattaya', html: '<li><strong>Tennis or badminton?</strong> → <a href="/guides/tennis-badminton-pattaya/">Tennis &amp; badminton in Pattaya</a></li>' },
@@ -84,6 +86,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'kids-youth-sport-pattaya', card: `<a href="/guides/kids-youth-sport-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Kids &amp; youth sport in Pattaya</h3><span class="cv-pill">Kids</span></div>
+      <p>AF Academy football from age 3, BOUNCE trampoline, Harbor Mall stack, Rusich, FAST PRO.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'adventure-pattaya', card: `<a href="/guides/adventure-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Adventure in Pattaya</h3><span class="cv-pill">Adventure</span></div>
       <p>Skydive, Tarzan zipline, karting, ATV, tower jump, shooting — all 12 operators mapped.</p>

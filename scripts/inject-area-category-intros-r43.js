@@ -66,6 +66,9 @@ const CUSTOM = {
   'jomtien|adventure': 'Pattaya Park Tower Jump and EasyKart Thepprasit are the Jomtien-border adventure belt — tower zip line plus outdoor karting until late. <a href="/guides/adventure-pattaya/">Adventure guide</a>.',
   'naklua|adventure': 'Pattaya Bike and Boat Tours runs quiet countryside cycling from Naklua — the non-adrenaline adventure pick. <a href="/guides/adventure-pattaya/">Adventure guide</a>.',
   'east-pattaya|adventure': 'ATV tours east of Mabprachan and Pattaya Shooting Park on Soi Khao Mai Kaew — Darkside mud and ranges. <a href="/guides/adventure-pattaya/">Adventure guide</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
+  'central-pattaya|kids-youth': 'Harbor Mall stacks BOUNCE trampoline, JumpZ, and Deep Climbing on upper floors — Pattaya\'s densest kids indoor belt. <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a> · <a href="/guides/climbing-pattaya/">Climbing</a>.',
+  'jomtien|kids-youth': 'AF Academy and FAST PRO run football programmes across Jomtien locations — after-school rhythm for relocating families. <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a>.',
+  'naklua|kids-youth': 'AF Academy trains from Naklua north through multi-location sessions — youngest football intake from age 3 in Pattaya. <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a>.',
 };
 
 function introText(areaSlug, catKey, count) {

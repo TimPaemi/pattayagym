@@ -35,6 +35,7 @@ const EDITORIAL = new Set([
   'tennis-badminton-pattaya',
   'climbing-pattaya',
   'adventure-pattaya',
+  'kids-youth-sport-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
@@ -70,8 +71,13 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Price table — monthly and walk-in tiers.' },
   ],
   'family-friendly-pattaya': [
+    { slug: 'kids-youth-sport-pattaya', title: 'Kids & youth sport', desc: 'Football academies, trampoline, MT for kids.' },
     { slug: 'adventure-pattaya', title: 'Adventure in Pattaya', desc: 'Zipline, karting, skydive, family days.' },
     { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Deep Harbor Mall and Bean Cow family walls.' },
+  ],
+  'pattaya-gyms-childcare-family-pools': [
+    { slug: 'kids-youth-sport-pattaya', title: 'Kids & youth sport', desc: 'Football, trampoline, Harbor Mall stack.' },
+    { slug: 'family-friendly-pattaya', title: 'Family-friendly', desc: 'Sport holidays with kids.' },
     { slug: 'swimming-pools-pattaya', title: 'Swimming & pools', desc: 'Hotel pools, water parks, lap swim.' },
   ],
   'best-dive-operators-pattaya': [

@@ -183,7 +183,7 @@ function faqsForVenue(g) {
   } else if (cat === 'kids-youth') {
     out.push({
       q: `What age groups does ${name} accept?`,
-      a: `Confirm minimum age and supervision rules directly — youth academies differ on parent presence. <a href="/guides/family-friendly-pattaya/">Family-friendly Pattaya</a>.`,
+      a: `Confirm minimum age and supervision rules directly — youth academies differ on parent presence. <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a> · <a href="/guides/family-friendly-pattaya/">Family-friendly</a>.`,
     });
     out.push({
       q: `Can parents train while kids are at ${name}?`,

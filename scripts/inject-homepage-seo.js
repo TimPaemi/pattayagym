@@ -106,6 +106,11 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Adventure in Pattaya</span>
         <span class="intent-card-desc">Skydive, zipline, karting, ATV, shooting</span>
       </a>
+      <a href="/guides/kids-youth-sport-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Kids</span>
+        <span class="intent-card-title">Kids &amp; youth sport</span>
+        <span class="intent-card-desc">Football academies, trampoline, MT for kids</span>
+      </a>
       <a href="/guides/pattaya-vs-phuket-muay-thai-training/" class="intent-card">
         <span class="intent-card-tag">// Compare cities</span>
         <span class="intent-card-title">Pattaya vs Phuket training</span>

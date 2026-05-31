@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 52, date: '2026-05-31', tag: 'v448',
+    title: 'Kids & youth sport editorial guide + family mesh',
+    summary: 'Round 52 adds a dedicated kids/youth sport guide — football academies from age 3, Harbor Mall trampoline stack, Muay Thai for kids cross-links — completing the family editorial cluster.',
+    bullets: [
+      'New: /guides/kids-youth-sport-pattaya/ — AF Academy, FAST PRO, Rusich, BOUNCE, JumpZ.',
+      'Kids-youth category strips, Harbor Mall area intros, childcare funnel cards.',
+      'Homepage intent: Kids & youth sport card alongside adventure and climbing.',
+      '40 guides total. Asset 447 -> 448.'
+    ]
+  },
+  {
     n: 51, date: '2026-05-31', tag: 'v447',
     title: 'Adventure editorial guide + zipline/skydive mesh',
     summary: 'Round 51 adds a dedicated adventure guide covering all 12 operators — skydive, zipline, karting, ATV, tower jump, shooting — with category cross-links, area intros, and homepage intent.',
