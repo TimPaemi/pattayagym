@@ -23,7 +23,7 @@ module.exports = `
 
 <ul>
 <li><strong>24-hour chains</strong> — <a href="/gyms/jetts-fitness-pattaya/">Jetts</a>, <a href="/gyms/anytime-fitness-pattaya/">Anytime</a> for racks, rowers, and dumbbells. <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms guide</a>.</li>
-<li><strong>Iron gyms</strong> — <a href="/gyms/muscle-factory/">Muscle Factory</a> (Pratamnak), <a href="/gyms/tonys-gym/">Tony's Gym</a> (central) for pure strength blocks.</li>
+<li><strong>Iron gyms</strong> — <a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a> (Pratamnak), <a href="/gyms/tonys-gym/">Tony's Gym</a> (central) for pure strength blocks.</li>
 <li><strong>Combat S&amp;C</strong> — <a href="/gyms/venum-training-camp/">Venum</a>, <a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> run conditioning classes. <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA guide</a>.</li>
 <li><strong>Hotel gym day pass</strong> — <a href="/guides/luxury-sports-clubs-pattaya/">luxury sports clubs</a> for Technogym + pool recovery.</li>
 </ul>

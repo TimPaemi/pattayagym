@@ -18,7 +18,7 @@ const TOP_VENUE_IDS = new Set([
   'fairtex-pattaya', 'venum-training-camp', 'fitz-club', 'anytime-fitness-pattaya',
   'mermaids-dive', 'ramayana-water-park',
   'kombat-group-thailand', 'wko-muay-thai', 'battle-conquer-gym', 'sityodtong-pattaya',
-  'jetts-fitness-pattaya', 'muscle-factory', 'alfa-bjj-pattaya', 'rage-fight-academy',
+  'jetts-fitness-pattaya', 'muscle-factory-pattaya', 'alfa-bjj-pattaya', 'rage-fight-academy',
   'crossfit-pattaya', 'hilton-pattaya-fitness', 'andaz-pattaya-jomtien',
   'ocean-marina-jomtien', 'phoenix-gold-golf', 'siam-country-club',
   'real-divers-pattaya', 'play-padel-pattaya', 'sor-klinmee', 'tonys-gym', 'platinum-fitness',

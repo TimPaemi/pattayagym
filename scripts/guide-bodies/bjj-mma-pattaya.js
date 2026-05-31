@@ -35,7 +35,7 @@ module.exports = `
 
 <p><a href="/gyms/crossfit-pattaya/">CrossFit Pattaya @ Jungle Gym</a> (Nong Prue) is Pattaya's only CrossFit affiliate — useful S&amp;C block between camp sessions. Also runs MMA and archery on the same site. East-side base: <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a>.</p>
 
-<p>Commercial iron for off-camp days: <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> · <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/gyms/muscle-factory/">Muscle Factory</a> (Pratamnak).</p>
+<p>Commercial iron for off-camp days: <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> · <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a> (Pratamnak).</p>
 
 <h2>Where to stay for BJJ/MMA</h2>
 
