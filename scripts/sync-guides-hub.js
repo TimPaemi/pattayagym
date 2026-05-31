@@ -56,9 +56,11 @@ const SLUG_TITLES = {
   'best-gym-sattahip-pattaya': 'Na Jomtien & Sattahip',
   'bjj-mma-pattaya': 'BJJ & MMA',
   'crossfit-pattaya': 'CrossFit Pattaya',
+  'swimming-pools-pattaya': 'Swimming & pools',
 };
 
 const TLDR_ADD = [
+  { slug: 'swimming-pools-pattaya', html: '<li><strong>Pool day or lap swim?</strong> → <a href="/guides/swimming-pools-pattaya/">Swimming &amp; pools in Pattaya</a></li>' },
   { slug: 'crossfit-pattaya', html: '<li><strong>CrossFit WODs?</strong> → <a href="/guides/crossfit-pattaya/">CrossFit in Pattaya</a></li>' },
   { slug: 'bjj-mma-pattaya', html: '<li><strong>BJJ or MMA?</strong> → <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA in Pattaya</a></li>' },
   { slug: 'best-gym-sattahip-pattaya', html: '<li><strong>Staying south / U-Tapao?</strong> → <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien &amp; Sattahip gyms</a></li>' },
@@ -76,6 +78,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'swimming-pools-pattaya', card: `<a href="/guides/swimming-pools-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Swimming &amp; pools in Pattaya</h3><span class="cv-pill">Swim</span></div>
+      <p>Hotel day-pass pools, water parks, beach laps, swim schools — all swim types mapped.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'crossfit-pattaya', card: `<a href="/guides/crossfit-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>CrossFit in Pattaya</h3><span class="cv-pill">CrossFit</span></div>
       <p>Jungle Gym affiliate on the Darkside — plus chain-gym and combat S&amp;C alternatives.</p>

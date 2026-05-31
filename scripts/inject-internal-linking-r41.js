@@ -94,9 +94,9 @@ const CATEGORY_STRIPS = {
     { slug: 'best-gym-naklua-pratamnak-pattaya', tag: 'Pratamnak', title: 'Pratamnak racquet hub', desc: 'Padel and pickleball on the hill' },
   ],
   swimming: [
+    { slug: 'swimming-pools-pattaya', tag: 'Swim', title: 'Swimming & pools', desc: 'Hotel pools, water parks, lap swim' },
     { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly', desc: 'Pools and beaches for kids' },
     { slug: 'pattaya-gyms-childcare-family-pools', tag: 'Childcare', title: 'Childcare & family pools', desc: 'Train while kids swim' },
-    { slug: 'best-gym-jomtien-pattaya', tag: 'Jomtien', title: 'Jomtien pools & gyms', desc: 'Beach-side swim options' },
   ],
   watersports: [
     { slug: 'best-dive-operators-pattaya', tag: 'Dive', title: 'Best dive operators', desc: 'PADI shops ranked' },
@@ -278,6 +278,9 @@ function venueGuideLinks(gym) {
     links.push({ slug: 'best-gym-naklua-pratamnak-pattaya', label: 'Pratamnak padel & pickleball' });
     links.push({ slug: 'luxury-sports-clubs-pattaya', label: 'Luxury racquet clubs' });
   } else if (cat === 'swimming' || cat === 'watersports') {
+    if (cat === 'swimming') {
+      links.push({ slug: 'swimming-pools-pattaya', label: 'Swimming & pools guide' });
+    }
     links.push({ slug: 'best-dive-operators-pattaya', label: 'Best dive operators' });
     links.push({ slug: 'family-friendly-pattaya', label: 'Family-friendly sport' });
   } else if (cat === 'kids-youth') {
@@ -412,7 +415,7 @@ const EDITORIAL = new Set([
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
   'is-muay-thai-safe-pattaya', 'best-gym-central-pattaya', 'yoga-retreat-pattaya',
-  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya', 'crossfit-pattaya',
+  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya', 'crossfit-pattaya', 'swimming-pools-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

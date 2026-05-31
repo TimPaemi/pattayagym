@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * inject-venue-faq-r47.js — FAQ blocks + FAQPage schema on top venue pages.
+ * inject-venue-faq-r47.js — FAQ blocks + FAQPage schema on venue pages.
+ * Round 47: top 25 venues. Round 48+: all 158 venues.
  * Run after build-v2.js + inject-internal-linking-r41.js. Idempotent: venue-faq-r47
  */
 
@@ -10,19 +11,8 @@ const { GYMS } = require('../data.js');
 const { faqsForVenue, faqHtml, faqJsonLd } = require('./lib/venue-faq-templates');
 
 const ROOT = path.resolve(__dirname, '..');
-const MARKER = 'venue-faq-r47';
-const SITE = 'https://pattaya-gym.com';
 
-/** Featured + high-traffic guide anchors */
-const TOP_VENUE_IDS = new Set([
-  'fairtex-pattaya', 'venum-training-camp', 'fitz-club', 'anytime-fitness-pattaya',
-  'mermaids-dive', 'ramayana-water-park',
-  'kombat-group-thailand', 'wko-muay-thai', 'battle-conquer-gym', 'sityodtong-pattaya',
-  'jetts-fitness-pattaya', 'muscle-factory-pattaya', 'alfa-bjj-pattaya', 'rage-fight-academy',
-  'crossfit-pattaya', 'hilton-pattaya-fitness', 'andaz-pattaya-jomtien',
-  'ocean-marina-jomtien', 'phoenix-gold-golf', 'siam-country-club',
-  'real-divers-pattaya', 'play-padel-pattaya', 'sor-klinmee', 'tonys-gym', 'platinum-fitness',
-]);
+const MARKER = 'venue-faq-r47';
 
 function sectionBlock(faqs) {
   return `
@@ -35,11 +25,42 @@ function sectionBlock(faqs) {
 </section>`;
 }
 
+function norm(s) {
+  return s.replace(/\r\n/g, '\n');
+}
+
+function injectAtAnchor(html, block, ldScript) {
+  const htmlNorm = norm(html);
+  const anchors = [
+    '<section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">',
+    '<section class="section u-pt-0">\n  <div class="wrap">\n    <div class="eyebrow"><span class="num">★</span> Social</div>',
+    '<section class="section">\n  <div class="wrap">\n    <div class="eyebrow"><span class="num">★</span> Contact channels</div>',
+    '<section class="section">\n  <div class="wrap">\n    <div class="eyebrow"><span class="num">★</span> Same sport</div>',
+  ];
+  for (const a of anchors) {
+    const idx = htmlNorm.indexOf(norm(a));
+    if (idx >= 0) {
+      let out = html.slice(0, idx) + block + '\n' + html.slice(idx);
+      if (!out.includes('"@type":"FAQPage"')) {
+        out = out.replace('</head>', `${ldScript}\n</head>`);
+      }
+      return out;
+    }
+  }
+  const mainEnd = html.lastIndexOf('</main>');
+  if (mainEnd > 0) {
+    let out = html.slice(0, mainEnd) + block + '\n' + html.slice(mainEnd);
+    if (!out.includes('"@type":"FAQPage"')) {
+      out = out.replace('</head>', `${ldScript}\n</head>`);
+    }
+    return out;
+  }
+  return null;
+}
+
 function inject(html, g, faqs) {
-  const url = `${SITE}/gyms/${g.id}/`;
   const block = sectionBlock(faqs).trim();
-  const ld = faqJsonLd(g, faqs, url);
-  const ldScript = `<script type="application/ld+json">${JSON.stringify(ld)}</script>`;
+  const ldScript = `<script type="application/ld+json">${JSON.stringify(faqJsonLd(g, faqs))}</script>`;
 
   if (html.includes(MARKER)) {
     html = html.replace(
@@ -47,8 +68,8 @@ function inject(html, g, faqs) {
       block
     );
     html = html.replace(
-      /<script type="application\/ld\+json">\{"@context":"https:\/\/schema\.org","@type":"FAQPage"[\s\S]*?<\/script>/,
-      ldScript
+      /<script type="application\/ld\+json">\{"@context":"https:\/\/schema\.org","@type":"FAQPage"[\s\S]*?<\/script>\s*/g,
+      ldScript + '\n'
     );
     if (!html.includes('"@type":"FAQPage"')) {
       html = html.replace('</head>', `${ldScript}\n</head>`);
@@ -56,48 +77,29 @@ function inject(html, g, faqs) {
     return html;
   }
 
-  const anchors = [
-    '<section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">',
-    '<section class="section">\n  <div class="wrap">\n    <div class="eyebrow"><span class="num">★</span> Contact channels</div>',
-    '<section class="section">\r\n  <div class="wrap">\r\n    <div class="eyebrow"><span class="num">★</span> Contact channels</div>',
-    '<section class="section">\n  <div class="wrap">\n    <div class="eyebrow"><span class="num">★</span> Same sport</div>',
-  ];
-  for (const a of anchors) {
-    if (html.includes(a)) {
-      html = html.replace(a, block + '\n' + a);
-      html = html.replace('</head>', `${ldScript}\n</head>`);
-      return html;
-    }
-  }
-  const mainEnd = html.lastIndexOf('</main>');
-  if (mainEnd > 0) {
-    html = html.slice(0, mainEnd) + block + '\n' + html.slice(mainEnd);
-    html = html.replace('</head>', `${ldScript}\n</head>`);
-    return html;
-  }
-  return null;
+  return injectAtAnchor(html, block, ldScript);
 }
 
-const gymById = Object.fromEntries(GYMS.map(g => [g.id, g]));
 let n = 0;
+let skipped = 0;
 
-for (const id of TOP_VENUE_IDS) {
-  const g = gymById[id];
-  if (!g) {
-    console.warn(`  [skip] unknown venue id: ${id}`);
+for (const g of GYMS) {
+  const fp = path.join(ROOT, 'gyms', g.id, 'index.html');
+  if (!fs.existsSync(fp)) {
+    skipped++;
     continue;
   }
-  const fp = path.join(ROOT, 'gyms', id, 'index.html');
-  if (!fs.existsSync(fp)) continue;
   const faqs = faqsForVenue(g);
-  if (faqs.length < 2) continue;
+  if (faqs.length < 2) {
+    skipped++;
+    continue;
+  }
   let html = fs.readFileSync(fp, 'utf8');
   const next = inject(html, g, faqs);
   if (next) {
     fs.writeFileSync(fp, next, 'utf8');
     n++;
-    console.log(`  /gyms/${id}/ FAQ added`);
   }
 }
 
-console.log(`Venue FAQ (R47): ${n} top venues.`);
+console.log(`Venue FAQ: ${n} venues (${skipped} skipped).`);

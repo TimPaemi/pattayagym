@@ -57,7 +57,7 @@ const CUSTOM = {
   'central-pattaya|bjj': 'ALFA BJJ Pattaya is the city\'s first dedicated BJJ academy — Gi and No-Gi on Soi Ko Pai. <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA guide</a>.',
   'sattahip|fitness': 'Na Jomtien resort strip — Andaz, Marriott, Renaissance, Mövenpick — 24-hour hotel fitness and spa recovery. <a href="/guides/best-gym-sattahip-pattaya/">Sattahip &amp; Na Jomtien guide</a>.',
   'sattahip|watersports': 'Ocean Marina is Southeast Asia\'s largest yacht hub; SailBreeze IYT school on-site. <a href="/guides/best-gym-sattahip-pattaya/">South Pattaya sport guide</a>.',
-  'sattahip|swimming': 'Ramayana and Columbia Pictures Aquaverse water parks — Thailand\'s largest family swim days south of Jomtien. <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien guide</a>.',
+  'sattahip|swimming': 'Ramayana and Columbia Pictures Aquaverse water parks — Thailand\'s largest family swim days south of Jomtien. <a href="/guides/swimming-pools-pattaya/">Swimming &amp; pools guide</a>.',
   'sattahip|golf': 'Chee Chan Golf and Bang Saray courses sit on the Sattahip corridor — Buddha Mountain views. <a href="/guides/best-golf-courses-pattaya/">Best golf courses</a>.',
 };
 

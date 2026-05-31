@@ -29,6 +29,7 @@ const EDITORIAL = new Set([
   'best-gym-sattahip-pattaya',
   'bjj-mma-pattaya',
   'crossfit-pattaya',
+  'swimming-pools-pattaya',
 ]);
 
 function polish(html, isHub) {

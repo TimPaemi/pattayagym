@@ -31,6 +31,7 @@ const EDITORIAL = new Set([
   'best-gym-sattahip-pattaya',
   'bjj-mma-pattaya',
   'crossfit-pattaya',
+  'swimming-pools-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
@@ -66,9 +67,9 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Price table — monthly and walk-in tiers.' },
   ],
   'family-friendly-pattaya': [
+    { slug: 'swimming-pools-pattaya', title: 'Swimming & pools', desc: 'Hotel pools, water parks, lap swim.' },
     { slug: 'best-gym-sattahip-pattaya', title: 'Na Jomtien & Sattahip', desc: 'Water parks, resort pools, marina family days.' },
     { slug: 'pattaya-gyms-childcare-family-pools', title: 'Childcare & pools', desc: 'Train while kids swim.' },
-    { slug: 'best-gym-jomtien-pattaya', title: 'Jomtien family gyms', desc: 'Beach-side options for parents.' },
   ],
   'best-dive-operators-pattaya': [
     { slug: 'best-gym-sattahip-pattaya', title: 'South pier corridor', desc: 'Na Jomtien marina and dive launch points.' },

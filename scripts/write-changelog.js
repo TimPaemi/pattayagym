@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 48, date: '2026-05-31', tag: 'v444',
+    title: 'Swimming & pools guide + venue FAQ on all 158 venues',
+    summary: 'Round 48 adds a swimming/pools editorial guide and rolls programmatic FAQ blocks with FAQPage schema to every venue page — with improved category templates and plain-text schema encoding.',
+    bullets: [
+      'New: /guides/swimming-pools-pattaya/ — hotel pools, water parks, lap swim, family days.',
+      'inject-venue-faq-r47.js now covers all 158 venues (was 25 flagship pages).',
+      'Enhanced FAQ templates for kids-youth, climbing, adventure, equestrian, clubs, swimming.',
+      '36 guides total. Asset 443 -> 444.'
+    ]
+  },
+  {
     n: 47, date: '2026-05-31', tag: 'v443',
     title: 'CrossFit guide, venue FAQ on 25 top venues, homepage BJJ/CrossFit intents',
     summary: 'Round 47 adds CrossFit editorial, programmatic FAQ blocks with FAQPage schema on 25 flagship venue pages, homepage intent cards for BJJ/MMA and CrossFit, and CRLF-safe venue guide injection.',
