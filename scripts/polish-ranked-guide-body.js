@@ -22,6 +22,9 @@ const EDITORIAL = new Set([
   'padel-pickleball-pattaya',
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
+  'is-muay-thai-safe-pattaya',
+  'best-gym-central-pattaya',
+  'yoga-retreat-pattaya',
 ]);
 
 function polish(html, isHub) {

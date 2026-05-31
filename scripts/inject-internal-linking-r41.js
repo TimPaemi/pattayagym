@@ -49,6 +49,7 @@ function stripSection(cards, title = 'Planning your trip?') {
 }
 
 const MT_FUNNEL = [
+  { slug: 'is-muay-thai-safe-pattaya', tag: 'Safety', title: 'Is Muay Thai safe?', desc: 'Injuries, red flags, medical' },
   { slug: 'muay-thai-pattaya-beginners', tag: 'Beginner', title: 'Muay Thai for beginners', desc: 'First week, gear, costs, red flags' },
   { slug: 'train-muay-thai-pattaya-1-week-1-month', tag: 'Trip length', title: '1 week vs 1 month', desc: 'Camps, budgets, schedules' },
   { slug: 'muay-thai-training-holiday-pattaya', tag: 'Holiday', title: 'Training holiday', desc: 'Stay-and-train 1–4 weeks' },
@@ -70,9 +71,9 @@ const CATEGORY_STRIPS = {
     { slug: 'best-for-beginners-pattaya', tag: 'Beginner', title: 'Best for beginners', desc: 'First-time friendly gyms' },
   ],
   yoga: [
+    { slug: 'yoga-retreat-pattaya', tag: 'Retreat', title: 'Yoga retreat Pattaya', desc: 'Studios and wellness weeks' },
     { slug: 'pattaya-digital-nomad-fitness', tag: 'Nomad', title: 'Digital nomad fitness', desc: 'Work + train rhythm' },
     { slug: 'thai-gym-terms-pattaya', tag: 'Thai', title: 'Thai gym terms', desc: 'Phrase cheat sheet' },
-    { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly sport', desc: 'Kids and parents' },
   ],
   golf: [
     { slug: 'best-golf-courses-pattaya', tag: 'Golf', title: 'Best golf courses', desc: 'Ranked Pattaya courses' },
@@ -138,9 +139,9 @@ const AREA_HUB_STRIPS = {
     { slug: 'cheapest-gyms-pattaya', tag: 'Budget', title: 'Cheapest gyms', desc: 'Price table' },
   ],
   'central-pattaya': [
-    { slug: 'best-gyms-near-walking-street-pattaya', tag: 'Central', title: 'Near Walking Street', desc: 'Central Pattaya gyms' },
+    { slug: 'best-gym-central-pattaya', tag: 'Area guide', title: 'Best gym Central Pattaya', desc: 'WKO, 24h chains, Tony\'s' },
+    { slug: 'best-gyms-near-walking-street-pattaya', tag: 'Central', title: 'Near Walking Street', desc: 'Beach Road gyms' },
     { slug: 'gym-day-pass-pattaya', tag: 'Day pass', title: 'Gym day pass', desc: 'Short-stay drop-ins' },
-    { slug: 'cheapest-gyms-pattaya', tag: 'Budget', title: 'Cheapest gyms', desc: 'Budget comparison' },
   ],
   'east-pattaya': [
     { slug: 'best-muay-thai-pattaya', tag: 'Muay Thai', title: 'Best Muay Thai', desc: 'Kombat Group and east-side camps' },
@@ -172,8 +173,8 @@ function areaCategoryStrip(areaSlug, catKey) {
     }
     if (areaSlug === 'central-pattaya') {
       return [
+        { slug: 'best-gym-central-pattaya', tag: 'Central', title: 'Central Pattaya gyms', desc: 'WKO, Battle Conquer, 24h' },
         { slug: 'best-muay-thai-pattaya', tag: 'Ranked', title: 'Best Muay Thai', desc: 'Top camps ranked' },
-        { slug: 'best-gyms-near-walking-street-pattaya', tag: 'Central', title: 'Near Walking Street', desc: 'Central zone gyms' },
         ...MT_FUNNEL.slice(0, 1),
       ];
     }
@@ -219,6 +220,7 @@ function venueGuideLinks(gym) {
   const tags = (gym.tags || []).join(' ').toLowerCase();
 
   if (cat === 'muay-thai' || cat === 'mma' || cat === 'bjj') {
+    links.push({ slug: 'is-muay-thai-safe-pattaya', label: 'Is Muay Thai safe?' });
     links.push({ slug: 'muay-thai-pattaya-beginners', label: 'Muay Thai for beginners' });
     links.push({ slug: 'muay-thai-training-holiday-pattaya', label: 'Training holiday guide' });
     links.push({ slug: 'training-thailand-visa-pattaya', label: 'Training & visa guide' });
@@ -238,6 +240,7 @@ function venueGuideLinks(gym) {
     links.push({ slug: 'best-golf-courses-pattaya', label: 'Best golf courses' });
     links.push({ slug: 'luxury-sports-clubs-pattaya', label: 'Luxury sports clubs' });
   } else if (cat === 'yoga') {
+    links.push({ slug: 'yoga-retreat-pattaya', label: 'Yoga retreat Pattaya' });
     links.push({ slug: 'thai-gym-terms-pattaya', label: 'Thai gym terms' });
     links.push({ slug: 'pattaya-digital-nomad-fitness', label: 'Digital nomad fitness' });
   } else if (cat === 'racquet') {
@@ -256,6 +259,7 @@ function venueGuideLinks(gym) {
 
   if (area === 'jomtien') links.push({ slug: 'best-gym-jomtien-pattaya', label: 'Best gym in Jomtien' });
   if (area === 'naklua' || area === 'pratamnak') links.push({ slug: 'best-gym-naklua-pratamnak-pattaya', label: 'Naklua & Pratamnak gyms' });
+  if (area === 'central-pattaya') links.push({ slug: 'best-gym-central-pattaya', label: 'Best gym Central Pattaya' });
 
   const seen = new Set();
   const uniq = [];

@@ -41,6 +41,16 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Muay Thai for beginners</span>
         <span class="intent-card-desc">First week, gear, costs, red flags</span>
       </a>
+      <a href="/guides/is-muay-thai-safe-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Safety</span>
+        <span class="intent-card-title">Is Muay Thai safe?</span>
+        <span class="intent-card-desc">Injuries, red flags, medical backup</span>
+      </a>
+      <a href="/guides/best-gym-central-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Central Pattaya</span>
+        <span class="intent-card-title">Best gym Central Pattaya</span>
+        <span class="intent-card-desc">WKO, 24h chains, Tony's Gym</span>
+      </a>
       <a href="/guides/best-gym-jomtien-pattaya/" class="intent-card">
         <span class="intent-card-tag">// Jomtien</span>
         <span class="intent-card-title">Best gym in Jomtien</span>
@@ -60,6 +70,11 @@ const INTENT_BLOCK = `
         <span class="intent-card-tag">// Long-stay</span>
         <span class="intent-card-title">Training &amp; visa</span>
         <span class="intent-card-desc">ED visa, tourist stay, camp paths</span>
+      </a>
+      <a href="/guides/yoga-retreat-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Yoga</span>
+        <span class="intent-card-title">Yoga retreat Pattaya</span>
+        <span class="intent-card-desc">Studios, resort packages, 7-day plan</span>
       </a>
       <a href="/guides/pattaya-vs-phuket-muay-thai-training/" class="intent-card">
         <span class="intent-card-tag">// Compare cities</span>
@@ -113,6 +128,9 @@ const NETWORK_BLOCK = `
       <a href="https://pattayavisahelp.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Visa Help</span><span class="network-card-desc">Long-stay &amp; ED visa</span></a>
       <a href="https://pattaya-school-guide.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">School Guide</span><span class="network-card-desc">Families relocating</span></a>
       <a href="https://pattaya-coffee.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Pattaya Coffee</span><span class="network-card-desc">Remote work cafés</span></a>
+      <a href="https://pattayapersonaltrainer.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Personal Trainer</span><span class="network-card-desc">1-on-1 coaching</span></a>
+      <a href="https://pattayavilla.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Pattaya Villa</span><span class="network-card-desc">Long-stay accommodation</span></a>
+      <a href="https://mrweoutside.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Mr We Outside</span><span class="network-card-desc">Outdoor community</span></a>
       <a href="https://pattayastream.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Villa Stream</span><span class="network-card-desc">Life in Pattaya</span></a>
       <a href="https://pattaya-medical.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Pattaya Medical</span><span class="network-card-desc">Clinics &amp; injury</span></a>
       <a href="https://pattayapets.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">PattayaPets</span><span class="network-card-desc">Vets &amp; pet life</span></a>

@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 43, date: '2026-05-31', tag: 'v439',
+    title: 'MT safety guide, Central Pattaya area hub, yoga retreat, network expansion',
+    summary: 'Round 43 closes the last major area gap (Central Pattaya), answers the high-intent safety query, adds yoga retreat editorial, deepens 24h/cheapest ranked guides, and enriches 45 area×category pages.',
+    bullets: [
+      'New: /guides/is-muay-thai-safe-pattaya/, /guides/best-gym-central-pattaya/, /guides/yoga-retreat-pattaya/.',
+      'deepen-round43-ranked.js — editorial blocks on 24-hour and cheapest guides.',
+      'inject-area-category-intros-r43.js — local intro paragraphs on 45 area×category pages.',
+      'Full TimPaemi network mesh: villa, personal trainer, mrweoutside, vehicle rentals. 31 guides; asset 438 -> 439.'
+    ]
+  },
+  {
     n: 42, date: '2026-05-30', tag: 'v438',
     title: 'Padel/pickleball + training visa guides, Thai terms editorial rebuild, sister-site links',
     summary: 'Round 42 fills racquet and long-stay keyword gaps and rebuilds thai-gym-terms as full editorial. Editorial shell gains in-content Pattaya network links (visa, medical, restaurants).',

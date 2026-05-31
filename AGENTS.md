@@ -25,7 +25,9 @@ node scripts/write-status-json.js
 node scripts/write-changelog.js
 node scripts/write-data-endpoints.js
 node scripts/inject-guide-schema.js
-node scripts/write-round42-guides.js
+node scripts/write-round43-guides.js
+node scripts/inject-area-category-intros-r43.js
+node scripts/deepen-round43-ranked.js
 node scripts/inject-internal-linking-r41.js
 node scripts/inject-ranked-editorial-funnel.js
 node scripts/write-round37-guides.js

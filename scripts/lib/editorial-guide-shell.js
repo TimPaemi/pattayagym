@@ -69,9 +69,15 @@ function paNetwork() {
     ['Pattaya Authority', 'https://pattaya-authority.com/', 'Network hub'],
     ['Restaurant Guide', 'https://pattaya-restaurant-guide.com/', 'Eat after training'],
     ['Visa Help', 'https://pattayavisahelp.com/', 'Long-stay'],
+    ['Medical', 'https://pattaya-medical.com/', 'Clinics & injury'],
     ['School Guide', 'https://pattaya-school-guide.com/', 'Families'],
     ['Coffee', 'https://pattaya-coffee.com/', 'Remote work'],
-    ['Medical', 'https://pattaya-medical.com/', 'Clinics'],
+    ['Personal Trainer', 'https://pattayapersonaltrainer.com/', '1-on-1 coaching'],
+    ['Pattaya Villa', 'https://pattayavilla.com/', 'Long-stay stays'],
+    ['Vehicle Rentals', 'https://pattaya-vehicle-rentals.com/', 'Scooters & cars'],
+    ['PattayaPets', 'https://pattayapets.com/', 'Vets & pet life'],
+    ['Mr We Outside', 'https://mrweoutside.com/', 'Outdoor community'],
+    ['TimPaemi', 'https://timpaemi.com/', 'Founders · agency'],
   ];
   const links = sites.map(([n, u, d]) =>
     `<a href="${u}" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">${esc(n)}</span><span class="pa-network-card-desc">${esc(d)}</span></a>`

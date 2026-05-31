@@ -49,9 +49,15 @@ const SLUG_TITLES = {
   'best-gym-naklua-pratamnak-pattaya': 'Naklua & Pratamnak',
   'padel-pickleball-pattaya': 'Padel & pickleball',
   'training-thailand-visa-pattaya': 'Training & visa',
+  'is-muay-thai-safe-pattaya': 'Is Muay Thai safe?',
+  'best-gym-central-pattaya': 'Best gym Central',
+  'yoga-retreat-pattaya': 'Yoga retreat',
 };
 
 const TLDR_ADD = [
+  { slug: 'is-muay-thai-safe-pattaya', html: '<li><strong>Worried about safety?</strong> → <a href="/guides/is-muay-thai-safe-pattaya/">Is Muay Thai safe in Pattaya?</a></li>' },
+  { slug: 'best-gym-central-pattaya', html: '<li><strong>Staying central / Beach Road?</strong> → <a href="/guides/best-gym-central-pattaya/">Best gym in Central Pattaya</a></li>' },
+  { slug: 'yoga-retreat-pattaya', html: '<li><strong>Yoga retreat week?</strong> → <a href="/guides/yoga-retreat-pattaya/">Yoga retreat in Pattaya</a></li>' },
   { slug: 'padel-pickleball-pattaya', html: '<li><strong>Padel or pickleball?</strong> → <a href="/guides/padel-pickleball-pattaya/">Padel &amp; pickleball in Pattaya</a></li>' },
   { slug: 'training-thailand-visa-pattaya', html: '<li><strong>Long-stay training visa?</strong> → <a href="/guides/training-thailand-visa-pattaya/">Train in Thailand — visa guide</a></li>' },
   { slug: 'best-gym-naklua-pratamnak-pattaya', html: '<li><strong>Staying Naklua or Pratamnak?</strong> → <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Best gym Naklua &amp; Pratamnak</a></li>' },
@@ -62,6 +68,21 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'is-muay-thai-safe-pattaya', card: `<a href="/guides/is-muay-thai-safe-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Is Muay Thai safe in Pattaya?</h3><span class="cv-pill">Safety</span></div>
+      <p>Injuries, red flags, women training alone, medical backup — honest answers.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
+  { slug: 'best-gym-central-pattaya', card: `<a href="/guides/best-gym-central-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Best gym in Central Pattaya</h3><span class="cv-pill">Area</span></div>
+      <p>WKO, Battle Conquer, Tony's, Fitness 7, Jetts — Beach Road corridor.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
+  { slug: 'yoga-retreat-pattaya', card: `<a href="/guides/yoga-retreat-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Yoga retreat in Pattaya</h3><span class="cv-pill">Yoga</span></div>
+      <p>Studios, resort packages, train-and-stretch weeks, sample 7-day plan.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'padel-pickleball-pattaya', card: `<a href="/guides/padel-pickleball-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Padel &amp; pickleball in Pattaya</h3><span class="cv-pill">Racquet</span></div>
       <p>Play Padel, Pickleball Pattaya, Mabprachan lakeside — courts and booking.</p>

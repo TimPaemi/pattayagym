@@ -24,11 +24,15 @@ const EDITORIAL = new Set([
   'padel-pickleball-pattaya',
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
+  'is-muay-thai-safe-pattaya',
+  'best-gym-central-pattaya',
+  'yoga-retreat-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
 const FUNNEL_BY_GUIDE = {
   'best-muay-thai-pattaya': [
+    { slug: 'is-muay-thai-safe-pattaya', title: 'Is Muay Thai safe?', desc: 'Injury risks, red flags, and medical backup in Pattaya.' },
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai for beginners', desc: 'First week, gear, costs, and red flags before you pick a camp.' },
     { slug: 'train-muay-thai-pattaya-1-week-1-month', title: '1 week vs 1 month training', desc: 'Trip-length camps, budgets, and realistic goals.' },
     { slug: 'muay-thai-training-holiday-pattaya', title: 'Training holiday', desc: 'Stay-and-train rhythm for 1–4 week visits.' },
@@ -44,9 +48,9 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'train-muay-thai-pattaya-1-week-1-month', title: '1 week vs 1 month', desc: 'Budget a short trip vs a full training block.' },
   ],
   'best-gyms-near-walking-street-pattaya': [
+    { slug: 'best-gym-central-pattaya', title: 'Best gym Central Pattaya', desc: 'WKO, Battle Conquer, 24h chains — full central guide.' },
     { slug: 'gym-day-pass-pattaya', title: 'Gym day pass', desc: 'Short-stay drop-ins near the nightlife zone.' },
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai beginners', desc: 'Avoid tourist-trap pad mills on Soi 6.' },
-    { slug: 'best-gym-naklua-pratamnak-pattaya', title: 'Naklua & Pratamnak gyms', desc: 'Quieter north/hill gyms — 15 min from central.' },
   ],
   'female-friendly-gyms-pattaya': [
     { slug: 'pattaya-solo-female-fitness', title: 'Solo female fitness', desc: 'Safety and gym culture for women training alone.' },
@@ -54,6 +58,7 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'english-speaking-muay-thai-pattaya', title: 'English-speaking MT', desc: 'Clear coaching for first-time fighters.' },
   ],
   '24-hour-gyms-pattaya': [
+    { slug: 'best-gym-central-pattaya', title: 'Central Pattaya 24h gyms', desc: 'Jetts, Anytime, Fitness 7 cluster on Beach Road corridor.' },
     { slug: 'gym-day-pass-pattaya', title: 'Gym day pass', desc: 'Night-owl drop-ins when you are not on a monthly deal.' },
     { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Price table — monthly and walk-in tiers.' },
     { slug: 'best-gym-naklua-pratamnak-pattaya', title: 'Naklua & Pratamnak', desc: 'SUN Fitness and Muscle Factory late hours.' },
