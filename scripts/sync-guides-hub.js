@@ -64,11 +64,14 @@ const SLUG_TITLES = {
   'diving-watersports-pattaya': 'Diving & watersports',
   'running-cycling-clubs-pattaya': 'Running & cycling clubs',
   'equestrian-pattaya': 'Equestrian & polo',
+  'snooker-pool-billiards-pattaya': 'Pool & snooker',
 };
 
 const TLDR_ADD = [
   { slug: 'equestrian-pattaya', html: '<li><strong>Horse riding or polo?</strong> → <a href="/guides/equestrian-pattaya/">Equestrian &amp; polo in Pattaya</a></li>' },
   { slug: 'running-cycling-clubs-pattaya', html: '<li><strong>Hash or cycling club?</strong> → <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs in Pattaya</a></li>' },
+  { slug: 'snooker-pool-billiards-pattaya', html: '<li><strong>Pool or snooker night?</strong> → <a href="/guides/snooker-pool-billiards-pattaya/">Pool &amp; snooker in Pattaya</a></li>' },
+  { slug: 'pattaya-russian-speaking-sport', html: '<li><strong>Russian-speaking coach?</strong> → <a href="/guides/pattaya-russian-speaking-sport/">Russian-speaking sport in Pattaya</a></li>' },
   { slug: 'diving-watersports-pattaya', html: '<li><strong>Dive or kite in Pattaya?</strong> → <a href="/guides/diving-watersports-pattaya/">Diving &amp; watersports in Pattaya</a></li>' },
   { slug: 'kids-youth-sport-pattaya', html: '<li><strong>Sport for kids?</strong> → <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport in Pattaya</a></li>' },
   { slug: 'adventure-pattaya', html: '<li><strong>Zipline or skydive?</strong> → <a href="/guides/adventure-pattaya/">Adventure in Pattaya</a></li>' },
@@ -100,6 +103,11 @@ const CARD_ADD = [
   { slug: 'running-cycling-clubs-pattaya', card: `<a href="/guides/running-cycling-clubs-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Running &amp; cycling clubs in Pattaya</h3><span class="cv-pill">Clubs</span></div>
       <p>Hash runs, cycling meetups, beach aerobics, cricket, rugby, lawn bowls — social sport mapped.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
+  { slug: 'snooker-pool-billiards-pattaya', card: `<a href="/guides/snooker-pool-billiards-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Pool &amp; snooker in Pattaya</h3><span class="cv-pill">Clubs</span></div>
+      <p>SF Strike Bowl, Megabreak, Pattaya Bowl — low-impact social evenings and rainy-season backup.</p>
       <span class="cv-cta">Read guide →</span>
     </a>\n    ` },
   { slug: 'diving-watersports-pattaya', card: `<a href="/guides/diving-watersports-pattaya/" class="cat-venue-card">

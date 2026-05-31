@@ -110,8 +110,8 @@ const CATEGORY_STRIPS = {
   ],
   clubs: [
     { slug: 'running-cycling-clubs-pattaya', tag: 'Clubs', title: 'Running & cycling clubs', desc: 'Hash, routes, beach aerobics' },
+    { slug: 'snooker-pool-billiards-pattaya', tag: 'Pool', title: 'Pool & snooker', desc: 'SF Strike, Megabreak, billiards' },
     { slug: 'pattaya-digital-nomad-fitness', tag: 'Nomad', title: 'Digital nomad fitness', desc: 'Long-stay social sport rhythm' },
-    { slug: 'pattaya-seniors-low-impact-sport', tag: 'Seniors', title: 'Seniors low-impact', desc: 'Bowls, petanque, gentle sport' },
   ],
   'kids-youth': [
     { slug: 'kids-youth-sport-pattaya', tag: 'Kids', title: 'Kids & youth sport', desc: 'Football, trampoline, MT for kids' },
@@ -306,6 +306,7 @@ function venueGuideLinks(gym) {
     links.push({ slug: 'pattaya-gyms-childcare-family-pools', label: 'Childcare & family pools' });
   } else if (cat === 'clubs') {
     links.push({ slug: 'running-cycling-clubs-pattaya', label: 'Running & cycling clubs' });
+    links.push({ slug: 'snooker-pool-billiards-pattaya', label: 'Pool & snooker' });
     links.push({ slug: 'pattaya-digital-nomad-fitness', label: 'Digital nomad fitness' });
     links.push({ slug: 'pattaya-seniors-low-impact-sport', label: 'Seniors low-impact sport' });
   } else if (cat === 'equestrian') {
@@ -426,9 +427,14 @@ const FUNNEL_R41 = {
     { slug: 'pattaya-solo-female-fitness', title: 'Solo female fitness', desc: 'Low-pressure gym culture.' },
   ],
   'pattaya-russian-speaking-sport': [
-    { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai beginners', desc: 'Many camps train Russians daily.' },
+    { slug: 'kids-youth-sport-pattaya', title: 'Kids & youth sport', desc: 'Rusich Club, AF Academy football.' },
     { slug: 'english-speaking-muay-thai-pattaya', title: 'English-speaking MT', desc: 'Multilingual camp options.' },
-    { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Budget fitness table.' },
+    { slug: 'training-thailand-visa-pattaya', title: 'Training visa', desc: 'Long-stay visa for sport.' },
+  ],
+  'snooker-pool-billiards-pattaya': [
+    { slug: 'running-cycling-clubs-pattaya', title: 'Running & cycling clubs', desc: 'Social sport week rhythm.' },
+    { slug: 'pattaya-digital-nomad-fitness', title: 'Digital nomad fitness', desc: 'Long-stay evenings.' },
+    { slug: 'pattaya-russian-speaking-sport', title: 'Russian-speaking sport', desc: 'Expat community venues.' },
   ],
   'pattaya-gyms-childcare-family-pools': [
     { slug: 'kids-youth-sport-pattaya', title: 'Kids & youth sport', desc: 'Football, trampoline, Harbor Mall stack.' },
@@ -446,7 +452,7 @@ const EDITORIAL = new Set([
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
   'is-muay-thai-safe-pattaya', 'best-gym-central-pattaya', 'yoga-retreat-pattaya',
-  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya',   'climbing-pattaya', 'adventure-pattaya', 'kids-youth-sport-pattaya', 'diving-watersports-pattaya', 'running-cycling-clubs-pattaya', 'equestrian-pattaya',
+  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya',   'climbing-pattaya', 'adventure-pattaya', 'kids-youth-sport-pattaya', 'diving-watersports-pattaya', 'running-cycling-clubs-pattaya', 'equestrian-pattaya', 'snooker-pool-billiards-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

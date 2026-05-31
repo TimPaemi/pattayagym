@@ -156,6 +156,16 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Running &amp; cycling clubs</span>
         <span class="intent-card-desc">Hash, beach aerobics, cricket, rugby</span>
       </a>
+      <a href="/guides/snooker-pool-billiards-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Pool</span>
+        <span class="intent-card-title">Pool &amp; snooker</span>
+        <span class="intent-card-desc">SF Strike, Megabreak, billiards nights</span>
+      </a>
+      <a href="/guides/pattaya-russian-speaking-sport/" class="intent-card">
+        <span class="intent-card-tag">// Russian</span>
+        <span class="intent-card-title">Russian-speaking sport</span>
+        <span class="intent-card-desc">Rusich, AF Academy, multilingual gyms</span>
+      </a>
       <a href="/compare/" class="intent-card intent-card-tool">
         <span class="intent-card-tag">// Tool</span>
         <span class="intent-card-title">Compare 158 venues</span>

@@ -1,13 +1,13 @@
 # GSC URL Inspection queue — request indexing (~10/day max)
-# Updated Round 55 · v451
+# Updated Round 57 · v452
 
-https://pattaya-gym.com/guides/equestrian-pattaya/
-https://pattaya-gym.com/category/equestrian/
-https://pattaya-gym.com/gyms/horseshoe-point-resort/
-https://pattaya-gym.com/gyms/thai-polo-equestrian-club/
-https://pattaya-gym.com/area/east-pattaya/equestrian/
-https://pattaya-gym.com/guides/luxury-sports-clubs-pattaya/
-https://pattaya-gym.com/guides/best-golf-courses-pattaya/
-https://pattaya-gym.com/guides/best-gym-east-pattaya/
+https://pattaya-gym.com/guides/snooker-pool-billiards-pattaya/
+https://pattaya-gym.com/guides/pattaya-russian-speaking-sport/
+https://pattaya-gym.com/category/clubs/
+https://pattaya-gym.com/gyms/sf-strike-bowl/
+https://pattaya-gym.com/gyms/megabreak-pool-hall/
+https://pattaya-gym.com/gyms/rusich-club-football/
+https://pattaya-gym.com/gyms/af-academy-football/
 https://pattaya-gym.com/guides/kids-youth-sport-pattaya/
 https://pattaya-gym.com/guides/
+https://pattaya-gym.com/

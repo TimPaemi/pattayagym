@@ -38,6 +38,27 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 57, date: '2026-05-28', tag: 'v452',
+    title: 'Pool & snooker mesh + Russian-speaking sport deepen',
+    summary: 'Round 57 completes the snooker editorial guide mesh (SF Strike, Megabreak) and deepens the Russian-speaking sport ranked guide with Rusich Club, AF Academy, and long-stay cross-links.',
+    bullets: [
+      'Mesh: /guides/snooker-pool-billiards-pattaya/ — clubs category, homepage intent, guides hub.',
+      'Deepen: /guides/pattaya-russian-speaking-sport/ — Rusich Club, AF Academy, Platinum, visa link.',
+      'Full-site audit script: scripts/full-site-audit.js for local + live sitemap crawl.',
+      '44 guides total. Asset 451 -> 452.'
+    ]
+  },
+  {
+    n: 56, date: '2026-05-31', tag: 'v451',
+    title: 'CI CSP hash fix (LF-normalize inline scripts)',
+    summary: 'Round 56 fixes GitHub Actions CSP mismatch between Windows CRLF and Linux LF deploy — sync-csp-hashes and verify-deploy now normalize script bodies before hashing.',
+    bullets: [
+      'Fix: CSP sha256-3sFDjj07 restored for search back-to-top inline script.',
+      'CI Build green on main after LF-normalize patch.',
+      'Pool & snooker guide draft added (meshed in Round 57).'
+    ]
+  },
+  {
     n: 55, date: '2026-05-31', tag: 'v451',
     title: 'Equestrian & polo editorial guide — all 15 categories covered',
     summary: 'Round 55 adds the final category editorial guide — Horseshoe Point vs Thai Polo Club on the Mabprachan belt — completing dedicated guides for all 15 sport categories.',
