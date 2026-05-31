@@ -58,9 +58,11 @@ const SLUG_TITLES = {
   'crossfit-pattaya': 'CrossFit Pattaya',
   'swimming-pools-pattaya': 'Swimming & pools',
   'tennis-badminton-pattaya': 'Tennis & badminton',
+  'climbing-pattaya': 'Climbing Pattaya',
 };
 
 const TLDR_ADD = [
+  { slug: 'climbing-pattaya', html: '<li><strong>Indoor climbing?</strong> → <a href="/guides/climbing-pattaya/">Climbing in Pattaya</a></li>' },
   { slug: 'tennis-badminton-pattaya', html: '<li><strong>Tennis or badminton?</strong> → <a href="/guides/tennis-badminton-pattaya/">Tennis &amp; badminton in Pattaya</a></li>' },
   { slug: 'swimming-pools-pattaya', html: '<li><strong>Pool day or lap swim?</strong> → <a href="/guides/swimming-pools-pattaya/">Swimming &amp; pools in Pattaya</a></li>' },
   { slug: 'crossfit-pattaya', html: '<li><strong>CrossFit WODs?</strong> → <a href="/guides/crossfit-pattaya/">CrossFit in Pattaya</a></li>' },
@@ -80,6 +82,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'climbing-pattaya', card: `<a href="/guides/climbing-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Climbing in Pattaya</h3><span class="cv-pill">Climbing</span></div>
+      <p>Deep at Harbor Mall vs Bean Cow Huay Yai — real walls, hotel walls, family picks.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'tennis-badminton-pattaya', card: `<a href="/guides/tennis-badminton-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Tennis &amp; badminton in Pattaya</h3><span class="cv-pill">Racquet</span></div>
       <p>Fitz Club, Pattaya Tennis Club, Greta covered courts, Euro Badminton — booking map.</p>

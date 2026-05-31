@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 50, date: '2026-05-31', tag: 'v446',
+    title: 'Climbing editorial guide + category mesh',
+    summary: 'Round 50 adds a dedicated climbing guide covering Deep Climbing Gym at Harbor Mall and Bean Cow in Huay Yai, cross-links the climbing category and family/beginner funnels, and adds homepage intent.',
+    bullets: [
+      'New: /guides/climbing-pattaya/ — Deep vs Bean Cow, hotel walls vs real gyms.',
+      'Climbing category strips, area×category intros (Naklua + East), venue FAQ links.',
+      'Homepage intent: Climbing card on Harbor Mall / Darkside cluster.',
+      '38 guides total. Asset 445 -> 446.'
+    ]
+  },
+  {
     n: 49, date: '2026-05-31', tag: 'v445',
     title: 'Tennis & badminton editorial guide + racquet mesh expansion',
     summary: 'Round 49 adds a dedicated tennis and badminton guide complementing the padel/pickleball editorial, cross-links the racquet category, and refreshes luxury-club funnel cards.',

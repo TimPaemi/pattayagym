@@ -1,13 +1,13 @@
 # GSC URL Inspection queue — request indexing (~10/day max)
-# Updated Round 49 · v445
+# Updated Round 50 · v446
 
+https://pattaya-gym.com/guides/climbing-pattaya/
+https://pattaya-gym.com/category/climbing/
+https://pattaya-gym.com/gyms/deep-climbing-gym/
+https://pattaya-gym.com/gyms/bean-cow-climbing-gym/
+https://pattaya-gym.com/area/naklua/climbing/
+https://pattaya-gym.com/area/east-pattaya/climbing/
+https://pattaya-gym.com/guides/family-friendly-pattaya/
+https://pattaya-gym.com/guides/best-for-beginners-pattaya/
 https://pattaya-gym.com/guides/tennis-badminton-pattaya/
-https://pattaya-gym.com/category/racquet/
-https://pattaya-gym.com/gyms/fitz-club/
-https://pattaya-gym.com/gyms/pattaya-tennis-club/
-https://pattaya-gym.com/gyms/play-padel-pattaya/
-https://pattaya-gym.com/guides/padel-pickleball-pattaya/
-https://pattaya-gym.com/gyms/euro-badminton/
-https://pattaya-gym.com/guides/luxury-sports-clubs-pattaya/
-https://pattaya-gym.com/area/pratamnak/racquet/
 https://pattaya-gym.com/guides/

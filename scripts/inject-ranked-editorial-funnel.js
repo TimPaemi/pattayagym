@@ -33,6 +33,7 @@ const EDITORIAL = new Set([
   'crossfit-pattaya',
   'swimming-pools-pattaya',
   'tennis-badminton-pattaya',
+  'climbing-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
@@ -43,9 +44,9 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai for beginners', desc: 'First week, gear, costs, and red flags before you pick a camp.' },
   ],
   'best-for-beginners-pattaya': [
+    { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Intro top-rope at Deep and Bean Cow.' },
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai for beginners', desc: 'Dedicated beginner camps and pad-round expectations.' },
     { slug: 'english-speaking-muay-thai-pattaya', title: 'English-speaking Muay Thai', desc: 'Ten camps where foreigners train without Thai.' },
-    { slug: 'gym-day-pass-pattaya', title: 'Gym day pass', desc: 'Try a gym today without a monthly contract.' },
   ],
   'cheapest-gyms-pattaya': [
     { slug: 'gym-day-pass-pattaya', title: 'Gym day pass Pattaya', desc: 'Drop-in and walk-in options with no membership.' },
@@ -68,9 +69,9 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Price table — monthly and walk-in tiers.' },
   ],
   'family-friendly-pattaya': [
+    { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Deep Harbor Mall and Bean Cow family walls.' },
     { slug: 'swimming-pools-pattaya', title: 'Swimming & pools', desc: 'Hotel pools, water parks, lap swim.' },
     { slug: 'best-gym-sattahip-pattaya', title: 'Na Jomtien & Sattahip', desc: 'Water parks, resort pools, marina family days.' },
-    { slug: 'pattaya-gyms-childcare-family-pools', title: 'Childcare & pools', desc: 'Train while kids swim.' },
   ],
   'best-dive-operators-pattaya': [
     { slug: 'best-gym-sattahip-pattaya', title: 'South pier corridor', desc: 'Na Jomtien marina and dive launch points.' },

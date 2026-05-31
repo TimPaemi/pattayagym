@@ -59,6 +59,8 @@ const CUSTOM = {
   'sattahip|watersports': 'Ocean Marina is Southeast Asia\'s largest yacht hub; SailBreeze IYT school on-site. <a href="/guides/best-gym-sattahip-pattaya/">South Pattaya sport guide</a>.',
   'sattahip|swimming': 'Ramayana and Columbia Pictures Aquaverse water parks — Thailand\'s largest family swim days south of Jomtien. <a href="/guides/swimming-pools-pattaya/">Swimming &amp; pools guide</a>.',
   'sattahip|golf': 'Chee Chan Golf and Bang Saray courses sit on the Sattahip corridor — Buddha Mountain views. <a href="/guides/best-golf-courses-pattaya/">Best golf courses</a>.',
+  'naklua|climbing': 'Deep Climbing Gym on Harbor Mall floor 8 is Pattaya\'s flagship indoor wall — AC, 10m routes, mall parking. <a href="/guides/climbing-pattaya/">Climbing guide</a>.',
+  'east-pattaya|climbing': 'Bean Cow in Huay Yai runs CWA-certified instruction on an 8m wall — family-friendly Darkside option. <a href="/guides/climbing-pattaya/">Climbing guide</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a>.',
 };
 
 function introText(areaSlug, catKey, count) {

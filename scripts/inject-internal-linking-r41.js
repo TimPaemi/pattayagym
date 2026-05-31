@@ -104,9 +104,9 @@ const CATEGORY_STRIPS = {
     { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly', desc: 'Active holidays with kids' },
   ],
   climbing: [
+    { slug: 'climbing-pattaya', tag: 'Climbing', title: 'Climbing in Pattaya', desc: 'Deep vs Bean Cow, hotel walls' },
     { slug: 'best-for-beginners-pattaya', tag: 'Beginner', title: 'Best for beginners', desc: 'Intro-friendly venues' },
     { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly', desc: 'Kids adventure options' },
-    { slug: 'cheapest-gyms-pattaya', tag: 'Budget', title: 'Cheapest gyms', desc: 'Budget strength training' },
   ],
   clubs: [
     { slug: 'pattaya-seniors-low-impact-sport', tag: 'Seniors', title: 'Seniors low-impact', desc: 'Gentle sport options' },
@@ -284,6 +284,10 @@ function venueGuideLinks(gym) {
     }
     links.push({ slug: 'best-dive-operators-pattaya', label: 'Best dive operators' });
     links.push({ slug: 'family-friendly-pattaya', label: 'Family-friendly sport' });
+  } else if (cat === 'climbing') {
+    links.push({ slug: 'climbing-pattaya', label: 'Climbing in Pattaya' });
+    links.push({ slug: 'best-for-beginners-pattaya', label: 'Best for beginners' });
+    links.push({ slug: 'family-friendly-pattaya', label: 'Family-friendly sport' });
   } else if (cat === 'kids-youth') {
     links.push({ slug: 'family-friendly-pattaya', label: 'Family-friendly Pattaya' });
     links.push({ slug: 'pattaya-gyms-childcare-family-pools', label: 'Childcare & family pools' });
@@ -361,9 +365,14 @@ const FUNNEL_R41 = {
     { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Budget gym between rounds.' },
   ],
   'family-friendly-pattaya': [
+    { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Deep Harbor Mall and Bean Cow family walls.' },
     { slug: 'pattaya-gyms-childcare-family-pools', title: 'Childcare & pools', desc: 'Train while kids swim.' },
-    { slug: 'pattaya-solo-female-fitness', title: 'Solo female fitness', desc: 'Women training alone.' },
     { slug: 'best-gym-jomtien-pattaya', title: 'Jomtien family gyms', desc: 'Beach-side family options.' },
+  ],
+  'best-for-beginners-pattaya': [
+    { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Intro top-rope at Deep and Bean Cow.' },
+    { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai beginners', desc: 'First pad rounds and camp picks.' },
+    { slug: 'gym-day-pass-pattaya', title: 'Gym day pass', desc: 'Try a gym today without membership.' },
   ],
   'pattaya-digital-nomad-fitness': [
     { slug: 'gym-day-pass-pattaya', title: 'Gym day pass', desc: 'Flexible drop-ins.' },
@@ -416,7 +425,7 @@ const EDITORIAL = new Set([
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
   'is-muay-thai-safe-pattaya', 'best-gym-central-pattaya', 'yoga-retreat-pattaya',
-  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya',
+  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya', 'climbing-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

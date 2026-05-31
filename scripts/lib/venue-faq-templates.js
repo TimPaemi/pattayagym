@@ -196,7 +196,7 @@ function faqsForVenue(g) {
   } else if (cat === 'climbing') {
     out.push({
       q: `Do I need experience to climb at ${name}?`,
-      a: `Most climbing gyms offer intro sessions and rental shoes — no prior experience required. <a href="/guides/best-for-beginners-pattaya/">Best for beginners</a>.`,
+      a: `Most climbing gyms offer intro sessions and rental shoes — no prior experience required. <a href="/guides/climbing-pattaya/">Climbing in Pattaya</a> · <a href="/guides/best-for-beginners-pattaya/">Best for beginners</a>.`,
     });
     out.push({
       q: `What does a session at ${name} cost?`,

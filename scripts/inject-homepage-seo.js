@@ -96,6 +96,11 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Swimming &amp; pools</span>
         <span class="intent-card-desc">Hotel pools, water parks, lap swim</span>
       </a>
+      <a href="/guides/climbing-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Climbing</span>
+        <span class="intent-card-title">Climbing in Pattaya</span>
+        <span class="intent-card-desc">Deep Harbor Mall, Bean Cow, intro sessions</span>
+      </a>
       <a href="/guides/pattaya-vs-phuket-muay-thai-training/" class="intent-card">
         <span class="intent-card-tag">// Compare cities</span>
         <span class="intent-card-title">Pattaya vs Phuket training</span>
