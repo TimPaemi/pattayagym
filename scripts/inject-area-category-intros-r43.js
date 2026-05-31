@@ -51,6 +51,10 @@ const CUSTOM = {
   'east-pattaya|muay-thai': 'East Pattaya and Huai Yai hold Kombat Group and Sor Klinmee — rural camp settings away from Beach Road noise. <a href="/guides/best-gym-east-pattaya/">East Pattaya gym guide</a> · <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Stay-and-train camps</a>.',
   'east-pattaya|fitness': 'Nong Prue and Khao Talo run Castra Gym and Sanit Sport Club\'s fitness wing — less tourist traffic than central chains. <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a>.',
   'east-pattaya|crossfit': 'Pattaya\'s only CrossFit affiliate lives east at Jungle Gym Nong Prue. <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a>.',
+  'sattahip|fitness': 'Na Jomtien resort strip — Andaz, Marriott, Renaissance, Mövenpick — 24-hour hotel fitness and spa recovery. <a href="/guides/best-gym-sattahip-pattaya/">Sattahip &amp; Na Jomtien guide</a>.',
+  'sattahip|watersports': 'Ocean Marina is Southeast Asia\'s largest yacht hub; SailBreeze IYT school on-site. <a href="/guides/best-gym-sattahip-pattaya/">South Pattaya sport guide</a>.',
+  'sattahip|swimming': 'Ramayana and Columbia Pictures Aquaverse water parks — Thailand\'s largest family swim days south of Jomtien. <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien guide</a>.',
+  'sattahip|golf': 'Chee Chan Golf and Bang Saray courses sit on the Sattahip corridor — Buddha Mountain views. <a href="/guides/best-golf-courses-pattaya/">Best golf courses</a>.',
 };
 
 function introText(areaSlug, catKey, count) {

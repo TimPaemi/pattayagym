@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 45, date: '2026-05-31', tag: 'v441',
+    title: 'Na Jomtien & Sattahip area guide, ranked deepen, IndexNow',
+    summary: 'Round 45 completes the six-area editorial set with the far-south marina/resort belt, deepens four ranked lifestyle guides, and adds IndexNow ping automation for Bing/Yandex.',
+    bullets: [
+      'New: /guides/best-gym-sattahip-pattaya/ — Ocean Marina, Ramayana, Andaz, U-Tapao corridor.',
+      'deepen-round45-ranked.js — solo female, digital nomad, luxury clubs, dive operators.',
+      'IndexNow: bd7f2a9c1e48.txt + scripts/ping-indexnow.js (runs in PUSH pipeline).',
+      '33 guides total. All 6 area hubs now have editorial anchors. Asset 440 -> 441.'
+    ]
+  },
+  {
     n: 44, date: '2026-05-31', tag: 'v440',
     title: 'East Pattaya (Darkside) area guide + deepen beginners/family/female ranked guides',
     summary: 'Round 44 completes the area editorial set with East Pattaya — Kombat Group, Mabprachan, Nong Prue — and adds editorial depth blocks to three high-traffic ranked guides.',

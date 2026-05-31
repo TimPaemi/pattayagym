@@ -149,9 +149,9 @@ const AREA_HUB_STRIPS = {
     { slug: 'muay-thai-training-holiday-pattaya', tag: 'Holiday', title: 'Training holiday', desc: 'Rural camp stays' },
   ],
   sattahip: [
-    { slug: 'best-gym-jomtien-pattaya', tag: 'Jomtien', title: 'Jomtien & Na Jomtien', desc: 'Nearest beach gyms' },
-    { slug: 'family-friendly-pattaya', tag: 'Family', title: 'Family-friendly', desc: 'Sport with kids south' },
-    { slug: 'best-dive-operators-pattaya', tag: 'Dive', desc: 'Dive shops', title: 'Dive operators' },
+    { slug: 'best-gym-sattahip-pattaya', tag: 'Area guide', title: 'Na Jomtien & Sattahip', desc: 'Marina, resorts, water parks' },
+    { slug: 'best-gym-jomtien-pattaya', tag: 'Jomtien', title: 'Jomtien beach gyms', desc: 'North Jomtien MT & fitness' },
+    { slug: 'best-dive-operators-pattaya', tag: 'Dive', title: 'Dive operators', desc: 'PADI shops ranked' },
   ],
 };
 
@@ -197,6 +197,9 @@ function areaCategoryStrip(areaSlug, catKey) {
   }
   if (areaSlug === 'east-pattaya' && CATEGORY_STRIPS[catKey]) {
     return [{ slug: 'best-gym-east-pattaya', tag: 'East', title: 'East Pattaya guide', desc: 'Darkside camps & Mabprachan' }, ...base.slice(0, 2)];
+  }
+  if (areaSlug === 'sattahip' && CATEGORY_STRIPS[catKey]) {
+    return [{ slug: 'best-gym-sattahip-pattaya', tag: 'South', title: 'Na Jomtien & Sattahip', desc: 'Marina, resorts, water parks' }, ...base.slice(0, 2)];
   }
   return base.slice(0, 3);
 }
@@ -271,6 +274,7 @@ function venueGuideLinks(gym) {
   if (area === 'naklua' || area === 'pratamnak') links.push({ slug: 'best-gym-naklua-pratamnak-pattaya', label: 'Naklua & Pratamnak gyms' });
   if (area === 'central-pattaya') links.push({ slug: 'best-gym-central-pattaya', label: 'Best gym Central Pattaya' });
   if (area === 'east-pattaya') links.push({ slug: 'best-gym-east-pattaya', label: 'Best gym East Pattaya' });
+  if (area === 'sattahip') links.push({ slug: 'best-gym-sattahip-pattaya', label: 'Na Jomtien & Sattahip' });
 
   const seen = new Set();
   const uniq = [];

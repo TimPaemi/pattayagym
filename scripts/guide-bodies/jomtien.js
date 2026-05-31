@@ -5,7 +5,7 @@ module.exports = `
 
 <h2>Understanding Jomtien geography for gym choice</h2>
 
-<p><strong>Jomtien Beach Road</strong> is the main tourist strip — Soi 7 alley gyms, beach walks, cafés. <strong>Thepprasit Road</strong> runs inland and hosts Venum, Fight EVO360, Yoga Pattaya Studio — still "Jomtien side" but not beach-walkable. <strong>Na Jomtien / Sattahip</strong> south adds Ramayana Water Park, Chee Chan Golf, KBA kiteboarding — 15–25 min from central Jomtien. <strong>Dongtan</strong> (between Pattaya and Jomtien) is where Rage Fight Academy sits — 5 minutes from both beach zones.</p>
+<p><strong>Jomtien Beach Road</strong> is the main tourist strip — Soi 7 alley gyms, beach walks, cafés. <strong>Thepprasit Road</strong> runs inland and hosts Venum, Fight EVO360, Yoga Pattaya Studio — still "Jomtien side" but not beach-walkable. <strong>Na Jomtien / Sattahip</strong> south adds Ramayana Water Park, Chee Chan Golf, KBA kiteboarding — 15–25 min from central Jomtien; full south guide: <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien &amp; Sattahip</a>. <strong>Dongtan</strong> (between Pattaya and Jomtien) is where Rage Fight Academy sits — 5 minutes from both beach zones.</p>
 
 <p>Traffic on Sukhumvit/Thepprasit at rush hour can turn a "15-minute" drive into 35. If you sign a monthly contract, <strong>live near your gym</strong>, not near your favourite restaurant.</p>
 

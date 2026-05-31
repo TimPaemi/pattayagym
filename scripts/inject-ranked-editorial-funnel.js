@@ -28,6 +28,7 @@ const EDITORIAL = new Set([
   'best-gym-central-pattaya',
   'yoga-retreat-pattaya',
   'best-gym-east-pattaya',
+  'best-gym-sattahip-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */
@@ -61,7 +62,16 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'best-gym-central-pattaya', title: 'Central Pattaya 24h gyms', desc: 'Jetts, Anytime, Fitness 7 cluster on Beach Road corridor.' },
     { slug: 'gym-day-pass-pattaya', title: 'Gym day pass', desc: 'Night-owl drop-ins when you are not on a monthly deal.' },
     { slug: 'cheapest-gyms-pattaya', title: 'Cheapest gyms', desc: 'Price table — monthly and walk-in tiers.' },
-    { slug: 'best-gym-naklua-pratamnak-pattaya', title: 'Naklua & Pratamnak', desc: 'SUN Fitness and Muscle Factory late hours.' },
+  ],
+  'family-friendly-pattaya': [
+    { slug: 'best-gym-sattahip-pattaya', title: 'Na Jomtien & Sattahip', desc: 'Water parks, resort pools, marina family days.' },
+    { slug: 'pattaya-gyms-childcare-family-pools', title: 'Childcare & pools', desc: 'Train while kids swim.' },
+    { slug: 'best-gym-jomtien-pattaya', title: 'Jomtien family gyms', desc: 'Beach-side options for parents.' },
+  ],
+  'best-dive-operators-pattaya': [
+    { slug: 'best-gym-sattahip-pattaya', title: 'South pier corridor', desc: 'Na Jomtien marina and dive launch points.' },
+    { slug: 'best-gym-jomtien-pattaya', title: 'Jomtien base', desc: 'Stay south, taxi to Bali Hai pier.' },
+    { slug: 'family-friendly-pattaya', title: 'Family-friendly', desc: 'Combine dive days with kid activities.' },
   ],
 };
 

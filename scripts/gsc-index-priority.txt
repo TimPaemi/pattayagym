@@ -1,13 +1,13 @@
 # GSC URL Inspection queue — request indexing (~10/day max)
-# Updated Round 44 · v440
+# Updated Round 45 · v441
 
-https://pattaya-gym.com/guides/best-gym-east-pattaya/
-https://pattaya-gym.com/area/east-pattaya/muay-thai/
-https://pattaya-gym.com/area/east-pattaya/
-https://pattaya-gym.com/guides/best-for-beginners-pattaya/
+https://pattaya-gym.com/guides/best-gym-sattahip-pattaya/
+https://pattaya-gym.com/area/sattahip/
+https://pattaya-gym.com/guides/pattaya-solo-female-fitness/
+https://pattaya-gym.com/guides/pattaya-digital-nomad-fitness/
+https://pattaya-gym.com/guides/luxury-sports-clubs-pattaya/
+https://pattaya-gym.com/guides/best-dive-operators-pattaya/
+https://pattaya-gym.com/gyms/ocean-marina-jomtien/
+https://pattaya-gym.com/guides/best-gym-jomtien-pattaya/
 https://pattaya-gym.com/guides/family-friendly-pattaya/
-https://pattaya-gym.com/guides/female-friendly-gyms-pattaya/
-https://pattaya-gym.com/gyms/kombat-group-thailand/
-https://pattaya-gym.com/guides/is-muay-thai-safe-pattaya/
-https://pattaya-gym.com/guides/muay-thai-camps-with-accommodation-pattaya/
 https://pattaya-gym.com/guides/

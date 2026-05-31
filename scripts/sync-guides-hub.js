@@ -53,9 +53,11 @@ const SLUG_TITLES = {
   'best-gym-central-pattaya': 'Best gym Central',
   'yoga-retreat-pattaya': 'Yoga retreat',
   'best-gym-east-pattaya': 'Best gym East Pattaya',
+  'best-gym-sattahip-pattaya': 'Na Jomtien & Sattahip',
 };
 
 const TLDR_ADD = [
+  { slug: 'best-gym-sattahip-pattaya', html: '<li><strong>Staying south / U-Tapao?</strong> → <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien &amp; Sattahip gyms</a></li>' },
   { slug: 'best-gym-east-pattaya', html: '<li><strong>Training on the Darkside?</strong> → <a href="/guides/best-gym-east-pattaya/">Best gym in East Pattaya</a></li>' },
   { slug: 'is-muay-thai-safe-pattaya', html: '<li><strong>Worried about safety?</strong> → <a href="/guides/is-muay-thai-safe-pattaya/">Is Muay Thai safe in Pattaya?</a></li>' },
   { slug: 'best-gym-central-pattaya', html: '<li><strong>Staying central / Beach Road?</strong> → <a href="/guides/best-gym-central-pattaya/">Best gym in Central Pattaya</a></li>' },
@@ -70,6 +72,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'best-gym-sattahip-pattaya', card: `<a href="/guides/best-gym-sattahip-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Na Jomtien &amp; Sattahip south</h3><span class="cv-pill">Area</span></div>
+      <p>Ocean Marina, Ramayana, Andaz, U-Tapao corridor — resort &amp; marina sport.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'best-gym-east-pattaya', card: `<a href="/guides/best-gym-east-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Best gym in East Pattaya (Darkside)</h3><span class="cv-pill">Area</span></div>
       <p>Kombat Group, Sor Klinmee, Sanit Mabprachan, Jungle Gym CrossFit.</p>
