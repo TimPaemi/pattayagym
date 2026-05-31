@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 46, date: '2026-05-31', tag: 'v442',
+    title: 'BJJ & MMA editorial guide + complete ranked deepen pass',
+    summary: 'Round 46 adds the first dedicated BJJ/MMA editorial guide and finishes editorial depth blocks on all remaining ranked guides — best Muay Thai, Walking Street, golf, childcare, Russian, seniors, Bangkok day trips.',
+    bullets: [
+      'New: /guides/bjj-mma-pattaya/ — ALFA BJJ, Venum, Rage, Kombat, Rambaa M16.',
+      'deepen-round46-ranked.js — 7 remaining ranked guides now have editorial depth.',
+      'MMA/BJJ category strips, venue links, and area×category intros wired.',
+      '34 guides total. All ranked guides now have deepen blocks. Asset 441 -> 442.'
+    ]
+  },
+  {
     n: 45, date: '2026-05-31', tag: 'v441',
     title: 'Na Jomtien & Sattahip area guide, ranked deepen, IndexNow',
     summary: 'Round 45 completes the six-area editorial set with the far-south marina/resort belt, deepens four ranked lifestyle guides, and adds IndexNow ping automation for Bing/Yandex.',

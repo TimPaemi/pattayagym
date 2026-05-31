@@ -39,6 +39,7 @@ const EDITORIAL_SLUGS = new Set([
   'yoga-retreat-pattaya',
   'best-gym-east-pattaya',
   'best-gym-sattahip-pattaya',
+  'bjj-mma-pattaya',
 ]);
 
 const buildSrc = fs.readFileSync(path.join(ROOT, 'build-v2.js'), 'utf8');

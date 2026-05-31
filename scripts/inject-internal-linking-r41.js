@@ -58,8 +58,16 @@ const MT_FUNNEL = [
 
 const CATEGORY_STRIPS = {
   'muay-thai': MT_FUNNEL,
-  mma: MT_FUNNEL.slice(0, 3),
-  bjj: MT_FUNNEL.slice(0, 3),
+  mma: [
+    { slug: 'bjj-mma-pattaya', tag: 'BJJ/MMA', title: 'BJJ & MMA guide', desc: 'Grappling, cage gyms, fight camps' },
+    { slug: 'best-gym-east-pattaya', tag: 'East', title: 'East Pattaya camps', desc: 'Kombat Group, Rambaa M16' },
+    { slug: 'best-muay-thai-pattaya', tag: 'Ranked', title: 'Best Muay Thai', desc: 'Pair striking with BJJ' },
+  ],
+  bjj: [
+    { slug: 'bjj-mma-pattaya', tag: 'BJJ/MMA', title: 'BJJ & MMA guide', desc: 'ALFA BJJ, Venum, Rage, Kombat' },
+    { slug: 'best-gym-east-pattaya', tag: 'East', title: 'East Pattaya', desc: 'Kombat Group grappling' },
+    { slug: 'muay-thai-pattaya-beginners', tag: 'Beginner', title: 'Muay Thai beginners', desc: 'Cross-train MT + BJJ' },
+  ],
   fitness: [
     { slug: 'cheapest-gyms-pattaya', tag: 'Budget', title: 'Cheapest gyms + table', desc: 'Monthly and drop-in prices' },
     { slug: 'gym-day-pass-pattaya', tag: 'Day pass', title: 'Gym day pass', desc: 'No membership needed' },
@@ -232,7 +240,12 @@ function venueGuideLinks(gym) {
   const area = areaSlugFromVenue(gym.area);
   const tags = (gym.tags || []).join(' ').toLowerCase();
 
-  if (cat === 'muay-thai' || cat === 'mma' || cat === 'bjj') {
+  if (cat === 'mma' || cat === 'bjj') {
+    links.push({ slug: 'bjj-mma-pattaya', label: 'BJJ & MMA in Pattaya' });
+    links.push({ slug: 'best-gym-east-pattaya', label: 'East Pattaya fight camps' });
+    links.push({ slug: 'training-thailand-visa-pattaya', label: 'Training & visa guide' });
+    links.push({ slug: 'best-muay-thai-pattaya', label: 'Best Muay Thai ranked list' });
+  } else if (cat === 'muay-thai') {
     links.push({ slug: 'is-muay-thai-safe-pattaya', label: 'Is Muay Thai safe?' });
     links.push({ slug: 'muay-thai-pattaya-beginners', label: 'Muay Thai for beginners' });
     links.push({ slug: 'muay-thai-training-holiday-pattaya', label: 'Training holiday guide' });
@@ -385,6 +398,8 @@ const EDITORIAL = new Set([
   'padel-pickleball-pattaya',
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
+  'is-muay-thai-safe-pattaya', 'best-gym-central-pattaya', 'yoga-retreat-pattaya',
+  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

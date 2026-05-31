@@ -27,6 +27,7 @@ const EDITORIAL = new Set([
   'yoga-retreat-pattaya',
   'best-gym-east-pattaya',
   'best-gym-sattahip-pattaya',
+  'bjj-mma-pattaya',
 ]);
 
 function polish(html, isHub) {
