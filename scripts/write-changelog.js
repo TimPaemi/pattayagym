@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 49, date: '2026-05-31', tag: 'v445',
+    title: 'Tennis & badminton editorial guide + racquet mesh expansion',
+    summary: 'Round 49 adds a dedicated tennis and badminton guide complementing the padel/pickleball editorial, cross-links the racquet category, and refreshes luxury-club funnel cards.',
+    bullets: [
+      'New: /guides/tennis-badminton-pattaya/ — Fitz Club, central tennis, Greta covered courts, badminton halls.',
+      'Padel guide cross-link + racquet category strips and venue FAQ links updated.',
+      'Homepage intent: Tennis & badminton card on Pratamnak/Fitz cluster.',
+      '37 guides total. Asset 444 -> 445.'
+    ]
+  },
+  {
     n: 48, date: '2026-05-31', tag: 'v444',
     title: 'Swimming & pools guide + venue FAQ on all 158 venues',
     summary: 'Round 48 adds a swimming/pools editorial guide and rolls programmatic FAQ blocks with FAQPage schema to every venue page — with improved category templates and plain-text schema encoding.',

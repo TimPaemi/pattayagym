@@ -89,9 +89,9 @@ const CATEGORY_STRIPS = {
     { slug: 'bangkok-day-trip-sport-pattaya', tag: 'Day trip', title: 'Bangkok day-trip sport', desc: 'Stadiums and courses near BKK' },
   ],
   racquet: [
+    { slug: 'tennis-badminton-pattaya', tag: 'Tennis', title: 'Tennis & badminton', desc: 'Courts, clubs, booking tips' },
     { slug: 'padel-pickleball-pattaya', tag: 'Padel', title: 'Padel & pickleball', desc: 'Every court in Pattaya ranked' },
     { slug: 'luxury-sports-clubs-pattaya', tag: 'Luxury', title: 'Luxury clubs + tennis', desc: 'Fitz Club and resort courts' },
-    { slug: 'best-gym-naklua-pratamnak-pattaya', tag: 'Pratamnak', title: 'Pratamnak racquet hub', desc: 'Padel and pickleball on the hill' },
   ],
   swimming: [
     { slug: 'swimming-pools-pattaya', tag: 'Swim', title: 'Swimming & pools', desc: 'Hotel pools, water parks, lap swim' },
@@ -274,6 +274,7 @@ function venueGuideLinks(gym) {
     links.push({ slug: 'thai-gym-terms-pattaya', label: 'Thai gym terms' });
     links.push({ slug: 'pattaya-digital-nomad-fitness', label: 'Digital nomad fitness' });
   } else if (cat === 'racquet') {
+    links.push({ slug: 'tennis-badminton-pattaya', label: 'Tennis & badminton Pattaya' });
     links.push({ slug: 'padel-pickleball-pattaya', label: 'Padel & pickleball Pattaya' });
     links.push({ slug: 'best-gym-naklua-pratamnak-pattaya', label: 'Pratamnak padel & pickleball' });
     links.push({ slug: 'luxury-sports-clubs-pattaya', label: 'Luxury racquet clubs' });
@@ -375,9 +376,9 @@ const FUNNEL_R41 = {
     { slug: 'best-muay-thai-pattaya', title: 'Best Muay Thai', desc: 'Ranked camp list.' },
   ],
   'luxury-sports-clubs-pattaya': [
+    { slug: 'tennis-badminton-pattaya', title: 'Tennis & badminton', desc: 'Fitz Club and resort courts.' },
     { slug: 'best-golf-courses-pattaya', title: 'Best golf courses', desc: 'Championship Pattaya golf.' },
     { slug: 'best-gym-naklua-pratamnak-pattaya', title: 'Pratamnak luxury cluster', desc: 'Fitz Club and hilltop gyms.' },
-    { slug: 'female-friendly-gyms-pattaya', title: 'Female-friendly gyms', desc: 'Premium venues for women.' },
   ],
   'pattaya-solo-female-fitness': [
     { slug: 'female-friendly-gyms-pattaya', title: 'Female-friendly gyms', desc: 'Ranked women-friendly venues.' },
@@ -415,7 +416,7 @@ const EDITORIAL = new Set([
   'training-thailand-visa-pattaya',
   'thai-gym-terms-pattaya',
   'is-muay-thai-safe-pattaya', 'best-gym-central-pattaya', 'yoga-retreat-pattaya',
-  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya', 'crossfit-pattaya', 'swimming-pools-pattaya',
+  'best-gym-east-pattaya', 'best-gym-sattahip-pattaya', 'bjj-mma-pattaya',   'crossfit-pattaya', 'swimming-pools-pattaya', 'tennis-badminton-pattaya',
 ]);
 
 function funnelCard({ slug, title, desc }) {

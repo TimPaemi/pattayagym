@@ -66,6 +66,11 @@ const INTENT_BLOCK = `
         <span class="intent-card-title">Padel &amp; pickleball</span>
         <span class="intent-card-desc">Courts on Pratamnak &amp; Mabprachan</span>
       </a>
+      <a href="/guides/tennis-badminton-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Tennis</span>
+        <span class="intent-card-title">Tennis &amp; badminton</span>
+        <span class="intent-card-desc">Fitz Club, courts, badminton halls</span>
+      </a>
       <a href="/guides/bjj-mma-pattaya/" class="intent-card">
         <span class="intent-card-tag">// BJJ / MMA</span>
         <span class="intent-card-title">BJJ &amp; MMA in Pattaya</span>

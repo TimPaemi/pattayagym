@@ -170,7 +170,7 @@ function faqsForVenue(g) {
   } else if (cat === 'racquet') {
     out.push({
       q: `How do I book a court at ${name}?`,
-      a: `Call or LINE for peak-hour slots. <a href="/guides/padel-pickleball-pattaya/">Padel &amp; pickleball Pattaya</a>.`,
+      a: `Call or LINE for peak-hour slots. <a href="/guides/tennis-badminton-pattaya/">Tennis &amp; badminton</a> · <a href="/guides/padel-pickleball-pattaya/">Padel &amp; pickleball</a>.`,
     });
     out.push({
       q: `Can beginners play at ${name}?`,

@@ -1,13 +1,13 @@
 # GSC URL Inspection queue — request indexing (~10/day max)
-# Updated Round 48 · v444
+# Updated Round 49 · v445
 
-https://pattaya-gym.com/guides/swimming-pools-pattaya/
-https://pattaya-gym.com/category/swimming/
-https://pattaya-gym.com/gyms/ramayana-water-park/
-https://pattaya-gym.com/gyms/centara-grand-mirage/
-https://pattaya-gym.com/guides/family-friendly-pattaya/
-https://pattaya-gym.com/gyms/pattaya-triathlon/
-https://pattaya-gym.com/guides/crossfit-pattaya/
-https://pattaya-gym.com/gyms/wko-muay-thai/
-https://pattaya-gym.com/gyms/sityodtong-pattaya/
+https://pattaya-gym.com/guides/tennis-badminton-pattaya/
+https://pattaya-gym.com/category/racquet/
+https://pattaya-gym.com/gyms/fitz-club/
+https://pattaya-gym.com/gyms/pattaya-tennis-club/
+https://pattaya-gym.com/gyms/play-padel-pattaya/
+https://pattaya-gym.com/guides/padel-pickleball-pattaya/
+https://pattaya-gym.com/gyms/euro-badminton/
+https://pattaya-gym.com/guides/luxury-sports-clubs-pattaya/
+https://pattaya-gym.com/area/pratamnak/racquet/
 https://pattaya-gym.com/guides/

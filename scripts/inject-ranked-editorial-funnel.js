@@ -32,6 +32,7 @@ const EDITORIAL = new Set([
   'bjj-mma-pattaya',
   'crossfit-pattaya',
   'swimming-pools-pattaya',
+  'tennis-badminton-pattaya',
 ]);
 
 /** slug -> editorial cards to inject (max 3) */

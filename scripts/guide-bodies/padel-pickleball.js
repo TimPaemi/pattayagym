@@ -77,5 +77,5 @@ module.exports = `
 <p>Light pickleball or padel footwork sessions work as active recovery; avoid hard padel the day before a fight camp sparring block. Training rhythm: <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month guide</a>.</p>
 
 <h2>Related guides</h2>
-<p><a href="/guides/best-gym-naklua-pratamnak-pattaya/">Pratamnak gyms</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/category/racquet/">All racquet venues</a> · <a href="/compare/">Compare</a></p>
+<p><a href="/guides/tennis-badminton-pattaya/">Tennis &amp; badminton</a> · <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Pratamnak gyms</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/category/racquet/">All racquet venues</a> · <a href="/compare/">Compare</a></p>
 `;

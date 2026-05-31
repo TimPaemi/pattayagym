@@ -57,9 +57,11 @@ const SLUG_TITLES = {
   'bjj-mma-pattaya': 'BJJ & MMA',
   'crossfit-pattaya': 'CrossFit Pattaya',
   'swimming-pools-pattaya': 'Swimming & pools',
+  'tennis-badminton-pattaya': 'Tennis & badminton',
 };
 
 const TLDR_ADD = [
+  { slug: 'tennis-badminton-pattaya', html: '<li><strong>Tennis or badminton?</strong> → <a href="/guides/tennis-badminton-pattaya/">Tennis &amp; badminton in Pattaya</a></li>' },
   { slug: 'swimming-pools-pattaya', html: '<li><strong>Pool day or lap swim?</strong> → <a href="/guides/swimming-pools-pattaya/">Swimming &amp; pools in Pattaya</a></li>' },
   { slug: 'crossfit-pattaya', html: '<li><strong>CrossFit WODs?</strong> → <a href="/guides/crossfit-pattaya/">CrossFit in Pattaya</a></li>' },
   { slug: 'bjj-mma-pattaya', html: '<li><strong>BJJ or MMA?</strong> → <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA in Pattaya</a></li>' },
@@ -78,6 +80,11 @@ const TLDR_ADD = [
 ];
 
 const CARD_ADD = [
+  { slug: 'tennis-badminton-pattaya', card: `<a href="/guides/tennis-badminton-pattaya/" class="cat-venue-card">
+      <div class="cv-head"><h3>Tennis &amp; badminton in Pattaya</h3><span class="cv-pill">Racquet</span></div>
+      <p>Fitz Club, Pattaya Tennis Club, Greta covered courts, Euro Badminton — booking map.</p>
+      <span class="cv-cta">Read guide →</span>
+    </a>\n    ` },
   { slug: 'swimming-pools-pattaya', card: `<a href="/guides/swimming-pools-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Swimming &amp; pools in Pattaya</h3><span class="cv-pill">Swim</span></div>
       <p>Hotel day-pass pools, water parks, beach laps, swim schools — all swim types mapped.</p>
