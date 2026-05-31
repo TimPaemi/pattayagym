@@ -145,6 +145,7 @@ if (fs.existsSync(headersPath)) {
   const hdrs = fs.readFileSync(headersPath, 'utf8');
   const cspHashes = [...hdrs.matchAll(/'sha256-([A-Za-z0-9+/=]+)'/g)].map(m => m[1]);
   const crypto = require('crypto');
+  const scriptBodyForHash = (body) => body.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
   const found = new Set();
   for (const fp of htmlFiles) {
     const html = fs.readFileSync(fp, 'utf8');
@@ -153,7 +154,7 @@ if (fs.existsSync(headersPath)) {
     while ((m = re.exec(html))) {
       const body = m[1];
       if (!body.trim()) continue;
-      const h = crypto.createHash('sha256').update(body, 'utf8').digest('base64');
+      const h = crypto.createHash('sha256').update(scriptBodyForHash(body), 'utf8').digest('base64');
       found.add(h);
     }
   }

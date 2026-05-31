@@ -27,6 +27,11 @@ const crypto = require('crypto');
 
 const ROOT = path.resolve(__dirname, '..');
 
+/** LF-normalize script bodies so CSP hashes match Linux deploy / CI (git stores LF). */
+function scriptBodyForHash(body) {
+  return body.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+}
+
 function* walkHtml(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (entry.name === 'node_modules' || entry.name === '.git' || entry.name === '.backups') continue;
@@ -46,7 +51,7 @@ for (const fp of walkHtml(ROOT)) {
   while ((m = re.exec(html))) {
     const body = m[1];
     if (!body.trim()) continue;
-    const h = crypto.createHash('sha256').update(body, 'utf8').digest('base64');
+    const h = crypto.createHash('sha256').update(scriptBodyForHash(body), 'utf8').digest('base64');
     found.add(h);
   }
 }
