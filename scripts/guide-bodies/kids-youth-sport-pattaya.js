@@ -91,6 +91,14 @@ module.exports = `
 <li>School holiday camp dates vs your visa or rental lease</li>
 </ul>
 
+<h2>School holidays and rainy-season planning</h2>
+
+<p>International school breaks (Oct, Dec–Jan, Apr) flood football academies — book trials two weeks ahead. Rainy season pushes AF Academy toward <strong>Central indoor fields</strong>; confirm which location runs when roads flood east. Harbor Mall indoor stack is the reliable wet-weekend default: trampoline → climb → mall cinema for parents.</p>
+
+<p>Split siblings: older child at FAST PRO Horseshoe morning, younger at AF Academy afternoon nearer condo — reduces one-car family stress. Teens wanting MT: trial one kids class at <a href="/gyms/venum-training-camp/">Venum</a> before committing month pass; mouthguard and shin guards are non-negotiable purchases.</p>
+
+<p>Documentation for academies: passport copy, allergy list, emergency contact — standard in Thailand youth sport. Rusich and AF both serve Russian-speaking parents; bring Thai translator only if you need FAT paperwork explained in Thai at Pattaya City FA.</p>
+
 <h2>Who this guide is for</h2>
 
 <ul>

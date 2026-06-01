@@ -98,6 +98,14 @@ module.exports = `
 
 <p>Medical: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> · Outdoor community: <a href="https://mrweoutside.com/" target="_blank" rel="noopener noreferrer">Mr We Outside</a>.</p>
 
+<h2>Gear and costs — what to budget</h2>
+
+<p>Hash: trail shoes ฿1,500+, headlamp for late finishes, small cash for run fee and social drinks. Cycling: helmet mandatory; many riders bring own pedals — confirm rental bike quality before long rides. Marathon: register early July race — hotel blocks near start line fill; taper week should drop MT sparring volume.</p>
+
+<p>Beach aerobics costs nothing but time — still budget water and light shirt. Lawn bowls roll-up <strong>฿250/day</strong> at Banchang cited in venue file is among the cheapest structured sport in Pattaya. Cricket kit often club-supplied for new players — ask <a href="/gyms/pattaya-cricket-club/">Pattaya Cricket Club</a> before buying pads.</p>
+
+<p>Transport: hash start points rotate — join Facebook group or ask at <a href="/gyms/pattaya-sports-club/">Pattaya Sports Club</a> bar night for weekly pin. Cycling clubs post meet coordinates Friday evenings for Saturday dawn.</p>
+
 <h2>Who this guide is for</h2>
 
 <ul>

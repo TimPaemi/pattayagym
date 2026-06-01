@@ -65,6 +65,12 @@ module.exports = `
 
 <p>Injury backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Beginners hub: <a href="/guides/best-for-beginners-pattaya/">best for beginners</a>.</p>
 
+<h2>Rainy season and heat — when indoor walls win</h2>
+
+<p>May–October brings afternoon storms; outdoor bouldering trips to Rayong or Krabi are not day-trip reliable from Pattaya. Harbor Mall sessions keep you on schedule — same reason <a href="/guides/snooker-pool-billiards-pattaya/">pool halls</a> and <a href="/guides/kids-youth-sport-pattaya/">trampoline parks</a> peak in wet weeks. Book Deep before 11:00 or after 17:00 if you dislike mall weekend crowds.</p>
+
+<p>Long-stay climbers often run a <strong>three-week block</strong>: week one intro top-rope twice, week two add bouldering volume, week three test lead checkout if experienced. Pair deload weeks with <a href="/guides/yoga-retreat-pattaya/">yoga</a> or pool days — tendons adapt slower than cardio from hash runs.</p>
+
 <h2>Who this guide is for</h2>
 
 <ul>
@@ -93,6 +99,12 @@ module.exports = `
 
 <h3>What should I avoid before climbing?</h3>
 <p>Hard pad rounds the same morning as intense crimping — schedule climb afternoons or rest days if fingers are already taxed from grip sports.</p>
+
+<h3>Is there outdoor climbing near Pattaya?</h3>
+<p>No notable sport-climbing crags inside the city — serious climbers use Deep or Bean Cow, then travel to Krab/Rayong trips on rest weeks. <a href="/guides/adventure-pattaya/">Adventure guide</a> covers ropes courses, not graded rock.</p>
+
+<h3>Can I buy chalk and shoes in Pattaya?</h3>
+<p>Mall sports shops carry basics; gyms rent shoes for try-outs. Long-stay climbers order online to a Thailand condo address — confirm sizing before you commit to a monthly pass. Harbor Mall has food court and parking if you drive from Naklua. Ask Deep staff about multi-visit cards if you climb twice weekly.</p>
 
 <h2>Related guides</h2>
 

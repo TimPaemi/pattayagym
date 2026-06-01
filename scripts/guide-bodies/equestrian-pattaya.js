@@ -79,6 +79,14 @@ module.exports = `
 <h3>Premium polo visitor</h3>
 <p>Thai Polo booked chukker or training session → spa/rest afternoon → Fitz Club or golf next day on Pratamnak — <a href="/guides/tennis-badminton-pattaya/">tennis guide</a> for racquet add-on.</p>
 
+<h2>Photography, dress code, and group logistics</h2>
+
+<p>Estate venues restrict drone use and may limit stable access during polo events — ask staff where spectators may stand. Wear long trousers and closed shoes; helmets provided for riding. Sunscreen and insect repellent matter on trail sections near reservoir vegetation.</p>
+
+<p>Groups of six or more should book separate riding slots and adventure activities (paintball at Horseshoe) in one email thread — front desk coordinates timing better than walk-in fragments. Russian- and English-speaking staff are common at Horseshoe; Thai Polo expects international equestrian English for competition visitors.</p>
+
+<p>Combine with <a href="/guides/best-golf-courses-pattaya/">golf</a> for executive weekends: morning tee time Siam Country Club, afternoon trail ride, evening seafood at Na Jomtien — <a href="/guides/best-gym-sattahip-pattaya/">Sattahip belt guide</a> for south-side hotels.</p>
+
 <h2>Who this guide is for</h2>
 
 <ul>

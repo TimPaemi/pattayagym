@@ -94,6 +94,14 @@ module.exports = `
 <li>Sparring intensity — ask if "fundamentals" class is no-contact or positional only</li>
 </ul>
 
+<h2>Combining BJJ with Muay Thai — realistic weekly load</h2>
+
+<p>Holiday fighters often overbook: morning pads five days plus evening rolls four days. Pattaya humidity amplifies fatigue — most sustainable split is <strong>three MT sessions + two BJJ sessions</strong> for a two-week trip, or alternate weeks if you stay a month. Use <a href="/guides/cheapest-gyms-pattaya/">commercial gym</a> days for legs-only S&amp;C instead of extra sparring.</p>
+
+<p>Gi laundry: wash kimono daily; skin infections spread in shared academies — shower immediately after class. Open mat etiquette: ask higher belts before repping hard; tap early in heat. Competition visitors should confirm if gym runs IBJJF-style rules or local submission-only rounds before you assume points game.</p>
+
+<p>If visa is the goal, <a href="/gyms/rage-fight-academy/">Rage</a> education sponsorship and <a href="/guides/training-thailand-visa-pattaya/">visa guide</a> matter more than mat prestige — read contract hours required per week before you sign.</p>
+
 <h2>Who this guide is for</h2>
 
 <ul>
