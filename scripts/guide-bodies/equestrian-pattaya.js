@@ -1,47 +1,114 @@
 module.exports = `
-<p>Pattaya has two serious equestrian venues — <strong>Horseshoe Point Resort</strong> at Mabprachan and <strong>Thai Polo &amp; Equestrian Club</strong> north of the city. Both run riding schools, polo, and multi-sport days on large estates. This guide covers who each suits, booking expectations, and how to pair a horse day with Muay Thai or golf nearby.</p>
+<p>Pattaya has two serious equestrian venues — <strong>Horseshoe Point Resort</strong> at Mabprachan and <strong>Thai Polo &amp; Equestrian Club</strong> north of the city. Both run riding schools, polo, and multi-sport days on large estates. This guide covers who each suits, booking expectations, and how to pair a horse day with Muay Thai, golf, or family sport nearby — sourced from venue markdown, not brochure copy.</p>
 
-<p>Hub: <a href="/category/equestrian/">Equestrian category</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a> · <a href="/compare/">compare</a> · <a href="/plan-my-trip/">plan my trip</a>.</p>
+<p>Equestrian here is not a beach pony photo-op — both venues operate at <strong>national or Asia-scale</strong> scale with formal riding schools, competition infrastructure, and advance booking. Hub: <a href="/category/equestrian/">Equestrian category</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a> · <a href="/compare/">compare</a> · <a href="/plan-my-trip/">plan my trip</a>.</p>
 
-<h2>Horseshoe Point Resort — Mabprachan mega-facility</h2>
+<h2>Horseshoe vs Thai Polo — market position</h2>
 
-<p><a href="/gyms/horseshoe-point-resort/">Horseshoe Point Resort &amp; Country Club</a> (Soi Siam Country Club, near Mabprachan Reservoir) is a 1,500-acre estate — International Riding School since 1999, five indoor/outdoor arenas, 100+ horses across Lusitano, Appaloosa, Lipizzaner, Arab, Warmblood, Falabella, and Thai pony breeds.</p>
+<p>Most tourist regions offer small trail-ride stables. Pattaya's two listed venues are different: <strong>Horseshoe Point</strong> combines TEF-certified riding school pedigree with a 1,500-acre adventure estate; <strong>Thai Polo Club</strong> targets polo players and international equestrian competition. Neither is walkable from Beach Road — plan transport.</p>
 
-<p>Same campus runs <strong>polo</strong>, paintball, zipline, mountain biking, and multi-sport fields — useful if your group splits interests. On-site accommodation for stay-and-ride weekends. Phone +66 38 253 599.</p>
+<table>
+<thead><tr><th>Factor</th><th>Horseshoe Point</th><th>Thai Polo &amp; Equestrian Club</th></tr></thead>
+<tbody>
+<tr><td>Land</td><td>1,500 acres near Mabprachan</td><td>250 hectares, Banglamung / lake belt</td></tr>
+<tr><td>Best for</td><td>Families, first rides, dressage students, adventure day</td><td>Polo, endurance, Derby programmes</td></tr>
+<tr><td>Extras</td><td>Paintball, zipline, MTB, accommodation</td><td>Tournament polo fields, 250+ stables</td></tr>
+<tr><td>Tier</td><td>฿฿฿ resort estate</td><td>฿฿฿฿ premium</td></tr>
+</tbody>
+</table>
 
-<p><strong>Best for:</strong> families wanting a full-day estate visit; beginner trail rides; FAST PRO Football Academy uses Horseshoe grounds — <a href="/guides/kids-youth-sport-pattaya/">kids sport guide</a>. Pair with Darkside training at <a href="/gyms/kombat-group-thailand/">Kombat Group</a> or <a href="/guides/crossfit-pattaya/">Jungle Gym CrossFit</a>.</p>
+<h2>1. Horseshoe Point Resort — Mabprachan mega-facility</h2>
 
-<h2>Thai Polo &amp; Equestrian Club — Asia-scale polo</h2>
+<p><a href="/gyms/horseshoe-point-resort/">Horseshoe Point Resort &amp; Country Club</a> (100 Moo 9, Pong, Bang Lamung — near Mabprachan Reservoir) is a <strong>1,500-acre estate</strong>. The <strong>International Riding School</strong> was established <strong>in 1999</strong> and holds:</p>
 
-<p><a href="/gyms/thai-polo-equestrian-club/">Thai Polo &amp; Equestrian Club</a> (Banglamung / Mabprachan Lake, ~25 min north of Pattaya) claims largest multi-functional polo and equestrian facility in Asia — 250 hectares, three polo fields plus two practice pitches, 250+ stables, endurance and Derby programmes, Argentinian vet on staff.</p>
+<ul>
+<li><strong>Thailand Equestrian Federation (TEF)</strong> certification</li>
+<li>Affiliation with <strong>Centro Equestre da Leziria Grande (Portugal)</strong> — classical riding lineage via Maestro Luis Valença Rodrigues' school</li>
+</ul>
+
+<p>Equestrian infrastructure in venue files: <strong>five indoor/outdoor arenas</strong>, <strong>100+ horses</strong> across Lusitano, Appaloosa, Lipizzaner, Arab, Warmblood, Falabella, and Thai pony breeds. Programmes span dressage, show jumping, classical riding, polo, trail rides, and kids' pony sessions.</p>
+
+<p>Same campus runs <strong>paintball, zipline, mountain biking, archery, water balls, and a multipurpose sports field</strong> — useful when your group splits interests. On-site accommodation supports stay-and-ride weekends. Phone <strong>+66 38 253 599</strong>.</p>
+
+<p><strong>Distances (venue file):</strong> ~14.5 km to Pattaya Beach (~25–30 min by car), ~14.7 km to Jomtien; ~10 minutes to Siam Country Club golf; adjacent to Mabprachan recreation popular with cyclists — <a href="/guides/running-cycling-clubs-pattaya/">running &amp; clubs guide</a>.</p>
+
+<p><strong>Best for:</strong> families wanting a full-day estate visit; beginner trail rides; classical/dressage students; <a href="/gyms/fast-pro-football-academy/">FAST PRO Football Academy</a> uses Horseshoe grounds — <a href="/guides/kids-youth-sport-pattaya/">kids sport guide</a>. Pair Darkside training at <a href="/gyms/kombat-group-thailand/">Kombat Group</a> or <a href="/guides/crossfit-pattaya/">Jungle Gym CrossFit</a> same week.</p>
+
+<h2>2. Thai Polo &amp; Equestrian Club — Asia-scale polo</h2>
+
+<p><a href="/gyms/thai-polo-equestrian-club/">Thai Polo &amp; Equestrian Club</a> (Banglamung / Mabprachan Lake area, ~25 min north of central Pattaya in venue research) claims largest multi-functional polo and equestrian facility in Asia — <strong>250 hectares</strong>, <strong>three polo fields plus two practice pitches</strong>, <strong>250+ stables</strong>, endurance and Derby programmes, Argentinian vet on staff.</p>
 
 <p><strong>Best for:</strong> serious polo players and international equestrian visitors; premium tier (฿฿฿฿). Book ahead — walk-ins rare. Website: <a href="https://www.thai-polo-club.com/" target="_blank" rel="noopener noreferrer">thai-polo-club.com</a>.</p>
 
-<h2>Horseshoe vs Thai Polo — quick pick</h2>
+<p>Cricket crossover: <a href="/gyms/pattaya-cricket-club/">Pattaya Cricket Club</a> plays at Horseshoe Point ground Nov–June — not Thai Polo, but same east belt for sport planning.</p>
+
+<h2>Quick pick — first visit</h2>
 
 <ul>
 <li><strong>First trail ride / family day?</strong> → Horseshoe Point — riding school + adventure activities on one ticket.</li>
 <li><strong>Polo or competitive equestrian?</strong> → Thai Polo &amp; Equestrian Club — tournament-scale fields.</li>
 <li><strong>Stay overnight?</strong> → Horseshoe accommodation on-site; Thai Polo by appointment.</li>
 <li><strong>Budget day?</strong> → Neither is cheap — compare resort tier: <a href="/guides/luxury-sports-clubs-pattaya/">luxury sports clubs</a>.</li>
+<li><strong>Riding + golf weekend?</strong> → Horseshoe near Siam Country Club — <a href="/guides/best-golf-courses-pattaya/">best golf courses</a>.</li>
 </ul>
 
-<h2>Booking and safety</h2>
+<h2>Booking, safety, and what to verify</h2>
 
-<p>Both venues require advance booking for riding slots and helmet fitting. Confirm weight limits and age policies for children. Transport: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a> — estates sit east/north of central Pattaya, not walkable from Beach Road.</p>
+<p>Both venues require advance booking for riding slots, helmet fitting, and weight/age policies for children. Confirm in writing:</p>
 
-<p>Injury backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Gentle alternatives: <a href="/guides/pattaya-seniors-low-impact-sport/">seniors low-impact sport</a>.</p>
+<ul>
+<li>Session length and whether guide accompanies trail rides</li>
+<li>Helmet and boot hire included or extra</li>
+<li>Weight limits and minimum age for mounts</li>
+<li>Insurance and waiver language (especially for kids)</li>
+<li>Photography rules around horses and polo fields</li>
+</ul>
 
-<h2>Sample day trip (equestrian + sport)</h2>
+<p>Transport: estates sit east/north of central Pattaya — use <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a> or hotel taxi desk; not walkable from Walking Street. Allow buffer time — Banglamung traffic spikes weekends.</p>
 
-<p>Morning trail ride Horseshoe → lunch on estate → afternoon paintball or MT pads at east camp → evening pool — <a href="/guides/swimming-pools-pattaya/">swimming &amp; pools guide</a>.</p>
+<p>Injury backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Gentle alternatives same week: <a href="/guides/pattaya-seniors-low-impact-sport/">seniors low-impact sport</a> · <a href="/guides/swimming-pools-pattaya/">swimming pools</a>.</p>
+
+<h2>Sample itineraries</h2>
+
+<h3>Family day (Horseshoe)</h3>
+<p>Morning pony or trail ride → estate lunch → afternoon paintball or zipline for teens → parents optional short gym session if staying on property → evening pool at hotel. Kids football families: align with FAST PRO training day if schedules match.</p>
+
+<h3>Sport holiday combo</h3>
+<p>Morning trail ride Horseshoe → lunch on estate → afternoon MT pads at east camp (<a href="/guides/best-gym-east-pattaya/">East Pattaya</a>) → evening recovery swim — <a href="/guides/swimming-pools-pattaya/">pools guide</a>.</p>
+
+<h3>Premium polo visitor</h3>
+<p>Thai Polo booked chukker or training session → spa/rest afternoon → Fitz Club or golf next day on Pratamnak — <a href="/guides/tennis-badminton-pattaya/">tennis guide</a> for racquet add-on.</p>
+
+<h2>Who this guide is for</h2>
+
+<ul>
+<li><strong>Families</strong> needing credible riding school (not beach pony traps)</li>
+<li><strong>Dressage / classical students</strong> attracted by Horseshoe's Portugal affiliation</li>
+<li><strong>Polo players</strong> visiting Asia with tournament expectations</li>
+<li><strong>Relocating parents</strong> pairing kids football at Horseshoe with estate activities</li>
+</ul>
+
+<h2>FAQ</h2>
+
+<h3>Which venue is better for kids' first horse ride?</h3>
+<p><a href="/gyms/horseshoe-point-resort/">Horseshoe Point</a> — pony programmes, adventure activities, and family accommodation on one estate. Confirm age and height rules when booking.</p>
+
+<h3>Can I visit Thai Polo without playing polo?</h3>
+<p>Contact the club directly — visitor policies vary. Serious polo and equestrian training dominate; Horseshoe is the easier general visitor entry.</p>
+
+<h3>How far is Horseshoe from Pattaya Beach?</h3>
+<p>About 14.5 km (~25–30 minutes by car) per venue file. Plan round-trip taxi or rental — not a baht-bus trip.</p>
+
+<h3>Is horse riding safe in Pattaya heat?</h3>
+<p>Book morning sessions; hydrate; wear long trousers and closed shoes. Estates run structured programmes — avoid unlicensed beach operators not in our directory.</p>
+
+<h3>Can I combine horses with Muay Thai same trip?</h3>
+<p>Yes — east-side camps (<a href="/gyms/kombat-group-thailand/">Kombat Group</a>, <a href="/gyms/fairtex-pattaya/">Fairtex</a>) sit drivable from Mabprachan. Rest days matter — do not stack hard riding and hard sparring without recovery.</p>
+
+<h3>What should I book first?</h3>
+<p>Riding slot and transport. Secondary: accommodation at Horseshoe if stay-and-ride; polo chukker dates at Thai Polo for competition visitors.</p>
 
 <h2>Related guides</h2>
 
-<ul>
-<li><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> — Fitz Club, resort golf, premium tier</li>
-<li><a href="/guides/best-golf-courses-pattaya/">Best golf courses</a> — pair polo day with a round nearby</li>
-<li><a href="/guides/best-gym-east-pattaya/">Best gym East Pattaya</a> — Mabprachan belt gyms</li>
-<li><a href="/guides/adventure-pattaya/">Adventure in Pattaya</a> — zipline and ATV if horses are not your sport</li>
-</ul>
+<p><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/guides/best-golf-courses-pattaya/">Best golf courses</a> · <a href="/guides/best-gym-east-pattaya/">Best gym East Pattaya</a> · <a href="/guides/adventure-pattaya/">Adventure in Pattaya</a> · <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a> · <a href="/category/equestrian/">All equestrian venues</a>.</p>
 `;

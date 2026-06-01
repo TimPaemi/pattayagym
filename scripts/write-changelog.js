@@ -38,6 +38,20 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 60, date: '2026-06-01', tag: 'v452',
+    title: 'Q3 Tier C rewrites — six remaining editorial guides',
+    summary: 'Round 60 Q3 expands all six remaining Tier C guides to full editorial depth from venue markdown — tennis, equestrian, kids sport, climbing, BJJ/MMA, and running clubs.',
+    bullets: [
+      'Rewrite: /guides/tennis-badminton-pattaya/ — Fitz, Greta, badminton halls, FAQ.',
+      'Rewrite: /guides/equestrian-pattaya/ — Horseshoe Point, Thai Polo Club.',
+      'Rewrite: /guides/kids-youth-sport-pattaya/ — football academies, Harbor Mall stack.',
+      'Rewrite: /guides/climbing-pattaya/ — Deep, Bean Cow, hotel walls vs gyms.',
+      'Rewrite: /guides/bjj-mma-pattaya/ — ALFA, Venum, Rage, Kombat, Rambaa.',
+      'Rewrite: /guides/running-cycling-clubs-pattaya/ — hash, cycling, aerobics, teams.',
+      'write-round60-q3.js; content-quality-audit.js re-run; Tier C cleared.',
+    ]
+  },
+  {
     n: 59, date: '2026-06-01', tag: 'v452',
     title: 'Q2 Tier C rewrites — snooker, CrossFit, swimming pools',
     summary: 'Round 59 Q2 expands three Tier C editorial guides to full depth from venue markdown — pool/snooker halls, Jungle Gym CrossFit affiliate, and public plus hotel swimming.',
