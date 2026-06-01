@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 58, date: '2026-05-31', tag: 'v452',
+    title: 'Q1 quality recovery — content audit + Russian-speaking editorial rewrite',
+    summary: 'Round 58 Q1 adds scripts/content-quality-audit.js (word-count tiers, FAQ/schema flags) and replaces the thin ranked Russian-speaking guide with a full editorial article sourced from venue markdown.',
+    bullets: [
+      'New: scripts/content-quality-audit.js → CONTENT_QUALITY_AUDIT report.',
+      'Rewrite: /guides/pattaya-russian-speaking-sport/ — ~14 min editorial, Rusich, AF Academy, Castra, Elite, yoga, MT, FAQ.',
+      'Honesty: UPDATED WEEKLY → UPDATED ROLLING in editorial-guide-shell.js.',
+      'Removed ranked deepen-r46/r57 injects for Russian guide (no patch-on-patch).',
+    ]
+  },
+  {
     n: 57, date: '2026-05-28', tag: 'v452',
     title: 'Pool & snooker mesh + Russian-speaking sport deepen',
     summary: 'Round 57 completes the snooker editorial guide mesh (SF Strike, Megabreak) and deepens the Russian-speaking sport ranked guide with Rusich Club, AF Academy, and long-stay cross-links.',

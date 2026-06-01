@@ -53,15 +53,6 @@ const BLOCKS = {
   <h3>Structured kids sport</h3>
   <p>Football academies (AF Academy, Rusich Club), swim schools, trampoline parks. Schools context: <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a>.</p>
 </section>`,
-  'pattaya-russian-speaking-sport': `
-<section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-ru-h">
-  <h2 id="${MARKER}-ru-h" class="guide-rank-section">Russian-speaking sport in Pattaya</h2>
-  <p>Naklua, Pratamnak, and Jomtien host large Russian-speaking communities — several gyms and academies run coaching in Russian or bilingual staff. This ranked list flags venues with confirmed Russian language support in our directory.</p>
-  <h3>Where the community trains</h3>
-  <p><strong>Football</strong> — Rusich Club, AF Academy. <strong>Fitness</strong> — Elite Gym, Muscle Factory members. <strong>East side</strong> — Castra Gym. Kite: <a href="/gyms/kba-kiteboarding-pattaya/">KBA Kiteboarding</a>.</p>
-  <h3>Muay Thai for Russian speakers</h3>
-  <p>Many camps train Eastern European long-stayers daily — start with <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking camps</a> (often multilingual) and <a href="/guides/best-muay-thai-pattaya/">best Muay Thai ranked list</a>. Visa: <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>.</p>
-</section>`,
   'pattaya-seniors-low-impact-sport': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-sen-h">
   <h2 id="${MARKER}-sen-h" class="guide-rank-section">Low-impact sport for 65+ in Pattaya</h2>
