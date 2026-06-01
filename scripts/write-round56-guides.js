@@ -10,7 +10,7 @@ const guides = [
     slug: 'snooker-pool-billiards-pattaya',
     crumb: 'Pool & snooker',
     kicker: 'Guide · Pool · snooker · billiards · SF Strike · Megabreak',
-    readTime: '6 min read',
+    readTime: '12 min read',
     title: 'Pool & snooker in Pattaya | SF Strike, Megabreak | Pattaya.Gym',
     desc: 'Where to play pool and snooker in Pattaya — SF Strike Bowl, Megabreak, Pattaya Bowl, hourly hire, and how to fit billiards into a training week.',
     h1: 'Pool & <span class="accent-cyan">snooker.</span>',

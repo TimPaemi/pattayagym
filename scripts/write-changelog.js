@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 59, date: '2026-06-01', tag: 'v452',
+    title: 'Q2 Tier C rewrites — snooker, CrossFit, swimming pools',
+    summary: 'Round 59 Q2 expands three Tier C editorial guides to full depth from venue markdown — pool/snooker halls, Jungle Gym CrossFit affiliate, and public plus hotel swimming.',
+    bullets: [
+      'Rewrite: /guides/snooker-pool-billiards-pattaya/ — Megabreak 9-foot, SF Strike, Pattaya Bowl.',
+      'Rewrite: /guides/crossfit-pattaya/ — Jungle Gym affiliate, Murray, alternatives.',
+      'Rewrite: /guides/swimming-pools-pattaya/ — public pools, hotel day-pass, water parks.',
+      'content-quality-audit.js re-run; Tier C count reduced.',
+    ]
+  },
+  {
     n: 58, date: '2026-05-31', tag: 'v452',
     title: 'Q1 quality recovery — content audit + Russian-speaking editorial rewrite',
     summary: 'Round 58 Q1 adds scripts/content-quality-audit.js (word-count tiers, FAQ/schema flags) and replaces the thin ranked Russian-speaking guide with a full editorial article sourced from venue markdown.',
