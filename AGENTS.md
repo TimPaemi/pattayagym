@@ -24,6 +24,7 @@ node scripts/build-plan-page.js
 node scripts/write-status-json.js
 node scripts/write-changelog.js
 node scripts/write-data-endpoints.js
+node scripts/inject-area-guide-faq-r74.js
 node scripts/inject-guide-schema.js
 node scripts/fix-guide-meta-entities-r68.js
 node scripts/write-round55-guides.js
