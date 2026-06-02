@@ -1,9 +1,13 @@
-# Venue outreach export
+# Venue outreach export (local only)
 
-Generated: 2026-06-02
+**Not deployed.** Public URLs under `/outreach/` return **404** (`_redirects`).
 
-- **104** venues with a public website
-- **Badge:** https://pattaya-gym.com/badge-listed.svg
-- **Listing pattern:** https://pattaya-gym.com/gyms/{slug}/
+Generate the CSV locally:
 
-Import `venue-outreach.csv` into Google Sheets. Track: Emailed · Replied · Linked.
+```cmd
+node scripts/export-venue-outreach.js
+```
+
+Output: `private/outreach/venue-outreach.csv` (gitignored).
+
+Import into Google Sheets. Track: Emailed · Replied · Linked.

@@ -10,7 +10,7 @@ const { loadGyms } = require('./lib/load-gyms');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://pattaya-gym.com';
-const OUT_DIR = path.join(ROOT, 'outreach');
+const OUT_DIR = path.join(ROOT, 'private', 'outreach');
 const CSV_PATH = path.join(OUT_DIR, 'venue-outreach.csv');
 
 function csvCell(s) {
@@ -18,14 +18,16 @@ function csvCell(s) {
   return `"${v}"`;
 }
 
-const gyms = loadGyms(ROOT).filter(g => g.website && String(g.website).startsWith('http'));
+const allGyms = loadGyms(ROOT);
+const venueN = allGyms.length;
+const gyms = allGyms.filter(g => g.website && String(g.website).startsWith('http'));
 gyms.sort((a, b) => a.name.localeCompare(b.name));
 
 const header = ['venue_id', 'venue_name', 'category', 'area', 'listing_url', 'website', 'phone', 'badge_url', 'email_template'];
 const rows = gyms.map(g => {
   const listing = `${SITE}/gyms/${g.id}/`;
   const badge = `${SITE}/badge-listed.svg`;
-  const template = `Subject: Your venue on Pattaya.Gym — ${g.name}\n\nHi ${g.name} team,\n\nWe run ${SITE} — independent directory of 158 Pattaya sport venues. Your free listing: ${listing}\n\nIf you'd like to show visitors you're listed, link to your page or use our badge: ${badge}\n\nReply with any corrections to hours or prices.\n\nTim — Pattaya.Gym`;
+  const template = `Subject: Your venue on Pattaya.Gym — ${g.name}\n\nHi ${g.name} team,\n\nWe run ${SITE} — independent directory of ${venueN} Pattaya sport venues. Your free listing: ${listing}\n\nIf you'd like to show visitors you're listed, link to your page or use our badge: ${badge}\n\nReply with any corrections to hours or prices.\n\nTim — Pattaya.Gym`;
   return [
     g.id,
     g.name,

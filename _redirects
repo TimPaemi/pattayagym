@@ -1,5 +1,9 @@
 https://www.pattaya-gym.com/* https://pattaya-gym.com/:splat 301
 
+# Ops exports — not for public download (backlink outreach CSV is local-only).
+/outreach/venue-outreach.csv /404.html 404
+/outreach/* /404.html 404
+
 # Duplicate-content consolidation: af-academy-football was an early stub that was later
 # superseded by the deeper af-academy-pattaya record (same business, same website
 # afacademy.pro/en, but af-academy-pattaya has the full address, phone, multi-location detail).

@@ -185,6 +185,21 @@ if (fs.existsSync(headersPath)) {
   }
 }
 
+// --- P0: outreach CSV must not ship as a public static file ---
+{
+  const outreachCsv = path.join(ROOT, 'outreach', 'venue-outreach.csv');
+  if (fs.existsSync(outreachCsv)) {
+    errors.push('outreach/venue-outreach.csv must not exist in deploy root — use private/outreach/ (node scripts/export-venue-outreach.js)');
+  }
+  const redirectsPath = path.join(ROOT, '_redirects');
+  if (fs.existsSync(redirectsPath)) {
+    const redirects = fs.readFileSync(redirectsPath, 'utf8');
+    if (!/\/outreach\/\*?\s+\/404\.html\s+404/.test(redirects) && !/\/outreach\/venue-outreach\.csv/.test(redirects)) {
+      errors.push('_redirects: missing 404 rule for /outreach/ (public outreach leak)');
+    }
+  }
+}
+
 // --- Round 21 (Codex P1-1 / P2-6): asset-version consistency ---
 let versionDrift = 0;
 {

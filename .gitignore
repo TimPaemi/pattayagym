@@ -16,6 +16,7 @@ desktop.ini
 # Local + secrets
 .env
 .env.local
+private/outreach/*.csv
 *.log
 *.bak
 *.tmp
