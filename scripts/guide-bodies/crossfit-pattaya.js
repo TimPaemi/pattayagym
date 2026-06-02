@@ -79,7 +79,7 @@ module.exports = `
 <h2>FAQ</h2>
 
 <h3>Is Jungle Gym the only CrossFit box in Pattaya?</h3>
-<p>Yes — it is the only CrossFit affiliate listed in our 158-venue directory for Pattaya city. Bangkok and Phuket have multiple affiliates; plan travel days if you need a second box culture.</p>
+<p>Yes — it is the only CrossFit affiliate listed in our 157-venue directory for Pattaya city. Bangkok and Phuket have multiple affiliates; plan travel days if you need a second box culture.</p>
 
 <h3>Can beginners attend CrossFit classes?</h3>
 <p>Beginner-friendly is on file, but affiliates often require an intro fundamentals block — ask Murray's team before dropping into a random WOD. <a href="/guides/best-for-beginners-pattaya/">Beginners guide</a> for non-CrossFit options.</p>

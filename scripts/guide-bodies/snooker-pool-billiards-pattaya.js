@@ -1,5 +1,5 @@
 module.exports = `
-<p>Pattaya cue sport splits into three tiers: <strong>bar pool</strong> (coin-op, warped cloth), <strong>sports bars with a few tables</strong>, and <strong>dedicated halls</strong> with tournament-grade 9-foot tables and proper lighting. This guide covers only the third tier plus the best hybrid venues in our 158-venue directory — where equipment gives honest feedback, not holiday flukes.</p>
+<p>Pattaya cue sport splits into three tiers: <strong>bar pool</strong> (coin-op, warped cloth), <strong>sports bars with a few tables</strong>, and <strong>dedicated halls</strong> with tournament-grade 9-foot tables and proper lighting. This guide covers only the third tier plus the best hybrid venues in our 157-venue directory — where equipment gives honest feedback, not holiday flukes.</p>
 
 <p>Pool and snooker are not cardio, but they fit a training week as <strong>low-impact evenings</strong>, rainy-season backup, and social sport for digital nomads and long-stay groups. Start at <a href="/category/clubs/">clubs &amp; social sport</a>, shortlist on <a href="/compare/">compare</a>, and map hotels on <a href="/plan-my-trip/">plan my trip</a>.</p>
 

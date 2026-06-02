@@ -27,6 +27,7 @@ const errors = [];
 const JS_FILES_TO_CHECK = [
   'build-v2.js', 'data.js',
   'scripts/build-compare-page.js',
+  'scripts/build-plan-page.js',
   'scripts/write-changelog.js',
   'scripts/write-status-json.js',
   'scripts/rebuild-tool-stubs.js',
@@ -212,6 +213,39 @@ for (const fp of htmlFiles) {
   if (dups.length) {
     errors.push(`${path.relative(ROOT, fp)}: duplicate id(s) ${dups.join(', ')}`);
     dupIdFiles++;
+  }
+}
+
+// --- Round 66: compare/plan external JSON (no giant inline venue blobs) ---
+const toolJson = ['data/compare-venues.json', 'data/plan-venues.json'];
+for (const rel of toolJson) {
+  const p = path.join(ROOT, rel);
+  if (!fs.existsSync(p)) errors.push(`Missing ${rel} (run build-compare-page.js + build-plan-page.js)`);
+  else {
+    try {
+      const arr = JSON.parse(fs.readFileSync(p, 'utf8'));
+      if (!Array.isArray(arr) || arr.length < 100) {
+        errors.push(`${rel}: expected array of 100+ venues, got ${Array.isArray(arr) ? arr.length : typeof arr}`);
+      }
+    } catch (e) {
+      errors.push(`${rel}: invalid JSON - ${e.message}`);
+    }
+  }
+}
+const compareHtml = path.join(ROOT, 'compare', 'index.html');
+if (fs.existsSync(compareHtml)) {
+  const ch = fs.readFileSync(compareHtml, 'utf8');
+  if (ch.includes('id="venues-data"')) {
+    errors.push('compare/index.html: still embeds inline venues-data (should fetch /data/compare-venues.json)');
+  }
+  const kb = ch.length / 1024;
+  if (kb > 85) errors.push(`compare/index.html: ${kb.toFixed(1)} KB (expected <85 KB without inline JSON)`);
+}
+const planHtml = path.join(ROOT, 'plan-my-trip', 'index.html');
+if (fs.existsSync(planHtml)) {
+  const ph = fs.readFileSync(planHtml, 'utf8');
+  if (ph.includes('id="venues-data"')) {
+    errors.push('plan-my-trip/index.html: still embeds inline venues-data (should fetch /data/plan-venues.json)');
   }
 }
 

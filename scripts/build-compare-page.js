@@ -6,9 +6,9 @@
  *
  *  - Side-by-side comparison of up to 4 Pattaya venues
  *  - URL-param state: /compare/?a=fairtex-pattaya&b=sityodtong-pattaya&c=kombat-group-thailand
- *  - Embedded venue summary JSON at build time (~50KB, ~12KB gzip)
- *  - Pure client-side, no fetch, no external dependencies
- *  - Picker dropdown lists all 158 venues, sorted alphabetically
+ *  - Venue summary JSON at /data/compare-venues.json (~50KB, ~12KB gzip)
+ *  - Pure client-side fetch from same origin (CSP connect-src 'self')
+ *  - Picker dropdown lists all venues, sorted alphabetically
  *  - "Share this comparison" button copies URL via Web Share API or clipboard
  *  - "Reset" button clears selection
  *
@@ -86,6 +86,7 @@ const html = `<!DOCTYPE html>
 <link rel="stylesheet" href="/styles.css${ASSET}">
 <link rel="preload" href="/fonts/space-grotesk.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
+<link rel="preload" href="/data/compare-venues.json" as="fetch" type="application/json" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -135,7 +136,7 @@ ${marquee(TOP_MARQUEE, false)}
     <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">
       Compare <span class="accent-yellow">venues.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">Pick up to 4 Pattaya venues from the 158 in our directory. See hours, prices, area, contact channels, key tags, and verified date — side by side. Share the comparison via URL.</p>
+    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">Pick up to 4 Pattaya venues from the ${VENUE_N} in our directory. See hours, prices, area, contact channels, key tags, and verified date — side by side. Share the comparison via URL.</p>
   </div>
 </section>
 
@@ -143,6 +144,7 @@ ${marquee(TOP_MARQUEE, false)}
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span> Pick venues</div>
     <h2 class="h-section">Add up to 4 <span class="accent-cyan">venues.</span></h2>
+    <p id="compare-loading" class="lede" style="color:var(--muted);">Loading venue directory…</p>
     <div class="compare-pickers" id="pickers">
       <!-- pickers rendered by JS -->
     </div>
@@ -181,15 +183,13 @@ ${marquee(TOP_MARQUEE, false)}
 
 <section class="pa-network"><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>
 ${marquee(BOTTOM_MARQUEE, true)}
-<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
-<script id="venues-data" type="application/json">${VENUE_JSON}</script>
-
 <script>
  (function(){
-  var data = JSON.parse(document.getElementById('venues-data').textContent);
+  var data = [];
   var maxSlots = 4;
   var slots = ['a','b','c','d'];
 
@@ -307,8 +307,19 @@ ${marquee(BOTTOM_MARQUEE, true)}
     renderTable();
   });
 
-  renderPickers();
-  renderTable();
+  function boot() {
+    renderPickers();
+    renderTable();
+  }
+
+  var loadingEl = document.getElementById('compare-loading');
+  fetch('/data/compare-venues.json', { credentials: 'same-origin' })
+    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(d){ data = d; if (loadingEl) loadingEl.remove(); boot(); })
+    .catch(function(){
+      if (loadingEl) loadingEl.textContent = 'Could not load venue data. Refresh the page or use /search/ to browse venues.';
+      announce('Venue data failed to load.');
+    });
 })();
 </script>
 <script defer src="/site-ui.js${ASSET}"></script>
@@ -318,6 +329,10 @@ ${marquee(BOTTOM_MARQUEE, true)}
 </html>
 `;
 
+const dataDir = path.join(ROOT, 'data');
+fs.mkdirSync(dataDir, { recursive: true });
+const jsonPath = path.join(dataDir, 'compare-venues.json');
+fs.writeFileSync(jsonPath, JSON.stringify(venueSummary), 'utf8');
 fs.mkdirSync(path.join(ROOT, 'compare'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'compare', 'index.html'), html, 'utf8');
-console.log(`/compare/index.html written (${(html.length/1024).toFixed(1)} KB, embedded ${venueSummary.length} venues, ${(VENUE_JSON.length/1024).toFixed(1)} KB data)`);
+console.log(`/compare/index.html written (${(html.length/1024).toFixed(1)} KB HTML) + /data/compare-venues.json (${(VENUE_JSON.length/1024).toFixed(1)} KB, ${venueSummary.length} venues)`);

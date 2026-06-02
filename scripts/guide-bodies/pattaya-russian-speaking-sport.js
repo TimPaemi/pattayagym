@@ -1,7 +1,7 @@
 module.exports = `
 <p>Pattaya hosts one of the largest Russian-speaking resident communities in Thailand — concentrated in <strong>Naklua, Wongamat, Pratamnak, Jomtien, and East Pattaya ("Darkside")</strong>. Sport infrastructure followed: dedicated Russian-language football academies, trilingual yoga studios, East-side gyms where Russian is routine at reception, and Muay Thai camps that train Eastern European long-stayers daily even when marketing is in English.</p>
 
-<p>This guide maps venues where <strong>Russian is a stated working language</strong> in our directory (front desk, coaching, or official programme copy) — not every gym where a Russian member trains. Built from 158 hand-checked venue records. Use <a href="/compare/">compare</a> to shortlist, <a href="/plan-my-trip/">plan my trip</a> for area vs hotel, and <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking Muay Thai</a> for camps that are multilingual in practice.</p>
+<p>This guide maps venues where <strong>Russian is a stated working language</strong> in our directory (front desk, coaching, or official programme copy) — not every gym where a Russian member trains. Built from 157 hand-checked venue records. Use <a href="/compare/">compare</a> to shortlist, <a href="/plan-my-trip/">plan my trip</a> for area vs hotel, and <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking Muay Thai</a> for camps that are multilingual in practice.</p>
 
 <h2>Geography — where Russian-speaking sport actually happens</h2>
 

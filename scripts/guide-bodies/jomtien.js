@@ -1,5 +1,5 @@
 module.exports = `
-<p>Jomtien is not "south Pattaya" on a marketing PDF — it is a <strong>distinct beach strip</strong> from Dongtan through Jomtien Beach Road to Na Jomtien and into Sattahip. Many listings say "Jomtien" but sit 20+ minutes north in central Pattaya. This guide uses our 158-venue directory and only recommends gyms you can reach from Jomtien Beach without a daily commute that kills training consistency.</p>
+<p>Jomtien is not "south Pattaya" on a marketing PDF — it is a <strong>distinct beach strip</strong> from Dongtan through Jomtien Beach Road to Na Jomtien and into Sattahip. Many listings say "Jomtien" but sit 20+ minutes north in central Pattaya. This guide uses our 157-venue directory and only recommends gyms you can reach from Jomtien Beach without a daily commute that kills training consistency.</p>
 
 <p>Start with <a href="/area/jomtien/">Jomtien area hub</a> (all categories) and <a href="/area/jomtien/muay-thai/">Muay Thai in Jomtien</a>. Shortlist with <a href="/compare/">compare</a> and map hotels using <a href="/plan-my-trip/">plan my trip</a>.</p>
 

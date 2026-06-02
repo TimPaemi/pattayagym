@@ -20,6 +20,8 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://pattaya-gym.com';
+const { GYMS } = require(path.join(ROOT, 'data.js'));
+const VENUE_N = GYMS.length;
 
 // Read current asset version
 const buildSrc = fs.readFileSync(path.join(ROOT, 'build-v2.js'), 'utf8');
@@ -39,8 +41,8 @@ function esc(s) {
     .replace(/'/g, '&#39;');
 }
 
-const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
+const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT',`${VENUE_N} VENUES`,'HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT',`★ LIVE ${VENUE_N} VENUES`,'UPDATED ROLLING'];
 
 function marquee(items, bottom) {
   const cls = bottom ? 'marquee marquee-bottom' : 'marquee';
@@ -108,7 +110,7 @@ function footer() {
     <div>
       <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
       <div class="footer-slogan">Built in Pattaya. For Pattaya.</div>
-      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
+      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
       <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
       <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div>
     </div>
@@ -191,15 +193,15 @@ const STUBS = [
   {
     slug: 'map',
     noindex: true,
-    title: 'Pattaya gym map — 158 venues',
-    desc: 'Interactive map of every gym, Muay Thai camp, and sport venue in Pattaya is rolling back online. In the meantime, browse 158 venues by area or sport.',
+    title: `Pattaya gym map — ${VENUE_N} venues`,
+    desc: `Interactive map of every gym, Muay Thai camp, and sport venue in Pattaya is rolling back online. In the meantime, browse ${VENUE_N} venues by area or sport.`,
     crumb: 'Map',
-    eyebrow: 'Map · Pattaya · 158 venues',
+    eyebrow: `Map · Pattaya · ${VENUE_N} venues`,
     accent: 'accent-cyan',
     h1: 'Pattaya gym <span class="accent-cyan">map.</span>',
     intro: 'Our interactive Leaflet map is being rebuilt for V2. Until it returns, every venue is browsable by neighborhood (6 areas), by sport (15 categories), or via the live search.',
     alts: [
-      {url: '/search/', title: 'Live venue search', desc: 'Filter 158 venues by name, sport, area, price, or open-now status. Live results, no page reload.'},
+      {url: '/search/', title: 'Live venue search', desc: `Filter ${VENUE_N} venues by name, sport, area, price, or open-now status. Live results, no page reload.`},
       {url: '/area/jomtien/', title: 'Browse by area', desc: 'Every venue in Jomtien, Naklua, Pratamnak, Central Pattaya, East Pattaya, or Sattahip.'},
       {url: '/category/muay-thai/', title: 'Browse by sport', desc: '15 sports including Muay Thai, fitness, golf, yoga, watersports, climbing, racquet sports.'}
     ]

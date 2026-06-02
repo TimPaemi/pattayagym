@@ -1,5 +1,5 @@
 module.exports = `
-<p>Pattaya has more tennis and badminton than most visitors expect — floodlit hard courts on Pratamnak, six covered ITF Plexipave courts south at Greta, budget badminton halls on the Darkside, and the luxury tier at <a href="/gyms/fitz-club/">Fitz Club</a> inside Royal Cliff. Padel and pickleball have their own guide; this page covers <strong>tennis, badminton, and multi-racquet clubs</strong> in our 158-venue directory.</p>
+<p>Pattaya has more tennis and badminton than most visitors expect — floodlit hard courts on Pratamnak, six covered ITF Plexipave courts south at Greta, budget badminton halls on the Darkside, and the luxury tier at <a href="/gyms/fitz-club/">Fitz Club</a> inside Royal Cliff. Padel and pickleball have their own guide; this page covers <strong>tennis, badminton, and multi-racquet clubs</strong> in our 157-venue directory.</p>
 
 <p>Racquet sport here splits into clear tiers: <strong>premium resort clubs</strong> (Fitz, hotel courts), <strong>mid-tier outdoor clubs</strong> with coaching and social leagues, and <strong>indoor badminton halls</strong> for humid evenings. Start at <a href="/category/racquet/">tennis / padel / squash category</a>, shortlist on <a href="/compare/">compare</a>, and map hotels on <a href="/plan-my-trip/">plan my trip</a>.</p>
 

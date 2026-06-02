@@ -85,7 +85,7 @@ module.exports = `
 
 <h2>Related guides</h2>
 
-<p><a href="/guides/best-gyms-near-walking-street-pattaya/">Near Walking Street</a> · <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> · <a href="/guides/best-muay-thai-pattaya/">Best Muay Thai ranked</a> · <a href="/guides/muay-thai-pattaya-beginners/">Beginners</a> · <a href="/area/central-pattaya/">Central area hub</a> · <a href="/compare/">Compare 158 venues</a></p>
+<p><a href="/guides/best-gyms-near-walking-street-pattaya/">Near Walking Street</a> · <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> · <a href="/guides/best-muay-thai-pattaya/">Best Muay Thai ranked</a> · <a href="/guides/muay-thai-pattaya-beginners/">Beginners</a> · <a href="/area/central-pattaya/">Central area hub</a> · <a href="/compare/">Compare 157 venues</a></p>
 
 <h2>Soi-by-soi training map (honest geography)</h2>
 

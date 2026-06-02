@@ -1,7 +1,7 @@
 module.exports = `
 <p>Day-pass gyms are the saver for short Pattaya trips. If you're here for 3–14 days, joining a gym on a monthly plan is wasteful — most reputable gyms accept walk-in day passes for ฿200–500, and weekly passes for ฿800–2,500.</p>
 
-<p>This guide covers fitness venues in Pattaya with a transparent day-pass option. Pricing tiers are listed below. All hand-checked from our 158-venue Pattaya.Gym directory — confirm on the venue page before you travel.</p>
+<p>This guide covers fitness venues in Pattaya with a transparent day-pass option. Pricing tiers are listed below. All hand-checked from our 157-venue Pattaya.Gym directory — confirm on the venue page before you travel.</p>
 
 <p>Hub: <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> · <a href="/compare/">compare</a> · <a href="/plan-my-trip/">plan my trip</a>.</p>
 
@@ -98,7 +98,7 @@ module.exports = `
 
 <h2>Related guides</h2>
 
-<p><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a> · <a href="/compare/">Compare 158 venues</a></p>
+<p><a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a> · <a href="/compare/">Compare 157 venues</a></p>
 
 <h2>Muay Thai day sessions vs fitness day pass</h2>
 

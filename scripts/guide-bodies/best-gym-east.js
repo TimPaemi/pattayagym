@@ -80,7 +80,7 @@ module.exports = `
 
 <h2>Related guides</h2>
 
-<p><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai ranked</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · <a href="/area/east-pattaya/">East area hub</a> · <a href="/compare/">Compare 158 venues</a></p>
+<p><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai ranked</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · <a href="/area/east-pattaya/">East area hub</a> · <a href="/compare/">Compare 157 venues</a></p>
 
 <h2>Huai Yai vs Nong Prue vs Mabprachan — three east belts</h2>
 

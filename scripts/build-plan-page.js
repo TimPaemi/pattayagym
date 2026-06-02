@@ -11,7 +11,7 @@
  * and practical notes.
  *
  *  - Pure client-side, no fetch, no external dependencies
- *  - Embedded 158-venue summary JSON (computed family/stay/day-pass flags)
+ *  - Venue summary JSON at /data/plan-venues.json (computed family/stay/day-pass flags)
  *  - URL-param state (?sport=&length=&budget=&style=) -> bookmarkable plans
  *  - Replaces the old honest-stub /plan-my-trip/ page (Round 21 noindex stub)
  *
@@ -158,6 +158,7 @@ const html = `<!DOCTYPE html>
 <link rel="stylesheet" href="/styles.css${ASSET}">
 <link rel="preload" href="/fonts/space-grotesk.woff2${ASSET}" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
+<link rel="preload" href="/data/plan-venues.json" as="fetch" type="application/json" crossorigin>
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
@@ -264,14 +265,13 @@ ${marquee(BOTTOM_MARQUEE, true)}
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
-<script id="venues-data" type="application/json">${VENUE_JSON}</script>
 <script id="plan-meta" type="application/json">${JSON.stringify({ lengths: LENGTHS, styles: STYLES, cross: CROSS })}</script>
 
 <script>
  (function(){
-  var data = JSON.parse(document.getElementById('venues-data').textContent);
+  var data = [];
   var meta = JSON.parse(document.getElementById('plan-meta').textContent);
-  var byId = {}; data.forEach(function(v){ byId[v.id] = v; });
+  var byId = {};
   var lengthBy = {}; meta.lengths.forEach(function(l){ lengthBy[l.key] = l; });
   var styleBy = {}; meta.styles.forEach(function(s){ styleBy[s.key] = s; });
 
@@ -414,6 +414,10 @@ ${marquee(BOTTOM_MARQUEE, true)}
     if (p.style) qStyle.value = p.style;
   }
   function go(updateUrl){
+    if (!data.length) {
+      announce('Venue data still loading — wait a moment and try again.');
+      return;
+    }
     var p = readForm();
     if (updateUrl){
       var qs = 'sport=' + encodeURIComponent(p.sport) + '&length=' + encodeURIComponent(p.length)
@@ -437,12 +441,22 @@ ${marquee(BOTTOM_MARQUEE, true)}
     } else { window.prompt('Copy link:', u); }
   });
 
-  // Restore a shared plan from the URL on load.
-  var params = new URLSearchParams(window.location.search);
-  if (params.get('sport') || params.get('length')){
-    applyToForm({ sport:params.get('sport'), length:params.get('length'), budget:params.get('budget'), style:params.get('style') });
-    go(false);
+  function boot() {
+    data.forEach(function(v){ byId[v.id] = v; });
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('sport') || params.get('length')){
+      applyToForm({ sport:params.get('sport'), length:params.get('length'), budget:params.get('budget'), style:params.get('style') });
+      go(false);
+    }
   }
+
+  fetch('/data/plan-venues.json', { credentials: 'same-origin' })
+    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(d){ data = d; boot(); })
+    .catch(function(){
+      empty.textContent = 'Could not load venue data. Refresh the page or use /search/ to browse venues.';
+      announce('Venue data failed to load.');
+    });
  })();
 </script>
 <script defer src="/site-ui.js${ASSET}"></script>
@@ -452,6 +466,9 @@ ${marquee(BOTTOM_MARQUEE, true)}
 </html>
 `;
 
+const dataDir = path.join(ROOT, 'data');
+fs.mkdirSync(dataDir, { recursive: true });
+fs.writeFileSync(path.join(dataDir, 'plan-venues.json'), JSON.stringify(venueSummary), 'utf8');
 fs.mkdirSync(path.join(ROOT, 'plan-my-trip'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'plan-my-trip', 'index.html'), html, 'utf8');
-console.log(`/plan-my-trip/index.html written (${(html.length/1024).toFixed(1)} KB, ${venueSummary.length} venues embedded)`);
+console.log(`/plan-my-trip/index.html written (${(html.length/1024).toFixed(1)} KB HTML) + /data/plan-venues.json (${(VENUE_JSON.length/1024).toFixed(1)} KB, ${venueSummary.length} venues)`);

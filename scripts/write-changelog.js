@@ -40,6 +40,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 66, date: '2026-05-31', tag: 'v452',
+    title: 'Compare/plan external JSON — smaller HTML, faster first paint',
+    summary: 'Moves 157-venue tool payloads to /data/compare-venues.json and /data/plan-venues.json; pages fetch on load. Fixes remaining 158 copy in tool stubs, manifest, and guide-bodies.',
+    bullets: [
+      'build-compare-page.js + build-plan-page.js — external JSON; HTML drops ~50KB inline blob each.',
+      '_headers — cache + CORS for /data/compare-venues.json and /data/plan-venues.json.',
+      'verify-deploy.js — gate on tool JSON files and no inline venues-data.',
+      'rebuild-tool-stubs.js + sync-index-venue-count.js — dynamic VENUE_N everywhere.',
+    ],
+  },
+  {
     n: 65, date: '2026-05-31', tag: 'v452',
     title: 'AF Academy dedupe + dynamic venue counts + audit fixes',
     summary: 'Removes duplicate af-academy-football from data.js (301 to af-academy-pattaya retained); site copy uses GYMS.length; full-site-audit skips robots.txt title and external prefetch links.',

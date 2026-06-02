@@ -1,7 +1,7 @@
 module.exports = `
 <p>“How long should I train?” is the question behind half the emails we get. <strong>One week</strong> and <strong>one month</strong> are the two most common trip lengths for foreigners landing in Pattaya — and they need completely different camp choices, budgets, and recovery plans. This guide is the length-of-stay layer on top of <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday planning</a> and <a href="/guides/muay-thai-pattaya-beginners/">beginners guide</a>.</p>
 
-<p>Everything below is built from our 158-venue directory, verified on a rolling schedule. Use <a href="/compare/">compare</a> to shortlist camps, then <a href="/plan-my-trip/">plan my trip</a> to match area to your hotel.</p>
+<p>Everything below is built from our 157-venue directory, verified on a rolling schedule. Use <a href="/compare/">compare</a> to shortlist camps, then <a href="/plan-my-trip/">plan my trip</a> to match area to your hotel.</p>
 
 <h2>One week vs one month — what changes</h2>
 
@@ -156,5 +156,5 @@ module.exports = `
 <p>Yes — Pattaya’s advantage is camp density. Pay drop-in or weekly at gym two before cancelling gym one’s monthly contract.</p>
 
 <h2>Related guides</h2>
-<p><a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with accommodation</a> · <a href="/guides/gym-day-pass-pattaya/">Day pass gyms</a> · <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> · <a href="/compare/">Compare 158 venues</a></p>
+<p><a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with accommodation</a> · <a href="/guides/gym-day-pass-pattaya/">Day pass gyms</a> · <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> · <a href="/compare/">Compare 157 venues</a></p>
 `;

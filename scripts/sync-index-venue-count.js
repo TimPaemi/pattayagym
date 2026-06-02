@@ -23,6 +23,16 @@ function patchVenueCount(html) {
     .replace(/Search 158 venues/g, `Search ${n} venues`);
 }
 
+function patchFile(fp) {
+  const orig = fs.readFileSync(fp, 'utf8');
+  const next = patchVenueCount(orig);
+  if (next !== orig) {
+    fs.writeFileSync(fp, next, 'utf8');
+    return true;
+  }
+  return false;
+}
+
 let files = 0;
 function walk(dir) {
   for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -31,15 +41,20 @@ function walk(dir) {
       if (ent.name === 'node_modules' || ent.name === '.git') continue;
       walk(fp);
     } else if (ent.name.endsWith('.html')) {
-      const orig = fs.readFileSync(fp, 'utf8');
-      const next = patchVenueCount(orig);
-      if (next !== orig) {
-        fs.writeFileSync(fp, next, 'utf8');
-        files++;
-      }
+      if (patchFile(fp)) files++;
     }
   }
 }
 
 walk(ROOT);
-console.log(`sync-index-venue-count: updated ${files} HTML files to ${n} venues.`);
+const manifest = path.join(ROOT, 'manifest.json');
+if (fs.existsSync(manifest) && patchFile(manifest)) files++;
+const bodiesDir = path.join(ROOT, 'scripts', 'guide-bodies');
+if (fs.existsSync(bodiesDir)) {
+  for (const ent of fs.readdirSync(bodiesDir)) {
+    if (!ent.endsWith('.js')) continue;
+    const fp = path.join(bodiesDir, ent);
+    if (patchFile(fp)) files++;
+  }
+}
+console.log(`sync-index-venue-count: updated ${files} file(s) to ${n} venues.`);

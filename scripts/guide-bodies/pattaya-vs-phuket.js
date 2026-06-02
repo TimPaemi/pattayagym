@@ -116,7 +116,7 @@ module.exports = `
 <p>Yes toward Pattaya data depth — but we state plainly when Phuket fits beach-first holidays. We do not invent Phuket venue scores.</p>
 
 <h2>Plan Pattaya</h2>
-<p><a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with accommodation</a> · <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking camps</a> · <a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a> · <a href="/compare/">Compare 158 venues</a> · <a href="/plan-my-trip/">Plan my trip</a></p>
+<p><a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with accommodation</a> · <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking camps</a> · <a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a> · <a href="/compare/">Compare 157 venues</a> · <a href="/plan-my-trip/">Plan my trip</a></p>
 
 <h2>Flight and ground logistics</h2>
 
