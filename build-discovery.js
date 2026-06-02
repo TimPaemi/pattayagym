@@ -160,10 +160,10 @@ function footer() {
       <p class="sf-heading">Tools &amp; site</p>
       <ul>
         <li><a href="/search/">Search venues</a></li>
-        <li><a href="/favorites/">Saved favorites</a></li>
-        <li><a href="/map/">Interactive map</a></li>
         <li><a href="/compare/">Compare venues</a></li>
         <li><a href="/plan-my-trip/">Plan my trip</a></li>
+        <li><a href="/favorites/">Saved favorites</a></li>
+        <li><a href="/map/">Map (rebuilding)</a></li>
         <li><a href="/find-my-coach/">Find my coach</a></li>
         <li><a href="/about/">About this site</a></li>
         <li><a href="/methodology/">Research methodology</a></li>
@@ -583,11 +583,11 @@ ${header()}
 
   <div class="venue-cta-foot" style="margin-top:48px;">
     <h3>Looking for something specific?</h3>
-    <p>Browse by category, view the full map, or compare venues side-by-side.</p>
+    <p>Browse by category, search live, or compare venues side-by-side.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="/map/">📍 Open the map</a>
+      <a class="btn btn-primary" href="/search/">▶ Search venues</a>
       <a class="btn btn-secondary" href="/compare/">Side-by-side compare</a>
-      <a class="btn btn-secondary" href="/">Browse all</a>
+      <a class="btn btn-tertiary" href="/map/">Map (rebuilding)</a>
     </div>
   </div>
 </main>

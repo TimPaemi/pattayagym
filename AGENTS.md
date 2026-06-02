@@ -25,6 +25,7 @@ node scripts/write-status-json.js
 node scripts/write-changelog.js
 node scripts/write-data-endpoints.js
 node scripts/inject-guide-schema.js
+node scripts/fix-guide-meta-entities-r68.js
 node scripts/write-round55-guides.js
 node scripts/inject-venue-faq-r47.js
 node scripts/inject-area-category-intros-r43.js
@@ -43,7 +44,6 @@ node scripts/polish-ranked-guide-body.js
 node scripts/bump-legacy-assets.js
 node scripts/sync-csp-hashes.js
 node scripts/sync-llms-guides.js
-node scripts/fix-guide-meta-entities-r68.js
 node scripts/patch-guide-map-cta-r70.js
 node scripts/verify-deploy.js
 npm run html:validate

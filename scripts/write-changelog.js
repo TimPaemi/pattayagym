@@ -40,6 +40,18 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 71, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
+    title: 'Guide head meta in schema pipeline; demote /map/ CTAs',
+    summary: 'normalize-guide-head-meta runs after every inject-guide-schema pass; legacy build-discovery footers and area CTAs prioritize search over the noindex map stub.',
+    bullets: [
+      'scripts/lib/normalize-guide-head-meta.js — shared title/OG/Twitter repair.',
+      'inject-guide-schema.js — normalizes head meta on write.',
+      'build-discovery.js — search-first area CTAs; map link labeled rebuilding.',
+      'package.json + .htmlvalidate.json — validate-all works cross-platform; guide titles allow 120 chars.',
+      'AGENTS.md gate order: inject-guide-schema then fix-guide-meta.',
+    ],
+  },
+  {
     n: 70, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
     title: 'Guide map CTAs → search; normalize head meta; CI html:validate-all',
     summary: 'Ranked guide footers no longer push the noindex map stub; head title/OG normalized on every guide pass; GitHub Actions runs full HTML validation.',

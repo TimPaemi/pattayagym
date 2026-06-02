@@ -3,6 +3,7 @@
     "html-validate:recommended"
   ],
   "rules": {
+    "long-title": ["error", { "maxlength": 120 }],
     "aria-label-misuse": "off",
     "attribute-empty-style": "off",
     "no-dup-id": "off",

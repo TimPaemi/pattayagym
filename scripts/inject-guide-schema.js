@@ -17,6 +17,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { normalizeGuideHeadMeta } = require('./lib/normalize-guide-head-meta');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://pattaya-gym.com';
@@ -218,7 +219,8 @@ for (const guide of readGuidePages()) {
     );
   }
 
+  html = normalizeGuideHeadMeta(html);
   fs.writeFileSync(guide.path, html, 'utf8');
 }
 
-console.log(`Guide schema enrichment: Article added to ${articleAdded} guides; FAQPage added to ${faqAdded} guides; ${skipped} already had both. Bylines + reading time added/refreshed.`);
+console.log(`Guide schema enrichment: Article added to ${articleAdded} guides; FAQPage added to ${faqAdded} guides; ${skipped} already had both. Bylines + reading time + head meta normalized.`);
