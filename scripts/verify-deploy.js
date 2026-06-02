@@ -194,8 +194,11 @@ if (fs.existsSync(headersPath)) {
   const redirectsPath = path.join(ROOT, '_redirects');
   if (fs.existsSync(redirectsPath)) {
     const redirects = fs.readFileSync(redirectsPath, 'utf8');
-    if (!/\/outreach\/\*?\s+\/404\.html\s+404/.test(redirects) && !/\/outreach\/venue-outreach\.csv/.test(redirects)) {
-      errors.push('_redirects: missing 404 rule for /outreach/ (public outreach leak)');
+    const hasOutreachBlock =
+      /\/outreach\/venue-outreach\.csv\s+\/404\.html\s+30[12]/.test(redirects) &&
+      /\/outreach\/\*\s+\/404\.html\s+30[12]/.test(redirects);
+    if (!hasOutreachBlock) {
+      errors.push('_redirects: missing 302 redirect for /outreach/* → /404.html (CF Pages does not support 404 status in _redirects)');
     }
   }
 }

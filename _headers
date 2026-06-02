@@ -17,6 +17,10 @@
   Cross-Origin-Resource-Policy: cross-origin
   Content-Type: application/json; charset=utf-8
 
+/outreach/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
 /llms.txt
   Cache-Control: public, max-age=3600
   Access-Control-Allow-Origin: *

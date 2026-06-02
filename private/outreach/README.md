@@ -1,6 +1,6 @@
 # Venue outreach export (local only)
 
-**Not deployed.** Public URLs under `/outreach/` return **404** (`_redirects`).
+Public `/outreach/*` URLs redirect away on production (`_redirects`).
 
 Generate the CSV locally:
 
