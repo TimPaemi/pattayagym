@@ -40,6 +40,18 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 74, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
+    title: 'postalCode 157/157; FAQPage on all guides; schema verify gates',
+    summary: 'PostalAddress fallback covers Sukhumvit/soi areas; FAQ extractor reads editorial list FAQs; verify-deploy enforces geo/postal/FAQ coverage; GSC checklist doc.',
+    bullets: [
+      'build-v2.js — postalCodeForArea defaults to 20150 for Pattaya belt.',
+      'inject-guide-schema.js — FAQ from list items + guide-faq details.',
+      'inject-area-guide-faq-r74.js — FAQ sections on central + Sattahip area guides.',
+      'verify-deploy.js — geo/postal/FAQPage coverage gates.',
+      'OFF_PAGE_GSC_CHECKLIST.md — Search Console + Bing setup steps.',
+    ],
+  },
+  {
     n: 73, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
     title: 'LocalBusiness geo 155/157 — manual seeds + area fallback',
     summary: 'Hand-plotted coords for 46 flagship failed venues; area fallback for the rest. Only 2 venues lack geo (Bangkok stadium + Soi Dao resort). Full regen injects GeoCoordinates into venue schema.',

@@ -134,8 +134,9 @@ function postalCodeForArea(areaStr) {
   if (/sriracha|laem\s*chabang/i.test(s)) return '20110';
   if (/bo\s*win/i.test(s)) return '20230';
   // Default to Bang Lamung district (covers all of Pattaya proper)
-  if (/jomtien|naklua|pratamnak|pratumnak|central|walking|wongamat|huai\s*yai|nong\s*prue|mabprachan|darkside|east\s*pattaya|south\s*pattaya|north\s*pattaya|pattaya/i.test(s)) return '20150';
-  return undefined;
+  if (/jomtien|naklua|pratamnak|pratumnak|central|walking|wongamat|huai\s*yai|nong\s*prue|mabprachan|darkside|east\s*pattaya|south\s*pattaya|north\s*pattaya|sukhumvit|buakhao|thepprasit|thappraya|soi\s|klang|pattaya/i.test(s)) return '20150';
+  // Pattaya-directory default — all listed venues are Bang Lamung / Eastern Seaboard belt
+  return '20150';
 }
 
 // Turn free-text address into a PostalAddress object (best-effort).

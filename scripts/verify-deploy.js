@@ -273,6 +273,45 @@ if (fs.existsSync(planHtml)) {
   }
 }
 
+// --- Round 74: LocalBusiness schema coverage on venue pages ---
+let venueGeo = 0;
+let venuePostal = 0;
+let venuePhone = 0;
+let guideFaq = 0;
+let guideTotal = 0;
+const gymsDir = path.join(ROOT, 'gyms');
+if (fs.existsSync(gymsDir)) {
+  for (const ent of fs.readdirSync(gymsDir, { withFileTypes: true })) {
+    if (!ent.isDirectory()) continue;
+    const fp = path.join(gymsDir, ent.name, 'index.html');
+    if (!fs.existsSync(fp)) continue;
+    const h = fs.readFileSync(fp, 'utf8');
+    if (h.includes('"geo"') && h.includes('GeoCoordinates')) venueGeo++;
+    if (h.includes('"postalCode"')) venuePostal++;
+    if (h.includes('"telephone"')) venuePhone++;
+  }
+}
+const guidesDir = path.join(ROOT, 'guides');
+if (fs.existsSync(guidesDir)) {
+  for (const ent of fs.readdirSync(guidesDir, { withFileTypes: true })) {
+    if (!ent.isDirectory()) continue;
+    guideTotal++;
+    const fp = path.join(guidesDir, ent.name, 'index.html');
+    if (fs.existsSync(fp) && fs.readFileSync(fp, 'utf8').includes('FAQPage')) guideFaq++;
+  }
+}
+const { GYMS } = require(path.join(ROOT, 'data.js'));
+const VENUE_N = GYMS.length;
+if (venueGeo < VENUE_N - 3) {
+  errors.push(`Venue schema: geo ${venueGeo}/${VENUE_N} (expected >= ${VENUE_N - 3})`);
+}
+if (venuePostal < VENUE_N - 3) {
+  errors.push(`Venue schema: postalCode ${venuePostal}/${VENUE_N} (expected >= ${VENUE_N - 3})`);
+}
+if (guideTotal > 0 && guideFaq < guideTotal) {
+  errors.push(`Guide schema: FAQPage ${guideFaq}/${guideTotal} (expected all guides)`);
+}
+
 // --- Report ---
 console.log(`HTML files checked: ${htmlFiles.length}`);
 console.log(`  truncated (no </html>): ${truncated}`);
@@ -285,6 +324,8 @@ console.log(`Sitemap URLs checked: ${sitemapUrls}`);
 console.log(`Asset-version drift files: ${versionDrift}`);
 console.log(`Duplicate-id files:        ${dupIdFiles}`);
 console.log(`  missing local file:     ${sitemapMissing}`);
+console.log(`Venue LocalBusiness schema: geo ${venueGeo}/${VENUE_N}, postalCode ${venuePostal}/${VENUE_N}, telephone ${venuePhone}/${VENUE_N}`);
+console.log(`Guide schema: FAQPage ${guideFaq}/${guideTotal}`);
 
 if (errors.length === 0) {
   console.log('\n\u2713 Deploy verify PASSED');
