@@ -22,8 +22,10 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', '158 VENUES', 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', '100% HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', '★ LIVE 158 VENUES', 'UPDATED ROLLING'];
+const { GYMS } = require(path.join(ROOT, 'data.js'));
+const VENUE_N = GYMS.length;
+const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', `${VENUE_N} VENUES`, 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', `★ LIVE ${VENUE_N} VENUES`, 'UPDATED ROLLING'];
 
 function marquee(items, bottom) {
   const cls = bottom ? 'marquee marquee-bottom' : 'marquee';
@@ -117,7 +119,7 @@ function footer(meta) {
     <div>
       <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
       <div class="footer-slogan">Built in Pattaya. For Pattaya.</div>
-      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements.</p>
+      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements.</p>
     </div>
     <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/guides/">Guides</a></li><li><a href="/compare/">Compare</a></li><li><a href="/methodology/">Methodology</a></li></ul></div>
     <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div>
@@ -187,7 +189,7 @@ ${nav()}
   <a href="/methodology/" class="guide-byline-link">How we rank →</a>
 </div>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">${g.lede}</p>
-    <p class="hero-meta" style="text-align:left;">Pattaya · 158 venues hand-checked · <a href="/compare/">Compare gyms</a></p>
+    <p class="hero-meta" style="text-align:left;">Pattaya · ${VENUE_N} venues hand-checked · <a href="/compare/">Compare gyms</a></p>
   </div>
 </section>
 <section class="section" style="padding-top:var(--s-4);">

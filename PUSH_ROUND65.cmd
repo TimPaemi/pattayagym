@@ -12,8 +12,9 @@ node scripts\write-status-json.js
 node scripts\write-changelog.js
 node scripts\write-data-endpoints.js
 node scripts\export-venue-outreach.js
+node scripts\fix-af-academy-orphan-links-r65.js
+node scripts\write-russian-speaking-guide.js
 node scripts\inject-guide-schema.js
-node scripts\write-round62-tier-b.js
 node scripts\sync-csp-hashes.js
 node scripts\verify-deploy.js || exit /b 1
 call npm run html:validate || exit /b 1
