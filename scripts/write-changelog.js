@@ -38,6 +38,16 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 64, date: '2026-06-02', tag: 'v452',
+    title: 'Ranked deepen inject consolidation + depth status report',
+    summary: 'Merges stacked deepen-r43–r63 blocks into single guide-rank-primer sections on 15 ranked guides; adds DEPTH_STATUS and full-site audit refresh.',
+    bullets: [
+      'consolidate-ranked-deepen-r64.js — dedupe h2, one primer section, zero deepen-rNN markers.',
+      'write-depth-status-r64.js — DEPTH_STATUS_*.md executive integrity summary.',
+      'content-quality-audit: inject flag count should hit 0 on ranked guides.',
+    ],
+  },
+  {
     n: 63, date: '2026-06-02', tag: 'v452',
     title: 'Tier B clearance — editorial + ranked depth to Tier A',
     summary: 'Round 63 pushes the last 17 Tier B guides toward ≥1200 words with expanded guide-bodies and ranked deepen-r63 blocks before full-list.',

@@ -1,0 +1,126 @@
+{
+  "date": "2026-06-02T04:15:00.231Z",
+  "touched": 15,
+  "report": [
+    {
+      "slug": "bangkok-day-trip-sport-pattaya",
+      "wordsBefore": 1201,
+      "wordsAfter": 1201,
+      "merged": 2,
+      "deepenBefore": 2,
+      "status": "ok"
+    },
+    {
+      "slug": "24-hour-gyms-pattaya",
+      "wordsBefore": 1251,
+      "wordsAfter": 1251,
+      "merged": 2,
+      "deepenBefore": 2,
+      "status": "ok"
+    },
+    {
+      "slug": "luxury-sports-clubs-pattaya",
+      "wordsBefore": 1227,
+      "wordsAfter": 1227,
+      "merged": 2,
+      "deepenBefore": 2,
+      "status": "ok"
+    },
+    {
+      "slug": "best-for-beginners-pattaya",
+      "wordsBefore": 1226,
+      "wordsAfter": 1226,
+      "merged": 2,
+      "deepenBefore": 2,
+      "status": "ok"
+    },
+    {
+      "slug": "family-friendly-pattaya",
+      "wordsBefore": 1240,
+      "wordsAfter": 1240,
+      "merged": 2,
+      "deepenBefore": 2,
+      "status": "ok"
+    },
+    {
+      "slug": "best-dive-operators-pattaya",
+      "wordsBefore": 1251,
+      "wordsAfter": 1251,
+      "merged": 2,
+      "deepenBefore": 2,
+      "status": "ok"
+    },
+    {
+      "slug": "best-muay-thai-pattaya",
+      "wordsBefore": 1252,
+      "wordsAfter": 1252,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "cheapest-gyms-pattaya",
+      "wordsBefore": 1515,
+      "wordsAfter": 1515,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "best-golf-courses-pattaya",
+      "wordsBefore": 1383,
+      "wordsAfter": 1383,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "best-gyms-near-walking-street-pattaya",
+      "wordsBefore": 1744,
+      "wordsAfter": 1744,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "female-friendly-gyms-pattaya",
+      "wordsBefore": 1356,
+      "wordsAfter": 1356,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "pattaya-digital-nomad-fitness",
+      "wordsBefore": 1388,
+      "wordsAfter": 1388,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "pattaya-solo-female-fitness",
+      "wordsBefore": 1361,
+      "wordsAfter": 1361,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "pattaya-gyms-childcare-family-pools",
+      "wordsBefore": 1209,
+      "wordsAfter": 1209,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    },
+    {
+      "slug": "pattaya-seniors-low-impact-sport",
+      "wordsBefore": 1279,
+      "wordsAfter": 1279,
+      "merged": 1,
+      "deepenBefore": 1,
+      "status": "ok"
+    }
+  ]
+}
