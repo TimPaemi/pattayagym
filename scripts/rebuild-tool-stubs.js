@@ -190,6 +190,7 @@ function breadcrumb(label) {
 const STUBS = [
   {
     slug: 'map',
+    noindex: true,
     title: 'Pattaya gym map — 158 venues',
     desc: 'Interactive map of every gym, Muay Thai camp, and sport venue in Pattaya is rolling back online. In the meantime, browse 158 venues by area or sport.',
     crumb: 'Map',

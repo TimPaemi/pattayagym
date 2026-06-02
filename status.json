@@ -17,8 +17,8 @@
   "build": {
     "version": "v452",
     "asset_version": "452",
-    "last_built_utc": "2026-06-01T05:08:12.660Z",
-    "last_built_date": "2026-06-01"
+    "last_built_utc": "2026-06-02T03:42:54.132Z",
+    "last_built_date": "2026-06-02"
   },
   "catalog": {
     "venues_total": 158,
@@ -26,7 +26,7 @@
     "categories": 15,
     "areas": 6,
     "html_pages_shipped": 287,
-    "sitemap_urls": 284
+    "sitemap_urls": 282
   },
   "schema_completeness": {
     "venues_with_verified_date": 158,
@@ -39,7 +39,7 @@
   "freshness": {
     "oldest_verified_date": "2026-04-27",
     "newest_verified_date": "2026-04-29",
-    "oldest_verified_age_days": 35,
+    "oldest_verified_age_days": 36,
     "target_max_age_days": 30
   },
   "endpoints": {

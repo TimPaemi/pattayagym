@@ -38,6 +38,19 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 61, date: '2026-06-02', tag: 'v452',
+    title: 'Audit critical fixes — trust marquee, FAQ schema, sitemap, 404, map',
+    summary: 'Implements top findings from FULL_WEBSITE_AUDIT_2026-06-02: honest UPDATED ROLLING marquees, rebuilt FAQPage JSON-LD, sitemap hygiene, and noindex on 404 + map stub.',
+    bullets: [
+      'sync-marquee-rolling.js — UPDATED WEEKLY → UPDATED ROLLING site-wide.',
+      'inject-guide-schema.js — strip CTA FAQs; refresh read times from word count.',
+      'Sitemap: drop af-academy-football (301 duplicate); remove /map/ until interactive map ships.',
+      '404.html: noindex,follow via build-v2 utilityPage.',
+      'map stub: noindex; llms.txt honest map status.',
+      'index.html Organization sameAs: Villa, Personal Trainer, Mr We Outside.',
+    ]
+  },
+  {
     n: 60, date: '2026-06-01', tag: 'v452',
     title: 'Q3 Tier C rewrites — six remaining editorial guides',
     summary: 'Round 60 Q3 expands all six remaining Tier C guides to full editorial depth from venue markdown — tennis, equestrian, kids sport, climbing, BJJ/MMA, and running clubs.',

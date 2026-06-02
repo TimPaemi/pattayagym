@@ -405,7 +405,10 @@ function syncCssFontVersion() {
   if (updated !== css) fs.writeFileSync(cssPath, updated, 'utf8');
 }
 
-function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null }) {
+/** Gym IDs that 301 elsewhere — omit from sitemap (HTML may remain for redirect targets). */
+const SITEMAP_EXCLUDE_GYM_IDS = new Set(['af-academy-football']);
+
+function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null, robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }) {
   // Allow jsonLd to be a single object OR an array of objects (one <script> per item).
   const ldBlocks = jsonLd
     ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd])
@@ -441,7 +444,7 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
 <meta name="twitter:image" content="${ogImage}">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="robots" content="${robots}">
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//maps.google.com">
 <link rel="dns-prefetch" href="//www.googletagmanager.com">
@@ -1596,8 +1599,9 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
 }
 
 // ---------- Utility / info page ----------
-function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent, accentClass, lede, bodyHtml, showContactCard = false }) {
+function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent, accentClass, lede, bodyHtml, showContactCard = false, robots }) {
   const url = `${SITE}/${slug}/`;
+  const robotsMeta = robots || (slug === '404' ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   // Pick a sensible @type per known slug
   const pageType = ({ 'about':'AboutPage', 'contact':'ContactPage', 'methodology':'AboutPage', 'press':'WebPage', 'add-your-gym':'WebPage', 'colophon':'AboutPage', 'pattaya-sport-stats':'WebPage', '404':'WebPage' })[slug] || 'WebPage';
   const webPageLd = {
@@ -1678,7 +1682,7 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
   </div>
 </section>` : '';
 
-  return head({ title, desc, url, jsonLd: utilJsonLd })
+  return head({ title, desc, url, jsonLd: utilJsonLd, robots: robotsMeta })
     + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([
@@ -2281,7 +2285,7 @@ function generateSitemap() {
     .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
     .map(e => e.name)
     .sort();
-  const TOOL_SLUGS = ['compare','map','plan-my-trip'];
+  const TOOL_SLUGS = ['compare','plan-my-trip'];
   const UTILITY_EXTRA = ['sports','add-your-gym','colophon','press','pattaya-sport-stats','changelog','privacy'];
   const urls = [
     `${SITE}/`,
@@ -2295,7 +2299,7 @@ function generateSitemap() {
     ...GUIDE_SLUGS.map(s => `${SITE}/guides/${s}/`),
     ...CATEGORIES.map(c => `${SITE}/category/${c.key}/`),
     ...Object.keys(AREA_MAP).map(a => `${SITE}/area/${a}/`),
-    ...GYMS.map(g => `${SITE}/gyms/${g.id}/`)
+    ...GYMS.filter(g => !SITEMAP_EXCLUDE_GYM_IDS.has(g.id)).map(g => `${SITE}/gyms/${g.id}/`)
   ];
   // Combined category-area URLs (one per non-empty pairing) — long-tail surface
   for (const slug of Object.keys(AREA_MAP)) {

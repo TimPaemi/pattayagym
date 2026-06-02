@@ -47,13 +47,17 @@ function stripTags(s) {
 // followed by one or more <p> tags before the next heading.
 function extractFAQ(bodyHtml) {
   const faqs = [];
-  // Find h2/h3 + following content
+  const bodyNoCta = bodyHtml
+    .replace(/<div class="venue-cta-foot"[\s\S]*?<\/div>/gi, '')
+    .replace(/<div class="guide-compare-cta"[\s\S]*?<\/div>/gi, '');
   const re = /<(h[23])\b[^>]*>([\s\S]*?)<\/\1>([\s\S]*?)(?=<h[1-6]\b|<\/article>|<\/main>|$)/gi;
   let m;
   const FAQ_RE = /\?$|^(how |what |what's |why |can |is |are |do |does |should |when |where |which |who |will |how's |best )/i;
-  while ((m = re.exec(bodyHtml))) {
+  const SKIP_Q = /compare these side-by-side|want to compare/i;
+  while ((m = re.exec(bodyNoCta))) {
     const headingText = stripTags(m[2]);
     if (!headingText) continue;
+    if (SKIP_Q.test(headingText)) continue;
     if (!FAQ_RE.test(headingText)) continue;
     // Pull first 1-3 <p> tags as the answer
     const pMatches = m[3].match(/<p\b[^>]*>([\s\S]*?)<\/p>/gi);
@@ -84,8 +88,20 @@ let articleAdded = 0;
 let faqAdded = 0;
 let skipped = 0;
 
+function stripFaqLd(html) {
+  return html.replace(/<script type="application\/ld\+json">\{[^<]*"@type":"FAQPage"[^<]*\}<\/script>\s*/g, '');
+}
+
+function wordCountFromMain(html) {
+  const mainMatch = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
+  const bodyHtml = mainMatch ? mainMatch[1] : html;
+  const plain = bodyHtml.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  return plain.split(/\s+/).filter(Boolean).length;
+}
+
 for (const guide of readGuidePages()) {
   let html = fs.readFileSync(guide.path, 'utf8');
+  html = stripFaqLd(html);
 
   // Parse title + description from meta
   const titleMatch = html.match(/<title>([^<]+)<\/title>/);
@@ -133,8 +149,8 @@ for (const guide of readGuidePages()) {
     articleAdded++;
   }
 
-  // 2) FAQPage schema (skip if already present)
-  if (!/"@type"\s*:\s*"FAQPage"/.test(html)) {
+  // 2) FAQPage schema — rebuild from on-page FAQ headings (CTA blocks excluded)
+  {
     const mainMatch = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
     const bodyHtml = mainMatch ? mainMatch[1] : html;
     const faqs = extractFAQ(bodyHtml);
@@ -164,14 +180,10 @@ for (const guide of readGuidePages()) {
     skipped++;
   }
 
-  // 3) Visible byline + reading time after the first <h1>, only inject once.
+  const words = wordCountFromMain(html);
+  const readingMin = Math.max(2, Math.round(words / 200));
+
   if (!/<div class="guide-byline"/.test(html)) {
-    // Compute reading time from body word count (200 wpm)
-    const mainMatch = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
-    const bodyHtml = mainMatch ? mainMatch[1] : html;
-    const plain = bodyHtml.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-    const words = plain.split(' ').filter(Boolean).length;
-    const readingMin = Math.max(2, Math.round(words / 200));
     const byline = `<div class="guide-byline">
   <span class="guide-byline-author">By <a href="/about/">Tim Paemi</a></span>
   <span class="guide-byline-dot">·</span>
@@ -181,8 +193,12 @@ for (const guide of readGuidePages()) {
   <span class="guide-byline-dot">·</span>
   <a href="/methodology/" class="guide-byline-link">How we rank →</a>
 </div>`;
-    // Insert byline immediately after the first </h1>
     html = html.replace(/(<\/h1>)/, '$1\n' + byline);
+  } else {
+    html = html.replace(
+      /<span class="guide-byline-time">[^<]*<\/span>/,
+      `<span class="guide-byline-time">${readingMin} min read</span>`
+    );
   }
 
   fs.writeFileSync(guide.path, html, 'utf8');

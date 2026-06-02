@@ -7,7 +7,7 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 
 - [Home](https://pattaya-gym.com/): Full directory with search, filters, featured venues
 - [Search](https://pattaya-gym.com/search/): Full-text search across all 158 venues
-- [Map](https://pattaya-gym.com/map/): Browse every Pattaya sport venue by area and neighbourhood
+- [Map](https://pattaya-gym.com/map/): Venue map (interactive rebuild in progress — use [Search](https://pattaya-gym.com/search/) or area hubs meanwhile)
 - [Compare](https://pattaya-gym.com/compare/): Side-by-side comparison of any 2–4 venues
 - [Plan My Trip](https://pattaya-gym.com/plan-my-trip/): Free trip builder - a tailored Pattaya training-trip plan by sport, length, budget and travel style
 - [All sports](https://pattaya-gym.com/sports/): Hub linking all 15 sport categories
