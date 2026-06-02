@@ -27,7 +27,7 @@ module.exports = `
 
 <p><a href="/gyms/af-academy-pattaya/">AF Academy Pattaya</a> is the Pattaya branch of a <strong>Russian-network children's football academy</strong> (Yaroslavl and Moscow flagship locations). Listed languages: <strong>English, Russian, Thai</strong>. Accepts children from <strong>age 3</strong> — among the youngest entry ages in Pattaya football. Two field types: <strong>outdoor South Pattaya</strong> and <strong>indoor Central Pattaya</strong> — weather-independent sessions for central families.</p>
 
-<p>Phone on file: +66 96 078 8308. Naklua address: 215/18 Moo 6, Na Kluea. Also see legacy listing <a href="/gyms/af-academy-football/">AF Academy Football School</a> for programme detail. Trial day checklist: ask which coach leads your age band, which language is used for parent briefings, and whether indoor or outdoor is assigned that term.</p>
+<p>Phone on file: +66 96 078 8308. Naklua address: 215/18 Moo 6, Na Kluea. Trial day checklist: ask which coach leads your age band, which language is used for parent briefings, and whether indoor or outdoor is assigned that term.</p>
 
 <h2>3. Yoga Pattaya Studio — trilingual instruction (Jomtien belt)</h2>
 

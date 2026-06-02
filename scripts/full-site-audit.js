@@ -103,7 +103,8 @@ function checkHtmlHealth(url, body) {
   }
   if (/\$\{[^}]+\}/.test(body.replace(/<script[\s\S]*?<\/script>/gi, ''))) issues.push('unresolved template literal');
   if (/undefined/.test(body.slice(0, 5000))) issues.push('literal "undefined" in head');
-  if (!extractTitle(body) && !url.endsWith('.json') && !url.endsWith('.xml')) issues.push('missing <title>');
+  const skipTitle = url.endsWith('.json') || url.endsWith('.xml') || url.endsWith('/robots.txt');
+  if (!extractTitle(body) && !skipTitle) issues.push('missing <title>');
   return issues;
 }
 
@@ -264,7 +265,13 @@ async function main() {
   const home = keyResults.find(r => r.url === SITE + '/');
   if (home && home.body) {
     const hrefs = [...home.body.matchAll(/href="(\/[^"#?]+)"/g)].map(m => m[1]);
-    const unique = [...new Set(hrefs)].slice(0, 25);
+    const unique = [...new Set(hrefs)]
+      .filter(rel => {
+        if (!rel.startsWith('//')) return true;
+        const host = rel.slice(2).split('/')[0].toLowerCase();
+        return !(host.includes('google') || host.includes('googletagmanager') || host.includes('cloudflareinsights'));
+      })
+      .slice(0, 25);
     const linkChecks = await mapPool(unique, async rel => {
       const r = await fetchUrl(SITE + rel);
       return { rel, status: r.status, ok: r.ok };

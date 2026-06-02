@@ -27,8 +27,10 @@ function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
-const TOP = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
-const BOT = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
+const { GYMS } = require(path.join(ROOT, 'data.js'));
+const VENUE_N = GYMS.length;
+const TOP = ['★ EVERY GYM','EVERY RING','EVERY COURT',`${VENUE_N} VENUES`,'HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
+const BOT = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT',`★ LIVE ${VENUE_N} VENUES`,'UPDATED ROLLING'];
 
 function marquee(items, bot) {
   const cls = bot ? 'marquee marquee-bottom' : 'marquee';
@@ -37,6 +39,18 @@ function marquee(items, bot) {
 }
 
 const ROUNDS = [
+  {
+    n: 65, date: '2026-05-31', tag: 'v452',
+    title: 'AF Academy dedupe + dynamic venue counts + audit fixes',
+    summary: 'Removes duplicate af-academy-football from data.js (301 to af-academy-pattaya retained); site copy uses GYMS.length; full-site-audit skips robots.txt title and external prefetch links.',
+    bullets: [
+      'data.js: drop af-academy-football stub; venue-geo + venues/*.md removed.',
+      'build-v2.js: VENUE_N marquees/footer/stats; sitemap lists all GYMS only.',
+      'sync-index-venue-count.js — homepage 158 → live count.',
+      'full-site-audit.js: no false missing-title on robots.txt; skip //google prefetch dead links.',
+      'Regenerated compare/plan JSON, feeds, APIs, Russian-speaking guide body.',
+    ],
+  },
   {
     n: 64, date: '2026-06-02', tag: 'v452',
     title: 'Ranked deepen inject consolidation + depth status report',

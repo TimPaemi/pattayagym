@@ -26,6 +26,7 @@ const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') 
 
 // ---------- Load data ----------
 const { CATEGORIES, GYMS } = require('./data.js');
+const VENUE_N = GYMS.length;
 
 // ---------- Load venue geo cache (optional — populated by scripts/geocode-venues.js) ----------
 let VENUE_GEO = {};
@@ -405,9 +406,6 @@ function syncCssFontVersion() {
   if (updated !== css) fs.writeFileSync(cssPath, updated, 'utf8');
 }
 
-/** Gym IDs that 301 elsewhere — omit from sitemap (HTML may remain for redirect targets). */
-const SITEMAP_EXCLUDE_GYM_IDS = new Set(['af-academy-football']);
-
 function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null, robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }) {
   // Allow jsonLd to be a single object OR an array of objects (one <script> per item).
   const ldBlocks = jsonLd
@@ -546,7 +544,7 @@ function footer() {
     <div>
       <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
       <div class="footer-slogan">Built in Pattaya. For Pattaya.</div>
-      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 158 venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
+      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
       <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
       <div class="footer-meta">
         TimPaemi Co., Ltd.<br>
@@ -602,9 +600,9 @@ ${pageScripts()}
 </html>`;
 }
 
-// Standard top/bottom marquee items
-const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', '158 VENUES', 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', '★ LIVE 158 VENUES', 'UPDATED ROLLING'];
+// Standard top/bottom marquee items (venue count follows GYMS.length)
+const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', `${VENUE_N} VENUES`, 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', `★ LIVE ${VENUE_N} VENUES`, 'UPDATED ROLLING'];
 
 function breadcrumb(items) {
   // items: [{label, href}], last has no href
@@ -2139,13 +2137,13 @@ const UTILITY_PAGES = [
   },
   {
     slug: 'pattaya-sport-stats',
-    title: 'Pattaya sport stats — 158 venues across 15 sports',
-    desc: 'The numbers behind Pattaya as a training destination. 158 hand-checked venues, 15 sports, 6 areas. Verified on a rolling schedule.',
+    title: `Pattaya sport stats — ${VENUE_N} venues across 15 sports`,
+    desc: `The numbers behind Pattaya as a training destination. ${VENUE_N} hand-checked venues, 15 sports, 6 areas. Verified on a rolling schedule.`,
     eyebrow: 'Stats',
     headlineLead: 'Pattaya',
     headlineAccent: 'by the numbers',
     accentClass: 'accent-yellow',
-    lede: 'The training landscape of Pattaya in numbers. 158 hand-checked venues across 15 sports and 6 distinct areas. One of the world\'s deepest single-city Muay Thai scenes.',
+    lede: `The training landscape of Pattaya in numbers. ${VENUE_N} hand-checked venues across 15 sports and 6 distinct areas. One of the world's deepest single-city Muay Thai scenes.`,
     showContactCard: false,
     bodyHtml: buildSportStatsBody()
   },
@@ -2211,7 +2209,7 @@ const UTILITY_PAGES = [
   {
     slug: '404',
     title: 'Page not found — Pattaya.Gym',
-    desc: 'That page doesn\'t exist on Pattaya.Gym. Browse 158 venues, 15 sports, or use search.',
+    desc: `That page doesn't exist on Pattaya.Gym. Browse ${VENUE_N} venues, 15 sports, or use search.`,
     eyebrow: '404',
     headlineLead: 'Page',
     headlineAccent: 'not found',
@@ -2220,7 +2218,7 @@ const UTILITY_PAGES = [
     showContactCard: false,
     bodyHtml: `
 <p><a href="/">Back to homepage →</a></p>
-<p><a href="/search/">Search 158 venues →</a></p>
+<p><a href="/search/">Search ${VENUE_N} venues →</a></p>
 <p><a href="/category/muay-thai/">Browse Muay Thai →</a></p>
 <p><a href="/category/fitness/">Browse fitness gyms →</a></p>
 <p><a href="/contact/">Contact us →</a></p>
@@ -2232,7 +2230,7 @@ const UTILITY_PAGES = [
 function sportsHubPage() {
   const url = `${SITE}/sports/`;
   const title = 'All sports in Pattaya - 15 categories | Pattaya.Gym';
-  const desc = truncateDesc('Browse every sport in Pattaya: Muay Thai, fitness, golf, yoga, BJJ, MMA, watersports, climbing, racquet sports, running clubs and more. 158 hand-checked venues across 15 categories.');
+  const desc = truncateDesc(`Browse every sport in Pattaya: Muay Thai, fitness, golf, yoga, BJJ, MMA, watersports, climbing, racquet sports, running clubs and more. ${VENUE_N} hand-checked venues across 15 categories.`);
   const cards = CATEGORIES.map(c => {
     const n = GYMS.filter(g => g.category === c.key).length;
     return `<a href="/category/${c.key}/" class="numcard u-plain-link">
@@ -2255,7 +2253,7 @@ function sportsHubPage() {
 
 <section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
   <div class="hero-inner u-wrap-max">
-    <div class="hero-kicker">// Every sport &middot; 15 categories &middot; 158 venues</div>
+    <div class="hero-kicker">// Every sport &middot; 15 categories &middot; ${VENUE_N} venues</div>
     <h1 class="hero-h1" style="font-size:clamp(44px,10vw,128px); text-align:left;">All <span class="accent-cyan">sports.</span></h1>
     <p class="hero-lede u-text-left-ml0">Every sport and training discipline in Pattaya - from Muay Thai and BJJ to golf, diving, climbing and running clubs. Pick a category to see every hand-checked venue.</p>
   </div>
@@ -2299,7 +2297,7 @@ function generateSitemap() {
     ...GUIDE_SLUGS.map(s => `${SITE}/guides/${s}/`),
     ...CATEGORIES.map(c => `${SITE}/category/${c.key}/`),
     ...Object.keys(AREA_MAP).map(a => `${SITE}/area/${a}/`),
-    ...GYMS.filter(g => !SITEMAP_EXCLUDE_GYM_IDS.has(g.id)).map(g => `${SITE}/gyms/${g.id}/`)
+    ...GYMS.map(g => `${SITE}/gyms/${g.id}/`)
   ];
   // Combined category-area URLs (one per non-empty pairing) — long-tail surface
   for (const slug of Object.keys(AREA_MAP)) {

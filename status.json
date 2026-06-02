@@ -17,23 +17,23 @@
   "build": {
     "version": "v452",
     "asset_version": "452",
-    "last_built_utc": "2026-06-02T03:51:03.465Z",
+    "last_built_utc": "2026-06-02T04:58:05.334Z",
     "last_built_date": "2026-06-02"
   },
   "catalog": {
-    "venues_total": 158,
-    "venues_with_body_content": 158,
+    "venues_total": 157,
+    "venues_with_body_content": 157,
     "categories": 15,
     "areas": 6,
-    "html_pages_shipped": 287,
+    "html_pages_shipped": 286,
     "sitemap_urls": 282
   },
   "schema_completeness": {
-    "venues_with_verified_date": 158,
+    "venues_with_verified_date": 157,
     "venues_with_phone": 47,
-    "venues_with_website": 105,
+    "venues_with_website": 104,
     "venues_with_geo_coordinates": 95,
-    "completeness_percent_geo": 60,
+    "completeness_percent_geo": 61,
     "completeness_percent_phone": 30
   },
   "freshness": {

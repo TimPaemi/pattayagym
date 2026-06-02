@@ -1,7 +1,7 @@
 {
   "name": "Pattaya Gym Directory — categories",
   "url": "https://pattaya-gym.com/",
-  "generated": "2026-06-01",
+  "generated": "2026-06-02",
   "license": "CC BY 4.0",
   "count": 15,
   "categories": [
@@ -1050,20 +1050,13 @@
       "key": "kids-youth",
       "label": "Kids / Youth Sports",
       "url": "https://pattaya-gym.com/category/kids-youth/",
-      "venueCount": 9,
+      "venueCount": 8,
       "venues": [
         {
           "id": "bounce-pattaya",
           "name": "BOUNCE Pattaya — Trampoline Park",
           "url": "https://pattaya-gym.com/gyms/bounce-pattaya/",
           "area": "Harbor Pattaya Mall — 6F / Central Pattaya",
-          "priceRange": "฿฿"
-        },
-        {
-          "id": "af-academy-football",
-          "name": "AF Academy Football School",
-          "url": "https://pattaya-gym.com/gyms/af-academy-football/",
-          "area": "South Pattaya (outdoor field) + Central Pattaya (indoor field)",
           "priceRange": "฿฿"
         },
         {

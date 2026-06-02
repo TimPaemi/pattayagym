@@ -1,7 +1,7 @@
 {
   "name": "Pattaya Gym Directory — areas",
   "url": "https://pattaya-gym.com/",
-  "generated": "2026-06-01",
+  "generated": "2026-06-02",
   "license": "CC BY 4.0",
   "count": 6,
   "areas": [
@@ -643,7 +643,7 @@
       "slug": "central-pattaya",
       "name": "Central Pattaya",
       "url": "https://pattaya-gym.com/area/central-pattaya/",
-      "venueCount": 37,
+      "venueCount": 36,
       "venues": [
         {
           "id": "wko-muay-thai",
@@ -804,13 +804,6 @@
           "name": "Deep Climbing Gym (Harbor Pattaya)",
           "url": "https://pattaya-gym.com/gyms/deep-climbing-gym/",
           "category": "climbing",
-          "priceRange": "฿฿"
-        },
-        {
-          "id": "af-academy-football",
-          "name": "AF Academy Football School",
-          "url": "https://pattaya-gym.com/gyms/af-academy-football/",
-          "category": "kids-youth",
           "priceRange": "฿฿"
         },
         {

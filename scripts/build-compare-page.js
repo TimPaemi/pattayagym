@@ -27,6 +27,7 @@ const ASSET = `?v=${ASSET_VERSION}`;
 const BUILD_TS = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
 const { GYMS, CATEGORIES } = require(path.join(ROOT, 'data.js'));
+const VENUE_N = GYMS.length;
 
 function esc(s) {
   if (s == null) return '';
@@ -53,8 +54,8 @@ const venueSummary = GYMS.map(g => ({
 
 const VENUE_JSON = JSON.stringify(venueSummary);
 
-const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
+const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT',`${VENUE_N} VENUES`,'HAND-CHECKED','NO PAID PLACEMENTS','PATTAYA · THAILAND','UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT',`★ LIVE ${VENUE_N} VENUES`,'UPDATED ROLLING'];
 
 function marquee(items, bot) {
   const cls = bot ? 'marquee marquee-bottom' : 'marquee';
