@@ -45,6 +45,7 @@ node scripts/bump-legacy-assets.js
 node scripts/sync-csp-hashes.js
 node scripts/sync-llms-guides.js
 node scripts/patch-guide-map-cta-r70.js
+node scripts/apply-geo-r73.js
 node scripts/verify-deploy.js
 npm run html:validate
 ```
