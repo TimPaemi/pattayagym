@@ -40,6 +40,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 72, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
+    title: 'Family guides Tier A; batch geocode remaining venues',
+    summary: 'Family ranked guides merged to Tier A (44/44). Nominatim v2 retry batch refreshes venue-geo.json; 95/157 venues carry GeoCoordinates in LocalBusiness schema.',
+    bullets: [
+      'polish-family-guides-r72.js — deepen-r68 merged into primer; 0 Tier B guides.',
+      'geocode-venues-v2.js — 65-venue retry (22 area centroids refreshed, 43 misses logged).',
+      'build-v2.js regen — venue HTML + schema from updated geo cache.',
+      'inject-guide-schema — FAQPage on guides missing expandable FAQ JSON-LD.',
+    ],
+  },
+  {
     n: 71, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
     title: 'Guide head meta in schema pipeline; demote /map/ CTAs',
     summary: 'normalize-guide-head-meta runs after every inject-guide-schema pass; legacy build-discovery footers and area CTAs prioritize search over the noindex map stub.',

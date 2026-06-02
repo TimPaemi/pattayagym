@@ -29,7 +29,7 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:31:42.709Z"
+    "attempted_at": "2026-06-02T18:18:54.183Z"
   },
   "battle-conquer-gym": {
     "lat": 12.914311,
@@ -44,7 +44,7 @@
   "sor-klinmee": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:31:47.747Z"
+    "attempted_at": "2026-06-02T18:18:59.483Z"
   },
   "petchrungruang-gym": {
     "lat": 12.928,
@@ -56,7 +56,7 @@
   "rambaa-somdet-m16": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:31:52.097Z"
+    "attempted_at": "2026-06-02T18:19:04.165Z"
   },
   "venum-training-camp": {
     "lat": 12.9404,
@@ -68,17 +68,17 @@
   "alfa-bjj-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:31:57.050Z"
+    "attempted_at": "2026-06-02T18:19:08.889Z"
   },
   "sanit-sport-club": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:32:02.286Z"
+    "attempted_at": "2026-06-02T18:19:13.551Z"
   },
   "lumpinee-boxing-stadium": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:32:07.534Z"
+    "attempted_at": "2026-06-02T18:19:18.663Z"
   },
   "rajadamnern-stadium": {
     "lat": 12.93,
@@ -88,15 +88,15 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "rage-fight-academy": {
-    "lat": 12.906886,
-    "lng": 100.869035,
+    "lat": 12.902845,
+    "lng": 100.869646,
     "display_name": "ถนนทัพพระยา, เมืองพัทยา, ห้วยใหญ่, อำเภอบางละมุง, จังหวัดชลบุรี, 20260, ประเทศไทย",
     "osm_type": "way",
-    "osm_id": 146447926,
+    "osm_id": 1064269743,
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:32:12.165Z"
+    "attempted_at": "2026-06-02T18:19:23.631Z"
   },
   "silk-muay-thai": {
     "lat": 12.921,
@@ -108,7 +108,7 @@
   "pattaya-thai-boxing-fitness": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:32:17.306Z"
+    "attempted_at": "2026-06-02T18:19:28.811Z"
   },
   "fight-evo360": {
     "lat": 12.908441,
@@ -119,7 +119,7 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:32:21.882Z"
+    "attempted_at": "2026-06-02T18:19:33.784Z"
   },
   "sitpholek-muay-thai": {
     "lat": 12.92,
@@ -131,12 +131,12 @@
   "crossfit-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:32:26.285Z"
+    "attempted_at": "2026-06-02T18:19:38.115Z"
   },
   "tonys-gym": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:32:31.147Z"
+    "attempted_at": "2026-06-02T18:19:43.076Z"
   },
   "platinum-fitness": {
     "lat": 12.9328606,
@@ -151,7 +151,7 @@
   "coco-fitness": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:32:36.292Z"
+    "attempted_at": "2026-06-02T18:19:48.457Z"
   },
   "universe-gym": {
     "lat": 12.935027,
@@ -173,7 +173,7 @@
   "elite-gym-fitness": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:32:43.475Z"
+    "attempted_at": "2026-06-02T18:19:54.091Z"
   },
   "jetts-fitness-pattaya": {
     "lat": 12.935997,
@@ -195,24 +195,24 @@
   "fitness-7": {
     "lat": 12.929371,
     "lng": 100.881707,
-    "display_name": "The Avenue, พัทยาสายสอง 14, นาเกลือ, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, 20210, ประเทศไทย",
+    "display_name": "The Avenue, บัวขาว 15, นาเกลือ, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, 20210, ประเทศไทย",
     "osm_type": "way",
     "osm_id": 27487671,
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:32:52.763Z"
+    "attempted_at": "2026-06-02T18:19:59.264Z"
   },
   "true-fitness-pattaya": {
     "lat": 12.934694,
     "lng": 100.883477,
-    "display_name": "Central Pattaya, ซอยพัทยา 9, นาเกลือ, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, 20210, ประเทศไทย",
+    "display_name": "Central Pattaya, พัทยากลาง 17, นาเกลือ, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, 20210, ประเทศไทย",
     "osm_type": "way",
     "osm_id": 151000011,
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:32:58.174Z"
+    "attempted_at": "2026-06-02T18:20:04.424Z"
   },
   "castra-gym": {
     "lat": 12.906342,
@@ -223,12 +223,12 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:33:03.352Z"
+    "attempted_at": "2026-06-02T18:20:09.502Z"
   },
   "sun-fitness-buakao": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:33:08.647Z"
+    "attempted_at": "2026-06-02T18:20:14.317Z"
   },
   "cross-pattaya-pratamnak": {
     "lat": 12.912546,
@@ -239,29 +239,29 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:33:13.764Z"
+    "attempted_at": "2026-06-02T18:20:19.311Z"
   },
   "manhattan-pattaya-fitness": {
-    "lat": 12.917773,
-    "lng": 100.869288,
-    "display_name": "The Regent Pratamnak, พระตำหนัก 1, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, 20260, ประเทศไทย",
+    "lat": 12.912546,
+    "lng": 100.86344,
+    "display_name": "Pratamnak Night Market, Sea Hill 5, เมืองพัทยา, ห้วยใหญ่, อำเภอบางละมุง, จังหวัดชลบุรี, 20260, ประเทศไทย",
     "osm_type": "way",
-    "osm_id": 311553000,
+    "osm_id": 1306083318,
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:33:19.102Z"
+    "attempted_at": "2026-06-02T18:20:24.470Z"
   },
   "yoga-pattaya-studio": {
-    "lat": 12.903971,
-    "lng": 100.876876,
-    "display_name": "Ratanakorn Market Thepprasit, เทพประสิทธิ์ 15, เมืองพัทยา, ห้วยใหญ่, อำเภอบางละมุง, จังหวัดชลบุรี, 20260, ประเทศไทย",
+    "lat": 12.904865,
+    "lng": 100.875214,
+    "display_name": "Thepprasit Cosy 3, เทพประสิทธิ์ 15, เมืองพัทยา, ห้วยใหญ่, อำเภอบางละมุง, จังหวัดชลบุรี, 20150, ประเทศไทย",
     "osm_type": "way",
-    "osm_id": 338786753,
+    "osm_id": 1312566004,
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:33:24.023Z"
+    "attempted_at": "2026-06-02T18:20:29.186Z"
   },
   "yoga-haus-pattaya": {
     "lat": 12.9334134,
@@ -276,7 +276,7 @@
   "ashtanga-yoga-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:33:29.156Z"
+    "attempted_at": "2026-06-02T18:20:34.158Z"
   },
   "one-d-yoga-studio": {
     "lat": 12.932473,
@@ -287,7 +287,7 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:33:34.515Z"
+    "attempted_at": "2026-06-02T18:20:39.495Z"
   },
   "nok-yoga-pattaya": {
     "lat": 12.959894,
@@ -298,12 +298,12 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:33:39.759Z"
+    "attempted_at": "2026-06-02T18:20:44.138Z"
   },
   "balance-yoga-studio-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:33:44.631Z"
+    "attempted_at": "2026-06-02T18:20:49.601Z"
   },
   "siam-country-club": {
     "lat": 12.9114,
@@ -315,7 +315,7 @@
   "laem-chabang-international": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:33:49.796Z"
+    "attempted_at": "2026-06-02T18:20:54.368Z"
   },
   "phoenix-gold-golf": {
     "lat": 12.965,
@@ -347,12 +347,12 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:33:54.956Z"
+    "attempted_at": "2026-06-02T18:20:58.735Z"
   },
   "chatrium-golf-soi-dao": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:34:00.536Z"
+    "attempted_at": "2026-06-02T18:21:03.719Z"
   },
   "pattana-sports-resort": {
     "lat": 12.8714,
@@ -385,7 +385,7 @@
   "mountain-shadow-country-club": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:34:05.771Z"
+    "attempted_at": "2026-06-02T18:21:08.795Z"
   },
   "pattaya-country-club": {
     "lat": 12.965,
@@ -397,7 +397,7 @@
   "pattaya-golf-driving-range": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:34:10.603Z"
+    "attempted_at": "2026-06-02T18:21:13.745Z"
   },
   "pattaya-tennis-club": {
     "lat": 12.934694,
@@ -418,22 +418,22 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:34:15.151Z"
+    "attempted_at": "2026-06-02T18:21:18.282Z"
   },
   "tara-tennis-club": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:34:20.075Z"
+    "attempted_at": "2026-06-02T18:21:23.166Z"
   },
   "tos-tennis": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:34:25.416Z"
+    "attempted_at": "2026-06-02T18:21:27.974Z"
   },
   "siam-bayshore-tennis": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:34:31.089Z"
+    "attempted_at": "2026-06-02T18:21:33.175Z"
   },
   "euro-badminton": {
     "lat": 12.881804,
@@ -444,7 +444,7 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:34:36.412Z"
+    "attempted_at": "2026-06-02T18:21:38.160Z"
   },
   "diamond-badminton": {
     "lat": 12.920741,
@@ -459,12 +459,12 @@
   "pattaya-tennis-badminton-inter-club": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:34:44.929Z"
+    "attempted_at": "2026-06-02T18:21:42.402Z"
   },
   "pickleball-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:34:50.093Z"
+    "attempted_at": "2026-06-02T18:21:47.388Z"
   },
   "play-padel-pattaya": {
     "lat": 12.919048,
@@ -475,7 +475,7 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:34:55.691Z"
+    "attempted_at": "2026-06-02T18:21:52.553Z"
   },
   "pattaya-sports-club": {
     "lat": 12.945697,
@@ -490,17 +490,17 @@
   "manta-kids-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:04.036Z"
+    "attempted_at": "2026-06-02T18:21:56.702Z"
   },
   "bounce-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:08.889Z"
+    "attempted_at": "2026-06-02T18:22:01.435Z"
   },
   "first-serve-sports-club": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:12.831Z"
+    "attempted_at": "2026-06-02T18:22:06.095Z"
   },
   "hard-rock-pool": {
     "lat": 12.9392035,
@@ -525,7 +525,7 @@
   "pattaya-public-pool-jomtien": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:17.562Z"
+    "attempted_at": "2026-06-02T18:22:11.463Z"
   },
   "mermaids-dive": {
     "lat": 12.9111,
@@ -547,17 +547,17 @@
   "seafari-padi-dive": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:22.350Z"
+    "attempted_at": "2026-06-02T18:22:16.510Z"
   },
   "pattaya-scuba-adventures": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:27.264Z"
+    "attempted_at": "2026-06-02T18:22:21.284Z"
   },
   "no-limit-divers": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:32.187Z"
+    "attempted_at": "2026-06-02T18:22:25.709Z"
   },
   "jomtien-dive-center": {
     "lat": 12.89546,
@@ -582,7 +582,7 @@
   "kitesurf-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:40.195Z"
+    "attempted_at": "2026-06-02T18:22:30.318Z"
   },
   "kba-kiteboarding-pattaya": {
     "lat": 12.856833,
@@ -593,7 +593,7 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:35:44.699Z"
+    "attempted_at": "2026-06-02T18:22:34.711Z"
   },
   "wave-pattaya": {
     "lat": 12.964,
@@ -611,53 +611,53 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:35:49.880Z"
+    "attempted_at": "2026-06-02T18:22:40.152Z"
   },
   "bean-cow-climbing-gym": {
-    "lat": 12.917809,
-    "lng": 100.8689,
-    "display_name": "Tourism Authority of Thailand, พระตำหนัก 1, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, 20260, ประเทศไทย",
+    "lat": 12.917113,
+    "lng": 100.878458,
+    "display_name": "Thailand House, สำนักงานที่ดิน 6, เมืองพัทยา, ห้วยใหญ่, อำเภอบางละมุง, จังหวัดชลบุรี, 20260, ประเทศไทย",
     "osm_type": "way",
-    "osm_id": 311552937,
+    "osm_id": 342779081,
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:35:54.142Z"
+    "attempted_at": "2026-06-02T18:22:45.803Z"
   },
   "pattaya-hash-house": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:35:58.873Z"
+    "attempted_at": "2026-06-02T18:22:50.071Z"
   },
   "pattaya-monkey-hash-house": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:03.497Z"
+    "attempted_at": "2026-06-02T18:22:54.989Z"
   },
   "pattaya-city-football-academy": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:12.676Z"
+    "attempted_at": "2026-06-02T18:22:59.743Z"
   },
   "planet-football-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:16.710Z"
+    "attempted_at": "2026-06-02T18:23:03.868Z"
   },
   "rusich-club-football": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:20.579Z"
+    "attempted_at": "2026-06-02T18:23:07.778Z"
   },
   "regents-international-school-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:24.587Z"
+    "attempted_at": "2026-06-02T18:23:12.110Z"
   },
   "horseshoe-point-resort": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:29.221Z"
+    "attempted_at": "2026-06-02T18:23:16.653Z"
   },
   "muscle-factory-pattaya": {
     "lat": 12.91184,
@@ -685,17 +685,17 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:36:37.413Z"
+    "attempted_at": "2026-06-02T18:23:21.456Z"
   },
   "fast-pro-football-academy": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:42.661Z"
+    "attempted_at": "2026-06-02T18:23:25.705Z"
   },
   "golf-hub-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:47.745Z"
+    "attempted_at": "2026-06-02T18:23:30.635Z"
   },
   "ramayana-water-park": {
     "lat": 12.7882,
@@ -707,7 +707,7 @@
   "af-academy-pattaya": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:36:53.092Z"
+    "attempted_at": "2026-06-02T18:23:35.702Z"
   },
   "diana-driving-range": {
     "lat": 12.929904,
@@ -718,12 +718,12 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:36:58.032Z"
+    "attempted_at": "2026-06-02T18:23:40.301Z"
   },
   "pratumnak-fitness-park": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:37:02.920Z"
+    "attempted_at": "2026-06-02T18:23:45.660Z"
   },
   "pattaya-bowl": {
     "lat": 12.965028,
@@ -734,7 +734,7 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:37:07.707Z"
+    "attempted_at": "2026-06-02T18:23:51.228Z"
   },
   "pattaya-park-water-fun": {
     "lat": 12.8857,
@@ -746,7 +746,7 @@
   "thai-sky-adventures-skydive": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:37:13.280Z"
+    "attempted_at": "2026-06-02T18:23:56.752Z"
   },
   "thai-polo-equestrian-club": {
     "lat": 12.923793,
@@ -757,12 +757,12 @@
     "source": "nominatim-v2",
     "strategy": "area_centroid",
     "_flag": "area_centroid",
-    "attempted_at": "2026-05-22T07:37:17.956Z"
+    "attempted_at": "2026-06-02T18:24:01.697Z"
   },
   "bira-circuit": {
     "failed": true,
     "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:37:23.433Z"
+    "attempted_at": "2026-06-02T18:24:06.634Z"
   },
   "jumpz-trampoline-park": {
     "failed": true,
