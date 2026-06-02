@@ -78,7 +78,7 @@ module.exports = `
 
 <h2>Related guides</h2>
 
-<p><a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a> · <a href="/guides/family-friendly-pattaya/">Family-friendly</a> · <a href="/guides/best-dive-operators-pattaya/">Dive operators</a> · <a href="/area/sattahip/">Sattahip hub</a> · <a href="/compare/">Compare 158 venues</a></p>
+<p><a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a> · <a href="/guides/family-friendly-pattaya/">Family-friendly</a> · <a href="/guides/best-dive-operators-pattaya/">Dive operators</a> · <a href="/area/sattahip/">Sattahip hub</a> · <a href="/compare/">Compare venues</a></p>
 
 <h2>U-Tapao airport corridor — who lands here</h2>
 

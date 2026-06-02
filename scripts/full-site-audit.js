@@ -97,8 +97,9 @@ function extractCanonical(html) {
 function checkHtmlHealth(url, body) {
   const issues = [];
   if (!body) return ['empty body'];
+  const isNonHtml = url.endsWith('.json') || url.endsWith('.xml') || url.endsWith('/robots.txt');
   if (body.includes('\0')) issues.push('NUL bytes');
-  if (!body.trimEnd().endsWith('</html>') && !url.endsWith('.xml') && !url.endsWith('.json')) {
+  if (!isNonHtml && !body.trimEnd().endsWith('</html>')) {
     issues.push('missing </html>');
   }
   if (/\$\{[^}]+\}/.test(body.replace(/<script[\s\S]*?<\/script>/gi, ''))) issues.push('unresolved template literal');
