@@ -103,4 +103,14 @@ module.exports = `
 <h2>Mabprachan lake week</h2>
 
 <p>Wake park mornings, padel afternoons, CrossFit evenings — east lake belt suits hybrid athletes. Grocery and café options improved but still thinner than Jomtien — plan meal prep or scooter to Thepprasit.</p>
+
+<h2>Sanit + guesthouse long-stay pattern</h2>
+
+<p>Athletes train at <a href="/gyms/sanit-sport-club/">Sanit Sport Club</a>, rent monthly room near Mabprachan, cook breakfast, taxi to camp — total cost often beats Kombat weekly rate if you do not need resort meals. Trade-off: you manage laundry, meals, and motivation without camp bubble accountability.</p>
+
+<p>Rural east roads flood in heavy rain — have a backup indoor gym day (<a href="/guides/gym-day-pass-pattaya/">central day pass</a>) when Huai Yai sois are underwater.</p>
+
+<p>Grab sometimes declines remote east pickups at 05:00 — pre-book camp shuttle or keep camp driver contact for morning sessions.</p>
+
+<p>East area hub lists every category slice: <a href="/area/east-pattaya/">East Pattaya directory</a> — filter Muay Thai, fitness, wake, and padel without cross-city noise.</p>
 `;

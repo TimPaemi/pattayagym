@@ -105,4 +105,18 @@ module.exports = `
 <h2>Bang Saray and Cartoon Network belt</h2>
 
 <p>Cartoon Network Amazone and Ramayana anchor family sport days south — not Muay Thai, but essential if partners and kids share the trip. Chee Chan Golf sits between marina life and water parks — book tee times before heat peak. Bang Saray food sois are cheaper than Beach Road — good for long-stay athletes watching budget.</p>
+
+<h2>Scooter vs car for south belt</h2>
+
+<p>Na Jomtien to Sattahip water parks is 15–25 minutes by car; scooters work if you have Thailand experience — highway sections are fast. UTP airport pickups: confirm camp/hotel quote includes tolls. Night returns from marina restaurants — carry small torch for unlit sois.</p>
+
+<p>Long-stay athletes stack south base with occasional central Pattaya fight night — budget ฿800–1,200 round-trip Grab when you do not want to ride tired after pads.</p>
+
+<p>Compare south resorts on <a href="/compare/">compare</a> filtered by area Sattahip before booking a month at the wrong end of Sukhumvit — distance to your primary sport venue matters more than sea view photos on booking sites.</p>
+
+<p>Medical emergencies south use Sattahip and Bang Lamung hospitals — save <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> clinic list on your phone before kite or dive days.</p>
+
+<p>Plan my trip: <a href="/plan-my-trip/">plan my trip</a> tool maps south venues against your hotel pin before you sign a lease.</p>
+
+<p>Updated from hand-checked venue files — see <a href="/methodology/">methodology</a> for how listings change when hours or policies drift.</p>
 `;

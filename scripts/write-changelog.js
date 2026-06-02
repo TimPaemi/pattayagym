@@ -38,6 +38,16 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 63, date: '2026-06-02', tag: 'v452',
+    title: 'Tier B clearance — editorial + ranked depth to Tier A',
+    summary: 'Round 63 pushes the last 17 Tier B guides toward ≥1200 words with expanded guide-bodies and ranked deepen-r63 blocks before full-list.',
+    bullets: [
+      'expand-ranked-tier-b-r63.js — bangkok, 24h, luxury, beginners, family, dive operators.',
+      'Second pass on 11 editorial guide-bodies (camps, holiday, areas, day pass, etc.).',
+      'write-round62-tier-b.js regen + inject-guide-schema + verify-deploy gate.',
+    ],
+  },
+  {
     n: 62, date: '2026-05-31', tag: 'v452',
     title: 'Tier B editorial guides deepened to Tier A (16 guides)',
     summary: 'Round 62 expands all remaining Tier B editorial guides to ≥1200 words, migrates gym-day-pass and stay-and-train guides to guide-bodies + editorial shell, and fixes FAQ schema extraction for ranked guide-faq blocks.',

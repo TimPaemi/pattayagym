@@ -124,4 +124,14 @@ module.exports = `
 <h2>When to extend vs fly home</h2>
 
 <p>Rule of thumb: if you still want morning pads on day 6 of a 7-day trip, extend. If ankles and shins scream through stairs, take rest days instead of extending blindly. Month-two athletes often relocate housing to <a href="/guides/best-gym-jomtien-pattaya/">Jomtien</a> while keeping the same camp commute — cheaper than resort weekly rates.</p>
+
+<h2>Group holidays and friends with different goals</h2>
+
+<p>One friend wants hard sparring, another wants tourist photos — split mornings (different camps) or pick Fairtex/Kombat where both coexist. Non-training friends should not book rural east camps without their own transport entertainment plan. Agree on alcohol rules before the trip — one hungover friend delays everyone's morning session.</p>
+
+<p>Corporate retreat style groups: ask camps for private ring blocks and team-building pad rounds — Fairtex and large resorts handle this routinely. Invoice VAT needs for Thai companies: ask finance desk, not front-line trainer.</p>
+
+<p>Share goals in writing before arrival — weight loss, technique, or fun — coaches assign different pad holders. Vague "get fit" requests produce vague sessions.</p>
+
+<p>Jet lag: skip pads on arrival day if you landed red-eye — walk, swim, sleep; start proper camp rhythm day two to avoid preventable shin splits from tired technique.</p>
 `;

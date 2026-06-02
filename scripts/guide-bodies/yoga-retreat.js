@@ -124,4 +124,14 @@ module.exports = `
 <h2>Teacher training and workshops</h2>
 
 <p>Some studios host weekend workshops (arm balances, yin marathons) — follow Instagram or LINE pages listed on venue files. Teacher training certifications exist but are less common than Chiang Mai — verify Yoga Alliance credentials if you care about certificate portability.</p>
+
+<h2>Studio hopping without overcommitting</h2>
+
+<p>Week one: try three studios (Balance, Yoga Haus, Ashtanga) on drop-in before buying a 10-class pack. Teachers differ more than shala decor — one bad chemistry day is normal. Respect closed practice during Thai holidays — studios post on Facebook faster than websites update.</p>
+
+<p>Bring grip towel for hot vinyasa — mats get slippery. Hydrate 500ml before class; studios sell water but lines form between back-to-back sessions.</p>
+
+<p>Evening yin on the beach is free self-practice — pick Wong Amat or Jomtien sand away from jet-ski lanes at dusk for calmest stretch space.</p>
+
+<p>All yoga venues: <a href="/category/yoga/">yoga category</a> — filter by area before you buy a ten-class pack at the wrong end of town.</p>
 `;

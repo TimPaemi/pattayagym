@@ -176,4 +176,18 @@ module.exports = `
 <tr><td>เรียกหมอ</td><td>riak mor</td><td>Call a doctor</td></tr>
 </tbody>
 </table>
+
+<h2>Recording phrases on your phone</h2>
+
+<p>Save audio clips from Google Translate for <strong>sawatdee</strong>, <strong>ra kha tao rai</strong>, and <strong>mai spar</strong> — play at the desk if nerves hit. Coaches appreciate effort even if tones are wrong. LINE is how many gyms confirm class times — ask <strong>LINE dai mai</strong> (do you have LINE?) at reception.</p>
+
+<h2>Reading gym whiteboards</h2>
+
+<p>Whiteboards list <strong>wan</strong> (day), <strong>chuang</strong> (round), and trainer names in Thai script. Photograph the board and translate slowly — schedule changes happen when fighters book stadium bouts. Holiday closures are often posted only in Thai — point and ask <strong>pit mai</strong> (closed?) if the gate is locked.</p>
+
+<p>Learn <strong>mai pen rai</strong> (no worries) — it defuses awkward moments when you miss a combo or block a kick accidentally. Gyms run on patience for foreigners who show respect.</p>
+
+<p>Print this page or save offline — Bali Hai and east camps have weak signal in locker rooms where you need phrases most.</p>
+
+<p>Share with training partners — two people practicing <strong>khop khun</strong> and <strong>bao bao</strong> before sparring week makes gym culture smoother for everyone.</p>
 `;

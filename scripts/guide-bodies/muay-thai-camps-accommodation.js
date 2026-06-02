@@ -108,4 +108,18 @@ module.exports = `
 <h2>Songkran, Loy Krathong, and holiday closures</h2>
 
 <p>Thai public holidays may shorten sessions or close kitchens midday. Songkran (mid-April) closes many gyms 2–3 days — book around it. Christmas/New Year peak fills resort rooms — deposit early Nov if you fly Dec.</p>
+
+<h2>Deposit and payment norms</h2>
+
+<p>Serious camps request 30–50% deposit to hold peak-season rooms — bank transfer or card, rarely PayPal. Get written confirmation listing sessions per day, meal count, and room class. Scams are rare at listed venues but common on Facebook copycat pages — book only through contacts on our venue pages or official websites linked from <a href="/compare/">compare</a>.</p>
+
+<p>On arrival walk the facility before signing multi-week extensions: ring count, shower hot water, Wi-Fi for remote work, and distance to 7-Eleven. If the gym oversold capacity, negotiate downgrade or partial refund before you sleep night one.</p>
+
+<p>Film a short walk-through video on check-in day — useful if room class does not match booking photos and you need evidence for a polite downgrade request at reception.</p>
+
+<p>Laundry: resort camps include it; DIY guesthouse athletes use coin laundry near Mabprachan — budget ฿40–60 per load and afternoon drying time in rain season.</p>
+
+<p>Compare stay-and-train tiers on <a href="/plan-my-trip/">plan my trip</a> after you shortlist three camps on <a href="/compare/">compare</a>.</p>
+
+<p>Questions before you wire a deposit? Use our <a href="/contact/">contact</a> page — we route venue corrections, not camp sales.</p>
 `;

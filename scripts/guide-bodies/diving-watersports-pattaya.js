@@ -108,4 +108,8 @@ module.exports = `
 <h2>Boat day logistics from Bali Hai</h2>
 
 <p>Arrive pier <strong>30–45 minutes before departure</strong> — paperwork and gear fitting eat time. Seasickness: sit aft, hydrate, avoid heavy alcohol night before. Camera policies vary — ask before bringing GoPro on wreck penetrations. Tip boat crew modestly if service is strong — not mandatory but appreciated on liveaboard-style days.</p>
+
+<h2>Nitrox and advanced divers</h2>
+
+<p>Tech-friendly shops (Aquanauts, Adventure Divers) handle mixed gas and wreck penetration when you show certs — book ahead, not walk-in. Fun divers should not piggyback tech profiles — depth limits exist for a reason. Post-dive beer is cultural but dehydrates — water first, Chang second.</p>
 `;

@@ -94,4 +94,10 @@ module.exports = `
 <h2>Equipment brands and balls</h2>
 
 <p>Padel rackets differ from tennis — rent at club first before buying. Pickleball uses perforated plastic balls — outdoor balls vs indoor balls affect bounce; clubs stock appropriate type. Sunglasses and hat for outdoor pickleball midday sessions.</p>
+
+<h2>Leagues and expat social play</h2>
+
+<p>Pickleball Pattaya runs the most approachable social ladder for newcomers — introduce yourself as beginner on first visit. Padel doubles needs four — clubs often post "looking for fourth" on LINE groups linked from venue pages. Post-match food: <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a> near Pratamnak.</p>
+
+<p>Indoor padel avoids midday UV — book 08:00 or 17:00 slots in April heat. Wear court shoes with non-mark soles; black running soles mark acrylic courts and annoy clubs.</p>
 `;

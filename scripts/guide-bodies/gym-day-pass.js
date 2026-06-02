@@ -107,4 +107,12 @@ module.exports = `
 <h2>Tourist district traps</h2>
 
 <p>Beach Road touts may promise "gym + pool" packages that are spa scams — walk into listed venues on Pattaya.Gym only. Price boards should be visible; if not, ask <strong>ra kha tao rai</strong> before changing clothes.</p>
+
+<h2>Weekly pass math for tourists</h2>
+
+<p>Seven day passes at ฿400 = ฿2,800; weekly pass at Jetts ~฿1,500 — buy weekly on day two if you liked day one. Anytime global members: confirm home-club reciprocity before assuming free entry. Lost key fob replacement fees apply — report same day.</p>
+
+<p>Photograph the locker room before you train — some budget gyms have no CCTV; use a small padlock on day-pass visits even if staff say optional.</p>
+
+<p>Hotel guests: ask concierge for gym partnership discounts — some Beach Road towers negotiate Jetts or Fitness 7 day rates below walk-in board price.</p>
 `;

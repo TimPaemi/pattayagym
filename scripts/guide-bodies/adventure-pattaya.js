@@ -97,4 +97,16 @@ module.exports = `
 <h2>Photography and social proof</h2>
 
 <p>Skydive and zipline operators sell photo packages — decide on ground, not mid-air. Drone rules apply near airports (U-Tapao south) — check local restrictions before flying consumer drones. Shooting ranges prohibit casual phone video for safety — follow range officer instructions.</p>
+
+<h2>Insurance and liability waivers</h2>
+
+<p>Adventure operators require signed waivers — read jump weight limits and pregnancy exclusions honestly. Travel insurance adventure riders matter for skydive and zipline, not just medical clinic visits. Keep passport copy in dry bag for boat-to-zipline combo days south of Pattaya.</p>
+
+<p>Group discounts appear at karting and ATV for 4+ people — worth coordinating in camp WhatsApp groups. Solo travellers still get pickup from most operators listed in our adventure category.</p>
+
+<p>Harbor Mall climbing pairs well with rainy-day adventure cancellation — <a href="/guides/climbing-pattaya/">climbing guide</a> for Deep wall sessions when zipline parks close.</p>
+
+<p>Full adventure category index: <a href="/category/adventure/">all adventure venues</a> with hours and map pins updated from our venue files.</p>
+
+<p>Spot a closed operator or wrong phone number? Tell us via <a href="/contact/">contact</a> — we fix source data, not marketing fluff.</p>
 `;

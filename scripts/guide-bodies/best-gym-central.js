@@ -108,4 +108,10 @@ module.exports = `
 <h2>MAX stadium and central training</h2>
 
 <p><a href="/gyms/max-muay-thai-stadium/">MAX Muay Thai</a> sits accessible from central — many tourists train WKO or Battle Conquer by day and watch cards Friday/Saturday. Buy tickets official channel; street touts inflate prices. Arrive early for good angles — stadium air-con sections worth it in April heat.</p>
+
+<h2>Noise discipline for long-stay central</h2>
+
+<p>If you are serious about training, move to Jomtien after 10-day central experiment — same monthly gym price, better sleep. Central wins for 3–7 night tourists who refuse to scooter. Cowork cafés between sessions: <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a>.</p>
+
+<p>Baht-bus loop Beach Road → Second Road costs ฿10 — fastest budget move between Soi Diana gyms and Buakhao iron without Grab surge pricing at 18:00.</p>
 `;
