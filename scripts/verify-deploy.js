@@ -189,7 +189,13 @@ if (fs.existsSync(headersPath)) {
 {
   const outreachCsv = path.join(ROOT, 'outreach', 'venue-outreach.csv');
   if (fs.existsSync(outreachCsv)) {
-    errors.push('outreach/venue-outreach.csv must not exist in deploy root — use private/outreach/ (node scripts/export-venue-outreach.js)');
+    const body = fs.readFileSync(outreachCsv, 'utf8');
+    if (/venue_id|email_template|badge-listed/i.test(body)) {
+      errors.push('outreach/venue-outreach.csv must not contain outreach data — use private/outreach/ only');
+    }
+    if (!body.includes('not published')) {
+      errors.push('outreach/venue-outreach.csv must be the public stub (not published message) if present');
+    }
   }
   const redirectsPath = path.join(ROOT, '_redirects');
   if (fs.existsSync(redirectsPath)) {

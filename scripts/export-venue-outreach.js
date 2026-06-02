@@ -44,6 +44,15 @@ const rows = gyms.map(g => {
 fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(CSV_PATH, [header.join(','), ...rows].join('\n'), 'utf8');
 
+// Public stub overwrites any cached full CSV at /outreach/venue-outreach.csv on deploy.
+const STUB = path.join(ROOT, 'outreach', 'venue-outreach.csv');
+const stubText = `# This export is not published on the web.
+# Generate locally: node scripts/export-venue-outreach.js
+# Output: private/outreach/venue-outreach.csv
+`;
+fs.mkdirSync(path.dirname(STUB), { recursive: true });
+fs.writeFileSync(STUB, stubText, 'utf8');
+
 const readme = `# Venue outreach export
 
 Generated: ${new Date().toISOString().slice(0, 10)}
