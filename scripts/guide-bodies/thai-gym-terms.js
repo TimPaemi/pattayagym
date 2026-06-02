@@ -130,4 +130,50 @@ module.exports = `
 
 <h2>Related guides</h2>
 <p><a href="/guides/muay-thai-pattaya-beginners/">Beginners</a> · <a href="/guides/training-thailand-visa-pattaya/">Training &amp; visa</a> · <a href="/guides/best-muay-thai-pattaya/">Best Muay Thai</a> · <a href="/compare/">Compare gyms</a></p>
+
+<h2>Pronunciation tips that actually help in gyms</h2>
+
+<p>Thai is tonal — the same romanization can mean different words. In practice, gym staff forgive tone errors if you are polite. <strong>Khrap</strong> (male) and <strong>kha</strong> (female) sentence endings signal respect; use them after price questions and thank-yous. Point at equipment while speaking — <strong>ni</strong> (this) + noun beats perfect grammar.</p>
+
+<h2>Numbers for prices and rounds</h2>
+
+<table>
+<thead><tr><th>Thai</th><th>Romanization</th><th>Number</th></tr></thead>
+<tbody>
+<tr><td>หนึ่ง</td><td>neung</td><td>1</td></tr>
+<tr><td>สอง</td><td>song</td><td>2</td></tr>
+<tr><td>สาม</td><td>saam</td><td>3</td></tr>
+<tr><td>สิบ</td><td>sip</td><td>10</td></tr>
+<tr><td>ยี่สิบ</td><td>yee sip</td><td>20</td></tr>
+<tr><td>ห้าร้อย</td><td>haa roi</td><td>500</td></tr>
+<tr><td>หนึ่งพัน</td><td>neung phan</td><td>1,000</td></tr>
+</tbody>
+</table>
+
+<p>Combine: <strong>ra kha tao rai</strong> (how much?) + point at the membership sign. Write the number they show on your phone calculator if audio fails.</p>
+
+<h2>When English is faster</h2>
+
+<p>Tier-A tourist camps (Fairtex, Kombat, Venum) run class in English. Street gyms (WKO, Sor Klinmee) mix Thai instructions with gesture — your phrase sheet still helps for front-desk pricing and taxi directions. If a coach switches to Thai mid-round, nod and mirror — do not stop the line to ask for translation unless safety is at stake.</p>
+
+<h2>Cultural mistakes to avoid</h2>
+
+<ul>
+<li>Do not touch a trainer's head or point feet at Buddha images in gym shrines.</li>
+<li>Remove shoes before entering some traditional gym office areas — watch locals.</li>
+<li>Do not film other students without permission — especially women and children.</li>
+<li>Tip is not mandatory; small cold drinks for pad holders on long sessions are appreciated.</li>
+</ul>
+
+<h2>Emergency phrases</h2>
+
+<table>
+<thead><tr><th>Thai</th><th>Romanization</th><th>Use</th></tr></thead>
+<tbody>
+<tr><td>เจ็บ</td><td>jep</td><td>It hurts (point to body part)</td></tr>
+<tr><td>พอแล้ว</td><td>phor laew</td><td>Enough / stop</td></tr>
+<tr><td>ช้าๆ</td><td>chaa chaa</td><td>Slow down</td></tr>
+<tr><td>เรียกหมอ</td><td>riak mor</td><td>Call a doctor</td></tr>
+</tbody>
+</table>
 `;

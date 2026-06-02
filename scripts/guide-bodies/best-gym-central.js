@@ -86,4 +86,26 @@ module.exports = `
 <h2>Related guides</h2>
 
 <p><a href="/guides/best-gyms-near-walking-street-pattaya/">Near Walking Street</a> · <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> · <a href="/guides/best-muay-thai-pattaya/">Best Muay Thai ranked</a> · <a href="/guides/muay-thai-pattaya-beginners/">Beginners</a> · <a href="/area/central-pattaya/">Central area hub</a> · <a href="/compare/">Compare 158 venues</a></p>
+
+<h2>Soi-by-soi training map (honest geography)</h2>
+
+<p><strong>Soi Diana / Soi 13 corridor</strong> — Tony's Gym, Megabreak, shortest walk from Beach Road hotels. Noise and bar proximity highest here. <strong>Soi Buakhao</strong> — Jetts, Universe, Platinum belt; grittier, better monthly value, still central. <strong>Pattaya Klang / Second Road</strong> — Fitness 7, Elite, mixed locals and expats. <strong>Pratamnak edge</strong> — not central despite taxi drivers saying "Pattaya" — use <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua guide</a> for Muscle Factory and Fitz Club.</p>
+
+<h2>Sample 7-day central short trip</h2>
+
+<ol>
+<li><strong>Day 1:</strong> <a href="/guides/gym-day-pass-pattaya/">day pass</a> trial at Jetts or Fitness 7 — locate your hotel walk radius.</li>
+<li><strong>Days 2–4:</strong> WKO or Battle Conquer pad blocks · evening <a href="/guides/is-muay-thai-safe-pattaya/">light sparring only if offered</a>.</li>
+<li><strong>Day 5:</strong> Rest — pool at hotel or <a href="/guides/swimming-pools-pattaya/">public pool</a>.</li>
+<li><strong>Day 6:</strong> MAX fight card or <a href="/guides/bangkok-day-trip-sport-pattaya/">Bangkok stadium</a> night.</li>
+<li><strong>Day 7:</strong> Tony's cheap session + departure — phrase help: <a href="/guides/thai-gym-terms-pattaya/">Thai gym terms</a>.</li>
+</ol>
+
+<h2>Central hotel + gym pairing</h2>
+
+<p>Beach Road high-rises pair with Soi Diana gyms. Avenue / Mike Mall guests use Coco Fitness and Fitness 7. Budget guesthouses on Buakhao should sign monthly at Universe or Jetts only after one day-pass test — contract exit clauses vary. Luxury tourists sometimes train at Fitz or Hilton day-pass while sleeping central; taxi ฿80–150 each way adds up — consider moving hotel after three nights if training daily.</p>
+
+<h2>MAX stadium and central training</h2>
+
+<p><a href="/gyms/max-muay-thai-stadium/">MAX Muay Thai</a> sits accessible from central — many tourists train WKO or Battle Conquer by day and watch cards Friday/Saturday. Buy tickets official channel; street touts inflate prices. Arrive early for good angles — stadium air-con sections worth it in April heat.</p>
 `;

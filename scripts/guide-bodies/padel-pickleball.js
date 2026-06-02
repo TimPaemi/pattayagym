@@ -78,4 +78,20 @@ module.exports = `
 
 <h2>Related guides</h2>
 <p><a href="/guides/tennis-badminton-pattaya/">Tennis &amp; badminton</a> · <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Pratamnak gyms</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/category/racquet/">All racquet venues</a> · <a href="/compare/">Compare</a></p>
+
+<h2>Padel vs pickleball — which to learn first</h2>
+
+<p><strong>Pickleball</strong> has a lower learning curve — smaller court, underhand serve, social doubles culture. Good for mixed-age groups and active recovery between fight weeks. <strong>Padel</strong> is faster, wall-play heavy, and equipment-specific — invest in a lesson before assuming tennis skill transfers. Pattaya has more dedicated pickleball social nights than padel league depth; padel is growing with Pratamnak indoor courts.</p>
+
+<h2>Court booking and peak hours</h2>
+
+<p>Evenings 17:00–20:00 fill first at covered Pratamnak courts — book via club LINE or website where listed. Midday heat makes outdoor pickleball brutal May–October; morning slots or indoor padel win. Weekend expat leagues spike Nov–Feb — tourists should book 48 hours ahead.</p>
+
+<h2>Combine racquet with Muay Thai without overtraining</h2>
+
+<p>Padel footwork and lateral stops stress ankles already battered from shin conditioning. Schedule racquet on <strong>rest days</strong> or light technical MT days — not the morning before hard sparring. Hydration and electrolytes matter double in Pattaya humidity. Strength maintenance: <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Pratamnak iron</a> or <a href="/guides/gym-day-pass-pattaya/">central day pass</a>.</p>
+
+<h2>Equipment brands and balls</h2>
+
+<p>Padel rackets differ from tennis — rent at club first before buying. Pickleball uses perforated plastic balls — outdoor balls vs indoor balls affect bounce; clubs stock appropriate type. Sunglasses and hat for outdoor pickleball midday sessions.</p>
 `;

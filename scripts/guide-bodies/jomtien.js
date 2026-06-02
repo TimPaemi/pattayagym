@@ -110,4 +110,16 @@ module.exports = `
 
 <h2>Related guides</h2>
 <p><a href="/guides/best-gyms-near-walking-street-pattaya/">Near Walking Street</a> · <a href="/area/jomtien/">All Jomtien venues</a> · <a href="/guides/pattaya-digital-nomad-fitness/">Digital nomad fitness</a> · <a href="/compare/">Compare</a></p>
+
+<h2>Monthly contracts vs walk-in — Jomtien economics</h2>
+
+<p>Walk-in pad gyms (Pattaya Thai Boxing &amp; Fitness) suit 1–2 week tourists. Monthly deals at Venum or Rage reward 4+ week stays — negotiate after one trial week, not on day one. Hotel gym "membership" is rarely cheaper than commercial gyms for pure iron; use hotels for pool recovery, not primary lifting unless you are time-poor.</p>
+
+<h2>Dongtan crossover</h2>
+
+<p>Dongtan sits between central and Jomtien — Rage Fight Academy is the anchor. Living Dongtan gives beach calm plus shorter Grab to central nightlife than pure Jomtien south. Check traffic at 17:00 school pickup on Thepprasit before signing a lease.</p>
+
+<h2>Na Jomtien handoff</h2>
+
+<p>When Jomtien Beach Road feels crowded, move south 10–15 minutes to Na Jomtien for marina, kite, and resort gyms — full corridor in <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>. Do not duplicate monthly contracts in both zones unless you enjoy taxi bills.</p>
 `;

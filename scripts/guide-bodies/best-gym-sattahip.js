@@ -79,4 +79,30 @@ module.exports = `
 <h2>Related guides</h2>
 
 <p><a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya</a> · <a href="/guides/family-friendly-pattaya/">Family-friendly</a> · <a href="/guides/best-dive-operators-pattaya/">Dive operators</a> · <a href="/area/sattahip/">Sattahip hub</a> · <a href="/compare/">Compare 158 venues</a></p>
+
+<h2>U-Tapao airport corridor — who lands here</h2>
+
+<p>Utapao–Rayong–Pattaya International Airport (UTP) sits <strong>south of Pattaya city</strong>. Fighters and families flying UTP often base Na Jomtien or Bang Saray to avoid an extra 45–60 minutes to central Beach Road. Kombat Group transfers market to this corridor; resort guests at Andaz and Mövenpick expect taxi or pre-booked pickup — confirm price before baggage claim.</p>
+
+<h2>Sample south-side weekly rhythm</h2>
+
+<ul>
+<li><strong>Mon/Wed/Fri AM:</strong> Ocean Marina swim or hotel gym · PM Muay Thai at Jomtien walk-in or Venum.</li>
+<li><strong>Tue:</strong> Ramayana or Cartoon Network water park — family rest from lifting.</li>
+<li><strong>Thu:</strong> Chee Chan or Phoenix golf — early tee, heat management.</li>
+<li><strong>Sat:</strong> KBA kite if wind season · or <a href="/guides/adventure-pattaya/">Tarzan zipline</a> Sattahip belt.</li>
+<li><strong>Sun:</strong> Pool recovery — <a href="/guides/swimming-pools-pattaya/">lap pools guide</a>.</li>
+</ul>
+
+<h2>Resort day-pass reality</h2>
+
+<p>5-star gyms (Andaz, Hilton south, Dusit) often restrict day passes to guests or concierge approval. Do not assume walk-in like Tony's Gym — email or call front desk with dates. Mid-tier resort fitness is more flexible; always carry passport copy for hotel gym registration.</p>
+
+<h2>Marina sport vs gym membership</h2>
+
+<p>Ocean Marina is infrastructure — berthing, customs, regattas — not a monthly gym. SailBreeze sells courses and charters. Pair marina mornings with afternoon iron at Jomtien commercial gyms or hotel fitness. Kite schools operate on wind windows; gym contracts should not assume daily kite availability.</p>
+
+<h2>Bang Saray and Cartoon Network belt</h2>
+
+<p>Cartoon Network Amazone and Ramayana anchor family sport days south — not Muay Thai, but essential if partners and kids share the trip. Chee Chan Golf sits between marina life and water parks — book tee times before heat peak. Bang Saray food sois are cheaper than Beach Road — good for long-stay athletes watching budget.</p>
 `;

@@ -119,4 +119,16 @@ module.exports = `
 
 <h2>Related guides</h2>
 <p><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai</a> · <a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a> · <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with accommodation</a> · <a href="/area/naklua/">All Naklua venues</a> · <a href="/compare/">Compare</a></p>
+
+<h2>Pratamnak Hill lifestyle for long-stay athletes</h2>
+
+<p>Hilltop condos trade stair climbs for sea views and quieter nights than Beach Road. Muscle Factory and Fitz Club anchor serious iron; Fairtex and Sityodtong sit Naklua-side for camp culture. Morning runs on Pratamnak Hill Road + <a href="/gyms/pratumnak-fitness-park/">outdoor calisthenics park</a> are free conditioning add-ons.</p>
+
+<h2>Wong Amat vs Naklua market — sleep quality</h2>
+
+<p>Wong Amat beach strip suits families and retirees who want calmer water. Naklua market soi adds local food economics — better for 6-month budgets than tourist menus on Beach Road. Both are north of central chaos; taxi to Walking Street is ฿100–200 when you want nightlife, not when you need sleep.</p>
+
+<h2>Sample north-side training month</h2>
+
+<p>Week 1–2: Fairtex or Sityodtong twice daily · padel/pickleball recovery at Play Padel. Week 3: deload — yoga at Balance, pool at Centara if family visit. Week 4: test sparring progression · Bangkok stadium weekend via <a href="/guides/bangkok-day-trip-sport-pattaya/">day-trip guide</a>. Visa holders stack reporting trips with <a href="/guides/training-thailand-visa-pattaya/">immigration rhythm</a>.</p>
 `;

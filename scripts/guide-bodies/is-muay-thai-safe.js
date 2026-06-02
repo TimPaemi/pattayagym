@@ -92,4 +92,24 @@ module.exports = `
 <p><strong>Should kids train?</strong> Many camps run kids programmes (Fairtex, Venum, Kombat Group). Verify age policies on each venue page under <a href="/category/kids-youth/">kids &amp; youth sport</a>.</p>
 
 <p><a href="/guides/">All guides</a> · <a href="/category/muay-thai/">All Muay Thai venues</a> · <a href="/plan-my-trip/">Plan my trip</a></p>
+
+<h2>Injury types beginners actually see</h2>
+
+<p><strong>Shin contusions</strong> from pads — normal, not a fracture if you can walk. <strong>Wrist sprains</strong> from poor hook form on bags. <strong>Dehydration headaches</strong> from skipping water between rounds. <strong>Shoulder impingement</strong> if you clinch before mobility work. Serious injuries (concussion, torn ACL) are rare in beginner pad-only weeks but spike when gyms force sparring day three — walk out if culture feels wrong.</p>
+
+<h2>Heat and humidity — the hidden risk</h2>
+
+<p>Pattaya afternoon sessions in non-AC gyms can push core temperature fast. Symptoms: dizziness, nausea, stopping sweating. Fix: morning sessions, electrolytes, AC gyms (<a href="/gyms/battle-conquer-gym/">Battle Conquer</a>) for summer months. Alcohol the night before morning pads is the most common self-inflicted failure mode.</p>
+
+<h2>Women training alone — practical notes</h2>
+
+<p>Pattaya camps routinely train solo women. Choose gyms with visible female students or female coaches on the schedule. Pair with <a href="/guides/pattaya-solo-female-fitness/">solo female fitness</a> and <a href="/guides/female-friendly-gyms-pattaya/">female-friendly ranked list</a>. Harassment in reputable gyms is rare; street awareness in central nightlife zones is separate from gym safety.</p>
+
+<h2>When to see a doctor</h2>
+
+<p>Persistent swelling beyond 72 hours, head impact with confusion, or knee pop with instability — clinic visit same day. <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> lists sports-friendly clinics; carry passport copy and insurance card.</p>
+
+<h2>Insurance and waivers</h2>
+
+<p>Reputable camps carry liability coverage but your travel insurance still matters for hospital admission. Read waiver text — it does not mean trainers will hurt you; it means you accept combat sport risk. Decline sparring if waiver language feels paired with aggressive gym culture.</p>
 `;

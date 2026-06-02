@@ -94,4 +94,27 @@ module.exports = `
 
 <h2>Related guides</h2>
 <p><a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with rooms</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help →</a></p>
+
+<h2>90-day reporting and immigration rhythm</h2>
+
+<p>Long-stay holders must file <strong>90-day reports</strong> (TM47 or online where eligible) even when training daily. Miss a window and fines accumulate. Chon Buri immigration offices serve Pattaya residents — queues spike Monday mornings. Agents listed on <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> handle reporting for a fee; DIY is possible if you track dates in a calendar app.</p>
+
+<h2>Insurance and medical proof</h2>
+
+<p>ED visa applications increasingly expect <strong>health insurance</strong> meeting minimum coverage — verify current Immigration rules before booking flights. Training injuries happen — pair visa compliance with a policy that covers outpatient clinics listed on <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>.</p>
+
+<h2>Common mistakes foreigners make</h2>
+
+<ul>
+<li>Starting ED visa paperwork <strong>after</strong> tourist days are nearly exhausted — build 2–3 week buffer.</li>
+<li>Assuming camp marketing equals government-approved school — verify institution status.</li>
+<li>Working remotely on tourist visa while calling it "training holiday" — immigration does not care about your Slack calendar.</li>
+<li>Ignoring <strong>overstay stamps</strong> — exit fines and bans are real.</li>
+</ul>
+
+<p>This page is orientation, not legal advice — confirm with a licensed agent for your nationality.</p>
+
+<h2>Tourist visa extension vs ED from day one</h2>
+
+<p>Some athletes enter on exemption, train two weeks, then decide to stay — extension at immigration buys time but is not infinite. Starting ED late still requires school paperwork lead time — begin conversations at week two if you feel the pull to stay. Do not work remotely on wrong visa class — enforcement is uneven but penalties are severe when applied.</p>
 `;

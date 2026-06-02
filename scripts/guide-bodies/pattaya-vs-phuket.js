@@ -117,4 +117,22 @@ module.exports = `
 
 <h2>Plan Pattaya</h2>
 <p><a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with accommodation</a> · <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking camps</a> · <a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a> · <a href="/compare/">Compare 158 venues</a> · <a href="/plan-my-trip/">Plan my trip</a></p>
+
+<h2>Flight and ground logistics</h2>
+
+<p><strong>Pattaya</strong> is served by U-Tapao (south) and Bangkok airports (BKK/DMK) with 90–120 minute transfers. <strong>Phuket</strong> is island-single-airport simple but internal drives to camps spread across beaches. Fight tourists in Pattaya add Bangkok stadium nights without changing base city — Phuket tourists fly or ferry for equivalent cards less often.</p>
+
+<h2>Accommodation economics</h2>
+
+<p>Pattaya monthly condos on Jomtien still undercut Patong resort pricing for equivalent square metres. Phuket pool villas market to honeymooners — great product, higher baseline. Training-only budgets: Pattaya wins; beach-luxury honeymoon with optional pads: Phuket can win.</p>
+
+<h2>Who should still pick Phuket</h2>
+
+<ul>
+<li>Beach quality is the primary success metric — Andaman sand beats Jomtien for many travellers.</li>
+<li>You already booked a Phuket resort camp package from a EU agent — switching costs deposits.</li>
+<li>You want island vibe without Pattaya's mainland nightlife reputation — perception matters for some partners.</li>
+</ul>
+
+<p>Who should pick Pattaya: fight-tourist density, camp switching mid-trip, budget long-stay, Bangkok stadium access, BJJ/MMA cross-training breadth — see <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA guide</a>.</p>
 `;

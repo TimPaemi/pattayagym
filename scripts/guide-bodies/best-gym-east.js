@@ -81,4 +81,26 @@ module.exports = `
 <h2>Related guides</h2>
 
 <p><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai ranked</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · <a href="/area/east-pattaya/">East area hub</a> · <a href="/compare/">Compare 158 venues</a></p>
+
+<h2>Huai Yai vs Nong Prue vs Mabprachan — three east belts</h2>
+
+<p><strong>Huai Yai</strong> is resort-camp country — Kombat Group, large compounds, airport-transfer culture. <strong>Nong Prue / Darkside</strong> holds authentic Thai gyms (Sor Klinmee) and local fitness without beach marketing. <strong>Mabprachan lake</strong> adds padel, wake park, and CrossFit — expat lake lifestyle, not walking distance to Beach Road. Pick one belt and rent nearby; daily cross-belt taxis erode training time.</p>
+
+<h2>All-inclusive camp checklist</h2>
+
+<ol>
+<li>Confirm <strong>meals included</strong> — dietary restrictions (halal, vegan) need advance notice at Kombat-tier camps.</li>
+<li>Ask <strong>BJJ/MMA mat schedule</strong> if you are not pure Muay Thai — timetables rotate.</li>
+<li>Clarify <strong>partner training</strong> for couples — some rooms are fighter-only.</li>
+<li>Verify <strong>airport pickup</strong> window — UTP vs BKK arrival times differ by hours.</li>
+<li>Read <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">camps with accommodation</a> for Fairtex vs east-side comparison.</li>
+</ol>
+
+<h2>When east Pattaya is the wrong choice</h2>
+
+<p>Weekend party tourists who want Walking Street stumble distance should stay central. Pure weightlifting tourists without MT may find equipment sparse outside Jungle Gym and camp gyms — add <a href="/guides/best-gym-central-pattaya/">central iron</a> day passes. Digital nomads needing café density every afternoon often migrate to Jomtien after the first camp month.</p>
+
+<h2>Mabprachan lake week</h2>
+
+<p>Wake park mornings, padel afternoons, CrossFit evenings — east lake belt suits hybrid athletes. Grocery and café options improved but still thinner than Jomtien — plan meal prep or scooter to Thepprasit.</p>
 `;

@@ -38,6 +38,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 62, date: '2026-05-31', tag: 'v452',
+    title: 'Tier B editorial guides deepened to Tier A (16 guides)',
+    summary: 'Round 62 expands all remaining Tier B editorial guides to ≥1200 words, migrates gym-day-pass and stay-and-train guides to guide-bodies + editorial shell, and fixes FAQ schema extraction for ranked guide-faq blocks.',
+    bullets: [
+      'write-round62-tier-b.js — 16 editorial guides regenerated from expanded guide-bodies/*.js.',
+      'New bodies: gym-day-pass, muay-thai-camps-accommodation, muay-thai-training-holiday.',
+      'inject-guide-schema.js — FAQPage from guide-faq <details> (fixes Bangkok stadium FAQ mismatch).',
+      'content-quality-audit.js — deepen inject counter counts sections only (not aria/id duplicates).',
+    ],
+  },
+  {
     n: 61, date: '2026-06-02', tag: 'v452',
     title: 'Audit critical fixes — trust marquee, FAQ schema, sitemap, 404, map',
     summary: 'Implements top findings from FULL_WEBSITE_AUDIT_2026-06-02: honest UPDATED ROLLING marquees, rebuilt FAQPage JSON-LD, sitemap hygiene, and noindex on 404 + map stub.',

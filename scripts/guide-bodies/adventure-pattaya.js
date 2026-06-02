@@ -67,4 +67,34 @@ module.exports = `
 <li><a href="/guides/family-friendly-pattaya/">Family-friendly Pattaya</a> — sport holidays with kids</li>
 <li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a> — underwater adventure from Bali Hai pier</li>
 </ul>
+
+<h2>Who each adventure type suits</h2>
+
+<p><strong>First-time adrenaline:</strong> tandem skydive (Thai Sky) or tower jump (Pattaya Park) — fixed schedule, minimal skill. <strong>Families with teens:</strong> Tarzan half-course, EasyKart beginner track, ATV beginner mud route — verify age/height on venue pages. <strong>Serious motorsport fans:</strong> Bira Circuit track days, not tourist karting. <strong>Training-holiday rest day:</strong> one adventure only; shin-heavy Muay Thai weeks need recovery, not back-to-back ATV + kart + shoot.</p>
+
+<h2>Booking lead times and weather</h2>
+
+<p>Skydive and Flight of the Gibbon often sell out <strong>2–7 days ahead</strong> in high season. Karting and shooting ranges accept more walk-ins. Rain cancels outdoor karting and zipline afternoon slots — have a backup (<a href="/guides/climbing-pattaya/">indoor climbing</a>, <a href="/guides/snooker-pool-billiards-pattaya/">snooker halls</a>). Songkran week (mid-April) closes many operators for the holiday — book around it.</p>
+
+<h2>Weight, age, and medical limits</h2>
+
+<p>Skydive and zipline enforce maximum weights (often ~95–100 kg) and minimum ages for tandem vs kids tracks. Shooting ranges require sober participants and ear protection — shops supply basic gear. ATV tours need closed shoes; flip-flops are rejected at pickup. Disclose heart conditions, pregnancy, and recent surgery — operators will refuse liability otherwise.</p>
+
+<h2>Transport from each Pattaya zone</h2>
+
+<ul>
+<li><strong>Central / Beach Road</strong> — 15–25 min to Thepprasit karting; 45–60 min to Thai Sky north; taxi ~฿400–700 one way.</li>
+<li><strong>Jomtien</strong> — closer to Tarzan/Sattahip zipline belt; combine with <a href="/guides/best-gym-sattahip-pattaya/">south corridor</a> gym days.</li>
+<li><strong>East / Mabprachan</strong> — ATV and wake park nearby; skydive still needs highway run north.</li>
+</ul>
+
+<p>Scooter rental: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>. Ride-hailing works but drivers may not know shooting-range sois — send the venue Google pin.</p>
+
+<h2>Adventure + Muay Thai on the same trip</h2>
+
+<p>Schedule adventure on <strong>rest days</strong> after hard sparring weeks, not the morning before pads. Bruised shins and ATV vibration do not mix well. A common pattern: Mon–Fri camp training, Sat skydive or zipline, Sun pool and massage. Fight tourists add Bangkok stadium night via <a href="/guides/bangkok-day-trip-sport-pattaya/">Bangkok day trips</a> instead of stacking three adrenaline hits in one Pattaya day.</p>
+
+<h2>Photography and social proof</h2>
+
+<p>Skydive and zipline operators sell photo packages — decide on ground, not mid-air. Drone rules apply near airports (U-Tapao south) — check local restrictions before flying consumer drones. Shooting ranges prohibit casual phone video for safety — follow range officer instructions.</p>
 `;

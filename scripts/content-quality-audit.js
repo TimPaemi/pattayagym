@@ -56,7 +56,7 @@ function hasGuideBodySource(slug) {
 }
 
 function countInjectBlocks(html) {
-  const m = html.match(/deepen-r\d+-block/g);
+  const m = html.match(/<section[^>]*\bid="deepen-r\d+-block"/g);
   return m ? m.length : 0;
 }
 

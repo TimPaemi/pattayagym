@@ -87,4 +87,41 @@ module.exports = `
 <p><strong>Muay Thai + yoga same trip?</strong> Very common — morning MT, evening yin. Watch total load; Pattaya humidity amplifies fatigue.</p>
 
 <p><a href="/category/yoga/">All yoga venues</a> · <a href="/guides/">All guides</a> · <a href="/compare/">Compare studios</a> · <a href="/plan-my-trip/">Plan my trip</a></p>
+
+<h2>Studio etiquette and what to expect</h2>
+
+<p>Pattaya studios are casual compared to Bali ashrams but still expect <strong>shoes off at the door</strong>, phone on silent, and no strong perfume in small shalas. Arrive 10 minutes early for first visit — teachers often need to see movement before adjusting inversions. Many classes are bilingual (Thai + English); resort hotel yoga may be English-only with tourist pacing.</p>
+
+<p>Drop-in culture is normal; monthly unlimited deals appear in low season (May–October) when tourist volume drops. Ask whether <strong>mats are included</strong> or ฿50–100 rental — bringing a travel mat is fine in Jomtien humidity.</p>
+
+<h2>Pricing bands (indicative, confirm on venue pages)</h2>
+
+<ul>
+<li><strong>Budget studio drop-in</strong> — often ฿300–500 per class at Nok Yoga and similar locals.</li>
+<li><strong>Mid boutique</strong> — ฿400–700; Balance, Yoga Haus, One D tier.</li>
+<li><strong>Ashtanga Mysore month</strong> — package pricing varies; expect serious practitioner norms.</li>
+<li><strong>Resort spa yoga</strong> — bundled with day pass or guest stay; ฿1,000+ for non-guests at 5-star properties — see <a href="/guides/luxury-sports-clubs-pattaya/">luxury sports clubs</a>.</li>
+</ul>
+
+<p>We do not publish fake promo codes — always confirm on the venue page before you commute.</p>
+
+<h2>Rainy season and heat management</h2>
+
+<p>May–October afternoon storms push studios to full capacity indoors. Morning classes before 09:00 are the comfort window year-round. Hydrate aggressively; Pattaya humidity makes yin and restorative styles more popular than hot vinyasa for newcomers. Outdoor beach practice at sunset is beautiful but bring insect repellent and check jellyfish flags on venue advisories.</p>
+
+<h2>Building a 10-day “city retreat” without a retreat centre</h2>
+
+<ol>
+<li>Book a Jomtien condo via <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a> — walk to studio.</li>
+<li>Buy a 10-class pack at Balance or Yoga Haus after one drop-in trial.</li>
+<li>Add two <a href="/guides/gym-day-pass-pattaya/">gym day passes</a> for strength maintenance.</li>
+<li>One <a href="/guides/is-muay-thai-safe-pattaya/">beginner-safe</a> pad session if you want fight culture exposure without a full camp.</li>
+<li>Schedule one spa day at Andaz or Dusit — onsen and pool recovery.</li>
+</ol>
+
+<p>Digital nomads: stack with <a href="/guides/pattaya-digital-nomad-fitness/">nomad fitness</a> and <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> for work blocks between classes.</p>
+
+<h2>Teacher training and workshops</h2>
+
+<p>Some studios host weekend workshops (arm balances, yin marathons) — follow Instagram or LINE pages listed on venue files. Teacher training certifications exist but are less common than Chiang Mai — verify Yoga Alliance credentials if you care about certificate portability.</p>
 `;

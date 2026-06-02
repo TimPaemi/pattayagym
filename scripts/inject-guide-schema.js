@@ -69,6 +69,22 @@ function extractFAQ(bodyHtml) {
   return faqs;
 }
 
+// Ranked guides use <section class="guide-faq"> with <details>/<summary> — prefer that over h2 heuristics.
+function extractFAQFromDetails(bodyHtml) {
+  const faqs = [];
+  const sec = bodyHtml.match(/<section\s+class="guide-faq"[\s\S]*?<\/section>/i);
+  if (!sec) return faqs;
+  const re = /<details[^>]*>\s*<summary>([\s\S]*?)<\/summary>\s*<p>([\s\S]*?)<\/p>/gi;
+  let m;
+  while ((m = re.exec(sec[0]))) {
+    const question = stripTags(m[1]);
+    const answer = stripTags(m[2]);
+    if (question.length < 8 || answer.length < 20) continue;
+    faqs.push({ question, answer });
+  }
+  return faqs;
+}
+
 function readGuidePages() {
   const out = [];
   const guidesDir = path.join(ROOT, 'guides');
@@ -153,7 +169,8 @@ for (const guide of readGuidePages()) {
   {
     const mainMatch = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
     const bodyHtml = mainMatch ? mainMatch[1] : html;
-    const faqs = extractFAQ(bodyHtml);
+    let faqs = extractFAQFromDetails(bodyHtml);
+    if (faqs.length < 2) faqs = extractFAQ(bodyHtml);
     if (faqs.length >= 2) {
       const faqLd = {
         '@context': 'https://schema.org',

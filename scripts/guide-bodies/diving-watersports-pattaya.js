@@ -75,4 +75,37 @@ module.exports = `
 <li><a href="/guides/swimming-pools-pattaya/">Swimming &amp; pools</a> — lap swim and pool recovery</li>
 <li><a href="/guides/adventure-pattaya/">Adventure in Pattaya</a> — skydive and zipline rest days</li>
 </ul>
+
+<h2>Gulf of Thailand diving — season and visibility</h2>
+
+<p>Pattaya diving is <strong>Gulf water</strong>, not Andaman clarity. Visibility on fun dives often runs 5–12 metres depending on tide, rain runoff, and boat traffic near islands. The trade-off is convenience: you can certify, fun-dive wrecks, and be back at your hotel by lunch without domestic flights to the islands.</p>
+
+<p><strong>November–February</strong> is the most comfortable surface interval — lower heat, calmer mornings, better kite wind overlap on rest days. <strong>March–May</strong> is hot but workable with early boat departures. <strong>May–October</strong> rainy season means more cancelled boats; shops reschedule or refund per their policy — confirm in writing before paying large course deposits.</p>
+
+<h2>Certification paths (first timer to instructor track)</h2>
+
+<p><strong>Try dive / Discover Scuba</strong> — one pool or shallow day, no certification. Good if you are unsure before a 3–4 day Open Water course. <strong>Open Water</strong> — entry-level licence; Pattaya shops run 3–4 day schedules with classroom, confined water, and open-water dives. <strong>Advanced / specialties</strong> — wreck, deep, nitrox where the shop has instructors on staff. <strong>Divemaster and IDC</strong> — Aquanauts and Mermaid's run instructor pipelines; longer stays pair with <a href="/guides/training-thailand-visa-pattaya/">visa planning</a>.</p>
+
+<p>Ask whether your course uses <strong>PADI or SSI</strong> materials — both are widely accepted; cross-over rules differ if you trained elsewhere years ago.</p>
+
+<h2>Rent vs bring your own kit</h2>
+
+<p>Reputable shops include BCD, reg, weights, and tanks in course and fun-dive pricing. Bringing your own mask and computer is worth the bag space. Wetsuits are optional in 28–30°C water; a rash guard suffices for many divers. Tech divers heading to HTMS Khram should confirm twin-set and stage availability with Adventure Divers or Aquanauts in advance.</p>
+
+<h2>Flying, ears, and insurance</h2>
+
+<p>Standard advice: no flight within <strong>12–18 hours</strong> after a single no-deco fun dive; longer after repetitive deep days — your instructor will brief. Sinus and ear issues are common in humid Pattaya; see <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> before forcing dives with congestion. Travel insurance that explicitly covers scuba is not optional for wreck and deep profiles.</p>
+
+<h2>Sample 5-day dive + train week</h2>
+
+<ol>
+<li><strong>Mon–Wed:</strong> Morning Open Water or fun dives from Bali Hai · afternoon optional <a href="/guides/gym-day-pass-pattaya/">gym day pass</a>.</li>
+<li><strong>Thu:</strong> Rest day — pool laps (<a href="/guides/swimming-pools-pattaya/">swimming guide</a>) or Koh Larn beach without tanks.</li>
+<li><strong>Fri:</strong> Wreck or advanced dive · evening watch <a href="/gyms/max-muay-thai-stadium/">MAX Muay Thai</a>.</li>
+<li><strong>Weekend:</strong> Kite at Blue Lagoon if wind holds — <a href="/guides/best-gym-jomtien-pattaya/">Jomtien base</a> keeps commutes short.</li>
+</ol>
+
+<h2>Boat day logistics from Bali Hai</h2>
+
+<p>Arrive pier <strong>30–45 minutes before departure</strong> — paperwork and gear fitting eat time. Seasickness: sit aft, hydrate, avoid heavy alcohol night before. Camera policies vary — ask before bringing GoPro on wreck penetrations. Tip boat crew modestly if service is strong — not mandatory but appreciated on liveaboard-style days.</p>
 `;
