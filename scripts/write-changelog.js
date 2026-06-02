@@ -40,6 +40,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 73, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
+    title: 'LocalBusiness geo 155/157 — manual seeds + area fallback',
+    summary: 'Hand-plotted coords for 46 flagship failed venues; area fallback for the rest. Only 2 venues lack geo (Bangkok stadium + Soi Dao resort). Full regen injects GeoCoordinates into venue schema.',
+    bullets: [
+      'data/manual-geo-r73.json + scripts/apply-geo-r73.js.',
+      '155/157 venues now have lat/lng in venue-geo.json.',
+      'Skipped: lumpinee-boxing-stadium (Bangkok), chatrium-golf-soi-dao (Chanthaburi).',
+      'build-v2.js regen — LocalBusiness geo on venue pages.',
+    ],
+  },
+  {
     n: 72, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
     title: 'Family guides Tier A; batch geocode remaining venues',
     summary: 'Family ranked guides merged to Tier A (44/44). Nominatim v2 retry batch refreshes venue-geo.json; 95/157 venues carry GeoCoordinates in LocalBusiness schema.',

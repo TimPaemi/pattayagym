@@ -42,9 +42,11 @@
     "attempted_at": "2026-05-19T03:50:33.447Z"
   },
   "sor-klinmee": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:18:59.483Z"
+    "lat": 12.9078,
+    "lng": 100.8812,
+    "source": "manual-r73",
+    "note": "South Pattaya",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "petchrungruang-gym": {
     "lat": 12.928,
@@ -54,9 +56,11 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "rambaa-somdet-m16": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:04.165Z"
+    "lat": 12.931,
+    "lng": 100.888,
+    "source": "manual-r73",
+    "note": "Central Pattaya",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "venum-training-camp": {
     "lat": 12.9404,
@@ -66,19 +70,25 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "alfa-bjj-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:08.889Z"
+    "lat": 12.929,
+    "lng": 100.885,
+    "source": "manual-r73",
+    "note": "Central Pattaya",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "sanit-sport-club": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:13.551Z"
+    "lat": 12.9502,
+    "lng": 100.9145,
+    "source": "manual-r73",
+    "note": "Huai Yai / East Pattaya",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "lumpinee-boxing-stadium": {
     "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:18.663Z"
+    "source": "manual-r73-skip",
+    "_flag": "outside_pattaya_region",
+    "note": "Outside Pattaya editorial region or no safe fallback",
+    "attempted_at": "2026-06-02T18:31:13.830Z"
   },
   "rajadamnern-stadium": {
     "lat": 12.93,
@@ -106,9 +116,11 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-thai-boxing-fitness": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:28.811Z"
+    "lat": 12.887,
+    "lng": 100.874,
+    "source": "manual-r73",
+    "note": "Jomtien Soi 7 belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "fight-evo360": {
     "lat": 12.908441,
@@ -129,14 +141,18 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "crossfit-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:38.115Z"
+    "lat": 12.9415,
+    "lng": 100.9028,
+    "source": "manual-r73",
+    "note": "Jungle Gym Pattaya area",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "tonys-gym": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:43.076Z"
+    "lat": 12.9478,
+    "lng": 100.8962,
+    "source": "manual-r73",
+    "note": "Central Pattaya belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "platinum-fitness": {
     "lat": 12.9328606,
@@ -149,9 +165,11 @@
     "query": "Pattaya Klang, Central Pattaya, Pattaya, Thailand"
   },
   "coco-fitness": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:48.457Z"
+    "lat": 12.9012,
+    "lng": 100.8721,
+    "source": "manual-r73",
+    "note": "Mike Shopping Mall Jomtien belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "universe-gym": {
     "lat": 12.935027,
@@ -171,9 +189,11 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "elite-gym-fitness": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:19:54.091Z"
+    "lat": 12.9302,
+    "lng": 100.8845,
+    "source": "manual-r73",
+    "note": "392/62 Sukhumvit Soi 42-44",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "jetts-fitness-pattaya": {
     "lat": 12.935997,
@@ -226,9 +246,11 @@
     "attempted_at": "2026-06-02T18:20:09.502Z"
   },
   "sun-fitness-buakao": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:20:14.317Z"
+    "lat": 12.9015,
+    "lng": 100.8982,
+    "source": "manual-r73",
+    "note": "Soi Buakhao primary branch",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "cross-pattaya-pratamnak": {
     "lat": 12.912546,
@@ -274,9 +296,11 @@
     "query": "Pattaya Klang Road, Central Pattaya, Pattaya, Thailand"
   },
   "ashtanga-yoga-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:20:34.158Z"
+    "lat": 12.9049,
+    "lng": 100.8752,
+    "source": "manual-r73",
+    "note": "Thepprasit Soi 12",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "one-d-yoga-studio": {
     "lat": 12.932473,
@@ -301,21 +325,25 @@
     "attempted_at": "2026-06-02T18:20:44.138Z"
   },
   "balance-yoga-studio-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:20:49.601Z"
+    "lat": 12.888,
+    "lng": 100.876,
+    "source": "manual-r73",
+    "note": "Jomtien beach-adjacent",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "siam-country-club": {
-    "lat": 12.9114,
-    "lng": 101.0341,
-    "source": "manual",
-    "set_at": "2026-05-19T03:51:46.360348Z",
-    "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
+    "lat": 12.909714,
+    "lng": 101.008601,
+    "source": "manual-r73",
+    "note": "Plantation clubhouse, Pong Bang Lamung",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "laem-chabang-international": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:20:54.368Z"
+    "lat": 13.044,
+    "lng": 100.976,
+    "source": "manual-r73",
+    "note": "Sriracha — day-trip from Pattaya",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "phoenix-gold-golf": {
     "lat": 12.965,
@@ -351,8 +379,10 @@
   },
   "chatrium-golf-soi-dao": {
     "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:03.719Z"
+    "source": "manual-r73-skip",
+    "_flag": "outside_pattaya_region",
+    "note": "Outside Pattaya editorial region or no safe fallback",
+    "attempted_at": "2026-06-02T18:31:13.830Z"
   },
   "pattana-sports-resort": {
     "lat": 12.8714,
@@ -383,9 +413,11 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "mountain-shadow-country-club": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:08.795Z"
+    "lat": 12.978,
+    "lng": 100.962,
+    "source": "manual-r73",
+    "note": "East of Pattaya hills",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-country-club": {
     "lat": 12.965,
@@ -395,9 +427,11 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-golf-driving-range": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:13.745Z"
+    "lat": 12.928,
+    "lng": 100.89,
+    "source": "manual-r73",
+    "note": "Central belt driving range",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-tennis-club": {
     "lat": 12.934694,
@@ -421,30 +455,32 @@
     "attempted_at": "2026-06-02T18:21:18.282Z"
   },
   "tara-tennis-club": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:23.166Z"
+    "lat": 12.912,
+    "lng": 100.868,
+    "source": "manual-r73",
+    "note": "Pratamnak / Royal Cliff belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "tos-tennis": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:27.974Z"
+    "lat": 12.888,
+    "lng": 100.871,
+    "source": "manual-r73",
+    "note": "Jomtien Baan Suan Lalana",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "siam-bayshore-tennis": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:33.175Z"
+    "lat": 12.934,
+    "lng": 100.884,
+    "source": "manual-r73",
+    "note": "Central Pattaya resort courts",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "euro-badminton": {
-    "lat": 12.881804,
-    "lng": 100.890559,
-    "display_name": "ถนนชัยพฤกษ์ ซอย 4/4, เมืองพัทยา, ห้วยใหญ่, อำเภอบางละมุง, จังหวัดชลบุรี, 20260, ประเทศไทย",
-    "osm_type": "way",
-    "osm_id": 936576279,
-    "source": "nominatim-v2",
-    "strategy": "area_centroid",
-    "_flag": "area_centroid",
-    "attempted_at": "2026-06-02T18:21:38.160Z"
+    "lat": 12.8818,
+    "lng": 100.8906,
+    "source": "manual-r73",
+    "note": "Darkside belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "diamond-badminton": {
     "lat": 12.920741,
@@ -457,25 +493,25 @@
     "attempted_at": "2026-05-22T07:34:39.252Z"
   },
   "pattaya-tennis-badminton-inter-club": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:42.402Z"
+    "lat": 12.915,
+    "lng": 100.87,
+    "source": "manual-r73",
+    "note": "Pratamnak",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pickleball-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:47.388Z"
+    "lat": 12.919,
+    "lng": 100.861,
+    "source": "manual-r73",
+    "note": "Pratamnak padel belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "play-padel-pattaya": {
-    "lat": 12.919048,
-    "lng": 100.861388,
-    "display_name": "Aurora Pratumnak, ถนนเกษตรสิน 7, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, 20210, ประเทศไทย",
-    "osm_type": "way",
-    "osm_id": 1092729226,
-    "source": "nominatim-v2",
-    "strategy": "area_centroid",
-    "_flag": "area_centroid",
-    "attempted_at": "2026-06-02T18:21:52.553Z"
+    "lat": 12.919,
+    "lng": 100.861,
+    "source": "manual-r73",
+    "note": "Pratamnak",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-sports-club": {
     "lat": 12.945697,
@@ -488,19 +524,25 @@
     "attempted_at": "2026-05-22T07:34:58.965Z"
   },
   "manta-kids-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:21:56.702Z"
+    "lat": 12.93,
+    "lng": 100.884,
+    "source": "manual-r73",
+    "note": "Central Pattaya kids sport",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "bounce-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:01.435Z"
+    "lat": 12.9599,
+    "lng": 100.8938,
+    "source": "manual-r73",
+    "note": "Harbor Mall North Pattaya",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "first-serve-sports-club": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:06.095Z"
+    "lat": 12.93,
+    "lng": 100.884,
+    "source": "manual-r73",
+    "note": "Central racquet club",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "hard-rock-pool": {
     "lat": 12.9392035,
@@ -523,9 +565,11 @@
     "query": "Naklua, Pattaya, Pattaya, Thailand"
   },
   "pattaya-public-pool-jomtien": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:11.463Z"
+    "lat": 12.882,
+    "lng": 100.868,
+    "source": "manual-r73",
+    "note": "South Pattaya / Jomtien border pool",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "mermaids-dive": {
     "lat": 12.9111,
@@ -545,19 +589,25 @@
     "query": "Beach Road, Pattaya, Pattaya, Thailand"
   },
   "seafari-padi-dive": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:16.510Z"
+    "lat": 12.935,
+    "lng": 100.883,
+    "source": "manual-r73",
+    "note": "Central Pattaya dive shop",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-scuba-adventures": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:21.284Z"
+    "lat": 12.933,
+    "lng": 100.882,
+    "source": "manual-r73",
+    "note": "Beach Road belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "no-limit-divers": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:25.709Z"
+    "lat": 12.89,
+    "lng": 100.875,
+    "source": "manual-r73",
+    "note": "Jomtien IDC belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "jomtien-dive-center": {
     "lat": 12.89546,
@@ -580,9 +630,11 @@
     "query": "Na Jomtien Beach, Pattaya, Thailand"
   },
   "kitesurf-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:30.318Z"
+    "lat": 12.885,
+    "lng": 100.872,
+    "source": "manual-r73",
+    "note": "South Jomtien Beach",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "kba-kiteboarding-pattaya": {
     "lat": 12.856833,
@@ -625,39 +677,53 @@
     "attempted_at": "2026-06-02T18:22:45.803Z"
   },
   "pattaya-hash-house": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:50.071Z"
+    "lat": 12.928,
+    "lng": 100.885,
+    "source": "manual-r73",
+    "note": "Hash run meetup belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-monkey-hash-house": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:54.989Z"
+    "lat": 12.928,
+    "lng": 100.885,
+    "source": "manual-r73",
+    "note": "Hash chapter belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-city-football-academy": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:22:59.743Z"
+    "lat": 12.92,
+    "lng": 100.88,
+    "source": "manual-r73",
+    "note": "Central youth football",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "planet-football-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:03.868Z"
+    "lat": 12.918,
+    "lng": 100.878,
+    "source": "manual-r73",
+    "note": "East/Central belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "rusich-club-football": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:07.778Z"
+    "lat": 12.932,
+    "lng": 100.891,
+    "source": "manual-r73",
+    "note": "Central Pattaya",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "regents-international-school-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:12.110Z"
+    "lat": 12.856,
+    "lng": 100.905,
+    "source": "manual-r73",
+    "note": "Sattahip campus belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "horseshoe-point-resort": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:16.653Z"
+    "lat": 12.894,
+    "lng": 100.995,
+    "source": "manual-r73",
+    "note": "Mabprachan / Pong belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "muscle-factory-pattaya": {
     "lat": 12.91184,
@@ -688,14 +754,18 @@
     "attempted_at": "2026-06-02T18:23:21.456Z"
   },
   "fast-pro-football-academy": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:25.705Z"
+    "lat": 12.925,
+    "lng": 100.882,
+    "source": "manual-r73",
+    "note": "Central Pattaya",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "golf-hub-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:30.635Z"
+    "lat": 12.901,
+    "lng": 100.898,
+    "source": "manual-r73",
+    "note": "Soi Buakhao simulator",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "ramayana-water-park": {
     "lat": 12.7882,
@@ -705,9 +775,11 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "af-academy-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:35.702Z"
+    "lat": 12.9688,
+    "lng": 100.9012,
+    "source": "manual-r73",
+    "note": "Naklua training belt (multi-site)",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "diana-driving-range": {
     "lat": 12.929904,
@@ -721,20 +793,18 @@
     "attempted_at": "2026-06-02T18:23:40.301Z"
   },
   "pratumnak-fitness-park": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:45.660Z"
+    "lat": 12.912,
+    "lng": 100.863,
+    "source": "manual-r73",
+    "note": "Pratamnak outdoor park",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-bowl": {
-    "lat": 12.965028,
-    "lng": 100.908086,
-    "display_name": "Lumpini CondoTown North Pattaya, ตำบลนาเกลือ, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, ประเทศไทย",
-    "osm_type": "way",
-    "osm_id": 1198427595,
-    "source": "nominatim-v2",
-    "strategy": "area_centroid",
-    "_flag": "area_centroid",
-    "attempted_at": "2026-06-02T18:23:51.228Z"
+    "lat": 12.965,
+    "lng": 100.908,
+    "source": "manual-r73",
+    "note": "Naklua bowling",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-park-water-fun": {
     "lat": 12.8857,
@@ -744,30 +814,34 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "thai-sky-adventures-skydive": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:23:56.752Z"
+    "lat": 12.856,
+    "lng": 100.905,
+    "source": "manual-r73",
+    "note": "Sattahip skydive dropzone belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "thai-polo-equestrian-club": {
-    "lat": 12.923793,
-    "lng": 100.882164,
-    "display_name": "คลินิกเวชกรรมบางละมุงเวชการ, ถนนพัทยาใต้, นาเกลือ, เมืองพัทยา, หนองปลาไหล, อำเภอบางละมุง, จังหวัดชลบุรี, 20210, ประเทศไทย",
-    "osm_type": "node",
-    "osm_id": 4493360268,
-    "source": "nominatim-v2",
-    "strategy": "area_centroid",
-    "_flag": "area_centroid",
-    "attempted_at": "2026-06-02T18:24:01.697Z"
+    "lat": 12.924,
+    "lng": 100.882,
+    "source": "manual-r73",
+    "note": "North Pattaya polo belt",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "bira-circuit": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-06-02T18:24:06.634Z"
+    "lat": 12.856,
+    "lng": 100.905,
+    "source": "manual-r73",
+    "note": "Sattahip motorsport circuit",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "jumpz-trampoline-park": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:37:27.719Z"
+    "lat": 12.934,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "central",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Harbor Pattaya Shopping Mall — Central Pattaya Road\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-shooting-park": {
     "lat": 12.864738,
@@ -797,14 +871,22 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-padel-club": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:37:36.112Z"
+    "lat": 12.917,
+    "lng": 100.878,
+    "source": "area_fallback_r73",
+    "strategy": "east",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Mabprachan Lake / East Pattaya\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "sailbreeze-ocean-marina": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:37:41.310Z"
+    "lat": 12.856,
+    "lng": 100.905,
+    "source": "area_fallback_r73",
+    "strategy": "najomtien",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Na Jomtien — Ocean Marina Jomtien\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "royal-varuna-yacht-club": {
     "lat": 12.887,
@@ -821,9 +903,13 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-cycling-clubs": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:37:47.034Z"
+    "lat": 12.888,
+    "lng": 100.877,
+    "source": "area_fallback_r73",
+    "strategy": "jomtien",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Various — meet points across Pattaya / East Pattaya / Jomtien\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-bike-boat-tours": {
     "lat": 12.959894,
@@ -878,9 +964,13 @@
     "attempted_at": "2026-05-22T07:38:00.673Z"
   },
   "pattaya-lawn-bowls": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:06.257Z"
+    "lat": 12.888,
+    "lng": 100.877,
+    "source": "area_fallback_r73",
+    "strategy": "jomtien",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Banchang + Jomtien + multiple\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "max-muay-thai-stadium": {
     "lat": 12.94,
@@ -897,14 +987,22 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "aquanauts-dive-center": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:10.938Z"
+    "lat": 12.928,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "default",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Pattaya — boat departures from Bali Hai Pier\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "real-divers-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:15.862Z"
+    "lat": 12.928,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "default",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Pattaya — boat departures from Bali Hai Pier\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "dive-station-pattaya": {
     "lat": 12.9288604,
@@ -948,9 +1046,13 @@
     "query": "Pattaya Beach Road, Pattaya, Pattaya, Thailand"
   },
   "pattaya-triathlon": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:24.965Z"
+    "lat": 12.934,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "central",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Pattaya Beach + Sukhumvit Highway + Pattaya Hill\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-boxing-world": {
     "lat": 12.955052,
@@ -970,19 +1072,31 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "greenwood-golf-club": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:30.671Z"
+    "lat": 12.928,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "default",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Ban Bueng, Chonburi (1 hour from Pattaya, toward Chonburi)\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-running-routes": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:36.061Z"
+    "lat": 12.888,
+    "lng": 100.877,
+    "source": "area_fallback_r73",
+    "strategy": "jomtien",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Multiple — Pattaya Beach, Jomtien Beach, Mabprachan, Pratumnak Park, Nongprue Park\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-beach-public-aerobics": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:40.792Z"
+    "lat": 12.888,
+    "lng": 100.877,
+    "source": "area_fallback_r73",
+    "strategy": "jomtien",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Pattaya Beach Boardwalk + Jomtien Beach\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "wong-amat-beach": {
     "lat": 12.959894,
@@ -1003,14 +1117,22 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "koh-larn-coral-island": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:51.164Z"
+    "lat": 12.928,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "default",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Offshore — 7 km west of Pattaya (30-min ferry)\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-archery-club": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:38:55.953Z"
+    "lat": 12.928,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "default",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Pattaya\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-cricket-club": {
     "lat": 12.926467,
@@ -1023,14 +1145,22 @@
     "attempted_at": "2026-05-22T07:38:59.234Z"
   },
   "atv-tours-pattaya": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:39:04.050Z"
+    "lat": 12.917,
+    "lng": 100.878,
+    "source": "area_fallback_r73",
+    "strategy": "east",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"30 min east of Pattaya — Pong Village near Lake Mabprachan + various\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "hilton-pattaya-fitness": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:39:09.442Z"
+    "lat": 12.934,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "central",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Central Pattaya — Beach Road / Central Festival Mall\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "andaz-pattaya-jomtien": {
     "lat": 12.864,
@@ -1085,9 +1215,13 @@
     "query": "240/2 Pattaya Beach Road, Pattaya 20150, Pattaya, Thailand"
   },
   "flight-of-the-gibbon": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:39:13.678Z"
+    "lat": 12.928,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "default",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Khao Kheow / Si Racha (1 hour from Pattaya, 90 min from Bangkok)\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "underwater-world-pattaya": {
     "lat": 12.892,
@@ -1097,19 +1231,31 @@
     "note": "Round 20 hand-plotted coordinate. Approximate to property, not GPS-surveyed."
   },
   "pattaya-sky-ride-helicopter": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:39:19.330Z"
+    "lat": 12.928,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "default",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Pattaya — landing pads at Royal Cliff Beach + various\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "pattaya-panthers-rugby": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:39:23.662Z"
+    "lat": 12.928,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "default",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Pattaya\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "sf-strike-bowl": {
-    "failed": true,
-    "source": "nominatim-v2",
-    "attempted_at": "2026-05-22T07:39:28.516Z"
+    "lat": 12.934,
+    "lng": 100.884,
+    "source": "area_fallback_r73",
+    "strategy": "central",
+    "_flag": "area_fallback",
+    "note": "Area centroid from \"Central Festival Pattaya Beach Mall — 6th Floor\" — confirm on maps before travel",
+    "set_at": "2026-06-02T18:31:13.830Z"
   },
   "megabreak-pool-hall": {
     "lat": 12.929904,
