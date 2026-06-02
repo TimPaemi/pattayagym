@@ -145,6 +145,9 @@ ${marquee(TOP_MARQUEE, false)}
     <div class="eyebrow"><span class="num">01</span> Pick venues</div>
     <h2 class="h-section">Add up to 4 <span class="accent-cyan">venues.</span></h2>
     <p id="compare-loading" class="lede" style="color:var(--muted);">Loading venue directory…</p>
+    <noscript>
+      <p class="lede" style="margin-top:var(--s-3);">JavaScript is required for the live comparison table. <a href="/search/">Search all ${VENUE_N} venues</a>, browse <a href="/category/muay-thai/">Muay Thai</a> or <a href="/category/fitness/">fitness</a>, or open preset links in section 03 below.</p>
+    </noscript>
     <div class="compare-pickers" id="pickers">
       <!-- pickers rendered by JS -->
     </div>

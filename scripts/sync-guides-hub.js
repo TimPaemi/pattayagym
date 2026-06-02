@@ -254,8 +254,12 @@ const collectionExtra = {
   itemListElement: itemList,
 };
 
-if (!html.includes('"@type":"ItemList"') && !html.includes('"@type": "ItemList"')) {
-  html = html.replace('</head>', `<script type="application/ld+json">${JSON.stringify(collectionExtra)}</script>\n</head>`);
+const itemListScript = `<script type="application/ld+json">${JSON.stringify(collectionExtra)}</script>`;
+const itemListRe = /<script type="application\/ld\+json">\s*\{[\s\S]*?"@type"\s*:\s*"ItemList"[\s\S]*?\}\s*<\/script>/;
+if (itemListRe.test(html)) {
+  html = html.replace(itemListRe, itemListScript);
+} else if (!html.includes('"@type":"ItemList"') && !html.includes('"@type": "ItemList"')) {
+  html = html.replace('</head>', `${itemListScript}\n</head>`);
 }
 
 fs.writeFileSync(HUB, html, 'utf8');

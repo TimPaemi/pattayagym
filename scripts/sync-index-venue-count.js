@@ -14,13 +14,28 @@ const n = GYMS.length;
 function patchVenueCount(html) {
   return html
     .replace(/\b158-venue\b/gi, `${n}-venue`)
+    .replace(/\b158-entry\b/gi, `${n}-entry`)
     .replace(/\b158\+/g, `${n}+`)
     .replace(/\b158 VENUES\b/g, `${n} VENUES`)
     .replace(/\b158 Venues\b/g, `${n} Venues`)
     .replace(/\b158 venues\b/g, `${n} venues`)
+    .replace(/\b158 verified\b/gi, `${n} verified`)
     .replace(/\b158 hand-checked\b/gi, `${n} hand-checked`)
+    .replace(/\b158 Pattaya sport venues\b/g, `${n} Pattaya sport venues`)
+    .replace(/across 158 hand-checked/gi, `across ${n} hand-checked`)
+    .replace(/Compare 158 venues/g, `Compare ${n} venues`)
+    .replace(/all 158 venues/g, `all ${n} venues`)
     .replace(/Search 158 Pattaya gyms/g, `Search ${n} Pattaya gyms`)
-    .replace(/Search 158 venues/g, `Search ${n} venues`);
+    .replace(/Search 158 venues/g, `Search ${n} venues`)
+    .replace(/Search 158 verified/g, `Search ${n} verified`)
+    .replace(/Generates 158 venues/g, `Generates ${n} venues`)
+    .replace(/158 venue pages/g, `${n} venue pages`)
+    .replace(/158\/158/g, `${n}/${n}`)
+    .replace(/for 158 venues/g, `for ${n} venues`)
+    .replace(/across 158 Pattaya/gi, `across ${n} Pattaya`)
+    .replace(/158 Pattaya venues/g, `${n} Pattaya venues`)
+    .replace(/158-entry directory/g, `${n}-entry directory`)
+    .replace(/map <strong>158 verified/gi, `map <strong>${n} verified`);
 }
 
 function patchFile(fp) {
@@ -47,6 +62,10 @@ function walk(dir) {
 }
 
 walk(ROOT);
+for (const rel of ['llms.txt', 'AGENTS.md', 'README.md']) {
+  const fp = path.join(ROOT, rel);
+  if (fs.existsSync(fp) && patchFile(fp)) files++;
+}
 const manifest = path.join(ROOT, 'manifest.json');
 if (fs.existsSync(manifest) && patchFile(manifest)) files++;
 const bodiesDir = path.join(ROOT, 'scripts', 'guide-bodies');

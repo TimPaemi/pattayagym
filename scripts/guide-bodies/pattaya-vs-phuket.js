@@ -1,5 +1,5 @@
 module.exports = `
-<p>If you search <em>muay thai training holiday thailand</em>, Google will show you Phuket resort camps and Pattaya gym listings in the same breath. They are not interchangeable. This guide helps you choose <strong>where to book flights</strong> before you send a deposit — written from Pattaya (we map <strong>158 verified venues</strong> here) with honest credit to Phuket when the island wins.</p>
+<p>If you search <em>muay thai training holiday thailand</em>, Google will show you Phuket resort camps and Pattaya gym listings in the same breath. They are not interchangeable. This guide helps you choose <strong>where to book flights</strong> before you send a deposit — written from Pattaya (we map <strong>157 verified venues</strong> here) with honest credit to Phuket when the island wins.</p>
 
 <p>Already decided on Pattaya? Jump to <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday planning</a>, <a href="/guides/muay-thai-pattaya-beginners/">beginners guide</a>, or <a href="/compare/">compare tool</a>. Still comparing cities? Read on.</p>
 

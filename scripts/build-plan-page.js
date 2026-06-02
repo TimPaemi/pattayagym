@@ -214,6 +214,9 @@ ${marquee(TOP_MARQUEE, false)}
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span> Build your plan</div>
     <h2 class="h-section">Four <span class="accent-cyan">questions.</span></h2>
+    <noscript>
+      <p class="lede" style="margin-bottom:var(--s-4);">JavaScript is required to build a plan interactively. Browse <a href="/search/">all ${VENUE_N} venues</a>, read trip-length tips in section 02, or use <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday guide</a> and <a href="/compare/">compare tool</a>.</p>
+    </noscript>
     <div class="plan-form" style="display:grid; gap:var(--s-4); max-width:560px; margin-top:var(--s-5);">
       <label style="display:block;"><span style="display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">1 · What do you want to do?</span>
         <select id="q-sport" class="plan-select" style="width:100%;">${sportOpts}</select></label>

@@ -1,5 +1,5 @@
 module.exports = `
-<p><a href="/guides/best-for-beginners-pattaya/">Best for beginners</a> covers dive, golf, yoga, and more. This page is <strong>Muay Thai only</strong> — written for tourists who have never thrown a jab, never held pads, and do not know what "Wai Kru" means. Every camp below accepts walk-in beginners; we have verified hours and pricing from our <a href="/methodology/">methodology</a> process across 158 Pattaya venues.</p>
+<p><a href="/guides/best-for-beginners-pattaya/">Best for beginners</a> covers dive, golf, yoga, and more. This page is <strong>Muay Thai only</strong> — written for tourists who have never thrown a jab, never held pads, and do not know what "Wai Kru" means. Every camp below accepts walk-in beginners; we have verified hours and pricing from our <a href="/methodology/">methodology</a> process across 157 Pattaya venues.</p>
 
 <p>If you already know you want English-only coaching, read <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking Muay Thai</a> first. If you are planning a full trip package, pair this with <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday planning</a>.</p>
 

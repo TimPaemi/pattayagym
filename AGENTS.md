@@ -76,7 +76,7 @@ Rollback: `git push origin main-pre-round<N>:main --force-with-lease`
 
 | File | Role |
 |---|---|
-| `build-v2.js` | Generates 158 venues, categories, areas, utility pages, sitemap |
+| `build-v2.js` | Generates venues (see `GYMS.length` in `data.js`), categories, areas, utility pages, sitemap |
 | `index.html` | Hand-maintained homepage (not generated) |
 | `scripts/verify-deploy.js` | Pre-push integrity gate |
 | `scripts/sync-csp-hashes.js` | Keeps `_headers` CSP in sync with inline scripts |

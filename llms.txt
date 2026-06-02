@@ -1,13 +1,13 @@
 # Pattaya Gym Directory
-> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 158 venues, 15 categories, 6 areas — no paid placements, source-cited research.
+> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 157 venues, 44 guides, 15 categories, 6 areas — no paid placements, source-cited research.
 
 This llms.txt file provides AI agents and language-model crawlers with a curated map of the most useful, high-signal pages on pattaya-gym.com.
 
 ## Core directory
 
 - [Home](https://pattaya-gym.com/): Full directory with search, filters, featured venues
-- [Search](https://pattaya-gym.com/search/): Full-text search across all 158 venues
-- [Map](https://pattaya-gym.com/map/): Venue map (interactive rebuild in progress — use [Search](https://pattaya-gym.com/search/) or area hubs meanwhile)
+- [Search](https://pattaya-gym.com/search/): Full-text search across all 157 venues
+- [Map](https://pattaya-gym.com/map/): Stub page (noindex) — use [Search](https://pattaya-gym.com/search/) or area hubs meanwhile
 - [Compare](https://pattaya-gym.com/compare/): Side-by-side comparison of any 2–4 venues
 - [Plan My Trip](https://pattaya-gym.com/plan-my-trip/): Free trip builder - a tailored Pattaya training-trip plan by sport, length, budget and travel style
 - [All sports](https://pattaya-gym.com/sports/): Hub linking all 15 sport categories
@@ -69,6 +69,9 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 
 ## Data feeds (machine-readable)
 
+- [Compare venue JSON](https://pattaya-gym.com/data/compare-venues.json): Slim venue summaries for /compare/
+- [Plan trip venue JSON](https://pattaya-gym.com/data/plan-venues.json): Tags for /plan-my-trip/
+- [Status / catalog metrics](https://pattaya-gym.com/status.json): Venue counts, schema completeness, build version
 - [Master sitemap](https://pattaya-gym.com/sitemap.xml)
 - [RSS — recently added](https://pattaya-gym.com/feed.xml)
 - [Category RSS feeds](https://pattaya-gym.com/feed/): Per-category /feed/<category>.xml
@@ -88,7 +91,7 @@ No paid placements, no sponsored listings, no affiliate-only entries.
 Independent directory operated since 2026. Built and maintained in Pattaya, Thailand.
 Coordinates: 12.93°N, 100.88°E.
 
-Last update: 2026-05-21
+Last update: 2026-06-02
 
 ## Sister sites (TimPaemi / Pattaya Authority network)
 - https://pattaya-authority.com/              (flagship media agency)

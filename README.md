@@ -1,6 +1,6 @@
 # pattaya-gym.com
 
-`pattaya-gym.com` is a 158-venue independent directory for gyms, Muay Thai camps, fitness clubs, golf courses, yoga studios, dive operators, racquet sports, kids' academies, hotel sport facilities, and sport-related landmarks across Pattaya, Thailand.
+`pattaya-gym.com` is a 157-venue independent directory for gyms, Muay Thai camps, fitness clubs, golf courses, yoga studios, dive operators, racquet sports, kids' academies, hotel sport facilities, and sport-related landmarks across Pattaya, Thailand.
 
 The site is content-first: every venue has a stable URL, a data record in `data.js`, a Markdown body in `venues/*.md`, schema.org structured data, internal links, social metadata, and full sitemap coverage. No paid placements. Hand-checked weekly.
 
@@ -10,7 +10,7 @@ Operated by **TimPaemi Co., Ltd.** as one of four sister directories (Pattaya Au
 
 - Static HTML, CSS, vanilla JavaScript. No bundler, no framework.
 - Node.js build chain — single canonical generator: **`build-v2.js`**.
-- Source data in `data.js` (158 venues + 15 categories + 6 areas) and `venues/*.md`.
+- Source data in `data.js` (157 venues + 15 categories + 6 areas) and `venues/*.md`.
 - Geocoded coordinates cached in `data/venue-geo.json` (Nominatim/OSM).
 - Output is committed to the repo and deployed via Cloudflare Pages.
 - Hosted on Cloudflare Pages from `TimPaemi/pattayagym`, branch `main`.
@@ -30,7 +30,7 @@ Open `http://localhost:8080/`.
 
 ## NPM Scripts
 
-- `npm run build` → `node build-v2.js`. Regenerates 158 venue pages, 15 category pages, 6 area pages, ~80 combined category-area pages, 8 utility pages, sitemap.xml.
+- `npm run build` → `node build-v2.js`. Regenerates 157 venue pages, 15 category pages, 6 area pages, ~80 combined category-area pages, 8 utility pages, sitemap.xml.
 - `npm run build:legacy` → `node build.js`. The pre-V2 build chain. Kept for emergency rollback only.
 - `npm run validate` → `node validate.js`. Pre-build structural validation of `data.js` and `venues/*.md`.
 - `npm run watch` → re-runs build-v2 on file changes.
@@ -60,7 +60,7 @@ Open `http://localhost:8080/`.
 
 ### Generated (output, committed)
 
-- `gyms/<id>/index.html` — 158 venue pages
+- `gyms/<id>/index.html` — 157 venue pages
 - `category/<key>/index.html` — 15 category pages
 - `area/<slug>/index.html` — 6 area pages
 - `area/<slug>/<category>/index.html` — ~80 combined area-category long-tail pages
@@ -72,7 +72,7 @@ Open `http://localhost:8080/`.
 ### Deploy automation
 
 - `PUSH_ROUND<N>.cmd` — each round of fixes has its own .cmd. Latest is the one to run.
-- `GEOCODE_VENUES.cmd` — runs the one-time Nominatim geocoder (~3 min for 158 venues)
+- `GEOCODE_VENUES.cmd` — runs the one-time Nominatim geocoder (~3 min for 157 venues)
 
 ## Adding A Venue
 

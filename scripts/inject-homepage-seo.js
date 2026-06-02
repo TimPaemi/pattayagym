@@ -168,7 +168,7 @@ const INTENT_BLOCK = `
       </a>
       <a href="/compare/" class="intent-card intent-card-tool">
         <span class="intent-card-tag">// Tool</span>
-        <span class="intent-card-title">Compare 158 venues</span>
+        <span class="intent-card-title">Compare venues side by side</span>
         <span class="intent-card-desc">Side-by-side filters — shareable shortlist</span>
       </a>
       <a href="/plan-my-trip/" class="intent-card intent-card-tool">
