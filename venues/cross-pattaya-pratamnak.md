@@ -4,7 +4,7 @@ name: Cross Pattaya Pratamnak (Cloud Club + PLAYROOM)
 category: fitness
 area: Pratamnak Hill
 address: Cross Pattaya Pratamnak, Phra Tamnak Hill, Pattaya
-phone: ""
+phone: "+66 33 266 155"
 website: https://www.crosspattayapratamnak.com/
 social:
   facebook: cross.pattayapratamnak

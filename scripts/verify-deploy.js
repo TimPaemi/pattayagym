@@ -311,6 +311,10 @@ if (venuePostal < VENUE_N - 3) {
 if (guideTotal > 0 && guideFaq < guideTotal) {
   errors.push(`Guide schema: FAQPage ${guideFaq}/${guideTotal} (expected all guides)`);
 }
+const MIN_VENUE_PHONE = 52;
+if (venuePhone < MIN_VENUE_PHONE) {
+  errors.push(`Venue schema: telephone ${venuePhone}/${VENUE_N} (expected >= ${MIN_VENUE_PHONE} after Round 75)`);
+}
 
 // --- Report ---
 console.log(`HTML files checked: ${htmlFiles.length}`);

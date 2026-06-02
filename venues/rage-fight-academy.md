@@ -4,7 +4,7 @@ name: Rage Fight Academy
 category: muay-thai
 area: Thappraya Road / South Pattaya (5 min from Dongtan & Jomtien beaches)
 address: Thappraya Road, South Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 84 216 1120"
 website: https://ragefightacademy.com/
 social:
   facebook: ragefightacademy

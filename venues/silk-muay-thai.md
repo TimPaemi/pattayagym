@@ -4,7 +4,7 @@ name: Silk Muay Thai
 category: muay-thai
 area: Pattaya
 address: Pattaya, Bang Lamung, Chonburi (verify exact at booking)
-phone: ""
+phone: "+66 64 561 5017"
 website: https://silkmuaythai.com/
 social:
   facebook: Silkmuaythai

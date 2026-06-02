@@ -1,0 +1,24 @@
+{
+  "_comment": "Round 75 — phones from venue official sites or venue-published listings only. Do not add agency/site contact numbers.",
+  "rage-fight-academy": {
+    "phone": "+66 84 216 1120",
+    "source": "https://ragefightacademy.com/contact/"
+  },
+  "silk-muay-thai": {
+    "phone": "+66 64 561 5017",
+    "source": "https://silkmuaythai.com/contact/"
+  },
+  "venum-training-camp": {
+    "phone": "+66 87 285 7699",
+    "website": "https://venumtrainingcamp.com/",
+    "source": "https://smoothcomp.com/en/club/24664"
+  },
+  "castra-gym": {
+    "phone": "+66 38 115 106",
+    "source": "https://castragym.com/contact"
+  },
+  "cross-pattaya-pratamnak": {
+    "phone": "+66 33 266 155",
+    "source": "https://www.crosspattayapratamnak.com/"
+  }
+}

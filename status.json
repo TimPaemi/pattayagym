@@ -17,7 +17,7 @@
   "build": {
     "version": "v452",
     "asset_version": "452",
-    "last_built_utc": "2026-06-02T17:07:14.433Z",
+    "last_built_utc": "2026-06-02T20:52:45.914Z",
     "last_built_date": "2026-06-02"
   },
   "catalog": {
@@ -30,11 +30,11 @@
   },
   "schema_completeness": {
     "venues_with_verified_date": 157,
-    "venues_with_phone": 47,
+    "venues_with_phone": 52,
     "venues_with_website": 104,
-    "venues_with_geo_coordinates": 95,
-    "completeness_percent_geo": 61,
-    "completeness_percent_phone": 30
+    "venues_with_geo_coordinates": 155,
+    "completeness_percent_geo": 99,
+    "completeness_percent_phone": 33
   },
   "freshness": {
     "oldest_verified_date": "2026-04-27",

@@ -4,7 +4,7 @@ name: Castra Gym
 category: fitness
 area: Khao Talo / East Pattaya ("Darkside")
 address: Top of Khao Talo, East Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 38 115 106"
 website: https://castragym.com/
 social:
   facebook: castra.gym

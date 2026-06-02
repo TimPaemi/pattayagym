@@ -4,8 +4,8 @@ name: Venum Training Camp Pattaya
 category: muay-thai
 area: Soi Khopai / off Thepprasit Road (1.8 km from Jomtien Beach)
 address: Soi Khopai 12, Pattaya City, Bang Lamung District, Chonburi 20150
-phone: ""
-website: https://venom-mt.com/
+phone: "+66 87 285 7699"
+website: https://venumtrainingcamp.com/
 social:
   facebook: venumtrainingcamp
   instagram: venumtrainingcamp
