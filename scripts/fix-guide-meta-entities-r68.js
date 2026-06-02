@@ -51,12 +51,10 @@ for (const ent of fs.readdirSync(guidesDir, { withFileTypes: true })) {
   const fp = path.join(guidesDir, ent.name, 'index.html');
   if (!fs.existsSync(fp)) continue;
   const orig = fs.readFileSync(fp, 'utf8');
-  if (!/&amp;amp/.test(orig)) continue;
   const next = fixHtml(orig);
   if (next !== orig) {
     fs.writeFileSync(fp, next, 'utf8');
     fixed++;
-    console.log(`  fixed ${ent.name}`);
   }
 }
-console.log(`fix-guide-meta-entities-r68: ${fixed} guide(s).`);
+console.log(`normalize-guide-head-meta: ${fixed} guide(s) updated.`);

@@ -42,11 +42,14 @@ node scripts/migrate-legacy-guides-chrome.js
 node scripts/polish-ranked-guide-body.js
 node scripts/bump-legacy-assets.js
 node scripts/sync-csp-hashes.js
+node scripts/sync-llms-guides.js
+node scripts/fix-guide-meta-entities-r68.js
+node scripts/patch-guide-map-cta-r70.js
 node scripts/verify-deploy.js
 npm run html:validate
 ```
 
-**Hard gates:** `verify-deploy.js` must pass (no truncated HTML, NUL bytes, CSP hash drift, sitemap gaps). GitHub Actions runs `validate`, `build`, `verify-deploy`, and `html:validate` on every push to `main`.
+**Hard gates:** `verify-deploy.js` must pass (no truncated HTML, NUL bytes, CSP hash drift, sitemap gaps). GitHub Actions runs `validate`, `build`, `verify-deploy`, `html:validate`, parallel `html:validate-all`, and Lighthouse CI on every push to `main`.
 
 ## Deploy workflow
 

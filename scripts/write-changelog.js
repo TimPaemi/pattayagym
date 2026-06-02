@@ -40,6 +40,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 70, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
+    title: 'Guide map CTAs → search; normalize head meta; CI html:validate-all',
+    summary: 'Ranked guide footers no longer push the noindex map stub; head title/OG normalized on every guide pass; GitHub Actions runs full HTML validation.',
+    bullets: [
+      'patch-guide-map-cta-r70.js — "Search venues" replaces "View on map" on ranked guides.',
+      'normalize-guide-head-meta (fix-guide-meta-entities-r68.js) runs on all guides.',
+      '.github/workflows/build.yml — html:validate-all job added.',
+      'build-discovery.js source template aligned for future regen.',
+    ],
+  },
+  {
     n: 69, date: '2026-06-02', tag: `v${ASSET_VERSION}`,
     title: 'Outreach redirect fix + robots block + llms guide sync',
     summary: 'Cloudflare Pages ignores 404 in _redirects; outreach URLs now 302 to /404.html. /outreach/ removed from deploy tree; robots Disallow; llms.txt lists all 44 guides.',
