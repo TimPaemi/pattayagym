@@ -40,6 +40,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 91, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 91 — tokens, nav, search paging, compare table',
+    summary: 'Design tokens --card/--border; homepage nav matches global shell; search loads 24 at a time; compare table CSS; mobile venue hero trims secondary CTAs.',
+    bullets: [
+      'styles.css — --card/--border, compare-table, breadcrumb/brand tap targets, search load-more.',
+      'search-page.js — paginate 24 venues per page with Load more.',
+      'index.html — desktop nav links to /category/ and /sports/ (not #anchors).',
+      'Venue heroes — Map stays visible; Email/Website/Share hidden under 640px.',
+    ],
+  },
+  {
     n: 90, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'Nearby 157/157 + Khao Chi Chan & Gibbon phones',
     summary: 'Sriracha/Koh Larn area fixes and category/Bangkok fallbacks complete venue-nearby; two verified phones; utility hub links on contact/press/privacy/stats.',

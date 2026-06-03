@@ -56,6 +56,10 @@
     return c ? c.label : key;
   }
 
+  var PAGE_SIZE = 24;
+  var visibleLimit = PAGE_SIZE;
+  var lastResults = [];
+
   var state = {
     q: '',
     cat: 'all',
@@ -138,18 +142,42 @@
     return true;
   }
 
+  function ensureLoadMoreMount() {
+    var grid = document.getElementById('search-results');
+    if (!grid) return null;
+    var mount = document.getElementById('search-load-more');
+    if (!mount) {
+      mount = document.createElement('div');
+      mount.id = 'search-load-more';
+      mount.className = 'search-load-more-wrap';
+      grid.parentNode.insertBefore(mount, grid.nextSibling);
+    }
+    return mount;
+  }
+
   function render(results) {
+    lastResults = results;
     var statsEl = document.getElementById('stats');
     var grid = document.getElementById('search-results');
+    var moreMount = ensureLoadMoreMount();
     if (!grid) return;
     var n = results.length;
     var total = window.GYMS.length;
+    var showing = Math.min(visibleLimit, n);
     if (statsEl) {
-      statsEl.innerHTML =
-        n === total
-          ? '<strong>' + total + '</strong> venues · showing all'
-          : '<strong>' + n + '</strong> of ' + total + ' venues match your filters';
+      if (n === 0) {
+        statsEl.innerHTML = 'No venues match your filters';
+      } else if (n === total && showing === n) {
+        statsEl.innerHTML = '<strong>' + total + '</strong> venues · showing all';
+      } else if (showing < n) {
+        statsEl.innerHTML =
+          'Showing <strong>' + showing + '</strong> of <strong>' + n + '</strong> matches (' + total + ' total)';
+      } else {
+        statsEl.innerHTML =
+          '<strong>' + n + '</strong> of ' + total + ' venues match your filters';
+      }
     }
+    if (moreMount) moreMount.innerHTML = '';
     if (n === 0) {
       grid.innerHTML =
         '<div class="search-empty">' +
@@ -163,7 +191,7 @@
       return;
     }
     var html = '';
-    for (var i = 0; i < results.length; i++) {
+    for (var i = 0; i < showing; i++) {
       var g = results[i];
       var cat = catLabel(g.category);
       var desc = g.description || '';
@@ -181,11 +209,22 @@
         '</a>';
     }
     grid.innerHTML = html;
+    if (moreMount && n > showing) {
+      var remain = n - showing;
+      moreMount.innerHTML =
+        '<button type="button" class="btn btn-secondary" id="search-load-more-btn">Load more (' +
+        remain + ' remaining)</button>';
+      document.getElementById('search-load-more-btn').addEventListener('click', function () {
+        visibleLimit += PAGE_SIZE;
+        render(lastResults);
+      });
+    }
   }
 
   function track(name, params){ try { if (window.gtag) window.gtag('event', name, params || {}); } catch(e){} }
   var lastTrackedState = '';
   function run() {
+    visibleLimit = PAGE_SIZE;
     var results = window.GYMS.filter(matches);
     results.sort(function (a, b) {
       if (!!a.featured !== !!b.featured) return a.featured ? -1 : 1;
@@ -205,6 +244,7 @@
   }
 
   function clearAll() {
+    visibleLimit = PAGE_SIZE;
     state.q = '';
     state.cat = 'all';
     state.area = 'all';
