@@ -59,6 +59,7 @@
   var PAGE_SIZE = 24;
   var visibleLimit = PAGE_SIZE;
   var lastResults = [];
+  var searchReady = false;
 
   var state = {
     q: '',
@@ -161,6 +162,7 @@
     var grid = document.getElementById('search-results');
     var moreMount = ensureLoadMoreMount();
     if (!grid) return;
+    grid.setAttribute('aria-busy', 'true');
     var n = results.length;
     var total = window.GYMS.length;
     var showing = Math.min(visibleLimit, n);
@@ -188,6 +190,7 @@
         '</div>';
       var btn = document.getElementById('clear-filters');
       if (btn) btn.addEventListener('click', clearAll);
+      grid.setAttribute('aria-busy', 'false');
       return;
     }
     var html = '';
@@ -231,6 +234,17 @@
       return (a.name || '').localeCompare(b.name || '');
     });
     render(results);
+    if (searchReady) {
+      var grid = document.getElementById('search-results');
+      if (grid && window.scrollY > 320) {
+        var top = grid.getBoundingClientRect().top;
+        if (top < 72 || top > window.innerHeight * 0.85) {
+          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    } else {
+      searchReady = true;
+    }
     // Round 20 - GA4 filter_apply event (debounced via state-hash)
     var snap = JSON.stringify(state);
     if (snap !== lastTrackedState) {
@@ -260,7 +274,20 @@
     run();
   }
 
+  function bindSearchToolbar() {
+    var toolbar = document.getElementById('search-toolbar');
+    if (!toolbar || typeof IntersectionObserver !== 'function') return;
+    var sentinel = document.createElement('div');
+    sentinel.className = 'search-toolbar-sentinel';
+    sentinel.setAttribute('aria-hidden', 'true');
+    toolbar.parentNode.insertBefore(sentinel, toolbar);
+    new IntersectionObserver(function (entries) {
+      toolbar.classList.toggle('is-stuck', !entries[0].isIntersecting);
+    }, { rootMargin: '-56px 0px 0px 0px', threshold: 0 }).observe(sentinel);
+  }
+
   function init() {
+    bindSearchToolbar();
     // Populate area dropdown
     var areaEl = document.getElementById('area-filter');
     if (areaEl && areaEl.children.length <= 1) {

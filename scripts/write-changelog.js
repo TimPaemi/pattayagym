@@ -40,6 +40,16 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 93, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 93 — search nav, sticky filters, tool discovery',
+    summary: 'Search page gets full mobile menu and site-ui; sticky filter bar; homepage hero More tools; compare sticky row labels; venue TOC swipe hint.',
+    bullets: [
+      '/search/ — burger menu, Plan/Compare in desktop nav, sticky search-toolbar, scroll-to-results on filter.',
+      'Homepage — mobile More tools for secondary hero CTAs.',
+      'Compare — sticky first column + swipe hint; venue jump-nav horizontal scroll affordance.',
+    ],
+  },
+  {
     n: 92, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'Venue mobile More actions + sticky TOC + WhatsApp label',
     summary: 'Collapsible secondary CTAs on small screens; sticky jump-nav with active section highlight; WhatsApp renamed Ask Pattaya.Gym with title tooltip.',

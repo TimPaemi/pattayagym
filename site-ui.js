@@ -92,14 +92,16 @@
     });
   }
 
-  function bindVenueMoreToggle() {
-    doc.querySelectorAll('.venue-more-toggle').forEach(function (btn) {
-      var wrap = btn.closest('.venue-hero-ctas-wrap');
+  function bindCtaMoreToggle() {
+    doc.querySelectorAll('.venue-more-toggle, .home-more-toggle').forEach(function (btn) {
+      var wrap = btn.closest('.venue-hero-ctas-wrap, .home-hero-ctas-wrap');
       if (!wrap) return;
+      var fewer = btn.classList.contains('home-more-toggle') ? '− Fewer tools' : '− Fewer actions';
+      var more = btn.classList.contains('home-more-toggle') ? '+ More tools' : '+ More actions';
       btn.addEventListener('click', function () {
         var open = wrap.classList.toggle('is-expanded');
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        btn.textContent = open ? '− Fewer actions' : '+ More actions';
+        btn.textContent = open ? fewer : more;
       });
     });
   }
@@ -168,7 +170,7 @@
     bindMediaFallback();
     bindDelegatedClicks();
     bindMobileNav();
-    bindVenueMoreToggle();
+    bindCtaMoreToggle();
     bindScrollUi();
     bindFooterClock();
   }

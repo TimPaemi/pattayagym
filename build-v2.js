@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '454';
+const ASSET_VERSION = '455';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -487,6 +487,8 @@ function nav() {
       <a href="/category/yoga/">Yoga</a>
       <a href="/sports/">All sports</a>
       <a href="/guides/">Guides</a>
+      <a href="/compare/" class="nav-tools-link">Compare</a>
+      <a href="/plan-my-trip/" class="nav-tools-link">Plan</a>
     </nav>
     <button type="button" class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile"><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span></button>
     <a href="/search/" class="nav-cta">★ Find a gym</a>
@@ -966,7 +968,11 @@ ${bodyHtml ? `
     a.innerHTML = '<span class="n">' + String(i+1).padStart(2,'0') + '</span><span>' + h.textContent + '</span>';
     pills.appendChild(a);
   });
+  var hint = document.createElement('p');
+  hint.className = 'jump-nav-hint';
+  hint.textContent = 'Swipe for more sections →';
   nav.appendChild(pills);
+  nav.appendChild(hint);
   body.insertBefore(nav, body.firstChild);
 })();
 </script>

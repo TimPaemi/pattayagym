@@ -164,7 +164,8 @@ ${marquee(TOP_MARQUEE, false)}
     <h2 class="h-section">Compare <span class="accent-pink">live.</span></h2>
     <!-- Round 17 — Codex F12.1: announce selection/result changes to assistive tech -->
     <div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
-    <div id="compare-table-mount" style="overflow-x:auto;"></div>
+    <p class="compare-table-scroll-hint" id="compare-scroll-hint">Swipe table to see all columns →</p>
+    <div id="compare-table-mount" class="compare-table-scroll"></div>
     <p id="compare-empty" style="color:var(--muted); display:none;">Pick at least 2 venues above to compare.</p>
   </div>
 </section>
