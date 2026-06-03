@@ -4,7 +4,7 @@ name: Pattaya Kart Speedway
 category: adventure
 area: Thepprasit Road Soi 9
 address: Thepprasit Road Soi 9, Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 38 422 044"
 website: https://pattayakart.com/en/home/
 social: {}
 hours: Daily 09:30-18:30

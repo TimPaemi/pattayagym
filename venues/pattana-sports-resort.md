@@ -4,7 +4,7 @@ name: Pattana Golf Club & Resort (Pattana Sports Resort)
 category: golf
 area: Si Racha (40 km north of Pattaya, 90 min from Bangkok)
 address: Pattana Golf Club & Resort, Si Racha, Chonburi
-phone: ""
+phone: "+66 38 318 999"
 website: https://pattana.co.th/
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30

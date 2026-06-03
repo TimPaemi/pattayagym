@@ -4,7 +4,7 @@ name: Pattaya Triathlon (Thailand Tri-League)
 category: clubs
 area: Pattaya Beach + Sukhumvit Highway + Pattaya Hill
 address: Race start at Bali Hai Pier, Pattaya
-phone: ""
+phone: "+66 2 957 5880"
 website: https://www.pattayatriathlon.com/
 social: {}
 hours: Annual event — Tour Series multiple races per year

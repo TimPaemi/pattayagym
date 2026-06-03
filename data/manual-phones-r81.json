@@ -1,0 +1,39 @@
+{
+  "_comment": "Round 81 — kart, golf, marina, hotel pool, cricket, resort, tri-league events, helicopter",
+  "pattaya-kart-speedway": {
+    "phone": "+66 38 422 044",
+    "source": "https://pattayakart.com/th-rate-php-2/"
+  },
+  "chatrium-golf-soi-dao": {
+    "phone": "+66 39 460 960",
+    "source": "https://www.chatrium.com/golfsoidaochanthaburi/contact-us/"
+  },
+  "sailbreeze-ocean-marina": {
+    "phone": "+66 82 320 8506",
+    "source": "https://www.sailbreeze.org/"
+  },
+  "hard-rock-pool": {
+    "phone": "+66 38 428 755",
+    "source": "https://hotel.hardrock.com/pattaya/contact.aspx"
+  },
+  "pattaya-cricket-club": {
+    "phone": "+66 87 039 5790",
+    "source": "https://www.bangkokcricketleague.com/clubs/pattaya-cricket-club/"
+  },
+  "pattana-sports-resort": {
+    "phone": "+66 38 318 999",
+    "source": "https://pattana.co.th/contact-us/"
+  },
+  "pattaya-marathon": {
+    "phone": "+66 2 957 5880",
+    "source": "https://www.pattayamarathon.com/pattayamarathon2022-2/"
+  },
+  "pattaya-triathlon": {
+    "phone": "+66 2 957 5880",
+    "source": "https://thailandtrileagueonline.com/pm26/registrations"
+  },
+  "pattaya-sky-ride-helicopter": {
+    "phone": "+66 99 775 5573",
+    "source": "https://www.pattayaskyride.com/contact-us"
+  }
+}

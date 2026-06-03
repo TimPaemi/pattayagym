@@ -4,7 +4,7 @@ name: Hard Rock Pool Pattaya
 category: swimming
 area: Hard Rock Hotel Pattaya — Central Pattaya Beach Road
 address: Hard Rock Hotel Pattaya, Beach Road, Pattaya
-phone: ""
+phone: "+66 38 428 755"
 website: https://hotel.hardrock.com/pattaya/swimming-pool.aspx
 social: {}
 hours: Daily — pool hours typically 06:00-22:00 (verify with hotel)

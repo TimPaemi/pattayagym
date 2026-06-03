@@ -3,7 +3,7 @@
 **Audit date:** 2026-06-03 (re-run before Round 78)  
 **Production:** https://pattaya-gym.com  
 **Branch:** `main` · ASSET_VERSION **v452**  
-**Latest ship:** Round 80 — telephone **90/157** (57%)
+**Latest ship:** Round 81 — telephone **99/157** (63%)
 
 **Commands:** `verify-deploy.js` · `verify.js` · `validate.js` · `html:validate` · `html:validate-all` · `content-quality-audit.js` · `audit-venue-fields-r74.js` · `full-site-audit.js`
 
@@ -15,11 +15,11 @@
 |-----------|-------|-------|
 | **Overall** | **8.5** | Crawl-clean production; guides at full Tier A |
 | **Technical** | **9.5** | 282/282 live HTTP 200; all local gates PASS |
-| **SEO / schema** | **8.2** | Geo/postal/FAQ enforced; phone sprint 65→target 72 (R78) |
+| **SEO / schema** | **8.4** | Geo/postal/FAQ enforced; phone sprint 90→99 (R81) |
 | **Content** | **9.0** | 44/44 Tier A; no marquee or FAQ drift |
 | **Trust** | **8.5** | Phones from venue-owned pages only |
 
-**Verdict:** **Ship-ready.** Main lever remains verified **telephone** coverage (92 venues still without phone before R78).
+**Verdict:** **Ship-ready.** Main lever remains verified **telephone** coverage (~58 venues still without phone after R81).
 
 ---
 
@@ -38,7 +38,7 @@
 |-------|-------|------|
 | GeoCoordinates | 155/157 | ≥ 154 |
 | postalCode | 157/157 | ≥ 154 |
-| telephone | 65/157 | ≥ 64 (R77); **≥ 70 after R78** |
+| telephone | 99/157 | ≥ 96 (R81) |
 | Guide FAQPage | 44/44 | all |
 
 **Geo exceptions:** `lumpinee-boxing-stadium`, `chatrium-golf-soi-dao`.

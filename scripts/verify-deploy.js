@@ -311,7 +311,7 @@ if (venuePostal < VENUE_N - 3) {
 if (guideTotal > 0 && guideFaq < guideTotal) {
   errors.push(`Guide schema: FAQPage ${guideFaq}/${guideTotal} (expected all guides)`);
 }
-const MIN_VENUE_PHONE = 87;
+const MIN_VENUE_PHONE = 96;
 if (venuePhone < MIN_VENUE_PHONE) {
   errors.push(`Venue schema: telephone ${venuePhone}/${VENUE_N} (expected >= ${MIN_VENUE_PHONE})`);
 }

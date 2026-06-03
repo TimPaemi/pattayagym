@@ -4,7 +4,7 @@ name: Pattaya Sky Ride — Helicopter Tours & Bangkok-Pattaya Charter
 category: adventure
 area: Pattaya — landing pads at Royal Cliff Beach + various
 address: Pattaya — verify departure pad at booking
-phone: ""
+phone: "+66 99 775 5573"
 website: https://www.pattayaskyride.com/
 social: {}
 hours: Daily — by appointment

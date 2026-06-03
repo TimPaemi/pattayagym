@@ -4,7 +4,7 @@ name: Pattaya Marathon (Amazing Thailand Pattaya Marathon)
 category: clubs
 area: Pattaya Beach (full marathon route along the bay)
 address: Pattaya Beach Road, Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 2 957 5880"
 website: "https://www.pattayamarathon.com/"
 social: {}
 hours: "Annual event — every July (race day: Sunday)"

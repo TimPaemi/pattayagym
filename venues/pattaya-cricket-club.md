@@ -4,7 +4,7 @@ name: Pattaya Cricket Club
 category: clubs
 area: Pattaya — home ground varies
 address: Pattaya Cricket Club @ Horseshoe Point Resort, 100 Moo 9, Tambon Pong, Bang Lamung, Chonburi 20150
-phone: ""
+phone: "+66 87 039 5790"
 website: http://www.pattayacricketclub.com/
 social:
   facebook: pattaya.cricketclub

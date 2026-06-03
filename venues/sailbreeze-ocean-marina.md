@@ -4,7 +4,7 @@ name: SailBreeze Sailing School @ Ocean Marina Yacht Club
 category: watersports
 area: Na Jomtien — Ocean Marina Jomtien
 address: Ocean Marina Yacht Club, 274/1-3 Sukhumvit Road, Na Jomtien, Sattahip, Chonburi 20250
-phone: ""
+phone: "+66 82 320 8506"
 website: https://www.sailbreeze.org/
 social: {}
 hours: Daily — confirm at school

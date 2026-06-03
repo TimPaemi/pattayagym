@@ -4,7 +4,7 @@ name: Chatrium Golf Resort Soi Dao Chanthaburi
 category: golf
 area: Khao Soi Dao Mountains, Chanthaburi (3 hours from Pattaya)
 address: Chatrium Golf Resort Soi Dao, Thap Sai, Chanthaburi
-phone: ""
+phone: "+66 39 460 960"
 website: https://www.chatrium.com/golfsoidaochanthaburi
 social:
   facebook: chatriumgolfresortsoidao
