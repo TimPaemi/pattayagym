@@ -3,7 +3,7 @@
 **Audit date:** 2026-06-03 (re-run before Round 78)  
 **Production:** https://pattaya-gym.com  
 **Branch:** `main` · ASSET_VERSION **v452**  
-**Latest ship:** Round 83 — telephone **118/157** (75%)
+**Latest ship:** Round 84 — internal linking mesh + **12-site** pa-network · telephone **118/157** (75%)
 
 **Commands:** `verify-deploy.js` · `verify.js` · `validate.js` · `html:validate` · `html:validate-all` · `content-quality-audit.js` · `audit-venue-fields-r74.js` · `full-site-audit.js`
 
@@ -19,7 +19,9 @@
 | **Content** | **9.0** | 44/44 Tier A; no marquee or FAQ drift |
 | **Trust** | **8.5** | Phones from venue-owned pages only |
 
-**Verdict:** **Ship-ready.** Main lever remains verified **telephone** coverage (~58 venues still without phone after R81).
+**Verdict:** **Ship-ready.** Round 84 closed **internal linking** drift (r41+r84 injectors, shared pa-network). Main data lever remains verified **telephone** (~39 venues without phone).
+
+**Internal linking (R84):** See `FULL_INTERNAL_LINK_AUDIT_2026-06-03.md` — 157/157 taxonomy + tools strips, 157/157 r41 guide blocks, 115 same-area cross-sport, 91 sister-context sections.
 
 ---
 

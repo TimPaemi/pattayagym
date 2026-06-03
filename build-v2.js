@@ -516,22 +516,8 @@ function pageScripts() {
 }
 
 function paNetwork() {
-  return `<section class="pa-network">
-  <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="u-plain-link">
-    <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
-  </a>
-  <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
-  <p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p>
-  <nav class="pa-network-grid" aria-label="Pattaya Authority network">
-    <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Authority</span><span class="pa-network-card-desc">Network hub</span></a>
-    <a href="https://pattaya-restaurant-guide.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Restaurants</span><span class="pa-network-card-desc">Eat · drink</span></a>
-    <a href="https://pattayavisahelp.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Visa Help</span><span class="pa-network-card-desc">Long-stay</span></a>
-    <a href="https://pattaya-school-guide.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Schools</span><span class="pa-network-card-desc">Families</span></a>
-    <a href="https://pattaya-coffee.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Coffee</span><span class="pa-network-card-desc">Remote work</span></a>
-    <a href="https://pattaya-medical.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Medical</span><span class="pa-network-card-desc">Clinics</span></a>
-    <a href="${SITE}/guides/" class="pa-network-card pa-network-card-here"><span class="pa-network-card-name">Pattaya.Gym</span><span class="pa-network-card-desc">You are here</span></a>
-  </nav>
-</section>`;
+  const { paNetworkHtml } = require('./scripts/lib/pa-network-block');
+  return paNetworkHtml({ hereOnGym: true, badgeUrl: 'https://pattaya-authority.com/work/pattaya-gym-directory/' });
 }
 
 function backToTop() {

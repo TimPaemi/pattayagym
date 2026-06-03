@@ -67,32 +67,8 @@ function nav() {
 }
 
 function paNetwork() {
-  const sites = [
-    ['Pattaya Authority', 'https://pattaya-authority.com/', 'Network hub'],
-    ['Restaurant Guide', 'https://pattaya-restaurant-guide.com/', 'Eat after training'],
-    ['Visa Help', 'https://pattayavisahelp.com/', 'Long-stay'],
-    ['Medical', 'https://pattaya-medical.com/', 'Clinics & injury'],
-    ['School Guide', 'https://pattaya-school-guide.com/', 'Families'],
-    ['Coffee', 'https://pattaya-coffee.com/', 'Remote work'],
-    ['Personal Trainer', 'https://pattayapersonaltrainer.com/', '1-on-1 coaching'],
-    ['Pattaya Villa', 'https://pattayavilla.com/', 'Long-stay stays'],
-    ['Vehicle Rentals', 'https://pattaya-vehicle-rentals.com/', 'Scooters & cars'],
-    ['PattayaPets', 'https://pattayapets.com/', 'Vets & pet life'],
-    ['Mr We Outside', 'https://mrweoutside.com/', 'Outdoor community'],
-    ['TimPaemi', 'https://timpaemi.com/', 'Founders · agency'],
-  ];
-  const links = sites.map(([n, u, d]) =>
-    `<a href="${u}" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">${esc(n)}</span><span class="pa-network-card-desc">${esc(d)}</span></a>`
-  ).join('\n    ');
-  return `<section class="pa-network">
-  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link">
-    <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
-  </a>
-  <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
-  <p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p>
-  <nav class="pa-network-grid" aria-label="Pattaya Authority network">${links}
-  </nav>
-</section>`;
+  const { paNetworkHtml } = require('./pa-network-block');
+  return paNetworkHtml({ hereOnGym: true, badgeUrl: 'https://pattaya-authority.com/' });
 }
 
 function sisterContextBlock(links) {
