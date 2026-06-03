@@ -4,7 +4,7 @@ name: Khao Chi Chan (Buddha Mountain) — Walking & Meditation
 category: clubs
 area: Na Chom Thian / Sattahip — 20 km southeast of Pattaya
 address: Khao Chi Chan, Na Chom Thian, Sattahip District, Chonburi 20250
-phone: ""
+phone: "+66 38 437 112"
 website: ""
 social: {}
 hours: Daily 06:00-18:00

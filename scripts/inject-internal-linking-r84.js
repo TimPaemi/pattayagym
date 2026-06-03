@@ -24,8 +24,8 @@ const AREA_MAP = {
   naklua: /naklua|north\s*pattaya|wongamat/i,
   pratamnak: /pratamnak|pratumnak/i,
   'central-pattaya': /central|beach\s*road|walking|soi\s*buakhao|3rd\s*road|mike|south\s*pattaya|pattaya\s*klang|thepprasit|pattaya\s*city|^pattaya\b/i,
-  'east-pattaya': /east|darkside|mabprachan|nong\s*prue|sukhumvit|huai\s*yai|si\s*racha|siracha|bang\s*phra|ban\s*bueng|khao\s*khansong|huay\s*yai/i,
-  sattahip: /sattahip|na\s*jomtien|bang\s*saray|u-tapao|ban\s*chang|rayong/i,
+  'east-pattaya': /east|darkside|mabprachan|nong\s*prue|sukhumvit|huai\s*yai|sriracha|siracha|si\s*racha|bang\s*phra|ban\s*bueng|khao\s*khansong|khao\s*mai\s*kaeo|huay\s*yai|chanthaburi|soi\s*dao/i,
+  sattahip: /sattahip|na\s*jomtien|na\s*chom\s*thian|bang\s*saray|u-tapao|ban\s*chang|rayong|khao\s*chi\s*chan|khao\s*kheow/i,
 };
 const AREA_LABELS = {
   jomtien: 'Jomtien',
@@ -46,11 +46,18 @@ function areaSlugFrom(areaStr) {
     if (re.test(a)) return slug;
   }
   if (/^pattaya(\s|$|\/|—|\s*city|\s*\()/i.test(a.trim())) return 'central-pattaya';
+  if (/horseshoe|mabprachan|ip\s*soccer/i.test(a)) return 'east-pattaya';
+  if (/koh\s*larn|coral\s*island|offshore.*pattaya|bali\s*hai/i.test(a)) return 'jomtien';
+  if (/various.*pattaya|pattaya\s*region|across\s*pattaya/i.test(a)) return 'central-pattaya';
   return null;
 }
 
 function catLabel(key) {
   return (CATEGORIES.find((c) => c.key === key) || {}).label || key;
+}
+
+function areaCategoryExists(area, cat) {
+  return fs.existsSync(path.join(ROOT, 'area', area, cat, 'index.html'));
 }
 
 function taxonomySection(gym) {
@@ -63,9 +70,11 @@ function taxonomySection(gym) {
     pills.push(
       `<a href="/area/${area}/" class="u-plain-link" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:13px;"><span style="color:var(--mint);font-weight:700;">◎</span> All sport in ${esc(AREA_LABELS[area] || area)}</a>`
     );
-    pills.push(
-      `<a href="/area/${area}/${cat}/" class="u-plain-link" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:13px;"><span style="color:var(--pink);font-weight:700;">→</span> ${esc(catLabel(cat))} in ${esc(AREA_LABELS[area] || area)}</a>`
-    );
+    if (areaCategoryExists(area, cat)) {
+      pills.push(
+        `<a href="/area/${area}/${cat}/" class="u-plain-link" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:13px;"><span style="color:var(--pink);font-weight:700;">→</span> ${esc(catLabel(cat))} in ${esc(AREA_LABELS[area] || area)}</a>`
+      );
+    }
   }
   pills.push(`<a href="/sports/" class="u-plain-link" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:13px;">Browse all sports</a>`);
   return `
@@ -78,15 +87,51 @@ function taxonomySection(gym) {
 </section>`;
 }
 
+function isBangkokArea(areaStr) {
+  return /^bangkok\b/i.test((areaStr || '').trim());
+}
+
+function pattayaRegionPeer(g) {
+  return !isBangkokArea(g.area);
+}
+
 function nearbySection(gym) {
   const area = areaSlugFrom(gym.area);
-  if (!area) return '';
-  let peers = GYMS.filter((g) => g.id !== gym.id && areaSlugFrom(g.area) === area && g.category !== gym.category)
-    .slice(0, 4);
-  if (!peers.length) {
-    peers = GYMS.filter((g) => g.id !== gym.id && areaSlugFrom(g.area) === area).slice(0, 4);
+  let peers = [];
+  let eyebrow = 'Same area';
+  let headline = '';
+  let lede = '';
+  let footer = '';
+
+  if (area) {
+    peers = GYMS.filter((g) => g.id !== gym.id && areaSlugFrom(g.area) === area && g.category !== gym.category)
+      .slice(0, 4);
+    if (!peers.length) {
+      peers = GYMS.filter((g) => g.id !== gym.id && areaSlugFrom(g.area) === area).slice(0, 4);
+    }
+    if (!peers.length) return '';
+    headline = `Also in <span class="accent-mint">${esc(AREA_LABELS[area])}.</span>`;
+    lede = `Other sports near this venue in ${esc(AREA_LABELS[area])} — cross-train without changing neighborhood.`;
+    footer = `<a href="/area/${area}/">All venues in ${esc(AREA_LABELS[area])} →</a>`;
+  } else if (isBangkokArea(gym.area)) {
+    eyebrow = 'From Pattaya';
+    peers = GYMS.filter((g) => g.id !== gym.id && g.category === gym.category && pattayaRegionPeer(g)).slice(0, 4);
+    if (!peers.length) return '';
+    headline = `Train in <span class="accent-mint">Pattaya first.</span>`;
+    lede = `This Bangkok venue is a common day trip from Pattaya — local ${esc(catLabel(gym.category))} options before you go.`;
+    footer = `<a href="/guides/bangkok-day-trip-sport-pattaya/">Bangkok sport day trips from Pattaya →</a>`;
+  } else {
+    eyebrow = 'Pattaya region';
+    peers = GYMS.filter((g) => g.id !== gym.id && g.category === gym.category && pattayaRegionPeer(g)).slice(0, 4);
+    if (!peers.length) {
+      peers = GYMS.filter((g) => g.id !== gym.id && pattayaRegionPeer(g)).slice(0, 4);
+    }
+    if (!peers.length) return '';
+    headline = `More <span class="accent-mint">${esc(catLabel(gym.category))} in Pattaya.</span>`;
+    lede = `Related venues in the Pattaya region for the same sport or activity type.`;
+    footer = `<a href="/category/${gym.category}/">All ${esc(catLabel(gym.category))} in Pattaya →</a>`;
   }
-  if (!peers.length) return '';
+
   const cards = peers.map((r, i) => `
       <a href="/gyms/${r.id}/" class="numcard u-plain-link">
         <div class="numcard-head">
@@ -98,11 +143,11 @@ function nearbySection(gym) {
   return `
 <section class="section u-pt-0" id="${NEARBY_MARKER}">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">◎</span> Same area</div>
-    <h2 class="h-section">Also in <span class="accent-mint">${esc(AREA_LABELS[area])}.</span></h2>
-    <p class="lede">Other sports near this venue in ${esc(AREA_LABELS[area])} — cross-train without changing neighborhood.</p>
+    <div class="eyebrow"><span class="num">◎</span> ${eyebrow}</div>
+    <h2 class="h-section">${headline}</h2>
+    <p class="lede">${lede}</p>
     <div class="numlist">${cards}</div>
-    <p class="u-muted" style="margin-top:12px;font-size:13px;"><a href="/area/${area}/">All venues in ${esc(AREA_LABELS[area])} →</a></p>
+    <p class="u-muted" style="margin-top:12px;font-size:13px;">${footer}</p>
   </div>
 </section>`;
 }
@@ -237,6 +282,18 @@ for (const g of GYMS) {
     const tax = taxonomySection(g);
     const next = insertBeforeFirstAnchor(tax);
     if (next) { html = next; stats.taxonomy++; changed = true; }
+  } else {
+    const area = areaSlugFrom(g.area);
+    const cat = g.category;
+    if (area && !areaCategoryExists(area, cat)) {
+      const bad = `/area/${area}/${cat}/`;
+      const pillRe = new RegExp(
+        `\\s*<a href="${bad.replace(/\//g, '\\/')}"[^>]*>[\\s\\S]*?<\\/a>`,
+        'g'
+      );
+      const stripped = html.replace(pillRe, '');
+      if (stripped !== html) { html = stripped; stats.taxonomy++; changed = true; }
+    }
   }
   if (!html.includes(NEARBY_MARKER)) {
     const near = nearbySection(g);
@@ -271,6 +328,12 @@ const utilityPages = [
   'find-my-coach/index.html',
   'favorites/index.html',
   'guides/index.html',
+  'contact/index.html',
+  'press/index.html',
+  'privacy/index.html',
+  'pattaya-sport-stats/index.html',
+  'add-your-gym/index.html',
+  'colophon/index.html',
 ];
 const indexFp = path.join(ROOT, 'index.html');
 if (fs.existsSync(indexFp)) {

@@ -5,7 +5,7 @@
 const SITE = 'https://pattaya-gym.com';
 
 const NETWORK_SITES = [
-  { name: 'Pattaya Authority', url: 'https://pattaya-authority.com/', desc: 'Network hub' },
+  { name: 'Pattaya Authority', url: 'https://pattaya-authority.com/work/pattaya-gym-directory/', desc: 'Network hub' },
   { name: 'Restaurant Guide', url: 'https://pattaya-restaurant-guide.com/', desc: 'Eat after training' },
   { name: 'Visa Help', url: 'https://pattayavisahelp.com/', desc: 'Long-stay visas' },
   { name: 'Medical', url: 'https://pattaya-medical.com/', desc: 'Clinics & injury' },

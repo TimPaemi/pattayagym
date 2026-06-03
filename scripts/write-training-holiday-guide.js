@@ -32,7 +32,7 @@ function marquee(items, bottom) {
 }
 
 const NETWORK_SITES = [
-  { name: 'Pattaya Authority', url: 'https://pattaya-authority.com/', desc: 'Hub for the whole network' },
+  { name: 'Pattaya Authority', url: 'https://pattaya-authority.com/work/pattaya-gym-directory/', desc: 'Hub for the whole network' },
   { name: 'Restaurant Guide', url: 'https://pattaya-restaurant-guide.com/', desc: 'Where to eat after training' },
   { name: 'Visa Help', url: 'https://pattayavisahelp.com/', desc: 'Long-stay visas &amp; paperwork' },
   { name: 'School Guide', url: 'https://pattaya-school-guide.com/', desc: 'Families relocating' },
@@ -78,7 +78,7 @@ function paNetwork() {
     `<a href="${s.url}" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">${esc(s.name)}</span><span class="pa-network-card-desc">${s.desc}</span></a>`
   ).join('\n    ');
   return `<section class="pa-network">
-  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link">
+  <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="u-plain-link">
     <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
   </a>
   <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
@@ -98,7 +98,7 @@ function footer() {
       <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Chon Buri 20150 · Thailand</div>
     </div>
     <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/compare/">Compare</a></li><li><a href="/search/">Search</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Vehicle Rentals</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Vehicle Rentals</a></li></ul></div>
     <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="/contact/">Contact</a></li></ul></div>
   </div>
   <div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="u-cyan">★ v${ASSET_VERSION} · ${BUILD_TS}</span></div>

@@ -87,7 +87,7 @@ module.exports = `
 
 <p><strong>Do I need fight experience?</strong> No. Pattaya's beginner economy exists because foreigners arrive with none.</p>
 
-<p><strong>Is street crime a training risk?</strong> Gym areas (Naklua, Jomtien, resort strips) are generally safe day and night. Central Pattaya nightlife zones need normal urban awareness — same as any tourist city. <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> covers neighbourhood context beyond sport.</p>
+<p><strong>Is street crime a training risk?</strong> Gym areas (Naklua, Jomtien, resort strips) are generally safe day and night. Central Pattaya nightlife zones need normal urban awareness — same as any tourist city. <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> covers neighbourhood context beyond sport.</p>
 
 <p><strong>Should kids train?</strong> Many camps run kids programmes (Fairtex, Venum, Kombat Group). Verify age policies on each venue page under <a href="/category/kids-youth/">kids &amp; youth sport</a>.</p>
 

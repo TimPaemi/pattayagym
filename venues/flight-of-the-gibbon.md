@@ -4,7 +4,7 @@ name: Flight of the Gibbon — Khao Kheow Canopy Zipline
 category: adventure
 area: Khao Kheow / Si Racha (1 hour from Pattaya, 90 min from Bangkok)
 address: Inside Khao Kheow Open Zoo, Si Racha District, Chonburi
-phone: ""
+phone: "+66 53 010 660"
 website: https://flightofthegibbon.com/
 social: {}
 hours: Daily — multi-session schedule with hotel pickups

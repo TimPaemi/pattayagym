@@ -1525,7 +1525,7 @@ ${openStatus === 'open' ? '        <span class="open-badge open-now">● Open no
     <div class="site-footer-base">
       <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
       <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
+          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
           
     </div>
   </footer>
