@@ -6,9 +6,9 @@ node build-v2.js || exit /b 1
 node scripts\rebuild-tool-stubs.js || exit /b 1
 node scripts\build-compare-page.js || exit /b 1
 node scripts\build-plan-page.js || exit /b 1
+node scripts\write-changelog.js || exit /b 1
 node scripts\inject-internal-linking-r84.js || exit /b 1
 node scripts\inject-guide-schema.js || exit /b 1
-node scripts\write-changelog.js || exit /b 1
 node scripts\write-status-json.js
 node scripts\sync-csp-hashes.js || exit /b 1
 node scripts\verify-deploy.js || exit /b 1

@@ -1,11 +1,11 @@
 # FULL WEBSITE AUDIT — pattaya-gym.com
 
-**Audit date:** 2026-06-03 (re-run before Round 78)  
+**Audit date:** 2026-06-03 (post Round 86)  
 **Production:** https://pattaya-gym.com  
 **Branch:** `main` · ASSET_VERSION **v452**  
-**Latest ship:** Round 86 — telephone **134/157** (85%) · Round 84 internal linking mesh
+**Latest ship:** Round 87 — full audit + changelog pa-network fix
 
-**Commands:** `verify-deploy.js` · `verify.js` · `validate.js` · `html:validate` · `html:validate-all` · `content-quality-audit.js` · `audit-venue-fields-r74.js` · `full-site-audit.js`
+**Commands run:** `verify-deploy.js` · `validate.js` · `html:validate` · `html:validate-all` · `content-quality-audit.js` · `audit-internal-links.js` · `full-site-audit.js`
 
 ---
 
@@ -13,15 +13,14 @@
 
 | Dimension | Grade | Notes |
 |-----------|-------|-------|
-| **Overall** | **8.5** | Crawl-clean production; guides at full Tier A |
-| **Technical** | **9.5** | 282/282 live HTTP 200; all local gates PASS |
-| **SEO / schema** | **8.4** | Geo/postal/FAQ enforced; phone sprint 90→99 (R81) |
-| **Content** | **9.0** | 44/44 Tier A; no marquee or FAQ drift |
-| **Trust** | **8.5** | Phones from venue-owned pages only |
+| **Overall** | **8.7** | Crawl-clean; strong internal mesh (R84); phones 85% |
+| **Technical** | **9.5** | 282/282 sitemap HTTP 200; all local gates PASS |
+| **SEO / schema** | **8.6** | Geo 155/157 · postal 157/157 · FAQ 44/44 · tel 134/157 |
+| **Content** | **9.0** | 44/44 Tier A guides; 0 FAQ drift |
+| **Internal linking** | **9.2** | 157/157 taxonomy + tools; 157/157 r41; 0 orphan venues |
+| **Trust** | **8.5** | Phones venue-sourced only; 23 venues correctly blank |
 
-**Verdict:** **Ship-ready.** Round 84 closed **internal linking** drift (r41+r84 injectors, shared pa-network). Main data lever remains verified **telephone** (~39 venues without phone).
-
-**Internal linking (R84):** See `FULL_INTERNAL_LINK_AUDIT_2026-06-03.md` — 157/157 taxonomy + tools strips, 157/157 r41 guide blocks, 115 same-area cross-sport, 91 sister-context sections.
+**Verdict:** **Ship-ready.** Round 87 fixes changelog regenerating a truncated 7-line `pa-network` after `inject-r84`.
 
 ---
 
@@ -30,8 +29,7 @@
 | Gate | Result |
 |------|--------|
 | `verify-deploy.js` | **PASS** |
-| `verify.js` | **PASS** |
-| `validate.js` | **0 errors**, 151 warnings (optional MD fields) |
+| `npm run validate` | **0 errors**, 76 warnings (optional MD fields) |
 | `html:validate` + `validate-all` | **PASS** |
 
 ### Schema (157 venues)
@@ -40,66 +38,75 @@
 |-------|-------|------|
 | GeoCoordinates | 155/157 | ≥ 154 |
 | postalCode | 157/157 | ≥ 154 |
-| telephone | 129/157 | ≥ 126 (R85) |
+| telephone | 134/157 | ≥ 133 (R86) |
 | Guide FAQPage | 44/44 | all |
 
 **Geo exceptions:** `lumpinee-boxing-stadium`, `chatrium-golf-soi-dao`.
 
 ---
 
-## 2. Live production
+## 2. Live production (`full-site-audit.js`)
 
 - **282/282** sitemap URLs → HTTP **200**
-- **0** homepage dead links (25 checked)
-- **6/6** sister sites up
+- **0** broken links on homepage spot-check (25 URLs)
+- **6/6** sister TimPaemi sites up
 - Machine log: `FULL_AUDIT_2026-06-03.md`
 
 ---
 
-## 3. Content quality
+## 3. Internal linking (`audit-internal-links.js`)
+
+| Marker | Pages |
+|--------|-------|
+| `venue-taxonomy-r84` | 157 |
+| `venue-tools-r84` | 157 |
+| `venue-guides-r41` | 157 |
+| `venue-nearby-r84` | 115 |
+| `sister-context-r84` | 92 |
+| `pa-network-grid` | 285 |
+
+- Venues with &lt;2 inbound internal links: **0**
+- Broken internal hrefs from venue pages: **0**
+
+See also: `FULL_INTERNAL_LINK_AUDIT_2026-06-03.md`
+
+---
+
+## 4. Content quality
 
 | Tier | Count |
 |------|-------|
 | A (≥1200 words) | **44** |
 | B / C | **0** |
 
-Flags: `UPDATED WEEKLY` **0** · FAQ mismatch **0** · deepen injects **0**  
 Report: `CONTENT_QUALITY_AUDIT_2026-06-03.md`
 
 ---
 
-## 4. Venue data
+## 5. Phone sprint (R81–R86)
 
-| Metric | Value |
-|--------|-------|
-| Phones data.js ↔ MD | **65/157**, sync drift **0** |
-| openingHoursSpecification | 157/157 |
-| Website but no phone | **51** (next sprint queue) |
+| Round | Added | Total |
+|-------|-------|-------|
+| R85 | +11 | 129 |
+| R86 | +5 | **134** (85%) |
 
----
-
-## 5. Phone sprint (R75–R77)
-
-**12 + 6 = 18** numbers added in prior two sessions; pipeline: `data/manual-phones-r*.json` + `apply-manual-phones.js`.
-
-**Skipped (no safe official line):** Jetts Pattaya, FIGHT EVO360 (site down), BOUNCE/Harbor ambiguity, First Serve (website = Nonthaburi HQ only), Clubloongchat (form only).
+**~23 without phone** — hash clubs, public beaches/pools/parks, walk-in-only gyms, wrong-city listings (Bounce, First Serve), Facebook-only (SUN Fitness, City Football Academy). Do not fabricate.
 
 ---
 
-## 6. Backlog (priority)
+## 6. Round 87 fix
 
-1. **Phone sprint** — ~5–7 official contacts per round  
-2. **area_fallback** geo pin review (19 venues)  
-3. Per-guide OG images; compare/plan payload diet  
-4. Lighthouse re-run on homepage + tool pages  
-5. Off-page: `OFF_PAGE_GSC_CHECKLIST.md`
+- `write-changelog.js` now uses `pa-network-block.js` (12-site grid).
+- Ship pipeline: **`write-changelog.js` before `inject-internal-linking-r84.js`** so changelog never loses the grid.
 
 ---
 
-## 7. Inventory
+## 7. Next levers
 
-157 venues · 44 guides · 287 HTML · 282 sitemap URLs · 15 categories
+1. Homepage in-main hub links to top guides (hand `index.html`).
+2. Resume phone research only where venue publishes a line (Facebook About, Google Business).
+3. Optional: backfill changelog entries for ship rounds 75–86.
 
 ---
 
-*After Round 78 ship, re-run `node scripts/full-site-audit.js` and bump telephone figures in this doc.*
+*Re-run: `node scripts/full-site-audit.js` · `node scripts/audit-internal-links.js`*
