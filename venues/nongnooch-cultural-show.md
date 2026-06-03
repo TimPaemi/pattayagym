@@ -4,7 +4,7 @@ name: Nong Nooch Tropical Garden — Thai Cultural & Muay Thai Show
 category: clubs
 area: Na Chom Thian / Sattahip — 20 km south of Pattaya
 address: 34/1 Moo 7, Na Chom Thian, Sattahip District, Chonburi 20250
-phone: ""
+phone: "+66 38 238 160"
 website: https://www.nongnoochpattaya.com/
 social: {}
 hours: Daily 08:00-18:00 — cultural shows multiple times daily

@@ -3,7 +3,7 @@
 **Audit date:** 2026-06-03 (re-run before Round 78)  
 **Production:** https://pattaya-gym.com  
 **Branch:** `main` · ASSET_VERSION **v452**  
-**Pre-ship baseline:** Round 77 (`4ae98f6`) — telephone **65/157**
+**Latest ship:** Round 79 — telephone **80/157** (51%)
 
 **Commands:** `verify-deploy.js` · `verify.js` · `validate.js` · `html:validate` · `html:validate-all` · `content-quality-audit.js` · `audit-venue-fields-r74.js` · `full-site-audit.js`
 

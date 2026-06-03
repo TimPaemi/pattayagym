@@ -4,7 +4,7 @@ name: Manta Kids Pattaya (IG Center)
 category: swimming
 area: Huayyai / East Pattaya
 address: 53/48 Chaiyaphruek 2 Rd, Huayyai, Bang Lamung District, Chonburi 20150
-phone: ""
+phone: "+66 82 983 3723"
 website: https://www.igcenter-pattaya.com/en/manta-kids-pattaya-en/
 secondaryWebsite: https://www.themantaswim.com/
 social:

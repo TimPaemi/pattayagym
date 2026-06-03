@@ -4,7 +4,7 @@ name: Dive Station Pattaya
 category: watersports
 area: Pattaya — boat departures from Bali Hai Pier
 address: Pattaya, Bang Lamung — Bali Hai Pier departures
-phone: ""
+phone: "+66 65 693 3828"
 website: https://divestationpattaya.com/
 social: {}
 hours: Daily — boat departures morning

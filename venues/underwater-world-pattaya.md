@@ -4,7 +4,7 @@ name: Underwater World Pattaya — Aquarium & Shark Dive Experience
 category: watersports
 area: Pattaya — Sukhumvit Road
 address: 22/22 Moo 11, Sukhumvit Road, Nong Prue, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 38 756 878"
 website: https://underwaterworldpattaya.com/
 social: {}
 hours: Daily 09:00-18:00

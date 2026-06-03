@@ -4,7 +4,7 @@ name: Bira Circuit (FIA-Standard Motor Racing Track)
 category: adventure
 area: Banglamung — 15 km northeast of Pattaya
 address: 111 Moo 5, Banglamung, Chonburi
-phone: ""
+phone: "+66 85 110 1000"
 website: https://bira.co.th/
 social: {}
 hours: Daily — track day schedules variable

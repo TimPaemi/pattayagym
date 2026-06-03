@@ -4,7 +4,7 @@ name: Dragon Shooting Club Pattaya
 category: adventure
 area: Pattaya — confirm exact at booking
 address: Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 80 063 8222"
 website: https://www.dragonshootingclub.com/
 social: {}
 hours: Daily — confirm at venue

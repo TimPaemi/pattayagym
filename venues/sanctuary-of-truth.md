@@ -4,7 +4,7 @@ name: Sanctuary of Truth — Wood Temple & Cultural-Sport Park
 category: clubs
 area: Naklua / North Pattaya
 address: 206/2 Soi Naklua 12, Naklua Rd, Bang Lamung, Pattaya 20150
-phone: ""
+phone: "+66 38 110 653"
 website: https://sanctuaryoftruthmuseum.com/
 social: {}
 hours: Daily 08:00–18:00

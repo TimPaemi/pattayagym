@@ -4,7 +4,7 @@ name: Greenwood Golf Club & Resort (formerly Noble Place)
 category: golf
 area: Ban Bueng, Chonburi (1 hour from Pattaya, toward Chonburi)
 address: Greenwood Golf Club, Ban Bueng District, Chonburi
-phone: ""
+phone: "+66 89 833 8948"
 website: http://www.gwgolfclub.com/
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30
