@@ -92,11 +92,25 @@
     });
   }
 
+  function bindVenueMoreToggle() {
+    doc.querySelectorAll('.venue-more-toggle').forEach(function (btn) {
+      var wrap = btn.closest('.venue-hero-ctas-wrap');
+      if (!wrap) return;
+      btn.addEventListener('click', function () {
+        var open = wrap.classList.toggle('is-expanded');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? '− Fewer actions' : '+ More actions';
+      });
+    });
+  }
+
   function bindScrollUi() {
     var navEl = doc.querySelector('.hero .nav') || doc.querySelector('.nav');
     var bar = doc.getElementById('pg-scroll-progress') || doc.querySelector('.progress-bar');
     var btn = doc.getElementById('pg-back-to-top') || doc.querySelector('.back-to-top');
-    var tocLinks = Array.prototype.slice.call(doc.querySelectorAll('.jump-pill'));
+    var tocLinks = Array.prototype.slice.call(
+      doc.querySelectorAll('.jump-pill, .jump-nav-pills a')
+    );
     var tocHeadings = tocLinks.map(function (link) {
       var id = link.getAttribute('href') ? link.getAttribute('href').slice(1) : '';
       return id ? doc.getElementById(id) : null;
@@ -154,6 +168,7 @@
     bindMediaFallback();
     bindDelegatedClicks();
     bindMobileNav();
+    bindVenueMoreToggle();
     bindScrollUi();
     bindFooterClock();
   }

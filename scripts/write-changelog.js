@@ -40,6 +40,16 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 92, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'Venue mobile More actions + sticky TOC + WhatsApp label',
+    summary: 'Collapsible secondary CTAs on small screens; sticky jump-nav with active section highlight; WhatsApp renamed Ask Pattaya.Gym with title tooltip.',
+    bullets: [
+      'venue-hero-ctas-wrap + venue-more-toggle (site-ui.js).',
+      'jump-nav sticky under nav; .jump-nav-pills a.is-active scroll spy.',
+      'WhatsApp CTA clarifies directory concierge vs gym line.',
+    ],
+  },
+  {
     n: 91, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'UX Round 91 — tokens, nav, search paging, compare table',
     summary: 'Design tokens --card/--border; homepage nav matches global shell; search loads 24 at a time; compare table CSS; mobile venue hero trims secondary CTAs.',

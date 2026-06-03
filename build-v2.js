@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '453';
+const ASSET_VERSION = '454';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -759,13 +759,16 @@ function venuePage(g, fm, body) {
       <a href="/methodology/" class="trust-pill is-link" title="How we rank venues">How we rank →</a>
     </div>` : ''}
     ${g.description ? `<p class="hero-lede u-lede-h">${esc(g.description)}</p>` : ''}
-    <div class="btn-row u-btn-row-left venue-hero-ctas">
-      ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
-      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">● WhatsApp us</a>
-      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">📍 Map</a>` : ''}
-      <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary btn-venue-more">Email →</a>
-      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-venue-more">Website →</a>` : ''}
-      <button type="button" class="btn btn-ghost btn-venue-more share-venue-btn" data-share-title="${esc(g.name)}" data-share-url="${url}">↗ Share</button>
+    <div class="venue-hero-ctas-wrap">
+      <div class="btn-row u-btn-row-left venue-hero-ctas" id="venue-hero-ctas">
+        ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
+        <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Message Pattaya.Gym (directory team), not the venue direct line">● Ask Pattaya.Gym</a>
+        ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">📍 Map</a>` : ''}
+        <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary btn-venue-more">Email →</a>
+        ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-venue-more">Website →</a>` : ''}
+        <button type="button" class="btn btn-ghost btn-venue-more share-venue-btn" data-share-title="${esc(g.name)}" data-share-url="${url}">↗ Share</button>
+      </div>
+      <button type="button" class="btn btn-ghost venue-more-toggle" aria-expanded="false" aria-controls="venue-hero-ctas">+ More actions</button>
     </div>
   </div>
 </section>
