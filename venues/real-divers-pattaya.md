@@ -4,7 +4,7 @@ name: Real Divers Pattaya
 category: watersports
 area: Pattaya — boat departures from Bali Hai Pier
 address: Pattaya, Bang Lamung — Bali Hai Pier departures
-phone: ""
+phone: "+66 38 232 476"
 website: https://www.real-divers.com/
 social:
   instagram: realdiverspattaya

@@ -4,7 +4,7 @@ name: Balance Yoga Studio Pattaya
 category: yoga
 area: Near sea — Pattaya / Jomtien beach-adjacent
 address: Pattaya — steps from the sea (verify exact at booking)
-phone: ""
+phone: "+66 82 186 1937"
 website: https://balancepattaya.com/
 social:
   instagram: balanceyogapattaya

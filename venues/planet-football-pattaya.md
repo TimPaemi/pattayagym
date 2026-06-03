@@ -4,7 +4,7 @@ name: Planet Football Pattaya (FC Planet)
 category: kids-youth
 area: Pattaya
 address: "Pattaya — confirm exact at booking"
-phone: ""
+phone: "+66 38 248 212"
 website: "https://www.pattayafootball.com/"
 social:
   instagram: planetfootballpattaya

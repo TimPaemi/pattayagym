@@ -4,7 +4,7 @@ name: Adventure Divers Pattaya
 category: watersports
 area: Central Pattaya — boat operates from Bali Hai Pier
 address: Pattaya, Bang Lamung — boat departures from Bali Hai Pier
-phone: ""
+phone: "+66 38 364 453"
 website: https://pattayadivers.com/
 social: {}
 hours: Daily — boat departures morning

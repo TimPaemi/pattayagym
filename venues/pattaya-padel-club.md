@@ -4,7 +4,7 @@ name: Pattaya Padel Club (Mabprachan Lake)
 category: racquet
 area: Mabprachan Lake / East Pattaya
 address: Mabprachan Lake, East Pattaya
-phone: ""
+phone: "+66 80 501 3991"
 website: http://pattayapadelclub.com/
 social:
   instagram: "pattaya.padel.club"

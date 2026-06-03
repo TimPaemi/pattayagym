@@ -4,7 +4,7 @@ name: Siam Bayshore Resort Pattaya Tennis Courts
 category: racquet
 area: Walking Street area / South Pattaya Beach Road
 address: Siam Bayshore Resort, 559 Beach Road, Pattaya — 600m from Walking Street
-phone: ""
+phone: "+66 38 428 679"
 website: https://siambayshorepattaya.com/sport-recreation/
 social: {}
 hours: Daily 07:00-18:00

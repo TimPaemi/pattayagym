@@ -4,7 +4,7 @@ name: Thai Wake Park Pattaya
 category: watersports
 area: East Pattaya near Mabprachan Lake
 address: Thai Wake Park, near Mabprachan Lake, East Pattaya
-phone: ""
+phone: "+66 38 197 671"
 website: https://www.thaiwakepark.com/
 social: {}
 hours: Daily — verify schedule (cable closes for maintenance days)
