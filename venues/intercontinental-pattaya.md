@@ -4,7 +4,7 @@ name: InterContinental Pattaya Resort
 category: fitness
 area: Pratamnak Hill
 address: 437 Phra Tamnak Road, Pratamnak Hill, Pattaya 20150
-phone: ""
+phone: "+66 38 259 888"
 website: https://pattaya.intercontinental.com/
 social: {}
 hours: 24/7 fitness for guests; spa daily; pools sunrise–sunset

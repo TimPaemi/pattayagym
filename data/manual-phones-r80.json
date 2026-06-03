@@ -1,0 +1,43 @@
+{
+  "_comment": "Round 80 — hotel/resort and attraction official contact lines",
+  "hilton-pattaya-fitness": {
+    "phone": "+66 38 253 000",
+    "source": "https://www.hilton.com/en/hotels/bkkhphi-hilton-pattaya/hotel-info/"
+  },
+  "intercontinental-pattaya": {
+    "phone": "+66 38 259 888",
+    "source": "https://pattaya.intercontinental.com/"
+  },
+  "cape-dara-resort": {
+    "phone": "+66 38 933 888",
+    "source": "https://capedarapattaya.com/contact-us/"
+  },
+  "dusit-thani-pattaya": {
+    "phone": "+66 38 425 611",
+    "source": "https://www.dusit.com/dusitthani-pattaya/"
+  },
+  "centara-grand-mirage": {
+    "phone": "+66 38 301 234",
+    "source": "https://www.centarahotelsresorts.com/centaragrand/cmbr/contact"
+  },
+  "movenpick-siam-pattaya": {
+    "phone": "+66 33 078 888",
+    "source": "https://www.movenpickpattayanajomtien.com/contact/"
+  },
+  "pattaya-marriott-resort": {
+    "phone": "+66 33 168 542",
+    "source": "https://www.marriott.com/en-us/hotels/utpjb-pattaya-marriott-resort-and-spa/rooms/"
+  },
+  "andaz-pattaya-jomtien": {
+    "phone": "+66 38 221 234",
+    "source": "https://www.hyatt.com/andaz/utpaz-hyatt-andaz-pattaya-jomtien-beach"
+  },
+  "royal-varuna-yacht-club": {
+    "phone": "+66 38 250 116",
+    "source": "https://www.varuna.org/"
+  },
+  "pattaya-floating-market": {
+    "phone": "+66 91 188 9951",
+    "source": "https://floatingmarketpattaya.com/contact-us/"
+  }
+}

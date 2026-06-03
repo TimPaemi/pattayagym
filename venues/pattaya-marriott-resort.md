@@ -4,7 +4,7 @@ name: Pattaya Marriott Resort and Spa
 category: fitness
 area: Na Jomtien
 address: 64 Moo 1 Na Jomtien, Sattahip, Pattaya, Chonburi 20250
-phone: ""
+phone: "+66 33 168 542"
 website: https://www.marriott.com/en-us/hotels/utpjb-pattaya-marriott-resort-and-spa/overview/
 social: {}
 hours: 24/7 hotel; pools 06:00–22:00; fitness extended; spa daily

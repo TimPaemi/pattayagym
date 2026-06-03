@@ -4,7 +4,7 @@ name: Hilton Pattaya — Fitness Center, Spa & Pool
 category: fitness
 area: Central Pattaya — Beach Road / Central Festival Mall
 address: Hilton Pattaya, 333/101 Moo 9, Beach Road, Nong Prue, Bang Lamung, Chonburi 20150
-phone: ""
+phone: "+66 38 253 000"
 website: https://www.hilton.com/en/hotels/bkkhphi-hilton-pattaya/
 social: {}
 hours: 24/7 fitness center; spa + pool with extended hours

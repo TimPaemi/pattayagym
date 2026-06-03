@@ -4,7 +4,7 @@ name: Dusit Thani Pattaya — Devarana Wellness
 category: fitness
 area: North Pattaya / Beach Road headland
 address: 240/2 Pattaya Beach Road, Pattaya 20150
-phone: ""
+phone: "+66 38 425 611"
 website: https://www.dusit.com/dusitthani-pattaya/
 social: {}
 hours: Hotel 24/7 — fitness extended; spa daily; pools sunrise–sunset

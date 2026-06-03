@@ -4,7 +4,7 @@ name: Pattaya Floating Market — Muay Talay & Cultural Activities
 category: clubs
 area: Sukhumvit Road / South Pattaya
 address: 451/304 Moo 12, Sukhumvit Rd, Nong Prue, Bang Lamung, Pattaya
-phone: ""
+phone: "+66 91 188 9951"
 website: https://floatingmarketpattaya.com/
 social: {}
 hours: Daily 09:00–18:00

@@ -4,7 +4,7 @@ name: Cape Dara Resort
 category: fitness
 area: Naklua / North Pattaya — beach-cliff position
 address: Cape Dara Resort, 256 Dara Beach, Soi 20 Naklua Road, Naklua, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 38 933 888"
 website: https://capedarapattaya.com/
 social: {}
 hours: Hotel hours; gym + spa with extended hours

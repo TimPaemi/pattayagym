@@ -4,7 +4,7 @@ name: Centara Grand Mirage Beach Resort
 category: swimming
 area: Wong Amat Beach / North Pattaya
 address: Centara Grand Mirage Beach Resort, 277 Moo 5, Naklua, Bang Lamung, Chonburi 20150
-phone: ""
+phone: "+66 38 301 234"
 website: https://www.centarahotelsresorts.com/centaragrand/cmbr
 social: {}
 hours: Hotel hours; water park 09:00-18:00 typical

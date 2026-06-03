@@ -4,7 +4,7 @@ name: Andaz Pattaya Jomtien Beach (Hyatt)
 category: fitness
 area: Na Jomtien / Sattahip
 address: Andaz Pattaya Jomtien Beach, Na Jomtien, Sattahip District, Chonburi
-phone: ""
+phone: "+66 38 221 234"
 website: https://www.hyatt.com/andaz/utpaz-hyatt-andaz-pattaya-jomtien-beach/
 social: {}
 hours: 24/7 fitness; spa + pools extended

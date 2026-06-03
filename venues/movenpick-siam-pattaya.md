@@ -4,7 +4,7 @@ name: Mövenpick Siam Hotel Na Jomtien Pattaya
 category: fitness
 area: Na Jomtien
 address: Mövenpick Siam Hotel Na Jomtien Pattaya, Na Jomtien, Sattahip District, Chonburi
-phone: ""
+phone: "+66 33 078 888"
 website: https://www.movenpickpattayanajomtien.com/
 social: {}
 hours: 24/7 fitness; spa + pool extended

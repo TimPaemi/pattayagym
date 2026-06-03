@@ -4,7 +4,7 @@ name: Royal Varuna Yacht Club
 category: watersports
 area: Pratamnak Hill
 address: 286 Moo 12 Pratamnak Rd, Nongprue, Banglamung, Chonburi 20150
-phone: ""
+phone: "+66 38 250 116"
 website: https://www.varuna.org/
 social:
   facebook: RoyalVarunaYachtClub
