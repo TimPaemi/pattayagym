@@ -4,7 +4,7 @@ name: Euro Badminton
 category: racquet
 area: Soi Chaiyaphruek 2 / East Pattaya
 address: Soi Chaiyaphruek 2, East Pattaya, Bang Lamung District, Chonburi
-phone: ""
+phone: "+66 81 295 2285"
 website: ""
 social: {}
 hours: Daily — verify directly at venue

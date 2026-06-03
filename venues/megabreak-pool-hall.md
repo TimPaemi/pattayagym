@@ -4,7 +4,7 @@ name: Megabreak Pool Hall Pattaya
 category: clubs
 area: Soi Diana (Soi 13) / Central Pattaya
 address: Soi Diana (Soi 13), off Second Road, Pattaya
-phone: ""
+phone: "+66 38 428 859"
 website: ""
 social: {}
 hours: Daily — typically late afternoon to late night

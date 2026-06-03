@@ -4,7 +4,7 @@ name: JumpZ Trampoline Park
 category: kids-youth
 area: Harbor Pattaya Shopping Mall — Central Pattaya Road
 address: Harbor Pattaya Shopping Mall, 6th Floor, Central Pattaya Road, Pattaya
-phone: ""
+phone: "+66 65 848 1000"
 website: ""
 social: {}
 hours: Daily 10:30-19:30

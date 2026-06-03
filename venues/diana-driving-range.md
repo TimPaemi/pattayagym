@@ -4,7 +4,7 @@ name: Diana Driving Range Pattaya
 category: golf
 area: Soi Diana / Central Pattaya
 address: Soi Diana Inn area, Central Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 38 415 212"
 website: ""
 social: {}
 hours: Daily 06:00-22:00 (floodlit evening)

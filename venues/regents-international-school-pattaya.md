@@ -4,7 +4,7 @@ name: Regents International School Pattaya (Sports)
 category: kids-youth
 area: Pattaya / Eastern Seaboard
 address: Regents International School Pattaya, Eastern Seaboard area
-phone: ""
+phone: "+66 38 418 777"
 website: https://www.nordangliaeducation.com/risp-pattaya
 social: {}
 hours: School hours; sports facilities for students + select community programs

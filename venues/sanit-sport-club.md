@@ -4,7 +4,7 @@ name: Sanit Sport Club
 category: muay-thai
 area: Mabprachan Reservoir / East Pattaya
 address: Mabprachan Reservoir area, East Pattaya
-phone: ""
+phone: "+66 33 641 108"
 website: ""
 social:
   facebook: sanitsportclub

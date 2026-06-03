@@ -4,7 +4,7 @@ name: Mountain Shadow Country Club
 category: golf
 area: Halfway between Bangkok and Pattaya / Si Racha
 address: Mountain Shadow Golf Club, Si Racha area, Chonburi
-phone: ""
+phone: "+66 38 349 371"
 website: ""
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30

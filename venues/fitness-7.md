@@ -4,7 +4,7 @@ name: Fitness 7 Pattaya (The Avenue)
 category: fitness
 area: The Avenue Pattaya / Central Pattaya (parallel to Beach Road)
 address: The Avenue Pattaya, Central Pattaya — 500m from Mike Shopping Mall
-phone: ""
+phone: "+66 99 287 5677"
 website: https://fitness7thailand.com/
 social:
   facebook: fitness7official

@@ -4,7 +4,7 @@ name: Tarzan Adventure Pattaya (Zipline)
 category: adventure
 area: Na Chom Thian / Sattahip — between Nong Nooch and Golden Cliff Temple
 address: 108/14 Moo 6, Na Chom Thian, Sattahip District, Chonburi 20250
-phone: ""
+phone: "+66 92 235 4800"
 website: ""
 social:
   facebook: TarzanZipline

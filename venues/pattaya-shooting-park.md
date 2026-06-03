@@ -4,7 +4,7 @@ name: Pattaya Shooting Park
 category: adventure
 area: Soi Khao Mai Kaew / East Pattaya
 address: 8 Moo 4, Soi Khao Mai Kaew, Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 38 907 808"
 website: ""
 social: {}
 hours: Daily 09:00-19:00

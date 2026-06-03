@@ -4,7 +4,7 @@ name: Pattaya Country Club
 category: golf
 area: Khao Mai Kaeo (one of the closest courses to Pattaya proper)
 address: Khao Mai Kaeo, Bang Lamung, Tambon Khao Mai Kaeo, Chonburi 20150
-phone: ""
+phone: "+66 38 423 718"
 website: ""
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30
