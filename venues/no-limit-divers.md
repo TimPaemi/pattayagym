@@ -4,7 +4,7 @@ name: No Limit Divers
 category: watersports
 area: Pattaya / Jomtien
 address: Pattaya / Jomtien (two dive centers — confirm location at booking)
-phone: ""
+phone: "+66 86 084 0651"
 website: https://nolimitdive.com/
 social: {}
 hours: Daily — boat departures morning; office reception 09:00-18:00 typically

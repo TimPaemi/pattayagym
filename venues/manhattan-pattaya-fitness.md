@@ -4,7 +4,7 @@ name: Manhattan Pattaya (Hotel Gym)
 category: fitness
 area: Pratamnak / Central Pattaya
 address: Manhattan Pattaya Hotel — Pratamnak / Central Pattaya
-phone: ""
+phone: "+66 38 225 320"
 website: https://manhattanpattaya.com/facilities/gym/
 social: {}
 hours: Daily 08:00-21:00 (reservation required)

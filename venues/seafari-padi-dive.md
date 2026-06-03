@@ -4,7 +4,7 @@ name: Seafari PADI Dive Centre
 category: watersports
 area: Behind Mike's Mall — 2 min from Pattaya Beach Road
 address: Behind Mike's Mall, ~2 min from Pattaya Beach Road, Pattaya, Chonburi
-phone: ""
+phone: "+66 38 429 060"
 website: https://seafari.co.th/
 social:
   facebook: Seafaridivepattaya

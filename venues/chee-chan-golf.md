@@ -4,7 +4,7 @@ name: Chee Chan Golf Resort
 category: golf
 area: Na Jomtien / Sattahip
 address: Chee Chan Golf Resort, Na Jom Thien, Sattahip, Chonburi
-phone: ""
+phone: "+66 38 196 555"
 website: https://cheechangolf.com/
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30

@@ -4,7 +4,7 @@ name: Pattaya Dive Centre
 category: watersports
 area: Pattaya Beach Road (between Soi 10 and Soi 11)
 address: Pattaya Beach Road, between Soi 10 and Soi 11, Pattaya, Chonburi
-phone: ""
+phone: "+66 38 422 133"
 website: https://www.divecentrepattaya.com/
 social:
   facebook: Pattayadivecentrethailand

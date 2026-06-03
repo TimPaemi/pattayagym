@@ -4,7 +4,7 @@ name: Ramayana Water Park Pattaya
 category: swimming
 area: Na Jomtien / Sattahip — 20 km south of Pattaya
 address: 9 9, Tambon Na Chom Thian, Sattahip, Chonburi 20250
-phone: ""
+phone: "+66 33 005 9299"
 website: https://www.ramayanawaterpark.com/
 social: {}
 hours: Daily 10:00-18:00 (verify at park)

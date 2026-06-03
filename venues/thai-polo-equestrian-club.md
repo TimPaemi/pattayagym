@@ -4,7 +4,7 @@ name: Thai Polo & Equestrian Club
 category: equestrian
 area: Banglamung / Mabprachan Lake (25 min north of Pattaya)
 address: Banglamung, near Mabhrachan Lake (Mabprachan Reservoir), Pattaya, Chonburi
-phone: ""
+phone: "+66 97 818 5605"
 website: https://www.thai-polo-club.com/
 social:
   facebook: thaipolo.equestrianclub

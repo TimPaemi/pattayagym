@@ -1,5 +1,5 @@
 @echo off
-REM Round 75 — verified phone sprint (official sources) + telephone schema gate
+REM Round 76 — phone sprint batch 2 (dive, golf, water park, hotel gym)
 cd /d "%~dp0"
 call npm install --silent || exit /b 1
 node scripts\apply-manual-phones.js || exit /b 1
@@ -18,7 +18,7 @@ call npm run html:validate || exit /b 1
 call npm run html:validate-all || exit /b 1
 node scripts\ping-sitemap.js
 git add -A
-git commit -m "Round 75: +5 verified venue phones; telephone schema gate" -m "Official contacts: Rage, Silk, Venum (fix website), Castra, Cross Pattaya. apply-phones-r75.js. verify-deploy requires >=52 telephone."
+git commit -m "Round 76: +7 verified venue phones; telephone gate 57" -m "Ramayana, dive shops, Manhattan gym, Thai Polo, Chee Chan, Seafari. apply-manual-phones.js merges all manual-phones-r*.json."
 if errorlevel 1 echo Nothing to commit
 git push origin main || exit /b 1
-echo Round 75 SHIPPED.
+echo Round 76 SHIPPED.
