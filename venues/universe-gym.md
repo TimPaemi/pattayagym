@@ -4,7 +4,7 @@ name: Universe Gym
 category: fitness
 area: Welcome Town / North Pattaya
 address: Welcome Town, 47/113 Moo 9, Nongprue, Bang Lamung District, Chonburi 20150
-phone: ""
+phone: "+66 38 416 002"
 website: ""
 social:
   facebook: universe.gym.pattaya

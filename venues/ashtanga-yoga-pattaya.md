@@ -4,7 +4,7 @@ name: Ashtanga Yoga Pattaya
 category: yoga
 area: Pattaya — Soi 12 Thepprasit / Jomtien
 address: Pattaya — Soi 12 Thepprasit area
-phone: ""
+phone: "+66 82 210 2446"
 website: https://ashtangayogapattaya.weebly.com/
 social: {}
 hours: Morning Mysore practice + scheduled led classes; verify at studio

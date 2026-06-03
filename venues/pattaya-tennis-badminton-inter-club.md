@@ -4,7 +4,7 @@ name: Pattaya Tennis & Badminton Inter Club
 category: racquet
 area: Soi Toongklom-Talman 25, Pattaya City
 address: Soi Toongklom-Talman 25, Pattaya City, Bang Lamung District, Chonburi 20150
-phone: ""
+phone: "+66 81 408 8804"
 website: "https://liga.tennis/venue/pattaya-badminton-tennis-inter-club"
 social:
   facebook: "Pattaya-Tennis-Badminton-Inter-Club-100063564184679"

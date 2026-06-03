@@ -4,7 +4,7 @@ name: Jetts Fitness Pattaya
 category: fitness
 area: Little Walk Mall (Sukhumvit / Pattaya Klang)
 address: "8/114 Sukhumvit Rd, Bang Lamung District, Chonburi 20150 (Little Walk Mall — Royal Garden Plaza branch closed May 2022)"
-phone: ""
+phone: "+66 64 302 0601"
 website: https://www.jetts.co.th/en/
 social:
   facebook: JettsThailand

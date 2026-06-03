@@ -4,7 +4,7 @@ name: Rambaa Somdet M16 Muay Thai & MMA
 category: mma
 area: Nong Prue / East Pattaya (100m from Sor Klinmee)
 address: Nong Prue, Bang Lamung District, Chonburi 20150 — adjacent to Sor Klinmee Gym
-phone: ""
+phone: "+66 61 718 0973"
 website: ""
 social:
   instagram: m16_pattaya

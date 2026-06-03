@@ -4,7 +4,7 @@ name: Sitpholek - Institute of Muay Thai Techniques
 category: muay-thai
 area: Pattaya
 address: Pattaya, Bang Lamung, Chonburi (verify exact at booking)
-phone: ""
+phone: "+66 89 934 5001"
 website: ""
 social:
   facebook: sitpholekmuaythaipattaya

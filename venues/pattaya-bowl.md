@@ -4,7 +4,7 @@ name: Pattaya Bowl (Soi Regent Marina)
 category: clubs
 area: North Pattaya — Pattaya 2nd Road / Soi Regent Marina
 address: 463/78 M.9, Soi Regent Marina, Srinakorn Centre, Pattaya 2nd Road, North Pattaya
-phone: ""
+phone: "+66 38 429 908"
 website: ""
 social: {}
 hours: Daily 10:00-02:00 (16-hour operation)

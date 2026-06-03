@@ -4,7 +4,7 @@ name: Greta Sport Club Pattaya (at Greta Resort)
 category: racquet
 area: Na Jomtien / Sattahip (18 km south of central Pattaya / Walking Street)
 address: 68/18 Moo 3, Soi Wat Yanasangwararam, Na Jomtien, Sattahip, Chonburi 20250
-phone: ""
+phone: "+66 92 634 3388"
 website: http://www.gretafarm.com/en/tennis/
 social:
   facebook: gretaresortandsportclub
