@@ -23,9 +23,9 @@ const AREA_MAP = {
   jomtien: /jomtien/i,
   naklua: /naklua|north\s*pattaya|wongamat/i,
   pratamnak: /pratamnak|pratumnak/i,
-  'central-pattaya': /central|beach\s*road|walking|soi\s*buakhao|3rd\s*road|mike|south\s*pattaya|pattaya\s*klang/i,
-  'east-pattaya': /east|darkside|mabprachan|nong\s*prue|sukhumvit|huai\s*yai/i,
-  sattahip: /sattahip|na\s*jomtien|bang\s*saray|u-tapao/i,
+  'central-pattaya': /central|beach\s*road|walking|soi\s*buakhao|3rd\s*road|mike|south\s*pattaya|pattaya\s*klang|thepprasit|pattaya\s*city|^pattaya\b/i,
+  'east-pattaya': /east|darkside|mabprachan|nong\s*prue|sukhumvit|huai\s*yai|si\s*racha|siracha|bang\s*phra|ban\s*bueng|khao\s*khansong|huay\s*yai/i,
+  sattahip: /sattahip|na\s*jomtien|bang\s*saray|u-tapao|ban\s*chang|rayong/i,
 };
 const AREA_LABELS = {
   jomtien: 'Jomtien',
@@ -45,6 +45,7 @@ function areaSlugFrom(areaStr) {
   for (const [slug, re] of Object.entries(AREA_MAP)) {
     if (re.test(a)) return slug;
   }
+  if (/^pattaya(\s|$|\/|—|\s*city|\s*\()/i.test(a.trim())) return 'central-pattaya';
   return null;
 }
 
@@ -80,8 +81,11 @@ function taxonomySection(gym) {
 function nearbySection(gym) {
   const area = areaSlugFrom(gym.area);
   if (!area) return '';
-  const peers = GYMS.filter((g) => g.id !== gym.id && areaSlugFrom(g.area) === area && g.category !== gym.category)
+  let peers = GYMS.filter((g) => g.id !== gym.id && areaSlugFrom(g.area) === area && g.category !== gym.category)
     .slice(0, 4);
+  if (!peers.length) {
+    peers = GYMS.filter((g) => g.id !== gym.id && areaSlugFrom(g.area) === area).slice(0, 4);
+  }
   if (!peers.length) return '';
   const cards = peers.map((r, i) => `
       <a href="/gyms/${r.id}/" class="numcard u-plain-link">
@@ -256,6 +260,9 @@ for (const g of GYMS) {
 
 const utilityPages = [
   'index.html',
+  'sports/index.html',
+  'about/index.html',
+  'methodology/index.html',
   'changelog/index.html',
   'compare/index.html',
   'plan-my-trip/index.html',

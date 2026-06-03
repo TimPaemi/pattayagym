@@ -4,7 +4,7 @@ name: BOUNCE Pattaya — Trampoline Park
 category: kids-youth
 area: Harbor Pattaya Mall — 6F / Central Pattaya
 address: 6th Floor, Harbor Pattaya, 190/25 Moo 9, Central Pattaya Rd
-phone: ""
+phone: "+66 65 848 1000"
 website: https://bounceinc.co.th/
 social:
   facebook: bouncethailand

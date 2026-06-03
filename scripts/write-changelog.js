@@ -40,6 +40,16 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 89, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'Nearby fallback + BOUNCE phone + sports hub links',
+    summary: 'Venue nearby blocks fill from same-area peers when cross-sport sparse; Harbor mall line for BOUNCE; site tools + sister-context on sports/about/methodology.',
+    bullets: [
+      'inject-internal-linking-r84 — area map + same-area fallback; venue-nearby 148/157.',
+      'bounce-pattaya +66 65 848 1000 (Harbor Pattaya call center).',
+      'sports/, about/, methodology/ — site-tools-hub + sister-context.',
+    ],
+  },
+  {
     n: 88, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'Homepage area hub + Naklua public pool phone',
     summary: 'Hero links to best Muay Thai, compare, and categories; six-area homepage hub; richer sister-context; municipal pool phone for Naklua public pool.',
