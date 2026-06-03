@@ -4,7 +4,7 @@ name: SF Strike Bowl Pattaya (Central Festival)
 category: clubs
 area: Central Festival Pattaya Beach Mall — 6th Floor
 address: 6th Floor, Central Festival Pattaya Beach Mall, Beach Road, Pattaya
-phone: ""
+phone: "+66 33 003 600"
 website: ""
 social:
   facebook: sfstrikebowlptb.sf

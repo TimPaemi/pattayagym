@@ -4,7 +4,7 @@ name: St. Andrews 2000 Pattaya
 category: golf
 area: Ban Chang, Rayong (45 min from Pattaya)
 address: St Andrews 2000 Golf Club, Ban Chang, Rayong
-phone: ""
+phone: "+66 38 030 6602"
 website: ""
 social: {}
 hours: Daily — first tee from sunrise; last tee typically 14:30

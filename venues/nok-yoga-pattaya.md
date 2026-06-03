@@ -4,7 +4,7 @@ name: Nok Yoga Pattaya
 category: yoga
 area: Naklua / Pattaya-Naklua Road (near Jomtien Beach for some sessions)
 address: 571/32 Moo 5, Naklua 16/2, Pattaya-Naklua Road, Pattaya, Chonburi 20150
-phone: ""
+phone: "+66 89 748 7149"
 website: ""
 social:
   facebook: nokyogapattaya

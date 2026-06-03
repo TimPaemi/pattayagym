@@ -4,7 +4,7 @@ name: One-D Yoga Studio
 category: yoga
 area: Pattaya-Naklua Road / Naklua
 address: 571/32 Moo 5, Naklua 16/2, Pattaya-Naklua Road, Pattaya, Chonburi 20150
-phone: ""
+phone: "+66 90 293 9462"
 website: ""
 social:
   facebook: OneDYoga

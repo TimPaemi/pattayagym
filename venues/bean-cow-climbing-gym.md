@@ -4,7 +4,7 @@ name: Bean Cow Climbing Gym & Community Center
 category: climbing
 area: Huay Yai / East Pattaya
 address: 61/23 Moo 1, Huay Yai, Bang Lamung District, Chonburi 20150
-phone: ""
+phone: "+66 94 459 3911"
 website: https://www.beancowclimbing.com/
 social:
   facebook: beancowclimbing

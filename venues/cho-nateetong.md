@@ -4,7 +4,7 @@ name: Cho Nateetong Thai Boxing Camp
 category: muay-thai
 area: Sukhumvit 34 / East Pattaya
 address: Sukhumvit Soi 34, Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 92 624 9354"
 website: ""
 social: {}
 hours: Mon-Sat — Morning + Afternoon sessions (drop-in friendly)

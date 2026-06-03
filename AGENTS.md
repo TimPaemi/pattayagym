@@ -31,7 +31,7 @@ node scripts/write-round55-guides.js
 node scripts/inject-venue-faq-r47.js
 node scripts/inject-area-category-intros-r43.js
 node scripts/deepen-round43-ranked.js
-node scripts/inject-internal-linking-r41.js
+node scripts/inject-internal-linking-r84.js
 node scripts/inject-ranked-editorial-funnel.js
 node scripts/write-round37-guides.js
 node scripts/deepen-round37-guides.js

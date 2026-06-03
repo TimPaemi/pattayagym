@@ -4,7 +4,7 @@ name: Yoga Haus Pattaya
 category: yoga
 area: Pattaya Klang / Central Pattaya
 address: Pattaya Klang Road, Central Pattaya
-phone: ""
+phone: "+66 85 142 4787"
 website: ""
 social: {}
 hours: Group + private lessons most days; morning + evening sessions typical

@@ -4,7 +4,7 @@ name: Clubloongchat Watersports
 category: watersports
 area: Na Jomtien Beach
 address: Na Jomtien Beach, Pattaya, Chonburi
-phone: ""
+phone: "+66 81 340 2180"
 website: https://www.clubloongchat.com/
 social:
   facebook: clubloongchat

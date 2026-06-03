@@ -4,7 +4,7 @@ name: Aquanauts Dive Center Pattaya
 category: watersports
 area: Pattaya — boat departures from Bali Hai Pier
 address: Pattaya, Bang Lamung — boat departures from Bali Hai Pier
-phone: ""
+phone: "+66 38 361 724"
 website: ""
 social: {}
 hours: Daily — boat departures morning

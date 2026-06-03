@@ -4,7 +4,7 @@ name: Sor Klinmee Muay Thai Gym
 category: muay-thai
 area: Nong Prue / East Pattaya (Soi Khao Talo area)
 address: Nong Prue, Bang Lamung District, Chonburi 20150 (off Soi Khao Talo)
-phone: ""
+phone: "+66 38 456 5467"
 website: ""
 social:
   facebook: sorklinmeegym

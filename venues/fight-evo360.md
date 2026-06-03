@@ -4,7 +4,7 @@ name: Fight EVO360 Muay Thai Gym
 category: muay-thai
 area: Thepprasit Road / Jomtien
 address: 193/15 Moo 11, Thepprasit Road, Muang Pattaya, Bang Lamung District, Chonburi 20150
-phone: ""
+phone: "+66 84 098 5250"
 website: https://www.fightevo360.com/
 social:
   instagram: fight_evo360

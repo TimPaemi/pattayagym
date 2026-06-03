@@ -3,7 +3,7 @@
 **Audit date:** 2026-06-03 (re-run before Round 78)  
 **Production:** https://pattaya-gym.com  
 **Branch:** `main` · ASSET_VERSION **v452**  
-**Latest ship:** Round 84 — internal linking mesh + **12-site** pa-network · telephone **118/157** (75%)
+**Latest ship:** Round 85 — telephone **129/157** (82%) · Round 84 internal linking mesh
 
 **Commands:** `verify-deploy.js` · `verify.js` · `validate.js` · `html:validate` · `html:validate-all` · `content-quality-audit.js` · `audit-venue-fields-r74.js` · `full-site-audit.js`
 
@@ -40,7 +40,7 @@
 |-------|-------|------|
 | GeoCoordinates | 155/157 | ≥ 154 |
 | postalCode | 157/157 | ≥ 154 |
-| telephone | 118/157 | ≥ 115 (R83) |
+| telephone | 129/157 | ≥ 126 (R85) |
 | Guide FAQPage | 44/44 | all |
 
 **Geo exceptions:** `lumpinee-boxing-stadium`, `chatrium-golf-soi-dao`.
