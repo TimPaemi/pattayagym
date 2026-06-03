@@ -4,7 +4,7 @@ name: Pattaya Lawn Bowls Clubs (Banchang / Paradise / The Retreat)
 category: clubs
 area: Banchang + Jomtien + multiple
 address: Multiple locations — Banchang covered facility + Paradise off Jomtien 2nd Rd + The Retreat
-phone: ""
+phone: "+66 97 201 1697"
 website: ""
 social: {}
 hours: Open roll-up Mon/Wed/Fri 10:00; competitions year-round

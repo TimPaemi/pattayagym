@@ -4,7 +4,7 @@ name: Kitesurf Pattaya
 category: watersports
 area: South end of Jomtien Beach
 address: South end of Jomtien Beach, Pattaya
-phone: ""
+phone: "+66 66 008 4644"
 website: ""
 social: {}
 hours: Daily — wind-dependent (best November-March)

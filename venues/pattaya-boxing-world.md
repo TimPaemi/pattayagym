@@ -4,7 +4,7 @@ name: Pattaya Boxing World Stadium
 category: muay-thai
 area: Pattaya
 address: Pattaya Boxing World, Pattaya, Bang Lamung, Chonburi
-phone: ""
+phone: "+66 38 726 2034"
 website: ""
 social: {}
 hours: Wed + Fri 20:00 fights (cultural shows other days)

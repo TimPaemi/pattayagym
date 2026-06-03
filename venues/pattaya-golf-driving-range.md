@@ -4,7 +4,7 @@ name: Pattaya Golf Driving Range
 category: golf
 area: Pattaya
 address: Pattaya, Chonburi (verify exact at booking)
-phone: ""
+phone: "+66 83 544 9978"
 website: ""
 social: {}
 hours: Daily 07:00-22:00 typical
