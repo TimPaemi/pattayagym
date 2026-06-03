@@ -4,7 +4,7 @@ name: Thai Sky Adventures (Tandem Skydiving Pattaya)
 category: adventure
 area: Dropzone 25 km north of Pattaya / Rayong direction
 address: "Dropzone near Nong Kho Reservoir, ~25 km north of Pattaya — Pattaya hotel pickup included"
-phone: ""
+phone: "+66 85 900 3412"
 website: https://thaiskyadventures.com/
 social: {}
 hours: Daily — 07:00 or 10:00 AM Pattaya pickups

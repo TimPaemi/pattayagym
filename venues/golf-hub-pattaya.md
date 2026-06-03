@@ -4,7 +4,7 @@ name: Golf Hub Pattaya (Indoor Simulator + Club Fitting)
 category: golf
 area: Soi Buakhao + East Pattaya (multiple locations)
 address: Soi Buakhao, Pattaya + East Pattaya locations
-phone: ""
+phone: "+66 90 913 0552"
 website: https://www.golfhubpattaya.com/
 social: {}
 hours: Daily — confirm at venue

@@ -4,8 +4,8 @@ name: Cartoon Network Amazone Waterpark (now Columbia Pictures Aquaverse)
 category: swimming
 area: Na Jomtien / Sattahip — 15 km south of Pattaya
 address: 888 Moo 8, Na Jomtien, Sattahip, Chonburi 20250
-phone: ""
-website: https://www.aquaverse.co.th/
+phone: "+66 33 004 999"
+website: https://columbiapicturesaquaverse.com/en/
 social: {}
 hours: Daily 10:00-18:00 (verify at park)
 priceRange: ฿฿฿

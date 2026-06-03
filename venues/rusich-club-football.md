@@ -4,7 +4,7 @@ name: Rusich Club Pattaya (HSIF Thailand)
 category: kids-youth
 area: Pattaya
 address: Rusich Club / HSIF Thailand, Pattaya
-phone: ""
+phone: "+66 62 002 6863"
 website: https://rusich.club/en/home_en/
 social: {}
 hours: Daily — verify with club

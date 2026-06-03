@@ -4,7 +4,7 @@ name: Pattaya Scuba Adventures
 category: watersports
 area: Pattaya / boat operations from Bali Hai Pier
 address: Pattaya — boat departures typically Bali Hai Pier
-phone: ""
+phone: "+66 83 924 1907"
 website: https://www.pattaya-scuba-adventures.com/
 social: {}
 hours: Boat departures morning; office reception 09:00-18:00

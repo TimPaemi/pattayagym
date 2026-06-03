@@ -4,7 +4,7 @@ name: FAST PRO Football Academy Pattaya
 category: kids-youth
 area: Two locations — Horseshoe Point Pattaya + IP Soccer Club Pattaya
 address: "Horseshoe Point Pattaya (Mabprachan Reservoir/East Pattaya) + IP Soccer Club Pattaya"
-phone: ""
+phone: "+66 80 595 6949"
 website: https://www.fastprofootball.com/
 social:
   facebook: fastprofootball
