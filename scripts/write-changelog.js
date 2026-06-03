@@ -40,6 +40,16 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 88, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'Homepage area hub + Naklua public pool phone',
+    summary: 'Hero links to best Muay Thai, compare, and categories; six-area homepage hub; richer sister-context; municipal pool phone for Naklua public pool.',
+    bullets: [
+      'index.html — hero CTAs, area hub (homepage-area-hub-r88), Pattaya.Gym “here” card.',
+      'inject-internal-linking-r84.js — injects homepage area hub idempotently.',
+      'pattaya-public-pool-naklua +66 38 933 107 (Nongprue City education office).',
+    ],
+  },
+  {
     n: 87, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'Full audit PASS; changelog uses shared 12-site pa-network',
     summary: 'Re-ran verify-deploy, validate, html:validate-all, full-site-audit (282/282 live 200), content-quality (44 Tier A), internal-link audit. Fixed write-changelog truncating pa-network after inject-r84.',

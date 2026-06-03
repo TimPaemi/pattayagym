@@ -17,6 +17,7 @@ const NEARBY_MARKER = 'venue-nearby-r84';
 const TOOLS_MARKER = 'venue-tools-r84';
 const SISTER_MARKER = 'sister-context-r84';
 const HUB_MARKER = 'site-tools-hub-r84';
+const HOMEPAGE_AREA_MARKER = 'homepage-area-hub-r88';
 
 const AREA_MAP = {
   jomtien: /jomtien/i,
@@ -120,6 +121,34 @@ function toolsSection() {
 </section>`;
 }
 
+function homepageAreaHub() {
+  const areas = [
+    ['Jomtien', 'jomtien', 'Beach, camps, watersports'],
+    ['Central Pattaya', 'central-pattaya', 'Walking Street belt'],
+    ['Naklua', 'naklua', 'North Pattaya'],
+    ['Pratamnak', 'pratamnak', 'Hill + fitness'],
+    ['East Pattaya', 'east-pattaya', 'Darkside · Mabprachan'],
+    ['Sattahip', 'sattahip', 'Na Jomtien · Bang Saray'],
+  ];
+  const areaCards = areas.map(([label, slug, desc]) =>
+    `<a href="/area/${slug}/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Area</span><span class="intent-card-title">${esc(label)}</span><span class="intent-card-desc">${esc(desc)}</span></a>`
+  ).join('\n      ');
+  return `
+<section class="section u-pt-0" id="${HOMEPAGE_AREA_MARKER}">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">◎</span> By area</div>
+    <h2 class="h-section">Browse <span class="accent-mint">Pattaya by neighborhood.</span></h2>
+    <p class="lede u-max-760">Six area hubs link every venue, sport filter, and editorial guide strip for that part of the city.</p>
+    <div class="intent-grid intent-grid-compact" style="margin-top:var(--s-4);">
+      ${areaCards}
+      <a href="/category/fitness/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Fitness</span><span class="intent-card-desc">Gyms · 24h · hotel</span></a>
+      <a href="/category/golf/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Golf</span><span class="intent-card-desc">Courses · ranges</span></a>
+      <a href="/guides/best-muay-thai-pattaya/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Guide</span><span class="intent-card-title">Best Muay Thai</span><span class="intent-card-desc">Top camp picks</span></a>
+    </div>
+  </div>
+</section>`;
+}
+
 function siteToolsHub() {
   return `
 <section class="section u-pt-0" id="${HUB_MARKER}">
@@ -167,6 +196,7 @@ const stats = {
   sister: 0,
   hub: 0,
   paNetwork: 0,
+  homepageArea: 0,
 };
 
 console.log('Round 84 internal linking…');
@@ -235,6 +265,19 @@ const utilityPages = [
   'favorites/index.html',
   'guides/index.html',
 ];
+const indexFp = path.join(ROOT, 'index.html');
+if (fs.existsSync(indexFp)) {
+  let html = fs.readFileSync(indexFp, 'utf8');
+  let changed = false;
+  if (!html.includes(HOMEPAGE_AREA_MARKER)) {
+    const anchor = '<section class="section intent-router" id="start-here">';
+    const block = homepageAreaHub();
+    const next = insertBeforeAnchor(html, block, anchor);
+    if (next) { html = next; stats.homepageArea++; changed = true; }
+  }
+  if (changed) fs.writeFileSync(indexFp, html, 'utf8');
+}
+
 for (const rel of utilityPages) {
   const fp = path.join(ROOT, rel);
   if (!fs.existsSync(fp)) continue;
@@ -281,4 +324,4 @@ for (const base of walkDirs) {
   }
 }
 
-console.log(`\nRound 84 internal linking: r41=${stats.r41}, taxonomy=${stats.taxonomy}, nearby=${stats.nearby}, tools=${stats.tools}, sister=${stats.sister}, hub=${stats.hub}, paNetwork=${stats.paNetwork}.`);
+console.log(`\nRound 84 internal linking: r41=${stats.r41}, taxonomy=${stats.taxonomy}, nearby=${stats.nearby}, tools=${stats.tools}, sister=${stats.sister}, hub=${stats.hub}, paNetwork=${stats.paNetwork}, homepageArea=${stats.homepageArea}.`);

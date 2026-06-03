@@ -4,7 +4,7 @@ name: Naklua Public Swimming Pool
 category: swimming
 area: Naklua / North Pattaya
 address: Naklua, Pattaya, Chonburi
-phone: ""
+phone: "+66 38 933 107"
 website: ""
 social: {}
 hours: Public hours — confirm at facility
