@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '457';
+const ASSET_VERSION = '458';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -1143,10 +1143,10 @@ function categoryPage(cat, venues) {
     + `
 <main id="main">
 
-<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-10); text-align:left;">
+<section class="hero hub-hero hub-hero--category" style="text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Sport · ${venues.length} venues in Pattaya</div>
-    <h1 class="hero-h1" style="font-size:clamp(48px,11vw,140px); text-align:left;">
+    <h1 class="hero-h1">
       <span class="${accent}">${esc(cat.label)}.</span>
     </h1>
     <p class="hero-lede u-text-left-ml0">Every <strong>${esc(cat.label.toLowerCase())}</strong> venue worth knowing in Pattaya. <strong>${venues.length} entries</strong> hand-checked. No paid placements. Verified on a rolling schedule. Closures and changes are re-checked as fast as we hear about them.</p>
@@ -1382,10 +1382,10 @@ ${(() => {
     .slice(0, 6)
     .map(([key, count]) => ({ key, count, label: (CATEGORIES.find(c => c.key === key) || {}).label || key }));
 
-  return `<section class="hero u-pt-10-pb-8">
+  return `<section class="hero hub-hero hub-hero--area u-pt-10-pb-8">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Neighborhood · ${venues.length} venues · ${topCats.length} sports</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,10vw,120px); text-align:left;">
+    <h1 class="hero-h1">
       <span class="${accent}">${esc(label)}.</span>
     </h1>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:780px;">${content ? esc(content.summary) : `Every venue we track in <strong>${esc(label)}</strong>. ${venues.length} hand-checked entries across all sports.`}</p>

@@ -40,6 +40,16 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 96, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 96 — favorites tool, plan polish, hub heroes',
+    summary: 'Functional /favorites/ page (localStorage); plan form UX + scroll-to-results; category/area heroes smaller on mobile.',
+    bullets: [
+      'build-favorites-page.js — shortlist UI; favorites.js list cards + floating widget styles.',
+      'Plan — tool-empty-card states, plan-select 48px taps, scroll to results on build.',
+      'hub-hero — category/area H1 clamp on mobile.',
+    ],
+  },
+  {
     n: 95, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'UX Round 95 — guide nav parity + tool empty states',
     summary: 'All 44+ guides get v2-nav (Compare/Plan desktop links); search and compare empty states offer next-step CTAs.',

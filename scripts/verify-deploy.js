@@ -28,6 +28,7 @@ const JS_FILES_TO_CHECK = [
   'build-v2.js', 'data.js',
   'scripts/build-compare-page.js',
   'scripts/build-plan-page.js',
+  'scripts/build-favorites-page.js',
   'scripts/write-changelog.js',
   'scripts/write-status-json.js',
   'scripts/rebuild-tool-stubs.js',

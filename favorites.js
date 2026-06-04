@@ -155,18 +155,20 @@ PG.favorites = {
       return;
     }
     if (empty) empty.hidden = true;
+    var status = document.getElementById('favorites-status');
+    if (status) status.textContent = list.length + ' saved venue' + (list.length === 1 ? '' : 's') + '.';
     target.innerHTML = list.map(function (item) {
       var g = byId[item.id] || item;
+      var desc = g.description || '';
+      if (desc.length > 140) desc = desc.slice(0, 140).trim() + '…';
       return '<article class="cat-venue-card favorite-list-card">' +
         '<div class="cv-head"><h3><a href="/gyms/' + this.esc(item.id) + '/">' + this.esc(g.name || item.name) + '</a></h3></div>' +
-        (g.area ? '<div class="cv-meta">Area: ' + this.esc(g.area) + '</div>' : '') +
-        (g.priceRange ? '<div class="cv-meta">Price: ' + this.esc(g.priceRange) + '</div>' : '') +
-        (g.description ? '<p>' + this.esc(g.description) + '</p>' : '') +
-        '<div class="card-actions">' +
-          '<a class="primary" href="/gyms/' + this.esc(item.id) + '/">View Details</a>' +
-          '<button type="button" class="favorite-btn is-saved" data-pg-favorite-id="' + this.esc(item.id) + '" data-pg-favorite-name="' + this.esc(g.name || item.name) + '" aria-pressed="true"><span class="fav-heart" aria-hidden="true">&#9829;</span><span class="fav-btn-label">Saved</span></button>' +
-        '</div>' +
-      '</article>';
+        (g.area ? '<div class="cv-meta">' + this.esc(g.area) + (g.priceRange ? ' · ' + this.esc(g.priceRange) : '') + '</div>' : '') +
+        (desc ? '<p>' + this.esc(desc) + '</p>' : '') +
+        '<div class="btn-row favorite-list-actions">' +
+          '<a class="btn btn-primary" href="/gyms/' + this.esc(item.id) + '/">View venue</a>' +
+          '<button type="button" class="btn btn-ghost favorite-btn is-saved" data-pg-favorite-id="' + this.esc(item.id) + '" data-pg-favorite-name="' + this.esc(g.name || item.name) + '" aria-pressed="true"><span class="fav-heart" aria-hidden="true">&#9829;</span><span class="fav-btn-label">Remove</span></button>' +
+        '</div></article>';
     }, this).join('');
     this.bindButtons(target);
     this.refreshAllButtons();

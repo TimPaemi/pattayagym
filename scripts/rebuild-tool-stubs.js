@@ -197,21 +197,7 @@ const STUBS = [
       {url: '/search/', title: 'Filter by what you need', desc: 'Live search includes language flags and beginner-friendly tags on most venue cards.'}
     ]
   },
-  {
-    slug: 'favorites', noindex: true,
-    title: 'Your saved Pattaya gyms',
-    desc: 'A local-storage favorites tool is being rebuilt. For now, bookmark your shortlist in your browser, or use the search filter and category pages to build a list.',
-    crumb: 'Favorites',
-    eyebrow: 'Favorites · Coming back',
-    accent: 'accent-pink',
-    h1: 'Your <span class="accent-pink">favorites.</span>',
-    intro: 'The save-this-venue tool is being rebuilt for V2 with browser local-storage so your shortlist persists across visits. Until it returns, use your browser bookmarks — every venue has a stable URL that you can bookmark and share.',
-    alts: [
-      {url: '/search/', title: 'Build a shortlist', desc: 'Live search makes it easy to filter to 3-5 venues that match your criteria.'},
-      {url: '/category/muay-thai/', title: 'Top picks by sport', desc: 'Each category page surfaces the top 3 venues at the top with full editorial picks below.'},
-      {url: '/about/', title: 'How we rank', desc: 'Our methodology — independent, hand-checked, no paid placements, re-verified on a rolling schedule.'}
-    ]
-  }
+  // NOTE: 'favorites' is built by scripts/build-favorites-page.js (localStorage shortlist).
 ];
 
 function render(stub) {

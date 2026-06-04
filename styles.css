@@ -8,15 +8,15 @@
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("/fonts/space-grotesk.woff2?v=457") format("woff2-variations");
+  src: url("/fonts/space-grotesk.woff2?v=458") format("woff2-variations");
 }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=457") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=457") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=457") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=457") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=457") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=457") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=457") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=458") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=458") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=458") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=458") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=458") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=458") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=458") format("woff2"); }
 
 /* ================================================================
    PATTAYA.GYM v2 — TimPaemi-inspired design system
@@ -1828,6 +1828,114 @@ body.nav-open { overflow: hidden; }
 .search-empty button:hover {
   background: var(--cyan);
   color: #000;
+}
+
+.hub-hero {
+  padding-top: var(--s-8);
+  padding-bottom: var(--s-6);
+  text-align: left;
+}
+.hub-hero .hero-h1 {
+  font-size: clamp(36px, 10vw, 72px);
+  text-align: left;
+}
+@media (min-width: 900px) {
+  .hub-hero {
+    padding-top: var(--s-10);
+    padding-bottom: var(--s-10);
+  }
+  .hub-hero--category .hero-h1 {
+    font-size: clamp(48px, 11vw, 140px);
+  }
+  .hub-hero--area .hero-h1 {
+    font-size: clamp(40px, 10vw, 120px);
+  }
+}
+
+.plan-form {
+  display: grid;
+  gap: var(--s-4);
+  max-width: 560px;
+  margin-top: var(--s-5);
+}
+.plan-field {
+  display: block;
+}
+.plan-field-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.plan-select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  color: var(--text);
+  font-size: 15px;
+}
+
+.favorites-list {
+  display: grid;
+  gap: var(--s-4);
+  max-width: 880px;
+}
+.favorite-list-actions {
+  margin-top: var(--s-4);
+  gap: 10px;
+}
+.favorite-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.favorite-btn.is-saved {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+.favorite-btn .fav-heart {
+  font-size: 14px;
+}
+.pg-fw-inner {
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: var(--r-pill);
+  background: var(--pink);
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(255, 46, 126, 0.35);
+}
+@media (min-width: 900px) {
+  .pg-fw-inner { right: 24px; bottom: 24px; }
 }
 
 @media (max-width: 700px) {

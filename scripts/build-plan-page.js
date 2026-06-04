@@ -203,15 +203,15 @@ ${v2NavHtml()}
     <noscript>
       <p class="lede" style="margin-bottom:var(--s-4);">JavaScript is required to build a plan interactively. Browse <a href="/search/">all ${VENUE_N} venues</a>, read trip-length tips in section 02, or use <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday guide</a> and <a href="/compare/">compare tool</a>.</p>
     </noscript>
-    <div class="plan-form" style="display:grid; gap:var(--s-4); max-width:560px; margin-top:var(--s-5);">
-      <label style="display:block;"><span style="display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">1 · What do you want to do?</span>
-        <select id="q-sport" class="plan-select" style="width:100%;">${sportOpts}</select></label>
-      <label style="display:block;"><span style="display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">2 · How long is your trip?</span>
-        <select id="q-length" class="plan-select" style="width:100%;">${lengthOpts}</select></label>
-      <label style="display:block;"><span style="display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">3 · What is your budget?</span>
-        <select id="q-budget" class="plan-select" style="width:100%;">${budgetOpts}</select></label>
-      <label style="display:block;"><span style="display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">4 · How are you travelling?</span>
-        <select id="q-style" class="plan-select" style="width:100%;">${styleOpts}</select></label>
+    <div class="plan-form">
+      <label class="plan-field"><span class="plan-field-label">1 · What do you want to do?</span>
+        <select id="q-sport" class="plan-select">${sportOpts}</select></label>
+      <label class="plan-field"><span class="plan-field-label">2 · How long is your trip?</span>
+        <select id="q-length" class="plan-select">${lengthOpts}</select></label>
+      <label class="plan-field"><span class="plan-field-label">3 · What is your budget?</span>
+        <select id="q-budget" class="plan-select">${budgetOpts}</select></label>
+      <label class="plan-field"><span class="plan-field-label">4 · How are you travelling?</span>
+        <select id="q-style" class="plan-select">${styleOpts}</select></label>
       <div class="btn-row" style="gap:8px; flex-wrap:wrap;">
         <button type="button" class="btn btn-primary" id="plan-go">▶ Build my plan</button>
         <button type="button" class="btn btn-ghost" id="plan-share">↗ Share this plan</button>
@@ -220,12 +220,19 @@ ${v2NavHtml()}
   </div>
 </section>
 
-<section class="section u-pt-0">
+<section class="section u-pt-0" id="plan-results">
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> Your plan</div>
     <div id="plan-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
     <div id="plan-output"></div>
-    <p id="plan-empty" class="lede" style="color:var(--muted);">Answer the four questions above and press <strong>Build my plan</strong> — your tailored trip appears here.</p>
+    <div id="plan-empty" class="tool-empty-card">
+      <h3>Your plan appears here</h3>
+      <p>Answer the four questions above and press <strong>Build my plan</strong>. Share the URL to bookmark your picks.</p>
+      <div class="tool-empty-actions">
+        <a href="/guides/muay-thai-training-holiday-pattaya/" class="btn btn-ghost">Training holiday guide</a>
+        <a href="/compare/" class="btn btn-ghost">Compare venues</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -347,9 +354,10 @@ ${marquee(BOTTOM_MARQUEE, true)}
                      .filter(function(x){ return x.s > -900; })
                      .sort(function(a,b){ return b.s - a.s; });
     if (!ranked.length){
-      out.innerHTML = '<p class="lede">No venues matched — try widening the budget or choosing a different sport.</p>';
-      empty.style.display = 'none';
+      out.innerHTML = '<div class="tool-empty-card"><h3>No venues matched</h3><p>Try widening the budget, choosing a different sport, or pick &ldquo;I&rsquo;m flexible&rdquo; for sport.</p><div class="tool-empty-actions"><a href="/search/" class="btn btn-secondary">Search all venues</a><a href="/sports/" class="btn btn-ghost">Browse sports</a></div></div>';
+      empty.hidden = true;
       announce('No venues matched your answers.');
+      scrollToResults();
       return;
     }
     var bases = ranked.slice(0, Math.min(3, ranked.length)).map(function(x){ return x.v; });
@@ -388,10 +396,19 @@ ${marquee(BOTTOM_MARQUEE, true)}
     html += '<p style="margin-top:var(--s-5);"><a href="/sports/" class="u-cyan">Browse all 15 sports →</a> &nbsp; <a href="/compare/" class="u-cyan">Compare venues side by side →</a></p>';
 
     out.innerHTML = html;
-    empty.style.display = 'none';
+    empty.hidden = true;
     announce('Plan ready: base venue ' + bases[0].name + ', ' + comp.length + ' rest-day picks.');
+    scrollToResults();
   }
   function announce(m){ if (statusEl) statusEl.textContent = m; }
+  function scrollToResults(){
+    var el = document.getElementById('plan-results');
+    if (!el) return;
+    var top = el.getBoundingClientRect().top;
+    if (top < 80 || top > window.innerHeight * 0.5) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
   function readForm(){
     return { sport:qSport.value, length:qLength.value, budget:qBudget.value, style:qStyle.value };
@@ -443,7 +460,7 @@ ${marquee(BOTTOM_MARQUEE, true)}
     .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function(d){ data = d; boot(); })
     .catch(function(){
-      empty.textContent = 'Could not load venue data. Refresh the page or use /search/ to browse venues.';
+      empty.innerHTML = '<h3>Could not load venue data</h3><p>Refresh the page or browse venues manually.</p><div class="tool-empty-actions"><a href="/search/" class="btn btn-secondary">Search all venues</a></div>';
       announce('Venue data failed to load.');
     });
  })();
