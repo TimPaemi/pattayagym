@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '455';
+const ASSET_VERSION = '456';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -476,39 +476,9 @@ function bottomMarquee(items) {
 </div>`;
 }
 
+const { v2NavHtml } = require('./scripts/lib/v2-nav.js');
 function nav() {
-  return `<header class="nav" role="banner">
-  <div class="nav-row">
-    <a href="/" class="brand">pattaya<span class="dot">.</span>gym</a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="/category/muay-thai/">Muay Thai</a>
-      <a href="/category/fitness/">Fitness</a>
-      <a href="/category/golf/">Golf</a>
-      <a href="/category/yoga/">Yoga</a>
-      <a href="/sports/">All sports</a>
-      <a href="/guides/">Guides</a>
-      <a href="/compare/" class="nav-tools-link">Compare</a>
-      <a href="/plan-my-trip/" class="nav-tools-link">Plan</a>
-    </nav>
-    <button type="button" class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile"><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span></button>
-    <a href="/search/" class="nav-cta">★ Find a gym</a>
-  </div>
-</header>
-<nav class="nav-mobile" id="nav-mobile" hidden aria-label="Mobile menu">
-  <a href="/" class="nav-mobile-link">Home</a>
-  <a href="/category/muay-thai/" class="nav-mobile-link">Muay Thai</a>
-  <a href="/category/fitness/" class="nav-mobile-link">Fitness</a>
-  <a href="/category/golf/" class="nav-mobile-link">Golf</a>
-  <a href="/sports/" class="nav-mobile-link">All sports</a>
-  <a href="/guides/" class="nav-mobile-link">Guides</a>
-  <a href="/plan-my-trip/" class="nav-mobile-link">Plan my trip</a>
-  <a href="/compare/" class="nav-mobile-link">Compare</a>
-  <a href="/search/" class="nav-mobile-link">Search</a>
-  <a href="/about/" class="nav-mobile-link">About</a>
-  <a href="/methodology/" class="nav-mobile-link">Methodology</a>
-  <a href="/changelog/" class="nav-mobile-link">Changelog</a>
-  <a href="/search/" class="nav-mobile-cta">★ Find a gym</a>
-</nav>`;
+  return v2NavHtml();
 }
 
 function pageScripts() {
@@ -950,7 +920,7 @@ ${bodyHtml ? `
 (function(){
   var body = document.getElementById('venue-body');
   if (!body) return;
-  var heads = body.querySelectorAll('h2');
+  var heads = Array.prototype.slice.call(body.querySelectorAll(':scope > h2'));
   if (heads.length < 3) return;
   var nav = document.createElement('div');
   nav.className = 'jump-nav';
@@ -973,6 +943,51 @@ ${bodyHtml ? `
   hint.textContent = 'Swipe for more sections →';
   nav.appendChild(pills);
   nav.appendChild(hint);
+  var foldMobile = window.matchMedia('(max-width: 899px)').matches && heads.length >= 4;
+  if (foldMobile) {
+    var tools = document.createElement('div');
+    tools.className = 'venue-section-tools';
+    tools.innerHTML = '<button type="button" class="btn btn-ghost venue-section-expand">Expand all</button><button type="button" class="btn btn-ghost venue-section-collapse">Collapse all</button>';
+    nav.appendChild(tools);
+    for (var i = heads.length - 1; i >= 0; i--) {
+      var h = heads[i];
+      var nextH = heads[i + 1];
+      var details = document.createElement('details');
+      details.className = 'venue-section';
+      if (i < 2) details.setAttribute('open', '');
+      var summary = document.createElement('summary');
+      summary.className = 'venue-section-summary';
+      var panel = document.createElement('div');
+      panel.className = 'venue-section-body';
+      var node = h.nextSibling;
+      while (node && node !== nextH) {
+        var nxt = node.nextSibling;
+        panel.appendChild(node);
+        node = nxt;
+      }
+      summary.appendChild(h);
+      details.appendChild(summary);
+      details.appendChild(panel);
+      if (nextH && nextH.parentNode) nextH.parentNode.insertBefore(details, nextH);
+      else body.appendChild(details);
+    }
+    tools.querySelector('.venue-section-expand').addEventListener('click', function(){
+      body.querySelectorAll('.venue-section').forEach(function(d){ d.setAttribute('open',''); });
+    });
+    tools.querySelector('.venue-section-collapse').addEventListener('click', function(){
+      body.querySelectorAll('.venue-section').forEach(function(d, idx){
+        if (idx < 2) d.setAttribute('open',''); else d.removeAttribute('open');
+      });
+    });
+    pills.addEventListener('click', function(e){
+      var link = e.target.closest('a');
+      if (!link || !link.hash) return;
+      var target = body.querySelector(link.hash);
+      if (!target) return;
+      var section = target.closest('.venue-section');
+      if (section) section.setAttribute('open', '');
+    });
+  }
   body.insertBefore(nav, body.firstChild);
 })();
 </script>

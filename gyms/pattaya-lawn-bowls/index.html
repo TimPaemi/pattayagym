@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/gyms/pattaya-lawn-bowls/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=455" as="style">
-<link rel="stylesheet" href="/styles.css?v=455">
+<link rel="preload" href="/styles.css?v=456" as="style">
+<link rel="stylesheet" href="/styles.css?v=456">
 <!-- Self-hosted fonts — preload only the LCP display face -->
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=455" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=456" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <meta property="og:title" content="Pattaya Lawn Bowls Clubs (Banchang / Paradise / The Retreat) | Pattaya.Gym">
 <meta property="og:description" content="Three lawn bowls facilities. 14+ artificial rinks total. Banchang ฿250/day all-inclusive. Pattaya Sports Club League runs year-round.">
@@ -559,7 +559,7 @@
 (function(){
   var body = document.getElementById('venue-body');
   if (!body) return;
-  var heads = body.querySelectorAll('h2');
+  var heads = Array.prototype.slice.call(body.querySelectorAll(':scope > h2'));
   if (heads.length < 3) return;
   var nav = document.createElement('div');
   nav.className = 'jump-nav';
@@ -582,6 +582,51 @@
   hint.textContent = 'Swipe for more sections →';
   nav.appendChild(pills);
   nav.appendChild(hint);
+  var foldMobile = window.matchMedia('(max-width: 899px)').matches && heads.length >= 4;
+  if (foldMobile) {
+    var tools = document.createElement('div');
+    tools.className = 'venue-section-tools';
+    tools.innerHTML = '<button type="button" class="btn btn-ghost venue-section-expand">Expand all</button><button type="button" class="btn btn-ghost venue-section-collapse">Collapse all</button>';
+    nav.appendChild(tools);
+    for (var i = heads.length - 1; i >= 0; i--) {
+      var h = heads[i];
+      var nextH = heads[i + 1];
+      var details = document.createElement('details');
+      details.className = 'venue-section';
+      if (i < 2) details.setAttribute('open', '');
+      var summary = document.createElement('summary');
+      summary.className = 'venue-section-summary';
+      var panel = document.createElement('div');
+      panel.className = 'venue-section-body';
+      var node = h.nextSibling;
+      while (node && node !== nextH) {
+        var nxt = node.nextSibling;
+        panel.appendChild(node);
+        node = nxt;
+      }
+      summary.appendChild(h);
+      details.appendChild(summary);
+      details.appendChild(panel);
+      if (nextH && nextH.parentNode) nextH.parentNode.insertBefore(details, nextH);
+      else body.appendChild(details);
+    }
+    tools.querySelector('.venue-section-expand').addEventListener('click', function(){
+      body.querySelectorAll('.venue-section').forEach(function(d){ d.setAttribute('open',''); });
+    });
+    tools.querySelector('.venue-section-collapse').addEventListener('click', function(){
+      body.querySelectorAll('.venue-section').forEach(function(d, idx){
+        if (idx < 2) d.setAttribute('open',''); else d.removeAttribute('open');
+      });
+    });
+    pills.addEventListener('click', function(e){
+      var link = e.target.closest('a');
+      if (!link || !link.hash) return;
+      var target = body.querySelector(link.hash);
+      if (!target) return;
+      var section = target.closest('.venue-section');
+      if (section) section.setAttribute('open', '');
+    });
+  }
   body.insertBefore(nav, body.firstChild);
 })();
 </script>
@@ -748,14 +793,14 @@
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span class="footer-version-badge">Built 2026-06-03 16:44 UTC · <a href="/changelog/">v455</a></span>
+    <span class="footer-version-badge">Built 2026-06-04 05:48 UTC · <a href="/changelog/">v456</a></span>
     <span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span>
   </div>
 </footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script defer src="/site-ui.js?v=455"></script>
+<script defer src="/site-ui.js?v=456"></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script defer src="/analytics.js?v=455"></script>
+<script defer src="/analytics.js?v=456"></script>
 </body>
 </html>

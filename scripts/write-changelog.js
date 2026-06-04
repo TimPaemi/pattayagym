@@ -40,6 +40,15 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 94, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 94 — venue fold sections + shared tool nav',
+    summary: 'Long venue pages collapse into sections on mobile (first two open); Compare/Plan/Map stubs use canonical v2-nav; scripts/lib/v2-nav.js single source.',
+    bullets: [
+      'Venue body — details.venue-section on mobile (4+ h2); Expand/Collapse all; pill opens section.',
+      'v2-nav.js — Yoga + Compare + Plan on tool pages (compare, plan, map, favorites, find-my-coach).',
+    ],
+  },
+  {
     n: 93, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'UX Round 93 — search nav, sticky filters, tool discovery',
     summary: 'Search page gets full mobile menu and site-ui; sticky filter bar; homepage hero More tools; compare sticky row labels; venue TOC swipe hint.',
@@ -1025,22 +1034,8 @@ const head = `<!DOCTYPE html>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>`;
 
-const nav = `<header class="nav" role="banner"><div class="nav-row"><a href="/" class="brand">pattaya<span class="dot">.</span>gym</a><nav class="nav-links" aria-label="Primary"><a href="/category/muay-thai/">Muay Thai</a><a href="/category/fitness/">Fitness</a><a href="/category/golf/">Golf</a><a href="/sports/">All sports</a><a href="/guides/">Guides</a><a href="/search/">Search</a></nav><button type="button" class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile"><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span><span class="nav-burger-bar"></span></button><a href="/search/" class="nav-cta">★ Find a gym</a></div></header>
-<nav class="nav-mobile" id="nav-mobile" hidden aria-label="Mobile menu">
-  <a href="/" class="nav-mobile-link">Home</a>
-  <a href="/category/muay-thai/" class="nav-mobile-link">Muay Thai</a>
-  <a href="/category/fitness/" class="nav-mobile-link">Fitness</a>
-  <a href="/category/golf/" class="nav-mobile-link">Golf</a>
-  <a href="/sports/" class="nav-mobile-link">All sports</a>
-  <a href="/guides/" class="nav-mobile-link">Guides</a>
-  <a href="/plan-my-trip/" class="nav-mobile-link">Plan my trip</a>
-  <a href="/compare/" class="nav-mobile-link">Compare</a>
-  <a href="/search/" class="nav-mobile-link">Search</a>
-  <a href="/about/" class="nav-mobile-link">About</a>
-  <a href="/methodology/" class="nav-mobile-link">Methodology</a>
-  <a href="/changelog/" class="nav-mobile-link">Changelog</a>
-  <a href="/search/" class="nav-mobile-cta">★ Find a gym</a>
-</nav>`;
+const { v2NavHtml } = require('./lib/v2-nav.js');
+const nav = v2NavHtml();
 
 const breadcrumb = `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Changelog</span></nav>`;
 

@@ -8,15 +8,15 @@
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("/fonts/space-grotesk.woff2?v=455") format("woff2-variations");
+  src: url("/fonts/space-grotesk.woff2?v=456") format("woff2-variations");
 }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=455") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=455") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=455") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=455") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=455") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=455") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=455") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=456") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=456") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=456") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=456") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=456") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=456") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=456") format("woff2"); }
 
 /* ================================================================
    PATTAYA.GYM v2 — TimPaemi-inspired design system
@@ -1200,8 +1200,78 @@ nav[aria-label="Breadcrumb"] a {
 }
 
 /* Better body spacing — give sections more breathing room */
-.venue-body > h2 {
+.venue-body > h2,
+.venue-section-summary h2 {
   scroll-margin-top: 90px;
+}
+.venue-section-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--s-3);
+}
+.venue-section-tools .btn {
+  min-height: 40px;
+  font-size: 12px;
+  padding: 8px 14px;
+}
+@media (min-width: 900px) {
+  .venue-section-tools { display: none; }
+}
+.venue-section {
+  margin: 0 0 var(--s-5);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  overflow: hidden;
+}
+.venue-section-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-4) var(--s-5);
+  cursor: pointer;
+  list-style: none;
+}
+.venue-section-summary::-webkit-details-marker { display: none; }
+.venue-section-summary::after {
+  content: '▼';
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--muted);
+  transition: transform var(--t-fast) var(--easing);
+}
+.venue-section:not([open]) .venue-section-summary::after {
+  transform: rotate(-90deg);
+}
+.venue-section-summary h2 {
+  margin: 0;
+  font-size: clamp(18px, 4vw, 22px);
+  line-height: 1.25;
+}
+.venue-section-body {
+  padding: 0 var(--s-5) var(--s-5);
+  border-top: 1px solid var(--line);
+}
+.venue-section-body > :first-child {
+  margin-top: var(--s-4);
+}
+@media (min-width: 900px) {
+  .venue-section {
+    border: none;
+    background: transparent;
+    margin-bottom: var(--s-6);
+  }
+  .venue-section-summary {
+    padding: 0;
+    cursor: default;
+    pointer-events: none;
+  }
+  .venue-section-summary::after { display: none; }
+  .venue-section-body {
+    padding: 0;
+    border-top: none;
+  }
 }
 .venue-body > h2 + p,
 .venue-body > h2 + ul,
