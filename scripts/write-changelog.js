@@ -40,6 +40,15 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 95, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 95 — guide nav parity + tool empty states',
+    summary: 'All 44+ guides get v2-nav (Compare/Plan desktop links); search and compare empty states offer next-step CTAs.',
+    bullets: [
+      'patch-guide-nav.js + editorial/migrate shells use v2-nav.js.',
+      'tool-empty-card — search no-results and compare picker hints with action buttons.',
+    ],
+  },
+  {
     n: 94, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'UX Round 94 — venue fold sections + shared tool nav',
     summary: 'Long venue pages collapse into sections on mobile (first two open); Compare/Plan/Map stubs use canonical v2-nav; scripts/lib/v2-nav.js single source.',

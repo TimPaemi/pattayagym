@@ -152,7 +152,14 @@ ${v2NavHtml()}
     <div id="compare-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
     <p class="compare-table-scroll-hint" id="compare-scroll-hint">Swipe table to see all columns →</p>
     <div id="compare-table-mount" class="compare-table-scroll"></div>
-    <p id="compare-empty" style="color:var(--muted); display:none;">Pick at least 2 venues above to compare.</p>
+    <div id="compare-empty" class="tool-empty-card" hidden>
+      <h3>Pick at least 2 venues</h3>
+      <p>Choose two or more gyms from the dropdowns above, or start from a preset below.</p>
+      <div class="tool-empty-actions">
+        <a href="/search/" class="btn btn-secondary">Search all venues</a>
+        <a href="/guides/best-muay-thai-pattaya/" class="btn btn-ghost">Best Muay Thai guide</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -241,11 +248,11 @@ ${marquee(BOTTOM_MARQUEE, true)}
     var venues = ids.map(venueById).filter(Boolean);
     if (venues.length < 2) {
       tableMount.innerHTML = '';
-      emptyMsg.style.display = 'block';
+      emptyMsg.hidden = false;
       announce(venues.length === 0 ? 'No venues selected for comparison.' : 'One venue selected. Pick at least one more to compare.');
       return;
     }
-    emptyMsg.style.display = 'none';
+    emptyMsg.hidden = true;
     announce('Comparing ' + venues.length + ' venues: ' + venues.map(function(v){return v.name;}).join(', ') + '.');
     var rows = [
       { key: 'name', label: 'Name', render: function(v){ return '<a href="/gyms/' + escapeHtml(v.id) + '/" style="color:var(--cyan); font-weight:700; text-decoration:none; border-bottom:1px dotted rgba(78,224,255,0.35);">' + escapeHtml(v.name) + '</a>'; } },

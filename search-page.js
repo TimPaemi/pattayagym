@@ -182,12 +182,14 @@
     if (moreMount) moreMount.innerHTML = '';
     if (n === 0) {
       grid.innerHTML =
-        '<div class="search-empty">' +
-        '<div class="search-empty-emoji">·</div>' +
+        '<div class="search-empty tool-empty-card">' +
         '<h3>No matches</h3>' +
         '<p>Try a different keyword, broaden a filter, or clear all filters.</p>' +
-        '<button type="button" id="clear-filters">Clear filters</button>' +
-        '</div>';
+        '<div class="tool-empty-actions">' +
+        '<button type="button" class="btn btn-secondary" id="clear-filters">Clear filters</button>' +
+        '<a href="/category/muay-thai/" class="btn btn-ghost">All Muay Thai</a>' +
+        '<a href="/guides/" class="btn btn-ghost">Guides</a>' +
+        '</div></div>';
       var btn = document.getElementById('clear-filters');
       if (btn) btn.addEventListener('click', clearAll);
       grid.setAttribute('aria-busy', 'false');
