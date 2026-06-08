@@ -12,6 +12,7 @@ const HUB = path.join(ROOT, 'guides', 'index.html');
 const SITE = 'https://pattaya-gym.com';
 
 const FEATURED = [
+  { slug: 'best-gyms-in-pattaya', title: 'Best gyms in Pattaya', desc: 'Head-term ranked picks by area & budget', tag: 'High intent' },
   { slug: 'muay-thai-training-holiday-pattaya', title: 'Muay Thai training holiday', desc: '1–4 week stay-and-train plans, budgets, daily schedule', tag: 'High intent' },
   { slug: 'english-speaking-muay-thai-pattaya', title: 'English-speaking Muay Thai', desc: '10 camps where foreigners train without Thai', tag: 'Editorial' },
   { slug: 'muay-thai-camps-with-accommodation-pattaya', title: 'Camps with accommodation', desc: 'Stay-and-train packages on-site', tag: 'Editorial' },
@@ -27,6 +28,9 @@ const SLUG_TITLES = {
   'best-for-beginners-pattaya': 'Best for beginners',
   'best-golf-courses-pattaya': 'Best golf courses',
   'best-gyms-near-walking-street-pattaya': 'Near Walking Street',
+  'best-gyms-in-pattaya': 'Best gyms in Pattaya',
+  'hotel-gym-pattaya': 'Hotel gym day pass',
+  'boxing-kickboxing-gym-pattaya': 'Boxing & kickboxing',
   'best-muay-thai-pattaya': 'Best Muay Thai',
   'cheapest-gyms-pattaya': 'Cheapest gyms',
   'family-friendly-pattaya': 'Family-friendly',
@@ -68,6 +72,9 @@ const SLUG_TITLES = {
 };
 
 const TLDR_ADD = [
+  { slug: 'best-gyms-in-pattaya', html: '<li><strong>Best gym overall?</strong> → <a href="/guides/best-gyms-in-pattaya/">Best gyms in Pattaya</a></li>' },
+  { slug: 'hotel-gym-pattaya', html: '<li><strong>Hotel gym day pass?</strong> → <a href="/guides/hotel-gym-pattaya/">Hotel gym day pass Pattaya</a></li>' },
+  { slug: 'boxing-kickboxing-gym-pattaya', html: '<li><strong>Boxing not Muay Thai?</strong> → <a href="/guides/boxing-kickboxing-gym-pattaya/">Boxing &amp; kickboxing gyms</a></li>' },
   { slug: 'equestrian-pattaya', html: '<li><strong>Horse riding or polo?</strong> → <a href="/guides/equestrian-pattaya/">Equestrian &amp; polo in Pattaya</a></li>' },
   { slug: 'running-cycling-clubs-pattaya', html: '<li><strong>Hash or cycling club?</strong> → <a href="/guides/running-cycling-clubs-pattaya/">Running &amp; cycling clubs in Pattaya</a></li>' },
   { slug: 'snooker-pool-billiards-pattaya', html: '<li><strong>Pool or snooker night?</strong> → <a href="/guides/snooker-pool-billiards-pattaya/">Pool &amp; snooker in Pattaya</a></li>' },

@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '458';
+const ASSET_VERSION = '465';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -321,6 +321,99 @@ function truncateDesc(s, max = 155) {
   return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trimEnd();
 }
 
+function venueSeoTitle(g, catLabel) {
+  const name = g.name;
+  if (/pattaya/i.test(name)) return `${name} | Pattaya.Gym`;
+  const core = `${name} — ${catLabel} Pattaya`;
+  if (core.length <= 58) return `${core} | Pattaya.Gym`;
+  return truncateTitle(`${name} Pattaya | Pattaya.Gym`);
+}
+
+function venueSeoDesc(g, catLabel) {
+  let base = g.description || '';
+  if (!base) {
+    const areaBit = g.area ? g.area.split(/[—\/,]/)[0].trim() : 'Pattaya';
+    base = `${g.name} — ${catLabel.toLowerCase()} in ${areaBit}, Pattaya. Hours, prices, contact and maps.`;
+  } else if (!/pattaya/i.test(base)) {
+    const areaBit = g.area ? g.area.split(/[—\/,]/)[0].trim() : 'Pattaya';
+    base = `${base} ${catLabel} venue in ${areaBit}, Pattaya.`;
+  }
+  return truncateDesc(base, 155);
+}
+
+const CATEGORY_INTRO = {
+  'muay-thai': 'Pattaya is one of Thailand\'s most popular cities for Muay Thai training holidays — from budget walk-in camps on Soi Buakhao to resort stay-and-train packages in Naklua. This directory lists every Muay Thai gym we could verify: drop-in rates, English-speaking trainers, accommodation options, and area guides.',
+  'fitness': 'Commercial gyms, hotel fitness centres, and budget weight rooms are spread across Central Pattaya, Jomtien, and the Darkside. Filter by 24-hour access, day pass, price tier, or neighbourhood — whether you need a tourist membership or a long-stay condo gym.',
+  'golf': 'Pattaya sits inside one of Thailand\'s densest golf regions — championship courses from Phoenix Gold to Siam Country Club, mostly 20–45 minutes from the beach hotels. Green fees, caddie policy, and booking contacts for every course we track.',
+  'yoga': 'Beachfront studios, rooftop flows, and resort wellness programmes cluster in Jomtien and Pratamnak. Compare drop-in class prices, styles (Ashtanga, Vinyasa, Yin), and English-speaking teachers.',
+  'racquet': 'Tennis courts, padel, pickleball, badminton halls, and squash — from Fitz Club at Royal Cliff to budget covered courts inland. Hourly hire, coaching, and social leagues for short-stay visitors.',
+  'swimming': 'Lap pools, hotel day-pass swimming, water parks, and swim schools — every pool venue in Pattaya with hours and whether non-guests can buy a day ticket.',
+  'watersports': 'Scuba from Bali Hai, kitesurfing at Jomtien, sailing at Ocean Marina, and island boats to Koh Larn. Operators ranked by certification level, beginner suitability, and area.',
+  'climbing': 'Indoor bouldering and top-rope at Deep Climbing Gym (Harbor Mall) and Bean Cow (Huay Yai) — the only dedicated climbing walls in greater Pattaya.',
+  'crossfit': 'CrossFit affiliates and functional fitness boxes on the Darkside and in Central Pattaya — WOD schedules, drop-in policy, and strength alternatives if boxes are full.',
+  'mma': 'MMA gyms, fight camps, and hybrid striking-grappling venues — cage training, amateur fight prep, and S&C for combat athletes.',
+  'bjj': 'Brazilian Jiu-Jitsu and No-Gi academies — gi schedules, open mat times, and gyms that welcome travelling white belts.',
+  'clubs': 'Hash House Harriers, cycling meetups, beach aerobics, cricket, rugby, and social run clubs — the community sport layer beneath the commercial gyms.',
+  'kids-youth': 'Football academies, trampoline parks, kids Muay Thai, swim lessons, and family sport — venues that explicitly welcome children.',
+  'equestrian': 'Horse riding schools, polo clubs, and equestrian resorts east of Pattaya — Horseshoe Point, Thai Polo Equestrian Club, and beginner trail rides.',
+  'adventure': 'Skydive, zipline, karting, ATV, shooting ranges, and tower jumps — adrenaline operators with safety credentials and booking practicalities.'
+};
+
+function categoryIntroSection(cat) {
+  const intro = CATEGORY_INTRO[cat.key];
+  if (!intro) return '';
+  return `
+<section class="section u-pt-0">
+  <div class="wrap u-max-760">
+    <article class="venue-body u-prose">
+      <p>${esc(intro)}</p>
+    </article>
+  </div>
+</section>`;
+}
+
+// Editorial guide funnel per category (SEO internal links)
+const CATEGORY_GUIDE_LINKS = {
+  'muay-thai':   { url: '/guides/best-muay-thai-pattaya/', label: 'Best Muay Thai gyms in Pattaya' },
+  'mma':         { url: '/guides/bjj-mma-pattaya/', label: 'BJJ & MMA in Pattaya' },
+  'bjj':         { url: '/guides/bjj-mma-pattaya/', label: 'BJJ & MMA in Pattaya' },
+  'crossfit':    { url: '/guides/crossfit-pattaya/', label: 'CrossFit in Pattaya' },
+  'fitness':     { url: '/guides/best-gyms-in-pattaya/', label: 'Best gyms in Pattaya' },
+  'yoga':        { url: '/guides/yoga-retreat-pattaya/', label: 'Yoga in Pattaya' },
+  'golf':        { url: '/guides/best-golf-courses-pattaya/', label: 'Best golf courses in Pattaya' },
+  'racquet':     { url: '/guides/tennis-badminton-pattaya/', label: 'Tennis & badminton in Pattaya' },
+  'swimming':    { url: '/guides/swimming-pools-pattaya/', label: 'Swimming pools in Pattaya' },
+  'watersports': { url: '/guides/diving-watersports-pattaya/', label: 'Diving & watersports in Pattaya' },
+  'climbing':    { url: '/guides/climbing-pattaya/', label: 'Climbing in Pattaya' },
+  'clubs':       { url: '/guides/running-cycling-clubs-pattaya/', label: 'Running & cycling clubs' },
+  'kids-youth':  { url: '/guides/kids-youth-sport-pattaya/', label: 'Kids & youth sport in Pattaya' },
+  'equestrian':  { url: '/guides/equestrian-pattaya/', label: 'Equestrian & polo in Pattaya' },
+  'adventure':   { url: '/guides/adventure-pattaya/', label: 'Adventure sport in Pattaya' }
+};
+
+function categoryGuideSection(cat) {
+  const g = CATEGORY_GUIDE_LINKS[cat.key];
+  if (!g) return '';
+  return `
+<section class="section u-pt-0">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> Editorial guide</div>
+    <h2 class="h-section">Ranked <span class="accent-cyan">picks.</span></h2>
+    <p class="lede">Hand-checked shortlist with trip context: <a href="${g.url}" class="u-cyan">${esc(g.label)} →</a></p>
+  </div>
+</section>`;
+}
+
+function categoryHubCtas(cat) {
+  return `
+    <div class="btn-row u-mt-5">
+      <a href="/search/?cat=${esc(cat.key)}" class="btn btn-primary">▶ Search ${esc(cat.label)}</a>
+      <a href="/compare/" class="btn btn-secondary">Compare venues</a>
+      <a href="/plan-my-trip/?sport=${esc(cat.key)}" class="btn btn-ghost">Plan trip</a>
+      <a href="/favorites/" class="btn btn-ghost">♡ Favorites</a>
+    </div>`;
+}
+
 // ---------- Category FAQ content (Round 24) ----------
 const CATEGORY_FAQS = (function () {
   try { return require('./data/category-faqs.js'); }
@@ -487,6 +580,56 @@ function pageScripts() {
 <script defer src="/analytics.js${ASSET}"></script>`;
 }
 
+function venuePageScripts() {
+  return `<script src="/data.js${ASSET}"></script>
+<script defer src="/favorites.js${ASSET}"></script>
+${pageScripts()}`;
+}
+
+function venueFavoriteBtn(g, opts) {
+  const hero = opts && opts.hero;
+  const cls = hero ? 'favorite-btn venue-hero-save' : 'favorite-btn';
+  return `<button type="button" class="${cls}" data-pg-favorite-id="${esc(g.id)}" data-pg-favorite-name="${esc(g.name)}" data-pg-favorite-category="${esc(g.category)}" data-pg-favorite-area="${esc(g.area)}" data-pg-favorite-price="${esc(g.priceRange)}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>`;
+}
+
+function venueToolsStrip(g) {
+  const sport = g.category || 'any';
+  return `
+<section class="section u-pt-0 venue-tools-strip" id="venue-tools">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> Next steps</div>
+    <h2 class="h-section" style="font-size:clamp(20px,3vw,28px);">Use our <span class="accent-yellow">directory tools.</span></h2>
+    <div class="btn-row venue-tools-actions">
+      <a href="/compare/?a=${esc(g.id)}" class="btn btn-secondary">Compare with others</a>
+      <a href="/plan-my-trip/?sport=${esc(sport)}" class="btn btn-ghost">Plan a trip</a>
+      <a href="/favorites/" class="btn btn-ghost">♡ Favorites</a>
+      <a href="/search/?cat=${esc(sport)}" class="btn btn-ghost">Search ${esc(sport)}</a>
+    </div>
+  </div>
+</section>`;
+}
+
+function venueListingCard(v) {
+  const cat = CATEGORIES.find(c => c.key === v.category);
+  const tags = (v.tags || []).slice(0, 3).map(t => `<span class="cv-pill cv-pill-tag">${esc(t)}</span>`).join('');
+  const desc = v.description || '';
+  const descShort = desc.length > 180 ? desc.slice(0, 180).trim() + '…' : desc;
+  return `<article class="cat-venue-card">
+      <div class="cv-head">
+      <h3><a href="/gyms/${v.id}/">${esc(v.name)}</a></h3>
+      ${venueFavoriteBtn(v)}
+    </div>
+    <div class="cv-meta">${cat ? esc(cat.label) + ' · ' : ''}${esc(v.area || '')}</div>
+    ${v.hours ? `<div class="cv-meta">🕐 ${esc(v.hours)}</div>` : ''}
+    ${descShort ? `<p>${esc(descShort)}</p>` : ''}
+    <div class="cv-tags">
+      <span class="cv-pill">💰 ${esc(v.priceRange || '—')}</span>
+      ${tags}
+    </div>
+    <a class="cv-cta" href="/gyms/${v.id}/">View full page →</a>
+  </article>`;
+}
+
 function paNetwork() {
   const { paNetworkHtml } = require('./scripts/lib/pa-network-block');
   return paNetworkHtml({ hereOnGym: true, badgeUrl: 'https://pattaya-authority.com/work/pattaya-gym-directory/' });
@@ -497,7 +640,8 @@ function backToTop() {
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>`;
 }
 
-function footer() {
+function footer(scripts) {
+  const scriptBlock = scripts || pageScripts();
   return `<footer class="footer" role="contentinfo">
   <div class="footer-grid">
     <div>
@@ -520,6 +664,9 @@ function footer() {
         <li><a href="/guides/">Guides</a></li>
         <li><a href="/sports/">All sports</a></li>
         <li><a href="/search/">Search</a></li>
+        <li><a href="/favorites/">Favorites</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/plan-my-trip/">Plan trip</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -554,7 +701,7 @@ function footer() {
   </div>
 </footer>
 ${backToTop()}
-${pageScripts()}
+${scriptBlock}
 </body>
 </html>`;
 }
@@ -570,7 +717,7 @@ function breadcrumb(items) {
     if (isLast) return `<span class="u-text-bold">${esc(it.label)}</span>`;
     return `<a href="${it.href}" class="u-muted">${esc(it.label)}</a>`;
   });
-  return `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
+  return `<nav aria-label="Breadcrumb" class="site-breadcrumb">
   ${parts.join(' <span class="u-crumb-sep">/</span> ')}
 </nav>`;
 }
@@ -580,8 +727,8 @@ function venuePage(g, fm, body) {
   const cat = CATEGORIES.find(c => c.key === g.category);
   const catLabel = cat ? cat.label : g.category;
   const url = `${SITE}/gyms/${g.id}/`;
-  const title = `${g.name} | Pattaya.Gym`;
-  const desc = truncateDesc(g.description || '', 155);
+  const title = venueSeoTitle(g, catLabel);
+  const desc = venueSeoDesc(g, catLabel);
   const ogImage = `${SITE}/og/${g.id}.png`;
 
   // Color accent based on category
@@ -736,6 +883,7 @@ function venuePage(g, fm, body) {
         ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
         <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Message Pattaya.Gym (directory team), not the venue direct line">● Ask Pattaya.Gym</a>
         ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">📍 Map</a>` : ''}
+        ${venueFavoriteBtn(g, { hero: true })}
         <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary btn-venue-more">Email →</a>
         ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-venue-more">Website →</a>` : ''}
         <button type="button" class="btn btn-ghost btn-venue-more share-venue-btn" data-share-title="${esc(g.name)}" data-share-url="${url}">↗ Share</button>
@@ -1071,33 +1219,27 @@ ${related.length ? `
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> Same sport</div>
     <h2 class="h-section">Other <span class="${accent.class}">${esc(catLabel.toLowerCase())}.</span></h2>
-    <div class="numlist">
-      ${related.map((r, i) => `
-      <a href="/gyms/${r.id}/" class="numcard u-plain-link">
-        <div class="numcard-head">
-          <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
-          <h3 class="numcard-title">// ${esc(r.name)}</h3>
-        </div>
-        <p class="numcard-body">${esc((r.description || '').slice(0, 140))}${(r.description || '').length > 140 ? '…' : ''}</p>
-      </a>
-      `).join('')}
+    <div class="numlist guide-hub-grid">
+      ${related.map(r => venueListingCard(r)).join('')}
     </div>
   </div>
 </section>
 ` : ''}
 
+${venueToolsStrip(g)}
+
 </main>
 `
     + paNetwork()
     + bottomMarquee(BOTTOM_MARQUEE)
-    + footer();
+    + footer(venuePageScripts());
 }
 
 // ---------- Category page ----------
 function categoryPage(cat, venues) {
   const url = `${SITE}/category/${cat.key}/`;
-  const title = `${cat.label} in Pattaya | Pattaya.Gym`;
-  const desc = truncateDesc(`Every ${cat.label.toLowerCase()} venue in Pattaya — ${venues.length} hand-checked ${venues.length === 1 ? 'entry' : 'entries'} with hours, prices, location and contact details. Independent directory, no paid placements, verified on a rolling schedule.`);
+  const title = `${cat.label} in Pattaya (${venues.length} venues) | Pattaya.Gym`;
+  const desc = truncateDesc(`Find every ${cat.label.toLowerCase()} venue in Pattaya — ${venues.length} hand-checked gyms and sport operators with hours, prices, maps and contact. Compare camps, filter by area, no paid placements.`);
 
   const accentColors = {
     'muay-thai': 'accent-pink', 'mma': 'accent-pink', 'bjj': 'accent-pink',
@@ -1126,6 +1268,7 @@ function categoryPage(cat, venues) {
     '@context': 'https://schema.org',
     ...breadcrumbJsonLd([
       { label: 'Home', href: '/' },
+      { label: 'All sports', href: '/sports/' },
       { label: cat.label }
     ], `${SITE}/category/${cat.key}/`)
   };
@@ -1138,6 +1281,7 @@ function categoryPage(cat, venues) {
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
+        { label: 'All sports', href: '/sports/' },
         { label: cat.label }
       ])
     + `
@@ -1147,28 +1291,22 @@ function categoryPage(cat, venues) {
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Sport · ${venues.length} venues in Pattaya</div>
     <h1 class="hero-h1">
-      <span class="${accent}">${esc(cat.label)}.</span>
+      ${esc(cat.label)} <span class="${accent}">in Pattaya.</span>
     </h1>
-    <p class="hero-lede u-text-left-ml0">Every <strong>${esc(cat.label.toLowerCase())}</strong> venue worth knowing in Pattaya. <strong>${venues.length} entries</strong> hand-checked. No paid placements. Verified on a rolling schedule. Closures and changes are re-checked as fast as we hear about them.</p>
+    <p class="hero-lede u-text-left-ml0">Every <strong>${esc(cat.label.toLowerCase())}</strong> gym and venue in Pattaya — <strong>${venues.length} hand-checked entries</strong> with hours, prices, maps and contact. No paid placements. Updated on a rolling schedule.</p>
     <p class="hero-meta u-text-left">${venues.length} venues · Updated ${TODAY} · Pattaya · Thailand</p>
+    ${categoryHubCtas(cat)}
   </div>
 </section>
+${categoryIntroSection(cat)}
 
 <section class="section u-pt-0">
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span> Quick pick</div>
     <h2 class="h-section">Where to <span class="${accent}">start.</span></h2>
     <p class="lede">${venues.length ? `Our top 3 picks from <strong class="u-text">${venues.length} ${cat.label.toLowerCase()} venues</strong>. Full list below.` : 'No venues currently listed.'}</p>
-    <div class="numlist">
-      ${venues.slice(0, 3).map((v, i) => `
-      <a href="/gyms/${v.id}/" class="numcard u-plain-link">
-        <div class="numcard-head">
-          <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
-          <h3 class="numcard-title">// ${esc(v.name)}</h3>
-        </div>
-        <p class="numcard-body">${esc(v.area ? `${v.area} · ${v.priceRange || ''}` : '')}${v.description ? ' · ' + esc(v.description.slice(0, 120)) + ((v.description||'').length > 120 ? '…' : '') : ''}</p>
-      </a>
-      `).join('')}
+    <div class="numlist guide-hub-grid">
+      ${venues.slice(0, 3).map(v => venueListingCard(v)).join('')}
     </div>
   </div>
 </section>
@@ -1177,25 +1315,18 @@ function categoryPage(cat, venues) {
   <div class="wrap">
     <div class="eyebrow"><span class="num">02</span> All ${venues.length} venues</div>
     <h2 class="h-section">Every <span class="accent-mint">venue.</span> Hand-<span class="accent-pink">checked.</span></h2>
-    <div class="numlist">
-      ${venues.map((v, i) => `
-      <a href="/gyms/${v.id}/" class="numcard u-plain-link">
-        <div class="numcard-head">
-          <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
-          <h3 class="numcard-title">// ${esc(v.name)}</h3>
-        </div>
-        <p class="numcard-body">${v.area ? `<strong class="u-text">${esc(v.area)}</strong>` : ''}${v.priceRange ? ` · ${esc(v.priceRange)}` : ''}${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
-      </a>
-      `).join('')}
+    <div class="numlist guide-hub-grid">
+      ${venues.map(v => venueListingCard(v)).join('')}
     </div>
   </div>
 </section>
+${categoryGuideSection(cat)}
 ${faqHtml}
 </main>
 `
     + paNetwork()
     + bottomMarquee(BOTTOM_MARQUEE)
-    + footer();
+    + footer(venuePageScripts());
 }
 
 // ---------- Area page ----------
@@ -1335,8 +1466,8 @@ const AREA_CONTENT = {
 
 function areaPage(slug, label, venues) {
   const url = `${SITE}/area/${slug}/`;
-  const title = `${label}, Pattaya — sport venues | Pattaya.Gym`;
-  const desc = truncateDesc(`Every gym, Muay Thai camp, and sport venue in ${label}, Pattaya — ${venues.length} hand-checked entries with hours, prices and contact details. Independent directory, no paid placements.`);
+  const title = `Gyms in ${label}, Pattaya (${venues.length}) | Pattaya.Gym`;
+  const desc = truncateDesc(`Every gym, Muay Thai camp and sport venue in ${label}, Pattaya — ${venues.length} hand-checked listings with hours, prices, maps and contact. Filter by sport or compare side by side.`);
 
   const itemList = {
     '@context': 'https://schema.org',
@@ -1386,10 +1517,15 @@ ${(() => {
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Neighborhood · ${venues.length} venues · ${topCats.length} sports</div>
     <h1 class="hero-h1">
-      <span class="${accent}">${esc(label)}.</span>
+      Gyms in <span class="${accent}">${esc(label)}, Pattaya.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:780px;">${content ? esc(content.summary) : `Every venue we track in <strong>${esc(label)}</strong>. ${venues.length} hand-checked entries across all sports.`}</p>
+    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:780px;">${content ? esc(content.summary) : `Every gym and sport venue in <strong>${esc(label)}, Pattaya</strong> — ${venues.length} hand-checked entries across Muay Thai, fitness, yoga, golf and more.`}</p>
     <p class="hero-meta u-text-left">${venues.length} venues · ${esc(label)} · Pattaya · Updated ${TODAY}</p>
+    <div class="btn-row u-mt-5">
+      <a href="/search/?area=${esc(slug)}" class="btn btn-primary">▶ Search ${esc(label)}</a>
+      <a href="/sports/" class="btn btn-secondary">All sports</a>
+      <a href="/compare/" class="btn btn-ghost">Compare</a>
+    </div>
   </div>
 </section>
 
@@ -1456,20 +1592,8 @@ ${content ? `
   <div class="wrap">
     <div class="eyebrow"><span class="num">0${content ? '7' : '2'}</span> Every venue</div>
     <h2 class="h-section">All ${venues.length} venues in <span class="accent-yellow">${esc(label)}.</span></h2>
-    <div class="numlist">
-      ${venues.map((v, i) => {
-        const cat = CATEGORIES.find(c => c.key === v.category);
-        return `
-      <a href="/gyms/${v.id}/" class="numcard u-plain-link">
-        <div class="numcard-head">
-          <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
-          <h3 class="numcard-title">// ${esc(v.name)}</h3>
-        </div>
-        <p class="numcard-body">${cat ? `<strong class="u-text">${esc(cat.label)}</strong> · ` : ''}${esc(v.priceRange || '')}${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
-      </a>
-      `;
-      }).join('')}
-      ${venues.length === 0 ? '<p class="u-muted">No venues currently listed in this area.</p>' : ''}
+    <div class="numlist guide-hub-grid">
+      ${venues.length ? venues.map(v => venueListingCard(v)).join('') : '<p class="u-muted">No venues currently listed in this area.</p>'}
     </div>
   </div>
 </section>
@@ -1496,7 +1620,7 @@ ${faqHtml}
 `
     + paNetwork()
     + bottomMarquee(BOTTOM_MARQUEE)
-    + footer();
+    + footer(venuePageScripts());
 }
 
 // ---------- Combined category-area landing page ----------
@@ -1552,16 +1676,17 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
     + `
 <main id="main">
 
-<section class="hero u-pt-10-pb-8">
+<section class="hero hub-hero hub-hero--category" style="text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// ${esc(catLabel)} · ${esc(areaLabel)} · ${venues.length} venue${venues.length === 1 ? '' : 's'}</div>
-    <h1 class="hero-h1 u-h-fluid-sm">
+    <h1 class="hero-h1">
       <span class="${accent}">${esc(catLabel)}</span><br>
-      <span style="color:var(--text-2); font-weight:600;">in ${esc(areaLabel)}.</span>
+      <span class="hub-hero-sub">in ${esc(areaLabel)}.</span>
     </h1>
     <p class="hero-lede u-text-left-ml0">${venues.length} hand-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Verified on a rolling schedule. The complete local list.</p>
     <p class="hero-meta u-text-left">${venues.length} venues · ${esc(areaLabel)} · Pattaya · Updated ${TODAY}</p>
     <div class="btn-row u-mt-5">
+      <a href="/search/?cat=${esc(cat.key)}&amp;area=${esc(areaSlug)}" class="btn btn-primary">▶ Search in ${esc(areaLabel)}</a>
       <a href="/category/${cat.key}/" class="btn btn-secondary">● All ${esc(catLabel.toLowerCase())} in Pattaya</a>
       <a href="/area/${areaSlug}/" class="btn btn-tertiary">All ${esc(areaLabel)} venues →</a>
     </div>
@@ -1572,17 +1697,8 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span> The list</div>
     <h2 class="h-section">Every ${esc(catLabel.toLowerCase())} venue in <span class="${accent}">${esc(areaLabel)}.</span></h2>
-    <div class="numlist">
-      ${venues.map((v, i) => `
-      <a href="/gyms/${v.id}/" class="numcard u-plain-link">
-        <div class="numcard-head">
-          <span class="numcard-num">${String(i+1).padStart(2,'0')}</span>
-          <div class="numcard-title">// ${esc(v.name)}</div>
-        </div>
-        <p class="numcard-body"><strong class="u-text">${esc(v.priceRange || '')}</strong>${v.hours ? ` · ${esc(v.hours)}` : ''}${v.description ? '<br>' + esc(v.description.slice(0, 180)) + ((v.description||'').length > 180 ? '…' : '') : ''}</p>
-      </a>
-      `).join('')}
-      ${venues.length === 0 ? `<p class="u-muted">No ${esc(catLabel.toLowerCase())} venues currently listed in ${esc(areaLabel)}. Try <a href="/category/${cat.key}/" class="u-cyan">all ${esc(catLabel.toLowerCase())} in Pattaya</a> or <a href="/area/${areaSlug}/" class="u-cyan">all venues in ${esc(areaLabel)}</a>.</p>` : ''}
+    <div class="numlist guide-hub-grid">
+      ${venues.length ? venues.map(v => venueListingCard(v)).join('') : `<p class="u-muted">No ${esc(catLabel.toLowerCase())} venues currently listed in ${esc(areaLabel)}. Try <a href="/category/${cat.key}/" class="u-cyan">all ${esc(catLabel.toLowerCase())} in Pattaya</a> or <a href="/area/${areaSlug}/" class="u-cyan">all venues in ${esc(areaLabel)}</a>.</p>`}
     </div>
   </div>
 </section>
@@ -1595,7 +1711,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
     <div class="btn-row">
       <a href="/category/${cat.key}/" class="btn btn-primary">▶ All ${esc(catLabel)} in Pattaya</a>
       <a href="/area/${areaSlug}/" class="btn btn-secondary">● All sports in ${esc(areaLabel)}</a>
-      <a href="/search/?cat=${cat.key}" class="btn btn-tertiary">Filter search →</a>
+      <a href="/search/?cat=${cat.key}&amp;area=${areaSlug}" class="btn btn-tertiary">Filter search →</a>
     </div>
   </div>
 </section>
@@ -1604,7 +1720,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
 `
     + paNetwork()
     + bottomMarquee(BOTTOM_MARQUEE)
-    + footer();
+    + footer(venuePageScripts());
 }
 
 // ---------- Utility / info page ----------
@@ -2225,14 +2341,27 @@ const UTILITY_PAGES = [
     headlineLead: 'Page',
     headlineAccent: 'not found',
     accentClass: 'accent-pink',
-    lede: 'That URL doesn\'t exist on Pattaya.Gym. It may have moved, or you may have followed a stale link. Use the buttons below to navigate, or browse the directory.',
+    lede: 'That URL doesn\'t exist on Pattaya.Gym. It may have moved, or you may have followed a stale link. Search the directory or jump to a popular section below.',
     showContactCard: false,
     bodyHtml: `
-<p><a href="/">Back to homepage →</a></p>
-<p><a href="/search/">Search ${VENUE_N} venues →</a></p>
-<p><a href="/category/muay-thai/">Browse Muay Thai →</a></p>
-<p><a href="/category/fitness/">Browse fitness gyms →</a></p>
-<p><a href="/contact/">Contact us →</a></p>
+<form class="search-404-form" action="/search/" method="get" role="search">
+  <label for="q404" class="sr-only">Search ${VENUE_N} Pattaya venues</label>
+  <input type="search" id="q404" name="q" class="search-input" placeholder="Search ${VENUE_N} venues by name, sport, area…" autocomplete="off">
+  <button type="submit" class="btn btn-primary">▶ Search</button>
+</form>
+<div class="tool-empty-actions u-mt-6">
+  <a href="/" class="btn btn-secondary">Home</a>
+  <a href="/favorites/" class="btn btn-ghost">♡ Favorites</a>
+  <a href="/compare/" class="btn btn-ghost">Compare</a>
+</div>
+<div class="eyebrow u-mt-8"><span class="num">★</span> Popular</div>
+<div class="numlist u-mt-4">
+  <a href="/category/muay-thai/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">01</span><h3 class="numcard-title">// Muay Thai</h3></div><p class="numcard-body">Every camp in Pattaya — hand-checked.</p></a>
+  <a href="/category/fitness/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">02</span><h3 class="numcard-title">// Fitness</h3></div><p class="numcard-body">Gyms, hotel fitness, 24-hour options.</p></a>
+  <a href="/area/jomtien/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">03</span><h3 class="numcard-title">// Jomtien</h3></div><p class="numcard-body">Beachfront neighborhood venues.</p></a>
+  <a href="/guides/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">04</span><h3 class="numcard-title">// Guides</h3></div><p class="numcard-body">Ranked lists and trip planners.</p></a>
+</div>
+<p class="u-mt-6"><a href="/contact/">Wrong link? Tell us →</a></p>
 `
   }
 ];
@@ -2240,8 +2369,8 @@ const UTILITY_PAGES = [
 // ---------- All-sports hub (Round 21 - Codex P1-5: de-orphan BJJ + every category) ----------
 function sportsHubPage() {
   const url = `${SITE}/sports/`;
-  const title = 'All sports in Pattaya - 15 categories | Pattaya.Gym';
-  const desc = truncateDesc(`Browse every sport in Pattaya: Muay Thai, fitness, golf, yoga, BJJ, MMA, watersports, climbing, racquet sports, running clubs and more. ${VENUE_N} hand-checked venues across 15 categories.`);
+  const title = `Pattaya Gyms & Sport — ${VENUE_N} Venues, 15 Categories | Pattaya.Gym`;
+  const desc = truncateDesc(`Browse every Pattaya gym and sport venue: Muay Thai camps, fitness chains, golf, yoga, BJJ, diving, climbing and more. ${VENUE_N} hand-checked listings — filter by area, price or sport.`);
   const cards = CATEGORIES.map(c => {
     const n = GYMS.filter(g => g.category === c.key).length;
     return `<a href="/category/${c.key}/" class="numcard u-plain-link">
@@ -2262,11 +2391,11 @@ function sportsHubPage() {
     + `
 <main id="main">
 
-<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-8); text-align:left;">
+<section class="hero hub-hero hub-hero--category" style="text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Every sport &middot; 15 categories &middot; ${VENUE_N} venues</div>
-    <h1 class="hero-h1" style="font-size:clamp(44px,10vw,128px); text-align:left;">All <span class="accent-cyan">sports.</span></h1>
-    <p class="hero-lede u-text-left-ml0">Every sport and training discipline in Pattaya - from Muay Thai and BJJ to golf, diving, climbing and running clubs. Pick a category to see every hand-checked venue.</p>
+    <h1 class="hero-h1">Pattaya <span class="accent-cyan">gyms &amp; sport.</span></h1>
+    <p class="hero-lede u-text-left-ml0">Every gym, Muay Thai camp, and sport venue in Pattaya — ${VENUE_N} hand-checked listings across 15 categories. From budget fitness on Soi Buakhao to resort golf east of the city.</p>
   </div>
 </section>
 
@@ -2328,6 +2457,7 @@ function generateSitemap() {
     if (u.startsWith(`${SITE}/guides/`) && u.length > `${SITE}/guides/`.length + 1) return '0.8';
     if (u.startsWith(`${SITE}/gyms/`)) return '0.7';
     if (u === `${SITE}/search/` || u === `${SITE}/guides/`) return '0.7';
+    if (u === `${SITE}/compare/` || u === `${SITE}/plan-my-trip/`) return '0.75';
     return '0.5';
   }
   function changefreqFor(u) {

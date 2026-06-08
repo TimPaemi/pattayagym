@@ -28,6 +28,7 @@ const BUILD_TS = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC
 
 const { GYMS, CATEGORIES } = require(path.join(ROOT, 'data.js'));
 const { v2NavHtml } = require('./lib/v2-nav.js');
+const { toolBreadcrumb, toolSiteFooterCol } = require('./lib/tool-chrome.js');
 const VENUE_N = GYMS.length;
 
 function esc(s) {
@@ -110,9 +111,7 @@ const html = `<!DOCTYPE html>
 <a class="skip-link" href="#main">Skip to content</a>
 ${marquee(TOP_MARQUEE, false)}
 ${v2NavHtml()}
-<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
-  <a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Compare</span>
-</nav>
+${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Compare' }])}
 
 <main id="main">
 
@@ -157,6 +156,7 @@ ${v2NavHtml()}
       <p>Choose two or more gyms from the dropdowns above, or start from a preset below.</p>
       <div class="tool-empty-actions">
         <a href="/search/" class="btn btn-secondary">Search all venues</a>
+        <a href="/favorites/" class="btn btn-secondary">♡ Favorites</a>
         <a href="/guides/best-muay-thai-pattaya/" class="btn btn-ghost">Best Muay Thai guide</a>
       </div>
     </div>
@@ -180,7 +180,7 @@ ${v2NavHtml()}
 
 <section class="pa-network"><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>
 ${marquee(BOTTOM_MARQUEE, true)}
-<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div>${toolSiteFooterCol()}<div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
@@ -189,10 +189,17 @@ ${marquee(BOTTOM_MARQUEE, true)}
   var data = [];
   var maxSlots = 4;
   var slots = ['a','b','c','d'];
+  var STORAGE_KEY = 'pg_compare_slots_v1';
 
   function getSelected() {
     var params = new URLSearchParams(window.location.search);
-    return slots.map(function(k){ return params.get(k) || ''; });
+    var fromUrl = slots.map(function(k){ return params.get(k) || ''; });
+    if (fromUrl.some(Boolean)) return fromUrl;
+    try {
+      var saved = JSON.parse(sessionStorage.getItem(STORAGE_KEY));
+      if (Array.isArray(saved) && saved.length === maxSlots) return saved;
+    } catch (e) { /* ignore */ }
+    return ['','','',''];
   }
   function track(name, params){ try { if (window.gtag) window.gtag('event', name, params || {}); } catch(e){} }
   function setSelected(arr) {
@@ -204,6 +211,7 @@ ${marquee(BOTTOM_MARQUEE, true)}
     var qs = params.toString();
     var newUrl = window.location.pathname + (qs ? '?' + qs : '');
     history.replaceState(null, '', newUrl);
+    try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(arr)); } catch (e) { /* private mode */ }
     track('compare_pick', { count: picked.length, venues: picked.join('|') });
   }
   function escapeHtml(s) {
@@ -299,6 +307,7 @@ ${marquee(BOTTOM_MARQUEE, true)}
   });
 
   document.getElementById('compare-reset').addEventListener('click', function(){
+    try { sessionStorage.removeItem(STORAGE_KEY); } catch (e) { /* ignore */ }
     setSelected(['','','','']);
     renderPickers();
     renderTable();

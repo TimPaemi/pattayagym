@@ -28,6 +28,7 @@ function v2NavHtml() {
   <a href="/guides/" class="nav-mobile-link">Guides</a>
   <a href="/plan-my-trip/" class="nav-mobile-link">Plan my trip</a>
   <a href="/compare/" class="nav-mobile-link">Compare</a>
+  <a href="/favorites/" class="nav-mobile-link">Favorites</a>
   <a href="/search/" class="nav-mobile-link">Search</a>
   <a href="/about/" class="nav-mobile-link">About</a>
   <a href="/methodology/" class="nav-mobile-link">Methodology</a>

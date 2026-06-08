@@ -8,15 +8,15 @@
   font-style: normal;
   font-weight: 300 700;
   font-display: swap;
-  src: url("/fonts/space-grotesk.woff2?v=458") format("woff2-variations");
+  src: url("/fonts/space-grotesk.woff2?v=465") format("woff2-variations");
 }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=458") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=458") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=458") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=458") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=458") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=458") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=458") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=465") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=465") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=465") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=465") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=465") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=465") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=465") format("woff2"); }
 
 /* ================================================================
    PATTAYA.GYM v2 — TimPaemi-inspired design system
@@ -1311,6 +1311,9 @@ nav[aria-label="Breadcrumb"] a {
   outline: 3px solid var(--cyan);
   outline-offset: 3px;
 }
+body:has(#pg-favorites-widget) .back-to-top {
+  bottom: calc(72px + env(safe-area-inset-bottom, 0));
+}
 
 /* === Footer column heading (semantic-neutral, was <h4>) === */
 .footer-col-h {
@@ -1720,7 +1723,6 @@ body.nav-open { overflow: hidden; }
   border: 1.5px solid rgba(255,255,255,0.08);
   border-radius: 14px;
   padding: 18px;
-  text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
@@ -1730,6 +1732,36 @@ body.nav-open { overflow: hidden; }
   transform: translateY(-2px);
   border-color: var(--pink);
   background: rgba(255, 46, 126, 0.04);
+}
+.result-card-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  flex: 1;
+}
+.result-card-main {
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.result-card-main:hover .result-card-name {
+  color: var(--pink);
+}
+.search-404-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: stretch;
+  max-width: 640px;
+}
+.search-404-form .search-input {
+  flex: 1;
+  min-width: 200px;
+  min-height: 48px;
+  font-size: 16px;
 }
 .result-card-tag {
   font-family: var(--font-mono, monospace);
@@ -1839,6 +1871,40 @@ body.nav-open { overflow: hidden; }
   font-size: clamp(36px, 10vw, 72px);
   text-align: left;
 }
+.hub-hero-sub {
+  color: var(--text-2);
+  font-weight: 600;
+}
+.site-breadcrumb {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: var(--s-4) var(--pad) 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 0;
+}
+.site-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 4px;
+  text-decoration: none;
+}
+.site-breadcrumb a:hover {
+  color: var(--text);
+}
+.site-breadcrumb .u-text-bold {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 4px;
+}
 @media (min-width: 900px) {
   .hub-hero {
     padding-top: var(--s-10);
@@ -1914,9 +1980,20 @@ body.nav-open { overflow: hidden; }
 .favorite-btn .fav-heart {
   font-size: 14px;
 }
+.venue-hero-ctas .venue-hero-save {
+  flex-shrink: 0;
+}
+.venue-tools-actions {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--s-4);
+}
+.venue-tools-actions .btn {
+  min-height: 44px;
+}
 .pg-fw-inner {
   position: fixed;
-  bottom: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0));
   right: 16px;
   z-index: 40;
   display: inline-flex;

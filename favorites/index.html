@@ -10,9 +10,9 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/favorites/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=458" as="style">
-<link rel="stylesheet" href="/styles.css?v=458">
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=458" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/styles.css?v=465" as="style">
+<link rel="stylesheet" href="/styles.css?v=465">
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=465" as="font" type="font/woff2" crossorigin>
 <meta property="og:title" content="Your saved Pattaya gyms — Pattaya.Gym">
 <meta property="og:description" content="Save venues to your personal shortlist in the browser. 157 Pattaya gyms, Muay Thai camps, and sport venues — no account, stored locally on your device.">
 <meta property="og:image" content="https://pattaya-gym.com/og-image.png">
@@ -49,21 +49,20 @@
   <a href="/guides/" class="nav-mobile-link">Guides</a>
   <a href="/plan-my-trip/" class="nav-mobile-link">Plan my trip</a>
   <a href="/compare/" class="nav-mobile-link">Compare</a>
+  <a href="/favorites/" class="nav-mobile-link">Favorites</a>
   <a href="/search/" class="nav-mobile-link">Search</a>
   <a href="/about/" class="nav-mobile-link">About</a>
   <a href="/methodology/" class="nav-mobile-link">Methodology</a>
   <a href="/changelog/" class="nav-mobile-link">Changelog</a>
   <a href="/search/" class="nav-mobile-cta">★ Find a gym</a>
 </nav>
-<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
-  <a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Favorites</span>
-</nav>
+<nav aria-label="Breadcrumb" class="site-breadcrumb"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Favorites</span></nav>
 <main id="main">
 <section class="hero hub-hero" style="text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Shortlist · Browser-only · 157 venues</div>
     <h1 class="hero-h1">Your <span class="accent-pink">favorites.</span></h1>
-    <p class="hero-lede u-text-left-ml0">Tap <strong>Save</strong> on ranked guide picks to build a shortlist. Stored in your browser only — not on our servers. Clear anytime.</p>
+    <p class="hero-lede u-text-left-ml0">Tap <strong>Save</strong> on venue pages, search results, hub listings, or guide picks. Stored in your browser only — not on our servers. Clear anytime.</p>
     <div class="btn-row u-mt-5">
       <a href="/search/" class="btn btn-primary">▶ Find venues</a>
       <a href="/compare/" class="btn btn-secondary">Compare →</a>
@@ -77,24 +76,91 @@
     <div id="favorites-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
     <div id="favorites-empty" class="tool-empty-card">
       <h3>No saved venues yet</h3>
-      <p>Open any ranked guide and tap <strong>Save</strong> on a venue card. Your list appears here instantly.</p>
+      <p>Save from a <strong>venue page</strong>, <strong>search result</strong>, or <strong>category listing</strong>. Your list appears here instantly.</p>
       <div class="tool-empty-actions">
-        <a href="/guides/best-muay-thai-pattaya/" class="btn btn-secondary">Best Muay Thai guide</a>
-        <a href="/search/" class="btn btn-ghost">Search all venues</a>
+        <a href="/search/" class="btn btn-secondary">Search venues</a>
+        <a href="/category/muay-thai/" class="btn btn-ghost">Browse Muay Thai</a>
+        <a href="/guides/best-muay-thai-pattaya/" class="btn btn-ghost">Best Muay Thai guide</a>
       </div>
     </div>
     <div id="favorites-list" class="favorites-list"></div>
   </div>
 </section>
+
+<section class="section u-pt-0" id="site-tools-hub-r84">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">★</span> Directory</div>
+    <h2 class="h-section">Explore <span class="accent-cyan">Pattaya.Gym.</span></h2>
+    <div class="intent-grid intent-grid-compact" style="margin-top:var(--s-4);">
+      <a href="/guides/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Guides</span><span class="intent-card-title">47 trip planners</span><span class="intent-card-desc">Ranked lists, visas, area picks</span></a>
+      <a href="/category/muay-thai/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Muay Thai</span><span class="intent-card-desc">Every camp in Pattaya</span></a>
+      <a href="/category/fitness/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Fitness gyms</span><span class="intent-card-desc">24h, budget, hotel gyms</span></a>
+      <a href="/compare/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Compare</span><span class="intent-card-desc">Side-by-side venue table</span></a>
+      <a href="/plan-my-trip/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Plan trip</span><span class="intent-card-desc">Build your shortlist</span></a>
+      <a href="/favorites/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Favorites</span><span class="intent-card-desc">Save venues locally</span></a>
+      <a href="/map/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Map</span><span class="intent-card-desc">Rebuilding — use search</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sister-context u-pt-0" id="sister-context-r84" aria-labelledby="sister-context-r84-h">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> Pattaya network</div>
+    <h2 id="sister-context-r84-h" class="h-section">Go <span class="accent-cyan">deeper.</span></h2>
+    <ul class="venue-guide-link-list">
+        <li><a href="/guides/">All Pattaya sport guides</a> — 44 editorial trip planners</li>
+        <li><a href="/compare/">Compare venues</a> — Side-by-side directory tool</li>
+        <li><a href="/plan-my-trip/">Plan my trip</a> — Build a shortlist by sport</li>
+        <li><a href="/favorites/">Favorites</a> — Your saved venue shortlist</li>
+        <li><a href="/search/">Search</a> — Filter all venues live</li>
+        <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a> — Eat after training</li>
+        <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a> — Long-stay and ED visas</li>
+        <li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Medical directory</a> — Clinics and rehab</li>
+        <li><a href="https://pattayapersonaltrainer.com/" target="_blank" rel="noopener noreferrer">Personal trainers</a> — 1-on-1 coaching</li>
+    </ul>
+  </div>
+</section>
 </main>
-<section class="pa-network"><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p></section>
+<section class="pa-network">
+  <a href="https://pattaya-authority.com/" target="_blank" rel="noopener noreferrer" class="u-plain-link">
+    <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
+  </a>
+  <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
+  <p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p>
+  <nav class="pa-network-grid" aria-label="Pattaya Authority network">
+    <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Pattaya Authority</span><span class="pa-network-card-desc">Network hub</span></a>
+    <a href="https://pattaya-restaurant-guide.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Restaurant Guide</span><span class="pa-network-card-desc">Eat after training</span></a>
+    <a href="https://pattayavisahelp.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Visa Help</span><span class="pa-network-card-desc">Long-stay visas</span></a>
+    <a href="https://pattaya-medical.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Medical</span><span class="pa-network-card-desc">Clinics &amp; injury</span></a>
+    <a href="https://pattaya-school-guide.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">School Guide</span><span class="pa-network-card-desc">Families</span></a>
+    <a href="https://pattaya-coffee.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Coffee</span><span class="pa-network-card-desc">Remote work</span></a>
+    <a href="https://pattayapersonaltrainer.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Personal Trainer</span><span class="pa-network-card-desc">1-on-1 coaching</span></a>
+    <a href="https://pattayavilla.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Pattaya Villa</span><span class="pa-network-card-desc">Long-stay stays</span></a>
+    <a href="https://pattaya-vehicle-rentals.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Vehicle Rentals</span><span class="pa-network-card-desc">Scooters &amp; cars</span></a>
+    <a href="https://pattayapets.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">PattayaPets</span><span class="pa-network-card-desc">Vets &amp; pet life</span></a>
+    <a href="https://mrweoutside.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">Mr We Outside</span><span class="pa-network-card-desc">Outdoor community</span></a>
+    <a href="https://timpaemi.com/" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">TimPaemi</span><span class="pa-network-card-desc">Founders · agency</span></a>
+    
+  </nav>
+</section>
 <div class="marquee marquee-bottom" aria-hidden="true"><div class="marquee-track"><div class="marquee-set"><span>★ PATTAYA VILLA</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>HAND-CHECKED</span><span class="star">·</span><span>EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>★ LIVE 157 VENUES</span><span class="star">·</span><span>UPDATED ROLLING</span><span class="star">·</span></div><div class="marquee-set" aria-hidden="true"><span>★ PATTAYA VILLA</span><span class="star">·</span><span>NO PAID PLACEMENTS</span><span class="star">·</span><span>HAND-CHECKED</span><span class="star">·</span><span>EVERY GYM</span><span class="star">·</span><span>EVERY RING</span><span class="star">·</span><span>EVERY COURT</span><span class="star">·</span><span>★ LIVE 157 VENUES</span><span class="star">·</span><span>UPDATED ROLLING</span><span class="star">·</span></div></div></div>
-<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 157 venues hand-checked. No paid placements.</p></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/guides/">Guides</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="u-cyan">★ v458</span></div></footer>
+<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> 157 venues hand-checked. No paid placements.</p></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/methodology/">Methodology</a></li>
+        <li><a href="/guides/">Guides</a></li>
+        <li><a href="/sports/">All sports</a></li>
+        <li><a href="/search/">Search</a></li>
+        <li><a href="/favorites/">Favorites</a></li>
+        <li><a href="/compare/">Compare</a></li>
+        <li><a href="/plan-my-trip/">Plan trip</a></li>
+        <li><a href="/changelog/">Changelog</a></li>
+      </ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="footer-version-badge">Built 2026-06-08 06:37 UTC · <a href="/changelog/">v465</a></span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script src="/data.js?v=458"></script>
-<script defer src="/favorites.js?v=458"></script>
-<script defer src="/site-ui.js?v=458"></script>
-<script defer src="/analytics.js?v=458"></script>
+<script src="/data.js?v=465"></script>
+<script defer src="/favorites.js?v=465"></script>
+<script defer src="/site-ui.js?v=465"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
+<script defer src="/analytics.js?v=465"></script>
 </body>
 </html>

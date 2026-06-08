@@ -39,7 +39,7 @@ if (fs.existsSync(guidesDir)) {
   const idx = path.join(guidesDir, 'index.html');
   if (fs.existsSync(idx)) LEGACY_PAGES.push(idx);
 }
-for (const slug of ['search', 'compare', 'map', 'plan-my-trip', 'find-my-coach', 'favorites']) {
+for (const slug of ['search', 'compare', 'map', 'plan-my-trip', 'find-my-coach', 'favorites', 'changelog']) {
   const p = path.join(ROOT, slug, 'index.html');
   if (fs.existsSync(p)) LEGACY_PAGES.push(p);
 }

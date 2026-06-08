@@ -74,7 +74,7 @@ function extractFAQ(bodyHtml) {
 // Editorial guides: <li><strong>Question?</strong> → answer</li>
 function extractFAQFromListItems(bodyHtml) {
   const faqs = [];
-  const re = /<li>\s*<strong>([^<]*\?[^<]*)<\/strong>\s*(?:→|—|–|-)\s*([\s\S]*?)<\/li>/gi;
+  const re = /<li>\s*<strong>([^<]*\?[^<]*)<\/strong>\s*(?:→|—|–|-)?\s*([\s\S]*?)<\/li>/gi;
   let m;
   while ((m = re.exec(bodyHtml))) {
     const question = stripTags(m[1]).trim();

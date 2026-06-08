@@ -120,7 +120,11 @@
 
     if (btn) {
       btn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        var reduce = false;
+        try {
+          reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        } catch (e) { /* ignore */ }
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
       });
     }
 

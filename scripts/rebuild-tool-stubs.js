@@ -56,6 +56,7 @@ function marquee(items, bottom) {
 }
 
 const { v2NavHtml } = require('./lib/v2-nav.js');
+const { toolBreadcrumb } = require('./lib/tool-chrome.js');
 function nav() {
   return v2NavHtml();
 }
@@ -155,9 +156,7 @@ function head(title, desc, url, noindex) {
 }
 
 function breadcrumb(label) {
-  return `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
-  <a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">${esc(label)}</span>
-</nav>`;
+  return toolBreadcrumb([{ label: 'Home', href: '/' }, { label }]);
 }
 
 // Each stub: title, desc, breadcrumb, eyebrow num, accent, h1, intro, "Use instead" cards, support note
@@ -218,17 +217,19 @@ function render(stub) {
     + `
 <main id="main">
 
-<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
+<section class="hero hub-hero" style="text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// ${esc(stub.eyebrow)}</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,9vw,108px); text-align:left;">
-      ${stub.h1}
-    </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0; max-width: 680px;">${stub.intro}</p>
-    <div class="btn-row u-mt-6">
-      <a href="/search/" class="btn btn-primary">▶ Use search instead</a>
-      <a href="/guides/" class="btn btn-secondary">● Browse guides</a>
-      <a href="/" class="btn btn-tertiary">Back to home →</a>
+    <h1 class="hero-h1">${stub.h1}</h1>
+    <p class="hero-lede u-text-left-ml0">${stub.intro}</p>
+    <div class="tool-empty-card u-mt-6" style="max-width:680px;">
+      <h3>${esc(stub.crumb)} is being rebuilt</h3>
+      <p>Use search, browse by area or sport, or save venues to your shortlist while we ship the full tool.</p>
+      <div class="tool-empty-actions">
+        <a href="/search/" class="btn btn-primary">▶ Live search</a>
+        <a href="/favorites/" class="btn btn-secondary">♡ Favorites</a>
+        <a href="/sports/" class="btn btn-ghost">All sports</a>
+      </div>
     </div>
   </div>
 </section>

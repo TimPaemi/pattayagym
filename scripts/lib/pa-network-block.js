@@ -51,6 +51,8 @@ function defaultSisterContextLinks() {
     { url: '/guides/', label: 'All Pattaya sport guides', desc: '44 editorial trip planners' },
     { url: '/compare/', label: 'Compare venues', desc: 'Side-by-side directory tool' },
     { url: '/plan-my-trip/', label: 'Plan my trip', desc: 'Build a shortlist by sport' },
+    { url: '/favorites/', label: 'Favorites', desc: 'Your saved venue shortlist' },
+    { url: '/search/', label: 'Search', desc: 'Filter all venues live' },
     { url: 'https://pattaya-restaurant-guide.com/', label: 'Restaurant Guide', desc: 'Eat after training', external: true },
     { url: 'https://pattayavisahelp.com/', label: 'Visa Help', desc: 'Long-stay and ED visas', external: true },
     { url: 'https://pattaya-medical.com/', label: 'Medical directory', desc: 'Clinics and rehab', external: true },

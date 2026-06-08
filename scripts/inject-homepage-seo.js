@@ -26,6 +26,11 @@ const INTENT_BLOCK = `
     <h2 class="h-section">Find your <span class="accent-cyan">intent.</span></h2>
     <p class="lede">Curated guides and tools — pick the trip you are actually planning.</p>
     <div class="intent-grid">
+      <a href="/guides/best-gyms-in-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Best overall</span>
+        <span class="intent-card-title">Best gyms in Pattaya</span>
+        <span class="intent-card-desc">Head-term ranked picks by area &amp; budget</span>
+      </a>
       <a href="/guides/train-muay-thai-pattaya-1-week-1-month/" class="intent-card">
         <span class="intent-card-tag">// Trip length</span>
         <span class="intent-card-title">1 week vs 1 month training</span>
@@ -130,6 +135,16 @@ const INTENT_BLOCK = `
         <span class="intent-card-tag">// Short stay</span>
         <span class="intent-card-title">Gym day pass Pattaya</span>
         <span class="intent-card-desc">No membership — train today</span>
+      </a>
+      <a href="/guides/hotel-gym-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Hotel gym</span>
+        <span class="intent-card-title">Hotel gym day pass</span>
+        <span class="intent-card-desc">Resort fitness for non-guests</span>
+      </a>
+      <a href="/guides/boxing-kickboxing-gym-pattaya/" class="intent-card">
+        <span class="intent-card-tag">// Boxing</span>
+        <span class="intent-card-title">Boxing &amp; kickboxing gyms</span>
+        <span class="intent-card-desc">Western boxing beyond Muay Thai</span>
       </a>
       <a href="/guides/muay-thai-camps-with-accommodation-pattaya/" class="intent-card">
         <span class="intent-card-tag">// Stay &amp; train</span>

@@ -61,6 +61,23 @@
   var lastResults = [];
   var searchReady = false;
 
+  function scrollBehavior() {
+    try {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return 'auto';
+    } catch (e) { /* ignore */ }
+    return 'smooth';
+  }
+
+  function favoriteBtnHtml(g) {
+    return '<button type="button" class="favorite-btn" data-pg-favorite-id="' + esc(g.id) +
+      '" data-pg-favorite-name="' + esc(g.name) +
+      '" data-pg-favorite-category="' + esc(g.category) +
+      '" data-pg-favorite-area="' + esc(g.area) +
+      '" data-pg-favorite-price="' + esc(g.priceRange) +
+      '" aria-pressed="false" aria-label="Save to favorites">' +
+      '<span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>';
+  }
+
   var state = {
     q: '',
     cat: 'all',
@@ -202,16 +219,21 @@
       var desc = g.description || '';
       if (desc.length > 130) desc = desc.slice(0, 130).trim() + '…';
       html +=
-        '<a class="result-card" href="/gyms/' + esc(g.id) + '/">' +
-          '<div class="result-card-tag">// ' + esc(cat) + '</div>' +
-          '<h3 class="result-card-name">' + esc(g.name) + '</h3>' +
-          '<div class="result-card-meta">' + esc(g.area || '') + '</div>' +
-          '<p class="result-card-desc">' + esc(desc) + '</p>' +
-          '<div class="result-card-foot">' +
-            '<span class="result-card-price">' + esc(g.priceRange || '—') + '</span>' +
-            '<span class="result-card-arrow">View →</span>' +
+        '<article class="result-card">' +
+          '<div class="result-card-head">' +
+            '<a class="result-card-main" href="/gyms/' + esc(g.id) + '/">' +
+              '<div class="result-card-tag">// ' + esc(cat) + '</div>' +
+              '<h3 class="result-card-name">' + esc(g.name) + '</h3>' +
+              '<div class="result-card-meta">' + esc(g.area || '') + '</div>' +
+              '<p class="result-card-desc">' + esc(desc) + '</p>' +
+              '<div class="result-card-foot">' +
+                '<span class="result-card-price">' + esc(g.priceRange || '—') + '</span>' +
+                '<span class="result-card-arrow">View →</span>' +
+              '</div>' +
+            '</a>' +
+            favoriteBtnHtml(g) +
           '</div>' +
-        '</a>';
+        '</article>';
     }
     grid.innerHTML = html;
     if (moreMount && n > showing) {
@@ -241,7 +263,7 @@
       if (grid && window.scrollY > 320) {
         var top = grid.getBoundingClientRect().top;
         if (top < 72 || top > window.innerHeight * 0.85) {
-          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          grid.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
         }
       }
     } else {

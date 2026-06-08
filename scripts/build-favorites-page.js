@@ -14,6 +14,7 @@ const ASSET = `?v=${ASSET_VERSION}`;
 const BUILD_TS = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 const { GYMS } = require(path.join(ROOT, 'data.js'));
 const { v2NavHtml } = require('./lib/v2-nav.js');
+const { toolBreadcrumb, toolSiteFooterCol } = require('./lib/tool-chrome.js');
 const VENUE_N = GYMS.length;
 
 function esc(s) {
@@ -60,15 +61,13 @@ const html = `<!DOCTYPE html>
 <a class="skip-link" href="#main">Skip to content</a>
 ${marquee(TOP_MARQUEE, false)}
 ${v2NavHtml()}
-<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
-  <a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Favorites</span>
-</nav>
+${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Favorites' }])}
 <main id="main">
 <section class="hero hub-hero" style="text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Shortlist · Browser-only · ${VENUE_N} venues</div>
     <h1 class="hero-h1">Your <span class="accent-pink">favorites.</span></h1>
-    <p class="hero-lede u-text-left-ml0">Tap <strong>Save</strong> on ranked guide picks to build a shortlist. Stored in your browser only — not on our servers. Clear anytime.</p>
+    <p class="hero-lede u-text-left-ml0">Tap <strong>Save</strong> on venue pages, search results, hub listings, or guide picks. Stored in your browser only — not on our servers. Clear anytime.</p>
     <div class="btn-row u-mt-5">
       <a href="/search/" class="btn btn-primary">▶ Find venues</a>
       <a href="/compare/" class="btn btn-secondary">Compare →</a>
@@ -82,10 +81,11 @@ ${v2NavHtml()}
     <div id="favorites-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
     <div id="favorites-empty" class="tool-empty-card">
       <h3>No saved venues yet</h3>
-      <p>Open any ranked guide and tap <strong>Save</strong> on a venue card. Your list appears here instantly.</p>
+      <p>Save from a <strong>venue page</strong>, <strong>search result</strong>, or <strong>category listing</strong>. Your list appears here instantly.</p>
       <div class="tool-empty-actions">
-        <a href="/guides/best-muay-thai-pattaya/" class="btn btn-secondary">Best Muay Thai guide</a>
-        <a href="/search/" class="btn btn-ghost">Search all venues</a>
+        <a href="/search/" class="btn btn-secondary">Search venues</a>
+        <a href="/category/muay-thai/" class="btn btn-ghost">Browse Muay Thai</a>
+        <a href="/guides/best-muay-thai-pattaya/" class="btn btn-ghost">Best Muay Thai guide</a>
       </div>
     </div>
     <div id="favorites-list" class="favorites-list"></div>
@@ -94,12 +94,13 @@ ${v2NavHtml()}
 </main>
 <section class="pa-network"><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p></section>
 ${marquee(BOTTOM_MARQUEE, true)}
-<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements.</p></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/guides/">Guides</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="u-cyan">★ v${ASSET_VERSION}</span></div></footer>
+<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements.</p></div>${toolSiteFooterCol()}</div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script src="/data.js${ASSET}"></script>
 <script defer src="/favorites.js${ASSET}"></script>
 <script defer src="/site-ui.js${ASSET}"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
 <script defer src="/analytics.js${ASSET}"></script>
 </body>
 </html>

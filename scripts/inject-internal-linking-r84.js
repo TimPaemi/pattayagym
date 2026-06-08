@@ -12,6 +12,13 @@ const { GYMS, CATEGORIES } = require('../data.js');
 const { paNetworkHtml, sisterContextHtml, defaultSisterContextLinks } = require('./lib/pa-network-block');
 
 const ROOT = path.resolve(__dirname, '..');
+
+function guideCount() {
+  const guidesDir = path.join(ROOT, 'guides');
+  return fs.readdirSync(guidesDir, { withFileTypes: true })
+    .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
+    .length;
+}
 const TAX_MARKER = 'venue-taxonomy-r84';
 const NEARBY_MARKER = 'venue-nearby-r84';
 const TOOLS_MARKER = 'venue-tools-r84';
@@ -161,9 +168,10 @@ function toolsSection() {
     <ul class="venue-guide-link-list">
       <li><a href="/compare/">Compare venues</a> — shortlist gyms side-by-side</li>
       <li><a href="/plan-my-trip/">Plan my trip</a> — filter ${GYMS.length} venues by sport and area</li>
-      <li><a href="/map/">Map view</a> — Pattaya venue map</li>
+      <li><a href="/favorites/">Favorites</a> — your saved shortlist (browser-only)</li>
       <li><a href="/search/">Search</a> — find by name or sport</li>
-      <li><a href="/find-my-coach/">Find my coach</a> — Muay Thai camp matcher</li>
+      <li><a href="/map/">Map</a> — interactive map rebuilding; use search meanwhile</li>
+      <li><a href="/find-my-coach/">Find a coach</a> — coach finder coming soon</li>
       <li><a href="/guides/">All guides</a> — editorial trip planners</li>
     </ul>
   </div>
@@ -205,12 +213,13 @@ function siteToolsHub() {
     <div class="eyebrow"><span class="num">★</span> Directory</div>
     <h2 class="h-section">Explore <span class="accent-cyan">Pattaya.Gym.</span></h2>
     <div class="intent-grid intent-grid-compact" style="margin-top:var(--s-4);">
-      <a href="/guides/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Guides</span><span class="intent-card-title">44 trip planners</span><span class="intent-card-desc">Ranked lists, visas, area picks</span></a>
+      <a href="/guides/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Guides</span><span class="intent-card-title">${guideCount()} trip planners</span><span class="intent-card-desc">Ranked lists, visas, area picks</span></a>
       <a href="/category/muay-thai/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Muay Thai</span><span class="intent-card-desc">Every camp in Pattaya</span></a>
       <a href="/category/fitness/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Fitness gyms</span><span class="intent-card-desc">24h, budget, hotel gyms</span></a>
       <a href="/compare/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Compare</span><span class="intent-card-desc">Side-by-side venue table</span></a>
       <a href="/plan-my-trip/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Plan trip</span><span class="intent-card-desc">Build your shortlist</span></a>
-      <a href="/map/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Map</span><span class="intent-card-desc">${GYMS.length} pinned venues</span></a>
+      <a href="/favorites/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Favorites</span><span class="intent-card-desc">Save venues locally</span></a>
+      <a href="/map/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Map</span><span class="intent-card-desc">Rebuilding — use search</span></a>
     </div>
   </div>
 </section>`;

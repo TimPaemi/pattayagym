@@ -40,6 +40,68 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
+    n: 103, date: '2026-06-08', tag: `v${ASSET_VERSION}`,
+    title: 'SEO Round 103 — keyword pages, titles, H1s, meta repair',
+    summary: 'Full on-page SEO pass: head-term guide, hotel gym + boxing guides, keyword-rich homepage/category/area/venue titles, truncated meta repair, search popular-intent hub, GA fix on search/favorites.',
+    bullets: [
+      'New guides: /guides/best-gyms-in-pattaya/, /guides/hotel-gym-pattaya/, /guides/boxing-kickboxing-gym-pattaya/ — FAQ schema + internal links.',
+      'Homepage H1/title/meta target "Pattaya gyms" + "Muay Thai camps"; category/area/sports hub H1s include Pattaya keyword.',
+      'Venue SEO titles append sport + Pattaya when name omits city; category intro paragraphs for all 15 sports.',
+      'Search page — full meta, popular-searches intent grid, gtag loader; favorites gtag fixed.',
+      'normalize-guide-head-meta repairs 11 truncated guide descriptions; scripts/seo-audit.js gate added.',
+    ],
+  },
+  {
+    n: 101, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 101 — venue tool strip + homepage IA',
+    summary: 'Every venue page gets Compare/Plan/Favorites/Search CTAs; homepage footer uses real URLs; hero More tools adds Plan + Favorites; floating widget clears back-to-top on mobile.',
+    bullets: [
+      'venueToolsStrip — /compare/?a=id, plan, favorites, search on all 157 venue pages (build-v2.js).',
+      'Homepage — footer /about/, /methodology/, /sports/; hero More tools: Plan + Favorites.',
+      'pg-fw-inner + back-to-top — safe-area and stack offset when favorites widget visible.',
+    ],
+  },
+  {
+    n: 100, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 100 — honest tool copy + plan Save + tool chrome',
+    summary: 'Stop promising live map/coach tools; favorites in directory hubs; plan results get Save buttons; compare/plan/favorites share footer + breadcrumbs via tool-chrome.js.',
+    bullets: [
+      'Honest copy — map “rebuilding”, coach “coming soon”; Favorites card in explore hubs (home, search, guides inject).',
+      'Plan — Save on result cards; data.js + favorites.js; cross-links to /favorites/.',
+      'tool-chrome.js — shared site-breadcrumb + footer links on compare, plan, favorites, map/coach stubs.',
+    ],
+  },
+  {
+    n: 99, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 99 — audit fixes: hub heroes, breadcrumbs, nav',
+    summary: 'Category-area pages get hub-hero; breadcrumb links meet 44px tap targets; Favorites in mobile nav + homepage footer; listing Save buttons use correct class.',
+    bullets: [
+      'Category-area — hub-hero H1 clamp (45 long-tail pages).',
+      'site-breadcrumb — 44px min-height links sitewide via build-v2.js.',
+      'v2-nav + homepage — Favorites in mobile menu; homepage footer adds Favorites + Plan.',
+    ],
+  },
+  {
+    n: 98, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 98 — Save on search + hubs, 404 search, compare memory',
+    summary: 'Search and category/area listings get Save buttons; 404 adds live search form; compare restores picks via sessionStorage; footer links tools; reduced-motion scroll.',
+    bullets: [
+      'Search — Save on result cards; favorites.js loaded; result-card article layout.',
+      'Category, area, category-area — cat-venue-card listings with Save + favorites.js.',
+      '404 — search form + popular paths; compare sessionStorage; back-to-top honors prefers-reduced-motion.',
+    ],
+  },
+  {
+    n: 97, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
+    title: 'UX Round 97 — venue Save, sports hub hero, stub CTAs',
+    summary: 'Every venue page gets a hero Save button + favorites.js; /sports/ uses hub-hero on mobile; map and coach stubs get tool-empty-card next steps.',
+    bullets: [
+      'Venue hero — Save to favorites (always visible, not hidden in More actions); data.js + favorites.js on all venue pages.',
+      '/sports/ — hub-hero H1 clamp matches category and area hubs.',
+      'Map / find-my-coach stubs — hub-hero + tool-empty-card with search, favorites, sports links.',
+    ],
+  },
+  {
     n: 96, date: '2026-06-03', tag: `v${ASSET_VERSION}`,
     title: 'UX Round 96 — favorites tool, plan polish, hub heroes',
     summary: 'Functional /favorites/ page (localStorage); plan form UX + scroll-to-results; category/area heroes smaller on mobile.',

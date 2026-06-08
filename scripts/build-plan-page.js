@@ -30,6 +30,7 @@ const BUILD_TS = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC
 
 const { GYMS, CATEGORIES } = require(path.join(ROOT, 'data.js'));
 const { v2NavHtml } = require('./lib/v2-nav.js');
+const { toolBreadcrumb, toolSiteFooterCol } = require('./lib/tool-chrome.js');
 const VENUE_N = GYMS.length;
 
 function esc(s) {
@@ -182,9 +183,7 @@ const html = `<!DOCTYPE html>
 <a class="skip-link" href="#main">Skip to content</a>
 ${marquee(TOP_MARQUEE, false)}
 ${v2NavHtml()}
-<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">
-  <a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Plan my trip</span>
-</nav>
+${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Plan my trip' }])}
 
 <main id="main">
 
@@ -231,6 +230,7 @@ ${v2NavHtml()}
       <div class="tool-empty-actions">
         <a href="/guides/muay-thai-training-holiday-pattaya/" class="btn btn-ghost">Training holiday guide</a>
         <a href="/compare/" class="btn btn-ghost">Compare venues</a>
+        <a href="/favorites/" class="btn btn-ghost">♡ Favorites</a>
       </div>
     </div>
   </div>
@@ -257,7 +257,7 @@ ${v2NavHtml()}
 
 <section class="pa-network"><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>
 ${marquee(BOTTOM_MARQUEE, true)}
-<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/changelog/">Changelog</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div>${toolSiteFooterCol()}<div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
@@ -282,6 +282,14 @@ ${marquee(BOTTOM_MARQUEE, true)}
   function track(name, params){ try { if (window.gtag) window.gtag('event', name, params || {}); } catch(e){} }
   function esc(s){ return String(s==null?'':s).replace(/[<>&"']/g,function(c){return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&#39;'}[c];}); }
 
+  function favoriteBtn(v){
+    return '<button type="button" class="favorite-btn" data-pg-favorite-id="' + esc(v.id)
+      + '" data-pg-favorite-name="' + esc(v.name)
+      + '" data-pg-favorite-category="' + esc(v.category)
+      + '" data-pg-favorite-area="' + esc(v.area)
+      + '" data-pg-favorite-price="' + esc(v.price)
+      + '" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>';
+  }
   function venueCard(v, tagline){
     var price = v.price ? '<span style="color:var(--yellow); font-weight:700;">' + esc(v.price) + '</span>' : '';
     var flags = [];
@@ -289,13 +297,19 @@ ${marquee(BOTTOM_MARQUEE, true)}
     if (v.stay) flags.push('Stay &amp; train');
     if (v.family) flags.push('Family-friendly');
     if (v.daypass) flags.push('Drop-in OK');
-    return '<a href="/gyms/' + esc(v.id) + '/" class="numcard u-plain-link" style="display:block;">'
-      + '<div class="numcard-head"><span class="numcard-num">→</span><h3 class="numcard-title">// ' + esc(v.name) + '</h3></div>'
-      + '<p class="numcard-body">' + (tagline ? '<strong class="u-text">' + esc(tagline) + '</strong> ' : '')
-      + esc(v.categoryLabel) + (v.area ? ' &middot; ' + esc(v.area) : '') + (price ? ' &middot; ' + price : '')
-      + (v.desc ? '<br>' + esc(v.desc) + (v.desc.length >= 190 ? '…' : '') : '')
-      + (flags.length ? '<br><span style="font-family:var(--font-mono); font-size:11px; color:var(--cyan); letter-spacing:0.06em;">' + flags.join(' &nbsp;·&nbsp; ') + '</span>' : '')
-      + '</p></a>';
+    return '<article class="cat-venue-card plan-result-card">'
+      + '<div class="cv-head"><h3><a href="/gyms/' + esc(v.id) + '/">' + esc(v.name) + '</a></h3>' + favoriteBtn(v) + '</div>'
+      + (tagline ? '<div class="cv-meta"><strong>' + esc(tagline) + '</strong></div>' : '')
+      + '<div class="cv-meta">' + esc(v.categoryLabel) + (v.area ? ' &middot; ' + esc(v.area) : '') + (price ? ' &middot; ' + price : '') + '</div>'
+      + (v.desc ? '<p>' + esc(v.desc) + (v.desc.length >= 190 ? '…' : '') + '</p>' : '')
+      + (flags.length ? '<div class="cv-tags">' + flags.map(function(f){ return '<span class="cv-pill cv-pill-tag">' + f + '</span>'; }).join('') + '</div>' : '')
+      + '<a class="cv-cta" href="/gyms/' + esc(v.id) + '/">View full page →</a></article>';
+  }
+  function bindPlanFavorites(){
+    if (window.PG && PG.favorites) {
+      PG.favorites.bindButtons(out);
+      PG.favorites.refreshAllButtons();
+    }
   }
 
   function scoreBase(v, sport, budget, style){
@@ -354,7 +368,7 @@ ${marquee(BOTTOM_MARQUEE, true)}
                      .filter(function(x){ return x.s > -900; })
                      .sort(function(a,b){ return b.s - a.s; });
     if (!ranked.length){
-      out.innerHTML = '<div class="tool-empty-card"><h3>No venues matched</h3><p>Try widening the budget, choosing a different sport, or pick &ldquo;I&rsquo;m flexible&rdquo; for sport.</p><div class="tool-empty-actions"><a href="/search/" class="btn btn-secondary">Search all venues</a><a href="/sports/" class="btn btn-ghost">Browse sports</a></div></div>';
+      out.innerHTML = '<div class="tool-empty-card"><h3>No venues matched</h3><p>Try widening the budget, choosing a different sport, or pick &ldquo;I&rsquo;m flexible&rdquo; for sport.</p><div class="tool-empty-actions"><a href="/search/" class="btn btn-secondary">Search all venues</a><a href="/sports/" class="btn btn-ghost">Browse sports</a><a href="/favorites/" class="btn btn-ghost">♡ Favorites</a></div></div>';
       empty.hidden = true;
       announce('No venues matched your answers.');
       scrollToResults();
@@ -373,7 +387,7 @@ ${marquee(BOTTOM_MARQUEE, true)}
 
     html += '<h3 class="h-section" style="font-size:clamp(22px,3vw,30px);">Your base' + (bases.length > 1 ? ' — top ' + bases.length + ' picks' : '') + '</h3>';
     html += '<p class="lede">Anchor your trip around ' + (bases.length > 1 ? 'one of these' : 'this venue') + ' — ranked purely on fit with your answers.</p>';
-    html += '<div class="numlist">';
+    html += '<div class="numlist guide-hub-grid">';
     html += venueCard(bases[0], 'Best match');
     for (var i = 1; i < bases.length; i++) html += venueCard(bases[i], 'Also strong');
     html += '</div>';
@@ -384,7 +398,7 @@ ${marquee(BOTTOM_MARQUEE, true)}
     if (comp.length){
       html += '<h3 class="h-section" style="font-size:clamp(22px,3vw,30px); margin-top:var(--s-6);">For rest days &amp; the rest of the trip</h3>';
       html += '<p class="lede">Pattaya is more than one sport — these pair well with your training for recovery or a change of pace.</p>';
-      html += '<div class="numlist">';
+      html += '<div class="numlist guide-hub-grid">';
       comp.forEach(function(v){ html += venueCard(v, v.categoryLabel); });
       html += '</div>';
     }
@@ -393,9 +407,10 @@ ${marquee(BOTTOM_MARQUEE, true)}
     html += '<h3 class="h-section" style="font-size:clamp(22px,3vw,30px); margin-top:var(--s-6);">Practical notes</h3>';
     html += '<ul class="lede" style="padding-left:22px;">' + notes.map(function(n){ return '<li>' + n + '</li>'; }).join('') + '</ul>';
 
-    html += '<p style="margin-top:var(--s-5);"><a href="/sports/" class="u-cyan">Browse all 15 sports →</a> &nbsp; <a href="/compare/" class="u-cyan">Compare venues side by side →</a></p>';
+    html += '<p style="margin-top:var(--s-5);"><a href="/sports/" class="u-cyan">Browse all 15 sports →</a> &nbsp; <a href="/compare/" class="u-cyan">Compare venues side by side →</a> &nbsp; <a href="/favorites/" class="u-cyan">View your favorites →</a></p>';
 
     out.innerHTML = html;
+    bindPlanFavorites();
     empty.hidden = true;
     announce('Plan ready: base venue ' + bases[0].name + ', ' + comp.length + ' rest-day picks.');
     scrollToResults();
@@ -465,6 +480,8 @@ ${marquee(BOTTOM_MARQUEE, true)}
     });
  })();
 </script>
+<script src="/data.js${ASSET}"></script>
+<script defer src="/favorites.js${ASSET}"></script>
 <script defer src="/site-ui.js${ASSET}"></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
 <script defer src="/analytics.js${ASSET}"></script>
