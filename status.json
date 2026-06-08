@@ -15,31 +15,31 @@
     "updateCadence": "rolling"
   },
   "build": {
-    "version": "v452",
-    "asset_version": "452",
-    "last_built_utc": "2026-06-03T13:33:48.528Z",
-    "last_built_date": "2026-06-03"
+    "version": "v465",
+    "asset_version": "465",
+    "last_built_utc": "2026-06-08T06:51:53.032Z",
+    "last_built_date": "2026-06-08"
   },
   "catalog": {
     "venues_total": 157,
     "venues_with_body_content": 157,
     "categories": 15,
     "areas": 6,
-    "html_pages_shipped": 287,
-    "sitemap_urls": 282
+    "html_pages_shipped": 289,
+    "sitemap_urls": 285
   },
   "schema_completeness": {
     "venues_with_verified_date": 157,
-    "venues_with_phone": 134,
+    "venues_with_phone": 138,
     "venues_with_website": 104,
     "venues_with_geo_coordinates": 155,
     "completeness_percent_geo": 99,
-    "completeness_percent_phone": 85
+    "completeness_percent_phone": 88
   },
   "freshness": {
     "oldest_verified_date": "2026-04-27",
     "newest_verified_date": "2026-04-29",
-    "oldest_verified_age_days": 37,
+    "oldest_verified_age_days": 42,
     "target_max_age_days": 30
   },
   "endpoints": {
