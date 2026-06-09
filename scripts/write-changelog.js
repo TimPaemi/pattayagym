@@ -40,7 +40,18 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
-    n: 103, date: '2026-06-08', tag: `v${ASSET_VERSION}`,
+    n: 104, date: '2026-06-09', tag: `v${ASSET_VERSION}`,
+    title: 'Platform audit fixes — Twitter cards, guide counts, venue SEO',
+    summary: 'Closes P1/P2 gaps from full platform audit: twitter:card on editorial guides + favorites, dynamic 47-guide copy site-wide, fitz-club/nongnooch title+meta Pattaya fixes, search heading a11y.',
+    bullets: [
+      'editorial-guide-shell.js + inject-twitter-cards-r104.js — Twitter meta on 32 pages that had OG only.',
+      'pa-network-block.js + inject-internal-linking-r84.js — sister-context uses live guide count (47), refreshes stale "44 trip planners" copy.',
+      'build-v2.js venueSeoTitle/venueSeoDesc — long venue names always keep Pattaya; descriptions append "Near Pattaya, Thailand." without mid-word truncation.',
+      'search/index.html — sr-only H2 before results fixes Lighthouse heading-order on mobile.',
+    ],
+  },
+  {
+    n: 103, date: '2026-06-08', tag: 'v465',
     title: 'SEO Round 103 — keyword pages, titles, H1s, meta repair',
     summary: 'Full on-page SEO pass: head-term guide, hotel gym + boxing guides, keyword-rich homepage/category/area/venue titles, truncated meta repair, search popular-intent hub, GA fix on search/favorites.',
     bullets: [

@@ -54,6 +54,11 @@ const html = `<!DOCTYPE html>
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:image" content="${SITE}/og-image.png">
 <meta property="og:url" content="${url}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@PattayaGym">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<meta name="twitter:image" content="${SITE}/og-image.png">
 <meta name="robots" content="noindex, follow">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>

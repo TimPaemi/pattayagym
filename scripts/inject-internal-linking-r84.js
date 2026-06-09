@@ -9,16 +9,10 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const { GYMS, CATEGORIES } = require('../data.js');
-const { paNetworkHtml, sisterContextHtml, defaultSisterContextLinks } = require('./lib/pa-network-block');
+const { paNetworkHtml, sisterContextHtml, defaultSisterContextLinks, guideCount } = require('./lib/pa-network-block');
 
 const ROOT = path.resolve(__dirname, '..');
 
-function guideCount() {
-  const guidesDir = path.join(ROOT, 'guides');
-  return fs.readdirSync(guidesDir, { withFileTypes: true })
-    .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
-    .length;
-}
 const TAX_MARKER = 'venue-taxonomy-r84';
 const NEARBY_MARKER = 'venue-nearby-r84';
 const TOOLS_MARKER = 'venue-tools-r84';
@@ -403,4 +397,52 @@ for (const base of walkDirs) {
   }
 }
 
+function refreshGuideCounts(html) {
+  const n = guideCount();
+  return html
+    .replace(/(\d+) editorial trip planners/g, `${n} editorial trip planners`)
+    .replace(/(\d+) trip planners/g, `${n} trip planners`);
+}
+
+function refreshSisterContext(html) {
+  const marker = 'id="sister-context-r84-h"';
+  if (!html.includes(marker)) return null;
+  const start = html.indexOf('<section class="section sister-context');
+  if (start < 0) return null;
+  const end = html.indexOf('</section>', start);
+  if (end < 0) return null;
+  const block = sisterContextHtml(defaultSisterContextLinks());
+  return html.slice(0, start) + block.trim() + html.slice(end + '</section>'.length);
+}
+
+function walkAllHtml() {
+  const out = [];
+  const skip = new Set(['node_modules', '.git', 'scripts', 'venues', 'data', 'docs', 'private']);
+  function w(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (skip.has(e.name)) continue;
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) w(p);
+      else if (e.name.endsWith('.html')) out.push(p);
+    }
+  }
+  w(ROOT);
+  return out;
+}
+
+let countRefresh = 0;
+let sisterRefresh = 0;
+for (const file of walkAllHtml()) {
+  let html = fs.readFileSync(file, 'utf8');
+  const original = html;
+  html = refreshGuideCounts(html);
+  const sis = refreshSisterContext(html);
+  if (sis) { html = sis; sisterRefresh++; }
+  if (html !== original) {
+    fs.writeFileSync(file, html, 'utf8');
+    countRefresh++;
+  }
+}
+
 console.log(`\nRound 84 internal linking: r41=${stats.r41}, taxonomy=${stats.taxonomy}, nearby=${stats.nearby}, tools=${stats.tools}, sister=${stats.sister}, hub=${stats.hub}, paNetwork=${stats.paNetwork}, homepageArea=${stats.homepageArea}.`);
+console.log(`Guide count refresh: ${countRefresh} files; sister-context rebuilt: ${sisterRefresh}.`);

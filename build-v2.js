@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '465';
+const ASSET_VERSION = '466';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -323,22 +323,36 @@ function truncateDesc(s, max = 155) {
 
 function venueSeoTitle(g, catLabel) {
   const name = g.name;
-  if (/pattaya/i.test(name)) return `${name} | Pattaya.Gym`;
+  const brand = ' | Pattaya.Gym';
+  if (/pattaya/i.test(name)) {
+    const full = `${name}${brand}`;
+    return full.length <= 65 ? truncateTitle(full, 65) : truncateTitle(name, 65 - brand.length) + brand;
+  }
   const core = `${name} — ${catLabel} Pattaya`;
-  if (core.length <= 58) return `${core} | Pattaya.Gym`;
-  return truncateTitle(`${name} Pattaya | Pattaya.Gym`);
+  if (core.length + brand.length <= 65) return `${core}${brand}`;
+  const suffix = ` Pattaya${brand}`;
+  const displayName = name.includes(' — ') ? name.split(' — ')[0].trim() : name;
+  const room = 65 - suffix.length;
+  const short = displayName.length <= room ? displayName : truncateTitle(displayName, room);
+  return `${short}${suffix}`;
 }
 
 function venueSeoDesc(g, catLabel) {
-  let base = g.description || '';
+  const max = 155;
+  const areaBit = g.area ? g.area.split(/[—\/,]/)[0].trim() : 'Pattaya';
+  let base = (g.description || '').trim();
   if (!base) {
-    const areaBit = g.area ? g.area.split(/[—\/,]/)[0].trim() : 'Pattaya';
-    base = `${g.name} — ${catLabel.toLowerCase()} in ${areaBit}, Pattaya. Hours, prices, contact and maps.`;
-  } else if (!/pattaya/i.test(base)) {
-    const areaBit = g.area ? g.area.split(/[—\/,]/)[0].trim() : 'Pattaya';
-    base = `${base} ${catLabel} venue in ${areaBit}, Pattaya.`;
+    return truncateDesc(`${g.name} — ${catLabel.toLowerCase()} in ${areaBit}, Pattaya. Hours, prices, contact and maps.`, max);
   }
-  return truncateDesc(base, 155);
+  if (/pattaya/i.test(base)) return truncateDesc(base, max);
+  const suffix = ' Near Pattaya, Thailand.';
+  const room = max - suffix.length;
+  if (base.length > room) {
+    base = base.slice(0, room);
+    const lastSpace = base.lastIndexOf(' ');
+    if (lastSpace > room * 0.5) base = base.slice(0, lastSpace);
+  }
+  return truncateDesc(base + suffix, max);
 }
 
 const CATEGORY_INTRO = {

@@ -113,6 +113,13 @@ function writeEditorialGuide(g) {
 <meta property="og:image" content="${meta.SITE}/og-image.png">
 <meta property="og:url" content="${url}">
 <meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Pattaya.Gym">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@PattayaGym">
+<meta name="twitter:title" content="${esc(g.title)}">
+<meta name="twitter:description" content="${esc(g.desc)}">
+<meta name="twitter:image" content="${meta.SITE}/og-image.png">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <script type="application/ld+json">${JSON.stringify(webpage)}</script>
 <script type="application/ld+json">${JSON.stringify(crumbs)}</script>

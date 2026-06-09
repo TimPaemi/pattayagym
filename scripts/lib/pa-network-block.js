@@ -2,7 +2,19 @@
  * Shared Pattaya Authority / TimPaemi network footer block (internal + external mesh).
  */
 
+const fs = require('fs');
+const path = require('path');
+
 const SITE = 'https://pattaya-gym.com';
+const ROOT = path.resolve(__dirname, '../..');
+
+function guideCount() {
+  const guidesDir = path.join(ROOT, 'guides');
+  if (!fs.existsSync(guidesDir)) return 47;
+  return fs.readdirSync(guidesDir, { withFileTypes: true })
+    .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
+    .length;
+}
 
 const NETWORK_SITES = [
   { name: 'Pattaya Authority', url: 'https://pattaya-authority.com/work/pattaya-gym-directory/', desc: 'Network hub' },
@@ -47,8 +59,9 @@ function paNetworkHtml(opts = {}) {
 
 /** Contextual in-page links to sister properties (internal site paths + network). */
 function defaultSisterContextLinks() {
+  const n = guideCount();
   return [
-    { url: '/guides/', label: 'All Pattaya sport guides', desc: '44 editorial trip planners' },
+    { url: '/guides/', label: 'All Pattaya sport guides', desc: `${n} editorial trip planners` },
     { url: '/compare/', label: 'Compare venues', desc: 'Side-by-side directory tool' },
     { url: '/plan-my-trip/', label: 'Plan my trip', desc: 'Build a shortlist by sport' },
     { url: '/favorites/', label: 'Favorites', desc: 'Your saved venue shortlist' },
@@ -83,4 +96,5 @@ module.exports = {
   paNetworkHtml,
   sisterContextHtml,
   defaultSisterContextLinks,
+  guideCount,
 };
