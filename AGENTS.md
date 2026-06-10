@@ -47,6 +47,7 @@ node scripts/sync-csp-hashes.js
 node scripts/sync-llms-guides.js
 node scripts/patch-guide-map-cta-r70.js
 node scripts/apply-geo-r73.js
+node scripts/update-sitemap-lastmod.js
 node scripts/verify-deploy.js
 npm run html:validate
 ```
@@ -65,6 +66,7 @@ git push origin redesign-2026
 git tag -f main-pre-round<N> origin/main
 git push origin redesign-2026:main
 node scripts/ping-sitemap.js
+node scripts/submit-indexnow.js
 ```
 
 Rollback: `git push origin main-pre-round<N>:main --force-with-lease`
