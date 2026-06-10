@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/gyms/sitpholek-muay-thai/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=466" as="style">
-<link rel="stylesheet" href="/styles.css?v=466">
+<link rel="preload" href="/styles.css?v=467" as="style">
+<link rel="stylesheet" href="/styles.css?v=467">
 <!-- Self-hosted fonts — preload only the LCP display face -->
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=466" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=467" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <meta property="og:title" content="Sitpholek - Institute of Muay Thai Pattaya | Pattaya.Gym">
 <meta property="og:description" content="Pattaya Muay Thai camp mentioned in 2025 best-of lists. Stub — needs deep research.">
@@ -34,6 +34,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","SportsActivityLocation"],"@id":"https://pattaya-gym.com/gyms/sitpholek-muay-thai/#business","name":"Sitpholek - Institute of Muay Thai Techniques","description":"Pattaya Muay Thai camp mentioned in 2025 best-of lists. Stub — needs deep research.","url":"https://pattaya-gym.com/gyms/sitpholek-muay-thai/","image":"https://pattaya-gym.com/og/sitpholek-muay-thai.png","priceRange":"฿฿","address":{"@type":"PostalAddress","streetAddress":"Pattaya, Bang Lamung, Chonburi (verify exact at booking)","addressLocality":"Pattaya","addressRegion":"Chon Buri","postalCode":"20150","addressCountry":"TH"},"telephone":"+66899345001","geo":{"@type":"GeoCoordinates","latitude":12.92,"longitude":100.918},"openingHours":"Two-a-day — morning + afternoon sessions, Mon-Sat","areaServed":{"@type":"City","name":"Pattaya"},"sameAs":["https://facebook.com/sitpholekmuaythaipattaya"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pattaya-gym.com/"},{"@type":"ListItem","position":2,"name":"Muay Thai","item":"https://pattaya-gym.com/category/muay-thai/"},{"@type":"ListItem","position":3,"name":"Sitpholek - Institute of Muay Thai Techniques","item":"https://pattaya-gym.com/gyms/sitpholek-muay-thai/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Sitpholek - Institute of Muay Thai Techniques accept beginners?","acceptedAnswer":{"@type":"Answer","text":"Most Pattaya Muay Thai camps accept first-timers — ask for technique-focused rounds, not hard sparring. Read is Muay Thai safe? before you book."}},{"@type":"Question","name":"What are typical prices at Sitpholek - Institute of Muay Thai Techniques?","acceptedAnswer":{"@type":"Answer","text":"Listed tier: ฿฿ (mid-range). Drop-ins and monthly rates change — call or message before you commit. Compare on cheapest gyms and best Muay Thai."}},{"@type":"Question","name":"When is Sitpholek - Institute of Muay Thai Techniques open?","acceptedAnswer":{"@type":"Answer","text":"Hours on file: Verify. Pattaya camps often run two sessions daily (morning + afternoon) — arrive 15 minutes early for wrap and warm-up."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a><div class="marquee" aria-hidden="true">
@@ -573,9 +574,9 @@
     tools.className = 'venue-section-tools';
     tools.innerHTML = '<button type="button" class="btn btn-ghost venue-section-expand">Expand all</button><button type="button" class="btn btn-ghost venue-section-collapse">Collapse all</button>';
     nav.appendChild(tools);
+    var prevDetails = null;
     for (var i = heads.length - 1; i >= 0; i--) {
       var h = heads[i];
-      var nextH = heads[i + 1];
       var details = document.createElement('details');
       details.className = 'venue-section';
       if (i < 2) details.setAttribute('open', '');
@@ -584,7 +585,7 @@
       var panel = document.createElement('div');
       panel.className = 'venue-section-body';
       var node = h.nextSibling;
-      while (node && node !== nextH) {
+      while (node && node !== prevDetails) {
         var nxt = node.nextSibling;
         panel.appendChild(node);
         node = nxt;
@@ -592,8 +593,9 @@
       summary.appendChild(h);
       details.appendChild(summary);
       details.appendChild(panel);
-      if (nextH && nextH.parentNode) nextH.parentNode.insertBefore(details, nextH);
+      if (prevDetails) body.insertBefore(details, prevDetails);
       else body.appendChild(details);
+      prevDetails = details;
     }
     tools.querySelector('.venue-section-expand').addEventListener('click', function(){
       body.querySelectorAll('.venue-section').forEach(function(d){ d.setAttribute('open',''); });
@@ -630,6 +632,13 @@
 </section>
 
 
+<section class="section u-pt-0 venue-faq guide-faq" id="venue-faq-r47" aria-labelledby="venue-faq-r47-h">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> FAQ</div>
+    <h2 id="venue-faq-r47-h" class="h-section">Common <span class="accent-cyan">questions.</span></h2>
+    <details class="faq-item"><summary>Does Sitpholek - Institute of Muay Thai Techniques accept beginners?</summary><p>Most Pattaya Muay Thai camps accept first-timers — ask for technique-focused rounds, not hard sparring. Read <a href="/guides/is-muay-thai-safe-pattaya/">is Muay Thai safe?</a> before you book.</p></details><details class="faq-item"><summary>What are typical prices at Sitpholek - Institute of Muay Thai Techniques?</summary><p>Listed tier: ฿฿ (mid-range). Drop-ins and monthly rates change — call or message before you commit. Compare on <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> and <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a>.</p></details><details class="faq-item"><summary>When is Sitpholek - Institute of Muay Thai Techniques open?</summary><p>Hours on file: Verify. Pattaya camps often run two sessions daily (morning + afternoon) — arrive 15 minutes early for wrap and warm-up.</p></details>
+  </div>
+</section>
 
 <section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">
   <div class="wrap u-max-760">
@@ -891,16 +900,16 @@
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span class="footer-version-badge">Built 2026-06-09 05:40 UTC · <a href="/changelog/">v466</a></span>
+    <span class="footer-version-badge">Built 2026-06-10 02:08 UTC · <a href="/changelog/">v467</a></span>
     <span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span>
   </div>
 </footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script src="/data.js?v=466"></script>
-<script defer src="/favorites.js?v=466"></script>
-<script defer src="/site-ui.js?v=466"></script>
+<script src="/data.js?v=467"></script>
+<script defer src="/favorites.js?v=467"></script>
+<script defer src="/site-ui.js?v=467"></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script defer src="/analytics.js?v=466"></script>
+<script defer src="/analytics.js?v=467"></script>
 </body>
 </html>

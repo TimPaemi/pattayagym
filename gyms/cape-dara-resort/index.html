@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/gyms/cape-dara-resort/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=466" as="style">
-<link rel="stylesheet" href="/styles.css?v=466">
+<link rel="preload" href="/styles.css?v=467" as="style">
+<link rel="stylesheet" href="/styles.css?v=467">
 <!-- Self-hosted fonts — preload only the LCP display face -->
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=466" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=467" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <meta property="og:title" content="Cape Dara Resort — Fitness / Gym Pattaya | Pattaya.Gym">
 <meta property="og:description" content="5-star beach-cliff luxury. Infinity pool + Luminous Spa + mineral bath + sauna + steam + beauty centre + fitness with yoga classes. Near Pattaya, Thailand.">
@@ -34,6 +34,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","ExerciseGym","HealthClub"],"@id":"https://pattaya-gym.com/gyms/cape-dara-resort/#business","name":"Cape Dara Resort","description":"5-star beach-cliff luxury. Infinity pool + Luminous Spa + mineral bath + sauna + steam + beauty centre + fitness with yoga classes.","url":"https://pattaya-gym.com/gyms/cape-dara-resort/","image":"https://pattaya-gym.com/og/cape-dara-resort.png","priceRange":"฿฿฿฿","address":{"@type":"PostalAddress","streetAddress":"Cape Dara Resort, 256 Dara Beach, Soi 20 Naklua Road, Naklua, Bang Lamung, Chonburi","addressLocality":"Pattaya","addressRegion":"Chon Buri","postalCode":"20150","addressCountry":"TH"},"telephone":"+6638933888","geo":{"@type":"GeoCoordinates","latitude":12.971,"longitude":100.9},"openingHours":"Hotel hours; gym + spa with extended hours","areaServed":{"@type":"City","name":"Pattaya"},"sameAs":["https://capedarapattaya.com/"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pattaya-gym.com/"},{"@type":"ListItem","position":2,"name":"Fitness / Gym","item":"https://pattaya-gym.com/category/fitness/"},{"@type":"ListItem","position":3,"name":"Cape Dara Resort","item":"https://pattaya-gym.com/gyms/cape-dara-resort/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I get a day pass at Cape Dara Resort?","acceptedAnswer":{"@type":"Answer","text":"Day passes and short-stay deals vary — call ahead. See gym day pass Pattaya."}},{"@type":"Question","name":"How much does Cape Dara Resort cost?","acceptedAnswer":{"@type":"Answer","text":"Listed tier: ฿฿฿฿ (luxury). Monthly contracts and tourist passes differ — cheapest gyms · compare tool."}},{"@type":"Question","name":"When is Cape Dara Resort open?","acceptedAnswer":{"@type":"Answer","text":"Hours on file: Hotel hours; gym/spa extended. Chain gyms often allow 24/7 key-fob entry — 24-hour gyms."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a><div class="marquee" aria-hidden="true">
@@ -568,9 +569,9 @@
     tools.className = 'venue-section-tools';
     tools.innerHTML = '<button type="button" class="btn btn-ghost venue-section-expand">Expand all</button><button type="button" class="btn btn-ghost venue-section-collapse">Collapse all</button>';
     nav.appendChild(tools);
+    var prevDetails = null;
     for (var i = heads.length - 1; i >= 0; i--) {
       var h = heads[i];
-      var nextH = heads[i + 1];
       var details = document.createElement('details');
       details.className = 'venue-section';
       if (i < 2) details.setAttribute('open', '');
@@ -579,7 +580,7 @@
       var panel = document.createElement('div');
       panel.className = 'venue-section-body';
       var node = h.nextSibling;
-      while (node && node !== nextH) {
+      while (node && node !== prevDetails) {
         var nxt = node.nextSibling;
         panel.appendChild(node);
         node = nxt;
@@ -587,8 +588,9 @@
       summary.appendChild(h);
       details.appendChild(summary);
       details.appendChild(panel);
-      if (nextH && nextH.parentNode) nextH.parentNode.insertBefore(details, nextH);
+      if (prevDetails) body.insertBefore(details, prevDetails);
       else body.appendChild(details);
+      prevDetails = details;
     }
     tools.querySelector('.venue-section-expand').addEventListener('click', function(){
       body.querySelectorAll('.venue-section').forEach(function(d){ d.setAttribute('open',''); });
@@ -625,6 +627,13 @@
 </section>
 
 
+<section class="section u-pt-0 venue-faq guide-faq" id="venue-faq-r47" aria-labelledby="venue-faq-r47-h">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> FAQ</div>
+    <h2 id="venue-faq-r47-h" class="h-section">Common <span class="accent-cyan">questions.</span></h2>
+    <details class="faq-item"><summary>Can I get a day pass at Cape Dara Resort?</summary><p>Day passes and short-stay deals vary — call ahead. See <a href="/guides/gym-day-pass-pattaya/">gym day pass Pattaya</a>.</p></details><details class="faq-item"><summary>How much does Cape Dara Resort cost?</summary><p>Listed tier: ฿฿฿฿ (luxury). Monthly contracts and tourist passes differ — <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> · <a href="/compare/">compare tool</a>.</p></details><details class="faq-item"><summary>When is Cape Dara Resort open?</summary><p>Hours on file: Hotel hours; gym/spa extended. Chain gyms often allow 24/7 key-fob entry — <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a>.</p></details>
+  </div>
+</section>
 
 <section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">
   <div class="wrap u-max-760">
@@ -885,16 +894,16 @@
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span class="footer-version-badge">Built 2026-06-09 05:40 UTC · <a href="/changelog/">v466</a></span>
+    <span class="footer-version-badge">Built 2026-06-10 02:08 UTC · <a href="/changelog/">v467</a></span>
     <span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span>
   </div>
 </footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script src="/data.js?v=466"></script>
-<script defer src="/favorites.js?v=466"></script>
-<script defer src="/site-ui.js?v=466"></script>
+<script src="/data.js?v=467"></script>
+<script defer src="/favorites.js?v=467"></script>
+<script defer src="/site-ui.js?v=467"></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script defer src="/analytics.js?v=466"></script>
+<script defer src="/analytics.js?v=467"></script>
 </body>
 </html>

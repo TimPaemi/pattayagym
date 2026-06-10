@@ -40,7 +40,17 @@ function marquee(items, bot) {
 
 const ROUNDS = [
   {
-    n: 104, date: '2026-06-09', tag: `v${ASSET_VERSION}`,
+    n: 105, date: '2026-06-09', tag: `v${ASSET_VERSION}`,
+    title: 'Mobile venue fix — section folding restored on all 157 venues',
+    summary: 'Fixes a JS HierarchyRequestError in the mobile section-folding script that deleted the last two content sections, killed the jump-nav, and disabled collapsible sections on every venue page on mobile.',
+    bullets: [
+      'build-v2.js venue folding loop — sibling walk now stops at the previously folded section instead of the moved H2, so no content is orphaned.',
+      'Mobile venue pages regain the full "On this page" jump-nav, Expand/Collapse tools, and all sections (e.g. Not Best For, Quick Reference Card).',
+      'Clears the Lighthouse errors-in-console failure (Best Practices 96 → 100) on venue pages.',
+    ],
+  },
+  {
+    n: 104, date: '2026-06-09', tag: 'v466',
     title: 'Platform audit fixes — Twitter cards, guide counts, venue SEO',
     summary: 'Closes P1/P2 gaps from full platform audit: twitter:card on editorial guides + favorites, dynamic 47-guide copy site-wide, fitz-club/nongnooch title+meta Pattaya fixes, search heading a11y.',
     bullets: [

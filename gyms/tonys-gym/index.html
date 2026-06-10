@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/gyms/tonys-gym/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=466" as="style">
-<link rel="stylesheet" href="/styles.css?v=466">
+<link rel="preload" href="/styles.css?v=467" as="style">
+<link rel="stylesheet" href="/styles.css?v=467">
 <!-- Self-hosted fonts — preload only the LCP display face -->
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=466" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=467" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <meta property="og:title" content="Tony&#39;s Fitness Gym (Tony&#39;s Group Pattaya) | Pattaya.Gym">
 <meta property="og:description" content="Legendary old-school bodybuilding gym. Massive free-weights, no-frills, low monthly. A Pattaya institution.">
@@ -34,6 +34,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","ExerciseGym","HealthClub"],"@id":"https://pattaya-gym.com/gyms/tonys-gym/#business","name":"Tony's Fitness Gym (Tony's Group Pattaya)","description":"Legendary old-school bodybuilding gym. Massive free-weights, no-frills, low monthly. A Pattaya institution.","url":"https://pattaya-gym.com/gyms/tonys-gym/","image":"https://pattaya-gym.com/og/tonys-gym.png","priceRange":"฿","address":{"@type":"PostalAddress","streetAddress":"Multiple Pattaya locations (Wongamat to Jomtien + Bangkok + Si Racha)","addressLocality":"Pattaya","addressRegion":"Chon Buri","postalCode":"20150","addressCountry":"TH"},"telephone":"+6638425795","geo":{"@type":"GeoCoordinates","latitude":12.9478,"longitude":100.8962},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"23:00"}],"areaServed":{"@type":"City","name":"Pattaya"},"sameAs":["https://facebook.com/tonysgrouppattaya","https://facebook.com/tonysgympattaya"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pattaya-gym.com/"},{"@type":"ListItem","position":2,"name":"Fitness / Gym","item":"https://pattaya-gym.com/category/fitness/"},{"@type":"ListItem","position":3,"name":"Tony's Fitness Gym (Tony's Group Pattaya)","item":"https://pattaya-gym.com/gyms/tonys-gym/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I get a day pass at Tony's Fitness Gym?","acceptedAnswer":{"@type":"Answer","text":"Day passes and short-stay deals vary — call ahead. See gym day pass Pattaya."}},{"@type":"Question","name":"How much does Tony's Fitness Gym cost?","acceptedAnswer":{"@type":"Answer","text":"Listed tier: ฿ (budget). Monthly contracts and tourist passes differ — cheapest gyms · compare tool."}},{"@type":"Question","name":"When is Tony's Fitness Gym open?","acceptedAnswer":{"@type":"Answer","text":"Hours on file: Daily 6:00-23:00. Chain gyms often allow 24/7 key-fob entry — 24-hour gyms."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a><div class="marquee" aria-hidden="true">
@@ -504,9 +505,9 @@
     tools.className = 'venue-section-tools';
     tools.innerHTML = '<button type="button" class="btn btn-ghost venue-section-expand">Expand all</button><button type="button" class="btn btn-ghost venue-section-collapse">Collapse all</button>';
     nav.appendChild(tools);
+    var prevDetails = null;
     for (var i = heads.length - 1; i >= 0; i--) {
       var h = heads[i];
-      var nextH = heads[i + 1];
       var details = document.createElement('details');
       details.className = 'venue-section';
       if (i < 2) details.setAttribute('open', '');
@@ -515,7 +516,7 @@
       var panel = document.createElement('div');
       panel.className = 'venue-section-body';
       var node = h.nextSibling;
-      while (node && node !== nextH) {
+      while (node && node !== prevDetails) {
         var nxt = node.nextSibling;
         panel.appendChild(node);
         node = nxt;
@@ -523,8 +524,9 @@
       summary.appendChild(h);
       details.appendChild(summary);
       details.appendChild(panel);
-      if (nextH && nextH.parentNode) nextH.parentNode.insertBefore(details, nextH);
+      if (prevDetails) body.insertBefore(details, prevDetails);
       else body.appendChild(details);
+      prevDetails = details;
     }
     tools.querySelector('.venue-section-expand').addEventListener('click', function(){
       body.querySelectorAll('.venue-section').forEach(function(d){ d.setAttribute('open',''); });
@@ -549,6 +551,13 @@
 
 
 
+<section class="section u-pt-0 venue-faq guide-faq" id="venue-faq-r47" aria-labelledby="venue-faq-r47-h">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> FAQ</div>
+    <h2 id="venue-faq-r47-h" class="h-section">Common <span class="accent-cyan">questions.</span></h2>
+    <details class="faq-item"><summary>Can I get a day pass at Tony's Fitness Gym?</summary><p>Day passes and short-stay deals vary — call ahead. See <a href="/guides/gym-day-pass-pattaya/">gym day pass Pattaya</a>.</p></details><details class="faq-item"><summary>How much does Tony's Fitness Gym cost?</summary><p>Listed tier: ฿ (budget). Monthly contracts and tourist passes differ — <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> · <a href="/compare/">compare tool</a>.</p></details><details class="faq-item"><summary>When is Tony's Fitness Gym open?</summary><p>Hours on file: Daily 6:00-23:00. Chain gyms often allow 24/7 key-fob entry — <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a>.</p></details>
+  </div>
+</section>
 
 <section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">
   <div class="wrap u-max-760">
@@ -833,16 +842,16 @@
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span class="footer-version-badge">Built 2026-06-09 05:40 UTC · <a href="/changelog/">v466</a></span>
+    <span class="footer-version-badge">Built 2026-06-10 02:08 UTC · <a href="/changelog/">v467</a></span>
     <span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span>
   </div>
 </footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script src="/data.js?v=466"></script>
-<script defer src="/favorites.js?v=466"></script>
-<script defer src="/site-ui.js?v=466"></script>
+<script src="/data.js?v=467"></script>
+<script defer src="/favorites.js?v=467"></script>
+<script defer src="/site-ui.js?v=467"></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script defer src="/analytics.js?v=466"></script>
+<script defer src="/analytics.js?v=467"></script>
 </body>
 </html>

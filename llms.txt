@@ -1,5 +1,5 @@
 # Pattaya Gym Directory
-> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 157 venues, 44 guides, 15 categories, 6 areas — no paid placements, source-cited research.
+> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 157 venues, 47 guides, 15 categories, 6 areas — no paid placements, source-cited research.
 
 This llms.txt file provides AI agents and language-model crawlers with a curated map of the most useful, high-signal pages on pattaya-gym.com.
 
@@ -39,7 +39,7 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 - [BJJ / Grappling](https://pattaya-gym.com/category/bjj/): 1 verified BJJ academy
 - [CrossFit / Functional](https://pattaya-gym.com/category/crossfit/): 1 affiliate
 
-## Curated guides (44)
+## Curated guides (47)
 
 - [24-hour gyms](https://pattaya-gym.com/guides/24-hour-gyms-pattaya/)
 - [Adventure sport](https://pattaya-gym.com/guides/adventure-pattaya/)
@@ -52,9 +52,11 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 - [Best gym Jomtien](https://pattaya-gym.com/guides/best-gym-jomtien-pattaya/)
 - [Best gym Naklua & Pratamnak](https://pattaya-gym.com/guides/best-gym-naklua-pratamnak-pattaya/)
 - [Na Jomtien & Sattahip](https://pattaya-gym.com/guides/best-gym-sattahip-pattaya/)
+- [best gyms in pattaya](https://pattaya-gym.com/guides/best-gyms-in-pattaya/)
 - [Gyms near Walking Street](https://pattaya-gym.com/guides/best-gyms-near-walking-street-pattaya/)
 - [Best Muay Thai](https://pattaya-gym.com/guides/best-muay-thai-pattaya/)
 - [BJJ & MMA](https://pattaya-gym.com/guides/bjj-mma-pattaya/)
+- [boxing kickboxing gym pattaya](https://pattaya-gym.com/guides/boxing-kickboxing-gym-pattaya/)
 - [Cheapest gyms](https://pattaya-gym.com/guides/cheapest-gyms-pattaya/)
 - [Climbing](https://pattaya-gym.com/guides/climbing-pattaya/)
 - [CrossFit](https://pattaya-gym.com/guides/crossfit-pattaya/)
@@ -64,6 +66,7 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 - [Family-friendly sport](https://pattaya-gym.com/guides/family-friendly-pattaya/)
 - [Female-friendly gyms](https://pattaya-gym.com/guides/female-friendly-gyms-pattaya/)
 - [Gym day pass](https://pattaya-gym.com/guides/gym-day-pass-pattaya/)
+- [hotel gym pattaya](https://pattaya-gym.com/guides/hotel-gym-pattaya/)
 - [Is Muay Thai safe?](https://pattaya-gym.com/guides/is-muay-thai-safe-pattaya/)
 - [Kids & youth sport](https://pattaya-gym.com/guides/kids-youth-sport-pattaya/)
 - [Luxury sports clubs](https://pattaya-gym.com/guides/luxury-sports-clubs-pattaya/)

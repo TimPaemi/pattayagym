@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '466';
+const ASSET_VERSION = '467';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -1111,9 +1111,9 @@ ${bodyHtml ? `
     tools.className = 'venue-section-tools';
     tools.innerHTML = '<button type="button" class="btn btn-ghost venue-section-expand">Expand all</button><button type="button" class="btn btn-ghost venue-section-collapse">Collapse all</button>';
     nav.appendChild(tools);
+    var prevDetails = null;
     for (var i = heads.length - 1; i >= 0; i--) {
       var h = heads[i];
-      var nextH = heads[i + 1];
       var details = document.createElement('details');
       details.className = 'venue-section';
       if (i < 2) details.setAttribute('open', '');
@@ -1122,7 +1122,7 @@ ${bodyHtml ? `
       var panel = document.createElement('div');
       panel.className = 'venue-section-body';
       var node = h.nextSibling;
-      while (node && node !== nextH) {
+      while (node && node !== prevDetails) {
         var nxt = node.nextSibling;
         panel.appendChild(node);
         node = nxt;
@@ -1130,8 +1130,9 @@ ${bodyHtml ? `
       summary.appendChild(h);
       details.appendChild(summary);
       details.appendChild(panel);
-      if (nextH && nextH.parentNode) nextH.parentNode.insertBefore(details, nextH);
+      if (prevDetails) body.insertBefore(details, prevDetails);
       else body.appendChild(details);
+      prevDetails = details;
     }
     tools.querySelector('.venue-section-expand').addEventListener('click', function(){
       body.querySelectorAll('.venue-section').forEach(function(d){ d.setAttribute('open',''); });

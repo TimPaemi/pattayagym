@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/gyms/wong-amat-beach/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=466" as="style">
-<link rel="stylesheet" href="/styles.css?v=466">
+<link rel="preload" href="/styles.css?v=467" as="style">
+<link rel="stylesheet" href="/styles.css?v=467">
 <!-- Self-hosted fonts — preload only the LCP display face -->
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=466" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=467" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <meta property="og:title" content="Wong Amat Beach — Naklua / Pattaya&#39;s Family | Pattaya.Gym">
 <meta property="og:description" content="Pattaya quietest, cleanest, most family-friendly main beach. ~1.5km long Naklua coastline with safe-swim zone, beach volleyball court, jet ski + banana">
@@ -34,6 +34,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","SportsActivityLocation"],"@id":"https://pattaya-gym.com/gyms/wong-amat-beach/#business","name":"Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach","description":"Pattaya quietest, cleanest, most family-friendly main beach. ~1.5km long Naklua coastline with safe-swim zone, beach volleyball court, jet ski + banana boat (central section). Walking distance to Centara Grand Mirage, Cape Dara, and Sanctuary of Truth. Free.","url":"https://pattaya-gym.com/gyms/wong-amat-beach/","image":"https://pattaya-gym.com/og/wong-amat-beach.png","priceRange":"฿","address":{"@type":"PostalAddress","streetAddress":"Wong Amat Beach (access via Naklua Road, Soi 16), Naklua, Bang Lamung, Chonburi 20150","addressLocality":"Pattaya","addressRegion":"Chon Buri","postalCode":"20150","addressCountry":"TH"},"geo":{"@type":"GeoCoordinates","latitude":12.959894,"longitude":100.893826},"openingHours":"Public access daily — best swimming dawn–18:00","areaServed":{"@type":"City","name":"Pattaya"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pattaya-gym.com/"},{"@type":"ListItem","position":2,"name":"Swimming","item":"https://pattaya-gym.com/category/swimming/"},{"@type":"ListItem","position":3,"name":"Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach","item":"https://pattaya-gym.com/gyms/wong-amat-beach/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I swim at Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach without a hotel stay?","acceptedAnswer":{"@type":"Answer","text":"Water parks and some resort pools sell day tickets — call ahead. Guide: swimming & pools Pattaya."}},{"@type":"Question","name":"Is Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach good for families?","acceptedAnswer":{"@type":"Answer","text":"Pool and water venues suit mixed-age groups — family-friendly sport · childcare & pools."}},{"@type":"Question","name":"Where is Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach located?","acceptedAnswer":{"@type":"Answer","text":"Naklua. Naklua & Pratamnak guide · south water parks: Sattahip guide."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a><div class="marquee" aria-hidden="true">
@@ -596,9 +597,9 @@
     tools.className = 'venue-section-tools';
     tools.innerHTML = '<button type="button" class="btn btn-ghost venue-section-expand">Expand all</button><button type="button" class="btn btn-ghost venue-section-collapse">Collapse all</button>';
     nav.appendChild(tools);
+    var prevDetails = null;
     for (var i = heads.length - 1; i >= 0; i--) {
       var h = heads[i];
-      var nextH = heads[i + 1];
       var details = document.createElement('details');
       details.className = 'venue-section';
       if (i < 2) details.setAttribute('open', '');
@@ -607,7 +608,7 @@
       var panel = document.createElement('div');
       panel.className = 'venue-section-body';
       var node = h.nextSibling;
-      while (node && node !== nextH) {
+      while (node && node !== prevDetails) {
         var nxt = node.nextSibling;
         panel.appendChild(node);
         node = nxt;
@@ -615,8 +616,9 @@
       summary.appendChild(h);
       details.appendChild(summary);
       details.appendChild(panel);
-      if (nextH && nextH.parentNode) nextH.parentNode.insertBefore(details, nextH);
+      if (prevDetails) body.insertBefore(details, prevDetails);
       else body.appendChild(details);
+      prevDetails = details;
     }
     tools.querySelector('.venue-section-expand').addEventListener('click', function(){
       body.querySelectorAll('.venue-section').forEach(function(d){ d.setAttribute('open',''); });
@@ -653,6 +655,13 @@
 </section>
 
 
+<section class="section u-pt-0 venue-faq guide-faq" id="venue-faq-r47" aria-labelledby="venue-faq-r47-h">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> FAQ</div>
+    <h2 id="venue-faq-r47-h" class="h-section">Common <span class="accent-cyan">questions.</span></h2>
+    <details class="faq-item"><summary>Can I swim at Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach without a hotel stay?</summary><p>Water parks and some resort pools sell day tickets — call ahead. Guide: <a href="/guides/swimming-pools-pattaya/">swimming &amp; pools Pattaya</a>.</p></details><details class="faq-item"><summary>Is Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach good for families?</summary><p>Pool and water venues suit mixed-age groups — <a href="/guides/family-friendly-pattaya/">family-friendly sport</a> · <a href="/guides/pattaya-gyms-childcare-family-pools/">childcare &amp; pools</a>.</p></details><details class="faq-item"><summary>Where is Wong Amat Beach — Naklua / Pattaya's Family Swimming Beach located?</summary><p>Naklua. <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua &amp; Pratamnak guide</a> · south water parks: <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.</p></details>
+  </div>
+</section>
 
 <section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">
   <div class="wrap u-max-760">
@@ -913,16 +922,16 @@
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span class="footer-version-badge">Built 2026-06-09 05:40 UTC · <a href="/changelog/">v466</a></span>
+    <span class="footer-version-badge">Built 2026-06-10 02:08 UTC · <a href="/changelog/">v467</a></span>
     <span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span>
   </div>
 </footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script src="/data.js?v=466"></script>
-<script defer src="/favorites.js?v=466"></script>
-<script defer src="/site-ui.js?v=466"></script>
+<script src="/data.js?v=467"></script>
+<script defer src="/favorites.js?v=467"></script>
+<script defer src="/site-ui.js?v=467"></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script defer src="/analytics.js?v=466"></script>
+<script defer src="/analytics.js?v=467"></script>
 </body>
 </html>

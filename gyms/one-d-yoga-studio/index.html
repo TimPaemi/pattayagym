@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/gyms/one-d-yoga-studio/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<link rel="preload" href="/styles.css?v=466" as="style">
-<link rel="stylesheet" href="/styles.css?v=466">
+<link rel="preload" href="/styles.css?v=467" as="style">
+<link rel="stylesheet" href="/styles.css?v=467">
 <!-- Self-hosted fonts — preload only the LCP display face -->
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=466" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=467" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <meta property="og:title" content="One-D Yoga Studio — Yoga / Pilates Pattaya | Pattaya.Gym">
 <meta property="og:description" content="Modern multi-style yoga studio at 571/32 Naklua 16/2 offering daily Hatha, Vinyasa Flow, and Yin classes plus private sessions, Near Pattaya, Thailand.">
@@ -34,6 +34,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","HealthClub"],"@id":"https://pattaya-gym.com/gyms/one-d-yoga-studio/#business","name":"One-D Yoga Studio","description":"Modern multi-style yoga studio at 571/32 Naklua 16/2 offering daily Hatha, Vinyasa Flow, and Yin classes plus private sessions, workshops, and weekend / weeklong retreats.","url":"https://pattaya-gym.com/gyms/one-d-yoga-studio/","image":"https://pattaya-gym.com/og/one-d-yoga-studio.png","priceRange":"฿฿","address":{"@type":"PostalAddress","streetAddress":"571/32 Moo 5, Naklua 16/2, Pattaya-Naklua Road, Pattaya, Chonburi 20150","addressLocality":"Pattaya","addressRegion":"Chon Buri","postalCode":"20150","addressCountry":"TH"},"telephone":"+66902939462","geo":{"@type":"GeoCoordinates","latitude":12.932473,"longitude":100.884808},"openingHours":"Daily classes — verify schedule with studio","areaServed":{"@type":"City","name":"Pattaya"},"sameAs":["https://facebook.com/OneDYoga"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pattaya-gym.com/"},{"@type":"ListItem","position":2,"name":"Yoga / Pilates","item":"https://pattaya-gym.com/category/yoga/"},{"@type":"ListItem","position":3,"name":"One-D Yoga Studio","item":"https://pattaya-gym.com/gyms/one-d-yoga-studio/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are drop-in yoga classes available at One-D Yoga Studio?","acceptedAnswer":{"@type":"Answer","text":"Most studios sell single classes and weekly packages — confirm schedule on their site. Yoga retreat Pattaya."}},{"@type":"Question","name":"Is One-D Yoga Studio suitable for beginners?","acceptedAnswer":{"@type":"Answer","text":"Studios routinely welcome first-timers — tell the instructor about injuries. Best for beginners."}},{"@type":"Question","name":"Where is One-D Yoga Studio located?","acceptedAnswer":{"@type":"Answer","text":"Pattaya-Naklua Road — Naklua & Pratamnak guide."}}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a><div class="marquee" aria-hidden="true">
@@ -570,9 +571,9 @@
     tools.className = 'venue-section-tools';
     tools.innerHTML = '<button type="button" class="btn btn-ghost venue-section-expand">Expand all</button><button type="button" class="btn btn-ghost venue-section-collapse">Collapse all</button>';
     nav.appendChild(tools);
+    var prevDetails = null;
     for (var i = heads.length - 1; i >= 0; i--) {
       var h = heads[i];
-      var nextH = heads[i + 1];
       var details = document.createElement('details');
       details.className = 'venue-section';
       if (i < 2) details.setAttribute('open', '');
@@ -581,7 +582,7 @@
       var panel = document.createElement('div');
       panel.className = 'venue-section-body';
       var node = h.nextSibling;
-      while (node && node !== nextH) {
+      while (node && node !== prevDetails) {
         var nxt = node.nextSibling;
         panel.appendChild(node);
         node = nxt;
@@ -589,8 +590,9 @@
       summary.appendChild(h);
       details.appendChild(summary);
       details.appendChild(panel);
-      if (nextH && nextH.parentNode) nextH.parentNode.insertBefore(details, nextH);
+      if (prevDetails) body.insertBefore(details, prevDetails);
       else body.appendChild(details);
+      prevDetails = details;
     }
     tools.querySelector('.venue-section-expand').addEventListener('click', function(){
       body.querySelectorAll('.venue-section').forEach(function(d){ d.setAttribute('open',''); });
@@ -615,6 +617,13 @@
 
 
 
+<section class="section u-pt-0 venue-faq guide-faq" id="venue-faq-r47" aria-labelledby="venue-faq-r47-h">
+  <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">★</span> FAQ</div>
+    <h2 id="venue-faq-r47-h" class="h-section">Common <span class="accent-cyan">questions.</span></h2>
+    <details class="faq-item"><summary>Are drop-in yoga classes available at One-D Yoga Studio?</summary><p>Most studios sell single classes and weekly packages — confirm schedule on their site. <a href="/guides/yoga-retreat-pattaya/">Yoga retreat Pattaya</a>.</p></details><details class="faq-item"><summary>Is One-D Yoga Studio suitable for beginners?</summary><p>Studios routinely welcome first-timers — tell the instructor about injuries. <a href="/guides/best-for-beginners-pattaya/">Best for beginners</a>.</p></details><details class="faq-item"><summary>Where is One-D Yoga Studio located?</summary><p>Pattaya-Naklua Road — <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua &amp; Pratamnak guide</a>.</p></details>
+  </div>
+</section>
 
 <section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">
   <div class="wrap u-max-760">
@@ -899,16 +908,16 @@
   </div>
   <div class="footer-base">
     <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span class="footer-version-badge">Built 2026-06-09 05:40 UTC · <a href="/changelog/">v466</a></span>
+    <span class="footer-version-badge">Built 2026-06-10 02:08 UTC · <a href="/changelog/">v467</a></span>
     <span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span>
   </div>
 </footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
-<script src="/data.js?v=466"></script>
-<script defer src="/favorites.js?v=466"></script>
-<script defer src="/site-ui.js?v=466"></script>
+<script src="/data.js?v=467"></script>
+<script defer src="/favorites.js?v=467"></script>
+<script defer src="/site-ui.js?v=467"></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script defer src="/analytics.js?v=466"></script>
+<script defer src="/analytics.js?v=467"></script>
 </body>
 </html>
