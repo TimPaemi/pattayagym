@@ -8,9 +8,19 @@
 
 const SITE = 'https://pattaya-gym.com';
 const TIMPAEMI_URL = 'https://timpaemi.com/';
-const AUTHOR_IMAGE = `${SITE}/authors/timpaemi.jpg`;
+// Canonical author photo lives at the entity home (timpaemi.com) — one URL
+// network-wide so Google binds every byline image to the same Person node.
+const AUTHOR_IMAGE = 'https://timpaemi.com/authors/timpaemi.jpg';
+
+const SOCIAL_SAMEAS = [
+  'https://www.youtube.com/@timpaemi',
+  'https://www.tiktok.com/@timpaemi.com',
+  'https://www.instagram.com/timpaemi/',
+  'https://www.facebook.com/profile.php?id=61583166493467',
+];
 
 const NETWORK_SAMEAS = [
+  ...SOCIAL_SAMEAS,
   'https://timpaemi.com/',
   'https://pattaya-authority.com/',
   'https://pattaya-gym.com/',
@@ -34,7 +44,7 @@ function authorPerson() {
     '@type': 'Person',
     '@id': `${TIMPAEMI_URL}#timpaemi`,
     name: 'TimPaemi',
-    alternateName: ['Tim Paemi', 'Paemi Tim', 'Tim & Paemi'],
+    alternateName: ['Tim Paemi', 'Paemi Tim', 'Tim & Paemi', 'TIMPAEMI'],
     url: TIMPAEMI_URL,
     image: AUTHOR_IMAGE,
     jobTitle: 'Founders & editors, Pattaya Authority network',
@@ -49,4 +59,4 @@ function bylineAuthorHtml() {
   return `By <a href="${TIMPAEMI_URL}" rel="author" target="_blank">TimPaemi</a>`;
 }
 
-module.exports = { authorPerson, bylineAuthorHtml, NETWORK_SAMEAS, TIMPAEMI_URL, AUTHOR_IMAGE };
+module.exports = { authorPerson, bylineAuthorHtml, NETWORK_SAMEAS, SOCIAL_SAMEAS, TIMPAEMI_URL, AUTHOR_IMAGE };

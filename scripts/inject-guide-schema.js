@@ -179,10 +179,16 @@ for (const guide of readGuidePages()) {
   } else {
     // Patch existing Article schemas: consolidate author onto the canonical
     // TimPaemi entity (timpaemi.com) for cross-network entity SEO.
-    // Only matches the legacy flat author shape — idempotent on re-runs.
-    const patched = html.replace(
+    // Matches the legacy flat author shape AND any prior canonical-entity
+    // shape (so sameAs/image updates propagate). Idempotent on re-runs.
+    const canonicalAuthor = `"author":${JSON.stringify(authorPerson())}`;
+    let patched = html.replace(
       /"author":\{"@type":"Person","name":"Tim Paemi","url":"[^"]*"\}/g,
-      `"author":${JSON.stringify(authorPerson())}`
+      canonicalAuthor
+    );
+    patched = patched.replace(
+      /"author":\{"@type":"Person","@id":"https:\/\/timpaemi\.com\/#timpaemi".*?"sameAs":\[[^\]]*\]\}/g,
+      canonicalAuthor
     );
     if (patched !== html) { html = patched; authorPatched++; }
   }
