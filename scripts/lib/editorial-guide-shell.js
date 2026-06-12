@@ -70,7 +70,7 @@ function footer(meta) {
       <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements.</p>
     </div>
     <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/guides/">Guides</a></li><li><a href="/compare/">Compare</a></li><li><a href="/methodology/">Methodology</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li><li><a href="https://pattaya-afterdark.com/" target="_blank" rel="noopener noreferrer">Pattaya After Dark</a></li><li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li></ul></div>
     <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li></ul></div>
   </div>
   <div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="u-cyan">★ v${meta.ASSET_VERSION} · ${meta.BUILD_TS}</span></div>
@@ -135,7 +135,7 @@ ${nav()}
     <div class="hero-kicker">// ${esc(g.kicker)}</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">${g.h1}</h1>
 <div class="guide-byline">
-  <span class="guide-byline-author">By <a href="/about/">Tim Paemi</a></span>
+  <span class="guide-byline-author">By <a href="https://timpaemi.com/" rel="author" target="_blank">TimPaemi</a></span>
   <span class="guide-byline-dot">·</span>
   <span class="guide-byline-time">${esc(g.readTime || '7 min read')}</span>
   <span class="guide-byline-dot">·</span>

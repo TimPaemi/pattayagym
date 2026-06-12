@@ -18,6 +18,7 @@
 const fs = require('fs');
 const path = require('path');
 const { normalizeGuideHeadMeta } = require('./lib/normalize-guide-head-meta');
+const { authorPerson, bylineAuthorHtml } = require('./lib/timpaemi-author');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://pattaya-gym.com';
@@ -118,6 +119,7 @@ function readGuidePages() {
 let articleAdded = 0;
 let faqAdded = 0;
 let skipped = 0;
+let authorPatched = 0;
 
 function stripFaqLd(html) {
   return html.replace(/<script type="application\/ld\+json">\{[^<]*"@type":"FAQPage"[^<]*\}<\/script>\s*/g, '');
@@ -157,11 +159,7 @@ for (const guide of readGuidePages()) {
       inLanguage: 'en',
       datePublished: pubDate,
       dateModified: pubDate,
-      author: {
-        '@type': 'Person',
-        name: 'Tim Paemi',
-        url: `${SITE}/about/`
-      },
+      author: authorPerson(),
       publisher: {
         '@type': 'Organization',
         '@id': `${SITE}/#organization`,
@@ -178,6 +176,15 @@ for (const guide of readGuidePages()) {
     };
     blocks.push(`<script type="application/ld+json">${JSON.stringify(articleLd)}</script>`);
     articleAdded++;
+  } else {
+    // Patch existing Article schemas: consolidate author onto the canonical
+    // TimPaemi entity (timpaemi.com) for cross-network entity SEO.
+    // Only matches the legacy flat author shape — idempotent on re-runs.
+    const patched = html.replace(
+      /"author":\{"@type":"Person","name":"Tim Paemi","url":"[^"]*"\}/g,
+      `"author":${JSON.stringify(authorPerson())}`
+    );
+    if (patched !== html) { html = patched; authorPatched++; }
   }
 
   // 2) FAQPage schema — rebuild from on-page FAQ headings (CTA blocks excluded)
@@ -218,7 +225,7 @@ for (const guide of readGuidePages()) {
 
   if (!/<div class="guide-byline"/.test(html)) {
     const byline = `<div class="guide-byline">
-  <span class="guide-byline-author">By <a href="/about/">Tim Paemi</a></span>
+  <span class="guide-byline-author">${bylineAuthorHtml()}</span>
   <span class="guide-byline-dot">·</span>
   <span class="guide-byline-time">${readingMin} min read</span>
   <span class="guide-byline-dot">·</span>
@@ -232,10 +239,20 @@ for (const guide of readGuidePages()) {
       /<span class="guide-byline-time">[^<]*<\/span>/,
       `<span class="guide-byline-time">${readingMin} min read</span>`
     );
+    // Normalize existing bylines onto the TimPaemi entity
+    html = html.replace(
+      /<span class="guide-byline-author">By <a [^>]*>[^<]*<\/a><\/span>/,
+      `<span class="guide-byline-author">${bylineAuthorHtml()}</span>`
+    );
+  }
+
+  // <meta name="author"> for crawlers/AI that read head metadata only
+  if (!/<meta name="author"/.test(html)) {
+    html = html.replace(/(<meta name="robots")/, '<meta name="author" content="TimPaemi (timpaemi.com)">\n$1');
   }
 
   html = normalizeGuideHeadMeta(html);
   fs.writeFileSync(guide.path, html, 'utf8');
 }
 
-console.log(`Guide schema enrichment: Article added to ${articleAdded} guides; FAQPage added to ${faqAdded} guides; ${skipped} already had both. Bylines + reading time + head meta normalized.`);
+console.log(`Guide schema enrichment: Article added to ${articleAdded} guides; FAQPage added to ${faqAdded} guides; ${skipped} already had both; author entity patched on ${authorPatched}. Bylines + reading time + head meta normalized.`);

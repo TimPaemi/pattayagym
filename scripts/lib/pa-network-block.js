@@ -27,6 +27,7 @@ const NETWORK_SITES = [
   { name: 'Pattaya Villa', url: 'https://pattayavilla.com/', desc: 'Long-stay stays' },
   { name: 'Vehicle Rentals', url: 'https://pattaya-vehicle-rentals.com/', desc: 'Scooters & cars' },
   { name: 'PattayaPets', url: 'https://pattayapets.com/', desc: 'Vets & pet life' },
+  { name: 'Pattaya After Dark', url: 'https://pattaya-afterdark.com/', desc: 'Nightlife tonight' },
   { name: 'Mr We Outside', url: 'https://mrweoutside.com/', desc: 'Outdoor community' },
   { name: 'TimPaemi', url: 'https://timpaemi.com/', desc: 'Founders · agency' },
 ];

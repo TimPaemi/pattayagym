@@ -1,6 +1,6 @@
 # Venue outreach export
 
-Generated: 2026-06-10
+Generated: 2026-06-12
 
 - **104** venues with a public website
 - **Badge:** https://pattaya-gym.com/badge-listed.svg
