@@ -645,8 +645,7 @@ function venueListingCard(v) {
 }
 
 function paNetwork() {
-  const { paNetworkHtml } = require('./scripts/lib/pa-network-block');
-  return paNetworkHtml({ hereOnGym: true, badgeUrl: 'https://pattaya-authority.com/work/pattaya-gym-directory/' });
+  return '';
 }
 
 function backToTop() {
@@ -688,14 +687,22 @@ function footer(scripts) {
       <ul class="footer-projects">
         <li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li>
         <li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></li>
+        <li><a href="https://timpaemi.live/" target="_blank" rel="noopener noreferrer">TimPaemi Live</a></li>
         <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a></li>
+        <li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li>
         <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a></li>
         <li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a></li>
-        <li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li>
-        <li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li>
+        <li><a href="https://retire-in-pattaya.com/" target="_blank" rel="noopener noreferrer">Retire in Pattaya</a></li>
+        <li><a href="https://movetopattaya.com/" target="_blank" rel="noopener noreferrer">Move to Pattaya</a></li>
+        <li><a href="https://pattayatools.pages.dev/" target="_blank" rel="noopener noreferrer">PattayaTools</a></li>
         <li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li>
+        <li><a href="https://pattaya-afterdark.com/" target="_blank" rel="noopener noreferrer">Pattaya After Dark</a></li>
+        <li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li>
+        <li><a href="https://pattaya-golf.com/" target="_blank" rel="noopener noreferrer">Pattaya Golf</a></li>
+        <li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li>
         <li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li>
-        <li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a></li><li><a href="https://pattaya-afterdark.com/" target="_blank" rel="noopener noreferrer">Pattaya After Dark</a></li>
+        <li><a href="https://koh-larn-thailand.com/" target="_blank" rel="noopener noreferrer">Koh Larn Guide</a></li>
+        <li><a href="https://pattaya-insider.com/" target="_blank" rel="noopener noreferrer">Pattaya Insider</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -705,6 +712,10 @@ function footer(scripts) {
         <li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li>
         <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li>
         <li><a href="/contact/">Contact page</a></li>
+        <li><a href="https://www.youtube.com/@timpaemi" target="_blank" rel="noopener noreferrer">YouTube · @timpaemi</a></li>
+        <li><a href="https://www.tiktok.com/@timpaemi.com" target="_blank" rel="noopener noreferrer">TikTok · @timpaemi.com</a></li>
+        <li><a href="https://www.instagram.com/timpaemi/" target="_blank" rel="noopener noreferrer">Instagram · @timpaemi</a></li>
+        <li><a href="https://www.facebook.com/timpaemi" target="_blank" rel="noopener noreferrer">Facebook · TIMPAEMI</a></li>
       </ul>
     </div>
   </div>
