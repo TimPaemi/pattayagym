@@ -16,7 +16,7 @@ const SOCIAL_SAMEAS = [
   'https://www.youtube.com/@timpaemi',
   'https://www.tiktok.com/@timpaemi.com',
   'https://www.instagram.com/timpaemi/',
-  'https://www.facebook.com/profile.php?id=61583166493467',
+  'https://www.facebook.com/timpaemi',
 ];
 
 const NETWORK_SAMEAS = [
