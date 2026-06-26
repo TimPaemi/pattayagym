@@ -33,9 +33,9 @@ const NETWORK_SAMEAS = [
   'https://pattaya-medical.com/',
   'https://pattayapets.com/',
   'https://pattaya-vehicle-rentals.com/',
-  'https://pattayavilla.com/',
-  'https://pattayapersonaltrainer.com/',
-  'https://mrweoutside.com/',
+  
+  
+  
 ];
 
 /** Canonical Person node for JSON-LD `author` fields. */
