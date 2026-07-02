@@ -788,6 +788,26 @@ function breadcrumb(items) {
 }
 
 // ---------- Venue page ----------
+// Additive: per-venue FAQPage built from verified data fields (no invented facts).
+function venueFaqLd(g, catLabel, url) {
+  const n = g.name;
+  const faqs = [];
+  if (g.area) faqs.push({ q: `Where is ${n} located?`, a: `${n} is located in ${g.area}, Pattaya, Thailand. The full address and map are on this page.` });
+  faqs.push({ q: `What kind of venue is ${n}?`, a: `${n} is listed under ${catLabel} in the Pattaya sports & fitness directory.` });
+  if (g.hours) faqs.push({ q: `What are ${n}'s opening hours?`, a: `${n} is listed with these hours: ${g.hours}. Confirm directly before visiting.` });
+  if (faqs.length < 4 && g.phone) faqs.push({ q: `How do I contact ${n}?`, a: `You can reach ${n} by phone at ${g.phone}. Contact details are on this page.` });
+  if (!faqs.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${url}#faq`,
+    mainEntity: faqs.slice(0, 4).map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a }
+    }))
+  };
+}
 function venuePage(g, fm, body) {
   const cat = CATEGORIES.find(c => c.key === g.category);
   const catLabel = cat ? cat.label : g.category;
@@ -874,7 +894,7 @@ function venuePage(g, fm, body) {
       { label: g.name }
     ], url)
   };
-  const jsonLd = [localBusiness, breadcrumbLd];
+  const jsonLd = [localBusiness, breadcrumbLd, venueFaqLd(g, catLabel, url)].filter(Boolean);
 
   const bodyHtml = mdToHtml(body);
 

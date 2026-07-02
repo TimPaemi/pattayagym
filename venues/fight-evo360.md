@@ -28,7 +28,7 @@ sources:
   - https://www.nowmuaythai.com/blog/the-best-muay-thai-gyms-in-pattaya-thailand
   - https://www.nowmuaythai.com/class/191-1-month-morning-muay-thai-fight-evo360
   - https://x.com/fight_evo360
-description: Combines traditional Muay Thai and boxing values with structured sports science and performance-based programming. Stub — needs deep research.
+description: Combines traditional Muay Thai and boxing values with structured sports science, S&C and performance nutrition. Championship-level trainers on Thepprasit Road.
 mapsUrl: "https://maps.google.com/?q=FIGHT+EVO360+Pattaya"
 tags: [sport-science, performance, modern]
 ---

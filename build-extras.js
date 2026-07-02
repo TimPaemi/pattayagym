@@ -1113,10 +1113,10 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 
 ## Sport categories
 
-- [Muay Thai camps](${SITE}/category/muay-thai/): 21 verified camps including Fairtex, Sityodtong, Kombat Group
-- [Fitness / Gym](${SITE}/category/fitness/): 25 venues — 24-hour chains, hotel gyms, boutique
+- [Muay Thai camps](${SITE}/category/muay-thai/): 38 verified camps including Fairtex, Sityodtong, Kombat Group
+- [Fitness / Gym](${SITE}/category/fitness/): 29 venues — 24-hour chains, hotel gyms, boutique
 - [Golf](${SITE}/category/golf/): 17 courses including Siam Country Club, Laem Chabang, Phoenix Gold
-- [Yoga / Pilates](${SITE}/category/yoga/): 6 studios
+- [Yoga / Pilates](${SITE}/category/yoga/): 14 studios
 - [Tennis / Padel / Squash](${SITE}/category/racquet/): 11 venues
 - [Watersports / Diving](${SITE}/category/watersports/): 20 dive operators + kitesurf + yacht clubs
 - [Swimming](${SITE}/category/swimming/): 9 pools + waterparks
@@ -1179,6 +1179,26 @@ Independent directory operated since 2026. Built and maintained in Pattaya, Thai
 Coordinates: 12.93°N, 100.88°E.
 
 Last update: ${LAST_BUILD_DATE}
+
+## Sister sites (TimPaemi / Pattaya Authority network · 18 sites)
+- https://timpaemi.com/                       (parent brand)
+- https://pattaya-authority.com/              (flagship media agency)
+- https://timpaemi.live/                      (TimPaemi Live)
+- https://pattayastream.com/                  (Pattaya content channel)
+- https://pattaya-afterdark.com/              (Pattaya After Dark)
+- https://pattaya-restaurant-guide.com/       (independent restaurant directory)
+- https://pattaya-coffee.com/                 (independent coffee directory)
+- https://pattaya-medical.com/                (Pattaya medical directory)
+- https://pattayavisahelp.com/                (long-stay visa support)
+- https://pattaya-school-guide.com/           (independent school directory)
+- https://pattayapets.com/                    (Pattaya pet services directory)
+- https://pattaya-vehicle-rentals.com/        (Pattaya car & bike rental directory)
+- https://pattaya-golf.com/                   (Pattaya Golf)
+- https://koh-larn-thailand.com/              (Koh Larn guide)
+- https://pattaya-insider.com/                (Pattaya Insider)
+- https://retire-in-pattaya.com/              (retire & stay guide)
+- https://movetopattaya.com/                  (moving guide)
+- https://pattayatools.pages.dev/             (PattayaTools)
 `;
 }
 
