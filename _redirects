@@ -27,3 +27,10 @@ https://www.pattaya-gym.com/* https://pattaya-gym.com/:splat 301
 /guides/luxury-gyms-pattaya  /guides/luxury-sports-clubs-pattaya/ 301
 /guides/digital-nomad-friendly/ /guides/pattaya-digital-nomad-fitness/ 301
 /guides/digital-nomad-friendly  /guides/pattaya-digital-nomad-fitness/ 301
+
+# /gyms/ has no index page (children only) but venue-page breadcrumbs link it —
+# send to the sports directory. /muay-thai/ vanity → real category hub.
+/gyms/ /sports/ 301
+/gyms  /sports/ 301
+/muay-thai/ /category/muay-thai/ 301
+/muay-thai  /category/muay-thai/ 301
