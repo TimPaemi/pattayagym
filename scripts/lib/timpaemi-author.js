@@ -19,23 +19,12 @@ const SOCIAL_SAMEAS = [
   'https://www.facebook.com/timpaemi',
 ];
 
+// sameAs = social profiles + honest publisher hub only. Sister sites are NOT
+// the same entity's profiles — do not list network domains here (link-network signal).
 const NETWORK_SAMEAS = [
   ...SOCIAL_SAMEAS,
-  'https://timpaemi.com/',
   'https://pattaya-authority.com/',
   'https://pattaya-gym.com/',
-  'https://pattaya-afterdark.com/',
-  'https://pattaya-restaurant-guide.com/',
-  'https://pattayavisahelp.com/',
-  'https://pattaya-school-guide.com/',
-  'https://pattaya-coffee.com/',
-  'https://pattayastream.com/',
-  'https://pattaya-medical.com/',
-  'https://pattayapets.com/',
-  'https://pattaya-vehicle-rentals.com/',
-  
-  
-  
 ];
 
 /** Canonical Person node for JSON-LD `author` fields. */
