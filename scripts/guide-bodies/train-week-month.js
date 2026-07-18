@@ -73,7 +73,7 @@ module.exports = `
 
 <p><strong><a href="/gyms/fairtex-pattaya/">Fairtex</a> / <a href="/gyms/kombat-group-thailand/">Kombat Group</a></strong> — monthly packages available; premium but removes housing friction. Best if you do not want to apartment-hunt.</p>
 
-<p><strong><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a></strong> — education-visa pathway advertised; Thappraya near Jomtien. Best if you are serious about MMA/BJJ alongside MT for 90+ days — confirm visa legality with <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>, not gym sales alone.</p>
+<p><strong><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a></strong> — education-visa pathway advertised; Thappraya near Jomtien. Best if you are serious about MMA/BJJ alongside MT for 90+ days — confirm visa legality with Pattaya Visa Help, not gym sales alone.</p>
 
 <h3>1-month budget ranges (2026, per person)</h3>
 
@@ -99,8 +99,7 @@ module.exports = `
 <ul>
 <li>Public pools — <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms guide</a> lists Jomtien/Naklua pools.</li>
 <li>Yoga — Jomtien/Thepprasit studios in <a href="/guides/best-gym-jomtien-pattaya/">Jomtien guide</a>.</li>
-<li>Massage — ubiquitous; sports massage ฿300–600/hr common.</li>
-<li>Injury — <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> for clinics if pain is sharp, not dull soreness.</li>
+<li>Massage — ubiquitous; sports massage ฿300–600/hr common.</li>
 </ul>
 
 <h2>Sample day schedules</h2>
@@ -115,10 +114,8 @@ module.exports = `
 
 <h3>Typical 1-month day (week 3+, two-a-day optional)</h3>
 <ul>
-<li>07:00–09:00 — morning session</li>
-<li>10:00–14:00 — work remotely (<a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">coffee guide</a>) or rest</li>
-<li>15:00–17:30 — afternoon session OR yoga/swim</li>
-<li>18:00 — protein-heavy meal (<a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">restaurant guide</a>)</li>
+<li>07:00–09:00 — morning session</li>
+<li>15:00–17:30 — afternoon session OR yoga/swim</li>
 </ul>
 
 <h2>Fights and stadium trips during your stay</h2>
@@ -147,7 +144,7 @@ module.exports = `
 <p>Only from day 4–5 if recovery is strong. Resorts push two-a-days — listen to your shins and sleep.</p>
 
 <h3>What visa do I need for 1 month training?</h3>
-<p>Many nationalities use 60-day tourist exemption or tourist visa. Longer stays need proper planning — <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">visa guide</a>. Do not trust gym “visa guarantee” marketing without independent verification.</p>
+<p>Many nationalities use 60-day tourist exemption or tourist visa. Longer stays need proper planning — visa guide. Do not trust gym “visa guarantee” marketing without independent verification.</p>
 
 <h3>Fairtex or WKO for one month?</h3>
 <p>Fairtex if you want resort infrastructure and English everywhere. WKO if you want monthly value and will rent your own place. Compare on <a href="/compare/">compare tool</a>.</p>

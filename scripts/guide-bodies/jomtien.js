@@ -15,8 +15,7 @@ module.exports = `
 <li><strong>Quieter nights</strong> than Beach Road / Walking Street — better sleep for two-a-days.</li>
 <li><strong>Swimmable zones</strong> — Jomtien public pool, Dongtan beach areas; see venue pages for current safety.</li>
 <li><strong>Expat density</strong> — gyms expect foreign members, monthly deals, and irregular travel schedules.</li>
-<li><strong>Still connected</strong> — ฿60–100 Grab to MAX fights, central Pattaya nightlife, Bangkok bus stations.</li>
-<li><strong>Remote work viable</strong> — <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> and beach cafés between sessions.</li>
+<li><strong>Still connected</strong> — ฿60–100 Grab to MAX fights, central Pattaya nightlife, Bangkok bus stations.</li>
 </ul>
 
 <h2>Best Muay Thai near Jomtien Beach</h2>

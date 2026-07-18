@@ -58,7 +58,7 @@ function nav() {
 }
 
 function paNetwork() {
-  return `<section class="pa-network"><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>`;
+  return `<section class="pa-network"><div class="pa-network-badge">★ A Pattaya Authority property ★</div><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>`;
 }
 
 function footer() {
@@ -72,8 +72,8 @@ function footer() {
       <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div>
     </div>
     <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/search/">Search</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="/">Pattaya.Gym</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://api.whatsapp.com/send/?phone=66967286999" target="_blank" rel="noopener noreferrer">WhatsApp · +66 96 728 6999</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul><li><a href="/">Pattaya.Gym</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div>
   </div>
   <div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span style="color:var(--cyan);">★ Last updated · ${BUILD_TS} · v${ASSET_VERSION}</span><span>12.92°N · 100.87°E · Pattaya Villa</span></div>
 </footer>
@@ -313,7 +313,7 @@ const GUIDES = [
 <p>First-timers benefit from 1-2 week trips — long enough to see real technique improvement but short enough that the muscle pain doesn't compound. Serious trainees do 4-12 week blocks. Champions train year-round in 6-week cycles. If you've never done Muay Thai, start with 1 week and extend on arrival if you love it.</p>
 
 <h3>Are visas required for a Pattaya Muay Thai trip?</h3>
-<p>Stays under 30 days: most Western passport-holders get visa-exempt entry. 30-60 days: tourist visa (TR). 60+ days: education/sport visa (ED). Fairtex and Kombat Group provide the support letters needed for ED visas. See our Pattaya Visa Help sister site at <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">pattayavisahelp.com</a> for current rules.</p>
+<p>Stays under 30 days: most Western passport-holders get visa-exempt entry. 30-60 days: tourist visa (TR). 60+ days: education/sport visa (ED). Fairtex and Kombat Group provide the support letters needed for ED visas. See our Pattaya Visa Help sister site at pattayavisahelp.com for current rules.</p>
 
 <h3>What's included in "all-inclusive"?</h3>
 <p>At Fairtex and Kombat Group it typically means: private room, three meals daily, two Muay Thai sessions per day, pool access, gym access, laundry (Kombat), airport transfer (Kombat). NOT typically included: massage/recovery, fight equipment (gloves/wraps/shin guards), Bangkok day trips, alcohol, drone/photo packages. Confirm specifics with the camp.</p>

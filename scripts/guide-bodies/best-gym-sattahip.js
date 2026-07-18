@@ -7,7 +7,7 @@ module.exports = `
 
 <p><strong>Na Jomtien</strong> is the southern extension of Jomtien Beach — Marriott, Renaissance, Andaz, Mövenpick, Ocean Marina, Ramayana corridor. Still beach-resort territory, 15–25 minutes south of central Jomtien traffic.</p>
 
-<p><strong>Sattahip district</strong> stretches further — Bang Saray fishing village, Nong Nooch gardens, Buddha Mountain (Khao Chi Chan), Tarzan zipline, Chee Chan Golf. Baht-bus coverage thins out; <strong>car or scooter essential</strong> for daily sport — <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>.</p>
+<p><strong>Sattahip district</strong> stretches further — Bang Saray fishing village, Nong Nooch gardens, Buddha Mountain (Khao Chi Chan), Tarzan zipline, Chee Chan Golf. Baht-bus coverage thins out; <strong>car or scooter essential</strong> for daily sport — Pattaya Vehicle Rentals.</p>
 
 <h2>Why stay south of Jomtien</h2>
 
@@ -72,7 +72,7 @@ module.exports = `
 
 <h2>Getting around &amp; where to stay</h2>
 
-<p>Sukhumvit Road runs the full coast — Grab reliable but adds up daily. Monthly south-side condos cluster Na Jomtien and Bang Saray. Long-stay housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a>. Eat local: <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a>.</p>
+<p>Sukhumvit Road runs the full coast — Grab reliable but adds up daily. Monthly south-side condos cluster Na Jomtien and Bang Saray. Long-stay housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a>. Eat local: Restaurant Guide.</p>
 
 <p><strong>Who should not base here:</strong> nightlife-focused short trips needing Walking Street walkability — use <a href="/guides/best-gym-central-pattaya/">Central Pattaya</a>. Budget MT monthly on ฿4k camp tier — <a href="/guides/best-gym-east-pattaya/">East Darkside</a> or central WKO instead.</p>
 
@@ -114,7 +114,7 @@ module.exports = `
 
 <p>Compare south resorts on <a href="/compare/">compare</a> filtered by area Sattahip before booking a month at the wrong end of Sukhumvit — distance to your primary sport venue matters more than sea view photos on booking sites.</p>
 
-<p>Medical emergencies south use Sattahip and Bang Lamung hospitals — save <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> clinic list on your phone before kite or dive days.</p>
+<p>Medical emergencies south use Sattahip and Bang Lamung hospitals — save Pattaya Medical clinic list on your phone before kite or dive days.</p>
 
 <p>Plan my trip: <a href="/plan-my-trip/">plan my trip</a> tool maps south venues against your hotel pin before you sign a lease.</p>
 

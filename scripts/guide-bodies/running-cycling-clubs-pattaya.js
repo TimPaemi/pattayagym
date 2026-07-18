@@ -96,7 +96,7 @@ module.exports = `
 <li>Cricket/rugby: club insurance and kit — ask captain before first match</li>
 </ul>
 
-<p>Medical: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> · Outdoor community: <a href="https://mrweoutside.com/" target="_blank" rel="noopener noreferrer">Mr We Outside</a>.</p>
+<p>Medical: Pattaya Medical · Outdoor community: <a href="https://mrweoutside.com/" target="_blank" rel="noopener noreferrer">Mr We Outside</a>.</p>
 
 <h2>Gear and costs — what to budget</h2>
 

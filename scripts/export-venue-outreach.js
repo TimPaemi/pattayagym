@@ -35,7 +35,7 @@ const header = ['venue_id', 'venue_name', 'category', 'area', 'listing_url', 'we
 const rows = gyms.map(g => {
   const listing = `${SITE}/gyms/${g.id}/`;
   const badge = `${SITE}/badge-listed.svg`;
-  const template = `Subject: Your venue is listed on Pattaya.Gym — ${g.name}\n\nHi ${g.name} team,\n\nWe run ${SITE} — an independent, hand-checked directory of ${venueN} Pattaya sport venues. No paid placements, no commissions. Your listing is free and live here:\n\n${listing}\n\nTwo quick things:\n\n1. If any hours, prices, or contact details are wrong, reply and we'll fix them within days.\n2. If the listing is useful, we'd appreciate a link to it from your website — it helps visitors confirm you're open and verified. Copy-paste badge code:\n\n${embedHtml(g, listing)}\n\nOr a plain text link works just as well:\n\n${embedTextLink(g, listing)}\n\nThanks,\nTim — Pattaya.Gym (${SITE})\nWhatsApp +66 96 728 6999`;
+  const template = `Subject: Your venue is listed on Pattaya.Gym — ${g.name}\n\nHi ${g.name} team,\n\nWe run ${SITE} — an independent, hand-checked directory of ${venueN} Pattaya sport venues. No paid placements, no commissions. Your listing is free and live here:\n\n${listing}\n\nTwo quick things:\n\n1. If any hours, prices, or contact details are wrong, reply and we'll fix them within days.\n2. If the listing is useful, we'd appreciate a link to it from your website — it helps visitors confirm you're open and verified. Copy-paste badge code:\n\n${embedHtml(g, listing)}\n\nOr a plain text link works just as well:\n\n${embedTextLink(g, listing)}\n\nThanks,\nTim — Pattaya.Gym (${SITE})\n`;
   return [
     g.id,
     g.name,

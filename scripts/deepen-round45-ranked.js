@@ -20,12 +20,12 @@ const BLOCKS = {
   <h3>Muay Thai as a solo woman</h3>
   <p>Ethical camps scale pad power to your level — say early if rounds feel too hard. Read <a href="/guides/is-muay-thai-safe-pattaya/">is Muay Thai safe?</a> and <a href="/guides/female-friendly-gyms-pattaya/">female-friendly gyms</a>. Fairtex, Battle Conquer, and Kombat Group routinely train solo women.</p>
   <h3>Commercial gyms &amp; yoga</h3>
-  <p>Key-fob chains (<a href="/gyms/jetts-fitness-pattaya/">Jetts</a>, <a href="/gyms/anytime-fitness-pattaya/">Anytime</a>) suit early/late solo sessions. Yoga studios: <a href="/guides/yoga-retreat-pattaya/">yoga retreat guide</a>. Medical: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>.</p>
+  <p>Key-fob chains (<a href="/gyms/jetts-fitness-pattaya/">Jetts</a>, <a href="/gyms/anytime-fitness-pattaya/">Anytime</a>) suit early/late solo sessions. Yoga studios: <a href="/guides/yoga-retreat-pattaya/">yoga retreat guide</a>. Medical: Pattaya Medical.</p>
 </section>`,
   'pattaya-digital-nomad-fitness': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-dn-h">
   <h2 id="${MARKER}-dn-h" class="guide-rank-section">Fitness rhythm for remote workers</h2>
-  <p>Pattaya nomads usually split the day: <strong>morning training before heat</strong>, cowork block midday, optional second session or pool recovery late afternoon. Wi-Fi cafés: <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a>.</p>
+  <p>Pattaya nomads usually split the day: <strong>morning training before heat</strong>, cowork block midday, optional second session or pool recovery late afternoon. Wi-Fi cafés: Pattaya Coffee.</p>
   <h3>Best areas for work + train</h3>
   <ul>
     <li><strong>Jomtien</strong> — quiet, beach, monthly gym deals; <a href="/guides/best-gym-jomtien-pattaya/">Jomtien guide</a>.</li>
@@ -33,7 +33,7 @@ const BLOCKS = {
     <li><strong>Central</strong> — maximum gym density, worst sleep near nightlife; <a href="/guides/best-gym-central-pattaya/">Central guide</a>.</li>
   </ul>
   <h3>Visa &amp; long-stay training</h3>
-  <p>ED visa through camps, tourist extensions, or elite routes — <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a> and <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>. Month blocks: <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a>.</p>
+  <p>ED visa through camps, tourist extensions, or elite routes — <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a> and Pattaya Visa Help. Month blocks: <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a>.</p>
   <h3>Budget &amp; day passes</h3>
   <p>No monthly lock-in: <a href="/guides/gym-day-pass-pattaya/">gym day pass</a> · <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms table</a> · <a href="/compare/">compare venues</a>.</p>
 </section>`,

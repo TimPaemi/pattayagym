@@ -21,7 +21,7 @@ const BLOCKS = {
     <li><strong>฿฿฿+</strong> — Resort kids club + water park + private tennis — see <a href="/guides/luxury-sports-clubs-pattaya/">luxury clubs</a>.</li>
   </ul>
   <h3>Long-stay families</h3>
-  <p>School placement drives neighbourhood choice — use <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a> before signing a 12-month lease. Visa context: <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a>. Housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a>.</p>
+  <p>School placement drives neighbourhood choice — use Pattaya School Guide before signing a 12-month lease. Visa context: <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a>. Housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a>.</p>
   <p>Compare venues: <a href="/compare/">compare tool</a> · Plan trip: <a href="/plan-my-trip/">plan my trip</a> · Kids hub: <a href="/guides/kids-youth-sport-pattaya/">kids &amp; youth sport</a>.</p>
   <h3>Red flags for family venues</h3>
   <p>Walk away from operators who refuse written supervision rules, have no first-aid kit visible, or push hard sparring for children under 12. Pattaya is generally family-welcoming, but nightlife-adjacent central gyms are poor evening choices with toddlers — prefer Jomtien or Naklua belts listed in our area guides. Re-verify pool depth and lifeguard presence on arrival — our directory dates are rolling, not live CCTV.</p>
@@ -35,7 +35,7 @@ const BLOCKS = {
   <h3>Pool day-pass etiquette</h3>
   <p>Call ahead: many hotels allow non-guest pool access 10:00–17:00 with food minimum or ฿300–800/adult. Bring rash guards for kids; Pattaya sun is intense 11:00–15:00. Full swim map: <a href="/guides/swimming-pools-pattaya/">swimming &amp; pools guide</a>.</p>
   <h3>When things go wrong</h3>
-  <p>Minor injuries: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> directory. Rain backup: Harbor Mall indoor stack. Broader family days: <a href="/guides/family-friendly-pattaya/">family-friendly guide</a>.</p>
+  <p>Minor injuries: Pattaya Medical directory. Rain backup: Harbor Mall indoor stack. Broader family days: <a href="/guides/family-friendly-pattaya/">family-friendly guide</a>.</p>
   <h3>Documentation to ask on arrival</h3>
   <p>Get WhatsApp contact for kids coach, written pool depth rules, and allergy policy if snacks are served. For multi-hour football academies, confirm whether parents must stay on-site — policies vary by age band and location.</p>
   <h3>Pairing with adult training</h3>

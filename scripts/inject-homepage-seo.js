@@ -208,19 +208,19 @@ const NETWORK_BLOCK = `
     <h2 class="h-section">The TimPaemi <span class="accent-pink">Pattaya guides.</span></h2>
     <p class="lede">Pattaya.Gym is one property in an independent network built in Pattaya — restaurants, visas, schools, coffee, medical, and more. Cross-linked for long-stay trainers and relocators.</p>
     <nav class="network-grid" aria-label="Pattaya Authority network sites">
-      <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Pattaya Authority</span><span class="network-card-desc">Network hub · all properties</span></a>
-      <a href="https://pattaya-restaurant-guide.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Restaurant Guide</span><span class="network-card-desc">Eat after training</span></a>
-      <a href="https://pattayavisahelp.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Visa Help</span><span class="network-card-desc">Long-stay &amp; ED visa</span></a>
-      <a href="https://pattaya-school-guide.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">School Guide</span><span class="network-card-desc">Families relocating</span></a>
-      <a href="https://pattaya-coffee.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Pattaya Coffee</span><span class="network-card-desc">Remote work cafés</span></a>
+      <span class="network-card-name">Pattaya Authority</span><span class="network-card-desc">Network hub · all properties</span>
+      <span class="network-card-name">Restaurant Guide</span><span class="network-card-desc">Eat after training</span>
+      <span class="network-card-name">Visa Help</span><span class="network-card-desc">Long-stay &amp; ED visa</span>
+      <span class="network-card-name">School Guide</span><span class="network-card-desc">Families relocating</span>
+      <span class="network-card-name">Pattaya Coffee</span><span class="network-card-desc">Remote work cafés</span>
       <a href="https://pattayapersonaltrainer.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Personal Trainer</span><span class="network-card-desc">1-on-1 coaching</span></a>
       <a href="https://pattayavilla.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Pattaya Villa</span><span class="network-card-desc">Long-stay accommodation</span></a>
       <a href="https://mrweoutside.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Mr We Outside</span><span class="network-card-desc">Outdoor community</span></a>
-      <a href="https://pattayastream.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Villa Stream</span><span class="network-card-desc">Life in Pattaya</span></a>
-      <a href="https://pattaya-medical.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Pattaya Medical</span><span class="network-card-desc">Clinics &amp; injury</span></a>
-      <a href="https://pattayapets.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">PattayaPets</span><span class="network-card-desc">Vets &amp; pet life</span></a>
-      <a href="https://pattaya-vehicle-rentals.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Vehicle Rentals</span><span class="network-card-desc">Scooters &amp; cars</span></a>
-      <a href="https://timpaemi.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">TimPaemi</span><span class="network-card-desc">Founders · agency</span></a>
+      <span class="network-card-name">Villa Stream</span><span class="network-card-desc">Life in Pattaya</span>
+      <span class="network-card-name">Pattaya Medical</span><span class="network-card-desc">Clinics &amp; injury</span>
+      <span class="network-card-name">PattayaPets</span><span class="network-card-desc">Vets &amp; pet life</span>
+      <span class="network-card-name">Vehicle Rentals</span><span class="network-card-desc">Scooters &amp; cars</span>
+      <span class="network-card-name">TimPaemi</span><span class="network-card-desc">Founders · agency</span>
     </nav>
   </div>
 </section>

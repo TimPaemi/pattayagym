@@ -51,14 +51,14 @@ const BLOCKS = {
   <h3>Hotel &amp; resort picks</h3>
   <p><a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a> — gym + PLAYROOM + pool. <a href="/gyms/centara-grand-mirage/">Centara Grand Mirage</a> water park. Na Jomtien resorts: <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.</p>
   <h3>Structured kids sport</h3>
-  <p>Football academies (AF Academy, Rusich Club), swim schools, trampoline parks. Schools context: <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a>.</p>
+  <p>Football academies (AF Academy, Rusich Club), swim schools, trampoline parks. Schools context: Pattaya School Guide.</p>
 </section>`,
   'pattaya-seniors-low-impact-sport': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-sen-h">
   <h2 id="${MARKER}-sen-h" class="guide-rank-section">Low-impact sport for 65+ in Pattaya</h2>
   <p>Pattaya suits retirees who want <strong>pool swimming, gentle yoga, hotel gym cardio, and social clubs</strong> without high-impact fight sport. Heat and humidity matter — train before 09:00 or after 16:00.</p>
   <h3>Best formats</h3>
-  <p>Hotel club day passes (<a href="/guides/luxury-sports-clubs-pattaya/">luxury clubs guide</a>), yoga studios (<a href="/guides/yoga-retreat-pattaya/">yoga retreat</a>), Wong Amat beach walks, hotel pool laps. Medical backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>.</p>
+  <p>Hotel club day passes (<a href="/guides/luxury-sports-clubs-pattaya/">luxury clubs guide</a>), yoga studios (<a href="/guides/yoga-retreat-pattaya/">yoga retreat</a>), Wong Amat beach walks, hotel pool laps. Medical backup: Pattaya Medical.</p>
   <h3>Areas</h3>
   <p>Pratamnak and Naklua beat central nightlife for calm mornings — <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua guide</a>. Family visits: <a href="/guides/family-friendly-pattaya/">family-friendly</a>.</p>
 </section>`,
@@ -69,7 +69,7 @@ const BLOCKS = {
   <h3>Muay Thai stadiums</h3>
   <p><a href="/gyms/rajadamnern-stadium/">Rajadamnern</a> (world's oldest, almost nightly) and Lumpinee (RWS flagship Saturdays). Pair with Pattaya camp training: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">trip length guide</a>.</p>
   <h3>Golf &amp; other</h3>
-  <p>Compare Pattaya fairways on <a href="/guides/best-golf-courses-pattaya/">best golf courses</a> before booking Bangkok tee times. Transport: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Vehicle Rentals</a>.</p>
+  <p>Compare Pattaya fairways on <a href="/guides/best-golf-courses-pattaya/">best golf courses</a> before booking Bangkok tee times. Transport: Vehicle Rentals.</p>
 </section>`,
 };
 

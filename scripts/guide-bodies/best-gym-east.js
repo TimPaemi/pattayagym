@@ -1,7 +1,7 @@
 module.exports = `
 <p>East Pattaya — locals call it the <strong>Darkside</strong> — is Pattaya's rural training belt: Huai Yai lake country, Mabprachan Reservoir, Nong Prue back sois, and Soi Khao Talo. No Beach Road noise. No walking to pads from your hotel. Instead you get Kombat Group's all-inclusive campus, Sor Klinmee's authentic family camp, Sanit Sport Club's 1,000-member Mabprachan floor, and wakeboarding beside the reservoir.</p>
 
-<p>Start with the <a href="/area/east-pattaya/">East Pattaya area hub</a>, slices like <a href="/area/east-pattaya/muay-thai/">east-side Muay Thai</a> and <a href="/area/east-pattaya/fitness/">east fitness</a>, then <a href="/compare/">compare</a> and <a href="/plan-my-trip/">plan my trip</a>. You need a scooter or Grab for most venues — <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a> · central alternative: <a href="/guides/best-gym-central-pattaya/">Central Pattaya guide</a>.</p>
+<p>Start with the <a href="/area/east-pattaya/">East Pattaya area hub</a>, slices like <a href="/area/east-pattaya/muay-thai/">east-side Muay Thai</a> and <a href="/area/east-pattaya/fitness/">east fitness</a>, then <a href="/compare/">compare</a> and <a href="/plan-my-trip/">plan my trip</a>. You need a scooter or Grab for most venues — Pattaya Vehicle Rentals · central alternative: <a href="/guides/best-gym-central-pattaya/">Central Pattaya guide</a>.</p>
 
 <h2>East Pattaya geography — where am I actually training?</h2>
 
@@ -67,7 +67,7 @@ module.exports = `
 
 <p>From central Pattaya: Grab/Bolt ฿150–300 depending on Huai Yai vs Mabprachan. Baht buses do not serve most camp sois — budget scooter if training daily (experience required). From U-Tapao airport, Huai Yai camps are closer than Beach Road hotels.</p>
 
-<p>Post-training: <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a> · Long-stay housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a> · Outdoor community: <a href="https://mrweoutside.com/" target="_blank" rel="noopener noreferrer">Mr We Outside</a>.</p>
+<p>Post-training: Restaurant Guide · Long-stay housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a> · Outdoor community: <a href="https://mrweoutside.com/" target="_blank" rel="noopener noreferrer">Mr We Outside</a>.</p>
 
 <h2>East vs other zones — quick pick</h2>
 

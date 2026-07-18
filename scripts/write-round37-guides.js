@@ -145,7 +145,7 @@ const GUIDES = [
 </ul>
 
 <h2>How to pick your Jomtien base</h2>
-<p><strong>Budget + beach walk:</strong> Pattaya Thai Boxing &amp; Fitness + public pool. <strong>Serious MT/MMA:</strong> Venum or Rage. <strong>Resort comfort:</strong> hotel gym + occasional MT drop-ins. <strong>Remote worker:</strong> yoga studio + <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> for work sessions.</p>
+<p><strong>Budget + beach walk:</strong> Pattaya Thai Boxing &amp; Fitness + public pool. <strong>Serious MT/MMA:</strong> Venum or Rage. <strong>Resort comfort:</strong> hotel gym + occasional MT drop-ins. <strong>Remote worker:</strong> yoga studio + Pattaya Coffee for work sessions.</p>
 
 <h2>FAQ</h2>
 <h3>Is Jomtien good for Muay Thai beginners?</h3>
@@ -191,7 +191,7 @@ const GUIDES = [
 <ul>
 <li>You want <strong>maximum camp choice</strong> without island taxi logistics — see <a href="/guides/best-muay-thai-pattaya/">best Muay Thai Pattaya</a>.</li>
 <li>Budget matters — <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> and <a href="/gyms/wko-muay-thai/">WKO</a>-tier monthly training.</li>
-<li>You might train <strong>1–3 months</strong> and need visa/restaurant/school ecosystem — <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> + Pattaya Authority network.</li>
+<li>You might train <strong>1–3 months</strong> and need visa/restaurant/school ecosystem — Pattaya Visa Help + Pattaya Authority network.</li>
 <li>You want <strong>Bangkok stadium trips</strong> (<a href="/gyms/lumpinee-boxing-stadium/">Lumpinee</a>, <a href="/gyms/rajadamnern-stadium/">Rajadamnern</a>) on weekends.</li>
 <li>Lineage-focused training: <a href="/gyms/sityodtong-pattaya/">Sityodtong</a>, <a href="/gyms/fairtex-pattaya/">Fairtex</a>, family camps like <a href="/gyms/petchrungruang-gym/">Petchrungruang</a>.</li>
 </ul>

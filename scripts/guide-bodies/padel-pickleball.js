@@ -46,8 +46,7 @@ module.exports = `
 <ul>
 <li><strong>Mon/Wed/Fri AM:</strong> padel clinic or open play at Play Padel</li>
 <li><strong>Tue/Thu:</strong> strength at <a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a> or <a href="/gyms/sun-fitness-buakao/">SUN Fitness</a></li>
-<li><strong>Sat:</strong> pickleball social at Pickleball Pattaya</li>
-<li><strong>Sun:</strong> rest — <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> recovery meal</li>
+<li><strong>Sat:</strong> pickleball social at Pickleball Pattaya</li>
 </ul>
 
 <h2>Prices and booking (what to expect)</h2>
@@ -97,7 +96,7 @@ module.exports = `
 
 <h2>Leagues and expat social play</h2>
 
-<p>Pickleball Pattaya runs the most approachable social ladder for newcomers — introduce yourself as beginner on first visit. Padel doubles needs four — clubs often post "looking for fourth" on LINE groups linked from venue pages. Post-match food: <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a> near Pratamnak.</p>
+<p>Pickleball Pattaya runs the most approachable social ladder for newcomers — introduce yourself as beginner on first visit. Padel doubles needs four — clubs often post "looking for fourth" on LINE groups linked from venue pages. Post-match food: Restaurant Guide near Pratamnak.</p>
 
 <p>Indoor padel avoids midday UV — book 08:00 or 17:00 slots in April heat. Wear court shoes with non-mark soles; black running soles mark acrylic courts and annoy clubs.</p>
 `;

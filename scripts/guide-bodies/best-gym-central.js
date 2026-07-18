@@ -71,9 +71,9 @@ module.exports = `
 
 <h2>Getting around central for training</h2>
 
-<p>Baht buses (songthaews) run Beach Road and Second Road loops — ฿10 per ride. Grab and Bolt are reliable for 06:00 pad sessions when buses are empty. Scooter rental: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a> — only if you have Thailand riding experience; central traffic is unforgiving.</p>
+<p>Baht buses (songthaews) run Beach Road and Second Road loops — ฿10 per ride. Grab and Bolt are reliable for 06:00 pad sessions when buses are empty. Scooter rental: Pattaya Vehicle Rentals — only if you have Thailand riding experience; central traffic is unforgiving.</p>
 
-<p>Post-training food: <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a>. Remote work between sessions: <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a>.</p>
+<p>Post-training food: Pattaya Restaurant Guide. Remote work between sessions: Pattaya Coffee.</p>
 
 <h2>Who should not base in Central</h2>
 
@@ -111,7 +111,7 @@ module.exports = `
 
 <h2>Noise discipline for long-stay central</h2>
 
-<p>If you are serious about training, move to Jomtien after 10-day central experiment — same monthly gym price, better sleep. Central wins for 3–7 night tourists who refuse to scooter. Cowork cafés between sessions: <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a>.</p>
+<p>If you are serious about training, move to Jomtien after 10-day central experiment — same monthly gym price, better sleep. Central wins for 3–7 night tourists who refuse to scooter. Cowork cafés between sessions: Pattaya Coffee.</p>
 
 <p>Baht-bus loop Beach Road → Second Road costs ฿10 — fastest budget move between Soi Diana gyms and Buakhao iron without Grab surge pricing at 18:00.</p>
 `;

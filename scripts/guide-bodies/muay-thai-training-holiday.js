@@ -12,7 +12,6 @@ module.exports = `
 <li><strong>Cost:</strong> Stay-and-train packages often run <strong>20–40% below Phuket resort camps</strong> for comparable hours.</li>
 <li><strong>English:</strong> Higher share of Tier-A English kru than most Thai provinces outside Bangkok.</li>
 <li><strong>Fight ecosystem:</strong> <a href="/gyms/max-muay-thai-stadium/">MAX Muay Thai</a> cards and Bangkok stadiums within a day trip.</li>
-<li><strong>Long-stay life:</strong> <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">visa planning</a>, <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">food</a>, <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">remote-work cafés</a>.</li>
 </ul>
 
 <h2>Training holiday lengths — what changes</h2>
@@ -87,7 +86,7 @@ module.exports = `
 <p>Schedule one rest day per week in week one, two in week three if soreness stacks. Pool swim (<a href="/guides/swimming-pools-pattaya/">swimming guide</a>), yoga (<a href="/guides/yoga-retreat-pattaya/">yoga retreat</a>), or beach walk — not full-day drinking before morning pads. Massage is cheap and good; avoid deep tissue hours before hard sparring.</p>
 
 <h2>Visa and long-stay notes</h2>
-<p>Most holidays run on <strong>tourist visa or exemption</strong>. Multi-month: education pathways — <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a> and <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>, not gym sales desk alone.</p>
+<p>Most holidays run on <strong>tourist visa or exemption</strong>. Multi-month: education pathways — <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a> and Pattaya Visa Help, not gym sales desk alone.</p>
 
 <h2>FAQ</h2>
 

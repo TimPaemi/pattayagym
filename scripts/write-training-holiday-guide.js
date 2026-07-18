@@ -50,9 +50,9 @@ function paNetwork() {
     `<a href="${s.url}" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">${esc(s.name)}</span><span class="pa-network-card-desc">${s.desc}</span></a>`
   ).join('\n    ');
   return `<section class="pa-network">
-  <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="u-plain-link">
+  
     <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
-  </a>
+  
   <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
   <p class="pa-network-sub">// Independent Pattaya guides · engineered in-house by TimPaemi</p>
   <nav class="pa-network-grid" aria-label="Pattaya Authority network">${links}
@@ -70,7 +70,7 @@ function footer() {
       <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Chon Buri 20150 · Thailand</div>
     </div>
     <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/compare/">Compare</a></li><li><a href="/search/">Search</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"><li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a></li><li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a></li><li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a></li><li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">School Guide</a></li><li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a></li><li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a></li><li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a></li><li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a></li><li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Vehicle Rentals</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"></ul></div>
     <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="/contact/">Contact</a></li></ul></div>
   </div>
   <div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="u-cyan">★ v${ASSET_VERSION} · ${BUILD_TS}</span></div>
@@ -99,7 +99,7 @@ const BODY = `
 <li><strong>Cost:</strong> Stay-and-train packages often run <strong>20–40% below Phuket resort camps</strong> for comparable hours.</li>
 <li><strong>English:</strong> Higher share of Tier-A English kru than most Thai provinces outside Bangkok.</li>
 <li><strong>Fight ecosystem:</strong> <a href="/gyms/max-muay-thai-stadium/">MAX Muay Thai</a> cards, local stadiums, and Bangkok (<a href="/gyms/lumpinee-boxing-stadium/">Lumpinee</a> / <a href="/gyms/rajadamnern-stadium/">Rajadamnern</a>) within a day trip.</li>
-<li><strong>Long-stay life:</strong> Pair training with <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">visa planning</a>, <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">food</a>, and <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">remote-work cafés</a> — the Pattaya Authority network exists for exactly this trip type.</li>
+<li><strong>Long-stay life:</strong> Pair training with visa planning, food, and remote-work cafés — the Pattaya Authority network exists for exactly this trip type.</li>
 </ul>
 
 <p>Use our <a href="/compare/">compare tool</a> to shortlist three camps, then <a href="/plan-my-trip/">plan my trip</a> to map area and commute.</p>
@@ -173,7 +173,7 @@ const BODY = `
 </ol>
 
 <h2>Visa and long-stay notes</h2>
-<p>Most training holidays run on a <strong>tourist visa or visa exemption</strong> (check your nationality). Camps like <a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> advertise education-visa pathways for multi-month stays — confirm legality with a specialist (<a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>), not a gym sales desk alone.</p>
+<p>Most training holidays run on a <strong>tourist visa or visa exemption</strong> (check your nationality). Camps like <a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> advertise education-visa pathways for multi-month stays — confirm legality with a specialist (Pattaya Visa Help), not a gym sales desk alone.</p>
 
 <h2>FAQ</h2>
 

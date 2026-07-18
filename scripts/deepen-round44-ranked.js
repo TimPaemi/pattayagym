@@ -31,7 +31,7 @@ const BLOCKS = {
   <h3>All-ages active days</h3>
   <p><a href="/gyms/ramayana-water-park/">Ramayana Water Park</a> (day trip south) · <a href="/gyms/centara-grand-mirage/">Centara Grand Mirage</a> water park · <a href="/gyms/jumpz-trampoline-park/">Jumpz Trampoline</a> · beach volleyball <a href="/gyms/jomtien-beach-volleyball/">Jomtien</a>.</p>
   <h3>Where to stay</h3>
-  <p>Jomtien and Naklua beat central Pattaya for family sleep quality. Area guides: <a href="/guides/best-gym-jomtien-pattaya/">Jomtien</a> · <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua</a>. Schools: <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a>.</p>
+  <p>Jomtien and Naklua beat central Pattaya for family sleep quality. Area guides: <a href="/guides/best-gym-jomtien-pattaya/">Jomtien</a> · <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua</a>. Schools: Pattaya School Guide.</p>
 </section>`,
   'female-friendly-gyms-pattaya': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-ff-h">
@@ -42,7 +42,7 @@ const BLOCKS = {
   <h3>Commercial gyms</h3>
   <p>Air-con chains (<a href="/gyms/platinum-fitness/">Platinum</a>, <a href="/gyms/jetts-fitness-pattaya/">Jetts</a>, <a href="/gyms/anytime-fitness-pattaya/">Anytime</a>) with key-fob entry suit early-morning or late-night solo sessions. Yoga studios: <a href="/guides/yoga-retreat-pattaya/">yoga retreat guide</a>.</p>
   <h3>Areas women often prefer</h3>
-  <p>Jomtien and Pratamnak over central nightlife zones for long stays — <a href="/guides/best-gym-jomtien-pattaya/">Jomtien guide</a> · <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Pratamnak guide</a>. Medical backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>.</p>
+  <p>Jomtien and Pratamnak over central nightlife zones for long stays — <a href="/guides/best-gym-jomtien-pattaya/">Jomtien guide</a> · <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Pratamnak guide</a>. Medical backup: Pattaya Medical.</p>
 </section>`,
 };
 

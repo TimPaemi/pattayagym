@@ -1,7 +1,7 @@
 module.exports = `
 <p>Training Muay Thai or living in Pattaya long-term usually raises one question before flight booking: <strong>what visa fits a 1-month holiday vs a 6-month camp block?</strong> This guide explains the common paths foreigners use — ED (education) visas through camps, tourist visa runs, long-term elite options — without pretending to be immigration law. Rules change; always confirm with a licensed agent before you wire money.</p>
 
-<p>For step-by-step visa applications and current Thai Immigration policy, use our sister site <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>. This page connects <strong>training intent</strong> on pattaya-gym.com to the right visa conversation.</p>
+<p>For step-by-step visa applications and current Thai Immigration policy, use our sister site Pattaya Visa Help. This page connects <strong>training intent</strong> on pattaya-gym.com to the right visa conversation.</p>
 
 <p>Pair with <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday guide</a>, <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a>, and <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">camps with accommodation</a>.</p>
 
@@ -21,7 +21,7 @@ module.exports = `
 
 <p>An <strong>Education (ED) visa</strong> ties your stay to enrollment at a registered Thai school — including some Muay Thai camps and language schools. Camps may offer "visa support" or "education visa package" bundled with training hours. This is <strong>not automatic residency</strong>; it requires school registration, periodic reporting to immigration (90-day check-ins), and maintaining attendance rules the school sets.</p>
 
-<p>Camps commonly mentioned in long-stay trainer forums (verify current policy with the camp and <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a>):</p>
+<p>Camps commonly mentioned in long-stay trainer forums (verify current policy with the camp and Visa Help):</p>
 
 <ul>
 <li><a href="/gyms/fairtex-pattaya/">Fairtex Training Center</a> — resort camp; ask directly about long-stay and ED coordination.</li>
@@ -42,7 +42,7 @@ module.exports = `
 
 <p>Pattaya's location makes **Cambodia (Poipet)** and **Laos** border runs common for travelers extending stays — policies tighten and loosen on political cycles. A border run is not a lifestyle strategy for 2026 planning; treat it as a **short-term fix** while a proper ED or long-stay visa is processed.</p>
 
-<p>Ground logistics, agents, and current border hours: <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> (Pattaya-based, updated for relocators).</p>
+<p>Ground logistics, agents, and current border hours: Pattaya Visa Help (Pattaya-based, updated for relocators).</p>
 
 <h2>What camps need from you for long-stay</h2>
 
@@ -54,19 +54,18 @@ module.exports = `
 <li>Health insurance — some schools require coverage proof</li>
 </ul>
 
-<p>Medical insurance for combat sport: see <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> for clinic networks; tell insurers you train Muay Thai — generic travel policies often exclude martial arts.</p>
+<p>Medical insurance for combat sport: see Pattaya Medical for clinic networks; tell insurers you train Muay Thai — generic travel policies often exclude martial arts.</p>
 
 <h2>Working remotely while on tourist / ED visa</h2>
 
 <p>Thailand has introduced **DTV (Destination Thailand Visa)** and remote-work discussion for digital nomads — rules evolve separately from ED/tourist tracks. If you train mornings and work afternoons, your visa must still match primary purpose of stay.</p>
 
-<p>Remote-work cafés and condos: <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> + <a href="/guides/pattaya-digital-nomad-fitness/">digital nomad fitness guide</a>.</p>
+<p>Remote-work cafés and condos: Pattaya Coffee + <a href="/guides/pattaya-digital-nomad-fitness/">digital nomad fitness guide</a>.</p>
 
 <h2>Sample timeline: 6-month Muay Thai plan</h2>
 
 <ol>
-<li><strong>Month −2:</strong> Pick camp (<a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a>, <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking</a>)</li>
-<li><strong>Month −1:</strong> Consult <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Visa Help</a> on ED vs tourist path</li>
+<li><strong>Month −2:</strong> Pick camp (<a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a>, <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking</a>)</li>
 <li><strong>Week 1 in Pattaya:</strong> Register at camp, confirm immigration reporting dates</li>
 <li><strong>Month 1–5:</strong> Train; use <a href="/guides/thai-gym-terms-pattaya/">Thai gym terms</a> for smoother gym life</li>
 <li><strong>Before expiry:</strong> Extension or conversion — never overstay</li>
@@ -78,7 +77,7 @@ module.exports = `
 <p>Yes — most short-term trainers do exactly that. Tourist entry is for holiday; training is a normal holiday activity. Problems start with <strong>overstay</strong> or working illegally in Thailand.</p>
 
 <h3>Which Pattaya camps offer ED visa support?</h3>
-<p>Fairtex, Sityodtong, Rage Fight Academy, and others advertise long-stay programs — policies change. Contact the camp and cross-check with <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> before paying a semester upfront.</p>
+<p>Fairtex, Sityodtong, Rage Fight Academy, and others advertise long-stay programs — policies change. Contact the camp and cross-check with Pattaya Visa Help before paying a semester upfront.</p>
 
 <h3>How much does an ED visa cost?</h3>
 <p>School fees + agent fees + immigration levies vary widely (often ฿25,000–60,000+ per year all-in depending on school). Get itemized quotes — not one lump "visa package" without breakdown.</p>
@@ -87,21 +86,21 @@ module.exports = `
 <p>Immigration offices in Chon Buri may have limited English — bring a Thai speaker or agent for first 90-day reporting. Phrase help: <a href="/guides/thai-gym-terms-pattaya/">Thai gym terms</a>.</p>
 
 <h3>Can my family stay while I train on ED visa?</h3>
-<p>Dependents may qualify under separate family visa rules — not automatic. Families relocating: <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a> + <a href="/guides/family-friendly-pattaya/">family-friendly sport</a>.</p>
+<p>Dependents may qualify under separate family visa rules — not automatic. Families relocating: Pattaya School Guide + <a href="/guides/family-friendly-pattaya/">family-friendly sport</a>.</p>
 
 <h3>Where do I eat cheap while training long-stay?</h3>
-<p>Naklua and Jomtien have better long-stay food economics than Walking Street. <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> for area picks.</p>
+<p>Naklua and Jomtien have better long-stay food economics than Walking Street. Pattaya Restaurant Guide for area picks.</p>
 
 <h2>Related guides</h2>
-<p><a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with rooms</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help →</a></p>
+<p><a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with rooms</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · Pattaya Visa Help →</p>
 
 <h2>90-day reporting and immigration rhythm</h2>
 
-<p>Long-stay holders must file <strong>90-day reports</strong> (TM47 or online where eligible) even when training daily. Miss a window and fines accumulate. Chon Buri immigration offices serve Pattaya residents — queues spike Monday mornings. Agents listed on <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> handle reporting for a fee; DIY is possible if you track dates in a calendar app.</p>
+<p>Long-stay holders must file <strong>90-day reports</strong> (TM47 or online where eligible) even when training daily. Miss a window and fines accumulate. Chon Buri immigration offices serve Pattaya residents — queues spike Monday mornings. Agents listed on Pattaya Visa Help handle reporting for a fee; DIY is possible if you track dates in a calendar app.</p>
 
 <h2>Insurance and medical proof</h2>
 
-<p>ED visa applications increasingly expect <strong>health insurance</strong> meeting minimum coverage — verify current Immigration rules before booking flights. Training injuries happen — pair visa compliance with a policy that covers outpatient clinics listed on <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>.</p>
+<p>ED visa applications increasingly expect <strong>health insurance</strong> meeting minimum coverage — verify current Immigration rules before booking flights. Training injuries happen — pair visa compliance with a policy that covers outpatient clinics listed on Pattaya Medical.</p>
 
 <h2>Common mistakes foreigners make</h2>
 

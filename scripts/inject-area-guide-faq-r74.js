@@ -22,7 +22,7 @@ const BLOCKS = {
   <h2 id="guide-faq-h">Frequently asked questions</h2>
   <details><summary>What gyms are in Sattahip and far south Pattaya?</summary><p>Ramayana Water Park, Cartoon Network Aquaverse, Regents school sport, Thai Sky Adventures skydive, Bira Circuit, and golf toward Phoenix / Treasure Hill belts. Hub: <a href="/area/sattahip/">Sattahip area</a>.</p></details>
   <details><summary>Is Sattahip good for a training holiday base?</summary><p>Strong for golf, water parks, and quiet residential training — weak for nightly Beach Road convenience. Many fighters stay central or Jomtien and day-trip south for adventure.</p></details>
-  <details><summary>How far is Sattahip from central Pattaya?</summary><p>20–40 minutes by car depending on venue — plan taxis or rent from <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>. U-Tapao airport (UTP) sits inside the district for arrivals.</p></details>
+  <details><summary>How far is Sattahip from central Pattaya?</summary><p>20–40 minutes by car depending on venue — plan taxis or rent from Pattaya Vehicle Rentals. U-Tapao airport (UTP) sits inside the district for arrivals.</p></details>
   <details><summary>Where should families train in the south belt?</summary><p><a href="/gyms/ramayana-water-park/">Ramayana</a> and resort pools — pair with <a href="/guides/family-friendly-pattaya/">family-friendly guide</a>. Confirm child height rules before booking karting or skydive add-ons.</p></details>
 </section>`,
 };

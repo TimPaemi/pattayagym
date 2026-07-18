@@ -21,7 +21,7 @@ module.exports = `
 
 <p><a href="/gyms/rusich-club-football/">Rusich Club</a> operates under <strong>HSIF Thailand</strong> as a <strong>Russian-language sports club</strong> for the Pattaya Russian-speaking community — multi-sport programming with football as the headline. Ages <strong>5–16</strong> for structured youth football; coaching and community events run primarily in Russian. This is the clearest "same-language teammates and coaches" pick for families who have not yet built English or Thai fluency.</p>
 
-<p>Website: <a href="https://rusich.club/en/home_en/" target="_blank" rel="noopener noreferrer">rusich.club</a> — verify current schedule and fees before travelling. Pairs with <a href="/guides/kids-youth-sport-pattaya/">kids &amp; youth sport guide</a> and <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a> for schooling context.</p>
+<p>Website: <a href="https://rusich.club/en/home_en/" target="_blank" rel="noopener noreferrer">rusich.club</a> — verify current schedule and fees before travelling. Pairs with <a href="/guides/kids-youth-sport-pattaya/">kids &amp; youth sport guide</a> and Pattaya School Guide for schooling context.</p>
 
 <h2>2. AF Academy Football School Pattaya — from age 3, indoor + outdoor</h2>
 
@@ -73,7 +73,7 @@ module.exports = `
 
 <h2>10. Long-stay logistics — visa, medical, transport</h2>
 
-<p>We do not provide immigration legal advice. For DTV, extensions, and reporting rhythm questions, use <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> (sister site). Training-linked stays: <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a>. Injury backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Estate transport to East venues: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>.</p>
+<p>We do not provide immigration legal advice. For DTV, extensions, and reporting rhythm questions, use Pattaya Visa Help (sister site). Training-linked stays: <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a>. Injury backup: Pattaya Medical. Estate transport to East venues: Pattaya Vehicle Rentals.</p>
 
 <h2>How to pick — decision tree</h2>
 

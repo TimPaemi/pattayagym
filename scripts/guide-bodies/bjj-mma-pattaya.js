@@ -70,7 +70,7 @@ module.exports = `
 <li><strong>Central</strong> — ALFA BJJ, shorter commutes to nightlife. <a href="/guides/best-gym-central-pattaya/">Central guide</a>.</li>
 </ul>
 
-<p>Housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a> · Visa: <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>.</p>
+<p>Housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a> · Visa: Pattaya Visa Help.</p>
 
 <h2>Sample weekly rhythm (MT + BJJ holiday)</h2>
 

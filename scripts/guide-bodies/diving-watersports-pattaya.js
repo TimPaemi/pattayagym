@@ -65,7 +65,7 @@ module.exports = `
 
 <p>Typical rhythm: morning boat dive 09:00–14:00 · afternoon Muay Thai pads or gym · evening recovery swim. Base south for marina/kite: Jomtien camps (<a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a>). Base central for Bali Hai pier shops: <a href="/guides/best-gym-central-pattaya/">Central Pattaya</a>.</p>
 
-<p>Medical: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> for ear/sinus issues before flying after dives.</p>
+<p>Medical: Pattaya Medical for ear/sinus issues before flying after dives.</p>
 
 <h2>Related guides</h2>
 
@@ -94,7 +94,7 @@ module.exports = `
 
 <h2>Flying, ears, and insurance</h2>
 
-<p>Standard advice: no flight within <strong>12–18 hours</strong> after a single no-deco fun dive; longer after repetitive deep days — your instructor will brief. Sinus and ear issues are common in humid Pattaya; see <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> before forcing dives with congestion. Travel insurance that explicitly covers scuba is not optional for wreck and deep profiles.</p>
+<p>Standard advice: no flight within <strong>12–18 hours</strong> after a single no-deco fun dive; longer after repetitive deep days — your instructor will brief. Sinus and ear issues are common in humid Pattaya; see Pattaya Medical before forcing dives with congestion. Travel insurance that explicitly covers scuba is not optional for wreck and deep profiles.</p>
 
 <h2>Sample 5-day dive + train week</h2>
 

@@ -103,7 +103,7 @@ module.exports = `
 </tbody>
 </table>
 
-<p>Injury clinics: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Do not train through sharp joint pain — say <strong>"jep"</strong> and stop.</p>
+<p>Injury clinics: Pattaya Medical. Do not train through sharp joint pain — say <strong>"jep"</strong> and stop.</p>
 
 <h2>Yoga, swim, golf quick words</h2>
 
@@ -126,7 +126,7 @@ module.exports = `
 <p>"Mai spar" or "bao bao" with hands up smiling. Non-negotiable for beginners.</p>
 
 <h3>Where can I learn more Thai for daily life?</h3>
-<p>This sheet is gym-focused. Visa and relocation Thai: <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> resources.</p>
+<p>This sheet is gym-focused. Visa and relocation Thai: Pattaya Visa Help resources.</p>
 
 <h2>Related guides</h2>
 <p><a href="/guides/muay-thai-pattaya-beginners/">Beginners</a> · <a href="/guides/training-thailand-visa-pattaya/">Training &amp; visa</a> · <a href="/guides/best-muay-thai-pattaya/">Best Muay Thai</a> · <a href="/compare/">Compare gyms</a></p>

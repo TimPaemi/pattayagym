@@ -19,7 +19,7 @@ const BLOCKS = {
   <h3>Central vs Jomtien for late nights</h3>
   <p>Central Pattaya chains are walkable from Beach Road hotels. Jomtien resort gyms suit Na Jomtien long-stayers who want pool access after lifting. Area context: <a href="/guides/best-gym-central-pattaya/">Central Pattaya guide</a> · <a href="/guides/best-gym-jomtien-pattaya/">Jomtien guide</a>.</p>
   <h3>Safety at odd hours</h3>
-  <p>Chain gyms use key-fob entry — safer than empty street-level iron rooms. Train with a buddy if walking back through central nightlife zones after midnight. Scooter parking: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>.</p>
+  <p>Chain gyms use key-fob entry — safer than empty street-level iron rooms. Train with a buddy if walking back through central nightlife zones after midnight. Scooter parking: Pattaya Vehicle Rentals.</p>
   <p>Pair with <a href="/guides/gym-day-pass-pattaya/">gym day pass</a> if you only need one late session · Budget alternative hours: <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> (many close 22:00–23:00).</p>
 </section>`,
   'cheapest-gyms-pattaya': `

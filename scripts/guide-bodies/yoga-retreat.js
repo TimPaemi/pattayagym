@@ -11,7 +11,7 @@ module.exports = `
 <li><strong>Studio memberships</strong> — drop-in, weekly unlimited, or monthly at Jomtien/Thepprasit shalas.</li>
 <li><strong>Resort packages</strong> — luxury hotels (Andaz, Hilton, Centara) with daily yoga on the schedule plus spa pools.</li>
 <li><strong>Train + stretch weeks</strong> — Muay Thai mornings, yin yoga evenings; common long-stayer pattern.</li>
-<li><strong>Wellness weekends</strong> — Pratamnak hill walks, beach meditation, café cowork at <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> spots.</li>
+<li><strong>Wellness weekends</strong> — Pratamnak hill walks, beach meditation, café cowork at Pattaya Coffee spots.</li>
 </ul>
 
 <p>For pure meditation retreat culture, many travellers day-trip or weekend to quieter Chonburi province temples — Pattaya itself is the hybrid hub.</p>
@@ -74,9 +74,9 @@ module.exports = `
 
 <h2>Health, insurance &amp; network</h2>
 
-<p>Yoga injuries (hamstring, wrist, lower back) happen — communicate modifications to teachers. Medical directory: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Personal training beyond group class: <a href="https://pattayapersonaltrainer.com/" target="_blank" rel="noopener noreferrer">Pattaya Personal Trainer</a>.</p>
+<p>Yoga injuries (hamstring, wrist, lower back) happen — communicate modifications to teachers. Medical directory: Pattaya Medical. Personal training beyond group class: <a href="https://pattayapersonaltrainer.com/" target="_blank" rel="noopener noreferrer">Pattaya Personal Trainer</a>.</p>
 
-<p>Long-stay visas: <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a>. Families: <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a>.</p>
+<p>Long-stay visas: <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a>. Families: Pattaya School Guide.</p>
 
 <h2>FAQ</h2>
 
@@ -119,7 +119,7 @@ module.exports = `
 <li>Schedule one spa day at Andaz or Dusit — onsen and pool recovery.</li>
 </ol>
 
-<p>Digital nomads: stack with <a href="/guides/pattaya-digital-nomad-fitness/">nomad fitness</a> and <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> for work blocks between classes.</p>
+<p>Digital nomads: stack with <a href="/guides/pattaya-digital-nomad-fitness/">nomad fitness</a> and Pattaya Coffee for work blocks between classes.</p>
 
 <h2>Teacher training and workshops</h2>
 

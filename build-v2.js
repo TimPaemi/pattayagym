@@ -720,9 +720,9 @@ function footer(scripts) {
     <div class="pa-net__in">
       <div class="pa-net__property" style="margin-top:0;border-top:0;padding-top:0">
         <div class="pa-net__brand-name">Pattaya Gym<span class="pk">.</span></div>
-        <p style="margin:.7rem auto 0;font-size:.85rem;opacity:.72;line-height:1.5;max-width:52ch">Written, photographed and kept up to date by the team at <a href="https://pattaya-authority.com/" target="_blank" rel="author noopener noreferrer" style="font-weight:700;text-decoration:underline;text-underline-offset:2px">Pattaya Authority</a>, a Pattaya-based publishing studio.</p>
+        <p style="margin:.7rem auto 0;font-size:.85rem;opacity:.72;line-height:1.5;max-width:52ch">Written, photographed and kept up to date by the team at <a href="https://pattaya-authority.com/" target="_blank" rel="author nofollow noopener noreferrer" style="font-weight:700;text-decoration:underline;text-underline-offset:2px">Pattaya Authority</a>, a Pattaya-based publishing studio.</p>
       </div>
-      <div class="pa-net__bottom">© 2026 TIMPAEMI Co., Ltd. · <a href="https://timpaemi.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy</a> · <a href="mailto:info@timpaemi.com">Contact</a></div>
+      <div class="pa-net__bottom">© 2026 TIMPAEMI Co., Ltd. · <a href="https://timpaemi.com/privacy/" target="_blank" rel="nofollow noopener noreferrer">Privacy</a> · <a href="mailto:info@timpaemi.com">Contact</a></div>
     </div>
   </section>
 <!--PA-NET:END-->
@@ -928,7 +928,7 @@ function venuePage(g, fm, body) {
     <div class="venue-hero-ctas-wrap">
       <div class="btn-row u-btn-row-left venue-hero-ctas" id="venue-hero-ctas">
         ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
-        <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Message Pattaya.Gym (directory team), not the venue direct line">● Ask Pattaya.Gym</a>
+        
         ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">📍 Map</a>` : ''}
         ${venueFavoriteBtn(g, { hero: true })}
         <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary btn-venue-more">Email →</a>
@@ -1193,7 +1193,7 @@ ${bodyHtml ? `
     <div class="eyebrow"><span class="num">★</span> Know more about this venue?</div>
     <div style="background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--cyan); border-radius:var(--r-lg); padding:var(--s-6);">
       <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0 0 var(--s-4);">This is a <strong class="u-text">verified entry</strong> in the Pattaya.Gym directory. We've personally confirmed the venue exists and operates. If you've trained here and can share more details — coaches, prices, schedule, what makes it different — we want to know.</p>
-      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0;">Help us deepen this listing: <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Update: ' + g.name)}" style="color:var(--cyan); font-weight:600;">email us</a> · <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Update for ' + g.name)}" target="_blank" rel="noopener noreferrer" style="color:var(--mint); font-weight:600;">WhatsApp</a> · or <a href="/contact/" style="color:var(--pink); font-weight:600;">contact form</a>.</p>
+      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0;">Help us deepen this listing: <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Update: ' + g.name)}" style="color:var(--cyan); font-weight:600;">email us</a> ·  · or <a href="/contact/" style="color:var(--pink); font-weight:600;">contact form</a>.</p>
     </div>
   </div>
 </section>
@@ -1235,12 +1235,7 @@ ${(g.tags && g.tags.length) ? `
         <h3 class="channel-card-name">info@pattaya-gym.com</h3>
         <div class="channel-card-sub">Reply within 24h</div>
       </a>
-      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=${encodeURIComponent('Hi! Asking about ' + g.name + ' via pattaya-gym.com')}" target="_blank" rel="noopener noreferrer" class="channel-card is-wa">
-        <span class="channel-card-arrow">↗</span>
-        <div class="channel-card-tag">★ Fastest</div>
-        <h3 class="channel-card-name">whatsapp</h3>
-        <div class="channel-card-sub">+66 96 728 6999</div>
-      </a>
+      
       <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
@@ -1252,12 +1247,12 @@ ${(g.tags && g.tags.length) ? `
         <div class="channel-card-tag">★ Direct line</div>
         <h3 class="channel-card-name">Call gym</h3>
         <div class="channel-card-sub">${esc(g.phone)}</div>
-      </a>` : `<a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="channel-card is-agency">
+      </a>` : `
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Our agency</div>
         <h3 class="channel-card-name">pattaya authority</h3>
         <div class="channel-card-sub">pattaya-authority.com</div>
-      </a>`}
+      `}
     </div>
   </div>
 </section>
@@ -1814,24 +1809,19 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
         <h3 class="channel-card-name">info@pattaya-gym.com</h3>
         <div class="channel-card-sub">Reply within 24h</div>
       </a>
-      <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener noreferrer" class="channel-card is-wa">
-        <span class="channel-card-arrow">↗</span>
-        <div class="channel-card-tag">★ Fastest</div>
-        <h3 class="channel-card-name">whatsapp</h3>
-        <div class="channel-card-sub">+66 96 728 6999</div>
-      </a>
+      
       <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
         <h3 class="channel-card-name">@timpaemi</h3>
         <div class="channel-card-sub">Daily check</div>
       </a>
-      <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="channel-card is-agency">
+      
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">★ Our agency</div>
         <h3 class="channel-card-name">pattaya authority</h3>
         <div class="channel-card-sub">pattaya-authority.com</div>
-      </a>
+      
     </div>
   </div>
 </section>` : '';
@@ -2036,17 +2026,6 @@ ${donutHTML}
 <h2>What's <em>not</em> here</h2>
 <p>Pattaya.Gym focuses exclusively on training venues — gyms, camps, courts, courses, studios, dive operators, sport landmarks. We do <strong>not</strong> cover entertainment venues, restaurants, nightlife, or visa services. For those, see our sister sites:</p>
 <ul>
-  <li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> &mdash; flagship media agency</li>
-  <li><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a> &mdash; parent brand</li>
-  <li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> &mdash; independent restaurant directory</li>
-  <li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a> &mdash; long-stay visa support</li>
-  <li><a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a> &mdash; independent school directory</li>
-  <li><a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a> &mdash; independent coffee directory</li>
-  <li><a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a> &mdash; Pattaya content channel</li>
-  <li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> &mdash; Pattaya medical directory</li>
-  <li><a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a> &mdash; Pattaya pet services directory</li>
-  <li><a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a> &mdash; Pattaya car & bike rental directory</li>
-  <li><a href="https://pattaya-afterdark.com/" target="_blank" rel="noopener noreferrer">Pattaya After Dark</a> &mdash; Pattaya nightlife, hour by hour</li>
 </ul>
 
 <h2>About these numbers</h2>
@@ -2074,11 +2053,11 @@ const UTILITY_PAGES = [
 <p>No money changes hands. Ranking is based on consistent quality, current operation, breadth of facility, instructor caliber, and community reputation. Gyms with closed doors or stale information get demoted automatically.</p>
 
 <h2>What we operate</h2>
-<p>Pattaya.Gym is part of the independent TimPaemi / Pattaya Authority network of Pattaya publications operated by <strong>TimPaemi Co., Ltd.</strong>. The full network: <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a>, <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a>, <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a>, <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>, <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a>, <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">Pattaya Coffee</a>, <a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa Stream</a>, <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>, <a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">PattayaPets</a>, <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>, and <a href="https://pattaya-afterdark.com/" target="_blank" rel="noopener noreferrer">Pattaya After Dark</a>. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
+<p>Pattaya.Gym is part of the independent TimPaemi / Pattaya Authority network of Pattaya publications operated by <strong>TimPaemi Co., Ltd.</strong>. The full network: Pattaya Authority, TimPaemi, Pattaya Restaurant Guide, Pattaya Visa Help, Pattaya School Guide, Pattaya Coffee, Pattaya Villa Stream, Pattaya Medical, PattayaPets, Pattaya Vehicle Rentals, and Pattaya After Dark. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
 
 <h2>Who runs this</h2>
 <p><img src="/authors/timpaemi.jpg" alt="TimPaemi — founders and editors of the Pattaya Authority network" width="120" height="120" loading="lazy" style="float:right; border-radius:12px; margin:0 0 12px 16px;"></p>
-<p>Pattaya.Gym is operated by <strong><a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">TimPaemi</a></strong> — Tim Paemi, an independent operator and long-time Pattaya resident, alongside his wife and co-founder. Everything we publish across the network carries the TimPaemi byline; <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">timpaemi.com</a> is the identity behind every site. The site is self-funded and has no commercial relationship with any listed venue.</p>
+<p>Pattaya.Gym is operated by <strong>TimPaemi</strong> — Tim Paemi, an independent operator and long-time Pattaya resident, alongside his wife and co-founder. Everything we publish across the network carries the TimPaemi byline; timpaemi.com is the identity behind every site. The site is self-funded and has no commercial relationship with any listed venue.</p>
 
 <h2>Editorial policy</h2>
 <ul>
@@ -2092,7 +2071,7 @@ const UTILITY_PAGES = [
   {
     slug: 'contact',
     title: 'Contact Pattaya.Gym — Email, WhatsApp, LINE',
-    desc: 'Three ways to reach Pattaya.Gym. Email info@pattaya-gym.com, WhatsApp +66 96 728 6999, or LINE @timpaemi. We reply to every message personally.',
+    desc: 'Three ways to reach Pattaya.Gym. Email info@pattaya-gym.com,, or LINE @timpaemi. We reply to every message personally.',
     eyebrow: 'Contact',
     headlineLead: 'Reach us',
     headlineAccent: 'direct',
@@ -2184,10 +2163,8 @@ const UTILITY_PAGES = [
 
 <h2>Sister projects</h2>
 <ul>
-<li><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer"><strong>Pattaya Authority</strong></a> — flagship nightlife agency, one of the leading operators in Pattaya. Brand strategy, content production, venue partnerships.</li>
+<li><strong>Pattaya Authority</strong> — flagship nightlife agency, one of the leading operators in Pattaya. Brand strategy, content production, venue partnerships.</li>
 <li><strong>Pattaya.Gym</strong> (this site) — fitness directory. Every gym, every camp, every court in Pattaya.</li>
-<li><a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer"><strong>Pattaya Restaurant Guide</strong></a> — independent restaurant guide. Editorial reviews, real visits, honest takes.</li>
-<li><a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer"><strong>Pattaya Visa Help</strong></a> — visa and long-stay support for foreigners in Pattaya.</li>
 </ul>
 
 <h2>Reach</h2>
@@ -2244,7 +2221,7 @@ const UTILITY_PAGES = [
 <li>Cross-promote unrelated businesses</li>
 </ul>
 
-<p class="u-mt-6"><strong>Send the details to <a href="mailto:info@pattaya-gym.com?subject=Add%20my%20gym">info@pattaya-gym.com</a></strong> or WhatsApp <a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%20want%20to%20add%20my%20gym%20to%20pattaya-gym.com" target="_blank" rel="noopener noreferrer">+66 96 728 6999</a> with "Add my gym" in the message.</p>
+<p class="u-mt-6"><strong>Send the details to <a href="mailto:info@pattaya-gym.com?subject=Add%20my%20gym">info@pattaya-gym.com</a></strong> or WhatsApp  with "Add my gym" in the message.</p>
 `
   },
   {
@@ -2352,7 +2329,7 @@ const UTILITY_PAGES = [
 <p>No other third-party services are loaded on the site.</p>
 
 <h2>Our sister network</h2>
-<p>Pattaya.Gym is one of several independent publications operated by <strong>TimPaemi Co., Ltd.</strong>. Each runs on the same independence and editorial standards. The full network: <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">pattaya-authority.com</a>, <a href="https://timpaemi.com/" target="_blank" rel="noopener noreferrer">timpaemi.com</a>, <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">pattaya-restaurant-guide.com</a>, <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">pattayavisahelp.com</a>, <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">pattaya-school-guide.com</a>, <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">pattaya-coffee.com</a>, <a href="https://pattayastream.com/" target="_blank" rel="noopener noreferrer">pattayastream.com</a>, <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">pattaya-medical.com</a>, <a href="https://pattayapets.com/" target="_blank" rel="noopener noreferrer">pattayapets.com</a>, <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">pattaya-vehicle-rentals.com</a>, and <a href="https://pattaya-afterdark.com/" target="_blank" rel="noopener noreferrer">pattaya-afterdark.com</a>. Each site has its own privacy policy.</p>
+<p>Pattaya.Gym is one of several independent publications operated by <strong>TimPaemi Co., Ltd.</strong>. Each runs on the same independence and editorial standards. The full network: pattaya-authority.com, timpaemi.com, pattaya-restaurant-guide.com, pattayavisahelp.com, pattaya-school-guide.com, pattaya-coffee.com, pattayastream.com, pattaya-medical.com, pattayapets.com, pattaya-vehicle-rentals.com, and pattaya-afterdark.com. Each site has its own privacy policy.</p>
 
 <h2>Your rights — GDPR (EU/UK) and PDPA (Thailand)</h2>
 <p>If you are in the EU, UK, or Thailand (or anywhere with similar legislation), you have the right to: request access to whatever data we hold on you (which is functionally nothing beyond aggregate GA counts you cannot be re-identified from), request deletion, request correction, withdraw consent, and lodge a complaint with your national data-protection authority. Email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a> and we will respond within 30 days. Because we do not run accounts, most requests are satisfied simply by you clearing your browser data — but we will confirm in writing if you ask.</p>

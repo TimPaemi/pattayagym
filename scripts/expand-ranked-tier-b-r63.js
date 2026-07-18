@@ -25,7 +25,7 @@ const BLOCKS = {
     <li>Do not buy tickets from street touts outside venues — use camp desk, hotel concierge, or official RWS channels.</li>
     <li>Allow 2.5–3 hours return buffer after fights — Sukhumvit traffic at 23:00 is unpredictable.</li>
   </ul>
-  <p>Camp context: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday</a> · Transport: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Vehicle Rentals</a>.</p>
+  <p>Camp context: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday</a> · Transport: Vehicle Rentals.</p>
   <h3>Ticket tiers and seating</h3>
   <p>Ringside costs more but worth it once — further seats still deliver atmosphere. Arrive 45 minutes early for merchandise and fighter stare-downs. Bags may be searched — travel light. Children welcome at many cards but ear protection recommended close to ring.</p>
 </section>`,

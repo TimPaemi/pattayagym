@@ -170,8 +170,7 @@ function footer() {
         <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
         <li><a href="/add-your-gym/">Add your gym</a></li>
         <li><a href="/contact/">Contact</a></li>
-          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener">WhatsApp +66</a></li>
+          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
           <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE @timpaemi</a></li>
         <li><a href="/press/">Press</a></li>
       </ul>
@@ -181,7 +180,7 @@ function footer() {
   <div class="site-footer-base">
     <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
     <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener author" class="sf-builtby-link">PATTAYA AUTHORITY</a> · <a href="https://timpaemi.com/" target="_blank" rel="noopener author" class="sf-builtby-link">TIM PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
+          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener author nofollow" class="sf-builtby-link">PATTAYA AUTHORITY</a> · TIM PAEMI <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
           
   </div>
 </footer>`;
@@ -1681,8 +1680,7 @@ ${header()}
       Tip: combine a sport with an area ("yoga jomtien"), or with a feature ("24 hour", "english", "cheap", "family"). Multiple words narrow results.
     </p>
   </div>
-  <p class="search-stats" id="stats"></p>
-  <h2 id="search-results-title" style="max-width:720px;margin:0 auto 12px;font-size:1.1rem;">Search results</h2>
+    <h2 id="search-results-title" style="max-width:720px;margin:0 auto 12px;font-size:1.1rem;">Search results</h2>
   <div id="search-results"></div>
 </main>
 ${footer()}
@@ -1831,7 +1829,7 @@ ${header()}
     </ol>
   </section>
 
-  <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
+  <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
   <p style="text-align: center; color: var(--text-muted); font-size: 13px; max-width: 540px; margin: 24px auto;">Form opens your email client. Or email <a href="mailto:info@pattaya-gym.com" style="color: var(--accent);">info@pattaya-gym.com</a> directly with the same details.</p>
 </main>
 ${footer()}
@@ -1914,8 +1912,7 @@ ${header()}
       <label class="search-check" for="open-filter"><input id="open-filter" type="checkbox" /> <span>Open now</span></label>
     </div>
   </div>
-  <p class="search-stats" id="stats"></p>
-  <h2 id="search-results-title" style="max-width:720px;margin:0 auto 12px;font-size:1.1rem;">Search results</h2>
+    <h2 id="search-results-title" style="max-width:720px;margin:0 auto 12px;font-size:1.1rem;">Search results</h2>
   <div id="search-results"></div>
 </main>
 ${footer()}
@@ -2108,7 +2105,7 @@ ${header()}
     <p class="newsletter-kicker">Contact the editor</p>
     <h1 id="contact-title">Send a correction, venue lead, or partnership note.</h1>
     <p>Email is the fastest route: <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>. Venue owners can also use the structured <a href="/add-your-gym/">add-your-gym form</a>.</p>
-    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
+    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
   </section>
 </main>
 ${footer()}
@@ -2244,7 +2241,7 @@ ${header()}
     <p class="venue-lede">Choose your stay length, training goal, budget, and preferred area. The planner returns 5-8 venues plus a simple daily rhythm you can adjust.</p>
   </div>
   <div class="tool-grid">
-    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
+    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
     <section class="tool-results" aria-live="polite">
       <h2 style="margin-top:0;">Recommended venues</h2>
       <div class="tool-results-list" id="trip-results"></div>
@@ -2350,7 +2347,7 @@ ${header()}
     <p class="venue-lede">This is a rule-based shortlist from venue metadata, not a live trainer roster. Confirm current coaches, language fit, and sparring expectations with the gym before booking.</p>
   </div>
   <div class="tool-grid">
-    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-whatsapp" href="https://api.whatsapp.com/send/?phone=66967286999&amp;text=Hi%21%20I%27m%20reaching%20out%20via%20pattaya-gym.com" target="_blank" rel="noopener"><span class="channel-label">// WHATSAPP</span><span class="channel-addr">+66 96 728 6999</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
+    <div class="channels"><a class="channel channel-email" href="mailto:info@pattaya-gym.com"><span class="channel-label">// EMAIL</span><span class="channel-addr">info@pattaya-gym.com</span><span class="channel-arrow">→</span></a><a class="channel channel-line" href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener"><span class="channel-label">// LINE</span><span class="channel-addr">@timpaemi</span><span class="channel-arrow">→</span></a></div>
     <section class="tool-results" aria-live="polite">
       <h2 style="margin-top:0;">Best-fit camps and gyms</h2>
       <div class="tool-results-list" id="coach-results"></div>

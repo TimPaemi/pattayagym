@@ -42,7 +42,7 @@ module.exports = `
 <li><a href="/gyms/movenpick-siam-pattaya/">Mövenpick Siam Na Jomtien</a> — 24h fitness, seafront + lagoon pools, Little Birds Kids Club.</li>
 </ul>
 
-<p>South planning: <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien &amp; Sattahip guide</a>. Transport: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>.</p>
+<p>South planning: <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien &amp; Sattahip guide</a>. Transport: Pattaya Vehicle Rentals.</p>
 
 <h2>Water parks — family full days (not lap lanes)</h2>
 
@@ -110,7 +110,7 @@ module.exports = `
 
 <h2>Pool hygiene and gear — practical packing</h2>
 
-<p>Public pools expect swim cap rules on some lanes — buy locally for ฿50–150. Hotel pools usually provide towels with day-pass; public pools may not. Goggles with UV tint help outdoor hotel lanes at midday. Shower before entering municipal pools (Thai pool culture). Do not assume diving boards at public facilities — lap lanes only. Recovery: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> for ear or skin issues after long open-water weeks.</p>
+<p>Public pools expect swim cap rules on some lanes — buy locally for ฿50–150. Hotel pools usually provide towels with day-pass; public pools may not. Goggles with UV tint help outdoor hotel lanes at midday. Shower before entering municipal pools (Thai pool culture). Do not assume diving boards at public facilities — lap lanes only. Recovery: Pattaya Medical for ear or skin issues after long open-water weeks.</p>
 
 <h2>Related guides</h2>
 

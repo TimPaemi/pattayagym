@@ -93,8 +93,7 @@ module.exports = `
 <ul>
 <li><strong>Mon/Wed/Fri AM:</strong> Fairtex morning block</li>
 <li><strong>Tue/Thu PM:</strong> Muscle Factory or SUN Fitness strength</li>
-<li><strong>Sat:</strong> Wong Amat swim or Big Buddha steps</li>
-<li><strong>Sun:</strong> rest — <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya Restaurant Guide</a> recovery meal</li>
+<li><strong>Sat:</strong> Wong Amat swim or Big Buddha steps</li>
 </ul>
 
 <h2>FAQ</h2>

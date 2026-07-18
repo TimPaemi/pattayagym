@@ -55,7 +55,7 @@ module.exports = `
 <ul>
 <li><strong>Is the price all-inclusive?</strong> Meals, laundry, airport transfer may be extra — get itemized quotes.</li>
 <li><strong>Sessions per day included?</strong> Two-a-days standard at serious camps; resorts sometimes one-a-day.</li>
-<li><strong>Visa letter?</strong> Fairtex and Kombat provide support for ED pathways — confirm with <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>.</li>
+<li><strong>Visa letter?</strong> Fairtex and Kombat provide support for ED pathways — confirm with Pattaya Visa Help.</li>
 <li><strong>Cancellation policy?</strong> Often 7–14 days notice; low season sometimes flexible.</li>
 <li><strong>Skill level expectation?</strong> All welcome beginners; fighter-track gyms need honest disclosure.</li>
 </ul>

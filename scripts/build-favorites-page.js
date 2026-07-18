@@ -97,7 +97,7 @@ ${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Favorites' }])}
   </div>
 </section>
 </main>
-<section class="pa-network"><a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer" class="u-plain-link"><div class="pa-network-badge">★ A Pattaya Authority property ★</div></a><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p></section>
+<section class="pa-network"><div class="pa-network-badge">★ A Pattaya Authority property ★</div><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p></section>
 ${marquee(BOTTOM_MARQUEE, true)}
 <footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements.</p></div>${toolSiteFooterCol()}</div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span></div></footer>
 <div class="progress-bar" aria-hidden="true"></div>

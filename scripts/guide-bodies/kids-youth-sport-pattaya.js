@@ -66,7 +66,7 @@ module.exports = `
 
 <h2>International school sport — enrolled students only</h2>
 
-<p><a href="/gyms/regents-international-school-pattaya/">Regents International School Pattaya</a> runs basketball, football, swimming, athletics, rugby, and cricket — <strong>for enrolled students only</strong>, not public drop-in. Relocating families: <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">Pattaya School Guide</a> before you assume school facilities replace academies.</p>
+<p><a href="/gyms/regents-international-school-pattaya/">Regents International School Pattaya</a> runs basketball, football, swimming, athletics, rugby, and cricket — <strong>for enrolled students only</strong>, not public drop-in. Relocating families: Pattaya School Guide before you assume school facilities replace academies.</p>
 
 <h2>Parent training windows — same city, parallel schedules</h2>
 

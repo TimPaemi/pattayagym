@@ -217,7 +217,7 @@ function faqsForVenue(g) {
     });
     out.push({
       q: `Where is ${name}?`,
-      a: `${esc(area)}. Transport: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>. ${areaLink}.`,
+      a: `${esc(area)}. Transport: Pattaya Vehicle Rentals. ${areaLink}.`,
     });
   } else if (cat === 'equestrian') {
     out.push({

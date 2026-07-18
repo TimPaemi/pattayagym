@@ -64,9 +64,9 @@ module.exports = `
 <li>Photography rules around horses and polo fields</li>
 </ul>
 
-<p>Transport: estates sit east/north of central Pattaya — use <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a> or hotel taxi desk; not walkable from Walking Street. Allow buffer time — Banglamung traffic spikes weekends.</p>
+<p>Transport: estates sit east/north of central Pattaya — use Pattaya Vehicle Rentals or hotel taxi desk; not walkable from Walking Street. Allow buffer time — Banglamung traffic spikes weekends.</p>
 
-<p>Injury backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Gentle alternatives same week: <a href="/guides/pattaya-seniors-low-impact-sport/">seniors low-impact sport</a> · <a href="/guides/swimming-pools-pattaya/">swimming pools</a>.</p>
+<p>Injury backup: Pattaya Medical. Gentle alternatives same week: <a href="/guides/pattaya-seniors-low-impact-sport/">seniors low-impact sport</a> · <a href="/guides/swimming-pools-pattaya/">swimming pools</a>.</p>
 
 <h2>Sample itineraries</h2>
 

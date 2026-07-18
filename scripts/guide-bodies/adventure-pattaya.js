@@ -55,9 +55,9 @@ module.exports = `
 
 <h2>Booking &amp; safety notes</h2>
 
-<p>Most adventure operators require advance booking in peak season (Dec–Feb, Songkran). Zipline, skydive, and ATV enforce weight and age limits — confirm on each venue page. Transport: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a> for self-drive to Sattahip zipline; many operators include pickup.</p>
+<p>Most adventure operators require advance booking in peak season (Dec–Feb, Songkran). Zipline, skydive, and ATV enforce weight and age limits — confirm on each venue page. Transport: Pattaya Vehicle Rentals for self-drive to Sattahip zipline; many operators include pickup.</p>
 
-<p>Injury backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Family context: <a href="/guides/pattaya-gyms-childcare-family-pools/">childcare &amp; family pools</a>.</p>
+<p>Injury backup: Pattaya Medical. Family context: <a href="/guides/pattaya-gyms-childcare-family-pools/">childcare &amp; family pools</a>.</p>
 
 <h2>Related guides</h2>
 
@@ -88,7 +88,7 @@ module.exports = `
 <li><strong>East / Mabprachan</strong> — ATV and wake park nearby; skydive still needs highway run north.</li>
 </ul>
 
-<p>Scooter rental: <a href="https://pattaya-vehicle-rentals.com/" target="_blank" rel="noopener noreferrer">Pattaya Vehicle Rentals</a>. Ride-hailing works but drivers may not know shooting-range sois — send the venue Google pin.</p>
+<p>Scooter rental: Pattaya Vehicle Rentals. Ride-hailing works but drivers may not know shooting-range sois — send the venue Google pin.</p>
 
 <h2>Adventure + Muay Thai on the same trip</h2>
 

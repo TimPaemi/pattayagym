@@ -63,7 +63,7 @@ module.exports = `
 
 <p><strong>Family day:</strong> morning climb Harbor Mall → lunch → trampoline if younger sibling → afternoon <a href="/guides/swimming-pools-pattaya/">hotel pool day pass</a>.</p>
 
-<p>Injury backup: <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a>. Beginners hub: <a href="/guides/best-for-beginners-pattaya/">best for beginners</a>.</p>
+<p>Injury backup: Pattaya Medical. Beginners hub: <a href="/guides/best-for-beginners-pattaya/">best for beginners</a>.</p>
 
 <h2>Rainy season and heat — when indoor walls win</h2>
 

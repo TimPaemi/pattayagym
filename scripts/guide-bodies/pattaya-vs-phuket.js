@@ -32,7 +32,7 @@ module.exports = `
 <li><strong>Training holiday packages:</strong> <a href="/gyms/fairtex-pattaya/">Fairtex</a>, <a href="/gyms/kombat-group-thailand/">Kombat Group</a> — often less than comparable Phuket resort camps.</li>
 <li><strong>Lineage &amp; authenticity:</strong> <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> (since 1960), family camps, not only resort bubbles.</li>
 <li><strong>Fight culture:</strong> <a href="/gyms/max-muay-thai-stadium/">MAX Muay Thai</a> weekly cards; weekend trips to <a href="/gyms/lumpinee-boxing-stadium/">Lumpinee</a> / <a href="/gyms/rajadamnern-stadium/">Rajadamnern</a> in Bangkok (~2 hours).</li>
-<li><strong>Long-stay life:</strong> <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>, <a href="https://pattaya-restaurant-guide.com/" target="_blank" rel="noopener noreferrer">Restaurant Guide</a>, <a href="https://pattaya-school-guide.com/" target="_blank" rel="noopener noreferrer">School Guide</a> — TimPaemi network built for relocators, not just tourists.</li>
+<li><strong>Long-stay life:</strong> Pattaya Visa Help, Restaurant Guide, School Guide — TimPaemi network built for relocators, not just tourists.</li>
 <li><strong>Quiet training districts:</strong> live <a href="/guides/best-gym-jomtien-pattaya/">Jomtien</a>, Naklua, or Pratamnak; party in central Pattaya by choice, not by default.</li>
 </ul>
 
@@ -55,7 +55,7 @@ module.exports = `
 
 <p><strong>Phuket mid-tier:</strong> comparable resort packages frequently quote <strong>10–25% higher</strong> for similar room class — island logistics, seasonal tourism pricing, and brand premium. Always verify: private vs group pads, meals, transfers, gym fees vs "unlimited training" fine print.</p>
 
-<p><strong>Hidden costs both cities:</strong> motorbike rental, massage, supplements, visa extensions (<a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">visa guide</a> for Pattaya long-stays), and nightlife spend often exceed gym fees.</p>
+<p><strong>Hidden costs both cities:</strong> motorbike rental, massage, supplements, visa extensions (visa guide for Pattaya long-stays), and nightlife spend often exceed gym fees.</p>
 
 <h2>Training quality — the nuance</h2>
 
@@ -75,11 +75,11 @@ module.exports = `
 
 <p>Both cities can ruin a training block if you live in the wrong zone. <strong>Patong</strong> concentrates nightlife — easy to train poorly and party heavily in the same week. Pattaya separates zones: train in Jomtien/Naklua, visit central nightlife when you choose.</p>
 
-<p>For remote workers training seriously, Pattaya's <a href="https://pattaya-coffee.com/" target="_blank" rel="noopener noreferrer">coffee</a> and coworking density plus lower average accommodation cost often wins over 8–12 week stays.</p>
+<p>For remote workers training seriously, Pattaya's coffee and coworking density plus lower average accommodation cost often wins over 8–12 week stays.</p>
 
 <h2>Beaches and recovery</h2>
 
-<p>Phuket wins raw beach aesthetics — Kata, Karon, Nai Harn are genuinely strong. Pattaya's best swim/train balance is <strong>Jomtien</strong> and <strong>Wongamat</strong> — not central Pattaya Beach. Recovery options in Pattaya: public pools, resort day passes, yoga studios, cheap massage, <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">medical network</a> for sports injury.</p>
+<p>Phuket wins raw beach aesthetics — Kata, Karon, Nai Harn are genuinely strong. Pattaya's best swim/train balance is <strong>Jomtien</strong> and <strong>Wongamat</strong> — not central Pattaya Beach. Recovery options in Pattaya: public pools, resort day passes, yoga studios, cheap massage, medical network for sports injury.</p>
 
 <h2>Sample decision tree</h2>
 

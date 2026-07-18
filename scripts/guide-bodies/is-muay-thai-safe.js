@@ -61,11 +61,10 @@ module.exports = `
 <p>For sprains, cuts, or post-sparring swelling:</p>
 
 <ul>
-<li><a href="/gyms/bangkok-hospital-pattaya-rehab/">Bangkok Hospital Pattaya</a> — sports rehab and imaging on Sukhumvit Naklua corridor.</li>
-<li><a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> — network guide to clinics, dentists, and insurance-friendly providers.</li>
+<li><a href="/gyms/bangkok-hospital-pattaya-rehab/">Bangkok Hospital Pattaya</a> — sports rehab and imaging on Sukhumvit Naklua corridor.</li>
 </ul>
 
-<p>Travel insurance that covers martial arts training (not just "gym fitness") is worth the premium for trips longer than two weeks. Long-stay visa questions: <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a> and <a href="https://pattayavisahelp.com/" target="_blank" rel="noopener noreferrer">Pattaya Visa Help</a>.</p>
+<p>Travel insurance that covers martial arts training (not just "gym fitness") is worth the premium for trips longer than two weeks. Long-stay visa questions: <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a> and Pattaya Visa Help.</p>
 
 <h2>Safe beginner camps we recommend</h2>
 
@@ -87,7 +86,7 @@ module.exports = `
 
 <p><strong>Do I need fight experience?</strong> No. Pattaya's beginner economy exists because foreigners arrive with none.</p>
 
-<p><strong>Is street crime a training risk?</strong> Gym areas (Naklua, Jomtien, resort strips) are generally safe day and night. Central Pattaya nightlife zones need normal urban awareness — same as any tourist city. <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener noreferrer">Pattaya Authority</a> covers neighbourhood context beyond sport.</p>
+<p><strong>Is street crime a training risk?</strong> Gym areas (Naklua, Jomtien, resort strips) are generally safe day and night. Central Pattaya nightlife zones need normal urban awareness — same as any tourist city. Pattaya Authority covers neighbourhood context beyond sport.</p>
 
 <p><strong>Should kids train?</strong> Many camps run kids programmes (Fairtex, Venum, Kombat Group). Verify age policies on each venue page under <a href="/category/kids-youth/">kids &amp; youth sport</a>.</p>
 
@@ -107,7 +106,7 @@ module.exports = `
 
 <h2>When to see a doctor</h2>
 
-<p>Persistent swelling beyond 72 hours, head impact with confusion, or knee pop with instability — clinic visit same day. <a href="https://pattaya-medical.com/" target="_blank" rel="noopener noreferrer">Pattaya Medical</a> lists sports-friendly clinics; carry passport copy and insurance card.</p>
+<p>Persistent swelling beyond 72 hours, head impact with confusion, or knee pop with instability — clinic visit same day. Pattaya Medical lists sports-friendly clinics; carry passport copy and insurance card.</p>
 
 <h2>Insurance and waivers</h2>
 
