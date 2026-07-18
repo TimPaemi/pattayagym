@@ -92,10 +92,6 @@ function defaultSisterContextLinks() {
     { url: '/plan-my-trip/', label: 'Plan my trip', desc: 'Build a shortlist by sport' },
     { url: '/favorites/', label: 'Favorites', desc: 'Your saved venue shortlist' },
     { url: '/search/', label: 'Search', desc: 'Filter all venues live' },
-    { url: 'https://pattaya-restaurant-guide.com/', label: 'Restaurant Guide', desc: 'Eat after training', external: true },
-    { url: 'https://pattayavisahelp.com/', label: 'Visa Help', desc: 'Long-stay and ED visas', external: true },
-    { url: 'https://pattaya-medical.com/', label: 'Medical directory', desc: 'Clinics and rehab', external: true },
-    { url: 'https://pattayapersonaltrainer.com/', label: 'Personal trainers', desc: '1-on-1 coaching', external: true },
   ];
 }
 
