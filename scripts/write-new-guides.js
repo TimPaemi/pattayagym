@@ -47,7 +47,8 @@ const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT','158 VENUES','HA
 const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT','★ LIVE 158 VENUES','UPDATED ROLLING'];
 
 function marquee(items, bottom) {
-  const cls = bottom ? 'marquee marquee-bottom' : 'marquee';
+  if (bottom) return ''; // FOOTER-SPEC-2026: no bottom ticker
+  const cls = 'marquee';
   const inner = items.map(it => `<span>${esc(it)}</span><span class="star">·</span>`).join('');
   return `<div class="${cls}" aria-hidden="true"><div class="marquee-track"><div class="marquee-set">${inner}</div><div class="marquee-set" aria-hidden="true">${inner}</div></div></div>`;
 }

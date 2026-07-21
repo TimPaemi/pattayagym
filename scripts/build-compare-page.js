@@ -60,7 +60,8 @@ const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT',`${VENUE_N} VENU
 const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT',`★ LIVE ${VENUE_N} VENUES`,'UPDATED ROLLING'];
 
 function marquee(items, bot) {
-  const cls = bot ? 'marquee marquee-bottom' : 'marquee';
+  if (bot) return ''; // FOOTER-SPEC-2026: no bottom ticker
+  const cls = 'marquee';
   const inner = items.map(it => `<span>${esc(it)}</span><span class="star">·</span>`).join('');
   return `<div class="${cls}" aria-hidden="true"><div class="marquee-track"><div class="marquee-set">${inner}</div><div class="marquee-set" aria-hidden="true">${inner}</div></div></div>`;
 }
@@ -178,9 +179,8 @@ ${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Compare' }])}
 
 </main>
 
-<section class="pa-network"><div class="pa-network-badge">★ A Pattaya Authority property ★</div><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p></section>
 ${marquee(BOTTOM_MARQUEE, true)}
-<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div>${toolSiteFooterCol()}<div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 

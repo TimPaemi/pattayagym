@@ -26,7 +26,8 @@ const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', `${VENUE_N} V
 const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', `★ LIVE ${VENUE_N} VENUES`, 'UPDATED ROLLING'];
 
 function marquee(items, bot) {
-  const cls = bot ? 'marquee marquee-bottom' : 'marquee';
+  if (bot) return ''; // FOOTER-SPEC-2026: no bottom ticker
+  const cls = 'marquee';
   const inner = items.map(it => `<span>${esc(it)}</span><span class="star">·</span>`).join('');
   return `<div class="${cls}" aria-hidden="true"><div class="marquee-track"><div class="marquee-set">${inner}</div><div class="marquee-set" aria-hidden="true">${inner}</div></div></div>`;
 }
@@ -97,9 +98,8 @@ ${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Favorites' }])}
   </div>
 </section>
 </main>
-<section class="pa-network"><div class="pa-network-badge">★ A Pattaya Authority property ★</div><h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2><p class="pa-network-sub">// Independent Pattaya guides · TimPaemi network</p></section>
 ${marquee(BOTTOM_MARQUEE, true)}
-<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements.</p></div>${toolSiteFooterCol()}</div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span></div></footer>
+${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script src="/data.js${ASSET}"></script>

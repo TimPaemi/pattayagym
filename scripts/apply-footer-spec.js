@@ -69,6 +69,11 @@ for (const file of htmlFiles(ROOT)) {
     paNetRemoved++;
   }
 
+  // 3b. <meta name="author"> for head-only crawlers and AI engines
+  if (!/<meta name="author"/.test(html) && html.includes('</head>')) {
+    html = html.replace('</head>', '<meta name="author" content="TimPaemi (timpaemi.com)">\n</head>');
+  }
+
   // 4. JSON-LD: entity once per page + author/publisher reference
   if (html.includes('</head>')) {
     const blocks = [];

@@ -574,6 +574,7 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
 <meta name="twitter:image" content="${ogImage}">
+<meta name="author" content="TimPaemi (timpaemi.com)">
 <meta name="robots" content="${robots}">
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//maps.google.com">

@@ -45,7 +45,8 @@ const TOP_MARQUEE = ['★ EVERY GYM','EVERY RING','EVERY COURT',`${VENUE_N} VENU
 const BOTTOM_MARQUEE = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT',`★ LIVE ${VENUE_N} VENUES`,'UPDATED ROLLING'];
 
 function marquee(items, bottom) {
-  const cls = bottom ? 'marquee marquee-bottom' : 'marquee';
+  if (bottom) return ''; // FOOTER-SPEC-2026: no bottom ticker
+  const cls = 'marquee';
   const inner = items.map(it => `<span>${esc(it)}</span><span class="star">·</span>`).join('');
   return `<div class="${cls}" aria-hidden="true">
   <div class="marquee-track">
@@ -68,35 +69,13 @@ function pageScripts() {
 }
 
 function paNetwork() {
-  return `<section class="pa-network">
-  
-    <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
-  
-  <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
-  <p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p>
-</section>`;
+  // FOOTER-SPEC-2026: publisher credit lives in the footer publisher block.
+  return '';
 }
 
+const { siteFooterHtml } = require('./lib/site-footer.js');
 function footer() {
-  return `<footer class="footer" role="contentinfo">
-  <div class="footer-grid">
-    <div>
-      <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
-      <div class="footer-slogan">Built in Pattaya. For Pattaya.</div>
-      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
-      <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
-      <div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div>
-    </div>
-    <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/pattaya-sport-stats/">Sport stats</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/press/">Press</a></li><li><a href="/add-your-gym/">Add your venue</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div>
-  </div>
-  <div class="footer-base">
-    <span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span>
-    <span class="u-cyan">★ Last updated · ${BUILD_TIMESTAMP} · v${ASSET_VERSION}</span>
-    <span>12.92°N · 100.87°E · Pattaya Villa</span>
-  </div>
-</footer>
+  return `${siteFooterHtml(VENUE_N)}
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 ${pageScripts()}`;

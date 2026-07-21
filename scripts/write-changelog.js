@@ -33,7 +33,8 @@ const TOP = ['★ EVERY GYM','EVERY RING','EVERY COURT',`${VENUE_N} VENUES`,'HAN
 const BOT = ['★ PATTAYA VILLA','NO PAID PLACEMENTS','HAND-CHECKED','EVERY GYM','EVERY RING','EVERY COURT',`★ LIVE ${VENUE_N} VENUES`,'UPDATED ROLLING'];
 
 function marquee(items, bot) {
-  const cls = bot ? 'marquee marquee-bottom' : 'marquee';
+  if (bot) return ''; // FOOTER-SPEC-2026: no bottom ticker
+  const cls = 'marquee';
   const inner = items.map(it => `<span>${esc(it)}</span><span class="star">·</span>`).join('');
   return `<div class="${cls}" aria-hidden="true"><div class="marquee-track"><div class="marquee-set">${inner}</div><div class="marquee-set" aria-hidden="true">${inner}</div></div></div>`;
 }
