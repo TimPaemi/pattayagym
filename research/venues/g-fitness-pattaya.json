@@ -1,0 +1,29 @@
+{
+  "id": "g-fitness-pattaya",
+  "name": "G Fitness Pattaya",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "jomtien",
+  "addressFull": "53/48 Moo 4, Chaiyaphruek 2 Road, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 93 561 7373",
+  "website": "https://igcenter-pattaya.com/",
+  "hours": "Open daily; Google Maps currently shows closing at 21:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": null, "airConditioned": null},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": ["part of IG Center sports complex"],
+  "reviews": [{"platform": "Google", "score": 4.7, "count": 86, "url": "https://www.google.com/maps/search/?api=1&query=G+Fitness+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent Thai reviews describe a clean, uncrowded gym with plentiful equipment and helpful staff."], "complaints": ["One recent reviewer wishes the 21:00 closing time were later."]},
+  "sources": [
+    {"label": "Google Maps current listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=G+Fitness+Pattaya", "accessed": "2026-07-20"},
+    {"label": "IG Center operator site", "url": "https://igcenter-pattaya.com/", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 2,
+  "confidence": "low",
+  "confidenceReason": "Only two publisher families; all membership fields and air conditioning are missing.",
+  "unverified": ["all membership prices and terms", "air conditioning", "class schedule", "personal-training price", "facility inclusions", "complete weekly hours"],
+  "status": "open",
+  "verified": "2026-07-20",
+  "identityNote": "The existing `manta-kids-pattaya` record shares the IG Center address/site but has a different phone and a swimming-school identity. G Fitness is a distinct sub-venue within the same complex, not a second copy of Manta Kids."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "fitness-lifestyle-tiger-zoo",
+  "name": "Fitness Lifestyle Tiger Zoo",
+  "nameThai": "ฟิตเนส ไลฟ์สไตล์ สวนเสือศรีราชา",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "sriracha",
+  "addressFull": "341/688, Nong Kham, Si Racha, Chon Buri 20110",
+  "phone": "+66 98 826 9826",
+  "website": "http://www.fitnesslifestyle.co.th/",
+  "hours": "Open daily 06:00-22:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": true, "airConditioned": null},
+  "classes": {"groupClasses": true, "schedule": null, "included": null, "types": ["BodyCombat", "BodyPump", "BodyFlow", "BodyJam", "Sh'Bam"]},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": ["salt-water adult pool", "children's pool", "Wi-Fi", "parking"],
+  "reviews": [{"platform": "Google", "score": 4.7, "count": 136, "url": "https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Tiger+Zoo", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviews praise friendly service, a beginner-friendly atmosphere and staff who offer equipment guidance.", "Visitors value the combined cardio, weights, Les Mills classes and salt-water pools."], "complaints": ["A current Thai visitor guide recommends checking joining fees, zone access and suspension rules directly because packages are not transparent online."]},
+  "sources": [
+    {"label": "Google Maps current listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Tiger+Zoo", "accessed": "2026-07-20"},
+    {"label": "ThaiThurkic facility and hours profile", "url": "https://www.thaithurkic.com/fitness-lifestyle-%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%B7%E0%B8%AD%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2-098-826-9826", "accessed": "2026-07-20"},
+    {"label": "Lemon8 Thai visitor review", "url": "https://www.lemon8-app.com/@isara.storytelling/7302357293520388610?region=th", "accessed": "2026-07-20"},
+    {"label": "Nation Thailand club activity report", "url": "https://www.nationtv.tv/news/378583971", "accessed": "2026-07-20"},
+    {"label": "WorldPlaces branch profile", "url": "https://thailand.worldplaces.me/review/85392532-fitness-lifestyle.html", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "It clears four publishers and has strong facility evidence, but the complete membership/contract block and air conditioning are absent.",
+  "unverified": ["all membership prices and terms", "joining fee", "contract and suspension rules", "air conditioning", "class inclusion", "personal-training prices", "pool-access conditions for each membership"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "station-24-fitness-sriracha",
+  "name": "Station 24 Fitness Sriracha",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "sriracha",
+  "addressFull": "4th floor, Robinson Si Racha, 90/1 Sukhumvit Road, Si Racha, Chon Buri 20110",
+  "phone": "+66 94 236 3939",
+  "hours": "Open daily; Google Maps currently shows closing at 22:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": true, "airConditioned": null},
+  "classes": {"groupClasses": true, "schedule": null, "included": null, "types": ["dance", "Zumba", "yoga", "Pilates", "Muay Thai"]},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": [],
+  "reviews": [{"platform": "Google", "score": 4.8, "count": 29, "url": "https://www.google.com/maps/search/?api=1&query=Station+24+Fitness+Sriracha", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviewers describe a modern atmosphere, broad machine choice and friendly service."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps current branch listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Station+24+Fitness+Sriracha", "accessed": "2026-07-20"},
+    {"label": "Current operator-post mirror mentioning Sriracha", "url": "https://www.localgymsandfitness.com/TH/Samut-Prakan/405498980046488/Station-24-Fitness", "accessed": "2026-07-20"},
+    {"label": "Si Racha gym directory", "url": "https://www.localgymsandfitness.com/TH/Si-Racha/1490365/genre/184405378265823/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%A2%E0%B8%B4%E0%B8%A1%2F%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%9F%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%99%E0%B8%AA", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 2,
+  "confidence": "low",
+  "confidenceReason": "The two LocalGyms URLs are one publisher family, leaving only two independent sources; membership and air conditioning are missing.",
+  "unverified": ["all membership prices and terms", "joining fee", "contract and cancellation terms", "air conditioning", "current exact class timetable", "class inclusion", "personal-training rate"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

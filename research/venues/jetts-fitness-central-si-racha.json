@@ -1,0 +1,43 @@
+{
+  "id": "jetts-fitness-central-si-racha",
+  "name": "Jetts 24 Hour Fitness - Central Si Racha",
+  "nameThai": "เจ็ทส์ ฟิตเนส เซ็นทรัล ศรีราชา",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "sriracha",
+  "addressFull": "Room 226, 2nd floor, Central Si Racha, 8/1 Sukhumvit Road, Si Racha, Chon Buri 20110",
+  "phone": "+66 80 281 3660",
+  "website": "https://www.jetts.co.th/en/central-si-racha-en/",
+  "hours": "Member access 24/7. Staffed Mon-Fri 06:00-22:00; Sat-Sun and public holidays 08:00-20:00",
+  "membership": {
+    "joiningFee": {"value": "THB 1,500 standard value; waived for listed 2026 bank-card promotions subject to terms", "asOf": "2026-07-20", "priceSourceUrl": "https://www.jetts.co.th/en/jetts-fitness-promotion-en/"},
+    "accessFee": {"value": "THB 1,500 standard value; waived for listed 2026 bank-card promotions subject to terms", "asOf": "2026-07-20", "priceSourceUrl": "https://www.jetts.co.th/en/jetts-fitness-promotion-en/"},
+    "monthly": {"value": "THB 1,750 Freedom (3-month minimum), THB 1,650 Flexi (6 months), THB 1,550 Stay Fit (12 months)", "asOf": "2026-07-20", "priceSourceUrl": "https://www.jetts.co.th/join-online/"},
+    "dayPass": {"value": "THB 500 tourist 1-day pass", "asOf": "2026-07-20", "priceSourceUrl": "https://www.jetts.co.th/en/welcome-tourist-pass-en/"},
+    "contract": "Freedom minimum 3 months; Flexi 6 months; Stay Fit 12 months. Cancellation requires notice at least 30 days before the next billing date.",
+    "minimumTerm": "3 months on Freedom",
+    "hold": {"value": "Up to one billing cycle at a time, twice yearly; surplus suspension THB 450/month", "asOf": "2026-07-20", "priceSourceUrl": "https://www.jetts.co.th/en/memberships-en/"}
+  },
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": true, "airConditioned": true, "airConditioningNotes": "The enclosed second-floor mall club and its current official branch imagery show a fully indoor air-conditioned training floor."},
+  "classes": {"groupClasses": true, "schedule": "Available in the Jetts app and branch schedule", "included": true, "types": ["J Series HIIT", "group exercise", "HYROX training"]},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": ["1,105 square metre club", "Playground functional amphitheatre", "large free-weights zone", "group studio", "four-lane 10 m sled track", "Matrix cardio and strength equipment", "gender-neutral bathroom option"],
+  "reviews": [{"platform": "Google", "score": 3.8, "count": 84, "url": "https://www.google.com/maps/search/?api=1&query=Jetts+Fitness+Central+Si+Racha", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Members value the large free-weight area, 24-hour access and broad equipment selection."], "complaints": ["Multiple reviews from the month before verification complain about persistent body/foot odour and poor freshness.", "A recent reviewer says the class area is small and criticises cueing, tempo changes and limited form correction.", "Peak student use and members occupying machines for long periods are current friction points."]},
+  "sources": [
+    {"label": "Official Central Si Racha branch page", "url": "https://www.jetts.co.th/en/central-si-racha-en/", "accessed": "2026-07-20"},
+    {"label": "Official current online membership prices", "url": "https://www.jetts.co.th/join-online/", "accessed": "2026-07-20"},
+    {"label": "Official tourist passes", "url": "https://www.jetts.co.th/en/welcome-tourist-pass-en/", "accessed": "2026-07-20"},
+    {"label": "Official membership terms", "url": "https://www.jetts.co.th/en/memberships-en/", "accessed": "2026-07-20"},
+    {"label": "Google Maps location and recent Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=Jetts+Fitness+Central+Si+Racha", "accessed": "2026-07-20"},
+    {"label": "Nation Thailand branch-opening report", "url": "https://www.nationthailand.com/pr-news/more/pr-news/40024171", "accessed": "2026-07-20"},
+    {"label": "Longdo approved branch record", "url": "https://map.longdo.com/poilist/42%3Fpage%3D2653", "accessed": "2026-07-20"},
+    {"label": "Beautihost Thai branch directory", "url": "https://thai.beautihost.com/chonburi/agency/?q=jetts+24+hour+fitness+-+central+si+racha", "accessed": "2026-07-20"}
+  ],
+  "confidence": "high",
+  "confidenceReason": "Current official pages establish joining/access fees, multiple monthly terms, day passes, contract rules, 24/7 hours and an enclosed air-conditioned branch; independent branch and review sources exceed the four-source minimum.",
+  "unverified": ["personal-training prices", "current joining/access fee for applicants without an eligible promotion", "exact current daily class timetable", "whether odour complaints had been remediated after June 2026"],
+  "status": "open",
+  "verified": "2026-07-20",
+  "identityNote": "Distinct from the existing Jetts Little Walk Pattaya record: Central Si Racha has a different address and phone."
+}

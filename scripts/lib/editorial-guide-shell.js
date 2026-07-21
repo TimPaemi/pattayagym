@@ -39,8 +39,8 @@ function nav() {
 }
 
 function paNetwork() {
-  const { paNetworkHtml } = require('./pa-network-block');
-  return paNetworkHtml({ hereOnGym: true, badgeUrl: 'https://pattaya-authority.com/' });
+  // FOOTER-SPEC-2026: publisher credit lives in the footer publisher block. No network block.
+  return '';
 }
 
 function sisterContextBlock(links) {
@@ -61,20 +61,9 @@ function sisterContextBlock(links) {
 </section>`;
 }
 
+const { siteFooterHtml } = require('./site-footer.js');
 function footer(meta) {
-  return `<footer class="footer" role="contentinfo">
-  <div class="footer-grid">
-    <div>
-      <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
-      <div class="footer-slogan">Built in Pattaya. For Pattaya.</div>
-      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements.</p>
-    </div>
-    <div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/guides/">Guides</a></li><li><a href="/compare/">Compare</a></li><li><a href="/methodology/">Methodology</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"></ul></div>
-    <div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li></ul></div>
-  </div>
-  <div class="footer-base"><span>© 2026 TimPaemi Co., Ltd.</span><span class="u-cyan">★ v${meta.ASSET_VERSION} · ${meta.BUILD_TS}</span></div>
-</footer>
+  return `${siteFooterHtml(VENUE_N)}
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script defer src="/site-ui.js${meta.ASSET}"></script>
@@ -157,7 +146,6 @@ ${g.body}
 ${sisterContextBlock(g.sisterLinks)}
 </main>
 ${paNetwork()}
-${marquee(BOTTOM_MARQUEE, true)}
 ${footer(meta)}
 </body>
 </html>

@@ -1,0 +1,29 @@
+{
+  "id": "human-strong-gym-pattaya",
+  "name": "Human Strong Gym Pattaya",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "pratamnak",
+  "addressFull": "Pratamnak Soi 4, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": null,
+  "hours": "Mon-Fri 07:00-22:00; Sat-Sun 08:00-22:00",
+  "membership": {"joiningFee": null, "monthly": {"value": "THB 1,299", "asOf": "2026-07-20", "priceSourceUrl": "https://www.gotopattaya.com/venues/human-strong-gym-pattaya"}, "dayPass": {"value": "THB 149", "asOf": "2026-07-20", "priceSourceUrl": "https://www.gotopattaya.com/venues/human-strong-gym-pattaya"}, "fiveVisits": {"value": "THB 600", "asOf": "2026-07-20", "priceSourceUrl": "https://www.gotopattaya.com/venues/human-strong-gym-pattaya"}, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": true, "airConditioned": false, "airConditioningNotes": "Open-concept high-roof gym cooled by large fans."},
+  "classes": {"groupClasses": true, "schedule": "Functional circuits and boxing/Muay Thai; exact current weekly timetable should be confirmed", "included": null},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": ["parking", "changing room", "showers", "boxing and Muay Thai area"],
+  "reviews": [{"platform": "Google", "score": 4.5, "count": 139, "url": "https://www.google.com/maps/search/?api=1&query=Human+Strong+Gym+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai and Russian reviews praise the airy, uncrowded space, equipment variety and helpful staff.", "Members repeatedly call the pricing good value."], "complaints": ["It is fan-cooled rather than air-conditioned, which is decisive for heat-sensitive users."]},
+  "sources": [
+    {"label": "Google Maps current listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Human+Strong+Gym+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Go To Pattaya current membership profile", "url": "https://www.gotopattaya.com/venues/human-strong-gym-pattaya", "accessed": "2026-07-20"},
+    {"label": "Current operator-post mirror", "url": "https://www.localgymsandfitness.com/TH/Pattaya/1535026183256613/Human-strong-Gym-Pattaya", "accessed": "2026-07-20"},
+    {"label": "Buzzin Pattaya May 2026 profile", "url": "https://buzzinpattaya.com/human-strong-gym-pattaya/", "accessed": "2026-07-20"},
+    {"label": "Yandex current visitor review", "url": "https://yandex.com/maps/org/human_strong_gym_pattaya/62010698731/", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "Rates, hours and no-air-con status are well supported, but joining fee and contract/cancellation terms are not published.",
+  "unverified": ["joining fee", "contract and cancellation terms", "minimum term", "phone", "full group-class timetable", "class inclusion", "personal-training prices"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

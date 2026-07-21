@@ -1,0 +1,33 @@
+{
+  "id": "pattaya-city-school-11-swimming-pool",
+  "name": "Pattaya City School 11 Swimming Pool",
+  "nameThai": "สระว่ายน้ำโรงเรียนเมืองพัทยา 11",
+  "category": "swimming",
+  "categoryLabel": "Competition Pool",
+  "venueType": "school and competition pool",
+  "area": "east-pattaya",
+  "addressFull": "WWX5+7RV, Nong Yai 6, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": null,
+  "hours": "Google Maps currently shows an 18:00 closing time; public-use hours are not established",
+  "pool": {"length": "50 m", "lanes": 8, "indoor": false, "heated": null, "childrensPool": null, "depth": null, "notes": "The 2026 Pattaya Open programme describes a 50 m eight-lane long-course pool."},
+  "lessons": {"learnToSwim": null, "squad": true, "adultLessons": null, "ageFrom": null, "ageTo": null, "classSize": null, "ratio": null, "termOrDropIn": null, "trialAvailable": null},
+  "pricing": {"perLesson": null, "termFee": null, "privateRate": null, "membershipRequired": null},
+  "instructors": {"certification": null, "englishSpeaking": null, "femaleInstructors": null},
+  "practical": {"parentsCanWatch": null, "changingFacilities": null, "equipmentProvided": null},
+  "dayPassAvailable": null,
+  "dayPassPrice": null,
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 4, "url": "https://www.google.com/maps/search/?api=1&query=Pattaya+City+School+11+Swimming+Pool", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["The small review set describes the pool as a good-standard competition facility."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps current pool listing", "url": "https://www.google.com/maps/search/?api=1&query=Pattaya+City+School+11+Swimming+Pool", "accessed": "2026-07-20"},
+    {"label": "RaceSwim 2026 Pattaya Open specification", "url": "https://www.eoz.in.th/calendar/detail_swim.php?ChkID=474&language=en&language_id=2", "accessed": "2026-07-20"},
+    {"label": "RaceSwim event news", "url": "https://www.raceswim.com/news/detail.php?ChkID=194&language=en&language_id=2", "accessed": "2026-07-20"},
+    {"label": "Darasamutr Pattaya Open report", "url": "https://ds.ac.th/primary/pattaya-open.php", "accessed": "2026-07-20"},
+    {"label": "Thailand Aquatics result archive", "url": "https://www.thaiaquatics.or.th/", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "The physical competition pool and 2026 event use are established, but public access, lessons, prices, English instruction and the children's-pool field are all missing.",
+  "unverified": ["public day-pass access", "public-use timetable", "phone", "pool depth and heating", "pool.childrensPool", "all lesson fields except squad/event use", "all pricing", "all instructor fields", "parentsCanWatch outside events", "changing facilities"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

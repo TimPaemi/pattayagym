@@ -1,0 +1,28 @@
+{
+  "id": "fitness-lifestyle-srirachanakorn",
+  "name": "Fitness Lifestyle Srirachanakorn",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "sriracha",
+  "addressFull": "1/1 Srirachanakorn 3 Road, Si Racha, Chon Buri 20110",
+  "phone": "+66 95 228 8740",
+  "hours": "Open daily 06:00-22:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": true, "airConditioned": null},
+  "classes": {"groupClasses": true, "schedule": "Current weekly schedules are posted by the operator", "included": null, "types": ["BodyPump", "BodyCombat", "BodyJam", "Zumba", "yoga", "Pilates"]},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": [],
+  "reviews": [{"platform": "Google", "score": 4.7, "count": 55, "url": "https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Srirachanakorn", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviewers praise a large modern equipment range, plentiful classes, cleanliness and energetic trainers."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps current listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Srirachanakorn", "accessed": "2026-07-20"},
+    {"label": "Current operator-post mirror and class schedules", "url": "https://www.localgymsandfitness.com/TH/Si-Racha/103301275352462/Fitness-Lifestyle-Srirachanakorn", "accessed": "2026-07-20"},
+    {"label": "Beautihost Thai directory and hours", "url": "https://thai.beautihost.com/chonburi/agency/?q=fitness+lifestyle+srirachanakorn", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 3,
+  "confidence": "low",
+  "confidenceReason": "Below four source families; all membership/contract prices and air-conditioning evidence are missing.",
+  "unverified": ["all membership prices and terms", "joining fee", "contract and cancellation terms", "air conditioning", "class inclusion", "personal-training price", "changing and shower facilities"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

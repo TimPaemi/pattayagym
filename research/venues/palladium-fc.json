@@ -1,0 +1,153 @@
+{
+  "id": "palladium-fc",
+  "name": "Palladium FC",
+  "nameThai": "สนามฟุตบอลหญ้าเทียมพัทยา สนามฟุตซอล Palladium FC",
+  "category": "football",
+  "categoryLabel": "Football & Futsal",
+  "categoryStatus": "proposed",
+  "sport": "football",
+  "venueType": "commercial-pitch-hire",
+  "area": "central-pattaya",
+  "addressFull": "167/10 Moo 10, Soi Ko Phai 10, Bang Lamung, Chon Buri 20150",
+  "lat": 12.9120653,
+  "lng": 100.8838284,
+  "phone": "+66 83 923 1595",
+  "social": {
+    "facebook": "https://www.facebook.com/palladium2010"
+  },
+  "hours": "Current sources conflict: the operator Facebook page says always open, while Google Maps showed a 03:00 closing time at verification. Confirm a late-night booking with the manager.",
+  "priceRange": null,
+  "publicAccess": "Commercial pitch hire is advertised, and the manager currently directs individual players into regular games by phone or on-site enquiry.",
+  "football": {
+    "pitches": {
+      "count": null,
+      "surface": "artificial-grass",
+      "sizes": [
+        "7-a-side"
+      ],
+      "indoor": false,
+      "floodlit": true,
+      "netted": null,
+      "pitchDimensions": null
+    },
+    "booking": {
+      "hourlyRate": null,
+      "peakRate": null,
+      "offPeakRate": null,
+      "method": "Call the manager or message the official Facebook page",
+      "leadTime": null,
+      "minimumBooking": null,
+      "depositRequired": null,
+      "asOf": null,
+      "priceSourceUrl": null
+    },
+    "pickupGames": {
+      "organised": true,
+      "schedule": "The manager said games run daily at 17:00; a recent player separately documented a Saturday 16:00 gathering with many foreign players.",
+      "cost": null,
+      "howToJoin": "Call the manager at +66 83 923 1595 or ask the manager on site; the venue also points newcomers to Jomtien United.",
+      "foreignersWelcome": "confirmed",
+      "skillLevel": null,
+      "contactChannel": "Manager phone or on-site manager"
+    },
+    "rules": {
+      "bootType": null,
+      "showers": null,
+      "changingRooms": null,
+      "parking": null,
+      "spectatorArea": null,
+      "refreshments": true
+    },
+    "leagues": {
+      "hosted": true,
+      "details": "The operator documents regular team play and identifies Jomtien United as a team playing at the ground almost every day; formal league structure is not published.",
+      "openToNewTeams": null
+    },
+    "languages": [
+      "Thai",
+      "English"
+    ],
+    "englishConfidence": "confirmed"
+  },
+  "englishEvidence": "In current Google reviews, the manager answers English-language requests from foreign visitors with a specific daily time and direct phone invitation. The official page also publishes bilingual Thai/English posts.",
+  "facilities": [
+    "outdoor artificial-grass 7-a-side football",
+    "LED floodlighting",
+    "refreshments"
+  ],
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.5,
+      "count": 96,
+      "url": "https://www.google.com/maps/search/?api=1&query=Palladium%20FC%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Recent English-language players describe a welcoming foreign-player group on Saturdays and a manager who actively connects newcomers with near-daily team games.",
+      "Recent Thai and English operator activity presents the ground as a long-running social football venue, and player reviews praise the people and atmosphere."
+    ],
+    "complaints": [
+      "The newest visible review set contained a three-star rating without text but no repeated, substantiated facility complaint."
+    ]
+  },
+  "sources": [
+    {
+      "label": "Official Facebook identity, current activity, phone, hours and bilingual communication",
+      "url": "https://www.facebook.com/palladium2010",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Google Maps coordinates, address, status, rating and current join-a-game reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Palladium%20FC%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Current operator-post mirror for 7-a-side surface, LED lighting and 2026 activity",
+      "url": "https://www.localgymsandfitness.com/TH/Pattaya/180153632022130/%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%9F%E0%B8%B8%E0%B8%95%E0%B8%9A%E0%B8%AD%E0%B8%A5%E0%B8%AB%E0%B8%8D%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2-%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%9F%E0%B8%B8%E0%B8%95%E0%B8%8B%E0%B8%AD%E0%B8%A5-Palladium-FC",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "SportCentral address, phone and independent venue identity",
+      "url": "https://www.sportcentral.cz/sportoviste/detail/palladium-fc/269698",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Yandex Maps independent location listing",
+      "url": "https://yandex.com/maps/org/palladium_fc_/235477093147/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Around Pattaya current football directory listing",
+      "url": "https://aroundpattaya.com/list.php?CL=62&TY=16",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "low",
+  "unverified": [
+    "single authoritative weekly opening-hours schedule",
+    "whether +66 92 738 1409 remains an active alternate phone",
+    "football.pitches.count",
+    "football.pitches.netted",
+    "football.pitches.pitchDimensions",
+    "football.booking.hourlyRate",
+    "football.booking.peakRate",
+    "football.booking.offPeakRate",
+    "football.booking.leadTime",
+    "football.booking.minimumBooking",
+    "football.booking.depositRequired",
+    "football.pickupGames.cost",
+    "football.pickupGames.skillLevel",
+    "football.rules.bootType",
+    "football.rules.showers",
+    "football.rules.changingRooms",
+    "football.rules.parking",
+    "football.rules.spectatorArea",
+    "formal league name and whether new teams can enter"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

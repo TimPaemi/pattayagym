@@ -1,0 +1,30 @@
+{
+  "id": "chan-pilates-bang-saray",
+  "name": "Chan Pilates",
+  "category": "fitness",
+  "categoryLabel": "Pilates",
+  "area": "bang-saray",
+  "addressFull": "88/259 Beach Road, Bang Saray, Sattahip, Chon Buri 20250",
+  "lat": 12.762802,
+  "lng": 100.905619,
+  "phone": "+66 96 997 4552",
+  "hours": "Open daily; Google Maps currently shows closing at 20:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "classPass": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": null, "machines": null, "cardio": null, "functional": null, "airConditioned": true, "airConditioningNotes": "A recent Thai first-timer explicitly praises the strong air conditioning."},
+  "classes": {"groupClasses": true, "schedule": null, "included": null, "pilates": true},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": ["parking"],
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 8, "url": "https://www.google.com/maps/search/?api=1&query=Chan+Pilates+Bang+Saray", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai beginners praise clear instruction, a clean new studio, good music and cool air conditioning.", "Reviewers describe a friendly community and sufficient parking."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps Chan Pilates listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=Chan+Pilates+Bang+Saray", "accessed": "2026-07-20"},
+    {"label": "Operator Facebook linked by Google", "url": "https://www.facebook.com/chanpilatesbangsaray", "accessed": null, "accessNote": "Identity link only; no price was captured."}
+  ],
+  "independentPublisherFamilies": 2,
+  "confidence": "low",
+  "confidenceReason": "Only two publishers; all membership/class prices and contract terms are missing despite hours and air conditioning being established.",
+  "unverified": ["all prices and membership terms", "joining fee", "contract and cancellation terms", "class schedule", "private-session rate", "instructor credentials", "changing facilities"],
+  "status": "open",
+  "verified": "2026-07-20",
+  "identityNote": "CHAN STUDIO and Chan Pilates are duplicate pins about 8 metres apart at the same 88/259 site. They are merged as one venue record."
+}

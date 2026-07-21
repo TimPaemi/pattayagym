@@ -1,0 +1,179 @@
+{
+  "id": "chilli-padel-club",
+  "name": "Chilli Padel Club",
+  "nameThai": "ชิลลี่ พาเดล คลับ",
+  "category": "racquet",
+  "categoryLabel": "Padel",
+  "sport": "padel",
+  "area": "jomtien",
+  "addressFull": "Bun Kanchana 3, Pattaya City, Bang Lamung, Chon Buri 20150",
+  "lat": 12.8877645,
+  "lng": 100.8923714,
+  "phone": "+66 64 270 6605",
+  "website": "https://chillipadelthailand.com/",
+  "bookingUrl": "https://playtomic.com/clubs/chilli-padel",
+  "hours": "Current listings conflict: the official site says daily 07:00-24:00, Playtomic says daily 08:00-23:30, and Google Maps displayed a 09:00 opening at verification. Confirm before an early or late visit.",
+  "priceRange": "฿฿฿",
+  "padel": {
+    "courts": {
+      "count": 6,
+      "type": "mixed",
+      "indoor": true,
+      "covered": true,
+      "floodlit": null,
+      "surface": null,
+      "configuration": "One outdoor panoramic doubles court, four roofed panoramic doubles courts and one indoor single-wall court; five of six are protected from rain."
+    },
+    "booking": {
+      "hourlyRate": "฿1,000 per hour for the whole court",
+      "peakRate": null,
+      "offPeakRate": "฿600 per hour during published happy hours",
+      "memberRate": null,
+      "method": "app",
+      "appName": "Playtomic",
+      "otherMethods": "WhatsApp reception",
+      "leadTime": "No minimum is published; the official site says evenings fill first.",
+      "asOf": "2026-07-20",
+      "priceSourceUrl": "https://chillipadelthailand.com/",
+      "notes": "The happy-hour schedule itself is not published on the inspected page."
+    },
+    "openPlay": {
+      "americanaSessions": true,
+      "openPlayAvailable": true,
+      "partnerMatching": true,
+      "levelGrading": "All-level Americano, intermediate Mexicano, competitive King of the Court and Playtomic 0-7 grading.",
+      "sessionCost": "฿600-800 for current social and coached Americano listings",
+      "asOf": "2026-07-20",
+      "priceSourceUrl": "https://playtomic.com/clubs/chilli-padel",
+      "notes": "The operator says a joinable game runs every day, with the exact weekly schedule released through its community group."
+    },
+    "equipment": {
+      "racketHire": "Available; fee unpublished",
+      "ballsIncluded": null,
+      "proShop": true
+    },
+    "coaching": {
+      "available": true,
+      "groupRate": "From ฿800 for a 120-minute public class in the current Playtomic listing",
+      "privateRate": null,
+      "beginnerCourse": "A 90-minute first-timer introduction is offered; the separate coaching fee is unpublished",
+      "asOf": "2026-07-20",
+      "priceSourceUrl": "https://playtomic.com/clubs/chilli-padel"
+    },
+    "openedDate": "2026-05-20",
+    "operator": null
+  },
+  "languages": [
+    "Thai",
+    "English",
+    "Russian"
+  ],
+  "englishConfidence": "confirmed",
+  "englishEvidence": "The club directly identifies both current coaches as teaching all levels in English, Thai and Russian. Its English booking and matchmaking instructions are current, and recent English-language reviews describe actual play and staff service at this location.",
+  "facilities": [
+    "six padel courts",
+    "five rain-protected courts",
+    "court fans",
+    "equipment rental",
+    "pro shop",
+    "bar and food service",
+    "changing room",
+    "free and private parking",
+    "Wi-Fi",
+    "children's play area",
+    "disabled access"
+  ],
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Players who need air-conditioned courts should choose carefully: Chilli's rain-protected courts use fans and natural airflow rather than confirmed court AC."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 5.0,
+      "count": 27,
+      "url": "https://www.google.com/maps/search/?api=1&query=Chilli%20Padel%20Club%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Recent Thai and translated international reviews praise the new court quality, friendly staff, welcoming reception and opening-period value.",
+      "Players describe the club as easy to use across skill levels, and recent reviews support the active social and international mix documented by the operator."
+    ],
+    "complaints": [
+      "Several reviews from the opening period said parts of the complex, including changing or food facilities, were still being finished. The courts remained usable.",
+      "One regular player warned that tournaments occupy convenient time slots on several days, making advance planning important."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "prime-padel-pattaya",
+      "play-padel-pattaya",
+      "pattaya-padel-club"
+    ],
+    "differentiator": "The operating Pattaya club with the largest confirmed court count in this batch and the clearest daily partner-matching programme."
+  },
+  "sources": [
+    {
+      "label": "Official club site for courts, hourly prices, hours and equipment",
+      "url": "https://chillipadelthailand.com/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Official events and partner-matching schedule",
+      "url": "https://chillipadelthailand.com/events/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Official coaching languages and credentials",
+      "url": "https://chillipadelthailand.com/coaching/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Google Maps identity, coordinates, status and location-specific reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Chilli%20Padel%20Club%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Playtomic court configuration, booking, social sessions and coaching prices",
+      "url": "https://playtomic.com/clubs/chilli-padel",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Banmuang Thai report of the official opening ceremony",
+      "url": "https://www.banmuang.co.th/news/region/476764",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "OrangeCoach multilingual coach recruitment listing",
+      "url": "https://www.orangecoach.com/job/pattaya-jomtien-pattaya-jomtien-668-russian-speaking-padel-coach-pattaya-thailand/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Viborace independent Pattaya club comparison",
+      "url": "https://viborace.com/fr/blogs/trouver-terrain-padel/clubs-padel-pattaya",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "high",
+  "unverified": [
+    "legal operating entity",
+    "padel.courts.surface",
+    "padel.courts.floodlit specification",
+    "single authoritative current daily opening hours",
+    "numerical padel.booking.leadTime",
+    "happy-hour time bands",
+    "padel.booking.memberRate",
+    "padel.equipment.racketHire fee",
+    "padel.equipment.ballsIncluded for an ordinary court booking",
+    "padel.coaching.privateRate",
+    "opening/completion timing for the proposed seventh court",
+    "current completion status of the gym, sauna and all restaurant facilities mentioned during development"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

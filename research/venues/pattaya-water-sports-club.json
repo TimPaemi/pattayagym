@@ -1,0 +1,30 @@
+{
+  "id": "pattaya-water-sports-club",
+  "name": "Pattaya Water Sports Club",
+  "nameThai": "ชมรมกีฬาทางน้ำพัทยา",
+  "category": "watersports",
+  "categoryLabel": "Watersports",
+  "venueType": "bookable watersports operator",
+  "area": "na-jomtien",
+  "addressFull": "73/95 Moo 4, Soi Na Jomtien 22, Na Chom Thian, Sattahip, Chon Buri 20250",
+  "phone": "+66 81 781 9196",
+  "website": "https://www.pattayawatersportsclub.com/",
+  "hours": "Current session times are activity- and booking-dependent; confirm directly",
+  "activities": ["flyboard", "wakeboard", "stand-up paddleboard", "jet ski", "kayak"],
+  "pricing": {"flyboard30Minutes": "THB 3,500", "flyboard60Minutes": "THB 4,500", "notes": "A September 2024 first-hand post supplies these figures; the operator's current 2026 site does not publish a tariff.", "asOf": "2024-09-11", "priceSourceUrl": "https://www.lemon8-app.com/@hou_seki/7413294381551141377?region=th"},
+  "reviews": [{"platform": "Google", "score": 4.5, "count": 47, "url": "https://www.google.com/maps/search/?api=1&query=Pattaya+Water+Sports+Club", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviews describe a broad choice of water activities and helpful instructors.", "Visitors repeatedly mention friendly staff and beginner guidance."], "complaints": []},
+  "sources": [
+    {"label": "Current operator site", "url": "https://www.pattayawatersportsclub.com/", "accessed": "2026-07-20"},
+    {"label": "Google Maps listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Pattaya+Water+Sports+Club", "accessed": "2026-07-20"},
+    {"label": "Lemon8 flyboard visit and prices", "url": "https://www.lemon8-app.com/@hou_seki/7413294381551141377?region=th", "accessed": "2026-07-20"},
+    {"label": "Thai-language visitor guide", "url": "https://xn--12c8bag0axc1b5fmno5lwe.com/pattaya_water_sport/", "accessed": "2026-07-20"},
+    {"label": "Wanderlog location profile", "url": "https://wanderlog.com/he/place/details/2744213/pattaya-water-sports-club", "accessed": "2026-07-20"}
+  ],
+  "confidence": "medium",
+  "confidenceReason": "The current operator, address, phone, activity set and open status clear the four-source gate; detailed current prices and activity schedules still need direct confirmation.",
+  "unverified": ["current activity-by-activity tariff", "current weekly hours", "minimum ages except the reported age 12 flyboard threshold", "equipment inclusions", "insurance and cancellation terms", "English proficiency for every instructor"],
+  "status": "open",
+  "verified": "2026-07-20",
+  "categoryCorrection": "The discovery ledger called this swimming. It is a watersports operator, not a swim school or lap/day-pass pool."
+}

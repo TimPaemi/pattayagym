@@ -1,0 +1,165 @@
+{
+  "id": "sriracha-arena",
+  "name": "Sriracha Arena Sport Club",
+  "nameThai": "ศรีราชาอารีน่า สปอร์ตคลับ",
+  "category": "racquet",
+  "categoryLabel": "Badminton",
+  "sport": "badminton",
+  "area": "sriracha",
+  "addressFull": "888 Moo 6, Sukhumvit Road, Thung Suk La, Si Racha, Chon Buri 20130",
+  "phone": "+66 85 972 1888",
+  "secondaryPhone": "+66 64 563 5665",
+  "website": "https://srirachaarena.com/",
+  "socials": {
+    "line": "https://page.line.me/sjr4752t"
+  },
+  "hours": "Badminton courts 09:00-24:00 daily according to the official court page. Google Maps shows the wider sport club opening at 06:00.",
+  "priceRange": "฿",
+  "courts": {
+    "count": 6,
+    "surface": "Pulastic synthetic sports flooring",
+    "indoor": true,
+    "airConditioned": null,
+    "floodlit": false,
+    "ceilingHeight": null,
+    "notes": "The operator describes six international-standard courts and publishes court-shoe rules to protect the surface."
+  },
+  "booking": {
+    "method": "Badminton phone, Facebook or Line",
+    "leadTime": null,
+    "hourlyRate": "฿170-200 per hour",
+    "peakRate": "฿200 per hour weekdays 17:00-24:00 and weekends 09:00-24:00",
+    "offPeakRate": "฿170 per hour weekdays 09:00-17:00",
+    "memberRate": null,
+    "studentRate": "฿300 for two hours during published student windows",
+    "asOf": "2026-07-20",
+    "priceSourceUrl": "https://srirachaarena.com/badminton-court/",
+    "notes": "The official rate page does not show a last-updated date; confirm before booking."
+  },
+  "equipment": {
+    "racketHire": null,
+    "shoeHire": "Available from the on-site sport shop; fee unpublished",
+    "shuttlesProvided": null,
+    "shuttleCost": null,
+    "proShop": true
+  },
+  "coaching": {
+    "available": true,
+    "groupRate": "Badminton academy published at ฿2,000 per month",
+    "privateRate": null,
+    "juniorProgramme": true,
+    "priceAsOf": "2026-07-20",
+    "priceSourceUrl": "https://srirachaarena.com/academy/",
+    "notes": "The official academy page describes coaching by a former Thai youth national player with more than ten years' badminton experience; its last update date is not shown."
+  },
+  "languages": [
+    "Thai",
+    "English"
+  ],
+  "englishConfidence": "likely",
+  "englishEvidence": "The operator publishes English navigation, English facility labels, English contact details and an email booking path, and serves international-company sports events. No direct current English reply from badminton reception was captured.",
+  "facilities": [
+    "six indoor badminton courts",
+    "sport shop and shoe hire",
+    "showers and toilets",
+    "food and drink outlets",
+    "air-conditioned library/waiting zone for companions",
+    "parking",
+    "four indoor artificial-turf football pitches"
+  ],
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Players seeking a small badminton-only hall may find this large multi-sport complex busier than a neighbourhood court."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.4,
+      "count": 539,
+      "url": "https://www.google.com/maps/search/?api=1&query=Sriracha%20Arena%20Sport%20Club",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Recent Thai reviews describe a large complex with multiple courts, extensive parking, clean bathrooms and food or drink service.",
+      "Badminton-specific comments praise the modern, open hall and new-looking rubber floor.",
+      "The Badminton Association of Thailand has used the venue for a regional junior championship, supporting its competition capability."
+    ],
+    "complaints": [
+      "One Thai review complains about cigarette and vape smoke in covered areas, especially when rain concentrates people indoors."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "baan-badminton-sriracha",
+      "naklua-16-badminton",
+      "jp-badminton"
+    ],
+    "differentiator": "The batch's most fully documented competition-scale complex, with six Pulastic courts, official tiered rates, a junior academy and extensive ancillary facilities."
+  },
+  "sources": [
+    {
+      "label": "Sriracha Arena official overview and contact page",
+      "url": "https://srirachaarena.com/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Official badminton court and price page",
+      "url": "https://srirachaarena.com/badminton-court/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Official academy page",
+      "url": "https://srirachaarena.com/academy/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Official facilities page",
+      "url": "https://srirachaarena.com/facilities/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Google Maps location and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Sriracha%20Arena%20Sport%20Club",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "DataForThai active company registration",
+      "url": "https://www.dataforthai.com/company/0205555005561/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Badminton Association of Thailand regional championship report",
+      "url": "https://www.badmintonthai.or.th/news/1144",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Rayong Badminton Club 2026 entry list naming Sriracha Arena",
+      "url": "https://www.badmintonrayong.com/5th-list/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "high",
+  "unverified": [
+    "lat",
+    "lng",
+    "official rate-page publication date and whether prices changed after publication",
+    "courts.airConditioned",
+    "courts.ceilingHeight",
+    "booking.leadTime",
+    "booking.memberRate",
+    "equipment.racketHire",
+    "equipment.shoeHire fee",
+    "equipment.shuttlesProvided",
+    "equipment.shuttleCost",
+    "coaching.privateRate",
+    "current academy schedule and class size",
+    "direct English-speaking badminton receptionist"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

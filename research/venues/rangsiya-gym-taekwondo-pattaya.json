@@ -1,0 +1,30 @@
+{
+  "id": "rangsiya-gym-taekwondo-pattaya",
+  "name": "Rangsiya Gym Taekwondo Pattaya",
+  "nameThai": "รังสิยา ยิม เทควันโด พัทยา",
+  "category": "martial-arts",
+  "categoryLabel": "Taekwondo",
+  "sport": "taekwondo",
+  "area": "east-pattaya",
+  "addressFull": "Boonsampan area near Sukhumvit Road Km 1, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 96 936 5299",
+  "hours": "Google Maps currently shows a 15:00 opening time; full weekly timetable should be confirmed",
+  "federation": {"affiliation": null, "gradingRecognition": null, "evidence": "Rangsiya Gym appears in Taekwondo Association of Thailand result files and current national competition charts. That establishes competition participation, not formal academy affiliation or grading portability."},
+  "pricing": {"trial": null, "perClass": null, "monthly": null, "gradingFees": null, "uniform": null},
+  "classes": {"children": true, "adults": null, "ageFrom": null, "ageTo": null, "schedule": null, "englishInstruction": null, "competitionTrack": true, "levels": "Beginner to advanced"},
+  "coaches": ["Kru June Rangsiya Nisaisom, 2011 world champion and 2012 Olympian"],
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 29, "url": "https://www.google.com/maps/search/?api=1&query=Rangsiya+Gym+Taekwondo+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai parents describe kind teachers, a very clean venue and children who enjoy attending."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps Pattaya branch location and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Rangsiya+Gym+Taekwondo+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Go To Pattaya current branch profile", "url": "https://www.gotopattaya.com/venues/rangsiya-gym-taekwondo-pattaya", "accessed": "2026-07-20"},
+    {"label": "Current competition chart", "url": "https://www.thannam.net/champ/download/2160/B.pdf", "accessed": "2026-07-20"},
+    {"label": "Taekwondo Association of Thailand result PDF", "url": "https://tkd.or.th/wp-content/uploads/2023/04/%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%82%E0%B9%88%E0%B8%87%E0%B8%82%E0%B8%B1%E0%B8%99-G-H-Bank-%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%8A%E0%B8%99%E0%B8%B0%E0%B9%80%E0%B8%A5%E0%B8%B4%E0%B8%A8%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%A3.pdf", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "The coach pedigree and competition track are strong, but all prices, formal federation/grading status and English instruction are absent.",
+  "unverified": ["formal federation affiliation", "grading portability", "all prices and fees", "full weekly timetable", "age range", "adult classes", "English instruction", "class size"],
+  "status": "open",
+  "verified": "2026-07-20",
+  "branchNote": "A separate Rangsiya branch in Sattahip has a different address and phone. Its ages, timetable and contact details were not transferred to this Pattaya record."
+}

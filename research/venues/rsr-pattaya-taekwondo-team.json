@@ -1,0 +1,31 @@
+{
+  "id": "rsr-pattaya-taekwondo-team",
+  "name": "RSR Pattaya Taekwondo Team",
+  "nameThai": "อาร์เอสอาร์ พัทยา เทควันโด",
+  "category": "martial-arts",
+  "categoryLabel": "Taekwondo",
+  "sport": "taekwondo",
+  "area": "east-pattaya",
+  "addressFull": "19/94-95, Bang Lamung 31, Chon Buri 20150",
+  "phone": "+66 98 909 2449",
+  "hours": "Google Maps shows classes resuming Wednesday at 13:00; full weekly timetable should be confirmed",
+  "federation": {"affiliation": null, "gradingRecognition": null, "evidence": "The team appears in Taekwondo Association of Thailand championship results and current national competition systems; participation does not by itself prove the academy's current federation membership or grading portability."},
+  "pricing": {"trial": null, "perClass": null, "monthly": null, "gradingFees": null, "uniform": null},
+  "classes": {"children": true, "adults": null, "ageFrom": null, "ageTo": null, "schedule": null, "englishInstruction": null, "competitionTrack": true},
+  "coaches": ["Kru May (listed by Super 7)", "Kru Jo (named in current team posts)", "Suparat Wongrattanachart (identified as a team coach in 2024 reporting)"],
+  "reviews": [{"platform": "Google", "score": 4.9, "count": 30, "url": "https://www.google.com/maps/search/?api=1&query=RSR+Pattaya+Taekwondo+Team", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai parents praise the teachers and assistant coaches and describe the school as a good fit for children interested in combat sport."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps current location, phone and reviews", "url": "https://www.google.com/maps/search/?api=1&query=RSR+Pattaya+Taekwondo+Team", "accessed": "2026-07-20"},
+    {"label": "Current operator-post mirror", "url": "https://www.localgymsandfitness.com/TH/Pattaya/240048879525517/RSR-Pattaya-Taekwondo-Team", "accessed": "2026-07-20"},
+    {"label": "Super 7 verified partner listing", "url": "https://www.super7taekwondo.com/general-5", "accessed": "2026-07-20"},
+    {"label": "Pattaya Unplugged 2024 national-result report", "url": "https://pattayaunplugged.com/pattaya-youth-praised-for-winning-national-taekwondo-competitions/", "accessed": "2026-07-20"},
+    {"label": "Taekwondo competition registration system", "url": "https://program.fightingtkd.com/TKD_WebNew/Home/index/593", "accessed": "2026-07-20"},
+    {"label": "Taekwondo Association of Thailand result PDF", "url": "https://tkd.or.th/wp-content/uploads/2023/04/%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%82%E0%B9%88%E0%B8%87%E0%B8%82%E0%B8%B1%E0%B8%99-G-H-Bank-%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%8A%E0%B8%99%E0%B8%B0%E0%B9%80%E0%B8%A5%E0%B8%B4%E0%B8%A8%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%9B%E0%B8%A3.pdf", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "The active academy and competition track are strong, but all numeric prices, formal federation/grading status and English instruction—the deciding family fields—remain unverified.",
+  "unverified": ["formal federation affiliation", "grading portability", "all prices and fees", "full weekly schedule", "age range", "adult classes", "English instruction", "coach credential details", "class size"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

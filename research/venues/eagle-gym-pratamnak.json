@@ -1,0 +1,29 @@
+{
+  "id": "eagle-gym-pratamnak",
+  "name": "Eagle Gym Pratamnak",
+  "category": "muay-thai",
+  "categoryLabel": "Muay Thai & Fitness",
+  "area": "pratamnak",
+  "addressFull": "389/7, Pratamnak Soi 5, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 63 117 7766",
+  "hours": "Open daily from 08:00; Google Maps currently shows closing at 20:00",
+  "trainers": {"headTrainer": null, "fightRecord": null, "credentials": null, "notableAlumni": [], "ratio": null},
+  "foreignerFriendly": {"accepts": true, "english": true, "beginners": true, "women": null, "sparring": null},
+  "training": {"groupClasses": null, "privateTraining": true, "sessionDuration": null, "schedule": null, "strengthConditioning": true},
+  "pricing": {"singleSession": null, "dayPass": null, "weekly": null, "monthly": null, "privateRate": null},
+  "accommodation": {"available": null, "onSite": null, "price": null},
+  "fighters": {"activeRoster": [], "fightPath": null},
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 55, "url": "https://www.google.com/maps/search/?api=1&query=Eagle+Gym+Pratamnak", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent Thai reviews describe a clean gym, friendly coaches and a welcoming atmosphere.", "English reviews and an independent local profile show regular expatriate use."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps location, status and recent reviews", "url": "https://www.google.com/maps/search/?api=1&query=Eagle+Gym+Pratamnak", "accessed": "2026-07-20"},
+    {"label": "Go To Pattaya current venue profile", "url": "https://www.gotopattaya.com/venues/eagle-gym-pratamnak", "accessed": "2026-07-20"},
+    {"label": "Operator Instagram linked from Google Maps", "url": "https://www.instagram.com/eagle_gym_pattaya/", "accessed": null, "accessNote": "Identity link recorded; detailed posts were not relied upon."}
+  ],
+  "independentPublisherFamilies": 3,
+  "confidence": "low",
+  "confidenceReason": "The current venue and foreign/beginner route are clear, but it is below four independent publishers and the required trainer-pedigree and pricing blocks are empty.",
+  "unverified": ["all trainer fields", "women-specific provision", "sparring policy", "group timetable", "all numeric prices", "accommodation", "active fighter roster", "full equipment inventory", "current English level of every coach"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

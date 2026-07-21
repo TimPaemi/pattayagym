@@ -1,0 +1,156 @@
+{
+  "id": "baan-badminton-sriracha",
+  "name": "Baan Badminton Sriracha",
+  "nameThai": "บ้านแบดมินตันศรีราชา",
+  "category": "racquet",
+  "categoryLabel": "Badminton",
+  "sport": "badminton",
+  "area": "sriracha",
+  "addressFull": "15/126, Si Racha, Si Racha District, Chon Buri 20110",
+  "phone": "+66 84 541 3299",
+  "socials": {
+    "facebook": "https://www.facebook.com/banbadminton"
+  },
+  "hours": "Google Maps currently displays an 08:00 opening time. ThaiThurkic lists 17:00-23:00 daily but labels that schedule as last updated in September 2023, so the current full schedule is unverified.",
+  "priceRange": "unknown",
+  "courts": {
+    "count": null,
+    "surface": null,
+    "indoor": true,
+    "airConditioned": null,
+    "floodlit": false,
+    "ceilingHeight": null
+  },
+  "booking": {
+    "method": "Phone or Facebook",
+    "leadTime": null,
+    "hourlyRate": null,
+    "peakRate": null,
+    "offPeakRate": null,
+    "memberRate": null,
+    "asOf": null,
+    "priceSourceUrl": null,
+    "notes": "A 2019 blog published a historical hourly rate, but that stale figure is deliberately not carried forward as current pricing."
+  },
+  "equipment": {
+    "racketHire": null,
+    "shuttlesProvided": null,
+    "shuttleCost": null,
+    "proShop": null
+  },
+  "coaching": {
+    "available": null,
+    "groupRate": null,
+    "privateRate": null,
+    "juniorProgramme": null
+  },
+  "languages": [
+    "Thai",
+    "English"
+  ],
+  "englishConfidence": "likely",
+  "englishEvidence": "A long-running Japanese expatriate group uses the venue and welcomes visiting Japanese players, demonstrating non-Thai customer access. No current English-language operator reply or English staff claim was found.",
+  "facilities": [
+    "indoor badminton courts",
+    "parking",
+    "loan shoes reported by a reviewer"
+  ],
+  "audience": {
+    "suitsBeginners": null,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Absolute beginners should confirm coaching before visiting; the only detailed club account is historical and then described play for experienced participants."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.5,
+      "count": 135,
+      "url": "https://www.google.com/maps/search/?api=1&query=Baan%20Badminton%20Sriracha",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Recent Thai reviews praise the standard of the courts, non-glare lighting, large parking area and friendly owner.",
+      "Reviewers repeatedly describe the price as inexpensive, but no current numeric rate is published.",
+      "A Japanese expatriate club account documents regular doubles play and visiting players at the venue."
+    ],
+    "complaints": []
+  },
+  "comparison": {
+    "closestRivals": [
+      "sriracha-arena",
+      "naklua-16-badminton",
+      "sb-badminton-huai-yai"
+    ],
+    "differentiator": "A dedicated Si Racha badminton identity with long-standing Thai and Japanese community use."
+  },
+  "sources": [
+    {
+      "label": "Official Facebook identity",
+      "url": "https://www.facebook.com/banbadminton",
+      "accessed": null,
+      "accessNote": "Identity URL resolved through ThaiThurkic; the Facebook page itself was not directly inspectable."
+    },
+    {
+      "label": "Google Maps location and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Baan%20Badminton%20Sriracha",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "ThaiThurkic address, phone and legacy hours",
+      "url": "https://www.thaithurkic.com/%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%9A%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B8%99%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%B2-084-541-3299",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Sriracha Diary Japanese player-group account",
+      "url": "https://blog.goo.ne.jp/t-defector/e/547292ba15835277ffff8b4a1ad99426",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Longdo approved place listing",
+      "url": "https://map.longdo.com/poilist/4?page=16",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "thdata Chon Buri court directory",
+      "url": "https://thdata.co/en/badminton-court/chon-buri/?page=2",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Court Chon Buri historical rate listing",
+      "url": "https://court002.blogspot.com/2019/11/court-chon-buri.html",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "lat",
+    "lng",
+    "current full weekly hours",
+    "courts.count",
+    "courts.surface",
+    "courts.airConditioned",
+    "courts.ceilingHeight",
+    "booking.leadTime",
+    "booking.hourlyRate",
+    "booking.peakRate",
+    "booking.offPeakRate",
+    "booking.memberRate",
+    "equipment.racketHire",
+    "equipment.shuttlesProvided",
+    "equipment.shuttleCost",
+    "equipment.proShop",
+    "coaching.available",
+    "coaching.groupRate",
+    "coaching.privateRate",
+    "coaching.juniorProgramme",
+    "direct English-speaking booking staff",
+    "audience.suitsBeginners",
+    "recent repeated complaint themes"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

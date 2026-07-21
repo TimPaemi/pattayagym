@@ -660,7 +660,7 @@ const ROUNDS = [
   {
     n: 36, date: '2026-05-29', tag: 'v432',
     title: 'SEO machine — training holiday guide, price table, outreach CSV, homepage intent router, network hub',
-    summary: 'Turns Pattaya.Gym into the traffic anchor of the Pattaya Authority network: high-intent content, comparison tooling surfaced on homepage, venue backlink export, and cross-site network linking sitewide.',
+    summary: 'Turns Pattaya.Gym into the traffic anchor of the TimPaemi network: high-intent content, comparison tooling surfaced on homepage, venue backlink export, and cross-site network linking sitewide.',
     bullets: [
       'New guide: /guides/muay-thai-training-holiday-pattaya/ (~1k/mo intent).',
       'Cheapest-gyms guide: auto-generated fitness price comparison table from venue data.',
@@ -741,7 +741,7 @@ const ROUNDS = [
     summary: 'The homepage verticals section was factually wrong (\'four verticals\') after the network expanded to 11. Round 29 rebuilds it as an accurate, scalable 11-tile network grid - one agency + ten verticals, each with its own tile.',
     bullets: [
       'Headline updated: \'One agency. Four verticals.\' -> \'One agency. Ten verticals.\'',
-      'Intro rewritten to reflect 10 editorial verticals + the flagship Pattaya Authority agency, not 4 sites.',
+      'Intro rewritten to reflect 10 editorial verticals + the flagship flagship agency, not 4 sites.',
       'Grid expanded from 4 big cards to 11 compact network tiles with auto-fit layout (responsive: 1 col mobile, 2 col tablet, 3-4 col desktop). Each tile carries its vertical label, brand wordmark with accent dot, domain, and a one-line value prop.',
       'Tiles cycle through the four existing project-card accent colours (pink / yellow / cyan / mint) for visual rhythm without new CSS classes per vertical.',
       'New tiles: TimPaemi (parent brand), Pattaya School Guide, Pattaya Coffee, Pattaya Villa Stream, Pattaya Medical, PattayaPets, Pattaya Vehicle Rentals. Existing four (Authority, Gym, Restaurant Guide, Visa Help) retained.',
@@ -750,12 +750,12 @@ const ROUNDS = [
   },
   {
     n: 28, date: '2026-05-24', tag: 'v424',
-    title: 'Network tagline + footer self-exclusion (Pattaya Authority alignment)',
-    summary: 'Pattaya Authority network adopted a unified tagline across all owned sites. Round 28 applies the network footer prompt: the tagline appears under the brand wordmark in every footer, in Organization.slogan in the homepage JSON-LD, and the self-link is removed from the Projects sister-site list (a site should not link to itself in its network list).',
+    title: 'Network tagline + footer self-exclusion (network alignment)',
+    summary: 'TimPaemi network adopted a unified tagline across all owned sites. Round 28 applies the network footer prompt: the tagline appears under the brand wordmark in every footer, in Organization.slogan in the homepage JSON-LD, and the self-link is removed from the Projects sister-site list (a site should not link to itself in its network list).',
     bullets: [
       'New network tagline: \'Built in Pattaya. For Pattaya.\' rendered under the pattaya.gym wordmark on every page in a mono cyan strapline.',
       'Organization JSON-LD on the homepage now carries the slogan field for schema-graph recognition.',
-      'Footer Projects column went from 11 items to 10 - the self-link (Pattaya Gym -> /) is removed per the canonical Pattaya Authority spec. The 10 external sister sites still display in the user-specified order.',
+      'Footer Projects column went from 11 items to 10 - the self-link (Pattaya Gym -> /) is removed per the canonical network spec. The 10 external sister sites still display in the user-specified order.',
       'Applied across every surface: build-v2.js footer(), rebuild-tool-stubs.js, build-compare-page.js, build-plan-page.js, write-changelog.js, homepage index.html, and the 19 static legacy guide + search pages.',
       'New .footer-slogan CSS to fit the existing dark-theme palette.',
       'Asset version 423 -> 424.'
@@ -763,8 +763,8 @@ const ROUNDS = [
   },
   {
     n: 27, date: '2026-05-24', tag: 'v423',
-    title: 'Network expansion - 11-site TimPaemi / Pattaya Authority network + footer alignment',
-    summary: 'The Pattaya Authority empire network grew from 8 to 11 sites. Round 27 propagates the full canonical 11-site list across every network reference on pattaya-gym.com - footer, Organization and Person JSON-LD sameAs, llms.txt, the about page, and the privacy page - with the correct authoritative labels.',
+    title: 'Network expansion - 11-site TimPaemi / TimPaemi network + footer alignment',
+    summary: 'The the network empire network grew from 8 to 11 sites. Round 27 propagates the full canonical 11-site list across every network reference on pattaya-gym.com - footer, Organization and Person JSON-LD sameAs, llms.txt, the about page, and the privacy page - with the correct authoritative labels.',
     bullets: [
       'Three new sister sites added everywhere: pattaya-medical.com (Pattaya Medical), pattayapets.com (PattayaPets), pattaya-vehicle-rentals.com (Pattaya Vehicle Rentals).',
       'Label corrections to match the canonical list: \'Coffee Guide\' -> \'Pattaya Coffee\', \'Pattaya Stream\' -> \'Pattaya Villa Stream\', \'TimPaemi (parent)\' -> \'TimPaemi\', \'Restaurant Guide\' -> \'Pattaya Restaurant Guide\', \'School Guide\' -> \'Pattaya School Guide\', \'Visa Help\' -> \'Pattaya Visa Help\'.',
@@ -864,7 +864,7 @@ const ROUNDS = [
     title: 'Sister-network cross-linking + orphan-page graph fixes',
     summary: 'Closed the biggest finding from the Round 19 self-audit: 4 of 7 TimPaemi sister sites had zero inbound links from pattaya-gym.com. Plus killed 22 orphan pages by adding a category cross-link matrix to area pages and an expanded footer "Site" column.',
     bullets: [
-      'F-Sister - Sister network now fully cross-linked: timpaemi.com, pattaya-authority.com, pattaya-restaurant-guide.com, pattayavisahelp.com, pattayastream.com, pattaya-coffee.com, pattaya-school-guide.com all linked from footer + Organization.sameAs + Person.sameAs + privacy + about + press pages + llms.txt + humans.txt.',
+      'F-Sister - Sister network now fully cross-linked: timpaemi.com, the publisher hub, pattaya-restaurant-guide.com, pattayavisahelp.com, pattayastream.com, pattaya-coffee.com, pattaya-school-guide.com all linked from footer + Organization.sameAs + Person.sameAs + privacy + about + press pages + llms.txt + humans.txt.',
       'F08.1 - Area pages now include a "Browse this area by sport" matrix linking every existing /area/<a>/<sport>/ combination. Closes 15 orphan category-area pages.',
       'F08.1 - Footer "The site" column expanded with /compare/, /pattaya-sport-stats/, /changelog/, /privacy/, /press/, /add-your-gym/. Closes 7 utility-page orphans.',
       'F05.1 - truncateTitle() and truncateDesc() helpers added; auto-truncate at word boundary for venue/category/area/category-area pages. Caps titles at 65 chars, descs at 155.',
@@ -1152,10 +1152,10 @@ const nav = v2NavHtml();
 
 const breadcrumb = `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Changelog</span></nav>`;
 
-const { paNetworkHtml } = require('./lib/pa-network-block');
-const pa = paNetworkHtml({ hereOnGym: true, badgeUrl: 'https://pattaya-authority.com/' });
-
-const footer = `<footer class="footer" role="contentinfo"><div class="footer-grid"><div><div class="footer-brand">pattaya<span class="accent">.gym</span></div><div class="footer-slogan">Built in Pattaya. For Pattaya.</div><p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p><p class="u-foot-meta">— Tim &amp; Paemi, founders</p><div class="footer-meta">TimPaemi Co., Ltd.<br>Pattaya City, Bang Lamung District<br>Chon Buri 20150 · Thailand</div></div><div class="footer-col"><div class="footer-col-h">// The site</div><ul><li><a href="/about/">About</a></li><li><a href="/methodology/">Methodology</a></li><li><a href="/guides/">Guides</a></li><li><a href="/sports/">All sports</a></li><li><a href="/search/">Search</a></li><li><a href="/compare/">Compare</a></li><li><a href="/pattaya-sport-stats/">Sport stats</a></li><li><a href="/changelog/">Changelog</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/press/">Press</a></li><li><a href="/add-your-gym/">Add your venue</a></li></ul></div><div class="footer-col"><div class="footer-col-h">// Projects</div><ul class="footer-projects"></ul></div><div class="footer-col"><div class="footer-col-h">// Direct</div><ul><li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li><li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer">LINE · @timpaemi</a></li><li><a href="/contact/">Contact page</a></li></ul></div></div><div class="footer-base"><span>© 2026 TimPaemi Co., Ltd. · All rights reserved</span><span class="footer-version-badge">Built ${BUILD_TS} · <a href="/changelog/">v${ASSET_VERSION}</a></span><span class="pattaya-time">Pattaya · <span class="pattaya-time-value" id="pt-clock">--:--</span> ICT</span></div></footer>
+// FOOTER-SPEC-2026: shared five-block footer; no PA network block, no bottom marquee.
+const pa = '';
+const { siteFooterHtml } = require('./lib/site-footer.js');
+const footer = `${siteFooterHtml(VENUE_N)}
 <div class="progress-bar" aria-hidden="true"></div>
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 <script defer src="/site-ui.js${ASSET}"></script>
@@ -1221,7 +1221,7 @@ const html = head + marquee(TOP, false) + nav + breadcrumb + `
 </section>
 
 </main>
-` + pa + marquee(BOT, true) + footer + '\n</body>\n</html>\n';
+` + pa + footer + '\n</body>\n</html>\n';
 
 const dir = path.join(ROOT, 'changelog');
 fs.mkdirSync(dir, { recursive: true });

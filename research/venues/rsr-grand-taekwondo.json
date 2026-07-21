@@ -1,0 +1,30 @@
+{
+  "id": "rsr-grand-taekwondo",
+  "name": "RSR Grand Taekwondo",
+  "nameThai": "อาร์เอสอาร์ แกรนด์ เทควันโด",
+  "category": "martial-arts",
+  "categoryLabel": "Taekwondo",
+  "sport": "taekwondo",
+  "area": "central-pattaya",
+  "addressFull": "88/82, Wonder Space Pattaya, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 92 599 9150",
+  "hours": "Tue-Sun 10:00-20:00; Monday closed, according to the current operator-post mirror and Google listing",
+  "federation": {"affiliation": null, "gradingRecognition": null, "evidence": "The academy is listed by Super 7 as a verified partner and its students enter RSR competitions; no named federation membership or grading-recognition statement was found."},
+  "pricing": {"trial": null, "perClass": null, "monthly": null, "gradingFees": null, "uniform": null},
+  "classes": {"children": true, "adults": true, "ageFrom": null, "ageTo": null, "schedule": null, "englishInstruction": null, "competitionTrack": true},
+  "coaches": ["Kru Sam (listed by Super 7)"],
+  "practical": {"parentsCanWait": true, "notes": "A recent Thai parent review describes the venue as comfortable for waiting parents."},
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 38, "url": "https://www.google.com/maps/search/?api=1&query=RSR+Grand+Taekwondo+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent Thai parents praise attentive teaching, a warm community and a clean, orderly gym.", "One review specifically says the waiting environment is convenient for parents."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps current listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=RSR+Grand+Taekwondo+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Current operator-post mirror", "url": "https://www.medioq.com/TH/Pattaya/108598584244164/RSR-GRAND-Taekwondo", "accessed": "2026-07-20"},
+    {"label": "Super 7 verified partner listing", "url": "https://www.super7taekwondo.com/general-5", "accessed": "2026-07-20"},
+    {"label": "Saint Dominic School 2026 Pattaya championship result", "url": "https://www.sd.ac.th/main2/?author=0&paged=2", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "Four sources establish an active family-oriented academy, but all prices, formal federation/grading status and English instruction are missing.",
+  "unverified": ["formal federation affiliation", "grading portability", "all prices and fees", "class timetable", "age range", "English instruction", "class size", "coach credentials beyond partner listing"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

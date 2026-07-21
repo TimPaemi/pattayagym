@@ -1,0 +1,141 @@
+{
+  "id": "fight-evo360",
+  "name": "FIGHT EVO360",
+  "category": "muay-thai",
+  "categoryLabel": "Muay Thai",
+  "area": "jomtien",
+  "addressFull": "193/15 Moo 11, Thepprasit Road, Pattaya City, Bang Lamung, Chon Buri 20150",
+  "lat": 12.908441,
+  "lng": 100.893003,
+  "phone": "+66 84 098 5250",
+  "website": "https://fightevo360.gymdesk.com/page/home",
+  "socials": {
+    "instagram": "https://www.instagram.com/fight_evo360/"
+  },
+  "hours": "Published program Mon-Sat: running 06:30-08:00, Muay Thai 08:00-10:00 and 16:00-18:00, open gym 08:00-20:00; additional beginner, kids, wrestling, yoga and strength sessions vary by day. Check the live schedule for closures.",
+  "priceRange": "฿฿",
+  "pricing": {
+    "dropIn": "฿300 morning; ฿500 evening; ฿700 for two sessions in one day",
+    "weekly": "฿1,500 morning; ฿2,500 evening; ฿3,500 twice daily (6 training days)",
+    "monthly": "฿3,500 morning; ฿6,000 evening; official booking portal also lists ฿10,000 for two sessions daily plus open gym",
+    "packages": [
+      "12 morning sessions over 2 weeks: ฿2,500",
+      "12 evening sessions over 2 weeks: ฿4,500",
+      "12 twice-daily training days over 2 weeks: ฿5,500",
+      "Kids program, 3 sessions per week for one month: ฿3,000"
+    ],
+    "privateTraining": "฿1,000 per session; ฿10,000 for 11 sessions",
+    "includesAccommodation": false,
+    "notes": "NOW Muay Thai publishes the session and package menu. The gym's own Gymdesk portal separately lists ฿10,000/month for two daily sessions plus open gym, so monthly products are channel-specific and should be confirmed before payment.",
+    "asOf": "2026-07-20",
+    "priceSourceUrl": "https://www.nowmuaythai.com/gym/fight-evo360"
+  },
+  "facilities": [
+    "boxing ring",
+    "heavy bags",
+    "free weights and strength equipment",
+    "changing rooms",
+    "showers",
+    "lockers",
+    "separate toilets",
+    "parking",
+    "Wi-Fi"
+  ],
+  "classes": {
+    "schedule": "Muay Thai twice daily Mon-Sat, morning running, open gym, selected beginner groups, kids Muay Thai, freestyle wrestling, yoga and strength-and-conditioning sessions",
+    "levels": "Beginners through competitors",
+    "languages": [
+      "English",
+      "Thai"
+    ],
+    "dropInWelcome": true
+  },
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFighters": true,
+    "suitsFamilies": true,
+    "whoShouldSkip": "Visitors seeking a traditional live-in camp should note that no on-site accommodation was confirmed."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "score": 5.0,
+      "count": 84,
+      "url": "https://www.google.com/maps/search/?api=1&query=FIGHT%20EVO360%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Reviewers repeatedly describe the space as clean and well equipped.",
+      "Beginners say trainers teach fundamentals rather than leaving new students behind.",
+      "Longer-stay trainees praise friendly trainers, technique correction and serious conditioning."
+    ],
+    "complaints": []
+  },
+  "comparison": {
+    "closestRivals": [
+      "venum-training-camp",
+      "rage-fight-academy",
+      "petchrungruang-gym"
+    ],
+    "differentiator": "A modern training schedule combining twice-daily Muay Thai with open gym, strength and conditioning, wrestling, yoga and a separate beginner group."
+  },
+  "sources": [
+    {
+      "label": "FIGHT EVO360 official Gymdesk home",
+      "url": "https://fightevo360.gymdesk.com/page/home",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "FIGHT EVO360 official pricing portal",
+      "url": "https://fightevo360.gymdesk.com/pricing",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "FIGHT EVO360 official schedule",
+      "url": "https://fightevo360.gymdesk.com/schedule",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Google Maps location listing and reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=FIGHT%20EVO360%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "NOW Muay Thai gym, price and facility profile",
+      "url": "https://www.nowmuaythai.com/gym/fight-evo360",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Reddit Pattaya first-hand training discussion",
+      "url": "https://www.reddit.com/r/Pattaya/comments/106mxla/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Reddit beginner suitability discussion",
+      "url": "https://www.reddit.com/r/Pattaya/comments/1klf1nj/evo360_muay_thai_gym/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Pattaya Trader family training feature",
+      "url": "https://www.pattayatrader.com/2026/03/23/muay-thai-its-a-family-affair/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "people.headTrainer",
+    "people.credentials",
+    "people.notableAlumni",
+    "people.staffCount",
+    "accommodation",
+    "visa help",
+    "facilities exact ring and equipment counts",
+    "whether western visitors join regular sparring",
+    "reason and duration of the July 13-19, 2026 closed markers visible in the booking calendar",
+    "whether Sunday open-gym access shown in the schedule is available to drop-ins"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

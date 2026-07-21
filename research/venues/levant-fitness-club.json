@@ -1,0 +1,28 @@
+{
+  "id": "levant-fitness-club",
+  "name": "LEVANT Fitness Club",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "pratamnak",
+  "addressFull": "599/3 Soi Bonkai, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 98 558 1030",
+  "hours": "Open daily; Google Maps currently shows closing at 22:30",
+  "membership": {"joiningFee": null, "monthly": {"value": "THB 2,500 standard / THB 2,900 exclusive", "asOf": "2024-04-05", "priceSourceUrl": "https://www.localgymsandfitness.com/TH/%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97/102764975008132/Levant-Fitness-Club"}, "dayPass": {"value": "THB 300", "asOf": "2026-01-11", "priceSourceUrl": "https://www.fvrentals.com/property/samsara-hotel-pattaya/BC-13861249"}, "contract": null, "minimumTerm": null, "notes": "Membership tariff is historical operator material and must be reconfirmed."},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": null, "airConditioned": null},
+  "classes": {"groupClasses": true, "schedule": null, "included": null},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": ["swimming pool", "sauna", "steam room", "ice bath", "clean-food counter"],
+  "reviews": [{"platform": "Google", "score": 4.9, "count": 614, "url": "https://www.google.com/maps/search/?api=1&query=LEVANT+Fitness+Club+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent Thai reviews value the private atmosphere and combined gym, pool, steam and sauna facilities."], "complaints": ["A recent reviewer considered the price high for the level of staff attention."]},
+  "sources": [
+    {"label": "Google Maps current listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=LEVANT+Fitness+Club+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Operator-post mirror with historical tariff", "url": "https://www.localgymsandfitness.com/TH/%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%B8%E0%B8%A1%E0%B8%A7%E0%B8%B4%E0%B8%97/102764975008132/Levant-Fitness-Club", "accessed": "2026-07-20"},
+    {"label": "January 2026 hotel guest comparison", "url": "https://www.fvrentals.com/property/samsara-hotel-pattaya/BC-13861249", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 3,
+  "confidence": "low",
+  "confidenceReason": "Below four publisher families; joining/contract terms and air conditioning are missing, and the detailed membership tariff is from 2024.",
+  "unverified": ["joining fee", "current monthly tariff", "contract and cancellation terms", "minimum term", "air conditioning", "class schedule and inclusion", "personal-training rate"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

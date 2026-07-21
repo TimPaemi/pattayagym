@@ -1,0 +1,30 @@
+{
+  "id": "the-best-fitness-sattahip",
+  "name": "The Best Fitness Sattahip",
+  "nameThai": "เดอะเบสท์ฟิตเนส สัตหีบ",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "sattahip",
+  "addressFull": "65/16, Sattahip, Chon Buri 20180",
+  "phone": "+66 65 823 7903",
+  "hours": "Open daily 07:00-21:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": null, "airConditioned": null},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": true, "price": null, "notes": "Thai directory material says trainers provide exercise and nutrition planning."},
+  "facilities": ["clean bathrooms", "supplement sales"],
+  "reviews": [{"platform": "Google", "score": 4.8, "count": 54, "url": "https://www.google.com/maps/search/?api=1&query=The+Best+Fitness+Sattahip", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviews praise complete equipment, helpful staff, cleanliness and good bathrooms."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps current listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=The+Best+Fitness+Sattahip", "accessed": "2026-07-20"},
+    {"label": "Cybo current business profile", "url": "https://xn--l3cga1amo9al2e5c0fqf.cybo.com/TH-biz/the-best-fitness-sattahip", "accessed": "2026-07-20"},
+    {"label": "Cybo Sattahip gym directory", "url": "https://www.cybo.com/TH/sattahip-district/fitness-centers/", "accessed": "2026-07-20"},
+    {"label": "Mapcarta nearby-place corroboration", "url": "https://mapcarta.com/N10732703206", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 3,
+  "confidence": "low",
+  "confidenceReason": "The location and equipment are corroborated, but Cybo pages are one publisher family; membership and air conditioning are entirely missing.",
+  "unverified": ["all membership prices and terms", "joining fee", "contract and cancellation terms", "air conditioning", "classes", "personal-training price", "full facility inventory"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

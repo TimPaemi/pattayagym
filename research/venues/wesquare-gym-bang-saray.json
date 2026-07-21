@@ -1,0 +1,28 @@
+{
+  "id": "wesquare-gym-bang-saray",
+  "name": "WeSquare Gym",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "bang-saray",
+  "addressFull": "88/259, Bang Saray, Sattahip, Chon Buri 20250",
+  "phone": "+66 96 531 9363",
+  "hours": "Open daily; Google Maps currently shows closing at 21:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null, "notes": "A four-year-old review mentions two inconsistent visit prices but is too old and internally unclear to use as a current tariff."},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": null, "functional": null, "airConditioned": false, "airConditioningNotes": "A visitor review explicitly says there is no air conditioning."},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": null, "price": null},
+  "facilities": [],
+  "reviews": [{"platform": "Google", "score": 3.9, "count": 39, "url": "https://www.google.com/maps/search/?api=1&query=WeSquare+Bang+Saray", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Older local reviews identify it as a convenient neighbourhood gym."], "complaints": ["A visitor reports no air conditioning and inconsistent day-visit pricing."]},
+  "sources": [
+    {"label": "Google Maps current listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=WeSquare+Bang+Saray", "accessed": "2026-07-20"},
+    {"label": "Beautihost Thai directory", "url": "https://thai.beautihost.com/chonburi/agency/?q=wesquare", "accessed": "2026-07-20"},
+    {"label": "Pattaya Mail local property proximity report", "url": "https://www.pattayamail.com/property/house-for-sale-koonsuk-1-bang-saray-533894", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 3,
+  "confidence": "low",
+  "confidenceReason": "Below four sources and the whole current membership/contract block is missing, although the lack of air conditioning is documented.",
+  "unverified": ["all current membership prices and terms", "joining fee", "contract and cancellation terms", "full weekly hours", "classes", "personal training", "facilities"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

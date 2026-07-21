@@ -1,0 +1,177 @@
+{
+  "id": "prime-padel-pattaya",
+  "name": "Prime Padel Pattaya",
+  "category": "racquet",
+  "categoryLabel": "Padel",
+  "sport": "padel",
+  "area": "central-pattaya",
+  "addressFull": "16/111 Sukhumvit 41, Pattaya City, Bang Lamung, Chon Buri 20150",
+  "lat": 12.9472839,
+  "lng": 100.9070925,
+  "phone": "+66 61 301 6421",
+  "website": "https://www.instagram.com/primepadelpattaya/",
+  "bookingUrl": "https://playtomic.com/clubs/prime-padel-pattaya",
+  "hours": "Daily 08:00-23:00 according to Playtomic, BestPadel and the current Google Maps listing.",
+  "priceRange": "฿฿฿",
+  "padel": {
+    "courts": {
+      "count": 4,
+      "type": "panoramic",
+      "indoor": true,
+      "covered": true,
+      "floodlit": null,
+      "surface": null,
+      "configuration": "Four indoor doubles panoramic courts: one blue court, two black courts including the centre court, and one further blue court."
+    },
+    "booking": {
+      "hourlyRate": "฿800-1,000 per hour on the current RacketThailand listing",
+      "peakRate": null,
+      "offPeakRate": null,
+      "memberRate": null,
+      "method": "app",
+      "appName": "Playtomic",
+      "otherMethods": "Phone or Instagram",
+      "leadTime": "No minimum lead time is published; Playtomic shows live availability.",
+      "asOf": "2026-07-20",
+      "priceSourceUrl": "https://racketthailand.com/padel/court-finder?lang=en",
+      "notes": "RacketThailand does not identify which time bands produce the published range. A Playtomic grand-opening offer that began 28 March advertised earlier higher regular rates, so the exact current operator tariff should be reconfirmed."
+    },
+    "openPlay": {
+      "americanaSessions": true,
+      "openPlayAvailable": true,
+      "partnerMatching": null,
+      "levelGrading": "Playtomic uses its 0-7 scale and names beginner and intermediate sessions.",
+      "sessionCost": "฿400 open play; ฿500 Mexicano leveling; ฿600 Americano",
+      "asOf": "2026-07-20",
+      "priceSourceUrl": "https://playtomic.com/clubs/prime-padel-pattaya",
+      "notes": "The current calendar lists beginner and intermediate Americanos plus an unrestricted open-play session. Direct one-to-one partner matching outside organised sessions was not established."
+    },
+    "equipment": {
+      "racketHire": "Available; fee unpublished",
+      "ballsIncluded": null,
+      "proShop": true
+    },
+    "coaching": {
+      "available": true,
+      "groupRate": "From ฿700 for a 60-minute public beginner class",
+      "privateRate": "฿10,000 for five 60-minute private sessions",
+      "beginnerCourse": "Beginner public classes are listed on Playtomic",
+      "asOf": "2026-07-20",
+      "priceSourceUrl": "https://playtomic.com/clubs/prime-padel-pattaya"
+    },
+    "openedDate": null,
+    "operator": null
+  },
+  "languages": [
+    "Thai",
+    "English"
+  ],
+  "englishConfidence": "confirmed",
+  "englishEvidence": "A first-hand English player account dated 7 May 2026 describes an actual coaching session with Spanish coach Joan and head coach Alex. Playtomic's full English booking flow and the club's hosting of international APPT competition provide additional direct visitor pathways.",
+  "facilities": [
+    "four indoor panoramic doubles courts",
+    "equipment rental",
+    "pro shop and racket test centre",
+    "cafe and snack bar",
+    "changing room",
+    "lockers",
+    "free and private parking",
+    "Wi-Fi",
+    "children's play area"
+  ],
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Players who specifically require air-conditioned courts should confirm before booking: the evidence establishes a high, fully covered and well-ventilated hall, but not court air conditioning."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 5.0,
+      "count": 84,
+      "url": "https://www.google.com/maps/search/?api=1&query=Prime%20Padel%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Recent Thai reviewers repeatedly describe a high roof and strong airflow that keep the covered courts comfortable despite direct sun.",
+      "Thai reviews also praise the clean new facility, air-conditioned bathrooms, child waiting/play space, parking and easy motorway access.",
+      "Beginners mention staff or coaches actively teaching them, while both Thai and English reviews describe friendly service."
+    ],
+    "complaints": [
+      "No repeated complaint emerged from the visible recent Thai review set. The current rating distribution contains one four-star review and no one-to-three-star reviews, so this is a negative finding rather than proof that the venue has no drawbacks."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "chilli-padel-club",
+      "play-padel-pattaya",
+      "pattaya-padel-club"
+    ],
+    "differentiator": "Four fully covered panoramic courts with a live Playtomic social calendar and demonstrated capacity to host national and international tournaments."
+  },
+  "sources": [
+    {
+      "label": "Google Maps identity, coordinates, status and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Prime%20Padel%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Playtomic courts, booking, social play, coaching prices and amenities",
+      "url": "https://playtomic.com/clubs/prime-padel-pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "RacketThailand current hourly-rate listing",
+      "url": "https://racketthailand.com/padel/court-finder?lang=en",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "BestPadel court configuration and current hours",
+      "url": "https://www.bestpadel.com/prime-padel-pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Asia Pacific Padel Tour July 2026 venue listing",
+      "url": "https://asiapacificpadeltour.com/tournament/appt-prime-padel-pattaya-grand-slam/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Thai Padel Series 2026 Pattaya event listing",
+      "url": "https://thaipadelseries.com/calendar-2026/pattaya-open-2026-thaipadelseries-event-info/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "First-hand English coaching account on Reddit",
+      "url": "https://www.reddit.com/r/padel/comments/1pidola/padel_thailand/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Operator Instagram identity",
+      "url": "https://www.instagram.com/primepadelpattaya/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "exact opening date",
+    "legal operating entity",
+    "padel.courts.surface",
+    "padel.courts.floodlit specification",
+    "court air conditioning",
+    "current operator-owned hourly tariff",
+    "which time bands produce the published court-price range",
+    "padel.booking.leadTime beyond live availability",
+    "padel.booking.memberRate",
+    "padel.openPlay.partnerMatching outside organised sessions",
+    "padel.equipment.racketHire fee",
+    "padel.equipment.ballsIncluded",
+    "single-session private coaching rate",
+    "current coach roster and credentials"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

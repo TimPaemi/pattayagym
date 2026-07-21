@@ -1,0 +1,30 @@
+{
+  "id": "better-bodies-gym-na-jomtien",
+  "name": "Better Bodies Gym",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "na-jomtien",
+  "addressFull": "Na Chom Thian, Sattahip, Chon Buri 20250 (Google plus code RWF7+8Q)",
+  "phone": "+66 84 883 2967",
+  "website": "https://betterbodies.asia/",
+  "hours": "Mon-Sat 10:00-20:00; Sun 10:00-14:00",
+  "membership": {"joiningFee": null, "monthly": {"value": "THB 1,000 unlimited", "asOf": "2026-07-20", "priceSourceUrl": "https://www.gotopattaya.com/venues/better-bodies-gym"}, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": null, "airConditioned": true, "airConditioningNotes": "A Google reviewer explicitly reports effective adjustable air conditioning."},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": true, "price": {"value": "Included during the first month, according to Go To Pattaya", "asOf": "2026-07-20", "priceSourceUrl": "https://www.gotopattaya.com/venues/better-bodies-gym"}},
+  "facilities": ["free water", "Wi-Fi", "high-protein meal service", "nutrition advice"],
+  "reviews": [{"platform": "Google", "score": 4.7, "count": 34, "url": "https://www.google.com/maps/search/?api=1&query=Better+Bodies+Gym+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent reviews call it well equipped and good value.", "Visitors praise attentive staff, air conditioning and free water."], "complaints": ["A recent reviewer says some equipment is beginning to feel old despite the value."]},
+  "sources": [
+    {"label": "Current operator site", "url": "https://betterbodies.asia/", "accessed": "2026-07-20"},
+    {"label": "Google Maps current listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Better+Bodies+Gym+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Go To Pattaya current rate profile", "url": "https://www.gotopattaya.com/venues/better-bodies-gym", "accessed": "2026-07-20"},
+    {"label": "ThaiThurkic identity profile", "url": "https://www.thaithurkic.com/better-bodies-gym-thailand-038-197-259", "accessed": "2026-07-20"},
+    {"label": "Pool Villa City Thai gym guide", "url": "https://poolvillacity.com/%E0%B8%9F%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%99%E0%B8%AA-%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2-%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%96%E0%B8%B9%E0%B8%81", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "Monthly price, hours and air conditioning are established, but the required joining fee, day pass and contract terms are missing.",
+  "unverified": ["joining fee", "day pass", "weekly price", "contract and cancellation terms", "minimum term", "group classes", "current exact street number"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

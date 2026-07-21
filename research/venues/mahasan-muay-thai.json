@@ -1,0 +1,33 @@
+{
+  "id": "mahasan-muay-thai",
+  "name": "Mahasan Muay Thai",
+  "nameThai": "มหาศาล มวยไทย",
+  "category": "muay-thai",
+  "categoryLabel": "Muay Thai",
+  "area": "bang-saray",
+  "addressFull": "Na Chom Thian / Bang Saray area, Sattahip, Chon Buri 20250 (Google plus code RWFH+8XJ8)",
+  "lat": 12.823329,
+  "lng": 100.929893,
+  "phone": null,
+  "hours": "Google Maps currently shows an evening closing time of 20:00; full weekly schedule unverified",
+  "trainers": {"headTrainer": "Kru Pat (identified in a recent visitor update)", "fightRecord": null, "credentials": "A current visitor says Kru Pat has more than 30 years' experience; Klook describes former champions but names none.", "notableAlumni": [], "ratio": null},
+  "foreignerFriendly": {"accepts": true, "english": true, "beginners": true, "women": null, "sparring": null},
+  "training": {"groupClasses": true, "privateTraining": true, "sessionDuration": "1 hour", "schedule": null, "strengthConditioning": null},
+  "pricing": {"singleSession": "USD 15.55 shown for the selected Klook class", "dayPass": null, "weekly": null, "monthly": null, "privateRate": null, "asOf": "2026-07-20", "priceSourceUrl": "https://www.klook.com/en-US/activity/210034-mahasan-muay-thai-gym-pattaya/"},
+  "accommodation": {"available": null, "onSite": null, "price": null},
+  "fighters": {"activeRoster": [], "fightPath": null},
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 12, "url": "https://www.google.com/maps/search/?api=1&query=Mahasan+Muay+Thai+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent visitors describe technical, attentive instruction suitable for beginners.", "Reviews emphasise traditional technique, fitness and self-defence rather than a tourist show."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps location, current status and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Mahasan+Muay+Thai+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Klook current class listing and price", "url": "https://www.klook.com/en-US/activity/210034-mahasan-muay-thai-gym-pattaya/", "accessed": "2026-07-20"},
+    {"label": "MuayThaiTV Mahasan Poptheeratham bout record", "url": "https://muaythaitv.com/fighters/valentin-thibaut-3140/", "accessed": "2026-07-20", "note": "Corroborates the Mahasan fight name but does not prove current trainer identity."},
+    {"label": "SpaceBoxing 2017 bout result", "url": "https://www.spaceboxing.com/resultados-videos-max-muay-thai-09-julio-2017/", "accessed": "2026-07-20", "note": "Historical name evidence only."}
+  ],
+  "independentPublisherFamilies": 4,
+  "confidence": "low",
+  "confidenceReason": "Four source families exist, but two are historical fight-name evidence; the required head-trainer record, alumni, trainer ratio and most prices are not established.",
+  "unverified": ["phone", "full address", "full weekly schedule", "head trainer's formal role", "trainers.fightRecord", "trainers.notableAlumni", "trainers.ratio", "women-specific provision", "sparring policy", "Thai-baht walk-in price", "weekly and monthly prices", "accommodation", "active fighter roster"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

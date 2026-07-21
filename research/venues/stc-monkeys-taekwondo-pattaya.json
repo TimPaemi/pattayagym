@@ -1,0 +1,32 @@
+{
+  "id": "stc-monkeys-taekwondo-pattaya",
+  "name": "STC Monkeys Taekwondo Pattaya",
+  "nameThai": "เอสทีซี มังกี้ เทควันโด",
+  "category": "martial-arts",
+  "categoryLabel": "Taekwondo",
+  "sport": "taekwondo",
+  "area": "east-pattaya",
+  "addressFull": "Google plus code WWQ3+MM9, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 84 121 1821",
+  "hours": null,
+  "federation": {"affiliation": null, "gradingRecognition": null, "evidence": "Monkeys Taekwondo is active in July 2026 competition registration and national result charts. No formal federation membership or grading-portability statement was found."},
+  "pricing": {"trial": null, "perClass": null, "monthly": null, "gradingFees": null, "uniform": null},
+  "classes": {"children": true, "adults": null, "ageFrom": null, "ageTo": null, "schedule": null, "englishInstruction": null, "competitionTrack": true},
+  "coaches": ["Coach Ake (named in the July 2026 EEC Championship registration)"],
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 7, "url": "https://www.google.com/maps/search/?api=1&query=STC+Monkeys+Taekwondo+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Older reviews praise the coach and training atmosphere."], "complaints": ["A three-year-old review says the gym was old and moving; the current physical timetable and post-move facilities are not documented."]},
+  "sources": [
+    {"label": "Google Maps physical listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=STC+Monkeys+Taekwondo+Pattaya", "accessed": "2026-07-20"},
+    {"label": "July 2026 EEC Championship registration", "url": "https://program.fightingtkd.com/TKD_WebNew/Home/index/593", "accessed": "2026-07-20"},
+    {"label": "Pattaya school May 2026 athlete result", "url": "https://www.schoolandcollegelistings.com/TH/Pattaya/1524826867779332/%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AD%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2", "accessed": "2026-07-20"},
+    {"label": "Current competition chart", "url": "https://www.thannam.net/champ/download/2056/A.pdf", "accessed": "2026-07-20"},
+    {"label": "2025 national championship chart", "url": "https://gmacscore.com/match/393?download_chart=250404_Kyorugi_Chart.pdf", "accessed": "2026-07-20"},
+    {"label": "Chonburi provincial competition report", "url": "https://www.chonburipr.net/17682033/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%82%E0%B9%88%E0%B8%87%E0%B8%82%E0%B8%B1%E0%B8%99-%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%82%E0%B8%94-%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B9%81%E0%B8%8A%E0%B8%A1%E0%B8%9B%E0%B9%8C%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%95%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%AD%E0%B8%AD%E0%B8%81-%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88-1-", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "The team is currently active in competition, but the current physical timetable, post-move facility, federation/grading status, pricing and English instruction are all unresolved.",
+  "unverified": ["current street address after the reported move", "weekly hours", "formal federation affiliation", "grading portability", "all prices and fees", "age range", "adult classes", "English instruction", "class size", "post-move facilities"],
+  "status": "open",
+  "statusNote": "Current 2026 competition activity establishes an operating team; the physical site's walk-in timetable remains unverified.",
+  "verified": "2026-07-20"
+}

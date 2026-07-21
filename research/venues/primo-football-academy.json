@@ -1,0 +1,151 @@
+{
+  "id": "primo-football-academy",
+  "name": "PRIMO Football Academy",
+  "nameThai": "พรีโม่ ฟุตบอล อะคาเดมี่",
+  "category": "football",
+  "categoryLabel": "Football & Futsal",
+  "categoryStatus": "proposed",
+  "sport": "football",
+  "venueType": "club-or-academy-ground",
+  "area": "tungklom-tan-man",
+  "addressFull": "Tungklom-Tan Man, Pattaya, Chon Buri; the current operator page does not publish a street number",
+  "lat": null,
+  "lng": null,
+  "phone": "+66 64 090 3801",
+  "website": null,
+  "socials": {
+    "facebook": "https://www.facebook.com/nsalotti101"
+  },
+  "hours": "The current Facebook page labels the academy Always open, but it does not publish training or pitch-hire hours.",
+  "priceRange": "unknown",
+  "statusEvidence": "The operator page gives a current Tungklom-Tan Man address and phone and has visible activity dated 16 October 2025. Its linked website no longer resolves. This supports an operating academy identity at low confidence, not a verified walk-in pitch timetable.",
+  "football": {
+    "pitches": {
+      "count": null,
+      "surface": null,
+      "sizes": [],
+      "indoor": null,
+      "floodlit": null,
+      "netted": null,
+      "pitchDimensions": null
+    },
+    "booking": {
+      "hourlyRate": null,
+      "peakRate": null,
+      "offPeakRate": null,
+      "method": "Phone or Facebook",
+      "leadTime": null,
+      "minimumBooking": null,
+      "depositRequired": null,
+      "asOf": null,
+      "priceSourceUrl": null
+    },
+    "pickupGames": {
+      "organised": null,
+      "schedule": null,
+      "cost": null,
+      "howToJoin": null,
+      "foreignersWelcome": "unknown",
+      "skillLevel": "Children's academy; adult pickup access is unverified",
+      "contactChannel": "Current phone +66 64 090 3801 or Facebook"
+    },
+    "rules": {
+      "bootType": null,
+      "showers": null,
+      "changingRooms": null,
+      "parking": null,
+      "spectatorArea": null,
+      "refreshments": null
+    },
+    "leagues": {
+      "hosted": null,
+      "details": "The academy held matches and a charity cup at its former Ban Amphur ground; no current Tungklom-Tan Man competition schedule was found.",
+      "openToNewTeams": null
+    },
+    "languages": [
+      "Thai",
+      "English"
+    ],
+    "englishConfidence": "likely",
+    "englishEvidence": "The current operator page is bilingual and publishes an English email address, but no current first-hand English booking interaction was captured."
+  },
+  "reviews": [],
+  "reviewThemes": {
+    "praise": [],
+    "complaints": []
+  },
+  "comparison": {
+    "closestRivals": [
+      "planet-football-pattaya",
+      "fast-pro-football-academy",
+      "premier-football-arena-pattaya"
+    ],
+    "differentiator": "A bilingual non-profit children's academy identity; the current ground and visitor access require direct confirmation after relocation."
+  },
+  "sources": [
+    {
+      "label": "Current operator Facebook identity, Tungklom-Tan Man address, current phone, bilingual description and visible October 2025 activity",
+      "url": "https://www.facebook.com/nsalotti101",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Operator-linked website; DNS failed at verification and supplied no current facts",
+      "url": "http://www.primofootballacademy.com/",
+      "accessed": "2026-07-20",
+      "accessNote": "ERR_NAME_NOT_RESOLVED; counted with Facebook as one operator publisher family, not as an independent source."
+    },
+    {
+      "label": "Google Maps former Huai Yai ground, former phone and old location-specific reviews; not carried to the current record",
+      "url": "https://www.google.com/maps/search/?api=1&query=PRIMO%20Football%20Academy%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Mapcarta former natural-grass pitch at the old Huai Yai ground",
+      "url": "https://mapcarta.com/W1323498662",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "The Pattaya News 2022 report tying the same academy name and former phone to a Ban Amphur charity cup",
+      "url": "https://thepattayanews.com/2022/04/18/charity-football-cup-to-take-place-this-wednesday-in-the-pattaya-area/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "low",
+  "unverified": [
+    "exact current street address",
+    "current lat",
+    "current lng",
+    "current operating hours beyond the Facebook Always open label",
+    "current physical-pitch identity",
+    "football.pitches.count",
+    "football.pitches.surface",
+    "football.pitches.sizes",
+    "football.pitches.indoor",
+    "football.pitches.floodlit",
+    "football.pitches.netted",
+    "football.pitches.pitchDimensions",
+    "current numeric football.booking.hourlyRate",
+    "football.booking.peakRate",
+    "football.booking.offPeakRate",
+    "football.booking.leadTime",
+    "football.booking.minimumBooking",
+    "football.booking.depositRequired",
+    "football.pickupGames.organised",
+    "football.pickupGames.schedule",
+    "football.pickupGames.cost",
+    "football.pickupGames.howToJoin",
+    "football.pickupGames.foreignersWelcome",
+    "football.rules.bootType",
+    "football.rules.showers",
+    "football.rules.changingRooms",
+    "football.rules.parking",
+    "football.rules.spectatorArea",
+    "football.rules.refreshments",
+    "football.leagues.hosted at the current location",
+    "football.leagues.openToNewTeams",
+    "current location-specific rating and review themes",
+    "confirmed current staff English provision"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

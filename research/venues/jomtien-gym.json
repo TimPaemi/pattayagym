@@ -1,0 +1,28 @@
+{
+  "id": "jomtien-gym",
+  "name": "Jomtien Gym",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "jomtien",
+  "addressFull": "31/73, Jomtien, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": null,
+  "hours": "Open daily; Google Maps currently shows closing at 23:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": null, "functional": null, "airConditioned": null},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": null, "price": null},
+  "facilities": [],
+  "reviews": [{"platform": "Google", "score": 4.0, "count": 81, "url": "https://www.google.com/maps/search/?api=1&query=Jomtien+Gym", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["The listing remains actively reviewed as a straightforward local weights gym."], "complaints": ["The available web record is too thin to establish repeated current complaints without over-reading old forum material."]},
+  "sources": [
+    {"label": "Google Maps current location, hours and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Jomtien+Gym", "accessed": "2026-07-20"},
+    {"label": "Pattaya Addicts historical gym discussion", "url": "https://forum.pattaya-addicts.com/topic/335534-jomtien-gym/", "accessed": "2026-07-20"},
+    {"label": "RoamFit gym index", "url": "https://roamfit.net/phuket/best/budget-gyms", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 3,
+  "confidence": "low",
+  "confidenceReason": "Below four independent publishers; the entire membership block and air-conditioning field are unpublished.",
+  "unverified": ["phone", "complete street address", "full weekly hours", "all membership prices and terms", "air conditioning", "equipment inventory", "classes", "personal training", "facilities"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

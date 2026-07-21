@@ -514,13 +514,37 @@ function syncCssFontVersion() {
   if (updated !== css) fs.writeFileSync(cssPath, updated, 'utf8');
 }
 
+// FOOTER-SPEC-2026: every page carries author + publisher references to the
+// TimPaemi entity (@id https://timpaemi.com/#timpaemi) plus the Organization
+// entity itself, emitted once per page.
+const { timpaemiRef, timpaemiOrganization } = require('./scripts/lib/timpaemi-author');
+function withTimpaemiLd(jsonLd, url, title) {
+  const blocks = jsonLd ? (Array.isArray(jsonLd) ? [...jsonLd] : [jsonLd]) : [];
+  const isPageNode = b => b && typeof b['@type'] === 'string' && /Page$/.test(b['@type']) && b['@type'] !== 'FAQPage';
+  const page = blocks.find(isPageNode);
+  if (page) {
+    if (!page.author) page.author = timpaemiRef();
+    if (!page.publisher) page.publisher = timpaemiRef();
+  } else {
+    blocks.push({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url: url,
+      name: title,
+      author: timpaemiRef(),
+      publisher: timpaemiRef()
+    });
+  }
+  blocks.push({ '@context': 'https://schema.org', ...timpaemiOrganization() });
+  return blocks;
+}
+
 function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null, robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }) {
-  // Allow jsonLd to be a single object OR an array of objects (one <script> per item).
-  const ldBlocks = jsonLd
-    ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd])
-        .map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`)
-        .join('\n')
-    : '';
+  // One <script> per JSON-LD item; TimPaemi author/publisher + entity on every page.
+  const ldBlocks = withTimpaemiLd(jsonLd, url, title)
+    .map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`)
+    .join('\n');
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -653,80 +677,10 @@ function backToTop() {
 <button class="back-to-top" type="button" aria-label="Back to top">↑</button>`;
 }
 
+const { siteFooterHtml } = require('./scripts/lib/site-footer.js');
 function footer(scripts) {
   const scriptBlock = scripts || pageScripts();
-  return `<footer class="footer" role="contentinfo">
-  <div class="footer-grid">
-    <div>
-      <div class="footer-brand">pattaya<span class="accent">.gym</span></div>
-      <div class="footer-slogan">Built in Pattaya. For Pattaya.</div>
-      <p class="footer-tag"><strong>Every gym, every ring, every court in Pattaya.</strong> ${VENUE_N} venues hand-checked. No paid placements. Independent directory operated by TimPaemi Co., Ltd. from our Pattaya villa.</p>
-      <p class="u-foot-meta">— Tim &amp; Paemi, founders</p>
-      <div class="footer-meta">
-        TimPaemi Co., Ltd.<br>
-        Pattaya City, Bang Lamung District<br>
-        Chon Buri 20150 · Thailand
-      </div>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-h">// The site</div>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/methodology/">Methodology</a></li>
-        <li><a href="/guides/">Guides</a></li>
-        <li><a href="/sports/">All sports</a></li>
-        <li><a href="/search/">Search</a></li>
-        <li><a href="/favorites/">Favorites</a></li>
-        <li><a href="/compare/">Compare</a></li>
-        <li><a href="/plan-my-trip/">Plan trip</a></li>
-      </ul>
-    </div>
-  </div>
-  <!--PA-NET:START-->
-  <!-- [html-validate-disable-next element-permitted-content] -->
-  <style>.pa-net{--pa-pink:#ff2f8e;--pa-cyan:#00e5ff;font-family:inherit;box-sizing:border-box;width:100%;margin:0;padding:3rem 1.25rem 1.5rem;border-top:1px solid rgba(127,127,127,.22);color:inherit;-webkit-font-smoothing:antialiased}
-.pa-net *{box-sizing:border-box}
-.pa-net a{color:inherit;text-decoration:none}
-.pa-net__in{max-width:1180px;margin:0 auto}
-.pa-net__grid{display:grid;grid-template-columns:1fr;gap:2rem;text-align:left}
-.pa-net__brand-name{font-weight:800;font-size:1.35rem;letter-spacing:.02em}
-.pa-net__brand-name .pk{color:var(--pa-pink)}
-.pa-net__brand p{margin:.7rem 0 0;font-size:.85rem;opacity:.72;line-height:1.5;max-width:34ch}
-.pa-net__founder{margin:.6rem 0 0;font-size:.8rem;opacity:.85;font-weight:600}
-.pa-net__tag{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--pa-cyan);margin:0 0 .9rem}
-.pa-net__col a{display:block;padding:.32rem 0;font-size:.9rem;opacity:.85;transition:opacity .15s,color .15s}
-.pa-net__col a:hover,.pa-net__col a:focus-visible{opacity:1;color:var(--pa-cyan)}
-.pa-net__col a .pk{color:var(--pa-pink);font-weight:700}
-.pa-net__col-direct a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:rgba(127,127,127,.55)}
-.pa-net__col-direct a:hover,.pa-net__col-direct a:focus-visible{color:var(--pa-cyan);text-decoration-color:var(--pa-cyan)}
-.pa-net__property{text-align:center;margin:2.4rem 0 0;padding-top:1.6rem;border-top:1px solid rgba(127,127,127,.18)}
-.pa-net__badge{display:inline-block;font-size:.62rem;letter-spacing:.24em;color:var(--pa-cyan);border:1px solid rgba(127,127,127,.3);border-radius:4px;padding:.35rem .8rem;margin-bottom:1rem}
-.pa-net__bigname{font-weight:900;font-size:clamp(1.8rem,5vw,2.8rem);letter-spacing:.01em;line-height:1}
-.pa-net__bigname .pk{color:var(--pa-pink)}.pa-net__bigname .cy{color:var(--pa-cyan)}
-.pa-net__strap{margin:.7rem 0 0;font-weight:700;font-size:1rem}
-.pa-net__strap .pk{color:var(--pa-pink)}.pa-net__strap .cy{color:var(--pa-cyan)}
-.pa-net__sub{margin:.5rem 0 0;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
-.pa-net__sub b{color:var(--pa-cyan)}
-.pa-net__credit{margin:1rem 0 0;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7;line-height:1.7}
-.pa-net__credit a{font-weight:700;text-decoration:underline;text-underline-offset:2px}
-.pa-net__credit a:hover{color:var(--pa-cyan)}
-.pa-net__bottom{text-align:center;margin:1.4rem 0 0;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
-.pa-net__bottom a{color:inherit;text-decoration:underline;text-underline-offset:2px}
-@media(min-width:760px){.pa-net__grid{grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem}.pa-net__col-net{column-count:2;column-gap:1.5rem}}
-.pa-net-lite{font-family:inherit;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:center;width:100%;margin:0;padding:1rem;border-top:1px solid rgba(127,127,127,.2);font-size:.82rem;opacity:.9;color:inherit;text-align:center}
-.pa-net-lite a{color:inherit;font-weight:600;text-underline-offset:2px}</style>
-  <section class="pa-net" aria-label="Publisher">
-    <div class="pa-net__in">
-      <div class="pa-net__property" style="margin-top:0;border-top:0;padding-top:0">
-        <div class="pa-net__brand-name">Pattaya Gym<span class="pk">.</span></div>
-        <p style="margin:.7rem auto 0;font-size:.85rem;opacity:.72;line-height:1.5;max-width:52ch">Written, photographed and kept up to date by the team at <a href="https://pattaya-authority.com/" target="_blank" rel="author nofollow noopener noreferrer" style="font-weight:700;text-decoration:underline;text-underline-offset:2px">Pattaya Authority</a>, a Pattaya-based publishing studio.</p>
-      </div>
-      <div class="pa-net__bottom">© 2026 TIMPAEMI Co., Ltd. · <a href="https://timpaemi.com/privacy/" target="_blank" rel="nofollow noopener noreferrer">Privacy</a> · <a href="mailto:info@timpaemi.com">Contact</a></div>
-    </div>
-  </section>
-<!--PA-NET:END-->
-</footer>
+  return `${siteFooterHtml(VENUE_N)}
 ${backToTop()}
 ${scriptBlock}
 </body>
@@ -1247,12 +1201,7 @@ ${(g.tags && g.tags.length) ? `
         <div class="channel-card-tag">★ Direct line</div>
         <h3 class="channel-card-name">Call gym</h3>
         <div class="channel-card-sub">${esc(g.phone)}</div>
-      </a>` : `
-        <span class="channel-card-arrow">↗</span>
-        <div class="channel-card-tag">★ Our agency</div>
-        <h3 class="channel-card-name">pattaya authority</h3>
-        <div class="channel-card-sub">pattaya-authority.com</div>
-      `}
+      </a>` : ''}
     </div>
   </div>
 </section>
@@ -1274,7 +1223,6 @@ ${venueToolsStrip(g)}
 </main>
 `
     + paNetwork()
-    + bottomMarquee(BOTTOM_MARQUEE)
     + footer(venuePageScripts());
 }
 
@@ -1368,7 +1316,6 @@ ${faqHtml}
 </main>
 `
     + paNetwork()
-    + bottomMarquee(BOTTOM_MARQUEE)
     + footer(venuePageScripts());
 }
 
@@ -1662,7 +1609,6 @@ ${faqHtml}
 })()}
 `
     + paNetwork()
-    + bottomMarquee(BOTTOM_MARQUEE)
     + footer(venuePageScripts());
 }
 
@@ -1762,7 +1708,6 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
 </main>
 `
     + paNetwork()
-    + bottomMarquee(BOTTOM_MARQUEE)
     + footer(venuePageScripts());
 }
 
@@ -1790,12 +1735,8 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
     ], url)
   };
   const utilJsonLd = [webPageLd, crumbsLd];
-  // E-E-A-T: canonical TimPaemi Person entity on the /about/ page
-  // (operator + author of every guide — same @id as Article authors network-wide).
-  if (slug === 'about') {
-    const { authorPerson } = require('./scripts/lib/timpaemi-author');
-    utilJsonLd.push({ '@context': 'https://schema.org', ...authorPerson() });
-  }
+  // FOOTER-SPEC-2026: the TimPaemi Organization entity + author/publisher refs
+  // are injected centrally in head() on every page — no per-page entity here.
 
   const contactBlock = showContactCard ? `
 <section class="section">
@@ -1816,12 +1757,6 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
         <h3 class="channel-card-name">@timpaemi</h3>
         <div class="channel-card-sub">Daily check</div>
       </a>
-      
-        <span class="channel-card-arrow">↗</span>
-        <div class="channel-card-tag">★ Our agency</div>
-        <h3 class="channel-card-name">pattaya authority</h3>
-        <div class="channel-card-sub">pattaya-authority.com</div>
-      
     </div>
   </div>
 </section>` : '';
@@ -1860,7 +1795,6 @@ ${contactBlock}
 </main>
 `
     + paNetwork()
-    + bottomMarquee(BOTTOM_MARQUEE)
     + footer();
 }
 
@@ -2053,10 +1987,10 @@ const UTILITY_PAGES = [
 <p>No money changes hands. Ranking is based on consistent quality, current operation, breadth of facility, instructor caliber, and community reputation. Gyms with closed doors or stale information get demoted automatically.</p>
 
 <h2>What we operate</h2>
-<p>Pattaya.Gym is part of the independent TimPaemi / Pattaya Authority network of Pattaya publications operated by <strong>TimPaemi Co., Ltd.</strong>. The full network: Pattaya Authority, TimPaemi, Pattaya Restaurant Guide, Pattaya Visa Help, Pattaya School Guide, Pattaya Coffee, Pattaya Villa Stream, Pattaya Medical, PattayaPets, Pattaya Vehicle Rentals, and Pattaya After Dark. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
+<p>Pattaya.Gym is part of the independent TimPaemi network of Pattaya publications operated by <strong>TimPaemi Co., Ltd.</strong>. The full network: TimPaemi, Pattaya Restaurant Guide, Pattaya Visa Help, Pattaya School Guide, Pattaya Coffee, Pattaya Villa Stream, Pattaya Medical, PattayaPets, Pattaya Vehicle Rentals, and Pattaya After Dark. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
 
 <h2>Who runs this</h2>
-<p><img src="/authors/timpaemi.jpg" alt="TimPaemi — founders and editors of the Pattaya Authority network" width="120" height="120" loading="lazy" style="float:right; border-radius:12px; margin:0 0 12px 16px;"></p>
+<p><img src="/authors/timpaemi.jpg" alt="TimPaemi — Tim and Paemi, founders and editors" width="120" height="120" loading="lazy" style="float:right; border-radius:12px; margin:0 0 12px 16px;"></p>
 <p>Pattaya.Gym is operated by <strong>TimPaemi</strong> — Tim Paemi, an independent operator and long-time Pattaya resident, alongside his wife and co-founder. Everything we publish across the network carries the TimPaemi byline; timpaemi.com is the identity behind every site. The site is self-funded and has no commercial relationship with any listed venue.</p>
 
 <h2>Editorial policy</h2>
@@ -2163,7 +2097,6 @@ const UTILITY_PAGES = [
 
 <h2>Sister projects</h2>
 <ul>
-<li><strong>Pattaya Authority</strong> — flagship nightlife agency, one of the leading operators in Pattaya. Brand strategy, content production, venue partnerships.</li>
 <li><strong>Pattaya.Gym</strong> (this site) — fitness directory. Every gym, every camp, every court in Pattaya.</li>
 </ul>
 
@@ -2329,7 +2262,7 @@ const UTILITY_PAGES = [
 <p>No other third-party services are loaded on the site.</p>
 
 <h2>Our sister network</h2>
-<p>Pattaya.Gym is one of several independent publications operated by <strong>TimPaemi Co., Ltd.</strong>. Each runs on the same independence and editorial standards. The full network: pattaya-authority.com, timpaemi.com, pattaya-restaurant-guide.com, pattayavisahelp.com, pattaya-school-guide.com, pattaya-coffee.com, pattayastream.com, pattaya-medical.com, pattayapets.com, pattaya-vehicle-rentals.com, and pattaya-afterdark.com. Each site has its own privacy policy.</p>
+<p>Pattaya.Gym is one of several independent publications operated by <strong>TimPaemi Co., Ltd.</strong>. Each runs on the same independence and editorial standards. The full network: timpaemi.com, pattaya-restaurant-guide.com, pattayavisahelp.com, pattaya-school-guide.com, pattaya-coffee.com, pattayastream.com, pattaya-medical.com, pattayapets.com, pattaya-vehicle-rentals.com, and pattaya-afterdark.com. Each site has its own privacy policy.</p>
 
 <h2>Your rights — GDPR (EU/UK) and PDPA (Thailand)</h2>
 <p>If you are in the EU, UK, or Thailand (or anywhere with similar legislation), you have the right to: request access to whatever data we hold on you (which is functionally nothing beyond aggregate GA counts you cannot be re-identified from), request deletion, request correction, withdraw consent, and lodge a complaint with your national data-protection authority. Email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a> and we will respond within 30 days. Because we do not run accounts, most requests are satisfied simply by you clearing your browser data — but we will confirm in writing if you ask.</p>
@@ -2339,6 +2272,42 @@ const UTILITY_PAGES = [
 
 <h2>Changes</h2>
 <p>Material changes to this policy will be announced in the <a href="/changelog/">site changelog</a>. The "last updated" date above always reflects the most recent revision.</p>
+`
+  },
+  {
+    // FOOTER-SPEC-2026: Terms page — linked from the footer LEGAL column and legal line.
+    slug: 'terms',
+    title: 'Terms of use — Pattaya.Gym',
+    desc: 'The terms of use for Pattaya.Gym: what the directory is, how the information is verified, what we are responsible for, and what we are not.',
+    eyebrow: 'Terms',
+    headlineLead: 'Terms of',
+    headlineAccent: 'use',
+    accentClass: 'accent-cyan',
+    lede: 'Pattaya.Gym is a free, independent directory. These terms explain what you can expect from the information here — and where our responsibility ends.',
+    showContactCard: false,
+    bodyHtml: `
+<p><strong>Last updated:</strong> 2026-07-21. <strong>Operator:</strong> TimPaemi Co., Ltd., Pattaya City, Thailand. <strong>Contact:</strong> <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
+
+<h2>What this site is</h2>
+<p>Pattaya.Gym is an editorial directory of sport and fitness venues in Pattaya, Thailand, published by TimPaemi Co., Ltd. Access is free. No account is required, and no listing is paid for.</p>
+
+<h2>Accuracy of information</h2>
+<p>Venue details — opening hours, prices, contact details, locations — are checked by hand on a rolling schedule, but venues change without telling us. Always confirm critical details (prices, schedules, class times) directly with the venue before travelling or paying. Information on this site is provided in good faith, "as is", without warranty of any kind.</p>
+
+<h2>No professional advice</h2>
+<p>Nothing on this site is medical, legal, or financial advice. Training carries inherent risk; consult a professional where appropriate.</p>
+
+<h2>Intellectual property</h2>
+<p>Text, photographs, and data compilations on this site are the property of TimPaemi Co., Ltd. unless otherwise credited. You may quote with attribution and a link. Wholesale republication requires written permission.</p>
+
+<h2>External links</h2>
+<p>We link to venue websites, social profiles, and map services. We are not responsible for the content or practices of external sites.</p>
+
+<h2>Liability</h2>
+<p>To the maximum extent permitted by law, TimPaemi Co., Ltd. is not liable for any loss or damage arising from use of this site or reliance on its content.</p>
+
+<h2>Changes</h2>
+<p>These terms may be updated; the date above reflects the latest revision. Material changes are announced in the <a href="/changelog/">changelog</a>. Questions: <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
 `
   },
   {
@@ -2418,7 +2387,6 @@ function sportsHubPage() {
 </main>
 `
     + paNetwork()
-    + bottomMarquee(BOTTOM_MARQUEE)
     + footer();
 }
 
@@ -2432,7 +2400,7 @@ function generateSitemap() {
     .map(e => e.name)
     .sort();
   const TOOL_SLUGS = ['compare','plan-my-trip'];
-  const UTILITY_EXTRA = ['sports','add-your-gym','colophon','press','pattaya-sport-stats','changelog','privacy'];
+  const UTILITY_EXTRA = ['sports','add-your-gym','colophon','press','pattaya-sport-stats','changelog','privacy','terms'];
   const urls = [
     `${SITE}/`,
     `${SITE}/about/`,

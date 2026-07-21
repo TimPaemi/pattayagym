@@ -1,0 +1,140 @@
+{
+  "id": "sb-badminton-huai-yai",
+  "name": "SB Badminton Huai Yai",
+  "nameThai": "เอสบี แบดมินตัน ห้วยใหญ่",
+  "category": "racquet",
+  "categoryLabel": "Badminton",
+  "sport": "badminton",
+  "area": "huai-yai",
+  "addressFull": "VW49+PJ2, Huai Yai, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 94 998 2936",
+  "socials": {
+    "facebook": "https://www.facebook.com/249786852434450/"
+  },
+  "hours": "Daily 10:00-23:00 according to ThaiThurkic; Google Maps does not currently publish hours.",
+  "priceRange": "unknown",
+  "courts": {
+    "count": 6,
+    "surface": null,
+    "indoor": true,
+    "airConditioned": null,
+    "floodlit": false,
+    "ceilingHeight": null,
+    "notes": "A Thai Maps review describes six courts; no current operator facility page was found."
+  },
+  "booking": {
+    "method": "Phone or Facebook",
+    "leadTime": null,
+    "hourlyRate": null,
+    "peakRate": null,
+    "offPeakRate": null,
+    "memberRate": null,
+    "asOf": null,
+    "priceSourceUrl": null
+  },
+  "equipment": {
+    "racketHire": null,
+    "shuttlesProvided": null,
+    "shuttleCost": null,
+    "proShop": null
+  },
+  "coaching": {
+    "available": null,
+    "groupRate": null,
+    "privateRate": null,
+    "juniorProgramme": null
+  },
+  "languages": [
+    "Thai"
+  ],
+  "englishConfidence": "unknown",
+  "englishEvidence": "No English replies, English booking page, foreign-member references or readable English signage were found in the accessible evidence.",
+  "facilities": [
+    "six indoor courts reported by a reviewer",
+    "toilets",
+    "wheelchair-accessible parking reported by a directory"
+  ],
+  "audience": {
+    "suitsBeginners": null,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Visitors who require published prices, equipment rental or confirmed English support should arrange those details in advance."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.5,
+      "count": 16,
+      "url": "https://www.google.com/maps/search/?api=1&query=SB%20Badminton%20Huai%20Yai",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "A recent Thai review describes good courts and clean bathrooms.",
+      "An older Thai review identifies six courts and says the layout works well for competitions."
+    ],
+    "complaints": []
+  },
+  "comparison": {
+    "closestRivals": [
+      "badminton-khaonoi",
+      "272-estadio-de-pattaya",
+      "jp-badminton"
+    ],
+    "differentiator": "A dedicated Huai Yai neighbourhood court that fills a geographic gap south-east of central Pattaya."
+  },
+  "sources": [
+    {
+      "label": "Official Facebook identity linked by the business directory",
+      "url": "https://www.facebook.com/249786852434450/",
+      "accessed": null,
+      "accessNote": "Identity URL resolved through ThaiThurkic; the Facebook page itself was not directly inspectable."
+    },
+    {
+      "label": "Google Maps location and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=SB%20Badminton%20Huai%20Yai",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "ThaiThurkic hours, phones and Facebook linkage",
+      "url": "https://www.thaithurkic.com/sb-badminton-%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88-099-341-5546",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "thdata location and review-count listing",
+      "url": "https://thdata.co/en/p/sb-badminton-%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88-24119/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "low",
+  "unverified": [
+    "lat",
+    "lng",
+    "hours against a current operator schedule",
+    "current relationship between phone numbers +66 94 998 2936 and +66 99 341 5546",
+    "courts.surface",
+    "courts.airConditioned",
+    "courts.ceilingHeight",
+    "booking.leadTime",
+    "booking.hourlyRate",
+    "booking.peakRate",
+    "booking.offPeakRate",
+    "booking.memberRate",
+    "equipment.racketHire",
+    "equipment.shuttlesProvided",
+    "equipment.shuttleCost",
+    "equipment.proShop",
+    "coaching.available",
+    "coaching.groupRate",
+    "coaching.privateRate",
+    "coaching.juniorProgramme",
+    "English provision",
+    "audience.suitsBeginners",
+    "recent reviewThemes complaints",
+    "four robust independent publishers not met; the fourth source is an inaccessible operator Facebook identity"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

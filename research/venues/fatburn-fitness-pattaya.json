@@ -1,0 +1,29 @@
+{
+  "id": "fatburn-fitness-pattaya",
+  "name": "Fatburn Fitness",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "jomtien",
+  "addressFull": "427 Moo 12, Jomtien Sai 1 Road, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 63 542 5444",
+  "hours": "Mon-Fri 08:00-23:00; Sat-Sun 09:30-21:00",
+  "membership": {"joiningFee": null, "monthly": {"value": "THB 990", "asOf": "2026-07-20", "priceSourceUrl": "https://workoutfrom.com/pattaya/fatburn-fitness"}, "dayPass": {"value": "THB 120", "asOf": "2026-07-20", "priceSourceUrl": "https://workoutfrom.com/pattaya/fatburn-fitness"}, "weekly": {"value": "THB 700", "asOf": "2026-07-20", "priceSourceUrl": "https://workoutfrom.com/pattaya/fatburn-fitness"}, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": null, "airConditioned": null, "airConditioningNotes": "Current sources conflict: WorkoutFrom and Buzzin say air-conditioned, while a November 2025 GymPasser user update says no. A Thai Google review mentions both fans and air conditioning."},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": null, "price": null},
+  "facilities": ["showers", "lockers", "Wi-Fi", "parking"],
+  "reviews": [{"platform": "Google", "score": 4.5, "count": 94, "url": "https://www.google.com/maps/search/?api=1&query=Fatburn+Fitness+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Reviewers value the low day rate, broad basic equipment coverage and long weekday hours."], "complaints": ["Equipment is described as functional but not modern.", "Sources conflict on whether the whole gym is air-conditioned or only fan/partial-air-con cooled."]},
+  "sources": [
+    {"label": "Google Maps current listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=Fatburn+Fitness+Pattaya", "accessed": "2026-07-20"},
+    {"label": "WorkoutFrom current pass profile", "url": "https://workoutfrom.com/pattaya/fatburn-fitness", "accessed": "2026-07-20"},
+    {"label": "Buzzin Pattaya May 2026 profile", "url": "https://buzzinpattaya.com/fatburn-fitness/", "accessed": "2026-07-20"},
+    {"label": "GymPasser November 2025 user update", "url": "https://gympasser.com/", "accessed": "2026-07-20"},
+    {"label": "Around Pattaya listing", "url": "https://aroundpattaya.com/detail.php?ID=810", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "Rates and hours are usable, but joining/contract terms are missing and the required air-conditioning field is actively contradictory.",
+  "unverified": ["joining fee", "contract and cancellation terms", "minimum term", "whole-floor air conditioning", "group classes", "personal training", "current long-term prices beyond the recorded passes"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

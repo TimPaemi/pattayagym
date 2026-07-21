@@ -1,0 +1,31 @@
+{
+  "id": "chama-yoga-sound-healing-studio",
+  "name": "Chama Yoga & Sound Healing Studio",
+  "nameThai": "ชามา โยคะ แอนด์ ซาวด์ฮีลลิ่ง สตูดิโอ",
+  "category": "yoga",
+  "categoryLabel": "Yoga",
+  "area": "huai-yai",
+  "addressFull": "Unnamed Road, Huai Yai, Bang Lamung, Chon Buri 20150 (Google plus code VW5F+WJ)",
+  "phone": "+66 87 694 9464",
+  "hours": "Class schedule varies; contact the studio",
+  "styles": ["therapeutic yoga", "sound healing", "workshops"],
+  "classLanguages": ["Thai", "English"],
+  "pricing": {"dropIn": null, "classPack": null, "privateRate": null, "membership": null},
+  "classes": {"beginnerFriendly": true, "privateAvailable": null, "bookingRequired": null, "onlineSchedule": null},
+  "teachers": {"names": [], "credentials": []},
+  "practical": {"airConditioned": null, "matsProvided": null, "parking": null, "changingFacilities": null},
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 12, "url": "https://www.google.com/maps/search/?api=1&query=Chama+Yoga+Sound+Healing+Studio", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviewers describe a clean, airy studio and an attentive teacher.", "A recent English review praises a therapeutic workshop; Thai reviews mention both Thai and foreign participants."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps listing, current owner activity and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Chama+Yoga+Sound+Healing+Studio", "accessed": "2026-07-20"},
+    {"label": "Operator Facebook", "url": "https://m.facebook.com/kaesasicha/", "accessed": "2026-07-20"},
+    {"label": "Yoga Thailand directory", "url": "https://yogathailand.co/pattaya", "accessed": "2026-07-20"},
+    {"label": "Around Pattaya listing", "url": "https://www.aroundpattaya.com/detail.php?ID=799", "accessed": "2026-07-20"},
+    {"label": "Panora Estuaria local-area guide", "url": "https://thepanora-estuaria.com/", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "Thai and English class participation is supported, but the required price block is completely unpublished.",
+  "unverified": ["all numeric prices", "full style list", "weekly timetable", "teacher names and credentials", "booking rules", "private lessons", "mat rental", "air conditioning", "parking and changing facilities"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

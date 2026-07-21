@@ -1,0 +1,27 @@
+{
+  "id": "the-gym-boxing-fitness-sriracha",
+  "name": "The Gym Boxing & Fitness",
+  "category": "fitness",
+  "categoryLabel": "Fitness & Boxing",
+  "area": "sriracha",
+  "addressFull": "2nd floor, Atara Mall Si Racha, Si Racha, Chon Buri 20110",
+  "phone": "+66 61 535 2462",
+  "hours": "Open daily; Google Maps currently shows closing at 22:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": true, "airConditioned": null},
+  "classes": {"groupClasses": true, "schedule": null, "included": null, "types": ["boxing", "fitness", "children's activities"]},
+  "personalTraining": {"available": true, "price": null},
+  "facilities": ["zoned training floor"],
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 19, "url": "https://www.google.com/maps/search/?api=1&query=The+Gym+Boxing+Fitness+Sriracha", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviews from the two months before verification praise cleanliness, friendly professional trainers and clear zoning.", "Reviewers describe activities for both adults and children and consider the service good value, without publishing a number."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps current listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=The+Gym+Boxing+Fitness+Sriracha", "accessed": "2026-07-20"},
+    {"label": "Operator Facebook linked from Google", "url": "https://www.facebook.com/thegymboxingfitness", "accessed": null, "accessNote": "Identity link recorded; no numeric tariff was captured."}
+  ],
+  "independentPublisherFamilies": 2,
+  "confidence": "low",
+  "confidenceReason": "Only two source families; all membership/contract fields and air conditioning are unpublished.",
+  "unverified": ["all membership prices and terms", "joining fee", "air conditioning", "full class timetable", "class inclusion", "personal-training price", "changing and shower facilities"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

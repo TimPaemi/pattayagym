@@ -1,0 +1,31 @@
+{
+  "id": "laem-chabang-fitness-center",
+  "name": "Laem Chabang Fitness Center",
+  "nameThai": "แหลมฉบังฟิตเนส เซ็นเตอร์",
+  "category": "fitness",
+  "categoryLabel": "Municipal Fitness",
+  "area": "laem-chabang",
+  "addressFull": "Laem Chabang Sai 1 Road, Thung Sukhla, Si Racha, Chon Buri 20230 (Google plus code 3WMF+H9W)",
+  "lat": 13.083997,
+  "lng": 100.923447,
+  "phone": null,
+  "hours": null,
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null, "notes": "An undated Google review says access is free, but no date-stamped municipal admission policy was found, so no current price is recorded."},
+  "equipment": {"freeWeights": null, "machines": true, "cardio": true, "functional": null, "airConditioned": null},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": null, "price": null},
+  "facilities": [],
+  "reviews": [{"platform": "Google", "score": 4.2, "count": 11, "url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B8%9F%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%99%E0%B8%AA+%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["The small review set describes a useful municipal gym and includes an undated claim of free entry."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps municipal facility listing", "url": "https://www.google.com/maps/search/?api=1&query=%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B8%9F%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%99%E0%B8%AA+%E0%B9%80%E0%B8%8B%E0%B9%87%E0%B8%99%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C", "accessed": "2026-07-20"},
+    {"label": "Laem Chabang municipal equipment plan", "url": "https://infocenter.oic.go.th/FILEWEB/CABINFOCENTER24/DRAWER001/GENERAL/DATA0000/00000117.PDF", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 2,
+  "confidence": "low",
+  "confidenceReason": "Only two source families; current hours, admission policy, contract fields and air conditioning are not verified.",
+  "unverified": ["current operating status beyond the live map identity", "phone", "hours", "current free-entry policy", "all membership fields", "air conditioning", "equipment inventory", "classes", "staffing"],
+  "status": "unclear",
+  "statusNote": "The municipal identity remains live, but no dated 2026 municipal hours or activity notice was found.",
+  "verified": "2026-07-20"
+}

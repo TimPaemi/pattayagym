@@ -1,0 +1,145 @@
+{
+  "id": "jp-badminton",
+  "name": "JP Badminton",
+  "nameThai": "เจพี แบดมินตัน",
+  "category": "racquet",
+  "categoryLabel": "Badminton",
+  "sport": "badminton",
+  "area": "jomtien",
+  "addressFull": "300/61 Moo 12, Thepprasit Road, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 83 914 9449",
+  "website": "https://thailink.cc/jp-badminton-pattaya",
+  "hours": "Mon-Fri 08:00-22:00; Sat-Sun 08:00-21:00 according to the current linked guide. Google Maps also displays an 08:00 opening time.",
+  "priceRange": "฿",
+  "courts": {
+    "count": 12,
+    "surface": null,
+    "indoor": true,
+    "airConditioned": false,
+    "floodlit": false,
+    "ceilingHeight": null
+  },
+  "booking": {
+    "method": "Phone; the linked guide says solo players can ask about partner finding",
+    "leadTime": null,
+    "hourlyRate": "฿150-200 per hour",
+    "peakRate": "฿200 per hour after 14:00",
+    "offPeakRate": "฿150 per hour before 14:00",
+    "memberRate": null,
+    "asOf": "2026-07-20",
+    "priceSourceUrl": "https://thailink.cc/jp-badminton-pattaya",
+    "notes": "The price page is a third-party English guide linked by the Maps listing, not a clearly identified operator site. Confirm before payment."
+  },
+  "equipment": {
+    "racketHire": "฿50",
+    "shoeHire": "฿50",
+    "shuttlesProvided": false,
+    "shuttleCost": "From ฿85",
+    "proShop": true,
+    "priceAsOf": "2026-07-20",
+    "priceSourceUrl": "https://thailink.cc/jp-badminton-pattaya"
+  },
+  "coaching": {
+    "available": true,
+    "groupRate": null,
+    "privateRate": null,
+    "juniorProgramme": null
+  },
+  "languages": [
+    "Thai",
+    "English"
+  ],
+  "englishConfidence": "likely",
+  "englishEvidence": "The venue's Maps-linked guide is fully in English and gives instructions for rentals, solo-player matching and coaching. Older English directories publish an email address, but no current direct English reply from the operator was found.",
+  "facilities": [
+    "12 indoor courts",
+    "showers",
+    "changing rooms",
+    "lockers",
+    "parking",
+    "food, drinks and snacks"
+  ],
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Heat-sensitive players should avoid the hottest daytime hours because the hall is not air-conditioned."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.4,
+      "count": 182,
+      "url": "https://www.google.com/maps/search/?api=1&query=JP%20Badminton%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Thai reviewers repeatedly mention clean courts and exceptionally clean bathrooms.",
+      "Players value the 12-court capacity, large parking area and unusually broad selection of drinks, snacks and simple food."
+    ],
+    "complaints": [
+      "A detailed Thai review from about seven months before verification says the hall becomes extremely hot in strong daytime sun despite fans."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "badminton-khaonoi",
+      "pattaya-monkey-badminton-center",
+      "272-estadio-de-pattaya"
+    ],
+    "differentiator": "Twelve courts plus the batch's clearest published equipment-rental menu and solo-player guidance."
+  },
+  "sources": [
+    {
+      "label": "Google Maps location and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=JP%20Badminton%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "ThaiLink current price, equipment and booking guide",
+      "url": "https://thailink.cc/jp-badminton-pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Around Pattaya court-count listing",
+      "url": "https://aroundpattaya.com/detail.php?ID=548",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Pattaya Unlimited local rainy-day guide",
+      "url": "https://www.pattayaunlimited.com/pattaya-rainy-day-activities/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Private Scuba Pattaya badminton directory",
+      "url": "https://www.private-scuba.com/diving/thailand/east/pattaya/sport/badminton.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "DataForThai active company registration",
+      "url": "https://www.dataforthai.com/company/0105559081140/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "lat",
+    "lng",
+    "whether the Maps-linked ThaiLink page is operator-authorised",
+    "current venue-owned price tariff",
+    "courts.surface",
+    "courts.ceilingHeight",
+    "booking.leadTime",
+    "booking.memberRate",
+    "coaching.groupRate",
+    "coaching.privateRate",
+    "coaching.juniorProgramme",
+    "direct English-speaking booking staff",
+    "current relationship between the map phone and older directory phone numbers"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

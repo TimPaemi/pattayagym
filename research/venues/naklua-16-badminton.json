@@ -1,0 +1,158 @@
+{
+  "id": "naklua-16-badminton",
+  "name": "Naklua 16 Badminton",
+  "nameThai": "นาเกลือ 16 แบดมินตัน",
+  "category": "racquet",
+  "categoryLabel": "Badminton",
+  "sport": "badminton",
+  "area": "naklua",
+  "addressFull": "508/1 Soi Photisan, Naklua 16, Bang Lamung, Chon Buri 20150",
+  "lat": 12.96425,
+  "lng": 100.88729,
+  "phone": "+66 89 784 3430",
+  "socials": {
+    "facebook": "https://www.facebook.com/Naklua-16-Badminton-109011103936674"
+  },
+  "hours": "Google Maps currently displays a 12:00 opening time. WorldPlaces lists 13:00-23:00 daily; confirm the opening hour and closing time before arrival.",
+  "priceRange": "unknown",
+  "courts": {
+    "count": 6,
+    "surface": null,
+    "indoor": true,
+    "airConditioned": null,
+    "floodlit": false,
+    "ceilingHeight": null,
+    "notes": "A 2023 international badminton-camp listing names six courts; the current count was not independently republished."
+  },
+  "booking": {
+    "method": "Facebook or directory-listed phone; current Maps listing has no phone",
+    "leadTime": null,
+    "hourlyRate": null,
+    "peakRate": null,
+    "offPeakRate": null,
+    "memberRate": null,
+    "asOf": null,
+    "priceSourceUrl": null,
+    "notes": "A recent Thai review reports that a reservation was not entered and the group arrived to find every court occupied."
+  },
+  "equipment": {
+    "racketHire": null,
+    "shuttlesProvided": null,
+    "shuttleCost": null,
+    "proShop": null
+  },
+  "coaching": {
+    "available": null,
+    "groupRate": null,
+    "privateRate": null,
+    "juniorProgramme": null
+  },
+  "languages": [
+    "Thai",
+    "English"
+  ],
+  "englishConfidence": "likely",
+  "englishEvidence": "The venue hosted a multi-day Russian badminton training camp and is included in English-language local directories. This indicates foreign-group access but does not confirm reception English.",
+  "facilities": [
+    "six indoor courts reported in 2023",
+    "toilets",
+    "open-sided or ventilated hall described by reviewers"
+  ],
+  "audience": {
+    "suitsBeginners": null,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Visitors travelling a long distance should reconfirm the reservation because a recent Thai review reports a lost booking."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.4,
+      "count": 63,
+      "url": "https://www.google.com/maps/search/?api=1&query=Naklua%2016%20Badminton",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Thai reviewers praise the court floor, spacious feel, court availability and bathrooms.",
+      "The venue has supported organised foreign training groups, not only local casual play."
+    ],
+    "complaints": [
+      "A Thai review from about two months before verification says a reservation was not recorded, every court was full on arrival, and staff did not apologise."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "pattaya-monkey-badminton-center",
+      "badminton-khaonoi",
+      "jp-badminton"
+    ],
+    "differentiator": "The only dedicated Naklua badminton venue in this batch, with evidence of hosting an international training group."
+  },
+  "sources": [
+    {
+      "label": "Official Facebook identity linked by Around Pattaya",
+      "url": "https://www.facebook.com/Naklua-16-Badminton-109011103936674",
+      "accessed": null,
+      "accessNote": "Identity URL resolved through Around Pattaya; the Facebook page itself was not directly inspectable."
+    },
+    {
+      "label": "Google Maps location and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Naklua%2016%20Badminton",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Around Pattaya contact listing",
+      "url": "https://aroundpattaya.com/detail.php?ID=620",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Private Scuba Pattaya badminton directory",
+      "url": "https://www.private-scuba.com/diving/thailand/east/pattaya/sport/badminton.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "WorldPlaces hours and coordinates",
+      "url": "https://pattaya.worldplaces.me/th/review/158358007-naklua-16-badminton.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "BadmintonOpen Russian training-camp listing",
+      "url": "https://badminton77.ru/events2/289/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "thdata Chon Buri court directory",
+      "url": "https://thdata.co/en/badminton-court/chon-buri/?page=2",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "current full weekly hours",
+    "current phone because Google Maps publishes none",
+    "current court count after the 2023 training-camp listing",
+    "courts.surface",
+    "courts.airConditioned",
+    "courts.ceilingHeight",
+    "booking.leadTime",
+    "booking.hourlyRate",
+    "booking.peakRate",
+    "booking.offPeakRate",
+    "booking.memberRate",
+    "equipment.racketHire",
+    "equipment.shuttlesProvided",
+    "equipment.shuttleCost",
+    "equipment.proShop",
+    "coaching.available",
+    "coaching.groupRate",
+    "coaching.privateRate",
+    "coaching.juniorProgramme",
+    "direct English-speaking booking staff",
+    "audience.suitsBeginners"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

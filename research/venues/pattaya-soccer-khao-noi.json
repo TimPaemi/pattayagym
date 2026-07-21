@@ -1,0 +1,156 @@
+{
+  "id": "pattaya-soccer-khao-noi",
+  "name": "Pattaya Soccer Khao Noi",
+  "nameThai": "สนามฟุตบอลพัทยาซอคเกอร์ เขาน้อย",
+  "category": "football",
+  "categoryLabel": "Football & Futsal",
+  "categoryStatus": "proposed",
+  "sport": "football",
+  "venueType": "club-and-tournament-ground",
+  "area": "east-pattaya",
+  "addressFull": "WWG3+CRW, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "lat": 12.9261184,
+  "lng": 100.9045643,
+  "phone": "+66 38 429 091",
+  "website": "https://www.facebook.com/pages/category/Soccer-Stadium/%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%8B%E0%B8%AD%E0%B8%84%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-109566192713757/",
+  "hours": "Daily 07:00-22:00 according to current Waze and ThaiThurkic listings; Google Maps also displayed a 22:00 close at verification.",
+  "priceRange": null,
+  "football": {
+    "pitches": {
+      "count": null,
+      "surface": "artificial-grass",
+      "sizes": [
+        "7-a-side"
+      ],
+      "indoor": false,
+      "floodlit": true,
+      "netted": null,
+      "pitchDimensions": "Recent Thai reviews describe multiple football fields, and the venue hosted a seven-a-side youth competition. The exact count, alternative layouts and dimensions were not published. Night-use photos establish floodlighting."
+    },
+    "booking": {
+      "hourlyRate": null,
+      "peakRate": null,
+      "offPeakRate": null,
+      "method": "Phone or the linked Facebook page; public hourly hire terms were not established.",
+      "leadTime": null,
+      "minimumBooking": null,
+      "depositRequired": null,
+      "asOf": "2026-07-20",
+      "priceSourceUrl": null
+    },
+    "pickupGames": {
+      "organised": null,
+      "schedule": null,
+      "cost": null,
+      "howToJoin": null,
+      "foreignersWelcome": "unknown",
+      "skillLevel": null,
+      "contactChannel": "A German community thread documented Friday 10:30 over-50 play in December 2023, but a September 2024 request for confirmation had no visible answer. No current public group invite or Line link was found."
+    },
+    "rules": {
+      "bootType": null,
+      "showers": null,
+      "changingRooms": null,
+      "parking": null,
+      "spectatorArea": true,
+      "refreshments": true
+    },
+    "leagues": {
+      "hosted": true,
+      "details": "The site hosted the 2024 GLO Cup eastern-zone seven-a-side youth competition, and a June 2026 Thai review says the reviewer regularly brings a child to competitions there.",
+      "openToNewTeams": null
+    },
+    "languages": [
+      "Thai"
+    ],
+    "englishConfidence": "unknown",
+    "englishEvidence": "A German expat community used the venue historically, but that does not establish current English-speaking venue staff. No current English operator reply or booking exchange was found."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.4,
+      "count": 124,
+      "url": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Soccer%20Khao%20Noi",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "A Thai review from one month before verification says the complex has several football fields as well as badminton and gym facilities and is used frequently for children's competitions.",
+      "Thai players describe the ground as a familiar competitive-football home, and recent user photographs show active tournament and night use."
+    ],
+    "complaints": [
+      "A Thai review from one month before verification criticises the shop staff's politeness.",
+      "Another visible Thai review says the elevated seating would benefit from stairs at both ends because the current walk is tiring."
+    ]
+  },
+  "sources": [
+    {
+      "label": "Google Maps identity, coordinates, current status and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Soccer%20Khao%20Noi",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Operator Facebook identity",
+      "url": "https://www.facebook.com/pages/category/Soccer-Stadium/%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%8B%E0%B8%AD%E0%B8%84%E0%B9%80%E0%B8%81%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2-109566192713757/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Waze current phone and daily hours",
+      "url": "https://www.waze.com/live-map/directions/th/%E0%B8%88.%E0%B8%8A%E0%B8%A5%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5/pattaya-city/pattaya-soccer-khao-noi?to=place.ChIJ-RXQIOmVAjERjkDJtkLjDso",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "ThaiThurkic matching phone, address and hours",
+      "url": "https://www.thaithurkic.com/pattaya-soccer-khao-noi-038-429-091",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Siamrath 2024 GLO Cup location-specific tournament report",
+      "url": "https://archive.siamrath.co.th/n/539923",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "German expat forum historical pickup-game evidence and unresolved currency check",
+      "url": "https://www.pattayaforum.net/forums/threads/fussball-spielen-in-pattaya.102069/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Thai Lemon8 dated night-use post and field photographs",
+      "url": "https://www.lemon8-app.com/%40chimnian_wannasoon/7426684092537750032?region=th",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Around Pattaya venue directory",
+      "url": "https://www.aroundpattaya.com/detail.php?ID=655",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "low",
+  "confidenceReason": "Floodlighting is established, but no numeric hourly price and no current organised pickup schedule or joining method were found. Two required stars are missing.",
+  "unverified": [
+    "exact pitch count",
+    "all available pitch formats",
+    "metric pitch dimensions",
+    "whether pitches are fully netted",
+    "current numeric hourly rate",
+    "peak and off-peak rates",
+    "whether public hourly hire is available",
+    "booking lead time",
+    "minimum booking",
+    "deposit requirement",
+    "current organised pickup games",
+    "pickup cost and joining method",
+    "foreigners-welcome policy",
+    "boot or stud restrictions",
+    "showers",
+    "changing rooms",
+    "parking availability",
+    "whether current leagues accept new teams",
+    "current English-speaking venue staff"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

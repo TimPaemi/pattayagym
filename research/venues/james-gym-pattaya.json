@@ -1,0 +1,37 @@
+{
+  "id": "james-gym-pattaya",
+  "name": "James GYM",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "east-pattaya",
+  "addressFull": "Soi Khao Talo, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 80 821 9669",
+  "hours": "Open 24 hours daily",
+  "membership": {
+    "joiningFee": null,
+    "monthly": {"value": "THB 1,400", "asOf": "2026-07-20", "priceSourceUrl": "https://workoutfrom.com/pattaya/james-gym"},
+    "dayPass": {"value": "THB 150", "asOf": "2026-05-07", "priceSourceUrl": "https://buzzinpattaya.com/james-gym/"},
+    "weekly": {"value": "THB 950", "asOf": "2026-07-20", "priceSourceUrl": "https://workoutfrom.com/pattaya/james-gym"},
+    "contract": null,
+    "minimumTerm": null,
+    "notes": "Current sources conflict on the monthly price: Buzzin and Reddit report a lower range than the structured WorkoutFrom figure. Confirm before publication."
+  },
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": null, "airConditioned": false, "airConditioningNotes": "A 2026 East Pattaya guide and Thai review describe a clean, naturally ventilated open-air gym rather than air conditioning."},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": null, "price": null},
+  "facilities": ["parking", "lockers", "drinks counter"],
+  "reviews": [{"platform": "Google", "score": 4.9, "count": 429, "url": "https://www.google.com/maps/search/?api=1&query=James+GYM+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent Thai reviews praise the large equipment selection, cleanliness and natural ventilation."], "complaints": ["The gym is open-air and may not suit members who require air conditioning.", "Current independent sources disagree on the exact monthly and long-term tariff."]},
+  "sources": [
+    {"label": "Google Maps current listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=James+GYM+Pattaya", "accessed": "2026-07-20"},
+    {"label": "WorkoutFrom pass and amenity profile", "url": "https://workoutfrom.com/pattaya/james-gym", "accessed": "2026-07-20"},
+    {"label": "Buzzin Pattaya May 2026 profile", "url": "https://buzzinpattaya.com/james-gym/", "accessed": "2026-07-20"},
+    {"label": "Lakeside Property 2026 East Pattaya gym guide", "url": "https://lakesidepropertypattaya.com/real-talk/top-5-gyms-in-east-pattaya/", "accessed": "2026-07-20"},
+    {"label": "Reddit Pattaya member discussion", "url": "https://www.reddit.com/r/Pattaya/comments/1ngl5j5/", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "It clears four sources and establishes rates, 24-hour access and no air conditioning, but the required joining fee and contract terms are missing and current prices conflict.",
+  "unverified": ["joining fee", "contract and cancellation terms", "minimum term", "authoritative current monthly tariff", "group classes", "personal training", "showers"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

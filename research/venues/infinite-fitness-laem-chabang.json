@@ -1,0 +1,29 @@
+{
+  "id": "infinite-fitness-laem-chabang",
+  "name": "Infinite Fitness Laem Chabang",
+  "nameThai": "อินฟินิท ฟิตเนส แหลมฉบัง",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "laem-chabang",
+  "addressFull": "Inside Infinite artificial football ground, 10/20, Thung Sukhla, Si Racha, Chon Buri 20230",
+  "phone": "+66 84 147 1915",
+  "hours": "Mon-Sat 14:30-22:00; Sun 13:30-20:00",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": true, "functional": null, "airConditioned": null},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": null, "price": null},
+  "facilities": ["parking at football complex"],
+  "reviews": [{"platform": "Google", "score": 4.7, "count": 15, "url": "https://www.google.com/maps/search/?api=1&query=Infinite+Fitness+Laem+Chabang", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviewers describe a clean, friendly gym with a broad, modern equipment mix."], "complaints": ["One reviewer says members sometimes leave plates on machines and that the environment may be less comfortable for beginners."]},
+  "sources": [
+    {"label": "Google Maps current listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Infinite+Fitness+Laem+Chabang", "accessed": "2026-07-20"},
+    {"label": "ThaiThurkic contact and hours profile", "url": "https://www.thaithurkic.com/infinite-fitness-%E0%B8%9F%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%99%E0%B8%AA%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%87-084-147-1915", "accessed": "2026-07-20"},
+    {"label": "WorldPlaces identity and coordinate profile", "url": "https://thailand.worldplaces.me/review/85620984-infinite-fitness.html", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 3,
+  "confidence": "low",
+  "confidenceReason": "Below four independent publishers; every membership field and air conditioning are missing.",
+  "unverified": ["all membership prices and terms", "air conditioning", "group classes", "personal training", "showers and lockers", "exact equipment inventory"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

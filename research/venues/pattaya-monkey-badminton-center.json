@@ -1,0 +1,147 @@
+{
+  "id": "pattaya-monkey-badminton-center",
+  "name": "Pattaya Monkey Badminton Center",
+  "nameThai": "พัทยา มังกี้ แบดมินตัน เซ็นเตอร์",
+  "category": "racquet",
+  "categoryLabel": "Badminton",
+  "sport": "badminton",
+  "area": "east-pattaya",
+  "addressFull": "252/152 Moo 13, Soi Sukhumvit 81, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 81 949 7272",
+  "hours": "Google Maps currently shows an opening time of 10:00. Full weekly closing hours were not published in the sources reviewed.",
+  "priceRange": "฿",
+  "courts": {
+    "count": null,
+    "surface": null,
+    "indoor": true,
+    "airConditioned": false,
+    "floodlit": false,
+    "ceilingHeight": null
+  },
+  "booking": {
+    "method": "Phone or Line administrator; booking is strongly recommended",
+    "leadTime": "An independent coach asks for 1-2 days for coach-handled court booking",
+    "hourlyRate": "฿200 per hour, stated as the included court value in an independent coach's current package",
+    "peakRate": null,
+    "offPeakRate": null,
+    "memberRate": null,
+    "asOf": "2026-07-20",
+    "priceSourceUrl": "https://fastwork.co/user/kruton/badminton-training-13179565",
+    "notes": "The rate is not from a venue-owned tariff. Recent Thai reviews say new customers may struggle to secure a slot when regular groups retain bookings."
+  },
+  "equipment": {
+    "racketHire": null,
+    "shoeHire": "Available according to reviews; fee unpublished",
+    "shuttlesProvided": null,
+    "shuttleCost": null,
+    "proShop": null
+  },
+  "coaching": {
+    "available": true,
+    "groupRate": "External bilingual coach: ฿3,500 for eight group hours used within two months, court included",
+    "privateRate": "External coach: ฿6,500 for ten one-to-one hours used within six months, court included",
+    "juniorProgramme": true,
+    "priceAsOf": "2026-07-20",
+    "priceSourceUrl": "https://fastwork.co/user/kruton/badminton-training-13179565",
+    "notes": "This is an independent coach using Monkey and 272 Estadio, not a venue-run academy."
+  },
+  "languages": [
+    "Thai",
+    "English"
+  ],
+  "englishConfidence": "confirmed",
+  "englishEvidence": "A coach currently selling group sessions at this venue explicitly describes the sessions as Thai/English. English-language location reviews also document service to foreign visitors; venue reception English was not separately confirmed.",
+  "facilities": [
+    "indoor badminton courts",
+    "parking",
+    "borrowed shoes reported by reviewers"
+  ],
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Heat-sensitive players and spontaneous visitors without a confirmed booking may prefer another venue."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.3,
+      "count": 68,
+      "url": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Monkey%20Badminton%20Center",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Thai and English reviews describe clean, standard courts, convenient parking and a central South/East Pattaya location.",
+      "The venue continues to host organised Thai badminton tournaments, including events listed in March and April 2026."
+    ],
+    "complaints": [
+      "Three Thai reviews from roughly seven months before verification say the Line administrator prioritised regular groups, gave terse replies and could not offer slots to new customers.",
+      "English reviews warn that the unairconditioned hall gets very hot and that borrowed shoes can be poor quality."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "badminton-khaonoi",
+      "jp-badminton",
+      "272-estadio-de-pattaya"
+    ],
+    "differentiator": "An established tournament venue with a directly evidenced bilingual external coaching option."
+  },
+  "sources": [
+    {
+      "label": "Google Maps location and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Pattaya%20Monkey%20Badminton%20Center",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Wanderlog location-specific review compilation",
+      "url": "https://wanderlog.com/place/details/7576655/pattaya-monkey-badminton-center",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "BadWeb Thailand March 2026 tournament listing",
+      "url": "https://badwebthailand.com/tournaments-224-%E0%B9%81%E0%B8%82%E0%B9%88%E0%B8%87%E0%B9%81%E0%B8%9A%E0%B8%94-XCITE-BADMINTON-Trip-%26-Tournament-Cup-%232.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Fastwork bilingual coach and court-rate listing",
+      "url": "https://fastwork.co/user/kruton/badminton-training-13179565",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Private Scuba Pattaya badminton directory",
+      "url": "https://www.private-scuba.com/diving/thailand/east/pattaya/sport/badminton.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Pattaya Flight local badminton guide",
+      "url": "https://pattayaflight.com/play-badminton-pattaya/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "lat",
+    "lng",
+    "current full weekly hours",
+    "courts.count",
+    "courts.surface",
+    "courts.ceilingHeight",
+    "venue-owned hourly tariff",
+    "booking.peakRate",
+    "booking.offPeakRate",
+    "booking.memberRate",
+    "equipment.racketHire",
+    "equipment.shoeHire fee and sizes",
+    "equipment.shuttlesProvided",
+    "equipment.shuttleCost",
+    "equipment.proShop",
+    "venue reception English",
+    "whether coaching is contracted by the venue or solely external"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

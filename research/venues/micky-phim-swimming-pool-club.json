@@ -1,0 +1,33 @@
+{
+  "id": "micky-phim-swimming-pool-club",
+  "name": "Micky Phim Swimming Pool Club",
+  "nameThai": "มิกกี้พิม สวิมมิ่งพูลคลับ",
+  "category": "swimming",
+  "categoryLabel": "Public Pool",
+  "venueType": "day-pass pool",
+  "area": "east-pattaya",
+  "addressFull": "WWG7+VPM, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "lat": 12.927217,
+  "lng": 100.914309,
+  "phone": "+66 92 787 5730",
+  "hours": "Open daily; Google Maps currently shows closing at 20:00",
+  "pool": {"length": null, "lanes": null, "indoor": false, "heated": null, "childrensPool": true, "depth": null},
+  "lessons": {"learnToSwim": null, "squad": null, "adultLessons": null, "ageFrom": null, "ageTo": null, "classSize": null, "ratio": null, "termOrDropIn": null, "trialAvailable": null},
+  "pricing": {"dayPass": "THB 50", "asOf": "2026-01-15", "priceSourceUrl": "https://wanderlog.com/place/details/9161920/micky-phim-swimming-pool-club"},
+  "instructors": {"certification": null, "englishSpeaking": null, "femaleInstructors": null},
+  "practical": {"parentsCanWatch": true, "changingFacilities": "Showers reported; hot water not available in one visitor account", "equipmentProvided": null},
+  "dayPassAvailable": true,
+  "reviews": [{"platform": "Google", "score": 4.5, "count": 66, "url": "https://www.google.com/maps/search/?api=1&query=Micky+Phim+Swimming+Pool+Club", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Reviewers value the inexpensive public entry, space, parking and friendly food service."], "complaints": ["Two recent Thai reviews raise water-quality concerns: one reported brown water in both pools and another described an unpleasant taste despite clearer water.", "A visitor notes that showers do not provide hot water."]},
+  "sources": [
+    {"label": "Google Maps listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=Micky+Phim+Swimming+Pool+Club", "accessed": "2026-07-20"},
+    {"label": "Wanderlog profile, visitor reports and price", "url": "https://wanderlog.com/place/details/9161920/micky-phim-swimming-pool-club", "accessed": "2026-07-20"},
+    {"label": "Private Scuba pool directory", "url": "https://www.private-scuba.com/diving/thailand/east/pattaya/sport/swimming-lessons.html", "accessed": "2026-07-20"},
+    {"label": "Mapcarta location record", "url": "https://mapcarta.com/N13084025902", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "It clears four source families as a day-pass pool, but the swimming category's required lesson, instructor and pool-specification fields are absent; current hygiene concerns also need direct checking.",
+  "unverified": ["pool length, lanes, depth and heating", "all lesson fields", "all instructor fields", "equipment availability", "current water-quality management", "complete weekly hours", "infant/child entry rules"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

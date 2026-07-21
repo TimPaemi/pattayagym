@@ -1,0 +1,95 @@
+{
+  "id": "chill-out-climbing-gym",
+  "name": "Chill out Climbing Gym",
+  "category": "climbing",
+  "categoryLabel": "Climbing",
+  "area": "si-racha",
+  "addressFull": "15/25 Sukhumvit Road, Surasak, Si Racha District, Chon Buri 20110",
+  "website": "https://chillout-climb.com/en",
+  "socials": {
+    "instagram": "https://www.instagram.com/chillout_climb/"
+  },
+  "priceRange": "฿฿",
+  "pricing": {
+    "dropIn": "Planned day pass ฿380; planned student day pass ฿220",
+    "monthly": "Planned monthly pass ฿2,100; planned student monthly pass ฿1,400",
+    "packages": [
+      "Planned 10-visit pass: ฿3,400"
+    ],
+    "includesAccommodation": false,
+    "notes": "Pre-opening prices published by the venue. The site says equipment rental will be available but gives no rental menu. All products remain provisional until the gym opens.",
+    "asOf": "2026-07-20",
+    "priceSourceUrl": "https://chillout-climb.com/en"
+  },
+  "facilities": [
+    "planned bouldering area",
+    "planned cafe",
+    "planned workspace"
+  ],
+  "classes": {
+    "schedule": "No timetable published before opening.",
+    "levels": "Venue says all levels and children's classes are planned.",
+    "dropInWelcome": true
+  },
+  "history": {
+    "notableEvents": "Official site announces an autumn 2026 opening; Google Maps displays a planned opening date of 1 October 2026. Neither establishes that the venue has opened."
+  },
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFighters": false,
+    "suitsFamilies": true,
+    "whoShouldSkip": "Anyone seeking a gym now: this venue is pre-opening and should not be published as operational."
+  },
+  "reviews": [],
+  "reviewThemes": {
+    "praise": [],
+    "complaints": []
+  },
+  "comparison": {
+    "closestRivals": [
+      "bean-cow-climbing-gym",
+      "deep-climbing-gym"
+    ],
+    "differentiator": "A planned Si Racha bouldering venue with cafe and workspace, outside the site's current Pattaya area taxonomy; not yet open or reviewable."
+  },
+  "sources": [
+    {
+      "label": "Chill out Climbing Gym official website",
+      "url": "https://chillout-climb.com/en",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Google Maps pre-opening location listing",
+      "url": "https://www.google.com/maps/search/?api=1&query=Chill%20out%20climbing%20gym%20Si%20Racha",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Chill out Climbing Gym official Instagram",
+      "url": "https://www.instagram.com/chillout_climb/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "low",
+  "unverified": [
+    "actual opening date",
+    "status after planned opening",
+    "hours",
+    "phone",
+    "lat",
+    "lng",
+    "pricing final post-opening rates",
+    "pricing equipment-rental prices",
+    "pricing.privateTraining",
+    "facilities wall dimensions and route count",
+    "facilities rope, top-rope or lead-climbing provision",
+    "classes schedule",
+    "classes languages",
+    "people",
+    "accommodation",
+    "review score and count",
+    "reviewThemes",
+    "four-source minimum not met"
+  ],
+  "status": "unclear",
+  "verified": "2026-07-20"
+}

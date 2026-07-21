@@ -1,0 +1,33 @@
+{
+  "id": "pesuso-martial-arts-academy-pattaya",
+  "name": "Pesuso Martial Arts Academy Pattaya",
+  "nameThai": "พีสุโซ มาร์เชียลอาร์ต อะคาเดมี พัทยา",
+  "category": "martial-arts",
+  "categoryLabel": "Taekwondo",
+  "sport": "taekwondo",
+  "area": "naklua",
+  "addressFull": "Taekwondo room, 2nd floor, Lotus's North Pattaya, 221/19 Moo 5, Na Kluea, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 83 517 1980",
+  "website": "https://pesuso.com/",
+  "hours": "Current class timetable should be confirmed; the 24-hour map label is not treated as a literal coached-class schedule",
+  "federation": {"affiliation": null, "gradingRecognition": null, "evidence": "The current operator says training follows international taekwondo standards, and the team competes in national championship systems. Neither statement establishes a named federation membership or grading portability."},
+  "pricing": {"trial": null, "perClass": null, "monthly": null, "gradingFees": null, "uniform": null},
+  "classes": {"children": true, "adults": null, "ageFrom": null, "ageTo": null, "schedule": null, "englishInstruction": null, "competitionTrack": true},
+  "coaches": ["Master Joe (Thanarit Piyamethinrut), founder; operator reports more than 20 years of teaching experience"],
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 20, "url": "https://www.google.com/maps/search/?api=1&query=Pesuso+Martial+Arts+Academy+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent Thai parents repeatedly praise patient, individualised teaching that does not pressure children."], "complaints": []},
+  "sources": [
+    {"label": "Current operator history, address and programme", "url": "https://pesuso.com/about.php", "accessed": "2026-07-20"},
+    {"label": "Google Maps current Lotus North Pattaya listing and reviews", "url": "https://www.google.com/maps/search/?api=1&query=Pesuso+Martial+Arts+Academy+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Apple Maps current branch identity", "url": "https://maps.apple.com/place?auid=2044829773178724539&lsp=9902", "accessed": "2026-07-20"},
+    {"label": "Thai Department of Business Development franchise profile", "url": "https://franchise.dbd.go.th/franchise/pesuso-martial-arts-academy-1", "accessed": "2026-07-20"},
+    {"label": "Current competition registration system", "url": "https://program.fightingtkd.com/TKD_WebNew/Home/index/593", "accessed": "2026-07-20"},
+    {"label": "2025 national championship chart", "url": "https://gmacscore.com/match/393?download_chart=250404_Kyorugi_Chart.pdf", "accessed": "2026-07-20"}
+  ],
+  "confidence": "low",
+  "confidenceReason": "The relocated academy is current and independently corroborated, but every price plus federation/grading and English-instruction fields remain missing.",
+  "unverified": ["formal federation affiliation", "grading portability", "all prices and fees", "current coached-class timetable", "age range", "adult classes", "English instruction", "class sizes"],
+  "status": "open",
+  "verified": "2026-07-20",
+  "relocationNote": "The ledger's Chaiyaphruek identity resolves to the same academy now operating at Lotus's North Pattaya. No former-location rating, hours, price or facilities were transferred."
+}

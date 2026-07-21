@@ -1,0 +1,151 @@
+{
+  "id": "272-estadio-de-pattaya",
+  "name": "272 Estadio De Pattaya",
+  "category": "racquet",
+  "categoryLabel": "Badminton",
+  "sport": "badminton",
+  "area": "east-pattaya",
+  "addressFull": "45/14 Soi Chaiyaporn Withi 27, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 84 272 2272",
+  "socials": {
+    "facebook": "https://www.facebook.com/pages/272%20Estadio%20De%20Pattaya/100163071492354/"
+  },
+  "hours": "Google Maps currently displays an 08:00 opening time. Pattaya Sports Club lists 10:00-midnight, so the full current weekly schedule should be confirmed.",
+  "priceRange": "฿",
+  "courts": {
+    "count": 12,
+    "surface": null,
+    "indoor": true,
+    "airConditioned": false,
+    "floodlit": false,
+    "ceilingHeight": null,
+    "notes": "Around Pattaya reports two halls with six courts each."
+  },
+  "booking": {
+    "method": "Phone or Line; an external coach also arranges courts",
+    "leadTime": "The external coach requests 1-2 days for coach-handled bookings",
+    "hourlyRate": "฿200 per hour",
+    "peakRate": null,
+    "offPeakRate": null,
+    "memberRate": null,
+    "asOf": "2026-07-20",
+    "priceSourceUrl": "https://aroundpattaya.com/detail.php?ID=575",
+    "notes": "Around Pattaya last checked the rate in May 2025; Fastwork independently describes ฿200 as the court value in current coaching packages. Confirm the venue tariff."
+  },
+  "equipment": {
+    "racketHire": "฿40",
+    "shoeHire": "฿40",
+    "shuttlesProvided": null,
+    "shuttleCost": null,
+    "proShop": null,
+    "priceAsOf": "2026-07-20",
+    "priceSourceUrl": "https://aroundpattaya.com/detail.php?ID=575"
+  },
+  "coaching": {
+    "available": true,
+    "groupRate": "External bilingual coach: ฿3,500 for eight group hours used within two months, court included",
+    "privateRate": "External coach: ฿6,500 for ten one-to-one hours used within six months, court included",
+    "juniorProgramme": true,
+    "priceAsOf": "2026-07-20",
+    "priceSourceUrl": "https://fastwork.co/user/kruton/badminton-training-13179565",
+    "notes": "The advertised Thai/English group meets at 272 Estadio on Monday and Wednesday. This is an independent coach, not a venue-run academy."
+  },
+  "languages": [
+    "Thai",
+    "English"
+  ],
+  "englishConfidence": "confirmed",
+  "englishEvidence": "A current coach listing explicitly offers Thai/English group sessions at 272 Estadio on Monday and Wednesday. This confirms an English coaching path, though reception English remains unverified.",
+  "facilities": [
+    "two indoor badminton halls",
+    "parking",
+    "swimming pool reported by local visitor guides"
+  ],
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFamilies": true,
+    "suitsCompetitivePlayers": true,
+    "whoShouldSkip": "Players sensitive to heat or needing flexible early warm-up time should confirm conditions and rules before booking."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.6,
+      "count": 89,
+      "url": "https://www.google.com/maps/search/?api=1&query=272%20Estadio%20De%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Thai reviewers describe a large, clean venue with two court sections; one says the green-court side is easier to see on.",
+      "Local guides consistently mention parking, rental equipment and the on-site pool."
+    ],
+    "complaints": [
+      "A Thai review says the enclosed hall can feel very hot and poorly ventilated.",
+      "Another reviewer objected to being refused a dark-court warm-up ten minutes before the booked hour.",
+      "Badminton shoes are mandatory; a reviewer says loan shoes exist but sizes may be unavailable."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "badminton-khaonoi",
+      "pattaya-monkey-badminton-center",
+      "jp-badminton"
+    ],
+    "differentiator": "Two six-court halls, published low-cost rentals and a scheduled bilingual coaching group."
+  },
+  "sources": [
+    {
+      "label": "Official Facebook identity",
+      "url": "https://www.facebook.com/pages/272%20Estadio%20De%20Pattaya/100163071492354/",
+      "accessed": null,
+      "accessNote": "Identity URL resolved through Pattaya Sports Club; the Facebook page itself was not directly inspectable."
+    },
+    {
+      "label": "Google Maps location and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=272%20Estadio%20De%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Around Pattaya courts, equipment and rate listing",
+      "url": "https://aroundpattaya.com/detail.php?ID=575",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Pattaya Sports Club contact and hours listing",
+      "url": "https://pattayasports.org/badminton/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Fastwork bilingual coaching and court-value listing",
+      "url": "https://fastwork.co/user/kruton/badminton-training-13179565",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Lemon8 Thai visitor guide",
+      "url": "https://www.lemon8-app.com/@callmewilawila/7146611009548059138?region=th",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "lat",
+    "lng",
+    "current full weekly hours",
+    "current venue-owned price tariff",
+    "courts.surface",
+    "courts.ceilingHeight",
+    "booking.peakRate",
+    "booking.offPeakRate",
+    "booking.memberRate",
+    "equipment.shuttlesProvided",
+    "equipment.shuttleCost",
+    "equipment.proShop",
+    "venue reception English",
+    "current swimming-pool access conditions"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

@@ -1,0 +1,155 @@
+{
+  "id": "k-football-stadium-pattaya",
+  "name": "K Football Stadium Pattaya",
+  "category": "football",
+  "categoryLabel": "Football & Futsal",
+  "categoryStatus": "proposed",
+  "sport": "football",
+  "venueType": "commercial-pitch-hire",
+  "area": "east-pattaya",
+  "addressFull": "215/2 Moo 9, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "lat": 12.9354306,
+  "lng": 100.8892482,
+  "phone": "+66 83 220 3200",
+  "website": "https://www.facebook.com/kfspattaya/",
+  "hours": "Open 24 hours daily according to current Google Maps and ThaiThurkic listings.",
+  "priceRange": "฿฿",
+  "football": {
+    "pitches": {
+      "count": 2,
+      "surface": "artificial-grass",
+      "sizes": [
+        "5-a-side",
+        "7-a-side",
+        "11-a-side"
+      ],
+      "indoor": true,
+      "floodlit": true,
+      "netted": null,
+      "pitchDimensions": "Two covered artificial pitches. A 2025 local guide describes one five-a-side pitch and one three-quarter-size pitch usable for eleven-a-side; another current directory describes seven- and eight-a-side layouts. Confirm the preferred markings and goal setup when booking."
+    },
+    "booking": {
+      "hourlyRate": "THB 1,200-1,800 per hour depending on pitch size, time, weekend and holiday",
+      "peakRate": null,
+      "offPeakRate": null,
+      "method": "Phone or operator Facebook; hourly public hire is explicitly documented.",
+      "leadTime": null,
+      "minimumBooking": null,
+      "depositRequired": null,
+      "asOf": "2025-04-07 (page update; checked 2026-07-20)",
+      "priceSourceUrl": "https://www.pattayaunlimited.com/football-in-pattaya/"
+    },
+    "pickupGames": {
+      "organised": null,
+      "schedule": null,
+      "cost": null,
+      "howToJoin": null,
+      "foreignersWelcome": "unknown",
+      "skillLevel": null,
+      "contactChannel": "Phone or operator Facebook for enquiries; no current joinable-session post or public group invite was located."
+    },
+    "rules": {
+      "bootType": null,
+      "showers": null,
+      "changingRooms": null,
+      "parking": true,
+      "spectatorArea": true,
+      "refreshments": true
+    },
+    "leagues": {
+      "hosted": true,
+      "details": "K7 league rules and venue contacts are documented for 2019. Current reviews indicate team play, but a current league schedule was not found.",
+      "openToNewTeams": null
+    },
+    "languages": [
+      "Thai",
+      "English"
+    ],
+    "englishConfidence": "likely",
+    "englishEvidence": "Recent English reviews describe team play and received short English owner replies, and the venue attracts international players. No current English booking exchange or joinable-session instruction was found."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.3,
+      "count": 90,
+      "url": "https://www.google.com/maps/search/?api=1&query=K%20Football%20Stadium%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "A Thai review from about one year before verification praises the clean, attractive field and the availability of drinking water, toilets, waiting seats and parking.",
+      "A December 2025 English review says many teams can play there, while another review praises the ground length and width and mentions international players."
+    ],
+    "complaints": [
+      "A detailed English review criticises the older lighting and heat under the tin roof. Older Thai reviews also disagree about parking capacity, so peak-event parking should be confirmed."
+    ]
+  },
+  "sources": [
+    {
+      "label": "Google Maps identity, coordinates, current hours and newest reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=K%20Football%20Stadium%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Operator Facebook identity",
+      "url": "https://www.facebook.com/kfspattaya/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Pattaya Unlimited 2025 pitch configuration and numeric hourly range",
+      "url": "https://www.pattayaunlimited.com/football-in-pattaya/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "ThaiThurkic current phone, hours and seven/eight-a-side description",
+      "url": "https://www.thaithurkic.com/k-football-stadium-pattaya-co-ltd_18-083-220-3200",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Wanderlog location-specific review compilation only; its Planet Football summary was rejected",
+      "url": "https://wanderlog.com/place/details/11075182",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "SoiDB identity and address directory",
+      "url": "https://www.soidb.com/pattaya/sports-club/k-football-stadium.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "CopaFacil K7 league rules and venue contacts",
+      "url": "https://www.copafacil.com/-lmnfi-xcsmsqgctcz0q/info/fr",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Around Pattaya football directory",
+      "url": "https://aroundpattaya.com/detail.php?ID=27",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "low",
+  "confidenceReason": "Floodlighting and a dated numeric hourly rate are established, but current organised pickup play, schedule and joining method are not. The pickup-game star is missing.",
+  "unverified": [
+    "current operator-confirmed hourly tariff",
+    "exact peak and off-peak bands",
+    "booking lead time",
+    "minimum booking",
+    "deposit requirement",
+    "authoritative current pitch formats and markings",
+    "metric pitch dimensions",
+    "whether pitches are fully netted",
+    "boot or stud restrictions",
+    "showers",
+    "changing rooms",
+    "current organised pickup games",
+    "pickup cost and joining channel",
+    "current league schedule",
+    "whether leagues accept new teams",
+    "peak-event parking capacity",
+    "direct English booking service"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

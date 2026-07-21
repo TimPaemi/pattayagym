@@ -1,0 +1,31 @@
+{
+  "id": "gaya-fitness-pilates-branch-1",
+  "name": "GAYA Fitness and Pilates Studio (Branch 1 - Chaiyaphruek 2)",
+  "category": "fitness",
+  "categoryLabel": "Fitness & Pilates",
+  "area": "jomtien",
+  "addressFull": "302, Chaiyaphruek 2 area, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "lat": 12.881801,
+  "lng": 100.900198,
+  "phone": "+66 87 834 4455",
+  "hours": "Daily 08:00-20:00; an April 2026 operator post advertises 24/7 cardio access for private-training clients",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "contract": "Operator advertises no long-term contract for the three-session private offer", "minimumTerm": null},
+  "equipment": {"freeWeights": null, "machines": true, "cardio": true, "functional": null, "airConditioned": null},
+  "classes": {"groupClasses": null, "schedule": null, "included": null, "pilates": true},
+  "personalTraining": {"available": true, "price": {"value": "THB 3,333 for 3 private sessions", "asOf": "2026-04-22", "priceSourceUrl": "https://www.localgymsandfitness.com/TH/Pattaya/103227771382290/Gaya-studio"}},
+  "facilities": ["private studio", "protein drinks"],
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 38, "url": "https://www.google.com/maps/search/?api=1&query=GAYA+Fitness+and+Pilates+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Thai reviewers describe a clean, private studio with varied machines and kind trainers.", "One review says clients purchasing trainer hours can use cardio equipment without an additional membership fee."], "complaints": []},
+  "sources": [
+    {"label": "Google Maps exact branch identity and reviews", "url": "https://www.google.com/maps/search/?api=1&query=GAYA+Fitness+and+Pilates+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Current operator-post mirror and private rate", "url": "https://www.localgymsandfitness.com/TH/Pattaya/103227771382290/Gaya-studio", "accessed": "2026-07-20"},
+    {"label": "Beautihost Thai directory and reviews", "url": "https://thai.beautihost.com/pattaya-city/search/?q=gaya+fitness+and+pilates+studio", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 3,
+  "confidence": "low",
+  "confidenceReason": "Below four publishers; public membership/day-pass pricing, joining terms and air conditioning are missing.",
+  "unverified": ["joining fee", "monthly membership", "public day pass", "minimum term beyond the private offer", "air conditioning", "group classes", "equipment inventory", "current 24/7-access conditions"],
+  "status": "open",
+  "verified": "2026-07-20",
+  "identityNote": "The current Branch 1 coordinate and phone were kept separate from Gaya Wellness Studio, which has a different coordinate but the same phone."
+}

@@ -1,0 +1,131 @@
+{
+  "id": "o-sansuk-muay-thai-gym",
+  "name": "O. Sansuk Muay Thai Gym Pattaya",
+  "category": "muay-thai",
+  "categoryLabel": "Muay Thai",
+  "area": "east-pattaya",
+  "addressFull": "29 Soi Sukhumvit Pattaya 61/1, Pattaya City, Bang Lamung, Chon Buri 20150",
+  "lat": 12.9284465,
+  "lng": 100.9009964,
+  "phone": "+66 83 871 7761",
+  "socials": {
+    "facebook": "https://www.facebook.com/otsansuk.muaythaigym999",
+    "instagram": "https://www.instagram.com/osansukmuaythaigym/"
+  },
+  "hours": "Mon-Fri 07:00-09:00, 15:00-17:00 and 18:00-20:00; Sat 07:00-09:00 and 12:00-14:00; Sun closed",
+  "priceRange": "฿฿",
+  "pricing": {
+    "dropIn": "฿300 per session",
+    "monthly": "฿5,000",
+    "includesAccommodation": false,
+    "notes": "Figures are published by MuayThaiMap rather than the gym's own current channel; confirm before travelling. No current private-training or accommodation price was found.",
+    "asOf": "2026-07-20",
+    "priceSourceUrl": "https://www.muaythaimap.com/gyms/o-sansuk-muay-thai-gym"
+  },
+  "facilities": [
+    "Muay Thai training area",
+    "boxing ring",
+    "heavy bags"
+  ],
+  "classes": {
+    "schedule": "Three published weekday training windows and two Saturday windows; no Sunday training",
+    "levels": "Beginners through active fighters",
+    "languages": [
+      "English",
+      "Thai"
+    ],
+    "dropInWelcome": true
+  },
+  "people": {
+    "headTrainer": "Kru OT",
+    "credentials": "A current social mirror identifies Kru OT as owner and head coach and describes earlier coaching work in Bali, Baku and Brisbane; these career claims were not independently verified.",
+    "notableAlumni": [
+      "Delfan Dwi Satrio",
+      "Tovan Nopian",
+      "Petkiattisak"
+    ]
+  },
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFighters": true,
+    "suitsFamilies": true,
+    "whoShouldSkip": "Visitors who require on-site accommodation or a fully documented private-training package should confirm those points directly first."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "score": 4.9,
+      "count": 57,
+      "url": "https://www.google.com/maps/search/?api=1&query=O.Sansuk%20Muay%20Thai%20Gym%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Recent reviewers repeatedly describe the trainers as friendly and welcoming.",
+      "Beginners say the instruction is fun, easy to understand and produces quick progress.",
+      "Reviewers mention good value for the training received."
+    ],
+    "complaints": []
+  },
+  "comparison": {
+    "closestRivals": [
+      "fight-evo360",
+      "petchrungruang-gym",
+      "sor-klinmee"
+    ],
+    "differentiator": "A small traditional camp with multiple daily training windows and a documented pipeline of active regional and ONE Friday Fights competitors."
+  },
+  "sources": [
+    {
+      "label": "O. Sansuk official Facebook",
+      "url": "https://www.facebook.com/otsansuk.muaythaigym999",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Google Maps location listing and reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=O.Sansuk%20Muay%20Thai%20Gym%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "MuayThaiMap gym profile and prices",
+      "url": "https://www.muaythaimap.com/gyms/o-sansuk-muay-thai-gym",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Wanderlog location profile and review aggregation",
+      "url": "https://wanderlog.com/place/details/11491920/o-sansuk-muay-thai-gym",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Tapology gym profile",
+      "url": "https://www.tapology.com/gyms/8598-o-sansuk-muay-thai-gym",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Muay Thai Records gym roster",
+      "url": "https://muaythairecords.com/gyms/osansuk-muay-thai-gym-pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Reddit Pattaya training discussion",
+      "url": "https://www.reddit.com/r/Pattaya/comments/106mxla/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "pricing.privateTraining",
+    "pricing.weekly",
+    "pricing.packages",
+    "accommodation",
+    "people.staffCount",
+    "people.headTrainer career history beyond social-profile claims",
+    "facilities exact ring and equipment counts",
+    "visa help",
+    "whether western visitors join regular sparring",
+    "whether the older phone +66 62 762 5033 remains active"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

@@ -1,0 +1,113 @@
+{
+  "id": "deep-climbing-gym",
+  "name": "Deep Climbing Gym Harbor Pattaya",
+  "category": "climbing",
+  "categoryLabel": "Climbing",
+  "area": "central-pattaya",
+  "addressFull": "8th Floor, Harbor Pattaya Shopping Mall, 190/25 Moo 9, Central Pattaya Road, Nongprue, Bang Lamung, Chon Buri 20150",
+  "lat": 12.959894,
+  "lng": 100.893826,
+  "phone": "+66 65 848 1000",
+  "website": "https://www.harborlandgroup.com/",
+  "facilities": [
+    "historical 11-metre climbing wall",
+    "historical top-rope routes",
+    "historical auto-belay routes",
+    "historical lead-climbing area",
+    "historical bouldering area",
+    "air-conditioned indoor space"
+  ],
+  "classes": {
+    "schedule": "No current schedule: the location is listed as permanently closed.",
+    "levels": "Historically served first-time and experienced climbers.",
+    "dropInWelcome": false
+  },
+  "history": {
+    "founded": "Opened 30 July 2016",
+    "ownership": "Opened inside Harbor Pattaya as part of the Harborland group venue mix.",
+    "notableEvents": "Pattaya Mail reported a large 800-square-metre opening project developed with the Sport Climbing Association of Thailand. Google now marks the Pattaya location permanently closed; the exact closure date was not published.",
+    "renovations": "No verified renovation record found."
+  },
+  "audience": {
+    "whoShouldSkip": "Everyone planning a visit: the current Google location listing says permanently closed."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "score": 4.2,
+      "count": 73,
+      "url": "https://www.google.com/maps/search/?api=1&query=DEEP%20Climbing%20Gym%20Harbor%20Pattaya",
+      "asOf": "2026-07-20"
+    },
+    {
+      "platform": "Tripadvisor",
+      "score": 4.2,
+      "count": 23,
+      "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d10771852-Reviews-Deep_Climbing_Gym-Pattaya_Chonburi_Province.html",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Historical reviews describe an air-conditioned activity suitable for families and mixed ages.",
+      "A May 2025 review described friendly staff and a working climbing session before the later closure flag."
+    ],
+    "complaints": [
+      "Reviews describe a small bouldering section and unclear route grading.",
+      "Some visitors report weak safety briefing or limited staff belay support.",
+      "Older reviews criticize price-to-value and inconsistent English-language service."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "bean-cow-climbing-gym",
+      "chill-out-climbing-gym"
+    ],
+    "differentiator": "Historically Pattaya's central mall-based air-conditioned climbing wall; it is not a current option because the location is marked permanently closed."
+  },
+  "sources": [
+    {
+      "label": "Google Maps location listing and reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=DEEP%20Climbing%20Gym%20Harbor%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Harborland group website",
+      "url": "https://www.harborlandgroup.com/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Wanderlog location profile and review timeline",
+      "url": "https://wanderlog.com/place/details/4953879/deep-climbing-gym-harbor-pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Tripadvisor attraction profile and reviews",
+      "url": "https://www.tripadvisor.com/Attraction_Review-g293919-d10771852-Reviews-Deep_Climbing_Gym-Pattaya_Chonburi_Province.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Pattaya Mail opening report",
+      "url": "https://www.pattayamail.com/ourcommunity/deep-climbing-gym-opens-harbor-mall-pattaya-145182",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "GoToPattaya venue profile",
+      "url": "https://www.gotopattaya.com/venues/deep-climbing-gym-harbor-pattaya",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "exact closure date",
+    "reason for closure",
+    "whether equipment or staff moved to another venue",
+    "reopening or replacement plans",
+    "historical pricing effective dates",
+    "current phone responsiveness",
+    "people",
+    "accommodation"
+  ],
+  "status": "closed",
+  "verified": "2026-07-20"
+}

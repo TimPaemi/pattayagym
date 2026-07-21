@@ -1,0 +1,33 @@
+{
+  "id": "mavinn-muay-thai-pattaya",
+  "name": "MAVINN Muay Thai Pattaya",
+  "category": "muay-thai",
+  "categoryLabel": "Muay Thai",
+  "area": "jomtien",
+  "addressFull": "Thepprasit Road, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "phone": "+66 85 291 9000",
+  "website": "https://mavinn.com/pages/pattaya",
+  "hours": "Mon-Sat 07:00-20:00; Sun closed",
+  "trainers": {"headTrainer": "Namsaknoi", "fightRecord": "An independent June 2026 visitor profile reports more than 300 fights and a 95% win rate.", "credentials": "Namsaknoi is a multiple Lumpinee champion and former fighter of the year; co-head trainer Kaolan is a former Lumpinee champion.", "notableAlumni": ["Tapaokaew Singmawinn", "Denkriangkrai Mavinn Muaythai", "Decho Mavinn Muaythai"], "ratio": "A June 2026 first-hand visitor reported a good student-to-trainer ratio in low season; no fixed ratio is promised."},
+  "foreignerFriendly": {"accepts": true, "english": true, "beginners": true, "women": true, "sparring": "Not published as a guaranteed beginner activity; professional-fighter clinch and sparring are visible."},
+  "training": {"groupClasses": true, "privateTraining": null, "sessionDuration": null, "schedule": "Classes available Monday-Saturday within 07:00-20:00; pass holders may join any class", "strengthConditioning": true, "other": ["boxing", "MMA", "open gym"]},
+  "pricing": {"firstSession": "Free", "singleSession": "THB 700", "dayPass": "THB 1,000", "weekly": "THB 4,500 for 6 days", "monthly": "THB 16,000 for 24 days", "threeMonths": "THB 42,000 for 72 days", "asOf": "2026-07-20", "priceSourceUrl": "https://mavinn.com/pages/pattaya"},
+  "accommodation": {"available": true, "onSite": true, "price": null, "notes": "An on-site hotel is current; room prices were not found."},
+  "fighters": {"activeRoster": ["Tapaokaew Singmawinn", "Denkriangkrai Mavinn Muaythai", "Decho Mavinn Muaythai"], "fightPath": "The wider Mavinn team has active Rajadamnern and ONE competitors; exact Pattaya-resident roster changes should be confirmed."},
+  "facilities": ["multiple rings", "MMA cage", "heavy bags", "strength area", "swimming pool", "sauna", "ice bath", "recovery zone", "showers", "on-site hotel", "parking", "Wi-Fi"],
+  "reviews": [{"platform": "Google", "score": 5.0, "count": 61, "url": "https://www.google.com/maps/search/?api=1&query=MAVINN+Muay+Thai+Pattaya", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent reviewers describe a large, clean and newly equipped camp with close technical attention from champion trainers.", "Visitors value the pool, sauna, ice bath and on-site accommodation for longer stays."], "complaints": ["The premium tariff is materially above many neighbourhood camps; a current independent visitor explicitly notes the price difference."]},
+  "sources": [
+    {"label": "Current Pattaya operator page, trainers, prices and facilities", "url": "https://mavinn.com/pages/pattaya", "accessed": "2026-07-20"},
+    {"label": "Google Maps location and recent reviews", "url": "https://www.google.com/maps/search/?api=1&query=MAVINN+Muay+Thai+Pattaya", "accessed": "2026-07-20"},
+    {"label": "Go To Pattaya current venue profile", "url": "https://www.gotopattaya.com/venues/mavinn-muay-thai-pattaya", "accessed": "2026-07-20"},
+    {"label": "Muay Thai Camps in Thailand first-hand June 2026 visit", "url": "https://muaythaicampsinthailand.com/mavinn-muay-thai-pattaya/", "accessed": "2026-07-20"},
+    {"label": "ONE Championship current Mavinn fighter report", "url": "https://www.onefc.com/news/i-want-that-one-championship-main-roster-contract-denkriangkrai-ready-to-walk-through-fire-for-six-figure-deal-at-the-inner-circle/", "accessed": "2026-07-20"},
+    {"label": "SiamSport current Mavinn team report", "url": "https://www.siamsport.co.th/other-sports/boxing/105288/", "accessed": "2026-07-20"}
+  ],
+  "confidence": "high",
+  "confidenceReason": "Current operator and independent first-hand evidence establish the head trainer, fight record, active fighters, foreign/beginner/women access, full pricing and operating status.",
+  "unverified": ["fixed trainer-to-student ratio in peak season", "private-training rate", "hotel room rates", "formal beginner sparring policy", "which named Mavinn fighters reside full-time at the Pattaya branch"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

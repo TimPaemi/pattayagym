@@ -1,0 +1,147 @@
+{
+  "id": "bean-cow-climbing-gym",
+  "name": "STICKY Climbing Gym",
+  "category": "climbing",
+  "categoryLabel": "Climbing",
+  "area": "east-pattaya",
+  "addressFull": "61/23 Moo 1, Huai Yai, Bang Lamung District, Chon Buri 20150",
+  "lat": 12.917113,
+  "lng": 100.878458,
+  "website": "https://www.beancowclimbing.com/",
+  "socials": {
+    "facebook": "https://www.facebook.com/beancowclimbing",
+    "instagram": "https://www.instagram.com/beancowclimbing/"
+  },
+  "hours": "Tue-Sun 11:00-20:00; closed Mondays and the first day of each month",
+  "priceRange": "฿฿",
+  "pricing": {
+    "dropIn": "Adult day pass ฿350; teenager ฿200; youth ฿250; child age 1-5 ฿100; equipment extra",
+    "monthly": "Adult one month ฿2,000 including shoes; three months ฿5,580 including shoes; annual ฿20,400 including shoes",
+    "packages": [
+      "Adult 5-visit pass: ฿1,600",
+      "Adult 10-visit pass: ฿3,000",
+      "Shoe rental: ฿50",
+      "Harness rental: ฿50",
+      "ATC rental: ฿25",
+      "Grigri rental: ฿100",
+      "Lead-rope rental: ฿100",
+      "Chalk: ฿20"
+    ],
+    "privateTraining": "Staff belayer ฿300 per hour or ฿150 per 30 minutes for up to four people; harness included, admission and shoes extra",
+    "includesAccommodation": false,
+    "notes": "These prices remain published on the legacy official Bean Cow site after the venue's Google and social branding changed to STICKY. The current Facebook hours supersede the old rates-page hours. Confirm all rates under the new brand before travelling. First visits historically included a free 10-minute orientation and one staff belay.",
+    "asOf": "2026-07-20",
+    "priceSourceUrl": "https://www.beancowclimbing.com/rates"
+  },
+  "facilities": [
+    "approximately 500-square-metre climbing gym",
+    "bouldering area",
+    "top-rope climbing",
+    "lead climbing",
+    "fitness area",
+    "children's play area",
+    "rental shoes and harnesses",
+    "belay-device and rope rental"
+  ],
+  "classes": {
+    "schedule": "Open climbing during published hours; current lesson times are not published.",
+    "levels": "Beginner through intermediate, with lead-climbing facilities for experienced climbers",
+    "languages": [
+      "English",
+      "Thai"
+    ],
+    "dropInWelcome": true
+  },
+  "history": {
+    "ownership": "The venue retains Bean Cow web and social URLs but is currently named STICKY Climbing Gym on Google and current Facebook posts.",
+    "notableEvents": "The same address and Facebook identity establish STICKY as a rebrand of Bean Cow rather than a separate climbing discovery. The rebrand date and any ownership change were not published."
+  },
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFamilies": true,
+    "whoShouldSkip": "Advanced climbers seeking a large competition-style bouldering facility should check the current route mix; reviewers most consistently describe the gym as beginner-to-intermediate."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "score": 4.9,
+      "count": 117,
+      "url": "https://www.google.com/maps/search/?api=1&query=STICKY%20climbing%20gym%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Recent first-time visitors praise clear beginner instruction and supportive staff.",
+      "Reviewers like the all-day format, value and recurring route resets.",
+      "Families and mixed-skill groups describe the venue as welcoming and accessible."
+    ],
+    "complaints": [
+      "The gym is not air-conditioned; recent reviewers mention the heat but generally say it remained manageable."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "deep-climbing-gym",
+      "chill-out-climbing-gym"
+    ],
+    "differentiator": "The only verified open dedicated climbing gym in greater Pattaya in this batch, offering bouldering, top-rope and lead climbing at one Huai Yai venue."
+  },
+  "sources": [
+    {
+      "label": "Bean Cow legacy official website and rates",
+      "url": "https://www.beancowclimbing.com/rates",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "STICKY / Bean Cow official Facebook",
+      "url": "https://www.facebook.com/beancowclimbing",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Google Maps current STICKY listing and reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=STICKY%20climbing%20gym%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "GoToPattaya STICKY venue profile",
+      "url": "https://www.gotopattaya.com/venues/sticky-climbing-gym",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Tripadvisor Bean Cow attraction profile",
+      "url": "https://www.tripadvisor.in/Attraction_Review-g13306613-d27420330-Reviews-Bean_Cow_Climbing_Gym-Huai_Yai_Chonburi_Province.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Traveloka Bean Cow climbing experience",
+      "url": "https://www.traveloka.com/en-ph/activities/thailand/product/indoor-rock-climbing-experience-at-bean-cow-climbing-gym-in-pattaya-8912113241929",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Climbing-Gyms.com facility profile",
+      "url": "https://climbing-gyms.com/g/bean-cow-climbing-gym-and-community-center",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Reddit Thailand Tourism visitor discussion",
+      "url": "https://www.reddit.com/r/ThailandTourism/comments/19edtpy/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "current phone number after the STICKY rebrand",
+    "exact rebrand date",
+    "whether legal ownership changed",
+    "whether every legacy Bean Cow price remains effective under STICKY",
+    "classes current lesson schedule",
+    "people.headTrainer",
+    "people.credentials",
+    "people.staffCount",
+    "current wall height and route counts",
+    "accommodation"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

@@ -1,0 +1,122 @@
+{
+  "id": "sitpholek-muay-thai",
+  "name": "Sitpholek Muay Thai Gym",
+  "category": "muay-thai",
+  "categoryLabel": "Muay Thai",
+  "area": "east-pattaya",
+  "addressFull": "93/123 Moo 11, Khao Talo Soi 8, Bang Lamung District, Chon Buri 20150",
+  "lat": 12.92,
+  "lng": 100.918,
+  "phone": "+66 89 934 5001",
+  "socials": {
+    "facebook": "https://www.facebook.com/sitpholekmuaythaipattaya/"
+  },
+  "hours": "Daily 08:00-18:00",
+  "facilities": [
+    "Muay Thai training area",
+    "weights area"
+  ],
+  "classes": {
+    "schedule": "The current location listing publishes 08:00-18:00 daily, but no session timetable is published.",
+    "levels": "Beginner suitability and historical fighter training are supported; the current class split is not published."
+  },
+  "people": {
+    "headTrainer": "Frank Sitpholek",
+    "credentials": "Older independent profiles identify Frank Sitpholek as owner and promoter. Current day-to-day coaching responsibility was not confirmed.",
+    "notableAlumni": [
+      "Wanlop Sitpholek",
+      "Leonard Sitpholek"
+    ]
+  },
+  "history": {
+    "ownership": "Long-running camp associated with Frank Sitpholek; current legal ownership was not independently confirmed.",
+    "notableEvents": "Historical accounts connect the camp with regional and international fighters, but the gym's broader championship claims could not be substantiated from current primary records."
+  },
+  "audience": {
+    "suitsBeginners": true,
+    "suitsFighters": true,
+    "whoShouldSkip": "Visitors who need a published price menu, fixed class timetable or confirmed on-site accommodation should contact the gym before going."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "score": 4.8,
+      "count": 29,
+      "url": "https://www.google.com/maps/search/?api=1&query=Sitpholek%20Muay%20Thai%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "Recent reviewers describe a friendly atmosphere and an enjoyable teacher-led session."
+    ],
+    "complaints": [
+      "Recent Google question-style posts ask for weekly and self-training prices, reflecting the absence of a public current price list rather than a confirmed service complaint."
+    ]
+  },
+  "comparison": {
+    "closestRivals": [
+      "sor-klinmee",
+      "rambaa-somdet-m16",
+      "petchrungruang-gym"
+    ],
+    "differentiator": "A long-running, low-profile traditional camp with individual-instruction history rather than a modern all-inclusive training product."
+  },
+  "sources": [
+    {
+      "label": "Sitpholek official Facebook",
+      "url": "https://www.facebook.com/sitpholekmuaythaipattaya/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Google Maps location listing and reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Sitpholek%20Muay%20Thai%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Top-Rated.Online location and review snapshot",
+      "url": "https://www.top-rated.online/cities/Nong%2BPrue/place/p/14485263/Sitpholek%2B-%2BInstitute%2BOf%2BMuay%2BThai%2BTechniques",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Muay Thai Camps in Thailand historical camp profile",
+      "url": "https://muaythaicampsinthailand.com/sitpholek-gym/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Fight Passport first-hand historical training journal",
+      "url": "https://fightpassport.com/muay-thai-training-journals/sor-klinmee-sitpholek-sityodtong-cho-nateetong-gym-pattaya/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Thailand Nomads Pattaya Muay Thai overview",
+      "url": "https://www.thailandnomads.com/muay-thai-pattaya/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Reddit Pattaya gym discussion",
+      "url": "https://www.reddit.com/r/Pattaya/comments/106mxla/",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "medium",
+  "unverified": [
+    "pricing.dropIn",
+    "pricing.weekly",
+    "pricing.monthly",
+    "pricing.packages",
+    "pricing.privateTraining",
+    "accommodation current availability",
+    "classes exact session schedule",
+    "classes.languages",
+    "classes.dropInWelcome current policy",
+    "people current head-trainer role",
+    "people.staffCount",
+    "claim that the camp produced nine world champions",
+    "facilities current equipment and ring counts",
+    "visa help",
+    "whether western visitors join regular sparring"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

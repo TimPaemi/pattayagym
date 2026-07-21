@@ -1,0 +1,161 @@
+{
+  "id": "premier-football-arena-pattaya",
+  "name": "Premier Football Arena",
+  "category": "football",
+  "categoryLabel": "Football & Futsal",
+  "categoryStatus": "proposed",
+  "sport": "football-walking-football",
+  "venueType": "club-and-academy-ground",
+  "area": "east-pattaya",
+  "addressFull": "580/77 Land Office 2, Nong Prue, Bang Lamung, Chon Buri 20150",
+  "lat": 12.9190602,
+  "lng": 100.8781677,
+  "phone": "+66 89 224 5665",
+  "website": "https://www.facebook.com/150899402168551/",
+  "hours": "Open 24 hours daily according to current Google Maps and ThaiThurkic listings; organised sessions follow their own schedules.",
+  "priceRange": null,
+  "football": {
+    "pitches": {
+      "count": null,
+      "surface": null,
+      "sizes": [],
+      "indoor": false,
+      "floodlit": null,
+      "netted": null,
+      "pitchDimensions": null
+    },
+    "booking": {
+      "hourlyRate": null,
+      "peakRate": null,
+      "offPeakRate": null,
+      "method": "Call +66 89 224 5665 or message the operator Facebook page. Public hourly-hire terms were not published.",
+      "leadTime": null,
+      "minimumBooking": null,
+      "depositRequired": null,
+      "asOf": null,
+      "priceSourceUrl": null
+    },
+    "pickupGames": {
+      "organised": true,
+      "schedule": "Walking football every Sunday at 17:00 according to the current organiser page.",
+      "cost": null,
+      "howToJoin": "Contact the Walking Football Association on +66 61 560 0949 or team@thailand-jomtien-wf.com.",
+      "foreignersWelcome": "confirmed",
+      "skillLevel": "All skill levels; walkingfootball.com describes a mixed over-50 session suitable for beginners through advanced players.",
+      "contactChannel": "English phone and email through the Walking Football Association."
+    },
+    "rules": {
+      "bootType": null,
+      "showers": null,
+      "changingRooms": null,
+      "parking": null,
+      "spectatorArea": null,
+      "refreshments": null
+    },
+    "leagues": {
+      "hosted": true,
+      "details": "The operator published multiple named-team fixtures in February 2026. The venue also hosts regular walking football and hosted an international walking-football tournament in December 2024.",
+      "openToNewTeams": null
+    },
+    "languages": [
+      "Thai",
+      "English"
+    ],
+    "englishConfidence": "confirmed",
+    "englishEvidence": "A current English organiser publishes the exact weekly venue, welcomes every skill level and provides a Pattaya phone and email. This confirms a usable English pathway for the organised session, though not English-speaking venue staff for private hire."
+  },
+  "reviews": [
+    {
+      "platform": "Google",
+      "scale": 5,
+      "score": 4.7,
+      "count": 35,
+      "url": "https://www.google.com/maps/search/?api=1&query=Premier%20Football%20Arena%20Pattaya",
+      "asOf": "2026-07-20"
+    }
+  ],
+  "reviewThemes": {
+    "praise": [
+      "A Thai review from two months before verification praises the coaching and value.",
+      "Thai parents repeatedly describe attentive coaches, frequent academy competitions and useful skills development for children."
+    ],
+    "complaints": [
+      "No repeated facility complaint emerged from the visible review set. One low rating appears to concern map-location correctness rather than play or service, so it was not converted into a facility complaint."
+    ]
+  },
+  "sources": [
+    {
+      "label": "Google Maps identity, coordinates, current status and Thai reviews",
+      "url": "https://www.google.com/maps/search/?api=1&query=Premier%20Football%20Arena%20Pattaya",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Current operator-post mirror with February 2026 fixtures, phone and address",
+      "url": "https://www.localgymsandfitness.com/TH/Pattaya/150899402168551/Premier-Football-Arena",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "ThaiThurkic current phone, address and 24-hour listing",
+      "url": "https://www.thaithurkic.com/premier-football-arena-089-224-5665",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Current Walking Football Association weekly session and joining contacts",
+      "url": "https://thailand-jomtien-wf.com/walk/whereweplay.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Walking Football Association history and regular-use context",
+      "url": "https://thailand-jomtien-wf.com/walk/history.html",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Walkingfootball.com current Richmond Rangers session profile",
+      "url": "https://walkingfootball.com/walking-football/richmond-rangers/",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Pattaya Mail international walking-football tournament and open-team registration",
+      "url": "https://www.pattayamail.com/pattayasports/thailands-first-international-walking-football-competition-kicks-off-in-jomtien-482358",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Thai Lemon8 venue and youth-league account",
+      "url": "https://www.lemon8-app.com/marcom_22design/7390326309752242705?region=th",
+      "accessed": "2026-07-20"
+    },
+    {
+      "label": "Around Pattaya football directory",
+      "url": "https://aroundpattaya.com/list.php?TY=16",
+      "accessed": "2026-07-20"
+    }
+  ],
+  "confidence": "low",
+  "confidenceReason": "The stranger-joinable pickup pathway is established, but no numeric hourly rate and no direct floodlighting specification were found. Two required stars are missing.",
+  "unverified": [
+    "pitch count",
+    "pitch surface",
+    "available pitch formats",
+    "metric pitch dimensions",
+    "floodlighting specification",
+    "whether pitches are netted",
+    "current numeric hourly rate",
+    "peak and off-peak rates",
+    "whether general public hourly hire is available",
+    "booking lead time",
+    "minimum booking",
+    "deposit requirement",
+    "walking-football session cost",
+    "boot or stud restrictions",
+    "showers",
+    "changing rooms",
+    "parking availability",
+    "spectator area",
+    "refreshments",
+    "whether current leagues accept new teams",
+    "English-speaking staff for private pitch hire",
+    "relationship between the arena and Pattaya Inter Academy shown in reviews"
+  ],
+  "status": "open",
+  "verified": "2026-07-20"
+}

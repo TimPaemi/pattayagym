@@ -1,0 +1,27 @@
+{
+  "id": "real-fitness-sriracha",
+  "name": "Real Fitness Sriracha",
+  "category": "fitness",
+  "categoryLabel": "Fitness",
+  "area": "sriracha",
+  "addressFull": "66 Jerm Jom Phon Road, Si Racha, Chon Buri 20110",
+  "phone": "+66 85 288 8813",
+  "hours": "Mon-Sat 10:00-22:00; Sun closed",
+  "membership": {"joiningFee": null, "monthly": null, "dayPass": null, "weekly": null, "contract": null, "minimumTerm": null},
+  "equipment": {"freeWeights": true, "machines": true, "cardio": null, "functional": null, "airConditioned": null},
+  "classes": {"groupClasses": null, "schedule": null, "included": null},
+  "personalTraining": {"available": null, "price": null},
+  "facilities": [],
+  "reviews": [{"platform": "Google", "score": 4.7, "count": 11, "url": "https://www.google.com/maps/search/?api=1&query=Real+Fitness+Sriracha", "asOf": "2026-07-20"}],
+  "reviewThemes": {"praise": ["Recent Thai reviews praise the owner's manner, the price in general terms and a varied equipment mix."], "complaints": ["A reviewer says the floor area is small, even though the equipment selection is varied."]},
+  "sources": [
+    {"label": "Google Maps current listing and Thai reviews", "url": "https://www.google.com/maps/search/?api=1&query=Real+Fitness+Sriracha", "accessed": "2026-07-20"},
+    {"label": "ThaiThurkic contact and hours profile", "url": "https://www.thaithurkic.com/real-fitness-sriracha-085-288-8813", "accessed": "2026-07-20"}
+  ],
+  "independentPublisherFamilies": 2,
+  "confidence": "low",
+  "confidenceReason": "Only two publishers; all membership/contract and air-conditioning fields are missing.",
+  "unverified": ["all membership prices and terms", "joining fee", "air conditioning", "cardio equipment", "classes", "personal training", "facilities"],
+  "status": "open",
+  "verified": "2026-07-20"
+}

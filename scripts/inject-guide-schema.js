@@ -18,7 +18,7 @@
 const fs = require('fs');
 const path = require('path');
 const { normalizeGuideHeadMeta } = require('./lib/normalize-guide-head-meta');
-const { authorPerson, bylineAuthorHtml } = require('./lib/timpaemi-author');
+const { bylineAuthorHtml, timpaemiRef, timpaemiOrganization } = require('./lib/timpaemi-author');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://pattaya-gym.com';
@@ -159,29 +159,20 @@ for (const guide of readGuidePages()) {
       inLanguage: 'en',
       datePublished: pubDate,
       dateModified: pubDate,
-      author: authorPerson(),
-      publisher: {
-        '@type': 'Organization',
-        '@id': `${SITE}/#organization`,
-        name: 'Pattaya.Gym',
-        logo: {
-          '@type': 'ImageObject',
-          url: `${SITE}/og-image.png`,
-          width: 1200,
-          height: 630
-        }
-      },
+      author: timpaemiRef(),
+      publisher: timpaemiRef(),
       mainEntityOfPage: { '@type': 'WebPage', '@id': `${guide.url}#webpage` },
       isAccessibleForFree: true
     };
     blocks.push(`<script type="application/ld+json">${JSON.stringify(articleLd)}</script>`);
     articleAdded++;
   } else {
-    // Patch existing Article schemas: consolidate author onto the canonical
-    // TimPaemi entity (timpaemi.com) for cross-network entity SEO.
-    // Matches the legacy flat author shape AND any prior canonical-entity
-    // shape (so sameAs/image updates propagate). Idempotent on re-runs.
-    const canonicalAuthor = `"author":${JSON.stringify(authorPerson())}`;
+    // FOOTER-SPEC-2026: consolidate author AND publisher onto @id references
+    // to the TimPaemi Organization entity. Matches the legacy flat author
+    // shape, the prior embedded Person-entity shape, and the prior
+    // Pattaya.Gym Organization publisher. Idempotent on re-runs.
+    const canonicalAuthor = `"author":${JSON.stringify(timpaemiRef())}`;
+    const canonicalPublisher = `"publisher":${JSON.stringify(timpaemiRef())}`;
     let patched = html.replace(
       /"author":\{"@type":"Person","name":"Tim Paemi","url":"[^"]*"\}/g,
       canonicalAuthor
@@ -190,7 +181,16 @@ for (const guide of readGuidePages()) {
       /"author":\{"@type":"Person","@id":"https:\/\/timpaemi\.com\/#timpaemi".*?"sameAs":\[[^\]]*\]\}/g,
       canonicalAuthor
     );
+    patched = patched.replace(
+      /"publisher":\{"@type":"Organization","@id":"https:\/\/pattaya-gym\.com\/#organization","name":"Pattaya\.Gym","logo":\{[^{}]*\}\}/g,
+      canonicalPublisher
+    );
     if (patched !== html) { html = patched; authorPatched++; }
+  }
+
+  // FOOTER-SPEC-2026: emit the TimPaemi Organization entity once per page.
+  if (!/"@type":"Organization","@id":"https:\/\/timpaemi\.com\/#timpaemi"/.test(html)) {
+    blocks.push(`<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', ...timpaemiOrganization() })}</script>`);
   }
 
   // 2) FAQPage schema — rebuild from on-page FAQ headings (CTA blocks excluded)
