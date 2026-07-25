@@ -1,5 +1,5 @@
 # Pattaya Gym Directory
-> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 157 venues, 47 guides, 15 categories, 6 areas — no paid placements, source-cited research.
+> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 215 venues, 47 guides, 15 categories, 6 areas — no paid placements, source-cited research.
 
 This llms.txt file provides AI agents and language-model crawlers with a curated map of the most useful, high-signal pages on pattaya-gym.com.
 

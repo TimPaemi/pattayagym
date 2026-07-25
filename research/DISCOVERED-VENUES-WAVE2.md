@@ -35,75 +35,76 @@ Status vocabulary:
 
 | name (Thai) | name (English) | category | area | evidence URL | already-covered? | status |
 |---|---|---|---|---|---|---|
-| — | James GYM | fitness | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=James+GYM+Pattaya) | NO | OPEN |
-| — | Jomtien Gym | fitness | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Jomtien+Gym) | NO | OPEN |
-| — | Better Bodies Gym | fitness | na-jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Better+Bodies+Gym+Pattaya) | NO | OPEN |
-| — | G Fitness Pattaya | fitness | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=G+Fitness+Pattaya) | NO | OPEN |
-| — | Fatburn Fitness | fitness | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Fatburn+Fitness+Pattaya) | NO | OPEN |
-| — | Human Strong | fitness | pratamnak | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Human+Strong+Pattaya) | NO | OPEN |
-| — | LEVANT Fitness | fitness | pratamnak | [Thai Maps](https://www.google.com/maps/search/?api=1&query=LEVANT+Fitness+Pattaya) | NO | OPEN |
-| — | GAYA Fitness and Pilates — branch 1 | fitness | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=GAYA+Fitness+and+Pilates+Pattaya) | NO | OPEN |
-| — | Infinite Fitness Laem Chabang | fitness | laem-chabang | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Infinite+Fitness+Laem+Chabang) | NO | OPEN |
-| — | Universe Gym Laem Chabang | fitness | laem-chabang | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Universe+Gym+Laem+Chabang) | NO — separate branch/address from Universe Pattaya | OPEN |
+| — | James GYM | fitness | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=James+GYM+Pattaya) | YES — `james-gym-pattaya` | OPEN |
+| — | Jomtien Gym | fitness | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Jomtien+Gym) | NO | UNCLEAR — no exact live listing found 2026-07-25 |
+| — | Better Bodies Gym | fitness | na-jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Better+Bodies+Gym+Pattaya) | YES — `better-bodies-gym-na-jomtien` | OPEN |
+| — | G Fitness Pattaya | fitness | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=G+Fitness+Pattaya) | YES — `g-fitness-pattaya` | OPEN |
+| — | Fatburn Fitness | fitness | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Fatburn+Fitness+Pattaya) | YES — `fatburn-fitness-pattaya` | OPEN |
+| — | Human Strong | fitness | pratamnak | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Human+Strong+Pattaya) | YES — `human-strong-gym-pattaya` | OPEN |
+| — | LEVANT Fitness | fitness | pratamnak | [Thai Maps](https://www.google.com/maps/search/?api=1&query=LEVANT+Fitness+Pattaya) | YES — `levant-fitness-club` | OPEN |
+| — | GAYA Fitness and Pilates — branch 1 | fitness | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=GAYA+Fitness+and+Pilates+Pattaya) | YES — `gaya-fitness-pilates-chaiyapruek` | OPEN |
+| — | Infinite Fitness Laem Chabang | fitness | laem-chabang | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Infinite+Fitness+Laem+Chabang) | YES — `infinite-fitness-laem-chabang` | OPEN |
+| — | Universe Gym Laem Chabang | fitness | laem-chabang | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Universe+Gym+Laem+Chabang) | NO — separate branch/address from Universe Pattaya | OPEN — insufficient second current source 2026-07-25 |
 | ศูนย์ฟิตเนสแหลมฉบัง | Laem Chabang Fitness Center | fitness | laem-chabang | [Thai Maps](https://www.google.com/maps/search/?api=1&query=%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%9F%E0%B8%B4%E0%B8%95%E0%B9%80%E0%B8%99%E0%B8%AA%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B8%A1%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%87) | NO | UNCLEAR |
-| — | WeSquare | fitness | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=WeSquare+Bang+Saray) | NO | OPEN |
-| — | CHAN STUDIO / Chan Pilates — one location | fitness | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=CHAN+STUDIO+Bang+Saray) | NO | OPEN |
-| — | NRS.gym | fitness | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=NRS.gym+Bang+Saray) | NO | OPEN |
-| เดอะเบสท์ฟิตเนส สัตหีบ | The Best Fitness Sattahip | fitness | sattahip | [Thai Maps](https://www.google.com/maps/search/?api=1&query=The+Best+Fitness+Sattahip) | NO | OPEN |
-| — | Fitness Lifestyle Srirachanakorn | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Srirachanakorn) | NO | OPEN |
-| เจ็ทส์ ฟิตเนส เซ็นทรัล ศรีราชา | Jetts Fitness Central Si Racha | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Jetts+Fitness+Central+Si+Racha) | NO — distinct branch from Pattaya | OPEN |
-| — | The Gym Boxing & Fitness | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=The+Gym+Boxing+Fitness+Sriracha) | NO | OPEN |
-| — | Station 24 Fitness Sriracha | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Station+24+Fitness+Sriracha) | NO | OPEN |
-| — | Fitness Lifestyle Tiger Zoo | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Tiger+Zoo) | NO | OPEN |
-| — | Real Fitness Sriracha | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Real+Fitness+Sriracha) | NO | OPEN |
-| มหาศาล มวยไทย | Mahasan Muay Thai | muay-thai | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Mahasan+Muay+Thai+Pattaya) | NO | OPEN |
-| ค่ายมวย ก.ประกายแก้ว 99 | Kor Prakaikaew 99 Muay Thai | muay-thai | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Kor+Prakaikaew+99+Muay+Thai) | NO | OPEN |
-| — | MAVINN Muay Thai / Singmawin Pattaya | muay-thai | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=MAVINN+Muay+Thai+Pattaya) | NO | OPEN |
-| — | Eagle Gym Pratamnak | muay-thai | pratamnak | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Eagle+Gym+Pratamnak) | NO | OPEN |
-| อาร์เอสอาร์ พัทยา เทควันโด | RSR Pattaya Taekwondo Team | martial-arts | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=RSR+Pattaya+Taekwondo+Team) | NO | OPEN |
-| ธนิตา มาร์เชียลอาร์ต | Thanita Martial Arts | martial-arts | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Thanita+Martial+Arts+Pattaya) | NO | OPEN |
-| เปซูโซ่ เทควันโด ชัยพฤกษ์ | Pesuso Taekwondo Chaiyaphruek | martial-arts | jomtien | [operator](https://pesuso.com/) | NO — other Pesuso branches require separate identity checks | OPEN |
-| อาร์เอสอาร์ แกรนด์ เทควันโด | RSR Grand Taekwondo | martial-arts | central-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=RSR+Grand+Taekwondo+Pattaya) | NO | OPEN |
-| รังสิยา ยิม เทควันโด | Rangsiya Gym Taekwondo | martial-arts | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Rangsiya+Gym+Taekwondo+Pattaya) | NO | OPEN |
-| เอสทีซี มังกี้ เทควันโด | STC Monkeys Taekwondo | martial-arts | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=STC+Monkeys+Taekwondo+Pattaya) | NO | OPEN |
-| สนามแบดมินตันเขาน้อย | Badminton-Khaonoi | badminton | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Badminton-Khaonoi) | NO | OPEN |
-| พัทยา มังกี้ แบดมินตัน เซ็นเตอร์ | Pattaya Monkey Badminton Center | badminton | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Pattaya+Monkey+Badminton+Center) | NO | OPEN |
-| สนามแบดมินตันจันทอง | Chanthong Badminton Court | badminton | central-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Chanthong+Badminton+Court+Pattaya) | NO | OPEN |
-| เจพี แบดมินตัน | JP Badminton | badminton | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=JP+Badminton+Pattaya) | NO | OPEN |
-| — | 272 Estadio | badminton | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=272+Estadio+Pattaya) | NO | OPEN |
-| เอสบี แบดมินตัน ห้วยใหญ่ | SB Badminton Huai Yai | badminton | huai-yai | [Thai directory](https://thdata.co/en/p/sb-badminton-%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88-24119/) | NO | OPEN |
-| นาเกลือ 16 แบดมินตัน | Naklua 16 Badminton | badminton | naklua | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Naklua+16+Badminton) | NO | OPEN |
+| — | WeSquare | fitness | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=WeSquare+Bang+Saray) | YES — `wesquare-bang-saray` | OPEN |
+| — | CHAN STUDIO / Chan Pilates — one location | fitness | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=CHAN+STUDIO+Bang+Saray) | YES — `chan-pilates` | OPEN |
+| — | NRS.gym | fitness | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=NRS.gym+Bang+Saray) | NO | OPEN — insufficient second current source 2026-07-25 |
+| เดอะเบสท์ฟิตเนส สัตหีบ | The Best Fitness Sattahip | fitness | sattahip | [Thai Maps](https://www.google.com/maps/search/?api=1&query=The+Best+Fitness+Sattahip) | YES — `the-best-fitness-sattahip` | OPEN |
+| — | Fitness Lifestyle Srirachanakorn | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Srirachanakorn) | YES — `fitness-lifestyle-srirachanakorn` | OPEN |
+| เจ็ทส์ ฟิตเนส เซ็นทรัล ศรีราชา | Jetts Fitness Central Si Racha | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Jetts+Fitness+Central+Si+Racha) | YES — `jetts-central-sriracha`; distinct branch from Pattaya | OPEN |
+| — | The Gym Boxing & Fitness | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=The+Gym+Boxing+Fitness+Sriracha) | YES — `the-gym-boxing-fitness-sriracha` | OPEN |
+| — | Station 24 Fitness Sriracha | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Station+24+Fitness+Sriracha) | YES — `station-24-fitness-sriracha` | OPEN |
+| — | Fitness Lifestyle Tiger Zoo | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Tiger+Zoo) | YES — `fitness-lifestyle-suansue` | OPEN |
+| — | Real Fitness Sriracha | fitness | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Real+Fitness+Sriracha) | NO | OPEN — operator page stale; insufficient current second source 2026-07-25 |
+| มหาศาล มวยไทย | Mahasan Muay Thai | muay-thai | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Mahasan+Muay+Thai+Pattaya) | NO | OPEN — insufficient second current first-hand source 2026-07-25 |
+| ค่ายมวย ก.ประกายแก้ว 99 | Kor Prakaikaew 99 Muay Thai | muay-thai | bang-saray | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Kor+Prakaikaew+99+Muay+Thai) | NO | OPEN — insufficient second current first-hand source 2026-07-25 |
+| — | MAVINN Muay Thai / Singmawin Pattaya | muay-thai | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=MAVINN+Muay+Thai+Pattaya) | YES — `mavinn-muay-thai-pattaya` | OPEN |
+| — | Eagle Gym Pratamnak | muay-thai | pratamnak | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Eagle+Gym+Pratamnak) | YES — `eagle-gym-pratamnak` | OPEN |
+| — | O. Sansuk Muay Thai Gym Pattaya | muay-thai | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=O+Sansuk+Muay+Thai+Gym+Pattaya) | YES — `o-sansuk-muay-thai-gym` | OPEN |
+| อาร์เอสอาร์ พัทยา เทควันโด | RSR Pattaya Taekwondo Team | martial-arts | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=RSR+Pattaya+Taekwondo+Team) | YES — `rsr-pattaya-taekwondo-team` | OPEN |
+| ธนิตา มาร์เชียลอาร์ต | Thanita Martial Arts | martial-arts | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Thanita+Martial+Arts+Pattaya) | YES — `thanita-martial-arts-pattaya` | OPEN |
+| เปซูโซ่ เทควันโด ชัยพฤกษ์ | Pesuso Taekwondo Chaiyaphruek | martial-arts | jomtien | [operator](https://pesuso.com/) | YES — `pesuso-martial-arts-pattaya` covers confirmed North Pattaya location; Chaiyaphruek identity not confirmed | UNCLEAR |
+| อาร์เอสอาร์ แกรนด์ เทควันโด | RSR Grand Taekwondo | martial-arts | central-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=RSR+Grand+Taekwondo+Pattaya) | YES — `rsr-grand-taekwondo` | OPEN |
+| รังสิยา ยิม เทควันโด | Rangsiya Gym Taekwondo | martial-arts | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Rangsiya+Gym+Taekwondo+Pattaya) | YES — `rangsiya-gym-taekwondo-pattaya` | OPEN |
+| เอสทีซี มังกี้ เทควันโด | STC Monkeys Taekwondo | martial-arts | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=STC+Monkeys+Taekwondo+Pattaya) | YES — `stc-monkeys-taekwondo-pattaya` | OPEN |
+| สนามแบดมินตันเขาน้อย | Badminton-Khaonoi | badminton | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Badminton-Khaonoi) | YES — `badminton-khaonoi-pattaya` | OPEN |
+| พัทยา มังกี้ แบดมินตัน เซ็นเตอร์ | Pattaya Monkey Badminton Center | badminton | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Pattaya+Monkey+Badminton+Center) | YES — `pattaya-monkey-badminton` | OPEN |
+| สนามแบดมินตันจันทอง | Chanthong Badminton Court | badminton | central-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Chanthong+Badminton+Court+Pattaya) | YES — `chanthong-badminton-court` | OPEN |
+| เจพี แบดมินตัน | JP Badminton | badminton | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=JP+Badminton+Pattaya) | YES — `jp-badminton-pattaya` | OPEN |
+| — | 272 Estadio | badminton | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=272+Estadio+Pattaya) | YES — `272-estadio-de-pattaya` | OPEN |
+| เอสบี แบดมินตัน ห้วยใหญ่ | SB Badminton Huai Yai | badminton | huai-yai | [Thai directory](https://thdata.co/en/p/sb-badminton-%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88-24119/) | YES — `sb-badminton-huai-yai` | OPEN |
+| นาเกลือ 16 แบดมินตัน | Naklua 16 Badminton | badminton | naklua | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Naklua+16+Badminton) | YES — `naklua-16-badminton` | OPEN |
 | พัทยา แบดมินตัน | Pattaya Badminton | badminton | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Pattaya+Badminton) | NO | UNCLEAR |
-| — | Copa Sport Club Laem Chabang | badminton | laem-chabang | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Copa+Sport+Club+Laem+Chabang) | NO | OPEN |
-| บ้านแบดมินตัน ศรีราชา | Baan Badminton Sriracha | badminton | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Baan+Badminton+Sriracha) | NO | OPEN |
-| สนามแบดมินตันรวมมิตร | Ruammitr Badminton Court | badminton | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Ruammitr+Badminton+Court+Sriracha) | NO | OPEN |
-| เอซีเอส สปอร์ตฮอลล์ | ACS Sports Hall | badminton | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=ACS+Sports+Hall+Sriracha) | NO | OPEN |
-| เดอะทรีคลับ | The Tree Club | badminton | bang-phra | [Thai Maps](https://www.google.com/maps/search/?api=1&query=The+Tree+Club+Bang+Phra+Badminton) | NO | OPEN |
+| — | Copa Sport Club Laem Chabang | badminton | laem-chabang | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Copa+Sport+Club+Laem+Chabang) | YES — `copa-sport-club-laem-chabang` | OPEN |
+| บ้านแบดมินตัน ศรีราชา | Baan Badminton Sriracha | badminton | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Baan+Badminton+Sriracha) | YES — `baan-badminton-sriracha` | OPEN |
+| สนามแบดมินตันรวมมิตร | Ruammitr Badminton Court | badminton | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Ruammitr+Badminton+Court+Sriracha) | YES — `ruammitr-badminton-sriracha` | OPEN |
+| เอซีเอส สปอร์ตฮอลล์ | ACS Sports Hall | badminton | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=ACS+Sports+Hall+Sriracha) | YES — `acs-sports-hall-sriracha` | OPEN |
+| เดอะทรีคลับ | The Tree Club | badminton | bang-phra | [Thai Maps](https://www.google.com/maps/search/?api=1&query=The+Tree+Club+Bang+Phra+Badminton) | YES — `the-tree-club-badminton` | OPEN |
 | สนามแบดมินตันแซทเทิลไลท์ | Satellite Badminton Court | badminton | sriracha | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Satellite+Badminton+Court+Sriracha) | NO | TEMPORARILY-CLOSED |
-| ศรีราชา อารีน่า | Sriracha Arena | multi-sport | sriracha | [operator](https://srirachaarena.com/) | NO | OPEN |
-| — | Prime Padel Pattaya | padel | central-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Prime+Padel+Pattaya) | NO | OPEN |
-| ชิลลี่ พาเดล คลับ | Chilli Padel Club | padel | jomtien | [Thai opening report](https://www.banmuang.co.th/news/region/476764) | NO | OPEN |
+| ศรีราชา อารีน่า | Sriracha Arena | multi-sport | sriracha | [operator](https://srirachaarena.com/) | YES — `sriracha-arena` | OPEN |
+| — | Prime Padel Pattaya | padel | central-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Prime+Padel+Pattaya) | YES — `prime-padel-pattaya` | OPEN |
+| ชิลลี่ พาเดล คลับ | Chilli Padel Club | padel | jomtien | [Thai opening report](https://www.banmuang.co.th/news/region/476764) | YES — `chilli-padel-club` | OPEN |
 | — | Vamos Padel Club Pattaya | padel | huai-yai | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Vamos+Padel+Club+Pattaya) | NO | UNCLEAR |
 | — | Padium Padel Club Pattaya | padel | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Padium+Padel+Club+Pattaya) | NO | PRE-OPENING |
-| — | Palladium FC | football | central-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Palladium+FC+Pattaya) | NO | OPEN |
-| — | K Football Stadium Pattaya | football | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=K+Football+Stadium+Pattaya) | NO | OPEN |
-| สนามฟุตบอลพัทยาซอคเกอร์ เขาน้อย | Pattaya Soccer Khao Noi | football | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Pattaya+Soccer+Khao+Noi) | NO — second Thai listing at the same coordinates was merged | OPEN |
-| — | Premier Football Arena | football | east-pattaya | [current activity mirror](https://www.localgymsandfitness.com/TH/Pattaya/150899402168551/Premier-Football-Arena) | NO | OPEN |
-| พรีโม่ ฟุตบอล อะคาเดมี่ | PRIMO Football Academy | football | huai-yai | [Thai Maps](https://www.google.com/maps/search/?api=1&query=PRIMO+Football+Academy+Pattaya) | NO | OPEN |
-| ศูนย์กีฬาแห่งชาติภาคตะวันออก | Eastern National Sports Center | multi-sport | east-pattaya | [public-facility listing](https://smartdastaapp.dasta.or.th/place/346) | NO | OPEN |
-| สนามกีฬาเทศบาลเมืองหนองปรือ | Nong Prue Municipal Stadium | multi-sport | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B7%E0%B8%AD) | NO | OPEN |
-| สนามฟุตบอลเทศบาลเมืองหนองปรือแห่งที่ 2 | Nong Prue Municipal Football Stadium No. 2 | multi-sport | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%9F%E0%B8%B8%E0%B8%95%E0%B8%9A%E0%B8%AD%E0%B8%A5%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88+2) | NO | OPEN |
-| สนามกีฬาเทศบาลเมืองศรีราชา | Sriracha Municipal Stadium | multi-sport | sriracha | [municipality reopening notice](https://www.srirachacity.go.th/news_detail?hd=2&id=16493) | NO | OPEN |
-| สวิมมิ่งคิดส์ พัทยา | Swimming Kids Pattaya | swimming | na-jomtien | [operator](https://swimmingkidsthailand.com/swimming-kids-pattaya/) | NO | OPEN |
-| เบบี้ชาร์ค สวิมสคูล | Baby Shark Swim School | swimming | nong-pla-lai | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Baby+Shark+Swim+School+Pattaya) | NO | OPEN |
-| ชมรมกีฬาทางน้ำพัทยา | Pattaya Water Sports Club | swimming | na-jomtien | [operator](https://www.pattayawatersportsclub.com/) | NO — different phone and address from Clubloongchat | OPEN |
-| เจเอ็น สวิมมิ่งพูล เซ็นเตอร์ | JN Swimming Pool Center | swimming | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=JN+Swimming+Pool+Center+Pattaya) | NO | OPEN |
-| มิกกี้พิม สวิมมิ่งพูลคลับ | Micky Phim Swimming Pool Club | swimming | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Micky+Phim+Swimming+Pool+Club) | NO | OPEN |
-| สระว่ายน้ำโรงเรียนเมืองพัทยา 11 | Pattaya City School 11 Swimming Pool | swimming | east-pattaya | [2026 event venue](https://www.raceswim.com/news/detail.php?ChkID=194&language=en&language_id=2) | NO | OPEN |
-| — | Nara Maze Pool at Terra Nara — public day pass | hotel-day-pass | naklua | [hotel offer](https://www.terranara.com/promotions/nara-maze-pool-day-pass.html) | NO | OPEN |
+| — | Palladium FC | football | central-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Palladium+FC+Pattaya) | YES — `palladium-fc` | OPEN |
+| — | K Football Stadium Pattaya | football | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=K+Football+Stadium+Pattaya) | YES — `k-football-stadium-pattaya` | OPEN |
+| สนามฟุตบอลพัทยาซอคเกอร์ เขาน้อย | Pattaya Soccer Khao Noi | football | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Pattaya+Soccer+Khao+Noi) | YES — merged identity at `k-football-stadium-pattaya` | OPEN |
+| — | Premier Football Arena | football | east-pattaya | [current activity mirror](https://www.localgymsandfitness.com/TH/Pattaya/150899402168551/Premier-Football-Arena) | YES — `premier-football-arena-pattaya` | OPEN |
+| พรีโม่ ฟุตบอล อะคาเดมี่ | PRIMO Football Academy | football | huai-yai | [Thai Maps](https://www.google.com/maps/search/?api=1&query=PRIMO+Football+Academy+Pattaya) | NO | UNCLEAR — operator domain fails DNS; insufficient second current source 2026-07-25 |
+| ศูนย์กีฬาแห่งชาติภาคตะวันออก | Eastern National Sports Center | multi-sport | east-pattaya | [public-facility listing](https://smartdastaapp.dasta.or.th/place/346) | YES — `eastern-national-sports-center-pattaya` | OPEN |
+| สนามกีฬาเทศบาลเมืองหนองปรือ | Nong Prue Municipal Stadium | multi-sport | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%81%E0%B8%B5%E0%B8%AC%E0%B8%B2%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B7%E0%B8%AD) | YES — `nong-prue-municipal-stadium` | OPEN |
+| สนามฟุตบอลเทศบาลเมืองหนองปรือแห่งที่ 2 | Nong Prue Municipal Football Stadium No. 2 | multi-sport | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B8%9F%E0%B8%B8%E0%B8%95%E0%B8%9A%E0%B8%AD%E0%B8%A5%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88+2) | NO | OPEN — insufficient second current source 2026-07-25 |
+| สนามกีฬาเทศบาลเมืองศรีราชา | Sriracha Municipal Stadium | multi-sport | sriracha | [municipality reopening notice](https://www.srirachacity.go.th/news_detail?hd=2&id=16493) | YES — `sriracha-municipal-stadium` | OPEN |
+| สวิมมิ่งคิดส์ พัทยา | Swimming Kids Pattaya | swimming | na-jomtien | [operator](https://swimmingkidsthailand.com/swimming-kids-pattaya/) | YES — `swimming-kids-pattaya` | OPEN |
+| เบบี้ชาร์ค สวิมสคูล | Baby Shark Swim School | swimming | nong-pla-lai | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Baby+Shark+Swim+School+Pattaya) | YES — `baby-shark-swim-club-pattaya` | OPEN |
+| ชมรมกีฬาทางน้ำพัทยา | Pattaya Water Sports Club | swimming | na-jomtien | [operator](https://www.pattayawatersportsclub.com/) | YES — `pattaya-water-sports-club`; distinct from Clubloongchat | OPEN |
+| เจเอ็น สวิมมิ่งพูล เซ็นเตอร์ | JN Swimming Pool Center | swimming | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=JN+Swimming+Pool+Center+Pattaya) | NO | NOT-A-VENUE — pool construction and maintenance business |
+| มิกกี้พิม สวิมมิ่งพูลคลับ | Micky Phim Swimming Pool Club | swimming | pattaya-area-unverified | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Micky+Phim+Swimming+Pool+Club) | YES — `micky-phim-swimming-pool` | OPEN |
+| สระว่ายน้ำโรงเรียนเมืองพัทยา 11 | Pattaya City School 11 Swimming Pool | swimming | east-pattaya | [2026 event venue](https://www.raceswim.com/news/detail.php?ChkID=194&language=en&language_id=2) | YES — `pattaya-city-school-11-swimming-pool` | OPEN |
+| — | Nara Maze Pool at Terra Nara — public day pass | hotel-day-pass | naklua | [hotel offer](https://www.terranara.com/promotions/nara-maze-pool-day-pass.html) | YES — `nara-maze-pool-day-pass` | OPEN |
 | เจพีเอส พัทยาสวิม | JPS-PattayaSwim | swimming | na-jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=JPS-PattayaSwim) | NO — coaching service at Ban Rai pool | NOT-A-VENUE |
-| ชามา โยคะ แอนด์ ซาวด์ฮีลลิ่ง สตูดิโอ | Chama Yoga & Sound Healing Studio | yoga | huai-yai | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Chama+Yoga+Sound+Healing+Studio) | NO | OPEN |
-| เล็ก ไทย โยคะ | Lek Thai Yoga | yoga | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Lek+Thai+Yoga+Pattaya) | NO | OPEN |
+| ชามา โยคะ แอนด์ ซาวด์ฮีลลิ่ง สตูดิโอ | Chama Yoga & Sound Healing Studio | yoga | huai-yai | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Chama+Yoga+Sound+Healing+Studio) | YES — `chama-yoga-sound-healing` | OPEN |
+| เล็ก ไทย โยคะ | Lek Thai Yoga | yoga | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Lek+Thai+Yoga+Pattaya) | YES — `lek-thai-yoga-pattaya` | OPEN |
 | จี สวิม อะคาเดมี่ | G Swim Academy / IG Center | swimming | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=G+Swim+Academy+Pattaya) | YES — `manta-kids-pattaya`; same 53/48 address and IG Center site | OPEN |
 | โยคะ | Yoga | yoga | jomtien | [Thai Maps](https://www.google.com/maps/search/?api=1&query=Yoga+Soi+Thepprasit+12+Pattaya) | YES — `yoga-pattaya-studio`; same Thepprasit Soi 12 location | OPEN |
 | ไอพี ซอคเกอร์คลับ พัทยา | IP Soccer Club Pattaya | football | east-pattaya | [Thai Maps](https://www.google.com/maps/search/?api=1&query=IP+Soccer+Club+Pattaya) | YES — `fast-pro-football-academy`; existing record already names this host site | OPEN |
