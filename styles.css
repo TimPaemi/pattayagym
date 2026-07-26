@@ -1615,3 +1615,27 @@ ol.tldr-list > li::marker { font-family: var(--font-mono); font-weight: 700; col
 @media (min-width: 1040px) { .nav-cta { margin-left: 0; } }
 .nav-burger { margin-left: var(--s-2); }
 @media (min-width: 1040px) { .nav-burger { display: none; } }
+
+/* ============================================================================
+   FAQ CONTAINER FIX
+   ============================================================================
+   `.venue-faq` and `.guide-faq` are on the <section> element in the generated
+   markup — NOT on the list of questions:
+
+       <section class="section u-pt-0 venue-faq guide-faq"><div class="wrap ...">
+
+   So grouping them with `.faq-list` and giving all three `display:grid` plus
+   `max-width:68ch` shrank the entire section to 686px and pinned it flush to the
+   left edge with no gutter, while every other section stayed centred. Only
+   `.faq-list` is an actual list of items.
+   ============================================================================ */
+.faq-list { display: grid; gap: var(--s-2); max-width: 68ch; }
+.venue-faq, .guide-faq { display: block; max-width: none; }
+.venue-faq .faq-item + .faq-item,
+.guide-faq .faq-item + .faq-item { margin-top: var(--s-2); }
+.venue-faq .faq-item:first-of-type,
+.guide-faq .faq-item:first-of-type { margin-top: var(--s-4); }
+/* The guide shell emits a bare <section class="guide-faq"> with no .wrap, so it
+   inherits the gutter from the 880px article it sits inside. Only give it the
+   page gutter when it is a top-level section instead. */
+.guide-faq > .faq-item { max-width: 68ch; }
