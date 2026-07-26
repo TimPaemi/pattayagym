@@ -1,136 +1,108 @@
-# Pattaya Gym — Design Rules
+# Design rules — pattaya-gym.com (2026 system)
 
-**Locked.** Every template must follow these. Any deviation requires an explicit written change to this document before code is written.
+Replaces the 2025 "black background · multi-colour accents · neon glow ·
+marquee strips" rules. If you are an agent working on this repo, this file
+governs visual decisions. Read it before touching `styles.css` or any template.
 
----
+## The system in one paragraph
 
-## 1. Brand
+Light canvas, dark footer panel, one accent. Structure, type scale, radii,
+shadows and motion come from the TimPaemi network tokens so this site reads as
+the same publisher as Pattaya Insider — the network carries **no cross-site
+links**, so shared visual language is the only publisher signal there is.
+Colour is the only thing that differs per site, and for this site it is volt.
 
-- **Brand mark**: `Pattaya.Gym` (lowercase-friendly title case)
-- **Brand mark CSS**: `font-weight:800; letter-spacing:-0.03em; color:#0A1220; font-size:18px`
-- **The dot is always orange `#C84A0A`** — wherever the brand appears: header, footer, favicon, OG image
-- Never use ALL CAPS for the brand. Never display it bigger than 18px in chrome.
-
-## 2. Colors (single source of truth)
+## Palette
 
 | Token | Value | Use |
 |---|---|---|
-| `--blue` | `#0057B8` | Primary CTA, brand emphasis, focused state |
-| `--blue-deep` | `#032B5C` | Reserved |
-| `--blue-soft` | `#eff6ff` | Soft blue chip background, brand-tag pill |
-| `--orange` | `#C84A0A` | Brand dot, stats numbers, accent moments |
-| `--orange-soft` | `#fff5ec` | Fitness category icon background |
-| `--ink` | `#0A1220` | Primary text |
-| `--muted` | `#526174` | Secondary text, meta |
-| `--hint` | `#94a3b8` | Placeholder, tertiary text |
-| `--bg` | `#ffffff` | Page background |
-| `--surface-alt` | `#f8fafc` | Section alternation |
-| `--line` | `#e2e8f0` | Subtle border |
-| `--star` | `#f59e0b` | Rating star |
-| `--star-bg` | `#fffbeb` / `--star-text` `#92400e` | Rating pill |
+| `--accent` | `#cbff3c` | **The volt.** A fill only — CTA pills, highlights, marks. Never text. |
+| `--accent-ink` | `#4c5f00` | AA-safe volt-flavoured text |
+| `--brand-ink` | `#3f6212` | Link text, dark buttons' hover |
+| `--brand-bright` | `#cbff3c` | Volt on dark surfaces (footer only) |
+| `--ink` | `#14180f` | Body text, primary buttons |
+| `--canvas` / `--surface` | `#f7f8f3` / `#ffffff` | Page / cards |
+| `--panel` | `#171c11` | Footer panel |
 
-No hex codes anywhere outside `:root` declaration. Components reference tokens only.
+**The rule that breaks the site if you get it wrong:** volt is a fill. Volt as
+text on the light canvas is about 1.4:1 — invisible. Every volt surface carries
+`--ink`. Anything volt-flavoured that must be readable as text uses
+`--accent-ink`.
 
-## 3. Typography
+The canonical copy lives at `C:\Projects\_brand\themes\pattaya-gym.css`, with the
+measured contrast ratios in its header comment. Run
+`node check-contrast.mjs themes/pattaya-gym.css` from `_brand` before changing
+any colour.
 
-- Family: `Inter, system-ui, -apple-system, sans-serif` (Google Fonts CDN preloaded)
-- **Sentence case everywhere.** Never display ALL CAPS. Mono labels excepted (e.g. `EMAIL`, `WHATSAPP`, `LINE`).
-- Hero H1: `clamp(32px, 8vw, 52px) / 1.04 / 800 / -0.04em`
-- Section H2: `clamp(22px, 6vw, 30px) / 1.08 / 800 / -0.03em`
-- Card title (H3): `15-16px / 700 / ink`
-- Body: `16px / 1.55-1.6 / muted`
-- Meta: `13px / 1.5 / muted`
-- Tag / pill: `11-12px / 500-700`
-- No font sizes below 11px.
+## Do
 
-## 4. Spacing
+- **One accent.** The old design used pink, cyan, yellow, mint and red at once.
+  The `.accent-*` classes still exist (there are ~2,600 uses) but they all now
+  resolve to two calm colours. Do not reintroduce a third.
+- **Type:** Space Grotesk display, Inter body, JetBrains Mono for numbers —
+  prices, counts, dates, verified stamps. Mono on data is what makes a directory
+  read as a directory.
+- **Type scale:** the 1.200 minor third in `:root`. `--text-2xs` through
+  `--text-4xl`. Do not hand-pick px sizes.
+- **Cards:** 1px `--line` border, `--r-lg` radius, `--shadow-flat` at rest,
+  `--shadow-soft` and a 2px lift on hover. Nothing else.
+- **Sections:** `.section` owns the rhythm. `.section + .section` drops the top
+  pad automatically — do not add `u-pt-0` unless you are fighting an injected
+  block.
+- **Eyebrows** are `.eyebrow` with an optional `.num`. The trailing rule is drawn
+  by `::after`; do not add an `<hr>`.
 
-- Mobile container side-padding: `22px`. Desktop: `32px`.
-- Max container width: `1184px`, auto-centered.
-- Section vertical padding: `48px` mobile, `64px` desktop.
-- Card padding: `20-22px`.
-- Card gap: `12px`.
-- Touch target: minimum `44px`.
+## Do not
 
-## 5. Component patterns
+- **No glow.** The `--glow-*` tokens still exist but are neutralised to flat
+  shadows so old inline styles degrade gracefully. Do not restore neon.
+- **No marquee.** Both tickers are gone and `.marquee*` is `display:none`.
+- **No scroll-progress bar.** `.progress-bar` is `display:none`.
+- **No emoji as iconography.** ⭐ 🕐 📍 💰 ✎ were removed sitewide — they render
+  differently on every OS, cannot be brand-coloured, and cannot be sized against
+  the type scale. `★ ♡ ✓ → ↑` are text dingbats and are fine.
+- **No cross-site link blocks.** The network hub and projects grid are gone. One
+  nofollowed `timpaemi.com` publisher credit per page is the limit.
+- **No photography** is a permanent constraint across the network. Identity is
+  carried by type, the volt, and the mark.
 
-- **Card radius**: `22px` (xl).
-- **Pill radius**: `999px`.
-- **Button radius**: `14-18px`.
-- **Card border**: `1px solid #e2e8f0`, white background.
-- **Card hover**: `border-color: #0057B8`, `transform: translateY(-2px)`, `box-shadow: 0 4px 16px -4px rgba(10,18,32,0.12)`.
-- **Primary button**: `background:#0057B8; color:#fff; border-radius:14px; padding:12px 20px; font-weight:600`.
-- **Secondary button**: `background:#fff; color:#0A1220; border:1.5px solid #0A1220; border-radius:14px`.
-- **Brand tag** (e.g. category label on venue card): `background:#eff6ff; color:#0057B8; font-weight:600; padding:5px 11px; border-radius:999px`.
-- **Generic tag**: `background:#f1f5f9; color:#1e293b; font-weight:500; padding:5px 11px; border-radius:999px`.
+## Two things that will bite you
 
-## 6. Universal page chrome
+### 1. Inline styles are load-bearing
 
-Every page, top to bottom:
+The generated HTML carries **~8,300 inline `style=` attributes** referencing 24
+CSS custom properties: `--s-1`…`--s-20`, `--surface`, `--line`, `--r-lg`,
+`--r-pill`, `--muted`, `--text`, `--text-2`, `--hint`, `--text-muted`, `--cyan`,
+`--pink`, `--mint`, `--yellow`, `--font-mono`, `--font-display`, `--max`,
+`--pad`, `--t-fast`.
 
-1. **Sticky header**: brand left, 2 round icon buttons right (search + menu). `40px × 40px`. Grey background for search, ink background for menu.
-2. **Main content** — page-specific.
-3. **Dark contact card** (only on homepage and info pages, not every page).
-4. **Footer**: light grey background, brand mark, single-line tag, divider, copyright.
+No stylesheet rule can reach an inline style. That is why the whole restyle was
+done by **repointing those variable names at new values, not renaming them**.
+Rename or delete one and hundreds of pages break silently, with no build error.
+`--cyan` and `--mint` now mean "link green"; `--pink` and `--yellow` mean
+"volt-dark". They are misnamed on purpose — the names are an API.
 
-No marquees. No mono `// SECTION 01` labels. No scrollbars visible anywhere. No service worker. No `!important` in CSS.
+If you need to change layout that lives in an inline style, you must edit the
+emitting template, not the CSS. `scripts/polish-design-2026.js` is where that
+kind of sweep goes.
 
-## 7. Page-type templates
+### 2. Two sweep scripts must stay in the build chain
 
-- **Homepage**: hero w/ search → stats card → categories → top picks → why us → contact → footer
-- **Category page**: breadcrumb → hero (icon + name + count) → filter chips (wrap, no scroll) → quick pick → all venues → curated guides → footer
-- **Venue page**: breadcrumb → hero (name + rating + meta) → 3 contact CTAs → quick info card (hours/price/area/level) → about body → nearby venues → footer
-- **Guide page**: breadcrumb → hero (title + date) → TOC card → numbered list → footer
-- **Search page**: hero search → quick chips → results list → popular searches → footer
-- **Info page** (about/contact/methodology/press/etc.): breadcrumb → small hero → body prose → contact card → footer
+`scripts/apply-design-2026.js` rolls the header, footer, marquee removal, light
+metas and asset version onto every HTML file — including the ~59 static pages
+`build-v2.js` never regenerates, and the 4 orphaned `area/*/*` pages that fell
+out of every other script's allowlist.
 
-## 8. SEO contract (every page)
+`scripts/polish-design-2026.js` fixes the inline-style leftovers and patches the
+templates that emit them, so a rebuild agrees with the swept HTML.
 
-Required in every `<head>`:
+Both are idempotent and both are in the `AGENTS.md` ship chain. Dropping them
+means the next build silently reverts guide and tool pages to the old chrome.
 
-- `<title>` — page-specific, 50-60 chars
-- `<meta name="description">` — 150-160 chars
-- `<meta name="theme-color" content="#0057B8">`
-- `<link rel="canonical" href="...">`
-- Open Graph: `og:title`, `og:description`, `og:image`, `og:url`, `og:type`
-- Twitter Card: `summary_large_image`
-- Google Analytics tag `G-F5F6KD3XFZ` on every page
+## Component vocabulary
 
-Required in `<body>`:
-
-- One `<h1>` per page (never more)
-- Semantic markup: `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`
-- Skip link to `#main` first DOM element
-- JSON-LD structured data:
-  - Homepage: `WebSite` + `Organization`
-  - Venue: `LocalBusiness` (or `SportsActivityLocation`) with `name`, `address`, `geo`, `priceRange`, `openingHours`
-  - Category / area: `ItemList`
-  - Guide: `Article`
-  - All subpages: `BreadcrumbList`
-- Image `alt` on every meaningful `<img>`; decorative SVGs get `aria-hidden="true"`
-- Internal linking density: every page links back to home + parent category/area; every venue links to its category
-
-## 9. Performance contract
-
-- LCP < 2.5s on mobile 4G
-- CLS < 0.1
-- TBT < 200ms
-- Page weight < 100KB transferred per page (excluding fonts + images)
-- One `styles.css`. No `venue.css`. No service worker.
-- Inter loaded via `font-display: swap` with system fallback chain.
-- All SVG icons inlined or lucide-static (no separate icon font requests).
-- Lighthouse mobile budget: Performance ≥ 90, Accessibility ≥ 95, Best Practices = 100, SEO = 100.
-
-## 10. Workflow rules
-
-- **Branch isolation**: every visual change goes through `redesign-2026` branch with Cloudflare preview deploys. Live `pattaya-gym.com` stays on `main` until explicit merge approval.
-- **Pre-push gate**: `node scripts/verify.js` must pass. CI also runs it on every push.
-- **One CSS file**: `styles.css`. Touching it is a deliberate act, never a sprawl.
-- **No Codex on design**: Codex stays on data, research, audits, technical fixes only. Visual changes are written by hand with explicit screenshot approval per commit.
-- **One concern per commit**: never combine "fix marquee + adjust FAQ + tweak spacing" into one push. If verify fails or a regression appears, the diff is small enough to bisect.
-- **Asset versioning**: bump `ASSET_VERSION` once per release. One script (`bump-and-push.js`) updates all references.
-- **Screenshot per push**: every redesign-2026 push gets a screenshot from the Cloudflare preview URL before the next push.
-
----
-
-This document is the contract. Templates that violate it get rejected at gate review. The rules cost nothing to follow up front and prevent every category of regression we've hit.
+`styles.css` is organised in labelled blocks and defines a rule for **every one
+of the 280 class names the generated HTML uses**. Before inventing a class,
+grep — there is very likely one already. The header comment in `styles.css`
+explains anything unobvious, including which rules were added reactively after
+rendering the built pages rather than reading the markup.

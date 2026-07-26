@@ -42,6 +42,9 @@ node scripts/inject-homepage-seo.js
 node scripts/sync-guides-hub.js
 node scripts/migrate-legacy-guides-chrome.js
 node scripts/polish-ranked-guide-body.js
+node scripts/apply-design-2026.js
+node scripts/polish-design-2026.js
+node scripts/inject-guide-schema.js
 node scripts/bump-legacy-assets.js
 node scripts/sync-csp-hashes.js
 node scripts/sync-llms-guides.js
@@ -49,12 +52,22 @@ node scripts/patch-guide-map-cta-r70.js
 node scripts/apply-geo-r73.js
 node scripts/update-sitemap-lastmod.js
 node scripts/verify-deploy.js
+node scripts/verify-design-layer.js
 npm run html:validate
 ```
 
 **Hard gates:** `verify-deploy.js` must pass (no truncated HTML, NUL bytes, CSP hash drift, sitemap gaps). GitHub Actions runs `validate`, `build`, `verify-deploy`, `html:validate`, parallel `html:validate-all`, and Lighthouse CI on every push to `main`.
 
 ## Deploy workflow
+
+**Normal route — one command, runs everything above plus all gates, and pushes nothing if a gate fails:**
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File C:\Projects\pattayagym\SHIP-GYM.ps1
+```
+
+Add `-DryRun` to build and gate without touching git. The manual steps below are the fallback.
+
 
 1. Work on branch `redesign-2026` (or feature branch → PR → merge to `main`).
 2. Bump `ASSET_VERSION` in `build-v2.js` when CSS/JS/fonts change.
@@ -73,6 +86,8 @@ Rollback: `git push origin main-pre-round<N>:main --force-with-lease`
 
 ## Do not
 
+- **Never run `bump-and-push.js`** — it hard-codes `NEW_VERSION = 236` and will fail `verify-deploy` on every page. Delete it.
+
 - Rename venue IDs, category keys, area slugs, or guide URLs without 301 redirects
 - Add React/Next.js or external CDNs
 - Skip `verify-deploy.js`
@@ -85,7 +100,10 @@ Rollback: `git push origin main-pre-round<N>:main --force-with-lease`
 |---|---|
 | `build-v2.js` | Generates venues (see `GYMS.length` in `data.js`), categories, areas, utility pages, sitemap |
 | `index.html` | Hand-maintained homepage (not generated) |
+| `scripts/apply-design-2026.js` | Rolls the 2026 chrome (header, footer, no marquee, light metas, asset version) onto EVERY html file, including the ~59 static pages build-v2.js never regenerates. Idempotent. Do not drop from the chain. |
+| `scripts/polish-design-2026.js` | Fixes the inline-style leftovers a stylesheet cannot reach, and patches the templates that emit them. Idempotent. |
 | `scripts/verify-deploy.js` | Pre-push integrity gate |
+| `scripts/verify-design-layer.js` | Pre-push gate: proves the 2026 chrome and the live venue count landed on all 359 pages. Catches the one regression no other gate sees — the design sweeps falling out of the chain. |
 | `scripts/sync-csp-hashes.js` | Keeps `_headers` CSP in sync with inline scripts |
 | `.github/workflows/build.yml` | CI on push/PR |
 | `CONTRIBUTING.md` | Editorial + data conventions |

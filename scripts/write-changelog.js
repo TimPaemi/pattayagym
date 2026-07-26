@@ -1151,7 +1151,7 @@ const head = `<!DOCTYPE html>
 const { v2NavHtml } = require('./lib/v2-nav.js');
 const nav = v2NavHtml();
 
-const breadcrumb = `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Changelog</span></nav>`;
+const breadcrumb = `<nav aria-label="Breadcrumb" class="site-breadcrumb"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Changelog</span></nav>`;
 
 // FOOTER-SPEC-2026: shared five-block footer; no PA network block, no bottom marquee.
 const pa = '';
@@ -1186,7 +1186,7 @@ const html = head + marquee(TOP, false) + nav + breadcrumb + `
 <section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Public changelog · v${ASSET_VERSION} · Updated ${TODAY}</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">
+    <h1 class="hero-h1" style="font-size:clamp(30px,5vw,48px); text-align:left;">
       Every <span class="accent-pink">change.</span>
     </h1>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">

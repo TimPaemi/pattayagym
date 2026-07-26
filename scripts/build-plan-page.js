@@ -191,7 +191,7 @@ ${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Plan my trip' }])}
 <section class="hero" style="padding-top:var(--s-8); padding-bottom:var(--s-4); text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Trip planner · ${VENUE_N} venues · Free · No sign-up</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">Plan your <span class="accent-pink">trip.</span></h1>
+    <h1 class="hero-h1" style="font-size:clamp(30px,5vw,48px); text-align:left;">Plan your <span class="accent-pink">trip.</span></h1>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">Answer four quick questions and we will build a Pattaya training-trip plan from the ${VENUE_N} venues in our directory — a base venue to train at, a realistic structure for your trip length, picks for rest days, and practical notes. No paid placements; the recommendations are ranked only on fit.</p>
   </div>
 </section>

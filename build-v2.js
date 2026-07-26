@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '469';
+const ASSET_VERSION = '470';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -555,8 +555,8 @@ function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = nul
 <link rel="canonical" href="${url}">
 <link rel="alternate" hreflang="en" href="${url}">
 <link rel="alternate" hreflang="x-default" href="${url}">
-<meta name="theme-color" content="#000000">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#f7f8f3">
+<meta name="color-scheme" content="light">
 <link rel="preload" href="/styles.css${ASSET}" as="style">
 <link rel="stylesheet" href="/styles.css${ASSET}">
 <!-- Self-hosted fonts — preload only the LCP display face -->
@@ -659,10 +659,10 @@ function venueListingCard(v) {
       ${venueFavoriteBtn(v)}
     </div>
     <div class="cv-meta">${cat ? esc(cat.label) + ' · ' : ''}${esc(v.area || '')}</div>
-    ${v.hours ? `<div class="cv-meta">🕐 ${esc(v.hours)}</div>` : ''}
+    ${v.hours ? `<div class="cv-meta">${esc(v.hours)}</div>` : ''}
     ${descShort ? `<p>${esc(descShort)}</p>` : ''}
     <div class="cv-tags">
-      <span class="cv-pill">💰 ${esc(v.priceRange || '—')}</span>
+      <span class="cv-pill">${esc(v.priceRange || '—')}</span>
       ${tags}
     </div>
     <a class="cv-cta" href="/gyms/${v.id}/">View full page →</a>
@@ -854,7 +854,6 @@ function venuePage(g, fm, body) {
   ].filter(Boolean);
 
   return head({ title, desc, url, ogImage, jsonLd })
-    + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -884,7 +883,7 @@ function venuePage(g, fm, body) {
       <div class="btn-row u-btn-row-left venue-hero-ctas" id="venue-hero-ctas">
         ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
         
-        ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">📍 Map</a>` : ''}
+        ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Map</a>` : ''}
         ${venueFavoriteBtn(g, { hero: true })}
         <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary btn-venue-more">Email →</a>
         ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-venue-more">Website →</a>` : ''}
@@ -930,7 +929,7 @@ ${bodyHtml ? `
     </div>` : ''}
     <div class="venue-report-info u-max-760-mt-6">
       <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Suggest update: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I have an update for /gyms/' + g.id + '/:\\n\\n(your update here)\\n\\nSource link (if any):\\n\\nThanks!')}" class="report-info-link">
-        <span class="report-info-icon">✎</span>
+        <span class="report-info-icon"></span>
         <span class="report-info-text">Spot an error or have an update? <strong>Tell us</strong> — we'll re-check as fast as we can.</span>
       </a>
     </div>
@@ -1269,7 +1268,6 @@ function categoryPage(cat, venues) {
   const jsonLd = faqLd ? [itemList, crumbsLd, faqLd] : [itemList, crumbsLd];
 
   return head({ title, desc, url, jsonLd })
-    + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -1484,7 +1482,6 @@ function areaPage(slug, label, venues) {
   const jsonLd = faqLd ? [itemList, crumbsLd, faqLd] : [itemList, crumbsLd];
 
   return head({ title, desc, url, jsonLd })
-    + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -1656,7 +1653,6 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
   const jsonLd = [itemList, crumbsLd];
 
   return head({ title, desc, url, jsonLd })
-    + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -1763,7 +1759,6 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
 </section>` : '';
 
   return head({ title, desc, url, jsonLd: utilJsonLd, robots: robotsMeta })
-    + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -2363,7 +2358,6 @@ function sportsHubPage() {
   };
   const crumbsLd = { '@context': 'https://schema.org', ...breadcrumbJsonLd([{ label: 'Home', href: '/' }, { label: 'All sports' }], url) };
   return head({ title, desc, url, jsonLd: [itemList, crumbsLd] })
-    + topMarquee(TOP_MARQUEE)
     + nav()
     + breadcrumb([{ label: 'Home', href: '/' }, { label: 'All sports' }])
     + `

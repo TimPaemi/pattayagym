@@ -117,12 +117,12 @@ function writeEditorialGuide(g) {
 <a class="skip-link" href="#main">Skip to content</a>
 ${marquee(TOP_MARQUEE, false)}
 ${nav()}
-<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" style="color:var(--muted);">Home</a> <span style="color:var(--hint); margin:0 8px;">/</span> <a href="/guides/" style="color:var(--muted);">Guides</a> <span style="color:var(--hint); margin:0 8px;">/</span> <span style="color:var(--text); font-weight:600;">${esc(g.crumb)}</span></nav>
+<nav aria-label="Breadcrumb" class="site-breadcrumb"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <a href="/guides/" class="u-muted">Guides</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">${esc(g.crumb)}</span></nav>
 <main id="main">
 <section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+  <div class="hero-inner">
     <div class="hero-kicker">// ${esc(g.kicker)}</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">${g.h1}</h1>
+    <h1 class="hero-h1" style="font-size:clamp(30px,5vw,48px); text-align:left;">${g.h1}</h1>
 <div class="guide-byline">
   <span class="guide-byline-author">By TimPaemi</span>
   <span class="guide-byline-dot">·</span>
@@ -138,7 +138,7 @@ ${nav()}
 </section>
 <section class="section" style="padding-top:var(--s-4);">
   <div class="wrap">
-    <article class="venue-body" style="max-width:880px; margin:0 auto;">
+    <article class="venue-body" style="max-width:880px;">
 ${g.body}
     </article>
   </div>

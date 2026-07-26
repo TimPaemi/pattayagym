@@ -119,7 +119,7 @@ ${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Compare' }])}
 <section class="hero" style="padding-top:var(--s-8); padding-bottom:var(--s-4); text-align:left;">
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Side-by-side · Up to 4 venues · Bookmarkable URLs</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">
+    <h1 class="hero-h1" style="font-size:clamp(30px,5vw,48px); text-align:left;">
       Compare <span class="accent-yellow">venues.</span>
     </h1>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">Pick up to 4 Pattaya venues from the ${VENUE_N} in our directory. See hours, prices, area, contact channels, key tags, and verified date — side by side. Share the comparison via URL.</p>
@@ -271,7 +271,7 @@ ${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
       { key: 'hours', label: 'Hours', render: function(v){ return v.hours ? escapeHtml(v.hours) : '<span class="u-muted">—</span>'; } },
       { key: 'phone', label: 'Phone', render: function(v){ return v.phone ? '<a href="tel:' + escapeHtml(v.phone.replace(/[^+0-9]/g,'')) + '" style="color:var(--pink); text-decoration:none;">' + escapeHtml(v.phone) + '</a>' : '<span class="u-muted">unpublished</span>'; } },
       { key: 'web', label: 'Website', render: function(v){ return v.website ? '<a href="' + escapeHtml(v.website) + '" target="_blank" rel="noopener noreferrer" style="color:var(--cyan); text-decoration:underline; text-decoration-color:rgba(78,224,255,0.3);">official ↗</a>' : '<span class="u-muted">—</span>'; } },
-      { key: 'map', label: 'Map', render: function(v){ return v.mapsUrl ? '<a href="' + escapeHtml(v.mapsUrl) + '" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:none;">📍 directions</a>' : '<span class="u-muted">—</span>'; } },
+      { key: 'map', label: 'Map', render: function(v){ return v.mapsUrl ? '<a href="' + escapeHtml(v.mapsUrl) + '" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:none;">directions</a>' : '<span class="u-muted">—</span>'; } },
       { key: 'tags', label: 'Tags', render: function(v){ return (v.tags && v.tags.length) ? v.tags.slice(0, 4).map(function(t){ return '<span style="display:inline-block; background:rgba(255,255,255,0.06); padding:2px 8px; border-radius:999px; font-size:11px; margin:2px 4px 2px 0;">' + escapeHtml(t) + '</span>'; }).join('') : '<span class="u-muted">—</span>'; } },
       { key: 'desc', label: 'Description', render: function(v){ return v.description ? escapeHtml(v.description) + (v.description.length >= 240 ? '…' : '') : '<span class="u-muted">—</span>'; } },
       { key: 'verified', label: 'Verified', render: function(v){ return v.verified ? '<span style="color:var(--cyan); font-family:var(--font-mono); font-size:12px;">★ ' + escapeHtml(v.verified) + '</span>' : '<span class="u-muted">—</span>'; } }

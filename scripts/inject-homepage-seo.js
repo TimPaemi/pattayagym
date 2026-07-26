@@ -244,6 +244,6 @@ if (!whoMatch || whoMatch.index == null) {
   process.exit(1);
 }
 const nl = html.includes('\r\n') ? '\r\n' : '\n';
-html = html.slice(0, whoMatch.index) + INTENT + nl + NETWORK_BLOCK + nl + html.slice(whoMatch.index);
+html = html.slice(0, whoMatch.index) + INTENT + nl + html.slice(whoMatch.index);
 fs.writeFileSync(INDEX, html, 'utf8');
-console.log('Homepage: intent router + network hub injected.');
+console.log('Homepage: intent router injected; network hub removed (2026 redesign).');

@@ -82,7 +82,7 @@ function nav() {
 }
 
 function breadcrumb(label) {
-  return `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" style="color:var(--muted);">Home</a> <span style="color:var(--hint); margin:0 8px;">/</span> <a href="/guides/" style="color:var(--muted);">Guides</a> <span style="color:var(--hint); margin:0 8px;">/</span> <span style="color:var(--text); font-weight:600;">${esc(label)}</span></nav>`;
+  return `<nav aria-label="Breadcrumb" class="site-breadcrumb"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <a href="/guides/" class="u-muted">Guides</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">${esc(label)}</span></nav>`;
 }
 
 function tail(hasFavorites) {
@@ -228,7 +228,7 @@ function buildEditorialHero(slug, parts) {
   const spec = RANKED_HERO[slug];
   if (!spec) return '';
   const metaBits = [];
-  if (parts.venueCount) metaBits.push(`⭐ ${parts.venueCount} venues ranked`);
+  if (parts.venueCount) metaBits.push(`${parts.venueCount} venues ranked`);
   metaBits.push(`Updated ${parts.date}`);
   metaBits.push('Pattaya · 158 venues hand-checked');
   const ledeHtml = parts.ledes
@@ -238,9 +238,9 @@ function buildEditorialHero(slug, parts) {
     })
     .join('\n');
   return `<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+  <div class="hero-inner">
     <div class="hero-kicker">// ${esc(spec.kicker)}</div>
-    <h1 class="hero-h1" style="font-size:clamp(40px,8vw,96px); text-align:left;">${spec.h1}</h1>
+    <h1 class="hero-h1" style="font-size:clamp(30px,5vw,48px); text-align:left;">${spec.h1}</h1>
 ${parts.byline}
 ${ledeHtml}
     <p class="hero-meta" style="text-align:left;">${esc(metaBits.join(' · '))}</p>
@@ -250,7 +250,7 @@ ${ledeHtml}
 
 function buildHubHero() {
   return `<section class="hero" style="padding-top:var(--s-10); padding-bottom:var(--s-6); text-align:left;">
-  <div class="hero-inner" style="max-width:var(--max); margin:0 auto;">
+  <div class="hero-inner">
     <div class="hero-kicker">// Guides hub · 20 guides · 158 venues</div>
     <h1 class="hero-h1" style="font-size:clamp(40px,8vw,72px); text-align:left;">Pattaya gym <span class="accent-cyan">guides.</span></h1>
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">Curated picks across budget tiers, experience levels, family-friendliness, and 24-hour access. All guides are built from the same verified directory of 158 venues.</p>
@@ -271,7 +271,7 @@ function stripHeroAndWrappers(inner) {
 function wrapRankedBody(body) {
   return `<section class="section" style="padding-top:var(--s-4);">
   <div class="wrap">
-    <article class="venue-body" style="max-width:880px; margin:0 auto;">
+    <article class="venue-body" style="max-width:880px;">
 ${body}
     </article>
   </div>
@@ -294,7 +294,7 @@ function dedupeMainWrappers(inner) {
   const dupOpen =
     /<section class="section" style="padding-top:var\(--s-8\);">\s*<div class="wrap">\s*<article class="venue-body"[^>]*>\s*<section class="section" style="padding-top:var\(--s-8\);">\s*<div class="wrap">\s*<article class="venue-body"[^>]*>/i;
   if (dupOpen.test(s)) {
-    s = s.replace(dupOpen, '<section class="section" style="padding-top:var(--s-4);"><div class="wrap"><article class="venue-body" style="max-width:880px; margin:0 auto;">');
+    s = s.replace(dupOpen, '<section class="section" style="padding-top:var(--s-4);"><div class="wrap"><article class="venue-body" style="max-width:880px;">');
   }
   s = s.replace(
     /<\/article>\s*<\/div>\s*<\/section>\s*<\/article>\s*<\/div>\s*<\/section>/gi,
@@ -325,7 +325,7 @@ function migratePage(filePath, slug, isHub) {
 
   const hasFavorites = inner.includes('favorite-btn');
   const crumbHtml = isHub
-    ? `<nav aria-label="Breadcrumb" style="max-width:var(--max); margin:0 auto; padding:var(--s-6) var(--pad) 0; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);"><a href="/" style="color:var(--muted);">Home</a> <span style="color:var(--hint); margin:0 8px;">/</span> <span style="color:var(--text); font-weight:600;">Guides</span></nav>`
+    ? `<nav aria-label="Breadcrumb" class="site-breadcrumb"><a href="/" class="u-muted">Home</a> <span class="u-crumb-sep">/</span> <span class="u-text-bold">Guides</span></nav>`
     : breadcrumb(crumb);
 
   const out =
