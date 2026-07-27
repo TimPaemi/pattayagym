@@ -49,7 +49,7 @@ const FUNNEL_BY_GUIDE = {
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai for beginners', desc: 'First week, gear, costs, and red flags before you pick a camp.' },
   ],
   'best-for-beginners-pattaya': [
-    { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Intro top-rope at Deep and Bean Cow.' },
+    { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'STICKY is current; Deep is closed.' },
     { slug: 'muay-thai-pattaya-beginners', title: 'Muay Thai for beginners', desc: 'Dedicated beginner camps and pad-round expectations.' },
     { slug: 'english-speaking-muay-thai-pattaya', title: 'English-speaking Muay Thai', desc: 'Ten camps where foreigners train without Thai.' },
   ],
@@ -76,7 +76,7 @@ const FUNNEL_BY_GUIDE = {
   'family-friendly-pattaya': [
     { slug: 'kids-youth-sport-pattaya', title: 'Kids & youth sport', desc: 'Football academies, trampoline, MT for kids.' },
     { slug: 'adventure-pattaya', title: 'Adventure in Pattaya', desc: 'Zipline, karting, skydive, family days.' },
-    { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Deep Harbor Mall and Bean Cow family walls.' },
+    { slug: 'climbing-pattaya', title: 'Climbing in Pattaya', desc: 'Current STICKY access and Deep closure.' },
   ],
   'pattaya-gyms-childcare-family-pools': [
     { slug: 'kids-youth-sport-pattaya', title: 'Kids & youth sport', desc: 'Football, trampoline, Harbor Mall stack.' },

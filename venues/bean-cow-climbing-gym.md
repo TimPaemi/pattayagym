@@ -4,7 +4,7 @@ name: STICKY Climbing Gym
 category: climbing
 area: Huai Yai / East Pattaya
 address: 61/23 Moo 1, Huai Yai, Bang Lamung, Chonburi 20150
-phone: "+66 86 409 4696"
+phone: ""
 website: ""
 social:
   facebook: beancowclimbing
@@ -12,7 +12,7 @@ hours: "Tue–Sun 11:00–20:00; closed Monday and the first day of each month"
 priceRange: ""
 distinction: Former Bean Cow climbing gym, now operating under the STICKY name
 formerName: Bean Cow Climbing Gym & Community Center
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.facebook.com/beancowclimbing
   - https://www.facebook.com/people/Sticky-Climbing-gym/111305514913989/
@@ -30,4 +30,4 @@ The gym offers indoor bouldering and roped climbing. The former Bean Cow site's 
 
 ## First visit
 
-Current owner updates list opening hours as Tuesday to Sunday, 11:00–20:00, with closure every Monday and on the first day of each month. Ask the gym for the current day-pass price, equipment rental, belay requirements and beginner supervision before travelling. The current phone number comes from the active STICKY social page.
+Current owner updates list opening hours as Tuesday to Sunday, 11:00–20:00, with closure every Monday and on the first day of each month. A July 2026 owner post promoted a group discount but did not publish the underlying day-pass price. Ask the gym for that base price, promotion terms, equipment rental, belay requirements and beginner supervision before travelling. The current public pages do not publish a phone number, so the former number has been removed.

@@ -32,33 +32,13 @@ function marquee(items, bottom) {
   return `<div class="${cls}" aria-hidden="true"><div class="marquee-track"><div class="marquee-set">${inner}</div><div class="marquee-set" aria-hidden="true">${inner}</div></div></div>`;
 }
 
-const NETWORK_SITES = [
-  { name: 'Pattaya Authority', url: 'https://pattaya-authority.com/work/pattaya-gym-directory/', desc: 'Hub for the whole network' },
-  { name: 'Restaurant Guide', url: 'https://pattaya-restaurant-guide.com/', desc: 'Where to eat after training' },
-  { name: 'Visa Help', url: 'https://pattayavisahelp.com/', desc: 'Long-stay visas &amp; paperwork' },
-  { name: 'School Guide', url: 'https://pattaya-school-guide.com/', desc: 'Families relocating' },
-  { name: 'Coffee', url: 'https://pattaya-coffee.com/', desc: 'Remote work cafés' },
-  { name: 'Medical', url: 'https://pattaya-medical.com/', desc: 'Clinics &amp; sports injury' },
-];
-
 const { v2NavHtml } = require('./lib/v2-nav.js');
 function nav() {
   return v2NavHtml();
 }
 
 function paNetwork() {
-  const links = NETWORK_SITES.map(s =>
-    `<a href="${s.url}" class="pa-network-card" target="_blank" rel="noopener noreferrer"><span class="pa-network-card-name">${esc(s.name)}</span><span class="pa-network-card-desc">${s.desc}</span></a>`
-  ).join('\n    ');
-  return `<section class="pa-network">
-  
-    <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
-  
-  <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
-  <p class="pa-network-sub">// Independent Pattaya guides · engineered in-house by TimPaemi</p>
-  <nav class="pa-network-grid" aria-label="Pattaya Authority network">${links}
-  </nav>
-</section>`;
+  return '';
 }
 
 function footer() {
@@ -100,7 +80,7 @@ const BODY = `
 <li><strong>Cost:</strong> Stay-and-train packages often run <strong>20–40% below Phuket resort camps</strong> for comparable hours.</li>
 <li><strong>English:</strong> Higher share of Tier-A English kru than most Thai provinces outside Bangkok.</li>
 <li><strong>Fight ecosystem:</strong> <a href="/gyms/max-muay-thai-stadium/">MAX Muay Thai</a> cards, local stadiums, and Bangkok (<a href="/gyms/lumpinee-boxing-stadium/">Lumpinee</a> / <a href="/gyms/rajadamnern-stadium/">Rajadamnern</a>) within a day trip.</li>
-<li><strong>Long-stay life:</strong> Pair training with visa planning, food, and remote-work cafés — the Pattaya Authority network exists for exactly this trip type.</li>
+<li><strong>Long-stay planning:</strong> Pair the training schedule with accommodation, food, recovery time and any immigration advice you need before booking.</li>
 </ul>
 
 <p>Use our <a href="/compare/">compare tool</a> to shortlist three camps, then <a href="/plan-my-trip/">plan my trip</a> to map area and commute.</p>
@@ -174,7 +154,7 @@ const BODY = `
 </ol>
 
 <h2>Visa and long-stay notes</h2>
-<p>Most training holidays run on a <strong>tourist visa or visa exemption</strong> (check your nationality). Camps like <a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> advertise education-visa pathways for multi-month stays — confirm legality with a specialist (Pattaya Visa Help), not a gym sales desk alone.</p>
+<p>Most training holidays run on a <strong>tourist visa or visa exemption</strong> (check your nationality). Camps like <a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> advertise education-visa pathways for multi-month stays — confirm current legality with a qualified immigration adviser, not a gym sales desk alone.</p>
 
 <h2>FAQ</h2>
 

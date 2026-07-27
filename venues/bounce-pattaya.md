@@ -11,8 +11,9 @@ hours: ""
 priceRange: ""
 status: unverified
 distinction: Legacy listing likely conflated with the closed JUMPZ Harbor Pattaya venue
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
+  - https://bounceinc.co.th/select-your-venue/
   - https://www.google.com/maps/search/?api=1&query=BOUNCE+Pattaya
   - https://www.google.com/maps/search/?api=1&query=JUMPZ+HARBOR+PATTAYA
   - https://bounceinc.co.th/
@@ -23,6 +24,6 @@ tags: [kids-youth, trampoline, unverified]
 
 # BOUNCE Pattaya
 
-This legacy record is **unverified**. An exact-name Maps search did not locate a BOUNCE branch in Pattaya, and the current BOUNCE Thailand material checked this session did not establish one.
+This legacy record is **unverified**. An exact-name Maps search did not locate a BOUNCE branch in Pattaya. On 26 July 2026, BOUNCE Thailand's official venue selector listed only EmQuartier and Central Chaengwattana, with no Pattaya branch.
 
 The former record's Harbor Pattaya address and phone resolve to **JUMPZ HARBOR PATTAYA**, a different venue that Google Maps marks permanently closed. The trampoline zones, programmes, prices and opening hours previously attributed to BOUNCE Pattaya have therefore been removed. Do not travel to Harbor Pattaya expecting this venue.

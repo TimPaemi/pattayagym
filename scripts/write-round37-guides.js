@@ -1,9 +1,16 @@
 #!/usr/bin/env node
 /**
- * write-round37-guides.js — Round 37 editorial SEO guides (3 pages).
+ * write-round37-guides.js — Round 37 editorial SEO guides (10 pages).
  */
 
 const { writeEditorialGuide } = require('./lib/editorial-guide-shell');
+const bestGymsNearWalkingStreetBody = require('./guide-bodies/best-gyms-near-walking-street');
+const bestMuayThaiPattayaBody = require('./guide-bodies/best-muay-thai-pattaya');
+const bjjMmaPattayaBody = require('./guide-bodies/bjj-mma-pattaya');
+const boxingKickboxingPattayaBody = require('./guide-bodies/boxing-kickboxing-gym-pattaya');
+const cheapestGymsPattayaBody = require('./guide-bodies/cheapest-gyms-pattaya');
+const climbingPattayaBody = require('./guide-bodies/climbing-pattaya');
+const crossfitPattayaBody = require('./guide-bodies/crossfit-pattaya');
 
 const GUIDES = [
   {
@@ -90,11 +97,12 @@ const GUIDES = [
   {
     slug: 'best-gym-jomtien-pattaya',
     crumb: 'Best gym in Jomtien',
-    kicker: 'Guide · Jomtien · gyms &amp; Muay Thai',
-    title: 'Best gym in Jomtien Pattaya | Pattaya.Gym',
-    desc: 'Best gyms, Muay Thai camps, yoga studios, pools, and fitness options in Jomtien and Na Jomtien — hand-checked venues near Jomtien Beach with area map and compare links.',
+    kicker: 'Guide · Jomtien · current prices · access',
+    readTime: '14 min read',
+    title: 'Jomtien gyms, classes and sport: current prices | Pattaya.Gym',
+    desc: 'Compare Jomtien gyms, Muay Thai, yoga, courts, diving and family sport by current dated prices, access rules, status and exact corridor.',
     h1: 'Best gym in <span class="accent-cyan">Jomtien.</span>',
-    lede: 'Jomtien is Pattaya\'s quieter beach strip — better for long-stay trainers than Walking Street chaos. Here are the best gyms and camps actually in or beside Jomtien, not “Pattaya city” listings mis-tagged as beachside.',
+    lede: 'Choose the product and exact corridor first. The Jomtien filter reaches from Dongtan and Thepprasit to Na Jomtien and Ban Amphur, and it mixes memberships, coached sessions, courts, water days and resort facilities.',
     body: `
 <p>Start with the full area directory: <a href="/area/jomtien/">Jomtien area hub</a> and <a href="/area/jomtien/muay-thai/">Muay Thai in Jomtien</a>. Use <a href="/compare/">compare</a> filtered by area if you are shortlisting hotels + gyms together.</p>
 
@@ -226,6 +234,107 @@ const GUIDES = [
 <h2>Plan your Pattaya trip</h2>
 <p><a href="/guides/muay-thai-camps-with-accommodation-pattaya/">Camps with accommodation</a> · <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking camps</a> · <a href="/compare/">Compare 158 venues</a> · <a href="/plan-my-trip/">Plan my trip</a></p>
 `,
+  },
+  {
+    slug: 'best-gyms-near-walking-street-pattaya',
+    crumb: 'Gyms near Walking Street',
+    kicker: 'Guide · Walking Street · verified access · current prices',
+    readTime: '16 min read',
+    title: 'Best gyms near Walking Street Pattaya | current access',
+    desc: 'Compare gyms, combat training, tennis, badminton, cue sport and pool access near Walking Street by verified hours, current dated prices and access rules.',
+    h1: 'Gyms near <span class="accent-pink">Walking Street.</span>',
+    lede: 'The nearest useful option depends on whether you need weights, a coached class, a booked court or a recovery day. This guide separates those products and removes stale travel-time, fare and public-access assumptions.',
+    body: bestGymsNearWalkingStreetBody,
+  },
+  {
+    slug: 'best-muay-thai-pattaya',
+    crumb: 'Best Muay Thai in Pattaya',
+    kicker: 'Guide · Muay Thai · current prices · decision first',
+    readTime: '18 min read',
+    title: 'Best Muay Thai gyms in Pattaya | current prices',
+    desc: 'Compare Pattaya Muay Thai gyms by current dated prices, class format, location, facilities, residential packages and unresolved access questions.',
+    h1: 'Best Muay Thai in <span class="accent-pink">Pattaya.</span>',
+    lede: 'The best fit depends on the transaction: one coached session, two-a-day training, a central gym, mixed combat disciplines or a residential package. This guide compares those products without review scores or stale price bands.',
+    body: bestMuayThaiPattayaBody,
+  },
+  {
+    slug: 'bjj-mma-pattaya',
+    crumb: 'BJJ and MMA in Pattaya',
+    kicker: 'Guide · BJJ · grappling · MMA · current prices',
+    readTime: '18 min read',
+    title: 'BJJ, grappling and MMA in Pattaya | current guide',
+    desc: 'Compare Pattaya BJJ, grappling and MMA training by current class times, dated prices, location, residential packages and unresolved access questions.',
+    h1: 'BJJ &amp; MMA in <span class="accent-cyan">Pattaya.</span>',
+    lede: 'Pattaya has active BJJ, grappling and MMA programmes, but the only record in the direct BJJ category is closed. This guide maps the current cross-category choices without reviving old academy claims.',
+    body: bjjMmaPattayaBody,
+  },
+  {
+    slug: 'boxing-kickboxing-gym-pattaya',
+    crumb: 'Boxing and kickboxing',
+    kicker: 'Guide · Western boxing · kickboxing · current evidence',
+    readTime: '16 min read',
+    title: 'Boxing and kickboxing gyms in Pattaya | current guide',
+    desc: 'Compare Pattaya boxing and kickboxing options by verified discipline, current class times, dated prices, facilities and residential or contact-first access.',
+    h1: 'Boxing &amp; <span class="accent-pink">kickboxing.</span>',
+    lede: 'Choose the exact striking product first. This guide separates combined boxing and Muay Thai classes, multi-discipline camps, fitness kickboxing, residential western boxing and an unverified former stadium.',
+    body: boxingKickboxingPattayaBody,
+    sisterLinks: [
+      { url: '/guides/best-muay-thai-pattaya/', label: 'Best Muay Thai', desc: 'Current camp and price comparison' },
+      { url: '/guides/bjj-mma-pattaya/', label: 'BJJ and MMA', desc: 'Grappling and hybrid fight gyms' },
+      { url: '/area/central-pattaya/', label: 'Central Pattaya', desc: 'Compare access models by area' },
+      { url: '/compare/', label: 'Compare venues', desc: 'Filter the directory' },
+    ],
+  },
+  {
+    slug: 'climbing-pattaya',
+    crumb: 'Climbing in Pattaya',
+    kicker: 'Guide · Climbing · current status · first visit',
+    readTime: '12 min read',
+    title: 'Climbing gyms in Pattaya | current status and access',
+    desc: 'Find the current Pattaya climbing option, understand Deep Climbing Gym’s closure, and verify STICKY’s schedule, price and first-session access.',
+    h1: 'Climbing in <span class="accent-cyan">Pattaya.</span>',
+    lede: 'Pattaya’s directory has one current dedicated climbing venue and one closed record. This guide keeps that status explicit and shows what to confirm before travelling to STICKY in Huai Yai.',
+    body: climbingPattayaBody,
+    sisterLinks: [
+      { url: '/category/climbing/', label: 'Climbing directory', desc: 'Current venue and closed record' },
+      { url: '/guides/adventure-pattaya/', label: 'Adventure guide', desc: 'Separate climbing from ropes courses' },
+      { url: '/area/east-pattaya/', label: 'East Pattaya', desc: 'Inland location context' },
+      { url: '/compare/', label: 'Compare venues', desc: 'Filter the directory' },
+    ],
+  },
+  {
+    slug: 'crossfit-pattaya',
+    crumb: 'CrossFit in Pattaya',
+    kicker: 'Guide · Functional fitness · affiliate status · schedule',
+    readTime: '12 min read',
+    title: 'CrossFit in Pattaya | current affiliate status and options',
+    desc: 'Understand CrossFit Pattaya’s departed affiliate status and evaluate Jungle Gym’s current functional-fitness schedule, access and location.',
+    h1: 'CrossFit status in <span class="accent-yellow">Pattaya.</span>',
+    lede: 'Pattaya has no verified current CrossFit affiliate in this directory. Jungle Gym is the active independent functional-fitness option connected to the former affiliate record.',
+    body: crossfitPattayaBody,
+    sisterLinks: [
+      { url: '/category/crossfit/', label: 'CrossFit category', desc: 'The current status record' },
+      { url: '/category/fitness/', label: 'Fitness directory', desc: 'General training alternatives' },
+      { url: '/area/east-pattaya/', label: 'East Pattaya', desc: 'Nong Prue location context' },
+      { url: '/guides/24-hour-gyms-pattaya/', label: '24-hour gyms', desc: 'Access outside class schedules' },
+    ],
+  },
+  {
+    slug: 'cheapest-gyms-pattaya',
+    crumb: 'Cheapest gyms',
+    kicker: 'Guide · Budget fitness · current dated prices',
+    readTime: '17 min read',
+    title: 'Cheapest gyms in Pattaya | current prices',
+    desc: 'Compare current Pattaya gym day, week and monthly prices by product, area and included facilities, with unknown tariffs kept out of the ranking.',
+    h1: 'Cheapest <span class="accent-yellow">gyms.</span>',
+    lede: 'The lowest price changes with the transaction. Compare ordinary gym entry, coached-combat facilities and resort access using exact operator tariffs checked 25-26 July 2026.',
+    body: cheapestGymsPattayaBody,
+    sisterLinks: [
+      { url: '/guides/gym-day-pass-pattaya/', label: 'Gym day pass', desc: 'Short-stay access without a month' },
+      { url: '/guides/24-hour-gyms-pattaya/', label: '24-hour gyms', desc: 'Member access versus staffed hours' },
+      { url: '/category/fitness/', label: 'Fitness directory', desc: 'All general-fitness records' },
+      { url: '/compare/', label: 'Compare venues', desc: 'Filter by category and area' },
+    ],
   },
 ];
 

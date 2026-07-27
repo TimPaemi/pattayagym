@@ -1,6 +1,6 @@
 # Pattaya.Gym backlink badge kit
 
-Generated: 2026-07-26
+Generated: 2026-07-27
 
 ## Why this matters
 
@@ -14,7 +14,7 @@ more than any on-page change.
 
 ## Per-venue embed codes
 
-`venue-outreach.csv` has three ready columns for each of the 132 venues
+`venue-outreach.csv` has three ready columns for each of the 133 venues
 with websites:
 
 - `embed_html_badge` — SVG badge linking to the venue's listing

@@ -135,12 +135,12 @@ const GUIDES = [
   {
     slug: 'english-speaking-muay-thai-pattaya',
     crumb: 'English-speaking Muay Thai',
-    title: 'English-speaking Muay Thai gyms in Pattaya | Pattaya.Gym',
-    desc: 'The 10 best English-speaking Muay Thai gyms in Pattaya for foreign tourists, beginners, and long-stay trainers. Hand-checked English-fluent kru and trainer recommendations.',
+    title: 'English-speaking Muay Thai in Pattaya | evidence-led guide',
+    desc: 'Find Pattaya Muay Thai camps with explicit or confirmable English support, current training prices, exact schedules and a trainer-language checklist.',
     accent: 'accent-pink',
-    eyebrow: 'Guide · Muay Thai · English-speaking · 10 venues',
+    eyebrow: 'Guide · Muay Thai · language evidence · current prices',
     h1: 'English-speaking <span class="accent-pink">Muay Thai.</span>',
-    lede: 'You don\'t need any Thai to train Muay Thai in Pattaya. Most reputable camps have English-fluent kru as the norm — not the exception. This guide cuts straight to the 10 gyms where you can show up with zero Thai, learn proper technique, and not waste your trip on language friction.',
+    lede: 'An English website, an English-speaking receptionist and a trainer who can explain technique are not the same evidence. This guide separates them and shows what to confirm before paying.',
     body: `
 <p>Pattaya is the most foreigner-friendly Muay Thai city in Thailand. Bangkok has stronger lineage; Phuket has the resort packages; but Pattaya has the highest density of English-speaking kru per square kilometre because the city has been training Western fighters since the 1980s.</p>
 
@@ -231,7 +231,8 @@ const GUIDES = [
 <h2>Compare to other guides</h2>
 
 <p>If you specifically want female-friendly training: see <a href="/guides/female-friendly-gyms-pattaya/">our female-friendly gyms guide</a>. For Russian-speaking trainers: <a href="/guides/pattaya-russian-speaking-sport/">Russian-speaking sport guide</a>. For beginners specifically: <a href="/guides/best-for-beginners-pattaya/">beginner-friendly gyms</a>. For the broader top picks across all language tiers: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai Pattaya</a>.</p>
-`
+`,
+    body: require('./guide-bodies/english-speaking-muay-thai-pattaya'),
   },
 
   {

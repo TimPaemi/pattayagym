@@ -3,28 +3,27 @@ id: premier-football-arena-pattaya
 name: Premier Football Arena
 category: adventure
 area: Naklua / North Pattaya
-address: 580/77 Land Office 2, Naklua, Bang Lamung, Chonburi 20150
-phone: "+66 89 224 5665"
+address: WV9H+J7F, Pattaya City, Bang Lamung, Chonburi 20150
+phone: ""
 website: ""
 social: {}
 hours: Open 24 hours daily according to the current Maps listing; sessions require booking
 priceRange: ""
-distinction: Artificial-turf football venue used by local clubs and walking-football groups
+distinction: Book-ahead football venue used by a current walking-football group
 sport: Football
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://thailand-jomtien-wf.com/walk/whereweplay.html
-  - https://www.localgymsandfitness.com/TH/Pattaya/150899402168551/Premier-Football-Arena
   - https://www.google.com/maps/search/?api=1&query=Premier+Football+Arena+Pattaya
-description: Naklua football arena with current club fixtures and a regular Sunday walking-football session.
+description: North Pattaya football venue hosting a published Sunday 17:00 walking-football session.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Premier+Football+Arena+Pattaya"
-tags: [football, artificial-turf, walking-football, naklua, club-hire]
+tags: [football, walking-football, north-pattaya, club-hire]
 ---
 
 # Premier Football Arena
 
-Premier Football Arena is an artificial-turf football venue in Naklua. Current activity posts show matches at the ground in 2026, and the Jomtien Pattaya Walking Football group publishes Premier as its Sunday 17:00 venue.
+Premier Football Arena is a football venue in North Pattaya. The Jomtien Pattaya Walking Football group currently publishes the arena as its Sunday 17:00 venue and welcomes all skill levels. That group session is the clearest current first-hand route for an individual player.
 
-Maps lists the ground as open 24 hours, but that indicates booking availability rather than staffed walk-in play. Contact the arena or join an organised session before travelling.
+The Maps record is unclaimed and lists the ground as open 24 hours. Treat that as a directory availability label, not proof of staffed walk-in play at every hour. The listing publishes the Plus Code WV9H+J7F but no operator phone or website, so the former unsupported address and phone have been removed.
 
-No current operator tariff was accessible. Confirm pitch size, hire duration, footwear rules, floodlighting, changing facilities, deposits and weather or cancellation terms.
+No current operator tariff was accessible. A team organiser should confirm pitch size, hire duration, footwear rules, floodlighting, changing facilities, deposits and weather or cancellation terms through a current booking contact. An individual interested in the Sunday session should contact the walking-football group and confirm that week's fixture before travelling.

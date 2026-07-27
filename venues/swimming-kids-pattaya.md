@@ -11,6 +11,7 @@ social:
 hours: "Wed–Fri 10:00–18:00; Sat–Sun 08:30–18:00; closed Mon–Tue"
 priceRange: ฿฿฿
 distinction: Indoor heated saltwater swim school for babies and children aged four months to nine years
+priceAsOf: 2026-07-24
 priceSourceUrl: https://swimmingkidsthailand.com/wp-content/uploads/2025/07/Fees-Pattaya.jpg
 verified: 2026-07-24
 sources:
@@ -39,4 +40,3 @@ Confirm lesson length, class size, make-up policy and the correct age band befor
 ## First visit
 
 The school is on Soi Na Jomtien 14 near Ambassador City Jomtien. It closes Monday and Tuesday. Contact the branch by phone or Line to arrange an assessment or trial and ask what swimwear or swim nappies are required.
-

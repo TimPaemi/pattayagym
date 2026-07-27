@@ -134,7 +134,7 @@ const CARD_ADD = [
     </a>\n    ` },
   { slug: 'climbing-pattaya', card: `<a href="/guides/climbing-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Climbing in Pattaya</h3><span class="cv-pill">Climbing</span></div>
-      <p>Deep at Harbor Mall vs Bean Cow Huay Yai — real walls, hotel walls, family picks.</p>
+      <p>STICKY in Huai Yai is current; Deep at Harbor Pattaya is permanently closed.</p>
       <span class="cv-cta">Read guide →</span>
     </a>\n    ` },
   { slug: 'tennis-badminton-pattaya', card: `<a href="/guides/tennis-badminton-pattaya/" class="cat-venue-card">
@@ -149,7 +149,7 @@ const CARD_ADD = [
     </a>\n    ` },
   { slug: 'crossfit-pattaya', card: `<a href="/guides/crossfit-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>CrossFit in Pattaya</h3><span class="cv-pill">CrossFit</span></div>
-      <p>Jungle Gym affiliate on the Darkside — plus chain-gym and combat S&amp;C alternatives.</p>
+      <p>Departed affiliate status, current Jungle Gym schedule, and general-gym alternatives.</p>
       <span class="cv-cta">Read guide →</span>
     </a>\n    ` },
   { slug: 'bjj-mma-pattaya', card: `<a href="/guides/bjj-mma-pattaya/" class="cat-venue-card">
@@ -164,7 +164,7 @@ const CARD_ADD = [
     </a>\n    ` },
   { slug: 'best-gym-east-pattaya', card: `<a href="/guides/best-gym-east-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Best gym in East Pattaya (Darkside)</h3><span class="cv-pill">Area</span></div>
-      <p>Kombat Group, Sor Klinmee, Sanit Mabprachan, Jungle Gym CrossFit.</p>
+      <p>Kombat Group, Sor Klinmee, Sanit Mabprachan, and independent Jungle Gym.</p>
       <span class="cv-cta">Read guide →</span>
     </a>\n    ` },
   { slug: 'is-muay-thai-safe-pattaya', card: `<a href="/guides/is-muay-thai-safe-pattaya/" class="cat-venue-card">

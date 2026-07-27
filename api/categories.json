@@ -1,7 +1,7 @@
 {
   "name": "Pattaya Gym Directory — categories",
   "url": "https://pattaya-gym.com/",
-  "generated": "2026-07-26",
+  "generated": "2026-07-27",
   "license": "CC BY 4.0",
   "count": 15,
   "categories": [
@@ -251,7 +251,7 @@
           "name": "Coco Fitness",
           "url": "https://pattaya-gym.com/gyms/coco-fitness/",
           "area": "Mike Shopping Mall / Central Pattaya",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "universe-gym",
@@ -447,7 +447,7 @@
           "name": "Jetts Fitness Central Si Racha",
           "url": "https://pattaya-gym.com/gyms/jetts-central-sriracha/",
           "area": "Sriracha",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "station-24-fitness-sriracha",
@@ -673,7 +673,7 @@
           "name": "Bangpra Golf Club",
           "url": "https://pattaya-gym.com/gyms/bangpra-international/",
           "area": "Bang Phra / Si Racha",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "mountain-shadow-country-club",
@@ -693,8 +693,8 @@
           "id": "pattaya-golf-driving-range",
           "name": "Pattaya Golf Driving Range",
           "url": "https://pattaya-gym.com/gyms/pattaya-golf-driving-range/",
-          "area": "East Pattaya",
-          "priceRange": null
+          "area": "North Pattaya / Third Road",
+          "priceRange": "฿"
         },
         {
           "id": "golf-hub-pattaya",
@@ -818,7 +818,7 @@
         },
         {
           "id": "pattaya-monkey-badminton",
-          "name": "Monkey Badminton Court Pattaya",
+          "name": "Pattaya Monkey Badminton Center",
           "url": "https://pattaya-gym.com/gyms/pattaya-monkey-badminton/",
           "area": "East Pattaya / Sukhumvit 81",
           "priceRange": null
@@ -856,7 +856,7 @@
           "name": "SB Badminton Huai Yai",
           "url": "https://pattaya-gym.com/gyms/sb-badminton-huai-yai/",
           "area": "Huai Yai",
-          "priceRange": "฿"
+          "priceRange": null
         },
         {
           "id": "pattaya-tennis-club",
@@ -976,7 +976,7 @@
           "name": "Micky Phim Swimming Pool Club",
           "url": "https://pattaya-gym.com/gyms/micky-phim-swimming-pool/",
           "area": "Nong Prue / East Pattaya",
-          "priceRange": "฿"
+          "priceRange": null
         },
         {
           "id": "baby-shark-swim-club-pattaya",
@@ -1040,7 +1040,7 @@
           "name": "Seafari Diving Center",
           "url": "https://pattaya-gym.com/gyms/seafari-padi-dive/",
           "area": "Central Pattaya",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "pattaya-scuba-adventures",
@@ -1103,7 +1103,7 @@
           "name": "SailBreeze Yacht Charter",
           "url": "https://pattaya-gym.com/gyms/sailbreeze-ocean-marina/",
           "area": "Ocean Marina / Na Jomtien",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "royal-varuna-yacht-club",
@@ -1280,7 +1280,7 @@
           "name": "Nong Nooch Thai Cultural Show",
           "url": "https://pattaya-gym.com/gyms/nongnooch-cultural-show/",
           "area": "Na Jomtien / Sattahip",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "pattaya-running-routes",
@@ -1407,7 +1407,7 @@
           "name": "Planet Football Pattaya",
           "url": "https://pattaya-gym.com/gyms/planet-football-pattaya/",
           "area": "Nong Prue / East Pattaya",
-          "priceRange": null
+          "priceRange": "฿"
         },
         {
           "id": "rusich-club-football",

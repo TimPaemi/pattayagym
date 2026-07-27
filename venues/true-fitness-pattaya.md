@@ -10,8 +10,8 @@ social: {}
 hours: ""
 priceRange: ""
 distinction: Unverified legacy Pattaya gym identity
-status: Unverified
-verified: 2026-07-25
+status: unverified
+verified: 2026-07-26
 sources:
   - https://www.google.com/maps/search/?api=1&query=True+Fitness+Pattaya
 description: Legacy record retained for identity tracking; no current Pattaya operation could be verified.
@@ -21,6 +21,6 @@ tags: [fitness, unverified, legacy]
 
 # True Fitness Pattaya
 
-Current exact-name Maps and web checks found no True Fitness branch in Pattaya. The search resolves to unrelated businesses, the international chain outside Thailand and this directory's previous page rather than a live local venue.
+The exact-name Maps search checked on 26 July 2026 did not return a True Fitness club in Pattaya. It returned other current gyms, including Fitness 7, Coco Fitness and Jetts Little Walk, but that is not evidence that this legacy record belongs to any of them.
 
-The former mall location, class programme, hours, facilities and indicative prices were unsupported and have been removed. Treat this as an unverified legacy identity, not a confirmed operating gym.
+No current Pattaya address, phone, timetable, operator page or price could be verified for this name. The record remains only to prevent the old identity from being silently presented as an operating gym. Do not use it to plan a visit; compare current options in the [Pattaya fitness directory](/category/fitness/) instead.

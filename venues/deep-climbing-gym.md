@@ -11,7 +11,7 @@ hours: ""
 priceRange: ""
 status: closed
 distinction: Former indoor climbing gym retained as a closure finding
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.google.com/maps/search/?api=1&query=Deep+Climbing+Gym+Harbor+Pattaya
   - https://www.pattayamail.com/ourcommunity/deep-climbing-gym-opens-harbor-mall-pattaya-145182

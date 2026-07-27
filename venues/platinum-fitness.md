@@ -10,8 +10,8 @@ social: {}
 hours: ""
 priceRange: ""
 distinction: Unverified legacy Pattaya gym identity
-status: Unverified
-verified: 2026-07-25
+status: unverified
+verified: 2026-07-26
 sources:
   - https://www.google.com/maps/search/?api=1&query=Platinum+Fitness+Pattaya
 description: Legacy record retained for identity tracking; current Pattaya operation could not be verified.

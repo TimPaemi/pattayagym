@@ -9,17 +9,17 @@ const guides = [
   {
     slug: 'adventure-pattaya',
     crumb: 'Adventure',
-    kicker: 'Guide · Zipline · skydive · karting · ATV · shooting',
-    readTime: '10 min read',
+    kicker: 'Guide · Skydive · karting · ATV · zipline · shooting',
+    readTime: '13 min read',
     title: 'Adventure sport in Pattaya | Zipline, skydive, karting, ATV | Pattaya.Gym',
-    desc: 'Where to find adventure in Pattaya — Thai Sky tandem skydive, Tarzan zipline, Flight of the Gibbon, karting, ATV tours, tower jump, shooting ranges, and booking tips.',
+    desc: 'Compare current Pattaya adventure records for skydiving, karting, ATV, ziplines, motorsport and shooting, with dated prices, booking gaps and closure warnings.',
     h1: 'Adventure in <span class="accent-cyan">Pattaya.</span>',
-    lede: 'Pattaya runs tandem skydiving, jungle ziplines, kart tracks on Thepprasit, ATV mud east of Mabprachan, a 170m tower jump, and indoor/outdoor shooting — twelve operators in our directory. This guide maps each type and who it suits.',
+    lede: 'The directory has 16 adventure-category records, but four are football or multi-sport venues and two relevant records carry a closure or identity warning. This guide compares the current evidence without presenting every record as open or bookable.',
     body: require('./guide-bodies/adventure-pattaya'),
     sisterLinks: [
       { url: '/guides/family-friendly-pattaya/', label: 'Family-friendly', desc: 'Active holidays with kids' },
       { url: '/guides/climbing-pattaya/', label: 'Climbing', desc: 'Harbor Mall + Bean Cow walls' },
-      { url: 'https://mrweoutside.com/', external: true, label: 'Mr We Outside', desc: 'Outdoor adventure community' },
+      { url: '/guides/best-gym-east-pattaya/', label: 'East Pattaya', desc: 'Pong, Mabprachan and Huai Yai context' },
     ],
   },
 ];

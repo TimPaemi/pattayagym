@@ -1,112 +1,98 @@
 module.exports = `
-<p>Pattaya adventure sport is not one thing — it spans tandem skydiving north of the city, jungle ziplines south at Sattahip, karting on Thepprasit Road, ATV tours east of Mabprachan, tower jumps at Pattaya Park, and shooting ranges on the Darkside. This guide maps all 12 listed operators, who each suits, and how adventure days fit around Muay Thai training blocks.</p>
+<p><strong>If you only read one thing: choose the activity first, then verify the exact product and date with the operator.</strong> Pattaya's adventure records range from a walk-in kart race to a weather-dependent skydive and a reserved circuit session. A shared category label does not make their prices, eligibility rules or time commitment comparable.</p>
 
-<p>Hub: <a href="/category/adventure/">Adventure category</a> · <a href="/guides/family-friendly-pattaya/">Family-friendly</a> · <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a> · <a href="/compare/">compare</a> · <a href="/plan-my-trip/">plan my trip</a>.</p>
+<p>The <a href="/category/adventure/">adventure category</a> currently contains 16 directory records. Four are football or multi-sport venue records that are not treated as adventure attractions in this guide. Of the 12 relevant records, ten have no closure or identity warning, one is closed and one remains unverified. That distinction matters: this guide does not turn a legacy record into a recommendation.</p>
 
-<h2>Bucket-list adrenaline</h2>
+<h2>Quick comparison</h2>
 
-<p><a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a> runs Southeast Asia's only full-time skydive drop zone — tandem from 13,000 ft, ~60 seconds freefall, free Pattaya hotel pickup daily at 07:00 or 10:00. Book ahead; weather windows matter.</p>
+<table>
+<thead><tr><th>Option</th><th>Access model</th><th>Published price</th><th>Main limitation to confirm</th></tr></thead>
+<tbody>
+<tr><td><a href="/gyms/easykart-pattaya/">EasyKart Thepprasit</a></td><td>Individual kart races; daily 10:00–01:00</td><td>Kids race ฿499; regular race ฿699; fast kart two races ฿1,499, checked 25 July 2026</td><td>Driver eligibility, wait and weather</td></tr>
+<tr><td><a href="/gyms/pattaya-kart-speedway/">Pattaya Kart Speedway</a></td><td>Beginner and experienced-driver tracks; daily 09:30–18:30</td><td>No numeric rate reproduced</td><td>Current rate image, kart class and session length</td></tr>
+<tr><td><a href="/gyms/bira-circuit/">Bira Circuit</a></td><td>Scheduled shared track sessions or accepted private reservation</td><td>Motorcycle session ฿1,800; car session ฿3,500, checked 25 July 2026</td><td>Whether a suitable session is running and the vehicle requirements</td></tr>
+<tr><td><a href="/gyms/atv-tours-pattaya/">ATV &amp; Buggy Adventures</a></td><td>Guided route from Pong; scheduled departure</td><td>Explorer ฿2,990; Adventure ฿3,500, checked 25 July 2026</td><td>Vehicle, passenger rules, transfer coverage and booking terms</td></tr>
+<tr><td><a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a></td><td>Booked tandem jump or training; weather dependent</td><td>Tandem ฿9,450; media from ฿3,800, checked 25 July 2026 from the operator's April 2026 list</td><td>Weather, eligibility, full-day timing and rescheduling terms</td></tr>
+<tr><td><a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure Pattaya</a></td><td>Zipline and aerial-obstacle park; Maps lists daily 09:00–17:30</td><td>No stable public tariff found</td><td>Available course, participant rules, transfer and cancellation policy</td></tr>
+<tr><td><a href="/gyms/dragon-shooting-club/">Dragon Shooting Club</a></td><td>Instructor-led indoor range packages; daily 09:00–18:00</td><td>Packages from ฿2,000 for two firearms and 30 shots, checked 25 July 2026</td><td>Exact package composition, identification and operator eligibility decision</td></tr>
+<tr><td><a href="/gyms/pattaya-shooting-park/">Pattaya Shooting Park</a></td><td>Live Maps listing for an East Pattaya range; daily 09:00–18:00</td><td>No current first-party tariff found</td><td>Available activity, package, identification and booking requirement</td></tr>
+</tbody>
+</table>
 
-<p><a href="/gyms/pattaya-park-water-fun/">Pattaya Park Tower Jump</a> drops you 170m on a zip line from the 56th floor — the original Pattaya 1989 complex also bundles water park and amusement rides. South Pattaya / Jomtien border.</p>
+<p>The table is deliberately incomplete where the source is incomplete. A blank price is not a budget recommendation. It means the current operator tariff was not accessible during the recorded check and needs direct confirmation.</p>
 
-<p><a href="/gyms/pattaya-sky-ride-helicopter/">Pattaya Sky Ride</a> runs helicopter sightseeing and Bangkok–Pattaya charter on Airbus EC-135/EC-130 — luxury aerial, not budget day out.</p>
+<h2>Skydiving: the highest booking commitment</h2>
 
-<h2>Zipline &amp; jungle courses</h2>
+<p><a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a> operates in Nong Kham, Si Racha rather than central Pattaya. Its current operator site advertises tandem jumps from up to 13,000 feet with about 60 seconds of freefall, plus AFF and A-licence training. Those are operator claims tied to the exact tandem and price-list pages; they should not be generalized to every day because jumps depend on weather and operations.</p>
 
-<ul>
-<li><a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure Pattaya</a> — 25-platform jungle course + half course + kids track near Golden Cliff Temple, Sattahip. Daily 09:00–18:00. Pair with <a href="/guides/best-gym-sattahip-pattaya/">south Pattaya sport</a>.</li>
-<li><a href="/gyms/flight-of-the-gibbon/">Flight of the Gibbon</a> — Thailand's largest canopy zipline (3 km, 24 platforms) inside Khao Kheow Open Zoo, ~1 hour from Pattaya. All-inclusive day with zoo + lunch — plan a full day, not a morning add-on.</li>
-</ul>
+<p>The operator's April 2026 price list, checked 25 July 2026, lists a tandem at ฿9,450 and optional media from ฿3,800. The same document states that Pattaya round-trip transport is free for one tandem customer and one companion. Confirm the pickup area for the booked date rather than assuming every Pattaya address is included.</p>
 
-<p>Not zipline but related: <a href="/guides/climbing-pattaya/">indoor climbing</a> at Harbor Mall (Deep) and Huay Yai (Bean Cow) for structured wall sessions vs jungle ropes.</p>
+<p>This option suits a reader prepared to book, keep the operator informed and accept that the schedule can change. Before paying, ask for the expected arrival and finish window, body-size or medical restrictions, identification requirements, weather decision process, companion arrangements and refund or rescheduling terms. The directory does not infer those rules where the current price list or tandem page does not state them.</p>
 
-<h2>Karting &amp; motorsport</h2>
+<h2>Karting versus circuit driving</h2>
 
-<ul>
-<li><a href="/gyms/easykart-pattaya/">EasyKart Thepprasit</a> — newest outdoor track, 350m beginner + 800m racing, kids/regular/fast/2-seater tiers from ~480 baht. Open until 01:00.</li>
-<li><a href="/gyms/pattaya-kart-speedway/">Pattaya Kart Speedway</a> — Pattaya's first kart track since 1987; same compound runs ATV, paintball, and bungee on Thepprasit Soi 9.</li>
-<li><a href="/gyms/bira-circuit/">Bira Circuit</a> — Thailand's first FIA-standard motor racing circuit, 15 km northeast of Pattaya. Track days and spectator events — not casual tourist karting.</li>
-</ul>
+<p>Thepprasit Road has two different kart products. EasyKart publishes kids, regular, fast and two-seat products. Prices checked 25 July 2026 were ฿499 for one kids race, ฿699 for one regular race, ฿1,499 for two fast-kart races and ฿699 for one two-seat race. Three-race products were also listed: ฿1,999 for regular with a shirt, ฿1,999 for fast and ฿1,999 for two-seat, all checked on the same date. The operator's kids guidance was ages 7–13 with height above 125 centimetres. Treat that as guidance to confirm, not permission for a child to drive without the operator's decision.</p>
 
-<h2>Off-road &amp; countryside</h2>
+<p>Pattaya Kart Speedway publishes separate beginner and experienced-driver tracks and daily 09:30–18:30 hours. Its official ticket page presents prices as images that were not readable enough to reproduce reliably during the source check. That makes it a call-ahead comparison: ask for the correct kart, session duration, current charge and age or height limits.</p>
 
-<p><a href="/gyms/atv-tours-pattaya/">ATV &amp; Off-Road Tours</a> east of Pattaya (Pong Village / Mabprachan belt) run Polaris ATVs, buggies, and enduro routes with free hotel pickup — twice daily at 09:00 and 14:00. Beginner mud tracks to extreme hill routes.</p>
+<p><a href="/gyms/bira-circuit/">Bira Circuit</a> is not tourist karting. The operator describes a 2.41-kilometre road circuit with shared motorcycle and car sessions plus private hire. Rates checked 25 July 2026 were ฿1,800 for a shared motorcycle period from 09:00–12:00 and ฿3,500 for a shared car period from 13:00–17:00. Whole-circuit hire was ฿130,000 on a weekday and ฿150,000 on a weekend, checked on the same date. Access depends on the calendar or an accepted reservation. Confirm vehicle inspection, driver eligibility and required equipment before travelling.</p>
 
-<p><a href="/gyms/pattaya-bike-boat-tours/">Pattaya Bike and Boat Tours</a> (Naklua) is the quiet alternative — guided bicycle on back roads plus optional boat extensions. English-speaking small groups; real village routes, not ATV mud.</p>
+<h2>ATV and buggy routes east of the city</h2>
 
-<h2>Shooting ranges</h2>
+<p>ATV &amp; Buggy Adventures Pattaya runs guided off-road routes from Pong near Mabprachan. The operator's tour page listed a 27-kilometre Explorer route at ฿2,990 and a 34-kilometre Adventure route at ฿3,500, checked 25 July 2026. Both were described as about two hours of riding and about three hours in total. A private VIP departure added ฿2,000 per group, checked on the same date.</p>
 
-<ul>
-<li><a href="/gyms/pattaya-shooting-park/">Pattaya Shooting Park</a> — largest outdoor range, Soi Khao Mai Kaew east side. .22 through 9mm and shotguns; many packages include hotel pickup.</li>
-<li><a href="/gyms/dragon-shooting-club/">Dragon Shooting Club</a> — largest indoor range in Thailand, AC, VIP lanes. Confirm exact Pattaya address at booking.</li>
-</ul>
+<p>The useful trade-off is structure versus flexibility: this is a guided product with a base, vehicle assignment and departure arrangement, not an open trail where the directory can promise immediate access. Confirm whether the quoted price is per driver or vehicle, which vehicle is assigned, passenger rules, age or licence requirements, safety equipment, insurance, hotel-transfer coverage and cancellation terms. The live listing and operator contact page give different kinds of hours—venue daily 09:00–18:00 and office contact daily 08:00–20:00—so use the booked departure rather than treating either span as continuous tour starts.</p>
 
-<p>Strict ID and safety briefing at both — not kid-friendly unless operator runs a dedicated junior programme (verify directly).</p>
+<h2>Ziplines: one current record and one closure</h2>
 
-<h2>Quick pick by traveller type</h2>
+<p><a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure Pattaya</a> is the current zipline and aerial-obstacle record in Na Chom Thian. Owner social channels and its live Maps listing match the address and phone; Maps lists daily 09:00–17:30. No stable operator tariff was accessible, and the source check did not retain old platform counts, language claims or bundled attractions that could not be revalidated. Ask which course is available, the participant height and weight rules, whether transfer is included, the weather policy, insurance terms and the cancellation rule.</p>
 
-<ul>
-<li><strong>Family with kids 8+?</strong> → Tarzan half course or EasyKart kids tier · afternoon <a href="/guides/swimming-pools-pattaya/">pool day pass</a>.</li>
-<li><strong>Training holiday rest day?</strong> → Bike &amp; boat tour or Harbor Mall stack (<a href="/guides/climbing-pattaya/">climbing</a> + BOUNCE trampoline same building).</li>
-<li><strong>Adrenaline bucket list?</strong> → Thai Sky tandem skydive — book first, train around weather window.</li>
-<li><strong>Darkside resident?</strong> → ATV east tours or shooting park — less Beach Road traffic.</li>
-<li><strong>Luxury splurge?</strong> → Pattaya Sky Ride helicopter or Bira track-day experience.</li>
-</ul>
+<p><a href="/gyms/flight-of-the-gibbon/">Flight of the Gibbon Pattaya</a> is closed. It formerly operated at Khao Kheow, but the Chonburi Attractions Association lists it as closed, a local report updated in April 2025 says the operation appears to have ended around 2020, and the live-listing check on 25 July 2026 found no reopening signal. It is retained as a closure finding, not an alternative to Tarzan. Do not book transport or a day around old Flight of the Gibbon descriptions.</p>
 
-<h2>Booking &amp; safety notes</h2>
+<h2>Shooting ranges: compare package clarity</h2>
 
-<p>Most adventure operators require advance booking in peak season (Dec–Feb, Songkran). Zipline, skydive, and ATV enforce weight and age limits — confirm on each venue page. Transport: Pattaya Vehicle Rentals for self-drive to Sattahip zipline; many operators include pickup.</p>
+<p>Dragon Shooting Club has the clearer public price evidence. Operator packages checked 25 July 2026 included two firearms and 30 shots for ฿2,000; three firearms and 30 shots for ฿3,000; four firearms and 40 shots for ฿4,500; three firearms and 50 shots for ฿6,000; and four firearms and 85 shots for ฿7,500. Non-package options started at ฿1,000 on the same check date. The package composition matters, so confirm the selected firearms and ammunition count rather than comparing only the headline amount.</p>
 
-<p>Injury backup: Pattaya Medical. Family context: <a href="/guides/pattaya-gyms-childcare-family-pools/">childcare &amp; family pools</a>.</p>
+<p>The Pattaya Shooting Park record has current location, phone and daily 09:00–18:00 hours from its live Maps listing, but no current first-party tariff or stable activity menu. That makes it the weaker choice for a price comparison. Call to ask what supervised activities are available, the current package, identification and age requirements and whether advance booking is needed. At either venue, eligibility and participation are operator decisions; the directory does not substitute its own age or experience rule.</p>
 
-<h2>Related guides</h2>
+<h2>Water park and helicopter records</h2>
 
-<ul>
-<li><a href="/guides/climbing-pattaya/">Climbing in Pattaya</a> — Deep vs Bean Cow indoor walls</li>
-<li><a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien &amp; Sattahip</a> — Tarzan, Ramayana, marina south</li>
-<li><a href="/guides/family-friendly-pattaya/">Family-friendly Pattaya</a> — sport holidays with kids</li>
-<li><a href="/guides/best-dive-operators-pattaya/">Best dive operators</a> — underwater adventure from Bali Hai pier</li>
-</ul>
+<p>Pattaya Park Water Park is listed daily 09:00–18:00 within the Pattaya Park complex. It is a leisure water park rather than a lap-swimming or coached-sport facility. The operator site did not expose a stable ticket tariff during the recorded check, so no amount is quoted. Earlier tower height, floor number, named-ride and tower-jump claims were removed because they were sourced to third-party sellers or aggregators rather than current operator material. Book this record as a water-park enquiry, not as proof that a tower jump is available.</p>
 
-<h2>Who each adventure type suits</h2>
+<p>Pattaya Sky Ride advertises Pattaya sightseeing and Bangkok–Pattaya helicopter transport from a Huai Yai address. Its official package page displayed “No Package Found” on 25 July 2026, so the directory removed an old charter amount and aircraft claims instead of presenting them as current. Ask for a written itinerary and quotation that identifies the departure and landing points, passenger and baggage limits, weather terms, cancellation terms and aircraft assigned.</p>
 
-<p><strong>First-time adrenaline:</strong> tandem skydive (Thai Sky) or tower jump (Pattaya Park) — fixed schedule, minimal skill. <strong>Families with teens:</strong> Tarzan half-course, EasyKart beginner track, ATV beginner mud route — verify age/height on venue pages. <strong>Serious motorsport fans:</strong> Bira Circuit track days, not tourist karting. <strong>Training-holiday rest day:</strong> one adventure only; shin-heavy Muay Thai weeks need recovery, not back-to-back ATV + kart + shoot.</p>
+<h2>The unverified record</h2>
 
-<h2>Booking lead times and weather</h2>
+<p>Pattaya Bike and Boat Tours remains unverified. A legacy name or old activity description is not enough to recommend a current departure. Until a current owner page, exact live listing or other first-party operating signal is tied to the record, use it only as an identity note. This is why the guide's relevant-record count is not presented as twelve open, bookable operators.</p>
 
-<p>Skydive and Flight of the Gibbon often sell out <strong>2–7 days ahead</strong> in high season. Karting and shooting ranges accept more walk-ins. Rain cancels outdoor karting and zipline afternoon slots — have a backup (<a href="/guides/climbing-pattaya/">indoor climbing</a>, <a href="/guides/snooker-pool-billiards-pattaya/">snooker halls</a>). Songkran week (mid-April) closes many operators for the holiday — book around it.</p>
-
-<h2>Weight, age, and medical limits</h2>
-
-<p>Skydive and zipline enforce maximum weights (often ~95–100 kg) and minimum ages for tandem vs kids tracks. Shooting ranges require sober participants and ear protection — shops supply basic gear. ATV tours need closed shoes; flip-flops are rejected at pickup. Disclose heart conditions, pregnancy, and recent surgery — operators will refuse liability otherwise.</p>
-
-<h2>Transport from each Pattaya zone</h2>
+<h2>How to choose without comparing unlike products</h2>
 
 <ul>
-<li><strong>Central / Beach Road</strong> — 15–25 min to Thepprasit karting; 45–60 min to Thai Sky north; taxi ~฿400–700 one way.</li>
-<li><strong>Jomtien</strong> — closer to Tarzan/Sattahip zipline belt; combine with <a href="/guides/best-gym-sattahip-pattaya/">south corridor</a> gym days.</li>
-<li><strong>East / Mabprachan</strong> — ATV and wake park nearby; skydive still needs highway run north.</li>
+<li><strong>Lowest booking friction:</strong> start with a kart venue, but still confirm the driver category, current wait and weather before making a special trip.</li>
+<li><strong>Structured half-day product:</strong> compare the ATV route description, total duration and transfer terms rather than only the riding time.</li>
+<li><strong>Weather-dependent priority:</strong> book the skydive around the operator's process and keep the rest of that day flexible.</li>
+<li><strong>Specialist motorsport:</strong> use Bira only after a suitable session or reservation is confirmed; it is not a substitute for arrive-and-drive karting.</li>
+<li><strong>Price-first decision:</strong> EasyKart, ATV &amp; Buggy Adventures, Bira, Thai Sky and Dragon have dated public figures in their records. Tarzan, Pattaya Kart Speedway, Pattaya Shooting Park, Pattaya Park Water Park and Pattaya Sky Ride need direct quotes or readable current tariffs.</li>
 </ul>
 
-<p>Scooter rental: Pattaya Vehicle Rentals. Ride-hailing works but drivers may not know shooting-range sois — send the venue Google pin.</p>
+<p>For an inland base, the <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a> helps separate Pong, Mabprachan, Nong Prue and Huai Yai records. For a family trip, use the <a href="/guides/family-friendly-pattaya/">family-friendly guide</a>, but do not infer that an adventure product accepts a child merely because it appears in a family itinerary. The operator's current eligibility decision controls.</p>
 
-<h2>Adventure + Muay Thai on the same trip</h2>
+<h2>Booking checklist</h2>
 
-<p>Schedule adventure on <strong>rest days</strong> after hard sparring weeks, not the morning before pads. Bruised shins and ATV vibration do not mix well. A common pattern: Mon–Fri camp training, Sat skydive or zipline, Sun pool and massage. Fight tourists add Bangkok stadium night via <a href="/guides/bangkok-day-trip-sport-pattaya/">Bangkok day trips</a> instead of stacking three adrenaline hits in one Pattaya day.</p>
+<p>Send the operator the activity, date, number of participants and relevant experience before paying. Ask for the exact total, inclusions, tax or payment surcharge, meeting point, start and expected finish window, equipment supplied, identification, age/height/weight or licence rules, weather decision process, cancellation and rescheduling terms, transport coverage and any companion charge. Keep the written response with the booking. If the answer changes the product materially, rely on the current operator confirmation rather than this dated guide.</p>
 
-<h2>Photography and social proof</h2>
+<p>When combining an activity with gym or Muay Thai sessions, compare actual start and finish windows. A two-hour ATV route may be described by the operator as about three hours in total; a skydive can be weather dependent; Bira access depends on a scheduled session. Do not build a same-day training plan from the activity duration alone.</p>
 
-<p>Skydive and zipline operators sell photo packages — decide on ground, not mid-air. Drone rules apply near airports (U-Tapao south) — check local restrictions before flying consumer drones. Shooting ranges prohibit casual phone video for safety — follow range officer instructions.</p>
+<h2>Frequently asked questions</h2>
 
-<h2>Insurance and liability waivers</h2>
+<h3>Which Pattaya adventure option has the clearest low-cost published entry?</h3>
+<p>Among the records with readable current public prices, EasyKart listed a ฿499 kids race and a ฿699 regular race, checked 25 July 2026. Eligibility and current availability still need operator confirmation. A blank price at another venue does not mean it costs less.</p>
 
-<p>Adventure operators require signed waivers — read jump weight limits and pregnancy exclusions honestly. Travel insurance adventure riders matter for skydive and zipline, not just medical clinic visits. Keep passport copy in dry bag for boat-to-zipline combo days south of Pattaya.</p>
+<h3>Is Flight of the Gibbon Pattaya open?</h3>
+<p>No. The directory marks Flight of the Gibbon Pattaya closed. The Chonburi Attractions Association lists it as closed, a local report updated in April 2025 says it appears to have ended around 2020, and no reopening signal was found in the live-listing check on 25 July 2026.</p>
 
-<p>Group discounts appear at karting and ATV for 4+ people — worth coordinating in camp WhatsApp groups. Solo travellers still get pickup from most operators listed in our adventure category.</p>
+<h3>Can I book an adventure activity after I arrive in Pattaya?</h3>
+<p>That depends on the product. Kart venues publish daily hours, while Thai Sky jumps depend on booking, weather and operations; Bira requires a suitable session or accepted reservation; and ATV tours use guided departures. Contact the exact operator before travelling whenever the record says booking, reservation, scheduled departure or weather dependent.</p>
 
-<p>Harbor Mall climbing pairs well with rainy-day adventure cancellation — <a href="/guides/climbing-pattaya/">climbing guide</a> for Deep wall sessions when zipline parks close.</p>
-
-<p>Full adventure category index: <a href="/category/adventure/">all adventure venues</a> with hours and map pins updated from our venue files.</p>
-
-<p>Spot a closed operator or wrong phone number? Tell us via <a href="/contact/">contact</a> — we fix source data, not marketing fluff.</p>
+<p>Use the <a href="/compare/">comparison tool</a> for the underlying venue records, then open the venue page to see the dated source trail and unresolved gaps.</p>
 `;

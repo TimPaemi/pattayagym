@@ -95,7 +95,7 @@ function siteFooterHtml(venueN) {
     <div class="footer-top">
       <div>
         <a href="/" class="footer-brand" aria-label="Pattaya.Gym — home"><span class="footer-mark" aria-hidden="true"></span><span>pattaya<span class="accent">.gym</span></span></a>
-        <p class="footer-desc">Every gym, ring and court in Pattaya &mdash; ${venueN} venues across 15 sports, checked in person by people who live here.</p>
+        <p class="footer-desc">Every gym, ring and court in Pattaya &mdash; ${venueN} venues across 15 sports, researched and kept current by people who live here.</p>
         <p class="footer-desc">Written and kept up to date by <strong>Tim &amp; Paemi</strong>. <a href="https://timpaemi.com/" rel="author noopener" class="footer-pub-link">timpaemi.com</a></p>
         <div class="footer-social">${socialHtml()}</div>
       </div>

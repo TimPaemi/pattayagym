@@ -10,7 +10,7 @@ social: {}
 hours: Public-use hours require confirmation with Nong Prue Municipality
 priceRange: ""
 distinction: Municipal stadium used for community exercise, youth sport and football competition
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://nongpruecity.go.th/content/environment5
   - https://smartdastaapp.dasta.or.th/place/38?lang=th
@@ -23,7 +23,7 @@ tags: [municipal-stadium, football, youth-sport, nong-prue, east-pattaya]
 
 # Nong Prue Municipal Stadium
 
-Nong Prue Municipal Stadium is a public sports ground in East Pattaya. Municipal and DASTA pages identify it as a community and regional facility, while current 2026 youth-football activity confirms continued competition use.
+Nong Prue Municipal Stadium is a public sports ground in East Pattaya. Municipal and DASTA pages identify it as a community and regional facility, while 2026 youth-football activity confirms continued competition use. The exact Maps identity was still live on 26 July at Plus Code WWFP+PVF beside Wat Sutthawat.
 
 No dependable public timetable or booking tariff was published on the pages checked. Spectator access to a tournament is different from permission to use the pitch, track or other facilities, so contact Nong Prue Municipality before planning a training session.
 

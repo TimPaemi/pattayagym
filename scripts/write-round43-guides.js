@@ -25,17 +25,17 @@ const guides = [
   {
     slug: 'best-gym-central-pattaya',
     crumb: 'Best gym Central Pattaya',
-    kicker: 'Guide · Central Pattaya · gyms · Muay Thai · 24h',
-    readTime: '10 min read',
-    title: 'Best gym in Central Pattaya | WKO, Battle Conquer, 24h chains | Pattaya.Gym',
-    desc: 'Best gyms and Muay Thai camps in Central Pattaya — WKO, Battle Conquer, Tony\'s Gym, Fitness 7, Jetts, hotel day passes. Hand-checked venues near Beach Road and Soi Buakhao.',
+    kicker: 'Guide · Central Pattaya · access · current prices',
+    readTime: '15 min read',
+    title: 'Central Pattaya gyms: current prices and 24-hour access | Pattaya.Gym',
+    desc: 'Compare Central Pattaya gyms by current dated prices, member access, staffed hours, coached classes, hotel eligibility and exact location.',
     h1: 'Best gym in <span class="accent-yellow">Central.</span>',
-    lede: 'Central Pattaya packs more gyms per block than anywhere else in the city — 24-hour chains, budget Muay Thai legends, and hotel fitness on Beach Road. This guide lists only venues actually in the central zone.',
+    lede: 'Choose by access model: a dated membership, staffed visitor entry, coached session, hotel facility or pool pass. The right Central Pattaya option depends on the product and exact pin.',
     body: require('./guide-bodies/best-gym-central'),
     sisterLinks: [
       { url: '/guides/best-gyms-near-walking-street-pattaya/', label: 'Near Walking Street', desc: 'Beach Road gym cluster' },
-      { url: 'https://pattaya-vehicle-rentals.com/', external: true, label: 'Vehicle Rentals', desc: 'Scooters and cars' },
-      { url: 'https://pattaya-restaurant-guide.com/', external: true, label: 'Restaurant Guide', desc: 'Post-training food' },
+      { url: '/guides/24-hour-gyms-pattaya/', label: '24-hour gyms', desc: 'Member versus staffed access' },
+      { url: '/guides/gym-day-pass-pattaya/', label: 'Gym day passes', desc: 'Short-stay entry options' },
     ],
   },
   {
@@ -56,7 +56,15 @@ const guides = [
   },
 ];
 
-for (const g of guides) {
+const onlyArg = process.argv.find((arg) => arg.startsWith('--guide-only='));
+const onlySlug = onlyArg ? onlyArg.slice('--guide-only='.length) : '';
+const selectedGuides = onlySlug ? guides.filter((guide) => guide.slug === onlySlug) : guides;
+
+if (onlySlug && selectedGuides.length === 0) {
+  throw new Error(`Unknown guide slug: ${onlySlug}`);
+}
+
+for (const g of selectedGuides) {
   const bytes = writeEditorialGuide(g);
   console.log(`Wrote /guides/${g.slug}/ (${(bytes / 1024).toFixed(1)} KB)`);
 }

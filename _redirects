@@ -34,3 +34,15 @@ https://www.pattaya-gym.com/* https://pattaya-gym.com/:splat 301
 /gyms  /sports/ 301
 /muay-thai/ /category/muay-thai/ 301
 /muay-thai  /category/muay-thai/ 301
+
+# Retired area x category combos (2026-07-26). build-v2.js stopped generating
+# these when their venue counts fell to 0-1; the files lingered on disk as thin,
+# orphaned, indexable pages outside the sitemap. 301 to the parent area hub.
+/area/central-pattaya/crossfit/           /area/central-pattaya/ 301
+/area/central-pattaya/crossfit            /area/central-pattaya/ 301
+/area/central-pattaya/yoga/               /area/central-pattaya/ 301
+/area/central-pattaya/yoga                /area/central-pattaya/ 301
+/area/naklua/climbing/                    /area/naklua/ 301
+/area/naklua/climbing                     /area/naklua/ 301
+/area/sattahip/clubs/                     /area/sattahip/ 301
+/area/sattahip/clubs                      /area/sattahip/ 301

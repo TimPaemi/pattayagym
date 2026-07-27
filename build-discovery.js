@@ -9,6 +9,8 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { v2NavHtml } = require('./scripts/lib/v2-nav.js');
+const { siteFooterHtml } = require('./scripts/lib/site-footer.js');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
@@ -93,6 +95,9 @@ function loadGymsFromDataJs() {
 }
 function header() {
   return `<a href="#main" class="skip-link">Skip to main content</a>
+${v2NavHtml()}`;
+  /* Legacy chrome retained below for historical full-build compatibility; unreachable. */
+  return `<a href="#main" class="skip-link">Skip to main content</a>
 <div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span><span class="star">★</span><span>PATTAYA GYM × THE PLUG FOR TRAINING</span><span class="star">★</span><span>158 VENUES · HAND-CHECKED · LIVE</span><span class="star">★</span><span>MUAY THAI · MMA · BOXING · GOLF · TENNIS · YOGA</span><span class="star">★</span></div></div>
 <header class="nav" role="banner">
   <div class="nav-row">
@@ -108,6 +113,8 @@ function header() {
 function newsletterFooterHtml() { return ""; }
 
 function footer() {
+  return siteFooterHtml(loadGymsFromDataJs().GYMS.length);
+  /* Legacy chrome retained below for historical full-build compatibility; unreachable. */
   return `
   <div class="marquee-bottom" aria-hidden="true"><div class="marquee-track"><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span><span>FIND YOUR GYM.</span><span class="star">★</span><span>BOOK A SESSION.</span><span class="star">★</span><span>TRAIN IN PATTAYA.</span><span class="star">★</span></div></div>
   <footer class="site-footer" role="contentinfo">
@@ -170,7 +177,8 @@ function footer() {
         <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
         <li><a href="/add-your-gym/">Add your gym</a></li>
         <li><a href="/contact/">Contact</a></li>
-          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
+          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
+
           <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE @timpaemi</a></li>
         <li><a href="/press/">Press</a></li>
       </ul>
@@ -180,8 +188,8 @@ function footer() {
   <div class="site-footer-base">
     <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
     <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener author nofollow" class="sf-builtby-link">PATTAYA AUTHORITY</a> · TIM PAEMI <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
-          
+          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Written and kept up to date by <a href="https://timpaemi.com/" rel="author noopener" class="sf-builtby-link">TIM &amp; PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
+
   </div>
 </footer>`;
 }
@@ -215,12 +223,12 @@ function commonHead(title, desc, canonical, schemaType, ogType) {
   });
   return `<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#0b0b0d" />
+<meta name="theme-color" content="#f7f8f3" />
 <meta name="apple-mobile-web-app-title" content="Pattaya Gym" />
 <meta name="application-name" content="Pattaya Gym" />
-<meta name="msapplication-TileColor" content="#0b0b0d" />
+<meta name="msapplication-TileColor" content="#f7f8f3" />
 <meta name="msapplication-TileImage" content="/icon-192.png" />
-<meta name="color-scheme" content="dark" />
+<meta name="color-scheme" content="light" />
 <meta name="build-id" content="${LAST_BUILD_DATE}" />
 <link rel="manifest" href="/manifest.json" />
 <link rel="apple-touch-icon" href="/icon-180.png" />
@@ -314,7 +322,7 @@ function metaDesc(s) {
 }
 
 function criticalCss() {
-  return `<style>:root{color-scheme:dark}html{background:#0a0a0a}body{margin:0;background:#0a0a0a;color:#f4f0e8;font-family:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}*,*::before,*::after{box-sizing:border-box}a{color:inherit;text-decoration:none}img,svg,video{max-width:100%;display:block;height:auto}</style>`;
+  return `<style>:root{color-scheme:light}html{background:#f7f8f3}body{margin:0;background:#f7f8f3;color:#121212;font-family:"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}*,*::before,*::after{box-sizing:border-box}a{color:inherit;text-decoration:none}img,svg,video{max-width:100%;display:block;height:auto}</style>`;
 }
 
 function desktopTocCriticalCss() {
@@ -697,10 +705,10 @@ const GUIDES = [
     slug: '24-hour-gyms-pattaya',
     title: '24-Hour Gyms in Pattaya',
     h1: '24/7 gyms in Pattaya',
-    desc: '24-hour gyms in Pattaya, Thailand — full list of facilities open round-the-clock for shift workers, jet-lagged travelers, and dedicated trainers.',
-    intro: 'Pattaya\'s tropical climate and tourist economy make 24/7 gym access genuinely useful. Hot midday avoidance, jet-lag adjustment, late-evening training after dinner — these are all real reasons to want round-the-clock access.',
+    desc: 'Compare verified 24-hour gym access in Pattaya, including member-entry rules, staffed hours, hotel-guest restrictions and the current price gaps to confirm.',
+    intro: 'A gym can advertise 24-hour access without operating a staffed public reception all night. This guide separates member access, independent-gym listings and hotel-guest fitness rooms, then identifies which prices and overnight entry terms still require direct confirmation.',
     pickerKey: '24h',
-    filter: g => /24|all.?day|always/i.test(g.hours || ''),
+    filter: g => g.category === 'fitness' && /24|all.?day|always/i.test(g.hours || ''),
     rank: g => {
       const h = (g.hours||'').toLowerCase();
       let s = /24\/7|24\s*hour|always.?open/i.test(h) ? 20 : 5;
@@ -710,9 +718,9 @@ const GUIDES = [
       { label: '🌙 Always-Open Options', take: 10 }
     ],
     faqs: [
-      { q: 'Which 24-hour gyms in Pattaya don\'t require membership?', a: 'Most 24/7 gyms are membership-based, but Anytime Fitness offers 1-day free trials and Jetts has no-contract month-to-month plans you can cancel anytime.' },
-      { q: 'Can I drop in at 3am to a Pattaya gym?', a: 'Yes — Anytime Fitness Pattaya (key-fob), Jetts (key-card), and Fitness 7 (24-hour staffed) all allow access at any hour for members.' },
-      { q: 'Do Pattaya hotels have 24-hour fitness centers?', a: 'Many 5-star hotels offer 24-hour fitness for guests — Hilton, Andaz, Mövenpick, and Centara Grand Mirage all run 24/7. Day-pass availability varies.' },
+      { q: 'Can a first-time visitor walk into a Pattaya gym at 03:00?', a: 'Do not assume so. Jetts and Anytime publish 24-hour member access, while staffed enrolment hours are narrower. Fitness 7 publishes 24-hour operation, but no current owner statement confirming overnight reception or first-visit entry was found. Arrange access with the exact branch during staffed hours.' },
+      { q: 'Which 24-hour Pattaya gym publishes a current visitor price?', a: 'No current public visitor price was found for Jetts, Anytime, Fitness 7 or James Gym during the 26 July 2026 check. Coco Fitness publishes memberships from ฿1,599 for one month, but it closes at 22:00 and is included only as a priced non-24-hour fallback.' },
+      { q: 'Are Pattaya hotel gyms with 24-hour fitness open to the public?', a: 'Treat them as guest facilities unless the hotel confirms a public pass. Andaz identifies its 24-hour fitness room as a hotel-guest amenity. Pattaya Marriott and Mövenpick publish 24-hour fitness facilities, but no current public-gym pass was found for either.' },
     ]
   },
   {
@@ -751,89 +759,326 @@ const GUIDES = [
     slug: 'best-for-beginners-pattaya',
     title: 'Best Beginner-Friendly Sport Venues in Pattaya',
     h1: 'Best beginner-friendly venues in Pattaya',
-    desc: 'New to Muay Thai, scuba diving, golf, kitesurfing or yoga? These Pattaya venues are explicitly beginner-friendly with patient instruction, scaled difficulty, and welcoming culture.',
-    intro: 'You don\'t need any prior experience to start most sports in Pattaya. These venues are explicitly beginner-friendly — they market to first-timers, offer entry-level packages, and have patient instructors who don\'t mind teaching basics.',
+    desc: 'Compare 12 evidence-checked Pattaya starting points for Muay Thai, diving, padel, yoga, karting, children’s sport, swimming and general fitness.',
+    intro: 'A useful beginner venue publishes or confirms a real first step: an introductory product, a single session, coaching, equipment or an assessment. This guide ranks 12 records with current first-hand evidence and states the gaps instead of treating every “all levels” label as proof.',
     pickerKey: 'beginners',
-    filter: g => {
-      const t = ((g.tags||[]).join(' ') + ' ' + (g.description||'')).toLowerCase();
-      return /beginner|first.?time|intro|easy|patient|all.?level/.test(t);
-    },
-    rank: g => {
-      const t = ((g.tags||[]).join(' ') + ' ' + (g.description||'')).toLowerCase();
-      let s = 0;
-      if (/beginner/.test(t)) s += 10;
-      if (/first.?time|intro|easy|patient/.test(t)) s += 5;
-      if (/all.?level/.test(t)) s += 4;
-      return s;
-    },
+    filter: g => [
+      'seafari-padi-dive',
+      'sudsakorn-muay-thai-gym',
+      'play-padel-pattaya',
+      'yoga-pattaya-studio',
+      'af-academy-pattaya',
+      'easykart-pattaya',
+      'dive-station-pattaya',
+      'pattaya-dive-centre',
+      'fitz-club',
+      'castra-gym',
+      'baby-shark-swim-club-pattaya',
+      'pattaya-padel-club'
+    ].includes(g.id),
+    rank: g => ({
+      'seafari-padi-dive': 12,
+      'sudsakorn-muay-thai-gym': 11,
+      'play-padel-pattaya': 10,
+      'yoga-pattaya-studio': 9,
+      'af-academy-pattaya': 8,
+      'easykart-pattaya': 7,
+      'dive-station-pattaya': 6,
+      'pattaya-dive-centre': 5,
+      'fitz-club': 4,
+      'castra-gym': 3,
+      'baby-shark-swim-club-pattaya': 2,
+      'pattaya-padel-club': 1
+    }[g.id] || 0),
     sections: [
-      { label: '🎓 Best for First-Timers', take: 12 }
+      { label: 'Twelve evidence-checked starting points', take: 12 }
     ],
+    primerHtml: () => `
+  <section class="about" aria-labelledby="beginner-guide-decision" style="margin-top: 32px;">
+    <h2 id="beginner-guide-decision">If you only read one thing</h2>
+    <p><strong>Choose the smallest real commitment that still includes the help you need.</strong> A first Muay Thai group class, a supervised try-dive, a private padel lesson and an unsupervised gym day are not equivalent “beginner sessions.” Start by deciding whether you need instruction, equipment, a medical or age check, and a fixed booking. Then compare the complete price and travel route.</p>
+    <p>The ranked set is deliberately restricted to 12 active records with a named starter product, current owner tariff, coaching route or assessment-based entry. It does not include every venue whose marketing copy contains “beginner,” “easy” or “all levels.” Closed and unverified records are excluded, and a hotel gym is included only where public access or a clear visitor product is documented.</p>
+
+    <h2>Beginner comparison table</h2>
+    <p>Numeric prices below were checked on the date in each cell and come from the exact operator page recorded in the linked venue's price-source metadata. A blank public rate is shown as a gap rather than estimated. Promotions, group conditions and availability can change after the check date.</p>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead><tr><th>Venue</th><th>Sport and first step</th><th>Published starting point</th><th>Confirm before booking</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/gyms/seafari-padi-dive/">Seafari Diving Center</a></td><td>Scuba; one-day Discover Scuba Diving with two dives</td><td>26 Jul 2026: ฿4,500 per person</td><td>Medical process, swimming expectation, inclusions, pickup and no-fly guidance.</td></tr>
+          <tr><td><a href="/gyms/sudsakorn-muay-thai-gym/">Sudsakorn Muay Thai</a></td><td>Muay Thai; one group training session</td><td>25 Jul 2026: ฿400 for one session</td><td>Beginner slot, gloves and wraps, trainer language and whether sparring is optional.</td></tr>
+          <tr><td><a href="/gyms/play-padel-pattaya/">Play Padel Pattaya</a></td><td>Padel; private coaching or a booked court</td><td>25 Jul 2026: coaching from THB 600/hour; racket THB 100/hour</td><td>Player count, court charge, balls, prepayment and cancellation.</td></tr>
+          <tr><td><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a></td><td>Yoga; standard one-hour drop-in</td><td>25 Jul 2026: ฿500</td><td>Style, level, teacher language, exact class time and mat arrangement.</td></tr>
+          <tr><td><a href="/gyms/af-academy-pattaya/">AF Academy</a></td><td>Youth football; age-group trial</td><td>25 Jul 2026: first trial free; single session ฿600</td><td>Correct ground, age group, coach language, footwear and guardian arrangements.</td></tr>
+          <tr><td><a href="/gyms/easykart-pattaya/">EasyKart Pattaya</a></td><td>Karting; kids or regular kart product</td><td>25 Jul 2026: kids race ฿499; regular race ฿699</td><td>Age, height, kart type, safety briefing, race length and weather policy.</td></tr>
+          <tr><td><a href="/gyms/dive-station-pattaya/">Dive Station Pattaya</a></td><td>SSI scuba; Try Scuba or Basic Diver</td><td>25 Jul 2026: Try Scuba ฿3,000</td><td>Whether the product is confined-water only, full-day plan, equipment and medical rules.</td></tr>
+          <tr><td><a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a></td><td>PADI scuba; Discover Scuba Diving with two dives</td><td>25 Jul 2026: ฿4,500</td><td>Transfer, rental equipment, food, computer, medical form and return window.</td></tr>
+          <tr><td><a href="/gyms/fitz-club/">Fitz Club</a></td><td>General fitness and pool; outside-guest day pass</td><td>2026 tariff checked 25 Jul: adult ฿800</td><td>The pass excludes tennis and squash; reserve coaching or courts separately.</td></tr>
+          <tr><td><a href="/gyms/castra-gym/">Castra Gym</a></td><td>Muay Thai or BJJ group class with gym access</td><td>25 Jul 2026: group class ฿300</td><td>Exact discipline, experience level, equipment, class date and general-gym fee.</td></tr>
+          <tr><td><a href="/gyms/baby-shark-swim-club-pattaya/">Baby Shark Swim School</a></td><td>Children’s swimming; assessment or trial enquiry</td><td>No stable current public course fee</td><td>Child’s age, water experience, class size, lesson length and make-up policy.</td></tr>
+          <tr><td><a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a></td><td>Padel; court plus one-hour coaching</td><td>25 Jul 2026: court ฿600-฿800/hour; coaching from ฿1,600</td><td>Number of players, equipment, balls, coach availability and total shared cost.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Choose instruction before intensity</h2>
+    <p>A first-timer normally benefits more from a defined coach or instructor than from the largest facility. Sudsakorn provides a low-commitment single Muay Thai session with morning and afternoon training periods. Castra publishes separate Muay Thai and BJJ class times and says gym access is included with its fight-club classes. Before attending either, send your experience level and ask whether the selected session includes total beginners, how equipment is handled and whether contact or sparring can be avoided.</p>
+    <p>Fitz Club is different: its outside-guest pass opens the gym, pool, sauna and steam rooms, but does not include a coach or racquet court. It suits someone already comfortable choosing a basic workout. A nervous first-time lifter may be better served by a separately booked trainer, while a visitor who only needs cardio and machines may not need instruction at all. “Beginner-friendly” should describe the entry process, not assume every beginner needs the same level of supervision.</p>
+
+    <h2>First scuba experience versus certification</h2>
+    <p>Seafari and Pattaya Dive Centre both publish PADI Discover Scuba Diving products at ฿4,500, but matching headline prices do not prove identical inclusions. Dive Station's ฿3,000 Try Scuba is an SSI-centred product and must be checked for the exact water setting and day structure. Ask each operator whether the product includes confined-water preparation, open-water dives, rental gear, a dive computer, boat and park fees, food, transfers, photos and insurance.</p>
+    <p>A try-dive is not an Open Water certification. If certification is the objective, ask for the full number of training days, e-learning or manuals, confined-water sessions, open-water dives, certification fee and what happens when a student needs more time. Complete the medical questionnaire honestly. Send age, swimming confidence, health constraints and planned flight timing before payment, and obtain the operator's qualified no-fly guidance for the actual dive plan.</p>
+    <p>For a larger operator comparison, use the <a href="/guides/best-dive-operators-pattaya/">eight-operator Pattaya dive guide</a>. It separates first dives, certification courses and certified-diver boat days instead of ranking them on one price line.</p>
+
+    <h2>Padel: coaching, court and group arithmetic</h2>
+    <p>Play Padel publishes a lower private-coaching starting figure than Pattaya Padel Club, but the two price structures are not directly interchangeable. At Play Padel, confirm whether the coach amount is additional to the THB 1,200 court-hour and whether balls are included; the page separately lists THB 100 racket rental and a card-payment addition in the app. New players booking ahead must prepay.</p>
+    <p>Pattaya Padel Club publishes different court prices by time of day and coaching prices that change with player count. A group of four may lower the per-person coaching cost even when the total booking is higher. Tell either club that everybody is new, request a coaching slot rather than an open social match and confirm court, coach, rackets, balls and cancellation in one written total.</p>
+
+    <h2>Yoga and general movement</h2>
+    <p>Yoga Pattaya Studio offers the clearest current drop-in comparison in this shortlist, but its programme contains several styles and the teaching language varies by session. A standard one-hour drop-in does not guarantee that the chosen class is an introductory class. Ask which live timetable entry fits a first visit, whether it is taught in English, Russian or Thai, and whether a mat is supplied.</p>
+    <p>A beginner seeking Pilates or personal training may also consider a coached studio such as GAYA, but it is not ranked here because no stable current owner tariff or class-by-class schedule was publicly accessible in this pass. That omission is deliberate: an active Maps listing and a “beginner-friendly” flag are not enough to manufacture a comparable starter product.</p>
+
+    <h2>Children’s sport: age group comes first</h2>
+    <p>AF Academy publishes the strongest defined youth entry in this set: age groups from 3 to 17, a free first trial and a paid single-session option. The company uses multiple training locations, so the Naklua contact address is not automatically the child’s pitch. Send the child's age and experience and obtain the current ground, start time, coach language, footwear and guardian policy.</p>
+    <p>Baby Shark Swim School is a contact-first alternative. Its current first-hand evidence supports an indoor heated saltwater pool, a children's swim-school identity and public weekly business hours, but not a stable course fee. Ask for an assessment or trial, the teaching ratio, lesson duration, term commitment, make-up rule, swimwear and whether a guardian must remain poolside. Do not choose a children's lesson solely from a broad opening-hours listing.</p>
+
+    <h2>Karting is an activity product, not a driving lesson</h2>
+    <p>EasyKart separates kids, regular, fast and two-seat kart products. Its 25 July 2026 page associated the kids kart with ages 7-13 and height above 125 cm. That is operator guidance, not a guarantee that every child can drive. Staff must make the final fit and safety decision. A first-timer should book the appropriate product, attend the briefing and avoid selecting a faster kart merely because the price table makes it available.</p>
+
+    <h2>Budget and commitment</h2>
+    <p>The smallest number in the table is not automatically the cheapest complete start. A ฿300 group class may require wraps or gloves; a THB 600 coaching line may sit beside a separate court charge; a free football trial still requires travel and suitable footwear; and a try-dive price may exclude an item another operator bundles. Compare the total for one complete, usable first experience.</p>
+    <p>For a one-off visit, prioritise a dated single-session product and easy cancellation. For a one- to four-week stay, compare class packs only after testing one session. For children, avoid buying a term before confirming age-group fit and schedule. For high-consequence activities such as diving and karting, safety and eligibility questions come before a discount.</p>
+
+    <h2>Before paying</h2>
+    <ul>
+      <li>Name the exact date, product, participant count, ages and experience level.</li>
+      <li>Ask whether the published business hours are reception hours, class times or facility-access hours.</li>
+      <li>Request the complete price including instruction, equipment, entry, deposits, tax and compulsory extras.</li>
+      <li>Confirm language, group size and how the session is adapted for a total beginner.</li>
+      <li>Send injuries, medical constraints, swimming confidence or child-development needs honestly.</li>
+      <li>Check the exact map pin, building entrance, pickup or parking and return plan.</li>
+      <li>Read cancellation, weather, missed-class, make-up and refund terms before prepaying.</li>
+      <li>Do not treat reviews, a star rating or “all levels” marketing as a substitute for the operator's answer.</li>
+    </ul>
+
+    <h2>How this ranking works</h2>
+    <p>The order rewards a clearly named first step, current first-hand evidence, a dated public price, manageable commitment and useful visitor logistics. It does not score coaching quality from reviews, imply a first-hand visit or promise that a particular instructor is available. Different goals produce different winners: Seafari leads for a defined first-dive product, Sudsakorn for a low-cost single Muay Thai session, Play Padel for a published coaching route, Yoga Pattaya for a transparent drop-in and AF Academy for a documented youth trial.</p>
+  </section>`,
     faqs: [
-      { q: 'What sport is easiest to start in Pattaya?', a: 'Yoga, swimming, and running require no prior skill. For combat sports, most Muay Thai camps welcome total beginners. For watersports, scuba (open-water course in 3-4 days) and SUP are popular entry points.' },
-      { q: 'Do I need equipment to start a sport in Pattaya?', a: 'Most venues provide all equipment for beginners — Muay Thai gloves and pads, dive gear, paddles for pickleball, racquets at hotel courts. Bring workout clothes and water.' },
-      { q: 'Are Pattaya gyms beginner-friendly to women?', a: 'Many — Anytime Fitness, hotel gyms (Hilton, Andaz, Mövenpick), boutique yoga studios, and Fitz Club all rank well on female-friendly safety and comfort. The big bro-coded iron gyms are the exception, not the rule.' },
+      { q: 'What is the lowest-commitment published beginner session in this guide?', a: 'For coached adult sport, Castra listed a ฿300 group class and Sudsakorn a ฿400 Muay Thai session when checked on 25 July 2026. Confirm that the selected class accepts total beginners and ask about required equipment before travelling.' },
+      { q: 'Is a try-dive the same as an Open Water certification?', a: 'No. A try-dive is a supervised introductory product and does not issue the full Open Water certification. Ask about medical screening, swimming requirements, water sessions, equipment and the complete certification path before choosing.' },
+      { q: 'What should I tell a Pattaya venue before my first session?', a: 'Send the date, participant count, ages, experience, language, equipment needs, injuries or medical constraints and accommodation location. Ask for the exact start time, total price, inclusions and cancellation terms in writing.' },
     ]  },
   {
     slug: 'best-dive-operators-pattaya',
     title: 'Best Dive Operators in Pattaya 2026',
     h1: 'Best dive operators in Pattaya',
-    desc: 'Hand-picked best PADI and SSI dive shops in Pattaya for 2026 — from Five-Star IDC centres to British family-run schools and dedicated technical-diving operations.',
-    intro: 'Pattaya hosts more than 10 active dive operators serving the islands of Koh Larn, Koh Sak, Koh Krok and HTMS Khram wreck. This guide ranks the best by certification level, instructor depth, fleet quality, and reputation. Whether you want your Open Water cert in 4 days or a Tec Trimix course, there\'s an operator here that fits.',
+    desc: 'Compare eight current Pattaya dive-operator records by first-dive, Open Water and certified-diver products, dated public prices, agency, location and stated inclusions.',
+    intro: 'Eight active operator records have enough current first-hand evidence for this comparison. The order rewards source clarity and visitor utility, not an unverified claim about underwater conditions, instructor quality or fleet performance.',
     pickerKey: 'dive',
-    filter: g => g.category === 'watersports' && /dive|scuba|padi|ssi|divers|aquanauts|mermaid/i.test(((g.tags||[]).join(' ') + ' ' + (g.name||'') + ' ' + (g.description||''))),
-    rank: g => {
-      const text = ((g.tags||[]).join(' ') + ' ' + (g.description||'')).toLowerCase();
-      let s = 0;
-      if (/5.?star|five.?star|idc/.test(text)) s += 15;
-      if (/padi/.test(text)) s += 8;
-      if (/ssi/.test(text)) s += 6;
-      if (/family|british|established/.test(text)) s += 4;
-      if (/technical|tec|trimix/.test(text)) s += 5;
-      if (g.priceRange === '฿฿฿') s += 2;
-      return s;
-    },
+    filter: g => [
+      'pattaya-dive-centre',
+      'no-limit-divers',
+      'jomtien-dive-center',
+      'adventure-divers-pattaya',
+      'dive-station-pattaya',
+      'pattaya-scuba-adventures',
+      'real-divers-pattaya',
+      'seafari-padi-dive'
+    ].includes(g.id),
+    rank: g => ({
+      'pattaya-dive-centre': 8,
+      'no-limit-divers': 7,
+      'jomtien-dive-center': 6,
+      'adventure-divers-pattaya': 5,
+      'dive-station-pattaya': 4,
+      'pattaya-scuba-adventures': 3,
+      'real-divers-pattaya': 2,
+      'seafari-padi-dive': 1
+    }[g.id] || 0),
     sections: [
-      { label: '⭐ PADI 5-Star IDC Centres', take: 2 },
-      { label: '🌊 Family-Run & Established Schools', take: 4 },
-      { label: '🏝 Other Verified Operators', take: 6 }
+      { label: 'Eight operators with current first-hand evidence', take: 8 }
     ],
+    primerHtml: () => `
+  <section class="about" aria-labelledby="dive-guide-decision" style="margin-top: 32px;">
+    <h2 id="dive-guide-decision">If you only read one thing</h2>
+    <p><strong>Choose the exact dive product first, then compare the included equipment, location and pickup terms.</strong> A try-dive for a first-timer, an Open Water certification course and a two-dive day for an already certified diver are different purchases. The smallest published number can be misleading if it excludes rental gear, a dive computer, transport, a national-park charge or the training materials required for the chosen course.</p>
+    <p>This guide is deliberately limited to eight active directory records with current operator, training-agency or live listing evidence: <a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a>, <a href="/gyms/no-limit-divers/">No Limit Divers</a>, <a href="/gyms/jomtien-dive-center/">Jomtien Dive Center</a>, <a href="/gyms/adventure-divers-pattaya/">Adventure Divers Pattaya</a>, <a href="/gyms/dive-station-pattaya/">Dive Station Pattaya</a>, <a href="/gyms/pattaya-scuba-adventures/">Pattaya Scuba Adventures</a>, <a href="/gyms/real-divers-pattaya/">Real Divers Pattaya</a> and <a href="/gyms/seafari-padi-dive/">Seafari Diving Center</a>. The ranking favours a useful current public product and transparent inclusions. It does not claim first-hand dives, independently measured safety, better visibility, a newer boat or superior instructors.</p>
+
+    <h2>Operator comparison</h2>
+    <p>Every numeric price below is tied to the operator page recorded on the linked venue page and was checked on the date stated in its cell. Sale prices can change. “No stable public rate used” means this comparison did not find a current exact tariff suitable for quoting; it does not mean the operator is expensive or unavailable.</p>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead><tr><th>Operator</th><th>Agency / area</th><th>Useful current published price</th><th>Decision point</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a></td><td>PADI; Beach Road</td><td>25 Jul 2026: Pattaya two-dive day ฿2,700 with own gear or ฿3,000 with rental; Open Water ฿14,990 for one person</td><td>Clear Pattaya and Samae San table; computers and torches are listed separately.</td></tr>
+          <tr><td><a href="/gyms/no-limit-divers/">No Limit Divers</a></td><td>PADI; Central Pattaya</td><td>25 Jul 2026: equipment-included fun-diving day ฿2,800; Open Water ฿15,900</td><td>Publishes multi-day fun-dive packs and a detailed extras table.</td></tr>
+          <tr><td><a href="/gyms/jomtien-dive-center/">Jomtien Dive Center</a></td><td>PADI; Jomtien Beach</td><td>25 Jul 2026: Pattaya day from ฿2,800; Samae San from ฿3,200</td><td>States pickup within five kilometres and identifies dive computer as excluded.</td></tr>
+          <tr><td><a href="/gyms/adventure-divers-pattaya/">Adventure Divers Pattaya</a></td><td>PADI; Thappraya / Central</td><td>25 Jul 2026: day with own gear ฿2,800 or rental gear ฿3,300; Open Water ฿16,500</td><td>Publishes passenger, try-dive, extra-dive and course figures with stated inclusions.</td></tr>
+          <tr><td><a href="/gyms/dive-station-pattaya/">Dive Station Pattaya</a></td><td>SSI; North Pattaya / Naklua</td><td>25 Jul 2026: certified-diver day sale ฿3,000; three-day SSI Open Water sale ฿14,990</td><td>The only SSI-centred record in this eight-operator set; prices shown were sales.</td></tr>
+          <tr><td><a href="/gyms/pattaya-scuba-adventures/">Pattaya Scuba Adventures</a></td><td>PADI; South Pattaya</td><td>25 Jul 2026: Open Water ฿14,990 for one person or from ฿13,490 per person for two or more</td><td>The current live course product is more reliable than an older dated trip table.</td></tr>
+          <tr><td><a href="/gyms/real-divers-pattaya/">Real Divers Pattaya</a></td><td>PADI 5 Star IDC; Jomtien</td><td>No general stable public rate used for this table</td><td>Current operator presence and a dated promotion are documented; confirm the exact ordinary product directly.</td></tr>
+          <tr><td><a href="/gyms/seafari-padi-dive/">Seafari Diving Center</a></td><td>PADI 5 Star IDC; Central Pattaya</td><td>No stable current public rate found</td><td>PADI's current centre listing supports agency and services, not a price comparison.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>First dive, certification or fun diving?</h2>
+    <p><strong>First-ever dive:</strong> ask for a named introductory product, not merely “a dive.” On 25 July 2026, Pattaya Dive Centre listed a two-dive Discover Scuba Diving product at ฿4,500; No Limit listed a two-dive try-dive at ฿3,900; Adventure Divers listed a two-dive Discover Scuba Diving product at ฿4,000; and Dive Station displayed its Basic Diver sale at ฿4,000. Those prices belong to different operators and may differ in agency paperwork, confined-water preparation, photo products, pickup and supervision. Confirm minimum age, swimming expectations, medical screening and whether the trip is appropriate for a non-certified participant.</p>
+    <p><strong>Open Water certification:</strong> compare the complete course path. The current public examples checked on 25 July 2026 ranged from Pattaya Scuba Adventures' group rate of ฿13,490 per person for two or more to Adventure Divers' ฿16,500 course. Pattaya Dive Centre listed ฿14,990 for one person and ฿13,000 per person for two or more; Dive Station listed an SSI sale at ฿14,990; No Limit listed ฿15,900. A lower group price is useful only if the dates, required number of students, e-learning or manual, equipment, confined-water work, open-water dives, certification fee and transfer plan all match the traveller.</p>
+    <p><strong>Already certified:</strong> compare the dive-day structure and rental line. Pattaya Dive Centre and Adventure Divers both published lower own-equipment prices than rental-equipment prices on 25 July 2026. No Limit's current day figure was presented with equipment included. Jomtien Dive Center said equipment other than a dive computer was included. Send the agency, certification level, logged-dive recency and equipment needs with the enquiry so the operator can place the diver on a suitable trip rather than only quote the cheapest boat space.</p>
+
+    <h2>PADI and SSI without the marketing shorthand</h2>
+    <p>Seven records in this set identify with PADI; Dive Station identifies with SSI. That difference does not by itself rank teaching quality, safety or suitability. For an entry-level course, ask what certification will be issued, how the digital learning works, what happens if a skill needs more time, the maximum student-to-professional arrangement for the booked course and which language the instruction uses. For a certified-diver day, send the existing certification rather than assuming the agency logo on the shop determines whether the card is accepted.</p>
+    <p>PADI 5 Star or IDC wording supports a centre's current agency status and professional-training scope. It does not prove that every visitor product is better, that an instructor speaks the requested language, or that a specific date has space. Seafari and Real Divers have current PADI 5 Star IDC evidence, but this comparison does not push them above operators with clearer visitor tariffs merely because of the badge.</p>
+
+    <h2>Price inclusions that change the real comparison</h2>
+    <p>Pattaya Dive Centre's 25 July 2026 table said its day trips include transfers, equipment where selected, professional support, lunch and refreshments; it listed computers and torches as extras. No Limit separately listed equipment, computer, camera, Nitrox, photos or video and a third dive, making it easier to identify additions. Jomtien Dive Center said its Pattaya trip includes standard equipment except a computer, a qualified guide, lunch, refreshments and pickup within five kilometres; its Samae San information listed an additional ฿100 national-park fee on 25 July 2026. Adventure Divers said pickup and drop-off, lunch and drinks were included in its published products.</p>
+    <p>Do not combine those statements into a market-wide promise. Ask the selected operator whether the quote includes hotel pickup from the exact address, all required rental equipment, a dive computer, weights and cylinders, lunch and drinking water, certification or e-learning charges, boat or park fees, photos, taxes and card charges. Ask which omissions are optional and which are compulsory for that product.</p>
+
+    <h2>Location, pickup and the actual day</h2>
+    <p>Central-shop locations include Pattaya Dive Centre near Beach Road, Seafari in the Mike Shopping Mall area, No Limit on Second Road and Adventure Divers on Thappraya Road. Pattaya Scuba Adventures is in South Pattaya. Jomtien Dive Center and Real Divers serve the Jomtien side, while Dive Station is on the Naklua side. Shop location can affect an in-person visit, but it does not prove the boat departure point, dive site or pickup coverage.</p>
+    <p>Jomtien Dive Center publishes a pickup radius of five kilometres; that is operator-specific. Others describe transfers or pickup in their product inclusions, but the guide does not turn those statements into universal Pattaya coverage. Give the full accommodation name and map pin, ask for the pickup time and meeting point, and confirm the return estimate as a range rather than building a fixed evening connection around a sea day.</p>
+    <p>Weather, boat plan, diver mix and operational decisions can change a day. Ask how the operator communicates a change, what the cancellation or rescheduling terms are, whether the booked product can switch sites and which costs are refundable. This guide does not promise a particular island, wreck, depth, visibility figure, marine-life sighting or number of minutes underwater.</p>
+
+    <h2>Closed and stale records removed from the ranking</h2>
+    <p><a href="/gyms/mermaids-dive/">Mermaids Dive Center</a> is marked closed after its exact Maps listing showed permanently closed on 26 July 2026. <a href="/gyms/aquanauts-dive-center/">Aquanauts Dive Center</a> is retained as likely closed, not ranked as an active recommendation. Thai Wake Park is a wakeboarding record, not a scuba operator; a previous broad text match captured it because an unrelated word contained the letters “ssi.” The exact-ID filter now prevents those closure and false-positive errors.</p>
+    <p>The eight-record count is a statement about this directory's current evidence set, not a claim that only eight businesses can arrange diving in the region. An operator without adequate current first-hand evidence is omitted rather than padded into the list. A newly found shop should be added only after its identity, exact location, current activity and operator or agency source can be checked.</p>
+
+    <h2>Before paying for any Pattaya dive product</h2>
+    <ul>
+      <li>Name the exact product: introductory dive, Open Water course, certified fun dives, snorkelling passenger or another course.</li>
+      <li>Send the date, number of people, ages, certification level and recent-dive history.</li>
+      <li>Ask for the total payable amount and a written list of inclusions and compulsory extras.</li>
+      <li>Confirm equipment sizes, dive-computer policy and whether personal equipment changes the price.</li>
+      <li>Complete the operator's medical questionnaire honestly and ask what documentation is required when an answer triggers review.</li>
+      <li>Ask the operator for the applicable no-fly interval and schedule onward flights only after receiving qualified guidance for the planned dives.</li>
+      <li>Confirm pickup from the exact address, meeting point, expected return window and contact method on the morning of departure.</li>
+      <li>Read cancellation, weather, rescheduling, minimum-participant and refund terms before payment.</li>
+      <li>Check the certification agency, course materials, number of training days and what happens if more time is needed.</li>
+      <li>Keep the operator's current telephone or messaging contact available; a search-result snippet is not a booking confirmation.</li>
+    </ul>
+
+    <h2>How to use the shortlist</h2>
+    <p>For the clearest current certified-diver price comparison, begin with Pattaya Dive Centre, No Limit, Jomtien Dive Center and Adventure Divers, then align equipment and pickup. For a current SSI course or beginner product, compare Dive Station's exact sale terms rather than assuming SSI is automatically cheaper. For a PADI Open Water group, compare Pattaya Scuba Adventures and Pattaya Dive Centre only after confirming the minimum group condition and course dates. Consider Seafari or Real Divers when IDC-level scope, location or a specific course matters, but request a current written quote because this guide does not use a stable general tariff for either.</p>
+    <p>For activities beyond these eight scuba records, continue to the <a href="/guides/diving-watersports-pattaya/">Pattaya diving and watersports guide</a>. That broader page can include snorkelling and other water activities with different skills and risk profiles. Keep the products separate: a snorkelling passenger place, an introductory scuba dive and a certification course are not interchangeable simply because they share a boat.</p>
+  </section>`,
     faqs: [
-      { q: 'How much does Open Water dive certification cost in Pattaya?', a: 'PADI Open Water typically ฿11,000–฿16,000 over 3–4 days. SSI similar. Includes manual, gear, boat trips, and pool/confined-water sessions.' },
-      { q: 'Where do Pattaya dive boats go?', a: 'Coral Island (Koh Larn), Koh Sak, Koh Krok, Koh Khrok for shallow reefs. HTMS Khram (artificial reef wreck, ~30m) for advanced divers. Most operators run half-day or full-day boats with 2–3 dives.' },
-      { q: 'Are Pattaya dive sites good for beginners?', a: 'Yes — most reef dives are 8–18m with calm, clear water year-round. Visibility peaks Nov–Apr (15–25m). Gulf of Thailand currents are mild compared to Andaman Sea destinations.' }
+      { q: 'How much did a Pattaya Open Water course cost in the checked operator pages?', a: 'Prices checked on 25 July 2026 ranged from ฿13,490 per person on a qualifying two-or-more booking to ฿16,500 among the exact current products used here. Compare dates, agency, materials, equipment, certification fees, transfers and group conditions before choosing.' },
+      { q: 'Should I choose PADI or SSI in Pattaya?', a: 'Choose the operator, course delivery, language, schedule and complete inclusions first. Seven records in this set identify with PADI and Dive Station with SSI; the agency name alone does not establish instructor quality or fit.' },
+      { q: 'What should a certified diver send before requesting a quote?', a: 'Send the intended date, certification level and agency, recent-dive history, number of divers, equipment needs, accommodation map pin and any medical or scheduling constraint. Ask for the total price and all compulsory extras in writing.' }
     ]
   },
   {
     slug: 'best-golf-courses-pattaya',
-    title: 'Best Golf Courses in Pattaya 2026',
+    title: 'Best Golf Courses Near Pattaya 2026 | Verified Guide',
     h1: 'Best golf courses near Pattaya',
-    desc: 'Hand-picked best Pattaya / Eastern Seaboard golf courses for 2026 — from championship Pete Dye and Jack Nicklaus designs to value-tier 27-hole layouts and resort options with Buddha mountain views.',
-    intro: 'The Pattaya / Eastern Seaboard is one of Asia\'s densest premium-golf clusters with {count} verified courses including championship Pete Dye, Jack Nicklaus and Peter Thomson designs. Most are within 30–50 minutes of central Pattaya. This guide ranks the best by architecture, conditioning, hosting history, and overall experience.',
+    desc: 'Compare 13 current golf-course records near Pattaya by published total price, course format, exact location and the booking details still requiring confirmation.',
+    intro: 'This evidence-led shortlist contains {count} current regional course records. It does not rank present-day conditioning or claim a first-hand playing review. Use the published totals, course format, exact location and evidence gaps below to decide which clubs to contact.',
     pickerKey: 'golf-best',
-    filter: g => g.category === 'golf',
-    rank: g => {
-      const text = (g.description || '').toLowerCase() + ' ' + ((g.tags||[]).join(' ').toLowerCase());
-      let s = 0;
-      if (/championship|tour|tournament|host/.test(text)) s += 12;
-      if (/pete dye|nicklaus|thomson|fream/.test(text)) s += 10;
-      if (/27.?holes?|36.?holes?/.test(text)) s += 6;
-      if (g.priceRange === '฿฿฿฿') s += 8;
-      if (g.priceRange === '฿฿฿') s += 5;
-      if (/old course|premier|premium/.test(text)) s += 6;
-      return s;
-    },
+    filter: g => [
+      'chee-chan-golf',
+      'laem-chabang-international',
+      'siam-country-club',
+      'burapha-golf-club',
+      'phoenix-gold-golf',
+      'pattaya-country-club',
+      'pattana-sports-resort',
+      'st-andrews-2000',
+      'treasure-hill-golf',
+      'khao-kheow-country-club',
+      'bangpra-international',
+      'mountain-shadow-country-club',
+      'greenwood-golf-club'
+    ].includes(g.id),
+    rank: g => ({
+      'chee-chan-golf': 13,
+      'laem-chabang-international': 12,
+      'siam-country-club': 11,
+      'burapha-golf-club': 10,
+      'phoenix-gold-golf': 9,
+      'pattaya-country-club': 8,
+      'pattana-sports-resort': 7,
+      'st-andrews-2000': 6,
+      'treasure-hill-golf': 5,
+      'khao-kheow-country-club': 4,
+      'bangpra-international': 3,
+      'mountain-shadow-country-club': 2,
+      'greenwood-golf-club': 1
+    }[g.id] || 0),
     sections: [
-      { label: '🏆 Championship & Tournament-Grade', take: 4 },
-      { label: '🌟 Top-Tier Premium', take: 4 },
-      { label: '💚 Best Value & Hidden Gems', take: 4 },
-      { label: '🌳 Other Verified Courses', take: 6 }
+      { label: 'Current course shortlist', take: 13 }
     ],
+    extraHtml: () => `<section class="venue-body guide-extra">
+      <h2>If you only do one thing</h2>
+      <p><strong>Ask for the complete player total in writing, attached to the exact course or loop and tee time.</strong> A green fee alone may not be the amount required to start the round. The reply should separate the green fee, caddie, cart or buggy, club and shoe rental, taxes, card charge, deposit and date-specific supplement. It should also say which items are compulsory for that booking. Do not combine policies from different clubs into a Pattaya-wide rule.</p>
+      <p>This shortlist is ordered by decision-useful current evidence, not by claimed course condition, prestige or a first-hand playing review. Chee Chan and Laem Chabang lead because current operator pages make a required visitor total possible. Siam Country Club is high because its four-course identity and booking route are clear, but it has no stable public tariff in this record. A lower position can simply mean that more of the purchase still requires a written quote.</p>
+
+      <h2>What is included</h2>
+      <p>The 13 records are Chee Chan, Laem Chabang, Siam Country Club, Burapha, Phoenix Gold, Pattaya Country Club, Pattana, St Andrews 2000, Treasure Hill, Khao Kheow, Bangpra, Mountain Shadow and Greenwood. They form a regional shortlist rather than a Pattaya-city list: several are in Si Racha, Ban Bueng, Rayong or northern Chonburi. Exact route planning is part of the choice.</p>
+      <p>Practice-only facilities are deliberately excluded from the ranking. <a href="/gyms/pattaya-golf-driving-range/">Pattaya Golf Driving Range</a>, <a href="/gyms/diana-driving-range/">Diana Driving Range</a> and <a href="/gyms/golf-hub-pattaya/">Golf Hub Pattaya</a> can help with practice, but they are not substitutes for an 18-hole course comparison. Chatrium Golf Resort Soi Dao is also excluded: it is in Chanthaburi, outside this local shortlist, and its record documents a limited 2026 renovation phase rather than normal full-course operation.</p>
+
+      <h2>Four prices that can be checked exactly</h2>
+      <div class="table-wrap"><table class="price-table">
+        <thead><tr><th>Record</th><th>Checked product</th><th>Required published total</th><th>Important condition</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/gyms/chee-chan-golf/">Chee Chan</a></td><td>18 holes, weekday</td><td>฿5,800</td><td>฿4,500 green fee plus compulsory ฿1,300 caddie and cart</td></tr>
+          <tr><td><a href="/gyms/chee-chan-golf/">Chee Chan</a></td><td>18 holes, weekend or public holiday</td><td>฿6,800</td><td>฿5,500 green fee plus compulsory ฿1,300 caddie and cart</td></tr>
+          <tr><td><a href="/gyms/laem-chabang-international/">Laem Chabang</a></td><td>18 holes, weekday</td><td>฿4,930</td><td>฿3,500 green, ฿450 caddie and compulsory ฿980 buggy</td></tr>
+          <tr><td><a href="/gyms/laem-chabang-international/">Laem Chabang</a></td><td>18 holes, weekend</td><td>฿5,430</td><td>฿4,000 green, ฿450 caddie and compulsory ฿980 buggy</td></tr>
+          <tr><td><a href="/gyms/pattaya-country-club/">Pattaya Country Club</a></td><td>18 holes, weekday</td><td>฿3,500</td><td>฿2,500 green, ฿400 caddie and ฿600 cart</td></tr>
+          <tr><td><a href="/gyms/pattaya-country-club/">Pattaya Country Club</a></td><td>18 holes, weekend</td><td>฿4,000</td><td>฿3,000 green, ฿400 caddie and ฿600 cart</td></tr>
+          <tr><td><a href="/gyms/pattana-sports-resort/">Pattana</a></td><td>July 2026 early bird</td><td>฿1,650</td><td>Green, caddie and cart included; weekday before 07:30; eligibility restricted</td></tr>
+        </tbody>
+      </table></div>
+      <p>All figures in the table were checked against the exact operator source on 25 July 2026. Chee Chan's public card is valid from 1 April to 30 September 2026. Its nine-hole green fee was ฿2,250 on weekdays or ฿2,750 on weekends and public holidays, with a compulsory ฿700 caddie-and-cart charge. Laem Chabang says VAT is included and prices may change; its same page listed a full club set at ฿1,300 and shoes at ฿400. Pattaya Country Club listed a full set at ฿1,200 and shoes at ฿300.</p>
+      <p>Pattana's ฿1,650 line is not a general tourist benchmark. The operator limited it to weekday tee times before 07:30 from 1-31 July 2026 and to Thai nationals or foreign residents in Thailand. It expires after 31 July and does not establish the price for an overseas visitor, a later start or another month. Anyone outside those conditions needs a current quote.</p>
+
+      <h2>Course format changes the question</h2>
+      <p>Siam Country Club is a four-course operation. Its current site names the Old Course, Plantation, Waterside and Rolling Hills, opened in 1971, 2008, 2014 and 2020 respectively. “Siam Country Club” is not precise enough for a transfer or tee-time request. Name the course and use its exact pin.</p>
+      <p>Burapha documents 36 holes. The Tourism Authority of Thailand gives par 144 and 14,132 yards for the whole complex; those totals do not describe the specific 18-hole combination assigned to one visitor. Ask which nines make up the booking, which tees suit the group and whether any loop or practice facility is unavailable.</p>
+      <p>Laem Chabang, Phoenix Gold, Pattana and Greenwood each document 27 holes or three nine-hole loops. At Phoenix the named nines are Mountain, Lakes and Ocean. A quote should identify the combination in play rather than leaving “18 holes” as the only description. For Greenwood, the official site confirms three nines but its public green-fee page did not provide a dependable extractable current number during the check.</p>
+      <p>Chee Chan, Pattaya Country Club, St Andrews 2000, Treasure Hill, Bangpra and Mountain Shadow are documented as 18-hole records. That makes the identity simpler, but it does not answer tee choice, cart policy, temporary work or start-interval questions. Khao Kheow remains in the shortlist because its current identity and activity are supported; obtain the exact course arrangement and tariff directly.</p>
+
+      <h2>Location and route planning</h2>
+      <p>Chee Chan is in Na Jomtien/Sattahip. Phoenix Gold is in Huai Yai. Siam Country Club is in Pong, while Pattaya Country Club is on Highway 331 at Khao Mai Kaeo. These are the records most naturally grouped with the greater Pattaya side of the region, but none should be assigned a fixed travel time without the actual hotel and tee time.</p>
+      <p>Laem Chabang, Burapha, Pattana and Khao Kheow are on the Si Racha side. Treasure Hill, Bangpra, Mountain Shadow and Greenwood extend the comparison farther north into Ban Bueng or Chonburi. St Andrews is in Ban Chang, Rayong. A lower green fee can be a poor fit if a private vehicle must wait for the round or the route creates a rushed arrival.</p>
+      <p>Open the exact venue map before requesting transport. Give the driver the course name, map pin, player count, golf-bag count and required arrival time. Ask whether waiting, tolls and the return journey are included. For self-drive, confirm the correct gate, bag drop and parking area. This guide does not publish a universal central-Pattaya transfer time or fare because the start point, traffic, route and course location differ.</p>
+
+      <h2>Price anatomy without a false universal rule</h2>
+      <p>A written golf quote can contain a green fee, caddie fee, cart or buggy, rental set, shoe rental and other date-specific charges. Chee Chan explicitly makes its combined caddie and cart charge compulsory. Laem Chabang explicitly lists the buggy as compulsory. Pattaya Country Club's current venue record calculates its required green, caddie and cart total from the operator table. Those statements belong to those operators; this guide does not infer that the same components or policy apply at every course.</p>
+      <p>Ask separately about caddie tips instead of treating an online custom or old package estimate as a compulsory amount. Ask whether one or two people share a cart, whether a non-playing companion is allowed, whether rental clubs require a deposit and what happens when weather interrupts the round. A reseller bundle may include transfer or another service, but this comparison uses the operator's own tariff when stating a course price.</p>
+
+      <h2>Beginners and higher-handicap groups</h2>
+      <p>A famous design is not automatically the most practical first round. Tell reservations the handicap or experience range, number of players and whether anyone needs rental clubs. Ask which tees are appropriate, whether the chosen loop is suitable, how much time before the tee time is required and whether a lesson or practice session can be booked separately. Do not ask the desk to guarantee a score or a particular course condition.</p>
+      <p>For a warm-up without a full course booking, Pattaya Golf Driving Range has the clearest current conditional practice price in this directory: Pattaya Sports Club lists ฿55 for 55 balls when the PSC membership card is shown, checked 26 July 2026. That is a member benefit, not the public tray price. Diana Driving Range and Golf Hub remain useful comparison records, but neither contributes an assumed numeric rate here.</p>
+
+      <h2>Where current prices are still missing</h2>
+      <p>Siam Country Club provides a live tee-time enquiry but no stable public tariff in the checked first-hand pages. Burapha has current identity, hours and 36-hole evidence but no owner-owned public rate table found in this check. Phoenix Gold publishes its course identity, hours and booking contacts but not a stable current playing tariff. St Andrews, Treasure Hill, Khao Kheow, Bangpra, Mountain Shadow and Greenwood also require a direct current total rather than a copied reseller number.</p>
+      <p>A missing figure is an evidence gap, not a sign that a course is cheap, expensive or unavailable. Request the same components from each candidate on the same date. Preserve the written replies until the booking is complete, and check whether the payer is dealing with the course or a third party.</p>
+
+      <h2>Booking checklist</h2>
+      <ul>
+        <li>Name the exact course, and for multi-loop venues name or request the 18-hole combination.</li>
+        <li>Give the play date, preferred tee-time window, player count and handicap or experience range.</li>
+        <li>Request the total per player with every compulsory green, caddie, cart and date supplement separated.</li>
+        <li>Ask whether rental clubs, shoes, a locker, taxes, deposit or card fee are additional.</li>
+        <li>Confirm cart policy, sharing arrangement, caddie assignment and the handling of any non-playing companion.</li>
+        <li>Ask for the required arrival time, dress code, footwear rule, exact entrance and check-in desk.</li>
+        <li>Confirm the cancellation, no-show, rain-interruption, rescheduling and refund terms before payment.</li>
+        <li>Give the accommodation map pin when asking about a transfer; confirm bags, tolls, waiting and return terms.</li>
+        <li>Recheck temporary maintenance, available nines and the final tee time shortly before the date.</li>
+        <li>Keep the dated operator quote and payment confirmation rather than relying on a search snippet.</li>
+      </ul>
+
+      <h2>How to read the order</h2>
+      <p>Start with Chee Chan, Laem Chabang or Pattaya Country Club when a comparable current required total matters. Add Pattana only when the July early-bird eligibility and time window genuinely apply. Use Siam Country Club when choosing among its four named courses is the priority, then obtain the missing total. Burapha suits a 36-hole-complex comparison; Phoenix, Laem Chabang, Pattana and Greenwood suit readers comparing multi-nine formats.</p>
+      <p>The rest of the list extends geographic and course-format choice without pretending that sparse tariff evidence establishes value. Open every individual record for current sources and unresolved questions. The <a href="/category/golf/">complete golf directory</a> includes courses and practice venues, while the <a href="/area/sattahip/">Sattahip area page</a> helps place Chee Chan against other southern activities.</p>
+    </section>`,
     faqs: [
-      { q: 'What is the best golf course in Pattaya?', a: 'Siam Country Club Old Course is the headline championship layout. Phoenix Gold Golf, Burapha (36-hole, Thailand Open host), and Pattana Sports & Resort all rank top-tier. Best is subjective — fast greens, tight fairways, or scenic views all have strong contenders.' },
-      { q: 'How much does golf in Pattaya cost?', a: 'Green fees ฿1,500–฿5,000 weekday, ฿2,500–฿7,500 weekend. Premium courses peak at ฿8,000+. Plus caddie ฿500–฿800 (mandatory at most courses) and cart ฿800–฿1,500.' },
-      { q: 'Are caddies required at Pattaya golf courses?', a: 'Yes at virtually all courses — Thai golf tradition. Caddies typically expect ฿500–฿800 base plus tips. Most are excellent with course knowledge and pace; many speak basic English.' },
-      { q: 'When is the best time to golf in Pattaya?', a: 'Cool dry season Nov–Feb is peak — book tee times 2–4 weeks ahead, especially weekends. Hot season Mar–May has cheaper rates and quieter courses. Rainy season Jun–Oct sees afternoon storms but morning play is fine.' }
+      { q: 'What required golf totals were checked near Pattaya?', a: 'On 25 July 2026, Chee Chan totalled ฿5,800 weekday or ฿6,800 weekend for 18 holes with its compulsory caddie and cart charge. Laem Chabang totalled ฿4,930 or ฿5,430, and Pattaya Country Club ฿3,500 or ฿4,000, using each operator\'s published components.' },
+      { q: 'What should I confirm before booking a Pattaya golf course?', a: 'Confirm the exact course or nine-hole combination, tee time, total green, caddie and cart cost, compulsory items, rentals, arrival time, dress rule, exact entrance, transport and cancellation or rain terms in writing.' },
+      { q: 'Are Pattaya driving ranges included in the course ranking?', a: 'No. Pattaya Golf Driving Range, Diana Driving Range and Golf Hub Pattaya are practice facilities, so they are discussed separately and excluded from the 13-course order.' }
     ]
   },
   {
@@ -1150,33 +1395,65 @@ const GUIDES = [
   },
   {
     slug: 'bangkok-day-trip-sport-pattaya',
-    title: 'Bangkok Day-Trip Sport Venues from Pattaya',
-    h1: 'Bangkok day-trip sport venues',
-    desc: 'Iconic Bangkok sport destinations within day-trip range of Pattaya — Lumpinee Boxing Stadium, Rajadamnern Stadium, world-class courses and venues. Travel times, ticket info, and itinerary tips.',
-    intro: 'Pattaya is 1.5-2 hours from Bangkok. For sport tourists wanting the bucket-list Thai experiences — fight night at Lumpinee or Rajadamnern, world-class Bangkok venues — a day trip is genuinely doable from a Pattaya base. This guide picks the best Bangkok sport day-trips with practical logistics.',
+    title: 'Bangkok Muay Thai Stadium Trip from Pattaya',
+    h1: 'Bangkok Muay Thai stadium trip from Pattaya',
+    desc: 'Plan a Pattaya-to-Bangkok fight night using the current Lumpinee and Rajadamnern calendars, dated ticket evidence, location trade-offs and a realistic return plan.',
+    intro: 'This guide covers two out-of-area Bangkok stadium records: Lumpinee on Ramintra Road and Rajadamnern on Ratchadamnoen Nok Road. Neither is a Pattaya venue, and neither should be treated as a casual add-on without checking the date, route and return plan.',
     pickerKey: 'bangkok-day-trip',
-    filter: g => {
-      const area = (g.area || '').toLowerCase();
-      const desc = (g.description || '').toLowerCase();
-      return /bangkok/.test(area + ' ' + desc);
-    },
-    rank: g => {
-      const desc = (g.description || '').toLowerCase();
-      const tags = (g.tags || []).join(' ').toLowerCase();
-      let s = 0;
-      if (/legendary|iconic|world.?class|first|original|championship/.test(desc + tags)) s += 12;
-      if (/stadium|tournament|championship/.test(desc + tags)) s += 8;
-      if (g.category === 'muay-thai') s += 5;
-      return s;
-    },
+    filter: g => ['lumpinee-boxing-stadium', 'rajadamnern-stadium'].includes(g.id),
+    rank: g => g.id === 'lumpinee-boxing-stadium' ? 2 : 1,
     sections: [
-      { label: '🏟 Top Bangkok bucket-list sport venues', take: 4 },
-      { label: '🥊 Bangkok stadium fight nights', take: 2 }
+      { label: 'The two Bangkok stadium records', take: 2 }
     ],
+    primerHtml: () => `
+  <section class="about" aria-labelledby="bangkok-trip-decision" style="margin-top: 32px;">
+    <h2 id="bangkok-trip-decision">If you only read one thing</h2>
+    <p><strong>Choose the event date first, then the stadium, then the transport.</strong> Do not begin with a generic promise that Bangkok is a fixed number of hours from Pattaya. Road conditions vary, the two stadiums are in different parts of Bangkok, and a late finish changes the return problem. The current evidence is strongest for the stadium calendars and ticket bands; it does not support a guaranteed Pattaya transfer, a fixed taxi fare or a same-night public-transport connection.</p>
+    <p>The ranked list is intentionally limited to <a href="/gyms/lumpinee-boxing-stadium/">Lumpinee Boxing Stadium</a> and <a href="/gyms/rajadamnern-stadium/">Rajadamnern Stadium</a>. Older versions of this guide pulled in regional golf, diving and other records merely because their descriptions mentioned Bangkok. Those records were not Bangkok day-trip sport venues and have been removed from this ranking.</p>
+
+    <h2>Current calendar snapshot</h2>
+    <p><strong>Lumpinee:</strong> the official stadium calendar checked on 26 July 2026 listed ONE Lumpinee / ONE Friday Fights on Friday evenings from 18:30 to 23:30 and Lumpinee Super Champ on Saturday evenings from 18:30 to 21:00, with Saturday gates at 17:30. Its next displayed examples were Friday 31 July and Saturday 1 August. The same calendar listed an additional KAT PRO event on Monday 27 July and a selected ONE Fight Night at 09:00 on Saturday 15 August. This shows why the date-specific calendar matters: Friday and Saturday are the standing pattern, but additional events and morning cards can appear.</p>
+    <p><strong>Rajadamnern:</strong> the official ticket calendar checked on 26 July 2026 advertised live Muay Thai seven nights a week. The displayed programme used 17:00 gates for many traditional Wednesday, Thursday and Sunday cards and 18:00 gates for Monday, Tuesday, Friday and Saturday cards. Event names, bout counts and round formats differed by day. The operator's FAQ says the stadium ticket office opens daily at 15:00. Use the selected date in the live booking flow rather than treating those gate times as a permanent weekly guarantee.</p>
+
+    <h2>How the venues differ</h2>
+    <p>Lumpinee is at 6 Ramintra Road in Bang Khen. The operator describes the current site as being on Bangkok's outskirts in the direction of Don Mueang Airport and points visitors to the MRT Pink Line at Ram Inthra 3, with connections elsewhere in the Bangkok rail network. That location can make Lumpinee a poor match for a day otherwise planned around Bangkok's historic centre. It can make more sense when the fight card itself is the trip or when the wider route already uses the north or northeast side of Bangkok.</p>
+    <p>Rajadamnern is at 8 Rajadamnern Nok Road in the old-city side of Bangkok. Its central location is the more natural fit for a daytime plan around nearby Bangkok districts, but the final stadium approach and the post-event journey still need their own route checks. “Central Bangkok” is not a transport guarantee, and the guide does not claim that either stadium is universally easier from Pattaya.</p>
+    <p>The sporting formats also differ. Lumpinee's Friday ONE series can mix Muay Thai with kickboxing, MMA or submission grappling depending on the card, while Saturday Super Champ is presented as a Muay Thai event. Rajadamnern's live calendar distinguishes traditional cards from other branded event formats and varies the number and length of bouts. Read the actual card if a specific ruleset, fighter or traditional five-round format is the reason for travelling.</p>
+
+    <h2>Ticket evidence checked 25–26 July 2026</h2>
+    <p>Lumpinee published clear seating bands when checked. Friday ONE Lumpinee tickets were ฿1,000 for Category 3 grandstand, ฿2,500 for Category 2 upper grandstand, ฿3,500 for Category 1 lower grandstand and ฿5,000 ringside. Saturday Lumpinee Super Champ tickets were ฿1,000 grandstand, ฿1,500 club class and ฿2,000 ringside. The operator also displayed separate prices for selected monthly ONE Fight Night events. These are event-specific products; use the live event and seating chart before payment.</p>
+    <p>Rajadamnern's current operator calendar sends each date to its own booking flow and says prices vary by seating tier and event. The official-ticket panel visible through the current Maps listing showed admission from ฿1,800 on 25 July 2026. That “from” amount is a dated starting point, not a promise that every event or seat remains available at ฿1,800. Rajadamnern lists several seating types, including ringside, club class and higher or unassigned tiers; availability changes by card.</p>
+    <p>Compare the complete purchase, not only the smallest number. Check the exact date, event title, seat location, fees, ticket delivery method, refund or change terms and the name of the authorised seller reached from the operator's page. This directory does not endorse a reseller price merely because it is lower.</p>
+
+    <h2>Build a transport plan that survives a late finish</h2>
+    <p>Start with a live route check from the actual Pattaya pickup point to the actual stadium. A hotel in Jomtien, Central Pattaya or Naklua does not have the same road access. Add a buffer for the Bangkok approach, time to collect or validate tickets and the published gate opening. Do not plan arrival for the first bell.</p>
+    <p>A private car or pre-arranged driver can simplify the final leg and the late return, but agree in writing on pickup point, waiting time, parking, tolls, overtime and what happens if the card finishes late. If travelling by intercity bus or minivan, identify the Bangkok terminal, the onward stadium route and the last workable return before buying the fight ticket. “Bus to Bangkok” is only the first leg; neither stadium sits at Pattaya's intercity arrival point.</p>
+    <p>The Friday Lumpinee programme is especially important because the official finish is 23:30. Do not assume that Bangkok rail, a Pattaya-bound bus or an on-demand car will line up with that finish. A Bangkok overnight stay can be the more robust choice for a late card, a group with children, or anyone who does not want to negotiate a long road return after the event. For an overnight, choose accommodation by the stadium and next-morning route rather than by a generic “Bangkok centre” label.</p>
+
+    <h2>Three workable trip shapes</h2>
+    <p><strong>Fight-only round trip:</strong> depart Pattaya with enough buffer for the date-specific gate time, attend one card and use a pre-arranged return. This is the simplest plan to describe but only works when the driver and late-finish terms are confirmed.</p>
+    <p><strong>Bangkok day plus Rajadamnern:</strong> travel to Bangkok earlier, keep the daytime programme in the same broad part of the city, store bags safely and enter at the selected gate time. Return only if a confirmed late option exists; otherwise stay overnight. Do not add multiple distant Bangkok attractions just because they appear close on a regional map.</p>
+    <p><strong>Lumpinee plus overnight:</strong> treat the Ramintra stadium as the main destination, use the Pink Line or a road transfer for the last leg, and stay in Bangkok after a late Friday card. This avoids turning an 18:30–23:30 event into a rushed same-night connection. A shorter Saturday Super Champ schedule may make a same-day return easier, but it still needs a live route and booked transport.</p>
+
+    <h2>Before paying</h2>
+    <ul>
+      <li>Confirm that the event appears on the stadium's exact current calendar for the chosen date.</li>
+      <li>Check gate time, expected programme window, ruleset and card rather than relying on a generic weekday.</li>
+      <li>Use the operator-linked ticket flow and verify the seating tier, fees and delivery method.</li>
+      <li>Map the complete route from the Pattaya pickup point to the exact stadium entrance.</li>
+      <li>Confirm the return or overnight plan before buying a non-changeable ticket.</li>
+      <li>Allow for Bangkok traffic, ticket collection and security without promising a fixed journey time.</li>
+      <li>Ask the venue about accessibility, child admission or seating needs when relevant.</li>
+      <li>Recheck the calendar on the day of travel because cards and timings can change.</li>
+    </ul>
+
+    <h2>What this guide does not claim</h2>
+    <p>It does not claim that most Pattaya hotels sell stadium packages, that a tourist minibus includes a ticket, that either trip always takes 1.5–2 hours, or that a fixed taxi amount applies. No current first-hand evidence supported those statements. It also does not rank unrelated Bangkok golf or sport attractions. The decision here is deliberately narrow: choose between two current Bangkok Muay Thai stadium records and make the date and return logistics work.</p>
+  </section>`,
     faqs: [
-      { q: 'How long does it take to drive from Pattaya to Bangkok stadiums?', a: 'Bangkok is 1.5-2 hours from Pattaya by car or bus depending on traffic. A day-trip with afternoon arrival, evening fight night, and post-fight bus back to Pattaya is realistic and popular.' },
-      { q: 'Should I visit Lumpinee or Rajadamnern Stadium?', a: 'Both are essential. Rajadamnern (founded 1945) is the world\'s first Muay Thai stadium and runs fights every Mon-Sun. Lumpinee (Ramintra Road since 2014) is the modern flagship — Friday and Saturday cards. Many Pattaya visitors do both on different trips.' },
-      { q: 'Can I combine a Bangkok stadium night with a Pattaya stay?', a: 'Yes — most Pattaya hotels can book the round-trip transfer + tickets package. Tourist mini-buses run Pattaya → Bangkok stadium → Pattaya same-day for ~฿1,500-2,500 inclusive of tickets.' }
+      { q: 'How long should I allow from Pattaya to a Bangkok stadium?', a: 'There is no dependable fixed duration. Check a live route from the actual Pattaya pickup point to the exact stadium, then add time for Bangkok traffic, ticket collection and the published gate opening.' },
+      { q: 'Should I choose Lumpinee or Rajadamnern?', a: 'Choose by date, event format and location. Lumpinee publishes Friday ONE and Saturday Super Champ patterns on Ramintra Road; Rajadamnern publishes a seven-night calendar on Ratchadamnoen Nok Road. Read the selected card before booking.' },
+      { q: 'Can I return to Pattaya after the fight?', a: 'Only if the return is confirmed before purchase. Late cards, especially Lumpinee Friday events scheduled to 23:30, may not align with rail or Pattaya-bound buses. A pre-arranged driver or Bangkok overnight can be more robust.' }
     ]
   }
 
@@ -1251,10 +1528,11 @@ function buildGuidePage(guide, allGyms) {
   // FAQ block
   const faqs = guide.faqs || [];
   const faqHtml = faqs.length ? `
-  <section class="about" aria-labelledby="faq-h" style="margin-top: 48px;">
+  <section class="guide-faq" aria-labelledby="faq-h" style="margin-top: 48px;">
     <h2 id="faq-h" style="font-size: 1.4rem; margin-bottom: 18px;">Common questions</h2>
     ${faqs.map(f => `<details class="faq-item"><summary>${escHtml(f.q)}</summary><p>${escHtml(f.a)}</p></details>`).join('')}
   </section>` : '';
+  const primerHtml = typeof guide.primerHtml === 'function' ? guide.primerHtml(sorted, allGyms) : '';
   const extraHtml = typeof guide.extraHtml === 'function' ? guide.extraHtml(sorted, allGyms) : '';
 
   const speakableSchema = {
@@ -1307,6 +1585,7 @@ ${header()}
     </div>
   </div>
   ${tldrHtml}
+  ${primerHtml}
   <div id="full-list"></div>
   ${autoLinkVenues(sectionsHtml.join(''), guide.slug, allGyms)}
   ${extraHtml}
@@ -1337,7 +1616,7 @@ ${header()}
       <a class="btn btn-secondary" href="/search/">Search venues</a>
     </div>
   </div>
-  
+
 </main>
 ${footer()}
 <script src="${assetHref('/share.js')}" defer></script>
@@ -2571,4 +2850,19 @@ function main() {
   console.log('\nDiscovery built: ' + AREAS.length + ' area pages + ' + GUIDES.length + ' guides + search + add form + methodology + stats + contact + press + Section J tools');
 }
 
-main();
+function buildSingleGuide(slug) {
+  const { GYMS } = loadGymsFromDataJs();
+  const guide = GUIDES.find(g => g.slug === slug);
+  if (!guide) throw new Error(`Unknown guide slug: ${slug}`);
+  const dir = path.join(ROOT, 'guides', guide.slug);
+  ensureDir(dir);
+  fs.writeFileSync(path.join(dir, 'index.html'), finalizeHtml(buildGuidePage(guide, GYMS)));
+  console.log('  [GUIDE-ONLY] /guides/' + guide.slug + '/');
+}
+
+const guideOnlyArg = process.argv.find(arg => arg.startsWith('--guide-only='));
+if (guideOnlyArg) {
+  buildSingleGuide(guideOnlyArg.slice('--guide-only='.length));
+} else {
+  main();
+}

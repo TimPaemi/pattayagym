@@ -1,3 +1,7 @@
+'use strict';
+/* RETIRED 26 July 2026 — NETWORK-SAFETY-RULES §3.
+   This module injected a sister-site card grid. It now emits nothing. Do not revive it;
+   `npm run check:no-network-links` fails the build if its output reappears. */
 /**
  * Shared Pattaya Authority / TimPaemi network footer block (internal + external mesh).
  */
@@ -9,6 +13,7 @@ const SITE = 'https://pattaya-gym.com';
 const ROOT = path.resolve(__dirname, '../..');
 
 function guideCount() {
+  return ''; // retired 26 Jul 2026 — NETWORK-SAFETY-RULES §3
   const guidesDir = path.join(ROOT, 'guides');
   if (!fs.existsSync(guidesDir)) return 47;
   return fs.readdirSync(guidesDir, { withFileTypes: true })
@@ -16,21 +21,7 @@ function guideCount() {
     .length;
 }
 
-const NETWORK_SITES = [
-  { name: 'Pattaya Authority', url: 'https://pattaya-authority.com/work/pattaya-gym-directory/', desc: 'Network hub' },
-  { name: 'Restaurant Guide', url: 'https://pattaya-restaurant-guide.com/', desc: 'Eat after training' },
-  { name: 'Visa Help', url: 'https://pattayavisahelp.com/', desc: 'Long-stay visas' },
-  { name: 'Medical', url: 'https://pattaya-medical.com/', desc: 'Clinics & injury' },
-  { name: 'School Guide', url: 'https://pattaya-school-guide.com/', desc: 'Families' },
-  { name: 'Coffee', url: 'https://pattaya-coffee.com/', desc: 'Remote work' },
-  { name: 'Personal Trainer', url: 'https://pattayapersonaltrainer.com/', desc: '1-on-1 coaching' },
-  { name: 'Pattaya Villa', url: 'https://pattayavilla.com/', desc: 'Long-stay stays' },
-  { name: 'Vehicle Rentals', url: 'https://pattaya-vehicle-rentals.com/', desc: 'Scooters & cars' },
-  { name: 'PattayaPets', url: 'https://pattayapets.com/', desc: 'Vets & pet life' },
-  { name: 'Pattaya After Dark', url: 'https://pattaya-afterdark.com/', desc: 'Nightlife tonight' },
-  { name: 'Mr We Outside', url: 'https://mrweoutside.com/', desc: 'Outdoor community' },
-  { name: 'TimPaemi', url: 'https://timpaemi.com/', desc: 'Founders · agency' },
-];
+const NETWORK_SITES = [];
 
 function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -112,11 +103,12 @@ function sisterContextHtml(links) {
 </section>`;
 }
 
+/* RETIRED-STUB — every HTML export returns nothing. NETWORK-SAFETY-RULES §3. */
 module.exports = {
   SITE,
-  NETWORK_SITES,
-  paNetworkHtml,
-  sisterContextHtml,
-  defaultSisterContextLinks,
+  NETWORK_SITES: [],
+  paNetworkHtml: () => '',
+  sisterContextHtml: () => '',
+  defaultSisterContextLinks: () => [],
   guideCount,
 };

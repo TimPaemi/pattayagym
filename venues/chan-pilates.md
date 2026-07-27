@@ -13,7 +13,7 @@ priceRange: ""
 distinction: Bang Saray Pilates studio with current appointment-based social activity
 disciplines: [Pilates]
 beginnerFriendly: true
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.facebook.com/people/Chan-Pilates/61575569020794/
   - https://linktr.ee/chanpilates
@@ -25,8 +25,8 @@ tags: [pilates, fitness, studio, bang-saray, sattahip]
 
 # Chan Pilates
 
-Chan Pilates is a Pilates studio in Bang Saray. The operator page showed activity within two days of verification, and its Maps listing confirms the phone, address and daily 08:00-20:00 hours.
+Chan Pilates is a Pilates studio in Bang Saray. Its exact live Maps listing re-confirmed the phone, address and daily 08:00-20:00 hours on 26 July 2026, and it links to the operator's current Facebook presence.
 
 ## Price and first visit
 
-No stable public rate card was available. Contact the studio for an introductory session, private or small-group options, package prices and the experience level required. Confirm the exact appointment time rather than treating the broad Maps hours as a class schedule.
+No stable current owner rate card or class-by-class timetable was publicly accessible. Contact the studio for an introductory session, private or small-group options, package prices and the experience level required. Confirm the exact appointment time rather than treating the broad Maps hours as a class schedule.

@@ -14,7 +14,7 @@ distinction: Thai-language yoga and therapeutic movement instruction in Nong Pru
 disciplines: [Yoga, Therapeutic movement]
 beginnerFriendly: true
 languages: [Thai]
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.facebook.com/nokyogapattaya/
   - https://www.google.com/maps/search/?api=1&query=Nok+Yoga+Pattaya
@@ -25,6 +25,8 @@ tags: [yoga, therapeutic-movement, nong-prue, thai-language]
 
 # Nok Yoga
 
-Nok Yoga is active: the operator's Facebook page had new activity on 24 July 2026. Its current page address is 1/58 Moo 7 in Nong Prue, replacing the old Naklua address previously carried in this directory.
+Nok Yoga is active: the operator's Facebook page had new activity on 26 July 2026. The page describes yoga for health, therapy and balance, and publishes 1/58 Moo 7 in Nong Prue as the current address. That replaces the old Naklua address previously carried in this directory.
 
-The public page describes health-focused and therapeutic yoga but does not publish a dependable weekly timetable or current class price. Contact the instructor before travelling to confirm the session, language, level and exact entrance. No numeric price is shown because none was published in the current first-hand sources checked.
+The public page does not publish a dependable weekly timetable, class duration, group size or current price. Contact the instructor on +66 89 748 7149 before travelling and ask for the exact session, language, level and entrance. If the goal is rehabilitation or pain treatment, describe it accurately and ask about the instructor's scope before booking; this directory does not convert a broad therapeutic-yoga description into a medical claim.
+
+No numeric price is shown because none was published in the current first-hand sources checked. Confirm whether the quote is for a group class, private appointment or package, and ask about cancellation and any equipment to bring.

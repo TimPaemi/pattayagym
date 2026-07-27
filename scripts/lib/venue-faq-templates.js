@@ -102,8 +102,13 @@ function faqsForVenue(g) {
     });
     if (cat === 'crossfit') {
       out.push({
-        q: `Is ${name} Pattaya's CrossFit affiliate?`,
-        a: `CrossFit Pattaya @ Jungle Gym is Pattaya's only CrossFit affiliate. Full guide: <a href="/guides/crossfit-pattaya/">CrossFit Pattaya</a>.`,
+        q: `Is ${name} a current CrossFit affiliate?`,
+        a: `No current Pattaya affiliate is verified. The former CrossFit Pattaya entry is marked departed; Jungle Gym is the active independent functional-fitness operator. Full guide: <a href="/guides/crossfit-pattaya/">CrossFit Pattaya</a>.`,
+      });
+    } else if (!hasTag(g, '24-hour') && !hasTag(g, '24h') && !hasTag(g, '24-7')) {
+      out.push({
+        q: `When is ${name} open?`,
+        a: `Hours on file: ${hours}. Confirm staffed reception and first-entry requirements directly before travelling.`,
       });
     } else {
       out.push({
@@ -195,8 +200,8 @@ function faqsForVenue(g) {
     });
   } else if (cat === 'climbing') {
     out.push({
-      q: `Do I need experience to climb at ${name}?`,
-      a: `Most climbing gyms offer intro sessions and rental shoes — no prior experience required. <a href="/guides/climbing-pattaya/">Climbing in Pattaya</a> · <a href="/guides/best-for-beginners-pattaya/">Best for beginners</a>.`,
+      q: `What should I confirm before climbing at ${name}?`,
+      a: `Confirm the venue status, discipline, first-visit process, equipment, supervision and total price directly. Deep is closed and STICKY does not publish a complete current tariff. <a href="/guides/climbing-pattaya/">Climbing in Pattaya</a>.`,
     });
     out.push({
       q: `What does a session at ${name} cost?`,

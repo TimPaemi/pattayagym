@@ -84,7 +84,7 @@ const INTENT_BLOCK = `
       <a href="/guides/crossfit-pattaya/" class="intent-card">
         <span class="intent-card-tag">// CrossFit</span>
         <span class="intent-card-title">CrossFit Pattaya</span>
-        <span class="intent-card-desc">Jungle Gym affiliate + alternatives</span>
+        <span class="intent-card-desc">Former affiliate record + current alternatives</span>
       </a>
       <a href="/guides/training-thailand-visa-pattaya/" class="intent-card">
         <span class="intent-card-tag">// Long-stay</span>
@@ -109,7 +109,7 @@ const INTENT_BLOCK = `
       <a href="/guides/climbing-pattaya/" class="intent-card">
         <span class="intent-card-tag">// Climbing</span>
         <span class="intent-card-title">Climbing in Pattaya</span>
-        <span class="intent-card-desc">Deep Harbor Mall, Bean Cow, intro sessions</span>
+        <span class="intent-card-desc">STICKY current; Deep permanently closed</span>
       </a>
       <a href="/guides/adventure-pattaya/" class="intent-card">
         <span class="intent-card-tag">// Adventure</span>

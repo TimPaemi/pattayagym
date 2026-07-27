@@ -10,7 +10,7 @@ social: {}
 hours: Mon-Fri 07:00-21:00; Sat-Sun 07:00-20:00
 priceRange: ""
 distinction: Neighbourhood fitness facility in Bang Saray
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.google.com/maps/search/?api=1&query=WeSquare+Bang+Saray
   - https://www.pattayamail.com/property/house-for-sale-koonsuk-1-bang-saray-533894
@@ -21,7 +21,7 @@ tags: [fitness, neighborhood-gym, bang-saray, sattahip]
 
 # WeSquare
 
-WeSquare is a neighbourhood fitness listing in Bang Saray. Current Maps information supplies the address, phone and weekly hours, while a July 2026 Pattaya Mail property report independently identifies WeSquare Gym as a nearby operating amenity.
+WeSquare is a neighbourhood fitness listing in Bang Saray. Its exact Maps record remained active on 26 July 2026 and supplies the address, phone and weekly hours. A July 2026 Pattaya Mail property report also identifies WeSquare Gym as a nearby operating amenity.
 
 ## Price and first visit
 

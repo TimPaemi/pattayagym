@@ -11,7 +11,7 @@ hours: ""
 priceRange: ""
 status: unverified
 distinction: Legacy directory identity with no verified current distinct operation
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.google.com/maps/search/?api=1&query=Kitesurf+Pattaya
 description: Legacy kitesurfing record that could not be verified as a distinct current Pattaya operator.
@@ -23,6 +23,6 @@ tags: [unverified, legacy, kitesurfing, do-not-book]
 
 ## Current identity unverified
 
-This exact-name record could not be matched to a distinct current operator. The live Maps search returns named current operators including Clubloongchat and KBA, both handled separately in the directory, but does not establish another business called Kitesurf Pattaya.
+The exact-name Maps search checked on 26 July 2026 resolved to separately identified operators rather than a business currently trading as Kitesurf Pattaya. Results included Clubloongchat and KBA-branded Blue Lagoon listings. Those current schools have their own identities and records; they should not be merged into or used to rename this legacy entry without an operator source establishing continuity.
 
-The former phone, site, timetable and prices have been removed to avoid directing readers to an unsupported identity. Use a separately verified current operator.
+No current address, phone, schedule, price or owner page is retained for this name. Do not treat it as bookable. Compare the separately verified [Clubloongchat Watersports](/gyms/clubloongchat-watersports/) and [KBA Kiteboarding Asia Pattaya](/gyms/kba-kiteboarding-pattaya/) records instead.

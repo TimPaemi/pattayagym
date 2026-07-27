@@ -10,7 +10,7 @@ social: {}
 hours: Daily 06:00-18:00
 priceRange: ""
 distinction: Cultural walking stop centred on a cliff-carved Buddha image
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.tourismthailand.org/Destinations/Provinces/Pattaya/469
   - https://www.google.com/maps/search/?api=1&query=Khao+Chi+Chan+Buddha+Mountain
@@ -21,6 +21,6 @@ tags: [walking, cultural-site, buddha-mountain, sattahip]
 
 # Khao Chi Chan (Buddha Mountain)
 
-Khao Chi Chan is a cultural sightseeing and light-walking stop rather than a training venue. The Tourism Authority of Thailand lists opening hours of 06:00-18:00 and asks visitors to dress respectfully and keep a safe distance from the cliff image.
+Khao Chi Chan is a cultural sightseeing and light-walking stop, not a training venue. The Tourism Authority of Thailand lists daily 06:00-18:00 opening, asks visitors to dress respectfully and warns them not to approach too close to the Buddha image and cliff.
 
-No current official admission price or public contact number was found in the sources checked, so neither is stated here. Bring sun protection and treat the visit as a short outdoor walk around a religious site.
+The exact Maps result identifies the cliff-carved Buddha attraction on Soi Khao Chi Chan; it is distinct from the nearby Wat Khao Chi Chan result. No current official admission price or public contact number was found on 26 July 2026. Bring sun protection and treat the grounds as a religious site rather than a sports facility.

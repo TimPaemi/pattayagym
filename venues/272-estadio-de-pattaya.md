@@ -10,7 +10,7 @@ social: {}
 hours: "Daily 08:00-22:00"
 priceRange: ""
 distinction: Dedicated East Pattaya indoor badminton venue
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.google.com/maps/search/?api=1&query=272+Estadio+De+Pattaya
   - https://pattayasports.org/badminton/
@@ -21,7 +21,7 @@ tags: [badminton, indoor, east-pattaya, chaiyaporn-withi, call-ahead]
 
 # 272 Estadio De Pattaya
 
-272 Estadio is a dedicated indoor badminton venue on Soi Chaiyaporn Withi 27. Its live Maps listing confirms current activity, address, phone and daily 08:00-22:00 hours. Pattaya Sports Club also lists it among local badminton venues.
+272 Estadio is a dedicated indoor badminton venue on Soi Chaiyaporn Withi 27. Its live Maps listing confirmed current activity, address, phone and daily 08:00-22:00 hours when checked on 26 July 2026. Pattaya Sports Club also lists it among local badminton venues.
 
 ## Booking and first visit
 

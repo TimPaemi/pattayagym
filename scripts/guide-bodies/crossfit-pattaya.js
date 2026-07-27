@@ -1,112 +1,105 @@
 module.exports = `
-<p>Pattaya has <strong>one legitimate CrossFit affiliate</strong> — <a href="/gyms/crossfit-pattaya/">CrossFit Pattaya @ Jungle Gym</a> in Nong Prue (East Pattaya / Darkside). That single-box reality does not mean functional fitness stops elsewhere: hotel Technogym floors, iron gyms, and combat S&amp;C classes fill the gap for Beach Road tourists. This guide explains the affiliate honestly, who should commute to Nong Prue, and what to do if you cannot.</p>
+<p>Pattaya's directory has one CrossFit-category record, but it is not a current CrossFit affiliate. The official CrossFit Games directory marks <strong>CrossFit Pattaya as departed</strong>. The operating business attached to the local record is <a href="/gyms/crossfit-pattaya/">Jungle Gym Pattaya</a>, an independent multi-activity venue in Nong Prue that still publishes a functional group-training schedule.</p>
 
-<p>Hub: <a href="/category/crossfit/">CrossFit category</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya gyms</a> · <a href="/compare/">compare</a> · <a href="/plan-my-trip/">plan my trip</a>.</p>
+<p>That distinction is the foundation of this guide. Jungle Gym may be a relevant functional-fitness option, but visitors should not book it on the assumption that they are dropping into an active CrossFit affiliate. Start with the <a href="/category/crossfit/">CrossFit category</a> for the underlying status record.</p>
 
-<h2>CrossFit Pattaya @ Jungle Gym — the only affiliate</h2>
-
-<p><strong>Address:</strong> 165/4 Moo 6, Nong Prue, Bang Lamung 20150. <strong>Phone:</strong> +66 84 818 3994. <strong>Website:</strong> <a href="https://www.junglegympattaya.com/" target="_blank" rel="noopener noreferrer">junglegympattaya.com</a>. Owner-head coach <strong>Murray</strong> runs programming; venue copy describes CrossFit as the premier programme while <em>"the Jungle Gym is our identity"</em> — meaning the campus is a multi-discipline playground, not a minimalist white-wall box.</p>
-
-<h3>Scheduled CrossFit classes (on file)</h3>
-<ul>
-<li><strong>Monday–Friday:</strong> 09:00–10:00 and 19:00–20:00</li>
-<li><strong>Saturday:</strong> 09:00</li>
-<li><strong>Open gym</strong> — extended hours beyond class blocks; confirm at reception</li>
-</ul>
-
-<p>Reviews in our venue file highlight Murray as attentive on form, scales WODs for ability, and varies programming — important if you visit from another affiliate and expect familiar cycle structure.</p>
-
-<h3>What else is on the same campus</h3>
-
-<p>Jungle Gym is unusual for a CrossFit affiliate:</p>
-<ul>
-<li><strong>Personal training, small-group training, nutrition programming</strong></li>
-<li><strong>DNA testing</strong> for training/nutrition profiles (uncommon in Pattaya)</li>
-<li><strong>MMA and self-defence</strong></li>
-<li><strong>Target archery, archery tag, dodgeball, slacklining, yoga</strong></li>
-<li><strong>Brand partners:</strong> Under Armour and Decathlon listed on file</li>
-</ul>
-
-<p>Families with mixed interests: one parent WODs while kids try archery — pair with <a href="/guides/kids-youth-sport-pattaya/">kids &amp; youth sport guide</a>.</p>
-
-<h2>Who should base on the Darkside for CrossFit</h2>
+<h2>The status in one minute</h2>
 
 <ul>
-<li><strong>Long-stay functional fitness athletes</strong> — monthly packs beat daily taxis from central Pattaya.</li>
-<li><strong>Fight campers</strong> — stack morning MT at <a href="/gyms/kombat-group-thailand/">Kombat Group</a> or <a href="/gyms/sor-klinmee/">Sor Klinmee</a> with evening or off-day WODs at Jungle Gym.</li>
-<li><strong>Visiting CrossFitters</strong> — drop-in once; confirm drop-in fee and fundamentals requirement on WhatsApp before you fly.</li>
-<li><strong>Residents near Mabprachan / Nong Prue</strong> — Castra, east camps, and Jungle Gym form a coherent belt.</li>
+<li><strong>Current affiliate claim:</strong> none verified in the Pattaya directory.</li>
+<li><strong>Historical identity:</strong> CrossFit Pattaya appears in the official affiliate directory as departed.</li>
+<li><strong>Current local operator:</strong> Jungle Gym Pattaya at 165/4 Moo 6 in Nong Prue.</li>
+<li><strong>Current scheduled product:</strong> group fitness Monday–Friday at 09:00–10:00 and 19:00–20:00, plus Saturday 09:00–10:00.</li>
+<li><strong>Price status:</strong> no current public operator tariff was verified.</li>
 </ul>
 
-<p><strong>Who should not commute daily:</strong> one-week central-Pattaya holidays tied to Walking Street — use alternatives below and treat Jungle Gym as a single field-trip day.</p>
+<p>“Departed” is not the same as closed. It means the former affiliation should not be presented as current. Jungle Gym's own site remains active and offers training, but the transaction is with Jungle Gym under its current independent identity.</p>
 
-<h2>Geography — Nong Prue and the Darkside</h2>
+<h2>What Jungle Gym currently offers</h2>
 
-<p>Nong Prue sits east of Sukhumvit's tourist core — scooter or car is normal; baht-bus combinations are slower. Plan <strong>25–40 minutes</strong> from Beach Road at rush hour. If you train MT at Kombat (Huai Yai) and WOD at Jungle Gym, housing on the Darkside saves hours weekly. Area context: <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a> · <a href="/area/east-pattaya/crossfit/">East × CrossFit hub</a>.</p>
+<p>The operator presents personal training, small-group training, nutrition services, DNA testing, MMA and self-defence alongside activities including dodgeball, slacklining and archery. The breadth makes Jungle Gym different from a single-programme box. It also means a visitor should name the exact product required rather than asking only whether “the gym” is open.</p>
 
-<h2>Alternatives when you cannot reach Nong Prue</h2>
+<p>The current group-fitness page lists weekday sessions from 09:00 to 10:00 and 19:00 to 20:00, plus Saturday from 09:00 to 10:00. Saturday evening and Sunday are closed on that schedule. The operator also indicates weekday open-gym or private-training availability between classes, but that wording does not establish unsupervised visitor access at any arbitrary hour.</p>
 
-<h3>24-hour commercial gyms (racks, rowers, dumbbells)</h3>
-<p><a href="/gyms/jetts-fitness-pattaya/">Jetts Fitness</a>, <a href="/gyms/anytime-fitness-pattaya/">Anytime Fitness</a> — self-programmed EMOMs and strength work. Guide: <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a>.</p>
+<p>No current class description found in this check guarantees a particular workout format, movement list, equipment station or coaching ratio. Ask what the selected group session involves and how it is adapted for experience or injury before treating the timetable as a suitable drop-in.</p>
 
-<h3>Hardcore iron gyms</h3>
-<p><a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a> (Pratamnak bodybuilding culture), <a href="/gyms/tonys-gym/">Tony's Gym</a> (central Soi Diana belt) for pure strength blocks without class schedule. <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> for price context.</p>
+<h2>Why affiliate status matters</h2>
 
-<h3>Combat S&amp;C inside fight gyms</h3>
-<p><a href="/gyms/venum-training-camp/">Venum Training Camp</a>, <a href="/gyms/rage-fight-academy/">Rage Fight Academy</a>, <a href="/gyms/rambaa-somdet-m16/">Rambaa M16</a> run conditioning classes alongside striking. Full map: <a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA guide</a>.</p>
+<p>CrossFit is a brand and affiliate system, not a generic synonym for every circuit, strength-and-conditioning class or functional gym. A traveller may care about affiliate status because they expect a familiar drop-in process, programming vocabulary or link to a home box. The official directory's departed label means those expectations require a fresh conversation with Jungle Gym.</p>
 
-<h3>Hotel gym day passes</h3>
-<p><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> — Technogym, pools, spa recovery for one-off sessions when you stay central.</p>
+<p>This is not a judgement on training quality. It is an identity and consumer-clarity point. The current evidence supports an independent functional-fitness venue with scheduled group sessions. It does not support the older claims that Pattaya has “the only CrossFit affiliate,” that an affiliate coach runs a named CrossFit programme, or that a visitor can transfer a membership relationship.</p>
 
-<h3>Castra Gym — east neighbour (not CrossFit, but functional)</h3>
-<p><a href="/gyms/castra-gym/">Castra Gym</a> at Khao Talo offers bodybuilding, cardio, fight club classes, and yoga — ฿120 day visit on file. Useful if you live east but miss a Jungle Gym class slot.</p>
+<p>Readers who simply want general strength or conditioning can compare the wider <a href="/category/fitness/">Pattaya fitness directory</a>. Those gyms have different access rules and may not provide coached group programming, but they should not be excluded merely because they do not use the CrossFit name.</p>
 
-<h2>Sample weekly rhythm — CrossFit + Muay Thai</h2>
+<h2>Who should consider Jungle Gym</h2>
+
+<p>Jungle Gym is relevant to someone who wants a scheduled functional group session in Nong Prue and is comfortable booking with the current independent operator. It may also fit a household or group with different interests because the site presents personal training and several non-gym activities in the same business.</p>
+
+<p>It is a weaker fit for a visiting athlete whose non-negotiable requirement is a current licensed CrossFit affiliate. No such Pattaya record was verified. It is also a poor choice for someone who needs a transparent online drop-in fee, a guaranteed open-gym slot or a documented class plan before making contact; those details were not available.</p>
+
+<p>Location matters. Nong Prue is inland, east of the central visitor corridor. A one-week Beach Road traveller may find that a conventional gym near the hotel is more sustainable than arranging transport for every class. Someone already staying in East Pattaya may value the local schedule more. Use the <a href="/area/east-pattaya/">East Pattaya area page</a> for geographic context, then navigate to the exact venue pin.</p>
+
+<h2>What to ask before a first class</h2>
+
+<p>Contact +66 84 818 3994 with the date, preferred class, training background and number of participants. If you previously trained at an affiliate, say so without assuming that it changes the current access process. Ask for written answers to these points:</p>
 
 <ul>
-<li><strong>Mon / Wed / Fri:</strong> morning Muay Thai pads at east camp</li>
-<li><strong>Tue / Thu:</strong> Jungle Gym 19:00 WOD (or 09:00 if you are an early riser)</li>
-<li><strong>Sat:</strong> open gym, beach run Jomtien, or <a href="/guides/running-cycling-clubs-pattaya/">hash</a></li>
-<li><strong>Sun:</strong> rest, yoga — <a href="/guides/yoga-retreat-pattaya/">yoga retreat guide</a>, or pool — <a href="/guides/swimming-pools-pattaya/">swimming pools</a></li>
+<li>Is the 09:00 or 19:00 group-fitness session running on the selected date?</li>
+<li>Does a first-time visitor need orientation, assessment or advance reservation?</li>
+<li>What is the total drop-in price, and does it cover only the class?</li>
+<li>Is open-gym access available to visitors between sessions, and under what supervision?</li>
+<li>What movements or training emphasis are planned, and how are alternatives handled?</li>
+<li>Are indoor shoes, towel, water or personal equipment required?</li>
+<li>What are the late-arrival, cancellation, payment and refund rules?</li>
 </ul>
 
-<p>Trip length planning: <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · Holiday packaging: <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday</a>.</p>
+<p>No current operator price card was found, so this guide does not estimate a drop-in or membership rate. A price from an old review or former affiliate page would not prove the current Jungle Gym transaction.</p>
 
-<h2>Pricing and drop-in etiquette</h2>
+<h2>Schedule choices and recovery</h2>
 
-<p>Jungle Gym is ฿฿ tier in our directory — confirm drop-in, fundamentals, and monthly rates on <a href="https://www.junglegympattaya.com/crossfit" target="_blank" rel="noopener noreferrer">their CrossFit page</a> or by phone. Bring indoor shoes, towel, and water. If you are visiting from another affiliate, message ahead with your home box and experience level — coaches appreciate the heads-up.</p>
+<p>The morning and evening weekday sessions allow a visitor to choose around work or another activity. That does not mean two scheduled sessions should automatically be combined, or that open gym is appropriate between them. Training volume depends on the individual, the class content and other sport.</p>
 
-<h2>FAQ</h2>
+<p>Pattaya attracts visitors who also train Muay Thai, boxing or MMA. If that is the plan, disclose the other sessions and ask both coaches how to avoid duplicating intense work. The <a href="/guides/bjj-mma-pattaya/">BJJ and MMA guide</a> and <a href="/guides/best-muay-thai-pattaya/">Muay Thai guide</a> can help identify the separate programme, but neither can prescribe an individual workload.</p>
 
-<h3>Is Jungle Gym the only CrossFit box in Pattaya?</h3>
-<p>Yes — it is the only CrossFit affiliate listed in our 157-venue directory for Pattaya city. Bangkok and Phuket have multiple affiliates; plan travel days if you need a second box culture.</p>
+<p>Any injury, medical condition or return-to-training decision belongs with an appropriate professional and the coach. A timetable is not a readiness assessment. Ask for movement alternatives before class rather than assuming every programmed exercise can be substituted after the session begins.</p>
 
-<h3>Can beginners attend CrossFit classes?</h3>
-<p>Beginner-friendly is on file, but affiliates often require an intro fundamentals block — ask Murray's team before dropping into a random WOD. <a href="/guides/best-for-beginners-pattaya/">Beginners guide</a> for non-CrossFit options.</p>
+<h2>Alternatives when the affiliate label is essential</h2>
 
-<h3>What time slot is best for tourists?</h3>
-<p>19:00 classes fit fight campers who train mornings. 09:00 classes suit retirees and nomads on the Darkside. Saturday 09:00 is the weekend anchor — arrive early in high season.</p>
+<p>If a current affiliate is essential, the correct Pattaya answer is that this directory does not have one to recommend. Do not relabel another functional gym or a fight-camp conditioning session as CrossFit. Check the brand's current official affiliate directory for other destinations and verify again close to the travel date.</p>
 
-<h3>Can I combine archery and CrossFit same day?</h3>
-<p>Same campus — yes, but shoulder fatigue matters. Many members split archery to rest days. Book both at reception and disclose if you sparred or pad-worked that morning.</p>
+<p>If the label is not essential, define the practical need:</p>
 
-<h3>How do I get from Jomtien to Jungle Gym?</h3>
-<p>Taxi or owned scooter is typical; public transport is slow. If you are Jomtien-based without transport, <a href="/guides/best-gym-jomtien-pattaya/">Jomtien gyms</a> plus hotel gym may be more sustainable than daily commutes.</p>
+<ul>
+<li><strong>Coached functional group session:</strong> contact Jungle Gym for the current schedule, price and first-visit process.</li>
+<li><strong>General strength or cardio access:</strong> compare the <a href="/category/fitness/">fitness category</a> by hours, price evidence and location.</li>
+<li><strong>24-hour member access:</strong> use the <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms guide</a> and distinguish member access from staffed help.</li>
+<li><strong>Combat-sport conditioning:</strong> choose the actual striking or grappling programme rather than assuming it reproduces a functional-fitness class.</li>
+<li><strong>Private coaching:</strong> ask Jungle Gym or another operator for a written session goal, coach, duration and total price.</li>
+</ul>
 
-<h3>What if CrossFit classes are full?</h3>
-<p>Use open gym if permitted, or shift to Castra, Jetts, or combat S&amp;C that week. Do not skip recovery — two-a-days without sleep destroy technique on both MT and WODs.</p>
+<h2>Getting to the current venue</h2>
 
-<h2>Programming expectations — what WODs feel like here</h2>
+<p>The current venue record uses 165/4 Moo 6, Nong Prue. The old official affiliate entry historically referenced a different Classic Sport Club address, another reason not to navigate from the departed listing. Use Jungle Gym's current record and exact live pin.</p>
 
-<p>Affiliate programming at Jungle Gym follows classic CrossFit structure: warm-up, skill or strength piece, then metcon. Murray's reviews emphasise <strong>variety</strong> — you are unlikely to repeat the same chipper three weeks in a row. Olympic lifting appears when coach prescribes; do not expect a dedicated powerlifting gym's bar path coaching unless you book PT. Gymnastics movements scale to ring rows, box jumps, and banded pull-ups when athletes lack muscle-up capacity.</p>
+<p>No fixed Beach Road travel time, taxi fare, baht-bus combination, hotel transfer or parking rule was verified. Arrange transport around the confirmed start and finish. For the 19:00 class, plan the return as carefully as the outward trip; general opening language does not establish that reception remains staffed after every session.</p>
 
-<p>If your home box programmes strictly on competition templates, communicate goals — holiday maintenance, fat loss, or fight-camp engine work — so scaling makes sense. Pair engine work with <a href="/guides/is-muay-thai-safe-pattaya/">Muay Thai safety guide</a> if you are new to two-a-days.</p>
+<h2>A practical decision path</h2>
 
-<h2>Visiting from another affiliate — drop-in checklist</h2>
+<ol>
+<li>Decide whether current CrossFit affiliation is essential. If yes, Pattaya has no verified match in this directory.</li>
+<li>If functional group training is the goal, open the <a href="/gyms/crossfit-pattaya/">Jungle Gym record</a>.</li>
+<li>Select a listed session and confirm it is running on the date.</li>
+<li>Request the total price, first-visit process and access boundaries in writing.</li>
+<li>Check the exact Nong Prue route before paying.</li>
+<li>Compare a nearby general gym if transport or class timing creates more friction than value.</li>
+</ol>
 
-<p>Message ahead with your home box name, certification level, and any injuries. Bring indoor shoes, jump rope if you use your own, and belt-friendly shorts. Pattaya heat means hydrate before evening WODs; air-con on the floor helps but metabolic stress is still high after morning pads. If you scale poorly, ask Murray for substitution options — ego lifting after MT camp is how shoulders get angry on vacation.</p>
+<p>The honest recommendation is conditional, not a ranking win. Jungle Gym is the one current functional-fitness record associated with Pattaya's former affiliate history. It can be evaluated on its present schedule, services, location and quote, while the departed CrossFit status remains explicit.</p>
 
-<h2>Related guides</h2>
-
-<p><a href="/guides/bjj-mma-pattaya/">BJJ &amp; MMA</a> · <a href="/guides/best-gym-east-pattaya/">Best gym East Pattaya</a> · <a href="/guides/muay-thai-pattaya-beginners/">Muay Thai beginners</a> · <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking MT</a> · <a href="/guides/">All guides</a>.</p>
+<section class="guide-faq" aria-labelledby="crossfit-faq-h">
+<h2 id="crossfit-faq-h">FAQ</h2>
+<details class="faq-item"><summary>Is there a current CrossFit affiliate in Pattaya?</summary><p>No current affiliate is verified in this directory. The official CrossFit Games listing marks CrossFit Pattaya as departed. Jungle Gym Pattaya is the current independent operator associated with the local record.</p></details>
+<details class="faq-item"><summary>When are Jungle Gym's group-fitness classes?</summary><p>The current operator schedule lists Monday–Friday at 09:00–10:00 and 19:00–20:00, plus Saturday at 09:00–10:00. Saturday evening and Sunday are closed on that schedule; confirm the exact date before travelling.</p></details>
+<details class="faq-item"><summary>Does Jungle Gym publish a current drop-in price?</summary><p>No current public operator tariff was verified. Ask for the selected class, first-visit requirements, open-gym eligibility and total price in writing before arranging the trip to Nong Prue.</p></details>
+</section>
 `;

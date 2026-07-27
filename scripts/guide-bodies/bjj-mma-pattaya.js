@@ -1,137 +1,112 @@
 module.exports = `
-<p>Pattaya is a Muay Thai city first — but the grappling and MMA scene has grown fast. Dedicated BJJ academies, cage gyms, and multi-discipline camps now cover <strong>Gi, No-Gi, MMA, and S&amp;C</strong> from Jomtien to the Darkside. This guide maps where to train — venues where BJJ/MMA is a real programme, not a single evening class on a boxing timetable.</p>
+<p><strong>If you only read one thing: Pattaya has current BJJ, grappling and MMA training, but the directory's only standalone BJJ record is closed.</strong> <a href="/gyms/alfa-bjj-pattaya/">ALFA BJJ Pattaya</a> must not be used as a live academy recommendation. The active choices are programmes inside fitness gyms, Muay Thai camps, a residential combat camp and broader martial-arts clubs. Choose the exact discipline and transaction before choosing a venue.</p>
 
-<p>Hub: <a href="/category/bjj/">BJJ / Grappling</a> · <a href="/category/mma/">MMA</a> · <a href="/category/muay-thai/">Muay Thai</a> · <a href="/compare/">compare venues</a> · <a href="/plan-my-trip/">plan my trip</a>.</p>
+<p>The <a href="/category/bjj/">BJJ category</a> contains the ALFA closure record. The <a href="/category/mma/">MMA category</a> contains two contact-first mixed-discipline schools. Several of the most usable BJJ programmes sit under other primary categories: <a href="/gyms/castra-gym/">Castra Gym</a> under fitness, <a href="/gyms/fairtex-pattaya/">Fairtex</a> and <a href="/gyms/rage-fight-academy/">Rage</a> under Muay Thai, and <a href="/gyms/kombat-group-thailand/">Kombat Group</a> as a residential combat camp. A category label is therefore not a complete class finder.</p>
 
-<h2>BJJ-only vs MMA gym vs multi-discipline camp</h2>
-
-<ul>
-<li><strong>BJJ-only gyms</strong> — Gi and No-Gi classes, belt progression, open mat. Example: <a href="/gyms/alfa-bjj-pattaya/">ALFA BJJ</a>.</li>
-<li><strong>MMA gyms</strong> — striking plus grappling, often a competition cage. Venum, Rage, Rambaa M16.</li>
-<li><strong>Multi-discipline camps</strong> — MT mornings + BJJ afternoons. Kombat Group, Fairtex BJJ blocks, Venum passes.</li>
-</ul>
-
-<p>Beginner context: <a href="/guides/muay-thai-pattaya-beginners/">Muay Thai beginners</a> · <a href="/guides/best-for-beginners-pattaya/">best for beginners (all sports)</a> · Safety: <a href="/guides/is-muay-thai-safe-pattaya/">is Muay Thai safe?</a></p>
-
-<h2>1. ALFA BJJ Pattaya — dedicated academy</h2>
-
-<p><a href="/gyms/alfa-bjj-pattaya/">ALFA BJJ Pattaya</a> (Soi Ko Pai 12, Muang Pattaya) is <strong>Pattaya's first standalone Brazilian Jiu-Jitsu academy</strong> in venue files — Gi and No-Gi, all levels, mat-focused environment without pad-round noise in the same room.</p>
-
-<p>Why standalone matters: more rolls per hour, instructors focused on jiu-jitsu, partners who came to grapple — not tourists squeezing one class between Muay Thai sessions. Phone <strong>+66 96 794 1992</strong> · verify class times on Facebook AlfaBJJPattaya before you travel.</p>
-
-<p><strong>Best for:</strong> purple belts and above on holiday wanting pure mat time; beginners who want BJJ identity without learning nine other martial arts on day one.</p>
-
-<table>
-<thead><tr><th>Venue</th><th>BJJ depth</th></tr></thead>
+<h2>Quick comparison by training format</h2>
+<div class="guide-price-table-wrap">
+<table class="guide-price-table">
+<caption>Pattaya BJJ, grappling and MMA options checked 25-26 July 2026</caption>
+<thead><tr><th scope="col">Venue</th><th scope="col">Verified current fit</th><th scope="col">Schedule signal</th><th scope="col">Published price signal</th></tr></thead>
 <tbody>
-<tr><td>ALFA BJJ</td><td><strong>Primary art</strong> — full schedule</td></tr>
-<tr><td>Fairtex</td><td>BJJ programme Mon–Fri 18:30–20:00 (venue file)</td></tr>
-<tr><td>Venum / Rage / Kombat</td><td>BJJ inside multi-discipline passes</td></tr>
+<tr><td><a href="/gyms/castra-gym/">Castra Gym</a></td><td>Short-visit BJJ inside a general gym</td><td>Mon, Wed, Fri 19:00-20:00</td><td>THB 300 group class; THB 2,500 for ten</td></tr>
+<tr><td><a href="/gyms/fairtex-pattaya/">Fairtex</a></td><td>North Pattaya BJJ with session and monthly choices</td><td>Mon-Fri 18:30-20:00; Sat open mat 10:00-12:00</td><td>THB 300 session; THB 4,000 monthly unlimited</td></tr>
+<tr><td><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a></td><td>South Pattaya multi-discipline camp</td><td>Venue Mon-Sat 08:00-19:00; exact classes require contact</td><td>No stable current public BJJ or MMA tariff</td></tr>
+<tr><td><a href="/gyms/kombat-group-thailand/">Kombat Group</a></td><td>Residential BJJ purchase with room and meals</td><td>Programme schedule is package-specific</td><td>BJJ packages from THB 10,900 or THB 17,900 for one week</td></tr>
+<tr><td><a href="/gyms/rusich-club-football/">Rusich Club</a></td><td>Grappling, wrestling and age-specific MMA</td><td>Grappling Sat 10:00-11:30; MMA schedules vary by age</td><td>THB 350 listed class; product-specific monthly fees</td></tr>
+<tr><td><a href="/gyms/rambaa-somdet-m16/">Rambaa Somdet M16</a></td><td>East Pattaya Muay Thai and MMA identity</td><td>Mon-Sat 07:00-09:00 and 15:00-18:30</td><td>No current public tariff or discipline-by-period timetable</td></tr>
+<tr><td><a href="/gyms/mixfight-pattaya/">Mixfight Pattaya</a></td><td>Broad school programme including MMA and jiu-jitsu</td><td>Business hours published; exact class times require contact</td><td>No current public tariff</td></tr>
 </tbody>
 </table>
+</div>
 
-<h2>2. Venum Training Camp — Jomtien corridor</h2>
+<p>The table compares evidence, not review scores or prestige. “Venue hours” mean the doors are listed as open; they do not prove that BJJ, MMA or grappling starts at every hour. “Jiu-jitsu,” “grappling,” “wrestling” and “BJJ” are also not interchangeable labels. Ask the operator to name the ruleset and class format you will actually attend.</p>
 
-<p><a href="/gyms/venum-training-camp/">Venum Training Camp</a> near Jomtien runs Muay Thai, MMA, BJJ, combat fitness, and kids programmes. Two rings plus cage/mat zone. Strong for visitors who want <strong>beach proximity and modern facilities</strong> — <a href="/guides/best-gym-jomtien-pattaya/">Jomtien area guide</a>.</p>
+<h2>Best transparent BJJ drop-in: Castra</h2>
+<p><a href="/gyms/castra-gym/">Castra Gym</a> on Soi Khao Talo provides the simplest current BJJ transaction for a visitor who wants a published evening class and a per-session price. Its fight-club page lists BJJ on <strong>Monday, Wednesday and Friday from 19:00 to 20:00</strong>. Prices checked on <strong>25 July 2026</strong> were <strong>THB 300 for one group class</strong>, <strong>THB 2,500 for ten group classes valid for two months</strong> and <strong>THB 600 for a private class</strong>. The operator says gym access is included with those classes.</p>
 
-<p><strong>Best for:</strong> holiday fighters stacking morning MT + evening No-Gi; families with kids MT and parent BJJ on one campus brand.</p>
+<p>Castra is a general strength and cardio gym with a fight-club programme, not a BJJ-only academy. That can be useful when a traveller wants weights and a roll from one venue, but the general gym hours should not be substituted for the BJJ timetable. Confirm the exact date, coach, gi or no-gi format, beginner placement and whether the class is running normally before crossing to Khao Talo.</p>
 
-<h2>3. Rage Fight Academy — south Pattaya / Dongtan</h2>
+<p>The ten-class product is best compared by expected attendance, not just its lower per-class arithmetic. It expires after two months. Ask whether classes can be shared, paused or refunded, and whether the included gym access applies only on class days or across another defined period. The public page does not resolve those terms.</p>
 
-<p><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> stacks Muay Thai, boxing, BJJ, MMA, and cross-training. Three rings plus dedicated BJJ/MMA mats. <strong>Education visa sponsor</strong> for long-stays — <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a>.</p>
+<h2>Best published BJJ schedule in North Pattaya: Fairtex</h2>
+<p><a href="/gyms/fairtex-pattaya/">Fairtex Training Center Pattaya</a> publishes the broadest current BJJ price progression in this comparison. Its operator tariff checked on <strong>25 July 2026</strong> listed <strong>THB 300 for one BJJ session</strong>, <strong>THB 2,600 for ten sessions</strong> and <strong>THB 4,000 for one month of unlimited BJJ</strong>. A one-month product combining unlimited BJJ with one daily Muay Thai session was THB 19,500.</p>
 
-<p><strong>Best for:</strong> long-stay expats wanting Dongtan/Jomtien south belt without Darkside commute; visa paperwork as part of training plan.</p>
+<p>The same source publishes BJJ classes <strong>Monday-Friday from 18:30 to 20:00</strong> and a <strong>Saturday open mat from 10:00 to 12:00</strong>. That makes Fairtex the clearest option for a North Pattaya base or for someone deciding between a single roll, a short pack and a dedicated month. It does not establish the gi or no-gi format of every date, the belt mix or whether a traveller can join open mat without first attending a class.</p>
 
-<h2>4. Kombat Group Thailand — East Pattaya all-inclusive</h2>
+<p>Fairtex also sells Muay Thai, private boxing and accommodation packages. Keep those transactions separate. Ask reception to write down the BJJ product, class date, equipment requirement and any registration term. If combining disciplines, confirm whether “one daily Muay Thai session” follows a fixed schedule and whether unused sessions carry over. A combined headline is not permission to enter every programme at any time.</p>
 
-<p><a href="/gyms/kombat-group-thailand/">Kombat Group Thailand</a> is the premium rural camp: Muay Thai, boxing, MMA, BJJ, Krav, six rings, on-site accommodation. Christian Daghio legacy. Best for <strong>4–12 week fight camps</strong> — <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a> · <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">camps with accommodation</a>.</p>
+<h2>Best South Pattaya multi-discipline enquiry: Rage</h2>
+<p><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> off Thappraya Road presents Muay Thai, boxing, BJJ, MMA, functional fitness and strength work at one camp. Its current operator site documents a BJJ/MMA mat zone, three full-size rings, a functional-fitness and weight room, a pool and on-site accommodation. The exact Maps identity lists ordinary venue hours of <strong>08:00-19:00 Monday-Saturday</strong>, with Sunday closed.</p>
 
-<p><strong>Best for:</strong> fighters who want meals, lodging, and twice-daily sessions without taxi logistics; not ideal for casual one-off drop-ins compared to ALFA or central gyms.</p>
+<p>Rage is contact-first because the public training page did not expose a dependable class-by-class BJJ or MMA timetable or stable fee table on <strong>26 July 2026</strong>. The operating window is not a guaranteed rolling schedule. Send your date, experience, belt if relevant, gi or no-gi preference and whether the goal is BJJ, MMA grappling or general mat work. Ask for the exact class, coach, start and finish, group or private format and complete price.</p>
 
-<h2>5. Rambaa Somdet M16 — MMA pedigree</h2>
+<p>The former ALFA BJJ page redirected followers toward instructor activity that included Rage, but that historical redirect does not prove a permanent current timetable. Use Rage's present reply, not the closed academy's old identity. Likewise, the presence of a mat zone does not establish cage sparring, visitor open mat, a competition team or a particular ruleset.</p>
 
-<p><a href="/gyms/rambaa-somdet-m16/">Rambaa Somdet M16</a> in Nong Prue is the personal camp of Thailand's first MMA world champion (Shooto 2009) and Muay Thai legend Rambaa. Cage on site, <strong>100m from <a href="/gyms/sor-klinmee/">Sor Klinmee</a></strong>. Serious strikers who want MMA transitions — not a tourist drop-in factory.</p>
+<h2>Residential BJJ: compare the two Kombat products carefully</h2>
+<p><a href="/gyms/kombat-group-thailand/">Kombat Group Thailand</a> in Huai Yai is a stay-and-train decision rather than an ordinary evening drop-in. Its live pricing page checked on <strong>26 July 2026</strong> listed a standard-room <strong>BJJ Academy package from THB 17,900 for one week</strong>. That product includes training, equipment use, accommodation, three meals daily, pool access and specified camp extras.</p>
 
-<h2>6. Fairtex Pattaya — brand HQ with BJJ block</h2>
+<p>A separate <strong>Bronze BJJ package started at THB 10,900 for one week</strong>. The Bronze product uses a fan room with a Thai-style bathroom and includes three Thai meals daily and gym use, while excluding the pool and some resort-style facilities. The operator states that displayed prices exclude <strong>7% VAT</strong> and that card payments add <strong>3%</strong>. Those charges must be included when comparing the payable total.</p>
 
-<p><a href="/gyms/fairtex-pattaya/">Fairtex Pattaya</a> remains the global Muay Thai brand headquarters — BJJ classes listed evenings in venue research. Choose Fairtex when MT is primary and BJJ is secondary; choose ALFA when BJJ is primary.</p>
+<p>The lower Bronze headline is not simply the same package at a discount. Align room type, bathroom, pool, meals, training frequency, equipment, transfers, arrival date and other inclusions. Ask for the full written total using the intended payment method. Kombat makes sense when accommodation and food belong in the purchase; it is a weak comparison against Castra or Fairtex if the traveller only wants one or two evening rolls.</p>
 
-<h2>Strength &amp; conditioning for fighters</h2>
+<h2>Grappling and MMA at Rusich: match the exact age group</h2>
+<p><a href="/gyms/rusich-club-football/">Rusich Club Pattaya</a> is not a football academy despite its legacy record ID. The current operator programme includes judo, sambo, jiu-jitsu, grappling, MMA, hand-to-hand fighting and Muay Thai across different age groups. It is useful for someone open to a broader grappling or mixed-combat class; it should not be presented as a standalone Brazilian Jiu-Jitsu academy.</p>
 
-<p><a href="/gyms/crossfit-pattaya/">CrossFit Pattaya @ Jungle Gym</a> (Nong Prue) is Pattaya's only CrossFit affiliate — useful S&amp;C between camp sessions. Also MMA and archery on same site — <a href="/guides/crossfit-pattaya/">CrossFit guide</a>.</p>
+<p>Schedules checked on <strong>26 July 2026</strong> included adult wrestling combining judo, sambo and jiu-jitsu on Tuesday and Thursday from 19:00 to 20:30; adult MMA from age 16 on Monday, Wednesday and Friday from 10:00 to 11:30; MMA and hand-to-hand fighting from age 11 on those days from 19:00 to 20:30; and grappling from age 10 on Saturday from 10:00 to 11:30.</p>
 
-<p>Commercial iron for off-camp days: <a href="/guides/cheapest-gyms-pattaya/">cheapest gyms</a> · <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms</a> · <a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a> (Pratamnak).</p>
+<p>The named combat-class pages list <strong>THB 350 for one class</strong>. The grappling page lists THB 1,200 for one month, while adult MMA products list THB 3,000 for one month and a free trial. These are discipline-specific fees, not proof that one membership covers every class. Ask which programme matches the participant's age, whether the trial applies, which language the coach uses and whether a gi or protective equipment is required.</p>
 
-<h2>Where to stay for BJJ/MMA</h2>
+<h2>Contact-first MMA schools: Rambaa and Mixfight</h2>
+<p><a href="/gyms/rambaa-somdet-m16/">Rambaa Somdet M16</a> is an active Muay Thai and MMA identity in Nong Prue. Its exact listing gives two periods Monday-Saturday, 07:00-09:00 and 15:00-18:30, with Sunday closed. Independent fight records document Rambaa Somdet's MMA history, but a fighter's record does not establish the content of every present-day class. No current operator tariff or discipline-by-period timetable was found.</p>
 
+<p><a href="/gyms/mixfight-pattaya/">BOXING CLUB Mixfight Pattaya</a> in Khao Makok advertises Muay Thai, boxing, MMA, jiu-jitsu, yoga, fitness, children's groups and fight preparation. Its live hours are 08:00-21:00 on Monday, Wednesday and Friday; 08:00-19:00 on Tuesday, Thursday and Saturday; and Sunday closed. Event records confirm relevant combat activity at the venue, not a standing visitor class at every open hour.</p>
+
+<p>For either school, send the desired discipline rather than asking only, “Can I train?” State experience, preferred date, group or private format and any competition goal. Ask whether the session includes drilling, controlled rounds, striking-to-grappling transitions or another format, and whether beginners can join. Neither blank price should be replaced by a reseller amount, old review or city-wide estimate.</p>
+
+<h2>Why ALFA is a closure record</h2>
+<p><a href="/gyms/alfa-bjj-pattaya/">ALFA BJJ Pattaya</a> is closed as a standalone academy. An owner post dated 22 November 2024 said the page would receive no further updates and redirected followers toward instructor activity. The exact ALFA Maps identity is permanently closed. Its UAEJJF page is historical identity evidence, not proof of an operating Pattaya academy.</p>
+
+<p>Keeping the record prevents older articles and map results from being mistaken for current training. Do not travel to the former Soi Khopai 12 address. A former instructor teaching elsewhere also does not transfer ALFA's old timetable, phone, prices or class claims to the new venue. Verify the current operator directly.</p>
+
+<h2>Location should decide more than the category label</h2>
+<p>Fairtex is in North Pattaya. Rage is off Thappraya in South Pattaya. Castra, Rusich and Rambaa are inland in East Pattaya, Mixfight is farther south in Khao Makok, and Kombat is in Huai Yai. These are not one compact BJJ district. A cheap drop-in can become inconvenient if the accommodation is across the city and the class runs only on three evenings.</p>
+
+<p>For one or two classes, choose a verified schedule close to the actual room. For a dedicated month, compare class frequency, training partners, weights access and the commute. For a residential package, place room, meals, training and taxes in the same total. Open each exact map rather than relying on “Central,” “South” or “East” as a travel-time promise.</p>
+
+<h2>Questions to send before paying</h2>
 <ul>
-<li><strong>Jomtien / south</strong> — Venum, Rage, beach recovery. <a href="/guides/best-gym-jomtien-pattaya/">Jomtien guide</a>.</li>
-<li><strong>East Darkside</strong> — Kombat Group, Rambaa, Jungle Gym. <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a>.</li>
-<li><strong>Central</strong> — ALFA BJJ, shorter commutes to nightlife. <a href="/guides/best-gym-central-pattaya/">Central guide</a>.</li>
+<li>Is the exact class running on the date, and what are the start and finish times?</li>
+<li>Is it BJJ, no-gi grappling, jiu-jitsu, wrestling or an MMA session with striking?</li>
+<li>What experience or age group is expected, and can a first-time visitor join?</li>
+<li>Is a gi required, optional or unavailable for that session?</li>
+<li>Does the fee cover one class, open gym, a private session, a pack or accommodation?</li>
+<li>Are registration, equipment, VAT, card charges, room or meals extra?</li>
+<li>What are the rolling or sparring rules, and can a visitor opt out of contact rounds?</li>
+<li>Which language will the named coach use?</li>
 </ul>
 
-<p>Housing: <a href="https://pattayavilla.com/" target="_blank" rel="noopener noreferrer">Pattaya Villa</a> · Visa: Pattaya Visa Help.</p>
+<p>Bring only what the operator asks for. Ask about clothing, footwear off the mat, mouthguard or other protective equipment, shower and changing access and laundry for a multi-day stay. Keep nails trimmed, wear clean kit and follow the venue's mat rules; if you have an injury or health concern, discuss participation with an appropriate professional and tell the coach what movement you cannot safely perform.</p>
 
-<h2>Sample weekly rhythm (MT + BJJ holiday)</h2>
-
+<h2>A practical decision path</h2>
 <ul>
-<li><strong>Mon/Wed/Fri AM:</strong> Muay Thai pads at camp</li>
-<li><strong>Tue/Thu PM:</strong> Gi or No-Gi at ALFA or Venum</li>
-<li><strong>Sat:</strong> open mat or beach run — <a href="/guides/running-cycling-clubs-pattaya/">running &amp; clubs</a></li>
-<li><strong>Sun:</strong> pool recovery — <a href="/guides/swimming-pools-pattaya/">swimming pools</a></li>
+<li><strong>One transparent BJJ evening in East Pattaya:</strong> Castra, after confirming Monday, Wednesday or Friday.</li>
+<li><strong>North Pattaya BJJ with a Saturday option:</strong> Fairtex, after confirming class or open-mat eligibility.</li>
+<li><strong>BJJ or MMA inside a South Pattaya multi-discipline camp:</strong> Rage, after receiving the current timetable and price.</li>
+<li><strong>Room, meals and BJJ in one purchase:</strong> Kombat, with Bronze and standard inclusions aligned.</li>
+<li><strong>Age-specific grappling, wrestling or MMA:</strong> Rusich, using the exact class page.</li>
+<li><strong>Contact-first East or far-south MMA identity:</strong> Rambaa or Mixfight, with discipline and format confirmed.</li>
 </ul>
 
-<p>Trip length: <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · Bangkok stadium side trip: <a href="/guides/bangkok-day-trip-sport-pattaya/">Bangkok day-trip sport</a>.</p>
-
-<h2>What to verify before you enroll</h2>
-
-<ul>
-<li>Drop-in day pass vs weekly unlimited — multi-discipline camps price differently</li>
-<li>Gi rental or bring your own kimono (humid climate — wash daily)</li>
-<li>Open mat etiquette and required mouthguard / rashguard rules</li>
-<li>Kids class times if family training</li>
-<li>Education visa minimum months at Rage — contract terms</li>
-<li>Sparring intensity — ask if "fundamentals" class is no-contact or positional only</li>
-</ul>
-
-<h2>Combining BJJ with Muay Thai — realistic weekly load</h2>
-
-<p>Holiday fighters often overbook: morning pads five days plus evening rolls four days. Pattaya humidity amplifies fatigue — most sustainable split is <strong>three MT sessions + two BJJ sessions</strong> for a two-week trip, or alternate weeks if you stay a month. Use <a href="/guides/cheapest-gyms-pattaya/">commercial gym</a> days for legs-only S&amp;C instead of extra sparring.</p>
-
-<p>Gi laundry: wash kimono daily; skin infections spread in shared academies — shower immediately after class. Open mat etiquette: ask higher belts before repping hard; tap early in heat. Competition visitors should confirm if gym runs IBJJF-style rules or local submission-only rounds before you assume points game.</p>
-
-<p>If visa is the goal, <a href="/gyms/rage-fight-academy/">Rage</a> education sponsorship and <a href="/guides/training-thailand-visa-pattaya/">visa guide</a> matter more than mat prestige — read contract hours required per week before you sign.</p>
-
-<h2>Who this guide is for</h2>
-
-<ul>
-<li><strong>BJJ tourists</strong> maintaining belt rhythm on holiday</li>
-<li><strong>MMA amateurs</strong> stacking striking and grappling same trip</li>
-<li><strong>Long-stay fighters</strong> on education visa or camp packages</li>
-<li><strong>Muay Thai fighters</strong> adding grappling for rule sets beyond pure MT</li>
-</ul>
+<p>Use the <a href="/compare/">comparison tool</a> for area and category filtering, then let the individual venue record and current operator reply decide. For striking-first options, continue to the <a href="/guides/best-muay-thai-pattaya/">best Muay Thai guide</a>. For a room-based combat trip, use the <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">camps with accommodation guide</a> and compare its package logic with Kombat's BJJ products.</p>
 
 <h2>FAQ</h2>
+<h3>Is there a current standalone BJJ academy in the Pattaya directory?</h3>
+<p>No current standalone academy is verified in the direct BJJ category. Its only record, ALFA BJJ Pattaya, is closed. Active BJJ exists inside Castra, Fairtex, Rage and Kombat, while Rusich offers related grappling and jiu-jitsu content. Confirm the exact format before attending.</p>
 
-<h3>Where is the only dedicated BJJ gym in Pattaya?</h3>
-<p><a href="/gyms/alfa-bjj-pattaya/">ALFA BJJ Pattaya</a> — first standalone BJJ academy in our files. Multi-discipline gyms also run strong BJJ blocks.</p>
+<h3>Which Pattaya BJJ option has the clearest drop-in price?</h3>
+<p>Castra and Fairtex both published THB 300 BJJ group sessions when checked on 25 July 2026. Castra lists Monday, Wednesday and Friday evenings; Fairtex lists weekday evenings plus Saturday open mat. Location, class format and open-mat eligibility should decide between them.</p>
 
-<h3>Can I train BJJ without Muay Thai?</h3>
-<p>Yes at ALFA. At Venum, Rage, or Kombat you can usually buy grappling-focused attendance — confirm at reception.</p>
-
-<h3>Best gym for a 4-week fight camp?</h3>
-<p><a href="/gyms/kombat-group-thailand/">Kombat Group</a> for all-inclusive lodging + multi-discipline. <a href="/gyms/rage-fight-academy/">Rage</a> for south-side city access + visa sponsor.</p>
-
-<h3>Is there a cage for MMA sparring?</h3>
-<p>Venum, Rage, Kombat, and <a href="/gyms/rambaa-somdet-m16/">Rambaa M16</a> list cage/MMA zones — confirm sparring rules before you assume full contact.</p>
-
-<h3>CrossFit with fight training?</h3>
-<p><a href="/guides/crossfit-pattaya/">Jungle Gym CrossFit</a> on Darkside — schedule around leg-heavy WODs before fight week.</p>
-
-<h3>What gear should I bring?</h3>
-<p>Rashguard, mouthguard, Gi (or buy locally), flip-flops for mat hygiene, and nail clippers — gyms enforce grooming rules.</p>
-
-<h2>Related guides</h2>
-
-<p><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai Pattaya</a> · <a href="/guides/best-gym-east-pattaya/">Best gym East Pattaya</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/guides/bangkok-day-trip-sport-pattaya/">Bangkok day-trip sport</a> · <a href="/category/bjj/">All BJJ venues</a>.</p>
+<h3>Where can I combine accommodation with BJJ training?</h3>
+<p>Kombat Group publishes residential BJJ products. On 26 July 2026, Bronze BJJ started at THB 10,900 for one week and the standard BJJ Academy package at THB 17,900, before the operator's stated 7% VAT and 3% card charge. The room and facility inclusions differ, so compare the written package rather than only the starting price.</p>
 `;

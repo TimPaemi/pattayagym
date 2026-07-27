@@ -1639,3 +1639,34 @@ ol.tldr-list > li::marker { font-family: var(--font-mono); font-weight: 700; col
    inherits the gutter from the 880px article it sits inside. Only give it the
    page gutter when it is a top-level section instead. */
 .guide-faq > .faq-item { max-width: 68ch; }
+
+/* ============================================================================
+   PERMANENTLY CLOSED
+   ============================================================================
+   Four records in data.js carry `status: closed`. build-v2.js had no rendering
+   for that field, so a closed venue page showed a green "Verified by Tim" pill
+   and a live "Checking hours…" indicator, with the closure mentioned only in
+   body prose — a reader scanning the top of the page would have concluded it was
+   open. This is the one pill that must out-shout the rest of the trust bar.
+   ============================================================================ */
+.trust-pill.is-permanently-closed {
+  order: -1;
+  background: var(--danger-ink);
+  border-color: var(--danger-ink);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.trust-pill.is-permanently-closed::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 2px;
+  background: currentColor;
+}
+/* A closed venue keeps its verified date — we did check that it is shut — but it
+   should not read as an endorsement sitting beside the closure notice. */
+.trust-bar:has(.is-permanently-closed) .trust-pill.is-verified {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink-muted);
+}

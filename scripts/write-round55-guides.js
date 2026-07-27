@@ -9,17 +9,17 @@ const guides = [
   {
     slug: 'equestrian-pattaya',
     crumb: 'Equestrian',
-    kicker: 'Guide · Horse riding · polo · Horseshoe Point · Thai Polo Club',
-    readTime: '7 min read',
+    kicker: 'Guide · Horse riding · polo · current booking evidence',
+    readTime: '10 min read',
     title: 'Equestrian & polo in Pattaya | Horseshoe Point, Thai Polo Club | Pattaya.Gym',
-    desc: 'Where to ride horses and play polo near Pattaya — Horseshoe Point Resort at Mabprachan and Thai Polo & Equestrian Club, booking tips, and who each venue suits.',
+    desc: 'Compare Horseshoe Point and Thai Polo & Equestrian Club using current operator and 2026 competition evidence, with booking questions and honest access gaps.',
     h1: 'Equestrian & <span class="accent-cyan">polo.</span>',
-    lede: 'Pattaya equestrian means two world-scale venues — Horseshoe Point\'s 1,500-acre riding school at Mabprachan and Thai Polo Club\'s 250-hectare polo fields north of the city. This guide maps both, booking rules, and how to pair a horse day with golf or Muay Thai.',
+    lede: 'Pattaya’s two equestrian records serve different decisions. Horseshoe Point publishes ordinary riding-school products and has current 2026 competition use; Thai Polo documents polo, eventing and specialist facilities. Neither publishes a simple current visitor tariff, so the first booking message matters.',
     body: require('./guide-bodies/equestrian-pattaya'),
     sisterLinks: [
       { url: '/guides/luxury-sports-clubs-pattaya/', label: 'Luxury sports clubs', desc: 'Resort sport tier' },
       { url: '/guides/best-golf-courses-pattaya/', label: 'Best golf courses', desc: 'Championship Pattaya golf' },
-      { url: 'https://pattayavilla.com/', external: true, label: 'Pattaya Villa', desc: 'Long-stay near Mabprachan' },
+      { url: '/area/east-pattaya/', label: 'East Pattaya', desc: 'Pong and Mabprachan context' },
     ],
   },
 ];

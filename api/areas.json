@@ -1,7 +1,7 @@
 {
   "name": "Pattaya Gym Directory — areas",
   "url": "https://pattaya-gym.com/",
-  "generated": "2026-07-26",
+  "generated": "2026-07-27",
   "license": "CC BY 4.0",
   "count": 6,
   "areas": [
@@ -128,7 +128,7 @@
           "name": "SailBreeze Yacht Charter",
           "url": "https://pattaya-gym.com/gyms/sailbreeze-ocean-marina/",
           "category": "watersports",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "ocean-marina-jomtien",
@@ -170,7 +170,7 @@
           "name": "Nong Nooch Thai Cultural Show",
           "url": "https://pattaya-gym.com/gyms/nongnooch-cultural-show/",
           "category": "clubs",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "pattaya-running-routes",
@@ -558,7 +558,7 @@
       "slug": "east-pattaya",
       "name": "East Pattaya / Darkside",
       "url": "https://pattaya-gym.com/area/east-pattaya/",
-      "venueCount": 48,
+      "venueCount": 47,
       "venues": [
         {
           "id": "sityodtong-pattaya",
@@ -659,13 +659,6 @@
           "priceRange": "฿฿฿"
         },
         {
-          "id": "pattaya-golf-driving-range",
-          "name": "Pattaya Golf Driving Range",
-          "url": "https://pattaya-gym.com/gyms/pattaya-golf-driving-range/",
-          "category": "golf",
-          "priceRange": null
-        },
-        {
           "id": "tara-tennis-club",
           "name": "Tara Tennis Pattaya",
           "url": "https://pattaya-gym.com/gyms/tara-tennis-club/",
@@ -698,7 +691,7 @@
           "name": "Planet Football Pattaya",
           "url": "https://pattaya-gym.com/gyms/planet-football-pattaya/",
           "category": "kids-youth",
-          "priceRange": null
+          "priceRange": "฿"
         },
         {
           "id": "rusich-club-football",
@@ -793,7 +786,7 @@
         },
         {
           "id": "pattaya-monkey-badminton",
-          "name": "Monkey Badminton Court Pattaya",
+          "name": "Pattaya Monkey Badminton Center",
           "url": "https://pattaya-gym.com/gyms/pattaya-monkey-badminton/",
           "category": "racquet",
           "priceRange": null
@@ -803,7 +796,7 @@
           "name": "Micky Phim Swimming Pool Club",
           "url": "https://pattaya-gym.com/gyms/micky-phim-swimming-pool/",
           "category": "swimming",
-          "priceRange": "฿"
+          "priceRange": null
         },
         {
           "id": "baby-shark-swim-club-pattaya",
@@ -923,7 +916,7 @@
           "name": "Coco Fitness",
           "url": "https://pattaya-gym.com/gyms/coco-fitness/",
           "category": "fitness",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "universe-gym",
@@ -993,7 +986,7 @@
           "name": "Seafari Diving Center",
           "url": "https://pattaya-gym.com/gyms/seafari-padi-dive/",
           "category": "watersports",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "no-limit-divers",
@@ -1204,7 +1197,7 @@
           "name": "SailBreeze Yacht Charter",
           "url": "https://pattaya-gym.com/gyms/sailbreeze-ocean-marina/",
           "category": "watersports",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "ocean-marina-jomtien",
@@ -1239,7 +1232,7 @@
           "name": "Nong Nooch Thai Cultural Show",
           "url": "https://pattaya-gym.com/gyms/nongnooch-cultural-show/",
           "category": "clubs",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "andaz-pattaya-jomtien",

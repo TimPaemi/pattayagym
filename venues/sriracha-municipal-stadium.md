@@ -10,7 +10,7 @@ social: {}
 hours: Daily except public holidays 05:00-07:30 and 13:00-20:00
 priceRange: ""
 distinction: Reopened municipal stadium with public exercise periods and bookable team-sport areas
-verified: 2026-07-25
+verified: 2026-07-26
 sources:
   - https://www.srirachacity.go.th/news-detail?hd=2&id=16493
   - https://www.google.com/maps/search/?api=1&query=Sriracha+Municipal+Stadium
@@ -21,8 +21,10 @@ tags: [municipal-stadium, public-exercise, football, basketball, sriracha]
 
 # Sriracha Municipal Stadium
 
-Sriracha Municipality announced the stadium's reopening on 4 September 2025. Its current notice publishes two daily public periods, 05:00-07:30 and 13:00-20:00, except on public holidays.
+Sriracha Municipality announced the refurbished stadium's reopening on 4 September 2025 for public exercise, sport and public-benefit activities. The exact Maps record places it at 243/70 Surasak 2 Road in central Si Racha.
 
-The municipality also publishes separate booking rules for football and basketball areas. Public exercise hours do not automatically grant team or exclusive use, so groups should arrange permission in advance through the municipal number.
+The municipal notice publishes two public periods every day except public holidays: 05:00-07:30 and 13:00-20:00. There is no public period between 07:30 and 13:00 in that notice. Treat the split schedule literally and check for event or holiday changes before travelling.
 
-No current municipal fee table was found. Confirm any booking charge, identification or deposit, footwear rules, floodlighting, changing facilities and event closures before travelling.
+Football and basketball use follow separate permission rules linked by the municipality. General public exercise hours do not automatically grant a team exclusive use of either playing area. A group should contact the municipality before organising a match, coaching session or event.
+
+No current municipal fee table was found on the checked notice. Ask the municipal office whether the intended use needs a booking, identification, deposit or charge, and confirm footwear, floodlighting, changing facilities and event closures. The listed +66 38 327 888 number is the municipality's general contact, not a promise of a staffed stadium desk throughout the public exercise periods.

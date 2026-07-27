@@ -292,7 +292,8 @@ function footer() {
         <li><a href="/pattaya-sport-stats/">Sport tourism stats</a></li>
         <li><a href="/add-your-gym/">Add your gym</a></li>
         <li><a href="/contact/">Contact</a></li>
-          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
+          <li><a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a></li>
+
           <li><a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener">LINE @timpaemi</a></li>
         <li><a href="/press/">Press</a></li>
       </ul>
@@ -302,7 +303,7 @@ function footer() {
   <div class="site-footer-base">
     <p>© ${new Date().getFullYear()} pattaya-gym.com — Every gym &amp; sport in Pattaya, Thailand.</p>
     <p class="sf-disclaimer">Last updated: ${LAST_BUILD_DATE}. Independent directory. No paid placements. Listings researched and source-cited from public information.</p>
-          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Site built &amp; managed by <a href="https://pattaya-authority.com/work/pattaya-gym-directory/" target="_blank" rel="noopener author nofollow" class="sf-builtby-link">PATTAYA AUTHORITY</a> · TIM PAEMI <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
+          <p class="sf-builtby"><span class="sf-builtby-rule"></span><span class="sf-builtby-text">// Written and kept up to date by <a href="https://timpaemi.com/" rel="author noopener" class="sf-builtby-link">TIM &amp; PAEMI</a> <span class="sf-builtby-star">★</span></span><span class="sf-builtby-rule"></span></p>
           
   </div>
 </footer>`;
@@ -1178,25 +1179,6 @@ Coordinates: 12.93°N, 100.88°E.
 
 Last update: ${LAST_BUILD_DATE}
 
-## Sister sites (TimPaemi / Pattaya Authority network · 18 sites)
-- https://timpaemi.com/                       (parent brand)
-- https://pattaya-authority.com/              (flagship media agency)
-- https://timpaemi.live/                      (TimPaemi Live)
-- https://pattayastream.com/                  (Pattaya content channel)
-- https://pattaya-afterdark.com/              (Pattaya After Dark)
-- https://pattaya-restaurant-guide.com/       (independent restaurant directory)
-- https://pattaya-coffee.com/                 (independent coffee directory)
-- https://pattaya-medical.com/                (Pattaya medical directory)
-- https://pattayavisahelp.com/                (long-stay visa support)
-- https://pattaya-school-guide.com/           (independent school directory)
-- https://pattayapets.com/                    (Pattaya pet services directory)
-- https://pattaya-vehicle-rentals.com/        (Pattaya car & bike rental directory)
-- https://pattaya-golf.com/                   (Pattaya Golf)
-- https://koh-larn-thailand.com/              (Koh Larn guide)
-- https://pattaya-insider.com/                (Pattaya Insider)
-- https://retire-in-pattaya.com/              (retire & stay guide)
-- https://movetopattaya.com/                  (moving guide)
-- https://pattayatools.pages.dev/             (PattayaTools)
 `;
 }
 

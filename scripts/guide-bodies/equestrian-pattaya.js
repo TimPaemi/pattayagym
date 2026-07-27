@@ -1,122 +1,89 @@
 module.exports = `
-<p>Pattaya has two serious equestrian venues — <strong>Horseshoe Point Resort</strong> at Mabprachan and <strong>Thai Polo &amp; Equestrian Club</strong> north of the city. Both run riding schools, polo, and multi-sport days on large estates. This guide covers who each suits, booking expectations, and how to pair a horse day with Muay Thai, golf, or family sport nearby — sourced from venue markdown, not brochure copy.</p>
+<p><strong>If you only read one thing: start with Horseshoe Point for an ordinary riding enquiry and Thai Polo &amp; Equestrian Club for polo, eventing or competition-specific access.</strong> That is a fit decision, not a ranking. Both venues are active in Pong, east of the beach districts, and both require direct confirmation because neither publishes a complete current public riding tariff.</p>
 
-<p>Equestrian here is not a beach pony photo-op — both venues operate at <strong>national or Asia-scale</strong> scale with formal riding schools, competition infrastructure, and advance booking. Hub: <a href="/category/equestrian/">Equestrian category</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya guide</a> · <a href="/compare/">compare</a> · <a href="/plan-my-trip/">plan my trip</a>.</p>
+<p>The <a href="/category/equestrian/">equestrian directory</a> contains these two records. It does not support a city-wide “horse-riding price” because the products are different: a private lesson, group lesson, pony ride, trail ride, polo clinic, competition entry and spectator event are not substitutes. Current operator pages establish the facilities and contact routes; 2026 federation schedules establish recent competition use. Neither source type proves that an unbooked visitor can arrive and ride.</p>
 
-<h2>Horseshoe vs Thai Polo — market position</h2>
-
-<p>Most tourist regions offer small trail-ride stables. Pattaya's two listed venues are different: <strong>Horseshoe Point</strong> combines TEF-certified riding school pedigree with a 1,500-acre adventure estate; <strong>Thai Polo Club</strong> targets polo players and international equestrian competition. Neither is walkable from Beach Road — plan transport.</p>
+<h2>The two-venue comparison</h2>
 
 <table>
-<thead><tr><th>Factor</th><th>Horseshoe Point</th><th>Thai Polo &amp; Equestrian Club</th></tr></thead>
+<thead><tr><th>Decision</th><th>Horseshoe Point</th><th>Thai Polo &amp; Equestrian Club</th></tr></thead>
 <tbody>
-<tr><td>Land</td><td>1,500 acres near Mabprachan</td><td>250 hectares, Banglamung / lake belt</td></tr>
-<tr><td>Best for</td><td>Families, first rides, dressage students, adventure day</td><td>Polo, endurance, Derby programmes</td></tr>
-<tr><td>Extras</td><td>Paintball, zipline, MTB, accommodation</td><td>Tournament polo fields, 250+ stables</td></tr>
-<tr><td>Tier</td><td>฿฿฿ resort estate</td><td>฿฿฿฿ premium</td></tr>
+<tr><td>Current identity</td><td>Equestrian and resort venue at 100 Moo 9, Pong</td><td>Polo and equestrian complex at 111 Polo Drive, Moo 9, Pong</td></tr>
+<tr><td>Published activity</td><td>Private and group riding lessons, trail rides and pony rides</td><td>Polo school, beginner and club chukkas, weekend polo clinics, trail riding, eventing and competition facilities</td></tr>
+<tr><td>2026 evidence</td><td>FEI-approved CSI1* schedule for 13–15 March 2026 at HSP</td><td>2025/26 polo fixtures and FEI-approved competition at Thai Polo in February 2026</td></tr>
+<tr><td>Public price</td><td>No current lesson or trail-ride tariff published</td><td>No current lesson, polo-clinic, membership or visitor tariff published</td></tr>
+<tr><td>Best first enquiry</td><td>Beginner lesson, child’s pony product or ordinary trail ride</td><td>Polo instruction, chukkas, eventing, competition or named spectator event</td></tr>
 </tbody>
 </table>
 
-<h2>1. Horseshoe Point Resort — Mabprachan mega-facility</h2>
+<p>The strongest differentiator is transaction clarity. Horseshoe Point’s riding-school page names formats that a general visitor can ask for. Thai Polo’s site documents a much larger specialist complex and several polo products, but the access process is more likely to depend on the rider, horse, event and date. A large estate or prestigious facility does not by itself make a casual booking easier.</p>
 
-<p><a href="/gyms/horseshoe-point-resort/">Horseshoe Point Resort &amp; Country Club</a> (100 Moo 9, Pong, Bang Lamung — near Mabprachan Reservoir) is a <strong>1,500-acre estate</strong>. The <strong>International Riding School</strong> was established <strong>in 1999</strong> and holds:</p>
+<h2>Horseshoe Point for the ordinary riding enquiry</h2>
 
-<ul>
-<li><strong>Thailand Equestrian Federation (TEF)</strong> certification</li>
-<li>Affiliation with <strong>Centro Equestre da Leziria Grande (Portugal)</strong> — classical riding lineage via Maestro Luis Valença Rodrigues' school</li>
-</ul>
+<p><a href="/gyms/horseshoe-point-resort/">Horseshoe Point</a> is at 100 Moo 9 in Pong. Its current riding-school page lists private lessons, group lessons, trail rides and pony rides. Those four labels are useful because they let a reader ask for the right product. A lesson is instruction; a trail ride is a route-based experience; a pony ride may have different age, height and supervision rules. Do not ask only for “horse riding” and assume the answer covers all four.</p>
 
-<p>Equestrian infrastructure in venue files: <strong>five indoor/outdoor arenas</strong>, <strong>100+ horses</strong> across Lusitano, Appaloosa, Lipizzaner, Arab, Warmblood, Falabella, and Thai pony breeds. Programmes span dressage, show jumping, classical riding, polo, trail rides, and kids' pony sessions.</p>
+<p>The site’s current contact page publishes +66 38 735 050, while the live Maps identity lists +66 63 994 7165. The venue record retains both rather than choosing one as silently more authoritative. Use the operator number first for a riding enquiry and keep the live-listing number as a second route if the first is unanswered. Ask staff to send the exact meeting point because the resort and equestrian facilities occupy a broader property than a single street-front shop.</p>
 
-<p>Same campus runs <strong>paintball, zipline, mountain biking, archery, water balls, and a multipurpose sports field</strong> — useful when your group splits interests. On-site accommodation supports stay-and-ride weekends. Phone <strong>+66 38 253 599</strong>.</p>
+<p>Current operation is supported by more than an old resort page. A federation schedule approved for 13–15 March 2026 identifies the showground as Chonburi–HSP, gives a Horseshoe Point email contact and documents an outdoor CSI1* competition. The schedule specifies a 55-by-75-metre sand competition arena and a 20-by-63-metre sand practice arena. Those figures describe the named competition setup. They do not establish the arena used for a tourist lesson or the condition of a surface on another date.</p>
 
-<p><strong>Distances (venue file):</strong> ~14.5 km to Pattaya Beach (~25–30 min by car), ~14.7 km to Jomtien; ~10 minutes to Siam Country Club golf; adjacent to Mabprachan recreation popular with cyclists — <a href="/guides/running-cycling-clubs-pattaya/">running &amp; clubs guide</a>.</p>
+<p>No current public lesson fee, trail-ride price, pony-ride price, weekly timetable or non-resident booking policy was published during the latest check. Horseshoe Point is therefore the more straightforward first enquiry, not a guaranteed walk-in. Send the rider’s age, experience, approximate height and weight, preferred date and desired format. Ask whether a beginner assessment is required and whether an event blocks normal riding access.</p>
 
-<p><strong>Best for:</strong> families wanting a full-day estate visit; beginner trail rides; classical/dressage students; <a href="/gyms/fast-pro-football-academy/">FAST PRO Football Academy</a> uses Horseshoe grounds — <a href="/guides/kids-youth-sport-pattaya/">kids sport guide</a>. Pair Darkside training at <a href="/gyms/kombat-group-thailand/">Kombat Group</a> or <a href="/guides/crossfit-pattaya/">Jungle Gym CrossFit</a> same week.</p>
+<h2>Thai Polo for specialist polo and equestrian use</h2>
 
-<h2>2. Thai Polo &amp; Equestrian Club — Asia-scale polo</h2>
+<p><a href="/gyms/thai-polo-equestrian-club/">Thai Polo &amp; Equestrian Club</a> publishes a much broader competition and club footprint. The operator states that the property covers more than 2,000 rai, approximately 250 hectares. Its facilities page lists three full-sized polo fields, two practice fields, cross-country and eventing courses, stables and an equine clinic. The about page also documents more than 250 stables and describes horses available for members and guests.</p>
 
-<p><a href="/gyms/thai-polo-equestrian-club/">Thai Polo &amp; Equestrian Club</a> (Banglamung / Mabprachan Lake area, ~25 min north of central Pattaya in venue research) claims largest multi-functional polo and equestrian facility in Asia — <strong>250 hectares</strong>, <strong>three polo fields plus two practice pitches</strong>, <strong>250+ stables</strong>, endurance and Derby programmes, Argentinian vet on staff.</p>
+<p>Those numbers show scale, not visitor eligibility. The live Maps listing gives 08:00–17:00 Tuesday to Sunday and Monday closed, but opening hours do not mean a polo lesson, trail ride, clubhouse visit or competition is available throughout that window. The operator’s contact page separates polo and equestrian enquiries and publishes a named Thai equestrian contact. Use the correct channel and state the intended activity.</p>
 
-<p><strong>Best for:</strong> serious polo players and international equestrian visitors; premium tier (฿฿฿฿). Book ahead — walk-ins rare. Website: <a href="https://www.thai-polo-club.com/" target="_blank" rel="noopener noreferrer">thai-polo-club.com</a>.</p>
+<p>The club’s polo page describes a progression from lessons into beginner chukkas, club chukkas and a weekend polo clinic. It also describes a trail ride across the property. A beginner chukka is not necessarily a first-ever riding lesson: the operator says it follows lessons and introduces players to a small game format. A weekend clinic combines morning lesson time with afternoon chukkas. Ask what prior riding competence is required before treating either as a beginner product.</p>
 
-<p>Cricket crossover: <a href="/gyms/pattaya-cricket-club/">Pattaya Cricket Club</a> plays at Horseshoe Point ground Nov–June — not Thai Polo, but same east belt for sport planning.</p>
+<p>The competition evidence is current. The official 2025/26 material lists Thai Polo Open and Queen’s Cup Pink Polo dates, and an FEI-approved schedule documents competition at Thai Polo Club House 1 in February 2026. Event evidence helps a spectator or competitor distinguish an active venue from a dormant listing. It still does not create a standing public calendar after those dates. Ask whether the intended event is open to spectators, whether registration is needed and which gate is in use.</p>
 
-<h2>Quick pick — first visit</h2>
+<h2>Price comparison stops where the evidence stops</h2>
 
-<ul>
-<li><strong>First trail ride / family day?</strong> → Horseshoe Point — riding school + adventure activities on one ticket.</li>
-<li><strong>Polo or competitive equestrian?</strong> → Thai Polo &amp; Equestrian Club — tournament-scale fields.</li>
-<li><strong>Stay overnight?</strong> → Horseshoe accommodation on-site; Thai Polo by appointment.</li>
-<li><strong>Budget day?</strong> → Neither is cheap — compare resort tier: <a href="/guides/luxury-sports-clubs-pattaya/">luxury sports clubs</a>.</li>
-<li><strong>Riding + golf weekend?</strong> → Horseshoe near Siam Country Club — <a href="/guides/best-golf-courses-pattaya/">best golf courses</a>.</li>
-</ul>
+<p>Neither venue publishes a current ordinary visitor tariff that can support a numeric side-by-side table. Horseshoe Point does not show lesson, pony-ride or trail-ride rates. Thai Polo does not show lesson, chukka, clinic, trail-ride, membership or spectator prices. Blank price fields mean unknown, not free and not necessarily expensive.</p>
 
-<h2>Booking, safety, and what to verify</h2>
+<p>Competition documents may contain entry fees for registered athletes and horses. Those are event-administration products governed by federation rules; they are not evidence of the cost of a lesson or casual ride. Likewise, a hotel room or resort package should not be treated as including riding unless the operator names that inclusion for the exact booking.</p>
 
-<p>Both venues require advance booking for riding slots, helmet fitting, and weight/age policies for children. Confirm in writing:</p>
+<p>Request a written quote with the activity name, session duration, number of riders, instruction level, horse provision, helmet and boot arrangements, taxes, deposit, cancellation rule and weather policy. For polo, add horse hire, tack, groom support, chukka count and the rider standard required. A complete expensive quote can be easier to compare than a low headline number with most essentials omitted.</p>
 
-<ul>
-<li>Session length and whether guide accompanies trail rides</li>
-<li>Helmet and boot hire included or extra</li>
-<li>Weight limits and minimum age for mounts</li>
-<li>Insurance and waiver language (especially for kids)</li>
-<li>Photography rules around horses and polo fields</li>
-</ul>
+<h2>Fit by rider and trip type</h2>
 
-<p>Transport: estates sit east/north of central Pattaya — use Pattaya Vehicle Rentals or hotel taxi desk; not walkable from Walking Street. Allow buffer time — Banglamung traffic spikes weekends.</p>
+<p><strong>First-time adult or child:</strong> Horseshoe Point is the clearer first contact because its site explicitly names private lessons, group lessons and pony rides. That does not guarantee acceptance. Confirm age, size, supervision and instructor availability before placing transport around the booking.</p>
 
-<p>Injury backup: Pattaya Medical. Gentle alternatives same week: <a href="/guides/pattaya-seniors-low-impact-sport/">seniors low-impact sport</a> · <a href="/guides/swimming-pools-pattaya/">swimming pools</a>.</p>
+<p><strong>Existing rider:</strong> choose by discipline. Ask Horseshoe about the relevant lesson format and arena; ask Thai Polo about polo, eventing, cross-country or competition-specific use. Send an honest experience summary. “Experienced” can mean very different things in trail riding, dressage, show jumping and polo.</p>
 
-<h2>Sample itineraries</h2>
+<p><strong>Polo learner or player:</strong> Thai Polo is the purpose-built enquiry. Name whether you need an introductory lesson, beginner chukkas, club chukkas or a weekend clinic. Confirm whether the programme supplies the horse and equipment and whether the stated contact still handles the selected product.</p>
 
-<h3>Family day (Horseshoe)</h3>
-<p>Morning pony or trail ride → estate lunch → afternoon paintball or zipline for teens → parents optional short gym session if staying on property → evening pool at hotel. Kids football families: align with FAST PRO training day if schedules match.</p>
+<p><strong>Spectator:</strong> choose an exact dated event rather than visiting during general Maps hours. Thai Polo’s current-season pages and the federation schedules provide event evidence; Horseshoe’s March 2026 schedule documents recent show-jumping use. After an event date passes, it is evidence of operation, not a future ticket.</p>
 
-<h3>Sport holiday combo</h3>
-<p>Morning trail ride Horseshoe → lunch on estate → afternoon MT pads at east camp (<a href="/guides/best-gym-east-pattaya/">East Pattaya</a>) → evening recovery swim — <a href="/guides/swimming-pools-pattaya/">pools guide</a>.</p>
+<p><strong>Family with mixed interests:</strong> the riding decision should still be made rider by rider. A child’s pony product, an adult lesson and a spectator programme can have different eligibility and timings. The <a href="/guides/family-friendly-pattaya/">family-friendly sport guide</a> compares other current child products without implying that a family label overrides an operator’s age or supervision rule.</p>
 
-<h3>Premium polo visitor</h3>
-<p>Thai Polo booked chukker or training session → spa/rest afternoon → Fitz Club or golf next day on Pratamnak — <a href="/guides/tennis-badminton-pattaya/">tennis guide</a> for racquet add-on.</p>
+<h2>Location and return planning</h2>
 
-<h2>Photography, dress code, and group logistics</h2>
+<p>Both records are in Pong within the wider East Pattaya belt, but their addresses and gates are different. Horseshoe Point is at 100 Moo 9. Thai Polo is at 111 Polo Drive, Moo 9. A shared district does not prove the properties are adjacent, share an entrance or use the same route around an event.</p>
 
-<p>Estate venues restrict drone use and may limit stable access during polo events — ask staff where spectators may stand. Wear long trousers and closed shoes; helmets provided for riding. Sunscreen and insect repellent matter on trail sections near reservoir vegetation.</p>
+<p>The Thai Polo contact page publishes driving directions via Route 36 and Bira Racing Circuit, plus an alternative approach through Soi Siam Country Club and Mabprachan Reservoir. Those directions are more useful than a generic “near Pattaya” label, but a current map pin and staff confirmation should control. The <a href="/area/east-pattaya/">East Pattaya area page</a> explains why this inland index is not one compact walkable neighbourhood.</p>
 
-<p>Groups of six or more should book separate riding slots and adventure activities (paintball at Horseshoe) in one email thread — front desk coordinates timing better than walk-in fragments. Russian- and English-speaking staff are common at Horseshoe; Thai Polo expects international equestrian English for competition visitors.</p>
+<p>Arrange the return as carefully as the outward trip. Neither operator publishes a universal public-transport route, ride-hailing pickup promise, fixed transfer fare or journey time from Beach Road. An event finish, child’s lesson or trail ride may end away from the initial enquiry desk. Ask for the gate name, staff contact and pickup point in the booking reply.</p>
 
-<p>Combine with <a href="/guides/best-golf-courses-pattaya/">golf</a> for executive weekends: morning tee time Siam Country Club, afternoon trail ride, evening seafood at Na Jomtien — <a href="/guides/best-gym-sattahip-pattaya/">Sattahip belt guide</a> for south-side hotels.</p>
+<h2>Booking and safety questions</h2>
 
-<h2>Who this guide is for</h2>
+<p>Send one structured message instead of several vague questions. Include rider count, each rider’s age and experience, desired discipline, date, preferred time and language requirement. Ask whether the session is private or shared, how long it lasts, what happens in rain, and whether the operator can accommodate the rider’s size and mobility needs.</p>
 
-<ul>
-<li><strong>Families</strong> needing credible riding school (not beach pony traps)</li>
-<li><strong>Dressage / classical students</strong> attracted by Horseshoe's Portugal affiliation</li>
-<li><strong>Polo players</strong> visiting Asia with tournament expectations</li>
-<li><strong>Relocating parents</strong> pairing kids football at Horseshoe with estate activities</li>
-</ul>
+<p>Confirm who supplies the helmet, suitable footwear and any body protector required for the activity. Ask whether closed shoes and long trousers are mandatory, whether fitting time is included and whether the venue provides secure storage. Do not infer safety equipment from competition photographs or promotional images.</p>
+
+<p>For a child, ask whether a guardian must remain on site, whether the adult may accompany the activity, and where handover occurs. For a competition visit, follow the event’s accreditation, veterinary and stable-access rules. The FEI schedules document controlled competition environments; they do not establish public access to stable areas.</p>
 
 <h2>FAQ</h2>
 
-<h3>Which venue is better for kids' first horse ride?</h3>
-<p><a href="/gyms/horseshoe-point-resort/">Horseshoe Point</a> — pony programmes, adventure activities, and family accommodation on one estate. Confirm age and height rules when booking.</p>
+<h3>Which venue is better for a first riding enquiry?</h3>
+<p>Horseshoe Point is the clearer first contact because its operator page explicitly lists private lessons, group lessons, trail rides and pony rides. That is not a guarantee of a slot or a current price. Send the rider’s age, experience and desired format and wait for confirmation before travelling.</p>
 
-<h3>Can I visit Thai Polo without playing polo?</h3>
-<p>Contact the club directly — visitor policies vary. Serious polo and equestrian training dominate; Horseshoe is the easier general visitor entry.</p>
+<h3>Can visitors watch polo?</h3>
+<p>Thai Polo publishes named fixtures and event dates, but a past or current-season listing does not establish permanent daily spectator access. Ask about the exact event, ticket or registration requirement, arrival gate, dress expectations and weather changes. General 08:00–17:00 business hours are not an event calendar.</p>
 
-<h3>How far is Horseshoe from Pattaya Beach?</h3>
-<p>About 14.5 km (~25–30 minutes by car) per venue file. Plan round-trip taxi or rental — not a baht-bus trip.</p>
+<h3>What should I ask before paying?</h3>
+<p>Request the exact activity, duration, rider eligibility, horse and equipment provision, instruction format, complete price, taxes, deposit, cancellation and weather terms. Add gate and pickup details. For polo, also ask about the experience prerequisite, horse hire, tack, groom support and chukka count.</p>
 
-<h3>Is horse riding safe in Pattaya heat?</h3>
-<p>Book morning sessions; hydrate; wear long trousers and closed shoes. Estates run structured programmes — avoid unlicensed beach operators not in our directory.</p>
-
-<h3>Can I combine horses with Muay Thai same trip?</h3>
-<p>Yes — east-side camps (<a href="/gyms/kombat-group-thailand/">Kombat Group</a>, <a href="/gyms/fairtex-pattaya/">Fairtex</a>) sit drivable from Mabprachan. Rest days matter — do not stack hard riding and hard sparring without recovery.</p>
-
-<h3>What should I book first?</h3>
-<p>Riding slot and transport. Secondary: accommodation at Horseshoe if stay-and-ride; polo chukker dates at Thai Polo for competition visitors.</p>
-
-<h2>Related guides</h2>
-
-<p><a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/guides/best-golf-courses-pattaya/">Best golf courses</a> · <a href="/guides/best-gym-east-pattaya/">Best gym East Pattaya</a> · <a href="/guides/adventure-pattaya/">Adventure in Pattaya</a> · <a href="/guides/kids-youth-sport-pattaya/">Kids &amp; youth sport</a> · <a href="/category/equestrian/">All equestrian venues</a>.</p>
+<p>For related planning, compare the <a href="/guides/kids-youth-sport-pattaya/">kids and youth sport guide</a>, the <a href="/guides/best-golf-courses-pattaya/">Pattaya golf guide</a> and the <a href="/guides/luxury-sports-clubs-pattaya/">luxury sports-club guide</a>. Each covers a different product; none should be used to fill a missing equestrian tariff.</p>
 `;

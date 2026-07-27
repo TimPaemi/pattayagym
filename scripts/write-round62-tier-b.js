@@ -25,17 +25,17 @@ const guides = [
   {
     slug: 'adventure-pattaya',
     crumb: 'Adventure',
-    kicker: 'Guide · Zipline · skydive · karting · ATV',
-    readTime: '12 min read',
+    kicker: 'Guide · Skydive · karting · ATV · zipline · shooting',
+    readTime: '13 min read',
     title: 'Adventure sport in Pattaya | Zipline, skydive, karting, ATV | Pattaya.Gym',
-    desc: 'Adventure in Pattaya — Thai Sky skydive, Tarzan zipline, Flight of the Gibbon, karting, ATV, tower jump, shooting ranges, booking and safety tips.',
+    desc: 'Compare current Pattaya adventure records for skydiving, karting, ATV, ziplines, motorsport and shooting, with dated prices, booking gaps and closure warnings.',
     h1: 'Adventure in <span class="accent-cyan">Pattaya.</span>',
-    lede: 'Tandem skydiving, jungle ziplines, kart tracks, ATV mud, a 170m tower jump, and shooting ranges — twelve operators in our directory. This guide maps each type and who it suits.',
+    lede: 'The directory has 16 adventure-category records, but four are football or multi-sport venues and two relevant records carry a closure or identity warning. This guide compares the current evidence without presenting every record as open or bookable.',
     body: require('./guide-bodies/adventure-pattaya'),
     sisterLinks: [
       { url: '/guides/family-friendly-pattaya/', label: 'Family-friendly', desc: 'Active holidays with kids' },
       { url: '/guides/climbing-pattaya/', label: 'Climbing', desc: 'Indoor walls' },
-      { url: 'https://mrweoutside.com/', external: true, label: 'Mr We Outside', desc: 'Outdoor community' },
+      { url: '/guides/best-gym-east-pattaya/', label: 'East Pattaya', desc: 'Pong, Mabprachan and Huai Yai context' },
     ],
   },
   {
@@ -57,17 +57,17 @@ const guides = [
   {
     slug: 'best-gym-sattahip-pattaya',
     crumb: 'Na Jomtien & Sattahip',
-    kicker: 'Guide · Sattahip · marina · resort',
-    readTime: '12 min read',
-    title: 'Best gym in Na Jomtien & Sattahip | Marina, resorts, water parks | Pattaya.Gym',
-    desc: 'Gyms, resort fitness, marina sport, water parks and golf in Na Jomtien and Sattahip — Ocean Marina, Ramayana, Andaz, U-Tapao corridor.',
+    kicker: 'Guide · Sattahip · Na Jomtien · access · prices',
+    readTime: '14 min read',
+    title: 'Gyms in Sattahip & Na Jomtien | Prices, access, maps | Pattaya.Gym',
+    desc: 'Compare Sattahip, Bang Saray and Na Jomtien gyms, resort fitness, watersports, golf and family activities by access, dated price and exact area.',
     h1: 'Na Jomtien & <span class="accent-yellow">Sattahip.</span>',
-    lede: 'South of Jomtien is a different Pattaya — yacht marinas, water parks, U-Tapao airport, and 5-star resort gyms without Walking Street noise. This guide is the far-south sport belt only.',
+    lede: 'Compare the southern corridor from Na Jomtien and Ban Amphur through Bang Saray to Sattahip. The useful distinction is access: public gym, hotel-guest amenity, coached studio or book-ahead activity.',
     body: require('./guide-bodies/best-gym-sattahip'),
     sisterLinks: [
       { url: '/guides/best-gym-jomtien-pattaya/', label: 'Jomtien gyms', desc: 'Beach-road Muay Thai' },
-      { url: 'https://pattayavilla.com/', external: true, label: 'Pattaya Villa', desc: 'South-side stays' },
-      { url: 'https://pattaya-vehicle-rentals.com/', external: true, label: 'Vehicle Rentals', desc: 'Sattahip commutes' },
+      { url: '/guides/best-gym-central-pattaya/', label: 'Central Pattaya', desc: 'More public gym choices' },
+      { url: '/guides/diving-watersports-pattaya/', label: 'Watersports', desc: 'Dive, kite and sailing access' },
     ],
   },
   {
@@ -89,33 +89,33 @@ const guides = [
   {
     slug: 'best-gym-central-pattaya',
     crumb: 'Central Pattaya',
-    kicker: 'Guide · Central · gyms · Muay Thai',
-    readTime: '12 min read',
-    title: 'Best gym in Central Pattaya | WKO, Battle Conquer, 24h chains | Pattaya.Gym',
-    desc: 'Best gyms and Muay Thai camps in Central Pattaya — WKO, Battle Conquer, Tony\'s Gym, Fitness 7, Jetts, hotel day passes near Beach Road.',
+    kicker: 'Guide · Central · access · current prices',
+    readTime: '15 min read',
+    title: 'Central Pattaya gyms: current prices and 24-hour access | Pattaya.Gym',
+    desc: 'Compare Central Pattaya gyms by current dated prices, member access, staffed hours, coached classes, hotel eligibility and exact location.',
     h1: 'Best gym in <span class="accent-yellow">Central.</span>',
-    lede: 'Central Pattaya packs more gyms per block than anywhere else — 24-hour chains, budget Muay Thai legends, and hotel fitness on Beach Road. Only venues actually in the central zone.',
+    lede: 'Choose by access model: a dated membership, staffed visitor entry, coached session, hotel facility or pool pass. The right Central Pattaya option depends on the product and exact pin.',
     body: require('./guide-bodies/best-gym-central'),
     sisterLinks: [
       { url: '/guides/best-gyms-near-walking-street-pattaya/', label: 'Near Walking Street', desc: 'Beach Road cluster' },
-      { url: 'https://pattaya-vehicle-rentals.com/', external: true, label: 'Vehicle Rentals', desc: 'Scooters and cars' },
-      { url: 'https://pattaya-restaurant-guide.com/', external: true, label: 'Restaurant Guide', desc: 'Post-training food' },
+      { url: '/guides/24-hour-gyms-pattaya/', label: '24-hour gyms', desc: 'Member versus staffed access' },
+      { url: '/guides/gym-day-pass-pattaya/', label: 'Gym day passes', desc: 'Short-stay entry options' },
     ],
   },
   {
     slug: 'best-gym-east-pattaya',
     crumb: 'East Pattaya',
-    kicker: 'Guide · Darkside · camps',
-    readTime: '12 min read',
-    title: 'Best gym in East Pattaya (Darkside) | Kombat Group, Mabprachan | Pattaya.Gym',
-    desc: 'Gyms and Muay Thai camps in East Pattaya — Kombat Group, Sor Klinmee, Mabprachan wake and padel, Jungle Gym CrossFit.',
+    kicker: 'Guide · East Pattaya · current prices · access',
+    readTime: '18 min read',
+    title: 'East Pattaya gyms: current prices, camps and courts | Pattaya.Gym',
+    desc: 'Compare East Pattaya gyms, Muay Thai camps, courts and youth sport by current dated prices, access model and exact inland location.',
     h1: 'Best gym on the <span class="accent-cyan">Darkside.</span>',
-    lede: 'East Pattaya is where serious camps live away from Beach Road — Huai Yai all-inclusive resorts, authentic gyms, and Mabprachan lake sport with honest transport reality.',
+    lede: 'East Pattaya spans several inland corridors. Choose by current access product, exact pin and travel plan rather than treating the Darkside as one compact gym district.',
     body: require('./guide-bodies/best-gym-east'),
     sisterLinks: [
-      { url: '/guides/muay-thai-camps-with-accommodation-pattaya/', label: 'Camps with accommodation', desc: 'Stay-and-train' },
-      { url: 'https://pattaya-vehicle-rentals.com/', external: true, label: 'Vehicle Rentals', desc: 'Daily camp commute' },
-      { url: 'https://mrweoutside.com/', external: true, label: 'Mr We Outside', desc: 'Outdoor sport' },
+      { url: '/guides/muay-thai-camps-with-accommodation-pattaya/', label: 'Camps with accommodation', desc: 'Stay-and-train packages' },
+      { url: '/guides/tennis-badminton-pattaya/', label: 'Racquet sport', desc: 'Tennis, badminton and court access' },
+      { url: '/guides/best-gym-central-pattaya/', label: 'Central Pattaya', desc: 'Beach-corridor alternative' },
     ],
   },
   {
@@ -217,12 +217,12 @@ const guides = [
   {
     slug: 'best-gym-naklua-pratamnak-pattaya',
     crumb: 'Naklua & Pratamnak',
-    kicker: 'Guide · North Pattaya · hilltop',
-    readTime: '12 min read',
-    title: 'Best gym in Naklua & Pratamnak Pattaya | Pattaya.Gym',
-    desc: 'Train in Naklua and Pratamnak: Fairtex, Sityodtong, Muscle Factory, padel, pools, yoga, hilltop fitness.',
+    kicker: 'Guide · Access · current prices · exact areas',
+    readTime: '18 min read',
+    title: 'Naklua & Pratamnak gyms: prices and access | Pattaya.Gym',
+    desc: 'Compare Naklua and Pratamnak gyms, Muay Thai, courts, yoga, pools and hotel fitness by current dated prices, public access and exact location.',
     h1: 'Naklua & <span class="accent-cyan">Pratamnak.</span>',
-    lede: 'North Pattaya camps and hilltop iron — Fairtex, Sityodtong, Muscle Factory, padel, Wong Amat, and luxury resort gyms mapped for where you sleep.',
+    lede: 'Choose the side and access product first. The current filters contain 24 north-side records and 13 hill records, mixing public gyms, coached sessions, courts, clubs, hotel amenities and status warnings.',
     body: require('./guide-bodies/naklua-pratamnak'),
     sisterLinks: [
       { url: '/guides/best-muay-thai-pattaya/', label: 'Best Muay Thai', desc: 'Ranked camps' },
@@ -233,12 +233,12 @@ const guides = [
   {
     slug: 'best-gym-jomtien-pattaya',
     crumb: 'Jomtien',
-    kicker: 'Guide · Jomtien · beach strip',
-    readTime: '12 min read',
-    title: 'Best gym in Jomtien Pattaya | Pattaya.Gym',
-    desc: 'Best gyms, Muay Thai camps, yoga, pools in Jomtien and Na Jomtien — hand-checked venues near Jomtien Beach.',
+    kicker: 'Guide · Jomtien · current prices · access',
+    readTime: '14 min read',
+    title: 'Jomtien gyms, classes and sport: current prices | Pattaya.Gym',
+    desc: 'Compare Jomtien gyms, Muay Thai, yoga, courts, diving and family sport by current dated prices, access rules, status and exact corridor.',
     h1: 'Best gym in <span class="accent-cyan">Jomtien.</span>',
-    lede: 'Jomtien is Pattaya\'s quieter beach strip — better for long-stay trainers than Walking Street chaos. Only gyms you can reach from Jomtien without a daily commute killer.',
+    lede: 'Choose the product and exact corridor first. The Jomtien filter reaches from Dongtan and Thepprasit to Na Jomtien and Ban Amphur, and it mixes memberships, coached sessions, courts, water days and resort facilities.',
     body: require('./guide-bodies/jomtien'),
     sisterLinks: [
       { url: '/guides/best-gym-sattahip-pattaya/', label: 'Na Jomtien & Sattahip', desc: 'South corridor' },
@@ -264,8 +264,15 @@ const guides = [
   },
 ];
 
-for (const g of guides) {
+const onlyArg = process.argv.find(arg => arg.startsWith('--guide-only='));
+const onlySlug = onlyArg ? onlyArg.slice('--guide-only='.length) : '';
+const selectedGuides = onlySlug ? guides.filter(g => g.slug === onlySlug) : guides;
+if (onlySlug && selectedGuides.length === 0) {
+  throw new Error(`Unknown --guide-only slug: ${onlySlug}`);
+}
+
+for (const g of selectedGuides) {
   const bytes = writeEditorialGuide(g);
   console.log(`Wrote /guides/${g.slug}/ (${(bytes / 1024).toFixed(1)} KB)`);
 }
-console.log(`Round 62 Tier B: ${guides.length} editorial guides regenerated.`);
+console.log(`Round 62 Tier B: ${selectedGuides.length} editorial guide(s) regenerated.`);

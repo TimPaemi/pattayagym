@@ -12,18 +12,18 @@ const guides = [
   {
     slug: 'best-gyms-in-pattaya',
     crumb: 'Best gyms in Pattaya',
-    kicker: 'Guide · Head term · ranked by area & trip type',
-    readTime: '9 min read',
-    title: 'Best Gyms in Pattaya (2026) — Ranked by Area | Pattaya.Gym',
-    desc: 'The best gyms in Pattaya ranked by trip type and neighbourhood — commercial fitness, Muay Thai camps, budget picks, and luxury clubs. 157 venues hand-checked.',
+    kicker: 'Guide · Fitness · current prices · access',
+    readTime: '11 min read',
+    title: 'Best Gyms in Pattaya (2026) — Prices and Access | Pattaya.Gym',
+    desc: 'Compare Pattaya gyms by current day and monthly prices, area, staffed access, 24-hour terms, training style and length of stay.',
     h1: 'Best gyms in <span class="accent-yellow">Pattaya.</span>',
-    lede: 'The head-term guide: which Pattaya gym fits your trip — tourist day pass, Muay Thai camp, long-stay nomad, or luxury club. Ranked picks with links to every area guide and venue page.',
+    lede: 'Choose by access product, area and length of stay. This evidence-led shortlist separates ordinary gym entry, 24-hour member access, coached combat and multi-sport club days.',
     body: require('./guide-bodies/best-gyms-in-pattaya'),
     sisterLinks: [
       { url: '/guides/best-muay-thai-pattaya/', label: 'Best Muay Thai', desc: 'Camp ranking by tier' },
       { url: '/guides/cheapest-gyms-pattaya/', label: 'Cheapest gyms', desc: 'Budget price table' },
       { url: '/guides/gym-day-pass-pattaya/', label: 'Day pass', desc: 'Drop-in without contract' },
-      { url: '/search/', label: 'Search 157 venues', desc: 'Filter live' },
+      { url: '/search/', label: 'Search records', desc: 'Filter by sport and area' },
     ],
   },
   {
@@ -45,24 +45,31 @@ const guides = [
   },
   {
     slug: 'boxing-kickboxing-gym-pattaya',
-    crumb: 'Boxing & kickboxing',
-    kicker: 'Guide · Western boxing · K1 · fight academies',
-    readTime: '8 min read',
-    title: 'Boxing & Kickboxing Gyms in Pattaya | Pattaya.Gym',
-    desc: 'Western boxing and kickboxing in Pattaya — beyond Muay Thai. Fight academies, hybrid MMA gyms, and where to train hands-only or K1 rules.',
+    crumb: 'Boxing and kickboxing',
+    kicker: 'Guide · Western boxing · kickboxing · current evidence',
+    readTime: '16 min read',
+    title: 'Boxing and kickboxing gyms in Pattaya | current guide',
+    desc: 'Compare Pattaya boxing and kickboxing options by verified discipline, current class times, dated prices, facilities and residential or contact-first access.',
     h1: 'Boxing &amp; <span class="accent-pink">kickboxing.</span>',
-    lede: 'Pattaya search results skew Muay Thai — this guide maps boxing, kickboxing, and hybrid fight gyms where you can train western striking without the clinch.',
+    lede: 'Choose the exact striking product first. This guide separates combined boxing and Muay Thai classes, multi-discipline camps, fitness kickboxing, residential western boxing and an unverified former stadium.',
     body: require('./guide-bodies/boxing-kickboxing-gym-pattaya'),
     sisterLinks: [
-      { url: '/guides/best-muay-thai-pattaya/', label: 'Best Muay Thai', desc: 'When MT beats boxing' },
-      { url: '/guides/bjj-mma-pattaya/', label: 'BJJ & MMA', desc: 'Hybrid fight gyms' },
-      { url: '/guides/best-gym-central-pattaya/', label: 'Central Pattaya', desc: 'Pattaya Boxing World belt' },
-      { url: '/compare/', label: 'Compare venues', desc: 'Side-by-side table' },
+      { url: '/guides/best-muay-thai-pattaya/', label: 'Best Muay Thai', desc: 'Current camp and price comparison' },
+      { url: '/guides/bjj-mma-pattaya/', label: 'BJJ and MMA', desc: 'Grappling and hybrid fight gyms' },
+      { url: '/area/central-pattaya/', label: 'Central Pattaya', desc: 'Compare access models by area' },
+      { url: '/compare/', label: 'Compare venues', desc: 'Filter the directory' },
     ],
   },
 ];
 
-for (const g of guides) {
+const onlyArg = process.argv.find(arg => arg.startsWith('--guide-only='));
+const onlySlug = onlyArg ? onlyArg.slice('--guide-only='.length) : '';
+const selectedGuides = onlySlug ? guides.filter(g => g.slug === onlySlug) : guides;
+if (onlySlug && selectedGuides.length === 0) {
+  throw new Error(`Unknown --guide-only slug: ${onlySlug}`);
+}
+
+for (const g of selectedGuides) {
   const bytes = writeEditorialGuide(g);
   console.log(`Wrote /guides/${g.slug}/ (${(bytes / 1024).toFixed(1)} KB)`);
 }
