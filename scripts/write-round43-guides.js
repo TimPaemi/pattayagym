@@ -18,8 +18,8 @@ const guides = [
     body: require('./guide-bodies/is-muay-thai-safe'),
     sisterLinks: [
       { url: '/guides/muay-thai-pattaya-beginners/', label: 'Muay Thai beginners', desc: 'First-week camp picks' },
-      { url: 'https://pattaya-medical.com/', external: true, label: 'Pattaya Medical', desc: 'Clinics and injury care' },
-      { url: 'https://pattayapersonaltrainer.com/', external: true, label: 'Pattaya Personal Trainer', desc: '1-on-1 coaching' },
+      { url: '/guides/english-speaking-muay-thai-pattaya/', label: 'English-speaking camps', desc: 'Language support' },
+      { url: '/guides/gym-day-pass-pattaya/', label: 'Gym day passes', desc: 'Lighter-contact alternatives' },
     ],
   },
   {
@@ -50,8 +50,8 @@ const guides = [
     body: require('./guide-bodies/yoga-retreat'),
     sisterLinks: [
       { url: '/guides/pattaya-digital-nomad-fitness/', label: 'Digital nomad fitness', desc: 'Work + train rhythm' },
-      { url: 'https://pattayavilla.com/', external: true, label: 'Pattaya Villa', desc: 'Long-stay accommodation' },
-      { url: 'https://pattaya-coffee.com/', external: true, label: 'Pattaya Coffee', desc: 'Cafés between classes' },
+      { url: '/guides/best-gym-jomtien-pattaya/', label: 'Jomtien gyms', desc: 'Beach-side base' },
+      { url: '/guides/best-gym-naklua-pratamnak-pattaya/', label: 'Naklua & Pratamnak', desc: 'Quieter studio areas' },
     ],
   },
 ];

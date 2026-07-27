@@ -15,13 +15,12 @@ distinction: Combat-sports camp combining Muay Thai, boxing, BJJ, MMA and functi
 disciplines: [Muay Thai, Boxing, BJJ, MMA, Functional fitness, Strength and conditioning, Yoga, Hyrox]
 facilities: [Three full-size rings, BJJ and MMA mat zone, Functional fitness and weight room, Pool, On-site accommodation]
 beginnerFriendly: true
-verified: 2026-07-26
+verified: 2026-07-27
 sources:
   - https://ragefightacademy.com/
   - https://ragefightacademy.com/training/
   - https://ragefightacademy.com/the-camp/
   - https://ragefightacademy.com/member-info/
-  - https://www.facebook.com/ragefightacademy/
   - https://www.google.com/maps/search/?api=1&query=Rage+Fight+Academy+Pattaya
 description: South Pattaya combat camp with Muay Thai, boxing, BJJ, MMA, functional training, accommodation and a pool.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Rage+Fight+Academy+Pattaya"
@@ -30,30 +29,41 @@ tags: [muay-thai, boxing, bjj, mma, functional-fitness, south-pattaya]
 
 # Rage Fight Academy
 
-Rage is a multi-discipline fight camp on Soi Norway off Thappraya Road. The current operator site presents it as family-friendly and open to beginners as well as professional fighters. Its programme list extends beyond Muay Thai: boxing, BJJ, MMA, strength and conditioning, yoga, HYROX-style training and other functional-fitness classes are advertised.
+Rage Fight Academy is a real multi-discipline camp on Soi Norway off Thappraya Road, but it is still a contact-first purchase rather than a transparent e-commerce gym. The operator pages support Muay Thai, boxing, BJJ, MMA and functional training plus accommodation and a pool. What they do not give is one stable public fee table for all those products.
 
-That range makes Rage relevant to a household or training group whose members want different disciplines at one base. It does not mean that every discipline runs throughout the published business day. The public training page did not expose a dependable class-by-class timetable during the 26 July 2026 check.
+## What training is on offer
 
-## Training spaces and facilities
+The current operator site presents Rage as a family-friendly camp open to beginners as well as experienced fighters. Its public programme extends beyond Muay Thai into boxing, BJJ, MMA, strength and conditioning, yoga, HYROX-style work and general functional fitness. That breadth is the main reason to keep the record prominent in both the [Muay Thai category](/category/muay-thai/) and the [BJJ and MMA guide](/guides/bjj-mma-pattaya/): it can suit a mixed-discipline household that wants one base.
 
-The current homepage lists two dedicated Muay Thai and boxing areas with three full-size rings, a spacious matted BJJ/MMA zone, and a functional-fitness and weight room. An older camp page describes two rings rather than three, so anyone booking for a team or private event should reconfirm the current ring inventory instead of treating either number as reserved capacity.
+The current public facility description lists two dedicated Muay Thai and boxing areas, **three full-size rings**, a matted BJJ and MMA zone, a functional-fitness and weights area, a pool and on-site rooms. The older camp page still describes two rings rather than three, so the safest reading is that the venue clearly has multiple striking spaces but any team or camp organiser should reconfirm the exact current ring count before assuming reserved capacity.
 
-The site also documents a pool, Ring Side Café and on-site accommodation. Room descriptions include air conditioning, Wi-Fi, a refrigerator, bathroom, tea and coffee facilities, a kitchenette, bedding and housekeeping. Ask which room type and services are included in the exact quote; the existence of accommodation does not establish a bundled training package or meal plan.
+## What it costs
 
-The homepage says a sauna and ice bath are under construction and expected later. They are not counted as current facilities in this record. A future-feature announcement should not be used when comparing recovery access today.
+No stable public drop-in, week, month or residential rate could be verified from the checked first-hand pages on 2026-07-27. The member-information page provides policy and agreement material, but not a current price table. That blank tariff is a contact task, not a sign that the academy is closed or unwilling to take visitors.
 
-## Hours, schedule and price
+Ask for the exact product: one class, one day, unlimited training, private coaching, a room-and-training package or a specific discipline such as BJJ. Also ask whether the quote includes open-gym access, equipment, pool use or any meal or housekeeping component. Rage documents accommodation, but it does not publish one dependable camp package number that can be compared cleanly with residential operators that do.
 
-The exact Maps listing displays ordinary weekly venue hours of **08:00 to 19:00 Monday through Saturday**, with Sunday closed. Holiday notices can vary. These are venue hours, not a promise that a beginner Muay Thai class, BJJ roll or yoga session starts at any chosen time.
+## Who it suits — and who it does not
 
-No stable current public drop-in, weekly, monthly or residential tariff was accessible on the operator pages checked. The member-information page provides agreements and policy documents but not a current fee table. Request the price for the named discipline and format, and ask whether it covers one class, open gym, unlimited training, private coaching or accommodation. A blank price is not evidence of free or inexpensive access.
+Rage suits a visitor who values a multi-discipline camp, wants the option of on-site accommodation and is willing to get the final quote directly from the operator. It is especially relevant if one person wants Muay Thai while another wants BJJ, MMA or functional work.
 
-## Address and first visit
+It does not suit someone who wants a clearly published Muay Thai-only day pass, a precise public class grid or a simple cheap walk-in. For that type of buyer, compare the [Central Pattaya area page](/area/central-pattaya/) for access context and the [Muay Thai beginners guide](/guides/muay-thai-pattaya-beginners/) for cleaner first-purchase logic.
 
-The operator footer publishes **308/43 Moo 10, Thappraya Road, Soi Norway**. Maps displays **308/45 Soi Norway** for the same exact business identity, together with phone **097 331 6365** and Plus Code **WV6C+CX**. This record keeps the operator's 308/43 address and the exact Maps link so a visitor can resolve the entrance rather than silently merging the two street numbers.
+## Getting there
 
-Before a first session, send your discipline, experience level, date and equipment needs. Ask for the exact start and finish, class size, coaching language, whether gloves, wraps, shin guards or a gi are required, and whether sparring or rolling is optional. For accommodation, obtain the room, meals, housekeeping, training frequency, arrival terms, taxes and cancellation policy in writing. Rage is a credible multi-discipline option, but its breadth makes the exact transaction more important than the general facility list.
+The operator footer uses **308/43 Moo 10, Thappraya Road, Soi Norway**, while the live Maps business identity shows **308/45 Soi Norway** for the same place. The exact phone **+66 97 331 6365** is consistent. This record keeps the operator's published street number and preserves the map link so visitors can resolve the entrance directly instead of silently choosing one numbering system over the other.
 
-## Price and first visit
+Because the site and Maps disagree slightly on the street number, share the exact pin with the driver and the academy. A broad South Pattaya or Thappraya description is not accurate enough on its own.
 
-No stable current public fee table was accessible on the operator pages checked. Use the live schedule and contact the academy for the relevant drop-in, weekly or monthly option. Ask whether gloves, wraps and shin guards are included and which sessions suit a first-time visitor.
+## Before you go
+
+Send the discipline, date, experience level and whether you need one class, multiple days or accommodation. The broad facility list is current, but the class-by-class commercial detail is not public enough to improvise on arrival.
+
+Also ask whether the sauna and ice-bath project mentioned on the homepage is now live, whether gloves, wraps, shin guards or a gi are required, whether sparring or rolling is optional, and what the room quote includes. For accommodation, get the room type, taxes, cleaning, training frequency and cancellation terms in writing before paying.
+
+## What we could not verify
+
+- No stable public fee table was available for drop-ins, weeks, months, privates or residential packages.
+- No dependable class-by-class timetable was visible in accessible text on the checked pages.
+- The checked first-hand sources did not confirm a current coach roster or language-by-trainer breakdown.
+- The public pages did not prove that the announced sauna and ice bath are already open for use.

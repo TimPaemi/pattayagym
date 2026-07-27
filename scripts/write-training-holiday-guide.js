@@ -65,10 +65,10 @@ function footer() {
 
 const SLUG = 'muay-thai-training-holiday-pattaya';
 const TITLE = 'Muay Thai training holiday in Pattaya | Pattaya.Gym';
-const DESC = 'Plan a 1–4 week Muay Thai training holiday in Pattaya: best stay-and-train camps, realistic budgets, daily schedule, visa notes, and how Pattaya compares to Phuket for fight camps.';
+const DESC = 'Plan a Pattaya Muay Thai training holiday with dated training and residential prices, schedule checks, room inclusions and a written-quote checklist.';
 const URL = `${SITE}/guides/${SLUG}/`;
 
-const BODY = `
+const LEGACY_BODY = `
 <p>A <strong>Muay Thai training holiday</strong> in Pattaya means you fly in with one job: train twice a day, recover, repeat — without spending half your trip on logistics. Pattaya is not Bangkok (lineage museums) or Phuket (resort marketing). It is the city where foreigners have trained at scale since the 1980s: English-friendly kru, fight nights most weeks, and packages from budget bunkhouse to full resort.</p>
 
 <p>This guide is for the <strong>1–4 week traveller</strong> (and the 1–3 month serious amateur) who wants a realistic plan: which camps run real holidays, what you will pay, how days are structured, and what to book before you land.</p>
@@ -177,6 +177,7 @@ const BODY = `
 <p><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai Pattaya</a> · <a href="/guides/gym-day-pass-pattaya/">Gym day pass</a> · <a href="/guides/cheapest-gyms-pattaya/">Cheapest gyms</a> · <a href="/guides/best-gyms-near-walking-street-pattaya/">Near Walking Street</a> · <a href="/category/muay-thai/">All Muay Thai venues</a></p>
 `;
 
+const BODY = require('./guide-bodies/muay-thai-training-holiday-enriched');
 const webpage = { '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': `${URL}#webpage`, url: URL, name: TITLE, description: DESC, inLanguage: 'en', isPartOf: { '@id': `${SITE}/#website` } };
 const crumbs = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` }, { '@type': 'ListItem', position: 2, name: 'Guides', item: `${SITE}/guides/` }, { '@type': 'ListItem', position: 3, name: 'Muay Thai training holiday', item: URL }] };
 
@@ -215,7 +216,7 @@ ${nav()}
   <div class="hero-inner">
     <div class="hero-kicker">// Guide · Training holiday · stay-and-train</div>
     <h1 class="hero-h1" style="font-size:clamp(30px,5vw,48px); text-align:left;">Muay Thai <span class="accent-pink">training holiday.</span></h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">Plan a 1–4 week Muay Thai trip in Pattaya: which camps run real holidays, what you will pay, daily schedule, and how it compares to Phuket — from the team that hand-checks all 158 sport venues in the city.</p>
+    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:760px;">Compare a residential week, training-only passes and contact-first camps using dated operator prices, exact inclusions and a reversible first-booking plan.</p>
     <p class="hero-meta" style="text-align:left;">Updated ${TODAY} · Pattaya · <a href="/compare/">Compare camps</a> · <a href="/plan-my-trip/">Plan trip</a></p>
   </div>
 </section>

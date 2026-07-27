@@ -645,7 +645,7 @@ function serviceTypeForCategory(cat) {
 function mapPriceRangeToDollars(priceRange) {
   const raw = String(priceRange || '').trim();
   if (!raw) return undefined;
-  const bahtCount = (raw.match(/฿/g) || []).length || (raw.match(/à¸¿/g) || []).length;
+  const bahtCount = (raw.match(/฿/g) || []).length || (raw.match(/฿/g) || []).length;
   if (bahtCount) return '$'.repeat(Math.max(1, Math.min(4, bahtCount)));
   const cleaned = raw.replace(/\s+/g, '');
   if (cleaned.length <= 4) return '$'.repeat(Math.max(1, Math.min(4, cleaned.length)));

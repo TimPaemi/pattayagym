@@ -16,11 +16,11 @@ const GUIDES = [
   {
     slug: 'muay-thai-pattaya-beginners',
     crumb: 'Muay Thai for beginners',
-    kicker: 'Guide · Muay Thai · absolute beginners',
+    kicker: 'Guide · Muay Thai · beginners · current prices',
     title: 'Muay Thai in Pattaya for beginners | Pattaya.Gym',
-    desc: 'Which Pattaya Muay Thai gyms actually accept absolute beginners, what your first week feels like, gear checklist, realistic costs, and red flags for tourist traps.',
+    desc: 'Compare Pattaya Muay Thai beginner options by current dated prices, explicit level evidence, session format, timetable and questions still requiring confirmation.',
     h1: 'Muay Thai for <span class="accent-pink">beginners.</span>',
-    lede: 'Pattaya is one of the easiest cities in Thailand to start Muay Thai — if you pick the right camp. This guide is only for absolute beginners: zero experience, maybe zero fitness, first pad round ever.',
+    lede: 'Choose the exact beginner product, not a gym reputation. Compare explicit level claims, current prices, session formats and timetable evidence, then mark the gaps that still need a direct answer.',
     body: `
 <p><a href="/guides/best-for-beginners-pattaya/">Best for beginners</a> covers all sports. This page is <strong>Muay Thai only</strong> — the camps that patiently teach stance, guard, and basic combos without throwing you into hard sparring on day two.</p>
 

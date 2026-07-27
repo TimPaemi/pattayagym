@@ -15,11 +15,11 @@ const guides = [
     desc: 'Every padel and pickleball court in Pattaya: Play Padel, Pickleball Pattaya, Pattaya Padel Club, booking tips, and where to stay on Pratamnak Hill.',
     h1: 'Padel & <span class="accent-cyan">pickleball.</span>',
     lede: 'Pattaya has dedicated padel and pickleball courts before most Thai cities — indoor Pratamnak, lakeside Mabprachan, and social pickleball leagues. This guide maps where to book.',
-    body: require('./guide-bodies/padel-pickleball'),
+    body: require('./guide-bodies/padel-pickleball-enriched'),
     sisterLinks: [
-      { url: 'https://pattaya-restaurant-guide.com/', external: true, label: 'Pattaya Restaurant Guide', desc: 'Eat after court sessions' },
       { url: '/guides/best-gym-naklua-pratamnak-pattaya/', label: 'Pratamnak gyms', desc: 'Combine racquet with MT or iron' },
-      { url: 'https://pattaya-coffee.com/', external: true, label: 'Pattaya Coffee', desc: 'Remote work between matches' },
+      { url: '/guides/tennis-badminton-pattaya/', label: 'Tennis & badminton', desc: 'Other racquet options' },
+      { url: '/guides/pattaya-digital-nomad-fitness/', label: 'Digital nomad fitness', desc: 'Work between matches' },
     ],
   },
   {
@@ -28,14 +28,14 @@ const guides = [
     kicker: 'Guide · Long-stay · ED visa & training',
     readTime: '9 min read',
     title: 'Train Muay Thai in Thailand: visa guide for Pattaya | Pattaya.Gym',
-    desc: 'ED visa, tourist stay, and long-stay training in Pattaya: which visa fits 1 week vs 6 months, camp sponsorship, and links to Pattaya Visa Help.',
+    desc: 'ED visa, tourist stay, and long-stay training in Pattaya: which visa fits 1 week vs 6 months, camp sponsorship, and official-planning questions.',
     h1: 'Train here. <span class="accent-yellow">Stay legal.</span>',
     lede: 'Trip length picks your visa path — tourist holiday vs ED visa through a camp. This guide connects Pattaya training plans to the right immigration conversation without legal guesswork.',
     body: require('./guide-bodies/training-visa'),
     sisterLinks: [
-      { url: 'https://pattayavisahelp.com/', external: true, label: 'Pattaya Visa Help', desc: 'Applications, extensions, agents' },
-      { url: 'https://pattaya-medical.com/', external: true, label: 'Pattaya Medical', desc: 'Insurance and injury clinics' },
-      { url: 'https://pattaya-school-guide.com/', external: true, label: 'Pattaya School Guide', desc: 'Families relocating' },
+      { url: '/guides/muay-thai-training-holiday-pattaya/', label: 'Training holiday', desc: 'Short-stay planning' },
+      { url: '/guides/train-muay-thai-pattaya-1-week-1-month/', label: '1 week vs 1 month', desc: 'Trip-length planning' },
+      { url: '/guides/muay-thai-camps-with-accommodation-pattaya/', label: 'Camps with rooms', desc: 'Residential planning' },
     ],
   },
   {
@@ -50,7 +50,7 @@ const guides = [
     body: require('./guide-bodies/thai-gym-terms'),
     sisterLinks: [
       { url: '/guides/muay-thai-pattaya-beginners/', label: 'Muay Thai beginners', desc: 'First week expectations' },
-      { url: 'https://pattayavisahelp.com/', external: true, label: 'Pattaya Visa Help', desc: 'Immigration office trips' },
+      { url: '/guides/gym-day-pass-pattaya/', label: 'Gym day passes', desc: 'Check-in and first-visit questions' },
       { url: '/guides/english-speaking-muay-thai-pattaya/', label: 'English-speaking camps', desc: 'When you prefer zero Thai' },
     ],
   },

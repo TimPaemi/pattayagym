@@ -19,7 +19,6 @@ const guides = [
     sisterLinks: [
       { url: '/guides/best-dive-operators-pattaya/', label: 'Best dive operators', desc: 'Ranked PADI and SSI shops' },
       { url: '/guides/best-gym-sattahip-pattaya/', label: 'Na Jomtien & Sattahip', desc: 'Marina and south corridor' },
-      { url: 'https://mrweoutside.com/', external: true, label: 'Mr We Outside', desc: 'Outdoor adventure community' },
     ],
   },
 ];

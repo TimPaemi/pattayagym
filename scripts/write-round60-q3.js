@@ -41,17 +41,17 @@ const guides = [
   {
     slug: 'kids-youth-sport-pattaya',
     crumb: 'Kids & youth',
-    kicker: 'Guide · Football · trampoline · kids Muay Thai · Harbor Mall',
-    readTime: '12 min read',
-    title: 'Kids & youth sport in Pattaya | Football, trampoline, MT for kids | Pattaya.Gym',
-    desc: 'Where kids play sport in Pattaya — AF Academy football from age 3, FAST PRO UEFA coaching, Rusich Club, BOUNCE and JumpZ at Harbor Mall, and Muay Thai kids programmes at major camps.',
+    kicker: 'Guide · Youth football · martial arts · school sport · access',
+    readTime: '13 min read',
+    title: 'Kids & youth sport in Pattaya | Prices, ages and access | Pattaya.Gym',
+    desc: 'Compare Pattaya youth football, martial arts and school sport by age, current price, exact access and status, including closed and unverified records.',
     h1: 'Kids & youth <span class="accent-cyan">sport.</span>',
-    lede: 'Pattaya kids sport means football academies from age 3, trampoline parks stacked at Harbor Mall, and Muay Thai programmes at major camps — nine dedicated venues in our directory plus cross-category options. This guide maps each path for relocating and holiday families without inventing prices or schedules.',
+    lede: 'Choose among published football trials, age-banded combat classes, contact-first academies and enrolled-pupil school sport. Status matters: one trampoline record is closed and another is unverified.',
     body: require('./guide-bodies/kids-youth-sport-pattaya'),
     sisterLinks: [
-      { url: '/guides/pattaya-gyms-childcare-family-pools/', label: 'Childcare & pools', desc: 'Train while kids swim' },
-      { url: '/guides/family-friendly-pattaya/', label: 'Family-friendly', desc: 'Sport holidays with kids' },
-      { url: 'https://pattaya-school-guide.com/', external: true, label: 'School Guide', desc: 'International schools Pattaya' },
+      { url: '/guides/pattaya-gyms-childcare-family-pools/', label: 'Childcare & pools', desc: 'Access and supervision questions' },
+      { url: '/guides/family-friendly-pattaya/', label: 'Family-friendly', desc: 'Plan a household sport stay' },
+      { url: '/category/kids-youth/', label: 'Kids & youth records', desc: 'Check every current status' },
     ],
   },
   {
@@ -104,7 +104,12 @@ const guides = [
   },
 ];
 
-for (const g of guides) {
+const onlyArg = process.argv.find((arg) => arg.startsWith('--guide-only='));
+const onlySlug = onlyArg ? onlyArg.slice('--guide-only='.length) : '';
+const selectedGuides = onlySlug ? guides.filter((guide) => guide.slug === onlySlug) : guides;
+if (onlySlug && selectedGuides.length === 0) throw new Error(`Unknown guide slug: ${onlySlug}`);
+
+for (const g of selectedGuides) {
   const bytes = writeEditorialGuide(g);
   console.log(`Wrote /guides/${g.slug}/ (${(bytes / 1024).toFixed(1)} KB)`);
 }

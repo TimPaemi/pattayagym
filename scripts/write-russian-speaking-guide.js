@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * write-russian-speaking-guide.js — Full editorial rewrite (Q1 quality recovery).
+ * write-russian-speaking-guide.js — Evidence-led Russian-language sport guide.
  * Run: node scripts/write-russian-speaking-guide.js
  */
 
@@ -9,18 +9,18 @@ const { writeEditorialGuide } = require('./lib/editorial-guide-shell');
 const guide = {
   slug: 'pattaya-russian-speaking-sport',
   crumb: 'Russian-speaking sport',
-  kicker: 'Guide · Russian-speaking community · football · fitness · MT',
-  readTime: '14 min read',
-  title: 'Russian-speaking sport in Pattaya | Pattaya.Gym',
-  desc: 'Where to train in Pattaya with Russian-speaking coaches and staff — Rusich Club, AF Academy, Castra, Elite Gym, Yoga Pattaya Studio, Muay Thai camps, and long-stay logistics.',
+  kicker: 'Guide · Russian-language evidence · classes · booking checks',
+  readTime: '12 min read',
+  title: 'Russian-Speaking Sport in Pattaya | Pattaya.Gym',
+  desc: 'Evidence-led Russian-speaking sport in Pattaya: Rusich combat classes, multilingual yoga, language checks, current prices and booking questions.',
   h1: 'Russian-speaking <span class="accent-cyan">sport.</span>',
-  lede: 'Pattaya\'s Russian-speaking corridor runs Naklua through Jomtien and East Pattaya. This guide lists only venues where Russian (or trilingual) coaching is documented in our directory — football academies, gyms, yoga, Muay Thai, and watersports — with honest booking and area advice.',
+  lede: 'Compare the small set of Pattaya venues with current Russian-language evidence, then confirm the exact coach, class, date, price and location before booking.',
   body: require('./guide-bodies/pattaya-russian-speaking-sport'),
   sisterLinks: [
-    { url: '/guides/kids-youth-sport-pattaya/', label: 'Kids & youth sport', desc: 'Football academies and schools' },
-    { url: '/guides/english-speaking-muay-thai-pattaya/', label: 'English-speaking Muay Thai', desc: 'Multilingual camp shortlist' },
-    { url: '/guides/training-thailand-visa-pattaya/', label: 'Training & visa', desc: 'Long-stay sport stays' },
-    { url: 'https://pattayavisahelp.com/', external: true, label: 'Pattaya Visa Help', desc: 'DTV and reporting (sister site)' },
+    { url: '/guides/kids-youth-sport-pattaya/', label: 'Kids & youth sport', desc: 'Age groups and guardian checks' },
+    { url: '/guides/muay-thai-pattaya-beginners/', label: 'Beginner Muay Thai', desc: 'Choose the session before language' },
+    { url: '/guides/yoga-retreat-pattaya/', label: 'Pattaya yoga', desc: 'Studios, classes and booking checks' },
+    { url: '/guides/training-thailand-visa-pattaya/', label: 'Training and visa', desc: 'Long-stay planning boundaries' },
   ],
 };
 

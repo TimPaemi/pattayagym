@@ -18,7 +18,6 @@ const guides = [
     body: require('./guide-bodies/kids-youth-sport-pattaya'),
     sisterLinks: [
       { url: '/guides/pattaya-gyms-childcare-family-pools/', label: 'Childcare & pools', desc: 'Train while kids swim' },
-      { url: 'https://pattaya-school-guide.com/', external: true, label: 'School Guide', desc: 'International schools Pattaya' },
       { url: '/guides/family-friendly-pattaya/', label: 'Family-friendly', desc: 'Sport holidays with kids' },
     ],
   },

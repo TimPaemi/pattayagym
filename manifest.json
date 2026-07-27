@@ -1,31 +1,26 @@
 {
-  "name": "Pattaya Gym Directory",
-  "short_name": "Pattaya Gym",
+  "name": "Pattaya.Gym — Pattaya sport venue directory",
+  "short_name": "Pattaya.Gym",
   "id": "/",
-  "start_url": "/",
+  "start_url": "/?utm_source=pwa",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0b0b0d",
-  "theme_color": "#0b0b0d",
-  "description": "Independent directory of every gym, Muay Thai camp, golf course, dive operator, watersports, climbing, yoga and sport venue in Pattaya, Thailand. 157 hand-checked venues. No paid placements.",
-  "categories": [
-    "sports",
-    "travel",
-    "lifestyle"
-  ],
+  "background_color": "#f7f8f3",
+  "theme_color": "#f7f8f3",
+  "description": "Independent directory of every gym, Muay Thai camp, golf course, dive operator, watersports, climbing, yoga and sport venue in Pattaya, Thailand. Prices carry the date they were checked. No paid placements.",
+  "categories": ["sports", "travel", "lifestyle"],
   "lang": "en",
   "dir": "ltr",
   "orientation": "any",
   "icons": [
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "/brand/logo-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Search venues", "short_name": "Search", "url": "/search/" },
+    { "name": "Compare venues", "short_name": "Compare", "url": "/compare/" },
+    { "name": "Plan a trip", "short_name": "Plan", "url": "/plan-my-trip/" }
   ]
 }

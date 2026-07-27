@@ -11,10 +11,10 @@ hours: ""
 priceRange: ""
 status: unverified
 distinction: Historic Pattaya Muay Thai listing whose current operating status could not be confirmed
-verified: 2026-07-25
+verified: 2026-07-27
 sources:
   - https://www.google.com/maps/search/?api=1&query=Cho+Nateetong+Thai+Boxing+Camp+Pattaya
-description: Current operation, address, phone, hours and prices could not be confirmed from a first-hand source.
+description: Historic Pattaya Muay Thai identity retained as unverified because no exact current place or operator channel could be confirmed.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Cho+Nateetong+Thai+Boxing+Camp+Pattaya"
 tags: [unverified, muay-thai]
 ---
@@ -23,9 +23,9 @@ tags: [unverified, muay-thai]
 
 ## Current status
 
-Cho Nateetong appears in older Pattaya travel listings, but this refresh did not find a current owner channel or a live first-hand listing that was strong enough to confirm that the camp is operating. Older listings also conflict on its address and phone number.
+Cho Nateetong appears in older Pattaya travel listings, but the exact-name Maps search checked on 27 July 2026 returned other active Pattaya gyms rather than an exact current place. No current owner website or social channel was found to resolve the identity.
 
-The previous session price, timetable, phone number and Sukhumvit Soi 34 address have therefore been removed. Do not travel to this venue without confirming its current location and operation independently.
+The historical session price, timetable, phone number and Sukhumvit Soi 34 address therefore remain removed. This is an identity and existence failure, not a skip caused by missing prices. Do not travel to the legacy venue name without independently establishing a current operator and exact location.
 
 ## What remains unknown
 

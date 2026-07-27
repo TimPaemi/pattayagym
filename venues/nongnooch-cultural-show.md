@@ -27,29 +27,36 @@ tags: [cultural-show, martial-arts-demonstration, family, na-jomtien]
 
 # Nong Nooch Thai Cultural Show
 
-Nong Nooch's Thai Cultural Show is a **spectator attraction, not a martial-arts school or participatory class**. The operator describes a contemporary Thai cultural performance that includes staged martial-arts sequences. Visitors looking for coaching, sparring or a workout should choose a training venue instead.
+## What training is on offer
 
-The current event page lists four performances every day at **10:30, 11:30, 13:30 and 15:30**. The operator says the theatre holds about 2,030 people and accepts advance show bookings from 08:00 to 15:30. The wider botanical garden is listed as open daily from **08:00 to 18:00**. An admission-only ticket does not automatically mean that a cultural-show seat is included.
+Nong Nooch's Thai Cultural Show is a **spectator attraction, not a martial-arts school or participatory class**. The operator describes a contemporary Thai cultural performance containing staged martial-arts sequences. It does not advertise coaching, sparring or a workout.
 
-## Official ticket options checked 26 July 2026
+The current event page lists four performances daily at **10:30, 11:30, 13:30 and 15:30**. The operator says the theatre holds about 2,030 people and accepts advance show bookings from 08:00 to 15:30. Visitors seeking participation should compare the [Pattaya clubs directory](/category/clubs/) or [Muay Thai directory](/category/muay-thai/) instead.
 
-The operator's booking page displayed the following **foreign-tourist prices** for a visit selected on 26 July 2026:
+## What it costs
 
-- admission only: **THB 600 per adult** and **THB 400 per child**;
-- admission plus sightseeing bus: **THB 700 per adult** and **THB 600 per child**;
-- admission plus the Thai cultural show: **THB 800 per adult** and **THB 650 per child**; and
-- admission, cultural show, elephant show and sightseeing bus: **THB 1,000 per adult** and **THB 750 per child**.
+For a visit selected on **26 July 2026**, the operator booking page displayed foreign-tourist prices of **THB 600 adult / THB 400 child** for admission; **THB 700 / THB 600** with sightseeing bus; **THB 800 / THB 650** with the Thai cultural show; and **THB 1,000 / THB 750** for admission, cultural show, elephant show and sightseeing bus.
 
-The live page said the selected products were valid for five days, through 30 July 2026, and stated that no hidden costs were added. These are date-specific web prices, not a permanent tariff. Re-enter the intended visit date and read the exact package title before paying. The page checked did not clearly define the child age or height band, so families should obtain that rule directly rather than assuming that every minor receives the child price.
+Those were date-specific web products, not a permanent tariff. The page said the selected products were valid for five days through 30 July and that no hidden costs were added. Re-enter the intended date and read the package name before paying. Admission alone does not establish a show seat.
 
-## Choosing the right package
+## Who it suits — and who it does not
 
-Choose admission only when the garden is the purpose of the day. Choose the admission-plus-show product when the staged cultural programme matters but the sightseeing bus and elephant show do not. The largest package combines separate attractions; its higher amount should not be described as the price of the Thai cultural show alone.
+The cultural-show product may suit a visitor who wants a staged performance inside a broader garden visit. Choose admission-only if the garden is the purpose; choose the named admission-plus-show product if the cultural programme matters. The largest package combines separate attractions and must not be described as the price of the show alone.
 
-The show page gives dedicated booking numbers **+66 95 385 4105** and **+66 63 229 9588**. The current Maps listing supplies the main venue number shown above, **+66 81 919 2153**. When calling, name the date, performance time and exact package. Ask whether a seat is assigned, when to arrive, where the theatre entrance is and what happens if the garden itinerary makes the selected performance late.
+It does not suit someone seeking martial-arts instruction or an exercise session. Families and visitors sensitive to loud action should ask about sound, lighting and seating. No child band was clearly defined on the checked price page.
 
-## Planning the visit
+## Getting there
 
-Nong Nooch is at **34/1 Moo 7, Na Jomtien, Sattahip**, south of central Pattaya. Use the live garden pin and plan both the outward and return trip around the chosen performance rather than relying on a generic Na Jomtien label. Allow time between admission, transport inside the grounds and theatre entry.
+Nong Nooch is at **34/1 Moo 7, Na Jomtien, Sattahip**, south of central Pattaya. Use the exact garden pin and plan the return around the selected performance. The garden lists daily hours of **08:00-18:00**, but that wider window does not alter the four published show times.
 
-For children or anyone sensitive to loud staged action, ask the operator about sound, lighting and seating before booking. Also confirm accessibility, stroller handling and whether an accompanying adult needs the same package. The essential distinction is simple: this page records a cultural performance containing martial-arts choreography; it does not establish training, instructor credentials or a beginner lesson.
+Allow time between admission, movement inside the grounds and theatre entry. The [Sattahip area page](/area/sattahip/) provides regional context without promising a transfer, fare, parking place or walking time.
+
+## Before you go
+
+The show page gives **+66 95 385 4105** and **+66 63 229 9588** for booking; Maps lists the main venue number **+66 81 919 2153**. Name the visit date, performance and exact package. Ask whether a seat is assigned, when to arrive, where the theatre entrance is and what happens if the garden itinerary makes the selected performance late.
+
+Confirm current eligibility, accessibility, stroller handling, sound or lighting concerns and whether every accompanying adult needs the same product. Save the dated package description and cancellation terms.
+
+## What we could not verify
+
+The checked page did not clearly define the child age or height band, seat-assignment process, theatre re-entry, accessibility arrangements, stroller handling, sound intensity or late-arrival policy. The directory can verify current show times and dated package options; it does not establish training, instructor credentials or suitability for an individual.

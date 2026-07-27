@@ -16,7 +16,11 @@
     "html:validate": "npx --yes html-validate index.html 404.html compare/index.html search/index.html map/index.html find-my-coach/index.html plan-my-trip/index.html about/index.html methodology/index.html pattaya-sport-stats/index.html contact/index.html press/index.html favorites/index.html add-your-gym/index.html guides/index.html category/muay-thai/index.html category/fitness/index.html category/golf/index.html area/jomtien/index.html area/central-pattaya/index.html guides/best-muay-thai-pattaya/index.html",
     "html:validate-all": "npx --yes html-validate index.html 404.html compare/index.html search/index.html map/index.html find-my-coach/index.html plan-my-trip/index.html about/index.html methodology/index.html pattaya-sport-stats/index.html contact/index.html press/index.html favorites/index.html add-your-gym/index.html guides/index.html category/*/index.html area/*/index.html guides/*/index.html gyms/*/index.html",
     "check:no-network-links": "node scripts/check-no-network-links.js",
-    "prebuild": "node scripts/check-no-network-links.js"
+    "prebuild": "node scripts/check-no-network-links.js",
+    "verify:redirects": "node scripts/verify-redirects.js",
+    "fix:redirects": "node scripts/verify-redirects.js --fix",
+    "verify:encoding": "node scripts/verify-encoding.js",
+    "fix:encoding": "node scripts/verify-encoding.js --fix"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",

@@ -19,7 +19,7 @@ const guides = [
     sisterLinks: [
       { url: '/guides/family-friendly-pattaya/', label: 'Family-friendly', desc: 'Sport holidays with kids' },
       { url: '/guides/best-gym-sattahip-pattaya/', label: 'Na Jomtien & Sattahip', desc: 'Ramayana and resort pools south' },
-      { url: 'https://pattaya-medical.com/', external: true, label: 'Pattaya Medical', desc: 'Pool safety and minor injuries' },
+      { url: '/guides/hotel-gym-pattaya/', label: 'Hotel gym day passes', desc: 'When a pool pass and a gym pass are different products' },
     ],
   },
 ];

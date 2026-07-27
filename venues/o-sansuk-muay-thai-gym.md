@@ -28,7 +28,7 @@ O. Sansuk is a Muay Thai gym on Sukhumvit Pattaya Soi 61/1, east of the central 
 
 It belongs in the <a href="/category/muay-thai/">Pattaya Muay Thai directory</a> as an active contact-first gym with clearer operating periods than pricing. The <a href="/area/east-pattaya/">East Pattaya area page</a> helps compare the Sukhumvit-side location with inland camps and beach-district options.
 
-## Weekly hours checked 26 July 2026
+## What training is on offer
 
 The exact Maps listing publishes three weekday periods:
 
@@ -38,16 +38,30 @@ The exact Maps listing publishes three weekday periods:
 
 These are split business or training windows, not proof that the same group class starts at the beginning of every period. Holiday hours can also vary. Contact the gym with the exact date and ask whether the desired time is a group session, open training or a private appointment.
 
-## Training format and price
+## What it costs
 
 The current owner activity establishes private Muay Thai training, and the page categorises the venue as a sports club. It does not publish a complete permanent group timetable, session duration, beginner placement or named trainer roster. Ask whether a first-time visitor can join, which period suits the stated experience level and whether technical work, pads, bag work, clinch or sparring are part of that session. Do not assume contact work is compulsory or available.
 
 No current first-hand numeric tariff was published in the sources checked. Facebook displays only a broad low-price-band symbol, which cannot be converted into a Thai-baht amount or a specific product. Request the total for one group session, one private session and any weekly package separately. Ask whether registration, trainer time or equipment changes the amount. A blank directory price means unknown, not free.
 
-## Equipment and first visit
+## Who it suits — and who it does not
+
+The gym suits a visitor who can arrange the session directly and wants Muay Thai on the east side of the city. It is a stronger fit for someone comfortable with contact-first Thai gym booking than for someone who needs a published web checkout.
+
+It is a weaker fit for someone who must compare a public drop-in price, needs a guaranteed English-language beginner class or wants a residential package without making contact. The <a href="/guides/best-muay-thai-pattaya/">current Muay Thai guide</a> compares more transparent short-session and stay-and-train products.
+
+## Getting there
+
+Use the linked map rather than searching only by the English name. Maps publishes **29 Soi Sukhumvit Pattaya 61/1** and phone **+66 83 871 7761**; the owner page also lists **Vongsrichatree84@gmail.com**. The gym describes itself as opposite the former Max Muay Thai stadium site, which helps identify the corridor but should not replace the exact pin.
+
+## Before you go
 
 The public pages do not say whether gloves, wraps, shin guards or other protective equipment are lent, rented or sold. Confirm what to bring, footwear rules, changing and shower access, drinking water and whether personal belongings can be stored during training. If the session may include sparring or clinch work, ask the coach what protective equipment and prior experience are required.
 
-Use the linked map rather than searching only by the English name. Maps publishes **29 Soi Sukhumvit Pattaya 61/1** and phone **+66 83 871 7761**; the owner page also lists **Vongsrichatree84@gmail.com**. Send the date, preferred period, group or private format, experience level, equipment needs and complete-price request together. O. Sansuk is a useful current contact-first option with unusually clear weekly windows, but the exact class and tariff still need a direct reply.
+Send the date, preferred period, group or private format, experience level, equipment needs and complete-price request together. O. Sansuk is a useful current contact-first option with unusually clear weekly windows, but the exact class and tariff still need a direct reply.
 
-The gym suits a visitor who can arrange the session directly and wants Muay Thai on the east side of the city. It is a weaker fit for someone who must compare a published drop-in price, needs a guaranteed English-language beginner class or wants a residential package without making contact. The <a href="/guides/best-muay-thai-pattaya/">current Muay Thai guide</a> compares more transparent short-session and stay-and-train products.
+## What we could not verify
+
+- No current numeric baht tariff was published in the checked first-hand sources.
+- No complete class-by-class timetable, trainer roster or session duration list was found.
+- No public equipment-rental policy or language-of-instruction statement was published.

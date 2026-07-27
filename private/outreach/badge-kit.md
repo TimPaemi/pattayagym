@@ -14,7 +14,7 @@ more than any on-page change.
 
 ## Per-venue embed codes
 
-`venue-outreach.csv` has three ready columns for each of the 133 venues
+`venue-outreach.csv` has three ready columns for each of the 132 venues
 with websites:
 
 - `embed_html_badge` — SVG badge linking to the venue's listing

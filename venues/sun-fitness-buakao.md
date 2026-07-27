@@ -27,37 +27,36 @@ tags: [fitness, multi-location, soi-buakhao, pratamnak, naklua]
 
 # SUN Fitness Pattaya
 
-SUN Fitness operates three current Pattaya branches: **Soi Buakhao, Pratamnak Hill and Naklua**. Each branch has a live Maps identity and its own operator Facebook page. All three owner pages say that one membership card can be used across the three Pattaya branches, checked on **26 July 2026**.
+## What training is on offer
 
-That current operator statement corrects the previous directory note that cross-branch access could not be verified. It establishes member access across the group; it does not prove that a day pass, trial or promotion is valid at every branch. Ask the operator to confirm the access attached to the exact product being purchased.
+SUN Fitness operates three current Pattaya branches: **Soi Buakhao, Pratamnak Hill and Naklua**. Each has an exact Maps identity and an operator Facebook page. All three owner pages state that one membership card can be used across the Pattaya branches, checked on **26 July 2026**.
 
-## Branches and hours
+That statement supports cross-branch member access; it does not establish that the three sites have identical equipment, layouts, classes or staffed reception. The operator pages do not expose a dependable inventory. Compare the broader [fitness directory](/category/fitness/) if a particular training format matters.
 
-**Soi Buakhao** is the primary location in this record, at **281/4 Soi Buakhao**. Its current Maps and operator schedules publish **07:00-midnight Monday-Friday** and **09:00-midnight Saturday-Sunday**.
+## What it costs
 
-**Pratamnak Hill** is on **Kasetsin Soi 5**. Its owner page publishes the same schedule as Buakhao: **07:00-midnight Monday-Friday** and **09:00-midnight at weekends**. The exact Pratamnak Maps identity should be used for directions rather than the Buakhao pin.
+No stable current day-pass, monthly or annual tariff was visible on the operator pages. The former THB 1,090 amount remains excluded because it was not attached to a current first-hand rate card. A price in an old review or image is not promoted into the present tariff.
 
-**Naklua** is on Pattaya-Naklua Road at the Borussia Park location named by the branch page. It closes earlier: **07:00-22:00 Monday-Friday** and **09:00-22:00 Saturday-Sunday**. Do not extend the midnight closing of the other two branches to Naklua.
+Message the chosen branch or email **sunfitnessthailand@gmail.com** for the day, week and monthly totals. Ask about registration, card or deposit fees; start and expiry dates; payment and cancellation; and charges for lockers, towels, showers, classes or coaching. If cross-branch access drives the purchase, have the operator confirm that the exact quoted product works at all three sites.
 
-Public-holiday hours can differ. The branch pages are the most direct contact route because the current Maps listings do not publish a shared phone number.
+## Who it suits — and who it does not
 
-## Membership and price
+SUN may suit someone who wants a repeat gym brand across central Pattaya, Pratamnak and Naklua. A one-card statement can be useful for a member moving between those areas. Choose by the route and hours actually needed rather than assuming that access makes a farther branch the better workout.
 
-The operator pages publish the one-card rule but do not expose a stable current day-pass, monthly or annual tariff. The former THB 1,090 figure was not on a current first-hand tariff and remains excluded. A price appearing in an old customer review or image should not be treated as the present operator rate.
+It is a weaker fit for a short-stay visitor who needs an online day-pass price, a published class timetable or a confirmed equipment list before contact. The [gym day-pass guide](/guides/gym-day-pass-pattaya/) compares venues with more explicit visitor products.
 
-Before paying, message the chosen branch or email **sunfitnessthailand@gmail.com** and ask for:
+## Getting there
 
-- the day, week and monthly prices;
-- registration or card fees and any deposit;
-- whether a trial or day pass works at one branch or all three;
-- the start and expiry date of a membership;
-- payment methods, cancellation and branch-transfer terms; and
-- any charge for lockers, towels, showers, classes or coaching.
+The primary record is **Soi Buakhao, 281/4 Soi Buakhao**. That branch and Pratamnak on **Kasetsin Soi 5** publish **07:00-midnight Monday-Friday** and **09:00-midnight Saturday-Sunday**.
 
-If cross-branch access is the reason for joining, ask the operator to write the rule into the current quote. The public page says one card covers the three branches, but it does not describe replacement-card costs, staffed activation times or promotion exclusions.
+The Naklua branch is on Pattaya-Naklua Road at the Borussia Park location named by its page and closes earlier: **07:00-22:00 Monday-Friday** and **09:00-22:00 at weekends**. Use the exact branch pin; do not navigate to Buakhao for a Pratamnak or Naklua visit. The [Central Pattaya area page](/area/central-pattaya/) gives context for Buakhao only.
 
-## Choosing a branch
+## Before you go
 
-Choose by the route and the hours you will actually use. Buakhao is the central-city option in this record, Pratamnak serves the Kasetsin side of the hill, and Naklua is the north-Pattaya branch with the earlier close. One-card access can help a member who moves around Pattaya, but a longer journey is rarely worth it for an ordinary workout when another SUN branch is closer.
+Contact the chosen branch and name the product, date and intended arrival time. Confirm reception availability, first-entry or card activation steps, holiday hours and whether a visitor may buy a trial or day pass. Ask which facilities and training areas are present at that exact location.
 
-For a first visit, confirm the exact pin, reception availability and access product. Ask whether the training areas needed are present at that branch rather than assuming all three layouts or equipment inventories are identical. This record uses owner pages and branch listings for hours and access; it does not repeat equipment, cleanliness or crowding claims from customer reviews.
+For membership use, obtain cross-branch access, promotion exclusions, replacement-card charges and expiry terms in writing. Do not extend the midnight close of Buakhao and Pratamnak to Naklua.
+
+## What we could not verify
+
+The checked pages did not publish a stable tariff, shared phone, complete equipment list, class schedule, locker or towel terms, staffed activation periods, replacement-card charge or promotion exclusions. The directory can verify three current identities, their listed hours and the operator's one-card statement; it does not infer comparative size, cleanliness, crowding or coaching quality from customer reviews.

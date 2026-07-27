@@ -21,6 +21,12 @@ module.exports = `
 
 <p>The table is deliberately incomplete where the source is incomplete. A blank price is not a budget recommendation. It means the current operator tariff was not accessible during the recorded check and needs direct confirmation.</p>
 
+<h2>Adventure is not the same as watersports training</h2>
+
+<p>This guide deliberately stops short of turning every active outdoor or sea-sport operator into an “adventure attraction”. If the real plan is a booked dive day, certification route or Discover Scuba product, use <a href="/gyms/adventure-divers-pattaya/">Adventure Divers Pattaya</a> or the broader <a href="/guides/best-dive-operators-pattaya/">best dive operators guide</a> instead of forcing that purchase into a karting-versus-zipline comparison. Adventure Divers currently lists Discover Scuba Diving at ฿4,000 and two-dive day trips from ฿2,800 to ฿3,300, but those are qualification and inclusion-led dive products, not open-adrenaline attractions.</p>
+
+<p>The same separation helps with wind sport. <a href="/gyms/kba-kiteboarding-pattaya/">KBA Kiteboarding Asia Pattaya</a> is a current Blue Lagoon school whose operator pages list a one-hour kitesurf trial at ฿2,200, a six-hour beginner course at ฿11,000 and a twelve-hour course at ฿20,000, checked 27 July 2026. That is a structured Na Jomtien lesson ladder dependent on conditions and branch confirmation. It should be compared with other watersports schools, not with EasyKart, Bira or Tarzan. A useful Pattaya shortlist starts by naming the product correctly before comparing the headline number.</p>
+
 <h2>Skydiving: the highest booking commitment</h2>
 
 <p><a href="/gyms/thai-sky-adventures-skydive/">Thai Sky Adventures</a> operates in Nong Kham, Si Racha rather than central Pattaya. Its current operator site advertises tandem jumps from up to 13,000 feet with about 60 seconds of freefall, plus AFF and A-licence training. Those are operator claims tied to the exact tandem and price-list pages; they should not be generalized to every day because jumps depend on weather and operations.</p>

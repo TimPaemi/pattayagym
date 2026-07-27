@@ -213,9 +213,9 @@ const NETWORK_BLOCK = `
       <span class="network-card-name">Visa Help</span><span class="network-card-desc">Long-stay &amp; ED visa</span>
       <span class="network-card-name">School Guide</span><span class="network-card-desc">Families relocating</span>
       <span class="network-card-name">Pattaya Coffee</span><span class="network-card-desc">Remote work cafés</span>
-      <a href="https://pattayapersonaltrainer.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Personal Trainer</span><span class="network-card-desc">1-on-1 coaching</span></a>
-      <a href="https://pattayavilla.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Pattaya Villa</span><span class="network-card-desc">Long-stay accommodation</span></a>
-      <a href="https://mrweoutside.com/" class="network-card" target="_blank" rel="noopener noreferrer"><span class="network-card-name">Mr We Outside</span><span class="network-card-desc">Outdoor community</span></a>
+      <span class="network-card-name">Personal Trainer</span><span class="network-card-desc">1-on-1 coaching</span>
+      <span class="network-card-name">Pattaya Villa</span><span class="network-card-desc">Long-stay accommodation</span>
+      <span class="network-card-name">Mr We Outside</span><span class="network-card-desc">Outdoor community</span>
       <span class="network-card-name">Villa Stream</span><span class="network-card-desc">Life in Pattaya</span>
       <span class="network-card-name">Pattaya Medical</span><span class="network-card-desc">Clinics &amp; injury</span>
       <span class="network-card-name">PattayaPets</span><span class="network-card-desc">Vets &amp; pet life</span>

@@ -19,7 +19,6 @@ const guides = [
     sisterLinks: [
       { url: '/guides/family-friendly-pattaya/', label: 'Family-friendly', desc: 'Sport holidays with kids' },
       { url: '/guides/best-gym-east-pattaya/', label: 'East Pattaya', desc: 'Bean Cow + Kombat belt' },
-      { url: 'https://mrweoutside.com/', external: true, label: 'Mr We Outside', desc: 'Outdoor adventure community' },
     ],
   },
 ];

@@ -26,26 +26,32 @@ tags: [public-sports-center, multi-sport, jomtien, chaiyapruek, free-admission]
 
 The Eastern National Sports Center is a regional public sports complex on Chaiyapruek 2 Road. Thailand's DASTA public-facility record describes it as a centre for training, athlete camps and regional competition, with a large indoor-sports building and surrounding space used for recreation, rest and exercise. The same page explicitly says the general public and nearby visitors can use the area.
 
-## Hours and general admission checked 26 July 2026
+## What training is on offer
 
-DASTA lists ordinary opening from **09:00 to 20:00 every day** and states **no admission charge**. That is evidence for entry to the general public complex, not a universal promise that every court, room, field, organised class or event is free and available on demand.
+The DASTA text confirms a multi-sport public complex rather than one narrowly defined gym or court business. It supports organised training, athlete camps, regional competition and general public recreation. That means the record belongs in the [clubs and community-sport category](/category/clubs/) as a public-use venue with several possible sport uses, not as a fixed-schedule class provider.
 
-The facility is used for training camps and competitions, so access can change around an organised programme. Before travelling, name the sport and date and ask whether the required area has a public session, reservation, separate fee or equipment rule. Do not interpret the free-entry line as permission to enter a booked competition space or use specialised equipment without staff approval.
+The same source does not publish a reliable court-by-court inventory, lane count, room schedule or coaching menu in accessible text. The useful reading is that the site clearly exists, clearly operates and clearly allows public recreation, while the exact transaction for a named sport remains contact-first. Use the [Jomtien area page](/area/jomtien/) if you are comparing the wider Chaiyapruek corridor rather than this exact complex.
 
-## What the public source does and does not establish
+## What it costs
 
-The DASTA text confirms the indoor building and broad recreation purpose. It does not publish a complete court-by-court inventory, lane count, pitch timetable, class schedule or equipment-rental menu. The page includes a visual facilities and accessibility panel, but its colour-coded availability states are not reliable enough in accessible text to claim that every displayed item is currently provided. Contact the centre if a ramp, lift, accessible route, changing facility or specific toilet arrangement is essential.
-
-Food, shops, parking and several visitor categories also appear in that visual panel. Their presence as labels does not establish opening, capacity or a guaranteed service on the intended date. Bring only what the centre confirms for the planned activity.
-
-## Location and first visit
-
-The official address is **Chaiyapruek 2 Road, Pattaya City, Bang Lamung, Chonburi 20150**. DASTA's directions describe turning from Sukhumvit Road at the Chaiyapruek intersection, crossing the railway and continuing inland for about three kilometres. Use the exact map for the active entrance rather than navigating only to a broad “sports center” search result.
-
-The source also notes the nearby Pattaya City public park. That proximity can help identify the district, but it does not merge the park's rules or hours with the sports centre. First-time visitors should confirm the gate, parking area, event-day restrictions, changing or storage options and the precise public-use window. The strong current evidence is public recreation access, daily 09:00-20:00 hours and free general admission; the exact sport transaction remains contact-first.
+DASTA lists no admission charge for ordinary public entry, checked 2026-07-26. That supports free general access to the complex, not a guarantee that every court, room, field or organised activity is free on demand. If you are travelling for a specific activity, ask whether that area requires a booking, separate fee, event registration or equipment charge.
 
 ## Who it suits — and who it does not
 
-The centre suits someone seeking a public recreation complex and willing to confirm the exact sport area before arrival. It can also be relevant to an event participant whose organiser has named this venue. Browse the <a href="/category/clubs/">clubs and community-sport directory</a> for other non-commercial formats and the <a href="/area/jomtien/">Jomtien area page</a> for records around the wider Chaiyapruek corridor.
+The centre suits someone seeking a public recreation complex, a community-sport venue or an organiser-confirmed event location. It is also useful when you want a public rather than commercial sports site and are willing to confirm the exact sport area before arrival.
 
-It is not a dependable substitute for a bookable private court, a published class or a venue with a complete equipment menu. Families who need a scheduled, age-specific programme should start with the <a href="/guides/family-friendly-pattaya/">family-friendly sport guide</a> and still verify the chosen operator's eligibility and price. Free general entry at the sports centre does not resolve specialist booking, coaching or event access.
+It does not suit a reader who needs a transparent private-court booking flow, a published class schedule or a fixed equipment list. Families or short-stay visitors who need a named coached product should compare other records in the [clubs category](/category/clubs/) or the [family-friendly sport guide](/guides/family-friendly-pattaya/) first.
+
+## Getting there
+
+The official address is Chaiyapruek 2 Road, Pattaya City, Bang Lamung, Chonburi 20150. DASTA's directions describe turning from Sukhumvit Road at the Chaiyapruek intersection, crossing the railway and continuing inland for about three kilometres. Use the exact [Maps search](https://www.google.com/maps/search/?api=1&query=Eastern+National+Sports+Center+Pattaya) for the active entrance rather than navigating to a generic sports-centre label.
+
+## Before you go
+
+DASTA lists daily 09:00-20:00 ordinary opening. Even with that published window, confirm the gate, parking area, event-day restrictions, changing options and the public-use rule for the exact sport area you want. A public complex can be open while one hall or field is reserved.
+
+## What we could not verify
+
+- No dependable court-by-court inventory, lane count or field timetable was published in accessible text.
+- No stable class schedule, equipment-rental menu or public booking system was found.
+- The accessibility and amenity icons on the DASTA page were not specific enough in accessible text to verify every listed facility feature individually.

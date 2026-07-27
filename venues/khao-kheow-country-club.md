@@ -11,7 +11,7 @@ social:
 hours: Daily 06:00-19:00; tee times require confirmation
 priceRange: ""
 distinction: Si Racha golf club with current Pattaya society play
-verified: 2026-07-26
+verified: 2026-07-27
 sources:
   - https://www.facebook.com/khaokheowcountryclub/
   - http://khaokheowgolf.com/
@@ -24,36 +24,36 @@ tags: [golf, si-racha, bang-phra, call-ahead]
 
 # Khao Kheow Country Club
 
-Khao Kheow Country Club is an active golf club in **Bang Phra, Si Racha**, north of Pattaya. The current Maps listing supplies the address at **220/15 Bang Phra**, phone **+66 38 318 000** and daily business hours of **06:00-19:00**. Those hours identify the operating window, not a guaranteed visitor tee time.
+Khao Kheow Country Club is an active golf club in Bang Phra, Si Racha. Current Maps details establish the location, phone and operating window, while a March 2026 Pattaya Sports Club report documents recent organised play. The principal limitation is commercial: the operator's linked website does not provide a usable current visitor tariff or booking flow.
 
-The operator's Facebook identity describes the property as a Pete Dye course. A current Pattaya Sports Club society report documents play on the **B and C nines** on 7 March 2026, from the white tees, in a two-ball scramble format. That report is evidence that those nines were in active use for the society day. It is not an operator course-rotation promise, a complete hole count or a public tariff.
+## What training is on offer
 
-## Who this record suits
+This is a golf course rather than a documented lesson academy. The operator's Facebook identity describes the property as a Pete Dye course. A Pattaya Sports Club society report records play on the **B and C nines** on **7 March 2026**, from the white tees, in a two-ball scramble. That is dated evidence that those nines were used for that society day; it is not an operator promise about everyday rotation, a complete course specification or a visitor lesson.
 
-Khao Kheow is a book-ahead course option for a golfer willing to confirm the full playing arrangement directly. It is not a central Pattaya walk-in facility. The Bang Phra location makes the tee time, road route and return transport part of the decision; compare the complete day rather than only a green-fee headline from an outside reseller.
+Golfers comparing it with other courses can use the [Pattaya golf category](/category/golf/). No current operator source used here establishes a practice programme, resident professional, junior academy or equipment clinic.
 
-A society event and an ordinary visitor booking are different products. The March report describes its own competition format and field. It does not establish that an individual visitor can join a society group, use the same tees or receive the same rate. Contact the course for a direct booking or ask the relevant society separately about participation.
+## What it costs
 
-## Current website limitation
+No dependable current first-hand visitor tariff was found. Maps links `khaokheowgolf.com`, but the domain currently presents a bare WordPress placeholder rather than a useful rate or reservation page. The official Facebook identity confirms the club, but a visible booking post from 2023 is too old to use as a July 2026 price.
 
-Maps links **khaokheowgolf.com**, but the domain currently presents a bare WordPress placeholder rather than a useful course, booking or tariff page. It should not be treated as confirmation of a web rate or online reservation. The official Facebook page establishes the club identity, but its visible booking post is from 2023 and is too old to use as a 2026 price list.
+Call **+66 38 318 000** and request a dated total naming the green fee, caddie, cart or buggy, tax, weekday or weekend band, single-player rule and rental equipment. A reseller's “from” price should not be copied unless the date and inclusions match. The blank directory price means the direct amount was not found, not that play is free.
 
-## Price and booking questions
+## Who it suits — and who it does not
 
-No dependable current first-hand visitor tariff was found. Call the main number and request a written total for the intended date. Ask for:
+Khao Kheow may suit a golfer willing to book ahead and confirm the complete course-day arrangement. A society event and an individual visitor booking are different products: the March report does not show that a visitor can join that group, use the same tees or receive the same terms.
 
-- the green fee and whether it changes by weekday, weekend, holiday or tee-time band;
-- compulsory caddie and cart or buggy charges;
-- any single-player, shared-cart or minimum-party rule;
-- the nines or course rotation scheduled for the booking;
-- club, shoe or other equipment rental and the required dress code;
-- deposit, payment, cancellation and rain-check terms; and
-- the arrival time, bag-drop point and registration desk.
+It is not a central Pattaya walk-in practice venue, and it is a weak fit for anyone who requires an online operator tariff before making contact. The [best golf courses guide](/guides/best-golf-courses-pattaya/) explains why green fee, caddie, cart and transport need to be compared as one transaction.
 
-Do not copy a reseller's “from” price into the course record without matching the same date, inclusions and player conditions. A blank directory price means the current direct amount was not found, not that the course is inexpensive or free.
+## Getting there
 
-## Planning the golf day
+The current Maps profile lists **220/15 Moo 12, Bang Phra, Si Racha, Chonburi 20110**, phone **+66 38 318 000** and daily hours of **06:00-19:00**. Use the exact course pin and plan the return from the actual accommodation. The club sits north of Pattaya's beach districts; no checked source publishes a universal transfer, fare, journey time, public-transport route or vehicle-waiting rule.
 
-Use the exact Maps pin and build the route from the actual accommodation. Ask the course how early to arrive and whether a return vehicle should wait or return at an estimated finish time. A golfer arranging transport should leave flexibility for check-in, warm-up, course pace and any weather interruption rather than promising a fixed door-to-door duration.
+## Before you go
 
-Before paying, reconfirm the phone number, tee time, player names, handicap or experience requirements, full fee stack, caddie and cart arrangement, selected nines and transport pickup point. The current evidence supports an active course and recent organised play; it does not support an undated package price or a guaranteed course rotation.
+Obtain the tee time and player names in writing. Ask which nines are scheduled, how early to arrive, where bag drop and registration occur, and whether a handicap or minimum party applies. Reconfirm the complete fee stack, caddie and cart arrangement, dress code, club or shoe rental, deposit, cancellation and rain-check terms. Published business hours do not guarantee a tee time anywhere within the operating window.
+
+## What we could not verify
+
+- No current operator visitor rate card or functional online booking page was available.
+- The everyday course rotation, complete hole configuration, practice facilities and lesson provision were not established.
+- Rental prices, dress code, single-player rules, deposit and weather terms remain unconfirmed.

@@ -19,7 +19,6 @@ const guides = [
     sisterLinks: [
       { url: '/guides/best-gym-east-pattaya/', label: 'East Pattaya camps', desc: 'Kombat Group, Rambaa, Jungle Gym' },
       { url: '/guides/best-muay-thai-pattaya/', label: 'Best Muay Thai', desc: 'Ranked MT camps to pair with BJJ' },
-      { url: 'https://pattayavisahelp.com/', external: true, label: 'Pattaya Visa Help', desc: 'Education visa via fight camps' },
     ],
   },
 ];

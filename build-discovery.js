@@ -281,11 +281,11 @@ function venueCard(g) {
       <h3><a href="/gyms/${escHtml(g.id)}/">${escHtml(g.name)}</a></h3>
       <button class="favorite-btn" data-pg-favorite-id="${escHtml(g.id)}" data-pg-favorite-name="${escHtml(g.name)}" data-pg-favorite-category="${escHtml(g.category || '')}" data-pg-favorite-area="${escHtml(g.area || '')}" data-pg-favorite-price="${escHtml(g.priceRange || '')}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>
     </div>
-    ${g.area ? `<div class="cv-meta">📍 ${escHtml(g.area)}</div>` : ''}
-    ${g.hours ? `<div class="cv-meta">🕐 ${escHtml(g.hours)}</div>` : ''}
+${g.area ? `    <div class="cv-meta">📍 ${escHtml(g.area)}</div>` : ''}
+${g.hours ? `    <div class="cv-meta">🕐 ${escHtml(g.hours)}</div>` : ''}
     <p>${escHtml(g.description || '')}</p>
     <div class="cv-tags">
-      ${g.priceRange ? `<span class="cv-pill">💰 ${escHtml(g.priceRange)}</span>` : ''}
+${g.priceRange ? `      <span class="cv-pill">💰 ${escHtml(g.priceRange)}</span>` : ''}
       ${tags}
     </div>
     <a class="cv-cta" href="/gyms/${escHtml(g.id)}/">View full page -></a>
@@ -677,8 +677,8 @@ const GUIDES = [
     slug: 'luxury-sports-clubs-pattaya',
     title: 'Luxury Sports Clubs in Pattaya 2026',
     h1: 'Luxury sports clubs in Pattaya',
-    desc: 'Premium-tier sports and fitness clubs in Pattaya — 5-star hotel-attached facilities, ITF-rated tennis, championship golf, and members-only luxury training environments.',
-    intro: 'Pattaya is not just budget tourism — at the top tier, the city hosts genuinely world-class sports facilities. FITZ Club at Royal Cliff (triple-TripAdvisor Travelers\' Choice winner), Greta Sport Club\'s 6 covered ITF Plexipave tennis courts, championship Pete Dye and Jack Nicklaus golf, and Asia\'s largest polo + equestrian operation are all here.',
+    desc: 'Compare Pattaya premium sport by verified access: an outside-guest club pass, hotel-guest fitness, booked golf and contact-first sailing, polo and tennis.',
+    intro: 'Luxury does not prove public access. Pattaya\'s upper-tier records mix one published outside-guest club pass, registered-hotel-guest amenities, bookable golf rounds and contact-first sailing, polo and tournament tennis. Choose the product and eligibility before comparing facility lists.',
     pickerKey: 'luxury',
     filter: g => g.priceRange === '฿฿฿' || g.priceRange === '฿฿฿฿',
     rank: g => {
@@ -696,9 +696,9 @@ const GUIDES = [
       { label: '🎾 Premium Racquet Sports', take: 3 }
     ],
     faqs: [
-      { q: 'What is the most exclusive sports club in Pattaya?', a: 'FITZ Club at Royal Cliff Hotels is the headline luxury racquet/swim/fitness club — multi-award-winning. For golf, Siam Country Club Old Course and Phoenix Gold rank top-tier.' },
-      { q: 'Which Pattaya hotels have the best 5-star fitness facilities?', a: 'Hilton Pattaya, Andaz Jomtien (Hyatt), Centara Grand Mirage, Cape Dara, Mövenpick Siam Na Jomtien, Royal Cliff (Fitz Club), and Dusit Thani all offer day-pass access to genuinely premium facilities.' },
-      { q: 'Is there a luxury polo or equestrian club in Pattaya?', a: 'Thai Polo & Equestrian Club is the most prominent — internationally recognised, hosting tournaments. Horseshoe Point Resort is the second major equestrian destination.' },
+      { q: 'Which Pattaya luxury sports venue has a verified outside-guest day pass?', a: 'Fitz Club at Royal Cliff publishes a 2026 outside-guest pass covering its gym, pool, sauna and steam rooms. Tennis and squash are excluded and priced separately.' },
+      { q: 'Can non-residents use the Andaz, Marriott or Hilton hotel gyms?', a: 'No current public gym pass was found on the checked operator pages. Treat the facilities as registered-guest amenities unless the exact hotel provides written date-specific confirmation.' },
+      { q: 'How should Pattaya golf prices be compared?', a: 'Compare the required green fee, individual cart or buggy and caddie together, then add tip and rentals. A green-fee headline alone is not the complete round cost.' },
     ]
   },
   {
@@ -816,7 +816,7 @@ const GUIDES = [
           <tr><td><a href="/gyms/fitz-club/">Fitz Club</a></td><td>General fitness and pool; outside-guest day pass</td><td>2026 tariff checked 25 Jul: adult ฿800</td><td>The pass excludes tennis and squash; reserve coaching or courts separately.</td></tr>
           <tr><td><a href="/gyms/castra-gym/">Castra Gym</a></td><td>Muay Thai or BJJ group class with gym access</td><td>25 Jul 2026: group class ฿300</td><td>Exact discipline, experience level, equipment, class date and general-gym fee.</td></tr>
           <tr><td><a href="/gyms/baby-shark-swim-club-pattaya/">Baby Shark Swim School</a></td><td>Children’s swimming; assessment or trial enquiry</td><td>No stable current public course fee</td><td>Child’s age, water experience, class size, lesson length and make-up policy.</td></tr>
-          <tr><td><a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a></td><td>Padel; court plus one-hour coaching</td><td>25 Jul 2026: court ฿600-฿800/hour; coaching from ฿1,600</td><td>Number of players, equipment, balls, coach availability and total shared cost.</td></tr>
+          <tr><td><a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a></td><td>Padel; court plus one-hour coaching</td><td>27 Jul 2026: court ฿600-฿800/hour; coaching from ฿1,600</td><td>Number of players, equipment, balls, coach availability and total shared cost.</td></tr>
         </tbody>
       </table>
     </div>
@@ -841,6 +841,7 @@ const GUIDES = [
     <h2>Children’s sport: age group comes first</h2>
     <p>AF Academy publishes the strongest defined youth entry in this set: age groups from 3 to 17, a free first trial and a paid single-session option. The company uses multiple training locations, so the Naklua contact address is not automatically the child’s pitch. Send the child's age and experience and obtain the current ground, start time, coach language, footwear and guardian policy.</p>
     <p>Baby Shark Swim School is a contact-first alternative. Its current first-hand evidence supports an indoor heated saltwater pool, a children's swim-school identity and public weekly business hours, but not a stable course fee. Ask for an assessment or trial, the teaching ratio, lesson duration, term commitment, make-up rule, swimwear and whether a guardian must remain poolside. Do not choose a children's lesson solely from a broad opening-hours listing.</p>
+    <p><a href="/gyms/manta-kids-pattaya/">Manta Kids Pattaya</a> is another structured swim-school option that now has a fuller venue record but is still not ranked here because the public site exposes programme prices rather than a simple trial or one-off lesson product. Its current published ladder starts at ฿8,500 for Splash, Swirl and Swim Beginner, with Swim at ฿10,900, checked 27 July 2026. Parents should compare lesson count, age placement and make-up policy before treating those figures as like-for-like with any assessment-led school.</p>
 
     <h2>Karting is an activity product, not a driving lesson</h2>
     <p>EasyKart separates kids, regular, fast and two-seat kart products. Its 25 July 2026 page associated the kids kart with ages 7-13 and height above 125 cm. That is operator guidance, not a guarantee that every child can drive. Staff must make the final fit and safety decision. A first-timer should book the appropriate product, attend the briefing and avoid selecting a faster kart merely because the price table makes it available.</p>
@@ -1037,7 +1038,7 @@ const GUIDES = [
       <h2>Course format changes the question</h2>
       <p>Siam Country Club is a four-course operation. Its current site names the Old Course, Plantation, Waterside and Rolling Hills, opened in 1971, 2008, 2014 and 2020 respectively. “Siam Country Club” is not precise enough for a transfer or tee-time request. Name the course and use its exact pin.</p>
       <p>Burapha documents 36 holes. The Tourism Authority of Thailand gives par 144 and 14,132 yards for the whole complex; those totals do not describe the specific 18-hole combination assigned to one visitor. Ask which nines make up the booking, which tees suit the group and whether any loop or practice facility is unavailable.</p>
-      <p>Laem Chabang, Phoenix Gold, Pattana and Greenwood each document 27 holes or three nine-hole loops. At Phoenix the named nines are Mountain, Lakes and Ocean. A quote should identify the combination in play rather than leaving “18 holes” as the only description. For Greenwood, the official site confirms three nines but its public green-fee page did not provide a dependable extractable current number during the check.</p>
+      <p>Laem Chabang, Phoenix Gold, Pattana and Greenwood each document 27 holes or three nine-hole loops. At Phoenix the named nines are Mountain, Lakes and Ocean. A quote should identify the combination in play rather than leaving “18 holes” as the only description. For Greenwood, the official site still confirmed three nines and Peter W. Thomson design on 27 July 2026, but its public green-fee page still did not expose a dependable extractable current number, so it remains a contact-first comparison rather than a price-table entry.</p>
       <p>Chee Chan, Pattaya Country Club, St Andrews 2000, Treasure Hill, Bangpra and Mountain Shadow are documented as 18-hole records. That makes the identity simpler, but it does not answer tee choice, cart policy, temporary work or start-interval questions. Khao Kheow remains in the shortlist because its current identity and activity are supported; obtain the exact course arrangement and tariff directly.</p>
 
       <h2>Location and route planning</h2>
@@ -1085,8 +1086,8 @@ const GUIDES = [
     slug: 'pattaya-digital-nomad-fitness',
     title: 'Pattaya Digital Nomad Fitness Guide | Pattaya Gym',
     h1: 'Pattaya fitness for digital nomads',
-    desc: 'Flexible Pattaya gyms, yoga studios, runs, pools and Muay Thai camps for remote workers who need short memberships, late hours and easy routines.',
-    intro: 'Remote workers need frictionless training more than perfect programming. This guide favours venues with 24-hour access, no-contract plans, central or Jomtien locations, English-friendly staff, and routines that fit around calls.',
+    desc: 'Compare Pattaya 24-hour member gyms, short passes, yoga and scheduled Muay Thai without assuming overnight visitor access.',
+    intro: 'A remote-work routine depends on the exact access product, staffed arrival window, class clock and route. This guide separates 24-hour member entry from reception hours and compares published short passes with contact-first gyms.',
     pickerKey: 'nomads',
     filter: g => {
       const text = textForVenue(g);
@@ -1109,24 +1110,40 @@ const GUIDES = [
       { label: 'Workday reset sessions', take: 5 },
       { label: 'Outdoor routines before or after calls', take: 4 }
     ],
+    primerHtml: () => `
+  <section class="about" aria-labelledby="nomad-guide-decision" style="margin-top: 32px;">
+    <h2 id="nomad-guide-decision">If you only read one thing</h2>
+    <p><strong>Choose the access clock before the venue name.</strong> A 24-hour door for an enrolled member is not proof of overnight reception or an instant tourist pass. A class timetable is not all-day access, and a monthly tariff is not a day-pass promise. Match the product to the gap between calls, then check the first-visit process, exact pin and complete dated price.</p>
+    <p>For the lowest-uncertainty purchase in this set, <a href="/gyms/elite-gym-fitness-pattaya/">Elite Gym &amp; Fitness</a> publishes short access from a THB 300 day to a THB 2,200 month. <a href="/gyms/yoga-pattaya/">Yoga Pattaya</a> publishes class prices, while <a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a> publishes a fixed afternoon class clock. The 24-hour chains are useful when member access matters, but current Pattaya visitor prices or staffed-arrival details still need checking.</p>
+    <div class="table-wrap">
+      <table class="price-table">
+        <thead><tr><th>Remote-work need</th><th>Current evidence</th><th>Decision limit</th></tr></thead>
+        <tbody>
+          <tr><td>Member access at any hour</td><td><a href="/gyms/jetts-fitness-pattaya/">Jetts Little Walk</a>: 24-hour member access; staff Mon-Fri 06:00-22:00, weekends and public holidays 08:00-20:00</td><td>No current Pattaya public price was found; arrive during staff hours for first registration</td></tr>
+          <tr><td>Two 24-hour branch choices</td><td><a href="/gyms/anytime-fitness-pattaya/">Anytime Fitness Pattaya</a>: separate Again Pattaya and Bukis Point branches with 24-hour member access</td><td>Staff hours and visitor price were not published in the checked branch material</td></tr>
+          <tr><td>Large central 24-hour floor</td><td><a href="/gyms/fitness-7/">Fitness 7</a>: 24 hours; operator describes 2,000 m² and named equipment areas</td><td>No current public visitor tariff or overnight registration rule was found</td></tr>
+          <tr><td>Published short gym pass</td><td><a href="/gyms/elite-gym-fitness-pattaya/">Elite Gym &amp; Fitness</a>: THB 300 day, THB 1,200 week, THB 2,200 month</td><td>Daily hours are 06:30-22:00, not 24 hours</td></tr>
+          <tr><td>Booked yoga reset</td><td><a href="/gyms/yoga-pattaya/">Yoga Pattaya</a>: THB 500 standard group drop-in; THB 600 Ashtanga drop-in</td><td>Use the current timetable; a price does not reserve a class</td></tr>
+          <tr><td>Fixed combat session</td><td><a href="/gyms/wko-muay-thai/">ISS</a>: boxing/Muay Thai classes Mon-Sat 14:00-15:30; THB 1,000 day, THB 4,000 week, THB 8,000 month</td><td>General gym access is a separately priced product</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Trade-off:</strong> round-the-clock member entry maximises schedule freedom after onboarding, while a published short pass reduces price uncertainty. A scheduled class gives instruction but fixes the clock. Choose the constraint that would otherwise break the workday.</p>
+  </section>`,
     faqs: [
-      { q: 'What is the best Pattaya gym setup for a digital nomad?', a: 'Use a no-contract chain or 24-hour gym for lifting, then add one low-friction recovery option such as yoga, swimming, beach running or Muay Thai once or twice a week.' },
-      { q: 'Which Pattaya areas are easiest for remote-worker fitness routines?', a: 'Central Pattaya works best for late access and chain gyms. Jomtien works better for beach running, yoga and calmer long-stay routines.' },
-      { q: 'Can I train without committing to a long membership?', a: 'Yes. Many Pattaya gyms offer day passes, weekly passes or no-contract memberships. Muay Thai camps also commonly accept drop-in classes.' }
+      { q: 'Does a 24-hour Pattaya gym accept first-time visitors overnight?', a: 'Not necessarily. Jetts, Anytime and Fitness 7 publish round-the-clock access or operation, but the checked sources do not establish overnight reception or instant visitor registration. Confirm the branch, staffed arrival window, access method and complete price.' },
+      { q: 'Which Pattaya fitness options publish short-stay prices?', a: 'Elite published THB 300 for a day, THB 1,200 for a week and THB 2,200 for a month on 27 July 2026. Yoga Pattaya and ISS publish class products, but those are scheduled instruction rather than unrestricted gym access.' },
+      { q: 'How should a remote worker choose between a gym and a class?', a: 'Choose a gym when flexible access is the main constraint and a class when coaching is worth a fixed start time. Check travel time, first-entry rules, exact inclusions and cancellation terms before placing either around calls.' }
     ],
-    extraHtml: sorted => {
-      const jetts = sorted.find(g => g.id === 'jetts-fitness-pattaya');
-      const beach = sorted.find(g => /beach|jomtien/i.test(g.area || '') && g.category === 'clubs');
-      return `<article class="venue-body guide-extra">
-        <h2>Sample remote-worker weekly routine</h2>
-        <ul>
-          <li><strong>Monday and Thursday:</strong> lift at ${jetts ? `<a href="/gyms/${jetts.id}/">a no-contract Jetts branch</a>` : 'a no-contract chain gym'} before dinner, when air-conditioned gyms are quieter.</li>
-          <li><strong>Tuesday:</strong> use a yoga or mobility class as a screen-break day rather than another maximal session.</li>
-          <li><strong>Wednesday:</strong> train Muay Thai technique only; avoid hard sparring before late calls.</li>
-          <li><strong>Weekend:</strong> use ${beach ? `<a href="/gyms/${beach.id}/">the beach-running option</a>` : 'Jomtien or Pattaya Beach'} for easy cardio, then keep one full rest day.</li>
-        </ul>
-      </article>`;
-    }
+    extraHtml: () => `<article class="venue-body guide-extra">
+      <h2>A three-step remote-work test</h2>
+      <ol>
+        <li><strong>Protect one repeatable time window.</strong> Use a 24-hour member product only after the access method works; use a class only if its exact start survives the meeting calendar.</li>
+        <li><strong>Test the smallest published commitment.</strong> A day, single class or written trial answer is more reversible than an assumed monthly membership.</li>
+        <li><strong>Extend after the route works.</strong> Recheck first-entry staffing, class booking, towel or locker terms, holiday changes and the full renewal or cancellation amount.</li>
+      </ol>
+      <p>No venue in this guide is ranked for Wi-Fi, coworking space, measured quietness or the quality of a first-hand workout. Those claims were not established by the checked operator sources.</p>
+    </article>`
   },
   {
     slug: 'female-friendly-gyms-pattaya',
@@ -1178,8 +1195,8 @@ const GUIDES = [
     slug: 'pattaya-gyms-childcare-family-pools',
     title: 'Pattaya Gyms With Childcare and Pools | Pattaya Gym',
     h1: 'Pattaya gyms with childcare, kids sport and family pools',
-    desc: 'Family-friendly Pattaya gyms, pools, kids academies and water parks for parents who need safe activities, swim time and child-friendly sport options.',
-    intro: 'This guide is for parents who still want to train. It favours pools, kids academies, supervised sport programmes, hotel clubs and large family venues where children have a genuine activity instead of waiting beside the equipment.',
+    desc: 'Compare Pattaya family pool passes, kids sport lessons and guest-only facilities without confusing those products with childcare.',
+    intro: 'Childcare, a coached children’s class, family leisure access and a hotel Kids Club are different products. This guide identifies what each current source actually establishes and keeps supervision or parent-training claims out unless an operator publishes them.',
     pickerKey: 'childcare-pools',
     filter: g => {
       const text = textForVenue(g);
@@ -1201,10 +1218,29 @@ const GUIDES = [
       { label: 'Kids academies and coached sport', take: 6 },
       { label: 'Parent-friendly training bases', take: 4 }
     ],
+    primerHtml: () => `
+  <section class="about" aria-labelledby="family-guide-decision" style="margin-top: 32px;">
+    <h2 id="family-guide-decision">If you only read one thing</h2>
+    <p><strong>A child being admitted is not the same as a child being supervised.</strong> A pool day pass establishes leisure access; a coached academy session establishes instruction for its named age group and time; a hotel Kids Club may be restricted to registered guests. None automatically authorises a parent to leave the child or train elsewhere. Obtain the exact supervision, check-in, pickup and guardian rules in writing.</p>
+    <div class="table-wrap">
+      <table class="price-table">
+        <thead><tr><th>Option</th><th>Verified product</th><th>What it does not establish</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/gyms/hard-rock-pool/">Hard Rock Hotel pool</a></td><td>Non-resident leisure pool 09:00-19:00; THB 500 adult with selected cocktail, THB 400 child under 12 with fruit punch</td><td>Childcare, a lap lane or permission for a guardian to leave</td></tr>
+          <tr><td><a href="/gyms/nara-maze-pool-day-pass/">Nara Maze</a></td><td>Non-guest pool 09:00-18:00; THB 500 net with water, smoothie and 20% food-and-drink discount excluding alcohol</td><td>Coached swimming, childcare or a separate gym product</td></tr>
+          <tr><td><a href="/gyms/fitz-club-pattaya/">Fitz Club</a></td><td>2026 outside-guest facilities pass: THB 800 adult, THB 400 child under 12</td><td>That every facility is appropriate for every child or that supervision is included</td></tr>
+          <tr><td><a href="/gyms/af-academy-pattaya/">AF Academy</a></td><td>Ages 3-17; free first trial, THB 600 single session, THB 3,000 for eight, THB 3,600 for twelve</td><td>A central-Pattaya class, childcare outside the lesson or automatic age-group placement</td></tr>
+          <tr><td><a href="/gyms/ramayana-water-park/">Ramayana Water Park</a></td><td>Tourist online price THB 1,099 or walk-in THB 1,199 for guests 106 cm and taller under the displayed offer; below 106 cm free</td><td>Childcare, sports coaching or permission to leave a child unaccompanied</td></tr>
+          <tr><td><a href="/gyms/renaissance-pattaya-fitness/">Renaissance Pattaya</a></td><td>Fitness centre, main, sunset and kids pools, and a Kids Club are documented for registered guests</td><td>A public day pass or outside-family access</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Trade-off:</strong> a public pool pass gives a clear leisure product but not childcare. A coached academy gives a named session but may be at a specific training ground. A guest amenity can reduce on-site coordination only for eligible hotel guests. Choose the access and supervision model before comparing facilities.</p>
+  </section>`,
     faqs: [
-      { q: 'Do Pattaya gyms offer childcare?', a: 'Dedicated childcare is uncommon, but family pools, kids academies and hotel clubs solve the same problem by giving children a supervised or structured activity while adults train nearby.' },
-      { q: 'Which Pattaya venues are best for children who need to burn energy?', a: 'Water parks, football academies, swim schools, trampoline or adventure venues, and hotel pool clubs are usually better than conventional gyms.' },
-      { q: 'Can parents train while kids take lessons?', a: 'Yes at multi-sport clubs, hotel clubs and some academies. Confirm supervision, pickup rules and lesson times directly before relying on it.' }
+      { q: 'Do Pattaya gyms in this guide publish childcare?', a: 'No checked source establishes a general gym childcare service. The guide documents family pool admission, children’s lessons, water-park access and guest amenities; each has different supervision and guardian rules.' },
+      { q: 'Which Pattaya options publish current family prices?', a: 'Hard Rock, Nara Maze, Fitz Club, AF Academy and Ramayana publish named current products in their records. Compare eligibility, age or height rules, hours, inclusions and the complete family total rather than the smallest headline amount.' },
+      { q: 'Can a parent train while a child attends one of these products?', a: 'Do not assume so. Ask whether the child is continuously supervised, whether the guardian must remain poolside or on the premises, who may check in and collect the child, and whether the adult fitness area is a separate eligible product.' }
     ]
   },
   {
@@ -1234,10 +1270,79 @@ const GUIDES = [
       { label: 'Low-impact racquet and golf choices', take: 6 },
       { label: 'Easy public routes and community sport', take: 4 }
     ],
+    primerHtml: () => `<section class="venue-body guide-extra">
+      <p><strong>If you only read one thing: “low impact” is a planning label, not a medical clearance.</strong> Choose the exact product that matches the person's current ability, obtain clinical advice when health or recovery is involved, and confirm the session, access, total price and route before paying. A pool, yoga studio, rehabilitation department and social boules club solve different problems and should not be ranked as interchangeable exercise.</p>
+
+      <p>This guide uses current Pattaya directory records to compare access models. It does not diagnose a condition, prescribe exercise or imply a first-hand visit. The strongest options below publish either a defined outside-guest product, a current timetable or a clinical service description. Where a fee or suitability rule is missing, the correct next step is a direct enquiry, not a guessed price or a recommendation based on reviews.</p>
+
+      <h2>Match the activity to the real constraint</h2>
+
+      <div class="table-wrap">
+      <table class="price-table">
+        <thead><tr><th>Current option</th><th>What the source establishes</th><th>Main unresolved question</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/gyms/bangkok-hospital-pattaya-rehab/">Bangkok Hospital Pattaya Rehabilitation Center</a></td><td>Hospital-based assessment, physical and occupational therapy and an exercise zone; daily centre hours 08:00-20:00</td><td>The assessed treatment plan, appointment route, ordinary tariff, insurance and language support</td></tr>
+          <tr><td><a href="/gyms/hard-rock-pool/">Hard Rock Hotel pool</a></td><td>Non-resident leisure-pool access 09:00-19:00; THB 500 adult with selected cocktail and THB 400 child under 12 with fruit punch</td><td>Lane suitability, towel, locker, capacity and the child's complete supervision rule</td></tr>
+          <tr><td><a href="/gyms/nara-maze-pool-day-pass/">Nara Maze at Terra Nara</a></td><td>THB 500 net non-guest leisure-pool pass 09:00-18:00 with water, one smoothie and a food-and-drink discount excluding alcohol</td><td>Child pricing, lane dimensions, towels, lockers, parking and any reservation limit</td></tr>
+          <tr><td><a href="/gyms/fitz-club/">Fitz Club</a></td><td>2026 outside-guest facilities pass at THB 800 adult or THB 400 child under 12 for gym, pool, sauna and steam</td><td>Whether the chosen activity is suitable; tennis, squash, coaching and other court products are separate</td></tr>
+          <tr><td><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a></td><td>Group and private yoga, standard one-hour drop-in at THB 500 and Ashtanga at THB 600; current pass menu</td><td>The live class, level, teacher, language and any individual health constraint</td></tr>
+          <tr><td><a href="/gyms/pattaya-petanque-club/">Pattaya Sai 3 Petanque Club</a></td><td>Current central club identity with listed 14:00-midnight hours</td><td>Visitor access, current fee, equipment, language, organised play and the correct overlapping entrance</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <p><strong>Trade-off:</strong> the clearest public price may buy leisure rather than training. A clinical department offers assessment rather than casual entry. A social club can reduce formal structure but may require the most contact. Decide which uncertainty matters most before comparing the headline amount.</p>
+
+      <h2>Clinical rehabilitation is not a gym category</h2>
+
+      <p><a href="/gyms/bangkok-hospital-pattaya-rehab/">Bangkok Hospital Pattaya Rehabilitation Center</a> belongs in this guide only as a clinical route. Its operator describes physician assessment, physical and occupational therapy, treatment rooms and an exercise zone for post-orthopaedic, musculoskeletal and neurological needs. That evidence does not establish a public gym pass or allow this directory to select a treatment.</p>
+
+      <p>Contact the centre with the reason for the appointment and ask whether the first booking should be with a physician or therapist. Confirm referrals, imaging or operation notes, medication information, language support, estimate and insurance pre-authorisation. The centre's 08:00-20:00 listing is not the same as the wider hospital's round-the-clock operation. For an emergency, use the appropriate hospital emergency pathway rather than a directory guide.</p>
+
+      <h2>Pool access: leisure product versus training product</h2>
+
+      <p><a href="/gyms/hard-rock-pool/">Hard Rock Hotel pool</a> and <a href="/gyms/nara-maze-pool-day-pass/">Nara Maze</a> publish explicit non-resident passes. That makes eligibility and the core price clearer than at a hotel that merely advertises a pool to registered guests. Both are documented as leisure settings; neither record publishes lap length, reserved training lanes or a coached programme.</p>
+
+      <p><a href="/gyms/fitz-club/">Fitz Club</a> offers a broader facilities pass that includes its gym, pool, sauna and steam. The same pass excludes tennis and squash, which have separate prices. A wider inclusion list can be useful, but it also creates more suitability questions: confirm which facilities the visitor intends to use, child eligibility, supervision, current hours and any reservation procedure. Do not infer that a sauna, steam room or gym floor is medically appropriate because it appears in a package.</p>
+
+      <p>For more pool records, use the <a href="/guides/swimming-pools-pattaya/">Pattaya pool guide</a>. It distinguishes public access, hotel leisure passes, children's instruction and unverified municipal access. If the goal is continuous lap work, require a source that states dimensions or lane access rather than treating a large leisure-pool area as proof.</p>
+
+      <h2>Yoga and controlled studio sessions</h2>
+
+      <p><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> publishes named styles, drop-ins, passes and teaching languages. That is useful transaction evidence, but “open level” does not guarantee that a class is appropriate for every older beginner. Ask for the exact style, pace, duration, teacher and language. Describe balance, floor-transfer or movement constraints and ask whether a suitable variation is part of that session. Seek qualified medical advice when an injury or condition affects participation.</p>
+
+      <p><a href="/gyms/one-d-yoga-studio/">ONE-D Yoga</a> has a current identity and morning and selected evening listing hours but no public tariff or class-by-class schedule. <a href="/gyms/balance-yoga-studio-pattaya/">Balance Yoga</a> publishes several prices but its accessible timetable was stale at verification. Both remain legitimate contact-first options. Missing schedules or prices do not make them closed; they simply make them less predictable for a visitor who needs a fixed, documented product.</p>
+
+      <h2>Social boules and other community choices</h2>
+
+      <p><a href="/gyms/pattaya-petanque-club/">Pattaya Sai 3 Petanque Club</a> is a current central identity with afternoon-to-midnight listed hours. Its record does not establish a beginner lesson, visitor fee, supplied boules or English-language organiser. Call before travelling and ask whether the intended time has casual play, practice or an event, which of the nearby overlapping pins to use and what equipment is needed.</p>
+
+      <p><a href="/gyms/pattaya-lawn-bowls/">Pattaya lawn bowls</a> groups several facilities and roll-up information, so the exact site matters. Do not transfer a price, schedule or access rule from one bowls location to another. The <a href="/guides/running-cycling-clubs-pattaya/">community-sport guide</a> provides more club options but should not be used as a medical ranking.</p>
+
+      <p>Racquet labels also need care. Pickleball, badminton and tennis can be adjusted in pace, but this guide does not declare them low-impact for a particular person. Use the <a href="/guides/padel-pickleball-pattaya/">padel and pickleball guide</a> or <a href="/guides/tennis-badminton-pattaya/">tennis and badminton guide</a> to find a current booking product, then ask about coaching, surface, doubles format, rest and equipment. A smaller court or social format does not replace individual advice.</p>
+
+      <h2>Heat, timing and route planning without invented guarantees</h2>
+
+      <p>Choose a repeatable time from the venue's current schedule. Indoor pools and studios reduce some weather uncertainty, while beach, walking, golf and outdoor club options remain exposed to conditions. This guide does not prescribe a universal “safe” hour. Ask the venue or organiser about the intended date, and make an individual plan for hydration, medication, sun exposure and transport with appropriate professional advice where needed.</p>
+
+      <p>Use exact pins and entrances. Fitz Club is inside Royal Cliff on Pratamnak; Balance Yoga is inside a condominium; the rehabilitation centre is on the third floor of Building A at Bangkok Hospital Pattaya; Nara Maze is inside Terra Nara. An area page such as <a href="/area/central-pattaya/">Central Pattaya</a> or <a href="/area/naklua/">Naklua</a> provides context but does not establish a walk time, step-free route, parking space or return fare.</p>
+
+      <h2>A low-commitment booking sequence</h2>
+
+      <ol>
+        <li><strong>Define the need.</strong> Separate clinical rehabilitation, independent exercise, supervised instruction and social play.</li>
+        <li><strong>Choose one exact product.</strong> Use a dated day pass, drop-in, assessment or confirmed visitor session rather than a broad venue reputation.</li>
+        <li><strong>State constraints.</strong> Ask about movement, language, access, changing facilities, guardian or companion rules and the exact entrance.</li>
+        <li><strong>Get the complete total.</strong> Include registration, equipment, towels, lockers, coaching, transport and cancellation where relevant.</li>
+        <li><strong>Extend only after the product fits.</strong> A longer package is useful only when the route, schedule, access and individual response are workable.</li>
+      </ol>
+
+      <p>The directory can verify current source statements and unresolved gaps; it cannot guarantee future availability, a health outcome or how an individual session will feel. Reconfirm any time-sensitive detail directly and retain the venue's written answer.</p>
+    </section>`,
     faqs: [
-      { q: 'What is the safest sport for seniors in Pattaya?', a: 'Swimming, walking routes, beginner yoga, golf practice and pickleball are usually the safest starting points because intensity can be scaled easily.' },
-      { q: 'Are Pattaya gyms suitable for older beginners?', a: 'Some are. Choose air-conditioned commercial gyms, hotel clubs or coached studios rather than hardcore bodybuilding rooms if joint safety and supervision matter.' },
-      { q: 'When should seniors train outdoors in Pattaya?', a: 'Early morning is best. Heat and humidity rise quickly after 9am, so carry water and avoid peak-afternoon outdoor sessions.' }
+      { q: 'Does “low impact” mean an activity is medically appropriate?', a: 'No. It is a planning label, not a diagnosis or clearance. Choose the exact product, describe relevant constraints, and obtain qualified medical guidance when health, injury or recovery affects participation.' },
+      { q: 'Which Pattaya options publish outside-guest access?', a: 'Hard Rock and Nara Maze publish non-resident leisure-pool passes, while Fitz Club publishes a broader outside-guest facilities pass. Compare the exact inclusions and unresolved lane, supervision, locker and reservation rules.' },
+      { q: 'Should a confirmed venue be removed when its price is missing?', a: 'No. A missing public tariff is a contact task, not evidence of closure. Ask the exact venue for the dated product, complete total, inclusions, eligibility, cancellation terms and entrance before travelling.' }
     ]
   },
   {
@@ -1327,36 +1432,101 @@ const GUIDES = [
     slug: 'pattaya-solo-female-fitness',
     title: 'Pattaya for Solo Female Travelers — Sport & Fitness',
     h1: 'Pattaya sport venues for solo female travelers',
-    desc: 'Pattaya gyms, Muay Thai camps, yoga studios, swimming pools and group classes with strong female-friendly signals — safety, women-only sessions, female trainers, and welcoming atmospheres.',
-    intro: 'Solo female travelers training in Pattaya have plenty of welcoming options — but knowing which venues have proven track records with female travelers, women-only group classes, or female trainers takes some research. This guide pulls together the most consistently female-friendly Pattaya sport venues, organised by category.',
+    desc: 'A verification-first guide for solo women comparing Pattaya gyms, Muay Thai, yoga and pools by exact product, current price evidence, staffed arrival and route.',
+    intro: 'No directory can certify how a future visit will feel. This guide gives solo women a practical way to compare the facts operators do publish, identify the questions they do not answer, and make a small first booking before committing to a longer Pattaya training plan.',
     pickerKey: 'solo-female',
-    filter: g => {
-      const tags = (g.tags || []).join(' ').toLowerCase();
-      const desc = (g.description || '').toLowerCase();
-      return /female|women|family|kids|yoga|swim|hotel|premium/.test(tags + ' ' + desc) || g.category === 'yoga' || g.category === 'swimming';
-    },
+    primerHtml: () => `
+      <section class="venue-body guide-extra">
+        <p><strong>If you only read one thing:</strong> choose the exact first transaction and arrange the arrival and return before paying. “Open,” “beginner friendly,” “hotel gym” and “all levels” answer different questions. None establishes the coach leading your session, whether partner contact is optional, whether reception will be staffed, or how you will leave after an evening class. A single suitable session or day pass is usually a better first test than a non-refundable month.</p>
+
+        <p>This guide does not label a venue safe, women-only or universally welcoming. The checked operator pages do not support those blanket promises. It also does not infer a female trainer from a photograph, a guest review or a venue category. Instead, it compares named products and tells you what to request in writing. Start with the <a href="/category/fitness/">fitness directory</a>, <a href="/category/muay-thai/">Muay Thai directory</a> or <a href="/category/yoga/">yoga directory</a> when the activity matters more than this planning lens.</p>
+
+        <h2>Match the first purchase to the uncertainty</h2>
+        <div class="guide-price-table-wrap">
+          <table class="guide-price-table">
+            <caption>Examples checked from operator sources, 25-27 July 2026</caption>
+            <thead><tr><th scope="col">Option</th><th scope="col">Published product</th><th scope="col">Useful first check</th><th scope="col">Still ask</th></tr></thead>
+            <tbody>
+              <tr><td><a href="/gyms/smash-fitness-kickboxing/">SMASH</a></td><td>Kickboxing, strength and hybrid sessions in a live booking grid; no dependable baht tariff</td><td>Reserve the named one-hour session</td><td>Price, gloves, wraps, contact level and staffed arrival</td></tr>
+              <tr><td><a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a></td><td>THB 500 group session; THB 2,500 week; THB 7,000 month</td><td>Use one group session before extending</td><td>Beginner placement, partner work, equipment and exact coach</td></tr>
+              <tr><td><a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a></td><td>THB 1,000 class day; THB 4,000 week; THB 8,000 month</td><td>Confirm the Monday-Saturday 14:00-15:30 class</td><td>Which discipline, trainer language and glove or wrap terms</td></tr>
+              <tr><td><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a></td><td>Group and private yoga with current passes and a changing timetable</td><td>Choose the exact class, teacher and language</td><td>Current slot, level, booking and cancellation</td></tr>
+              <tr><td><a href="/gyms/hard-rock-pool/">Hard Rock pool</a></td><td>THB 500 net adult non-resident leisure-pool access with one named drink</td><td>Use only if a leisure pool is the intended product</td><td>Outside-guest window, changing access and current inclusions</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The amounts in the table are not a ranking. Battle sells a group Muay Thai session with gym and recovery access in its longer packages; ISS separates classes from general-gym and recovery products; Hard Rock sells leisure-pool access rather than a lane workout. SMASH is contact-first because its public portal did not establish a reliable currency. Missing price is a request for a quote, not evidence that an operating venue should be removed.</p>
+
+        <h2>Combat training: name the contact you will accept</h2>
+        <p>For Muay Thai, boxing or kickboxing, tell the operator whether you are new, returning or preparing for competition. Ask which session accepts that level and whether drills require pads, partner contact or sparring. If you do not want head contact or open sparring, say so before booking and repeat it to the coach. A general “all levels” label is useful but does not define every drill. The <a href="/guides/muay-thai-pattaya-beginners/">beginner Muay Thai guide</a> provides a longer class-placement checklist.</p>
+
+        <p><a href="/gyms/fairtex-pattaya/">Fairtex</a> publishes one Muay Thai session at THB 800, ten at THB 7,000 and a training month at THB 16,500, while its accommodation products are separate transactions. <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> publishes group sessions at 08:00-10:00 and 16:00-18:00. ISS publishes a 14:00-15:30 class Monday-Saturday. Those are useful scheduling facts, not guarantees about the individual trainer, group makeup or contact level on a future date. Request the date, start, coach, class format, price and equipment arrangement in one reply.</p>
+
+        <h2>Yoga and general fitness: a venue clock is not a class clock</h2>
+        <p><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> publishes group and private practice in English, Russian and Thai, but its timetable changes; the selected teacher and language still need confirmation. <a href="/gyms/one-d-yoga-studio/">ONE-D Yoga</a> has current operator activity and split morning and evening operating periods, yet no dependable public class-by-class timetable or rate card. <a href="/gyms/ashtanga-yoga-pattaya/">Ashtanga Yoga Pattaya</a> describes Mysore-style individual progression within a shared room and explicitly tells visitors to ask for current schedule and prices. These are three different access models, not interchangeable “women's classes.”</p>
+
+        <p>For a conventional gym, decide whether you need only equipment, a scheduled class or an appointment with a trainer. <a href="/gyms/elite-gym-fitness/">Elite Gym &amp; Fitness</a> publishes a THB 300 general-gym day pass and separates functional training from ordinary membership. A business window does not guarantee a staff member who can provide orientation at every hour. Ask for the staffed first-visit time, registration or ID requirements, changing and locker terms, class reservation and the complete amount.</p>
+
+        <h2>Hotel facilities: confirm eligibility before comfort</h2>
+        <p>A hotel amenity can look straightforward while remaining guest-only. Hard Rock publishes a specific outside-guest leisure-pool product, so eligibility and the base amount are documented. <a href="/gyms/movenpick-siam-pattaya/">Mövenpick Siam Na Jomtien</a> publishes a 24-hour fitness centre and seafront pool as hotel facilities but no non-resident fitness pass. <a href="/gyms/fitz-club/">Fitz Club</a> is different again: Royal Cliff publishes outside-guest sports-club prices and names gym, pool, racquet and wet-area facilities. Always match the public-access rule to the intended facility; a room booking, pool pass and sports-club day pass are separate contracts.</p>
+
+        <h2>Build a two-pin arrival and return plan</h2>
+        <p>Save the exact venue entrance, then save the place you intend to return to. Check the scheduled finish rather than only the business closing time. If the venue is inside a hotel, mall, condotel or multi-building complex, ask which reception, floor or building handles the first visit. For evening sessions, arrange the return before class and keep the venue's current phone available. No fixed walking time, fare or transport service is inferred by this guide.</p>
+
+        <p>Send one compact message: “I want the [named product] on [date]. I am [experience level]. Please confirm start and finish, coach or teacher language, contact level, equipment, staffed check-in, total price, payment, cancellation and exact entrance.” An operator may not answer every item, but the gaps become visible before money changes hands. Screenshot the reply or booking confirmation and recheck changes on the day.</p>
+
+        <h2>A reversible first-visit sequence</h2>
+        <ol>
+          <li>Shortlist by the exact activity, not a broad claim about atmosphere.</li>
+          <li>Open the enriched venue record and check the source date, status, product and unresolved items.</li>
+          <li>Request the session, coach or teacher, contact level, complete cost and arrival point in writing.</li>
+          <li>Book the smallest product that answers the main uncertainty: one class, one day or one private appointment.</li>
+          <li>Extend only after the schedule, coaching, facilities and route work for you.</li>
+        </ol>
+
+        <p>This process does not remove ordinary personal judgement, and it cannot predict another person's conduct. It does stop the directory from substituting reviews, gender stereotypes or marketing language for verifiable access facts. For longer routines, use the <a href="/guides/pattaya-digital-nomad-fitness/">digital-nomad fitness guide</a> to compare membership length, staffed access and commute friction after the first visit has been tested.</p>
+      </section>`,
+    filter: g => [
+      'smash-fitness-kickboxing',
+      'battle-conquer-gym',
+      'wko-muay-thai',
+      'fairtex-pattaya',
+      'yoga-pattaya-studio',
+      'one-d-yoga-studio',
+      'ashtanga-yoga-pattaya',
+      'elite-gym-fitness',
+      'hard-rock-pool',
+      'fitz-club',
+      'movenpick-siam-pattaya',
+      'castra-gym'
+    ].includes(g.id),
     rank: g => {
-      const desc = (g.description || '').toLowerCase();
-      const tags = (g.tags || []).join(' ').toLowerCase();
-      let s = 0;
-      if (/female|women|female-friendly|girl/.test(desc + tags)) s += 12;
-      if (g.category === 'yoga') s += 8;
-      if (g.category === 'swimming') s += 5;
-      if (/family|kids/.test(tags + desc)) s += 4;
-      if (/hotel|5-star|premium|luxury/.test(tags + desc)) s += 3;
-      if (/safe|welcoming|community/.test(desc)) s += 2;
-      return s;
+      const order = [
+        'smash-fitness-kickboxing',
+        'battle-conquer-gym',
+        'wko-muay-thai',
+        'fairtex-pattaya',
+        'yoga-pattaya-studio',
+        'one-d-yoga-studio',
+        'ashtanga-yoga-pattaya',
+        'elite-gym-fitness',
+        'hard-rock-pool',
+        'fitz-club',
+        'movenpick-siam-pattaya',
+        'castra-gym'
+      ];
+      return order.length - order.indexOf(g.id);
     },
     sections: [
-      { label: '🌸 Top solo-female-friendly picks', take: 5 },
-      { label: '🧘 Best yoga studios for women', take: 4 },
-      { label: '🏊 Best pools & swimming', take: 3 },
-      { label: '🥊 Female-friendly Muay Thai & combat', take: 3 }
+      { label: 'Published classes and first-session evidence', take: 4 },
+      { label: 'Yoga and staffed fitness contacts', take: 4 },
+      { label: 'Hotel and multi-facility access to verify', take: 4 }
     ],
     faqs: [
-      { q: 'Is Pattaya safe for solo female travelers training in gyms?', a: 'Generally yes — hotel-attached gyms, established yoga studios, and family-owned camps are very welcoming. Stick to verified venues with Western reviews and trust your read of each space.' },
-      { q: 'Which Pattaya Muay Thai gyms welcome women?', a: 'Sityodtong, Fairtex, Kombat Group, Rage Fight Academy, and Venum Training Camp all run women-friendly programs. Most camps now explicitly welcome female fighters and recreational students.' },
-      { q: 'Are there women-only fitness sessions in Pattaya?', a: 'A handful of yoga studios run female-only or trauma-informed sessions. Hotel gyms (Hilton, Centara, Andaz) provide the most reliably comfortable mainstream gym environments.' }
+      { q: 'Can this guide certify that a Pattaya gym is safe for every solo woman?', a: 'No. It compares published products, current identity, price evidence, staffed arrival and unresolved questions. Confirm the exact session and route, make a small first booking and use your own judgement.' },
+      { q: 'How should I ask a Muay Thai gym about contact or sparring?', a: 'State your experience and the contact you will accept. Ask whether the chosen session includes partner drills, body contact, head contact or open sparring, and repeat the boundary to the coach before class.' },
+      { q: 'Does a hotel gym or pool automatically accept non-residents?', a: 'No. Hard Rock publishes an outside-guest pool product and Fitz Club publishes outside-guest sports access, while many hotel fitness centres are presented only as guest amenities. Confirm eligibility for the exact facility.' }
     ]
   },
   {
@@ -1584,13 +1754,13 @@ ${header()}
       <span class="meta-chip" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.04em;">// Updated ${new Date().toISOString().slice(0,10)}</span>
     </div>
   </div>
-  ${tldrHtml}
-  ${primerHtml}
+${tldrHtml}
+${primerHtml}
   <div id="full-list"></div>
-  ${autoLinkVenues(sectionsHtml.join(''), guide.slug, allGyms)}
-  ${extraHtml}
-  ${faqHtml}
-  ${(() => {
+${autoLinkVenues(sectionsHtml.join(''), guide.slug, allGyms)}
+${extraHtml}
+${faqHtml}
+${(() => {
     const related = GUIDES.filter(g => g.slug !== guide.slug).slice(0, 6);
     if (!related.length) return '';
     const picks = related.slice(0, 3);
@@ -1607,7 +1777,7 @@ ${header()}
     </div>
     <p style="margin: 16px 0 0; font-size: 13px; color: var(--text-muted);"><a href="/guides/" style="color: var(--accent);">Browse all ${GUIDES.length} Pattaya guides →</a></p>
   </section>`;
-  })()}
+})()}
   <div class="venue-cta-foot" style="margin-top:48px;">
     <h3>Want to compare these side-by-side?</h3>
     <p>Click "+ Add to compare" on any venue page. Then visit /compare/ to see them in a single table.</p>

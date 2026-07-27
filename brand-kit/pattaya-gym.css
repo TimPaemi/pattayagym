@@ -1,0 +1,55 @@
+/* ============================================================================
+   THEME — pattaya-gym.com  (light canvas, single volt accent)
+   ============================================================================
+   SCOPE: pattaya-gym.com only. This file is the documented record of the
+   palette; the live values are the `:root` block in styles.css. Keep the two in
+   sync by hand. Nothing else reads this file.
+
+   THE ONE RULE THAT MATTERS HERE: volt is a FILL, never a text colour.
+   Every volt surface carries near-black ink. `--color-accent-ink` is the
+   AA-safe variant for volt-flavoured text. Setting volt as a text colour on the
+   light canvas gives you roughly 1.4:1 and is unreadable.
+
+   Verified ratios (WCAG AA needs 4.5:1 for text):
+     brand-ink on canvas ........ 6.63:1
+     white on brand-ink ......... 7.08:1
+     ink on accent (volt fill) .. 15.34:1
+     ink-muted on canvas ........ 6.01:1
+     ink-subtle on canvas ....... 4.68:1
+     accent-ink on canvas ....... 6.68:1
+     panel-ink on panel ......... 15.63:1
+     panel-muted on panel ....... 6.61:1
+     brand-bright on panel ...... 14.79:1
+
+   Before shipping:  node check-contrast.mjs themes/pattaya-gym.css
+   ============================================================================ */
+@theme {
+  --color-brand:         #4d7c0f;  /* fill: chips, table headers, large areas   */
+  --color-brand-ink:     #3f6212;  /* AA-safe: link text, primary button bg     */
+  --color-brand-bright:  #cbff3c;  /* on dark surfaces only                     */
+
+  --color-accent:        #cbff3c;  /* THE volt. ONE accent, not five.           */
+  --color-accent-ink:    #4c5f00;  /* AA-safe volt-flavoured text               */
+
+  --color-canvas:         #f7f8f3;
+  --color-surface:        #ffffff;
+  --color-surface-sunken: #edf0e5;
+  --color-ink:            #14180f;
+  --color-ink-muted:      #5b6151;
+  --color-ink-subtle:     #6b7262;
+  --color-line:           #dfe3d4;
+  --color-line-strong:    #c6ccb6;
+
+  /* Dark panel — footer and any dark band. */
+  --color-panel:          #171c11;
+  --color-panel-sunken:   #10140b;
+  --color-panel-line:     #2b3223;
+  --color-panel-ink:      #f2f4ec;
+  --color-panel-muted:    #9aa38d;
+  --color-panel-subtle:   #7e876f;
+
+  /* status roles — same across the network, not brand colours */
+  --color-warn: #ffb020;  --color-warn-ink: #9e6600;
+  --color-info: #38bdf8;  --color-info-ink: #0678aa;
+  --color-ok:   #4ade80;  --color-ok-ink:   #2f6b1f;
+}

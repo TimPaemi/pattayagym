@@ -1,125 +1,96 @@
 module.exports = `
-<p>Stay-and-train packages remove every logistical excuse to not train. Pattaya has multiple Muay Thai camps offering on-site accommodation — from budget bunkhouse to 5-star resort. This guide maps verified options from our directory: what each tier includes, who it suits, and what to ask before you wire a deposit.</p>
+<p><strong>If you only read one thing: “accommodation included” is not one standard product.</strong> Fairtex publishes room-and-training packages, Kombat publishes several bundles with materially different room and facility access, Rage documents on-site rooms without a public package price, and Sityodtong requires a direct housing quote. Compare the written inclusions, not the camp label.</p>
 
-<p>Hub: <a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/guides/best-muay-thai-pattaya/">best Muay Thai ranked</a> · <a href="/guides/best-gym-east-pattaya/">East Pattaya camps</a> · <a href="/compare/">compare</a>.</p>
+<p>This guide uses operator pages checked on <strong>26 July 2026</strong>. It does not convert a hotel gym, a nearby guesthouse or an unpriced room into a verified residential Muay Thai package. For the underlying venue evidence, open each linked record; for training-only alternatives, use the <a href="/category/muay-thai/">Muay Thai directory</a>.</p>
 
-<h2>Pricing tier reference</h2>
+<h2>Current stay-and-train choices at a glance</h2>
 
-<ul>
-<li><strong>฿:</strong> Under ฿15,000/week — basic shared accommodation, training included, no frills</li>
-<li><strong>฿฿:</strong> ฿15,000–30,000/week — private room, meals, training, basic amenities</li>
-<li><strong>฿฿฿:</strong> ฿30,000–60,000/week — resort-tier, pool, premium gym, mixed disciplines</li>
-<li><strong>฿฿฿฿:</strong> ฿60,000+/week — 5-star resort with Muay Thai integration, spa, multi-sport</li>
-</ul>
+<div class="guide-price-table-wrap">
+<table class="guide-price-table">
+<caption>Published Pattaya accommodation routes checked 26 July 2026</caption>
+<thead><tr><th scope="col">Route</th><th scope="col">Current evidence</th><th scope="col">Decision point</th></tr></thead>
+<tbody>
+<tr><td><a href="/gyms/fairtex-pattaya/">Fairtex</a></td><td>6 nights/10 sessions from ฿16,000 for one; longer room-and-training packages published</td><td>Clear package ladder; verify room, session and occupancy terms</td></tr>
+<tr><td><a href="/gyms/kombat-group-thailand/">Kombat Group</a></td><td>One-week Muay Thai/boxing bundles from ฿12,900 Bronze or ฿20,900 Standard</td><td>Bronze and resort tiers have different rooms, meals and pool access</td></tr>
+<tr><td><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a></td><td>On-site rooms and training facilities documented; no public package tariff</td><td>Request an itemised room-and-training quote</td></tr>
+<tr><td><a href="/gyms/sityodtong-pattaya/">Sityodtong</a></td><td>Camp and housing route described; no current residential tariff</td><td>Contact-first option for a training-led stay</td></tr>
+<tr><td><a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer plus separate room</a></td><td>Training prices published; accommodation is not bundled</td><td>DIY flexibility, but two contracts and a travel plan</td></tr>
+</tbody>
+</table>
+</div>
 
-<h2>1. Fairtex Training Center Pattaya — flagship resort camp</h2>
+<p>The amounts above are not interchangeable. Fairtex prices a set number of sessions with a room. Kombat's Standard and Deluxe products include a wider bundle, while Bronze is deliberately more basic. Rage and Sityodtong need direct quotes. The Battle route is training-only and should never be described as an accommodation package.</p>
 
-<p><a href="/gyms/fairtex-pattaya/">Fairtex Pattaya</a> is the largest stay-and-train camp in Thailand. On-site hotel, 25m pool, restaurant, 9 rings, 17 trainers. All-inclusive: room, meals, two daily Muay Thai sessions, pool, gym. ฿฿฿ to ฿฿฿฿ depending on room class. Visa-support letters available for long stays. Naklua side — <a href="/guides/best-gym-naklua-pratamnak-pattaya/">area guide</a>.</p>
+<h2>Fairtex: the clearest published package ladder</h2>
 
-<p>Best for: first-time visitors who want resort experience with zero logistics. Champions train alongside tourists.</p>
+<p><a href="/gyms/fairtex-pattaya/">Fairtex Training Center Pattaya</a> publishes short, medium and monthly room-and-training products. Its checked rate page listed a six-night package with ten training sessions at <strong>฿16,000 for one person</strong> or <strong>฿23,000 for two people sharing</strong>. A 15-night package with 20 sessions was <strong>฿35,000 for one</strong> or <strong>฿49,000 for two sharing</strong>. The one-month product was <strong>฿46,500 for one</strong> or <strong>฿63,000 for two sharing</strong>.</p>
 
-<h2>2. Kombat Group Thailand — all-inclusive multi-discipline</h2>
+<p>The operator describes a deluxe room, training access and use of the gym and pool in its package material. Do not infer meals, airport transfer, laundry, private tuition or an unlimited number of coached sessions unless the written quote names them. The occupancy column also matters: a two-person amount is not the single-person rate multiplied by two, and “sharing” should be checked against the exact room configuration.</p>
 
-<p><a href="/gyms/kombat-group-thailand/">Kombat Group</a> in Huai Yai (East Pattaya) is the most fully all-inclusive option. Daily two-a-days Muay Thai + optional BJJ, MMA, boxing. Includes airport transfer, accommodation, meals, training, laundry, pool, restaurant. ฿฿฿. Best for 1–4 week trips testing multiple disciplines.</p>
+<p>Fairtex also publishes training-only prices: ฿800 for one session, ฿7,000 for ten and ฿16,500 for one month, with a private session at ฿1,500. Those figures create a useful control. If a traveller already has suitable accommodation, compare the training-only total with the residential package rather than assuming the package is automatically cheaper.</p>
 
-<h2>3. Pattana Sports Resort — golf + Muay Thai + fitness</h2>
+<h2>Kombat Group: read the tier before reading the headline price</h2>
 
-<p><a href="/gyms/pattana-sports-resort/">Pattana Sports Resort</a> (Bo Win, ~30 min from central) is multi-sport — golf, tennis, pool, fitness, Muay Thai program. Hotel accommodation. ฿฿฿. Best when your group includes non-fighters (kids, partners, golfers).</p>
+<p><a href="/gyms/kombat-group-thailand/">Kombat Group Thailand</a> publishes several residential tiers. For Muay Thai or boxing, the checked one-week Standard price was <strong>฿20,900</strong> and Deluxe was <strong>฿24,900</strong>. The operator lists training, gym use, three meals per day including Sunday, an air-conditioned en-suite room, pool access, a T-shirt, a 30-minute private session, body analysis, juice and a massage among the stated inclusions for those packages.</p>
 
-<h2>4. Horseshoe Point Resort — equestrian + Muay Thai combo</h2>
+<p>The Bronze one-week Muay Thai or boxing product was <strong>฿12,900</strong>; two weeks was ฿22,900 and four weeks ฿39,900. Bronze includes training, gym access, three Thai meals per day and a single fan room with a Thai-style bathroom. The operator explicitly excludes the pool and resort facilities from that tier. A traveller comparing ฿12,900 with ฿20,900 is therefore comparing different accommodation and facility products, not merely two discounts for the same stay.</p>
 
-<p><a href="/gyms/horseshoe-point-resort/">Horseshoe Point</a> integrates Muay Thai into a larger resort. East Pattaya. ฿฿฿. Unusual but works for horse-riding plus combat sport — <a href="/guides/equestrian-pattaya/">equestrian guide</a>.</p>
+<p>Kombat's rate page says 7% VAT and a 3% card charge are excluded, as are airfare and taxi costs. Add those stated charges before comparing the complete amount. Confirm the exact discipline, arrival date, room, meal arrangement, pool eligibility, private-session scheduling and cancellation terms in the final invoice.</p>
 
-<h2>5. Sanit Sport Club (Mabprachan) — long-stay-friendly</h2>
+<h2>Rage: verified rooms, quote-first package</h2>
 
-<p><a href="/gyms/sanit-sport-club/">Sanit Sport Club</a> pairs training with nearby guesthouses within walking distance of Mabprachan Lake. Less polished than resorts but cheaper and flexible (฿). Best for 1+ month stays — <a href="/guides/best-gym-east-pattaya/">East guide</a>.</p>
+<p><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> documents on-site rooms with air conditioning, Wi-Fi, a refrigerator, bathroom, tea and coffee facilities, a kitchenette, bedding and housekeeping. Its camp page also documents a pool alongside Muay Thai and boxing areas, three full-size rings, a BJJ/MMA mat zone and a functional-fitness and weight room.</p>
 
-<h2>6. Hilton Pattaya — hotel-first, Muay Thai as amenity</h2>
+<p>That evidence supports a genuine train-and-stay route, but the operator page checked on 26 July did not publish a dependable room-and-training tariff or a class-by-class timetable. Request a written quote that separates room nights, the exact discipline and number of sessions, gym or pool access, housekeeping, deposits, taxes and any meals. An equipment list and a room description do not establish coaching frequency.</p>
 
-<p><a href="/gyms/hilton-pattaya-fitness/">Hilton Pattaya</a> on Pratamnak Hill: 5-star fitness with PT-led Muay Thai add-on. ฿฿฿฿. Not for learning from scratch — excellent for maintaining training on a luxury stay.</p>
+<p>Rage is relevant when mixed combat facilities and on-site accommodation matter more than a public package ladder. It is a weaker choice for someone who will not contact the operator before fixing a budget.</p>
 
-<h2>7. Andaz Pattaya Jomtien — 5-star fitness with Muay Thai access</h2>
+<h2>Sityodtong: training-led housing requires confirmation</h2>
 
-<p><a href="/gyms/andaz-pattaya-jomtien/">Andaz Pattaya Jomtien</a> — Hyatt resort, full fitness, on-call Muay Thai trainers. ฿฿฿฿. Pick over Hilton if Jomtien beachfront matters — <a href="/guides/best-gym-jomtien-pattaya/">Jomtien guide</a>.</p>
+<p><a href="/gyms/sityodtong-pattaya/">Sityodtong Muay Thai</a> is an established camp whose current schedule material explicitly separates beginner, intermediate and advanced participation. The camp also describes a four-week fight-camp route with housing. No current residential tariff or complete inclusion list was published on the pages checked for this guide.</p>
 
-<h2>8. Movenpick Siam Na Jomtien — resort + sport amenities</h2>
+<p>This is a contact-first path for someone choosing the training environment before room amenities. Ask whether the quote covers a private or shared room, air conditioning, bathroom, utilities, cleaning, meals and the exact number of group or individual sessions. Also ask whether housing is on the same property and which address is used at check-in. Do not apply an old package price or assume a fighter-oriented route is the only option for a beginner.</p>
 
-<p><a href="/gyms/movenpick-siam-pattaya/">Movenpick</a> Na Jomtien has sports center and arrangements with nearby Muay Thai gyms. ฿฿฿฿. Family-friendly — <a href="/guides/family-friendly-pattaya/">family sport</a>.</p>
+<h2>The DIY route: published training plus separately verified housing</h2>
 
-<h2>DIY stay-and-train (not on-site hotel)</h2>
+<p>A residential camp reduces coordination. A DIY stay gives more control over room location, length and the option to change gyms. <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> publishes group training at ฿500 for one session, ฿2,500 for one week and ฿7,000 for one month. Those are training prices, not room prices. The traveller must obtain a separate accommodation quote and map the route between the two exact pins.</p>
 
-<p><a href="/gyms/wko-muay-thai/">WKO</a> (~฿4,000/month training) plus Jomtien or central guesthouse (฿4,000–8,000/month) beats half the "all-inclusive" weekly price if you handle logistics. <a href="/guides/gym-day-pass-pattaya/">Day passes</a> for strength days. Best for independent travellers who hate resort bubbles.</p>
+<p>A DIY comparison should include the room's taxes and deposit, training, daily transport, laundry, food and any separate fitness or recovery access. It should also preserve cancellation flexibility: a non-refundable room and a non-refundable training block can create two separate liabilities. The <a href="/guides/muay-thai-pattaya-beginners/">beginner Muay Thai guide</a> compares current session products before a new student commits to a long package.</p>
 
-<h2>What to actually ask before booking</h2>
+<p>Do not convert “near a gym” into “camp accommodation.” The room provider and gym should each confirm their own product. Do not use an estimated neighbourhood rent as if it were an operator tariff.</p>
 
-<ul>
-<li><strong>Is the price all-inclusive?</strong> Meals, laundry, airport transfer may be extra — get itemized quotes.</li>
-<li><strong>Sessions per day included?</strong> Two-a-days standard at serious camps; resorts sometimes one-a-day.</li>
-<li><strong>Visa letter?</strong> Fairtex and Kombat provide support for ED pathways — confirm with Pattaya Visa Help.</li>
-<li><strong>Cancellation policy?</strong> Often 7–14 days notice; low season sometimes flexible.</li>
-<li><strong>Skill level expectation?</strong> All welcome beginners; fighter-track gyms need honest disclosure.</li>
-</ul>
-
-<h2>FAQ</h2>
-
-<h3>What's the cheapest camp with accommodation in Pattaya?</h3>
-<p>WKO + nearby guesthouse often totals ฿8,000–12,000/month — less than half many all-inclusive weekly rates. You manage housing yourself.</p>
-
-<h3>How long should I book?</h3>
-<p>First-timers: 1–2 weeks. Serious trainees: 4–12 weeks. Never done Muay Thai? Book 1 week extendable on arrival.</p>
-
-<h3>Are visas required?</h3>
-<p>Under 30 days: visa exemption for many passports. 30–60 days: tourist visa. 60+ days: ED/sport pathways — <a href="/guides/training-thailand-visa-pattaya/">training &amp; visa guide</a>.</p>
-
-<h3>What's included in "all-inclusive"?</h3>
-<p>Typically room, meals, two MT sessions, pool/gym. Usually NOT massage, personal gear, Bangkok trips, alcohol. Confirm per camp.</p>
-
-<h3>Can my non-training partner stay?</h3>
-<p>Fairtex and Kombat accommodate partners; Hilton/Andaz/Movenpick are hotels first. Sityodtong case-by-case.</p>
-
-<h3>Are camps open year-round?</h3>
-<p>Yes. Peak Nov–Mar; rainy season quieter. Songkran (mid-April) many gyms close briefly.</p>
-
-<h2>Related guides</h2>
-
-<p><a href="/guides/best-muay-thai-pattaya/">Best Muay Thai</a> · <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking camps</a> · <a href="/guides/luxury-sports-clubs-pattaya/">Luxury sports clubs</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">Training holiday</a> · <a href="/compare/">Compare</a></p>
-
-<h2>Resort camp vs DIY guesthouse — decision matrix</h2>
-
-<p><strong>Choose resort stay-and-train</strong> when you want one invoice, airport pickup, meals handled, and you are okay with camp social bubble culture. <strong>Choose DIY</strong> when you want Jomtien café life, dating, remote work, or switching gyms mid-month. Fairtex and Kombat optimize the first; WKO + condo optimizes the second.</p>
-
-<h2>Room class questions</h2>
+<h2>How to compare the written quote</h2>
 
 <ul>
-<li>AC vs fan room — Pattaya humidity makes AC worth it for sleep quality if you two-a-day train.</li>
-<li>Shared vs private bath — shared is fine for budget fighters; couples should confirm private bath availability.</li>
-<li>Fridge and desk — remote workers should confirm before paying monthly resort rates.</li>
-<li>Pool hours and guest policy — some camps restrict pool to training guests only before 18:00.</li>
+<li><strong>Training:</strong> name the discipline, group or private format, sessions included, normal weekly closure and validity period.</li>
+<li><strong>Room:</strong> confirm private or shared occupancy, air conditioning or fan, bathroom, dates, housekeeping and utilities.</li>
+<li><strong>Food:</strong> record the number of meals, which days are covered and whether dietary requirements were accepted in writing.</li>
+<li><strong>Facilities:</strong> ask whether the quoted tier includes the pool, general gym, recovery areas and access on rest days.</li>
+<li><strong>Total:</strong> add VAT, card fees, deposits, transfers and equipment that the operator explicitly excludes.</li>
+<li><strong>Changes:</strong> obtain cancellation, date-change, injury and early-departure terms before paying.</li>
 </ul>
 
-<h2>Meal reality on all-inclusive</h2>
+<p>The best package is the one whose documented training load, room and total match the traveller's plan. A lower headline price can be correct and still be the wrong comparison when it removes air conditioning, pool access or another required inclusion.</p>
 
-<p>Camp kitchens rotate Thai staples — rice, protein, vegetables. Western portion expectations differ. Allergies (gluten, dairy, halal) need email confirmation — do not assume on arrival. Vegetarians survive but may need supplement snacks from Tesco Lotus near Jomtien or central.</p>
+<h2>Booking sequence</h2>
 
-<h2>Partner and family on camp property</h2>
+<ol>
+<li>Choose training frequency and discipline before choosing the room tier.</li>
+<li>Request a dated, itemised quote from the operator contact linked in the venue record.</li>
+<li>Match names, dates, occupancy, taxes and every inclusion to the invoice.</li>
+<li>Check the exact pin and arrival instructions before buying separate transport.</li>
+<li>Keep the cancellation and change terms with the payment record.</li>
+</ol>
 
-<p>Non-training partners at Fairtex/Kombat are common — confirm extra bed fees. Kids at resort camps (Movenpick, Centara links) pair with <a href="/guides/kids-youth-sport-pattaya/">kids sport guide</a>. Partners who hate fight sport should not book rural east camps without their own transport — entertainment is training-adjacent.</p>
+<p>For broader location context, compare the <a href="/area/naklua/">Naklua area</a> around Fairtex with the <a href="/area/east-pattaya/">East Pattaya area</a> used by several inland camp routes. An area page is not a travel-time guarantee; use exact pins.</p>
 
-<h2>Songkran, Loy Krathong, and holiday closures</h2>
+<section class="guide-faq">
+<h2>Questions people ask</h2>
 
-<p>Thai public holidays may shorten sessions or close kitchens midday. Songkran (mid-April) closes many gyms 2–3 days — book around it. Christmas/New Year peak fills resort rooms — deposit early Nov if you fly Dec.</p>
+<details class="faq-item"><summary>Which Pattaya Muay Thai camp has the cheapest verified accommodation package?</summary><p>Among the current numeric packages compared here, Kombat's one-week Bronze Muay Thai or boxing tier is ฿12,900. It is a fan-room product with a Thai-style bathroom and excludes the pool and resort facilities, so it should not be compared as equivalent to Kombat Standard, Deluxe or Fairtex room products.</p></details>
 
-<h2>Deposit and payment norms</h2>
+<details class="faq-item"><summary>Does every stay-and-train package include meals?</summary><p>No. Kombat publishes meal inclusions for the compared tiers. Fairtex's checked package evidence supports room, training, gym and pool use, but this guide does not infer meals. Rage and Sityodtong require a written inclusion list. Confirm the exact quote rather than relying on the phrase “all-inclusive.”</p></details>
 
-<p>Serious camps request 30–50% deposit to hold peak-season rooms — bank transfer or card, rarely PayPal. Get written confirmation listing sessions per day, meal count, and room class. Scams are rare at listed venues but common on Facebook copycat pages — book only through contacts on our venue pages or official websites linked from <a href="/compare/">compare</a>.</p>
-
-<p>On arrival walk the facility before signing multi-week extensions: ring count, shower hot water, Wi-Fi for remote work, and distance to 7-Eleven. If the gym oversold capacity, negotiate downgrade or partial refund before you sleep night one.</p>
-
-<p>Film a short walk-through video on check-in day — useful if room class does not match booking photos and you need evidence for a polite downgrade request at reception.</p>
-
-<p>Laundry: resort camps include it; DIY guesthouse athletes use coin laundry near Mabprachan — budget ฿40–60 per load and afternoon drying time in rain season.</p>
-
-<p>Compare stay-and-train tiers on <a href="/plan-my-trip/">plan my trip</a> after you shortlist three camps on <a href="/compare/">compare</a>.</p>
-
-<p>Questions before you wire a deposit? Use our <a href="/contact/">contact</a> page — we route venue corrections, not camp sales.</p>
+<details class="faq-item"><summary>Should a first-timer book a month immediately?</summary><p>A longer booking increases commitment to one room, location and coaching format. Compare a short published product or contact the camp about extension terms before locking in a month. The right choice depends on cancellation flexibility, training fit and the complete written total, not a universal trip length.</p></details>
+</section>
 `;

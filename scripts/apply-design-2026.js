@@ -113,7 +113,7 @@ const HEADER_RE = /<header class="nav"[^>]*>[\s\S]*?<\/header>/i;
 const NAVMOBILE_RE = /\n?[ \t]*<nav class="nav-mobile"[^>]*>[\s\S]*?<\/nav>\n?/i;
 const FOOTER_RE = /<footer class="footer"[^>]*>[\s\S]*?<\/footer>/i;
 
-let files = 0, navs = 0, footers = 0, marquees = 0, metas = 0, accents = 0, versions = 0;
+let files = 0, navs = 0, footers = 0, marquees = 0, metas = 0, accents = 0, versions = 0, icons = 0;
 
 for (const file of htmlFiles(ROOT)) {
   const orig = fs.readFileSync(file, 'utf8');
@@ -156,6 +156,23 @@ for (const file of htmlFiles(ROOT)) {
     .replace(/class="c-red"/g, 'class="accent-pink"');
   if (html !== beforeAccent) accents++;
 
+  // 6. Icon set. The old build emitted only an SVG favicon, so Safari, Windows
+  //    tiles, Android install prompts and every legacy crawler got nothing. One
+  //    <link> per format, added once, in the same place on every page.
+  const ICON_SET = [
+    '<link rel="icon" href="/favicon.ico" sizes="32x32">',
+    '<link rel="apple-touch-icon" href="/icon-180.png">',
+    '<link rel="manifest" href="/manifest.json">'
+  ];
+  const beforeIcons = html;
+  if (html.includes('<link rel="icon" type="image/svg+xml" href="/favicon.svg">') && !html.includes('apple-touch-icon')) {
+    html = html.replace(
+      '<link rel="icon" type="image/svg+xml" href="/favicon.svg">',
+      ICON_SET[0] + '\n<link rel="icon" type="image/svg+xml" href="/favicon.svg">\n' + ICON_SET[1] + '\n' + ICON_SET[2]
+    );
+  }
+  if (html !== beforeIcons) icons++;
+
   // 6. Asset cache-busting version, on every page including orphans.
   const beforeVer = html;
   html = html.replace(/\.(css|js|woff2)\?v=\d+/g, (_m, ext) => `.${ext}?v=${ASSET_VERSION}`);
@@ -170,5 +187,5 @@ for (const file of htmlFiles(ROOT)) {
 console.log(
   `apply-design-2026: ${files} files changed — navs ${navs}, footers ${footers}, ` +
   `marquees removed ${marquees}, metas ${metas}, neon helpers ${accents}, ` +
-  `asset versions ${versions} (v${ASSET_VERSION}, venue count ${VENUE_N})`
+  `asset versions ${versions}, icon sets ${icons} (v${ASSET_VERSION}, venue count ${VENUE_N})`
 );

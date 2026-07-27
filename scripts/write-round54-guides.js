@@ -18,7 +18,7 @@ const guides = [
     body: require('./guide-bodies/running-cycling-clubs-pattaya'),
     sisterLinks: [
       { url: '/guides/pattaya-digital-nomad-fitness/', label: 'Digital nomad fitness', desc: 'Long-stay training rhythm' },
-      { url: 'https://mrweoutside.com/', external: true, label: 'Mr We Outside', desc: 'Outdoor community' },
+      { url: '/guides/best-gym-central-pattaya/', label: 'Central Pattaya gyms', desc: 'Pair club days with weights' },
       { url: '/guides/pattaya-seniors-low-impact-sport/', label: 'Seniors low-impact', desc: 'Bowls, petanque, gentle sport' },
     ],
   },

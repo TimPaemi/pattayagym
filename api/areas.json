@@ -9,7 +9,7 @@
       "slug": "jomtien",
       "name": "Jomtien",
       "url": "https://pattaya-gym.com/area/jomtien/",
-      "venueCount": 40,
+      "venueCount": 39,
       "venues": [
         {
           "id": "pattaya-thai-boxing-fitness",
@@ -50,13 +50,6 @@
           "id": "tos-tennis",
           "name": "TOS Tennis Academy",
           "url": "https://pattaya-gym.com/gyms/tos-tennis/",
-          "category": "racquet",
-          "priceRange": null
-        },
-        {
-          "id": "euro-badminton",
-          "name": "Euro Badminton Club Pattaya",
-          "url": "https://pattaya-gym.com/gyms/euro-badminton/",
           "category": "racquet",
           "priceRange": null
         },
@@ -297,7 +290,7 @@
       "slug": "naklua",
       "name": "Naklua",
       "url": "https://pattaya-gym.com/area/naklua/",
-      "venueCount": 18,
+      "venueCount": 17,
       "venues": [
         {
           "id": "anytime-fitness-pattaya",
@@ -398,13 +391,6 @@
           "priceRange": null
         },
         {
-          "id": "eagle-gym-pratamnak",
-          "name": "EAGLE GYM",
-          "url": "https://pattaya-gym.com/gyms/eagle-gym-pratamnak/",
-          "category": "muay-thai",
-          "priceRange": null
-        },
-        {
           "id": "naklua-16-badminton",
           "name": "Naklua 16 Badminton",
           "url": "https://pattaya-gym.com/gyms/naklua-16-badminton/",
@@ -431,7 +417,7 @@
       "slug": "pratamnak",
       "name": "Pratamnak Hill",
       "url": "https://pattaya-gym.com/area/pratamnak/",
-      "venueCount": 17,
+      "venueCount": 18,
       "venues": [
         {
           "id": "battle-conquer-gym",
@@ -546,6 +532,13 @@
           "priceRange": null
         },
         {
+          "id": "eagle-gym-pratamnak",
+          "name": "Eagle Gym Pratamnak",
+          "url": "https://pattaya-gym.com/gyms/eagle-gym-pratamnak/",
+          "category": "muay-thai",
+          "priceRange": null
+        },
+        {
           "id": "human-strong-gym-pattaya",
           "name": "Human Strong Gym Pattaya",
           "url": "https://pattaya-gym.com/gyms/human-strong-gym-pattaya/",
@@ -649,7 +642,7 @@
           "name": "Siam Country Club Pattaya",
           "url": "https://pattaya-gym.com/gyms/siam-country-club/",
           "category": "golf",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "pattaya-country-club",
@@ -937,7 +930,7 @@
           "name": "Fitness 7 Pattaya",
           "url": "https://pattaya-gym.com/gyms/fitness-7/",
           "category": "fitness",
-          "priceRange": null
+          "priceRange": "฿"
         },
         {
           "id": "sun-fitness-buakao",
@@ -1070,7 +1063,7 @@
           "name": "Dusit Thani Pattaya — Devarana Wellness",
           "url": "https://pattaya-gym.com/gyms/dusit-thani-pattaya/",
           "category": "fitness",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "sf-strike-bowl",

@@ -71,7 +71,7 @@ function authorPerson() {
 
 /** Visible byline HTML (guides). */
 function bylineAuthorHtml() {
-  return `By <a href="${TIMPAEMI_URL}" rel="author" target="_blank">TimPaemi</a>`;
+  return 'By TimPaemi';
 }
 
 module.exports = { authorPerson, bylineAuthorHtml, timpaemiRef, timpaemiOrganization, TIMPAEMI_ID, NETWORK_SAMEAS, SOCIAL_SAMEAS, TIMPAEMI_URL, AUTHOR_IMAGE };

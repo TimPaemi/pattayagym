@@ -10,7 +10,7 @@ social: {}
 hours: Contact the venue for current riding hours
 priceRange: ""
 distinction: East Pattaya equestrian and resort venue with current competition use
-verified: 2026-07-25
+verified: 2026-07-27
 sources:
   - https://horseshoepoint.com/
   - https://horseshoepoint.com/en/service/horse-riding-school
@@ -24,8 +24,36 @@ tags: [equestrian, horse-riding, competition, east-pattaya, pong]
 
 # Horseshoe Point
 
-Horseshoe Point is an equestrian and resort venue at 100 Moo 9 in Pong, east of Pattaya. The live listing remains active, and an approved March 2026 competition schedule documents current equestrian use at the site. The riding-school page describes private and group lessons, trail rides and pony rides; it does not publish a current tariff or timetable.
+Horseshoe Point is an equestrian school and resort site at 100 Moo 9 in Pong. The operator currently describes lessons, trails and pony activity, while an approved March 2026 competition schedule provides dated evidence of equestrian use. The public pages do not supply a current lesson timetable or tariff, so recreational access remains contact-first.
 
-## Riding access
+## What training is on offer
 
-The checked sources did not provide a current public lesson tariff or weekly lesson schedule. The official contact page lists **+66 38 735 050**, while Maps lists **+66 63 994 7165**; either channel should be used to confirm whether lessons or trail rides are available to non-residents, what clothing is required and whether an event affects access.
+The riding-school page says the school is registered with Thailand's Ministry of Education and offers private and group lessons for different levels. It lists pony rides, trail rides, dressage and a jumping progression, with classical riding available after an instructor assessment. The same page says instructors can teach in multiple languages, but it does not identify which language is available in each time slot.
+
+An FEI-approved schedule documents a **CSI1*** outdoor event at Chonburi-HSP from **13-15 March 2026**. That completed event confirms current competition use; it does not establish an everyday visitor programme or a future event calendar. The [Pattaya equestrian guide](/guides/equestrian-pattaya/) helps separate lesson, trail and competition products.
+
+## What it costs
+
+No current public price was found on **27 July 2026** for a lesson, trail ride, pony ride, assessment or equipment use. Ask for the exact activity, duration, private or group format, horse allocation, instructor, tax and any resort or facility access. If accommodation is relevant, request it as a separate line rather than assuming a riding package includes a room.
+
+No `priceRange` is stored because the checked sources do not support a dependable transaction amount. Missing price is not a reason to treat the venue as closed or to infer free riding.
+
+## Who it suits — and who it does not
+
+Horseshoe Point may suit a beginner who can arrange an assessed lesson, a returning rider seeking dressage or jumping progression, or a family asking about a pony ride. An experienced competition rider should still ask which arena, coach and horse arrangement applies; the March event schedule is not a standing training promise.
+
+It is a poor fit for someone expecting an unscheduled walk-in ride or a confirmed public rate before contact. Readers comparing other sports around Pong can use the [East Pattaya area index](/area/east-pattaya/), but that broad area label does not establish access to the equestrian grounds.
+
+## Getting there
+
+The operator publishes **100 Moo 9, Pong, Bang Lamung, Chonburi 20150**. Its contact page lists **+66 38 735 050**, while the current Maps profile displays **+66 63 994 7165**; both are retained because the sources differ. Use the exact Horseshoe Point pin. No checked source provides a fixed central-Pattaya transfer, public-transport route, fare or visitor-parking instruction.
+
+## Before you go
+
+Contact the school with the rider's age, height, experience, preferred discipline and date. Ask whether an assessment is required, what clothing and footwear are mandatory, whether a helmet is supplied, and how weather or an event affects the booking. Confirm the correct entrance, instructor language, arrival time and payment or cancellation terms. Resort opening information should not be substituted for a riding-school appointment.
+
+## What we could not verify
+
+- No current public riding tariff or weekly lesson schedule was available.
+- Helmet and boot supply, minimum age, weight limits, trail length and non-resident access were not published.
+- The two current phone sources differ, and no future competition calendar was established from the completed March event.

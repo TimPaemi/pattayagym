@@ -153,9 +153,9 @@
         },
         {
           "id": "eagle-gym-pratamnak",
-          "name": "EAGLE GYM",
+          "name": "Eagle Gym Pratamnak",
           "url": "https://pattaya-gym.com/gyms/eagle-gym-pratamnak/",
-          "area": "North Pattaya / Naklua",
+          "area": "Pratamnak",
           "priceRange": null
         },
         {
@@ -293,7 +293,7 @@
           "name": "Fitness 7 Pattaya",
           "url": "https://pattaya-gym.com/gyms/fitness-7/",
           "area": "The Avenue Pattaya / Central Pattaya",
-          "priceRange": null
+          "priceRange": "฿"
         },
         {
           "id": "true-fitness-pattaya",
@@ -391,7 +391,7 @@
           "name": "Dusit Thani Pattaya — Devarana Wellness",
           "url": "https://pattaya-gym.com/gyms/dusit-thani-pattaya/",
           "area": "North Pattaya / Beach Road",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "intercontinental-pattaya",
@@ -603,7 +603,7 @@
           "name": "Siam Country Club Pattaya",
           "url": "https://pattaya-gym.com/gyms/siam-country-club/",
           "area": "East Pattaya / Pong",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "laem-chabang-international",
@@ -757,7 +757,7 @@
           "id": "euro-badminton",
           "name": "Euro Badminton Club Pattaya",
           "url": "https://pattaya-gym.com/gyms/euro-badminton/",
-          "area": "Chaiyaphruek 2 / Jomtien",
+          "area": "Pattaya / Bang Lamung",
           "priceRange": null
         },
         {
@@ -1266,7 +1266,7 @@
           "name": "Amazing Thailand Pattaya Marathon",
           "url": "https://pattaya-gym.com/gyms/pattaya-marathon/",
           "area": "Pattaya",
-          "priceRange": null
+          "priceRange": "฿"
         },
         {
           "id": "pattaya-triathlon",

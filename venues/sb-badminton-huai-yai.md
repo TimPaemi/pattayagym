@@ -12,41 +12,52 @@ hours: Daily 13:00-23:00
 priceRange: ""
 distinction: Thai badminton court in Huai Yai with daily afternoon and evening hours
 facilities: [Badminton courts]
-verified: 2026-07-26
+verified: 2026-07-27
 sources:
-  - https://www.facebook.com/people/SB-Badmintonห้วยใหญ่/100057126773129/
+  - https://www.facebook.com/people/SB-Badminton%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88/100057126773129/
   - https://www.google.com/maps/search/?api=1&query=SB+Badminton+Huai+Yai
-description: Huai Yai badminton venue publishing daily 13:00-23:00 hours, with the current court quote requiring direct confirmation.
+description: Huai Yai badminton venue with published daily 13:00-23:00 hours and a contact-first booking model.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=SB+Badminton+Huai+Yai"
 tags: [badminton, huai-yai, late-hours, thai-language]
 ---
 
 # SB Badminton Huai Yai
 
-SB Badminton is a dedicated badminton venue in Huai Yai, inland from Pattaya's beach districts. Its current owner page publishes the full address, phone number and ordinary opening hours. The exact Google Maps search identifies the same Huai Yai venue. The page also showed July 2026 activity when this record was checked, supporting current operation without relying on an old review or directory copy.
+SB Badminton Huai Yai is a dedicated badminton venue inland from the beach corridor, with enough current evidence to confirm that it operates even though it does not publish a clean public rate card. The owner page and live Maps identity support the Huai Yai address, phone number and daily opening window.
 
-Within the <a href="/category/racquet/">Pattaya racquet directory</a>, this is a contact-first court rather than a full-service sports club. The <a href="/area/east-pattaya/">East Pattaya area page</a> is useful when comparing its inland location with other activities around Huai Yai and Nong Prue.
+## What training is on offer
 
-## Hours and booking checked 26 July 2026
+The confirmed public evidence supports badminton courts and current operation. It does not support a larger "sports club" claim, a full coaching programme or a promised social-play system. That matters because many local racquet records in Pattaya are useful only when the buyer asks the right practical questions instead of assuming that every hall works like a drop-in expat club.
 
-Ordinary hours are **13:00 to 23:00 every day**. The late close can suit an evening game, but it does not guarantee that a court is free at the desired time.
+Inside the [racquet category](/category/racquet/), SB looks like a contact-first court venue rather than a resort club or tournament centre. If the real comparison is broader than one hall in Huai Yai, continue to the [tennis and badminton guide](/guides/tennis-badminton-pattaya/) after reading this record.
 
-Call **+66 94 998 2936** before travelling. Give the date, requested start time and length of play, and ask the venue to confirm the current court quote and whether it is charged by court or participant. The public page does not provide a page-level dated rate card that meets this directory's price-citation standard, and it does not state a cancellation rule, deposit, minimum booking length or rounding policy.
+## What it costs
 
-## Equipment and playing conditions
+No page-level dated rate card meeting the site's current citation standard was visible in the checked first-hand sources on 2026-07-27. The correct outcome is therefore to keep the venue active and tell the reader exactly what to ask, rather than skipping it for missing price.
 
-The verified source establishes badminton courts, but it does not publish a current equipment menu. Ask whether rackets and shuttlecocks are sold, rented or must be brought; whether non-marking court shoes are required; and whether drinking water, changing space or lockers are available. Do not assume those items are included in the quoted court hire.
-
-The page also does not state the number of courts, floor material, ceiling clearance, ventilation or whether coaching and player matching are offered. Those omissions matter to a club group or a visitor arriving alone. Request the exact court arrangement if the booking depends on tournament lines, training baskets or a coach.
+Call **+66 94 998 2936** and ask for the current court quote, whether the amount is charged **per court** or **per participant**, and whether lighting, shuttlecocks, coaching or equipment rental change the total. Also ask whether peak evening slots cost more than daytime play.
 
 ## Who it suits — and who it does not
 
-SB is the better fit for two or more players who can reserve a court, bring any required equipment and reach Huai Yai for an afternoon or evening booking. The published seven-day schedule gives a group flexibility, but the actual slot still needs confirmation.
+SB suits two or more players who can reserve directly, bring the equipment they may need and travel to Huai Yai for an afternoon or evening session. The published seven-day opening window gives genuine flexibility, especially for later play after work or after the hottest part of the day.
 
-It is a weaker fit for a solo visitor who needs guaranteed partner matching, an English-speaking coach, racket rental or a published central-Pattaya walk-in price. Those services may exist, but the current sources do not establish them. The <a href="/guides/tennis-badminton-pattaya/">tennis and badminton guide</a> compares court products whose booking and access evidence may suit those needs better.
+It is a weaker fit for a solo visitor who needs guaranteed partner matching, a fully published tariff, a central Pattaya location or a clear English-speaking coaching offer. The current sources do not establish those services.
 
-## Location and first visit
+## Getting there
 
-Use the linked map rather than searching only for “badminton Pattaya.” The published address is **57/68 Moo 1, Soi 4, Huai Yai, Bang Lamung, Chonburi 20150**, outside the central beach corridor. Confirm the entrance and return transport before a late booking.
+The published address is **57/68 Moo 1, Soi 4, Huai Yai, Bang Lamung, Chonburi 20150**. Use the exact map pin rather than a generic Pattaya badminton search, because this is a Huai Yai venue outside the central strip. The [East Pattaya area guide](/area/east-pattaya/) is useful only as location context, not as navigation evidence.
 
-The operator page is primarily Thai-language. A visitor who needs English communication should send a short, specific booking request rather than assuming English service. Confirm the court, date, time, duration, number of players, equipment and full amount in the same exchange. This is a useful late-opening option when Huai Yai is convenient; it is not evidence that rackets, shuttlecocks, coaching or transport are bundled with the court.
+Late bookings need a transport plan as well as a court. Confirm the entrance and return arrangements before setting off.
+
+## Before you go
+
+The checked current hours are **13:00-23:00 daily**. Treat them as business hours, not as proof that a court will be free at every moment. Ask for the date, start time, duration, player count and payment method in the same message or call.
+
+Because the operator presence is mainly Thai-language, a visitor who needs English communication should keep the request short and specific. Confirm equipment, shoes, changing space and any deposit or cancellation rule before travelling.
+
+## What we could not verify
+
+- No current public tariff, cancellation rule or deposit policy was found.
+- Court count, floor material, ventilation and ceiling clearance were not published.
+- Coaching, partner matching, racket rental and shuttlecock policy remain unverified.
+- The checked first-hand sources do not state changing-facility, locker or water-service details.

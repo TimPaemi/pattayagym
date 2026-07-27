@@ -19,7 +19,6 @@ const guides = [
     sisterLinks: [
       { url: '/guides/best-gym-east-pattaya/', label: 'East Pattaya', desc: 'Jungle Gym, Kombat, Mabprachan' },
       { url: '/guides/bjj-mma-pattaya/', label: 'BJJ & MMA', desc: 'Combat S&C alternatives' },
-      { url: 'https://pattaya-vehicle-rentals.com/', external: true, label: 'Vehicle Rentals', desc: 'Essential for east-side daily WODs' },
     ],
   },
 ];

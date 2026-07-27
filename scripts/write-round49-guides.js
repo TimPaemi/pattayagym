@@ -19,7 +19,7 @@ const guides = [
     sisterLinks: [
       { url: '/guides/padel-pickleball-pattaya/', label: 'Padel & pickleball', desc: 'Dedicated padel and pickleball courts' },
       { url: '/guides/best-gym-naklua-pratamnak-pattaya/', label: 'Pratamnak gyms', desc: 'Fitz Club and hilltop training' },
-      { url: 'https://pattayavilla.com/', external: true, label: 'Pattaya Villa', desc: 'Long-stay near Pratamnak courts' },
+      { url: '/guides/best-gym-jomtien-pattaya/', label: 'Jomtien gyms', desc: 'Where to stay near Chaiyapruek and south-side courts' },
     ],
   },
 ];

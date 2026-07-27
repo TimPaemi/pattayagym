@@ -34,7 +34,13 @@ tags: [waterpark, family, slides, na-jomtien, day-trip]
 
 Ramayana is a full-day leisure water park in Na Jomtien, south of the main Pattaya beach corridor. The operator currently publishes daily opening from 11:00 to 18:00 except Wednesday, when the park is closed. It describes 26 slides with 34 lanes, four children's zones, three pools and a lazy river. Those features make this a family or group day out, not a substitute for a quiet lap pool or coached swimming session.
 
-## Current admission
+## What training is on offer
+
+Ramayana does not publish a coached training programme. Its product is leisure admission to slides, pools, children's areas and a lazy river. The operator's 26-slide, 34-lane description is an attraction count, not a promise that every visitor can use every ride.
+
+Height affects access. The operator says children from 106 centimetres can use most slides, except Aqualoop and Free Fall. Check the current height and safety rules for each participant rather than assuming an admission ticket grants access to every attraction.
+
+## What it costs
 
 The tourist booking page displayed the following promotion on 26 July 2026:
 
@@ -43,15 +49,9 @@ The tourist booking page displayed the following promotion on 26 July 2026:
 
 The operator also showed a THB 1,490 regular price beside the promotional full-day ticket. Treat all three amounts as a dated product snapshot rather than a permanent tariff. The online page says same-day online booking is available only before 11:00, so a later decision may leave the walk-in product as the relevant comparison.
 
-Height affects attraction access as well as price. The operator says children from 106 centimetres can use most slides, with Aqualoop and Free Fall excepted. Check the current height and safety rules for every participant rather than assuming admission grants access to every ride.
-
-## Extras and the cashless system
-
 The ticket does not include every convenience. On 26 July 2026, the operator listed medium lockers at THB 169, large lockers at THB 259 and towel rental at THB 150 each. Full-day cabanas, available for the park's 11:00-18:00 operating period, were THB 999 for a medium cabana, THB 1,799 for a large and THB 2,999 for an extra-large.
 
-Payments inside the park use a QR wristband. The FAQ says visitors can add money at the entrance cashiers and several named top-up points, while bars and kiosks generally take the wristband. Remaining credit can be refunded at retail before 17:45. The booking page recommends loading THB 300 per person, but that is an operator suggestion rather than a required spend.
-
-## Who it suits
+## Who it suits — and who it does not
 
 Ramayana suits families and mixed-age groups seeking slides, children's areas, pools and a long leisure visit. A child under 15 must be accompanied by a responsible adult; visitors aged 15 or older may visit without one under the current FAQ. Free parking is published, and life jackets are available without charge on a first-come basis in sizes from infant to adult.
 
@@ -61,6 +61,15 @@ It is a weaker fit for someone seeking lane swimming, a short pool workout or a 
 
 The operator places the park at 9 Moo 7 on Ban Yen Road in Na Chom Thian, Sattahip. Use the exact map rather than treating "Pattaya" in the attraction name as a central-city location. No fixed transfer duration or fare is quoted here because both depend on the starting point, traffic and booking method.
 
-## Before booking
+## Before you go
 
-Recheck the chosen date, promotion, park calendar, participant heights and any attraction restrictions. Decide whether lockers, towels or a cabana are needed, and include them in the total before comparing this ticket with another leisure day. The public pages do not establish guaranteed queue lengths, water temperature, a lap lane, food prices or availability of a particular cabana on arrival.
+Payments inside the park use a QR wristband. The FAQ says visitors can add money at the entrance cashiers and named top-up points, while bars and kiosks generally take the wristband. Remaining credit can be refunded at retail before 17:45. The booking page recommends loading THB 300 per person, but that is an operator suggestion rather than a required spend.
+
+Recheck the chosen date, promotion, park calendar, participant heights and attraction restrictions. Decide whether lockers, towels or a cabana are needed and include them in the total.
+
+## What we could not verify
+
+- The public pages do not guarantee queue lengths, water temperature or availability of a particular cabana on arrival.
+- No lap lane or coached swimming product was published.
+- Food and drink prices were not verified.
+- Promotional ticket availability after the checked date is not guaranteed.

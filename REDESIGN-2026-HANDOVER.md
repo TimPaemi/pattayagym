@@ -169,7 +169,6 @@ the old dark chrome on the next build, and you get a half-redesigned site.
 2. **The brand mark is CSS.** A volt tile with a dark inner rule — a ring seen
    from above. It works and costs no request, but the network README flags a real
    wordmark as the one item worth paying a designer for, and it would be reused
-   across all 18 sites.
 5. **Titles:** 21 pages have titles over 65 characters and 15 have meta
    descriptions over 165. Pre-existing, not a gate failure, but worth a pass.
 6. **Telephone coverage** is 170/215 on venue schema — the weakest structured-data

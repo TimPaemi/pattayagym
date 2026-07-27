@@ -9,44 +9,62 @@ website: https://www.dusit.com/dusitthani-pattaya/
 social:
   facebook: dusitthanipattaya
   instagram: dusitthanipattaya
-hours: Hotel operates continuously; confirm fitness, pool and tennis hours directly
-priceRange: ""
+hours: Tennis daily 07:00-20:00; Devarana wellness products require reservation; hotel operates continuously
+priceRange: ฿฿฿
 distinction: Resort wellness facilities with a fitness centre, yoga, two outdoor pools and tennis
 facilities: [Fitness centre, Yoga, Outdoor pools, Tennis, Kids club]
-verified: 2026-07-26
+priceAsOf: 2026-07-27
+priceSourceUrl: https://www.dusit.com/dusitthani-pattaya/specialoffers/
+verified: 2026-07-27
 sources:
   - https://www.dusit.com/dusitthani-pattaya/
   - https://www.dusit.com/dusitthani-pattaya/devarana-wellness/
-  - https://www.facebook.com/dusitthanipattaya
-  - https://www.instagram.com/dusitthanipattaya
+  - https://www.dusit.com/dusitthani-pattaya/specialoffers/
+  - https://www.dusit.com/dusitthani-pattaya/facilities/tennis-court/
+  - https://www.dusit.com/dusitthani-pattaya/specialoffer/ice-bath-ritual-by-devarana-wellness/
   - https://www.google.com/maps/search/?api=1&query=Dusit+Thani+Pattaya
-description: North Pattaya resort with Devarana fitness and wellness services, daily activities, two outdoor pools and tennis courts.
+description: North Pattaya resort wellness option with a published Devarana day pass, public tennis pricing and broader hotel fitness facilities.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Dusit+Thani+Pattaya"
 tags: [hotel-fitness, wellness, swimming, tennis, yoga, north-pattaya]
 ---
 
 # Dusit Thani Pattaya — Devarana Wellness
 
-Dusit Thani Pattaya is a Beach Road resort whose current facilities list includes the Devarana Fitness Centre, daily fitness activities, two outdoor swimming pools with direct beach access, tennis courts, a kids club and a playground. This record is useful when choosing a hotel with sport and wellness on site. It is not evidence that a non-resident can buy a gym, pool or tennis day pass.
+Dusit Thani Pattaya is a hotel wellness record with some genuinely published public products, not just a vague “ask the resort” listing. The checked operator pages now support a Devarana wellness day pass, a public tennis product and an ice-bath offer alongside the broader hotel fitness, pool and spa facilities.
 
-## What the operator currently documents
+## What training is on offer
 
-The resort's facilities panel lists the fitness centre and daily activities separately, but it does not publish an equipment inventory or a recurring activity timetable. The Devarana Wellness page currently names Aerobic Fit Ball, Classical Tai Chi, Fitness & Movement, Muay Thai Boxing, personal training and Taebo among its treatment and movement categories. A category appearing on that page does not mean it runs every day or is included with every room.
+The property page and Devarana wellness pages support a fitness centre, daily fitness activities, two outdoor pools with beach access, tennis courts, yoga-adjacent movement products and a wider spa operation with nine treatment rooms. The Devarana pages name movement and recovery categories such as Fitness & Movement, Muay Thai Boxing, personal training and the ice-bath ritual.
 
-The same resort panel lists two outdoor pools with direct beach access and tennis courts. It does not state lane availability, court count, surface, racket hire, coaching or weather terms. The kids club and playground are resort facilities, not proof of supervised childcare during an adult workout. Ask about the exact facility and date rather than requesting "sports access" generally.
+That is enough to confirm a genuine wellness-and-fitness offer inside the hotel. It is not enough to invent a full gym equipment list, lap-swim product or class timetable. Readers comparing hotel-based options should also use the [fitness category](/category/fitness/), the [hotel gym guide](/guides/hotel-gym-pattaya/) and the [luxury sports clubs guide](/guides/luxury-sports-clubs-pattaya/) rather than treating every resort facility as interchangeable.
 
-Devarana Wellness also describes nine treatment rooms and places the spa and fitness operation in the resort's garden area. Spa treatments, fitness access, movement sessions and personal training are different products. A treatment booking should not be assumed to include the gym or pools, and a hotel room should not be assumed to include every instructor-led activity.
+## What it costs
 
-## Public access and price
+The hotel's current special-offers page checked 2026-07-27 publishes a **Devarana Wellness Day Pass at ฿2,499 net per person**. The same site also publishes public tennis pricing: **฿1,000 net per hour for up to two players**, **฿150 net per racket per hour**, **฿500 net per additional person**, **฿350 net per hour for floodlights** and **฿1,000 net per hour for a knocker**. The tennis page says the courts are open **daily from 07:00 to 20:00** and that hotel guests use the courts free of charge.
 
-No current first-hand page checked on 26 July 2026 confirmed a non-resident fitness, pool or tennis product. No stable public tariff was published for those facilities. The blank price field therefore means that outside access and price are unresolved, not free.
+The current ice-bath special offer is listed at **฿1,200 net per person** for a **60-minute** session, with the hotel requiring **24 hours advance reservation**. These are three separate transactions: a day pass, a tennis booking and a recovery treatment. Do not treat one published amount as proof that every Dusit fitness facility can be accessed for the same price.
 
-Registered hotel guests should still confirm whether a particular court, class, trainer or spa treatment requires a reservation or an additional charge. Non-residents should request written confirmation of eligibility for the exact facility, the full price, included changing or towel services, cancellation terms and the permitted access period before travelling.
+## Who it suits — and who it does not
 
-## Hours and contact
+Dusit suits a traveller or local resident who wants a premium hotel setting, a clearly published tennis booking, or a named Devarana wellness product rather than a basic weights-room visit. It can also work for couples or families already staying on North Beach Road who want one resort handling several activities.
 
-The hotel itself operates continuously, but that does not establish 24-hour use of the fitness centre, pools, courts, kids club or spa. The current pages checked did not provide a complete operating timetable for those sports facilities. Ask for the opening and final-entry time of each selected facility and whether a holiday, private function, maintenance period or weather condition changes access.
+It does not suit someone whose priority is the cheapest stand-alone gym session, a documented commercial strength floor, or a clearly published public lap-swim product. Those users should compare the [Naklua area page](/area/naklua/) and the [hotel gym guide](/guides/hotel-gym-pattaya/) before assuming a five-star wellness offer is the best value training choice.
 
-The property page lists **+66 3842 5611-7** for the hotel. The Devarana page gives extensions **2483 and 2484**, a direct spa line of **+66 3841 4556**, and **spapattaya@dusit.com**. The exact Maps identity at 240/2 Pattaya Beach Road displays the shorter main number **038 425 611** and Plus Code **XV2P+64**.
+## Getting there
 
-For a decision between this resort and a public commercial gym, ask four separate questions: whether the visitor is eligible, whether the requested facility is available at the intended time, whether instructor or equipment use is included, and what the complete dated price is. Dusit is a documented resort-facility option; it should remain outside any public day-pass ranking until the hotel publishes or directly confirms that transaction.
+The hotel publishes **240/2 Pattaya Beach Road, Pattaya, Bang Lamung, Chonburi 20150**. The exact Maps listing uses the same location and the shorter hotel phone **+66 38 425 611**. The main property site also shows the broader hotel switchboard format **+66 38 425 611-7**.
+
+The key location point is that the training and wellness products sit inside a resort property, not on a street-front gym entrance. Tell the driver Dusit Thani Pattaya on Beach Road and confirm which desk handles tennis, Devarana wellness or the spa before arriving.
+
+## Before you go
+
+Book the exact product, not just “Dusit gym access”. Ask whether you are buying the Devarana day pass, a tennis hour, an ice-bath session, a spa treatment or a room-inclusive hotel facility. The hotel pages support all of those as distinct offers.
+
+Also confirm what the day pass includes, whether towels and changing are provided, whether the fitness centre can be used independently of a treatment, and whether a pool, court or movement session needs a separate reservation. A hotel being open continuously does not mean every sports or wellness facility is staffed around the clock.
+
+## What we could not verify
+
+- No detailed public equipment inventory for the fitness centre was published.
+- No current public lap-swim timetable, lane policy or separate non-resident pool-only product was found.
+- The checked pages did not publish a full recurring class timetable for the named movement activities.
+- No current public cancellation policy or complete Devarana day-pass inclusion list was visible in the checked sources.

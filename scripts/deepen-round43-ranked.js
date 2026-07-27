@@ -39,6 +39,7 @@ const BLOCKS = {
 
   <h2>A priced fallback if midnight access is optional</h2>
   <p>If a verified price matters more than training after 22:00, <a href="/gyms/coco-fitness/">Coco Fitness</a> publishes a current membership menu but closes at 22:00. On 26 July 2026 its owner page listed ฿1,599 for one month, ฿4,299 for three months, ฿8,299 for six and ฿12,999 for twelve; it also advertised a ฿2,998 couple promotion. Coco is on the fourth floor of Mike Shopping Mall and describes a training area over 1,000 sqm with machines, free weights, cardio, stretching and boxing facilities. The trade-off is explicit: known membership prices and defined daily hours versus an overnight window whose visitor price must be requested elsewhere.</p>
+  <p><a href="/gyms/castra-gym/">Castra Gym</a> is a second priced fallback if the real need is a late-but-not-overnight training plan plus combat classes. Its fight-club page checked on 27 July 2026 listed Muay Thai group sessions at 09:00-10:00 and 17:30-18:30 on weekdays, BJJ on Monday, Wednesday and Friday from 19:00-20:00, ฿300 for one group class, ฿2,500 for ten classes valid for two months and ฿600 for a private class, with gym access included. That is not a 24-hour answer, but it is a current published alternative for a reader who values a known class price over a vague overnight-access promise.</p>
 
   <h2>Checklist before relying on a 03:00 session</h2>
   <ul>

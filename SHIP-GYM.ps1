@@ -9,7 +9,9 @@
  WHAT IT DOES, in order:
    1. Sanity      repo, tools, branch, data.js loads
    2. Build       the full chain from AGENTS.md
-   3. Gates       validate, verify-deploy, verify, seo-audit, html-validate,
+   3. Gates       validate, verify-encoding, no-network-links, verify-deploy,
+                  verify, seo-audit, verify-redirects,
+                  html-validate,
                   design-layer  ->  if ANY gate fails it STOPS and pushes nothing
    4. Tag         tags the current origin/main so rollback is one command
    5. Push        commits, pushes the branch, fast-forwards main
@@ -234,6 +236,10 @@ if ($SkipBuild) {
   # the FAQPage schema injected earlier. verify-deploy fails without this.
   Invoke-Node 'inject-guide-schema (re-run for FAQPage)' 'scripts/inject-guide-schema.js'
 
+  # Press kit last among HTML writers: it swaps <main> on /press/ and must see
+  # the chrome the sweeps just applied, or the design sweep overwrites it back.
+  Invoke-Node 'build-press-kit (live figures)'          'scripts/build-press-kit.js'
+
   foreach ($s in @(
     'bump-legacy-assets', 'sync-csp-hashes', 'sync-llms-guides',
     'patch-guide-map-cta-r70', 'apply-geo-r73', 'update-sitemap-lastmod'
@@ -246,10 +252,13 @@ if ($SkipBuild) {
 Write-Head 'GATES'
 
 Invoke-Node 'validate.js (venue records)'  'validate.js'
+Invoke-Node 'verify-encoding.js (mojibake)'   'scripts/verify-encoding.js'
+Invoke-Node 'check-no-network-links.js'       'scripts/check-no-network-links.js'
 Invoke-Node 'verify-deploy.js (HARD GATE)' 'scripts/verify-deploy.js'
 Invoke-Node 'verify.js (structure)'        'scripts/verify.js'
 Invoke-Node 'seo-audit.js'                 'scripts/seo-audit.js'
 Invoke-Node 'verify-design-layer.js'       'scripts/verify-design-layer.js'
+Invoke-Node 'verify-redirects.js (301 vs built pages)' 'scripts/verify-redirects.js'
 Invoke-Step -Label 'html-validate (core pages)' -Exe $Npm -CmdArgs @('run', 'html:validate') -Quiet
 Invoke-Step -Label 'html-validate (all 359 pages)' -Exe $Npm -CmdArgs @('run', 'html:validate-all') -Quiet
 

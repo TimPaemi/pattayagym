@@ -14,20 +14,20 @@ const BLOCKS = {
   'bangkok-day-trip-sport-pattaya': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-bkk-h">
   <h2 id="${MARKER}-bkk-h" class="guide-rank-section">Bangkok day-trip logistics from Pattaya</h2>
-  <p>Most Pattaya hotels and camps can book <strong>stadium transfer + ticket</strong> packages — you leave 14:00–16:00, watch fights 18:00–22:00, return after midnight. DIY: Grab/Bolt to Bangkok ฿1,200–1,800 one way depending on traffic; shared minibus from South Pattaya bus stations often cheaper but less flexible on return time.</p>
+  <p>Treat this guide as a <strong>date-and-finish-time</strong> decision before it becomes a transport decision. The current Lumpinee listing supports Friday ONE cards from 18:30 to 23:30 and Saturday Super Champ from 18:30 to 21:00, while Rajadamnern's current calendar supports different gate times and card formats by day. That means the return problem changes with the exact card even before Bangkok traffic enters the calculation.</p>
   <h3>Rajadamnern vs Lumpinee — pick your night</h3>
-  <p><a href="/gyms/rajadamnern-stadium/">Rajadamnern</a> runs cards most nights — historic stadium, RWS series Saturdays. <a href="/gyms/lumpinee-boxing-stadium/">Lumpinee</a> (Ramintra) is the modern flagship — Friday/Saturday prestige cards. First-time viewers: Rajadamnern atmosphere is classic; Lumpinee production is slicker. Dress smart-casual; stadiums sell food and beer — pace yourself if you train next morning in Pattaya.</p>
+  <p><a href="/gyms/rajadamnern-stadium/">Rajadamnern</a> is the better fit when the chosen date and Bangkok day are already centred around the old-city side of the capital. <a href="/gyms/lumpinee-boxing-stadium/">Lumpinee</a> is the cleaner fit when the card itself is the destination and the traveller is willing to plan around Ramintra Road rather than central Bangkok. The practical distinction is not romance versus production; it is exact location, exact event window and whether a same-night Pattaya return is still realistic once the card ends.</p>
   <h3>Golf day-trips</h3>
-  <p>Bangkok fairways (Alpine, Thai Country Club belt) compete with Pattaya's own championship tracks — see <a href="/guides/best-golf-courses-pattaya/">Pattaya golf guide</a> before booking BKK tee times only for bragging rights. Early tee (06:30–07:00) beats traffic both directions. Cart and caddie fees are standard — budget tips in baht cash.</p>
+  <p>The same discipline applies to golf. Compare a Bangkok-area round against the current <a href="/guides/best-golf-courses-pattaya/">Pattaya golf guide</a> only after the exact tee time, course stack and transport plan are confirmed. A day-trip course can still be the right call, but it should win on the whole day product rather than on the course name alone.</p>
   <h3>What not to do</h3>
   <ul>
-    <li>Do not schedule hard Pattaya pad session the morning after a late Bangkok card — sleep debt + shins do not mix.</li>
-    <li>Do not buy tickets from street touts outside venues — use camp desk, hotel concierge, or official RWS channels.</li>
-    <li>Allow 2.5–3 hours return buffer after fights — Sukhumvit traffic at 23:00 is unpredictable.</li>
+    <li>Do not assume every Bangkok fight night is a same-shape 18:00-22:00 trip.</li>
+    <li>Do not build a Pattaya return around a late card until the exact driver, bus or overnight plan exists in writing.</li>
+    <li>Do not compare a Bangkok stadium ticket with a Pattaya training class as if they were the same Muay Thai purchase.</li>
   </ul>
-  <p>Camp context: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday</a> · Transport: Vehicle Rentals.</p>
+  <p>Camp context: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a> · <a href="/guides/muay-thai-training-holiday-pattaya/">training holiday</a> · Longer commitment logic: <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">1 week vs 1 month</a>.</p>
   <h3>Ticket tiers and seating</h3>
-  <p>Ringside costs more but worth it once — further seats still deliver atmosphere. Arrive 45 minutes early for merchandise and fighter stare-downs. Bags may be searched — travel light. Children welcome at many cards but ear protection recommended close to ring.</p>
+  <p>Use the official seating map and event page for the chosen date. A cheaper upper tier can still be the right purchase if the trip is really about seeing a current Bangkok card from Pattaya rather than maximising one prestige night. Ringside, club and grandstand are not just price differences; they change how early you need to arrive, how you handle bags and how much of the night budget remains for the return plan.</p>
 </section>`,
   '24-hour-gyms-pattaya': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-24h-h">
@@ -39,9 +39,9 @@ const BLOCKS = {
 </section>`,
   'luxury-sports-clubs-pattaya': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-lux2-h">
-  <h2 id="${MARKER}-lux2-h" class="guide-rank-section">Luxury club day — sample itinerary</h2>
-  <p><strong>08:00</strong> hotel gym weights · <strong>10:00</strong> pool laps · <strong>12:00</strong> spa or onsen (Andaz) · <strong>15:00</strong> tennis or padel booking at <a href="/gyms/fitz-club/">Fitz Club</a> · <strong>18:00</strong> sunset swim. One venue rarely covers all — Fitz for racquet, Hilton for central Beach Road, Andaz for Jomtien south recovery.</p>
-  <p>Compare total cost vs mid-tier chain + separate padel court — luxury wins on locker quality, towel service, and family-safe pools. Muay Thai still happens at dedicated camps: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a>.</p>
+  <h2 id="${MARKER}-lux2-h" class="guide-rank-section">Build one day from confirmed access</h2>
+  <p>A non-resident can build a facilities day around <a href="/gyms/fitz-club/">Fitz Club</a> because the operator publishes the access product: gym, pool, sauna and steam under the outside-guest pass, with courts and coaching priced separately. Confirm the dated pass, chosen facility hours, towel and locker terms, then reserve any court or instructor before planning the rest of the day.</p>
+  <p>Andaz, Pattaya Marriott and Hilton solve a different problem. Their operator pages establish hotel fitness or pool amenities, but no current public facility pass was found. Book them when the room and guest access are the product; do not construct a non-resident itinerary from the amenity list. If the only requirement is weights or cardio, compare an ordinary <a href="/guides/gym-day-pass-pattaya/">gym day pass</a> before paying for a resort stay.</p>
 </section>`,
   'best-for-beginners-pattaya': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-beg2-h">
@@ -57,9 +57,10 @@ const BLOCKS = {
 </section>`,
   'best-dive-operators-pattaya': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-dive2-h">
-  <h2 id="${MARKER}-dive2-h" class="guide-rank-section">Choosing PADI vs SSI shop</h2>
-  <p>Both certify Open Water globally. PADI dominates marketing; SSI shops like <a href="/gyms/dive-station-pattaya/">Dive Station</a> suit flexible online theory. IDC-heavy shops (Aquanauts, Mermaid's) matter if you might become an instructor — not for a one-week holiday try-dive.</p>
-  <p>Ask: boat size, diver-to-guide ratio, equipment age, refund policy on weather cancellation. Wreck dives need advanced cert — do not book HTMS Khram penetration on holiday Open Water. Broader watersport map: <a href="/guides/diving-watersports-pattaya/">diving &amp; watersports guide</a>.</p>
+  <h2 id="${MARKER}-dive2-h" class="guide-rank-section">Choose the operator by the exact dive product</h2>
+  <p>A Discover Scuba day, an Open Water course and a certified-diver boat day are different purchases even when the same shop sells all three. <a href="/gyms/adventure-divers-pattaya/">Adventure Divers</a> is now a good example: its current operator page separates passenger, Discover Scuba, certified-diver and course products with different inclusions and prices. That makes the booking more useful than a generic label such as "PADI 5 Star" on its own.</p>
+  <p><a href="/gyms/dive-station-pattaya/">Dive Station</a> remains the SSI-centred comparison point in this guide, while shops such as <a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre</a>, <a href="/gyms/no-limit-divers/">No Limit Divers</a> and Adventure Divers publish stronger current public product tables for PADI-led buyers. The better question is not "PADI or SSI?" by itself. It is "which exact product, with which inclusions, from which pickup zone, on which date?"</p>
+  <p>Ask for the whole written product: boat day, gear, dive computer, pickup, lunch, park fees, certification materials, photo add-ons, weather-change policy and minimum participant conditions. Broader watersport context: <a href="/guides/diving-watersports-pattaya/">diving &amp; watersports guide</a>.</p>
 </section>`,
 };
 
@@ -74,12 +75,17 @@ function inject(slug, block) {
     if (!html.includes(anchor)) return false;
     html = html.replace(anchor, block + '\n  ' + anchor);
   }
+  html = html.replace(/[ \t]+(?=\r?\n)/g, '');
   fs.writeFileSync(fp, html, 'utf8');
   return true;
 }
 
 let n = 0;
-for (const [slug, block] of Object.entries(BLOCKS)) {
+const onlyArg = process.argv.find((arg) => arg.startsWith('--guide-only='));
+const onlySlug = onlyArg ? onlyArg.slice('--guide-only='.length) : '';
+const selectedBlocks = onlySlug ? Object.entries(BLOCKS).filter(([slug]) => slug === onlySlug) : Object.entries(BLOCKS);
+if (onlySlug && selectedBlocks.length === 0) throw new Error(`Unknown guide slug: ${onlySlug}`);
+for (const [slug, block] of selectedBlocks) {
   if (inject(slug, block)) {
     n++;
     console.log(`  /guides/${slug}/ +r63 depth`);
