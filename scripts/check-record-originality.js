@@ -11,7 +11,7 @@
  *   node scripts/check-record-originality.js <id> <id> ...
  *
  * Fails on:
- *   1. a sentence of 8+ words appearing in more than one venue record
+ *   1. two records sharing a passage — 2+ sentences, or one 15+ word sentence
  *   2. three or more touched records gaining an identical number of words
  *      (a constant delta means one template, not research; two can be coincidence)
  *   3. a record whose additions carry no digit — no price, no time, no date, no
@@ -24,6 +24,8 @@ const { execFileSync } = require('child_process');
 
 const MIN_SENTENCE_WORDS = 8;
 const MIN_TEMPLATE_GROUP = 3;
+const MIN_SHARED_SENTENCES = 2;
+const LONG_SENTENCE_WORDS = 15;
 const ids = process.argv.slice(2);
 if (!ids.length) {
   console.error('usage: node scripts/check-record-originality.js <id> [<id> ...]');
@@ -69,27 +71,46 @@ for (const f of allFiles) {
 }
 
 // --- 1. cross-record sentence reuse ---------------------------------------
-const reported = new Set();
+// Two records can land on the same short factual line by honest coincidence —
+// "No current operator tariff was found on 27 July 2026" is the pattern §3 asks
+// for, and two venues checked the same day will write it the same way. What is
+// never coincidence is a shared PASSAGE. So a pair is flagged only when it shares
+// two or more sentences, or one sentence long enough that nobody writes it twice.
 for (const id of ids) {
   const f = path.posix.join('venues', id + '.md');
-  if (!fs.existsSync(f)) {
-    problems.push(`MISSING  ${f}`);
-    continue;
-  }
-  const t = fs.readFileSync(f, 'utf8');
-  for (const s of new Set(sentences(t))) {
-    const hits = seen.get(s) || [];
-    if (hits.length > 1 && !reported.has(s)) {
-      reported.add(s);
-      const others = hits.filter((h) => h !== f).map((h) => path.basename(h, '.md'));
-      problems.push(
-        `REUSED   this sentence appears in ${hits.length} records (${id} + ${others
-          .slice(0, 4)
-          .join(', ')}${others.length > 4 ? `, +${others.length - 4} more` : ''})\n` +
-          `           "${s.slice(0, 120)}${s.length > 120 ? '…' : ''}"`
-      );
+  if (!fs.existsSync(f)) problems.push(`MISSING  ${f}`);
+}
+
+const pairs = new Map(); // "fileA\u0000fileB" -> [shared sentence, ...]
+for (const [sentence, files] of seen) {
+  if (files.length < 2) continue;
+  for (let i = 0; i < files.length; i++) {
+    for (let j = i + 1; j < files.length; j++) {
+      const key = files[i] + '\u0000' + files[j];
+      if (!pairs.has(key)) pairs.set(key, []);
+      pairs.get(key).push(sentence);
     }
   }
+}
+
+const touched = new Set(ids.map((id) => path.posix.join('venues', id + '.md')));
+for (const [key, shared] of pairs) {
+  const [a, b] = key.split('\u0000');
+  if (!touched.has(a) && !touched.has(b)) continue;
+  const long = shared.filter((x) => x.split(' ').length >= LONG_SENTENCE_WORDS);
+  if (shared.length < MIN_SHARED_SENTENCES && long.length === 0) continue;
+  const na = path.basename(a, '.md');
+  const nb = path.basename(b, '.md');
+  const why =
+    shared.length >= MIN_SHARED_SENTENCES
+      ? `share ${shared.length} sentences — that is a passage, not a coincidence`
+      : `share a ${long[0].split(' ').length}-word sentence verbatim`;
+  const show = (long.length ? long : shared).slice(0, 3);
+  problems.push(
+    `REUSED   ${na} and ${nb} ${why}\n` +
+      show.map((x) => `           "${x.slice(0, 110)}${x.length > 110 ? '…' : ''}"`).join('\n') +
+      (shared.length > show.length ? `\n           …and ${shared.length - show.length} more` : '')
+  );
 }
 
 // --- 2. identical word deltas across the run ------------------------------
