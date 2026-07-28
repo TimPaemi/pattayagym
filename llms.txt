@@ -6,7 +6,7 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 ## Core directory
 
 - [Home](https://pattaya-gym.com/): Full directory with search, filters, featured venues
-- [Search](https://pattaya-gym.com/search/): Full-text search across all 157 venues
+- [Search](https://pattaya-gym.com/search/): Full-text search across all 215 venues
 - [Map](https://pattaya-gym.com/map/): Stub page (noindex) — use [Search](https://pattaya-gym.com/search/) or area hubs meanwhile
 - [Compare](https://pattaya-gym.com/compare/): Side-by-side comparison of any 2–4 venues
 - [Plan My Trip](https://pattaya-gym.com/plan-my-trip/): Free trip builder - a tailored Pattaya training-trip plan by sport, length, budget and travel style
@@ -23,19 +23,19 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 
 ## Sport categories
 
-- [Muay Thai camps](https://pattaya-gym.com/category/muay-thai/): 38 verified camps including Fairtex, Sityodtong, Kombat Group
-- [Fitness / Gym](https://pattaya-gym.com/category/fitness/): 29 venues — 24-hour chains, hotel gyms, boutique
+- [Muay Thai camps](https://pattaya-gym.com/category/muay-thai/): 22 verified camps including Fairtex, Sityodtong, Kombat Group
+- [Fitness / Gym](https://pattaya-gym.com/category/fitness/): 43 venues — 24-hour chains, hotel gyms, boutique
 - [Golf](https://pattaya-gym.com/category/golf/): 17 courses including Siam Country Club, Laem Chabang, Phoenix Gold
-- [Yoga / Pilates](https://pattaya-gym.com/category/yoga/): 14 studios
-- [Tennis / Padel / Squash](https://pattaya-gym.com/category/racquet/): 11 venues
-- [Watersports / Diving](https://pattaya-gym.com/category/watersports/): 20 dive operators + kitesurf + yacht clubs
-- [Swimming](https://pattaya-gym.com/category/swimming/): 9 pools + waterparks
+- [Yoga / Pilates](https://pattaya-gym.com/category/yoga/): 8 studios
+- [Tennis / Padel / Squash](https://pattaya-gym.com/category/racquet/): 25 venues
+- [Watersports / Diving](https://pattaya-gym.com/category/watersports/): 21 dive operators + kitesurf + yacht clubs
+- [Swimming](https://pattaya-gym.com/category/swimming/): 15 pools + waterparks
 - [Climbing](https://pattaya-gym.com/category/climbing/): 2 climbing gyms
-- [Running / Cycling Clubs](https://pattaya-gym.com/category/clubs/): 23 groups
-- [Kids / Youth Sports](https://pattaya-gym.com/category/kids-youth/): 9 football academies + trampoline parks
+- [Running / Cycling Clubs](https://pattaya-gym.com/category/clubs/): 26 groups
+- [Kids / Youth Sports](https://pattaya-gym.com/category/kids-youth/): 14 football academies + trampoline parks
 - [Equestrian](https://pattaya-gym.com/category/equestrian/): 2 facilities including Thai Polo & Equestrian Club
-- [Adventure / Multi-Sport](https://pattaya-gym.com/category/adventure/): 12 venues — skydiving, karts, ATV, ziplines
-- [MMA](https://pattaya-gym.com/category/mma/): 1 verified MMA camp
+- [Adventure / Multi-Sport](https://pattaya-gym.com/category/adventure/): 16 venues — skydiving, karts, ATV, ziplines
+- [MMA](https://pattaya-gym.com/category/mma/): 2 verified MMA camp
 - [BJJ / Grappling](https://pattaya-gym.com/category/bjj/): 1 verified BJJ academy
 - [CrossFit / Functional](https://pattaya-gym.com/category/crossfit/): 1 affiliate
 

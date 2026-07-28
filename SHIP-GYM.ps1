@@ -240,6 +240,10 @@ if ($SkipBuild) {
   # the chrome the sweeps just applied, or the design sweep overwrites it back.
   Invoke-Node 'build-press-kit (live figures)'          'scripts/build-press-kit.js'
 
+  # Entity graph last among HTML writers: resolves any bare founder Person left by a
+  # hand-maintained block and stamps dateModified on anything still missing one.
+  Invoke-Node 'normalize-entity-graph'                  'scripts/normalize-entity-graph.js'
+
   foreach ($s in @(
     'bump-legacy-assets', 'sync-csp-hashes', 'sync-llms-guides',
     'patch-guide-map-cta-r70', 'apply-geo-r73', 'update-sitemap-lastmod'

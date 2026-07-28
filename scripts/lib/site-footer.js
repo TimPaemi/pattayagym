@@ -1,6 +1,13 @@
 /**
  * site-footer.js — FOOTER-SPEC-2026-V2: the canonical simple footer.
- *
+ * PREFERRED SOURCES (added 2026-07-28)
+ * The one publisher-controllable input into AI Overviews and AI Mode that Google
+ * actually documents. A reader opts in; Google then favours this site for them in
+ * generative results, and reports roughly double the click-through from opted-in
+ * users. Domain-level only - subdirectories are ineligible - so one link covers the
+ * whole site. nofollow because it is a utility link to a Google preference screen,
+ * not an editorial citation.
+ * *
  * Rebuilt July 2026 to match the Pattaya Insider footer shape, because the
  * network carries no cross-site links and shared visual language is therefore
  * the only mechanism left for signalling one publisher.
@@ -97,6 +104,7 @@ function siteFooterHtml(venueN) {
         <a href="/" class="footer-brand" aria-label="Pattaya.Gym — home"><span class="footer-mark" aria-hidden="true"></span><span>pattaya<span class="accent">.gym</span></span></a>
         <p class="footer-desc">Every gym, ring and court in Pattaya &mdash; ${venueN} venues across 15 sports, researched and kept current by people who live here.</p>
         <p class="footer-desc">Written and kept up to date by <strong>Tim &amp; Paemi</strong>. <a href="https://timpaemi.com/" rel="author noopener" class="footer-pub-link">timpaemi.com</a></p>
+        <p class="footer-desc footer-prefsource"><a href="https://google.com/preferences/source?q=pattaya-gym.com" rel="nofollow noopener" target="_blank">Make Pattaya.Gym a preferred source on Google &rarr;</a></p>
         <div class="footer-social">${socialHtml()}</div>
       </div>
       <nav class="footer-nav" aria-label="Footer">
@@ -107,7 +115,7 @@ ${columnsHtml()}
       <p>&copy; ${year} TimPaemi Co., Ltd. &middot; Made in Pattaya, Thailand</p>
       <p class="footer-legal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap.xml">Sitemap</a></p>
     </div>
-    <p class="footer-note">Listings are free and we take no payment for placement or ranking. Every venue is checked in person and re-checked on a rolling basis.</p>
+    <p class="footer-note">Listings are free and we take no payment for placement or ranking. Every venue is researched from operator sources and public listings, each carrying the date we checked it &mdash; and we say so when something could not be confirmed.</p>
   </div>
 </footer>`;
 }

@@ -1,6 +1,17 @@
 #!/usr/bin/env node
 /**
- * sync-llms-guides.js — Rebuild ## Curated guides in llms.txt from guide folders on disk.
+ * sync-llms-guides.js — Rebuild ## Curated guides in llms.txt from guide folders on disk,
+ * and repair any stale venue count anywhere in the file.
+ *
+ * SCOPE: pattaya-gym.com only.
+ *
+ * On the count sweep: llms.txt claimed "Full-text search across all 157 venues" on
+ * 2026-07-28, against a live directory of 215. Every other surface on the site has a
+ * script keeping its count honest; this file did not, because only its guide section
+ * was ever regenerated. A wrong number in a machine-readable file is worse than no
+ * file at all - it is the one place a model will read a figure and repeat it without
+ * checking. Google's May 2026 guidance is that llms.txt does nothing for Search; it
+ * stays here only because it costs nothing once it is correct.
  */
 
 const fs = require('fs');
@@ -80,3 +91,43 @@ llms = llms.replace(/\d+ venues, \d+ guides/g, `${n} venues, ${slugs.length} gui
 llms = llms.replace(/## Curated guides[\s\S]*?(?=\n## Methodology)/, block + '\n');
 fs.writeFileSync(LLMS, llms, 'utf8');
 console.log(`sync-llms-guides: ${slugs.length} guides in llms.txt`);
+
+/* --- count sweep -------------------------------------------------------------
+   Two different kinds of number live in this file and they must not be confused.
+
+     - the SITE TOTAL ("215 venues", "Full-text search across all 215 venues")
+     - PER-CATEGORY counts on the category-link lines ("29 venues", "17 courses")
+
+   The first pass of this sweep rewrote both to the site total, which turned every
+   category line into a claim that the site has 215 fitness venues. So: the site
+   total is only corrected outside the category block, and category lines are
+   recomputed from data.js instead. Both are now derived, neither is typed.        */
+{
+  const CATS = {};
+  for (const g of GYMS) CATS[g.category] = (CATS[g.category] || 0) + 1;
+
+  const lines = fs.readFileSync(LLMS, 'utf8').split('\n');
+  let siteFixed = 0, catFixed = 0;
+
+  const out = lines.map((line) => {
+    const catLink = line.match(/^- \[[^\]]+\]\(https:\/\/pattaya-gym\.com\/category\/([a-z0-9-]+)\/\):\s*(\d+)(\s+\S+)/);
+    if (catLink) {
+      const [, slug, shown, unit] = catLink;
+      const real = CATS[slug];
+      if (real === undefined || String(real) === shown) return line;
+      catFixed++;
+      return line.replace(/:\s*\d+(\s+\S+)/, `: ${real}$1`);
+    }
+    // site total - only on lines that are not category links
+    const fixed = line.replace(
+      /\b\d{2,4}(?=\s+(?:venues|sport venues|listings|venue pages))/g,
+      (m) => { if (m !== String(n)) siteFixed++; return String(n); }
+    );
+    return fixed;
+  });
+
+  const before = lines.join('\n');
+  const after = out.join('\n');
+  if (after !== before) fs.writeFileSync(LLMS, after, 'utf8');
+  console.log(`llms.txt: site total ${n} (${siteFixed} stale), category counts recomputed (${catFixed} corrected)`);
+}

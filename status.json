@@ -17,8 +17,8 @@
   "build": {
     "version": "v470",
     "asset_version": "470",
-    "last_built_utc": "2026-07-27T22:15:41.677Z",
-    "last_built_date": "2026-07-27"
+    "last_built_utc": "2026-07-28T12:39:19.473Z",
+    "last_built_date": "2026-07-28"
   },
   "catalog": {
     "venues_total": 215,
@@ -39,7 +39,7 @@
   "freshness": {
     "oldest_verified_date": "2026-07-24",
     "newest_verified_date": "2026-07-27",
-    "oldest_verified_age_days": 3,
+    "oldest_verified_age_days": 4,
     "target_max_age_days": 30
   },
   "endpoints": {

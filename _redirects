@@ -53,3 +53,18 @@ https://www.pattaya-gym.com/* https://pattaya-gym.com/:splat 301
 /area/naklua/climbing                     /area/naklua/ 301
 /area/sattahip/clubs/                     /area/sattahip/ 301
 /area/sattahip/clubs                      /area/sattahip/ 301
+
+# Internal files that must live at the repo root but must not be readable in public.
+# AGENTS.md and CLAUDE.md carry the network rulebook and name every sister site; the Codex
+# loop files and ENRICH-STATE.json expose the content pipeline; package.json exposes the
+# dependency tree. None is linked from any page or listed in any sitemap, so this costs zero
+# clicks - it only closes a door that was open. Everything else historical now lives in
+# .internal-docs/, which is outside the deploy.
+/AGENTS.md                         /404.html 302
+/CLAUDE.md                         /404.html 302
+/CODEX-GYM-ENRICH-LOOP.md          /404.html 302
+/CODEX-GYM-LOOP.md                 /404.html 302
+/CONTRIBUTING.md                   /404.html 302
+/ENRICH-STATE.json                 /404.html 302
+/package.json                      /404.html 302
+/package-lock.json                 /404.html 302

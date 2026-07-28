@@ -307,7 +307,10 @@ const schema = {
       width: 512, height: 512, caption: BRAND.site
     },
     image: { '@type': 'ImageObject', url: `${BRAND.url}/brand/og-image.png`, width: 1200, height: 630 },
-    founder: BRAND.founders.map(n => ({ '@type': 'Person', name: n })),
+    // @id references, not bare {name} nodes. A Person with only a name is a string,
+    // not an entity - Google needs url or sameAs to resolve it, and the full Person
+    // definitions live in scripts/lib/timpaemi-author.js and are emitted on this page.
+    founder: [{ '@id': 'https://timpaemi.com/#tim' }, { '@id': 'https://timpaemi.com/#paemi' }],
     address: {
       '@type': 'PostalAddress',
       addressLocality: BRAND.city, addressRegion: BRAND.region, addressCountry: 'TH'

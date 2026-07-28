@@ -20,7 +20,7 @@
 const fs = require('fs');
 const path = require('path');
 const { siteFooterHtml } = require('./lib/site-footer.js');
-const { timpaemiRef, timpaemiOrganization } = require('./lib/timpaemi-author');
+const { timpaemiRef, timpaemiOrganization, authorRefs, authorPersons } = require('./lib/timpaemi-author');
 
 const ROOT = path.resolve(__dirname, '..');
 const { GYMS } = require(path.join(ROOT, 'data.js'));
@@ -71,7 +71,7 @@ for (const file of htmlFiles(ROOT)) {
 
   // 3b. <meta name="author"> for head-only crawlers and AI engines
   if (!/<meta name="author"/.test(html) && html.includes('</head>')) {
-    html = html.replace('</head>', '<meta name="author" content="TimPaemi (timpaemi.com)">\n</head>');
+    html = html.replace('</head>', '<meta name="author" content="Tim and Paemi, TimPaemi Co., Ltd.">\n</head>');
   }
 
   // 4. JSON-LD: entity once per page + author/publisher reference
@@ -87,13 +87,23 @@ for (const file of htmlFiles(ROOT)) {
         '@id': `${url}#webpage`,
         url: url,
         name: titleMatch ? titleMatch[1] : 'Pattaya.Gym',
-        author: timpaemiRef(),
+        author: authorRefs(),
         publisher: timpaemiRef()
       });
     }
-    if (!ENTITY_RE.test(html)) {
-      blocks.push({ '@context': 'https://schema.org', ...timpaemiOrganization() });
-    }
+    /* Rewrite the entity blocks rather than skipping when one already exists.
+       Skipping is how 37 pages kept an Organization whose `founder` was still an
+       array of bare {"@type":"Person","name":"Tim"} nodes - no @id, no url, no
+       sameAs - long after the definition had been corrected. One definition, one
+       shape, refreshed on every run. */
+    const orgScript = `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', ...timpaemiOrganization() })}</script>`;
+    const orgRe = /<script type="application\/ld\+json">\{"@context":"https:\/\/schema\.org","@type":"Organization","@id":"https:\/\/timpaemi\.com\/#timpaemi"[\s\S]*?<\/script>/g;
+    if (orgRe.test(html)) html = html.replace(orgRe, orgScript);
+    else blocks.push({ '@context': 'https://schema.org', ...timpaemiOrganization() });
+
+    const personRe = /<script type="application\/ld\+json">\{"@context":"https:\/\/schema\.org","@type":"Person","@id":"https:\/\/timpaemi\.com\/#(?:tim|paemi)"[\s\S]*?<\/script>\s*/g;
+    html = html.replace(personRe, '');
+    for (const person of authorPersons()) blocks.push({ '@context': 'https://schema.org', ...person });
     if (blocks.length) {
       const scripts = blocks.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join('\n') + '\n';
       html = html.replace('</head>', scripts + '</head>');

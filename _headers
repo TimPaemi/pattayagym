@@ -88,3 +88,33 @@
   Cache-Control: public, max-age=86400
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Internal root files - never index, never cache.
+/AGENTS.md
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+/CLAUDE.md
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+/CODEX-GYM-ENRICH-LOOP.md
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+/CODEX-GYM-LOOP.md
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+/CONTRIBUTING.md
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+/ENRICH-STATE.json
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+/package.json
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+/package-lock.json
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/.internal-docs/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store

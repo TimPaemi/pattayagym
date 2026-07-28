@@ -780,14 +780,17 @@ function syncCssFontVersion() {
 // FOOTER-SPEC-2026: every page carries author + publisher references to the
 // TimPaemi entity (@id https://timpaemi.com/#timpaemi) plus the Organization
 // entity itself, emitted once per page.
-const { timpaemiRef, timpaemiOrganization } = require('./scripts/lib/timpaemi-author');
-function withTimpaemiLd(jsonLd, url, title) {
+const { timpaemiRef, timpaemiOrganization, authorRefs, authorPersons } = require('./scripts/lib/timpaemi-author');
+function withTimpaemiLd(jsonLd, url, title, modified) {
   const blocks = jsonLd ? (Array.isArray(jsonLd) ? [...jsonLd] : [jsonLd]) : [];
   const isPageNode = b => b && typeof b['@type'] === 'string' && /Page$/.test(b['@type']) && b['@type'] !== 'FAQPage';
   const page = blocks.find(isPageNode);
+  // author = the two people, publisher = the company. They are different things
+  // and Google reads them differently; do not collapse them back into one node.
   if (page) {
-    if (!page.author) page.author = timpaemiRef();
+    if (!page.author) page.author = authorRefs();
     if (!page.publisher) page.publisher = timpaemiRef();
+    if (modified && !page.dateModified) page.dateModified = modified;
   } else {
     blocks.push({
       '@context': 'https://schema.org',
@@ -795,17 +798,61 @@ function withTimpaemiLd(jsonLd, url, title) {
       '@id': `${url}#webpage`,
       url: url,
       name: title,
-      author: timpaemiRef(),
-      publisher: timpaemiRef()
+      author: authorRefs(),
+      publisher: timpaemiRef(),
+      ...(modified ? { dateModified: modified } : {})
     });
   }
   blocks.push({ '@context': 'https://schema.org', ...timpaemiOrganization() });
+  // The Person nodes the refs above point at. Emitted once per page so every
+  // @id in the graph resolves locally rather than dangling.
+  for (const person of authorPersons()) blocks.push({ '@context': 'https://schema.org', ...person });
   return blocks;
 }
 
-function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null, robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }) {
-  // One <script> per JSON-LD item; TimPaemi author/publisher + entity on every page.
-  const ldBlocks = withTimpaemiLd(jsonLd, url, title)
+
+/* Resolve a venue OG card at build time. Falls back to the site card when the
+   per-venue PNG was never generated, so no page can ship a 404 image path. */
+const OG_DIR = path.join(ROOT, "og");
+const OG_PRESENT = fs.existsSync(OG_DIR)
+  ? new Set(fs.readdirSync(OG_DIR).filter(f => f.endsWith(".png")).map(f => f.slice(0, -4)))
+  : new Set();
+let OG_FALLBACKS = 0;
+function venueOgImage(id) {
+  if (OG_PRESENT.has(id)) return `${SITE}/og/${id}.png`;
+  OG_FALLBACKS++;
+  return `${SITE}/og-image.png`;
+}
+
+
+/* The hours pill used to ship the literal string "Checking hours..." and wait for the
+   inline open-status script to replace it with a live "Open, closes 20:00" state.
+   That script works fine for humans. But 105 of 215 venue pages therefore told every
+   crawler, snippet generator and AI retriever that this venue's opening hours were
+   "Checking hours..." - the one fact they most need, replaced by a spinner.
+   Render the real hours into the HTML instead. The inline script still overwrites
+   textContent on load, so readers keep the live status and machines get a fact. */
+function hoursPillLabel(raw) {
+  const s = String(raw || '').trim();
+  if (!s) return 'Hours on request';
+  // Take the first clause; a pill cannot carry "Mon-Sat 07:00-09:00 and 15:00-18:30; Sun closed".
+  let first = s.split(';')[0].trim().replace(/\s+and\s+\d.*$/i, '').trim();
+  if (first.length > 34) first = first.slice(0, 33).trimEnd() + '\u2026';
+  return first;
+}
+
+/* Site-wide content date. Hub pages (categories, areas, area x category, info pages)
+   have no verification date of their own, so they inherit the newest venue check on
+   the site. Every page then carries a dateModified, which is what a crawler uses to
+   decide whether a re-crawl is worth it. Derived, never typed. */
+const SITE_MODIFIED = (() => {
+  const dates = GYMS.map(g => g.verified).filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d));
+  return dates.length ? dates.sort().pop() : new Date().toISOString().slice(0, 10);
+})();
+
+function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null, modified = null, robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }) {
+  // One <script> per JSON-LD item; Person authors + Organization publisher on every page.
+  const ldBlocks = withTimpaemiLd(jsonLd, url, title, modified)
     .map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`)
     .join('\n');
   return `<!DOCTYPE html>
@@ -997,7 +1044,10 @@ function venuePage(g, fm, body) {
   const url = `${SITE}/gyms/${g.id}/`;
   const title = venueSeoTitle(g, catLabel);
   const desc = venueSeoDesc(g, catLabel);
-  const ogImage = `${SITE}/og/${g.id}.png`;
+  // OG card: per-venue if one was generated, otherwise the site card. Never emit a path
+  // that 404s - 58 venue pages shipped a missing /og/<slug>.png on 2026-07-27, which broke
+  // every social share AND the `image` property of their LocalBusiness JSON-LD.
+  const ogImage = venueOgImage(g.id);
 
   // Color accent based on category
   const accentColors = {
@@ -1119,7 +1169,7 @@ function venuePage(g, fm, body) {
     v.verified && { lbl: 'Last verified', val: v.verified, color: 'pink' }
   ].filter(Boolean);
 
-  return head({ title, desc, url, ogImage, jsonLd })
+  return head({ title, desc, url, ogImage, jsonLd, modified: g.verified || undefined })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -1139,7 +1189,7 @@ function venuePage(g, fm, body) {
     ${g.verified ? `<div class="trust-bar" aria-label="Verification status">
       ${g.status === 'closed' ? `<span class="trust-pill is-permanently-closed" title="This venue has permanently closed">Permanently closed</span>` : ''}
       ${g.featured ? `<span class="trust-pill is-editors-pick" title="Editor's Pick — hand-selected as a top venue in this category">★ Editor's Pick</span>` : ''}
-      ${g.status !== 'closed' && hoursSpec.length ? `<span class="trust-pill is-open-status" data-hours-spec='${JSON.stringify(hoursSpec).replace(/'/g, '&#39;')}'>● Checking hours…</span>` : ''}
+      ${g.status !== 'closed' && hoursSpec.length ? `<span class="trust-pill is-open-status" data-hours-spec='${JSON.stringify(hoursSpec).replace(/'/g, '&#39;')}'>● ${esc(hoursPillLabel(g.hours || fm.hours))}</span>` : ''}
       <span class="trust-pill is-verified" title="Hand-checked by Tim Paemi">★ Verified by Tim · ${esc(g.verified)}</span>
       <span class="trust-pill">100% Hand-checked</span>
       <span class="trust-pill">No paid placement</span>
@@ -1534,7 +1584,7 @@ function categoryPage(cat, venues) {
   const faqHtml = categoryFaqHtml(cat);
   const jsonLd = faqLd ? [itemList, crumbsLd, faqLd] : [itemList, crumbsLd];
 
-  return head({ title, desc, url, jsonLd })
+  return head({ title, desc, url, jsonLd , modified: SITE_MODIFIED })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -1888,7 +1938,7 @@ function areaPage(slug, label, venues) {
   const faqHtml = areaFaqHtml(slug, label);
   const jsonLd = faqLd ? [itemList, crumbsLd, faqLd] : [itemList, crumbsLd];
 
-  return head({ title, desc, url, jsonLd })
+  return head({ title, desc, url, jsonLd , modified: SITE_MODIFIED })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -2059,7 +2109,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
   };
   const jsonLd = [itemList, crumbsLd];
 
-  return head({ title, desc, url, jsonLd })
+  return head({ title, desc, url, jsonLd , modified: SITE_MODIFIED })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -2165,7 +2215,7 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
   </div>
 </section>` : '';
 
-  return head({ title, desc, url, jsonLd: utilJsonLd, robots: robotsMeta })
+  return head({ title, desc, url, jsonLd: utilJsonLd, robots: robotsMeta , modified: SITE_MODIFIED })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -2393,8 +2443,16 @@ const UTILITY_PAGES = [
 <p>Pattaya.Gym is part of the independent TimPaemi network of Pattaya publications operated by <strong>TimPaemi Co., Ltd.</strong>.. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
 
 <h2>Who runs this</h2>
-<p><img src="/authors/timpaemi.jpg" alt="TimPaemi — Tim and Paemi, founders and editors" width="120" height="120" loading="lazy" style="float:right; border-radius:12px; margin:0 0 12px 16px;"></p>
-<p>Pattaya.Gym is operated by <strong>TimPaemi</strong> — Tim Paemi, an independent operator and long-time Pattaya resident, alongside his wife and co-founder. Everything we publish across the network carries the TimPaemi byline; timpaemi.com is the identity behind every site. The site is self-funded and has no commercial relationship with any listed venue.</p>
+<p><img src="/authors/timpaemi.jpg" alt="Tim and Paemi, founders and editors of Pattaya.Gym" width="120" height="120" loading="lazy" style="float:right; border-radius:12px; margin:0 0 12px 16px;"></p>
+<p>Pattaya.Gym is published by <strong>TimPaemi Co., Ltd.</strong> and written by two people: Tim and Paemi. The company funds the site; the two of us do the research and the writing. It is self-funded and has no commercial relationship with any listed venue.</p>
+
+<h3 id="tim">Tim — founder and editor</h3>
+<p>A long-time Pattaya resident. Tim researches and writes the venue records and the guides, works the sources for prices and opening hours, and decides what goes on a page and what gets flagged as unconfirmed. Reachable at <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
+
+<h3 id="paemi">Paemi — co-founder and editor</h3>
+<p>Co-founder of TimPaemi Co., Ltd., also based in Pattaya. Paemi works on venue research and Thai-language sourcing — the operator pages, Thai social posts and local listings that an English-only search never reaches.</p>
+
+<p>Everything across the network carries the TimPaemi byline; <a href="https://timpaemi.com/" rel="author noopener">timpaemi.com</a> is the identity behind every site.</p>
 
 <h2>Editorial policy</h2>
 <ul>
@@ -2764,7 +2822,7 @@ function sportsHubPage() {
     itemListElement: CATEGORIES.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/category/${c.key}/`, name: c.label }))
   };
   const crumbsLd = { '@context': 'https://schema.org', ...breadcrumbJsonLd([{ label: 'Home', href: '/' }, { label: 'All sports' }], url) };
-  return head({ title, desc, url, jsonLd: [itemList, crumbsLd] })
+  return head({ title, desc, url, jsonLd: [itemList, crumbsLd] , modified: SITE_MODIFIED })
     + nav()
     + breadcrumb([{ label: 'Home', href: '/' }, { label: 'All sports' }])
     + `

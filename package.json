@@ -20,7 +20,8 @@
     "verify:redirects": "node scripts/verify-redirects.js",
     "fix:redirects": "node scripts/verify-redirects.js --fix",
     "verify:encoding": "node scripts/verify-encoding.js",
-    "fix:encoding": "node scripts/verify-encoding.js --fix"
+    "fix:encoding": "node scripts/verify-encoding.js --fix",
+    "verify:entities": "node scripts/normalize-entity-graph.js"
   },
   "devDependencies": {
     "@lhci/cli": "^0.15.1",

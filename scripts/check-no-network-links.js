@@ -9,8 +9,12 @@ const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
-const SKIP_DIRS = new Set(['.backups', 'node_modules', 'dist', '.git', '.wrangler', '.cursor', '.github', 'scripts', 'tmp', 'research', 'docs']);
-const EXT = /\.(html?|css|js|mjs|json|txt|xml|webmanifest)$/i;
+const SKIP_DIRS = new Set(['.internal-docs', '.backups', 'node_modules', 'dist', '.git', '.wrangler', '.cursor', '.github', 'scripts', 'tmp', 'research', 'docs']);
+/* .md is in this list because it is how the leak happened: 68 internal markdown files
+   sat at the web root naming every sister site, and this gate reported "0 sister-site links"
+   the entire time because it never opened them. Cloudflare Pages serves whatever is in the
+   deploy directory, not just what the sitemap lists. */
+const EXT = /\.(html?|css|js|mjs|json|txt|xml|webmanifest|md)$/i;
 const SKIP_FILES = new Set(['package-lock.json', 'package.json']);
 const SKIP_PATTERNS = [/^lh-.*\.json$/i]; // local Lighthouse dumps, never shipped
 
