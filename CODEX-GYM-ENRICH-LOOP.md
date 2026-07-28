@@ -329,8 +329,11 @@ node scripts/check-record-originality.js <id-1> <id-2> …
 
 It must print `PASS`. It fails a run on four things the check above cannot see:
 
-1. **a sentence of 8+ words appearing in more than one venue record.** Prose is per venue. If
-   a paragraph fits two venues, it describes neither.
+1. **two records sharing a passage** — two or more sentences in common, or a single sentence
+   of 15+ words. Prose is per venue: if a paragraph fits two venues, it describes neither.
+   One short factual line in common is fine and deliberately not flagged — two venues checked
+   on the same day will write "No current operator tariff was found on 27 July 2026" the same
+   way, and that is the honest §3 pattern, not padding.
 2. **three or more records gaining an identical number of words.** A constant delta is one
    block pasted N times. Two records can coincide; three cannot.
 3. **added sentences containing no digit at all.** No price, no clock time, no date, no street
