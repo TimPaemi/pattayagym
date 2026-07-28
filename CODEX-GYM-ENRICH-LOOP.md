@@ -1,337 +1,394 @@
-# CODEX PATTAYA-GYM ENRICHMENT LOOP v3 — built for long queues
+# CODEX — PATTAYA.GYM ENRICH LOOP v4
 
-One paste = one session. Queue as many back-to-back as you like; nothing is
-pushed between them. `ENRICH-STATE.json` guarantees each run takes a different
-batch.
+Paste this whole file, or just:
 
-Read first — these govern, this file only defines the recurring work:
-`AGENTS.md`, `EDITORIAL_STYLE_GUIDE.md`, `SCHEMA_REFERENCE.md`,
-`DESIGN_RULES.md`, and `ENRICH-STATE.json`.
+> **Read `CODEX-GYM-ENRICH-LOOP.md` in `C:\Projects\pattayagym` and do exactly one run.**
 
-Finish by updating `ENRICH-STATE.json`, appending to `WORK_LOG_CODEX.md`, then
-STOP. Do not ask questions or wait for confirmation — make the call, log it,
-move on.
+One paste = ONE run. Run it as many times as you like, back to back. Every run picks its own
+targets from state, so you never have to tell it what to work on. **Nothing is committed and
+nothing is pushed — Tim reviews and ships.**
 
----
-
-## NON-NEGOTIABLES
-
-1. **Never invent a fact.** Price, hours, phone, class schedule, trainer count,
-   ring count, floor area, founding year, equipment brands, instructor names —
-   each traces to a URL in that record's `sources:` list, or it is omitted.
-   Not softened. Omitted.
-
-2. **Never write or imply a first-hand visit.** The site says venues are checked
-   in person by Tim and Paemi. You have not been there. No "we visited", "when we
-   trained here", "the mats smell of", "we counted", "on our visit", "we spoke
-   to". No sensory detail you could only have by being present. Attribute
-   instead: "the venue's rate card lists", "its Google listing shows", "the club
-   posted in June 2026". **Breaking this turns an honest directory into
-   fabrication at scale. It is the worst thing you can do here.**
-
-3. **Cite the exact page, not the profile.** If a price comes from a Facebook post
-   dated 13 July 2026, the post's own URL goes in `sources:` — not just
-   `facebook.com/venuename`. A reader must be able to click through to the thing
-   you read. Set `priceAsOf:` and `priceSourceUrl:` in frontmatter for the price
-   you used (this convention is now standard on this site).
-
-4. **Every price carries an as-of date** in the prose too: "฿1,599 per month
-   (operator's membership graphic, 13 July 2026, checked 2026-07-26)".
-
-5. **Sources are first-hand.** The venue's own site, its Facebook or Instagram
-   with recent activity, a live Google Maps listing, a federation register (PADI,
-   IBJJF, tournament sites), or local press. **Not** SERP AI summaries, not
-   aggregators, not other directories, not TripAdvisor prose.
-
-6. **No padding — but skip ONLY for identity, never for missing prices.**
-   Runs 1–15 skipped 61% of attempted venues, and most of those skips were
-   wrong. Petchrungruang was skipped with "supports the active family camp,
-   phone and current fight activity, but no stable owner tariff" — that is a
-   confirmed, operating, well-documented gym and it deserved a page.
-
-   **Skip a venue if and only if one of these is true:**
-   - it is permanently closed (then set `status: closed`, see PART A), or
-   - you cannot confirm the venue currently exists as a distinct identity —
-     no live Maps place, no operator channel, name collides with other venues.
-
-   **Never skip because a price, timetable, or equipment list is unpublished.**
-   If existence and operation are confirmed, you have an address, a phone,
-   hours, a discipline and a category — that is a genuinely useful 450-word
-   page. "No published rate card; here is exactly what to ask when you call"
-   is the most useful sentence on the page. That is what the *What we could
-   not verify* section is for. A confirmed venue is never a skip.
-
-7. **Do not touch the headline venue counts.** 4 of 215 records are closed, so
-   211 operate. Tim is deciding how to word that. Leave the homepage title, meta
-   descriptions and hero counts alone. In new copy you write, say "records" or
-   "listings" rather than asserting all are open.
-
-8. **No cross-domain links** except the existing `timpaemi.com` publisher credit.
-   Internal links are encouraged.
-
-9. **Never commit, push, tag or deploy.** Tim ships. Leave a clean tree with
-   passing gates.
-
-10. **Do not touch** `styles.css`, `index.html`, `scripts/apply-design-2026.js`,
-    `scripts/polish-design-2026.js`, `scripts/verify-design-layer.js`,
-    `scripts/lib/v2-nav.js`, `scripts/lib/site-footer.js`, `SHIP-GYM.ps1`. The
-    design layer is finished and gated. You add content.
-
-11. **Never run `node build-v2.js` on its own.** It regenerates all 215 venue
-    pages and wipes the FAQ, intro, internal-linking and geo injection layers.
-    If you build, you run the whole chain (PART D). A bare build leaves the tree
-    broken for the next run in the queue.
+Rewritten 2026-07-28 after a full SEO audit of all 355 pages. Every rule below traces to
+something that actually broke or something Google actually documents. Nothing here is folklore.
 
 ---
 
-## STEP 0 — claim your batch
+## 0 · WHAT THIS SITE IS, AND WHY THAT DECIDES EVERYTHING
 
-Open `ENRICH-STATE.json`. Compute this and write the list at the top of your
-session before touching anything:
+pattaya-gym.com is an independent directory of 215 sport venues in one Thai city. It takes no
+money from venues. Its only asset is that a page here tells you something you cannot get from
+Google Maps.
+
+That is not a slogan, it is the indexing bar. Google confirmed in April 2026 that
+**"Crawled – currently not indexed" is a quality verdict, not a technical problem**, and the
+March and May 2026 core updates specifically demoted *replaceable* directory pages — sites that
+are "a derivative summary of someone else's data". Aggregators that were the definitive
+destination for their niche recovered; reference layers did not.
+
+So before you write a single line, apply **the test**:
+
+> **If Google Maps already shows this, it is not content. It is padding.**
+
+Name, address, phone, a star rating and a category are all on Maps. What is not on Maps: the
+price with the date you saw it, which class times are real versus aspirational, whether a
+beginner is welcome, what the walk from the road is actually like, and what you *could not*
+confirm. Write those. Skip the rest.
+
+---
+
+## 1 · THE ELEVEN NON-NEGOTIABLES
+
+Break any of these and the run is worse than useless, because Tim has to find it and undo it.
+
+**1. Never invent a fact.** Every price, hour, phone number, class time, trainer name and
+   founding year comes from a source you can cite in the record's `sources:` list — or it is
+   omitted. "Probably around ฿400" is a fabrication. So is "typically open until late".
+
+**2. Never imply a first-hand visit.** Nobody from this site visited the venue. Do not write
+   "we visited", "when we dropped in", "the mats felt", "the aircon struggles", "we watched a
+   class". The footer now says *"researched from operator sources and public listings, each
+   carrying the date we checked it"* — your prose must be able to stand behind that sentence.
+   This one is not stylistic. A false first-hand claim is the single fastest way to lose a
+   manual review, and since April 2026 competitor spam reports can trigger one.
+
+**3. Write UTF-8. Always. Explicitly.** On 2026-07-27 something re-saved `data.js`,
+   `build-v2.js` and `build-discovery.js` through a Windows codepage. Every baht sign turned into
+   a three-character run and every em dash into a four-character one, and a build propagated it
+   into 306 files. Every gate passed, because mojibake is valid UTF-8 — structurally perfect,
+   semantically garbage, and visible only to a human reading the page. (This file deliberately
+   describes the damage rather than showing it: a document that quotes corrupt bytes trips the
+   very gate that detects them.) If you write a file with PowerShell, use
+   `Set-Content -Encoding utf8` — never bare `>` or `Out-File`, which default to the system ANSI
+   codepage. Run `node scripts/verify-encoding.js` before you finish. If it fails,
+   `node scripts/verify-encoding.js --fix`, rebuild, run it again.
+
+**4. Never add rating or review markup.** No `aggregateRating`, no `review`, no `ratingValue`,
+   ever, in any schema block. Google's review-snippet rules (updated 2026-07-24) say verbatim:
+   *"Don't rely on human editors to create, curate, or compile ratings information for local
+   businesses."* This site currently has zero review markup across 1,695 JSON-LD blocks. Keep it
+   at zero. A star rating in *prose*, attributed to a platform with a date, is fine —
+   "4.6 on Google Maps from 210 reviews, checked 2026-07-28".
+
+**5. Never link to a sister site.** No pattayavisahelp.com, pattaya-restaurant-guide.com,
+   mrweoutside.com, pattaya-school-guide.com, pattaya-medical.com, pattaya-coffee.com or any
+   other network domain, in any file, including markdown. The only permitted cross-domain link
+   is the existing followed timpaemi.com author credit. `node scripts/check-no-network-links.js`
+   enforces this and now scans `.md` too.
+
+**6. Never touch the encoding, structure or ordering of `data.js` beyond your own records.**
+   Edit the fields of the venues you worked on. Do not reformat, do not re-sort, do not
+   "tidy". It is 215 records on single lines by design.
+
+**7. Never run a bare `node build-v2.js` and stop there.** That regenerates venue pages and
+   drops the design layer, the FAQ blocks, the internal linking and the press kit. Run the full
+   chain in §5 or run nothing.
+
+**8. Never commit, never push, never deploy.** Not even "just the safe files". Tim ships with
+   `SHIP-GYM.ps1`.
+
+**9. Never add or remove `noindex`, canonicals, redirects or sitemap rules.** If you think a
+   page should be removed, merged or de-indexed, write it in the report and stop. In July 2026 an
+   index gate on a sibling site quarantined 4,635 pages and took it from 40 clicks a day to zero
+   in 24 hours.
+
+**10. A thin honest record beats a padded one.** If a venue has almost nothing verifiable, say
+   so in 80 words and move on. Do not reach for generic reassurance — "day passes vary, call
+   ahead" appears verbatim on 44 pages already and it is the weakest text on the site.
+
+**11. Work only in `C:\Projects\pattayagym`.** Everything outside it is read-only. Other windows
+   are working in the sibling repos right now.
+
+---
+
+## 2 · PICK YOUR TARGETS (do this first, every run)
+
+Read `ENRICH-STATE.json`. Then run this to get the live queue — it is the single source of truth
+for what is thin, and it changes every run:
+
+```bash
+node -e "
+const fs=require('fs'), d=require('./data.js');
+const H='## What training is on offer';
+const SKIP=new Set(['closed','likely-closed','unverified','out-of-area','non-sport','non-sport-attraction','public-beach','limited-operation']);
+const rows=d.GYMS.filter(g=>!SKIP.has(g.status)).map(g=>{
+  const f='venues/'+g.id+'.md'; if(!fs.existsSync(f)) return null;
+  const t=fs.readFileSync(f,'utf8'), b=t.replace(/^---[\s\S]*?---/,'');
+  return {id:g.id, w:(b.match(/\b[\p{L}0-9][\p{L}0-9'-]*/gu)||[]).length,
+          tpl:t.includes(H), cat:g.category, price:!!g.priceAsOf,
+          hrs:/\d{1,2}:\d{2}/.test(g.hours||'')};
+}).filter(Boolean);
+const need=rows.filter(r=>!r.tpl).sort((a,b)=>a.w-b.w);
+console.log('needing enrichment: '+need.length);
+need.slice(0,12).forEach(r=>console.log('  '+String(r.w).padStart(4)+'w  '+r.id.padEnd(38)+r.cat));
+console.log('missing priceAsOf: '+rows.filter(r=>!r.price).length+'   vague hours: '+rows.filter(r=>!r.hrs).length);
+"
+```
+
+**Take the 6–10 thinnest.** Thinnest first, always — those are the pages at real deindex risk,
+and a 90-word page is where 400 words of research changes the most.
+
+If that list ever comes back empty, switch to the second queue in this order:
+
+1. **Records with no `priceAsOf`.** Only 48 of 215 currently carry one. A price without a date is
+   a liability; a price with a date is the most citable thing on the page.
+2. **Records with vague hours.** 144 of 215 have specific clock times. The rest say things like
+   "contact the gym" — go and find the timetable.
+3. **Records verified longest ago.** Prices rot faster than anything else.
+4. **New venues** that genuinely exist and are not yet listed — but only after 1–3 are clear.
+
+---
+
+## 3 · WHAT A FINISHED RECORD LOOKS LIKE
+
+Rewrite `venues/<id>.md`. Keep the YAML front matter valid. The body uses **these six H2
+headings, verbatim, in this order** — the build, the FAQ injector and the internal-link pass all
+key off them:
 
 ```
-venues   = first 6 ids in venueQueue in neither done.venues nor skipped.venues
-repair   = first 2 ids in repairQueue not in done.repaired
-           (when repairQueue is exhausted, use reopenQueue instead — PART A2)
-guide    = first 2 slugs in guideQueue not in done.guides
-category = first key  in categoryQueue not in done.categories
-area     = first slug in areaQueue     not in done.areas
-```
-
-Wrap to index 0 if a queue is exhausted — a second pass deepens, which is fine.
-
-`venueQueue` is thinnest-first. **Do not reorder it and do not pick your own
-favourites** — that is what makes queued runs collide and waste sessions. Drop
-to 4 venues if research is slow and say so in the log.
-
----
-
-## PART A — the 6 venue records
-
-Edit `venues/<id>.md`. Target **450–750 words of body prose**, reached only by
-adding real information.
-
-### Frontmatter
-
-- Bump `verified:` to today — only for fields you actually re-checked.
-- Add every source URL you used, at page-level precision (rule 3).
-- Set `priceAsOf:` and `priceSourceUrl:` when you record a price.
-- Fill `website`, `social`, `hours`, `priceRange`, `phone`, `address` where found
-  and previously blank.
-- **Never blank or change an existing verified field** unless a source shows it
-  changed — then say so in the body and flag it in your report.
-- **Closed, moved or renamed:** set `status: closed` in the record frontmatter
-  **and** on the matching entry in `data.js` — both, or the page will not show
-  the closure badge. Rewrite `description` to lead with the closure. Add `closed`
-  to `tags`. `build-v2.js` renders a red PERMANENTLY CLOSED pill and suppresses
-  the live-hours indicator off that field. Flag it prominently in your report.
-
-### Body structure — USE THESE SIX H2 STRINGS VERBATIM
-
-This is a hard requirement, not a suggestion. Across runs 2–15, 25 of 35
-enriched records invented their own headings ("Weekly hours checked 26 July
-2026", "Training format and price"), and only 5 of 35 kept *What we could not
-verify* — the one section no competing directory has. Inconsistent structure
-across 215 pages destroys scannability and the sense of one system.
-
-Copy these six headings character-for-character. Keep their order. If a section
-has nothing in it, write one honest sentence saying so — do not rename it, do
-not merge it into a neighbour, do not delete it.
-
-- `## What training is on offer`
-- `## What it costs`
-- `## Who it suits — and who it does not`
-- `## Getting there`
-- `## Before you go`
-- `## What we could not verify`
-
-**Markdown links only** — `[text](/path/)`. Never raw `<a href>`; four recent
-records used raw HTML and it is inconsistent with the rest of the site.
-
-```markdown
-# <Venue name>
-
-<Lede, 40–60 words: what it actually is, who it suits, one honest limitation.
-No marketing adjectives.>
-
 ## What training is on offer
-<Disciplines, class formats, equipment categories, ring / court / lane / bay
-counts, floor area if published, whether coaching is included. Attribute each
-claim.>
-
 ## What it costs
-<Every published rate with an as-of date: walk-in, weekly, monthly, per-class,
-course, joining fee. State what is NOT included — towels, lockers, gloves, pad
-work, class booking. If nothing is published, say so and list exactly what to
-ask when calling.>
-
 ## Who it suits — and who it does not
-<An honest fit judgement from the facts above: first-timer, returning amateur,
-fight-prep, family, long-stay, budget. Name who should look elsewhere and link a
-better-fitting venue or guide. This section is where the site earns trust.>
-
 ## Getting there
-<Area, nearest recognisable landmark, road, baht-bus route if known, parking if
-published. No invented travel times or fares.>
-
 ## Before you go
-<Booking requirement, what to bring, glove and wrap hire, language of
-instruction, walk-in versus contract, minimum age, anything a first-timer would
-otherwise get wrong.>
-
 ## What we could not verify
-<Explicit bullets for the gaps: "No current rate card is published." "Class
-timetable not online as of 2026-07-26." This section is a feature — it adds
-honest length, tells the reader what to ask, and no competitor does it.>
 ```
 
-2–4 internal links per record, in prose: its category (`/category/<key>/`), its
-area (`/area/<slug>/`), the most relevant guide (`/guides/<slug>/`). No link
-dumps, no "click here", never the same anchor text twice on a page.
+Target **450–700 words of body prose** for a live venue. Under 300 is the failure zone.
+
+### The rules that make it worth indexing
+
+**Lead with the answer.** Every guide on this site opens with a plain-prose "if you only read one
+thing" paragraph, and it is the most extraction-friendly pattern here. Do the same on venue pages.
+An AI answer engine quotes the first specific sentence it can find.
+
+**Put numbers in visible prose, not only in tables or front matter.** This is what a strong
+record reads like — from `gyms/fairtex-pattaya`:
+
+> *"Operator prices checked on 25 July 2026: Muay Thai: ฿800 for one session … Muay Thai
+> unlimited: ฿16,500 for one month … BJJ: ฿300 for one session."*
+
+And this is what a weak one reads like — currently on 35 pages:
+
+> *"Listed tier: varies (varies). Monthly contracts and tourist passes differ."*
+
+The first is quotable. The second is noise. If you cannot write the first, write §"What we could
+not verify" instead — that is also unique, also useful, and also true.
+
+**Every price carries the date you saw it**, in the prose *and* in `data.js` as `priceAsOf`, with
+`priceSourceUrl` pointing at the page you read it on.
+
+**"What we could not verify" is a feature, not an apology.** The best page in the whole corpus,
+`gyms/crossfit-pattaya`, says:
+
+> *"No current first-hand public day-pass, weekly or monthly price was found on the pages checked
+> 2026-07-27. That means this record can confirm format and schedule, but not a numeric tariff."*
+
+Nobody else writes that. Write it every time it is true.
+
+**Be specific about who it does not suit.** "Suitable for all levels" is filler. "The published
+timetable is two sessions a day at fixed times with no drop-in class between them, so it does not
+work around a normal office day" is a fact somebody can act on.
+
+**Getting there means transport, not coordinates.** Nearest landmark, which road, roughly what a
+Bolt or songthaew costs from a known point, whether there is parking. Cite where you got it.
 
 ---
 
-## PART A2 — repair two off-template records (do this every run)
+## 4 · WHERE TO LOOK
 
-`ENRICH-STATE.json` has a `repairQueue` of 30 records that were enriched with
-good prose but the wrong structure, and a `reopenQueue` of 40 that were skipped
-for missing prices when the venue verifiably operates.
+Roughly in order of how much Google already knows. Cast wide — the whole point of this loop is
+to surface what a single English search does not.
 
-Every run, take **the first 2 ids in `repairQueue`** not already in
-`done.repaired`, and reshape them onto the six canonical headings. Keep every
-verified fact and source — this is a restructure, not a rewrite. Add the
-*What we could not verify* section if it is missing. Convert any raw `<a href>`
-to markdown links. Then append those ids to `done.repaired`.
+**Operator-first**
+- The venue's own site, especially `/prices`, `/schedule`, `/timetable`, `/classes`, `/rates` —
+  and the same in Thai (`/ราคา`, `/ตารางเรียน`)
+- Facebook page: pinned posts, Photos tab, recent posts. Thai gyms post price cards as images —
+  read the image text, and cite the post URL and date
+- Instagram bio links, Story highlights, LINE Official Account pages
+- Google Maps: hours, "popular times", recent Q&A, owner replies, and *photos posted by visitors*
+  that show a printed price board
 
-When `repairQueue` is empty, take **the first 2 ids in `reopenQueue`** instead
-and write them properly under the new rule 6, removing them from
-`skipped.venues` and adding them to `done.venues`.
+**Thai-language sources — do this, it is the biggest untapped edge**
+Google's May 2026 core update strongly favoured local-market entities for local-market queries.
+Out-of-market `.com` domains lost heavily. A price found on a Thai Facebook post and reported here
+in English is exactly the non-commodity information that survives.
+- Search the venue name in Thai script
+- `พัทยา ยิม ราคา`, `ค่าสมาชิก ฟิตเนส พัทยา`, `มวยไทย พัทยา ราคา`, `สนามแบดมินตัน พัทยา`
+- Thai Facebook groups and Pantip threads about specific venues
 
----
+**Federations and registries** — PADI / SSI dive-centre locators, IBJJF and academy affiliations,
+Thai Boxing associations, tournament and league pages, municipal sports-facility listings for
+Nong Prue, Bang Lamung, Sattahip and Pattaya City
 
-## PART B — one category page, one area page
+**Local press and community** — Pattaya Mail, The Thaiger, expat forums, Reddit r/Thailand and
+r/Pattaya, YouTube gym tours (the video description often carries the current price list)
 
-Category intros live in `scripts/inject-area-category-intros-r43.js` and
-`build-v2.js`; area copy in `build-v2.js`. **Edit those sources, never the
-generated HTML** — generated HTML is overwritten on every build.
-
-Target **350+ words each**, decision-useful rather than descriptive:
-
-- What the category or area actually offers, with real counts from `data.js`
-- The price range across those venues, with as-of dates
-- How the options differ — the trade-off a chooser faces
-- Who it suits and who it does not
-- Two or three internal links to the strongest records and the relevant guide
-- If the count includes closed or unverified records, say so (see rule 7)
-
----
-
-## PART C — two guides
-
-After 15 runs all 15 categories are done and the area queue has wrapped, but
-only 15 of 47 guides are touched. Guides are now **two per run** to catch up.
-
-Deepen each assigned `guide`. Find the `scripts/write-*.js` or
-`scripts/deepen-*.js` that owns it and **edit that writer, not the built HTML**.
-Aim for 1,200+ words total:
-
-- A comparison table where one helps, built from `data.js` plus dated sources
-- The trade-off the guide is actually about, stated plainly
-- A short "if you only read one thing" answer near the top
-- Two or three FAQ entries feeding the existing FAQPage schema
-- Fresh internal links to venues that now have enriched records
-
-Do not restructure the guide shell or its schema. Add inside it.
+**What is not a source:** an AI summary at the top of a search page, a scraped aggregator, another
+directory, or your own memory. If you cannot link it, you cannot write it.
 
 ---
 
-## PART D — build and gate
+## 5 · THE BUILD CHAIN — run it in full, in this order
 
-One command. Runs the full chain, every gate, and cannot touch git:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File SHIP-GYM.ps1 -DryRun
+```bash
+node build-v2.js
+node scripts/rebuild-tool-stubs.js
+node scripts/build-compare-page.js
+node scripts/build-plan-page.js
+node scripts/write-status-json.js
+node scripts/write-changelog.js
+node scripts/write-data-endpoints.js
+node scripts/inject-area-guide-faq-r74.js
+node scripts/inject-guide-schema.js
+node scripts/fix-guide-meta-entities-r68.js
+node scripts/write-round55-guides.js
+node scripts/inject-venue-faq-r47.js
+node scripts/inject-area-category-intros-r43.js
+node scripts/deepen-round43-ranked.js
+node scripts/inject-internal-linking-r84.js
+node scripts/inject-ranked-editorial-funnel.js
+node scripts/write-round37-guides.js
+node scripts/deepen-round37-guides.js
+node scripts/write-training-holiday-guide.js
+node scripts/inject-cheapest-price-table.js
+node scripts/export-venue-outreach.js
+node scripts/inject-homepage-seo.js
+node scripts/sync-guides-hub.js
+node scripts/migrate-legacy-guides-chrome.js
+node scripts/polish-ranked-guide-body.js
+node scripts/apply-design-2026.js
+node scripts/polish-design-2026.js
+node scripts/inject-guide-schema.js
+node scripts/build-press-kit.js
+node scripts/normalize-entity-graph.js
+node scripts/bump-legacy-assets.js
+node scripts/sync-csp-hashes.js
+node scripts/sync-llms-guides.js
+node scripts/patch-guide-map-cta-r70.js
+node scripts/apply-geo-r73.js
+node scripts/update-sitemap-lastmod.js
 ```
 
-Fallback if PowerShell is unavailable — the whole chain from `AGENTS.md`, not a
-bare build (rule 11), ending with `validate.js`, `verify-deploy.js`,
-`verify-design-layer.js`, `verify.js`, `seo-audit.js`, `npm run html:validate`.
+The two design sweeps must run after every generator, and `build-press-kit.js` must run after
+them — run it earlier and a sweep silently overwrites the page.
 
-**All gates must pass with zero errors.** Fix failures in this session. Never
-disable a gate. `verify-deploy.js` and `verify-design-layer.js` are hard gates.
+## 6 · GATES — every one must pass before you write your report
+
+```bash
+node validate.js
+node scripts/verify-encoding.js
+node scripts/check-no-network-links.js
+node scripts/verify-deploy.js
+node scripts/verify.js
+node scripts/seo-audit.js
+node scripts/verify-design-layer.js
+node scripts/verify-redirects.js
+npm run html:validate
+node scripts/check-record-originality.js <id-1> <id-2> …
+```
+
+A failing gate is your problem to fix, not Tim's. If you genuinely cannot fix it, revert your
+own edits to the affected file and say so in the report.
+
+## 7 · SELF-CHECK — paste this and read the output before you stop
+
+```bash
+node -e "
+const fs=require('fs');
+const H=['## What training is on offer','## What it costs','## Who it suits — and who it does not','## Getting there','## Before you go','## What we could not verify'];
+const BAD=/\b(we visited|when we visited|our visit|we trained|we dropped in|we watched|we stopped by|i visited)\b/i;
+const ids=process.argv.slice(1);
+let ok=true;
+for(const id of ids){
+  const f='venues/'+id+'.md';
+  if(!fs.existsSync(f)){ console.log('MISSING  '+f); ok=false; continue; }
+  const t=fs.readFileSync(f,'utf8'), b=t.replace(/^---[\s\S]*?---/,'');
+  const miss=H.filter(h=>!t.includes(h));
+  const w=(b.match(/\b[\p{L}0-9][\p{L}0-9'-]*/gu)||[]).length;
+  const src=(t.match(/^\s+- https?:/gm)||[]).length;
+  const firstHand=BAD.test(b);
+  const prob=[];
+  if(miss.length) prob.push(miss.length+' heading(s) missing');
+  if(w<300) prob.push('only '+w+' words');
+  if(src<2) prob.push('only '+src+' source(s)');
+  if(firstHand) prob.push('FIRST-HAND CLAIM');
+  if(prob.length){ ok=false; console.log('FAIL  '+id+'  — '+prob.join(' · ')); }
+  else console.log('ok    '+id+'  '+w+'w, '+src+' sources');
+}
+process.exit(ok?0:1);
+" <id-1> <id-2> <id-3>
+```
+
+Replace `<id-1> …` with the venue ids you touched. Fix anything it flags, then re-run it.
+
+**Then run the originality gate — this one is not optional:**
+
+```bash
+node scripts/check-record-originality.js <id-1> <id-2> …
+```
+
+It must print `PASS`. It fails a run on four things the check above cannot see:
+
+1. **a sentence of 8+ words appearing in more than one venue record.** Prose is per venue. If
+   a paragraph fits two venues, it describes neither.
+2. **three or more records gaining an identical number of words.** A constant delta is one
+   block pasted N times. Two records can coincide; three cannot.
+3. **added sentences containing no digit at all.** No price, no clock time, no date, no street
+   number. Enrichment that adds no number added no fact.
+4. **a stray `+` or `-` alone on a line** — a diff-paste leftover. Eighteen of these reached
+   built pages once and rendered as a visible plus sign at the end of a paragraph.
+
+**Why this exists.** On 2026-07-28 runs 39–42 appended the same six boilerplate sections to 24
+records — 405–512 words each, every venue in a run gaining exactly the same count, `fairtex-pattaya`
+gaining 233 words and not one new fact. The §7 check above passed all 24, because headings, word
+count, source count and absence of first-hand claims were all satisfied. Every gate in §6 passed
+too. The work log said `PASS` nine times. All of it had to be reverted by hand.
+
+Padding is the failure mode this loop is most prone to, because the queue rewards word count.
+A record that trips this gate is worse than the 90-word record it replaced: it is 400 words of
+text that is true, useless, and near-identical to 23 other pages — which is the exact profile the
+March and May 2026 core updates demoted. **If you cannot find venue-specific facts, write §"What
+we could not verify" and stop. A thin honest record is a pass. A padded one is a revert.**
+
+## 8 · REPORT, THEN STOP
+
+Append one entry to `WORK_LOG_CODEX.md` and print the same thing:
+
+```
+## Run <n> — <date>
+Records enriched:  <id> (<before>w → <after>w), …
+New facts landed:  <e.g. "3 price ladders with dates, 5 timetables, 2 phone numbers">
+priceAsOf added:   <n>
+Could not verify:  <venue> — <what was missing and where you looked>
+Sources used:      <count>, of which Thai-language: <count>
+Gates:             validate ✓  encoding ✓  network-links ✓  deploy ✓  verify ✓
+                   seo-audit ✓  design-layer ✓  redirects ✓  html-validate ✓
+Build printed:     <n> venues · <n> categories · <n> areas · <n> category-area
+Flagged for Tim:   <anything structural you noticed and did NOT change>
+```
+
+Then **stop**. Do not start another venue, do not commit, do not push.
 
 ---
 
-## PART E — state and log
+## 9 · THINGS THAT ARE NO LONGER TRUE — do not "fix" them back
 
-In `ENRICH-STATE.json`: `runCount` += 1, set `lastRunAt`, append finished venue
-ids to `done.venues`, append the category / area / guide to their `done` arrays,
-and for anything you could not honestly expand append the id to
-`skipped.venues` with a one-line reason in `skipped.reasonByVenue`.
+Ignore any older instruction, anywhere in this repo, that says otherwise.
 
-Never remove ids from `venueQueue` — `done` and `skipped` advance the loop, the
-queue is the fixed running order.
-
-**Append** to `WORK_LOG_CODEX.md`. Never edit or reflow an earlier run's entry —
-in a long queue that destroys the audit trail. Record:
-
-- venues enriched, before → after word counts
-- each new fact and the exact URL it came from
-- venues skipped, with reasons
-- closures, moves, renames — and confirmation you set `status: closed` in both
-  `venues/<id>.md` and `data.js`
-- category / area / guide touched
-- gate results and the venue-page count the build printed
-- what you left for the next run
-
----
-
-## STOP CONDITION
-
-If this run skipped **every** venue in its batch, and the log shows the two
-previous runs also skipped everything, stop and write at the top of your report:
-`QUEUE STALLED — three consecutive all-skip runs. Tim should reorder
-venueQueue or add new venues before continuing.` Do not keep grinding.
-
----
-
-## SELF-CHECK — answer these explicitly, fix any "no" before finishing
-
-0. **Grep each record you wrote for the six literal headings.** All six present,
-   spelled exactly, in order? If not, fix it before anything else.
-1. Can every number, price, hour and name be traced to a URL in that record's
-   `sources:` list?
-2. Does every price carry an as-of date, with `priceAsOf` and `priceSourceUrl`
-   set, and does the source URL point at the exact page or post — not a profile?
-3. Have I written nothing implying a first-hand visit?
-4. Did I add information rather than words? Would a reader planning a trip be
-   measurably better off?
-5. Did I skip ONLY closed venues and unconfirmable identities — never a venue
-   that verifiably operates but publishes no price?
-6. For any closure: did I set `status: closed` in **both** the `.md` and
-   `data.js`?
-7. **Does every internal link I wrote resolve?** Never guess a venue slug —
-   open `data.js` and copy the exact `id`. A pre-existing guide body shipped
-   `/gyms/tos-badminton-pattaya/` and `/gyms/euro-tennis-pattaya/`, neither of
-   which exists, and the anchor text named venues that do not exist either
-   (the real ones are TOS Tennis Academy and Euro Badminton Club). Broken
-   internal links waste crawl budget; invented venue names are worse.
-8. Did I edit source scripts rather than generated HTML?
-9. Did I leave the eight protected design files untouched?
-10. Do all gates pass?
-11. Is `ENRICH-STATE.json` advanced so the next queued run picks a different
-    batch?
-12. Did I append to the work log without altering earlier entries, and leave the
-    tree uncommitted for Tim?
-
----
-
-## What "rich" means, and what it does not
-
-**Does mean:** someone choosing between three gyms can decide from your page.
-Real prices with dates. Honest limitations. Who it is wrong for. Precise gaps.
-
-**Does not mean:** word count. Never write "nestled in the heart of vibrant
-Pattaya", "whether you're a seasoned athlete or just starting out",
-"state-of-the-art facilities", "something for everyone". **If a sentence would
-survive swapping in a different gym's name, delete it.**
+- **FAQ rich results are dead.** Google dropped them on 2026-05-07 for every site type. The FAQ
+  blocks stay because the visible Q&A still feeds snippets and AI retrieval — but never add
+  `FAQPage` markup for the sake of a rich result, and never add an FAQ to a closed or unverified
+  venue. Those records deliberately have none now.
+- **`llms.txt` is not an SEO lever.** Google, May 2026: *"You don't need to create new machine
+  readable files, AI text files, markup, or Markdown to appear in Google Search."* The file is
+  kept only because a script keeps its numbers honest. Do not expand it and do not build more
+  files like it.
+- **There is no special schema for AI search.** Google, same guide: *"Structured data isn't
+  required for generative AI search, and there's no special schema.org markup you need to add."*
+  No content chunking, no AI-keyword rewriting, no `about`/`mentions` padding. Optimising for AI
+  answers is writing a specific, sourced, dated fact where a competitor wrote a hedge.
+- **`author` is two Persons, `publisher` is the company.** TimPaemi Co., Ltd. publishes; Tim and
+  Paemi write. Both Person nodes carry `url` and `sameAs` and are defined in
+  `scripts/lib/timpaemi-author.js`. Do not collapse them back into one Organization.
+- **The site ships no photography.** Do not write alt text, image captions or "pictured above"
+  for images that do not exist.

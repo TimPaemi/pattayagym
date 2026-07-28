@@ -26,6 +26,28 @@ tags: [football, youth, academy, east-pattaya]
 
 # Pattaya City Football Academy
 
-The academy's active official page describes football skills and technique coaching from the foundations. It places training at MC Football Field on the railway road before the Chaiyaphruek intersection and publishes +66 85 149 4923. A current owner post also advertises a Pattaya City FA friendly match for 28 July 2026, supporting present activity.
+Pattaya City Football Academy is an active Thai youth-football programme at MC Football Field on the railway road before the Chaiyaphruek intersection. Its official page describes foundational skills and technique coaching, provides +66 85 149 4923, and advertised a friendly match on 28 July 2026. Current activity is supported; a full regular timetable is not.
 
-The public sources checked on 26 July do not publish a dependable full timetable, age range, session length or current fee. Parents should send the child's age, experience and preferred date, then ask which group is suitable, what footwear and kit are required, which language the coach will use and whether a trial session is available.
+## What training is on offer
+
+The documented offer is youth football coaching from foundational skills. Public sources do not provide reliable age bands, session duration, group timetable, coach roster or language detail beyond Thai. Parents should send the child's age and experience to ask which group is appropriate.
+
+## What it costs
+
+No current fee, trial price, registration charge, kit cost, match fee or package was published on 26 July 2026. Do not infer a price. Ask whether a trial exists and what the total includes.
+
+## Who it suits — and who it does not
+
+It may suit a child seeking Thai youth football coaching near Chaiyaphruek and a parent able to arrange a group directly. It does not suit a family needing an English-language promise, online registration, published age bands or a fixed timetable before contact.
+
+## Getting there
+
+Training is listed at MC Football Field on the railway road before the Chaiyaphruek intersection, Pattaya. Use the Maps link and call the academy to confirm the field and entrance. No verified fare, parking policy or walking directions were published.
+
+## Before you go
+
+Call +66 85 149 4923 with age, experience and preferred date. Confirm group availability, footwear, kit, language, trial arrangements and payment.
+
+## What we could not verify
+
+No complete timetable, age range, session length, fee table, trial policy, coach roster, language policy, kit cost, parking terms or cancellation rules was published in the official and Maps sources checked on 26 July 2026.

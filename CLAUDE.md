@@ -20,6 +20,60 @@ Gates that must pass: `validate` · `verify-encoding` (mojibake - a bad save onc
 it stops a retired area x category combo being rebuilt and 301d away when a venue refills it;
 `npm run fix:redirects` removes only the shadowing rules) · `html:validate`.
 
+<!-- STATE AT 2026-07-28 — written at the end of a long session. Delete once shipped. -->
+## STATE: unshipped work sitting in the tree
+
+Branch `redesign-2026-07`, HEAD `bae2ba7`. The 2026-07-27 redesign, encoding repair and SEO
+remediation were **committed and pushed** during the day — local HEAD and `origin/main` both sit
+at `bae2ba7`, so the live site already carries them.
+
+What is still uncommitted at the time of writing is (a) the handoff notes in this file,
+(b) `CODEX-GYM-ENRICH-LOOP.md` v4, and (c) whatever the currently-running Codex loop has written
+into `venues/*.md`. **Check `git status` before assuming anything — a Codex run was mid-flight.**
+Ship with `.\SHIP-GYM.ps1` once its output has been reviewed.
+
+**Three things were repaired that no gate had been catching:**
+
+1. Mojibake in `data.js`, `build-v2.js`, `build-discovery.js` propagated into 306 output files.
+   Repaired; `scripts/verify-encoding.js` now gates it.
+2. Sister-site links in three guides, plus 68 internal `.md` files served at the web root naming
+   every sister site. Moved to `.internal-docs/`, blocked in `_redirects`, and
+   `check-no-network-links.js` now scans `.md` — it never did, which is why it reported clean
+   for months.
+3. A false "every venue is checked in person" claim on all 355 pages. Rewritten to what actually
+   happens.
+
+**SEO remediation from the 2026-07-28 audit — nine fixes, all re-measured after rebuild:**
+in-person claim 355 to 0 · `Checking hours...` in static HTML 105 to 0 · broken `og:image` 58 to 0 ·
+Person nodes with `url`/`sameAs` 0/704 to 710/710 · pages declaring a Person author 0 to 355 ·
+pages with `dateModified` 0 to 354/355 · guides whose visible date contradicts their schema
+43/47 to 0 · templated FAQ on closed/unverified venues 22 to 0 · `llms.txt` venue count 157 to 215 ·
+Preferred Sources opt-in link added sitewide.
+
+**Author model, corrected:** TimPaemi Co., Ltd. is the `publisher`; Tim and Paemi are two separate
+`Person` authors, each with `url` (to `/about/#tim` and `/about/#paemi`), `jobTitle`,
+`homeLocation`, `knowsAbout`, `worksFor` and four social `sameAs`. Defined once in
+`scripts/lib/timpaemi-author.js`. Do not collapse them back into one Organization.
+
+**New in the ship chain:** `scripts/verify-encoding.js`, `scripts/verify-redirects.js`,
+`scripts/normalize-entity-graph.js`, `scripts/lib/mojibake.js`, and `check-no-network-links.js`
+promoted to an explicit gate — SHIP calls `node build-v2.js` directly, so the `prebuild` hook was
+being skipped on every deploy.
+
+**Three decisions still open. All index-affecting, all need an explicit yes:**
+
+- consolidate six overlapping guide pairs, up to 6 URLs. `pattaya-digital-nomad-fitness` is the
+  most redundant guide on the site.
+- 33 area x category pages under 300 words. Recommendation is to thicken, not merge — those are
+  long-tail queries a local directory should own.
+- strip 283 dead `FAQPage` blocks, 338 KB, zero benefit since 2026-05-07. Harmless to leave.
+
+**Ongoing content work:** `CODEX-GYM-ENRICH-LOOP.md` v4, self-targeting. 48 live records still
+need the six-heading template, 144 have no `priceAsOf`, 48 have vague hours.
+`gyms/fairtex-pattaya` is an Editor's Pick with a full published price ladder but only 179 body
+words — worth an early run.
+<!-- END STATE -->
+
 **Retired 26 Jul 2026 — ignore anything below that says otherwise:** the publisher is
 **TimPaemi**, not Pattaya Authority. Pattaya Authority must not appear on this site in any
 footer, byline, JSON-LD, `llms.txt`, `humans.txt` or prose.

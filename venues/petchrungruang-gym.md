@@ -26,8 +26,30 @@ tags: [muay-thai, family-camp, south-pattaya, thai-fighters]
 
 # Petchrungruang Gym
 
-Petchrungruang is a family Muay Thai camp on Sukhumvit-Pattaya 50. The operator says the gym was officially established in 1986. Its exact Maps identity remains open, and the owner Facebook page carried current fight activity in July 2026. The current contact number is **+66 82 211 6100**; the operator profile also lists petchrungruanggym@gmail.com.
+Petchrungruang is a family Muay Thai camp on Sukhumvit-Pattaya 50. Operator sources say it was established in 1986, the Maps identity remains open, and the Facebook page showed current fight activity in July 2026. The current contact is +66 82 211 6100. Contact the gym for the next actual training session.
 
-## Price and first visit
+## What training is on offer
 
-No current owner-published fee table or complete normal-week timetable was accessible on 26 July 2026. That week’s Maps display was affected by Thai public-holiday notices, so isolated opening periods were not converted into a standing schedule. Message the gym before travelling to confirm the next group session, drop-in price, private-training availability and equipment requirements.
+The camp trains Thai fighters and visiting students and is described as beginner friendly. The sources do not provide a dependable normal-week timetable, trainer roster, class split, accommodation offer or equipment policy. Current fight activity is evidence of operation, not proof of a visitor session at a particular hour.
+
+## What it costs
+
+No current owner fee table, drop-in price, private-training fee, weekly package, monthly package or equipment charge was available on 26 July 2026. Ask for the current total before attending.
+
+## Who it suits — and who it does not
+
+It may suit a visitor seeking a family Muay Thai camp who can message ahead. It does not suit someone needing a published group schedule, fixed package price, confirmed accommodation or a trainer assignment before contact.
+
+## Getting there
+
+The address is 161/1 Moo 11, Sukhumvit-Pattaya 50 Alley, Nong Prue, Bang Lamung, Chonburi 20150. Use Maps and confirm the entrance. No verified fare, parking rule or landmark route was published.
+
+## Before you go
+
+Message or call +66 82 211 6100 to confirm the next group session, visitor access, private training, payment and equipment. Holiday notices can affect displayed hours.
+
+## What we could not verify
+
+No current price list, normal-week timetable, trainer roster, class format, accommodation, equipment requirements, payment method, parking policy or cancellation terms was published on 26 July 2026.
+
+An active fight post confirms current gym activity, but it is not a substitute for a dated visitor schedule. Ask specifically about your intended day, not a general opening label.

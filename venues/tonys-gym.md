@@ -22,8 +22,28 @@ tags: [fitness, weights, open-air, south-pattaya, 24-hours]
 
 # Tony's Fitness Group
 
-The current verifiable Tony's venue is the open-air weight-training gym on South Pattaya Third Road. Its location-specific Maps listing shows 24-hour opening and phone +66 95 850 3475.
+The current verifiable Tony's venue is an open-air weight-training gym on South Pattaya Third Road. Its Maps listing shows 24-hour opening and phone +66 95 850 3475. The Tony's Group Facebook identity remains available, but its newest visible operator posts were from April 2022, so it is historical identity support rather than evidence of a current tariff or staffing arrangement.
 
-The Tony's Group Facebook identity still exists, but the newest public operator posts visible during the 26 July 2026 check dated from April 2022. It is retained only as historical identity support, not as evidence of a current tariff, equipment list or staffed schedule. The former record's ten-branch network, old landline and specific branch list remain removed.
+## What training is on offer
 
-No current operator-published pass or membership tariff was found, and the Maps record does not link a current website. Confirm staffed arrival hours, day access, monthly membership, showers, lockers and any essential equipment before travelling. A 24-hour Maps label does not prove that a first-time visitor can register at every hour.
+The supported offer is open-air weight training. The public sources do not provide a current equipment list, trainer service, class programme, shower provision or complete staffing schedule. Do not assume that former network or branch claims apply to this current Third Road listing.
+
+## What it costs
+
+No current day-pass, membership, coaching fee, package or equipment charge was found. The 24-hour Maps label is not evidence that a first-time visitor can register at every hour. Confirm price and access before travelling.
+
+## Who it suits — and who it does not
+
+It may suit an experienced gym user who can confirm access directly and wants an open-air weights venue in South Pattaya. It does not suit someone who needs a published tariff, equipment inventory, confirmed staffed arrival hours, classes or guaranteed shower and locker access.
+
+## Getting there
+
+The listed address is South Pattaya Third Road, Pattaya City, Bang Lamung, Chonburi 20150. Use the Maps listing and call +66 95 850 3475 for the entrance. No verified transport fare or parking terms were published.
+
+## Before you go
+
+Confirm staffed arrival time, visitor entry, payment, membership, lockers, showers and essential equipment before leaving. Do not treat 24-hour listing hours as a guarantee for all services.
+
+## What we could not verify
+
+No current tariff, staffed schedule, equipment inventory, class timetable, visitor rule, locker or shower policy, parking terms, payment method or trainer availability was published on 26 July 2026.
