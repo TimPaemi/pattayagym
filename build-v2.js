@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '470';
+const ASSET_VERSION = '471';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -121,6 +121,30 @@ function localBusinessType(category) {
   return map[category] || ['LocalBusiness'];
 }
 
+/* S2-B2, 2026-07-29 - most specific applicable subtype.
+   Google's LocalBusiness guidance asks for the most specific subtype that
+   applies. The category map above is as specific as a *category* can be; these
+   rules go one step further where the individual record carries the evidence in
+   its own name. Deliberately narrow - a rule fires only when the venue's name
+   says what it is, because structured data must describe the visible facts and
+   not a guess. `additionalType` is left alone: Google does not support it.
+
+   Records whose operation is unresolved are skipped. Refining "unverified
+   legacy listing" into a TennisComplex would add confidence the page itself
+   does not have. */
+function refineLocalBusinessType(types, g) {
+  if (!g || operationUnresolved(g.status)) return types;
+  const name = String(g.name || '');
+  const hay = `${g.id} ${name} ${(g.tags || []).join(' ')}`;
+  let extra = null;
+  if (/bowling|bowl\b/i.test(name) && !/lawn/i.test(hay))                          extra = 'BowlingAlley';
+  else if (/\b(stadium|arena)\b/i.test(name))                                      extra = 'StadiumOrArena';
+  else if (g.category === 'racquet' && /tennis/i.test(name))                       extra = 'TennisComplex';
+  else if (g.category === 'swimming' && /pool/i.test(name)
+           && /public|municipal|school/i.test(name))                               extra = 'PublicSwimmingPool';
+  return extra && !types.includes(extra) ? [...types, extra] : types;
+}
+
 // Map area context to a fallback Thai postal code when address doesn't include one.
 // Chon Buri Province postal codes:
 //   20150 — Bang Lamung district (covers Pattaya City, Naklua, Pratamnak, Jomtien, Central Pattaya, East Pattaya, Huai Yai)
@@ -162,8 +186,18 @@ function parsePostalAddress(addr, areaContext) {
 // Returns array; empty array if not parseable.
 function parseHoursSpec(hoursStr) {
   if (!hoursStr) return [];
-  // Skip if the string mentions exceptions we can't represent cleanly
-  if (/closed|except|verify|by\s*appointment|tbd|n\/a|call\s*ahead|seasonal|members?\s*only/i.test(hoursStr)) return [];
+  /* S2-B2, 2026-07-29 - "closed" used to abort the whole string.
+     28 records read like "Mon-Sat 08:00-19:00; Sun closed", which is completely
+     representable: parse the segments that state times and drop the ones that
+     state a closure. Omitting Sunday says "not specified" rather than asserting
+     a closure we would then have to keep true, which is the conservative read.
+     The other qualifiers still abort, because each of them changes what the
+     whole timetable means rather than removing one day from it. */
+  if (/except|verify|by\s*appointment|tbd|n\/a|call\s*ahead|seasonal|members?\s*only/i.test(hoursStr)) return [];
+  /* Two records cite two sources that disagree ("Official site lists daily
+     07:00-19:00; Maps lists Mon-Sat 09:00-19:00"). Markup must not pick a winner
+     the visible text does not. */
+  if (/(official site|maps? lists?|website lists?)[\s\S]*(official site|maps? lists?|website lists?)/i.test(hoursStr)) return [];
   const DAY = { mon:'Monday', tue:'Tuesday', wed:'Wednesday', thu:'Thursday', fri:'Friday', sat:'Saturday', sun:'Sunday' };
   // Split on ; , and & — but & inherits days from previous segment
   const segments = String(hoursStr).split(/[;,]|&/).map(s => s.trim()).filter(Boolean);
@@ -176,6 +210,10 @@ function parseHoursSpec(hoursStr) {
     const timeRe = /(\d{1,2}):?(\d{2})\s*[-\u2013\u2014]\s*(\d{1,2}):?(\d{2})/;
     const dm = seg.match(daysRe);
     const tm = seg.match(timeRe);
+    /* A closure segment ("Sun closed") states no hours. Skip it, and crucially do
+       NOT let it become `lastDays` - otherwise the next segment's times would be
+       attributed to the day that is shut. */
+    if (/closed/i.test(seg) && !tm) continue;
     if (!dm && !lastDays) continue;
     let days = [];
     const dayFromKey = (s) => DAY[s.toLowerCase().slice(0, 3)];
@@ -299,9 +337,30 @@ _md.renderer.rules.heading_close = function (tokens, idx) {
   return `</${t.tag}>`;
 };
 _md.renderer.rules.th_open = function () { return '<th scope="col">'; };
+/* S2-H3, 2026-07-29 - Language of Parts.
+   Five venue records name their venue in Thai script inside otherwise English
+   prose, and WCAG 2.2 requires a language change to be programmatically
+   identifiable when pronunciation rules differ - without it a screen reader
+   voices Thai letters with English rules and produces noise. markdown-it runs
+   here with `html: false`, so a <span> written into the Markdown would be
+   escaped rather than rendered; the wrap therefore happens after render.
+
+   The Thai block also contains U+0E3F, the baht sign. That is a currency symbol
+   in English sentences ("day pass ฿300"), NOT Thai language, and wrapping it
+   would mislabel 1,900+ price strings across the site. The class below is Thai
+   letters and marks only, with U+0E3F deliberately excluded. */
+const THAI_PHRASE = /[\u0E01-\u0E3A\u0E40-\u0E5B]+(?:[ \u00A0]+[\u0E01-\u0E3A\u0E40-\u0E5B]+)*/g;
+function wrapThai(html) {
+  if (!html || !/[\u0E01-\u0E3A\u0E40-\u0E5B]/.test(html)) return html;
+  // Split on tags so nothing inside an attribute value is ever touched.
+  return html.split(/(<[^>]*>)/).map(seg =>
+    seg.startsWith('<') ? seg : seg.replace(THAI_PHRASE, m => `<span lang="th">${m}</span>`)
+  ).join('');
+}
+
 function mdToHtml(md) {
   if (!md) return '';
-  return _md.render(md).trim();
+  return wrapThai(_md.render(md).trim());
 }
 
 // ---------- Round 19 helpers: title/desc length safety (Codex F05.1) ----------
@@ -791,6 +850,7 @@ function withTimpaemiLd(jsonLd, url, title, modified) {
     if (!page.author) page.author = authorRefs();
     if (!page.publisher) page.publisher = timpaemiRef();
     if (modified && !page.dateModified) page.dateModified = modified;
+    if (!page.inLanguage) page.inLanguage = 'en';
   } else {
     blocks.push({
       '@context': 'https://schema.org',
@@ -800,6 +860,7 @@ function withTimpaemiLd(jsonLd, url, title, modified) {
       name: title,
       author: authorRefs(),
       publisher: timpaemiRef(),
+      inLanguage: 'en',
       ...(modified ? { dateModified: modified } : {})
     });
   }
@@ -841,14 +902,77 @@ function hoursPillLabel(raw) {
   return first;
 }
 
-/* Site-wide content date. Hub pages (categories, areas, area x category, info pages)
-   have no verification date of their own, so they inherit the newest venue check on
-   the site. Every page then carries a dateModified, which is what a crawler uses to
-   decide whether a re-crawl is worth it. Derived, never typed. */
-const SITE_MODIFIED = (() => {
-  const dates = GYMS.map(g => g.verified).filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d));
-  return dates.length ? dates.sort().pop() : new Date().toISOString().slice(0, 10);
+/* VENUE STATUS - S1-3, 2026-07-29.
+   `status` is set on a venue record whenever the directory cannot present it as
+   a plainly operating venue. Until now only 'closed' produced any visible mark,
+   so an unverified, out-of-area or informational record rendered exactly like a
+   working gym: live opening-hours pill, "Verified by Tim", "100% Hand-checked",
+   and nothing saying otherwise. Six records were also carrying the status only
+   in their Markdown front matter, never in data.js, so the generator did not
+   even know. Both halves are fixed: data.js now carries every status, and every
+   status renders here.
+
+   Google's structured-data policy requires markup to match visible content, and
+   its trust guidance requires a claim to be supportable. A record we cannot
+   vouch for must not display a claim that we can. */
+const STATUS_LABEL = {
+  'closed':                    'Permanently closed',
+  'likely-closed':             'Likely closed',
+  'unverified':                'Unverified record',
+  'out-of-area':               'Not in Pattaya',
+  'not-in-pattaya':            'Not in Pattaya',
+  'informational':             'Reference record, not a venue',
+  'schedule-unconfirmed':      'Timetable unconfirmed',
+  'former-crossfit-affiliate': 'Former CrossFit affiliate',
+  'non-sport':                 'Not a sports venue',
+  'non-sport-attraction':      'Not a sports venue',
+  'public-beach':              'Public beach, not a staffed venue',
+  'limited-operation':         'Limited operation',
+};
+
+/* Statuses meaning "we cannot currently vouch that this operates as described".
+   These suppress the live open/closed pill (it would assert hours we do not
+   stand behind) and soften the hand-checked claim. A gym whose timetable is
+   merely unconfirmed, or which simply left an affiliate scheme, is still open -
+   it gets the flag but keeps its hours. */
+const STATUS_OPERATION_UNRESOLVED = new Set([
+  'closed', 'likely-closed', 'unverified', 'out-of-area', 'not-in-pattaya', 'informational',
+]);
+
+function statusKey(v) { return String(v || '').trim().toLowerCase(); }
+function operationUnresolved(v) { return STATUS_OPERATION_UNRESOLVED.has(statusKey(v)); }
+function statusPill(v) {
+  const k = statusKey(v);
+  if (!k) return '';
+  const label = STATUS_LABEL[k] || k.replace(/-/g, ' ');
+  const cls = (k === 'closed' || k === 'likely-closed') ? 'is-permanently-closed' : 'is-status-flag';
+  return `<span class="trust-pill ${cls}" title="Directory status: ${esc(label)}">${esc(label)}</span>`;
+}
+
+/* PAGE MODIFICATION DATE - S1-4, 2026-07-29.
+   This used to be `modified: g.verified` on all 215 venue pages, and the newest
+   verification date on the site for every hub page. Both are the date of an
+   action described on the page, not the date the page changed. Google's date
+   guidance rules that out explicitly, and 52 venue pages were additionally
+   publishing a dateModified identical to their priceAsOf.
+
+   The real page-change date lives in the content-hash ledger that already backs
+   sitemap lastmod (data/sitemap-lastmod.json, written by
+   scripts/update-sitemap-lastmod.js). Read the previous build's ledger here so
+   a page is emitted with an honest date from the start; that script re-stamps
+   the authoritative value at the end of the chain once the final HTML exists.
+   A page absent from the ledger is genuinely new, so today is correct for it.
+
+   `verified` and `priceAsOf` are untouched and still shown on the page, clearly
+   labelled, as the separate facts they are. */
+const CONTENT_DATES = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'sitemap-lastmod.json'), 'utf8')); }
+  catch (e) { return {}; }
 })();
+function pageModified(url) {
+  const e = CONTENT_DATES[url] || CONTENT_DATES[String(url).replace(/\/?$/, '/')];
+  return (e && e.date) || TODAY;
+}
 
 function head({ title, desc, url, ogImage = `${SITE}/og-image.png`, jsonLd = null, modified = null, robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }) {
   // One <script> per JSON-LD item; Person authors + Organization publisher on every page.
@@ -1083,7 +1207,7 @@ function venuePage(g, fm, body) {
   const related = GYMS.filter(x => x.category === g.category && x.id !== g.id).slice(0, 3);
 
   // JSON-LD — rich LocalBusiness + BreadcrumbList graph
-  const lbType = localBusinessType(g.category);
+  const lbType = refineLocalBusinessType(localBusinessType(g.category), g);
   const address = parsePostalAddress(fm.address || g.address, fm.area || g.area);
   // Prefer data.js short form for parsing (frontmatter often contains prose); fall back to fm if data.js empty.
   let hoursSpec = parseHoursSpec(g.hours);
@@ -1117,6 +1241,11 @@ function venuePage(g, fm, body) {
     openingHoursSpecification: hoursSpec.length ? hoursSpec : undefined,
     openingHours: (!hoursSpec.length && (fm.hours || g.hours)) ? (fm.hours || g.hours) : undefined,
     areaServed: { '@type': 'City', name: 'Pattaya' },
+    /* Global audience, 2026-07-29. Every price on this site is Thai baht, but the
+       visible form is a bare glyph or a tier band, and neither states a currency
+       a machine or a first-time visitor from abroad can rely on. Most readers of
+       a Pattaya sport directory are planning a trip from somewhere else. */
+    currenciesAccepted: 'THB',
     sameAs: sameAs.length ? sameAs : undefined
   };
   const breadcrumbLd = {
@@ -1169,7 +1298,7 @@ function venuePage(g, fm, body) {
     v.verified && { lbl: 'Last verified', val: v.verified, color: 'pink' }
   ].filter(Boolean);
 
-  return head({ title, desc, url, ogImage, jsonLd, modified: g.verified || undefined })
+  return head({ title, desc, url, ogImage, jsonLd, modified: pageModified(url) })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -1187,11 +1316,11 @@ function venuePage(g, fm, body) {
     </h1>
     ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
     ${g.verified ? `<div class="trust-bar" aria-label="Verification status">
-      ${g.status === 'closed' ? `<span class="trust-pill is-permanently-closed" title="This venue has permanently closed">Permanently closed</span>` : ''}
+      ${statusPill(g.status)}
       ${g.featured ? `<span class="trust-pill is-editors-pick" title="Editor's Pick — hand-selected as a top venue in this category">★ Editor's Pick</span>` : ''}
-      ${g.status !== 'closed' && hoursSpec.length ? `<span class="trust-pill is-open-status" data-hours-spec='${JSON.stringify(hoursSpec).replace(/'/g, '&#39;')}'>● ${esc(hoursPillLabel(g.hours || fm.hours))}</span>` : ''}
+      ${!operationUnresolved(g.status) && hoursSpec.length ? `<span class="trust-pill is-open-status" data-hours-spec='${JSON.stringify(hoursSpec).replace(/'/g, '&#39;')}'>● ${esc(hoursPillLabel(g.hours || fm.hours))}</span>` : ''}
       <span class="trust-pill is-verified" title="Hand-checked by Tim Paemi">★ Verified by Tim · ${esc(g.verified)}</span>
-      <span class="trust-pill">100% Hand-checked</span>
+      <span class="trust-pill">${operationUnresolved(g.status) ? 'Hand-checked &middot; status unresolved' : '100% Hand-checked'}</span>
       <span class="trust-pill">No paid placement</span>
       <a href="/methodology/" class="trust-pill is-link" title="How we rank venues">How we rank →</a>
     </div>` : ''}
@@ -1463,8 +1592,8 @@ ${bodyHtml ? `
   <div class="wrap u-max-760">
     <div class="eyebrow"><span class="num">★</span> Know more about this venue?</div>
     <div style="background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--cyan); border-radius:var(--r-lg); padding:var(--s-6);">
-      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0 0 var(--s-4);">This is a <strong class="u-text">verified entry</strong> in the Pattaya.Gym directory. We've personally confirmed the venue exists and operates. If you've trained here and can share more details — coaches, prices, schedule, what makes it different — we want to know.</p>
-      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0;">Help us deepen this listing: <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Update: ' + g.name)}" style="color:var(--cyan); font-weight:600;">email us</a> ·  · or <a href="/contact/" style="color:var(--pink); font-weight:600;">contact form</a>.</p>
+      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0 0 var(--s-4);">This is a <strong class="u-text">checked entry</strong> in the Pattaya.Gym directory: its details were confirmed against the operator's own listings and public sources on the date shown above, not from a visit. If you've trained here and can share more — coaches, prices, schedule, what makes it different — we want to know.</p>
+      <p style="font-size:15px; color:var(--text-2); line-height:1.7; margin:0;">Help us deepen this listing: <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Update: ' + g.name)}" style="color:var(--cyan); font-weight:600;">email us</a> or <a href="/contact/" style="color:var(--pink); font-weight:600;">contact form</a>.</p>
     </div>
   </div>
 </section>
@@ -1547,7 +1676,7 @@ ${venueToolsStrip(g)}
 function categoryPage(cat, venues) {
   const url = `${SITE}/category/${cat.key}/`;
   const title = `${cat.label} in Pattaya (${venues.length} venues) | Pattaya.Gym`;
-  const desc = truncateDesc(`Find every ${cat.label.toLowerCase()} venue in Pattaya — ${venues.length} hand-checked gyms and sport operators with hours, prices, maps and contact. Compare camps, filter by area, no paid placements.`);
+  const desc = truncateDesc(`Find every ${cat.label.toLowerCase()} venue in Pattaya — ${venues.length} hand-checked gyms and sport operators with hours, prices, maps and contact where published. Compare camps, filter by area, no paid placements.`);
 
   const accentColors = {
     'muay-thai': 'accent-pink', 'mma': 'accent-pink', 'bjj': 'accent-pink',
@@ -1584,7 +1713,7 @@ function categoryPage(cat, venues) {
   const faqHtml = categoryFaqHtml(cat);
   const jsonLd = faqLd ? [itemList, crumbsLd, faqLd] : [itemList, crumbsLd];
 
-  return head({ title, desc, url, jsonLd , modified: SITE_MODIFIED })
+  return head({ title, desc, url, jsonLd , modified: pageModified(url) })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -1600,7 +1729,7 @@ function categoryPage(cat, venues) {
     <h1 class="hero-h1">
       ${esc(cat.label)} <span class="${accent}">in Pattaya.</span>
     </h1>
-    <p class="hero-lede u-text-left-ml0">Every <strong>${esc(cat.label.toLowerCase())}</strong> gym and venue in Pattaya — <strong>${venues.length} hand-checked entries</strong> with hours, prices, maps and contact. No paid placements. Updated on a rolling schedule.</p>
+    <p class="hero-lede u-text-left-ml0">Every <strong>${esc(cat.label.toLowerCase())}</strong> gym and venue in Pattaya — <strong>${venues.length} hand-checked entries</strong> with hours, prices, maps and contact where the operator publishes them, and blanks where they do not. No paid placements. Updated on a rolling schedule.</p>
     <p class="hero-meta u-text-left">${venues.length} venues · Updated ${TODAY} · Pattaya · Thailand</p>
     ${categoryHubCtas(cat)}
   </div>
@@ -1913,7 +2042,7 @@ const AREA_CONTENT = {
 function areaPage(slug, label, venues) {
   const url = `${SITE}/area/${slug}/`;
   const title = `Gyms in ${label}, Pattaya (${venues.length}) | Pattaya.Gym`;
-  const desc = truncateDesc(`Every gym, Muay Thai camp and sport venue in ${label}, Pattaya — ${venues.length} hand-checked listings with hours, prices, maps and contact. Filter by sport or compare side by side.`);
+  const desc = truncateDesc(`Every gym, Muay Thai camp and sport venue in ${label}, Pattaya — ${venues.length} hand-checked listings with hours, prices, maps and contact where published. Filter by sport or compare side by side.`);
 
   const itemList = {
     '@context': 'https://schema.org',
@@ -1938,7 +2067,7 @@ function areaPage(slug, label, venues) {
   const faqHtml = areaFaqHtml(slug, label);
   const jsonLd = faqLd ? [itemList, crumbsLd, faqLd] : [itemList, crumbsLd];
 
-  return head({ title, desc, url, jsonLd , modified: SITE_MODIFIED })
+  return head({ title, desc, url, jsonLd , modified: pageModified(url) })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -2075,7 +2204,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
   const catLabel = cat.label;
   const core = `${catLabel} in ${areaLabel}, Pattaya`;
   const title = core.length <= 49 ? `${core} | Pattaya.Gym` : truncateTitle(core);
-  const desc = truncateDesc(`Every ${catLabel.toLowerCase()} venue in ${areaLabel}, Pattaya — ${venues.length} hand-checked ${venues.length === 1 ? 'option' : 'options'} with hours, prices and contact details. Independent directory, no paid placements, verified on a rolling schedule.`);
+  const desc = truncateDesc(`Every ${catLabel.toLowerCase()} venue in ${areaLabel}, Pattaya — ${venues.length} hand-checked ${venues.length === 1 ? 'option' : 'options'} with hours, prices and contact details where published. Independent directory, no paid placements, verified on a rolling schedule.`);
 
   const accentColors = {
     'muay-thai':'accent-pink','mma':'accent-pink','bjj':'accent-pink',
@@ -2109,7 +2238,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
   };
   const jsonLd = [itemList, crumbsLd];
 
-  return head({ title, desc, url, jsonLd , modified: SITE_MODIFIED })
+  return head({ title, desc, url, jsonLd , modified: pageModified(url) })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -2215,7 +2344,7 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
   </div>
 </section>` : '';
 
-  return head({ title, desc, url, jsonLd: utilJsonLd, robots: robotsMeta , modified: SITE_MODIFIED })
+  return head({ title, desc, url, jsonLd: utilJsonLd, robots: robotsMeta , modified: pageModified(url) })
     + nav()
     + breadcrumb([
         { label: 'Home', href: '/' },
@@ -2822,7 +2951,7 @@ function sportsHubPage() {
     itemListElement: CATEGORIES.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/category/${c.key}/`, name: c.label }))
   };
   const crumbsLd = { '@context': 'https://schema.org', ...breadcrumbJsonLd([{ label: 'Home', href: '/' }, { label: 'All sports' }], url) };
-  return head({ title, desc, url, jsonLd: [itemList, crumbsLd] , modified: SITE_MODIFIED })
+  return head({ title, desc, url, jsonLd: [itemList, crumbsLd] , modified: pageModified(url) })
     + nav()
     + breadcrumb([{ label: 'Home', href: '/' }, { label: 'All sports' }])
     + `
@@ -2882,30 +3011,16 @@ function generateSitemap() {
       if (has) urls.push(`${SITE}/area/${slug}/${cat.key}/`);
     }
   }
-  // Sitemap priority + changefreq per URL pattern (Codex V3 P2-3 polish)
-  function priorityFor(u) {
-    if (u === `${SITE}/`) return '1.0';
-    if (u.startsWith(`${SITE}/category/`) || u.startsWith(`${SITE}/area/`)) {
-      // Combined area+category landing pages are highest-leverage long-tail surface
-      if (u.split('/').filter(Boolean).length >= 5) return '0.85';
-      return '0.9';
-    }
-    if (u.startsWith(`${SITE}/guides/`) && u.length > `${SITE}/guides/`.length + 1) return '0.8';
-    if (u.startsWith(`${SITE}/gyms/`)) return '0.7';
-    if (u === `${SITE}/search/` || u === `${SITE}/guides/`) return '0.7';
-    if (u === `${SITE}/compare/` || u === `${SITE}/plan-my-trip/`) return '0.75';
-    return '0.5';
-  }
-  function changefreqFor(u) {
-    if (u === `${SITE}/`) return 'daily';
-    if (u.startsWith(`${SITE}/category/`) || u.startsWith(`${SITE}/area/`)) return 'weekly';
-    if (u.startsWith(`${SITE}/gyms/`)) return 'weekly';
-    if (u.startsWith(`${SITE}/guides/`)) return 'monthly';
-    return 'monthly';
-  }
+  /* Sitemap carries <loc> and <lastmod> only, approved 2026-07-29.
+     Google's sitemap documentation, updated 8 July 2026, says <priority> and
+     <changefreq> are ignored outright. They were computed per URL pattern here
+     and written to all 351 entries, which is 351 lines of XML asserting a
+     freshness and importance ranking nothing reads. <lastmod> is the field that
+     does work, and scripts/update-sitemap-lastmod.js makes it honest by hashing
+     each page's content rather than stamping the build date. */
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(u => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod><changefreq>${changefreqFor(u)}</changefreq><priority>${priorityFor(u)}</priority></url>`).join('\n')}
+${urls.map(u => `  <url><loc>${u}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}
 </urlset>`;
   writeFile(path.join(ROOT, 'sitemap.xml'), xml);
 }

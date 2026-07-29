@@ -58,7 +58,6 @@ const SOCIAL_SAMEAS = [
 // signal, not an identity signal. Do not add them.
 const NETWORK_SAMEAS = [
   ...SOCIAL_SAMEAS,
-  'https://pattaya-authority.com/',
   'https://pattaya-gym.com/',
 ];
 

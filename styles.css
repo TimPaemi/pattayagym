@@ -27,15 +27,15 @@
 @font-face {
   font-family: "Space Grotesk";
   font-style: normal; font-weight: 300 700; font-display: swap;
-  src: url("/fonts/space-grotesk.woff2?v=470") format("woff2-variations");
+  src: url("/fonts/space-grotesk.woff2?v=471") format("woff2-variations");
 }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=470") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=470") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=470") format("woff2"); }
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=470") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=470") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=470") format("woff2"); }
-@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=470") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-400.woff2?v=471") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-500.woff2?v=471") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-600.woff2?v=471") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/inter-700.woff2?v=471") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: optional; src: url("/fonts/jetbrains-mono-500.woff2?v=471") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: optional; src: url("/fonts/jetbrains-mono-600.woff2?v=471") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: optional; src: url("/fonts/jetbrains-mono-700.woff2?v=471") format("woff2"); }
 
 /* ============ TOKENS ============ */
 :root {
@@ -52,6 +52,16 @@
   --ink-muted:     #5b6151;
   --ink-subtle:    #6b7262;
   --line-strong:   #c6ccb6;
+
+  /* S2-H1, 2026-07-29 - control boundary.
+     --line (#dfe3d4) is 1.22:1 against the canvas and --line-strong is 1.55:1.
+     Both are fine for a decorative divider and both fail WCAG 2.2 AA 1.4.11,
+     which requires 3:1 for the visual information needed to identify a control.
+     Inputs, selects and outlined buttons had no other boundary, so on this
+     canvas they were effectively borderless. #7f8775 clears 3:1 against every
+     surface the site uses - canvas 3.50, sunken 3.36, white 3.73, surface-3
+     3.23 - and is the lightest value that does. Dividers keep --line. */
+  --line-control:  #7f8775;
 
   /* Dark panel — footer, dark bands */
   --panel:         #171c11;
@@ -440,7 +450,7 @@ body.nav-open { overflow: hidden; }
 .hero-search-form {
   display: flex; gap: var(--s-2);
   background: var(--surface);
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--line-control);
   border-radius: var(--r-pill);
   padding: 5px 5px 5px var(--s-5);
   box-shadow: var(--shadow-soft);
@@ -497,9 +507,9 @@ body.nav-open { overflow: hidden; }
 .btn-primary:hover { background: var(--brand-ink); }
 .btn-secondary { background: var(--accent); color: var(--ink); border-color: rgba(20, 24, 15, 0.1); }
 .btn-secondary:hover { background: var(--ink); color: var(--accent); }
-.btn-tertiary { background: var(--sunken); color: var(--ink); border-color: var(--line); }
+.btn-tertiary { background: var(--sunken); color: var(--ink); border-color: var(--line-control); }
 .btn-tertiary:hover { background: var(--surface); border-color: var(--line-strong); }
-.btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--line-control); }
 .btn-ghost:hover { border-color: var(--line-strong); background: var(--sunken); }
 .btn-row { display: flex; flex-wrap: wrap; gap: var(--s-3); align-items: center; }
 .btn-hero-more, .home-more-toggle, .venue-more-toggle { font-size: var(--text-xs); }
@@ -999,7 +1009,7 @@ a.numcard:hover .numcard-title { color: var(--brand-ink); }
 .search-input-wrap {
   display: flex; align-items: center; gap: var(--s-3);
   background: var(--surface);
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--line-control);
   border-radius: var(--r-pill);
   padding: 0.15rem var(--s-5);
   box-shadow: var(--shadow-flat);
@@ -1084,7 +1094,7 @@ a.numcard:hover .numcard-title { color: var(--brand-ink); }
 .compare-picker-select, .plan-select {
   width: 100%;
   background: var(--surface); color: var(--ink);
-  border: 1px solid var(--line-strong); border-radius: var(--r-md);
+  border: 1px solid var(--line-control); border-radius: var(--r-md);
   padding: 0.6rem var(--s-3);
   font-size: var(--text-sm);
 }
@@ -1543,7 +1553,7 @@ ol.tldr-list > li::marker { font-family: var(--font-mono); font-weight: 700; col
   text-transform: none; letter-spacing: 0;
   color: var(--ink);
   background: var(--surface);
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--line-control);
   border-radius: var(--r-md);
   padding: 0.45rem 0.6rem;
 }
@@ -1663,6 +1673,24 @@ ol.tldr-list > li::marker { font-family: var(--font-mono); font-weight: 700; col
 /* A closed venue keeps its verified date — we did check that it is shut — but it
    should not read as an endorsement sitting beside the closure notice. */
 .trust-bar:has(.is-permanently-closed) .trust-pill.is-verified {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink-muted);
+}
+
+/* A qualified record - unverified, not in Pattaya, informational, timetable
+   unconfirmed - must carry that qualification in the same bar that carries the
+   verification date, or the page reads as a plainly operating venue (S1-3).
+   Softer than the closure notice: these are open questions, not settled facts. */
+.trust-pill.is-status-flag {
+  order: -1;
+  background: color-mix(in srgb, var(--warn) 14%, #fff);
+  border-color: var(--warn-ink);
+  color: var(--warn-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.trust-bar:has(.is-status-flag) .trust-pill.is-verified {
   background: var(--surface);
   border-color: var(--line);
   color: var(--ink-muted);

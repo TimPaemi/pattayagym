@@ -10,9 +10,9 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/compare/">
 <meta name="theme-color" content="#f7f8f3">
 <meta name="color-scheme" content="light">
-<link rel="preload" href="/styles.css?v=470" as="style">
-<link rel="stylesheet" href="/styles.css?v=470">
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=470" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/styles.css?v=471" as="style">
+<link rel="stylesheet" href="/styles.css?v=471">
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=471" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <link rel="preload" href="/data/compare-venues.json" as="fetch" type="application/json" crossorigin>
 <meta property="og:title" content="Compare Pattaya gyms side by side — Pattaya.Gym">
@@ -33,8 +33,11 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/icon-180.png">
 <link rel="manifest" href="/manifest.json">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://pattaya-gym.com/compare/#webpage","url":"https://pattaya-gym.com/compare/","name":"Compare Pattaya gyms side by side — Pattaya.Gym","description":"Real side-by-side comparison of up to 4 Pattaya gyms, Muay Thai camps, or sport venues. Hours, prices, area, contact — all in one table. Live, bookmarkable.","inLanguage":"en","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","isPartOf":{"@id":"https://pattaya-gym.com/#website"},"dateModified":"2026-07-27"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","@id":"https://pattaya-gym.com/compare/#webpage","url":"https://pattaya-gym.com/compare/","name":"Compare Pattaya gyms side by side — Pattaya.Gym","description":"Real side-by-side comparison of up to 4 Pattaya gyms, Muay Thai camps, or sport venues. Hours, prices, area, contact — all in one table. Live, bookmarkable.","inLanguage":"en","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","isPartOf":{"@id":"https://pattaya-gym.com/#website"},"dateModified":"2026-07-29","author":[{"@id":"https://timpaemi.com/#tim"},{"@id":"https://timpaemi.com/#paemi"}],"publisher":{"@id":"https://timpaemi.com/#timpaemi"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://pattaya-gym.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://pattaya-gym.com/compare/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://timpaemi.com/#timpaemi","name":"TimPaemi","legalName":"TimPaemi Co., Ltd.","url":"https://timpaemi.com/","logo":{"@type":"ImageObject","url":"https://pattaya-gym.com/brand/logo-mark.svg","contentUrl":"https://pattaya-gym.com/brand/logo-mark.svg"},"foundingLocation":{"@type":"Place","name":"Pattaya, Chon Buri, Thailand"},"founder":[{"@id":"https://timpaemi.com/#tim"},{"@id":"https://timpaemi.com/#paemi"}],"employee":[{"@id":"https://timpaemi.com/#tim"},{"@id":"https://timpaemi.com/#paemi"}],"sameAs":["https://www.youtube.com/@timpaemi","https://www.tiktok.com/@timpaemi.com","https://www.instagram.com/timpaemi/","https://www.facebook.com/timpaemi"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://timpaemi.com/#tim","name":"Tim","alternateName":"Tim Paemi","url":"https://pattaya-gym.com/about/#tim","image":"https://timpaemi.com/authors/timpaemi.jpg","jobTitle":"Founder and editor","description":"Long-time Pattaya resident; researches and writes the venue records and guides on Pattaya.Gym.","homeLocation":{"@type":"Place","name":"Pattaya, Chon Buri, Thailand"},"knowsAbout":["Muay Thai","Gyms and fitness in Pattaya","Sport tourism in Thailand","Pattaya, Chon Buri","Local directory editorial"],"worksFor":{"@id":"https://timpaemi.com/#timpaemi"},"sameAs":["https://www.youtube.com/@timpaemi","https://www.tiktok.com/@timpaemi.com","https://www.instagram.com/timpaemi/","https://www.facebook.com/timpaemi","https://pattaya-gym.com/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://timpaemi.com/#paemi","name":"Paemi","url":"https://pattaya-gym.com/about/#paemi","image":"https://timpaemi.com/authors/timpaemi.jpg","jobTitle":"Co-founder and editor","description":"Co-founder of TimPaemi Co., Ltd.; Pattaya-based, works on venue research and Thai-language sourcing.","homeLocation":{"@type":"Place","name":"Pattaya, Chon Buri, Thailand"},"knowsAbout":["Muay Thai","Gyms and fitness in Pattaya","Sport tourism in Thailand","Pattaya, Chon Buri","Local directory editorial"],"worksFor":{"@id":"https://timpaemi.com/#timpaemi"},"sameAs":["https://www.youtube.com/@timpaemi","https://www.tiktok.com/@timpaemi.com","https://www.instagram.com/timpaemi/","https://www.facebook.com/timpaemi","https://pattaya-gym.com/"]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -261,7 +264,8 @@
     var html = '';
     for (var i = 0; i < maxSlots; i++) {
       var current = sel[i];
-      html += '<div class="compare-picker"><label class="compare-picker-label">Venue ' + (i+1) + '</label><select data-slot="' + i + '" class="compare-picker-select"><option value="">— pick a venue —</option>';
+      // id/for pair: without it these four selects have no programmatic label.
+      html += '<div class="compare-picker"><label class="compare-picker-label" for="compare-slot-' + i + '">Venue ' + (i+1) + '</label><select id="compare-slot-' + i + '" data-slot="' + i + '" class="compare-picker-select"><option value="">— pick a venue —</option>';
       for (var j = 0; j < data.length; j++) {
         var v = data[j];
         var selected = v.id === current ? ' selected' : '';
@@ -363,8 +367,8 @@
     });
 })();
 </script>
-<script defer src="/site-ui.js?v=470"></script>
+<script defer src="/site-ui.js?v=471"></script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
-<script defer src="/analytics.js?v=470"></script>
+<script defer src="/analytics.js?v=471"></script>
 </body>
 </html>

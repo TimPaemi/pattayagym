@@ -54,6 +54,21 @@ https://www.pattaya-gym.com/* https://pattaya-gym.com/:splat 301
 /area/sattahip/clubs/                     /area/sattahip/ 301
 /area/sattahip/clubs                      /area/sattahip/ 301
 
+# Operational trees that ship with the repo but must never be readable in public.
+# Approved 2026-07-29. noindex is not access control: .internal-docs already sent
+# X-Robots-Tag and still returned 200 on an exact path, and research/ and private/
+# sent nothing at all. These are not in any sitemap and are linked from no page,
+# so the cost is 0 user-intent clicks. Wildcards cover every file beneath them,
+# including files added later - which is the point, since the two 2026-07 audit
+# documents would otherwise have gone live on the next ship.
+/.internal-docs/*                  /404.html 302
+/research/*                        /404.html 302
+/private/*                         /404.html 302
+/.backups/*                        /404.html 302
+/CODEX-FULL-AUDIT.md               /404.html 302
+/WORK_LOG_CODEX.md                 /404.html 302
+/ENRICH-STATE.json                 /404.html 302
+
 # Internal files that must live at the repo root but must not be readable in public.
 # AGENTS.md and CLAUDE.md carry the network rulebook and name every sister site; the Codex
 # loop files and ENRICH-STATE.json expose the content pipeline; package.json exposes the

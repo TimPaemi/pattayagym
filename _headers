@@ -7,7 +7,7 @@
   Permissions-Policy: accelerometer=(), browsing-topics=(), camera=(), geolocation=(), gyroscope=(), interest-cohort=(), magnetometer=(), microphone=(), payment=(), usb=()
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-K1qBkH+0eV/J4HK4vJ+fIQ4WjCq4AKK1nJURUmGW0aY=' 'sha256-KC4LADafV7ZrDlAuWfeQQ1ULP0a6TmzJSdvWoeTkOpo=' 'sha256-KyuMS1AkwrJBF6u/hkXpiw0gUIogHZ5buNMLAouRgW4=' 'sha256-aFwTK/bzwx5qkbvT2j9QAt+dQs3NWmIXHm0Tee1dnZM=' 'sha256-kkAo5KViCWMUEzBpbg4P7ugaZc3oi543NWYHP2sHo8E=' 'sha256-lbhAOFMjZYNvrsk+IHytNqHofGRYkW5zioAJRvVnQKU=' 'sha256-oJiFSGyHU247PqNXP7ibRwM3qregsGaDdNHyHxzaREI=' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-CkZCkkDKD2n7m0aPehkDTMlB+swEzhVw3tc8cBjMuKg=' 'sha256-K1qBkH+0eV/J4HK4vJ+fIQ4WjCq4AKK1nJURUmGW0aY=' 'sha256-KC4LADafV7ZrDlAuWfeQQ1ULP0a6TmzJSdvWoeTkOpo=' 'sha256-KyuMS1AkwrJBF6u/hkXpiw0gUIogHZ5buNMLAouRgW4=' 'sha256-aFwTK/bzwx5qkbvT2j9QAt+dQs3NWmIXHm0Tee1dnZM=' 'sha256-lbhAOFMjZYNvrsk+IHytNqHofGRYkW5zioAJRvVnQKU=' 'sha256-oJiFSGyHU247PqNXP7ibRwM3qregsGaDdNHyHxzaREI=' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
 
 /api/*
   Cache-Control: public, max-age=3600, s-maxage=86400
@@ -21,17 +21,74 @@
   X-Robots-Tag: noindex, nofollow
   Cache-Control: no-store
 
+# Belt and braces behind the _redirects block above: if a rule is ever removed,
+# these paths must still not be indexable or cached anywhere.
+/.internal-docs/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/research/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/private/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
+/.backups/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+
 /llms.txt
   Cache-Control: public, max-age=3600
   Access-Control-Allow-Origin: *
   Content-Type: text/markdown; charset=utf-8
 
+# Content-versioned assets, cached for a year (2026-07-29).
+#
+# Every reference to these carries ?v=<ASSET_VERSION>, so the URL itself changes
+# whenever the file does and the browser fetches the new one immediately. They
+# were on a four-hour revalidate, which meant a returning visitor re-checked
+# roughly seven versioned files per page for no benefit - the URL had already
+# told them nothing changed.
+#
+# The one risk is an edit that ships without a version bump: that would pin the
+# stale file for a year. scripts/verify-asset-version.js fingerprints each of
+# these and fails the ship if the bytes moved and ASSET_VERSION did not, so the
+# bump cannot be forgotten. Keep that script's IMMUTABLE list in step with this
+# block.
+#
+# data.js is deliberately excluded - it is the venue dataset, it changes on
+# nearly every ship, and a gate that fires every time is a gate nobody reads.
 /styles.css
-  Cache-Control: public, max-age=3600, s-maxage=3600, must-revalidate
+  Cache-Control: public, max-age=31536000, immutable
 
 /venue.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/site-ui.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/favorites.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/share.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/shortcuts.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/search-page.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/analytics.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# The venue dataset: short cache, revalidated, never immutable.
+/data.js
   Cache-Control: public, max-age=3600, s-maxage=3600, must-revalidate
 
+# Unreferenced legacy bundles kept only until they are removed.
 /app.js
   Cache-Control: public, max-age=3600, s-maxage=3600, must-revalidate
 

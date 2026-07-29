@@ -127,9 +127,19 @@ for (const file of htmlFiles(ROOT)) {
     html = html.replace(HEADER_RE, () => v2NavHtml());
     navs++;
   }
-  if (FOOTER_RE.test(html) && !html.includes(FOOTER_MARKER)) {
+  /* 2026-07-29: this used to be `&& !html.includes(FOOTER_MARKER)`, which made the
+     sweep a one-shot migration rather than a sync. Once a page had a V2 footer it
+     was never refreshed again, so every later edit to scripts/lib/site-footer.js
+     landed on new pages only. That is why the Google Preferred Sources link, added
+     to the footer module after those pages were first swept, was present on 319
+     pages and missing from 36 - including the homepage, the guides hub and 32
+     guides. siteFooterHtml() takes only the venue count, so the canonical footer is
+     identical everywhere and replacing it unconditionally converges. The footer
+     module is now genuinely the single source for the footer. */
+  if (FOOTER_RE.test(html)) {
+    const beforeFooter = html;
     html = html.replace(FOOTER_RE, () => siteFooterHtml(VENUE_N));
-    footers++;
+    if (html !== beforeFooter) footers++;
   }
 
   // 3. Marquee tickers.

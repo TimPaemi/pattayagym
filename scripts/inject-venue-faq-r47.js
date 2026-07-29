@@ -30,7 +30,12 @@
  */
 
 /* Statuses that mean "we cannot describe this venue with confidence". */
-const NO_FAQ_STATUS = new Set(['closed', 'likely-closed', 'unverified', 'out-of-area']);
+/* 2026-07-29: 'not-in-pattaya' is the same finding as 'out-of-area' under a
+   different name, and 'informational' records are reference entries rather than
+   venues - "Does X accept beginners?" has no honest answer for either. Both were
+   invisible here until the six dropped statuses were restored to data.js (S1-3). */
+const NO_FAQ_STATUS = new Set(['closed', 'likely-closed', 'unverified', 'out-of-area',
+                               'not-in-pattaya', 'informational']);
 
 const fs = require('fs');
 const path = require('path');
@@ -56,7 +61,28 @@ function norm(s) {
   return s.replace(/\r\n/g, '\n');
 }
 
+/* 2026-07-29 - this script was not idempotent, and the two runs disagreed.
+   On a FIRST run over a freshly built page, build-v2.js has already emitted its
+   own data-derived FAQPage ("Where is X located?", "What are X's opening
+   hours?"). The `if (!out.includes(FAQPage))` guards below therefore did nothing,
+   so the page shipped this script's visible Q&A ("Does X accept beginners?")
+   alongside build-v2's completely different questions in the markup. On a SECOND
+   run the marker branch stripped the old block and the two agreed. A clean build
+   and a rebuild produced different sites, and the clean one - the one that
+   ships - was the broken one.
+
+   Google's structured-data policy requires FAQPage content to match what is
+   visible on the page. Whatever is rendered is the source of truth, so any
+   pre-existing FAQPage is removed before this one is written, on every path. */
+function stripFaqLd(html) {
+  return html.replace(
+    /<script type="application\/ld\+json">\{"@context":"https:\/\/schema\.org","@type":"FAQPage"[\s\S]*?<\/script>\s*/g,
+    ''
+  );
+}
+
 function injectAtAnchor(html, block, ldScript) {
+  html = stripFaqLd(html);
   const htmlNorm = norm(html);
   const anchors = [
     '<section class="section u-pt-0 venue-guide-links" id="venue-guides-r41">',

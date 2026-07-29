@@ -6,7 +6,9 @@ Allow: /
 Allow: /og/
 Disallow: /uploads/
 Disallow: /outreach/
-Crawl-delay: 1
+Disallow: /.internal-docs/
+Disallow: /research/
+Disallow: /private/
 
 # === Search engines ===
 User-agent: Googlebot
@@ -31,13 +33,16 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: OAI-AdsBot
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: Claude-User
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: PerplexityBot

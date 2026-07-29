@@ -10,14 +10,14 @@ module.exports = `
 <caption>Thai gym phrases that solve real check-in problems</caption>
 <thead><tr><th scope="col">Situation</th><th scope="col">Thai</th><th scope="col">Romanization</th><th scope="col">Why it matters</th></tr></thead>
 <tbody>
-<tr><td>Greeting the desk or trainer</td><td>สวัสดีครับ / ค่ะ</td><td>sawatdee khrap / kha</td><td>Polite opening before any question.</td></tr>
-<tr><td>Can I join today?</td><td>เทรนได้ไหม</td><td>train dai mai</td><td>Best first check when the public timetable is unclear.</td></tr>
-<tr><td>How much is it?</td><td>ราคาเท่าไหร่</td><td>ra kha tao rai</td><td>Use for day pass, private lesson or monthly quote.</td></tr>
-<tr><td>First time here</td><td>ลองครั้งแรก</td><td>long krang raek</td><td>Signals that you need beginner handling.</td></tr>
-<tr><td>Light sparring only</td><td>เบาๆ</td><td>bao bao</td><td>Most useful safety phrase for new Muay Thai students.</td></tr>
-<tr><td>No sparring</td><td>ไม่สปาร์</td><td>mai spar</td><td>Common Thai-gym mixed phrase; clearer than forcing pure Thai.</td></tr>
-<tr><td>It hurts / stop</td><td>เจ็บ / พอแล้ว</td><td>jep / phor laew</td><td>Use immediately if a round or drill crosses your limit.</td></tr>
-<tr><td>Changing room / toilet</td><td>ห้องแต่งตัว / ห้องน้ำ</td><td>hong taeng tua / hong nam</td><td>Useful in municipal pools and smaller local gyms too.</td></tr>
+<tr><td>Greeting the desk or trainer</td><td><span lang="th">สวัสดีครับ</span> / <span lang="th">ค่ะ</span></td><td>sawatdee khrap / kha</td><td>Polite opening before any question.</td></tr>
+<tr><td>Can I join today?</td><td><span lang="th">เทรนได้ไหม</span></td><td>train dai mai</td><td>Best first check when the public timetable is unclear.</td></tr>
+<tr><td>How much is it?</td><td><span lang="th">ราคาเท่าไหร่</span></td><td>ra kha tao rai</td><td>Use for day pass, private lesson or monthly quote.</td></tr>
+<tr><td>First time here</td><td><span lang="th">ลองครั้งแรก</span></td><td>long krang raek</td><td>Signals that you need beginner handling.</td></tr>
+<tr><td>Light sparring only</td><td><span lang="th">เบาๆ</span></td><td>bao bao</td><td>Most useful safety phrase for new Muay Thai students.</td></tr>
+<tr><td>No sparring</td><td><span lang="th">ไม่สปาร์</span></td><td>mai spar</td><td>Common Thai-gym mixed phrase; clearer than forcing pure Thai.</td></tr>
+<tr><td>It hurts / stop</td><td><span lang="th">เจ็บ</span> / <span lang="th">พอแล้ว</span></td><td>jep / phor laew</td><td>Use immediately if a round or drill crosses your limit.</td></tr>
+<tr><td>Changing room / toilet</td><td><span lang="th">ห้องแต่งตัว</span> / <span lang="th">ห้องน้ำ</span></td><td>hong taeng tua / hong nam</td><td>Useful in municipal pools and smaller local gyms too.</td></tr>
 </tbody>
 </table>
 </div>
@@ -30,19 +30,19 @@ module.exports = `
 
 <h2>Check-in, price and gear words you will actually use</h2>
 
-<p>For first-day admin, four words matter more than long sentences. <strong>สมาชิก</strong> (<strong>sama chik</strong>) means membership or member. <strong>รายวัน</strong> (<strong>rai wan</strong>) means daily. <strong>รายเดือน</strong> (<strong>rai duean</strong>) means monthly. <strong>ถุงมือ</strong> (<strong>thung mue</strong>) means gloves. If the desk reply becomes too fast, show your phone and ask the staff member to type or point at the number rather than pretending you understood it.</p>
+<p>For first-day admin, four words matter more than long sentences. <strong><span lang="th">สมาชิก</span></strong> (<strong>sama chik</strong>) means membership or member. <strong><span lang="th">รายวัน</span></strong> (<strong>rai wan</strong>) means daily. <strong><span lang="th">รายเดือน</span></strong> (<strong>rai duean</strong>) means monthly. <strong><span lang="th">ถุงมือ</span></strong> (<strong>thung mue</strong>) means gloves. If the desk reply becomes too fast, show your phone and ask the staff member to type or point at the number rather than pretending you understood it.</p>
 
 <p>For Muay Thai itself, the highest-value phrase is still <strong>bao bao</strong>. It is useful with trainers, partners and mixed-ability classes because it sets intensity without argument. If you need to stop altogether, <strong>phor laew</strong> is clearer than smiling through the round. If you are lost during a combo, most gyms will also understand simple English words such as <strong>again</strong>, <strong>slow</strong> and <strong>no spar</strong>. The goal is safe participation, not linguistic purity.</p>
 
 <h2>Directions, transport and area language</h2>
 
-<p>You will hear <strong>soi</strong> constantly because Pattaya navigation is built around side streets: Soi Buakhao, Soi Khopai, Soi Norway and dozens of others. <strong>ไป...</strong> (<strong>bpai...</strong>) means go to, <strong>ตรงไป</strong> (<strong>trong bpai</strong>) means go straight, and <strong>เลี้ยวซ้าย / ขวา</strong> (<strong>liao sai / kwaa</strong>) means turn left or right. These become useful when a gym's exact entrance is harder to spot than its headline address.</p>
+<p>You will hear <strong>soi</strong> constantly because Pattaya navigation is built around side streets: Soi Buakhao, Soi Khopai, Soi Norway and dozens of others. <strong><span lang="th">ไป</span>...</strong> (<strong>bpai...</strong>) means go to, <strong><span lang="th">ตรงไป</span></strong> (<strong>trong bpai</strong>) means go straight, and <strong><span lang="th">เลี้ยวซ้าย</span> / <span lang="th">ขวา</span></strong> (<strong>liao sai / kwaa</strong>) means turn left or right. These become useful when a gym's exact entrance is harder to spot than its headline address.</p>
 
 <p>That matters in the Pattaya directory because one business name, one reception desk and one training pin are not always the same location. A central office can sell a dive trip that leaves elsewhere. A Muay Thai gym can use a familiar landmark to explain its road but still require the exact map pin. Save the venue page, then keep the Thai directions simple enough to confirm that the driver or desk is talking about the same entrance.</p>
 
 <h2>Money, rounds and counting</h2>
 
-<p>Many Pattaya gyms quote baht amounts in English numerals, but it still helps to recognise <strong>ร้อย</strong> (<strong>roi</strong>) for hundred and <strong>พัน</strong> (<strong>phan</strong>) for thousand. That way you can sanity-check a spoken amount against the written number on a calculator or sign. If the venue publishes a price online, save the exact page before arriving so you can compare the verbal quote to the dated source.</p>
+<p>Many Pattaya gyms quote baht amounts in English numerals, but it still helps to recognise <strong><span lang="th">ร้อย</span></strong> (<strong>roi</strong>) for hundred and <strong><span lang="th">พัน</span></strong> (<strong>phan</strong>) for thousand. That way you can sanity-check a spoken amount against the written number on a calculator or sign. If the venue publishes a price online, save the exact page before arriving so you can compare the verbal quote to the dated source.</p>
 
 <p>The same principle applies to rounds and drills. Trainers may count in English, Thai or both. If you only catch the number, watch the group and mirror the rhythm. You do not need full Thai grammar to get through warm-up, pad work or a municipal-pool enquiry; you need a short set of reliable signals that keep the first visit calm and accurate.</p>
 

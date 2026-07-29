@@ -7,12 +7,18 @@
    powershell -NoProfile -ExecutionPolicy Bypass -File C:\Projects\pattayagym\SHIP-GYM.ps1
 
  WHAT IT DOES, in order:
-   1. Sanity      repo, tools, branch, data.js loads
-   2. Build       the full chain from AGENTS.md
-   3. Gates       validate, verify-encoding, no-network-links, verify-deploy,
-                  verify, seo-audit, verify-redirects,
-                  html-validate,
-                  design-layer  ->  if ANY gate fails it STOPS and pushes nothing
+   1. Sanity      repo, tools, branch, data.js loads, chain manifest loads
+   2. Build       every step in scripts/ship-chain.json, in listed order
+   3. Gates       every gate in scripts/ship-chain.json
+                  ->  if ANY gate fails it STOPS and pushes nothing
+
+ THE CHAIN LIVES IN scripts/ship-chain.json, NOT IN THIS FILE (S2-F1, 2026-07-29).
+ It used to be a hardcoded list here and a second, different list in AGENTS.md,
+ and a third in .internal-docs/ENRICH-2026-07.md. They disagreed: AGENTS omitted
+ normalize-entity-graph.js entirely and ran verify-deploy before the encoding and
+ network gates. Add or reorder a step in the JSON, run
+ `node scripts/write-ship-chain-doc.js` to refresh the AGENTS.md copy, and
+ scripts/verify-ship-chain.js gates the two staying in sync.
    4. Tag         tags the current origin/main so rollback is one command
    5. Push        commits, pushes the branch, fast-forwards main
    6. Notify      sitemap ping + IndexNow (failures here never fail the ship)
@@ -189,6 +195,18 @@ if ([string]::IsNullOrWhiteSpace($Message)) {
   $Message = 'Redesign 2026: light canvas + single volt accent, simple footer, venue count 215, v470'
 }
 
+# --- The chain manifest — the single definition of build steps and gates -------
+$ChainFile = Join-Path $RepoPath 'scripts\ship-chain.json'
+if (-not (Test-Path $ChainFile)) {
+  Fail "No scripts\ship-chain.json in '$RepoPath'. That file defines the build and gate chain."
+}
+try { $Chain = Get-Content -Raw -LiteralPath $ChainFile | ConvertFrom-Json }
+catch { Fail "scripts\ship-chain.json is not valid JSON: $($_.Exception.Message)" }
+if (-not $Chain.build -or -not $Chain.gates) {
+  Fail 'scripts\ship-chain.json must define both "build" and "gates".'
+}
+Write-Host "  chain     $(@($Chain.build).Count) build steps, $(@($Chain.gates).Count) gates"
+
 $venues = (& node -e "console.log(require('./data.js').GYMS.length)" 2>&1)
 if ($LASTEXITCODE -ne 0) {
   Write-Host ''
@@ -209,45 +227,10 @@ if ($SkipBuild) {
 
   Invoke-Step -Label 'npm install' -Exe $Npm -CmdArgs @('install', '--no-audit', '--no-fund') -Quiet
 
-  Invoke-Node 'build-v2 (venues, categories, areas)' 'build-v2.js'
-
-  foreach ($s in @(
-    'rebuild-tool-stubs', 'build-compare-page', 'build-plan-page',
-    'write-status-json', 'write-changelog', 'write-data-endpoints',
-    'inject-area-guide-faq-r74', 'inject-guide-schema',
-    'fix-guide-meta-entities-r68', 'write-round55-guides',
-    'inject-venue-faq-r47', 'inject-area-category-intros-r43',
-    'deepen-round43-ranked', 'inject-internal-linking-r84',
-    'inject-ranked-editorial-funnel', 'write-round37-guides',
-    'deepen-round37-guides', 'write-training-holiday-guide',
-    'inject-cheapest-price-table', 'export-venue-outreach',
-    'inject-homepage-seo', 'sync-guides-hub',
-    'migrate-legacy-guides-chrome', 'polish-ranked-guide-body'
-  )) { Invoke-Node $s "scripts/$s.js" }
-
-  # --- The 2026 design layer. These two MUST run after every generator. -------
-  #     build-v2.js only regenerates the pages it owns, so without these the
-  #     ~59 static pages (guides, search, compare, map, plan, favorites,
-  #     changelog, sports, colophon) revert to the old dark chrome.
-  Invoke-Node 'apply-design-2026   <-- design sweep'  'scripts/apply-design-2026.js'
-  Invoke-Node 'polish-design-2026  <-- design sweep'  'scripts/polish-design-2026.js'
-
-  # Re-run: the write-*-guides scripts above rewrite guides from scratch and drop
-  # the FAQPage schema injected earlier. verify-deploy fails without this.
-  Invoke-Node 'inject-guide-schema (re-run for FAQPage)' 'scripts/inject-guide-schema.js'
-
-  # Press kit last among HTML writers: it swaps <main> on /press/ and must see
-  # the chrome the sweeps just applied, or the design sweep overwrites it back.
-  Invoke-Node 'build-press-kit (live figures)'          'scripts/build-press-kit.js'
-
-  # Entity graph last among HTML writers: resolves any bare founder Person left by a
-  # hand-maintained block and stamps dateModified on anything still missing one.
-  Invoke-Node 'normalize-entity-graph'                  'scripts/normalize-entity-graph.js'
-
-  foreach ($s in @(
-    'bump-legacy-assets', 'sync-csp-hashes', 'sync-llms-guides',
-    'patch-guide-map-cta-r70', 'apply-geo-r73', 'update-sitemap-lastmod'
-  )) { Invoke-Node $s "scripts/$s.js" }
+  foreach ($step in $Chain.build) {
+    $label = if ($step.label) { $step.label } else { [IO.Path]::GetFileNameWithoutExtension($step.script) }
+    Invoke-Node $label $step.script
+  }
 }
 
 # =============================================================================
@@ -255,16 +238,15 @@ if ($SkipBuild) {
 # =============================================================================
 Write-Head 'GATES'
 
-Invoke-Node 'validate.js (venue records)'  'validate.js'
-Invoke-Node 'verify-encoding.js (mojibake)'   'scripts/verify-encoding.js'
-Invoke-Node 'check-no-network-links.js'       'scripts/check-no-network-links.js'
-Invoke-Node 'verify-deploy.js (HARD GATE)' 'scripts/verify-deploy.js'
-Invoke-Node 'verify.js (structure)'        'scripts/verify.js'
-Invoke-Node 'seo-audit.js'                 'scripts/seo-audit.js'
-Invoke-Node 'verify-design-layer.js'       'scripts/verify-design-layer.js'
-Invoke-Node 'verify-redirects.js (301 vs built pages)' 'scripts/verify-redirects.js'
-Invoke-Step -Label 'html-validate (core pages)' -Exe $Npm -CmdArgs @('run', 'html:validate') -Quiet
-Invoke-Step -Label 'html-validate (all 359 pages)' -Exe $Npm -CmdArgs @('run', 'html:validate-all') -Quiet
+foreach ($gate in $Chain.gates) {
+  if ($gate.npm) {
+    $label = if ($gate.label) { $gate.label } else { "npm run $($gate.npm)" }
+    Invoke-Step -Label $label -Exe $Npm -CmdArgs @('run', $gate.npm) -Quiet
+  } else {
+    $label = if ($gate.label) { $gate.label } else { [IO.Path]::GetFileNameWithoutExtension($gate.script) }
+    Invoke-Node $label $gate.script
+  }
+}
 
 Write-Host ''
 Write-Host '  ALL GATES PASSED' -ForegroundColor Green

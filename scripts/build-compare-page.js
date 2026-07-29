@@ -13,6 +13,17 @@
  *  - "Reset" button clears selection
  *
  * Run: node scripts/build-compare-page.js (idempotent; called from PUSH chain)
+ *
+ * S2-H2, 2026-07-29 - the four venue pickers are built at runtime by
+ * renderPickers(). Their label carried no for-attribute and their select no id, so
+ * every one of them was unlabelled to a screen reader; WCAG 2.2 AA requires a
+ * programmatically determinable label on every form control. Static labels
+ * elsewhere on the site wrap their input and were already valid - these are
+ * siblings, so they carry an explicit id/for pair.
+ *
+ * NOTE FOR EDITORS: the page body below is one long template literal. A comment
+ * written inside it is shipped to the browser, not stripped. Keep in-literal notes
+ * to a single short line and put reasoning here.
  */
 
 const fs = require('fs');
@@ -226,7 +237,8 @@ ${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
     var html = '';
     for (var i = 0; i < maxSlots; i++) {
       var current = sel[i];
-      html += '<div class="compare-picker"><label class="compare-picker-label">Venue ' + (i+1) + '</label><select data-slot="' + i + '" class="compare-picker-select"><option value="">— pick a venue —</option>';
+      // id/for pair: without it these four selects have no programmatic label.
+      html += '<div class="compare-picker"><label class="compare-picker-label" for="compare-slot-' + i + '">Venue ' + (i+1) + '</label><select id="compare-slot-' + i + '" data-slot="' + i + '" class="compare-picker-select"><option value="">— pick a venue —</option>';
       for (var j = 0; j < data.length; j++) {
         var v = data[j];
         var selected = v.id === current ? ' selected' : '';
