@@ -60,3 +60,10 @@ git
 kids-youth
 kids-youth)
 main
+
+# Operator docs - local only, never published.
+# Regenerate with: deploy.ps1 -SyncRules
+CLAUDE.md
+AGENTS.md
+RULES.md
+CHANGELOG-STRUCTURAL.md
