@@ -9,7 +9,8 @@
  *     with NUL bytes or UTF-8 BOM (Round 17 expansion - Codex F23.1).
  *     The build-v2.js NUL-byte truncation from Round 16 would have
  *     been caught here under the new rules.
- *   - Any sitemap URL whose local file is missing (catches GUIDE_SLUGS drift)
+ *   - Any sitemap URL whose local file is missing or untracked (catches
+ *     GUIDE_SLUGS drift and generated pages omitted from native Git deploys)
  *   - Any of the key build scripts failing `node --check`
  *
  * Run from repo root: `node scripts/verify-deploy.js`
@@ -120,9 +121,22 @@ for (const fp of sourceFiles) {
   }
 }
 
-// --- Round 17 - Codex F07.1: every sitemap URL must have a local file ---
+// --- Every sitemap URL must have a local, Git-tracked deploy file ---
+// Cloudflare Pages publishes this repository through its native Git integration.
+// A generated page that exists only in the working tree can make every local
+// file-existence gate pass while production still returns 404.
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
-let sitemapUrls = 0, sitemapMissing = 0;
+let sitemapUrls = 0, sitemapMissing = 0, sitemapUntracked = 0;
+let trackedFiles = null;
+try {
+  trackedFiles = new Set(execSync('git ls-files -z', {
+    cwd: ROOT,
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe']
+  }).split('\0').filter(Boolean));
+} catch (e) {
+  errors.push(`sitemap.xml: could not read Git-tracked deploy files - ${e.message}`);
+}
 if (fs.existsSync(sitemapPath)) {
   const sm = fs.readFileSync(sitemapPath, 'utf8');
   const matches = [...sm.matchAll(/<loc>https?:\/\/[^<]*?\/([^<]*?)<\/loc>/g)];
@@ -134,9 +148,16 @@ if (fs.existsSync(sitemapPath)) {
       path.join(ROOT, urlPath, 'index.html'),
       path.join(ROOT, urlPath)
     ];
-    if (!candidates.some(c => fs.existsSync(c))) {
+    const existing = candidates.find(c => fs.existsSync(c));
+    if (!existing) {
       errors.push(`sitemap.xml: ${m[0]} has no local file`);
       sitemapMissing++;
+    } else if (trackedFiles) {
+      const relative = path.relative(ROOT, existing).split(path.sep).join('/');
+      if (!trackedFiles.has(relative)) {
+        errors.push(`sitemap.xml: ${m[0]} maps to untracked ${relative}; native Git deploy would return 404`);
+        sitemapUntracked++;
+      }
     }
   }
 }
@@ -337,6 +358,7 @@ console.log(`Sitemap URLs checked: ${sitemapUrls}`);
 console.log(`Asset-version drift files: ${versionDrift}`);
 console.log(`Duplicate-id files:        ${dupIdFiles}`);
 console.log(`  missing local file:     ${sitemapMissing}`);
+console.log(`  untracked deploy file:  ${sitemapUntracked}`);
 console.log(`Venue LocalBusiness schema: geo ${venueGeo}/${VENUE_N}, postalCode ${venuePostal}/${VENUE_N}, telephone ${venuePhone}/${VENUE_N}`);
 console.log(`  safe geo cache:          ${safeGeoIds.size}; unsafe geo pages: ${unsafeVenueGeo}`);
 console.log(`Guide schema: FAQPage ${guideFaq}/${guideTotal}`);
