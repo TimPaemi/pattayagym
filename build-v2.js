@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '474';
+const ASSET_VERSION = '475';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -701,6 +701,8 @@ function categoryIntroSection(cat) {
   return `
 <section class="section u-pt-0">
   <div class="wrap u-max-760">
+    <div class="eyebrow"><span class="num">02</span> Choosing well</div>
+    <h2 class="h-section">How to choose <span class="accent-cyan">${esc(cat.label.toLowerCase())}.</span></h2>
     <article class="venue-body u-prose">
 ${body}
     </article>
@@ -743,7 +745,7 @@ function categoryGuideSection(cat) {
 function categoryHubCtas(cat) {
   return `
     <div class="btn-row u-mt-5">
-      <a href="/search/?cat=${esc(cat.key)}" class="btn btn-primary">▶ Search ${esc(cat.label)}</a>
+      <a href="/search/?cat=${esc(cat.key)}" class="btn btn-primary">Search ${esc(cat.label)}</a>
       <a href="/compare/" class="btn btn-secondary">Compare venues</a>
       <a href="/plan-my-trip/?sport=${esc(cat.key)}" class="btn btn-ghost">Plan trip</a>
       <a href="/favorites/" class="btn btn-ghost">♡ Favorites</a>
@@ -937,10 +939,21 @@ const STATUS_LABEL = {
    it gets the flag but keeps its hours. */
 const STATUS_OPERATION_UNRESOLVED = new Set([
   'closed', 'likely-closed', 'unverified', 'out-of-area', 'not-in-pattaya', 'informational',
+  'non-sport', 'non-sport-attraction', 'public-beach',
+]);
+
+const SYSTEM_VENUE_TAGS = new Set([
+  'closed', 'likely-closed', 'unverified', 'not-in-pattaya', 'out-of-area',
+  'non-sport', 'non-sport-attraction', 'public-beach', 'excluded', 'legacy', 'do-not-book'
 ]);
 
 function statusKey(v) { return String(v || '').trim().toLowerCase(); }
 function operationUnresolved(v) { return STATUS_OPERATION_UNRESOLVED.has(statusKey(v)); }
+function displayVenueTags(tags) {
+  return (tags || [])
+    .filter(tag => !SYSTEM_VENUE_TAGS.has(String(tag || '').trim().toLowerCase()))
+    .map(tag => ({ raw: String(tag), label: String(tag).replace(/-/g, ' ') }));
+}
 function statusPill(v) {
   const k = statusKey(v);
   if (!k) return '';
@@ -1064,21 +1077,23 @@ ${pageScripts()}`;
 function venueFavoriteBtn(g, opts) {
   const hero = opts && opts.hero;
   const cls = hero ? 'favorite-btn venue-hero-save' : 'favorite-btn';
-  return `<button type="button" class="${cls}" data-pg-favorite-id="${esc(g.id)}" data-pg-favorite-name="${esc(g.name)}" data-pg-favorite-category="${esc(g.category)}" data-pg-favorite-area="${esc(g.area)}" data-pg-favorite-price="${esc(g.priceRange)}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>`;
+  return `<button type="button" class="${cls}" data-pg-favorite-id="${esc(g.id)}" data-pg-favorite-name="${esc(g.name)}" data-pg-favorite-category="${esc(g.category)}" data-pg-favorite-area="${esc(g.area)}" data-pg-favorite-price="${esc(g.priceRange)}" aria-pressed="false" aria-label="Save ${esc(g.name)} to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>`;
 }
 
 function venueToolsStrip(g) {
   const sport = g.category || 'any';
+  const sportEntry = CATEGORIES.find(c => c.key === sport);
+  const sportLabel = sportEntry ? sportEntry.label : 'venues';
   return `
-<section class="section u-pt-0 venue-tools-strip" id="venue-tools">
+<section class="section u-pt-0 venue-tools-strip" id="venue-tools-r84">
   <div class="wrap u-max-760">
     <div class="eyebrow"><span class="num">★</span> Next steps</div>
     <h2 class="h-section" style="font-size:clamp(20px,3vw,28px);">Use our <span class="accent-yellow">directory tools.</span></h2>
     <div class="btn-row venue-tools-actions">
       <a href="/compare/?a=${esc(g.id)}" class="btn btn-secondary">Compare with others</a>
       <a href="/plan-my-trip/?sport=${esc(sport)}" class="btn btn-ghost">Plan a trip</a>
-      <a href="/favorites/" class="btn btn-ghost">♡ Favorites</a>
-      <a href="/search/?cat=${esc(sport)}" class="btn btn-ghost">Search ${esc(sport)}</a>
+      <a href="/favorites/" class="btn btn-ghost">Favorites</a>
+      <a href="/search/?cat=${esc(sport)}" class="btn btn-ghost">Search ${esc(sportLabel)}</a>
     </div>
   </div>
 </section>`;
@@ -1086,22 +1101,30 @@ function venueToolsStrip(g) {
 
 function venueListingCard(v) {
   const cat = CATEGORIES.find(c => c.key === v.category);
-  const tags = (v.tags || []).slice(0, 3).map(t => `<span class="cv-pill cv-pill-tag">${esc(t)}</span>`).join('');
+  const tags = displayVenueTags(v.tags).slice(0, 3)
+    .map(t => `<span class="cv-pill cv-pill-tag">${esc(t.label)}</span>`).join('');
   const desc = v.description || '';
   const descShort = desc.length > 180 ? desc.slice(0, 180).trim() + '…' : desc;
-  return `<article class="cat-venue-card">
+  const recordStatusKey = statusKey(v.status);
+  const recordBlocked = operationUnresolved(v.status) || recordStatusKey === 'non-sport' || recordStatusKey === 'non-sport-attraction';
+  const recordStatusLabel = recordStatusKey ? (STATUS_LABEL[recordStatusKey] || recordStatusKey.replace(/-/g, ' ')) : '';
+  const recordStatusBadge = recordStatusLabel
+    ? `<span class="record-status${recordStatusKey === 'closed' || recordStatusKey === 'likely-closed' ? ' is-closed' : ''}">${esc(recordStatusLabel)}</span>`
+    : '';
+  return `<article class="cat-venue-card${recordBlocked ? ' is-unresolved' : recordStatusKey ? ' has-status' : ''}">
       <div class="cv-head">
       <h3><a href="/gyms/${v.id}/">${esc(v.name)}</a></h3>
       ${venueFavoriteBtn(v)}
     </div>
     <div class="cv-meta">${cat ? esc(cat.label) + ' · ' : ''}${esc(v.area || '')}</div>
-    ${v.hours ? `<div class="cv-meta">${esc(v.hours)}</div>` : ''}
+    ${recordStatusBadge}
+    ${v.hours && !recordBlocked ? `<div class="cv-meta">${esc(v.hours)}</div>` : ''}
     ${descShort ? `<p>${esc(descShort)}</p>` : ''}
     <div class="cv-tags">
-      <span class="cv-pill">${esc(v.priceRange || '—')}</span>
+      ${recordBlocked ? '' : v.priceRange ? `<span class="cv-pill">${esc(v.priceRange)}</span>` : '<span class="cv-price-unavailable">Price not published</span>'}
       ${tags}
     </div>
-    <a class="cv-cta" href="/gyms/${v.id}/">View full page →</a>
+    <a class="cv-cta" href="/gyms/${v.id}/">${recordBlocked ? 'View record warning' : 'View full page'}</a>
   </article>`;
 }
 
@@ -1204,6 +1227,7 @@ function venuePage(g, fm, body) {
 
   // Related venues (same category, different venue, up to 3)
   const related = GYMS.filter(x => x.category === g.category && x.id !== g.id).slice(0, 3);
+  const venueTags = displayVenueTags(g.tags);
 
   // JSON-LD — rich LocalBusiness + BreadcrumbList graph
   const lbType = refineLocalBusinessType(localBusinessType(g.category), g);
@@ -1285,16 +1309,38 @@ function venuePage(g, fm, body) {
     verified: fm.verified || g.verified,
     social: fm.social || g.social || {}
   };
+  const venueStatusKey = statusKey(g.status);
+  const venueClosed = venueStatusKey === 'closed';
+  const venueLikelyClosed = venueStatusKey === 'likely-closed';
+  const venueUnresolved = operationUnresolved(g.status);
+  const venueNonSport = venueStatusKey === 'non-sport' || venueStatusKey === 'non-sport-attraction';
+  const venuePublicBeach = venueStatusKey === 'public-beach';
+  const venueReferenceOnly = venueNonSport || venuePublicBeach || venueStatusKey === 'informational';
+  const hasDirectOperatorContact = Boolean(v.phone || v.website || v.email);
+  const actionEyebrow = venueClosed ? 'Historical record' : venueLikelyClosed ? 'Likely closed' : venueReferenceOnly ? 'Reference record' : venueUnresolved ? 'Status unresolved' : 'Plan your visit';
+  const actionHeading = venueClosed
+    ? 'Do not travel to this former venue.'
+    : venueLikelyClosed
+      ? 'Do not travel without current confirmation.'
+    : venueNonSport
+      ? 'This is not a gym or sports venue.'
+    : venuePublicBeach
+      ? 'This is a public place, not a staffed venue.'
+    : venueStatusKey === 'informational'
+      ? 'Use this for context, not as a booking recommendation.'
+    : venueUnresolved
+      ? (hasDirectOperatorContact ? 'Verify the current status before travelling.' : 'No current operator contact is verified.')
+      : 'Confirm today\'s access before you go.';
 
   // Build info rows for the data grid (only show populated fields)
   const infoFields = [
-    v.address && { lbl: 'Address', val: v.address, link: v.mapsUrl, color: 'mint' },
+    v.address && { lbl: 'Address', val: v.address, link: v.mapsUrl, color: 'mint', wide: true },
     v.area && !v.address && { lbl: 'Area', val: v.area, color: 'cyan' },
     v.hours && { lbl: 'Hours', val: v.hours, color: 'cyan' },
     v.priceRange && { lbl: 'Price', val: v.priceRange, color: 'yellow' },
     v.phone && { lbl: 'Phone', val: v.phone, link: 'tel:' + phoneToTel(v.phone), color: 'pink' },
     v.email && { lbl: 'Email', val: v.email, link: 'mailto:' + v.email, color: 'cyan' },
-    v.website && { lbl: 'Website', val: v.website.replace(/^https?:\/\//, '').replace(/\/$/, ''), link: v.website, color: 'cyan' },
+    v.website && { lbl: 'Website', val: v.website.replace(/^https?:\/\//, '').replace(/\/$/, ''), link: v.website, color: 'cyan', wide: true },
     v.founded && { lbl: 'Founded', val: v.founded, color: 'yellow' },
     v.founders && { lbl: 'Founders', val: Array.isArray(v.founders) ? v.founders.join(', ') : v.founders, color: 'pink' },
     v.currentDirector && { lbl: 'Director', val: v.currentDirector, color: 'mint' },
@@ -1314,34 +1360,41 @@ function venuePage(g, fm, body) {
     + `
 <main id="main">
 
-<section class="hero u-pt-10-pb-8">
+<section class="hero venue-hero u-pt-10-pb-8">
   <div class="hero-inner u-wrap-max">
-    <div class="hero-kicker">// ${esc(catLabel)}${g.area ? ' · ' + esc(g.area.split(/[—\/,]/)[0].trim()) : ''}${g.priceRange ? ' · ' + esc(g.priceRange) : ''}</div>
-    <h1 class="hero-h1 u-h-fluid">
-      ${firstWords ? esc(firstWords) + '<br>' : ''}<span class="${accent.class}">${esc(lastWord)}.</span>
-    </h1>
-    ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
-    ${v.verified ? `<div class="trust-bar" aria-label="Evidence status">
-      ${statusPill(g.status)}
-      ${g.featured ? `<span class="trust-pill is-editors-pick" title="Editor's Pick — hand-selected as a top venue in this category">★ Editor's Pick</span>` : ''}
-      ${!operationUnresolved(g.status) && hoursSpec.length ? `<span class="trust-pill is-open-status" data-hours-spec='${JSON.stringify(hoursSpec).replace(/'/g, '&#39;')}'>● ${esc(hoursPillLabel(g.hours || fm.hours))}</span>` : ''}
-      <span class="trust-pill is-verified" title="Public sources reviewed by Tim and Paemi">★ Sources reviewed · ${esc(v.verified)}</span>
-      <span class="trust-pill">${operationUnresolved(g.status) ? 'Status unresolved &middot; confirm direct' : 'Source-checked record'}</span>
-      <span class="trust-pill">No paid placement</span>
-      <a href="/methodology/" class="trust-pill is-link" title="How we rank venues">How we rank →</a>
-    </div>` : ''}
-    ${g.description ? `<p class="hero-lede u-lede-h">${esc(g.description)}</p>` : ''}
-    <div class="venue-hero-ctas-wrap">
-      <div class="btn-row u-btn-row-left venue-hero-ctas" id="venue-hero-ctas">
-        ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="btn btn-primary">▶ Call gym</a>` : ''}
-        
-        ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Map</a>` : ''}
-        ${venueFavoriteBtn(g, { hero: true })}
-        <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="btn btn-tertiary btn-venue-more">Email →</a>
-        ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-venue-more">Website →</a>` : ''}
-        <button type="button" class="btn btn-ghost btn-venue-more share-venue-btn" data-share-title="${esc(g.name)}" data-share-url="${url}">↗ Share</button>
+    <div class="venue-hero-layout">
+      <div class="venue-hero-copy">
+        <div class="hero-kicker">// ${esc(catLabel)}${g.area ? ' · ' + esc(g.area.split(/[—\/,]/)[0].trim()) : ''}${g.priceRange ? ' · ' + esc(g.priceRange) : ''}</div>
+        <h1 class="hero-h1 u-h-fluid">
+          ${firstWords ? esc(firstWords) + ' ' : ''}<span class="${accent.class}">${esc(lastWord)}.</span>
+        </h1>
+${subtitleName ? `        <p class="venue-subtitle">${esc(subtitleName)}</p>` : ''}
+${v.verified ? `        <div class="trust-bar venue-proof-bar" aria-label="Evidence status">
+${statusPill(g.status) ? `          ${statusPill(g.status)}` : ''}
+${g.featured ? `          <span class="trust-pill is-editors-pick" title="Editor's Pick — hand-selected as a top venue in this category">★ Editor's Pick</span>` : ''}
+${!operationUnresolved(g.status) && hoursSpec.length ? `          <span class="trust-pill is-open-status" data-hours-spec='${JSON.stringify(hoursSpec).replace(/'/g, '&#39;')}'>● ${esc(hoursPillLabel(g.hours || fm.hours))}</span>` : ''}
+          <span class="trust-pill is-verified" title="Public sources reviewed by Tim and Paemi">Sources checked · ${esc(v.verified)}</span>
+          <a href="/methodology/" class="venue-proof-link" title="Read our research and ranking methodology">Methodology →</a>
+        </div>` : ''}
+${g.description ? `        <p class="hero-lede u-lede-h">${esc(g.description)}</p>` : ''}
       </div>
-      <button type="button" class="btn btn-ghost venue-more-toggle" aria-expanded="false" aria-controls="venue-hero-ctas">+ More actions</button>
+      <aside class="venue-action-panel${venueUnresolved ? ' is-caution' : ''}${venueClosed ? ' is-closed' : ''}" aria-label="${venueClosed ? 'Historical reference' : 'Contact and location actions'} for ${esc(g.name)}">
+        <div class="venue-action-panel-head">
+          <span class="venue-action-eyebrow">${actionEyebrow}</span>
+          <strong>${actionHeading}</strong>
+        </div>
+        <div class="venue-action-primary-grid">
+${!venueClosed && !venueReferenceOnly && v.phone ? `          <a href="tel:${esc(phoneToTel(v.phone))}" class="venue-action-card is-call"><span class="venue-action-label">${venueUnresolved ? 'Verify by phone' : 'Call venue'}</span><span class="venue-action-meta">${esc(v.phone)}</span></a>` : ''}
+${v.mapsUrl ? `          <a href="${esc(v.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="venue-action-card is-map${venueClosed || venueReferenceOnly ? ' is-reference' : ''}"><span class="venue-action-label">${venueClosed ? 'Former location' : venueReferenceOnly ? 'Reference location' : venueUnresolved ? 'Check Maps listing' : 'Google Maps'}</span><span class="venue-action-meta">${venueClosed || venueReferenceOnly ? 'For reference only' : venueLikelyClosed ? 'Closure is not confirmed' : venueUnresolved ? 'Look for a current operator' : 'Check the exact pin'}</span></a>` : ''}
+        </div>
+        <div class="venue-action-utilities" aria-label="Additional venue actions">
+${!venueClosed && v.website ? `          <a href="${esc(v.website)}" target="_blank" rel="noopener noreferrer" class="venue-action-utility">${venueReferenceOnly ? 'Official reference' : 'Website'} <span aria-hidden="true">↗</span></a>` : ''}
+${!venueClosed && !venueReferenceOnly && v.email ? `          <a href="mailto:${esc(v.email)}" class="venue-action-utility">Email venue</a>` : ''}
+          ${venueFavoriteBtn(g, { hero: true })}
+          <button type="button" class="venue-action-utility share-venue-btn" data-share-title="${esc(g.name)}" data-share-url="${url}">Share</button>
+        </div>
+        <p class="venue-action-note">${venueClosed ? 'Historical record · not a visit recommendation' : venueLikelyClosed ? 'Likely closed record · no paid placement' : venueReferenceOnly ? 'Reference only · not a venue recommendation' : venueUnresolved ? 'Unresolved record · no paid placement' : 'Independent record · no paid placement'}</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -1350,16 +1403,13 @@ ${infoFields.length ? `
 <section class="section u-pt-4-pb-8">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> Venue info</div>
-    <div style="display:grid; grid-template-columns:1fr; gap:0; border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; background:var(--surface);">
-      ${infoFields.map((f, i) => `
-      <div style="display:grid; grid-template-columns:130px 1fr; gap:var(--s-4); padding:var(--s-4) var(--s-5);${i < infoFields.length-1 ? ' border-bottom:1px solid var(--line);' : ''}">
-        <div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); font-weight:600; letter-spacing:0.10em; text-transform:uppercase;">${esc(f.lbl)}</div>
-        <div style="font-size:14px; color:var(--text); font-weight:500; line-height:1.5;${f.color === 'pink' ? ' color:var(--pink);' : ''}${f.color === 'cyan' ? ' color:var(--cyan);' : ''}${f.color === 'mint' ? ' color:var(--mint);' : ''}${f.color === 'yellow' ? ' color:var(--yellow);' : ''}">
-          ${f.link ? `<a href="${esc(f.link)}"${f.link.startsWith('http') ? ' target="_blank" rel="noopener noreferrer"' : ''} class="u-deemphasized">${esc(f.val)}</a>` : esc(f.val)}
-        </div>
-      </div>
-      `).join('')}
-    </div>
+    <dl class="venue-facts">
+      ${infoFields.map(f => `
+      <div class="venue-fact${f.wide ? ' is-wide' : ''}">
+        <dt>${esc(f.lbl)}</dt>
+        <dd>${f.link ? `<a href="${esc(f.link)}"${f.link.startsWith('http') ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(f.val)}</a>` : esc(f.val)}</dd>
+      </div>`).join('\n')}
+    </dl>
   </div>
 </section>
 ` : ''}
@@ -1388,7 +1438,7 @@ ${bodyHtml ? `
     ${Array.isArray(fm.sources) && fm.sources.length ? `
     <div class="venue-sources u-max-760-mt-8">
       <div class="eyebrow u-mb-3"><span class="num">★</span> Sources we checked</div>
-      <p class="u-info-card">These public sources were used for this record. They can include official venue pages, booking pages, public listings and independent references; each supports only the fact it actually states. If something looks wrong, <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inaccurate info: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I noticed the following on /gyms/' + g.id + '/ that needs updating:\\n\\n')}" class="u-cyan">tell us</a> and we'll re-check it.</p>
+      <p class="u-info-card">These public sources were used for this record. They can include official venue pages, booking pages, public listings and independent references; each supports only the fact it actually states.</p>
       <ul class="venue-source-list">
         ${fm.sources.map(s => `<li><a href="${esc(s)}" target="_blank" rel="noopener noreferrer">${esc(s.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></li>`).join('')}
       </ul>
@@ -1558,7 +1608,11 @@ ${bodyHtml ? `
   hint.textContent = 'Swipe for more sections →';
   nav.appendChild(pills);
   nav.appendChild(hint);
-  var foldMobile = window.matchMedia('(max-width: 899px)').matches && heads.length >= 4;
+  var foldQuery = window.matchMedia('(max-width: 899px)');
+  var reloadForLayout = function(){ window.location.reload(); };
+  if (foldQuery.addEventListener) foldQuery.addEventListener('change', reloadForLayout);
+  else if (foldQuery.addListener) foldQuery.addListener(reloadForLayout);
+  var foldMobile = foldQuery.matches && heads.length >= 4;
   if (foldMobile) {
     var tools = document.createElement('div');
     tools.className = 'venue-section-tools';
@@ -1626,51 +1680,21 @@ ${(g.social && (g.social.facebook || g.social.instagram)) ? `
     <div class="channels-grid">
       ${g.social.facebook ? `<a href="https://facebook.com/${esc(g.social.facebook)}" target="_blank" rel="noopener noreferrer" class="channel-card is-fb"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Facebook</div><h3 class="channel-card-name">${esc(g.social.facebook)}</h3><div class="channel-card-sub">facebook.com</div></a>` : ''}
       ${g.social.instagram ? `<a href="https://instagram.com/${esc(g.social.instagram)}" target="_blank" rel="noopener noreferrer" class="channel-card is-ig"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Instagram</div><h3 class="channel-card-name">@${esc(g.social.instagram)}</h3><div class="channel-card-sub">instagram.com</div></a>` : ''}
-      ${g.website ? `<a href="${esc(g.website)}" target="_blank" rel="noopener noreferrer" class="channel-card is-yt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Website</div><h3 class="channel-card-name">Official site</h3><div class="channel-card-sub">${esc(g.website.replace(/^https?:\/\//, '').replace(/\/.*$/, '').slice(0, 28))}</div></a>` : ''}
-      ${g.mapsUrl ? `<a href="${esc(g.mapsUrl)}" target="_blank" rel="noopener noreferrer" class="channel-card is-tt"><span class="channel-card-arrow">↗</span><div class="channel-card-tag">// Google Maps</div><h3 class="channel-card-name">View on map</h3><div class="channel-card-sub">Directions · location</div></a>` : ''}
     </div>
   </div>
 </section>
 ` : ''}
 
-${(g.tags && g.tags.length) ? `
+${venueTags.length ? `
 <section class="section u-pt-0">
   <div class="wrap u-max-760">
     <div class="eyebrow"><span class="num">★</span> Tags</div>
     <div class="u-tags-row">
-      ${g.tags.map(t => `<span style="background:var(--surface); border:1px solid var(--line); color:var(--text-2); padding:6px 14px; border-radius:var(--r-pill); font-family:var(--font-mono); font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">${esc(t)}</span>`).join('')}
+      ${venueTags.map(t => `<span class="venue-tag" data-tag="${esc(t.raw)}">${esc(t.label)}</span>`).join('')}
     </div>
   </div>
 </section>
 ` : ''}
-
-<section class="section">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">★</span> Contact channels</div>
-    <h2 class="h-section">Reach us <span class="accent-mint">direct.</span></h2>
-    <div class="channels-grid">
-      <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inquiry: ' + g.name)}" class="channel-card is-email">
-        <span class="channel-card-arrow">↗</span>
-        <div class="channel-card-tag">// Email</div>
-        <h3 class="channel-card-name">info@pattaya-gym.com</h3>
-        <div class="channel-card-sub">Email Tim &amp; Paemi</div>
-      </a>
-      
-      <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
-        <span class="channel-card-arrow">↗</span>
-        <div class="channel-card-tag">// LINE</div>
-        <h3 class="channel-card-name">@timpaemi</h3>
-        <div class="channel-card-sub">LINE with Tim &amp; Paemi</div>
-      </a>
-      ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="channel-card is-agency">
-        <span class="channel-card-arrow">↗</span>
-        <div class="channel-card-tag">★ Direct line</div>
-        <h3 class="channel-card-name">Call gym</h3>
-        <div class="channel-card-sub">${esc(g.phone)}</div>
-      </a>` : ''}
-    </div>
-  </div>
-</section>
 
 ${related.length ? `
 <section class="section">
@@ -1754,28 +1778,18 @@ function categoryPage(cat, venues) {
     ${categoryHubCtas(cat)}
   </div>
 </section>
-${categoryIntroSection(cat)}
 
 <section class="section u-pt-0">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">01</span> Quick pick</div>
-    <h2 class="h-section">Where to <span class="${accent}">start.</span></h2>
-    <p class="lede">${venues.length ? `Our top 3 picks from <strong class="u-text">${venues.length} ${cat.label.toLowerCase()} venues</strong>. Full list below.` : 'No venues currently listed.'}</p>
-    <div class="numlist guide-hub-grid">
-      ${venues.slice(0, 3).map(v => venueListingCard(v)).join('')}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">02</span> All ${venues.length} venues</div>
-    <h2 class="h-section">Every <span class="accent-mint">venue.</span> Hand-<span class="accent-pink">checked.</span></h2>
+    <div class="eyebrow"><span class="num">01</span> Directory · ${venues.length} records</div>
+    <h2 class="h-section">Every venue, <span class="${accent}">source by source.</span></h2>
+    <p class="lede">No repeated “top picks” and no padded shortlist—each current directory record appears once below.</p>
     <div class="numlist guide-hub-grid">
       ${venues.map(v => venueListingCard(v)).join('')}
     </div>
   </div>
 </section>
+${categoryIntroSection(cat)}
 ${categoryGuideSection(cat)}
 ${faqHtml}
 </main>
@@ -2104,7 +2118,6 @@ ${(() => {
   for (const v of venues) catCounts[v.category] = (catCounts[v.category] || 0) + 1;
   const topCats = Object.entries(catCounts)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 6)
     .map(([key, count]) => ({ key, count, label: (CATEGORIES.find(c => c.key === key) || {}).label || key }));
 
   return `<section class="hero hub-hero hub-hero--area u-pt-10-pb-8">
@@ -2116,9 +2129,30 @@ ${(() => {
     <p class="hero-lede" style="text-align:left; margin-left:0; max-width:780px;">${content ? esc(content.summary) : `Find gyms and sport venues in <strong>${esc(label)}, Pattaya</strong> — ${venues.length} source-checked entries across Muay Thai, fitness, yoga, golf and more.`}</p>
     <p class="hero-meta u-text-left">${venues.length} venues · ${esc(label)} · Pattaya · Updated ${TODAY}</p>
     <div class="btn-row u-mt-5">
-      <a href="/search/?area=${esc(slug)}" class="btn btn-primary">▶ Search ${esc(label)}</a>
+      <a href="/search/?area=${esc(slug)}" class="btn btn-primary">Search ${esc(label)}</a>
       <a href="/sports/" class="btn btn-secondary">All sports</a>
       <a href="/compare/" class="btn btn-ghost">Compare</a>
+    </div>
+  </div>
+</section>
+
+<section class="section u-pt-0">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">01</span> By sport</div>
+    <h2 class="h-section">Sports in <span class="accent-mint">${esc(label)}.</span></h2>
+    <p class="lede">Choose a sport or start with the complete area directory below.</p>
+    <div class="taxonomy-links">
+      ${topCats.map(c => `<a href="/area/${slug}/${c.key}/" class="taxonomy-link"><span class="taxonomy-count">${c.count}</span><span>${esc(c.label)}</span></a>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="section u-pt-0">
+  <div class="wrap">
+    <div class="eyebrow"><span class="num">02</span> Every venue</div>
+    <h2 class="h-section">All ${venues.length} venues in <span class="accent-yellow">${esc(label)}.</span></h2>
+    <div class="numlist guide-hub-grid">
+      ${venues.length ? venues.map(v => venueListingCard(v)).join('') : '<p class="u-muted">No venues currently listed in this area.</p>'}
     </div>
   </div>
 </section>
@@ -2127,7 +2161,7 @@ ${content ? `
 <section class="section u-pt-0">
   <div class="wrap">
     <article class="venue-body" style="max-width:880px; margin:0;">
-      <div class="eyebrow u-mb-3"><span class="num">01</span> About this neighborhood</div>
+      <div class="eyebrow u-mb-3"><span class="num">03</span> About this neighborhood</div>
       <h2 class="h-section">What ${esc(label)} <span class="${accent}">is for.</span></h2>
       ${content.intro}
     </article>
@@ -2136,7 +2170,7 @@ ${content ? `
 
 <section class="section u-pt-0">
   <div class="wrap">
-    <div class="eyebrow"><span class="num">02</span> Best for</div>
+    <div class="eyebrow"><span class="num">04</span> Best for</div>
     <h2 class="h-section">When to pick <span class="${accent}">${esc(label)}.</span></h2>
     <div class="numlist">
       ${content.bestFor.map((b, i) => `
@@ -2155,15 +2189,15 @@ ${content ? `
 <section class="section u-pt-0">
   <div class="wrap u-wrap-max">
     <article class="venue-body" style="max-width:880px; margin:0;">
-      <div class="eyebrow u-mb-3"><span class="num">03</span> Transport &amp; access</div>
+      <div class="eyebrow u-mb-3"><span class="num">05</span> Transport &amp; access</div>
       <h2 class="h-section">How to <span class="accent-cyan">get there.</span></h2>
       <p>${esc(content.transport)}</p>
 
-      <div class="eyebrow" style="margin:var(--s-6) 0 var(--s-3);"><span class="num">04</span> Landmarks &amp; orientation</div>
+      <div class="eyebrow" style="margin:var(--s-6) 0 var(--s-3);"><span class="num">06</span> Landmarks &amp; orientation</div>
       <h2 class="h-section">Where you <span class="accent-yellow">are.</span></h2>
       <ul>${content.landmarks.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
 
-      <div class="eyebrow" style="margin:var(--s-6) 0 var(--s-3);"><span class="num">05</span> Starter pick</div>
+      <div class="eyebrow" style="margin:var(--s-6) 0 var(--s-3);"><span class="num">07</span> Starter pick</div>
       <h2 class="h-section">If you're <span class="accent-pink">new here.</span></h2>
       <p>${esc(content.starterPicks)}</p>
     </article>
@@ -2171,43 +2205,6 @@ ${content ? `
 </section>
 ` : ''}
 
-<section class="section u-pt-4">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">0${content ? '6' : '1'}</span> By sport</div>
-    <h2 class="h-section">Sports in <span class="accent-mint">${esc(label)}.</span></h2>
-    <p class="lede">Jump straight to the combined category-area page for any sport in ${esc(label)}.</p>
-    <div class="btn-row" style="flex-wrap:wrap; gap:8px; margin-top:var(--s-4);">
-      ${topCats.map(c => `<a href="/area/${slug}/${c.key}/" class="btn btn-ghost" style="font-size:13px;">${esc(c.label)} <span style="color:var(--muted); font-weight:400;">(${c.count})</span></a>`).join('')}
-    </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:var(--s-6);">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">0${content ? '7' : '2'}</span> Every venue</div>
-    <h2 class="h-section">All ${venues.length} venues in <span class="accent-yellow">${esc(label)}.</span></h2>
-    <div class="numlist guide-hub-grid">
-      ${venues.length ? venues.map(v => venueListingCard(v)).join('') : '<p class="u-muted">No venues currently listed in this area.</p>'}
-    </div>
-  </div>
-</section>
-
-${(() => {
-  // Round 19 — Codex F08.1: cross-link matrix to surface the category-area
-  // combinations (e.g. /area/jomtien/muay-thai/). Without this block the 15
-  // category-area pages were orphans in the link graph.
-  const here = (slug || '').toLowerCase();
-  const byCategory = {};
-  for (const v of venues) {
-    if (!v.category) continue;
-    (byCategory[v.category] = byCategory[v.category] || []).push(v);
-  }
-  const sportLinks = CATEGORIES
-    .filter(c => byCategory[c.key] && byCategory[c.key].length > 0)
-    .map(c => `<a href="/area/${here}/${c.key}/" class="u-plain-link" style="display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border:1px solid rgba(255,255,255,0.12); border-radius:999px; font-size:13px; background:rgba(255,255,255,0.02); transition:border-color var(--t-fast);"><span style="color:var(--cyan); font-weight:700;">${byCategory[c.key].length}</span> <span class="u-muted">${esc(c.label)}</span></a>`)
-    .join('');
-  return sportLinks ? `<section class="section u-pt-0"><div class="wrap"><div class="eyebrow"><span class="num">03</span> Browse this area by sport</div><h2 class="h-section">Every sport in <span class="accent-cyan">${esc(label)}.</span></h2><p class="lede">Each tag below opens a focused page listing every venue of that sport in ${esc(label)}.</p><div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:var(--s-5);">${sportLinks}</div></div></section>` : '';
-})()}
 ${faqHtml}
 </main>`;
 })()}
@@ -2278,7 +2275,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
     <p class="hero-lede u-text-left-ml0">${venues.length} source-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Reviewed on a rolling schedule. The complete local list.</p>
     <p class="hero-meta u-text-left">${venues.length} venues · ${esc(areaLabel)} · Pattaya · Updated ${TODAY}</p>
     <div class="btn-row u-mt-5">
-      <a href="/search/?cat=${esc(cat.key)}&amp;area=${esc(areaSlug)}" class="btn btn-primary">▶ Search in ${esc(areaLabel)}</a>
+      <a href="/search/?cat=${esc(cat.key)}&amp;area=${esc(areaSlug)}" class="btn btn-primary">Search in ${esc(areaLabel)}</a>
       <a href="/category/${cat.key}/" class="btn btn-secondary">● All ${esc(catLabel.toLowerCase())} in Pattaya</a>
       <a href="/area/${areaSlug}/" class="btn btn-tertiary">All ${esc(areaLabel)} venues →</a>
     </div>
@@ -2301,7 +2298,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
     <h2 class="h-section">Looking elsewhere in <span class="accent-cyan">Pattaya?</span></h2>
     <p class="lede">Browse this sport in other neighborhoods, or explore everything ${esc(areaLabel)} offers.</p>
     <div class="btn-row">
-      <a href="/category/${cat.key}/" class="btn btn-primary">▶ All ${esc(catLabel)} in Pattaya</a>
+      <a href="/category/${cat.key}/" class="btn btn-primary">All ${esc(catLabel)} in Pattaya</a>
       <a href="/area/${areaSlug}/" class="btn btn-secondary">● All sports in ${esc(areaLabel)}</a>
       <a href="/search/?cat=${cat.key}&amp;area=${areaSlug}" class="btn btn-tertiary">Filter search →</a>
     </div>
@@ -2937,7 +2934,7 @@ const UTILITY_PAGES = [
 <form class="search-404-form" action="/search/" method="get" role="search">
   <label for="q404" class="sr-only">Search ${VENUE_N} Pattaya venues</label>
   <input type="search" id="q404" name="q" class="search-input" placeholder="Search ${VENUE_N} venues by name, sport, area…" autocomplete="off">
-  <button type="submit" class="btn btn-primary">▶ Search</button>
+  <button type="submit" class="btn btn-primary">Search</button>
 </form>
 <div class="tool-empty-actions u-mt-6">
   <a href="/" class="btn btn-secondary">Home</a>

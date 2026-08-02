@@ -66,16 +66,18 @@
     function openMenu() {
       menu.hidden = false;
       burger.setAttribute('aria-expanded', 'true');
+      burger.setAttribute('aria-label', 'Close menu');
       doc.body.classList.add('nav-open');
       var first = menu.querySelector('a');
       if (first) first.focus();
     }
 
-    function closeMenu() {
+    function closeMenu(restoreFocus) {
       menu.hidden = true;
       burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Open menu');
       doc.body.classList.remove('nav-open');
-      burger.focus();
+      if (restoreFocus !== false) burger.focus();
     }
 
     burger.addEventListener('click', function () {
@@ -88,16 +90,23 @@
     });
 
     menu.addEventListener('click', function (event) {
-      if (event.target.tagName === 'A') closeMenu();
+      if (event.target.tagName === 'A') closeMenu(false);
     });
+
+    var desktopQuery = window.matchMedia('(min-width: 1040px)');
+    function closeAtDesktop(event) {
+      if (event.matches && !menu.hidden) closeMenu(false);
+    }
+    if (desktopQuery.addEventListener) desktopQuery.addEventListener('change', closeAtDesktop);
+    else if (desktopQuery.addListener) desktopQuery.addListener(closeAtDesktop);
   }
 
   function bindCtaMoreToggle() {
-    doc.querySelectorAll('.venue-more-toggle, .home-more-toggle').forEach(function (btn) {
-      var wrap = btn.closest('.venue-hero-ctas-wrap, .home-hero-ctas-wrap');
+    doc.querySelectorAll('.home-more-toggle').forEach(function (btn) {
+      var wrap = btn.closest('.home-hero-ctas-wrap');
       if (!wrap) return;
-      var fewer = btn.classList.contains('home-more-toggle') ? '− Fewer tools' : '− Fewer actions';
-      var more = btn.classList.contains('home-more-toggle') ? '+ More tools' : '+ More actions';
+      var fewer = '− Fewer tools';
+      var more = '+ More tools';
       btn.addEventListener('click', function () {
         var open = wrap.classList.toggle('is-expanded');
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');

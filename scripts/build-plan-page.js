@@ -44,8 +44,17 @@ const STAY   = ['accommodation','on-site-accommodation','stay-and-train','all-in
 const DAYPASS= ['day-pass','walk-in','drop-in','no-contract','free-trial','casual'];
 const PRICE  = { '฿':1, '฿฿':2, '฿฿฿':3, '฿฿฿฿':4 };
 const hasAny = (tags, set) => (tags || []).some(t => set.indexOf(t) >= 0);
+const BLOCKED_STATUSES = new Set([
+  'closed', 'likely-closed', 'unverified', 'out-of-area', 'not-in-pattaya',
+  'informational', 'non-sport', 'non-sport-attraction', 'public-beach'
+]);
+const BLOCKED_TAGS = ['closed', 'likely-closed', 'do-not-book', 'excluded'];
+const recommendableGyms = GYMS.filter(g =>
+  !BLOCKED_STATUSES.has(String(g.status || '').trim().toLowerCase()) &&
+  !hasAny(g.tags, BLOCKED_TAGS)
+);
 
-const venueSummary = GYMS.map(g => ({
+const venueSummary = recommendableGyms.map(g => ({
   id: g.id,
   name: g.name,
   category: g.category,
@@ -58,13 +67,14 @@ const venueSummary = GYMS.map(g => ({
   stay: hasAny(g.tags, STAY),
   daypass: hasAny(g.tags, DAYPASS),
   hours: g.hours || '',
+  status: g.status || '',
   desc: (g.description || '').slice(0, 190)
 })).sort((a, b) => a.name.localeCompare(b.name));
 const VENUE_JSON = JSON.stringify(venueSummary);
 
 // Categories that work as a trip "base" (a sport you travel to train/do)
 const SPORT_OPTIONS = CATEGORIES.map(c => ({
-  key: c.key, label: c.label, count: GYMS.filter(g => g.category === c.key).length
+  key: c.key, label: c.label, count: recommendableGyms.filter(g => g.category === c.key).length
 })).filter(c => c.count > 0);
 
 // Trip-length editorial guidance — used by both the static content and the JS.
@@ -213,7 +223,7 @@ ${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Plan my trip' }])}
       <label class="plan-field"><span class="plan-field-label">4 · How are you travelling?</span>
         <select id="q-style" class="plan-select">${styleOpts}</select></label>
       <div class="btn-row" style="gap:8px; flex-wrap:wrap;">
-        <button type="button" class="btn btn-primary" id="plan-go">▶ Build my plan</button>
+        <button type="button" class="btn btn-primary" id="plan-go">Build my plan</button>
         <button type="button" class="btn btn-ghost" id="plan-share">↗ Share this plan</button>
       </div>
     </div>
@@ -288,7 +298,12 @@ ${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
       + '" data-pg-favorite-category="' + esc(v.category)
       + '" data-pg-favorite-area="' + esc(v.area)
       + '" data-pg-favorite-price="' + esc(v.price)
-      + '" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>';
+      + '" aria-pressed="false" aria-label="Save ' + esc(v.name) + ' to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>';
+  }
+  function statusLabel(v){
+    var labels = {'schedule-unconfirmed':'Timetable unconfirmed','limited-operation':'Limited operation','former-crossfit-affiliate':'Former CrossFit affiliate'};
+    var key = String((v && v.status) || '').trim().toLowerCase();
+    return key ? (labels[key] || key.replace(/-/g, ' ')) : '';
   }
   function venueCard(v, tagline){
     var price = v.price ? '<span style="color:var(--yellow); font-weight:700;">' + esc(v.price) + '</span>' : '';
@@ -301,9 +316,10 @@ ${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
       + '<div class="cv-head"><h3><a href="/gyms/' + esc(v.id) + '/">' + esc(v.name) + '</a></h3>' + favoriteBtn(v) + '</div>'
       + (tagline ? '<div class="cv-meta"><strong>' + esc(tagline) + '</strong></div>' : '')
       + '<div class="cv-meta">' + esc(v.categoryLabel) + (v.area ? ' &middot; ' + esc(v.area) : '') + (price ? ' &middot; ' + price : '') + '</div>'
+      + (statusLabel(v) ? '<span class="record-status">' + esc(statusLabel(v)) + '</span>' : '')
       + (v.desc ? '<p>' + esc(v.desc) + (v.desc.length >= 190 ? '…' : '') + '</p>' : '')
       + (flags.length ? '<div class="cv-tags">' + flags.map(function(f){ return '<span class="cv-pill cv-pill-tag">' + f + '</span>'; }).join('') + '</div>' : '')
-      + '<a class="cv-cta" href="/gyms/' + esc(v.id) + '/">View full page →</a></article>';
+      + '<a class="cv-cta" href="/gyms/' + esc(v.id) + '/">View full page</a></article>';
   }
   function bindPlanFavorites(){
     if (window.PG && PG.favorites) {
@@ -315,6 +331,8 @@ ${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
   function scoreBase(v, sport, budget, style){
     if (sport !== 'any' && v.category !== sport) return -999;
     var s = 0;
+    if (v.status === 'schedule-unconfirmed') s -= 3;
+    if (v.status === 'limited-operation') s -= 2;
     if (budget !== 'any' && v.priceTier > 0){
       var d = Math.abs(v.priceTier - parseInt(budget,10));
       s += d === 0 ? 4 : (d === 1 ? 1.5 : -1.5);

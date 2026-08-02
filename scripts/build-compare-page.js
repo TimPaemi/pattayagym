@@ -59,6 +59,7 @@ const venueSummary = GYMS.map(g => ({
   phone: g.phone || '',
   website: g.website || '',
   mapsUrl: g.mapsUrl || '',
+  status: g.status || '',
   description: (g.description || '').slice(0, 240),
   tags: g.tags || [],
   verified: g.verified || '',
@@ -263,6 +264,14 @@ ${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
   var emptyMsg = document.getElementById('compare-empty');
   var statusEl = document.getElementById('compare-status');
   function announce(msg) { if (statusEl) statusEl.textContent = msg; }
+  function statusKey(v){ return String((v && v.status) || '').trim().toLowerCase(); }
+  function isBlocked(v){ return ['closed','likely-closed','unverified','out-of-area','not-in-pattaya','informational','non-sport','non-sport-attraction','public-beach'].indexOf(statusKey(v)) !== -1; }
+  function statusLabel(v){
+    var labels = {'closed':'Permanently closed','likely-closed':'Likely closed','unverified':'Unverified record','out-of-area':'Not in Pattaya','not-in-pattaya':'Not in Pattaya','informational':'Reference record, not a venue','non-sport':'Not a sports venue','non-sport-attraction':'Not a sports venue','public-beach':'Public beach, not a staffed venue','schedule-unconfirmed':'Timetable unconfirmed','limited-operation':'Limited operation'};
+    var key = statusKey(v);
+    return key ? (labels[key] || key.replace(/-/g, ' ')) : 'Current record';
+  }
+  function withheld(v, value){ return isBlocked(v) ? '<span class="compare-withheld">Check record status</span>' : value; }
   function renderTable() {
     var ids = getSelected().filter(Boolean);
     var venues = ids.map(venueById).filter(Boolean);
@@ -275,18 +284,27 @@ ${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
     emptyMsg.hidden = true;
     announce('Comparing ' + venues.length + ' venues: ' + venues.map(function(v){return v.name;}).join(', ') + '.');
     var rows = [
-      { key: 'name', label: 'Name', render: function(v){ return '<a href="/gyms/' + escapeHtml(v.id) + '/" style="color:var(--cyan); font-weight:700; text-decoration:none; border-bottom:1px dotted rgba(78,224,255,0.35);">' + escapeHtml(v.name) + '</a>'; } },
-      { key: 'editors', label: 'Editor\\'s Pick', render: function(v){ return v.featured ? '<span style="color:var(--yellow); font-weight:700;">★ Yes</span>' : '<span class="u-muted">—</span>'; } },
-      { key: 'cat', label: 'Sport', render: function(v){ return '<a href="/category/' + escapeHtml(v.category) + '/" style="color:var(--text); text-decoration:none;">' + escapeHtml(v.categoryLabel) + '</a>'; } },
+      { key: 'name', label: 'Name', render: function(v){ return '<a class="compare-name-link" href="/gyms/' + escapeHtml(v.id) + '/">' + escapeHtml(v.name) + '</a>'; } },
+      { key: 'status', label: 'Record status', render: function(v){
+        var key = statusKey(v);
+        if (!key) return '<span class="compare-current">Current record</span>';
+        return '<span class="record-status' + (key === 'closed' || key === 'likely-closed' ? ' is-closed' : '') + '">' + escapeHtml(statusLabel(v)) + '</span>';
+      } },
+      { key: 'editors', label: 'Editor\\'s Pick', render: function(v){ return v.featured ? '<span class="compare-pick">★ Yes</span>' : '<span class="u-muted">—</span>'; } },
+      { key: 'cat', label: 'Sport', render: function(v){ return '<a class="compare-text-link" href="/category/' + escapeHtml(v.category) + '/">' + escapeHtml(v.categoryLabel) + '</a>'; } },
       { key: 'area', label: 'Area', render: function(v){ return escapeHtml(v.area || '—'); } },
-      { key: 'price', label: 'Price', render: function(v){ return v.priceRange ? '<strong style="color:var(--yellow);">' + escapeHtml(v.priceRange) + '</strong>' : '<span class="u-muted">—</span>'; } },
-      { key: 'hours', label: 'Hours', render: function(v){ return v.hours ? escapeHtml(v.hours) : '<span class="u-muted">—</span>'; } },
-      { key: 'phone', label: 'Phone', render: function(v){ return v.phone ? '<a href="tel:' + escapeHtml(v.phone.replace(/[^+0-9]/g,'')) + '" style="color:var(--pink); text-decoration:none;">' + escapeHtml(v.phone) + '</a>' : '<span class="u-muted">unpublished</span>'; } },
-      { key: 'web', label: 'Website', render: function(v){ return v.website ? '<a href="' + escapeHtml(v.website) + '" target="_blank" rel="noopener noreferrer" style="color:var(--cyan); text-decoration:underline; text-decoration-color:rgba(78,224,255,0.3);">official ↗</a>' : '<span class="u-muted">—</span>'; } },
-      { key: 'map', label: 'Map', render: function(v){ return v.mapsUrl ? '<a href="' + escapeHtml(v.mapsUrl) + '" target="_blank" rel="noopener noreferrer" style="color:var(--mint); text-decoration:none;">directions</a>' : '<span class="u-muted">—</span>'; } },
-      { key: 'tags', label: 'Tags', render: function(v){ return (v.tags && v.tags.length) ? v.tags.slice(0, 4).map(function(t){ return '<span style="display:inline-block; background:rgba(255,255,255,0.06); padding:2px 8px; border-radius:999px; font-size:11px; margin:2px 4px 2px 0;">' + escapeHtml(t) + '</span>'; }).join('') : '<span class="u-muted">—</span>'; } },
+      { key: 'price', label: 'Price', render: function(v){ return withheld(v, v.priceRange ? '<strong class="compare-price">' + escapeHtml(v.priceRange) + '</strong>' : '<span class="u-muted">—</span>'); } },
+      { key: 'hours', label: 'Hours', render: function(v){ return withheld(v, v.hours ? escapeHtml(v.hours) : '<span class="u-muted">—</span>'); } },
+      { key: 'phone', label: 'Phone', render: function(v){ return withheld(v, v.phone ? '<a class="compare-text-link" href="tel:' + escapeHtml(v.phone.replace(/[^+0-9]/g,'')) + '">' + escapeHtml(v.phone) + '</a>' : '<span class="u-muted">unpublished</span>'); } },
+      { key: 'web', label: 'Website', render: function(v){ return withheld(v, v.website ? '<a class="compare-text-link" href="' + escapeHtml(v.website) + '" target="_blank" rel="noopener noreferrer">official ↗</a>' : '<span class="u-muted">—</span>'); } },
+      { key: 'map', label: 'Map', render: function(v){ return withheld(v, v.mapsUrl ? '<a class="compare-text-link" href="' + escapeHtml(v.mapsUrl) + '" target="_blank" rel="noopener noreferrer">directions</a>' : '<span class="u-muted">—</span>'); } },
+      { key: 'tags', label: 'Tags', render: function(v){
+        var system = ['closed','likely-closed','unverified','not-in-pattaya','out-of-area','excluded','legacy','do-not-book'];
+        var tags = (v.tags || []).filter(function(t){ return system.indexOf(t) === -1; }).slice(0, 4);
+        return tags.length ? tags.map(function(t){ return '<span class="compare-tag">' + escapeHtml(t.replace(/-/g, ' ')) + '</span>'; }).join('') : '<span class="u-muted">—</span>';
+      } },
       { key: 'desc', label: 'Description', render: function(v){ return v.description ? escapeHtml(v.description) + (v.description.length >= 240 ? '…' : '') : '<span class="u-muted">—</span>'; } },
-      { key: 'verified', label: 'Verified', render: function(v){ return v.verified ? '<span style="color:var(--cyan); font-family:var(--font-mono); font-size:12px;">★ ' + escapeHtml(v.verified) + '</span>' : '<span class="u-muted">—</span>'; } }
+      { key: 'verified', label: 'Sources reviewed', render: function(v){ return v.verified ? '<span class="compare-verified">' + escapeHtml(v.verified) + '</span>' : '<span class="u-muted">—</span>'; } }
     ];
     var html = '<table class="compare-table"><thead><tr><th></th>';
     for (var i = 0; i < venues.length; i++) html += '<th>Venue ' + (i+1) + '</th>';

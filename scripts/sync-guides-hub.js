@@ -105,117 +105,117 @@ const CARD_ADD = [
   { slug: 'equestrian-pattaya', card: `<a href="/guides/equestrian-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Equestrian &amp; polo in Pattaya</h3><span class="cv-pill">Equestrian</span></div>
       <p>Horseshoe Point riding school vs Thai Polo Club — Mabprachan belt mapped.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'running-cycling-clubs-pattaya', card: `<a href="/guides/running-cycling-clubs-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Running &amp; cycling clubs in Pattaya</h3><span class="cv-pill">Clubs</span></div>
       <p>Hash runs, cycling meetups, beach aerobics, cricket, rugby, lawn bowls — social sport mapped.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'snooker-pool-billiards-pattaya', card: `<a href="/guides/snooker-pool-billiards-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Pool &amp; snooker in Pattaya</h3><span class="cv-pill">Clubs</span></div>
       <p>SF Strike Bowl, Megabreak, Pattaya Bowl — low-impact social evenings and rainy-season backup.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'diving-watersports-pattaya', card: `<a href="/guides/diving-watersports-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Diving &amp; watersports in Pattaya</h3><span class="cv-pill">Watersports</span></div>
       <p>Bali Hai scuba, Jomtien kite, Ocean Marina sailing, Koh Larn — all water lanes mapped.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'kids-youth-sport-pattaya', card: `<a href="/guides/kids-youth-sport-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Kids &amp; youth sport in Pattaya</h3><span class="cv-pill">Kids</span></div>
       <p>AF Academy football from age 3, BOUNCE trampoline, Harbor Mall stack, Rusich, FAST PRO.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'adventure-pattaya', card: `<a href="/guides/adventure-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Adventure in Pattaya</h3><span class="cv-pill">Adventure</span></div>
       <p>Skydive, Tarzan zipline, karting, ATV, tower jump, shooting — all 12 operators mapped.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'climbing-pattaya', card: `<a href="/guides/climbing-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Climbing in Pattaya</h3><span class="cv-pill">Climbing</span></div>
       <p>STICKY in Huai Yai is current; Deep at Harbor Pattaya is permanently closed.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'tennis-badminton-pattaya', card: `<a href="/guides/tennis-badminton-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Tennis &amp; badminton in Pattaya</h3><span class="cv-pill">Racquet</span></div>
       <p>Fitz Club, Pattaya Tennis Club, Greta covered courts, Euro Badminton — booking map.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'swimming-pools-pattaya', card: `<a href="/guides/swimming-pools-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Swimming &amp; pools in Pattaya</h3><span class="cv-pill">Swim</span></div>
       <p>Hotel day-pass pools, water parks, beach laps, swim schools — all swim types mapped.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'crossfit-pattaya', card: `<a href="/guides/crossfit-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>CrossFit in Pattaya</h3><span class="cv-pill">CrossFit</span></div>
       <p>Departed affiliate status, current Jungle Gym schedule, and general-gym alternatives.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'bjj-mma-pattaya', card: `<a href="/guides/bjj-mma-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>BJJ &amp; MMA in Pattaya</h3><span class="cv-pill">Combat</span></div>
       <p>ALFA BJJ, Venum, Rage, Kombat Group, Rambaa M16 — Gi, No-Gi, cage gyms.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'best-gym-sattahip-pattaya', card: `<a href="/guides/best-gym-sattahip-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Na Jomtien &amp; Sattahip south</h3><span class="cv-pill">Area</span></div>
       <p>Ocean Marina, Ramayana, Andaz, U-Tapao corridor — resort &amp; marina sport.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'best-gym-east-pattaya', card: `<a href="/guides/best-gym-east-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Best gym in East Pattaya (Darkside)</h3><span class="cv-pill">Area</span></div>
       <p>Kombat Group, Sor Klinmee, Sanit Mabprachan, and independent Jungle Gym.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'is-muay-thai-safe-pattaya', card: `<a href="/guides/is-muay-thai-safe-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Is Muay Thai safe in Pattaya?</h3><span class="cv-pill">Safety</span></div>
       <p>Injuries, red flags, women training alone, medical backup — honest answers.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'best-gym-central-pattaya', card: `<a href="/guides/best-gym-central-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Best gym in Central Pattaya</h3><span class="cv-pill">Area</span></div>
       <p>WKO, Battle Conquer, Tony's, Fitness 7, Jetts — Beach Road corridor.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'yoga-retreat-pattaya', card: `<a href="/guides/yoga-retreat-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Yoga retreat in Pattaya</h3><span class="cv-pill">Yoga</span></div>
       <p>Studios, resort packages, train-and-stretch weeks, sample 7-day plan.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'padel-pickleball-pattaya', card: `<a href="/guides/padel-pickleball-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Padel &amp; pickleball in Pattaya</h3><span class="cv-pill">Racquet</span></div>
       <p>Play Padel, Pickleball Pattaya, Mabprachan lakeside — courts and booking.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'training-thailand-visa-pattaya', card: `<a href="/guides/training-thailand-visa-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Train in Thailand — visa guide</h3><span class="cv-pill">Long-stay</span></div>
       <p>ED visa, tourist stay, camp sponsorship — Pattaya training paths.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'best-gym-naklua-pratamnak-pattaya', card: `<a href="/guides/best-gym-naklua-pratamnak-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Best gym in Naklua &amp; Pratamnak</h3><span class="cv-pill">Area</span></div>
       <p>Fairtex, Sityodtong, Muscle Factory, padel, Wong Amat — north &amp; hilltop venues.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'train-muay-thai-pattaya-1-week-1-month', card: `<a href="/guides/train-muay-thai-pattaya-1-week-1-month/" class="cat-venue-card">
       <div class="cv-head"><h3>Train Muay Thai: 1 week vs 1 month</h3><span class="cv-pill">Trip length</span></div>
       <p>Which camps, budgets, and schedules fit a 7-day trip vs a 4-week block.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'muay-thai-pattaya-beginners', card: `<a href="/guides/muay-thai-pattaya-beginners/" class="cat-venue-card">
       <div class="cv-head"><h3>Muay Thai in Pattaya for beginners</h3><span class="cv-pill">High intent</span></div>
       <p>Absolute beginners: 5 camps, gear list, costs, tourist-trap red flags.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'best-gym-jomtien-pattaya', card: `<a href="/guides/best-gym-jomtien-pattaya/" class="cat-venue-card">
       <div class="cv-head"><h3>Best gym in Jomtien Pattaya</h3><span class="cv-pill">Area</span></div>
       <p>Muay Thai, fitness, yoga, pools near Jomtien Beach — not mis-tagged central listings.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
   { slug: 'pattaya-vs-phuket-muay-thai-training', card: `<a href="/guides/pattaya-vs-phuket-muay-thai-training/" class="cat-venue-card">
       <div class="cv-head"><h3>Pattaya vs Phuket for Muay Thai</h3><span class="cv-pill">Compare</span></div>
       <p>Which city wins for training holidays — cost, camps, beaches, fights.</p>
-      <span class="cv-cta">Read guide →</span>
+      <span class="cv-cta">Read guide</span>
     </a>\n    ` },
 ];
 
@@ -231,6 +231,7 @@ const slugs = fs.readdirSync(guidesDir, { withFileTypes: true })
 
 let html = fs.readFileSync(HUB, 'utf8');
 html = html.replace(/\/\/ Guides hub · \d+ guides/g, `// Guides hub · ${slugs.length} guides`);
+html = html.replace(/(<span class="cv-cta">[\s\S]*?)\s*(?:→|-&gt;|->)(<\/span>)/gi, '$1$2');
 
 for (const { slug, html: line } of TLDR_ADD) {
   if (!html.includes(slug)) {

@@ -86,7 +86,7 @@ const sitemap = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
 for (const url of ['https://pattaya-gym.com/map/', 'https://pattaya-gym.com/find-my-coach/']) if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap missing ${url}`);
 
 const search = fs.readFileSync(path.join(ROOT, 'search', 'index.html'), 'utf8');
-const ssrCards = (search.match(/class="result-card"/g) || []).length;
+const ssrCards = (search.match(/<article class="[^"]*\bresult-card\b[^"]*"/g) || []).length;
 if (ssrCards < 24) fail(`/search/ has ${ssrCards} server-rendered cards; expected at least 24`);
 if (/\sautofocus(?:\s|\/?>)/i.test(search)) fail('/search/ still steals focus on load');
 

@@ -96,7 +96,17 @@ function inject(slug, block) {
   }
   let html = fs.readFileSync(fp, 'utf8');
   if (slug === '24-hour-gyms-pattaya' && html.includes('<section class="guide-rank-primer"')) {
-    html = html.replace(/<section class="guide-rank-primer"[\s\S]*?<\/section>/m, block.trim());
+    // The final reader-UI pass can place a native <section> table region inside
+    // this block. A non-greedy section regex then stops at the table's closing
+    // tag and duplicates the remainder on the next build. The stable full-list
+    // anchor is the actual boundary of this generated primer.
+    const start = html.indexOf('<section class="guide-rank-primer"');
+    const fullList = html.indexOf('<div id="full-list"></div>', start);
+    if (start < 0 || fullList < 0) {
+      console.warn(`  skip ${slug} — primer boundary missing`);
+      return false;
+    }
+    html = html.slice(0, start) + block.trim() + '\n  ' + html.slice(fullList);
   } else if (html.includes(MARKER)) {
     html = html.replace(new RegExp(`<section class="guide-editorial-depth" id="${MARKER}"[\\s\\S]*?</section>`, 'm'), block.trim());
   } else {

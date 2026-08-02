@@ -10,9 +10,9 @@
 <link rel="alternate" hreflang="x-default" href="https://pattaya-gym.com/plan-my-trip/">
 <meta name="theme-color" content="#f7f8f3">
 <meta name="color-scheme" content="light">
-<link rel="preload" href="/styles.css?v=474" as="style">
-<link rel="stylesheet" href="/styles.css?v=474">
-<link rel="preload" href="/fonts/space-grotesk.woff2?v=474" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/styles.css?v=475" as="style">
+<link rel="stylesheet" href="/styles.css?v=475">
+<link rel="preload" href="/fonts/space-grotesk.woff2?v=475" as="font" type="font/woff2" crossorigin>
 <link rel="alternate" type="application/json" href="/feed.json" title="Pattaya.Gym feed">
 <link rel="preload" href="/data/plan-venues.json" as="fetch" type="application/json" crossorigin>
 <meta property="og:title" content="Plan your Pattaya training trip — free trip builder | Pattaya.Gym">
@@ -96,7 +96,7 @@
     </noscript>
     <div class="plan-form">
       <label class="plan-field"><span class="plan-field-label">1 · What do you want to do?</span>
-        <select id="q-sport" class="plan-select"><option value="any">I'm flexible / not sure yet</option><option value="muay-thai">Muay Thai (22)</option><option value="mma">MMA (2)</option><option value="bjj">BJJ / Grappling (1)</option><option value="crossfit">CrossFit / Functional (1)</option><option value="fitness">Fitness / Gym (43)</option><option value="yoga">Yoga / Pilates (8)</option><option value="golf">Golf (17)</option><option value="racquet">Tennis / Padel / Squash (27)</option><option value="swimming">Swimming (15)</option><option value="watersports">Watersports / Diving (21)</option><option value="climbing">Climbing (2)</option><option value="clubs">Running / Cycling Clubs (26)</option><option value="kids-youth">Kids / Youth Sports (14)</option><option value="equestrian">Equestrian (2)</option><option value="adventure">Adventure / Multi-Sport (17)</option></select></label>
+        <select id="q-sport" class="plan-select"><option value="any">I'm flexible / not sure yet</option><option value="muay-thai">Muay Thai (19)</option><option value="mma">MMA (2)</option><option value="crossfit">CrossFit / Functional (1)</option><option value="fitness">Fitness / Gym (41)</option><option value="yoga">Yoga / Pilates (7)</option><option value="golf">Golf (17)</option><option value="racquet">Tennis / Padel / Squash (25)</option><option value="swimming">Swimming (11)</option><option value="watersports">Watersports / Diving (17)</option><option value="climbing">Climbing (1)</option><option value="clubs">Running / Cycling Clubs (19)</option><option value="kids-youth">Kids / Youth Sports (12)</option><option value="equestrian">Equestrian (2)</option><option value="adventure">Adventure / Multi-Sport (15)</option></select></label>
       <label class="plan-field"><span class="plan-field-label">2 · How long is your trip?</span>
         <select id="q-length" class="plan-select"><option value="weekend">A weekend — 2–3 days</option><option value="week">One week — 5–7 days</option><option value="twoweek">Two weeks — 10–16 days</option><option value="month">A month or more — 30+ days</option></select></label>
       <label class="plan-field"><span class="plan-field-label">3 · What is your budget?</span>
@@ -104,7 +104,7 @@
       <label class="plan-field"><span class="plan-field-label">4 · How are you travelling?</span>
         <select id="q-style" class="plan-select"><option value="solo">Solo / focused training</option><option value="family">With family</option><option value="casual">Casual / exploring</option></select></label>
       <div class="btn-row" style="gap:8px; flex-wrap:wrap;">
-        <button type="button" class="btn btn-primary" id="plan-go">▶ Build my plan</button>
+        <button type="button" class="btn btn-primary" id="plan-go">Build my plan</button>
         <button type="button" class="btn btn-ghost" id="plan-share">↗ Share this plan</button>
       </div>
     </div>
@@ -271,7 +271,12 @@
       + '" data-pg-favorite-category="' + esc(v.category)
       + '" data-pg-favorite-area="' + esc(v.area)
       + '" data-pg-favorite-price="' + esc(v.price)
-      + '" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>';
+      + '" aria-pressed="false" aria-label="Save ' + esc(v.name) + ' to favorites"><span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>';
+  }
+  function statusLabel(v){
+    var labels = {'schedule-unconfirmed':'Timetable unconfirmed','limited-operation':'Limited operation','former-crossfit-affiliate':'Former CrossFit affiliate'};
+    var key = String((v && v.status) || '').trim().toLowerCase();
+    return key ? (labels[key] || key.replace(/-/g, ' ')) : '';
   }
   function venueCard(v, tagline){
     var price = v.price ? '<span style="color:var(--yellow); font-weight:700;">' + esc(v.price) + '</span>' : '';
@@ -284,9 +289,10 @@
       + '<div class="cv-head"><h3><a href="/gyms/' + esc(v.id) + '/">' + esc(v.name) + '</a></h3>' + favoriteBtn(v) + '</div>'
       + (tagline ? '<div class="cv-meta"><strong>' + esc(tagline) + '</strong></div>' : '')
       + '<div class="cv-meta">' + esc(v.categoryLabel) + (v.area ? ' &middot; ' + esc(v.area) : '') + (price ? ' &middot; ' + price : '') + '</div>'
+      + (statusLabel(v) ? '<span class="record-status">' + esc(statusLabel(v)) + '</span>' : '')
       + (v.desc ? '<p>' + esc(v.desc) + (v.desc.length >= 190 ? '…' : '') + '</p>' : '')
       + (flags.length ? '<div class="cv-tags">' + flags.map(function(f){ return '<span class="cv-pill cv-pill-tag">' + f + '</span>'; }).join('') + '</div>' : '')
-      + '<a class="cv-cta" href="/gyms/' + esc(v.id) + '/">View full page →</a></article>';
+      + '<a class="cv-cta" href="/gyms/' + esc(v.id) + '/">View full page</a></article>';
   }
   function bindPlanFavorites(){
     if (window.PG && PG.favorites) {
@@ -298,6 +304,8 @@
   function scoreBase(v, sport, budget, style){
     if (sport !== 'any' && v.category !== sport) return -999;
     var s = 0;
+    if (v.status === 'schedule-unconfirmed') s -= 3;
+    if (v.status === 'limited-operation') s -= 2;
     if (budget !== 'any' && v.priceTier > 0){
       var d = Math.abs(v.priceTier - parseInt(budget,10));
       s += d === 0 ? 4 : (d === 1 ? 1.5 : -1.5);
@@ -463,9 +471,9 @@
     });
  })();
 </script>
-<script defer src="/data.js?v=474"></script>
-<script defer src="/favorites.js?v=474"></script>
-<script defer src="/site-ui.js?v=474"></script>
-<script defer src="/analytics.js?v=474"></script>
+<script defer src="/data.js?v=475"></script>
+<script defer src="/favorites.js?v=475"></script>
+<script defer src="/site-ui.js?v=475"></script>
+<script defer src="/analytics.js?v=475"></script>
 </body>
 </html>

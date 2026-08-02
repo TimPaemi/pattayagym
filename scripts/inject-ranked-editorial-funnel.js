@@ -105,7 +105,7 @@ function card({ slug, title, desc }) {
       <a href="/guides/${slug}/" class="cat-venue-card editorial-funnel-card">
         <div class="cv-head"><h3>${title}</h3><span class="cv-pill">Editorial</span></div>
         <p>${desc}</p>
-        <span class="cv-cta">Read guide →</span>
+        <span class="cv-cta">Read guide</span>
       </a>`;
 }
 

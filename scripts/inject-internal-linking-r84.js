@@ -65,25 +65,25 @@ function taxonomySection(gym) {
   const cat = gym.category;
   const area = areaSlugFrom(gym.area);
   const pills = [
-    `<a href="/category/${cat}/" class="u-plain-link" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:13px;"><span style="color:var(--cyan);font-weight:700;">★</span> All ${esc(catLabel(cat))} in Pattaya</a>`,
+    `<a href="/category/${cat}/" class="taxonomy-link">All ${esc(catLabel(cat))} in Pattaya</a>`,
   ];
   if (area) {
     pills.push(
-      `<a href="/area/${area}/" class="u-plain-link" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:13px;"><span style="color:var(--mint);font-weight:700;">◎</span> All sport in ${esc(AREA_LABELS[area] || area)}</a>`
+      `<a href="/area/${area}/" class="taxonomy-link">All sports in ${esc(AREA_LABELS[area] || area)}</a>`
     );
     if (areaCategoryExists(area, cat)) {
       pills.push(
-        `<a href="/area/${area}/${cat}/" class="u-plain-link" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:13px;"><span style="color:var(--pink);font-weight:700;">→</span> ${esc(catLabel(cat))} in ${esc(AREA_LABELS[area] || area)}</a>`
+        `<a href="/area/${area}/${cat}/" class="taxonomy-link">${esc(catLabel(cat))} in ${esc(AREA_LABELS[area] || area)}</a>`
       );
     }
   }
-  pills.push(`<a href="/sports/" class="u-plain-link" style="display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,0.12);border-radius:999px;font-size:13px;">Browse all sports</a>`);
+  pills.push(`<a href="/sports/" class="taxonomy-link">Browse all sports</a>`);
   return `
 <section class="section u-pt-0" id="${TAX_MARKER}">
   <div class="wrap">
     <div class="eyebrow"><span class="num">★</span> Browse</div>
     <h2 class="h-section">Find more <span class="accent-cyan">Pattaya sport.</span></h2>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--s-4);">${pills.join('\n      ')}</div>
+    <div class="taxonomy-links">${pills.join('\n      ')}</div>
   </div>
 </section>`;
 }

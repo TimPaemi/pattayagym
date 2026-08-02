@@ -32,13 +32,13 @@
     var cat = value(category), ar = value(area);
     if (q && String(item.name || '').toLowerCase().indexOf(q) === -1) return false;
     if (cat !== 'all' && item.category !== cat) return false;
-    if (ar !== 'all' && String(item.area || '').toLowerCase() !== ar) return false;
+    if (ar !== 'all' && String(item.areaKey || item.area || '').toLowerCase() !== ar) return false;
     return true;
   }
   function renderMapCards(items) {
     if (!list) return;
     var fragment = document.createDocumentFragment();
-    items.slice(0, 24).forEach(function (item) {
+    items.forEach(function (item) {
       var article = document.createElement('article');
       article.className = 'location-result-card';
       var copy = document.createElement('div');
@@ -73,10 +73,7 @@
       pins.forEach(function (el) { el.hidden = !matches(el); });
       var matchingMapRecords = mapData.filter(matchesData);
       renderMapCards(matchingMapRecords);
-      var rendered = Math.min(24, matchingMapRecords.length);
-      if (status) status.textContent = matchingMapRecords.length > rendered
-        ? 'Showing ' + rendered + ' of ' + matchingMapRecords.length + ' matching venues; refine the filters to narrow the list'
-        : 'Showing ' + matchingMapRecords.length + ' matching venue' + (matchingMapRecords.length === 1 ? '' : 's');
+      if (status) status.textContent = 'Showing ' + matchingMapRecords.length + ' matching venue' + (matchingMapRecords.length === 1 ? '' : 's');
       root.classList.toggle('has-no-tool-results', matchingMapRecords.length === 0);
       return;
     }

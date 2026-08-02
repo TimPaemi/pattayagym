@@ -56,6 +56,35 @@
     return c ? c.label : key;
   }
 
+  var STATUS_LABELS = {
+    'closed': 'Permanently closed',
+    'likely-closed': 'Likely closed',
+    'unverified': 'Unverified record',
+    'out-of-area': 'Not in Pattaya',
+    'not-in-pattaya': 'Not in Pattaya',
+    'informational': 'Reference record, not a venue',
+    'schedule-unconfirmed': 'Timetable unconfirmed',
+    'former-crossfit-affiliate': 'Former CrossFit affiliate',
+    'non-sport': 'Not a sports venue',
+    'non-sport-attraction': 'Not a sports venue',
+    'public-beach': 'Public beach, not a staffed venue',
+    'limited-operation': 'Limited operation'
+  };
+  var BLOCKED_STATUSES = {
+    'closed': true, 'likely-closed': true, 'unverified': true,
+    'out-of-area': true, 'not-in-pattaya': true, 'informational': true,
+    'non-sport': true, 'non-sport-attraction': true, 'public-beach': true
+  };
+  function statusKey(g) { return String((g && g.status) || '').trim().toLowerCase(); }
+  function operationBlocked(g) { return !!BLOCKED_STATUSES[statusKey(g)]; }
+  function recordStatusHtml(g) {
+    var key = statusKey(g);
+    if (!key) return '';
+    var label = STATUS_LABELS[key] || key.replace(/-/g, ' ');
+    var closed = key === 'closed' || key === 'likely-closed';
+    return '<span class="record-status' + (closed ? ' is-closed' : '') + '">' + esc(label) + '</span>';
+  }
+
   var PAGE_SIZE = 24;
   var visibleLimit = PAGE_SIZE;
   var lastResults = [];
@@ -74,7 +103,7 @@
       '" data-pg-favorite-category="' + esc(g.category) +
       '" data-pg-favorite-area="' + esc(g.area) +
       '" data-pg-favorite-price="' + esc(g.priceRange) +
-      '" aria-pressed="false" aria-label="Save to favorites">' +
+      '" aria-pressed="false" aria-label="Save ' + esc(g.name) + ' to favorites">' +
       '<span class="fav-heart" aria-hidden="true">&#9825;</span><span class="fav-btn-label">Save</span></button>';
   }
 
@@ -143,7 +172,7 @@
     if (state.price !== 'all' && g.priceRange !== state.price) return false;
     // Open now - Round 21 (Codex P2-5): honors weekday + seasonal
     // constraints in addition to HH:MM windows.
-    if (state.openNow && !isOpenNow(g.hours)) return false;
+    if (state.openNow && (operationBlocked(g) || !isOpenNow(g.hours))) return false;
     // Text query (case-insensitive substring across name + area + category + tags + description)
     if (state.q) {
       var q = state.q.toLowerCase();
@@ -216,19 +245,23 @@
     for (var i = 0; i < showing; i++) {
       var g = results[i];
       var cat = catLabel(g.category);
+      var blocked = operationBlocked(g);
       var desc = g.description || '';
       if (desc.length > 130) desc = desc.slice(0, 130).trim() + '…';
       html +=
-        '<article class="result-card">' +
+        '<article class="result-card' + (blocked ? ' is-unresolved' : '') + '">' +
           '<div class="result-card-head">' +
             '<a class="result-card-main" href="/gyms/' + esc(g.id) + '/">' +
               '<div class="result-card-tag">// ' + esc(cat) + '</div>' +
               '<h3 class="result-card-name">' + esc(g.name) + '</h3>' +
               '<div class="result-card-meta">' + esc(g.area || '') + '</div>' +
+              recordStatusHtml(g) +
               '<p class="result-card-desc">' + esc(desc) + '</p>' +
               '<div class="result-card-foot">' +
-                '<span class="result-card-price">' + esc(g.priceRange || '—') + '</span>' +
-                '<span class="result-card-arrow">View →</span>' +
+              (!blocked && g.priceRange
+                ? '<span class="result-card-price">' + esc(g.priceRange) + '</span>'
+                : '<span class="result-card-price is-unavailable">' + (blocked ? 'Check record status' : 'Price not published') + '</span>') +
+                '<span class="result-card-arrow">' + (blocked ? 'View warning' : 'View record') + ' →</span>' +
               '</div>' +
             '</a>' +
             favoriteBtnHtml(g) +
@@ -236,6 +269,10 @@
         '</article>';
     }
     grid.innerHTML = html;
+    if (window.PG && window.PG.favorites) {
+      window.PG.favorites.bindButtons(grid);
+      window.PG.favorites.refreshAllButtons();
+    }
     if (moreMount && n > showing) {
       var remain = n - showing;
       moreMount.innerHTML =
@@ -368,7 +405,7 @@
       });
     }
 
-    // Read initial state from URL (?q=foo&cat=muay-thai)
+    // Read initial state from URL so hub deep-links open the promised filter.
     try {
       var sp = new URLSearchParams(window.location.search);
       if (sp.has('q')) {
@@ -376,12 +413,31 @@
         if (qEl) qEl.value = state.q;
       }
       if (sp.has('cat')) {
-        state.cat = sp.get('cat');
+        var requestedCat = sp.get('cat') || 'all';
+        state.cat = Array.prototype.some.call(pills, function (p) {
+          return p.getAttribute('data-cat') === requestedCat;
+        }) ? requestedCat : 'all';
         pills.forEach(function (p) {
           var active = p.getAttribute('data-cat') === state.cat;
           p.classList.toggle('active', active);
           p.setAttribute('aria-pressed', active ? 'true' : 'false');
         });
+      }
+      if (sp.has('area') && areaEl) {
+        var requestedArea = sp.get('area') || 'all';
+        var areaExists = Array.prototype.some.call(areaEl.options, function (o) { return o.value === requestedArea; });
+        state.area = areaExists ? requestedArea : 'all';
+        areaEl.value = state.area;
+      }
+      if (sp.has('price') && priceEl) {
+        var requestedPrice = sp.get('price') || 'all';
+        var priceExists = Array.prototype.some.call(priceEl.options, function (o) { return o.value === requestedPrice; });
+        state.price = priceExists ? requestedPrice : 'all';
+        priceEl.value = state.price;
+      }
+      if ((sp.get('open') === '1' || sp.get('open_now') === '1') && openEl) {
+        state.openNow = true;
+        openEl.checked = true;
       }
     } catch (e) { /* SSR-safe */ }
 

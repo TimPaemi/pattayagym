@@ -205,7 +205,7 @@ function render(stub) {
       <h3>${esc(stub.crumb)} is being rebuilt</h3>
       <p>Use search, browse by area or sport, or save venues to your shortlist while we ship the full tool.</p>
       <div class="tool-empty-actions">
-        <a href="/search/" class="btn btn-primary">▶ Live search</a>
+        <a href="/search/" class="btn btn-primary">Live search</a>
         <a href="/favorites/" class="btn btn-secondary">♡ Favorites</a>
         <a href="/sports/" class="btn btn-ghost">All sports</a>
       </div>

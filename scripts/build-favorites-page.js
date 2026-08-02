@@ -75,7 +75,7 @@ ${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Favorites' }])}
     <h1 class="hero-h1">Your <span class="accent-pink">favorites.</span></h1>
     <p class="hero-lede u-text-left-ml0">Tap <strong>Save</strong> on venue pages, search results, hub listings, or guide picks. Stored in your browser only — not on our servers. Clear anytime.</p>
     <div class="btn-row u-mt-5">
-      <a href="/search/" class="btn btn-primary">▶ Find venues</a>
+      <a href="/search/" class="btn btn-primary">Find venues</a>
       <a href="/compare/" class="btn btn-secondary">Compare →</a>
       <button type="button" class="btn btn-ghost" id="favorites-clear-all" data-clear-favorites>Clear list</button>
     </div>

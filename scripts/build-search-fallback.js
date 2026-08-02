@@ -21,13 +21,44 @@ function catLabel(key) {
   const found = CATEGORIES.find(c => c.key === key);
   return found ? found.label : key;
 }
+const STATUS_LABELS = {
+  'closed': 'Permanently closed',
+  'likely-closed': 'Likely closed',
+  'unverified': 'Unverified record',
+  'out-of-area': 'Not in Pattaya',
+  'not-in-pattaya': 'Not in Pattaya',
+  'informational': 'Reference record, not a venue',
+  'schedule-unconfirmed': 'Timetable unconfirmed',
+  'former-crossfit-affiliate': 'Former CrossFit affiliate',
+  'non-sport': 'Not a sports venue',
+  'non-sport-attraction': 'Not a sports venue',
+  'public-beach': 'Public beach, not a staffed venue',
+  'limited-operation': 'Limited operation'
+};
+const BLOCKED_STATUSES = new Set([
+  'closed', 'likely-closed', 'unverified', 'out-of-area', 'not-in-pattaya',
+  'informational', 'non-sport', 'non-sport-attraction', 'public-beach'
+]);
+function statusKey(g) { return String((g && g.status) || '').trim().toLowerCase(); }
+function blocked(g) { return BLOCKED_STATUSES.has(statusKey(g)); }
+function statusBadge(g) {
+  const key = statusKey(g);
+  if (!key) return '';
+  const label = STATUS_LABELS[key] || key.replace(/-/g, ' ');
+  const cls = key === 'closed' || key === 'likely-closed' ? ' is-closed' : '';
+  return `<span class="record-status${cls}">${esc(label)}</span>`;
+}
 function favorite(g) {
-  return `<button type="button" class="favorite-btn" data-pg-favorite-id="${esc(g.id)}" data-pg-favorite-name="${esc(g.name)}" data-pg-favorite-category="${esc(g.category)}" data-pg-favorite-area="${esc(g.area)}" data-pg-favorite-price="${esc(g.priceRange)}" aria-pressed="false" aria-label="Save to favorites"><span class="fav-heart" aria-hidden="true">♡</span><span class="fav-btn-label">Save</span></button>`;
+  return `<button type="button" class="favorite-btn" data-pg-favorite-id="${esc(g.id)}" data-pg-favorite-name="${esc(g.name)}" data-pg-favorite-category="${esc(g.category)}" data-pg-favorite-area="${esc(g.area)}" data-pg-favorite-price="${esc(g.priceRange)}" aria-pressed="false" aria-label="Save ${esc(g.name)} to favorites"><span class="fav-heart" aria-hidden="true">♡</span><span class="fav-btn-label">Save</span></button>`;
 }
 function card(g) {
   let desc = g.description || '';
   if (desc.length > 130) desc = `${desc.slice(0, 130).trim()}…`;
-  return `<article class="result-card"><div class="result-card-head"><a class="result-card-main" href="/gyms/${esc(g.id)}/"><div class="result-card-tag">// ${esc(catLabel(g.category))}</div><h3 class="result-card-name">${esc(g.name)}</h3><div class="result-card-meta">${esc(g.area || '')}</div><p class="result-card-desc">${esc(desc)}</p><div class="result-card-foot"><span class="result-card-price">${esc(g.priceRange || '—')}</span><span class="result-card-arrow">View →</span></div></a>${favorite(g)}</div></article>`;
+  const isBlocked = blocked(g);
+  const price = !isBlocked && g.priceRange
+    ? `<span class="result-card-price">${esc(g.priceRange)}</span>`
+    : `<span class="result-card-price is-unavailable">${isBlocked ? 'Check record status' : 'Price not published'}</span>`;
+  return `<article class="result-card${isBlocked ? ' is-unresolved' : ''}"><div class="result-card-head"><a class="result-card-main" href="/gyms/${esc(g.id)}/"><div class="result-card-tag">// ${esc(catLabel(g.category))}</div><h3 class="result-card-name">${esc(g.name)}</h3><div class="result-card-meta">${esc(g.area || '')}</div>${statusBadge(g)}<p class="result-card-desc">${esc(desc)}</p><div class="result-card-foot">${price}<span class="result-card-arrow">${isBlocked ? 'View warning' : 'View record'} →</span></div></a>${favorite(g)}</div></article>`;
 }
 
 const ordered = [...GYMS].sort((a, b) => {
