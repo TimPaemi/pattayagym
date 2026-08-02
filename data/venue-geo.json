@@ -25,7 +25,7 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "battle-conquer-gym": {
     "lat": 12.914311,
@@ -42,7 +42,7 @@
     "lng": 100.8812,
     "source": "manual-r73",
     "note": "South Pattaya",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "petchrungruang-gym": {
     "lat": 12.928,
@@ -56,7 +56,7 @@
     "lng": 100.888,
     "source": "manual-r73",
     "note": "Central Pattaya",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "venum-training-camp": {
     "lat": 12.9404,
@@ -70,21 +70,21 @@
     "lng": 100.885,
     "source": "manual-r73",
     "note": "Central Pattaya",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "sanit-sport-club": {
     "lat": 12.9502,
     "lng": 100.9145,
     "source": "manual-r73",
     "note": "Huai Yai / East Pattaya",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "lumpinee-boxing-stadium": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "outside_pattaya_region",
     "note": "Outside Pattaya editorial region or no safe venue coordinate.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "rajadamnern-stadium": {
     "lat": 12.93,
@@ -98,7 +98,7 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "silk-muay-thai": {
     "lat": 12.921,
@@ -112,14 +112,14 @@
     "lng": 100.874,
     "source": "manual-r73",
     "note": "Jomtien Soi 7 belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "fight-evo360": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "sitpholek-muay-thai": {
     "lat": 12.92,
@@ -133,14 +133,14 @@
     "lng": 100.9028,
     "source": "manual-r73",
     "note": "Jungle Gym Pattaya area",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "tonys-gym": {
     "lat": 12.9478,
     "lng": 100.8962,
     "source": "manual-r73",
     "note": "Central Pattaya belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "platinum-fitness": {
     "lat": 12.9328606,
@@ -157,7 +157,7 @@
     "lng": 100.8721,
     "source": "manual-r73",
     "note": "Mike Shopping Mall Jomtien belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "universe-gym": {
     "lat": 12.935027,
@@ -181,7 +181,7 @@
     "lng": 100.8845,
     "source": "manual-r73",
     "note": "392/62 Sukhumvit Soi 42-44",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "jetts-fitness-pattaya": {
     "lat": 12.935997,
@@ -205,49 +205,49 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "true-fitness-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "castra-gym": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "sun-fitness-buakao": {
     "lat": 12.9015,
     "lng": 100.8982,
     "source": "manual-r73",
     "note": "Soi Buakhao primary branch",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "cross-pattaya-pratamnak": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "manhattan-pattaya-fitness": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "yoga-pattaya-studio": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "yoga-haus-pattaya": {
     "lat": 12.9334134,
@@ -264,42 +264,42 @@
     "lng": 100.8752,
     "source": "manual-r73",
     "note": "Thepprasit Soi 12",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "one-d-yoga-studio": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "nok-yoga-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "balance-yoga-studio-pattaya": {
     "lat": 12.888,
     "lng": 100.876,
     "source": "manual-r73",
     "note": "Jomtien beach-adjacent",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "siam-country-club": {
     "lat": 12.909714,
     "lng": 101.008601,
     "source": "manual-r73",
     "note": "Plantation clubhouse, Pong Bang Lamung",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "laem-chabang-international": {
     "lat": 13.044,
     "lng": 100.976,
     "source": "manual-r73",
     "note": "Sriracha — day-trip from Pattaya",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "phoenix-gold-golf": {
     "lat": 12.965,
@@ -327,14 +327,14 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "chatrium-golf-soi-dao": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "outside_pattaya_region",
     "note": "Outside Pattaya editorial region or no safe venue coordinate.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattana-sports-resort": {
     "lat": 12.8714,
@@ -369,7 +369,7 @@
     "lng": 100.962,
     "source": "manual-r73",
     "note": "East of Pattaya hills",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-country-club": {
     "lat": 12.965,
@@ -383,7 +383,7 @@
     "lng": 100.89,
     "source": "manual-r73",
     "note": "Central belt driving range",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-tennis-club": {
     "lat": 12.934694,
@@ -400,35 +400,35 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "tara-tennis-club": {
     "lat": 12.912,
     "lng": 100.868,
     "source": "manual-r73",
     "note": "Pratamnak / Royal Cliff belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "tos-tennis": {
     "lat": 12.888,
     "lng": 100.871,
     "source": "manual-r73",
     "note": "Jomtien Baan Suan Lalana",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "siam-bayshore-tennis": {
     "lat": 12.934,
     "lng": 100.884,
     "source": "manual-r73",
     "note": "Central Pattaya resort courts",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "euro-badminton": {
     "lat": 12.8818,
     "lng": 100.8906,
     "source": "manual-r73",
     "note": "Darkside belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "diamond-badminton": {
     "lat": 12.920741,
@@ -445,21 +445,21 @@
     "lng": 100.87,
     "source": "manual-r73",
     "note": "Pratamnak",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pickleball-pattaya": {
     "lat": 12.919,
     "lng": 100.861,
     "source": "manual-r73",
     "note": "Pratamnak padel belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "play-padel-pattaya": {
     "lat": 12.919,
     "lng": 100.861,
     "source": "manual-r73",
     "note": "Pratamnak",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-sports-club": {
     "lat": 12.945697,
@@ -476,21 +476,21 @@
     "lng": 100.884,
     "source": "manual-r73",
     "note": "Central Pattaya kids sport",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "bounce-pattaya": {
     "lat": 12.9599,
     "lng": 100.8938,
     "source": "manual-r73",
     "note": "Harbor Mall North Pattaya",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "first-serve-sports-club": {
     "lat": 12.93,
     "lng": 100.884,
     "source": "manual-r73",
     "note": "Central racquet club",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "hard-rock-pool": {
     "lat": 12.9392035,
@@ -517,7 +517,7 @@
     "lng": 100.868,
     "source": "manual-r73",
     "note": "South Pattaya / Jomtien border pool",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "mermaids-dive": {
     "lat": 12.9111,
@@ -541,21 +541,21 @@
     "lng": 100.883,
     "source": "manual-r73",
     "note": "Central Pattaya dive shop",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-scuba-adventures": {
     "lat": 12.933,
     "lng": 100.882,
     "source": "manual-r73",
     "note": "Beach Road belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "no-limit-divers": {
     "lat": 12.89,
     "lng": 100.875,
     "source": "manual-r73",
     "note": "Jomtien IDC belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "jomtien-dive-center": {
     "lat": 12.89546,
@@ -582,14 +582,14 @@
     "lng": 100.872,
     "source": "manual-r73",
     "note": "South Jomtien Beach",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "kba-kiteboarding-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "wave-pattaya": {
     "lat": 12.964,
@@ -603,63 +603,63 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "bean-cow-climbing-gym": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-hash-house": {
     "lat": 12.928,
     "lng": 100.885,
     "source": "manual-r73",
     "note": "Hash run meetup belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-monkey-hash-house": {
     "lat": 12.928,
     "lng": 100.885,
     "source": "manual-r73",
     "note": "Hash chapter belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-city-football-academy": {
     "lat": 12.92,
     "lng": 100.88,
     "source": "manual-r73",
     "note": "Central youth football",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "planet-football-pattaya": {
     "lat": 12.918,
     "lng": 100.878,
     "source": "manual-r73",
     "note": "East/Central belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "rusich-club-football": {
     "lat": 12.932,
     "lng": 100.891,
     "source": "manual-r73",
     "note": "Central Pattaya",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "regents-international-school-pattaya": {
     "lat": 12.856,
     "lng": 100.905,
     "source": "manual-r73",
     "note": "Sattahip campus belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "horseshoe-point-resort": {
     "lat": 12.894,
     "lng": 100.995,
     "source": "manual-r73",
     "note": "Mabprachan / Pong belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "muscle-factory-pattaya": {
     "lat": 12.91184,
@@ -683,21 +683,21 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "fast-pro-football-academy": {
     "lat": 12.925,
     "lng": 100.882,
     "source": "manual-r73",
     "note": "Central Pattaya",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "golf-hub-pattaya": {
     "lat": 12.901,
     "lng": 100.898,
     "source": "manual-r73",
     "note": "Soi Buakhao simulator",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "ramayana-water-park": {
     "lat": 12.7882,
@@ -711,28 +711,28 @@
     "lng": 100.9012,
     "source": "manual-r73",
     "note": "Naklua training belt (multi-site)",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "diana-driving-range": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pratumnak-fitness-park": {
     "lat": 12.912,
     "lng": 100.863,
     "source": "manual-r73",
     "note": "Pratamnak outdoor park",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-bowl": {
     "lat": 12.965,
     "lng": 100.908,
     "source": "manual-r73",
     "note": "Naklua bowling",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-park-water-fun": {
     "lat": 12.8857,
@@ -746,28 +746,28 @@
     "lng": 100.905,
     "source": "manual-r73",
     "note": "Sattahip skydive dropzone belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "thai-polo-equestrian-club": {
     "lat": 12.924,
     "lng": 100.882,
     "source": "manual-r73",
     "note": "North Pattaya polo belt",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "bira-circuit": {
     "lat": 12.856,
     "lng": 100.905,
     "source": "manual-r73",
     "note": "Sattahip motorsport circuit",
-    "set_at": "2026-08-02T15:59:51.886Z"
+    "set_at": "2026-08-02T16:03:23.435Z"
   },
   "jumpz-trampoline-park": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-shooting-park": {
     "lat": 12.864738,
@@ -801,14 +801,14 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "sailbreeze-ocean-marina": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "royal-varuna-yacht-club": {
     "lat": 12.887,
@@ -829,14 +829,14 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-bike-boat-tours": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-petanque-club": {
     "lat": 12.9086581,
@@ -873,14 +873,14 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-lawn-bowls": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "max-muay-thai-stadium": {
     "lat": 12.94,
@@ -901,14 +901,14 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "real-divers-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "dive-station-pattaya": {
     "lat": 12.9288604,
@@ -935,7 +935,7 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-marathon": {
     "lat": 12.9256246,
@@ -952,7 +952,7 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-boxing-world": {
     "lat": 12.955052,
@@ -976,28 +976,28 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-running-routes": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-beach-public-aerobics": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "wong-amat-beach": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "big-buddha-hill-wat-phra-yai": {
     "lat": 12.905,
@@ -1011,14 +1011,14 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-archery-club": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-cricket-club": {
     "lat": 12.926467,
@@ -1035,14 +1035,14 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "hilton-pattaya-fitness": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "andaz-pattaya-jomtien": {
     "lat": 12.864,
@@ -1101,7 +1101,7 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "underwater-world-pattaya": {
     "lat": 12.892,
@@ -1115,42 +1115,42 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-panthers-rugby": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "sf-strike-bowl": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "megabreak-pool-hall": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "bangkok-hospital-pattaya-rehab": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pattaya-floating-market": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "sanctuary-of-truth": {
     "lat": 12.9642,
@@ -1184,49 +1184,49 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "the-gym-boxing-fitness-sriracha": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "badminton-khaonoi-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "prime-padel-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "chilli-padel-club": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "swimming-kids-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "pesuso-martial-arts-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "sriracha-arena": {
     "lat": 13.12848,
@@ -1422,188 +1422,188 @@
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "station-24-fitness-sriracha": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "fitness-lifestyle-srirachanakorn": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "infinite-fitness-laem-chabang": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "the-best-fitness-sattahip": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "gaya-fitness-pilates-chaiyapruek": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "chama-yoga-sound-healing": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "copa-sport-club-laem-chabang": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "ruammitr-badminton-sriracha": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "acs-sports-hall-sriracha": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "premier-football-arena-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "eastern-national-sports-center-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "nong-prue-municipal-stadium": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "sriracha-municipal-stadium": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "lek-thai-yoga-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "g-fitness-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "fatburn-fitness-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "levant-fitness-club": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "wesquare-bang-saray": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "chan-pilates": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "fitness-lifestyle-suansue": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "mixfight-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "sudsakorn-muay-thai-gym": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "smash-fitness-kickboxing": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "nova-fencing-academy": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "att-pattaya-table-tennis-club": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   },
   "table-tennis-plaza-pattaya": {
     "failed": true,
     "source": "needs-venue-specific-geo",
     "_flag": "missing_exact_geo",
     "note": "No venue-specific sourced coordinate is available.",
-    "attempted_at": "2026-08-02T15:59:51.886Z"
+    "attempted_at": "2026-08-02T16:03:23.435Z"
   }
 }
