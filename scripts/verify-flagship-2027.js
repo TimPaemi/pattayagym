@@ -49,9 +49,9 @@ for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');
   if (/googletagmanager\.com\/gtag\/js/i.test(html)) fail(`${fileRel}: loads Google tag before consent`);
   if (/\bhand[- ]checked\b/i.test(html)) fail(`${fileRel}: still uses ambiguous hand-checked language`);
-  const firstHand = html.match(/\bwe visited\b|\bwe trained\b|\bwhen (?:we )?dropped\b|\bmats felt\b|\bwe watched\b|\bpersonally confirmed\b|\bchecked in person\b|\bwe photographed\b|\bour visit\b/i);
+  const firstHand = html.match(/\bwe visited\b|\bwe trained\b|\bwhen (?:we )?dropped\b|\bmats felt\b|\bwe watched\b|\bpersonally confirmed\b|\bchecked in person\b|\bwe photographed\b|\bour visit\b|\b(?:every )?venue is visited\b|\bvenues? (?:are|were) visited\b/i);
   if (firstHand) fail(`${fileRel}: unsupported first-hand claim "${firstHand[0]}"`);
-  const absolute = html.match(/every (?:claim|fact|detail) (?:comes|is sourced|was verified)|every venue record cites its sources|100% source-checked/i);
+  const absolute = html.match(/every (?:claim|fact|detail) (?:comes|is sourced|was verified)|every venue record cites its sources|100% source-checked|find every gym|every camp in pattaya|every venue is researched/i);
   if (absolute) fail(`${fileRel}: absolute provenance claim "${absolute[0]}"`);
 
   const publisherLinks = [...html.matchAll(/<a\b([^>]*\s)?href="https:\/\/timpaemi\.com\/?"([^>]*)>/gi)];
@@ -89,6 +89,14 @@ const search = fs.readFileSync(path.join(ROOT, 'search', 'index.html'), 'utf8');
 const ssrCards = (search.match(/class="result-card"/g) || []).length;
 if (ssrCards < 24) fail(`/search/ has ${ssrCards} server-rendered cards; expected at least 24`);
 if (/\sautofocus(?:\s|\/?>)/i.test(search)) fail('/search/ still steals focus on load');
+
+const homepage = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+const guideCount = fs.readdirSync(path.join(ROOT, 'guides'), { withFileTypes: true })
+  .filter(entry => entry.isDirectory() && fs.existsSync(path.join(ROOT, 'guides', entry.name, 'index.html'))).length;
+for (const marker of [`${guideCount} trip planners built`, `${guideCount} trip planners`, 'Venue-specific location explorer']) {
+  if (!homepage.includes(marker)) fail(`/ homepage missing live marker: ${marker}`);
+}
+if (/Rebuilding[^<]*use search/i.test(homepage)) fail('/ homepage still labels the live map as rebuilding');
 
 const analytics = fs.readFileSync(path.join(ROOT, 'analytics.js'), 'utf8');
 for (const marker of ['pg_analytics_consent_v1', 'globalPrivacyControl', 'doNotTrack', 'Privacy choices']) if (!analytics.includes(marker)) fail(`analytics.js missing consent marker: ${marker}`);

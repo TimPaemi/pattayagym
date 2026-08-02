@@ -208,7 +208,7 @@ function siteToolsHub() {
     <h2 class="h-section">Explore <span class="accent-cyan">Pattaya.Gym.</span></h2>
     <div class="intent-grid intent-grid-compact" style="margin-top:var(--s-4);">
       <a href="/guides/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Guides</span><span class="intent-card-title">${guideCount()} trip planners</span><span class="intent-card-desc">Ranked lists, visas, area picks</span></a>
-      <a href="/category/muay-thai/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Muay Thai</span><span class="intent-card-desc">Every camp in Pattaya</span></a>
+      <a href="/category/muay-thai/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Muay Thai</span><span class="intent-card-desc">Source-checked camp records</span></a>
       <a href="/category/fitness/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Sport</span><span class="intent-card-title">Fitness gyms</span><span class="intent-card-desc">24h, budget, hotel gyms</span></a>
       <a href="/compare/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Compare</span><span class="intent-card-desc">Side-by-side venue table</span></a>
       <a href="/plan-my-trip/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Plan trip</span><span class="intent-card-desc">Build your shortlist</span></a>
@@ -356,7 +356,10 @@ for (const rel of utilityPages) {
   let changed = false;
   const pn = fixPaNetwork(html);
   if (pn) { html = pn; stats.paNetwork++; changed = true; }
-  if (!html.includes(HUB_MARKER)) {
+  if (html.includes(HUB_MARKER)) {
+    const next = html.replace(/<section class="section u-pt-0" id="site-tools-hub-r84">[\s\S]*?<\/section>/, siteToolsHub().trim());
+    if (next !== html) { html = next; stats.hub++; changed = true; }
+  } else {
     const end = html.lastIndexOf('</main>');
     if (end > 0) {
       html = html.slice(0, end) + siteToolsHub() + '\n' + html.slice(end);
@@ -399,7 +402,9 @@ function refreshGuideCounts(html) {
   const n = guideCount();
   return html
     .replace(/(\d+) editorial trip planners/g, `${n} editorial trip planners`)
-    .replace(/(\d+) trip planners/g, `${n} trip planners`);
+    .replace(/(\d+) trip planners/g, `${n} trip planners`)
+    .replace(/>\s*trip planners built/g, `>${n} trip planners built`)
+    .replace(/>\s*trip planners</g, `>${n} trip planners<`);
 }
 
 function refreshSisterContext(html) {
