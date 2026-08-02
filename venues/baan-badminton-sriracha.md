@@ -1,6 +1,7 @@
 ---
 id: baan-badminton-sriracha
 name: Baan Badminton Sriracha
+nameTh: บ้านแบดมินตันศรีราชา
 category: racquet
 area: Sriracha
 address: 15/126, Si Racha, Si Racha District, Chonburi 20110
@@ -16,6 +17,7 @@ verified: 2026-07-26
 sources:
   - https://www.facebook.com/100028971382848/
   - https://www.google.com/maps/search/?api=1&query=Baan+Badminton+Sriracha
+  - "https://www.google.com/maps/search/?api=1&query=Baan+Badminton+Sriracha&hl=th"
 description: Dedicated badminton court in central Sriracha, open daily from morning to late evening.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Baan+Badminton+Sriracha"
 tags: [badminton, sriracha, thai-language, late-hours, court-hire]

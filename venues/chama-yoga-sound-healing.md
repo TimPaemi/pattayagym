@@ -38,3 +38,23 @@ The studio describes Vinyasa yoga and sound healing. A visitor should ask whethe
 No current stable single-class, package or special-event fee table was accessible. Message the studio for the selected date, exact start time, language, level, duration, mat availability and complete price. Ask how the mat is reserved, which payment confirms the place and what the cancellation or rescheduling rule is.
 
 Use the exact Maps pin rather than relying on the textual address, which remains **Unnamed Road** in the live record. Confirm the village gate or landmark, parking and return route with the operator. The phone shown on the current business listing is **+66 87 694 9464**.
+
+## What training is on offer
+
+The published formats are Vinyasa yoga, stretching-and-sound sessions and sound-healing events. The schedule should be checked for the exact format rather than assuming every listing is a standard yoga class.
+
+## Who it suits — and who it does not
+
+The small studio may suit a person able to reserve a mat directly. The sources do not confirm a fixed beginner course, medical service, pregnancy class or language for every session.
+
+## Getting there
+
+Use the live Maps pin for Chama Yoga at Panalee village, Huai Yai, and confirm gate or landmark details with +66 87 694 9464.
+
+## Before you go
+
+Ask about the date, duration, mat reservation, price, payment and cancellation policy before travel, particularly for separately announced evening sessions.
+
+## What we could not verify
+
+No stable fee table, enduring special-session timetable, teacher credential, capacity, parking rule or equipment policy was published.

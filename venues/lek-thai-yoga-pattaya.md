@@ -1,6 +1,7 @@
 ---
 id: lek-thai-yoga-pattaya
 name: Lek Thai Yoga
+nameTh: เล็ก ไทย โยคะ
 category: yoga
 area: Jomtien / Thepprasit
 address: Laguna Beach Resort 3 Maldives, 164 Moo 12, Soi Thepprasit 17, Nong Prue, Bang Lamung, Chonburi 20150
@@ -17,12 +18,15 @@ sources:
   - https://lekyoga.com/
   - https://lekyoga.com/workshops/300-hour-multi-style-yoga-teacher-certification-in-thailand
   - https://www.google.com/maps/search/?api=1&query=Lek+Thai+Yoga+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Lek+Thai+Yoga+Pattaya&hl=th"
 description: Jomtien-area Thai-yoga practice offering private work, massage, Yin yoga, meditation and training courses.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Lek+Thai+Yoga+Pattaya"
 tags: [thai-yoga, yin-yoga, meditation, massage, jomtien, teacher-training]
 ---
 
 # Lek Thai Yoga
+
+Thai Maps identifies the Laguna Beach Resort 3 studio on Soi Thepprasit 17 as **เล็ก ไทย โยคะ**, with Sunday closed after six operating days.
 
 Lek Thai Yoga is an appointment-led practice at Laguna Beach Resort 3 Maldives near Thepprasit Road. Its current site focuses on Thai yoga massage, Yin yoga, meditation, private work and teacher-training courses. It is more useful to someone seeking an arranged programme than to a visitor expecting a conventional studio timetable.
 

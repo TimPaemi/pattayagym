@@ -14,7 +14,7 @@ priceRange: ""
 distinction: Tennis facility beside Tara Pattana International School
 sport: Tennis, pickleball and basketball
 facilities: [Indoor tennis courts, Pickleball courts, Basketball court]
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/taratennisclub/
   - https://www.instagram.com/tara_tennis_pattaya/

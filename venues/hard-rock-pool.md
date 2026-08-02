@@ -1,6 +1,7 @@
 ---
 id: hard-rock-pool
 name: Hard Rock Hotel Pattaya Pool
+nameTh: สระว่ายน้ำฮาร์ดร็อค พัทยา
 category: swimming
 area: Central Pattaya / Beach Road
 address: Hard Rock Hotel Pattaya, 429 Moo 9, Pattaya Beach Road, Chonburi 20150
@@ -16,6 +17,7 @@ verified: 2026-07-26
 sources:
   - https://hotel.hardrock.com/pattaya/swimming-pool.aspx
   - https://hotel.hardrock.com/pattaya/entertainment.aspx
+  - https://hotel.hardrock.com/pattaya/th/swimming-pool.aspx
   - https://www.google.com/maps/search/?api=1&query=Hard+Rock+Hotel+Pattaya
 description: Hard Rock Hotel leisure pool with published daytime access for non-residents.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Hard+Rock+Hotel+Pattaya"
@@ -24,7 +26,7 @@ tags: [pool, day-pass, hotel, non-guests, central-pattaya, family]
 
 # Hard Rock Hotel Pattaya Pool
 
-Hard Rock Hotel Pattaya describes a 2,000-square-metre freeform leisure pool with a sand beach, jacuzzi, underwater speakers, guitar-shaped deck, children's zone, slides and a cocktail pool. The hotel publishes a specific daytime product for non-residents, making access easier to evaluate than at hotel pools that disclose amenities but not public eligibility.
+Hard Rock Hotel Pattaya describes a 2,000-square-metre freeform leisure pool with a sand beach, jacuzzi, underwater speakers, guitar-shaped deck, children's zone, slides and a cocktail pool. The hotel's Thai pool page uses the name **สระว่ายน้ำฮาร์ดร็อค พัทยา** for the same 2,000-square-metre pool, which can help Thai-speaking visitors identify the product. The hotel publishes a specific daytime product for non-residents, making access easier to evaluate than at hotel pools that disclose amenities but not public eligibility.
 
 ## What training is on offer
 

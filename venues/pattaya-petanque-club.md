@@ -1,5 +1,6 @@
 ---
 id: pattaya-petanque-club
+nameTh: ชมรมเปตองพัทยาสายสาม
 name: Pattaya Sai 3 Petanque Club
 category: clubs
 area: Central Pattaya / Third Road
@@ -15,12 +16,15 @@ verified: 2026-07-27
 sources:
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Sai+3+Petanque+Club
   - https://www.google.com/maps/search/?api=1&query=Open+Petanque+Pattaya+Sai+3
+  - https://www.thaithurkic.com/%E0%B8%8A%E0%B8%A1%E0%B8%A3%E0%B8%A1%E0%B9%80%E0%B8%9B%E0%B8%95%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%A1-pattaya-sai-093-624-9493
 description: Pétanque club on Pattaya Third Road with two overlapping Maps identities and conflicting contact numbers.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Sai+3+Petanque+Club"
 tags: [petanque, boules, central-pattaya, thai-listing, call-ahead]
 ---
 
 # Pattaya Sai 3 Petanque Club
+
+The Thai directory identifies the club as **ชมรมเปตองพัทยาสายสาม** and lists **093 624 9493** for the Third Road location.
 
 ## What training is on offer
 

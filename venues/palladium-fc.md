@@ -1,6 +1,7 @@
 ---
 id: palladium-fc
 name: Palladium FC
+nameTh: สนามฟุตบอลหญ้าเทียม สนามฟุตซอล พัทยา | Palladium FC. สนามพาราเดี้ยม
 category: adventure
 area: South Pattaya / Soi Ko Phai
 address: 167/10 Moo 10, Soi Ko Phai 10, Pattaya, Bang Lamung, Chonburi 20150
@@ -16,12 +17,15 @@ verified: 2026-07-26
 sources:
   - https://www.facebook.com/palladium2010
   - https://www.google.com/maps/search/?api=1&query=Palladium+FC+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Palladium+FC+Pattaya&hl=th"
 description: South Pattaya artificial-turf football and futsal venue with late-night booking.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Palladium+FC+Pattaya"
 tags: [football, futsal, artificial-turf, late-night, south-pattaya]
 ---
 
 # Palladium FC
+
+Thai Maps gives the 167/10 Moo 10 artificial-turf football and futsal pitch the label **สนามฟุตบอลหญ้าเทียม สนามฟุตซอล พัทยา | Palladium FC. สนามพาราเดี้ยม**.
 
 Palladium FC is an artificial-turf football and futsal venue on Soi Ko Phai 10. Its active Thai Facebook page matches the Maps address and phone +66 83 923 1595. Hours conflict: Facebook labels it always open while Maps listed daily 06:00-03:00 on 26 July 2026. Call before travelling.
 

@@ -1,5 +1,6 @@
 ---
 id: fitz-club
+nameTh: ฟิตซ์ คลับ
 name: Fitz Club — Racquets, Health & Fitness
 category: fitness
 area: Pratamnak Hill
@@ -18,8 +19,9 @@ beginnerFriendly: true
 languages: [English, Thai]
 priceAsOf: 2026-07-25
 priceSourceUrl: https://www.royalcliff.com/wp-content/uploads/2026/01/Fitz-Club-Price-List-In-House-and-Outside-Guests-2026-01.pdf
-verified: 2026-07-25
+verified: 2026-07-29
 sources:
+  - https://www.royalcliff.com/th/facilities/fitz-club/
   - https://www.royalcliff.com/facilities/fitz-club/
   - https://www.royalcliff.com/main/facilities-hours/
   - https://www.royalcliff.com/wp-content/uploads/2026/01/Fitz-Club-Price-List-In-House-and-Outside-Guests-2026-01.pdf
@@ -32,28 +34,30 @@ tags: [day-pass, gym, tennis, squash, swimming, pickleball, badminton, futsal]
 
 # Fitz Club — Racquets, Health & Fitness
 
-## Facilities
+Fitz Club is Royal Cliff Hotels Group’s sport and fitness club at 353 Phra Tamnuk Road. Its operator page explicitly welcomes non-hotel guests through day passes and membership plans. The 2026 operator tariff lists a Fitz day pass at ฿800 per person, including gym, pool, sauna and steam access but excluding tennis and squash; the under-12 day pass is ฿400.
 
-Fitz Club is the sports club at Royal Cliff Hotels Group. The operator confirms:
+## What training is on offer
 
-- Seven floodlit hard tennis courts
-- Two air-conditioned squash courts
-- Table tennis
-- A multipurpose court configurable for pickleball, badminton, basketball or futsal
-- Gym and group-class studio
-- Swimming pool
-- Sauna and steam rooms
+The operator's Thai page calls the 353 Phra Tamnuk Road club **ฟิตซ์ คลับ**.
 
-Professional tennis coaching is available. The 2026 guest tariff publishes private Thai boxing or sparring at ฿1,100 per hour.
+The club publishes cardio and strength equipment, fitness classes, an aerobic studio, tennis, squash, table tennis, swimming and a multipurpose court. The court is described as usable for pickleball, badminton, basketball and futsal if arranged with staff in advance. The operator also publishes tennis coaching and a beginner Thai-boxing session. These are named services, not a claim that every activity has a drop-in session each day.
 
-## Hours
+## What it costs
 
-- Gym, classes, sauna and steam: 07:00–21:00
-- Tennis, squash and multipurpose courts: 07:00–20:00
-- Pool: 07:00–20:00
+The outside-guest tariff dated January 2026 is the current price source. Day access is ฿800 for an adult and ฿400 for a child under 12, with tennis and squash separately charged. The same price list shows personal training and private Thai boxing or sparring at ฿1,100 an hour. Court hire, equipment rental, coaching and memberships have their own listed terms, so request the relevant tariff rather than treating the gym pass as all-inclusive.
 
-## Day access
+## Who it suits — and who it does not
 
-Royal Cliff explicitly welcomes non-hotel guests. Its linked 2026 guest price list publishes a Fitz day pass at **฿800 per person**, covering the gym, pool, sauna and steam rooms but excluding tennis and squash. A children's day pass for under-12s is **฿400**.
+The published day pass makes it a documented option for a visitor wanting gym, pool and sauna access. Racquet-sport players can book courts and use the available tennis coaching. The operator says children under 14 are not permitted in the fitness centre, so a pool or court visit should not be treated as gym access for that age group. No statement here promises a particular class level or court availability.
 
-Court hire, coaching and memberships are priced separately. The same tariff lists personal training at ฿1,100 per hour. First-time visitors should reserve courts and coaching in advance.
+## Getting there
+
+Fitz Club is within Royal Cliff Hotels Group at 353 Phra Tamnuk Road, Pattaya 20150. The club lists +66 38 250 421 extension 2621 and fitz@royalcliff.com. Use the Maps link in the record for the exact property location and reserve a court or coaching appointment before arrival.
+
+## Before you go
+
+The gym, classes, sauna and steam are published as 07:00-21:00. Tennis, squash, multipurpose courts and the pool run 07:00-20:00. Thai-boxing reservations must be made a day in advance, and the operator says registration and payment are due at least 20 minutes before class. Sportswear is required in the gym.
+
+## What we could not verify
+
+The sources do not establish a day-by-day fitness-class timetable, the availability of a particular coach, court availability, equipment-rental stock, or a permanent introductory offer. Prices and operating hours are sourced; advance confirmation remains necessary for a specific booking.

@@ -1,6 +1,7 @@
 ---
 id: pattaya-shooting-park
 name: Pattaya Shooting Park
+nameTh: พัทยา ชู้ทติ้ง ปาร์ค
 category: adventure
 area: East Pattaya / railway road
 address: 1/114 Moo 4, Railway Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -14,6 +15,7 @@ type: Shooting range
 verified: 2026-07-27
 sources:
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Shooting+Park
+  - "https://www.google.com/maps/search/?api=1&query=Pattaya+Shooting+Park&hl=th"
   - https://www.chonburiattractions.com/attachments/download/?attach_id=373694
 description: East Pattaya shooting range with current address, phone and opening hours verified on its live Maps listing.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Shooting+Park"
@@ -21,6 +23,8 @@ tags: [shooting-range, east-pattaya, railway-road, call-ahead]
 ---
 
 # Pattaya Shooting Park
+
+Thai Maps identifies the exact daily 09:00-18:00 Railway Road venue as **พัทยา ชู้ทติ้ง ปาร์ค**.
 
 ## What training is on offer
 

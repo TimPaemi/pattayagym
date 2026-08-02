@@ -11,35 +11,37 @@
     "location": "Pattaya, Chon Buri, Thailand",
     "independent": true,
     "paidPlacements": false,
-    "handChecked": true,
+    "editorialModel": "source-bounded records with visible gaps",
+    "firstHandVisitsClaimed": false,
     "updateCadence": "rolling"
   },
   "build": {
-    "version": "v471",
-    "asset_version": "471",
-    "last_built_utc": "2026-07-29T11:26:39.494Z",
-    "last_built_date": "2026-07-29"
+    "version": "v474",
+    "asset_version": "474",
+    "last_built_utc": "2026-08-02T13:23:08.464Z",
+    "last_built_date": "2026-08-02"
   },
   "catalog": {
-    "venues_total": 215,
-    "venues_with_body_content": 215,
+    "venues_total": 218,
+    "venues_with_body_content": 218,
     "categories": 15,
     "areas": 6,
-    "html_pages_shipped": 356,
-    "sitemap_urls": 351
+    "html_pages_shipped": 360,
+    "sitemap_urls": 356
   },
   "schema_completeness": {
-    "venues_with_verified_date": 215,
-    "venues_with_phone": 170,
-    "venues_with_website": 132,
-    "venues_with_geo_coordinates": 213,
-    "completeness_percent_geo": 99,
+    "definition": "Counts only venue-specific published fields. Area centroids and other location placeholders are excluded.",
+    "venues_with_verified_date": 218,
+    "venues_with_phone": 173,
+    "venues_with_website": 135,
+    "venues_with_geo_coordinates": 138,
+    "completeness_percent_geo": 63,
     "completeness_percent_phone": 79
   },
   "freshness": {
-    "oldest_verified_date": "2026-07-24",
-    "newest_verified_date": "2026-07-27",
-    "oldest_verified_age_days": 5,
+    "oldest_verified_date": "2026-07-25",
+    "newest_verified_date": "2026-07-30",
+    "oldest_verified_age_days": 8,
     "target_max_age_days": 30
   },
   "endpoints": {
@@ -60,7 +62,7 @@
     "fake_reviews": "never",
     "seo_spam": "never",
     "update_cadence": "venues re-verified on a rolling weekly schedule",
-    "correction_sla_days": 7,
+    "correction_process": "reports are triaged; urgent operating-status changes are prioritised",
     "methodology_url": "https://pattaya-gym.com/methodology/"
   }
 }

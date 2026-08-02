@@ -1,6 +1,7 @@
 ---
 id: thai-polo-equestrian-club
 name: Thai Polo & Equestrian Club
+nameTh: ไทยโปโล แอนด์ อีเควสเทรียน คลับ
 category: equestrian
 area: Pong / East Pattaya
 address: 111 Polo Drive, Moo 9, Pong, Bang Lamung, Chonburi 20150
@@ -22,6 +23,7 @@ sources:
   - https://www.facebook.com/thaipolo.equestrianclub/
   - https://results.equi-score.be/files/2026/32573/doc1_2.pdf
   - https://www.google.com/maps/search/?api=1&query=Thai+Polo+Equestrian+Club+Pattaya
+  - https://th.soidb.com/pattaya/activity/thai-polo-equestrian-club.html
 description: Pong polo and equestrian complex with a polo school, trial rides, club chukkas and current competition fixtures.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Thai+Polo+Equestrian+Club+Pattaya"
 tags: [polo, equestrian, eventing, pong, east-pattaya]
@@ -30,6 +32,8 @@ tags: [polo, equestrian, eventing, pong, east-pattaya]
 # Thai Polo & Equestrian Club
 
 Thai Polo & Equestrian Club is a large working polo and equestrian complex in Pong. The operator publishes instruction, trial rides and club play alongside competition facilities, but it does not publish a visitor tariff or promise walk-in access. Treat the listed hours as a business window and arrange the exact activity before travelling.
+
+The Thai directory listing places the 111 Polo Drive complex under **ไทยโปโล แอนด์ อีเควสเทรียน คลับ**.
 
 ## What training is on offer
 

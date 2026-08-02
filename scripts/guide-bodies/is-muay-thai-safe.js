@@ -22,7 +22,7 @@ module.exports = `
 
 <p>Pad work is a trainer-led product in which the trainer holds targets. Partner drills involve another participant and may range from rehearsed technique to live resistance. Sparring introduces an opponent and impact. Clinching adds close-contact balance and position work. The words are not interchangeable, and an operator's “Muay Thai class” label may not identify which appear that day.</p>
 
-<p>Ask for a plain description: warm-up, technique, bag or pads, conditioning, partner drills, clinch and sparring. Then state what you will and will not do. Fairtex's current operator page explicitly calls sparring and clinching optional within its group description; that is stronger evidence than assuming every camp follows the same rule. At another venue, obtain the answer directly.</p>
+<p>Ask for a plain description: warm-up, technique, bag or pads, conditioning, partner drills, clinch and sparring. Then state what you will and will not do. <a href="/gyms/fairtex-pattaya/">Fairtex's current operator page</a> explicitly calls sparring and clinching optional within its group description; that is stronger evidence than assuming every camp follows the same rule. At another venue, obtain the answer directly.</p>
 
 <p>A private session may offer clearer control over pace and communication, but private does not automatically mean low intensity or clinically appropriate. Name the goal—such as introductory stance and pad work—and ask the trainer to exclude sparring or any unwanted contact. A lower headline group price can be poor value if the product is too broad for the traveller's needs.</p>
 
@@ -38,7 +38,7 @@ module.exports = `
 
 <p>Pattaya training may take place in open-air or partly cooled spaces, and several camps publish morning and afternoon periods. The US Centers for Disease Control and Prevention states that people exercising on hot days are more likely to become dehydrated or develop heat-related illness. Its athlete guidance advises starting gradually, drinking water rather than waiting for thirst, monitoring one another and stopping activity to move to a cool place if faint or weak.</p>
 
-<p>Use that guidance as a planning floor, not a diagnosis tool. Ask whether the exact room is air-conditioned, fan-cooled or open-air; what water breaks are built into the session; whether drinking water is available; and whether a first visit can be shorter or lower intensity. A published 08:00 start at Battle &amp; Conquer or Sityodtong may suit someone avoiding a later period, but the timetable alone does not establish the room temperature or personal tolerance.</p>
+<p>Use that guidance as a planning floor, not a diagnosis tool. Ask whether the exact room is air-conditioned, fan-cooled or open-air; what water breaks are built into the session; whether drinking water is available; and whether a first visit can be shorter or lower intensity. A published 08:00 start at <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> or <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> may suit someone avoiding a later period, but the timetable alone does not establish the room temperature or personal tolerance.</p>
 
 <p>If illness, weakness, faintness or other concerning symptoms occur, stop training and seek appropriate medical help. Do not rely on a coach, directory page or another tourist to diagnose the cause. A prepaid package is not a reason to continue an activity when help is needed.</p>
 
@@ -56,11 +56,11 @@ module.exports = `
 
 <p>For partner drills, clarify required protection and whether participants are matched by experience and size. For clinching, ask whether the class accepts a complete beginner and whether a coach actively supervises the pairing. For bag and pad work, request help with wrapping and equipment fit rather than assuming that a rental includes instruction.</p>
 
-<p>Do not infer medical protection from equipment. Gloves and guards are sport tools, not a guarantee against injury. The strongest booking answer names the product, rules and supervisor and respects a stated refusal of contact.</p>
+<p>Do not infer medical protection from equipment. Gloves and guards are sport tools, not a guarantee against injury. A useful booking answer names the product, rules and supervisor and respects a stated refusal of contact.</p>
 
 <h2>Language is part of instruction, but English marketing is not proof</h2>
 
-<p>Kombat Group provides the clearest current operator statement among these records: its FAQ says all trainers speak English while qualifying that most Muay Thai trainers use a very basic level. That is useful, honest evidence. Fairtex, Battle &amp; Conquer and ISS publish workable English booking information, but the checked pages do not guarantee identical spoken fluency from every trainer.</p>
+<p><a href="/gyms/kombat-group-thailand/">Kombat Group</a> provides a direct current operator statement among these records: its FAQ says all trainers speak English while qualifying that most Muay Thai trainers use a very basic level. That is useful, honest evidence. <a href="/gyms/fairtex-pattaya/">Fairtex</a>, <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> and <a href="/gyms/wko-muay-thai/">ISS</a> publish workable English booking information, but the checked pages do not guarantee identical spoken fluency from every trainer.</p>
 
 <p>If detailed verbal correction matters, ask who leads the exact class and whether that coach can explain technique and boundaries in the required language. A demonstration-led class may suit one learner and frustrate another. Use the <a href="/guides/english-speaking-muay-thai-pattaya/">English-speaking Muay Thai guide</a> to distinguish explicit trainer-language evidence from an English website.</p>
 
@@ -70,7 +70,7 @@ module.exports = `
 
 <p>Ask the gym what waiver, identification and emergency-contact information it requires. A waiver is not a substitute for understanding the session. If the operator cannot explain the product, supervision, contact level or cancellation terms before payment, choose a product with clearer evidence.</p>
 
-<p>Residential packages increase the financial trade-off. Kombat's published one-week amount bundles training and accommodation-related inclusions and states extra VAT and card charges. Before a long purchase, confirm the first-session plan, how training can be adjusted, what happens if participation stops, and which costs are refundable. A single session or short product can test communication before a week or month is bought.</p>
+<p>Residential packages increase the financial trade-off. <a href="/gyms/kombat-group-thailand/">Kombat's published one-week amount</a> bundles training and accommodation-related inclusions and states extra VAT and card charges. Before a long purchase, confirm the first-session plan, how training can be adjusted, what happens if participation stops, and which costs are refundable. A single session or short product can test communication before a week or month is bought.</p>
 
 <h2>Red flags in the booking process</h2>
 

@@ -1,6 +1,7 @@
 ---
 id: pattana-sports-resort
 name: Pattana Sports Resort
+nameTh: พัฒนา สปอร์ต รีสอร์ท
 category: golf
 area: Si Racha
 address: 99/89 Moo 9, Khaokhunsong, Si Racha, Chonburi 20110
@@ -23,12 +24,15 @@ sources:
   - https://pattana.co.th/sports/
   - https://pattana.co.th/early-bird-golf-deal/
   - https://www.google.com/maps/search/?api=1&query=Pattana%20Sports%20Resort%20Chonburi
+  - "https://www.google.com/maps/search/?api=1&query=Pattana+Sports+Resort&hl=th"
 description: Si Racha resort with 27 holes, a 50-metre pool and a resident-restricted July 2026 early-bird golf offer.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattana%20Sports%20Resort%20Chonburi"
 tags: [golf, sports-resort, swimming, si-racha]
 ---
 
 # Pattana Sports Resort
+
+Thai Maps calls the 27-hole property **พัฒนา สปอร์ต รีสอร์ท**.
 
 Pattana is a Khaokhunsong sports resort combining a 27-hole golf course, a 50-metre pool, other sports facilities and several accommodation types. One July golf promotion is current on the verification date, but its residency restriction matters: it is not a universal visitor rate.
 

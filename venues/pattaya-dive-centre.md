@@ -1,5 +1,6 @@
 ---
 id: pattaya-dive-centre
+nameTh: พัทยา ไดฟ์ เซ็นเตอร์
 name: Pattaya Dive Centre
 category: watersports
 area: Pattaya Beach Road
@@ -22,12 +23,15 @@ sources:
   - https://www.divecentrepattaya.com/prices/
   - https://www.padi.com/dive-center/thailand/pattaya-dive-centre/
   - https://www.google.com/maps/search/?api=1&query=Pattaya%20Dive%20Centre%20Beach%20Road
+  - https://www.dataforthai.com/company/0205551018278/
 description: Tipp Plaza PADI 5 Star IDC with published Pattaya and Samae San trip, course and snorkelling prices.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya%20Dive%20Centre%20Beach%20Road"
 tags: [padi, beach-road, dive-trips, courses, technical-diving]
 ---
 
 # Pattaya Dive Centre
+
+The Thai company record names บริษัท พัทยา ไดฟ์ เซ็นเตอร์ จำกัด, gives a 7 August 2008 registration date and lists 219/3 as its address.
 
 Pattaya Dive Centre is a PADI 5 Star Instructor Development Centre at Tipp Plaza on Beach Road. It publishes prices for two-dive days, introductory dives, certification courses, professional training and technical courses. The useful distinction is not simply “a dive”: certification, equipment, site and medical requirements change the transaction.
 

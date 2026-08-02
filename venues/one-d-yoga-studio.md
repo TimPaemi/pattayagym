@@ -11,7 +11,7 @@ social:
 hours: Mon 09:00-10:30 and 19:00-21:00; Tue 09:00-10:30 and 18:00-21:00; Wed 09:00-10:30; Thu 09:00-10:30 and 19:00-21:00; Fri-Sat 09:00-10:30 and 18:00-21:00; Sun 09:00-10:30
 priceRange: ""
 distinction: Wong Amat yoga studio with morning and evening listing hours
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/OneDYoga/
   - https://www.google.com/maps/search/?api=1&query=ONE-D+YOGA+PATTAYA

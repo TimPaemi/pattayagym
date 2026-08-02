@@ -1,6 +1,7 @@
 ---
 id: pesuso-martial-arts-pattaya
 name: Pesuso Martial Arts Academy Pattaya
+nameTh: พีสุโซ ยิม
 category: kids-youth
 area: North Pattaya / Naklua
 address: Taekwondo room, second floor, Lotus North Pattaya, 221/19 Moo 5, Naklua, Bang Lamung, Chonburi 20150
@@ -14,6 +15,7 @@ beginnerFriendly: true
 languages: [Thai]
 verified: 2026-07-27
 sources:
+  - https://pesuso.com/about.php
   - https://pesuso.com/
   - https://pesuso.com/about.php
   - https://pesuso.com/branches.php
@@ -24,6 +26,8 @@ tags: [taekwondo, kids, martial-arts, north-pattaya, competition]
 ---
 
 # Pesuso Martial Arts Academy Pattaya
+
+The academy's Thai history page gives the short name **พีสุโซ ยิม**.
 
 Pesuso is a current taekwondo academy with a clearly documented North Pattaya branch inside Lotus North Pattaya. The useful evidence here is branch identity and activity rather than a published tariff: the operator's own 2026 site posts still cover belt-system education, national events and the May 2026 Pattaya International Open, so this is a live academy rather than a legacy listing in the [kids and youth category](/category/kids-youth/).
 

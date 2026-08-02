@@ -1,5 +1,5 @@
 module.exports = `
-<p><strong>If you only read one thing: “accommodation included” is not one standard product.</strong> Fairtex publishes room-and-training packages, Kombat publishes several bundles with materially different room and facility access, Rage documents on-site rooms without a public package price, and Sityodtong requires a direct housing quote. Compare the written inclusions, not the camp label.</p>
+<p><strong>If you only read one thing: “accommodation included” is not one standard product.</strong> <a href="/gyms/fairtex-pattaya/">Fairtex</a> publishes room-and-training packages, <a href="/gyms/kombat-group-thailand/">Kombat</a> publishes several bundles with materially different room and facility access, <a href="/gyms/rage-fight-academy/">Rage</a> documents on-site rooms without a public package price, and <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> requires a direct housing quote. Compare the written inclusions, not the camp label.</p>
 
 <p>This guide uses operator pages checked on <strong>26 July 2026</strong>. It does not convert a hotel gym, a nearby guesthouse or an unpriced room into a verified residential Muay Thai package. For the underlying venue evidence, open each linked record; for training-only alternatives, use the <a href="/category/muay-thai/">Muay Thai directory</a>.</p>
 
@@ -19,37 +19,37 @@ module.exports = `
 </table>
 </div>
 
-<p>The amounts above are not interchangeable. Fairtex prices a set number of sessions with a room. Kombat's Standard and Deluxe products include a wider bundle, while Bronze is deliberately more basic. Rage and Sityodtong need direct quotes. The Battle route is training-only and should never be described as an accommodation package.</p>
+<p>The amounts above are not interchangeable. <a href="/gyms/fairtex-pattaya/">Fairtex</a> prices a set number of sessions with a room. <a href="/gyms/kombat-group-thailand/">Kombat's</a> Standard and Deluxe products include a wider bundle, while Bronze is deliberately more basic. <a href="/gyms/rage-fight-academy/">Rage</a> and <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> need direct quotes. The <a href="/gyms/battle-conquer-gym/">Battle route</a> is training-only and should never be described as an accommodation package.</p>
 
 <h2>Fairtex: the clearest published package ladder</h2>
 
 <p><a href="/gyms/fairtex-pattaya/">Fairtex Training Center Pattaya</a> publishes short, medium and monthly room-and-training products. Its checked rate page listed a six-night package with ten training sessions at <strong>฿16,000 for one person</strong> or <strong>฿23,000 for two people sharing</strong>. A 15-night package with 20 sessions was <strong>฿35,000 for one</strong> or <strong>฿49,000 for two sharing</strong>. The one-month product was <strong>฿46,500 for one</strong> or <strong>฿63,000 for two sharing</strong>.</p>
 
-<p>The operator describes a deluxe room, training access and use of the gym and pool in its package material. Do not infer meals, airport transfer, laundry, private tuition or an unlimited number of coached sessions unless the written quote names them. The occupancy column also matters: a two-person amount is not the single-person rate multiplied by two, and “sharing” should be checked against the exact room configuration.</p>
+<p><a href="/gyms/fairtex-pattaya/">The Fairtex operator</a> describes a deluxe room, training access and use of the gym and pool in its package material. Do not infer meals, airport transfer, laundry, private tuition or an unlimited number of coached sessions unless the written quote names them. The occupancy column also matters: a two-person amount is not the single-person rate multiplied by two, and “sharing” should be checked against the exact room configuration.</p>
 
-<p>Fairtex also publishes training-only prices: ฿800 for one session, ฿7,000 for ten and ฿16,500 for one month, with a private session at ฿1,500. Those figures create a useful control. If a traveller already has suitable accommodation, compare the training-only total with the residential package rather than assuming the package is automatically cheaper.</p>
+<p><a href="/gyms/fairtex-pattaya/">Fairtex</a> also publishes training-only prices: ฿800 for one session, ฿7,000 for ten and ฿16,500 for one month, with a private session at ฿1,500. Those figures create a useful control. If a traveller already has suitable accommodation, compare the training-only total with the residential package rather than assuming the package is automatically cheaper.</p>
 
 <h2>Kombat Group: read the tier before reading the headline price</h2>
 
 <p><a href="/gyms/kombat-group-thailand/">Kombat Group Thailand</a> publishes several residential tiers. For Muay Thai or boxing, the checked one-week Standard price was <strong>฿20,900</strong> and Deluxe was <strong>฿24,900</strong>. The operator lists training, gym use, three meals per day including Sunday, an air-conditioned en-suite room, pool access, a T-shirt, a 30-minute private session, body analysis, juice and a massage among the stated inclusions for those packages.</p>
 
-<p>The Bronze one-week Muay Thai or boxing product was <strong>฿12,900</strong>; two weeks was ฿22,900 and four weeks ฿39,900. Bronze includes training, gym access, three Thai meals per day and a single fan room with a Thai-style bathroom. The operator explicitly excludes the pool and resort facilities from that tier. A traveller comparing ฿12,900 with ฿20,900 is therefore comparing different accommodation and facility products, not merely two discounts for the same stay.</p>
+<p><a href="/gyms/kombat-group-thailand/">The Kombat Bronze</a> one-week Muay Thai or boxing product was <strong>฿12,900</strong>; two weeks was ฿22,900 and four weeks ฿39,900. Bronze includes training, gym access, three Thai meals per day and a single fan room with a Thai-style bathroom. The operator explicitly excludes the pool and resort facilities from that tier. A traveller comparing ฿12,900 with ฿20,900 is therefore comparing different accommodation and facility products, not merely two discounts for the same stay.</p>
 
-<p>Kombat's rate page says 7% VAT and a 3% card charge are excluded, as are airfare and taxi costs. Add those stated charges before comparing the complete amount. Confirm the exact discipline, arrival date, room, meal arrangement, pool eligibility, private-session scheduling and cancellation terms in the final invoice.</p>
+<p><a href="/gyms/kombat-group-thailand/">Kombat's rate page</a> says 7% VAT and a 3% card charge are excluded, as are airfare and taxi costs. Add those stated charges before comparing the complete amount. Confirm the exact discipline, arrival date, room, meal arrangement, pool eligibility, private-session scheduling and cancellation terms in the final invoice.</p>
 
 <h2>Rage: verified rooms, quote-first package</h2>
 
 <p><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> documents on-site rooms with air conditioning, Wi-Fi, a refrigerator, bathroom, tea and coffee facilities, a kitchenette, bedding and housekeeping. Its camp page also documents a pool alongside Muay Thai and boxing areas, three full-size rings, a BJJ/MMA mat zone and a functional-fitness and weight room.</p>
 
-<p>That evidence supports a genuine train-and-stay route, but the operator page checked on 26 July did not publish a dependable room-and-training tariff or a class-by-class timetable. Request a written quote that separates room nights, the exact discipline and number of sessions, gym or pool access, housekeeping, deposits, taxes and any meals. An equipment list and a room description do not establish coaching frequency.</p>
+<p><a href="/gyms/rage-fight-academy/">That Rage evidence</a> supports a genuine train-and-stay route, but the operator page checked on 26 July did not publish a dependable room-and-training tariff or a class-by-class timetable. Request a written quote that separates room nights, the exact discipline and number of sessions, gym or pool access, housekeeping, deposits, taxes and any meals. An equipment list and a room description do not establish coaching frequency.</p>
 
-<p>Rage is relevant when mixed combat facilities and on-site accommodation matter more than a public package ladder. It is a weaker choice for someone who will not contact the operator before fixing a budget.</p>
+<p><a href="/gyms/rage-fight-academy/">Rage</a> is relevant when mixed combat facilities and on-site accommodation matter more than a public package ladder. It is a weaker choice for someone who will not contact the operator before fixing a budget.</p>
 
 <h2>Sityodtong: training-led housing requires confirmation</h2>
 
 <p><a href="/gyms/sityodtong-pattaya/">Sityodtong Muay Thai</a> is an established camp whose current schedule material explicitly separates beginner, intermediate and advanced participation. The camp also describes a four-week fight-camp route with housing. No current residential tariff or complete inclusion list was published on the pages checked for this guide.</p>
 
-<p>This is a contact-first path for someone choosing the training environment before room amenities. Ask whether the quote covers a private or shared room, air conditioning, bathroom, utilities, cleaning, meals and the exact number of group or individual sessions. Also ask whether housing is on the same property and which address is used at check-in. Do not apply an old package price or assume a fighter-oriented route is the only option for a beginner.</p>
+<p><a href="/gyms/sityodtong-pattaya/">Sityodtong remains</a> a contact-first path for someone choosing the training environment before room amenities. Ask whether the quote covers a private or shared room, air conditioning, bathroom, utilities, cleaning, meals and the exact number of group or individual sessions. Also ask whether housing is on the same property and which address is used at check-in. Do not apply an old package price or assume a fighter-oriented route is the only option for a beginner.</p>
 
 <h2>The DIY route: published training plus separately verified housing</h2>
 

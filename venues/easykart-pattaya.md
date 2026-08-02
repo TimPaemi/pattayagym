@@ -1,6 +1,7 @@
 ---
 id: easykart-pattaya
 name: EasyKart Pattaya Thepprasit
+nameTh: อีซี่คาร์ท พัทยา (เทพประสิทธิ)
 category: adventure
 area: Thepprasit Road / South Pattaya
 address: 168/24 Moo 12 Thepprasit Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -17,6 +18,7 @@ verified: 2026-07-27
 sources:
   - https://easykart.net/pattaya-thepprasit/
   - https://easykart.net/pattaya-thepprasit-contact-us/
+  - https://easykart.net/th/pattaya-thepprasit-easykart-%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%B1%E0%B8%9A/
   - https://www.google.com/maps/search/?api=1&query=EasyKart+Pattaya+Thepprasit
 description: Outdoor Thepprasit Road kart venue offering kid, regular, fast and two-seat kart products until late.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=EasyKart+Pattaya+Thepprasit"
@@ -26,6 +28,8 @@ tags: [karting, adventure, family, outdoor, thepprasit]
 # EasyKart Pattaya Thepprasit
 
 EasyKart Pattaya Thepprasit is a late-opening outdoor kart venue on Thepprasit Road with separate products for children, first-time adult drivers and faster sessions on the advanced circuit. It suits travellers who want a clearly published kart menu rather than a quote-by-message activity. Its limitation is that the operator does not publish weather rules, waiting times or a full safety-equipment list on the checked pages.
+
+The Thai operator page labels the 168/24 Thepprasit circuit on Thepprasit Road as **อีซี่คาร์ท พัทยา (เทพประสิทธิ)**.
 
 ## What training is on offer
 

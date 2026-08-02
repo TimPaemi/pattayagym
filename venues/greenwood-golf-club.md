@@ -1,6 +1,7 @@
 ---
 id: greenwood-golf-club
 name: Greenwood Golf Club
+nameTh: สนามกอล์ฟ กรีนวูด กอล์ฟ คลับ
 category: golf
 area: Ban Bueng / Chonburi
 address: 88/8 Moo 6, Khlong Kiew, Ban Bueng, Chonburi 20220
@@ -10,19 +11,22 @@ social: {}
 hours: Daily 06:00-18:00
 priceRange: ""
 distinction: 27-hole course arranged as three nine-hole loops
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.gwgolfclub.com/
   - https://www.gwgolfclub.com/contact.html
   - https://www.gwgolfclub.com/greenfee.html
   - https://www.gwgolfclub.com/course.html
   - https://www.google.com/maps/search/?api=1&query=Greenwood+Golf+Club+Chonburi
+  - "https://www.google.com/maps/search/?api=1&query=Greenwood+Golf+Club+Chonburi&hl=th"
 description: Ban Bueng regional golf club with 27 holes across three named nines and contact-first pricing.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Greenwood+Golf+Club+Chonburi"
 tags: [golf, 27-holes, ban-bueng, chonburi]
 ---
 
 # Greenwood Golf Club
+
+Thai Maps lists the 88/8 Moo 6 Khlong Kiew Chonburi property as **สนามกอล์ฟ กรีนวูด กอล์ฟ คลับ**.
 
 Greenwood Golf Club is a north-of-Pattaya golf day rather than a casual city practice stop. Its official pages clearly confirm the current course identity, the 27-hole format and the Ban Bueng address, but they are weaker on a dependable public green-fee number than some other regional clubs. This is therefore a contact-first course record, not a price-led one.
 

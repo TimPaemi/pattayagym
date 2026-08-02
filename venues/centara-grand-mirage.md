@@ -1,6 +1,7 @@
 ---
 id: centara-grand-mirage
 name: Centara Grand Mirage Beach Resort Pattaya
+nameTh: เซ็นทารา แกรนด์ มิราจ บีช รีสอร์ท พัทยา
 category: swimming
 area: Wong Amat / North Pattaya
 address: 277 Moo 5, Naklua, Bang Lamung, Chonburi 20150
@@ -17,12 +18,15 @@ sources:
   - https://www.centarahotelsresorts.com/centaragrand/sites/centara-centaragrand/files/2025-11/CMBR-Activities-Brochure.pdf
   - https://www.centarahotelsresorts.com/centaragrand/th/cmbr/spa
   - https://www.google.com/maps/search/?api=1&query=Centara+Grand+Mirage+Beach+Resort+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Centara+Grand+Mirage+Pattaya&hl=th"
 description: Wong Amat resort with the Lost World water park, a fitness centre, tennis and scheduled sports activities for staying guests.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Centara+Grand+Mirage+Beach+Resort+Pattaya"
 tags: [hotel-swimming, waterpark, fitness, tennis, yoga, muay-thai, family]
 ---
 
 # Centara Grand Mirage Beach Resort Pattaya
+
+Thai Maps identifies the 277 Moo 5 Naklua coastal resort and water-park property as **เซ็นทารา แกรนด์ มิราจ บีช รีสอร์ท พัทยา**.
 
 Centara Grand Mirage Beach Resort Pattaya is a North Pattaya hotel-and-water-park product, not a public sports club. The current resort pages and fact sheet support a large Lost World water park, fitness facilities and scheduled activities, which makes it relevant for family swimming and hotel-based recreation. The limitation is access: the checked public pages do not publish a dependable non-resident gym or water-park pass.
 

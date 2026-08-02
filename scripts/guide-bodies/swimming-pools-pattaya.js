@@ -54,17 +54,17 @@ module.exports = `
   </tbody>
 </table>
 
-<h2>Municipal pools are the lane-first answer</h2>
+<h2>Municipal pools are a public-swim starting point</h2>
 
-<p><a href="/gyms/nong-prue-municipal-swimming-pool/">Nong Prue Municipal Swimming Pool</a> is the clearest current municipal record in the directory because the local authority publishes service notices and a latest full-hours notice. What it does not publish is a stable tariff. That gap matters, but it is not a reason to treat the pool as unavailable. It means the right next step is to check the municipal notice feed for closures and then confirm admission details at the pool.</p>
+<p><a href="/gyms/nong-prue-municipal-swimming-pool/">Nong Prue Municipal Swimming Pool</a> is the clearest current municipal record in the directory because the local authority publishes service notices and a latest full-hours notice. What it does not publish is a stable tariff or a lap-pool specification. That gap matters, but it is not a reason to treat the pool as unavailable. It means the right next step is to check the municipal notice feed for closures and then confirm admission and swimming-space details at the pool.</p>
 
-<p>This is the key difference between a public pool and a hotel pool. The municipal record can be useful without a polished booking page because the public authority confirms the place, the opening pattern and the fact that separate closure notices exist. If the goal is routine swimming rather than a leisure day, a municipal pool is the first place to look. The <a href="/area/east-pattaya/">East Pattaya area page</a> helps with location context, while the venue record carries the current evidence.</p>
+<p>This is the key difference between a public pool and a hotel pool. The <a href="/gyms/nong-prue-municipal-swimming-pool/">municipal record</a> can be useful without a polished booking page because the public authority confirms the place, the opening pattern and the fact that separate closure notices exist. If the goal is routine swimming rather than a leisure day, a municipal pool is the first place to look. The <a href="/area/east-pattaya/">East Pattaya area page</a> helps with location context, while the venue record carries the current evidence.</p>
 
 <h2>Hotel day passes work only when the pass is explicit</h2>
 
 <p><a href="/gyms/hard-rock-pool/">Hard Rock Hotel Pattaya Pool</a> and <a href="/gyms/nara-maze-pool-day-pass/">Nara Maze Pool Day Pass at Terra Nara</a> are useful because both publish a non-guest product, and each also shows why a similar headline price can still mean a different visit. Hard Rock publishes THB 500 net for an adult and THB 400 net for a child under 12, tied to the 09:00-19:00 non-guest window. Nara Maze publishes THB 500 net per non-hotel guest from 09:00 to 18:00, with water, one smoothie and a 20% food-and-drink discount excluding alcohol.</p>
 
-<p>The current evidence still stops short of a training promise. Hard Rock describes a 2,000-square-metre leisure pool with family features, while Terra Nara sells a daytime pool product without a documented lap-lane setup. That is enough to support a hotel leisure comparison, not a claim that either venue is the best lap pool in Pattaya. For a hotel-and-facilities comparison beyond swimming, use the <a href="/guides/hotel-gym-pattaya/">hotel gym day-pass guide</a>.</p>
+<p>The current evidence still stops short of a training promise. <a href="/gyms/hard-rock-pool/">Hard Rock</a> describes a 2,000-square-metre leisure pool with family features, while <a href="/gyms/nara-maze-pool-day-pass/">Terra Nara</a> sells a daytime pool product without a documented lap-lane setup. That is enough to support a hotel leisure comparison, not a claim that either venue is the best lap pool in Pattaya. For a hotel-and-facilities comparison beyond swimming, use the <a href="/guides/hotel-gym-pattaya/">hotel gym day-pass guide</a>.</p>
 
 <h2>A hotel pool can be real without being bookable to outsiders</h2>
 
@@ -76,7 +76,7 @@ module.exports = `
 
 <p><a href="/gyms/ramayana-water-park/">Ramayana Water Park Pattaya</a> should be chosen as a family or group attraction, not as a substitute for a pool workout. The current operator evidence supports 26 slides with 34 lanes, opening from 11:00 to 18:00 except Wednesday, tourist tickets at THB 1,099 online or THB 1,199 walk-in for guests at least 106 centimetres tall, and extra charges such as lockers, towel rental and cabanas. That is a complete leisure-day product, not a lane-rental product.</p>
 
-<p>The difference becomes practical when you budget the day. A public or hotel pool decision is mostly about access and time. A water-park decision also includes height rules, lockers, towels, cabana choice, queue tolerance and the park calendar. Treating those as the same category of “swimming” produces bad comparisons, even though both involve water. If the real aim is slides and children's zones, Ramayana is the relevant record. If the real aim is exercise, compare the pools instead.</p>
+<p>The difference becomes practical when you budget the day. A public or hotel pool decision is mostly about access and time. A water-park decision also includes height rules, lockers, towels, cabana choice, queue tolerance and the park calendar. Treating those as the same category of “swimming” produces bad comparisons, even though both involve water. If the real aim is slides and children's zones, <a href="/gyms/ramayana-water-park/">Ramayana</a> is the relevant record. If the real aim is exercise, compare the pools instead.</p>
 
 <h2>Choose the product before you choose the area</h2>
 
@@ -87,8 +87,8 @@ module.exports = `
 <h3>Which current records actually publish a non-guest pool pass?</h3>
 <p>The clearest current examples are <a href="/gyms/hard-rock-pool/">Hard Rock Hotel Pattaya Pool</a> and <a href="/gyms/nara-maze-pool-day-pass/">Nara Maze Pool Day Pass at Terra Nara</a>. <a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a> publishes pool amenities but not a current public non-resident pass.</p>
 
-<h3>What is the safest lane-first starting point in the current directory?</h3>
-<p><a href="/gyms/nong-prue-municipal-swimming-pool/">Nong Prue Municipal Swimming Pool</a> is the safest lane-first starting point because the municipality publishes current service notices and full hours. The current record does not claim a tariff, so confirm entry details directly.</p>
+<h3>What is a lane-first starting point in the current directory?</h3>
+<p><a href="/gyms/nong-prue-municipal-swimming-pool/">Nong Prue Municipal Swimming Pool</a> is a documented public-swim starting point because the municipality publishes current service notices and full hours. The current record does not claim a tariff, pool dimensions or lane availability, so confirm entry and swimming-space details directly.</p>
 
 <h3>Is Ramayana a substitute for a training pool?</h3>
 <p>No. <a href="/gyms/ramayana-water-park/">Ramayana Water Park Pattaya</a> is a dated family attraction product with slides, pools and extras such as lockers and cabanas. It is a swimming-related day out, not a documented lap-training venue.</p>

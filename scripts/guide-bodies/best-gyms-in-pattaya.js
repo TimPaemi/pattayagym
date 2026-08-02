@@ -1,5 +1,5 @@
 module.exports = `
-<p><strong>The useful answer is not one universal winner.</strong> Pattaya's fitness records mix ordinary weight rooms, 24-hour member clubs, hotel facilities, combat gyms, Pilates studios and multi-sport day clubs. The best choice depends on the access product, exact area, training style and length of stay. This guide uses current operator tariffs and status findings checked on 25-26 July 2026; a blank price means no stable first-hand amount was found, not free admission.</p>
+<p><strong>The useful answer is not one universal winner.</strong> The current Pattaya fitness records mix ordinary weight rooms, 24-hour member clubs, hotel facilities, combat gyms, Pilates studios and multi-sport day clubs. The best choice depends on the access product, exact area, training style and length of stay. This guide uses current operator tariffs and status findings checked on 25-26 July 2026; a blank price means no stable first-hand amount was found, not free admission.</p>
 
 <p>For an immediately priced short visit, <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> publishes a ฿200 gym-only day, <a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a> publishes ฿300 gym-and-facilities access and <a href="/gyms/elite-gym-fitness/">Elite Gym &amp; Fitness</a> publishes a ฿400 day. For a wider club day, <a href="/gyms/fitz-club/">Fitz Club</a> lists ฿800 for the gym, pool, sauna and steam rooms, excluding racquet courts. Those are four different products, not a single city-wide day-pass range.</p>
 
@@ -30,7 +30,7 @@ module.exports = `
 
 <p><a href="/gyms/elite-gym-fitness/">Elite</a> listed ฿400 for a day, ฿2,500 for ten visits valid for less than three months and ฿3,000 for one month. A group class was ฿300, ten classes were ฿1,800 and personal training was ฿2,000 per hour. This menu suits a visitor who wants an exact short-term decision before arrival, but the chosen class still needs its own schedule and booking check.</p>
 
-<p>For ordinary memberships, <a href="/gyms/coco-fitness/">Coco Fitness</a> listed ฿1,599 for one month, ฿4,299 for three, ฿8,299 for six and ฿12,999 for twelve months. A July promotion displayed ฿2,998 for two months for one person or one month each for two people, subject to current availability. <a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies</a> listed ฿2,500 for three months and ฿4,500 for six, both paid in advance. Better Bodies can have the lower theoretical monthly cost, but it is in Ban Amphur, opens 10:00-20:00 Monday-Saturday and does not publish a single visit.</p>
+<p>For ordinary memberships, <a href="/gyms/coco-fitness/">Coco Fitness</a> listed ฿1,599 for one month, ฿4,299 for three, ฿8,299 for six and ฿12,999 for twelve months. A July promotion displayed ฿2,998 for two months for one person or one month each for two people, subject to current availability. <a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies</a> listed ฿2,500 for three months and ฿4,500 for six, both paid in advance. <a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies</a> can have the lower theoretical monthly cost, but it is in Ban Amphur, opens 10:00-20:00 Monday-Saturday and does not publish a single visit.</p>
 
 <h2>Central Pattaya choices</h2>
 
@@ -48,11 +48,11 @@ module.exports = `
 
 <p><a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> suits someone who wants a separately priced weight room or a combined Muay Thai and recovery product. Its group training runs 08:00-10:00 and 16:00-18:00 daily. A ฿200 gym day is not a ฿500 group session, and neither is the same as a private 90-minute session. Choose the product before comparing the number with an ordinary commercial membership.</p>
 
-<p><a href="/gyms/fitz-club/">Fitz Club</a> is the clearest non-hotel-guest club day. Its ฿800 adult pass covers the gym, pool, sauna and steam rooms. The gym and wet areas run 07:00-21:00, while the pool and racquet facilities close at 20:00. Tennis, squash, coaching and memberships cost extra. Fitz makes sense when the wider facilities are part of the day; it is expensive if only a basic weight session is needed.</p>
+<p><a href="/gyms/fitz-club/">Fitz Club</a> is a non-hotel-guest club day with a published ฿800 adult pass. The pass covers the gym, pool, sauna and steam rooms. The gym and wet areas run 07:00-21:00, while the pool and racquet facilities close at 20:00. Tennis, squash, coaching and memberships cost extra. Fitz makes sense when the wider facilities are part of the day; it is expensive if only a basic weight session is needed.</p>
 
 <h2>East Pattaya and Sukhumvit choices</h2>
 
-<p><a href="/gyms/elite-gym-fitness/">Elite Gym &amp; Fitness</a> is the strongest transparent short-visit option on Sukhumvit Road because the operator publishes general access, class and personal-training tariffs. It opens 06:30-22:00 daily. The tradeoff is location: a beachfront visitor should map the road crossing and route rather than assuming every place carrying a Pattaya name is near the beach.</p>
+<p><a href="/gyms/elite-gym-fitness/">Elite Gym &amp; Fitness</a> is a transparent short-visit option on Sukhumvit Road because the operator publishes general access, class and personal-training tariffs. It opens 06:30-22:00 daily. The tradeoff is location: a beachfront visitor should map the road crossing and route rather than assuming every place carrying a Pattaya name is near the beach.</p>
 
 <p>East Pattaya also contains training clubs and specialist records whose schedules can be more important than the fee. Use the <a href="/area/east-pattaya/">East Pattaya directory</a> for the full filter. A lower monthly rate can be poor value if the gym requires two inconvenient journeys every training day.</p>
 
@@ -66,11 +66,11 @@ module.exports = `
 
 <p><a href="/gyms/anytime-fitness-pattaya/">Anytime Fitness</a> has a current Again Pattaya branch in Naklua and a separate Bukis Point branch in South Pattaya. Both publish 24-hour member access, but the directory keeps them in one record and the phone shown belongs to the Again branch. Ask the intended branch about its staffed hours, joining fee, access key, minimum term and whether an overseas membership works immediately.</p>
 
-<p>SUN's Naklua branch is the north-end part of its three-branch network. It opens 07:00-22:00 Monday-Friday and 09:00-22:00 at weekends, closing earlier than the Buakhao and Pratamnak branches. The one-card owner statement makes it relevant to a member moving between districts, but the current tariff and day-access rule remain unpublished.</p>
+<p><a href="/gyms/sun-fitness-buakao/">SUN's</a> Naklua branch is the north-end part of its three-branch network. It opens 07:00-22:00 Monday-Friday and 09:00-22:00 at weekends, closing earlier than the Buakhao and Pratamnak branches. The one-card owner statement makes it relevant to a member moving between districts, but the current tariff and day-access rule remain unpublished.</p>
 
 <h2>The 24-hour label</h2>
 
-<p>Round-the-clock operation can describe a building, a member door or both. Fitness 7 publishes 24-hour operation. Jetts and Anytime publish 24-hour member access with narrower staffed service. A traveller arriving at 02:00 should not assume a receptionist can sell a pass, verify identification or issue an access credential. Complete first entry during staffed hours unless the exact branch confirms another method.</p>
+<p>Round-the-clock operation can describe a building, a member door or both. <a href="/gyms/fitness-7/">Fitness 7</a> publishes 24-hour operation. <a href="/gyms/jetts-fitness-pattaya/">Jetts</a> and <a href="/gyms/anytime-fitness-pattaya/">Anytime</a> publish 24-hour member access with narrower staffed service. A traveller arriving at 02:00 should not assume a receptionist can sell a pass, verify identification or issue an access credential. Complete first entry during staffed hours unless the exact branch confirms another method.</p>
 
 <p>Hotel fitness centres can also advertise 24-hour guest access. That does not turn them into public all-night gyms. Separate three questions: who may enter, when the door works and when staff can help.</p>
 
@@ -91,21 +91,21 @@ module.exports = `
 
 <p>This ranking does not use customer star scores or paid placement. It prioritises current operator and Maps identity, a dated first-hand tariff when available, a usable schedule, a clear access model and trip fit. Exact prices above were checked on 25-26 July 2026 and link to venue records containing the source URL and date. Promotions can expire, holiday hours can change and a public page can omit fees.</p>
 
-<p>A venue can be active without publishing enough information for a numeric comparison. Fitness 7, Jetts, Anytime, Muscle Factory and SUN remain useful candidates for particular needs, but their missing public tariffs are not estimated. Blank does not mean cheap, free or negotiable.</p>
+<p>A venue can be active without publishing enough information for a numeric comparison. <a href="/gyms/fitness-7/">Fitness 7</a>, <a href="/gyms/jetts-fitness-pattaya/">Jetts</a>, <a href="/gyms/anytime-fitness-pattaya/">Anytime</a>, <a href="/gyms/muscle-factory-pattaya/">Muscle Factory</a> and <a href="/gyms/sun-fitness-buakao/">SUN</a> remain useful candidates for particular needs, but their missing public tariffs are not estimated. Blank does not mean cheap, free or negotiable.</p>
 
 <section class="guide-faq">
 <h2>FAQ</h2>
 <details>
-<summary>What is the clearest Pattaya gym day pass?</summary>
-<p>For gym-only access, Battle &amp; Conquer publishes ฿200, ISS publishes ฿300 for gym and facilities, and Elite publishes ฿400. Fitz Club's ฿800 pass adds the pool, sauna and steam rooms. All were checked on 25 July 2026; compare the included product and location before choosing.</p>
+<summary>Which Pattaya gym day pass has a published price?</summary>
+<p>For gym-only access, <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> publishes ฿200, <a href="/gyms/wko-muay-thai/">ISS</a> publishes ฿300 for gym and facilities, and <a href="/gyms/elite-gym-fitness/">Elite</a> publishes ฿400. <a href="/gyms/fitz-club/">Fitz Club's</a> ฿800 pass adds the pool, sauna and steam rooms. All were checked on 25 July 2026; compare the included product and location before choosing.</p>
 </details>
 <details>
 <summary>Are Pattaya's 24-hour gyms staffed all night?</summary>
-<p>Not necessarily. Jetts and Anytime distinguish 24-hour member access from staffed service, and first-time registration can require a staffed visit. Fitness 7 publishes 24-hour operation but still requires direct confirmation of visitor pricing and registration.</p>
+<p>Not necessarily. <a href="/gyms/jetts-fitness-pattaya/">Jetts</a> and <a href="/gyms/anytime-fitness-pattaya/">Anytime</a> distinguish 24-hour member access from staffed service, and first-time registration can require a staffed visit. <a href="/gyms/fitness-7/">Fitness 7</a> publishes 24-hour operation but still requires direct confirmation of visitor pricing and registration.</p>
 </details>
 <details>
 <summary>Which Pattaya gym works best for a one-month stay?</summary>
-<p>There is no universal winner. Current one-month examples include Battle &amp; Conquer gym-only access at ฿1,300, ISS gym and facilities at ฿1,500, Coco Fitness at ฿1,599 and Elite at ฿3,000. Compare route, hours, equipment needs, joining costs and whether coaching or classes are included.</p>
+<p>There is no universal winner. Current one-month examples include <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> gym-only access at ฿1,300, <a href="/gyms/wko-muay-thai/">ISS</a> gym and facilities at ฿1,500, <a href="/gyms/coco-fitness/">Coco Fitness</a> at ฿1,599 and <a href="/gyms/elite-gym-fitness/">Elite</a> at ฿3,000. Compare route, hours, equipment needs, joining costs and whether coaching or classes are included.</p>
 </details>
 </section>
 `;

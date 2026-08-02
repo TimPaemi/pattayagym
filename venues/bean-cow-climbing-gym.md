@@ -1,6 +1,7 @@
 ---
 id: bean-cow-climbing-gym
 name: STICKY Climbing Gym
+nameTh: STICKY climbing gym(ยิมปีนเขา)
 category: climbing
 area: Huai Yai / East Pattaya
 address: 61/23 Moo 1, Huai Yai, Bang Lamung, Chonburi 20150
@@ -12,18 +13,21 @@ hours: "Tue–Sun 11:00–20:00; closed Monday and the first day of each month"
 priceRange: ""
 distinction: Former Bean Cow climbing gym, now operating under the STICKY name
 formerName: Bean Cow Climbing Gym & Community Center
-verified: 2026-07-26
+verified: 2026-07-27
 sources:
   - https://www.facebook.com/beancowclimbing
   - https://www.facebook.com/people/Sticky-Climbing-gym/111305514913989/
   - https://www.facebook.com/beancowclimbing/posts/stickyclimbinggym-climbinggympattaya-gympattaya-climbing-%E0%B8%9B%E0%B8%B5%E0%B8%99%E0%B9%80%E0%B8%82%E0%B8%B2/904328225688072/
   - https://www.google.com/maps/search/?api=1&query=STICKY+Climbing+Gym+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Bean+Cow+Climbing+Gym+Pattaya&hl=th"
 description: Huai Yai climbing gym offering indoor bouldering and roped climbing, rebranded from Bean Cow to STICKY.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=STICKY+Climbing+Gym+Pattaya"
 tags: [climbing, bouldering, top-rope, lead-climbing, huai-yai, rebrand]
 ---
 
 # STICKY Climbing Gym
+
+Thai Maps labels the Huai Yai indoor climbing venue **STICKY climbing gym(ยิมปีนเขา)** and lists Tuesday-Sunday 11:00-20:00 current access.
 
 STICKY is the current operating identity for the Huai Yai climbing gym formerly known as Bean Cow. The current Maps place and July 2026 owner posts support the same address and a live STICKY rebrand, so this remains a valid [climbing record](/category/climbing/) even though the operator still uses older Bean Cow social URLs.
 

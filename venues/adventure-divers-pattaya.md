@@ -1,5 +1,6 @@
 ---
 id: adventure-divers-pattaya
+nameTh: โรงเรียนสอนดำน้ำ Adventure Divers
 name: Adventure Divers Pattaya
 category: watersports
 area: Central Pattaya
@@ -15,19 +16,22 @@ priceSourceUrl: https://pattayadivers.com/price/
 distinction: PADI dive centre with training facilities and a day boat
 courses: [Discover Scuba Diving, PADI Open Water, Advanced Open Water, Rescue Diver, Divemaster, Instructor Development]
 beginnerFriendly: true
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://pattayadivers.com/about/
   - https://pattayadivers.com/price/
   - https://pattayadivers.com/scuba-diving-trips/
   - https://www.padi.com/dive-center/thailand/adventure-divers-2/
   - https://www.google.com/maps/search/?api=1&query=Adventure+Divers+Pattaya
+  - https://secretary.mots.go.th/ewtadmin/ewt/policy/article_attach/06DatabaseProjectDevelopmentandPromotionSportsTourism2559.pdf
 description: Pattaya PADI centre offering local day trips and courses from first dives through professional training.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Adventure+Divers+Pattaya"
 tags: [padi, day-trips, dive-courses, own-boat, beginner-friendly]
 ---
 
 # Adventure Divers Pattaya
+
+A Thai government sports-tourism PDF lists the operator as **โรงเรียนสอนดำน้ำ Adventure Divers**, while the live centre listing gives **391/77-78** Moo 10 for this Pattaya base.
 
 Adventure Divers Pattaya is a current Central Pattaya dive operator with both day trips and a PADI course ladder, not only a shopfront selling excursions. The strongest current evidence is the operator’s own price page plus PADI’s live centre listing, which identifies a training pool, classroom and dive boat. The main limitation is that published hours and contact detail differ across sources, so the exact booking time still needs reconfirmation.
 

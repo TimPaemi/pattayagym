@@ -1,6 +1,7 @@
 ---
 id: pattaya-tennis-badminton-inter-club
 name: Pattaya Badminton & Tennis Inter Club
+nameTh: "พัทยาแบดมินตัน & เทนนิส อินเตอร์คลับ"
 category: racquet
 area: Soi Toongklom-Talman 25 / East Pattaya
 address: Soi Toongklom-Talman 25, Nong Prue, Bang Lamung, Chonburi 20150
@@ -12,18 +13,21 @@ hours: Daily 06:00-21:00
 priceRange: ""
 distinction: Local multi-racquet club listed for badminton and tennis
 sports: [Badminton, Tennis, Pickleball]
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/p/Pattaya-Tennis-Badminton-Inter-Club-100063564184679/
   - https://www.facebook.com/100063564184679/videos/1256722559158741/
   - https://www.facebook.com/100063564184679/posts/pickle-ball-court-at-just-300bper-hour-special-coaching-lessons-equipments-avail/688627723266028/
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Tennis+Badminton+Inter+Club
+  - "https://www.google.com/maps/search/?api=1&query=Pattaya+Tennis+Badminton+Inter+Club&hl=th"
 description: East Pattaya racquet club with confirmed tennis, badminton and pickleball activity but no fully current dated public rate card.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Tennis+Badminton+Inter+Club"
 tags: [badminton, tennis, pickleball, east-pattaya, coaching]
 ---
 
 # Pattaya Badminton & Tennis Inter Club
+
+The Thai Maps entity **พัทยาแบดมินตัน & เทนนิส อินเตอร์คลับ** lists daily 06:00-21:00 access on Soi Toongklom-Talman 25 in Nong Prue for its two named racquet sports.
 
 Pattaya Badminton & Tennis Inter Club is a current East Pattaya racquet venue on Soi Toongklom-Talman 25. The exact Maps identity publishes daily 06:00-21:00 hours and phone **+66 81 209 5589**, while the operator's Facebook presence shows active tennis and pickleball content. It is a real club identity, but not one with a clean modern online booking flow.
 

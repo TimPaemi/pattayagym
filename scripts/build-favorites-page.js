@@ -22,8 +22,8 @@ function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', `${VENUE_N} VENUES`, 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', `★ LIVE ${VENUE_N} VENUES`, 'UPDATED ROLLING'];
+const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', `${VENUE_N} VENUES`, 'SOURCE-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'SOURCE-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', `★ LIVE ${VENUE_N} VENUES`, 'UPDATED ROLLING'];
 
 function marquee(items, bot) {
   if (bot) return ''; // FOOTER-SPEC-2026: no bottom ticker
@@ -86,7 +86,7 @@ ${toolBreadcrumb([{ label: 'Home', href: '/' }, { label: 'Favorites' }])}
     <div class="eyebrow"><span class="num">01</span> Saved venues</div>
     <div id="favorites-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
     <div id="favorites-empty" class="tool-empty-card">
-      <h3>No saved venues yet</h3>
+      <h2>No saved venues yet</h2>
       <p>Save from a <strong>venue page</strong>, <strong>search result</strong>, or <strong>category listing</strong>. Your list appears here instantly.</p>
       <div class="tool-empty-actions">
         <a href="/search/" class="btn btn-secondary">Search venues</a>
@@ -105,7 +105,6 @@ ${require('./lib/site-footer.js').siteFooterHtml(VENUE_N)}
 <script src="/data.js${ASSET}"></script>
 <script defer src="/favorites.js${ASSET}"></script>
 <script defer src="/site-ui.js${ASSET}"></script>
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
 <script defer src="/analytics.js${ASSET}"></script>
 </body>
 </html>

@@ -10,10 +10,10 @@ website: https://balancepattaya.com/
 social: {}
 hours: Timetable varies; book before travelling
 priceRange: ฿฿
-priceAsOf: 2026-07-27
+priceAsOf: 2026-07-29
 priceSourceUrl: https://balancepattaya.com/price
 distinction: Small yoga and sound-healing studio in a Pratamnak condominium
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://balancepattaya.com/
   - https://balancepattaya.com/price
@@ -37,7 +37,7 @@ If your goal is an ordinary yoga session, separate that from the studio’s soun
 
 ## What it costs
 
-The current price page listed a one-time group yoga class at ฿500, a sadhu nails board session at ฿1,500, a handmade nail-board session at ฿1,000 and a group sound-healing session at ฿1,000 (operator price page, checked 2026-07-27). Those are direct studio prices, but they describe different services and should not be treated as a single “yoga range”.
+The current price page listed a one-time group yoga class at ฿500, a sadhu nails board session at ฿1,500, a handmade nail-board session at ฿1,000 and a group sound-healing session at ฿1,000 (operator price page, checked 2026-07-29). Those are direct studio prices, but they describe different services and should not be treated as a single “yoga range”.
 
 The practical question is therefore not only “how much is Balance?” but “which product am I booking?” If you want yoga, confirm the exact class and date. If you want sound healing or nail-board work, ask whether it is group or individual, how long it lasts and what preparation is required.
 

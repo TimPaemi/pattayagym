@@ -1,5 +1,6 @@
 ---
 id: swimming-kids-pattaya
+nameTh: สวิมมิ่ง คิดส์ พัทยา
 name: Swimming Kids Pattaya
 category: swimming
 area: Na Jomtien
@@ -28,6 +29,8 @@ tags: [swim-school, babies, children, indoor-pool, heated-pool, saltwater, na-jo
 Swimming Kids Pattaya is a specialist children’s swim school in Na Jomtien, not a public lap pool or hotel day pass. Its current branch page ties the venue to babies and children from four months to nine years and to an indoor heated saltwater pool. The main limitation is access model: this is a term-based school, so parents need the exact course, age band and registration details before turning up.
 
 ## What training is on offer
+
+The branch's Thai page uses **สวิมมิ่ง คิดส์ พัทยา** for the Na Jomtien 14 location near the Ambassador City resort near Jomtien.
 
 The current branch page presents Swimming Kids Pattaya as a structured swim school for children aged four months to nine years. It explicitly describes an indoor heated saltwater pool, which is useful because this is not the same product as a municipal [swimming](/category/swimming/) pool or a hotel leisure pool. The lesson product is organised by age band rather than by casual public lane access.
 

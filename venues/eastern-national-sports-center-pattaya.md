@@ -1,6 +1,7 @@
 ---
 id: eastern-national-sports-center-pattaya
 name: Eastern National Sports Center
+nameTh: ศูนย์กีฬาแห่งชาติภาคตะวันออก พัทยา
 category: clubs
 area: Jomtien / Chaiyapruek 2
 address: Chaiyapruek 2 Road, Pattaya City, Bang Lamung, Chonburi 20150
@@ -17,12 +18,15 @@ verified: 2026-07-26
 sources:
   - https://smartdastaapp.dasta.or.th/place/346
   - https://www.google.com/maps/search/?api=1&query=Eastern+National+Sports+Center+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Eastern+National+Sports+Center+Pattaya&hl=th"
 description: Chaiyapruek 2 public sports complex whose DASTA listing confirms general recreation, exercise and organised competition use.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Eastern+National+Sports+Center+Pattaya"
 tags: [public-sports-center, multi-sport, jomtien, chaiyapruek, free-admission]
 ---
 
 # Eastern National Sports Center
+
+Thai Maps identifies the Chaiyapruek 2 complex as **ศูนย์กีฬาแห่งชาติภาคตะวันออก พัทยา**, matching its daily 09:00-20:00 listing.
 
 The Eastern National Sports Center is a regional public sports complex on Chaiyapruek 2 Road. Thailand's DASTA public-facility record describes it as a centre for training, athlete camps and regional competition, with a large indoor-sports building and surrounding space used for recreation, rest and exercise. The same page explicitly says the general public and nearby visitors can use the area.
 

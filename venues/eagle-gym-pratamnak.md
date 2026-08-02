@@ -1,5 +1,6 @@
 ---
 id: eagle-gym-pratamnak
+nameTh: อีเกิ้ลยิม พระตำหนัก
 name: Eagle Gym Pratamnak
 category: muay-thai
 area: Pratamnak
@@ -20,12 +21,15 @@ sources:
   - https://www.instagram.com/p/BfbAKlNBxf6/
   - https://www.instagram.com/p/DWrA9U9CR_A/
   - https://www.google.com/maps/search/?api=1&query=Eagle+Gym+Pratamnak
+  - https://www.gotopattaya.com/venues/eagle-gym-pratamnak
 description: Pratamnak gym offering Muay Thai, boxing and judo with published class blocks but no stable current public rate card.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Eagle+Gym+Pratamnak"
 tags: [muay-thai, boxing, judo, pratamnak, neighbourhood-gym]
 ---
 
 # Eagle Gym Pratamnak
+
+The local venue guide renders the search name as **อีเกิ้ลยิม พระตำหนัก** and places its combined gym-and-Muay-Thai offer on Pratamnak Hill with **08:00** opening.
 
 Eagle Gym Pratamnak is a current Pratamnak Soi 5 combat gym presenting Muay Thai, boxing and judo under one neighbourhood-gym identity. It suits visitors who want a smaller hill-side fight-gym option with published class blocks rather than a resort campus. Its limitation is price clarity: the public channels confirm the gym, location and session windows, but they do not provide a clean stable current rate card that can be quoted without guesswork.
 

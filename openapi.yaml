@@ -2,10 +2,11 @@ openapi: 3.1.0
 info:
   title: Pattaya Gym Directory API
   description: |
-    Read-only access to the full Pattaya Gym Directory — 158+ verified gyms,
-    Muay Thai camps, BJJ academies, golf courses, dive operators, and sport
-    venues in Pattaya, Thailand. Source: pattaya-gym.com. License: CC BY 4.0.
-  version: 1.0.0
+    Read-only access to 218 current Pattaya.Gym directory records across gyms,
+    Muay Thai camps, sport clubs, facilities and operators. Records expose their
+    sources-reviewed date; published price snapshots carry a separate as-of date.
+    No field implies a first-hand visit. License: CC BY 4.0.
+  version: 1.1.0
   contact:
     email: info@pattaya-gym.com
     url: https://pattaya-gym.com/
@@ -19,14 +20,10 @@ paths:
   /api/venues.json:
     get:
       operationId: listVenues
-      summary: Get every verified sport venue in Pattaya
-      description: |
-        Returns the full directory in one JSON document. Each venue includes
-        id, name, category, area, address, phone, website, hours, price range,
-        description, tags, Google Maps URL, and verification date.
+      summary: Get the current Pattaya.Gym venue-record dataset
       responses:
         '200':
-          description: Full directory
+          description: Current source-checked directory records
           content:
             application/json:
               schema:
@@ -35,16 +32,18 @@ components:
   schemas:
     Directory:
       type: object
+      required: [name, generated, counts, venues]
       properties:
         name: { type: string }
-        url: { type: string }
+        url: { type: string, format: uri }
         description: { type: string }
         generated: { type: string, format: date }
         license: { type: string }
+        attribution: { type: string }
         counts:
           type: object
           properties:
-            venues: { type: integer }
+            venues: { type: integer, example: 218 }
             categories: { type: integer }
         categories:
           type: array
@@ -55,25 +54,27 @@ components:
     Category:
       type: object
       properties:
-        key: { type: string, example: "muay-thai" }
-        label: { type: string, example: "Muay Thai" }
+        key: { type: string, example: muay-thai }
+        label: { type: string, example: Muay Thai }
     Venue:
       type: object
+      required: [id, name, url, category]
       properties:
         id: { type: string }
         name: { type: string }
         url: { type: string, format: uri }
         category: { type: string }
         categoryLabel: { type: string }
-        area: { type: string, nullable: true }
-        address: { type: string, nullable: true }
-        phone: { type: string, nullable: true }
-        website: { type: string, format: uri, nullable: true }
-        socialFacebook: { type: string, format: uri, nullable: true }
-        socialInstagram: { type: string, format: uri, nullable: true }
-        hours: { type: string, nullable: true }
-        priceRange: { type: string, nullable: true, description: "Thai baht symbol scale: ฿ (cheap) to ฿฿฿฿ (premium)" }
-        description: { type: string, nullable: true }
+        area: { type: [string, 'null'] }
+        address: { type: [string, 'null'] }
+        phone: { type: [string, 'null'] }
+        website: { type: [string, 'null'], format: uri }
+        hours: { type: [string, 'null'] }
+        priceRange: { type: [string, 'null'] }
+        priceAsOf: { type: [string, 'null'], format: date }
+        priceSourceUrl: { type: [string, 'null'], format: uri }
+        description: { type: [string, 'null'] }
         tags: { type: array, items: { type: string } }
-        mapsUrl: { type: string, format: uri, nullable: true }
-        verified: { type: string, format: date, nullable: true }
+        mapsUrl: { type: [string, 'null'], format: uri }
+        status: { type: [string, 'null'] }
+        sourcesReviewed: { type: [string, 'null'], format: date }

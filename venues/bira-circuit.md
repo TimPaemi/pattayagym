@@ -1,6 +1,7 @@
 ---
 id: bira-circuit
 name: Bira Circuit
+nameTh: พีระเซอร์กิต
 category: adventure
 area: Pong / Bang Lamung
 address: 111 Moo 5, Pong, Bang Lamung, Chonburi
@@ -20,12 +21,15 @@ sources:
   - https://bira.co.th/reserved/
   - https://bira.co.th/contact/
   - https://www.google.com/maps/search/?api=1&query=Bira+Circuit+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Bira+Circuit+Pattaya&hl=th"
 description: Road-racing circuit in Pong with bookable motorcycle and car track sessions.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Bira+Circuit+Pattaya"
 tags: [motor-racing, track-day, motorcycle, car, pong]
 ---
 
 # Bira Circuit
+
+Thai Maps identifies the 111 Moo 5 motor-racing venue in Pong west of Pattaya as **พีระเซอร์กิต**, matching the circuit record whose track access requires a published session or reservation.
 
 Bira Circuit is a 2.41-kilometre road-racing circuit in Pong with shared motorcycle and car sessions, private circuit hire and operator-arranged driving activities. It is not a public go-kart attraction or an unscheduled driving venue: access depends on the calendar, the selected product and an accepted reservation.
 

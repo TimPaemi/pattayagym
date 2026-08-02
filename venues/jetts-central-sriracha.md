@@ -1,6 +1,7 @@
 ---
 id: jetts-central-sriracha
 name: Jetts Fitness Central Si Racha
+nameTh: Jetts เซ็นทรัลศรีราชา (ชลบุรี)
 category: fitness
 area: Sriracha
 address: Room 226, 2nd floor, Central Si Racha, 8/1 Sukhumvit Road, Si Racha, Chonburi 20110
@@ -21,12 +22,15 @@ sources:
   - https://www.jetts.co.th/en/welcome-tourist-pass-en/
   - https://www.jetts.co.th/en/memberships-en/
   - https://www.google.com/maps/search/?api=1&query=Jetts+Fitness+Central+Si+Racha
+  - https://www.jetts.co.th/central-si-racha/
 description: Central Si Racha Jetts branch with 24-hour member access and current 1-, 3-, 7- and 30-day visitor passes usable during staffed hours.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Jetts+Fitness+Central+Si+Racha"
 tags: [fitness, 24-hour, chain, sriracha, mall]
 ---
 
 # Jetts Fitness Central Si Racha
+
+The operator's Thai branch page lists room 226 at Central Si Racha as **Jetts เซ็นทรัลศรีราชา (ชลบุรี)**.
 
 ## What training is on offer
 

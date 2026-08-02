@@ -1,6 +1,7 @@
 ---
 id: renaissance-pattaya-resort
 name: Renaissance Pattaya Resort & Spa
+nameTh: เรเนซองส์ พัทยา รีสอร์ท แอนด์ สปา
 category: fitness
 area: Na Jomtien
 address: 9/9 Moo 3, Na Jomtien, Sattahip, Pattaya, Thailand 20250
@@ -15,12 +16,15 @@ sources:
   - https://www.marriott.com/en-us/hotels/pyxbr-renaissance-pattaya-resort-and-spa/overview/
   - https://www.marriott.com/en-us/hotels/pyxbr-renaissance-pattaya-resort-and-spa/experiences/
   - https://www.google.com/maps/search/?api=1&query=Renaissance+Pattaya+Resort+and+Spa
+  - "https://www.google.com/maps/search/?api=1&query=Renaissance+Pattaya+Resort+Spa&hl=th"
 description: Na Jomtien resort with a fitness centre, main pool, sunset pool and children's pool for registered guests.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Renaissance+Pattaya+Resort+and+Spa"
 tags: [hotel-gym, hotel-pools, beachfront, na-jomtien, guest-facilities]
 ---
 
 # Renaissance Pattaya Resort & Spa
+
+The resort at 9/9 Moo 3 is listed in Thai Maps as **เรเนซองส์ พัทยา รีสอร์ท แอนด์ สปา**.
 
 Renaissance Pattaya Resort & Spa is a Na Jomtien hotel with fitness, pool and wellness facilities for registered guests. Marriott does not publish these amenities as a public gym or day-pass product. It can suit a hotel stay built around light training, but non-residents should choose a facility with explicit outside access.
 

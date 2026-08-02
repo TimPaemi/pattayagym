@@ -1,6 +1,7 @@
 ---
 id: infinite-fitness-laem-chabang
 name: Infinite Fitness Laem Chabang
+nameTh: INFINITE FITNESS ฟิตเนสแหลมฉบัง
 category: fitness
 area: Laem Chabang
 address: Inside Infinite artificial-turf football complex, 10/20 Thung Sukhla, Si Racha, Chonburi 20230
@@ -18,12 +19,15 @@ sources:
   - https://www.facebook.com/infinitefitnessstudio/posts/pfbid02xd66EBxZiZDyPVe1CwirysKgyGx9rYuD4dWzH3jabh5uAEkNqRiA3cCgbbSvMmbl
   - https://www.google.com/maps/search/?api=1&query=Infinite+Fitness+Laem+Chabang
   - https://www.google.com/maps/search/?api=1&query=Infinite+Football+Laem+Chabang
+  - "https://www.google.com/maps/search/?api=1&query=Infinite+Fitness+Laem+Chabang&hl=th"
 description: Laem Chabang fitness gym located inside the Infinite football complex.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Infinite+Fitness+Laem+Chabang"
 tags: [fitness, laem-chabang, football-complex, neighbourhood-gym]
 ---
 
 # Infinite Fitness Laem Chabang
+
+The 10/20 Thung Sukhla facility inside the football complex appears as **INFINITE FITNESS ฟิตเนสแหลมฉบัง** in Thai Maps and closes at 22:00 Monday-Saturday.
 
 Infinite Fitness Laem Chabang is a neighbourhood gym inside the Infinite artificial-turf football complex in Thung Sukhla. The Maps listing and operator Facebook page support the location, phone number and current weekly hours: 14:30-22:00 Monday to Saturday and 13:30-20:00 on Sunday. An owner Songkran notice in 2026 also showed that holiday hours can change, so contact +66 84 147 1915 before making a special trip.
 

@@ -1,6 +1,7 @@
 ---
 id: burapha-golf-club
 name: Burapha Golf Club
+nameTh: บูรพากอล์ฟ คลับ
 category: golf
 area: Bo Win / Si Racha
 address: 281 Moo 4, Bo Win, Si Racha, Chonburi 20230
@@ -13,17 +14,20 @@ hours: Daily 08:00-17:00
 priceRange: ""
 distinction: Thirty-six-hole golf complex in Si Racha
 holes: 36
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.thailandtravel.or.jp/burapha-golf-club/
   - https://www.facebook.com/p/Burapha-Golf-Resort-Thailand-100057382482955/
   - https://www.google.com/maps/search/?api=1&query=Burapha+Golf+Club
+  - "https://www.google.com/maps/search/?api=1&query=Burapha+Golf+Club&hl=th"
 description: Operating 36-hole golf complex in Bo Win, Si Racha.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Burapha+Golf+Club"
 tags: [golf, 36-holes, sriracha, bo-win]
 ---
 
 # Burapha Golf Club
+
+The 36-hole course is signposted in Thai Maps as **บูรพากอล์ฟ คลับ**.
 
 Burapha Golf Club is an operating 36-hole golf complex in Bo Win, Si Racha. It is a regional course rather than a Pattaya-city venue. The exact live Google Maps listing confirmed the current identity, address and daily 08:00-17:00 hours on 26 July 2026. Recent listing photos also support current activity, but user reviews are not used as evidence for course condition.
 

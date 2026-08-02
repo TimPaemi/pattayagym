@@ -1,5 +1,5 @@
 module.exports = `
-<p><strong>If you only read one thing: book the exact session in Russian, not a venue that merely has Russian-language marketing or Russian-speaking customers.</strong> The current directory evidence is strongest for Rusich Club, Yoga Pattaya Studio and one Russian contact at Balance Yoga. Even there, confirm the date, coach, teaching language, level and price before travelling. A translated website does not prove that every class is taught in that language.</p>
+<p><strong>If you only read one thing: book the exact session in Russian, not a venue that merely has Russian-language marketing or Russian-speaking customers.</strong> The current directory evidence covers <a href="/gyms/rusich-club-football/">Rusich Club</a>, <a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> and one Russian contact at <a href="/gyms/balance-yoga-studio-pattaya/">Balance Yoga</a>. Even there, confirm the date, coach, teaching language, level and price before travelling. A translated website does not prove that every class is taught in that language.</p>
 
 <p>This guide is deliberately narrower than a list of places popular with Russian visitors. It uses only language claims documented in current venue records, then separates those claims from assumptions. It does not infer language from a person's name, nationality, reviews, neighbourhood or social-media audience. For the complete sport inventory, use the <a href="/sports/">sports index</a>; for a shortlist you can save and compare, use the <a href="/compare/">comparison tool</a>.</p>
 
@@ -17,21 +17,21 @@ module.exports = `
 </table>
 </div>
 
-<p><strong>The trade-off is simple:</strong> the strongest language evidence gives a smaller shortlist. Broadening the list may improve location, price or discipline choice, but every added option becomes a contact-first lead rather than a verified Russian-language recommendation.</p>
+<p><strong>The trade-off is simple:</strong> direct language evidence gives a smaller shortlist. Broadening the list may improve location, price or discipline choice, but every added option becomes a contact-first lead rather than a verified Russian-language recommendation.</p>
 
-<h2>Rusich Club: the clearest multi-programme starting point</h2>
+<h2>Rusich Club: a multi-programme starting point</h2>
 
-<p><a href="/gyms/rusich-club-football/">Rusich Club Pattaya</a> is an East Pattaya combat and functional-training club. Its legacy file name mentions football, but the current operator programme is wrestling, MMA, hand-to-hand fighting, Muay Thai and mixed fighting, grappling, and functional work with CrossFit elements. The club's site is available in English and Russian. That makes Rusich the clearest language-first enquiry in this guide, while still requiring class-level confirmation.</p>
+<p><a href="/gyms/rusich-club-football/">Rusich Club Pattaya</a> is an East Pattaya combat and functional-training club. Its legacy file name mentions football, but the current operator programme is wrestling, MMA, hand-to-hand fighting, Muay Thai and mixed fighting, grappling, and functional work with CrossFit elements. The club's site is available in English and Russian. That makes Rusich a language-first enquiry in this guide, while still requiring class-level confirmation.</p>
 
-<p>The current record separates groups by age and discipline. It lists children's wrestling for ages 4–10, children's hand-to-hand fighting, adult wrestling from age 11, MMA and hand-to-hand groups from age 11, adult MMA from age 16, and grappling from age 10. Published days and times differ by programme. The record also carries a THB 350 single-class price on named combat pages, with some monthly products and free trials. Those prices cannot be combined into one all-club membership without an operator answer.</p>
+<p>The current <a href="/gyms/rusich-club-football/">Rusich record</a> separates groups by age and discipline. It lists children's wrestling for ages 4–10, children's hand-to-hand fighting, adult wrestling from age 11, MMA and hand-to-hand groups from age 11, adult MMA from age 16, and grappling from age 10. Published days and times differ by programme. The record also carries a THB 350 single-class price on named combat pages, with some monthly products and free trials. Those prices cannot be combined into one all-club membership without an operator answer.</p>
 
 <p>Send the participant's age, experience, chosen discipline and intended date. Ask which coach leads the class, which language is used for instruction and safety cues, whether a bilingual explanation is available, and what clothing or protective equipment is required. For children, confirm guardian observation and collection. The <a href="/guides/bjj-mma-pattaya/">BJJ and MMA guide</a> helps distinguish grappling, wrestling and mixed sessions before that enquiry.</p>
 
-<h2>Yoga Pattaya Studio: the strongest published language-and-price combination</h2>
+<h2>Yoga Pattaya Studio: a published language-and-price combination</h2>
 
 <p><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> on Thepprasit Soi 12 publishes English, Russian and Thai as teaching languages. Its operator also names Ashtanga, Mysore, Hatha, Vinyasa, stretching and fitness-yoga formats. The current record includes drop-ins and multi-class passes, which makes the transaction clearer than at venues with no public rate card.</p>
 
-<p>The published language list does not mean that one class is repeated in all three languages. Match the desired style and level to the newest schedule, then message the studio with the exact class. Ask whether the named teacher will teach in Russian, translate key instructions, or use another primary language. The record says most classes are open level and that mats can be borrowed without charge, but pregnancy yoga needs advance booking. Anyone with an injury or medical constraint should describe it and seek appropriate professional guidance; a language match is not a clinical assessment.</p>
+<p><a href="/gyms/yoga-pattaya-studio/">The published language list</a> does not mean that one class is repeated in all three languages. Match the desired style and level to the newest schedule, then message the studio with the exact class. Ask whether the named teacher will teach in Russian, translate key instructions, or use another primary language. The record says most classes are open level and that mats can be borrowed without charge, but pregnancy yoga needs advance booking. Anyone with an injury or medical constraint should describe it and seek appropriate professional guidance; a language match is not a clinical assessment.</p>
 
 <p>For location, Thepprasit is more convenient for many Jomtien and South Pattaya stays than East Pattaya. Use the <a href="/area/jomtien/">Jomtien area page</a> to compare nearby records, but do not assume another studio in the same area speaks Russian. The <a href="/guides/yoga-retreat-pattaya/">Pattaya yoga guide</a> separates studio classes, private sessions and broader retreat-style searches.</p>
 
@@ -39,7 +39,7 @@ module.exports = `
 
 <p><a href="/gyms/balance-yoga-studio-pattaya/">Balance Yoga Studio</a> is inside Cosy Beach View Condominium in Pratamnak. Its current operator material lists one Thai-and-English phone and a second Russian-and-English phone. That is useful contact evidence, but it is not the same as a guarantee that every teacher or class is Russian-speaking.</p>
 
-<p>The studio publishes prices for group yoga, sound healing and other named services. Its public schedule page still showed an older February 2026 timetable at verification, so the correct sequence is contact first, schedule second, journey third. Use the Russian-and-English number to request the live date, class type, teacher, language and total. Ask how to enter the condominium and whether reception needs the booking name. The <a href="/area/pratamnak/">Pratamnak area page</a> gives neighbourhood context without turning the building into a street-front walk-in studio.</p>
+<p><a href="/gyms/balance-yoga-studio-pattaya/">Balance</a> publishes prices for group yoga, sound healing and other named services. Its public schedule page still showed an older February 2026 timetable at verification, so the correct sequence is contact first, schedule second, journey third. Use the Russian-and-English number to request the live date, class type, teacher, language and total. Ask how to enter the condominium and whether reception needs the booking name. The <a href="/area/pratamnak/">Pratamnak area page</a> gives neighbourhood context without turning the building into a street-front walk-in studio.</p>
 
 <h2>How to evaluate a gym that is not on the verified language shortlist</h2>
 
@@ -51,13 +51,13 @@ module.exports = `
 
 <h2>Children and family bookings</h2>
 
-<p>Rusich is the best-supported Russian-language lead for age-banded sport in the current directory. Other youth programmes may publish good age groups, trial prices and timetables without publishing Russian. <a href="/gyms/af-academy-pattaya/">AF Academy Pattaya</a>, for example, publishes football groups from ages 3–17, a free first trial and several short packs, but its current record does not establish Russian instruction for the exact session. Treat it as a direct enquiry, not as a verified Russian-language academy.</p>
+<p><a href="/gyms/rusich-club-football/">Rusich</a> is the best-supported Russian-language lead for age-banded sport in the current directory. Other youth programmes may publish good age groups, trial prices and timetables without publishing Russian. <a href="/gyms/af-academy-pattaya/">AF Academy Pattaya</a>, for example, publishes football groups from ages 3–17, a free first trial and several short packs, but its current record does not establish Russian instruction for the exact session. Treat it as a direct enquiry, not as a verified Russian-language academy.</p>
 
 <p>For every child booking, send the child's age, experience and preferred language. Ask for the exact training ground, coach, group size, start and finish, footwear or uniform, guardian presence and collection policy. Confirm whether the trial is supervised only during the lesson and whether the parent must stay on site. The <a href="/guides/kids-youth-sport-pattaya/">kids-and-youth guide</a> compares access models without treating a class as childcare.</p>
 
 <h2>Area choice and transport</h2>
 
-<p>Do not choose accommodation from a vague belief that one district is “Russian-speaking.” Choose the exact venue and repeatable route. Rusich is in East Pattaya; Yoga Pattaya is on Thepprasit Soi 12; Balance Yoga is inside a Pratamnak condominium. Those three locations create materially different journeys from Naklua, Central Pattaya or Jomtien.</p>
+<p>Do not choose accommodation from a vague belief that one district is “Russian-speaking.” Choose the exact venue and repeatable route. <a href="/gyms/rusich-club-football/">Rusich</a> is in East Pattaya; <a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya</a> is on Thepprasit Soi 12; <a href="/gyms/balance-yoga-studio-pattaya/">Balance Yoga</a> is inside a Pratamnak condominium. Those three locations create materially different journeys from Naklua, Central Pattaya or Jomtien.</p>
 
 <p>Use the venue's live pin, request the entrance and plan the return before paying for a multi-session product. A small price saving can disappear when a long cross-city trip is repeated several times per week. The <a href="/plan-my-trip/">trip planner</a> helps compare area and category, but it cannot promise traffic, a fare or the correct building entrance.</p>
 

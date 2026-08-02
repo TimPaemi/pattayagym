@@ -40,3 +40,23 @@ A school result published the next day records an RSR event bronze medal in a gi
 No current tuition, trial policy, uniform fee, belt-test fee or class-by-class timetable was found. Contact the academy with the child's age, approximate weight, experience and goal. Ask which class is suitable, whether parents may observe, whether a trial is available, what language is used for instruction and whether sparring and poomsae are taught in the same or separate sessions.
 
 Request the complete first-month cost in writing, including registration, dobok, protective equipment, grading and any optional competition fees. Confirm the exact entrance using the Maps pin; the broad business-hours window should not be treated as unscheduled walk-in access.
+
+## What training is on offer
+
+The evidence supports an active children’s taekwondo academy and youth competition participation. It does not publish the normal age bands, class duration, sparring policy or poomsae timetable.
+
+## Who it suits — and who it does not
+
+Parents can use the academy contact route to ask about age-appropriate instruction. The competition evidence does not guarantee a place, trial, class level or competition pathway for a new child.
+
+## Getting there
+
+The listed address is 19/94-95 Bang Lamung 31, with +66 98 909 2449. Use the Maps pin to confirm the entrance.
+
+## Before you go
+
+Confirm the child’s class, arrival time, parent-observation policy, language, equipment and total first-month cost before the first visit.
+
+## What we could not verify
+
+No tuition table, trial rule, uniform charge, grading fee, class capacity or detailed weekly class schedule was found.

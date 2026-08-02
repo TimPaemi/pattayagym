@@ -10,7 +10,7 @@ social: {}
 hours: Daily 10:00-17:00
 priceRange: ""
 distinction: Two-branch indoor golf practice, teaching and club-service business
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.golfhubpattaya.com/
   - https://www.golfhubpattaya.com/repairsfitting.html

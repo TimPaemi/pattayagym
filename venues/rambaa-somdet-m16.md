@@ -1,5 +1,6 @@
 ---
 id: rambaa-somdet-m16
+nameTh: แรมบ้า สมเดช เอ็ม 16 ยิม
 name: Rambaa Somdet M16
 category: mma
 area: Nong Prue / East Pattaya
@@ -12,8 +13,9 @@ social:
 hours: Mon-Sat 07:00-09:00 and 15:00-18:30; Sun closed
 priceRange: ""
 distinction: Muay Thai and MMA gym associated with former Shooto champion Rambaa Somdet
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
+  - https://smartdastaapp.dasta.or.th/place/390
   - https://www.facebook.com/100063547570660/
   - https://www.instagram.com/rambaa_m16/
   - https://www.instagram.com/reel/DZUf_Jivhgv/
@@ -29,6 +31,8 @@ tags: [mma, muay-thai, east-pattaya, nong-prue]
 Rambaa Somdet M16 is a confirmed East Pattaya fight gym on Soi Map Yai Lia 39/1, but it remains a contact-first booking rather than a neatly packaged website transaction. The live Maps identity supports the phone and split daily training periods, while the current Facebook and Instagram presence show active Muay Thai and MMA promotion. It is useful because the gym clearly exists, not because every commercial detail is settled.
 
 ## What training is on offer
+
+The Thai DASTA place record calls the Soi Map Yai Lia 39/1 venue **แรมบ้า สมเดช เอ็ม 16 ยิม** and describes it as a Muay Thai, MMA and BJJ gym.
 
 The public identity supports a combat-sports gym rather than a general fitness room. The Facebook page brands the venue around Muay Thai, MMA and BJJ, and the current Instagram reels promote public training at the Pattaya gym. Maps currently lists two daily periods Monday to Saturday, **07:00-09:00** and **15:00-18:30**, with Sunday closed.
 

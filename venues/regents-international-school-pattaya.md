@@ -1,6 +1,7 @@
 ---
 id: regents-international-school-pattaya
 name: Regents International School Pattaya Sports Programme
+nameTh: โรงเรียนนานาชาติรีเจ้นท์ พัทยา
 category: kids-youth
 area: Nong Pla Lai / Eastern Seaboard
 address: Regents International School Pattaya, 33/3 Moo 1, Pong, Bang Lamung, Chonburi 20150
@@ -19,12 +20,15 @@ sources:
   - https://www.nordangliaeducation.com/risp-pattaya/outstanding-experiences/sports-and-pe
   - https://www.nordangliaeducation.com/risp-pattaya/-/media/risp-pattaya/outstanding-experience/260217_summer-camp-2026-brochure-a4-%282%29.pdf
   - https://www.google.com/maps/search/?api=1&query=Regents+International+School+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Regents+International+School+Pattaya&hl=th"
 description: School sports programme for Regents pupils and announced camps; not a general public facility.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Regents+International+School+Pattaya"
 tags: [school-sport, kids, youth, student-access, nong-pla-lai]
 ---
 
 # Regents International School Pattaya Sports Programme
+
+The 33/3 Moo 1 international school campus in Pong is **โรงเรียนนานาชาติรีเจ้นท์ พัทยา** in Thai Maps; its facilities remain school-programme assets.
 
 Regents International School Pattaya runs a school PE, athletics and competitive-sport programme at its Pong campus. The operator publishes substantial facilities and a wide activity list, but this record is not a public gym or municipal sports centre. It suits families evaluating the school or a specifically announced school programme, not visitors looking for walk-in court, pool or gym access.
 

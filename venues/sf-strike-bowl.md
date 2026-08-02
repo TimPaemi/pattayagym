@@ -1,5 +1,6 @@
 ---
 id: sf-strike-bowl
+nameTh: เอส เอฟ สไตรค์ โบว์ล
 name: SF Strike Bowl Pattaya
 category: clubs
 area: Central Pattaya
@@ -14,6 +15,7 @@ priceRange: ""
 distinction: Bowling centre inside Central Pattaya mall
 verified: 2026-07-26
 sources:
+  - https://hw.sfcinemacity.com/bowling-music
   - https://www.facebook.com/sfstrikebowlptb.sf/
   - https://www.instagram.com/sfstrikebowlptb.sf/
   - https://www.google.com/maps/search/?api=1&query=SF+Strike+Bowl+Pattaya
@@ -27,6 +29,8 @@ tags: [bowling, central-pattaya, mall, family]
 SF Strike Bowl is an indoor bowling centre on the sixth floor of Central Pattaya mall. It suits a group seeking weather-independent recreation in the central corridor. The current operator and Maps identities agree on its location, phone and daily hours, but no dependable public game or lane tariff is visible.
 
 ## What training is on offer
+
+The operator's Thai bowling page calls the Central Pattaya branch **เอส เอฟ สไตรค์ โบว์ล** and places it on the 6th floor.
 
 The current public pages establish bowling lanes and an active leisure venue, not a coaching programme. They do not publish a league calendar, tournament schedule, junior pathway, open-practice product, lane count or lane-condition specification. A lane booking should therefore not be presented as formal sports instruction.
 

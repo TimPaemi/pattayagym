@@ -8,11 +8,11 @@ phone: "+66 83 220 3200"
 website: ""
 social:
   facebook: kfspattaya
-hours: Open 24 hours daily
+hours: "Daily 00:00-24:00"
 priceRange: ""
 distinction: Indoor artificial-turf football pitch in Nong Prue
 facilities: [Indoor artificial-turf football pitch]
-verified: 2026-07-25
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/kfspattaya/
   - https://www.google.com/maps/search/?api=1&query=K+Football+Stadium+Pattaya

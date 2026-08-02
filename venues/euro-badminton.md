@@ -1,6 +1,7 @@
 ---
 id: euro-badminton
 name: Euro Badminton Club Pattaya
+nameTh: ยูโรแบดมินตันคลับพัทยา
 category: racquet
 area: Pattaya / Bang Lamung
 address: VWP6+3X, Pattaya, Bang Lamung, Chonburi 20150
@@ -10,15 +11,18 @@ social: {}
 hours: Mon-Sat 09:00-22:00; Sun 09:00-21:00
 priceRange: ""
 distinction: Local badminton club with a current listing and published opening hours
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.google.com/maps/search/?api=1&query=Euro+Badminton+Club+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Euro+Badminton+Pattaya&hl=th"
 description: Active local badminton club; current court prices and amenity details require direct confirmation.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Euro+Badminton+Club+Pattaya"
 tags: [badminton, jomtien, call-ahead, limited-information]
 ---
 
 # Euro Badminton Club Pattaya
+
+Thai Maps labels the current Pattaya club **ยูโรแบดมินตันคลับพัทยา** and shows Sunday closing at 21:00, one hour earlier than the Monday-Saturday 22:00 close.
 
 ## What training is on offer
 

@@ -1,6 +1,7 @@
 ---
 id: tonys-gym
 name: Tony's Fitness Group
+nameTh: โทนี่ จิม และมวยไทย
 category: fitness
 area: South Pattaya / Third Road
 address: South Pattaya Third Road, Pattaya City, Bang Lamung, Chonburi 20150
@@ -8,13 +9,14 @@ phone: "+66 95 850 3475"
 website: ""
 social:
   facebook: tonysgrouppattaya
-hours: Open 24 hours daily according to the current Maps listing
+hours: "Daily 00:00-24:00 according to the current Maps listing"
 priceRange: ""
 distinction: Long-running open-air weight-training gym on Pattaya Third Road
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/tonysgrouppattaya/
   - https://www.google.com/maps/search/?api=1&query=Tonys+Gym+Pattaya+3rd+Road
+  - https://patricklepetit.jalbum.net/CHONBURI/LIBRARY/chonburi.pdf
 description: South Pattaya Third Road weight-training gym with round-the-clock listing hours.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Tonys+Gym+Pattaya+3rd+Road"
 tags: [fitness, weights, open-air, south-pattaya, 24-hours]
@@ -23,6 +25,8 @@ tags: [fitness, weights, open-air, south-pattaya, 24-hours]
 # Tony's Fitness Group
 
 The current verifiable Tony's venue is an open-air weight-training gym on South Pattaya Third Road. Its Maps listing shows 24-hour opening and phone +66 95 850 3475. The Tony's Group Facebook identity remains available, but its newest visible operator posts were from April 2022, so it is historical identity support rather than evidence of a current tariff or staffing arrangement.
+
+The Thai tourism reference uses **โทนี่ จิม และมวยไทย** for the gym now listed at +66 95 850 3475 on Third Road.
 
 ## What training is on offer
 

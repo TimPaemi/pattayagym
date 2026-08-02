@@ -12,7 +12,7 @@ hours: Mon-Sat 09:00-18:00; Sun closed
 priceRange: ""
 distinction: Current operator identity for the Maps listing formerly labelled Jomtien Thai Boxing Gym
 formerName: Jomtien Thai Boxing Gym
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/profile.php?id=61580022024936
   - https://www.facebook.com/61580022024936/videos/857792777405682/

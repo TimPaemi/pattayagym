@@ -1,6 +1,7 @@
 ---
 id: siam-country-club
 name: Siam Country Club Pattaya
+nameTh: สยามคันทรีคลับ
 category: golf
 area: East Pattaya / Pong
 address: 50/10 Moo 9, Pong, Bang Lamung, Chonburi 20150
@@ -11,9 +12,9 @@ hours: Tee times by reservation
 priceRange: ฿฿฿
 distinction: Four-course golf operation in the Pattaya area
 opened: 1971
-priceAsOf: 2026-07-26
+priceAsOf: 2026-07-29
 priceSourceUrl: https://siamcountryclub.com/old-course/
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://siamcountryclub.com/
   - https://siamcountryclub.com/book-a-tee-time/
@@ -21,6 +22,7 @@ sources:
   - https://siamcountryclub.com/plantation/
   - https://siamcountryclub.com/waterside/
   - https://siamcountryclub.com/rolling-hills/
+  - https://siamcountryclub.com/th/
 description: Four-course Pattaya golf operation with current visitor green fees, mandatory individual carts and required caddies.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Siam+Country+Club+Pattaya"
 tags: [golf, old-course, plantation, waterside, rolling-hills, pong, tee-time]
@@ -30,6 +32,8 @@ tags: [golf, old-course, plantation, waterside, rolling-hills, pong, tee-time]
 
 Siam Country Club operates four separate Pattaya-area courses: Old Course, Plantation, Waterside and Rolling Hills. Current operator pages publish visitor green fees and the compulsory cart-and-caddie cost stack. The decision is not simply which club name to book; each course has its own layout, location and headline green fee.
 
+The operator's Thai site identifies the 50/10 Moo 9 golf operation as **สยามคันทรีคลับ**.
+
 ## What training is on offer
 
 The operator lists the Old Course as an 18-hole course opened in 1971 and renovated in 2007. Plantation opened in 2008 and has 27 holes arranged as three nine-hole loops. Waterside and Rolling Hills are separate 18-hole choices. Each has its own scorecard and tee-time selection.
@@ -38,7 +42,7 @@ The Old Course page also lists a natural-grass driving range, putting green, chi
 
 ## What it costs
 
-The operator pages checked on **26 July 2026** list Old Course visitor green fees at **฿6,500 on weekdays** and **฿8,500 on weekends and public holidays**. Plantation, Waterside and Rolling Hills each list **฿5,700 on weekdays** and **฿6,700 on weekends and public holidays**.
+The operator pages checked on **29 July 2026** list Old Course visitor green fees at **฿6,500 on weekdays** and **฿8,500 on weekends and public holidays**. Plantation, Waterside and Rolling Hills each list **฿5,700 on weekdays** and **฿6,700 on weekends and public holidays**.
 
 Every player must also take an individual **฿1,000 cart** and a **฿500 caddie**; carts cannot be shared, the caddie drives and the caddie tip is separate. The pages list club rental at **฿2,500**, shoe rental at **฿800** and umbrella rental at **฿500**. Before tip or optional rental, that makes the published minimum Old Course stack ฿8,000 weekday or ฿10,000 weekend/holiday, and the other three courses ฿7,200 or ฿8,200.
 

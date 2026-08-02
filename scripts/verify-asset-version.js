@@ -34,7 +34,8 @@ const LEDGER = path.join(ROOT, 'data', 'asset-fingerprints.json');
 
 /* Cached for a year in _headers. Keep the two lists in step. */
 const IMMUTABLE = ['styles.css', 'venue.css', 'site-ui.js', 'favorites.js',
-  'share.js', 'shortcuts.js', 'compare.js', 'search-page.js', 'analytics.js'];
+  'share.js', 'shortcuts.js', 'compare.js', 'search-page.js', 'analytics.js',
+  'location-tools.js'];
 
 const build = fs.readFileSync(path.join(ROOT, 'build-v2.js'), 'utf8');
 const m = build.match(/const ASSET_VERSION\s*=\s*'([^']+)'/);

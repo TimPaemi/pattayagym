@@ -1,6 +1,7 @@
 ---
 id: cartoon-network-amazone
 name: Columbia Pictures Aquaverse
+nameTh: โคลัมเบีย พิคเจอร์ส อควาเวิร์ส
 category: swimming
 area: Na Jomtien / Sattahip
 address: 888 Moo 8, Na Jomtien, Sattahip, Chonburi 20250
@@ -9,14 +10,18 @@ website: https://columbiapicturesaquaverse.com/en/
 social: {}
 hours: "Daily 10:00-18:00"
 priceRange: ""
+priceAsOf: 2026-07-29
+priceSourceUrl: https://columbiapicturesaquaverse.com/rides-attractions/bad-boys/go-kart-pattaya/
 distinction: Columbia Pictures-themed water and activity park, formerly Cartoon Network Amazone
 formerName: Cartoon Network Amazone
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://columbiapicturesaquaverse.com/en/
   - https://columbiapicturesaquaverse.com/en/about-us/
   - https://columbiapicturesaquaverse.com/en/contact-us/
   - https://columbiapicturesaquaverse.com/en/guest-services
+  - https://columbiapicturesaquaverse.com/rides-attractions/bad-boys/go-kart-pattaya/
+  - https://buynow.columbiapicturesaquaverse.com/
   - https://www.google.com/maps/search/?api=1&query=Columbia+Pictures+Aquaverse
 description: Na Jomtien water and theme park operating as Columbia Pictures Aquaverse, with film-themed zones, pools, slides and bookable attractions.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Columbia+Pictures+Aquaverse"
@@ -26,6 +31,8 @@ tags: [waterpark, slides, family, day-trip, themed, rebrand]
 # Columbia Pictures Aquaverse
 
 Columbia Pictures Aquaverse is the current operating identity for the Na Jomtien park formerly branded as Cartoon Network Amazone. It is a themed water-and-attractions day out rather than a training pool, but it still belongs in the swimming side of the directory because the public product is built around slides, pools and paid water access. The honest limitation is that the checked official pages did not show one stable static general-admission price.
+
+The operator's Thai booking page renders the 888 Moo 8 park name as **โคลัมเบีย พิคเจอร์ส อควาเวิร์ส**.
 
 ## What training is on offer
 
@@ -37,7 +44,7 @@ That distinction matters when comparing it with a public swim session or a hotel
 
 The operator's live official pages checked on 2026-07-27 confirmed the park identity, location, contact details and stated daily opening window of 10:00-18:00, but they did not expose one dependable static public ticket amount suitable for quoting here. Admission appears to run through a live booking flow and package offers that can vary by date or promotion.
 
-That means you should not reuse old Cartoon Network Amazone ticket prices or a reseller number as if it were the current operator tariff. Before paying, ask or check the official booking flow for the exact date, adult-versus-child pricing, resident-versus-tourist conditions if any, transport inclusions and whether specific land attractions, surfing products or premium experiences cost extra.
+That means you should not reuse old Cartoon Network Amazone ticket prices or a reseller number as if it were the current operator tariff. The operator does publish one specific add-on: Bad Boys Go Kart is **THB 990 for an eight-minute round**, checked 29 July 2026. That is a go-kart attraction price, not general park admission. Before paying, check the official booking flow for the exact date, adult-versus-child pricing, resident-versus-tourist conditions if any, transport inclusions and whether specific land attractions, surfing products or premium experiences cost extra.
 
 If a seller quotes a park ticket, ask whether it covers only entry or also transfers, food credit, locker use or access to add-on activities. This is the kind of attraction where the smallest headline number can hide a materially different day product.
 

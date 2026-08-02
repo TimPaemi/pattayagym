@@ -1,6 +1,7 @@
 ---
 id: muscle-factory-pattaya
 name: Muscle Factory Pattaya
+nameTh: Muscle Factory พัทยา
 category: fitness
 area: Pratamnak Hill
 address: Pratamnak Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -11,12 +12,16 @@ social:
   instagram: musclefactorypattaya
 hours: Daily 07:00-22:00
 priceRange: ""
+priceAsOf: 2026-07-29
+priceSourceUrl: https://musclefactory.co/collections/membership
 distinction: Large independent strength-training gym on Pratamnak
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/musclefactorypattaya/
   - https://www.instagram.com/musclefactorypattaya/
+  - https://musclefactory.co/collections/membership
   - https://www.google.com/maps/search/?api=1&query=Muscle+Factory+Pattaya
+  - https://www.ktc.co.th/pub/media/Pdf/sport/Fitness-202507.pdf
 description: Pratamnak gym with extensive strength equipment and group fitness classes.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Muscle+Factory+Pattaya"
 tags: [fitness, strength-training, bodybuilding, group-classes, pratamnak]
@@ -26,6 +31,8 @@ tags: [fitness, strength-training, bodybuilding, group-classes, pratamnak]
 
 Muscle Factory Pattaya is an operating fitness centre on Pratamnak Road. Its live Maps place matches the linked operator Facebook identity, address and phone, and shows recent owner media. It suits people prepared to confirm the exact pass and equipment they need; no dependable public tariff or complete inventory was accessible.
 
+The Thai fitness-directory PDF lists this 599/3 Soi Bonkai branch as **Muscle Factory พัทยา**.
+
 ## What training is on offer
 
 Google Maps classifies Muscle Factory as a fitness centre, and the operator-linked Facebook identity is the same business shown on the listing. This confirms a general gym rather than a single-discipline school. Recent owner media is visible on the Maps place, but the accessible first-hand text does not provide a machine-by-machine inventory, free-weight range or dated group-class timetable.
@@ -34,7 +41,7 @@ The record therefore does not promise a particular rack, platform, cable attachm
 
 ## What it costs
 
-No current operator-published day, week, month, joining or personal-training price was found on an accessible exact page as of **26 July 2026**. A blank price is not evidence of free access or a visitor pass.
+The operator's current membership store, checked 29 July 2026, lists a **US$20 drop-in**, **US$105 for seven drop-ins**, **US$128 sale price for one month** (regular US$168), and **US$1,280 sale price for twelve months** (regular US$1,680). These are operator-published US-dollar products; do not convert them into baht or assume a different branch's payment terms.
 
 Call **+66 83 695 9196** and ask for the complete price for the intended stay. Confirm whether registration, key or card deposits, towels, lockers, showers, group classes and trainer help are included. If a short pass is offered, request its validity dates, entry limit and refund or suspension rules in writing. The [gym day-pass guide](/guides/gym-day-pass-pattaya/) explains why a monthly membership and a one-off entry should not be treated as the same product.
 
@@ -58,7 +65,7 @@ Send the intended date, pass length and essential equipment. Ask about footwear,
 
 ## What we could not verify
 
-- No current public tariff or stable short-stay pass was found.
+- The store does not publish a baht-equivalent price, joining fee, refund terms or a Pattaya-specific payment rule.
 - No complete equipment, free-weight, cardio or studio inventory was published in accessible first-hand text.
 - Group-class times, coaching languages and trainer availability remain unconfirmed.
 - Air conditioning, shower and locker terms, towel provision, parking and overnight membership access were not established.

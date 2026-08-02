@@ -1,6 +1,7 @@
 ---
 id: sb-badminton-huai-yai
 name: SB Badminton Huai Yai
+nameTh: SB Badminton ห้วยใหญ่
 category: racquet
 area: Huai Yai
 address: 57/68 Moo 1, Soi 4, Huai Yai, Bang Lamung, Chonburi 20150
@@ -12,16 +13,19 @@ hours: Daily 13:00-23:00
 priceRange: ""
 distinction: Thai badminton court in Huai Yai with daily afternoon and evening hours
 facilities: [Badminton courts]
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/people/SB-Badminton%E0%B8%AB%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88/100057126773129/
   - https://www.google.com/maps/search/?api=1&query=SB+Badminton+Huai+Yai
+  - "https://www.google.com/maps/search/?api=1&query=SB+Badminton+Huai+Yai&hl=th"
 description: Huai Yai badminton venue with published daily 13:00-23:00 hours and a contact-first booking model.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=SB+Badminton+Huai+Yai"
 tags: [badminton, huai-yai, late-hours, thai-language]
 ---
 
 # SB Badminton Huai Yai
+
+Thai Maps uses **SB Badminton ห้วยใหญ่** for the 57/68 Moo 1 Huai Yai court, which lists daily 13:00-23:00 access.
 
 SB Badminton Huai Yai is a dedicated badminton venue inland from the beach corridor, with enough current evidence to confirm that it operates even though it does not publish a clean public rate card. The owner page and live Maps identity support the Huai Yai address, phone number and daily opening window.
 

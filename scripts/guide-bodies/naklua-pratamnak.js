@@ -5,7 +5,7 @@ module.exports = `
 
 <h2>Start with the side, then the access model</h2>
 
-<p>Naklua is the stronger first look for Fairtex Muay Thai, Wong Amat-area yoga, a north-side dive shop and resort fitness tied to a hotel stay. Pratamnak offers the denser mix of commercial strength training, a priced Muay Thai gym, indoor padel, pickleball, yoga, a public exercise park and a member yacht club. The exact pin matters on both sides. A record described as North Pattaya can be near a large road rather than the beach, while Pratamnak addresses spread across the hill, Kasetsin sois, Thappraya and the Royal Cliff side.</p>
+<p>Naklua is the stronger first look for <a href="/gyms/fairtex-pattaya/">Fairtex Muay Thai</a>, Wong Amat-area yoga, a north-side dive shop and resort fitness tied to a hotel stay. Pratamnak offers the denser mix of commercial strength training, a priced Muay Thai gym, indoor padel, pickleball, yoga, a public exercise park and a member yacht club. The exact pin matters on both sides. A record described as North Pattaya can be near a large road rather than the beach, while Pratamnak addresses spread across the hill, Kasetsin sois, Thappraya and the Royal Cliff side.</p>
 
 <p>Do not choose accommodation from an area label alone. Open the venue map, identify the building entrance and check the live route at the times you expect to train. This guide does not publish fixed drive times, taxi fares or a universal public-transport route because traffic, hill gradients and pickup location materially change the journey.</p>
 
@@ -23,15 +23,15 @@ module.exports = `
 </tbody>
 </table>
 
-<p>The Fairtex, Battle &amp; Conquer, Fitz, Ashtanga and Play Padel prices above were checked on 25 July 2026; the Nara Maze offer was checked on 24 July. Each amount belongs to the exact linked product, not to the venue in general. A blank price elsewhere in this guide means no stable current first-hand tariff was found, not free admission.</p>
+<p>The <a href="/gyms/fairtex-pattaya/">Fairtex</a>, <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a>, <a href="/gyms/fitz-club/">Fitz</a>, <a href="/gyms/ashtanga-yoga-pattaya/">Ashtanga</a> and <a href="/gyms/play-padel-pattaya/">Play Padel</a> prices above were checked on 25 July 2026; the <a href="/gyms/nara-maze-pool-day-pass/">Nara Maze</a> offer was checked on 24 July. Each amount belongs to the exact linked product, not to the venue in general. A blank price elsewhere in this guide means no stable current first-hand tariff was found, not free admission.</p>
 
 <h2>Naklua: coached training and north-side access</h2>
 
-<p><a href="/gyms/fairtex-pattaya/">Fairtex Training Center Pattaya</a> has the strongest public training evidence in the Naklua filter. The operator publishes Muay Thai and BJJ products for different experience levels. Its centre hours are Monday to Saturday from 07:30 to 20:00, while the relevant class time depends on the programme. In addition to the Muay Thai prices in the table, Fairtex listed BJJ at ฿300 for one session, ฿2,600 for ten sessions or ฿4,000 for one month, and private Muay Thai at ฿1,500.</p>
+<p><a href="/gyms/fairtex-pattaya/">Fairtex Training Center Pattaya</a> has current public training evidence in the Naklua filter. The operator publishes Muay Thai and BJJ products for different experience levels. Its centre hours are Monday to Saturday from 07:30 to 20:00, while the relevant class time depends on the programme. In addition to the Muay Thai prices in the table, Fairtex listed BJJ at ฿300 for one session, ฿2,600 for ten sessions or ฿4,000 for one month, and private Muay Thai at ฿1,500.</p>
 
-<p>Fairtex suits a visitor who wants a named combat product with a dated tariff and is prepared to reserve the correct session. It does not justify old claims about ring counts, a guaranteed trainer language at every class or accommodation inclusions that are not attached to the selected package. Ask whether the quote covers training only or a stay-and-train plan, which equipment is required and whether a beginner can join the chosen time.</p>
+<p><a href="/gyms/fairtex-pattaya/">Fairtex</a> suits a visitor who wants a named combat product with a dated tariff and is prepared to reserve the correct session. It does not justify old claims about ring counts, a guaranteed trainer language at every class or accommodation inclusions that are not attached to the selected package. Ask whether the quote covers training only or a stay-and-train plan, which equipment is required and whether a beginner can join the chosen time.</p>
 
-<p>The filter contains other Muay Thai identities, but they do not support the same price-led comparison. Pattaya Boxing World is an event and visitor product rather than an ordinary open training gym. EAGLE GYM has a current location identity but no stable public price in the record. A reader whose priority is an exact drop-in total should compare the broader <a href="/category/muay-thai/">Muay Thai category</a> rather than assuming every north-side result sells the same class format.</p>
+<p>The filter contains other Muay Thai identities, but they do not support the same price-led comparison. <a href="/gyms/pattaya-boxing-world/">Pattaya Boxing World</a> is an event and visitor product rather than an ordinary open training gym. <a href="/gyms/eagle-gym-pratamnak/">EAGLE GYM</a> has a current location identity but no stable public price in the record. A reader whose priority is an exact drop-in total should compare the broader <a href="/category/muay-thai/">Muay Thai category</a> rather than assuming every north-side result sells the same class format.</p>
 
 <h2>Naklua fitness: chain membership versus hotel amenity</h2>
 
@@ -39,7 +39,7 @@ module.exports = `
 
 <p><a href="/gyms/sun-fitness-buakao/">SUN Fitness Pattaya</a> likewise spans multiple locations. Its Naklua listing closes at 22:00, while the Buakhao and Pratamnak records publish later hours. No current owner tariff or cross-branch rule was accessible, so do not assume that a pass bought at one branch works at the others. The filter also contains independent and hotel fitness records whose equipment and eligibility differ.</p>
 
-<p><a href="/gyms/cape-dara-resort/">Cape Dara Resort</a> publishes a fitness centre with cardio and strength machines, free weights and yoga equipment, open daily from 06:00 to 22:00. Its current facility policy reserves the pools, fitness centre and playroom for registered in-house guests. <a href="/gyms/manhattan-pattaya-fitness/">Manhattan Pattaya Fitness Centre</a>, Dusit Thani, Centara Grand Mirage and Holiday Inn are also accommodation-led records. A hotel page confirming a gym is not evidence that a non-resident can buy a pass.</p>
+<p><a href="/gyms/cape-dara-resort/">Cape Dara Resort</a> publishes a fitness centre with cardio and strength machines, free weights and yoga equipment, open daily from 06:00 to 22:00. Its current facility policy reserves the pools, fitness centre and playroom for registered in-house guests. <a href="/gyms/manhattan-pattaya-fitness/">Manhattan Pattaya Fitness Centre</a>, <a href="/gyms/dusit-thani-pattaya/">Dusit Thani</a>, <a href="/gyms/centara-grand-mirage/">Centara Grand Mirage</a> and <a href="/gyms/holiday-inn-pattaya/">Holiday Inn</a> are also accommodation-led records. A hotel page confirming a gym is not evidence that a non-resident can buy a pass.</p>
 
 <h2>Naklua yoga, water and court options</h2>
 
@@ -47,7 +47,7 @@ module.exports = `
 
 <p><a href="/gyms/dive-station-pattaya/">Dive Station Pattaya</a> is the north-side SSI dive record. On 25 July it listed Try Scuba at ฿3,000, an SSI Basic Diver day at a ฿4,000 sale price, a certified-diver day at a ฿3,000 sale price and snorkelling at ฿1,350. These are full activity products with different eligibility and inclusions; shop hours were not clearly published, so arrange the meeting point and arrival time directly.</p>
 
-<p>For swimming, Nara Maze is the clearest published non-resident product. Its ฿500 net pass includes pool access from 09:00 to 18:00, drinking water, one smoothie and a food-and-drink discount. <a href="/gyms/wong-amat-beach/">Wong Amat Beach</a> is a public beach with no verified supervised hours or permanent safe-swim zone. The generic <a href="/gyms/pattaya-public-pool-naklua/">Naklua Public Swimming Pool</a> entry remains unverified and should not be used as directions.</p>
+<p>For swimming, <a href="/gyms/nara-maze-pool-day-pass/">Nara Maze</a> publishes a current non-resident product. Its ฿500 net pass includes pool access from 09:00 to 18:00, drinking water, one smoothie and a food-and-drink discount. <a href="/gyms/wong-amat-beach/">Wong Amat Beach</a> is a public beach with no verified supervised hours or permanent safe-swim zone. The generic <a href="/gyms/pattaya-public-pool-naklua/">Naklua Public Swimming Pool</a> entry remains unverified and should not be used as directions.</p>
 
 <p><a href="/gyms/naklua-16-badminton/">Naklua 16 Badminton</a> provides a current named court alternative off Soi Photisan. Its Maps listing was checked on 26 July and showed 12:00-23:00 Monday to Friday and Sunday, with Saturday closed. No current court price, phone, court count or equipment policy was published; ask through the operator page whether the quote is per court or player.</p>
 
@@ -76,11 +76,11 @@ module.exports = `
 <h2>Decision paths that avoid false comparisons</h2>
 
 <ul>
-<li><strong>One coached Muay Thai session:</strong> compare Fairtex at ฿800 with Battle &amp; Conquer at ฿500, then check class time, inclusions, location and equipment.</li>
-<li><strong>One ordinary workout:</strong> Battle &amp; Conquer has a published ฿200 gym day. Fitz is a broader ฿800 facilities pass. Other commercial gyms require a current quote.</li>
+<li><strong>One coached Muay Thai session:</strong> compare <a href="/gyms/fairtex-pattaya/">Fairtex</a> at ฿800 with <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> at ฿500, then check class time, inclusions, location and equipment.</li>
+<li><strong>One ordinary workout:</strong> <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> has a published ฿200 gym day. <a href="/gyms/fitz-club/">Fitz</a> is a broader ฿800 facilities pass. Other commercial gyms require a current quote.</li>
 <li><strong>Hotel-based training:</strong> choose the hotel first and verify guest eligibility, fitness hours and essential equipment. Do not import a public-pass assumption from another resort.</li>
-<li><strong>Racquet session:</strong> Play Padel publishes a court price; Fitz separates its facilities pass from court charges; Naklua 16 and PR Pickleball require contact.</li>
-<li><strong>Swimming:</strong> Nara Maze is a verified leisure pass, Wong Amat is an uncontrolled public beach and the generic Naklua pool record is unverified.</li>
+<li><strong>Racquet session:</strong> <a href="/gyms/play-padel-pattaya/">Play Padel</a> publishes a court price; <a href="/gyms/fitz-club/">Fitz</a> separates its facilities pass from court charges; <a href="/gyms/naklua-16-badminton/">Naklua 16</a> and <a href="/gyms/pickleball-pattaya/">PR Pickleball</a> require contact.</li>
+<li><strong>Swimming:</strong> <a href="/gyms/nara-maze-pool-day-pass/">Nara Maze</a> is a verified leisure pass, <a href="/gyms/wong-amat-beach/">Wong Amat</a> is an uncontrolled public beach and the generic <a href="/gyms/pattaya-public-pool-naklua/">Naklua pool record</a> is unverified.</li>
 <li><strong>Long stay:</strong> request a written monthly total, registration or key fees, cancellation terms, branch access and staffed arrival hours before choosing accommodation.</li>
 </ul>
 
@@ -89,10 +89,10 @@ module.exports = `
 <h2>FAQ</h2>
 
 <h3>Which side is better for Muay Thai?</h3>
-<p>Naklua has Fairtex, with a broad published Muay Thai and BJJ menu and a north-Pattaya location. Pratamnak has Battle &amp; Conquer, with twice-daily group Muay Thai plus separately priced gym and recovery access. Compare the exact class, total, inclusions and route rather than choosing on area reputation.</p>
+<p>Naklua has <a href="/gyms/fairtex-pattaya/">Fairtex</a>, with a broad published Muay Thai and BJJ menu and a north-Pattaya location. Pratamnak has <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a>, with twice-daily group Muay Thai plus separately priced gym and recovery access. Compare the exact class, total, inclusions and route rather than choosing on area reputation.</p>
 
 <h3>Can non-hotel guests use the resort gyms?</h3>
-<p>Only when the operator publishes outside access or confirms it for the chosen date. Fitz explicitly sells an outside-guest facilities pass. Cape Dara reserves its listed facilities for registered in-house guests, while Cross and InterContinental do not publish a current non-resident gym pass.</p>
+<p>Only when the operator publishes outside access or confirms it for the chosen date. <a href="/gyms/fitz-club/">Fitz</a> explicitly sells an outside-guest facilities pass. <a href="/gyms/cape-dara-resort/">Cape Dara</a> reserves its listed facilities for registered in-house guests, while <a href="/gyms/cross-pattaya-pratamnak/">Cross</a> and <a href="/gyms/intercontinental-pattaya/">InterContinental</a> do not publish a current non-resident gym pass.</p>
 
 <h3>What should I confirm before paying?</h3>
 <p>Confirm the exact product, date, start time, full price, eligibility, registration or key fee, equipment, booking and cancellation terms, staffed arrival window and exact entrance. For hotel records, ask whether access is included in the room. For court or water activities, add weather, equipment hire and meeting-point questions.</p>

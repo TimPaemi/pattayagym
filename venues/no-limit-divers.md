@@ -1,5 +1,6 @@
 ---
 id: no-limit-divers
+nameTh: โนลิมิตไดเวอร์ส พัทยา
 name: No Limit Divers
 category: watersports
 area: Central Pattaya / Second Road
@@ -21,12 +22,15 @@ sources:
   - https://nolimitdive.com/prices/
   - https://nolimitdive.com/padi-open-water-diver-course/
   - https://www.google.com/maps/search/?api=1&query=No+Limit+Divers+Pattaya
+  - https://www.kkday.com/th/product/263420
 description: Central Pattaya PADI dive centre offering day trips, beginner courses and professional-level training.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=No+Limit+Divers+Pattaya"
 tags: [padi, dive-trips, courses, instructor-development, central-pattaya]
 ---
 
 # No Limit Divers
+
+A Thai booking listing names this operator โนลิมิตไดเวอร์ส พัทยา and describes an 08:30 arrival window for one current product at 485/9.
 
 ## What training is on offer
 

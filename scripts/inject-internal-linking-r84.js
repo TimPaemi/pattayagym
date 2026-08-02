@@ -164,8 +164,8 @@ function toolsSection() {
       <li><a href="/plan-my-trip/">Plan my trip</a> — filter ${GYMS.length} venues by sport and area</li>
       <li><a href="/favorites/">Favorites</a> — your saved shortlist (browser-only)</li>
       <li><a href="/search/">Search</a> — find by name or sport</li>
-      <li><a href="/map/">Map</a> — interactive map rebuilding; use search meanwhile</li>
-      <li><a href="/find-my-coach/">Find a coach</a> — coach finder coming soon</li>
+      <li><a href="/map/">Map</a> — venue-specific points; guessed centroids excluded</li>
+      <li><a href="/find-my-coach/">Find coaching</a> — match needs to source-checked venue records</li>
       <li><a href="/guides/">All guides</a> — editorial trip planners</li>
     </ul>
   </div>
@@ -213,7 +213,7 @@ function siteToolsHub() {
       <a href="/compare/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Compare</span><span class="intent-card-desc">Side-by-side venue table</span></a>
       <a href="/plan-my-trip/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Plan trip</span><span class="intent-card-desc">Build your shortlist</span></a>
       <a href="/favorites/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Favorites</span><span class="intent-card-desc">Save venues locally</span></a>
-      <a href="/map/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Map</span><span class="intent-card-desc">Rebuilding — use search</span></a>
+      <a href="/map/" class="intent-card intent-card-compact"><span class="intent-card-tag">// Tool</span><span class="intent-card-title">Map</span><span class="intent-card-desc">Venue-specific location explorer</span></a>
     </div>
   </div>
 </section>`;
@@ -226,11 +226,9 @@ function insertBeforeAnchor(html, block, anchorSubstr) {
 }
 
 function fixPaNetwork(html) {
-  if (html.includes('pa-network-grid') && html.includes('Personal Trainer')) return null;
   const re = /<section class="pa-network">[\s\S]*?<\/section>/;
   if (!re.test(html)) return null;
-  const isGuide = /\/guides\//.test(html) || html.includes('guide-rank-primer');
-  return html.replace(re, paNetworkHtml({ hereOnGym: !isGuide, badgeUrl: 'https://pattaya-authority.com/' }));
+  return html.replace(re, paNetworkHtml());
 }
 
 function injectSisterBeforeMainEnd(html) {

@@ -1,6 +1,7 @@
 ---
 id: diana-driving-range
 name: Diana Driving Range
+nameTh: ไดอาน่า ไดรฟ์วิ่ง เรนจ์
 category: golf
 area: North Pattaya
 address: 209/112 Moo 6, North Pattaya Road, Pattaya, Bang Lamung, Chonburi 20150
@@ -14,12 +15,15 @@ verified: 2026-07-26
 sources:
   - https://www.google.com/travel/hotels/entity/ChgIo5qirZCuv_ayARoLL2cvMXRmNW1wNTYQAQ
   - https://www.google.com/maps/search/?api=1&query=Diana+Garden+Resort+Driving+Range+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Diana+Driving+Range+Pattaya&hl=th"
 description: North Pattaya driving range open daily; current ball and bay prices are not published.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Diana+Driving+Range+Pattaya"
 tags: [driving-range, north-pattaya, resort]
 ---
 
 # Diana Driving Range
+
+Thai Maps names the 209/112 Moo 6 North Pattaya Road range **ไดอาน่า ไดรฟ์วิ่ง เรนจ์**, with daily 06:00-22:00 hours.
 
 Diana Driving Range is a standalone golf-practice listing at the Diana Garden Resort property on North Pattaya Road. Its live Maps place confirms the range identity, address, phone and daily schedule, with recent owner media visible. It suits practice-first golfers who can call for the current basket and equipment terms.
 

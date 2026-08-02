@@ -1,20 +1,21 @@
 ---
 id: movenpick-siam-pattaya
 name: Mövenpick Siam Hotel Na Jomtien Pattaya
+nameTh: โรงแรมเมอเวนพิค สยาม นาจอมเทียน พัทยา
 category: fitness
 area: Na Jomtien
 address: 55 Moo 2, Sukhumvit Road Km 156.5, Na Jomtien, Sattahip, Chonburi 20250
 phone: "+66 33 078 888"
 website: https://www.movenpickpattayanajomtien.com/
 social: {}
-hours: "Fitness centre 24 hours; pool daily 07:00-20:00"
+hours: "Fitness centre daily 00:00-24:00; pool daily 07:00-20:00"
 priceRange: ""
 distinction: Hotel fitness centre with a seafront pool in Na Jomtien
 facilities: [Fitness centre, Seafront swimming pool, Spa, Kids club]
 access: Hotel guests; no public fitness day pass was published
 beginnerFriendly: true
 languages: [English, Thai]
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.movenpickpattayanajomtien.com/
   - https://www.movenpickpattayanajomtien.com/facilities-activities/
@@ -22,12 +23,15 @@ sources:
   - https://movenpick.accor.com/en/asia/thailand/pattaya/moevenpick-siam-hotel-na-jomtien-pattaya.html
   - https://all.accor.com/hotel/B4J6/index.en.shtml
   - https://www.google.com/maps/search/?api=1&query=Movenpick+Siam+Na+Jomtien+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Movenpick+Siam+Hotel+Na+Jomtien+Pattaya&hl=th"
 description: Na Jomtien hotel with a 24-hour fitness centre, seafront pool, spa and children's club.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Movenpick+Siam+Na+Jomtien+Pattaya"
 tags: [hotel-gym, 24-hour, swimming-pool, na-jomtien]
 ---
 
 # Mövenpick Siam Hotel Na Jomtien Pattaya
+
+Thai Maps calls the Na Jomtien hotel at Sukhumvit kilometre 156.5 **โรงแรมเมอเวนพิค สยาม นาจอมเทียน พัทยา**, consistent with the recorded 24-hour gym and 07:00-20:00 pool.
 
 Mövenpick Siam is a Na Jomtien resort with a 24-hour fitness centre, seafront leisure pool, spa and children’s club. The operator presents these as hotel facilities rather than a public gym product. It best suits registered guests; no current non-resident fitness pass is published.
 

@@ -1,5 +1,6 @@
 ---
 id: pattaya-cricket-club
+nameTh: พัทยา คริกเก็ต คลับ
 name: Pattaya Cricket Club
 category: clubs
 area: Pong / East Pattaya
@@ -19,12 +20,15 @@ sources:
   - https://www.bclcricket.com/BangkokCricketLeague/viewTeam.do?clubId=31385&teamId=968
   - https://www.bclcricket.com/BangkokCricketLeague/fixtures.do?clubId=31385&groundId=null&internalClubId=null&league=121&teamId=null&year=2026
   - https://www.google.com/maps/search/?api=1&query=Horseshoe+Point+Cricket+Ground
+  - https://buraphaevent.com/author/buraphaevent/page/3/
 description: Active Pattaya cricket club playing current Bangkok Cricket League fixtures from Horseshoe Point.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Horseshoe+Point+Cricket+Ground"
 tags: [cricket, bangkok-cricket-league, horseshoe-point, east-pattaya]
 ---
 
 # Pattaya Cricket Club
+
+A Thai sports report writes the team name as พัทยา คริกเก็ต คลับ and describes its participation in the Koh Chang event; the current record remains anchored to the club's own 2026 fixtures.
 
 Pattaya Cricket Club is an active playing club whose current league record names Horseshoe Point as its home ground. It welcomes playing and social enquiries, but it does not publish a walk-in session or current membership price. Contact the club before travelling because fixtures can use other grounds and training is not a daily attraction.
 

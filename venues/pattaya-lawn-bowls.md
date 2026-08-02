@@ -7,13 +7,13 @@ address: Multiple locations; use the venue-specific contacts below
 phone: ""
 website: https://backend.pattayasports.org/lawn_bowls_front_page
 social: {}
-hours: Roll-up and booking times vary by facility
+hours: Banchang roll-ups Mon/Wed/Fri 10:00; The Retreat afternoon roll-ups Wed/Fri/Sun; other facility times require confirmation
 priceRange: ฿
 priceAsOf: 2026-07-25
 priceSourceUrl: https://backend.pattayasports.org/lawn_bowls_front_page
 distinction: Four currently listed lawn-bowls facilities around Pattaya and Ban Chang
 facilities: [Banchang Lawn Bowls Club, Coco Sports Indoor Lawn Bowling, Paradise Lawn Bowls Pattaya, The Retreat]
-verified: 2026-07-25
+verified: 2026-07-29
 sources:
   - https://backend.pattayasports.org/lawn_bowls_front_page
   - https://pattayasports.org/lawn-bowls/
@@ -42,3 +42,23 @@ Those prices were checked on 25 July 2026 against the Pattaya Sports Club source
 ## First visit
 
 Choose Banchang or Coco if weather protection matters. Paradise requires advance contact, while The Retreat publishes both grass and artificial play. Ask whether the day's session is a roll-up, competition or private booking and whether bowls in your size are available.
+
+## What training is on offer
+
+The directory covers four distinct lawn-bowls facilities with indoor, covered, grass and artificial-rink options. It is not a single club timetable, and each facility controls its own roll-ups and bookings.
+
+## Who it suits — and who it does not
+
+Banchang and Coco are the documented weather-protected options. Players seeking an outdoor rink can ask Paradise or The Retreat directly. The sources do not promise a novice lesson, a league place or a specific rink at a chosen time.
+
+## Getting there
+
+Use the individual venue contacts and Maps links in the source list, rather than treating the broad multi-location record as one address or phone number.
+
+## Before you go
+
+Confirm whether the session is open play, competition or a private booking, and whether bowls in the needed size are available. The retained directory identifies Banchang roll-ups at 10:00 on Monday, Wednesday and Friday, while The Retreat lists afternoon roll-ups on Wednesday, Friday and Sunday; those are not a shared four-venue timetable.
+
+## What we could not verify
+
+No unified booking policy, all-facility fee table, coaching roster, accessibility statement or current Paradise tariff is published in the retained directory source.

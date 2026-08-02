@@ -1,6 +1,7 @@
 ---
 id: planet-football-pattaya
 name: Planet Football Pattaya
+nameTh: สนามแพลนเน็ทฟุตบอล
 category: kids-youth
 area: Nong Prue / East Pattaya
 address: Planet Football Stadium, 55/15 Moo 2, Siam Country Club Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -10,15 +11,16 @@ website: https://www.pattayafootball.com/
 social:
   facebook: pattayafootball
   instagram: planetfootballpattaya
-hours: Programme times vary by age group; confirm the selected session with the academy
+hours: "Sat 09:00-10:30 open youth sessions; development Sat/Sun 13:30-17:00 and Mon 17:30-19:00; academy weekdays 17:00-19:00"
 priceRange: ฿
-priceAsOf: 2026-07-26
+priceAsOf: 2026-07-29
 priceSourceUrl: https://www.pattayafootball.com/coaching/development-programme/
 distinction: Two-stadium East Pattaya football programme with open youth sessions, a development pathway and invite-only academy squads
 programmes: [Mini Kicks, Kiddy Kickers, Soccer School, Development Programme, FC Planet Academy, Camps]
 beginnerFriendly: true
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
+  - https://www.thaithurkic.com/%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B9%81%E0%B8%9E%E0%B8%A5%E0%B8%99%E0%B9%80%E0%B8%99%E0%B9%87%E0%B8%97%E0%B8%9F%E0%B8%B8%E0%B8%95%E0%B8%9A%E0%B8%AD%E0%B8%A5-planet-football-095-995-7693
   - https://www.pattayafootball.com/
   - https://www.pattayafootball.com/coaching/mini-kicks/
   - https://www.pattayafootball.com/coaching/kiddy-kicks/
@@ -35,6 +37,8 @@ tags: [football, kids, youth, academy, nong-prue]
 
 # Planet Football Pattaya
 
+The Thai directory entry names the main ground **สนามแพลนเน็ทฟุตบอล**.
+
 Planet Football is a youth football operator with two East Pattaya grounds and a pathway from open beginner sessions to development training and invite-only academy squads. The main directory pin is Planet Football Stadium on Siam Country Club Road; families must confirm which ground hosts the selected age group before travelling.
 
 ## What training is on offer
@@ -47,7 +51,7 @@ FC Planet Academy is invite-only, normally reached through Soccer School or Deve
 
 ## What it costs
 
-Each of the three Saturday open-session pages lists **฿400 per player** (operator pages, checked 26 July 2026). The Development Programme page lists **฿2,500 per calendar month** and a separate **฿2,500 yearly membership** that includes three programme kits and a training ball (operator page, checked 26 July 2026).
+Each of the three Saturday open-session pages lists **฿400 per player** (operator pages, checked 29 July 2026). The Development Programme page lists **฿2,500 per calendar month** and a separate **฿2,500 yearly membership** that includes three programme kits and a training ball (operator page, checked 29 July 2026).
 
 Confirm whether both Development payments are due at joining, the first billing date, absence or make-up rules and whether matches, tournaments or travel cost extra. The public Academy page does not publish an invite-only squad fee.
 

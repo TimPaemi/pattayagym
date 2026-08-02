@@ -1,6 +1,7 @@
 ---
 id: holiday-inn-pattaya
 name: Holiday Inn Pattaya
+nameTh: โรงแรมฮอลิเดย์ อินน์ พัทยา
 category: fitness
 area: Beach Road / North Pattaya
 address: 463/68 and 463/99 Moo 9 Pattaya Sai 1 Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -19,12 +20,15 @@ sources:
   - https://www.ihg.com/holidayinn/hotels/us/en/pattaya/pyxpa/hoteldetail/amenities
   - https://www.ihg.com/holidayinn/hotels/th/th/pattaya/pyxpa/hoteldetail/amenities
   - https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Pattaya&hl=th"
 description: Beach Road hotel with two 24-hour fitness centres, two infinity pools and a family pool.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Holiday+Inn+Pattaya"
 tags: [hotel-gym, 24-hour, beach-road, swimming-pool, spa, hotel-guests]
 ---
 
 # Holiday Inn Pattaya
+
+The Thai Maps name **โรงแรมฮอลิเดย์ อินน์ พัทยา** covers the Sai 1 property whose fitness centres operate 24 hours.
 
 Holiday Inn Pattaya operates two hotel fitness centres, one on level 5 of the Bay Tower and one on level 7 of the Executive Tower. The property's current fitness page lists both as open 24 hours and limits use to hotel guests aged 16 or older. This is an accommodation amenity record, not evidence of a public commercial gym.
 

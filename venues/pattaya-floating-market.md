@@ -1,6 +1,7 @@
 ---
 id: pattaya-floating-market
 name: Pattaya Floating Market
+nameTh: ตลาดน้ำ 4 ภาค พัทยา
 category: clubs
 area: Sukhumvit Road / South Pattaya
 address: 451/304 Moo 12, Sukhumvit Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -15,6 +16,7 @@ verified: 2026-07-26
 sources:
   - https://www.pattayafloatingmarket.com/
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Floating+Market
+  - https://www.openstreetmap.org/way/962535135
 description: Operating cultural floating market; no current first-hand evidence supports treating it as a sports venue.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Floating+Market"
 tags: [cultural-attraction, market, family, south-pattaya, non-sport]
@@ -24,7 +26,7 @@ tags: [cultural-attraction, market, family, south-pattaya, non-sport]
 
 ## What training is on offer
 
-No current first-hand source checked on 26 July 2026 presents Pattaya Floating Market as a place to train, exercise or book a sports lesson. Its active Maps identity categorises it as a tourist attraction and links to the operator domain. The record therefore carries a **non-sport** status even though it remains in the legacy clubs category.
+No current first-hand source checked on 26 July 2026 presents Pattaya Floating Market as a place to train, exercise or book a sports lesson. OpenStreetMap records the Thai name **ตลาดน้ำ 4 ภาค พัทยา**, which helps Thai-speaking visitors match the attraction identity. Its active Maps identity categorises it as a tourist attraction and links to the operator domain. The record therefore carries a **non-sport** status even though it remains in the legacy clubs category.
 
 An earlier directory version mentioned Muay Talay performances, rowboats, amphibious boats and a zipline. Those claims were removed because the current operator material available during verification did not provide a dependable activity page, schedule or booking product for them. Historical or promotional references are not enough to present a current sports offer.
 

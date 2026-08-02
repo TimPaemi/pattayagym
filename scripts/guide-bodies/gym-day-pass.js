@@ -23,31 +23,31 @@ module.exports = `
 </tbody>
 </table>
 
-<p>Only compare like with like. Elite's ฿400 amount buys general gym access; its operator lists one group class at ฿300 and personal training separately. Fitz costs more because the published pass includes pool and wet-area access. ISS separates ordinary facility use from a boxing or Muay Thai package. The similar word “day” does not make those three purchases equivalent.</p>
+<p>Only compare like with like. <a href="/gyms/elite-gym-fitness/">Elite's</a> ฿400 amount buys general gym access; its operator lists one group class at ฿300 and personal training separately. <a href="/gyms/fitz-club/">Fitz</a> costs more because the published pass includes pool and wet-area access. <a href="/gyms/wko-muay-thai/">ISS</a> separates ordinary facility use from a boxing or Muay Thai package. The similar word “day” does not make those three purchases equivalent.</p>
 
-<h2>The clearest conventional gym day pass</h2>
+<h2>A conventional gym day pass</h2>
 
 <p><a href="/gyms/elite-gym-fitness/">Elite Gym &amp; Fitness Pattaya</a> publishes the most direct ordinary-gym example in the current set. Its operator rate page listed day access at <strong>฿400</strong> when checked on <strong>25 July 2026</strong>. The same source listed ten visits at ฿2,500 with validity of less than three months and one month at ฿3,000. The venue page records a 1,600-square-metre air-conditioned facility, open training, personal training and scheduled group classes.</p>
 
-<p>Do not assume the day amount includes a class. Elite's operator listed a single group class at ฿300 and ten classes at ฿1,800 on the same check date. Ask whether the selected class requires advance booking and whether a day-access purchase can be combined with it. Elite is on Sukhumvit Road rather than in the Beach Road mall corridor, so use the exact pin before choosing it for convenience.</p>
+<p>Do not assume the day amount includes a class. <a href="/gyms/elite-gym-fitness/">Elite's operator</a> listed a single group class at ฿300 and ten classes at ฿1,800 on the same check date. Ask whether the selected class requires advance booking and whether a day-access purchase can be combined with it. The <a href="/gyms/elite-gym-fitness/">Elite venue record</a> places it on Sukhumvit Road rather than in the Beach Road mall corridor, so use the exact pin before choosing it for convenience.</p>
 
 <h2>When a premium pass is genuinely broader</h2>
 
 <p><a href="/gyms/fitz-club/">Fitz Club</a> at Royal Cliff explicitly welcomes outside guests. Its 2026 guest tariff, checked on <strong>25 July 2026</strong>, listed an adult day pass at <strong>฿800</strong> and a pass for children under 12 at <strong>฿400</strong>. The adult product covers the gym, swimming pool, sauna and steam rooms. It excludes tennis and squash, which have separate prices and booking needs.</p>
 
-<p>Fitz is therefore useful when a pool and recovery facilities matter alongside the workout. It is poor value if the only requirement is a short weights session. The operator publishes gym, class, sauna and steam hours of 07:00-21:00, while courts and pool close at 20:00. Arrive according to the facility you intend to use, not the latest closing time in the record.</p>
+<p><a href="/gyms/fitz-club/">Fitz</a> is therefore useful when a pool and recovery facilities matter alongside the workout. It is poor value if the only requirement is a short weights session. The operator publishes gym, class, sauna and steam hours of 07:00-21:00, while courts and pool close at 20:00. Arrive according to the facility you intend to use, not the latest closing time in the record.</p>
 
 <h2>A combat venue may sell ordinary gym access separately</h2>
 
 <p><a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a> demonstrates why the product name matters. Its operator tariff checked on <strong>25 July 2026</strong> listed general gym access at <strong>฿300 for one day, ฿800 for one week and ฿1,500 for one month</strong>. Its boxing or Muay Thai class package was separately priced. Someone who only wants resistance or cardio work should ask for the facility-access product rather than paying for coached combat by mistake.</p>
 
-<p>This is also useful weekly-pass arithmetic without inventing a city-wide average: three ฿300 day visits equal ฿900, so the published ฿800 week becomes cheaper on the third visit, provided the week covers the intended dates and facilities. That calculation applies only to this dated ISS tariff, not to every Pattaya gym.</p>
+<p>This is also useful weekly-pass arithmetic without inventing a city-wide average: three ฿300 day visits equal ฿900, so the published ฿800 week becomes cheaper on the third visit, provided the week covers the intended dates and facilities. That calculation applies only to this dated <a href="/gyms/wko-muay-thai/">ISS tariff</a>, not to every Pattaya gym.</p>
 
 <h2>How to approach the 24-hour chains</h2>
 
 <p><a href="/gyms/jetts-fitness-pattaya/">Jetts Little Walk Pattaya</a> publishes 24-hour member access and staffed periods of 06:00-22:00 Monday-Friday and 08:00-20:00 at weekends and on public holidays. Its tourist visitor page names Little Walk, says there is no entry fee or long-term contract for the visitor product and describes access to equipment and classes, but the page view checked on 26 July 2026 did not expose a Pattaya amount before the next application steps.</p>
 
-<p>A first-time Jetts visitor should therefore contact the branch or arrive during staffed hours. Ask for the total pass price, activation time, identification, access-card terms, class booking, expiry and cancellation. “No entry fee” is not the same statement as “no charge for the pass.”</p>
+<p>A first-time <a href="/gyms/jetts-fitness-pattaya/">Jetts visitor</a> should therefore contact the branch or arrive during staffed hours. Ask for the total pass price, activation time, identification, access-card terms, class booking, expiry and cancellation. “No entry fee” is not the same statement as “no charge for the pass.”</p>
 
 <p><a href="/gyms/anytime-fitness-pattaya/">Anytime Fitness Pattaya</a> covers two separate branches in one directory record. Both list 24-hour member access. The Bukis Point operator page links to a one-day free-trial request, but a request route does not establish eligibility, instant approval or reception availability. The Again Pattaya phone belongs to a different branch. Use the intended branch page and pin, then confirm staffed arrival and trial conditions.</p>
 
@@ -80,9 +80,9 @@ module.exports = `
 <section class="guide-faq" aria-labelledby="day-pass-faq-h">
 <h2 id="day-pass-faq-h">Common day-pass questions</h2>
 
-<details class="faq-item"><summary>How much is a verified fitness-gym day pass in Pattaya?</summary><p>The current operator-published examples in this guide are not a market average. Elite listed ordinary gym day access at ฿400 on 25 July 2026, while ISS listed general facility access at ฿300 on the same date. Fitz listed a broader gym, pool, sauna and steam pass at ฿800. Check the linked venue record because inclusions differ.</p></details>
+<details class="faq-item"><summary>How much is a verified fitness-gym day pass in Pattaya?</summary><p>The current operator-published examples in this guide are not a market average. <a href="/gyms/elite-gym-fitness/">Elite</a> listed ordinary gym day access at ฿400 on 25 July 2026, while <a href="/gyms/wko-muay-thai/">ISS</a> listed general facility access at ฿300 on the same date. <a href="/gyms/fitz-club/">Fitz</a> listed a broader gym, pool, sauna and steam pass at ฿800. Check the linked venue record because inclusions differ.</p></details>
 
-<details class="faq-item"><summary>Can I enter a 24-hour gym at any time on my first visit?</summary><p>Not safely assumed. Twenty-four-hour labels commonly describe member door access. Jetts publishes narrower staffed hours, and Anytime's free-trial route requires confirmation. Arrange registration and activation with the exact branch before an overnight or early-morning first visit.</p></details>
+<details class="faq-item"><summary>Can I enter a 24-hour gym at any time on my first visit?</summary><p>Not safely assumed. Twenty-four-hour labels commonly describe member door access. <a href="/gyms/jetts-fitness-pattaya/">Jetts Little Walk</a> publishes narrower staffed hours, and <a href="/gyms/anytime-fitness-pattaya/">Anytime's</a> free-trial route requires confirmation. Arrange registration and activation with the exact branch before an overnight or early-morning first visit.</p></details>
 
 <details class="faq-item"><summary>What should I do when a current gym publishes no price?</summary><p>Contact the exact venue and ask for the one-day, weekly and monthly totals, staffed registration time, deposits, inclusions and expiry. Do not replace the missing amount with an old review, another branch's tariff or a city-wide estimate. A missing public price does not establish that the venue is closed or refuses visitors.</p></details>
 </section>

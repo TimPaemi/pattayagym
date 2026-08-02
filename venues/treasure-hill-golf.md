@@ -1,6 +1,7 @@
 ---
 id: treasure-hill-golf
 name: Treasure Hill Golf Club
+nameTh: เทรชเชอร์ฮิลล์ กอล์ฟ คลับ
 category: golf
 area: Ban Bueng / Chonburi
 address: 222 Moo 7, Khlong Kio, Ban Bueng, Chonburi 20220
@@ -12,12 +13,14 @@ priceRange: ""
 distinction: 18-hole, par-72 course in Ban Bueng
 holes: 18
 par: 72
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
+  - https://thailandpga.or.th/wp-content/uploads/2026/02/1-SINGHA-SAT-Chonburi-Championship-2026_Tournament-Information.pdf
   - https://www.treasurehill.co.th/
   - https://www.treasurehill.co.th/ourservice/golf_course
   - https://treasurehill.co.th/ourservice/pro_shop
   - https://thailandlpga.or.th/wp-content/uploads/2025/03/SINGHA-NSDF-Chonburi-Ladies-Championship-2025-Info-EN.pdf
+  - https://thailandpga.or.th/wp-content/uploads/2026/02/1-SINGHA-SAT-Chonburi-Championship-2026_Tournament-Information.pdf
   - https://www.google.com/maps/search/?api=1&query=Treasure%20Hill%20Golf%20Club%20Chonburi
 description: Ban Bueng 18-hole, par-72 golf course with daily Maps hours, a pro shop and contact-first green fees.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Treasure%20Hill%20Golf%20Club%20Chonburi"
@@ -25,6 +28,8 @@ tags: [golf, ban-bueng, chonburi, 18-holes, par-72]
 ---
 
 # Treasure Hill Golf Club
+
+The Thai tournament information identifies the course as **เทรชเชอร์ฮิลล์ กอล์ฟ คลับ**.
 
 Treasure Hill is an 18-hole, par-72 course in Khlong Kio, Ban Bueng. Its operator publishes the course format and address, and the current Maps identity supplies daily opening hours. The main limitation for a visitor is pricing: no current operator rate card was readable on 27 July 2026, so a tee time and complete round cost require direct confirmation.
 

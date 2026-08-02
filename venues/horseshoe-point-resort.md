@@ -1,22 +1,25 @@
 ---
 id: horseshoe-point-resort
 name: Horseshoe Point
+nameTh: ฮอร์สชู พอยท์
 category: equestrian
 area: Pong / East Pattaya
 address: 100 Moo 9, Pong, Bang Lamung, Chonburi 20150
 phone: "+66 38 735 050; +66 63 994 7165"
 website: https://horseshoepoint.com/
 social: {}
-hours: Contact the venue for current riding hours
+hours: Daily 08:00-12:00 and 13:00-17:00 by appointment; confirm riding availability
 priceRange: ""
 distinction: East Pattaya equestrian and resort venue with current competition use
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://horseshoepoint.com/
   - https://horseshoepoint.com/en/service/horse-riding-school
   - https://horseshoepoint.com/en/contact
   - https://results.equi-score.be/files/2026/32641/doc1_3.pdf?1774084435=
   - https://www.google.com/maps/search/?api=1&query=Horseshoe+Point+Pattaya
+  - https://www.petshops1.com/TH/Mueang-Pattaya/378765945921822/International-Riding-School-at-Horseshoe-Point
+  - https://www.thaiholidayguide.com/attraction/the-horseshoe-point/
 description: East Pattaya equestrian venue and resort with documented 2026 competition use.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Horseshoe+Point+Pattaya"
 tags: [equestrian, horse-riding, competition, east-pattaya, pong]
@@ -25,6 +28,8 @@ tags: [equestrian, horse-riding, competition, east-pattaya, pong]
 # Horseshoe Point
 
 Horseshoe Point is an equestrian school and resort site at 100 Moo 9 in Pong. The operator currently describes lessons, trails and pony activity, while an approved March 2026 competition schedule provides dated evidence of equestrian use. The public pages do not supply a current lesson timetable or tariff, so recreational access remains contact-first.
+
+Thai tourism listings shorten the 100 Moo 9 equestrian venue name to **ฮอร์สชู พอยท์**.
 
 ## What training is on offer
 
@@ -50,7 +55,7 @@ The operator publishes **100 Moo 9, Pong, Bang Lamung, Chonburi 20150**. Its con
 
 ## Before you go
 
-Contact the school with the rider's age, height, experience, preferred discipline and date. Ask whether an assessment is required, what clothing and footwear are mandatory, whether a helmet is supplied, and how weather or an event affects the booking. Confirm the correct entrance, instructor language, arrival time and payment or cancellation terms. Resort opening information should not be substituted for a riding-school appointment.
+The riding school's current public profile states daily 08:00-12:00 and 13:00-17:00 hours and asks visitors to make an appointment in advance. Contact the school with the rider's age, height, experience, preferred discipline and date. Ask whether an assessment is required, what clothing and footwear are mandatory, whether a helmet is supplied, and how weather or an event affects the booking. Confirm the correct entrance, instructor language, arrival time and payment or cancellation terms.
 
 ## What we could not verify
 

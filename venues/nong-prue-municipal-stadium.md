@@ -1,6 +1,7 @@
 ---
 id: nong-prue-municipal-stadium
 name: Nong Prue Municipal Stadium
+nameTh: สนามกีฬาเทศบาลเมืองหนองปรือ
 category: clubs
 area: Nong Prue / East Pattaya
 address: Nong Prue, Bang Lamung, Chonburi 20150
@@ -16,12 +17,15 @@ sources:
   - https://smartdastaapp.dasta.or.th/place/38?lang=th
   - https://www.localgymsandfitness.com/TH/Unknown/846500035701349/Saimit-Kabin-United-Academy
   - https://www.google.com/maps/search/?api=1&query=Nong+Prue+Municipal+Stadium
+  - "https://www.google.com/maps/search/?api=1&query=Nong+Prue+Municipal+Stadium&hl=th"
 description: Nong Prue public stadium with municipal facilities and current youth-football competition use.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Nong+Prue+Municipal+Stadium"
 tags: [municipal-stadium, football, youth-sport, nong-prue, east-pattaya]
 ---
 
 # Nong Prue Municipal Stadium
+
+The stadium was labelled **สนามกีฬาเทศบาลเมืองหนองปรือ** in the Thai Maps result checked on 29 July 2026.
 
 Nong Prue Municipal Stadium is a public sports ground in East Pattaya used for community exercise, youth sport and football competition. Municipal and DASTA pages identify it as a community and regional facility, and 2026 youth-football activity supports continued competition use. The exact Maps identity was live on 26 July at Plus Code WWFP+PVF beside Wat Sutthawat. That does not by itself establish public training access.
 

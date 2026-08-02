@@ -1,59 +1,40 @@
 # pattaya-gym.com — humans.txt
-# We are humans, building things for humans.
+# A source-checked sport directory made in Pattaya.
 
-/* TEAM */
-  Editor / Founder: Tim Paemi
-  Site:             https://timpaemi.com/
-  Contact:          info@pattaya-gym.com
-  Location:         Pattaya, Chonburi, Thailand
-  Coordinates:      12.93°N, 100.88°E
-
-/* THANKS */
-  Every gym owner, trainer, fighter, instructor, and diver who answered
-  our research questions — you make this directory worth maintaining.
-
-  the gyms here exist because of the community you built.
+/* PEOPLE */
+  Authors:           Tim and Paemi
+  Publisher:         TimPaemi Co., Ltd.
+  Publisher hub:     https://timpaemi.com/
+  Contact:           info@pattaya-gym.com
+  Location:          Pattaya, Chon Buri, Thailand
+  Publisher scope:   20+ independently managed Pattaya publications and products
 
 /* SITE */
-  URL:        https://pattaya-gym.com/
-  Built:      2026
-  Purpose:    Independent, source-cited directory of every gym and sport
-              venue in Pattaya, Thailand. No paid placements. No sponsors.
-              No affiliate-only listings.
+  Records:           218
+  Sport categories:  15
+  Purpose:           Dated, sourced sport-venue facts with visible uncertainty
+  Commercial policy: No paid placement, booking commission or venue affiliate links
+  Visit claims:      None; Pattaya.Gym does not claim first-hand venue visits
 
-/* STACK */
-  Static HTML + CSS + vanilla JavaScript (no framework)
-  Node.js build chain (build.js + build-discovery.js + build-extras.js)
-  YAML frontmatter + Markdown content
-  Leaflet.js (interactive map)
-  JetBrains Mono + Inter Tight (typography)
-  Buttondown (newsletter — currently disabled)
-  Plausible Analytics (privacy-first, no cookies, no tracking)
-  Cloudflare Pages (hosting + edge cache)
-  GitHub Actions (CI: validate + html-validate + Lighthouse)
+/* CURRENT STACK */
+  Static HTML + CSS + first-party vanilla JavaScript
+  Node.js build chain: build-v2.js + scripts/ship-chain.json
+  YAML frontmatter + Markdown venue records
+  Consent-first optional Google Analytics; Google code is not requested before opt-in
+  Cloudflare Pages, with public-path denial rules in _redirects and _headers
+  Local variable fonts; no third-party font request
 
-/* SCHEMA */
-  Schema.org JSON-LD: LocalBusiness, BreadcrumbList, WebPage, FAQPage,
-  ItemList, Article, CollectionPage, Organization, Speakable, Place,
-  PostalAddress, GeoCoordinates, ContactPoint, OpeningHoursSpecification
-
-/* AI-FRIENDLY */
-  /llms.txt              — curated content map for AI agents
-  /api/venues.json       — full directory (CC BY 4.0)
-  /api/categories.json   — by sport
-  /api/areas.json        — by location
+/* DATA */
+  /api/venues.json       — directory records (CC BY 4.0)
+  /api/categories.json   — records grouped by sport
+  /api/areas.json        — records grouped by location
+  /status.json           — current completeness and build figures
   /feed.json             — JSON Feed 1.1
   /openapi.yaml          — OpenAPI 3.1 schema
-  /.well-known/ai-plugin.json — ChatGPT plugin manifest
 
 /* STANDARDS */
-  HTML5, CSS3 (variable fonts, container queries, prefers-reduced-motion)
-  WCAG 2.1 AA target
-  Open Graph + Twitter Cards (with image:width/height/alt)
-  RFC 9116 (security.txt)
-  jsonfeed.org 1.1
+  HTML5, CSS, JSON-LD, Open Graph, RFC 9116 security.txt
+  Accessibility target: WCAG 2.2 AA
+  Structured authors: two Person nodes; publisher: TimPaemi Co., Ltd.
 
-/* CREDITS */
-  Written and kept up to date by Tim & Paemi, who live in Pattaya.
-  https://timpaemi.com/
-
+Generated 2026-08-02 from the live dataset and ship manifest.

@@ -70,16 +70,25 @@ const SISTER = [
 /* Paths `_redirects` sends to /404.html (or anywhere else) are not publicly
    readable, so they are not a leak channel. Derived, never hand-maintained. */
 function blockedPaths() {
-  const out = new Set();
+  const out = [];
   const f = path.join(root, '_redirects');
   if (!fs.existsSync(f)) return out;
   for (const line of fs.readFileSync(f, 'utf8').split(/\r?\n/)) {
     const m = line.match(/^\s*(\/\S+)\s+(\S+)\s+30[12]\s*$/);
-    if (m && /404/.test(m[2])) out.add(m[1].replace(/^\//, '').toLowerCase());
+    if (m && /404/.test(m[2])) out.push(m[1].replace(/^\//, '').toLowerCase());
   }
   return out;
 }
 const BLOCKED = blockedPaths();
+function isBlocked(rel) {
+  const value = rel.toLowerCase();
+  return BLOCKED.some(pattern => {
+    const re = '^' + pattern.split('*')
+      .map(part => part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+      .join('.*') + '$';
+    return new RegExp(re).test(value);
+  });
+}
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -108,7 +117,7 @@ let pagesChecked = 0;
 
 for (const file of walk(root)) {
   const rel = path.relative(root, file).replace(/\\/g, '/');
-  if (BLOCKED.has(rel.toLowerCase())) { skipped.push(rel); continue; }
+  if (isBlocked(rel)) { skipped.push(rel); continue; }
   const s = fs.readFileSync(file, 'utf8');
   const isHtml = /\.html?$/i.test(rel);
   const machine = MACHINE_EXT.test(rel) ? s : isHtml ? referenceText(s) : '';
@@ -132,7 +141,7 @@ for (const file of walk(root)) {
   if (isHtml && rel !== 'offline.html') {
     pagesChecked++;
     const links = (s.match(/href="https:\/\/timpaemi\.com\/?"/g) || []).length;
-    if (links < 1) errors.push(`${rel}: expected a timpaemi.com publisher link, found none`);
+    if (links !== 1) errors.push(`${rel}: expected exactly one timpaemi.com publisher link, found ${links}`);
     timpaemiLinks += links;
     if (/href="https:\/\/timpaemi\.com[^"]*"[^>]*rel="[^"]*nofollow/.test(s)) {
       errors.push(`${rel}: the timpaemi.com author credit must be followed, not nofollow`);

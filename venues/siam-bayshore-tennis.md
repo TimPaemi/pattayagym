@@ -1,6 +1,7 @@
 ---
 id: siam-bayshore-tennis
 name: Siam Bayshore Pattaya Tennis Courts
+nameTh: สยาม เบย์ชอร์ รีสอร์ต พัทยา
 category: racquet
 area: South Pattaya / Walking Street
 address: Siam Bayshore Pattaya, 559 Beach Road, Pattaya, Chonburi 20150
@@ -22,12 +23,15 @@ verified: 2026-07-26
 sources:
   - https://siambayshorepattaya.com/sport-recreation/
   - https://www.google.com/maps/search/?api=1&query=Siam+Bayshore+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Siam+Bayshore+Resort+Pattaya&hl=th"
 description: Six daytime tennis courts open to hotel guests and the public at Siam Bayshore Pattaya.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Siam+Bayshore+Pattaya"
 tags: [tennis, hotel, public-access, south-pattaya, court-hire]
 ---
 
 # Siam Bayshore Pattaya Tennis Courts
+
+Thai Maps labels the parent 559 Beach Road resort hotel **สยาม เบย์ชอร์ รีสอร์ต พัทยา**; its two documented tennis courts have a 07:00-18:00 window.
 
 Siam Bayshore publishes six tennis courts inside its South Pattaya resort and explicitly opens them to the public as well as hotel guests. The current operator page gives useful court, rental and rain terms. It does not publish live availability, coaching or evening lighting, so this remains a daytime reservation.
 

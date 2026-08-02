@@ -38,38 +38,38 @@ const BLOCKS = {
   'best-golf-courses-pattaya': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-golf-h">
   <h2 id="${MARKER}-golf-h" class="guide-rank-section">Pattaya golf — how courses differ</h2>
-  <p>Chon Buri province packs <strong>20+ layouts</strong> from municipal budget tracks to Siam Country Club Old Course. Pattaya proper means 20–45 minute drives to fairways — plan tee times around heat (07:00 start ideal Nov–Feb).</p>
-  <h3>Tiers</h3>
-  <p><strong>Championship</strong> — Siam Country Club, Phoenix Gold, Treasure Hill. <strong>Resort pairings</strong> — Chee Chan (Buddha Mountain views), Horseshoe Point east. <strong>Value</strong> — Bangpra, Pattana, municipal tracks on <a href="/compare/">compare tool</a>.</p>
-  <h3>Combine with other sport</h3>
-  <p>Resort gym + golf: <a href="/guides/luxury-sports-clubs-pattaya/">luxury sports clubs</a>. South-side golf days: <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien &amp; Sattahip</a>. Bangkok courses: <a href="/guides/bangkok-day-trip-sport-pattaya/">Bangkok day trips</a>.</p>
+  <p>Chon Buri's directory records span municipal tracks through the <a href="/gyms/siam-country-club/">Siam Country Club</a> course group. Treat journey time and preferred tee time as booking questions rather than assuming that every course sits inside Pattaya proper.</p>
+  <h3>Course records, not quality tiers</h3>
+  <p><strong>Named course-format comparison</strong> — compare <a href="/gyms/siam-country-club/">Siam Country Club</a>, <a href="/gyms/phoenix-gold-golf/">Phoenix Gold</a> and <a href="/gyms/treasure-hill-golf/">Treasure Hill</a> by the layouts and holes their retained records actually document. <a href="/gyms/chee-chan-golf/">Chee Chan</a> is the retained resort-branded golf record near Buddha Mountain. Horseshoe Point is not included here because its current record documents equestrian rather than golf activity. Compare <a href="/gyms/bangpra-international/">Bangpra</a>, <a href="/gyms/pattana-sports-resort/">Pattana</a> and municipal records on the <a href="/compare/">compare tool</a>. These group labels do not establish current course conditioning, difficulty or quality; use the dated mandatory-charge stack and confirm the selected layout.</p>
+  <h3>Keep golf and other sport bookings separate</h3>
+  <p>Use the <a href="/guides/luxury-sports-clubs-pattaya/">luxury sports-club guide</a> to compare separately documented resort facilities, and the <a href="/guides/best-gym-sattahip-pattaya/">Na Jomtien and Sattahip guide</a> for south-side area context. Those links do not establish a combined gym-and-golf package, shared booking or transfer. Compare Bangkok options separately in the <a href="/guides/bangkok-day-trip-sport-pattaya/">Bangkok day-trip guide</a>.</p>
 </section>`,
   'pattaya-gyms-childcare-family-pools': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-cc-h">
-  <h2 id="${MARKER}-cc-h" class="guide-rank-section">Training windows when kids need occupying</h2>
-  <p>Dedicated gym childcare is rare in Pattaya — families solve it with <strong>hotel kids clubs, swim schools, football academies, and water parks</strong> while parents train nearby. Broader family sport: <a href="/guides/family-friendly-pattaya/">family-friendly guide</a>.</p>
-  <h3>Hotel &amp; resort picks</h3>
-  <p><a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a> — gym + PLAYROOM + pool. <a href="/gyms/centara-grand-mirage/">Centara Grand Mirage</a> water park. Na Jomtien resorts: <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.</p>
-  <h3>Structured kids sport</h3>
-  <p>Football academies (AF Academy, Rusich Club), swim schools, trampoline parks. Schools context: Pattaya School Guide.</p>
+  <h2 id="${MARKER}-cc-h" class="guide-rank-section">Compare family facilities without assuming childcare</h2>
+  <p>The retained directory records do not establish dedicated childcare at ordinary Pattaya gyms. Hotel kids clubs, swim schools, football academies and water parks are separate products, and none should be treated as supervision while a parent trains unless the operator confirms the child's eligibility, guardian rules, session time and hand-off arrangement. Broader family sport: <a href="/guides/family-friendly-pattaya/">family-friendly guide</a>.</p>
+  <h3>Documented hotel and resort facilities</h3>
+  <p><a href="/gyms/cross-pattaya-pratamnak/">Cross Pattaya Pratamnak</a> documents a gym, PLAYROOM and pool, while <a href="/gyms/centara-grand-mirage/">Centara Grand Mirage</a> documents a water-park facility. Co-location does not establish that a child may use either facility without a guardian while a parent trains; confirm guest eligibility, supervision and simultaneous access. Na Jomtien resorts: <a href="/guides/best-gym-sattahip-pattaya/">Sattahip guide</a>.</p>
+  <h3>Confirm structured youth-product terms</h3>
+  <p>Football academies such as <a href="/gyms/af-academy-pattaya/">AF Academy</a> and <a href="/gyms/rusich-club-football/">Rusich Club</a> publish structured youth products; confirm the current age band, timetable and guardian arrangements before treating either as childcare. Swim schools and trampoline parks are distinct products, and their listings do not establish a supervision window while a parent trains.</p>
 </section>`,
   'pattaya-seniors-low-impact-sport': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-sen-h">
-  <h2 id="${MARKER}-sen-h" class="guide-rank-section">Low-impact sport for 65+ in Pattaya</h2>
-  <p>Pattaya suits retirees who want <strong>pool swimming, gentle yoga, hotel gym cardio, and social clubs</strong> without high-impact fight sport. Heat and humidity matter — train before 09:00 or after 16:00.</p>
-  <h3>Best formats</h3>
-  <p>Hotel club day passes (<a href="/guides/luxury-sports-clubs-pattaya/">luxury clubs guide</a>), yoga studios (<a href="/guides/yoga-retreat-pattaya/">yoga retreat</a>), Wong Amat beach walks, hotel pool laps. Medical backup: Pattaya Medical.</p>
-  <h3>Areas</h3>
-  <p>Pratamnak and Naklua beat central nightlife for calm mornings — <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua guide</a>. Family visits: <a href="/guides/family-friendly-pattaya/">family-friendly</a>.</p>
+  <h2 id="${MARKER}-sen-h" class="guide-rank-section">Evidence limits for lower-impact options</h2>
+  <p>The directory records compare <strong>documented pools, yoga, hotel fitness facilities and social clubs</strong>, but they do not establish a swimming session, a cardio format, or that every option is low-impact or suitable for every older adult. Use the selected venue's actual hours and personal suitability rather than treating 09:00 or 16:00 as universal safety cutoffs.</p>
+  <h3>Formats documented in the retained records</h3>
+  <p>Hotel club day passes (<a href="/guides/luxury-sports-clubs-pattaya/">luxury clubs guide</a>), yoga studios (<a href="/guides/yoga-retreat-pattaya/">yoga retreat</a>), documented hotel pools, and self-directed walks. A pool listing does not establish lap lanes or a lap-swimming session. <a href="/gyms/wong-amat-beach/">Wong Amat Beach's evidence-limited public record</a> supports the last option, but does not establish supervised exercise, safe-swim coverage or medical suitability. This sport directory does not verify a medical-backup provider for an individual plan.</p>
+  <h3>Confirm access and routes by area</h3>
+  <p>Compare exact access products and routes in the <a href="/guides/best-gym-naklua-pratamnak-pattaya/">Naklua and Pratamnak guide</a> rather than assuming those districts guarantee calmer mornings than Central Pattaya. Family visits: <a href="/guides/family-friendly-pattaya/">family-friendly</a>.</p>
 </section>`,
   'bangkok-day-trip-sport-pattaya': `
 <section class="guide-editorial-depth" id="${MARKER}" aria-labelledby="${MARKER}-bkk-h">
   <h2 id="${MARKER}-bkk-h" class="guide-rank-section">Bangkok sport day-trips from Pattaya</h2>
-  <p>Pattaya is 90–120 minutes from Bangkok — realistic for <strong>evening stadium cards, morning golf, or adventure parks</strong> without changing your beach base. Most operators run Pattaya ↔ BKK transfer packages.</p>
+  <p>A Bangkok sport visit from Pattaya is a separate transport plan whose duration depends on the exact venue, date and route. The retained stadium records do not verify an operator transfer from Pattaya, so do not treat a generic 90–120-minute estimate or an assumed package as booking evidence.</p>
   <h3>Muay Thai stadiums</h3>
-  <p><a href="/gyms/rajadamnern-stadium/">Rajadamnern</a> (world's oldest, almost nightly) and Lumpinee (RWS flagship Saturdays). Pair with Pattaya camp training: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">trip length guide</a>.</p>
-  <h3>Golf &amp; other</h3>
-  <p>Compare Pattaya fairways on <a href="/guides/best-golf-courses-pattaya/">best golf courses</a> before booking Bangkok tee times. Transport: Vehicle Rentals.</p>
+  <p><a href="/gyms/rajadamnern-stadium/">Rajadamnern</a> lists recurring event products across seven nights, while <a href="/gyms/lumpinee-boxing-stadium/">Lumpinee</a> lists Friday ONE Lumpinee and Saturday Lumpinee Super Champ cards plus selected Saturday-morning events. Those recurring patterns do not confirm that a card, start time or ticket remains available on a selected date. Both are spectator products, not evidence of visitor training. Pair either with Pattaya camp training: <a href="/guides/best-muay-thai-pattaya/">best Muay Thai</a> · <a href="/guides/train-muay-thai-pattaya-1-week-1-month/">trip length guide</a>.</p>
+  <h3>Keep golf and transport evidence separate</h3>
+  <p>Compare Pattaya fairways on <a href="/guides/best-golf-courses-pattaya/">best golf courses</a> before booking Bangkok tee times. The retained stadium and golf records do not verify a transport provider, vehicle product or return arrangement from Pattaya; obtain those details separately for the exact venue and date.</p>
 </section>`,
 };
 

@@ -1,27 +1,31 @@
 ---
 id: pattaya-marriott-resort
 name: Pattaya Marriott Resort and Spa
+nameTh: โรงแรม พัทยา แมรีออท รีสอร์ต แอนด์ สปา
 category: fitness
 area: Na Jomtien
 address: 64 Moo 1, Na Chom Thian, Sattahip, Chonburi 20250
 phone: "+66 33 168 542"
 website: https://www.marriott.com/en-us/hotels/utpjb-pattaya-marriott-resort-and-spa/overview/
 social: {}
-hours: Fitness centre open 24 hours; other facility hours vary
+hours: Fitness centre daily 00:00-24:00 for hotel guests; other facility hours vary
 priceRange: ""
 distinction: Hotel fitness centre and pools for resort guests
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.marriott.com/en-us/hotels/utpjb-pattaya-marriott-resort-and-spa/overview/
   - https://www.marriott.com/en-us/hotels/utpjb-pattaya-marriott-resort-and-spa/experiences/
   - https://www.assetworldcorp-th.com/en/portfolio/hospitalities/936/pattaya-marriott-resort-and-spa
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Marriott+Resort+and+Spa
+  - "https://www.google.com/maps/search/?api=1&query=Pattaya+Marriott+Resort+and+Spa&hl=th"
 description: Na Jomtien resort with a 24-hour fitness centre, three outdoor pools and spa facilities for guests.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Marriott+Resort+and+Spa"
 tags: [hotel-gym, fitness, swimming-pools, spa, na-jomtien, hotel-guests]
 ---
 
 # Pattaya Marriott Resort and Spa
+
+Thai Maps gives the 64 Moo 1 property the name **โรงแรม พัทยา แมรีออท รีสอร์ต แอนด์ สปา** and matches its guest-only 24-hour fitness offer.
 
 ## What training is on offer
 
@@ -45,7 +49,7 @@ This record does not suit a non-resident who needs guaranteed walk-in entry, a p
 
 The resort's official address is **64 Moo 1, Na Chom Thian, Sattahip, Chonburi 20250**. That is in the Na Jomtien coastal corridor, not central Pattaya. Check the exact map pin before choosing transport from a beach-road hotel.
 
-Marriott publishes the fitness centre as open 24 hours. The pool, spa, reception and restaurant schedules are separate and may vary. Do not infer pool access at every hour from the fitness-centre listing.
+Marriott publishes the fitness centre as open 24 hours, represented here as 00:00-24:00. The pool, spa, reception and restaurant schedules are separate and may vary. Do not infer pool access at every hour from the fitness-centre listing.
 
 ## Before you go
 

@@ -1,6 +1,7 @@
 ---
 id: 272-estadio-de-pattaya
 name: 272 Estadio De Pattaya
+nameTh: สนามแบดมินตันพัทยาในร่ม
 category: racquet
 area: Chaiyaporn Withi / East Pattaya
 address: 45/14 Soi Chaiyaporn Withi 27, Pattaya, Bang Lamung, Chonburi 20150
@@ -12,6 +13,7 @@ priceRange: ""
 distinction: Dedicated East Pattaya indoor badminton venue
 verified: 2026-07-26
 sources:
+  - https://www.lemon8-app.com/@callmewilawila/7146611009548059138?region=th
   - https://www.google.com/maps/search/?api=1&query=272+Estadio+De+Pattaya
   - https://pattayasports.org/badminton/
 description: Dedicated indoor badminton venue on Soi Chaiyaporn Withi 27 in East Pattaya.
@@ -20,6 +22,8 @@ tags: [badminton, indoor, east-pattaya, chaiyaporn-withi, call-ahead]
 ---
 
 # 272 Estadio De Pattaya
+
+The Thai venue write-up describes 272 as **สนามแบดมินตันพัทยาในร่ม**.
 
 272 Estadio De Pattaya is a dedicated indoor badminton venue in East Pattaya, listed as active at 45/14 Soi Chaiyaporn Withi 27. Its Maps listing confirmed the address, phone number and daily 08:00–22:00 hours when checked on 26 July 2026, while Pattaya Sports Club includes it among local badminton venues. The useful action is to call +66 84 272 2272 with your preferred court time, because no owner-published price or booking terms were found.
 

@@ -1,6 +1,7 @@
 ---
 id: clubloongchat-watersports
 name: Clubloongchat Watersports
+nameTh: "คลับลุงชัช Clubloongchat : Wing Foiling / Windsurfing Club / Kitesurfing School Pattaya"
 category: watersports
 area: Na Jomtien
 address: 23/137 Soi Na Jomtien 14, Na Chom Thian, Sattahip, Chonburi 20150
@@ -24,12 +25,15 @@ sources:
   - https://www.clubloongchat.com/service-page/1-hr-lesson
   - https://www.clubloongchat.com/contact
   - https://www.google.com/maps/search/?api=1&query=Clubloongchat+Na+Jomtien
+  - "https://www.google.com/maps/search/?api=1&query=Clubloongchat+Watersports&hl=th"
 description: Na Jomtien watersports school offering lessons plus windsurf, wingfoil, kitesurf, SUP/surf and sailboat rental.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Clubloongchat+Na+Jomtien"
 tags: [kitesurf, wingfoil, windsurf, sup, sailing, rentals]
 ---
 
 # Clubloongchat Watersports
+
+Thai Maps expands the 23/137 Soi Na Jomtien 14 identity as **คลับลุงชัช Clubloongchat: Wing Foiling / Windsurfing Club / Kitesurfing School Pattaya**.
 
 ## What is offered
 
@@ -53,3 +57,15 @@ For a first kitesurf or sailboat rental, the operator requires an instructor for
 ## First visit
 
 The club publishes daily opening hours of 10:00–18:00. Book ahead and tell the club your experience level. Independent kitesurf rental requires suitable experience or certification. Bring sun protection and allow for a weather-related change or cancellation.
+
+## Who it suits — and who it does not
+
+The published lesson and rental menu gives beginners a clear route through an instructor-led lesson. Independent kitesurf rental is explicitly experience-dependent. The sources do not establish a children’s programme, a guaranteed wind window, safety-boat cover, disability provision or a fixed group lesson size.
+
+## Getting there
+
+The operator lists 23/137 Soi Na Jomtien 14, Na Chom Thian, Sattahip, with phone +66 81 340 2180. The exact Maps pin and the operator contact page are retained in the record; use them to confirm the beach meeting point.
+
+## What we could not verify
+
+No cancellation terms, insurance inclusion, equipment inventory, coaching language for every session, or availability of a particular board or boat was published in the sources checked.

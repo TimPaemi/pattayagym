@@ -1,5 +1,6 @@
 ---
 id: sailbreeze-ocean-marina
+nameTh: เซลเบรีซ
 name: SailBreeze Yacht Charter
 category: watersports
 area: Ocean Marina / Na Jomtien
@@ -23,12 +24,15 @@ sources:
   - https://www.sailbreeze.org/booking
   - https://oceanmarinayachtclub.com/
   - https://www.google.com/maps/search/?api=1&query=SailBreeze+Ocean+Marina+Pattaya
+  - https://www.sailbreeze.org/th
 description: Ocean Marina operator arranging private charters and crewed half- or full-day sailing cruises.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=SailBreeze+Ocean+Marina+Pattaya"
 tags: [sailing, yacht-charter, ocean-marina, na-jomtien, reservation]
 ---
 
 # SailBreeze Yacht Charter
+
+The operator's Thai page keeps the brand **SailBreeze**, while its service pages describe **8-hour** full-day and **4-hour** half-day cruises leaving from Ocean Marina Pattaya.
 
 SailBreeze is based at Ocean Marina and presents private yacht charters, marine services and crewed shared sailing cruises. Its published shared products are outings led by a qualified captain and crew. They should not be confused with a formal learn-to-sail course: the same site recommends a separate established school for international certification.
 

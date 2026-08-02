@@ -1,6 +1,7 @@
 ---
 id: atv-tours-pattaya
 name: ATV & Buggy Adventures Pattaya
+nameTh: เอทีวี พัทยาจังเกิลแอดเวนเจอร์ส
 category: adventure
 area: East Pattaya / Pong
 address: 22/6 Moo 6, Pong, Bang Lamung, Chonburi 20150
@@ -14,6 +15,7 @@ priceSourceUrl: https://www.atvtourspattaya.com/our-tours
 distinction: Guided ATV and buggy tours from a base near Lake Mabprachan
 verified: 2026-07-26
 sources:
+  - https://www.traveloka.com/th-th/activities/thailand/product/atv-pattaya-jungle-adventures-2000370845165
   - https://www.atvtourspattaya.com/
   - https://www.atvtourspattaya.com/our-tours
   - https://www.atvtourspattaya.com/contact
@@ -24,6 +26,8 @@ tags: [atv, buggy, off-road, pong, mabprachan, hotel-transfer]
 ---
 
 # ATV & Buggy Adventures Pattaya
+
+The Thai booking listing names the activity **เอทีวี พัทยาจังเกิลแอดเวนเจอร์ส**.
 
 ## What training is on offer
 

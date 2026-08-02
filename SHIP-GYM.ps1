@@ -59,6 +59,21 @@ param(
 $ErrorActionPreference = 'Stop'
 try { [Console]::OutputEncoding = [Text.Encoding]::UTF8 } catch { }
 
+# Transient-lock shim (2026-07-30): scanners/indexers briefly hold freshly built
+# files and random writeFileSync calls die with UNKNOWN (errno -4094). Preload a
+# retry wrapper into every node child so the chain rides out the lock.
+# Best-effort: if anything here misfires, ship WITHOUT the shim rather than stop.
+try {
+  $shimBase = $RepoPath
+  if ([string]::IsNullOrWhiteSpace($shimBase) -and $PSCommandPath) { $shimBase = Split-Path -Parent $PSCommandPath }
+  if (-not [string]::IsNullOrWhiteSpace($shimBase)) {
+    $shim = Join-Path $shimBase 'scripts\fs-write-retry-shim.cjs'
+    if ((Test-Path $shim) -and ($env:NODE_OPTIONS -notmatch 'fs-write-retry-shim')) {
+      $env:NODE_OPTIONS = ("$($env:NODE_OPTIONS) --require $shim").Trim()
+    }
+  }
+} catch { }
+
 $script:StepNo    = 0
 $script:StartTime = Get-Date
 
@@ -157,7 +172,10 @@ foreach ($tool in @('node', 'git')) {
 # So: if a lock exists and NO git process is actually running, it is stale and we
 # clear it. If git really is running, we stop and say so rather than corrupt it.
 $locks = @(Get-ChildItem -Path (Join-Path $RepoPath '.git') -Filter '*.lock' -File -ErrorAction SilentlyContinue)
-if ($locks.Count -gt 0) {
+if ($locks.Count -gt 0 -and $DryRun) {
+  Write-Host "  locks     $($locks.Count) git lock file(s) present; dry-run will not remove them" -ForegroundColor Yellow
+}
+if ($locks.Count -gt 0 -and -not $DryRun) {
   $running = @(Get-Process -Name 'git' -ErrorAction SilentlyContinue)
   if ($running.Count -gt 0) {
     Write-Host ''
@@ -191,8 +209,14 @@ if ([string]::IsNullOrWhiteSpace($Branch)) {
 }
 Write-Host "  branch    $Branch"
 
-if ([string]::IsNullOrWhiteSpace($Message)) {
-  $Message = 'Redesign 2026: light canvas + single volt accent, simple footer, venue count 215, v470'
+$AllowedShipBranches = @('main', 'redesign-2026-07')
+if ($AllowedShipBranches -notcontains $Branch) {
+  Fail "Branch '$Branch' is not an approved ship source. Use main or redesign-2026-07, or update the reviewed allowlist in SHIP-GYM.ps1."
+}
+& git show-ref --verify --quiet refs/remotes/origin/main
+if ($LASTEXITCODE -eq 0) {
+  $divergence = (& git rev-list --left-right --count "origin/main...HEAD" 2>&1)
+  if ($LASTEXITCODE -eq 0) { Write-Host "  divergence origin/main...HEAD  $divergence (left=live-only, right=branch-only)" }
 }
 
 # --- The chain manifest — the single definition of build steps and gates -------
@@ -215,6 +239,9 @@ if ($LASTEXITCODE -ne 0) {
 }
 $venues = "$venues".Trim()
 Write-Host "  venues    $venues"
+if ([string]::IsNullOrWhiteSpace($Message)) {
+  $Message = "Flagship 2027: source-led directory, venue count $venues"
+}
 if ($DryRun) { Write-Host '  mode      DRY RUN (build + gates only, no git)' -ForegroundColor Yellow }
 
 # =============================================================================
@@ -268,7 +295,17 @@ if ($dirty.Count -eq 0) {
   Write-Host '  Nothing to commit - the build produced no changes.' -ForegroundColor Yellow
 } else {
   Write-Host "  $($dirty.Count) changed path(s)"
-  Invoke-Step -Label 'git add -A' -Exe 'git' -CmdArgs @('add', '-A') -Quiet
+  # Stage the site and its source, but never sweep private operations, audit
+  # evidence or spent one-off command files into a release commit.
+  $stagePaths = @(
+    'add', '-A', '--', '.',
+    ':(exclude).internal-docs/**', ':(exclude)_audit-tmp/**',
+    ':(exclude)private/**', ':(exclude)research/**',
+    ':(exclude)*.cmd', ':(exclude)PUSH_*.cmd', ':(exclude)REBUILD_*.cmd',
+    ':(exclude)TIM-SHIP-*.ps1',
+    ':(exclude)WORK_LOG_CODEX.md', ':(exclude)CODEX-FULL-AUDIT.md'
+  )
+  Invoke-Step -Label 'git add (release allowlist)' -Exe 'git' -CmdArgs $stagePaths -Quiet
   Invoke-Step -Label 'git commit' -Exe 'git' -CmdArgs @('commit', '-m', $Message) -Quiet
   Write-Host ("       -> " + (& git log -1 --format="%h %s")) -ForegroundColor DarkGray
 }
@@ -285,6 +322,13 @@ if ($NoPush) {
 Write-Head 'PUSH'
 
 Invoke-Step -Label 'git fetch origin' -Exe 'git' -CmdArgs @('fetch', 'origin', '--quiet') -Quiet
+
+if ($Branch -ne 'main') {
+  & git merge-base --is-ancestor origin/main HEAD
+  if ($LASTEXITCODE -ne 0) {
+    Fail "$Branch does not contain current origin/main. Reconcile the branches before attempting a live push."
+  }
+}
 
 $tag = 'main-pre-' + (Get-Date -Format 'yyyyMMdd-HHmm')
 Invoke-Step -Label "tag $tag -> origin/main" -Exe 'git' -CmdArgs @('tag', '-f', $tag, 'origin/main') -Quiet

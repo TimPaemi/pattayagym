@@ -61,17 +61,17 @@ module.exports = `
   </tbody>
 </table>
 
-<h2>Fitz is the clearest premium racquet product</h2>
+<h2>Fitz: a documented premium racquet product</h2>
 
 <p><a href="/gyms/fitz-club/">Fitz Club</a> is the cleanest current premium record because the operator publishes both the facility mix and a dated guest tariff. The record supports seven floodlit hard tennis courts, two air-conditioned squash courts, a multipurpose court, a pool, sauna and steam rooms. The current guest price list also separates the day pass from the racquet transactions: THB 800 for an adult day pass and THB 400 for a child under 12, while tennis and squash are excluded from that day-pass amount.</p>
 
-<p>That separation matters. Fitz is not simply “expensive tennis.” It is a multi-facility premium club with a dated entry product and separate court and coaching decisions. For a traveller who wants one organised premium venue and is happy to book the details directly, it is the easiest record to price honestly. For a pure court-hire comparison, it is only one part of the market.</p>
+<p>That separation matters. <a href="/gyms/fitz-club/">Fitz</a> is not simply “expensive tennis.” It is a multi-facility premium club with a dated entry product and separate court and coaching decisions. For a traveller who wants one organised premium venue and is happy to book the details directly, it is the easiest record to price honestly. For a pure court-hire comparison, it is only one part of the market.</p>
 
-<h2>Greta is the strongest competition-linked tennis identity</h2>
+<h2>Greta is a competition-linked tennis identity</h2>
 
 <p><a href="/gyms/greta-sport-club/">Greta Sport Club Pattaya</a> is useful because current ITF and TATP records tie the venue to 2026 tennis and beach-tennis events, while Maps publishes daily 06:00-22:00 hours and a live phone number. That gives Greta stronger evidence of real tennis activity than many generic “sport club” records. It does not, however, give a public court-hire grid for an ordinary visitor.</p>
 
-<p>The result is a contact-first venue with strong competition evidence. That is still valuable if you are choosing a serious south-side tennis enquiry, especially in the Na Jomtien corridor. It simply means you should ask for the exact sport, date, surface, court status and price instead of borrowing assumptions from an event listing.</p>
+<p>The result is a contact-first venue with strong competition evidence. That is still valuable if you are choosing <a href="/gyms/greta-sport-club/">Greta</a> as a serious south-side tennis enquiry, especially in the Na Jomtien corridor. It simply means you should ask for the exact sport, date, surface, court status and price instead of borrowing assumptions from an event listing.</p>
 
 <h2>Inter Club and TOS solve different east-and-south tennis questions</h2>
 
@@ -83,18 +83,22 @@ module.exports = `
 
 <p><a href="/gyms/euro-badminton/">Euro Badminton Club Pattaya</a> and <a href="/gyms/sb-badminton-huai-yai/">SB Badminton Huai Yai</a> both show the right way to handle a current venue with limited public commerce data. Euro has a live Maps identity, phone and late closing hours. SB has a current venue identity, phone and published daily 13:00-23:00 hours. Neither record has a stable operator tariff that can be stored as a dependable live price.</p>
 
+<p><a href="/gyms/jp-badminton-pattaya/">JP Badminton Pattaya</a> adds a more specific, but dated, solo-player lead in the Jomtien / Nong Prue area: its operator posted a 10:00-12:00 morning walk-in group on 30 June 2026. The venue lists weekday 08:00-22:00 and weekend 08:00-21:00 hours. That post is not a permanent programme, and no current court or group fee is public, so confirm the session, court allocation, footwear and whether shuttlecocks are included before travelling.</p>
+
+<p>For every contact-first court, the entity page is the evidence record; this guide does not turn a listed opening window into a court reservation or an old event into routine access.</p>
+
 <p>That gap does not make either hall skippable. It makes them contact-first. Ask whether the quote is per court or per player, whether shuttles or rackets are extra, and whether the booking is for open play, court hire or coaching. The directory is more accurate when it keeps the halls visible with that limitation than when it replaces the missing tariff with an old figure.</p>
 
 <h2>Choose by transaction type before area</h2>
 
-<p>The smartest first filter is the transaction. If you want a premium club with a dated guest entry product, start with Fitz. If you want a competition-linked tennis enquiry in the south corridor, start with Greta. If you need one mixed-racquet contact in East Pattaya, start with Inter Club. If you need a Jomtien-side coaching enquiry, start with TOS. If the priority is a local badminton hall, start with Euro or SB. Only after that choice should you optimise around <a href="/area/jomtien/">Jomtien</a>, <a href="/area/east-pattaya/">East Pattaya</a> or the south corridor.</p>
+<p>The smartest first filter is the transaction. If you want a premium club with a dated guest entry product, start with <a href="/gyms/fitz-club/">Fitz</a>. If you want a competition-linked tennis enquiry in the south corridor, start with <a href="/gyms/greta-sport-club/">Greta</a>. If you need one mixed-racquet contact in East Pattaya, start with <a href="/gyms/pattaya-tennis-badminton-inter-club/">Inter Club</a>. If you need a Jomtien-side coaching enquiry, start with <a href="/gyms/tos-tennis/">TOS</a>. If the priority is a local badminton hall, start with <a href="/gyms/euro-badminton/">Euro</a> or <a href="/gyms/sb-badminton-huai-yai/">SB</a>. Only after that choice should you optimise around <a href="/area/jomtien/">Jomtien</a>, <a href="/area/east-pattaya/">East Pattaya</a> or the south corridor.</p>
 
 <h2>FAQ</h2>
 
 <h3>Which current record has the clearest public racquet pricing?</h3>
 <p><a href="/gyms/fitz-club/">Fitz Club</a> has the clearest public pricing because the operator publishes a dated guest tariff. The important limitation is that the day pass excludes tennis and squash, so court hire and coaching still need a separate quote.</p>
 
-<h3>Which tennis venue has the strongest current competition evidence?</h3>
+<h3>Which tennis venue has current competition evidence?</h3>
 <p><a href="/gyms/greta-sport-club/">Greta Sport Club Pattaya</a> has the strongest current competition evidence in this set because ITF and TATP records tie the venue to 2026 tennis and beach-tennis events. That does not replace the need to ask for ordinary court access and price.</p>
 
 <h3>Should missing price make me reject Euro or SB Badminton?</h3>

@@ -1,5 +1,6 @@
 ---
 id: chilli-padel-club
+nameTh: ชิลลี่ พาเดล
 name: Chilli Padel Club
 category: racquet
 area: Jomtien
@@ -17,12 +18,15 @@ sources:
   - https://chillipadelthailand.com/
   - https://playtomic.com/clubs/chilli-padel
   - https://www.google.com/maps/search/?api=1&query=Chilli+Padel+Pattaya
+  - https://www.dataforthai.com/company/0215568014378/
 description: Jomtien padel club with six courts, five under cover, plus coaching, social events, racket hire and a bar.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Chilli+Padel+Pattaya"
 tags: [padel, jomtien, covered-courts, coaching, social-play, equipment-hire]
 ---
 
 # Chilli Padel Club
+
+The Thai company listing records the operator as บริษัท ชิลลี่ พาเดล จำกัด; the club's official page lists 6 courts at Jomtien.
 
 Chilli Padel Club is a dedicated Jomtien padel venue with six courts, five of them roofed, plus coaching, social events and a bar-led club setup. It suits visitors who want a full padel environment rather than a single rentable court. Its main limitation is that some operational details remain live-booking questions, including the final playable slot and exact rental pricing.
 

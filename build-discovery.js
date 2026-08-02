@@ -1228,10 +1228,10 @@ const GUIDES = [
         <tbody>
           <tr><td><a href="/gyms/hard-rock-pool/">Hard Rock Hotel pool</a></td><td>Non-resident leisure pool 09:00-19:00; THB 500 adult with selected cocktail, THB 400 child under 12 with fruit punch</td><td>Childcare, a lap lane or permission for a guardian to leave</td></tr>
           <tr><td><a href="/gyms/nara-maze-pool-day-pass/">Nara Maze</a></td><td>Non-guest pool 09:00-18:00; THB 500 net with water, smoothie and 20% food-and-drink discount excluding alcohol</td><td>Coached swimming, childcare or a separate gym product</td></tr>
-          <tr><td><a href="/gyms/fitz-club-pattaya/">Fitz Club</a></td><td>2026 outside-guest facilities pass: THB 800 adult, THB 400 child under 12</td><td>That every facility is appropriate for every child or that supervision is included</td></tr>
+          <tr><td><a href="/gyms/fitz-club/">Fitz Club</a></td><td>2026 outside-guest facilities pass: THB 800 adult, THB 400 child under 12</td><td>That every facility is appropriate for every child or that supervision is included</td></tr>
           <tr><td><a href="/gyms/af-academy-pattaya/">AF Academy</a></td><td>Ages 3-17; free first trial, THB 600 single session, THB 3,000 for eight, THB 3,600 for twelve</td><td>A central-Pattaya class, childcare outside the lesson or automatic age-group placement</td></tr>
           <tr><td><a href="/gyms/ramayana-water-park/">Ramayana Water Park</a></td><td>Tourist online price THB 1,099 or walk-in THB 1,199 for guests 106 cm and taller under the displayed offer; below 106 cm free</td><td>Childcare, sports coaching or permission to leave a child unaccompanied</td></tr>
-          <tr><td><a href="/gyms/renaissance-pattaya-fitness/">Renaissance Pattaya</a></td><td>Fitness centre, main, sunset and kids pools, and a Kids Club are documented for registered guests</td><td>A public day pass or outside-family access</td></tr>
+          <tr><td><a href="/gyms/renaissance-pattaya-resort/">Renaissance Pattaya</a></td><td>Fitness centre, main, sunset and kids pools, and a Kids Club are documented for registered guests</td><td>A public day pass or outside-family access</td></tr>
         </tbody>
       </table>
     </div>

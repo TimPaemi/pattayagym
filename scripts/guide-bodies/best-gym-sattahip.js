@@ -1,5 +1,5 @@
 module.exports = `
-<p><strong>If you only read one thing: “Sattahip” is not one compact gym district.</strong> This guide covers the southern corridor from Na Jomtien and Ban Amphur through Bang Saray to Sattahip. The live <a href="/area/sattahip/">Sattahip area page</a> currently contains four first-match records: Tarzan Adventure, The Best Fitness Sattahip, WeSquare and Chan Pilates. Many geographically relevant Na Jomtien records appear instead on the <a href="/area/jomtien/">Jomtien area page</a> because the directory assigns each record to the first matching area. This guide brings those two views together without pretending that every result is nearby or publicly accessible.</p>
+<p><strong>If you only read one thing: “Sattahip” is not one compact gym district.</strong> This guide covers the southern corridor from Na Jomtien and Ban Amphur through Bang Saray to Sattahip. The live <a href="/area/sattahip/">Sattahip area page</a> currently contains four first-match records: <a href="/gyms/tarzan-adventure-pattaya/">Tarzan Adventure</a>, <a href="/gyms/the-best-fitness-sattahip/">The Best Fitness Sattahip</a>, <a href="/gyms/wesquare-bang-saray/">WeSquare</a> and <a href="/gyms/chan-pilates/">Chan Pilates</a>. Many geographically relevant Na Jomtien records appear instead on the <a href="/area/jomtien/">Jomtien area page</a> because the directory assigns each record to the first matching area. This guide brings those two views together without pretending that every result is nearby or publicly accessible.</p>
 
 <p>The corridor offers three different kinds of decision. An ordinary trainee can compare local weight rooms and studios. A hotel guest can choose a resort with documented fitness facilities. A visitor can book a destination activity such as golf, watersports, sailing or a water park. Those products should not be ranked by one headline price.</p>
 
@@ -25,11 +25,11 @@ module.exports = `
 
 <p><a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies Gym</a> is at Somphong Condotel in Ban Amphur. Its operator describes an air-conditioned weight-training gym with staff guidance for general fitness, contest preparation and injury prevention. Prices checked on 25 July 2026 were <strong>฿2,500 for three months</strong> or <strong>฿4,500 for six months</strong>, paid in advance. The operator lists 10:00-20:00 Monday-Saturday and Sunday closure.</p>
 
-<p>Those are multi-month memberships, not day-pass prices. Better Bodies is the strongest fit for a longer stay near Ban Amphur when weight training is the main activity and the 10:00 opening suits the schedule. A short visitor should ask whether a single visit, week or month can be purchased and obtain the complete amount before travelling.</p>
+<p>Those are multi-month memberships, not day-pass prices. <a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies</a> is a useful fit for a longer stay near Ban Amphur when weight training is the main activity and the 10:00 opening suits the schedule. A short visitor should ask whether a single visit, week or month can be purchased and obtain the complete amount before travelling.</p>
 
 <h3>The Best Fitness: current, but contact first</h3>
 
-<p><a href="/gyms/the-best-fitness-sattahip/">The Best Fitness Sattahip</a> is the most direct conventional-gym record in Sattahip proper. Current owner channels and the exact Maps record support the location, +66 65 823 7903 phone and a programme spanning fitness equipment, personal training, yoga and dance. The public evidence does not provide a complete dependable weekly timetable or a stable current tariff. Maps exposed Saturday 07:00-21:00 during the last check, but one day's hours should not be expanded into a seven-day schedule.</p>
+<p><a href="/gyms/the-best-fitness-sattahip/">The Best Fitness Sattahip</a> is a conventional-gym record in Sattahip proper. Current owner channels and the exact Maps record support the location, +66 65 823 7903 phone and a programme spanning fitness equipment, personal training, yoga and dance. The public evidence does not provide a complete dependable weekly timetable or a stable current tariff. Maps exposed Saturday 07:00-21:00 during the last check, but one day's hours should not be expanded into a seven-day schedule.</p>
 
 <p>Send the operator the intended date and product: gym access, personal training, yoga or dance. Ask for the start time, total price, membership validity, registration charge and what areas or classes the quote includes. This is a practical option only after that reply closes the schedule and price gaps.</p>
 
@@ -72,15 +72,15 @@ module.exports = `
 
 <h3>Ban Amphur or Na Jomtien</h3>
 
-<p>This northern part of the corridor offers Better Bodies, resort fitness, children's swimming, watersports and Ocean Marina records. It suits a trip whose primary booking is already in that cluster. The directory does not publish a universal transfer time between Na Jomtien and central Pattaya; route the exact venue and accommodation pins.</p>
+<p>This northern part of the corridor offers <a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies</a>, resort fitness, children's swimming, watersports and <a href="/gyms/ocean-marina-jomtien/">Ocean Marina</a> records. It suits a trip whose primary booking is already in that cluster. The directory does not publish a universal transfer time between Na Jomtien and central Pattaya; route the exact venue and accommodation pins.</p>
 
 <h3>Bang Saray</h3>
 
-<p>Bang Saray provides the WeSquare and Chan Pilates choices plus access to farther-south activities. It works when a neighbourhood gym or appointment-led studio is sufficient. It is weaker for someone who wants several transparent walk-in gyms within a short walk, because both current records require direct price confirmation.</p>
+<p>Bang Saray provides the <a href="/gyms/wesquare-bang-saray/">WeSquare</a> and <a href="/gyms/chan-pilates/">Chan Pilates</a> choices plus access to farther-south activities. It works when a neighbourhood gym or appointment-led studio is sufficient. It is weaker for someone who wants several transparent walk-in gyms within a short walk, because both current records require direct price confirmation.</p>
 
 <h3>Sattahip proper</h3>
 
-<p>The Best Fitness is the clearest general-gym identity in the direct Sattahip set. Choose this base when its confirmed timetable and tariff fit the stay, not merely because the directory label says Sattahip. U-Tapao may be relevant to an arrival route, but the airport's presence in the district does not establish a fixed transfer time or make every southern venue close to the terminal.</p>
+<p><a href="/gyms/the-best-fitness-sattahip/">The Best Fitness</a> is a general-gym identity in the direct Sattahip set. Choose this base when its confirmed timetable and tariff fit the stay, not merely because the directory label says Sattahip. U-Tapao may be relevant to an arrival route, but the airport's presence in the district does not establish a fixed transfer time or make every southern venue close to the terminal.</p>
 
 <h2>A reliable booking sequence</h2>
 
@@ -97,7 +97,7 @@ module.exports = `
 <section class="guide-faq" aria-labelledby="guide-faq-h">
   <h2 id="guide-faq-h">Frequently asked questions</h2>
   <details><summary>Which Sattahip-area gym publishes current membership prices?</summary><p><a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies Gym</a> published ฿2,500 for three months and ฿4,500 for six months, checked on 25 July 2026. It did not publish a day-pass price, so short access still requires confirmation.</p></details>
-  <details><summary>Can non-guests use Na Jomtien resort gyms?</summary><p>Do not assume so. The current Andaz, Pattaya Marriott, Mövenpick and Renaissance records document hotel fitness amenities but no stable public gym day pass. Ask the named resort for a dated outside-guest product before travelling.</p></details>
+  <details><summary>Can non-guests use Na Jomtien resort gyms?</summary><p>Do not assume so. The current <a href="/gyms/andaz-pattaya-jomtien/">Andaz</a>, <a href="/gyms/pattaya-marriott-resort/">Pattaya Marriott</a>, <a href="/gyms/movenpick-siam-pattaya/">Mövenpick</a> and <a href="/gyms/renaissance-pattaya-resort/">Renaissance</a> records document hotel fitness amenities but no stable public gym day pass. Ask the named resort for a dated outside-guest product before travelling.</p></details>
   <details><summary>Why do some Na Jomtien venues appear under Jomtien instead of Sattahip?</summary><p>The directory assigns each venue to the first area pattern its location matches. Na Jomtien therefore matches the Jomtien page before the later Sattahip rule. This guide intentionally combines the four direct <a href="/area/sattahip/">Sattahip-filter records</a> with relevant southern records from the <a href="/area/jomtien/">Jomtien filter</a>.</p></details>
 </section>
 `;

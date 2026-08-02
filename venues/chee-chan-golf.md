@@ -1,6 +1,7 @@
 ---
 id: chee-chan-golf
 name: Chee Chan Golf Resort
+nameTh: สนามชีจรรย์ กอล์ฟ รีสอร์ท
 category: golf
 area: Na Jomtien / Sattahip
 address: 108/18 Moo 6, Na Jomtien, Sattahip, Chonburi 20250
@@ -10,24 +11,27 @@ website: https://cheechangolf.com/
 social: {}
 hours: Daily; reserve a tee time
 priceRange: ฿฿฿฿
-priceAsOf: 2026-07-27
+priceAsOf: 2026-07-29
 distinction: 18-hole David Dale course beside Khao Chi Chan
 designer: David Dale, Golfplan
 holes: 18
 priceSourceUrl: https://cheechangolf.com/wp-content/uploads/2026/03/CCGR-Public-Rate.jpg
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://cheechangolf.com/about/
   - https://cheechangolf.com/the-course/
   - https://cheechangolf.com/facilities/
   - https://cheechangolf.com/wp-content/uploads/2026/03/CCGR-Public-Rate.jpg
   - https://www.google.com/maps/search/?api=1&query=Chee+Chan+Golf+Resort
+  - "https://www.google.com/maps/search/?api=1&query=Chee+Chan+Golf+Resort&hl=th"
 description: 18-hole Na Jomtien championship course with a dated 2026 public rate card, driving range and full golf-club facilities.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Chee+Chan+Golf+Resort"
 tags: [18-holes, championship, driving-range, golf-academy, na-jomtien]
 ---
 
 # Chee Chan Golf Resort
+
+In Thai Maps, the 18-hole resort at 108/18 Moo 6 is **สนามชีจรรย์ กอล์ฟ รีสอร์ท**.
 
 Chee Chan Golf Resort is a Na Jomtien golf record with a current dated public rate card, which makes it easier to price honestly than many Pattaya-area courses. It is an 18-hole David Dale design beside Chee Chan Mountain, but the green fee is only part of the total because the resort's 2026 public card also states separate compulsory caddie-and-cart charges.
 
@@ -41,7 +45,7 @@ Use the wider [golf category](/category/golf/) for course comparison and the [be
 
 ## What it costs
 
-The resort's public rate card valid **1 April 2026 to 30 September 2026**, checked again on **2026-07-27**, lists:
+The resort's public rate card valid **1 April 2026 to 30 September 2026**, checked again on **2026-07-29**, lists:
 
 - **THB 4,500** for **weekday 18 holes**
 - **THB 2,250** for **weekday 9 holes**

@@ -1,5 +1,6 @@
 ---
 id: pattaya-panthers-rugby
+nameTh: พัทยาแพนเตอร์ รักบี้ฟุตบอลคลับ
 name: Pattaya Panthers Rugby Football Club
 category: clubs
 area: Pattaya / Horseshoe Point
@@ -13,18 +14,21 @@ hours: Thu 19:15-20:45; confirm the session and pitch with the club
 priceRange: ""
 distinction: Social contact-and-touch rugby club and organiser of the Chris Kays Memorial tournament
 clubType: Rugby club
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://pattayapanthers.com/
   - https://pattayapanthers.com/pattaya-panties/
   - https://www.facebook.com/pattayapanthersrugby/
   - https://www.facebook.com/pattayapanthersrugby/posts/pfbid0rpdkAcA6x8H2PFqCeP7bgJAFbF63THGKaw5YQtXNzdumN2Z2yrWqS1TyytNfvQabl
+  - https://thrugby.com/
 description: All-levels social rugby club publishing Thursday contact-and-touch training at Horseshoe Point.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Horseshoe+Point+Resort+Pattaya"
 tags: [rugby, touch-rugby, contact-rugby, social-club, horseshoe-point]
 ---
 
 # Pattaya Panthers Rugby Football Club
+
+Thailand's rugby federation writes the club as **พัทยาแพนเตอร์ รักบี้ฟุตบอลคลับ**, matching the team's published **19:15** Thursday training slot at Horseshoe Point.
 
 ## What training is on offer
 

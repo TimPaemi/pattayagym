@@ -114,13 +114,7 @@ ${marquee(BOTTOM_MARQUEE, true)}
 }
 
 function paNetwork() {
-  return `<section class="pa-network">
-  
-    <div class="pa-network-badge">★ A Pattaya Authority property ★</div>
-  
-  <h2 class="pa-network-h">Pattaya <span class="accent">Authority.</span></h2>
-  <p class="pa-network-sub">// Site engineered, operated &amp; maintained in-house<br>by the founders of TimPaemi</p>
-</section>`;
+  return '';
 }
 
 function buildHead(title, desc, url, jsonLd) {

@@ -1,6 +1,7 @@
 ---
 id: jomtien-beach-volleyball
 name: Pattaya Jomtien Beach Volleyball Courts
+nameTh: สนามวอลเลย์บอลดงตาล
 category: clubs
 area: Jomtien / Dongtan Beach
 address: Jomtien Beach near the Sea Rescue station, Pattaya, Chonburi
@@ -16,12 +17,15 @@ verified: 2026-07-27
 sources:
   - https://www.beachvolleyballthailand.com/where-to-play-1
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Jomtien+Beach+Volleyball+Courts
+  - "https://www.google.com/maps/search/?api=1&query=Jomtien+Beach+Volleyball&hl=th"
 description: Free informal beach-volleyball courts near the Sea Rescue station at Jomtien and Dongtan.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Jomtien+Beach+Volleyball+Courts"
 tags: [beach-volleyball, free, social, jomtien, dongtan]
 ---
 
 # Pattaya Jomtien Beach Volleyball Courts
+
+The beach court beside the rescue area is **สนามวอลเลย์บอลดงตาล** in Thai Maps; informal games generally begin around 16:00.
 
 ## What training is on offer
 

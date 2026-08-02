@@ -1,5 +1,6 @@
 ---
 id: lumpinee-boxing-stadium
+nameTh: สนามมวยเวทีลุมพินี
 name: Lumpinee Boxing Stadium
 category: muay-thai
 area: Bangkok / Ramintra Road
@@ -17,12 +18,15 @@ sources:
   - https://lumpineestadium.com/
   - https://lumpineestadium.com/event
   - https://www.google.com/maps/search/?api=1&query=Lumpinee+Boxing+Stadium+Ramintra
+  - https://commons.wikimedia.org/wiki/Category%3ALumpinee_Boxing_Stadium
 description: Active Bangkok stadium hosting scheduled Muay Thai events, including Friday ONE Lumpinee and Saturday Lumpinee Super Champ cards.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Lumpinee+Boxing+Stadium+Ramintra"
 tags: [muay-thai-stadium, bangkok, day-trip-from-pattaya, one-championship, professional-fights]
 ---
 
 # Lumpinee Boxing Stadium
+
+Thai reference material gives the stadium name as **สนามมวยเวทีลุมพินี**; the current record keeps its Bangkok **6 Ramintra Road** location explicit for Pattaya day-trip readers planning a fight night.
 
 Lumpinee is an active Bangkok fight venue, not a Pattaya training gym. It belongs in the [Muay Thai category](/category/muay-thai/) because Pattaya visitors do use it as a stadium day trip, but the useful decision is whether you want a spectator card with fixed seating and date-specific start times rather than a coached session.
 

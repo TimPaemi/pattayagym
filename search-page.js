@@ -1,6 +1,6 @@
 /**
  * search-page.js
- * Live client-side search across all 158 Pattaya venues.
+ * Live client-side search across the current Pattaya venue dataset.
  * Reads window.GYMS + window.CATEGORIES set by /data.js
  *
  * Loaded by /search/index.html.
@@ -246,6 +246,7 @@
         render(lastResults);
       });
     }
+    grid.setAttribute('aria-busy', 'false');
   }
 
   function track(name, params){ try { if (window.gtag) window.gtag('event', name, params || {}); } catch(e){} }
@@ -293,7 +294,9 @@
     var priceEl = document.getElementById('price-filter'); if (priceEl) priceEl.value = 'all';
     var openEl = document.getElementById('open-filter'); if (openEl) openEl.checked = false;
     document.querySelectorAll('.sf-pill').forEach(function (p) {
-      p.classList.toggle('active', p.getAttribute('data-cat') === 'all');
+      var active = p.getAttribute('data-cat') === 'all';
+      p.classList.toggle('active', active);
+      p.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
     run();
   }
@@ -335,8 +338,12 @@
     pills.forEach(function (p) {
       p.addEventListener('click', function () {
         state.cat = p.getAttribute('data-cat') || 'all';
-        pills.forEach(function (other) { other.classList.remove('active'); });
+        pills.forEach(function (other) {
+          other.classList.remove('active');
+          other.setAttribute('aria-pressed', 'false');
+        });
         p.classList.add('active');
+        p.setAttribute('aria-pressed', 'true');
         run();
       });
     });
@@ -371,7 +378,9 @@
       if (sp.has('cat')) {
         state.cat = sp.get('cat');
         pills.forEach(function (p) {
-          p.classList.toggle('active', p.getAttribute('data-cat') === state.cat);
+          var active = p.getAttribute('data-cat') === state.cat;
+          p.classList.toggle('active', active);
+          p.setAttribute('aria-pressed', active ? 'true' : 'false');
         });
       }
     } catch (e) { /* SSR-safe */ }

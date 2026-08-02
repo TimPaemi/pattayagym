@@ -38,15 +38,18 @@ const venues = GYMS.map(g => ({
   socialInstagram: (g.social && g.social.instagram) ? `https://instagram.com/${g.social.instagram}` : null,
   hours: g.hours || null,
   priceRange: g.priceRange || null,
+  priceAsOf: g.priceAsOf || null,
+  priceSourceUrl: g.priceSourceUrl || null,
   description: g.description || null,
   tags: g.tags || [],
   mapsUrl: g.mapsUrl || null,
-  verified: g.verified || null
+  status: g.status || null,
+  sourcesReviewed: g.verified || null
 }));
 const venuesApi = {
   name: 'Pattaya Gym Directory',
   url: SITE + '/',
-  description: 'Independently-verified directory of every gym, Muay Thai camp, BJJ academy, golf course, dive operator, watersports, climbing, yoga and sport venue in Pattaya, Thailand.',
+  description: 'Current source-checked records for gyms, Muay Thai camps, sport clubs, facilities and operators in Pattaya and the Eastern Seaboard. Missing or unresolved fields remain visible.',
   generated: TODAY,
   license: 'CC BY 4.0',
   attribution: 'Source: pattaya-gym.com (independent directory, no paid placements)',
@@ -114,17 +117,17 @@ const jsonFeed = {
   title: 'Pattaya Gym Directory — Recently Added',
   home_page_url: SITE + '/',
   feed_url: SITE + '/feed.json',
-  description: 'Latest verified gyms, Muay Thai camps, dive operators, golf courses and sport venues added to the Pattaya Gym Directory.',
+  description: 'Recently source-reviewed Pattaya.Gym venue records.',
   icon: SITE + '/og-image.png',
   favicon: SITE + '/icon-180.png',
   language: 'en',
-  authors: [{ name: 'Pattaya Gym Directory', url: SITE + '/' }],
+  authors: [{ name: 'Tim', url: SITE + '/about/#tim' }, { name: 'Paemi', url: SITE + '/about/#paemi' }],
   items: recent.map(g => ({
     id: `${SITE}/gyms/${g.id}/`,
     url: `${SITE}/gyms/${g.id}/`,
     title: g.name || '',
     content_text: g.description || '',
-    date_published: (g.verified || TODAY) + 'T00:00:00Z',
+    date_modified: (g.verified || TODAY) + 'T00:00:00Z',
     tags: [g.category, g.area].filter(Boolean)
   }))
 };

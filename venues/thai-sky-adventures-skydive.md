@@ -1,5 +1,6 @@
 ---
 id: thai-sky-adventures-skydive
+nameTh: ไทยสกายแอดเวนเจอร์
 name: Thai Sky Adventures
 category: adventure
 area: Nong Kham / Si Racha
@@ -15,6 +16,8 @@ priceSourceUrl: https://thaiskyadventures.com/begin-your-booking/
 distinction: Tandem skydiving and licensed-skydiver training in Si Racha
 verified: 2026-07-27
 sources:
+  - https://map.longdo.com/poilist/65?page=2450
+  - https://www.booking.com/attractions/th/prn4jy2ytf1f-drop-zone-thai-sky-adventures-pattaya-with-return-transfer.th.html
   - https://thaiskyadventures.com/
   - https://thaiskyadventures.com/tandem-skydiving/
   - https://thaiskyadventures.com/begin-your-booking/
@@ -29,6 +32,8 @@ tags: [skydiving, tandem, aff, a-licence, si-racha, weather-dependent]
 # Thai Sky Adventures
 
 ## What training is on offer
+
+Thai location listings call the 777 77 Sriracha drop zone **ไทยสกายแอดเวนเจอร์** and describe tandem flights up to 13,000 feet.
 
 Thai Sky Adventures operates a drop zone at Nong Kham in Si Racha. The operator advertises tandem skydives from up to 13,000 feet with about 60 seconds of freefall. A tandem places a first-time participant with an instructor; the current booking flow also offers media add-ons.
 

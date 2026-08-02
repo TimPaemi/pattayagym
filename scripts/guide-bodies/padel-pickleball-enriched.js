@@ -28,7 +28,7 @@ module.exports = `
 </table>
 </div>
 
-<p>Play Padel’s and Chilli’s figures were rechecked against their operator pages on 27 July 2026. Pattaya Padel Club’s published tariff was checked 25 July 2026. The blank entries remain in the comparison because verified operation matters even when a stable price does not exist.</p>
+<p><a href="/gyms/play-padel-pattaya/">Play Padel’s</a> and <a href="/gyms/chilli-padel-club/">Chilli’s</a> figures were rechecked against their operator pages on 27 July 2026. <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club’s</a> published tariff was checked 25 July 2026. The blank entries remain in the comparison because verified operation matters even when a stable price does not exist.</p>
 
 <h2>Play Padel Pattaya: clear tariff and advance-payment rules</h2>
 
@@ -44,7 +44,7 @@ module.exports = `
 
 <p>The operator publishes **THB 1,000 per hour for the whole court**, up to four players, and happy-hour courts from **THB 600 per hour**. It says rackets and balls are available to rent without publishing the current rental price. Chilli also advertises a 90-minute introduction, coaching, Americano and other rotating formats, plus player groups for matching.</p>
 
-<p>Chilli is the clearest Jomtien option and the strongest rain-cover proposition in this comparison. A solo visitor should ask which current event accepts the stated level and what the per-player total includes; “social” does not make every event a walk-in.</p>
+<p>Chilli is a documented Jomtien option with indoor rain cover in this comparison. A solo visitor should ask which current event accepts the stated level and what the per-player total includes; “social” does not make every event a walk-in.</p>
 
 <h2>Pattaya Padel Club: time-band pricing at Mabprachan</h2>
 
@@ -80,38 +80,38 @@ module.exports = `
 
 <h2>How to book as a solo player</h2>
 
-<p>Padel normally needs four. A solo visitor should book a lesson, named social event or confirmed partner-matching route. Chilli publishes community groups and rotating formats. Play Padel asks players to avoid no-shows and does not promise that a reservation survives a missing fourth. Prime’s live system can show slots, but a court booking alone does not create partners.</p>
+<p>Padel normally needs four. A solo visitor should book a lesson, named social event or confirmed partner-matching route. <a href="/gyms/chilli-padel-club/">Chilli</a> publishes community groups and rotating formats. <a href="/gyms/play-padel-pattaya/">Play Padel</a> asks players to avoid no-shows and does not promise that a reservation survives a missing fourth. <a href="/gyms/prime-padel-pattaya/">Prime’s</a> live system can show slots, but a court booking alone does not create partners.</p>
 
-<p>For pickleball, ask whether “open play” means rotating games, which level attends and whether a first-time visitor must reserve. PR documents beginner coaching, while Inter Club requires a direct format check. Do not arrive from the word “daily” alone; business hours are not a session invitation.</p>
+<p>For pickleball, ask whether “open play” means rotating games, which level attends and whether a first-time visitor must reserve. <a href="/gyms/pickleball-pattaya/">PR</a> documents beginner coaching, while <a href="/gyms/pattaya-tennis-badminton-inter-club/">Inter Club</a> requires a direct format check. Do not arrive from the word “daily” alone; business hours are not a session invitation.</p>
 
 <h2>Weather, cover and time bands</h2>
 
-<p>Play Padel is the indoor choice in this set. Chilli publishes five roofed courts out of six and specifically presents them as rain protection. Do not generalise that cover to every other club. Pattaya Padel Club’s timetable creates an off-peak price band, while PR Pickleball’s current morning and late-afternoon windows avoid implying all-day play.</p>
+<p><a href="/gyms/play-padel-pattaya/">Play Padel</a> is the indoor choice in this set. <a href="/gyms/chilli-padel-club/">Chilli</a> publishes five roofed courts out of six and specifically presents them as rain protection. Do not generalise that cover to every other club. <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club’s</a> timetable creates an off-peak price band, while <a href="/gyms/pickleball-pattaya/">PR Pickleball’s</a> current morning and late-afternoon windows avoid implying all-day play.</p>
 
 <p>Ask what happens if weather interrupts an uncovered booking, whether the club moves the slot and when cancellation becomes non-refundable. A roof does not answer heat, ventilation or court-drying questions, and this guide does not invent those conditions.</p>
 
 <h2>Equipment and complete cost</h2>
 
-<p>For padel, request the court, racket, balls, coaching and booking fee as separate lines. Play Padel publishes each category and a THB 100 credit-card fee for new advance bookings through Padelmates. Chilli publishes court prices but not the current rental amount. Pattaya Padel Club’s public tariff does not settle equipment inclusion. Prime requires the live flow.</p>
+<p>For padel, request the court, racket, balls, coaching and booking fee as separate lines. <a href="/gyms/play-padel-pattaya/">Play Padel</a> publishes each category and a THB 100 credit-card fee for new advance bookings through Padelmates. <a href="/gyms/chilli-padel-club/">Chilli</a> publishes court prices but not the current rental amount. <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club’s</a> public tariff does not settle equipment inclusion. <a href="/gyms/prime-padel-pattaya/">Prime</a> requires the live flow.</p>
 
-<p>For pickleball, ask whether a paddle and balls are included in open play, whether a ball machine is separately charged and which shoes are required. PR’s operator page confirms equipment availability, not the price or inclusion for every product. Inter Club needs the same direct check.</p>
+<p>For pickleball, ask whether a paddle and balls are included in open play, whether a ball machine is separately charged and which shoes are required. <a href="/gyms/pickleball-pattaya/">PR’s</a> operator page confirms equipment availability, not the price or inclusion for every product. <a href="/gyms/pattaya-tennis-badminton-inter-club/">Inter Club</a> needs the same direct check.</p>
 
 <h2>Choose by geography only after product fit</h2>
 
-<p>Pratamnak contains Play Padel and PR Pattaya Pickleball. Central Sukhumvit contains Prime. Jomtien contains Chilli. Mabprachan contains Pattaya Padel Club. Inter Club is inland in East Pattaya. Those labels orient the choice but do not create a fixed journey time.</p>
+<p>Pratamnak contains <a href="/gyms/play-padel-pattaya/">Play Padel</a> and <a href="/gyms/pickleball-pattaya/">PR Pattaya Pickleball</a>. Central Sukhumvit contains <a href="/gyms/prime-padel-pattaya/">Prime</a>. Jomtien contains <a href="/gyms/chilli-padel-club/">Chilli</a>. Mabprachan contains <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a>. <a href="/gyms/pattaya-tennis-badminton-inter-club/">Inter Club</a> is inland in East Pattaya. Those labels orient the choice but do not create a fixed journey time.</p>
 
 <p>Open the exact venue pin, place it beside accommodation and the confirmed session, and then decide. The <a href="/area/pratamnak/">Pratamnak area page</a>, <a href="/area/jomtien/">Jomtien area page</a>, <a href="/area/central-pattaya/">Central Pattaya page</a> and <a href="/area/east-pattaya/">East Pattaya page</a> provide broader context without pretending the districts are one walkable block.</p>
 
 <h2>Make the call</h2>
 
-<p>Choose Play Padel for an indoor whole-court product with the clearest booking-fee detail. Choose Chilli for Jomtien, roof cover and current social-entry routes. Choose Pattaya Padel Club when Mabprachan fits and the time-band tariff is attractive. Choose Prime when central location and live-slot pricing matter. Choose PR for dedicated pickleball and a beginner-coaching enquiry. Choose Inter Club for a multi-racquet household willing to confirm the exact pickleball format.</p>
+<p>Choose <a href="/gyms/play-padel-pattaya/">Play Padel</a> for an indoor whole-court product with published booking-fee detail. Choose <a href="/gyms/chilli-padel-club/">Chilli</a> for Jomtien, roof cover and current social-entry routes. Choose <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a> when Mabprachan fits and the time-band tariff is attractive. Choose <a href="/gyms/prime-padel-pattaya/">Prime</a> when central location and live-slot pricing matter. Choose <a href="/gyms/pickleball-pattaya/">PR</a> for dedicated pickleball and a beginner-coaching enquiry. Choose <a href="/gyms/pattaya-tennis-badminton-inter-club/">Inter Club</a> for a multi-racquet household willing to confirm the exact pickleball format.</p>
 
 <p>Before paying, send the date, start time, player count, experience level and equipment needs. Ask for the complete total, cover, court duration, partner arrangement, cancellation and arrival time. That message turns a broad sport search into a verifiable booking.</p>
 
 <section class="guide-faq" aria-labelledby="padel-pickleball-faq-h">
 <h2 id="padel-pickleball-faq-h">Padel and pickleball questions</h2>
-<details class="faq-item"><summary>What is the clearest published padel court price in Pattaya?</summary><p>Play Padel publishes THB 1,200 per whole court-hour. Chilli publishes THB 1,000 and happy hour from THB 600. Pattaya Padel Club publishes THB 600 from 10:00-16:00 and THB 800 in its other listed hours. Confirm date, equipment and booking fees before comparing.</p></details>
-<details class="faq-item"><summary>Where can a beginner try pickleball in Pattaya?</summary><p>PR Pattaya Pickleball’s operator site documents beginner lessons with an English-speaking licensed coach and equipment availability. Its current public tariff was not verified, so ask for the named beginner product, date, duration, paddle inclusion and total before travelling.</p></details>
-<details class="faq-item"><summary>Can a solo player book padel without three partners?</summary><p>A solo player should request coaching, a named social event or confirmed partner matching. Chilli publishes community and rotating formats. A whole-court booking at Play Padel, Pattaya Padel Club or Prime does not by itself provide the other players.</p></details>
+<details class="faq-item"><summary>What published padel court prices are listed in Pattaya?</summary><p><a href="/gyms/play-padel-pattaya/">Play Padel</a> publishes THB 1,200 per whole court-hour. <a href="/gyms/chilli-padel-club/">Chilli</a> publishes THB 1,000 and happy hour from THB 600. <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a> publishes THB 600 from 10:00-16:00 and THB 800 in its other listed hours. Confirm date, equipment and booking fees before comparing.</p></details>
+<details class="faq-item"><summary>Where can a beginner try pickleball in Pattaya?</summary><p><a href="/gyms/pickleball-pattaya/">PR Pattaya Pickleball’s</a> operator site documents beginner lessons with an English-speaking licensed coach and equipment availability. Its current public tariff was not verified, so ask for the named beginner product, date, duration, paddle inclusion and total before travelling.</p></details>
+<details class="faq-item"><summary>Can a solo player book padel without three partners?</summary><p>A solo player should request coaching, a named social event or confirmed partner matching. <a href="/gyms/chilli-padel-club/">Chilli</a> publishes community and rotating formats. A whole-court booking at <a href="/gyms/play-padel-pattaya/">Play Padel</a>, <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a> or <a href="/gyms/prime-padel-pattaya/">Prime</a> does not by itself provide the other players.</p></details>
 </section>
 `;

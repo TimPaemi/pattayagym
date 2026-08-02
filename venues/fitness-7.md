@@ -1,6 +1,7 @@
 ---
 id: fitness-7
 name: Fitness 7 Pattaya
+nameTh: ฟิตเนสเซเว่น สาขาพัทยา
 category: fitness
 area: The Avenue Pattaya / Central Pattaya
 address: 399/9 The Avenue Pattaya, first floor, room A100, Moo 10, Pattaya Second Road, Bang Lamung, Chonburi 20150
@@ -10,7 +11,7 @@ website: https://fitness7thailand.com/our-branches/pattaya/
 social:
   facebook: fitness7official
   instagram: fitness7thailand
-hours: Open 24 hours daily
+hours: Daily 00:00-24:00
 priceRange: ฿
 distinction: 24-hour, 2,000-square-metre gym at The Avenue Pattaya with branch-wide published rates
 features: [Cardio machines, Weight machines, Free weights, Boxing ring, Functional training area, Group classes]
@@ -18,11 +19,12 @@ beginnerFriendly: true
 languages: [English, Thai]
 priceAsOf: 2026-07-27
 priceSourceUrl: https://fitness7thailand.com/
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://fitness7thailand.com/
   - https://fitness7thailand.com/our-branches/pattaya/
   - https://fitness7thailand.com/about-us/
+  - https://fitness7thailand.com/our-branches/pattaya/?lang=th
   - https://www.google.com/maps/search/?api=1&query=Fitness+7+The+Avenue+Pattaya
 description: Twenty-four-hour central Pattaya gym with a large mixed-equipment floor, boxing ring, functional area and branch-wide published rates.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Fitness+7+The+Avenue+Pattaya"
@@ -30,6 +32,8 @@ tags: [24-hour, central-pattaya, free-weights, boxing-ring, functional-training]
 ---
 
 # Fitness 7 Pattaya
+
+For Thai-script searches, the operator's Pattaya page gives the 399/9 The Avenue branch as **ฟิตเนสเซเว่น สาขาพัทยา**.
 
 Fitness 7 Pattaya is a true general-purpose 24-hour gym, not a Muay Thai camp or a hotel fitness room. The official Pattaya branch page is clear on the big picture: a large mall-based facility with weights, cardio, functional space and a boxing ring, open around the clock. Its most useful public strength is that the operator also publishes a current branch-wide rate card instead of hiding all pricing behind chat.
 

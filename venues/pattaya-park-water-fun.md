@@ -1,6 +1,7 @@
 ---
 id: pattaya-park-water-fun
 name: Pattaya Park Water Park
+nameTh: สวนน้ำพัทยาปาร์ค
 category: adventure
 area: Pratamnak / Jomtien border
 address: 345 Moo 12, Nong Prue, Bang Lamung, Chonburi 20150
@@ -14,6 +15,7 @@ verified: 2026-07-27
 sources:
   - https://www.pattayapark.com/
   - https://www.pattayapark.com/water-park/
+  - https://www.youtube.com/watch?v=-rdIHweRgbY
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Park+Water+Park
 description: Operating water park at the Pattaya Park complex, listed daily from 09:00 to 18:00.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Park+Water+Park"
@@ -21,6 +23,8 @@ tags: [water-park, swimming, family, pratamnak, jomtien]
 ---
 
 # Pattaya Park Water Park
+
+Thai travel coverage describes the 345 Moo 12 resort attraction near Pratamnak as **สวนน้ำพัทยาปาร์ค**.
 
 ## What training is on offer
 

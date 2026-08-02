@@ -151,7 +151,37 @@ function attachAuthor(node) {
   return false;
 }
 
-let foundersFixed = 0, datesAdded = 0, filesChanged = 0, authorsAdded = 0, entitiesCanonicalized = 0;
+/* The flagship contract is stronger than "add an author when missing". Every
+   page/article/application node is authored by the two people and published by
+   their company. Replace stale Organization authors and Person publishers too. */
+function normalizeAuthorship(node) {
+  if (Array.isArray(node)) {
+    let changed = false;
+    for (const item of node) if (normalizeAuthorship(item)) changed = true;
+    return changed;
+  }
+  if (!node || typeof node !== 'object') return false;
+  let changed = false;
+  const types = [].concat(node['@type'] || []);
+  const authored = types.some(t => typeof t === 'string' &&
+    ((/Page$/.test(t) && t !== 'FAQPage') || /Article$/.test(t) || t === 'WebApplication'));
+  if (authored) {
+    const wantedAuthor = authorRefs();
+    const wantedPublisher = timpaemiRef();
+    if (JSON.stringify(node.author) !== JSON.stringify(wantedAuthor)) {
+      node.author = wantedAuthor;
+      changed = true;
+    }
+    if (JSON.stringify(node.publisher) !== JSON.stringify(wantedPublisher)) {
+      node.publisher = wantedPublisher;
+      changed = true;
+    }
+  }
+  for (const value of Object.values(node)) if (normalizeAuthorship(value)) changed = true;
+  return changed;
+}
+
+let foundersFixed = 0, datesAdded = 0, filesChanged = 0, authorsAdded = 0, authorsNormalized = 0, entitiesCanonicalized = 0;
 
 for (const file of walkHtml(ROOT)) {
   const orig = fs.readFileSync(file, 'utf8');
@@ -170,6 +200,7 @@ for (const file of walkHtml(ROOT)) {
       let touched = false;
       if (fixFounders(json)) { touched = true; foundersFixed++; }
       if (canonicalizeEntities(json)) { touched = true; entitiesCanonicalized++; }
+      if (normalizeAuthorship(json)) { touched = true; authorsNormalized++; addEntityNodes = true; }
       if (!pageHasDate && stampDate(json)) { touched = true; pageHasDate = true; datesAdded++; }
       if (needsAuthor && attachAuthor(json)) { touched = true; needsAuthor = false; authorsAdded++; addEntityNodes = true; }
       return touched ? `<script type="application/ld+json">${JSON.stringify(json)}</script>` : whole;
@@ -214,4 +245,4 @@ for (const file of walkHtml(ROOT)) {
   if (html !== orig) { fs.writeFileSync(file, html, 'utf8'); filesChanged++; }
 }
 
-console.log(`entity graph: ${filesChanged} file(s) changed — ${foundersFixed} bare founder list(s) resolved to @id, ${datesAdded} dateModified added (${SITE_MODIFIED}), ${authorsAdded} page(s) given the author markup their visible byline claims, ${entitiesCanonicalized} stale entity definition(s) rewritten from scripts/lib/timpaemi-author.js`);
+console.log(`entity graph: ${filesChanged} file(s) changed — ${foundersFixed} bare founder list(s) resolved to @id, ${datesAdded} dateModified added (${SITE_MODIFIED}), ${authorsAdded} page(s) given missing author markup, ${authorsNormalized} content block(s) normalized to Tim + Paemi/company publisher, ${entitiesCanonicalized} stale entity definition(s) rewritten from scripts/lib/timpaemi-author.js`);

@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 /**
  * seo-audit.js — on-page SEO gate for shipped HTML.
- * Fails on truncated meta descriptions, missing gtag+analytics pairs, duplicate homepage H1 issues.
+ * Fails on truncated meta descriptions, pre-consent Google tags, and homepage H1 issues.
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const SKIP = new Set(['node_modules', '.git', 'scripts', 'venues', 'data', 'docs']);
+const SKIP = new Set(['node_modules', '.git', 'scripts', 'venues', 'data', 'docs', '.backups', '.internal-docs', '_audit-tmp', 'private', 'research']);
 
 const issues = {
   truncDesc: [],
   shortDesc: [],
   longDesc: [],
   longTitle: [],
-  missingGtag: [],
+  preConsentGtag: [],
   thinH1: [],
 };
 
@@ -48,8 +48,8 @@ for (const file of walk(ROOT)) {
     if (desc.length < 100) issues.shortDesc.push({ file: r, len: desc.length });
     if (desc.length > 165) issues.longDesc.push({ file: r, len: desc.length });
   }
-  if (html.includes('analytics.js') && !html.includes('googletagmanager.com/gtag')) {
-    issues.missingGtag.push(r);
+  if (/googletagmanager\.com\/gtag\/js/i.test(html)) {
+    issues.preConsentGtag.push(r);
   }
   if (r === 'index.html' && h1Text && !/pattaya/i.test(h1Text)) {
     issues.thinH1.push(r);
@@ -62,10 +62,13 @@ console.log('Truncated meta (...):', issues.truncDesc.length, issues.truncDesc.s
 console.log('Short meta (<100):', issues.shortDesc.length);
 console.log('Long meta (>165):', issues.longDesc.length);
 console.log('Long title (>65):', issues.longTitle.length);
-console.log('analytics.js without gtag:', issues.missingGtag.length, issues.missingGtag.join(', ') || '—');
+console.log('Pre-consent Google tags:', issues.preConsentGtag.length, issues.preConsentGtag.join(', ') || '—');
 console.log('Homepage H1 missing Pattaya:', issues.thinH1.length);
 
-const fail = issues.truncDesc.length + issues.missingGtag.length + issues.thinH1.length;
+const analytics = fs.readFileSync(path.join(ROOT, 'analytics.js'), 'utf8');
+const consentBroken = !analytics.includes('pg_analytics_consent_v1') || !analytics.includes('globalPrivacyControl');
+console.log('Consent-first analytics client:', consentBroken ? 'BROKEN' : 'OK');
+const fail = issues.truncDesc.length + issues.preConsentGtag.length + issues.thinH1.length + (consentBroken ? 1 : 0);
 if (fail) {
   console.error('\nSEO GATE FAIL — fix before ship.');
   process.exit(1);

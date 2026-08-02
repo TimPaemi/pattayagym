@@ -1,6 +1,7 @@
 ---
 id: megabreak-pool-hall
 name: Megabreak Pool Hall Pattaya
+nameTh: เมกะเบรก
 category: clubs
 area: Soi Diana / Central Pattaya
 address: Soi Diana, off Pattaya Second Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -13,6 +14,7 @@ priceRange: ""
 distinction: Late-opening dedicated pool hall on Soi Diana
 verified: 2026-07-26
 sources:
+  - https://www.thailandblog.nl/en/column/voetbalvreugde-megabreak-poolhal/
   - https://www.google.com/maps/search/?api=1&query=Megabreak+Pool+Hall+Pattaya
   - https://www.facebook.com/Megabreak/
   - https://www.facebook.com/Megabreak/posts/pfbid02z8NKyjdVbWaMAjFHHCcDf6unKYFoChLxrZy58D9isr9Rtdc3Gc8PyF32eFiKuwHil
@@ -24,6 +26,8 @@ tags: [pool, billiards, cue-sports, central-pattaya, soi-diana, late-opening]
 
 # Megabreak Pool Hall Pattaya
 
+The Thai-language pool-hall reference uses **เมกะเบรก** for the venue.
+
 Megabreak is an active dedicated pool hall on Soi Diana, off Pattaya Second Road. The current Maps listing supplies the phone above and gives late hours every day. It opens at **14:00 on Tuesday, Thursday and Sunday** and at **17:00 on Monday, Wednesday, Friday and Saturday**; closing is listed at **03:00** throughout the week.
 
 The operator's current Facebook page is the stronger activity check. A result posted on **23 July 2026** reports a Thursday nine-ball event, supporting continued organised cue-sport use. It does not establish a permanent weekly tournament timetable, entry price or guaranteed table availability for a casual visitor.
@@ -33,3 +37,23 @@ The operator's current Facebook page is the stronger activity check. A result po
 No current first-hand table-hire tariff, table inventory, cue-rental menu or booking policy was found. The standalone website remains online, but its visible editorial material is historical and should not be used as a current competition calendar or price list.
 
 Call **+66 38 428 859** before a fixed visit. Ask whether the hall charges by table or player, whether cues are available, whether a deposit or minimum spend applies and whether an announced event reduces casual table availability. Use the exact Maps pin for the entrance; the Soi Diana description is useful area context but not a substitute for a live route.
+
+## What training is on offer
+
+The evidence supports an active pool hall and a July 2026 nine-ball event. It does not establish a permanent tournament calendar, coaching, table count, league registration or a beginner programme.
+
+## Who it suits — and who it does not
+
+The late hours make it a documented option for cue-sport players who confirm table availability. The sources do not guarantee a casual table during an event or show that equipment is provided.
+
+## Getting there
+
+Megabreak is on Soi Diana off Pattaya Second Road. The listed phone is +66 38 428 859 and the exact Maps pin remains the recommended route source.
+
+## Before you go
+
+The public schedule closes at 03:00 daily, with 14:00 starts Tuesday, Thursday and Sunday, and 17:00 starts Monday, Wednesday, Friday and Saturday. Confirm event use before a fixed visit.
+
+## What we could not verify
+
+No current table tariff, cue-rental menu, table inventory, deposit, minimum spend, booking policy or recurring tournament price was published in the sources checked.

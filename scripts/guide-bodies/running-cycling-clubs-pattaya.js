@@ -58,17 +58,17 @@ module.exports = `
 
 <p><a href="/gyms/pattaya-hash-house/">Pattaya Hash House Harriers</a> is the clearest recurring current running-club structure in the directory. Its own site says the group has met every Monday since 1984, with Buffalo Bar pickup from 14:30, the last bus leaving at 15:00 and the first circle at 16:00. The current public contribution is visible and split by men, women and children. That combination of recurring schedule, public price and weekly A-site page makes it the easiest social entry point for most new arrivals.</p>
 
-<p><a href="/gyms/pattaya-monkey-hash-house/">Pattaya Monkey Hash House Harriers</a> is different. It is men only, it runs every second odd-numbered month rather than every week, and its published Run 125 fee at 25 July 2026 was far higher because it bundled extras for that specific event. Treat Monkey Hash as the tougher occasional trail challenge, not as the ordinary weekly running club that Pattaya Hash provides.</p>
+<p><a href="/gyms/pattaya-monkey-hash-house/">Pattaya Monkey Hash House Harriers</a> is different. It is men only, it runs every second odd-numbered month rather than every week, and its published Run 125 fee at 25 July 2026 was far higher because it bundled extras for that specific event. Treat Monkey Hash as the tougher occasional trail challenge, not as the ordinary weekly running club that <a href="/gyms/pattaya-hash-house/">Pattaya Hash</a> provides.</p>
 
 <p><a href="/gyms/pattaya-running-routes/">Pattaya Public Running Locations</a> helps when you want cardio without club ritual. That record confirms starting points rather than a managed route: Pattaya Beach, Jomtien Beach, Mabprachan, Nong Prue Public Park and the Pratamnak hill park area. It is useful for dawn solo running or for visitors whose schedule does not line up with Monday hash. It is weak for anyone who needs distance certification, bag drop, lighting certainty or a partner to run with.</p>
 
-<p><a href="/gyms/pattaya-marathon/">Amazing Thailand Pattaya Marathon</a> solves a completely different problem again. The current official evidence says the 2026 event is on 26-27 September and registration is due to open on 5 August. That is valuable if you are planning a race trip, but it is not a standing weekly training community. If you arrive in August and want company next Monday, Pattaya Hash answers the question; if you are choosing a September race weekend, the marathon does.</p>
+<p><a href="/gyms/pattaya-marathon/">Amazing Thailand Pattaya Marathon</a> solves a completely different problem again. The current official evidence says the 2026 event is on 26-27 September and registration is due to open on 5 August. That is valuable if you are planning a race trip, but it is not a standing weekly training community. If you arrive in August and want company next Monday, <a href="/gyms/pattaya-hash-house/">Pattaya Hash</a> answers the question; if you are choosing a September race weekend, the marathon does.</p>
 
-<h2>Cycling evidence is fragmented, so start from the organiser with the clearest public clock</h2>
+<h2>Cycling evidence is fragmented, so start with a published organiser schedule</h2>
 
 <p>The cycling side needs more care than the running side because Pattaya's public evidence is spread across separate organiser pages. The old umbrella record <a href="/gyms/pattaya-cycling-clubs/">Pattaya cycling clubs</a> remains an unverified composite and should not be treated as a booking source. It may still help readers remember names, but it is not the place to take current times or fees from.</p>
 
-<p>The strongest public scheduling signal checked for this run comes from <strong>Jomtien Cycling Club</strong>. Its own public site says rides go out on <strong>Tuesday, Wednesday, Friday and Sunday at 06:15</strong>, with different distances and routes, and it publishes direct rider contacts. That is the most decision-useful cycling evidence because it names a clock rather than only a Facebook identity. A rider still needs to ask about pace, starting point, helmet expectations, suitable bike type and whether the intended ride is social, tempo or training-heavy.</p>
+<p>A public scheduling signal checked for this run comes from <strong>Jomtien Cycling Club</strong>. Its own public site says rides go out on <strong>Tuesday, Wednesday, Friday and Sunday at 06:15</strong>, with different distances and routes, and it publishes direct rider contacts. That is decision-useful cycling evidence because it names a clock rather than only a Facebook identity. A rider still needs to ask about pace, starting point, helmet expectations, suitable bike type and whether the intended ride is social, tempo or training-heavy.</p>
 
 <p>A second current lead is <strong>Pattaya International Cycling Group</strong>, whose public Facebook presence describes itself as a daily bicycle training group in Pattaya. That supports current existence, but not enough practical detail to outrank Jomtien Cycling Club for a first visit. It is the sort of group you message after deciding you want a stronger road-cycling scene, not the first listing to anchor a holiday around.</p>
 
@@ -82,7 +82,7 @@ module.exports = `
 
 <p><strong>Road cyclist:</strong> start with the organiser that publishes an actual time. That currently points to Jomtien Cycling Club rather than to a broad Pattaya cycling umbrella. If you prefer a harder, more training-oriented road group, message Pattaya International Cycling Group after you have established whether you can handle a dawn road start.</p>
 
-<p><strong>Event-led visitor:</strong> the current marathon weekend is the better planning anchor than any weekly club. It has a known September 2026 date window, even though the final price and race guide were still pending at the time of this check.</p>
+<p><strong>Event-led visitor:</strong> the current <a href="/gyms/pattaya-marathon/">marathon weekend</a> is the better planning anchor than any weekly club. It has a known September 2026 date window, even though the final price and race guide were still pending at the time of this check.</p>
 
 <p><strong>Lower-impact social-sport seeker:</strong> skip the trail and bike uncertainty altogether and move to <a href="/gyms/pattaya-lawn-bowls/">Pattaya Lawn Bowls Facilities</a>, <a href="/gyms/pattaya-petanque-club/">Pattaya Sai 3 Petanque Club</a> or the <a href="/guides/pattaya-seniors-low-impact-sport/">seniors low-impact guide</a>. Those products solve a different body and schedule problem.</p>
 
@@ -94,7 +94,7 @@ module.exports = `
 
 <h2>What not to rely on</h2>
 
-<p>Do not rely on old “Pattaya cycling clubs” umbrella lists, outdated Cuore references or an unconfirmed public-aerobics organiser when the question is where to turn up tomorrow. The running side of Pattaya has one especially clear weekly source-backed answer. The cycling side requires closer inspection of separate organiser pages. That is not a flaw in the directory; it is the honest state of the evidence.</p>
+<p>Do not rely on the old <a href="/gyms/pattaya-cycling-clubs/">Pattaya cycling-clubs umbrella record</a>, outdated Cuore references or the <a href="/gyms/pattaya-beach-public-aerobics/">unconfirmed public-aerobics record</a> when the question is where to turn up tomorrow. The running side of Pattaya has one especially clear weekly source-backed answer. The cycling side requires closer inspection of separate organiser pages. That is not a flaw in the directory; it is the honest state of the evidence.</p>
 
 <p>It also explains why some directory records stay short. A confirmed venue or organiser identity stays visible even when the tariff is missing. An unresolved composite or legacy identity should not be promoted into a live recommendation just because it would make the guide feel fuller. This guide is strongest when it tells you exactly which public clocks are dependable and which names still need a message first.</p>
 
@@ -102,7 +102,7 @@ module.exports = `
   <h2 id="running-cycling-faq">FAQ</h2>
   <details class="faq-item"><summary>Which Pattaya running club has the clearest current weekly structure?</summary><p><a href="/gyms/pattaya-hash-house/">Pattaya Hash House Harriers</a>. Its own site publishes the Monday routine, fee split, Buffalo Bar pickup and the weekly next-run page, which is stronger current evidence than a legacy forum mention or a generic route listing.</p></details>
   <details class="faq-item"><summary>Is there a cycling club with a published current start time?</summary><p>Yes. The checked public Jomtien Cycling Club page lists rides on Tuesday, Wednesday, Friday and Sunday from 06:15. You still need to confirm the exact meet point, pace, route and bike expectation before turning up.</p></details>
-  <details class="faq-item"><summary>What should I ignore when searching for Pattaya cycling clubs?</summary><p>Ignore legacy club names or umbrella pages unless a current organiser page backs them. The Cuore Masters Team public page says activities were frozen in 2016, and the directory's old Pattaya cycling umbrella record remains an unresolved composite rather than a current booking source.</p></details>
+  <details class="faq-item"><summary>What should I ignore when searching for Pattaya cycling clubs?</summary><p>Ignore legacy club names or umbrella pages unless a current organiser page backs them. The Cuore Masters Team public page says activities were frozen in 2016, and the directory's <a href="/gyms/pattaya-cycling-clubs/">old Pattaya cycling umbrella record</a> remains an unresolved composite rather than a current booking source.</p></details>
 </section>
 
 <h2>Related guides</h2>

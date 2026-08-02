@@ -1,6 +1,7 @@
 ---
 id: rangsiya-gym-taekwondo-pattaya
 name: Rangsiya Gym Taekwondo Pattaya
+nameTh: Rangsiya Gym Taekwondo Pattaya/รังสิญา ยิม พัทยา
 category: kids-youth
 area: Boonsampan / East Pattaya
 address: Boonsampan area, Nong Prue, Bang Lamung, Chonburi 20150
@@ -14,6 +15,7 @@ distinction: Pattaya taekwondo academy led by 2011 world champion and 2012 Olymp
 verified: 2026-07-26
 sources:
   - https://www.google.com/maps/search/?api=1&query=Rangsiya+Gym+Taekwondo+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Rangsiya+Gym+Taekwondo+Pattaya&hl=th"
   - https://www.facebook.com/people/Rangsiya-Gym-Pattaya/61560343545644/
   - https://www.thannam.net/champ/download/2071/F.pdf
   - https://www.thannam.net/champ/download/2071/C.pdf
@@ -24,6 +26,8 @@ tags: [taekwondo, kids, martial-arts, competition, east-pattaya]
 ---
 
 # Rangsiya Gym Taekwondo Pattaya
+
+The Thai Maps listing **Rangsiya Gym Taekwondo Pattaya/รังสิญา ยิม พัทยา** carries the Saturday 09:00-20:00 hours, while its published Sunday window ends at 15:00 in Nong Prue.
 
 Rangsiya Gym is a taekwondo academy in Boonsampan, Nong Prue. The current operator page identifies the Pattaya school as being supervised by Kru June, Rangsiya Nisaisom, and describes her as the 2011 world champion, a former Thai national-team athlete and a 2012 Olympian. This record is specifically for the Pattaya branch. A separate Rangsiya identity in Sattahip publishes another address and phone number and should not be used to contact this school.
 

@@ -1,5 +1,6 @@
 ---
 id: pattaya-hash-house
+nameTh: พัทยา แฮช เฮาส์ แฮริเออร์ส
 name: Pattaya Hash House Harriers
 category: clubs
 area: Pattaya / rotating trail locations
@@ -22,12 +23,15 @@ sources:
   - https://www.pattayah3.com/
   - https://www.pattayah3.com/PH3/php/HareLine/NextRunInfo.php
   - https://www.pattayah3.com/PH3/php/RunCalendar/RunCalendar.php
+  - https://hashhouseharriersthailand.com/
 description: Monday social trail-running and walking hash with Buffalo Bar pickup, rotating trail sites and a published current fee split.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Buffalo+Bar+Pattaya+Third+Road"
 tags: [running, walking, social, weekly, monday]
 ---
 
 # Pattaya Hash House Harriers
+
+The Thailand Hash House directory groups this chapter under **Pattaya Hash House Harriers** and records the local chapter's **1984** start; the Thai rendering here is a searchable transliteration.
 
 Pattaya Hash House Harriers is a current Monday social run-and-walk club rather than a self-directed route listing. Its own site says the group has met every Monday since 1984, with gathering outside Buffalo Bar on Third Road from 14:30, the last bus leaving at 15:00 and the first circle starting at 16:00. It is a better fit for sociable runners and walkers than for anyone who wants a timed road race.
 

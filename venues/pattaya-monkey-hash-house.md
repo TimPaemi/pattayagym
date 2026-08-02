@@ -7,15 +7,16 @@ address: Meeting point changes for each run; see the operator's next-run page
 phone: ""
 website: https://pattayamonkeyh3.com/
 social: {}
-hours: Every second odd-numbered month, usually the third Saturday; about 2.5 hours
+hours: "Next run 26 Sep 2026; trail about 2.5 hours"
 priceRange: ฿฿
 distinction: Men-only challenge hash with changing trails and meeting points
 priceAsOf: 2026-07-27
 priceSourceUrl: https://pattayamonkeyh3.com/PMH3/php/NextRun/NextRun.php?run_type=Regular
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://pattayamonkeyh3.com/
   - https://pattayamonkeyh3.com/PMH3/php/NextRun/NextRun.php?run_type=Regular
+  - https://pattayamonkeyh3.com/PMH3/php/HareLine/HareLine.php
 description: Men-only Pattaya hash group running roughly every second odd-numbered month on changing trails with event-specific meeting points.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Monkey+Hash+House+Harriers"
 tags: [hash-house-harriers, trail-running, social, men-only, changing-location]
@@ -23,13 +24,13 @@ tags: [hash-house-harriers, trail-running, social, men-only, changing-location]
 
 # Pattaya Monkey Hash House Harriers
 
-Pattaya Monkey Hash House Harriers is an active men-only hash group rather than a fixed running venue. The operator's own site says the run normally takes about two and a half hours, happens every second odd-numbered month and usually lands on the third Saturday. That makes it useful for a visiting runner who wants a social trail challenge, but not for someone who needs a weekly club at one permanent location.
+Pattaya Monkey Hash House Harriers is an active men-only hash group rather than a fixed running venue. The operator's current hare line lists Run 126 on Saturday 26 September 2026; its main site says a run normally takes about two and a half hours. That makes it useful for a visiting runner who wants a social trail challenge, but not for someone who needs a weekly club at one permanent location.
 
 ## What training is on offer
 
 The main site describes the format as an A-to-B-to-C style trail with at least one water stop, a duration of about 2.5 hours and terrain that requires participants to be able to walk at least 8 km over moderately difficult ground in two hours. The same site's virgin policy says first-timers are expected to complete the full trail. That places the group closer to a social endurance challenge than to a casual sightseeing jog or an urban run club.
 
-Because Monkey Hash is event-based, the exact route changes. If your main goal is repeatable weekly running, use the broader [running and cycling clubs guide](/guides/running-cycling-clubs-pattaya/) instead.
+Because Monkey Hash is event-based, the exact route changes. The operator's hare line also lists future dates after Run 126, but the route, transport and meeting detail remain event-specific. If your main goal is repeatable weekly running, use the broader [running and cycling clubs guide](/guides/running-cycling-clubs-pattaya/) instead.
 
 ## What it costs
 

@@ -1,6 +1,7 @@
 ---
 id: jetts-fitness-pattaya
 name: Jetts Fitness Little Walk Pattaya
+nameTh: Jetts ลิตเติ้ล วอร์ค (พัทยากลาง)
 category: fitness
 area: Little Walk Pattaya / Pattaya Klang
 address: 8/116 Sukhumvit Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -18,6 +19,7 @@ sources:
   - https://www.jetts.co.th/en/little-walk-en/
   - https://www.jetts.co.th/en/welcome-tourist-pass-en/
   - https://www.google.com/maps/search/?api=1&query=Jetts+Fitness+Little+Walk+Pattaya
+  - https://www.jetts.co.th/little-walk/
 description: Jetts club at Little Walk Pattaya with 24-hour member access and published staffed hours.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Jetts+Fitness+Little+Walk+Pattaya"
 tags: [fitness, chain-gym, 24-hour, little-walk, central-pattaya]
@@ -26,6 +28,8 @@ tags: [fitness, chain-gym, 24-hour, little-walk, central-pattaya]
 # Jetts Fitness Little Walk Pattaya
 
 Jetts Little Walk is a chain fitness club on Sukhumvit Road at Pattaya Klang. Its main practical distinction is 24-hour access for members; that does not mean staff or visitor registration are available around the clock. It suits people who need a conventional gym outside staffed hours, provided they arrange the correct access product first.
+
+The Thai operator page labels the 8/116 branch **Jetts ลิตเติ้ล วอร์ค (พัทยากลาง)**.
 
 ## What training is on offer
 

@@ -1,5 +1,6 @@
 ---
 id: jomtien-dive-center
+nameTh: จอมเทียนไดฟ์เซ็นเตอร์
 name: Jomtien Dive Center
 category: watersports
 area: Jomtien Beach
@@ -18,12 +19,15 @@ sources:
   - https://jomtiendivecenter.com/prices/
   - https://jomtiendivecenter.com/contact/
   - https://www.google.com/maps/search/?api=1&query=Jomtien+Dive+Center+Pattaya
+  - https://thai.beautihost.com/chonburi/search/?q=jomtien+dive+center
 description: Jomtien operator with public prices for Pattaya and Samaesan fun dives, snorkelling, try dives and PADI courses.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Jomtien+Dive+Center+Pattaya"
 tags: [diving, padi, fun-dives, snorkelling, jomtien, samae-san]
 ---
 
 # Jomtien Dive Center
+
+A Thai directory identifies the operator as จอมเทียนไดฟ์เซ็นเตอร์; its current record address is 97/3 Moo 12 on Jomtien Beach Road.
 
 Jomtien Dive Center is one of the clearer Pattaya-area dive records because the operator publishes a real current product ladder on its own site. The public pages separate certified-diver trips, beginner try dives, snorkelling and full courses instead of forcing every buyer through a contact form first. It is still important to check inclusions, because the headline number does not make every optional rental or course add-on disappear.
 

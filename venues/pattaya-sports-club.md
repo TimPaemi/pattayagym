@@ -1,5 +1,6 @@
 ---
 id: pattaya-sports-club
+nameTh: พัทยา สปอร์ต คลับ
 name: Pattaya Sports Club Association
 category: clubs
 area: Central Pattaya
@@ -15,6 +16,7 @@ priceAsOf: 2026-07-27
 priceSourceUrl: https://pattayasports.org/join-us-now/
 verified: 2026-07-27
 sources:
+  - https://th.soidb.com/pattaya/building/pattaya-sports-club.html
   - https://pattayasports.org/
   - https://pattayasports.org/join-us-now/
   - https://pattayasports.org/members-discounts/
@@ -29,6 +31,8 @@ tags: [sports-association, membership, discounts, golf, central-pattaya]
 Pattaya Sports Club Association is a membership office and sports network on Pattaya 3rd Road, not a single all-in-one sports complex. Its current site ties the club to golf administration, social sport, member discounts and information across several activities. That makes it useful for someone who wants the PSC membership product, but not for a visitor expecting to walk into one building and find every sport named on the website.
 
 ## What training is on offer
+
+The Thai directory labels the 3/197 Pattaya 3rd Road office **พัทยา สปอร์ต คลับ** in its building entry.
 
 PSC does not present itself as a coached gym or court venue. The current website instead works as a club-and-membership hub covering golf services, discounts and activity information across sports such as badminton, cricket, lawn bowls, padel, pickleball, tennis and table tennis. That means this [clubs](/category/clubs/) record is about membership access and club administration rather than an on-site lesson timetable.
 

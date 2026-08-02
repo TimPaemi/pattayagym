@@ -1,6 +1,7 @@
 ---
 id: laem-chabang-international
 name: Laem Chabang International Country Club
+nameTh: สนามกอล์ฟ แหลมฉบัง อินเตอร์เนชั่นแนล คันทรี คลับ
 category: golf
 area: Laem Chabang / Si Racha
 address: 106/8 Moo 4, Bueng, Si Racha, Chonburi 20230
@@ -18,12 +19,15 @@ sources:
   - https://www.laemchabanggolf.com/golf-charge/
   - https://new.laemchabanggolf.com/event/stay-and-play-2026/
   - https://www.google.com/maps/search/?api=1&query=Laem+Chabang+International+Country+Club
+  - "https://www.google.com/maps/search/?api=1&query=Laem+Chabang+International+Country+Club&hl=th"
 description: Laem Chabang 27-hole golf club with published visitor charges and advance booking.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Laem+Chabang+International+Country+Club"
 tags: [golf, 27-holes, laem-chabang, si-racha, night-golf]
 ---
 
 # Laem Chabang International Country Club
+
+The 27-hole club's Thai Maps label is **สนามกอล์ฟ แหลมฉบัง อินเตอร์เนชั่นแนล คันทรี คลับ**.
 
 Laem Chabang International Country Club is a 27-hole Si Racha golf complex offering daytime and night-golf charges, compulsory caddie and buggy service, rental equipment and a current stay-and-play promotion. It suits golfers who want a booked full round and can confirm the available loop and tee window before travelling.
 

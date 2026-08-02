@@ -29,7 +29,7 @@ const BRAND = {
   site: 'Pattaya.Gym',
   domain: 'pattaya-gym.com',
   url: 'https://pattaya-gym.com',
-  tagline: 'Every gym, ring and court in Pattaya.',
+  tagline: 'Find gyms, rings and courts in Pattaya.',
   entity: 'TimPaemi Co., Ltd.',
   founders: ['Tim', 'Paemi'],
   city: 'Pattaya',
@@ -116,9 +116,9 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const YEAR = new Date().getFullYear();
 
 /* ------------------------------------------------------------- BOILERPLATE */
-const SHORT = `${BRAND.site} is an independent directory of every gym, Muay Thai camp and sport venue in ${BRAND.city}, Thailand — ${F.listings} listings across ${F.sports} sports, published by ${BRAND.entity.replace(/\.$/, '')}.`;
+const SHORT = `${BRAND.site} is an independent directory of gyms, Muay Thai camps and sport venues in ${BRAND.city}, Thailand — ${F.listings} source-checked records across ${F.sports} sports, published by ${BRAND.entity.replace(/\.$/, '')}.`;
 
-const LONG = `${BRAND.site} is an independent sport-venue directory for ${BRAND.city}, Thailand, published by ${BRAND.entity} and written by ${BRAND.founders.join(' and ')}, who live in the city. It lists ${F.listings} venues across ${F.sports} sports and ${F.areas} neighbourhoods, alongside ${F.guides} trip planners. Every price carries the date it was checked, every venue record cites its sources, and venues that close stay on the site marked as closed rather than quietly disappearing. No venue can pay for a listing, a ranking or a badge.`;
+const LONG = `${BRAND.site} is an independent sport-venue directory for ${BRAND.city}, Thailand, published by ${BRAND.entity} and written by ${BRAND.founders.join(' and ')}, who live in the city. It lists ${F.listings} records across ${F.sports} sports and ${F.areas} neighbourhoods, alongside ${F.guides} trip planners. Published prices carry an as-of date, venue pages expose their source ledger and unresolved details stay visible. Closed venues remain marked as closed rather than quietly disappearing. No venue can pay for a listing, a ranking or a badge. TimPaemi Co. manages more than 20 distinct Pattaya publications and products spanning local media, agency systems, events and streaming, with timpaemi.com as the central publisher identity.`;
 
 const FACTS = [
   ['Site', BRAND.site],
@@ -258,10 +258,10 @@ ${RULES.map(r => `        <li>${r}</li>`).join('\n')}
     <div class="venue-body">
       <ul>
         <li><strong>No paid placements.</strong> No venue can buy a listing, a ranking or a badge.</li>
-        <li><strong>Prices are dated.</strong> A rate without an as-of date is a rumour, so we do not publish one.</li>
-        <li><strong>Sources are cited</strong> on the venue record, at page level — the venue's own channels, its live map listing, or a federation register.</li>
+        <li><strong>Published prices are dated.</strong> Undated or unstable rates remain absent rather than being presented as current.</li>
+        <li><strong>Sources are exposed</strong> at record level — operator channels, public listings, authorities, sport bodies or a retained direct reply. The record says when evidence is incomplete.</li>
         <li><strong>Closures stay visible.</strong> ${F.closed} of ${F.listings} listings are marked permanently closed rather than deleted, so an old recommendation cannot send anyone to a dead address.</li>
-        <li><strong>Gaps are stated.</strong> Every venue page carries a “what we could not verify” section instead of guessing.</li>
+        <li><strong>Gaps are stated.</strong> Records surface missing prices, unresolved operation and imprecise locations instead of guessing.</li>
       </ul>
       <p>The full method is on the <a href="/methodology/">methodology page</a>.</p>
     </div>

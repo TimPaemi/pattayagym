@@ -1,5 +1,6 @@
 ---
 id: kombat-group-thailand
+nameTh: คอมแบท กรุ๊ป ไทยแลนด์
 name: Kombat Group Thailand
 category: muay-thai
 area: Huai Yai / East Pattaya
@@ -19,6 +20,7 @@ sources:
   - https://www.kombatgroup.com/prices/
   - https://www.kombatgroup.com/faq/
   - https://www.kombatgroup.com/contact/
+  - https://th.tripadvisor.com/Attraction_Review-g293919-d11676822-Reviews-Kombat_Group_Thailand-Pattaya_Chonburi_Province.html
   - https://www.google.com/maps/search/?api=1&query=Kombat+Group+Thailand
 description: Huai Yai residential camp selling package-based Muay Thai, boxing, MMA and BJJ stays with accommodation, meals and facility access.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Kombat+Group+Thailand"
@@ -26,6 +28,8 @@ tags: [muay-thai, boxing, mma, bjj, residential-camp, huai-yai]
 ---
 
 # Kombat Group Thailand
+
+The Thai listing renders the camp as **คอมแบท กรุ๊ป ไทยแลนด์** and places it at **49/1 Moo 4**, giving the record a locally searchable name alongside the operator's English brand.
 
 Kombat Group Thailand is a residential camp in Huai Yai selling multi-discipline combat-sports stays rather than a simple local gym pass. The official pages are strongest on package structure, accommodation tiers and what is included in the camp purchase. That makes it useful for longer-stay travellers, but less useful for someone who only wants one straightforward drop-in class.
 

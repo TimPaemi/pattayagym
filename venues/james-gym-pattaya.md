@@ -9,10 +9,10 @@ website: ""
 social:
   facebook: "61551820263944"
   instagram: j4mes_gym
-hours: Open 24 hours daily
+hours: "Daily 00:00-24:00"
 priceRange: ""
 distinction: 24-hour East Pattaya gym with current one-to-one coaching activity
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/profile.php?id=61551820263944
   - https://www.instagram.com/j4mes_gym/

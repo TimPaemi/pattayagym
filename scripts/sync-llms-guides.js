@@ -87,6 +87,9 @@ ${lines.join('\n')}
 `;
 
 let llms = fs.readFileSync(LLMS, 'utf8');
+llms = llms.replace(/^>[^\n]+/m, `> Source-checked directory of Pattaya gyms, Muay Thai camps and sport venues. ${n} records, ${slugs.length} guides, 15 categories and 6 areas — with dated evidence, visible gaps and no paid placements.`);
+llms = llms.replace(/- \[Map\][^\n]+/, `- [Map](${SITE}/map/): First-party explorer with venue-specific stored points; centroids and fallbacks are excluded`);
+if (!/\[Find coaching\]/.test(llms)) llms = llms.replace(/(- \[Map\][^\n]+\n)/, `$1- [Find coaching](${SITE}/find-my-coach/): Match training needs to venue records that publish coaching signals\n`);
 llms = llms.replace(/\d+ venues, \d+ guides/g, `${n} venues, ${slugs.length} guides`);
 llms = llms.replace(/## Curated guides[\s\S]*?(?=\n## Methodology)/, block + '\n');
 fs.writeFileSync(LLMS, llms, 'utf8');
@@ -130,4 +133,11 @@ console.log(`sync-llms-guides: ${slugs.length} guides in llms.txt`);
   const after = out.join('\n');
   if (after !== before) fs.writeFileSync(LLMS, after, 'utf8');
   console.log(`llms.txt: site total ${n} (${siteFixed} stale), category counts recomputed (${catFixed} corrected)`);
+}
+
+{
+  let current = fs.readFileSync(LLMS, 'utf8');
+  const promise = `## Editorial promise\n\nPattaya.Gym publishes source-checked venue records with a sources-reviewed date. Published prices carry a separate as-of date; missing tariffs, unresolved operation and imprecise locations remain visible. The site does not claim first-hand visits. No paid placements, sponsored rankings or venue affiliate commissions.\n\nPublished by Tim and Paemi / TimPaemi Co., Ltd. in Pattaya, Thailand.\n\nLast update: ${new Date().toISOString().slice(0, 10)}\n`;
+  current = current.replace(/## Editorial promise[\s\S]*$/, promise);
+  fs.writeFileSync(LLMS, current, 'utf8');
 }

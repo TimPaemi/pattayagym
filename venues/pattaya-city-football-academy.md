@@ -8,17 +8,18 @@ phone: "+66 85 149 4923"
 website: ""
 social:
   facebook: PattayaCityAcademy
-hours: Contact the academy for the current training timetable
+hours: Mon-Fri 17:00-19:00; confirm changes with the academy
 priceRange: ""
 distinction: Thai youth football coaching from foundational skills
 serviceType: Youth football training
 beginnerFriendly: true
 languages: [Thai]
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/PattayaCityAcademy/
   - https://www.facebook.com/PattayaCityAcademy/posts/pfbid0PRQfbPFjKR8bbS9tqsbhKGsDVP3GuFRMiep9MqkYxZpH8JqWjDa1mVFPKrhYn38fl
   - https://www.google.com/maps/search/?api=1&query=Pattaya+City+Football+Academy
+  - https://www.localgymsandfitness.com/TH/Pattaya/108254688572930/Pattaya-City-Football-Academy
 description: Active Thai youth football academy training at MC Football Field beside the railway road near Chaiyaphruek.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+City+Football+Academy"
 tags: [football, youth, academy, east-pattaya]
@@ -30,7 +31,7 @@ Pattaya City Football Academy is an active Thai youth-football programme at MC F
 
 ## What training is on offer
 
-The documented offer is youth football coaching from foundational skills. Public sources do not provide reliable age bands, session duration, group timetable, coach roster or language detail beyond Thai. Parents should send the child's age and experience to ask which group is appropriate.
+The documented offer is youth football coaching from foundational skills. A current mirrored listing of the academy's public profile gives Monday-Friday 17:00-19:00 hours; the academy also posted a weather-related cancellation on 8 May 2026, so parents should still reconfirm the intended session. Public sources do not provide reliable age bands, session duration, group timetable, coach roster or language detail beyond Thai.
 
 ## What it costs
 

@@ -276,18 +276,26 @@ if (fs.existsSync(planHtml)) {
 
 // --- Round 74: LocalBusiness schema coverage on venue pages ---
 let venueGeo = 0;
+let unsafeVenueGeo = 0;
 let venuePostal = 0;
 let venuePhone = 0;
 let guideFaq = 0;
 let guideTotal = 0;
 const gymsDir = path.join(ROOT, 'gyms');
+const geoCache = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'venue-geo.json'), 'utf8'));
+const safeGeoIds = new Set(Object.entries(geoCache).filter(([, p]) => p && Number.isFinite(Number(p.lat)) && Number.isFinite(Number(p.lng)) &&
+  !p.failed && !['area_fallback', 'area_centroid', 'outside_pattaya_region', 'missing_exact_geo'].includes(p._flag) &&
+  p.strategy !== 'area_centroid' && Number(p.lat) >= 12.55 && Number(p.lat) <= 13.25 && Number(p.lng) >= 100.70 && Number(p.lng) <= 101.25).map(([id]) => id));
 if (fs.existsSync(gymsDir)) {
   for (const ent of fs.readdirSync(gymsDir, { withFileTypes: true })) {
     if (!ent.isDirectory()) continue;
     const fp = path.join(gymsDir, ent.name, 'index.html');
     if (!fs.existsSync(fp)) continue;
     const h = fs.readFileSync(fp, 'utf8');
-    if (h.includes('"geo"') && h.includes('GeoCoordinates')) venueGeo++;
+    if (h.includes('"geo"') && h.includes('GeoCoordinates')) {
+      venueGeo++;
+      if (!safeGeoIds.has(ent.name)) unsafeVenueGeo++;
+    }
     if (h.includes('"postalCode"')) venuePostal++;
     if (h.includes('"telephone"')) venuePhone++;
   }
@@ -303,8 +311,8 @@ if (fs.existsSync(guidesDir)) {
 }
 const { GYMS } = require(path.join(ROOT, 'data.js'));
 const VENUE_N = GYMS.length;
-if (venueGeo < VENUE_N - 3) {
-  errors.push(`Venue schema: geo ${venueGeo}/${VENUE_N} (expected >= ${VENUE_N - 3})`);
+if (venueGeo !== safeGeoIds.size || unsafeVenueGeo) {
+  errors.push(`Venue schema: geo ${venueGeo}/${VENUE_N}; expected exactly ${safeGeoIds.size} safe venue-specific points and 0 unsafe pages (found ${unsafeVenueGeo})`);
 }
 if (venuePostal < VENUE_N - 3) {
   errors.push(`Venue schema: postalCode ${venuePostal}/${VENUE_N} (expected >= ${VENUE_N - 3})`);
@@ -330,6 +338,7 @@ console.log(`Asset-version drift files: ${versionDrift}`);
 console.log(`Duplicate-id files:        ${dupIdFiles}`);
 console.log(`  missing local file:     ${sitemapMissing}`);
 console.log(`Venue LocalBusiness schema: geo ${venueGeo}/${VENUE_N}, postalCode ${venuePostal}/${VENUE_N}, telephone ${venuePhone}/${VENUE_N}`);
+console.log(`  safe geo cache:          ${safeGeoIds.size}; unsafe geo pages: ${unsafeVenueGeo}`);
 console.log(`Guide schema: FAQPage ${guideFaq}/${guideTotal}`);
 
 if (errors.length === 0) {

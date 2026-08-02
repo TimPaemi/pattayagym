@@ -1,5 +1,6 @@
 ---
 id: baby-shark-swim-club-pattaya
+nameTh: เบบี้ชาร์คสวิมคลับ
 name: Baby Shark Swim School
 category: swimming
 area: Nong Pla Lai / East Pattaya
@@ -14,6 +15,7 @@ distinction: Children's swim school with an indoor heated saltwater pool
 beginnerFriendly: true
 verified: 2026-07-27
 sources:
+  - https://www.kaodedonline.com/archives/12391
   - https://www.facebook.com/babysharkswimclub/
   - https://www.google.com/maps/search/?api=1&query=Baby+Shark+Swim+School+Pattaya
 description: Nong Pla Lai children's swim school using an indoor heated saltwater pool for lessons and water-safety development.
@@ -24,6 +26,8 @@ tags: [swim-school, children, indoor-pool, heated-pool, saltwater, east-pattaya]
 # Baby Shark Swim School
 
 ## What training is on offer
+
+A Thai news report identifies the Nong Pla Lai school as **เบบี้ชาร์คสวิมคลับ** and records an Iron Kids event with almost 1,000 children.
 
 Baby Shark Swim School is a children's swimming school in Nong Pla Lai. Its active operator page describes a **Swim Australia curriculum** and an **indoor, heated saltwater pool**. It also identifies the school as being under the supervision of Thailand's Ministry of Education. These are the school's own programme descriptions; they do not prove a particular child's level, class placement or progress.
 

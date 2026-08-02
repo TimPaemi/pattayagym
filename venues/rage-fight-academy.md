@@ -1,5 +1,6 @@
 ---
 id: rage-fight-academy
+nameTh: ค่ายมวย เรจไฟท์ อคาเดมี พัทยา
 name: Rage Fight Academy
 category: muay-thai
 area: Thappraya / South Pattaya
@@ -10,24 +11,31 @@ social:
   facebook: ragefightacademy
   instagram: ragefightacademy
 hours: Mon-Sat 08:00-19:00; Sun closed; confirm individual class times
-priceRange: ""
+priceRange: "฿1,500 membership agreement fee/deposit; confirm selected plan and period"
+priceAsOf: 2026-07-29
+priceSourceUrl: https://ragefightacademy.com/wp-content/uploads/2023/06/mempdf1.pdf
 distinction: Combat-sports camp combining Muay Thai, boxing, BJJ, MMA and functional fitness
 disciplines: [Muay Thai, Boxing, BJJ, MMA, Functional fitness, Strength and conditioning, Yoga, Hyrox]
 facilities: [Three full-size rings, BJJ and MMA mat zone, Functional fitness and weight room, Pool, On-site accommodation]
 beginnerFriendly: true
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://ragefightacademy.com/
   - https://ragefightacademy.com/training/
   - https://ragefightacademy.com/the-camp/
   - https://ragefightacademy.com/member-info/
   - https://www.google.com/maps/search/?api=1&query=Rage+Fight+Academy+Pattaya
+  - https://ragefightacademy.com/shop/
+  - https://ragefightacademy.com/wp-content/uploads/2023/06/mempdf1.pdf
+  - https://www.agoda.com/rage-fight-academy-h62037834/hotel/pattaya-th.html
 description: South Pattaya combat camp with Muay Thai, boxing, BJJ, MMA, functional training, accommodation and a pool.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Rage+Fight+Academy+Pattaya"
 tags: [muay-thai, boxing, bjj, mma, functional-fitness, south-pattaya]
 ---
 
 # Rage Fight Academy
+
+Agoda's Thai-facing title gives the venue as **ค่ายมวย เรจไฟท์ อคาเดมี พัทยา**, matching the current **308/43** address used in this record.
 
 Rage Fight Academy is a real multi-discipline camp on Soi Norway off Thappraya Road, but it is still a contact-first purchase rather than a transparent e-commerce gym. The operator pages support Muay Thai, boxing, BJJ, MMA and functional training plus accommodation and a pool. What they do not give is one stable public fee table for all those products.
 
@@ -39,7 +47,7 @@ The current public facility description lists two dedicated Muay Thai and boxing
 
 ## What it costs
 
-No stable public drop-in, week, month or residential rate could be verified from the checked first-hand pages on 2026-07-27. The member-information page provides policy and agreement material, but not a current price table. That blank tariff is a contact task, not a sign that the academy is closed or unwilling to take visitors.
+The operator's current membership-agreement PDF names **฿1,500** as both the form's fee amount and refundable deposit. The same form leaves the membership period selectable (month, fortnight or week), so it is not a usable current drop-in, week or month tariff. Treat the figure as a membership-agreement amount only and confirm the selected plan, period, total charge and refund conditions directly with Rage.
 
 Ask for the exact product: one class, one day, unlimited training, private coaching, a room-and-training package or a specific discipline such as BJJ. Also ask whether the quote includes open-gym access, equipment, pool use or any meal or housekeeping component. Rage documents accommodation, but it does not publish one dependable camp package number that can be compared cleanly with residential operators that do.
 
@@ -63,7 +71,7 @@ Also ask whether the sauna and ice-bath project mentioned on the homepage is now
 
 ## What we could not verify
 
-- No stable public fee table was available for drop-ins, weeks, months, privates or residential packages.
+- No stable public fee table was available for drop-ins, weeks, months, privates or residential packages; the operator PDF's ฿1,500 form amount does not identify a selected plan or period.
 - No dependable class-by-class timetable was visible in accessible text on the checked pages.
 - The checked first-hand sources did not confirm a current coach roster or language-by-trainer breakdown.
 - The public pages did not prove that the announced sauna and ice bath are already open for use.

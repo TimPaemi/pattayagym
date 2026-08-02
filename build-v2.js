@@ -20,7 +20,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const SITE = 'https://pattaya-gym.com';
-const ASSET_VERSION = '471';
+const ASSET_VERSION = '474';
 const TODAY = new Date().toISOString().slice(0, 10);
 const BUILD_TIMESTAMP = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
@@ -735,7 +735,7 @@ function categoryGuideSection(cat) {
   <div class="wrap u-max-760">
     <div class="eyebrow"><span class="num">★</span> Editorial guide</div>
     <h2 class="h-section">Ranked <span class="accent-cyan">picks.</span></h2>
-    <p class="lede">Hand-checked shortlist with trip context: <a href="${g.url}" class="u-cyan">${esc(g.label)} →</a></p>
+    <p class="lede">Source-checked shortlist with trip context: <a href="${g.url}" class="u-cyan">${esc(g.label)} →</a></p>
   </div>
 </section>`;
 }
@@ -1052,12 +1052,11 @@ function nav() {
 
 function pageScripts() {
   return `<script defer src="/site-ui.js${ASSET}"></script>
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-F5F6KD3XFZ"></script>
 <script defer src="/analytics.js${ASSET}"></script>`;
 }
 
 function venuePageScripts() {
-  return `<script src="/data.js${ASSET}"></script>
+  return `<script defer src="/data.js${ASSET}"></script>
 <script defer src="/favorites.js${ASSET}"></script>
 ${pageScripts()}`;
 }
@@ -1126,8 +1125,8 @@ ${scriptBlock}
 }
 
 // Standard top/bottom marquee items (venue count follows GYMS.length)
-const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', `${VENUE_N} VENUES`, 'HAND-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
-const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'HAND-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', `★ LIVE ${VENUE_N} VENUES`, 'UPDATED ROLLING'];
+const TOP_MARQUEE = ['★ EVERY GYM', 'EVERY RING', 'EVERY COURT', `${VENUE_N} VENUES`, 'SOURCE-CHECKED', 'NO PAID PLACEMENTS', 'PATTAYA · THAILAND', 'UPDATED ROLLING'];
+const BOTTOM_MARQUEE = ['★ PATTAYA VILLA', 'NO PAID PLACEMENTS', 'SOURCE-CHECKED', 'EVERY GYM', 'EVERY RING', 'EVERY COURT', `★ LIVE ${VENUE_N} VENUES`, 'UPDATED ROLLING'];
 
 function breadcrumb(items) {
   // items: [{label, href}], last has no href
@@ -1230,10 +1229,17 @@ function venuePage(g, fm, body) {
       // Round 17 — Codex F04.1: round to 6 decimals (~11cm precision).
       const round6 = n => Number(Number(n).toFixed(6));
       if (fm.lat && fm.lng) {
-        return { '@type': 'GeoCoordinates', latitude: round6(fm.lat), longitude: round6(fm.lng) };
+        const lat = Number(fm.lat), lng = Number(fm.lng);
+        if (lat >= 12.55 && lat <= 13.25 && lng >= 100.70 && lng <= 101.25) {
+          return { '@type': 'GeoCoordinates', latitude: round6(lat), longitude: round6(lng) };
+        }
+        return undefined;
       }
       const cached = VENUE_GEO[g.id];
-      if (cached && cached.lat && cached.lng && !cached.failed && cached._flag !== 'outside_pattaya_region') {
+      const unsafeGeo = cached && ['outside_pattaya_region', 'area_fallback', 'area_centroid'].includes(cached._flag);
+      const unsafeStrategy = cached && cached.strategy === 'area_centroid';
+      const inRegion = cached && Number(cached.lat) >= 12.55 && Number(cached.lat) <= 13.25 && Number(cached.lng) >= 100.70 && Number(cached.lng) <= 101.25;
+      if (cached && cached.lat && cached.lng && !cached.failed && !unsafeGeo && !unsafeStrategy && inRegion) {
         return { '@type': 'GeoCoordinates', latitude: round6(cached.lat), longitude: round6(cached.lng) };
       }
       return undefined;
@@ -1295,7 +1301,7 @@ function venuePage(g, fm, body) {
     v.trainerHeadcount && { lbl: 'Trainers', val: v.trainerHeadcount, color: 'pink' },
     v.minimumAge && { lbl: 'Min age', val: v.minimumAge, color: 'cyan' },
     v.languages && { lbl: 'Languages', val: Array.isArray(v.languages) ? v.languages.join(', ') : v.languages, color: 'mint' },
-    v.verified && { lbl: 'Last verified', val: v.verified, color: 'pink' }
+    v.verified && { lbl: 'Sources reviewed', val: v.verified, color: 'pink' }
   ].filter(Boolean);
 
   return head({ title, desc, url, ogImage, jsonLd, modified: pageModified(url) })
@@ -1315,12 +1321,12 @@ function venuePage(g, fm, body) {
       ${firstWords ? esc(firstWords) + '<br>' : ''}<span class="${accent.class}">${esc(lastWord)}.</span>
     </h1>
     ${subtitleName ? `<p style="font-family:var(--font-mono); font-size:13px; color:var(--muted); letter-spacing:0.08em; margin:var(--s-4) 0 0; text-transform:uppercase;">${esc(subtitleName)}</p>` : ''}
-    ${g.verified ? `<div class="trust-bar" aria-label="Verification status">
+    ${v.verified ? `<div class="trust-bar" aria-label="Evidence status">
       ${statusPill(g.status)}
       ${g.featured ? `<span class="trust-pill is-editors-pick" title="Editor's Pick — hand-selected as a top venue in this category">★ Editor's Pick</span>` : ''}
       ${!operationUnresolved(g.status) && hoursSpec.length ? `<span class="trust-pill is-open-status" data-hours-spec='${JSON.stringify(hoursSpec).replace(/'/g, '&#39;')}'>● ${esc(hoursPillLabel(g.hours || fm.hours))}</span>` : ''}
-      <span class="trust-pill is-verified" title="Hand-checked by Tim Paemi">★ Verified by Tim · ${esc(g.verified)}</span>
-      <span class="trust-pill">${operationUnresolved(g.status) ? 'Hand-checked &middot; status unresolved' : '100% Hand-checked'}</span>
+      <span class="trust-pill is-verified" title="Public sources reviewed by Tim and Paemi">★ Sources reviewed · ${esc(v.verified)}</span>
+      <span class="trust-pill">${operationUnresolved(g.status) ? 'Status unresolved &middot; confirm direct' : 'Source-checked record'}</span>
       <span class="trust-pill">No paid placement</span>
       <a href="/methodology/" class="trust-pill is-link" title="How we rank venues">How we rank →</a>
     </div>` : ''}
@@ -1365,10 +1371,24 @@ ${bodyHtml ? `
     <article class="venue-body u-prose" id="venue-body">
       ${bodyHtml}
     </article>
+    <aside class="evidence-ledger" aria-labelledby="evidence-ledger-${esc(g.id)}">
+      <div>
+        <span class="evidence-ledger-kicker">Evidence ledger</span>
+        <h2 id="evidence-ledger-${esc(g.id)}">What was checked—and when.</h2>
+        <p>Dates describe source review, not a visit. Blank values mean the public evidence was not strong enough to publish.</p>
+      </div>
+      <dl class="evidence-ledger-grid">
+        <div><dt>Record reviewed</dt><dd>${esc(v.verified || 'Not dated')}</dd></div>
+        <div><dt>Price checked</dt><dd>${fm.priceAsOf ? esc(fm.priceAsOf) : 'No dated public price'}</dd></div>
+        <div><dt>Sources cited</dt><dd>${Array.isArray(fm.sources) ? fm.sources.length : 0}</dd></div>
+        <div><dt>Location</dt><dd>${localBusiness.geo ? 'Venue-specific coordinates' : 'Use the cited map link'}</dd></div>
+      </dl>
+      ${fm.priceSourceUrl ? `<a class="evidence-ledger-link" href="${esc(fm.priceSourceUrl)}" target="_blank" rel="noopener noreferrer">Open price source →</a>` : ''}
+    </aside>
     ${Array.isArray(fm.sources) && fm.sources.length ? `
     <div class="venue-sources u-max-760-mt-8">
       <div class="eyebrow u-mb-3"><span class="num">★</span> Sources we checked</div>
-      <p class="u-info-card">Every claim on this page is verified against the venue's own sources. If something looks wrong, <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inaccurate info: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I noticed the following on /gyms/' + g.id + '/ that needs updating:\\n\\n')}" class="u-cyan">tell us</a> and we'll re-check as fast as we can.</p>
+      <p class="u-info-card">These public sources were used for this record. They can include official venue pages, booking pages, public listings and independent references; each supports only the fact it actually states. If something looks wrong, <a href="mailto:info@pattaya-gym.com?subject=${encodeURIComponent('Inaccurate info: ' + g.name)}&body=${encodeURIComponent('Hi Tim — I noticed the following on /gyms/' + g.id + '/ that needs updating:\\n\\n')}" class="u-cyan">tell us</a> and we'll re-check it.</p>
       <ul class="venue-source-list">
         ${fm.sources.map(s => `<li><a href="${esc(s)}" target="_blank" rel="noopener noreferrer">${esc(s.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></li>`).join('')}
       </ul>
@@ -1633,14 +1653,14 @@ ${(g.tags && g.tags.length) ? `
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// Email</div>
         <h3 class="channel-card-name">info@pattaya-gym.com</h3>
-        <div class="channel-card-sub">Reply within 24h</div>
+        <div class="channel-card-sub">Email Tim &amp; Paemi</div>
       </a>
       
       <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
         <h3 class="channel-card-name">@timpaemi</h3>
-        <div class="channel-card-sub">Daily check</div>
+        <div class="channel-card-sub">LINE with Tim &amp; Paemi</div>
       </a>
       ${g.phone ? `<a href="tel:${esc(phoneToTel(g.phone))}" class="channel-card is-agency">
         <span class="channel-card-arrow">↗</span>
@@ -1676,7 +1696,7 @@ ${venueToolsStrip(g)}
 function categoryPage(cat, venues) {
   const url = `${SITE}/category/${cat.key}/`;
   const title = `${cat.label} in Pattaya (${venues.length} venues) | Pattaya.Gym`;
-  const desc = truncateDesc(`Find every ${cat.label.toLowerCase()} venue in Pattaya — ${venues.length} hand-checked gyms and sport operators with hours, prices, maps and contact where published. Compare camps, filter by area, no paid placements.`);
+  const desc = truncateDesc(`Find every ${cat.label.toLowerCase()} venue in Pattaya — ${venues.length} source-checked records with hours, prices, maps and contact where published. Compare camps, filter by area, no paid placements.`);
 
   const accentColors = {
     'muay-thai': 'accent-pink', 'mma': 'accent-pink', 'bjj': 'accent-pink',
@@ -1729,7 +1749,7 @@ function categoryPage(cat, venues) {
     <h1 class="hero-h1">
       ${esc(cat.label)} <span class="${accent}">in Pattaya.</span>
     </h1>
-    <p class="hero-lede u-text-left-ml0">Every <strong>${esc(cat.label.toLowerCase())}</strong> gym and venue in Pattaya — <strong>${venues.length} hand-checked entries</strong> with hours, prices, maps and contact where the operator publishes them, and blanks where they do not. No paid placements. Updated on a rolling schedule.</p>
+    <p class="hero-lede u-text-left-ml0">Every <strong>${esc(cat.label.toLowerCase())}</strong> gym and venue in Pattaya — <strong>${venues.length} source-checked entries</strong> with hours, prices, maps and contact where the operator publishes them, and blanks where they do not. No paid placements. Updated on a rolling schedule.</p>
     <p class="hero-meta u-text-left">${venues.length} venues · Updated ${TODAY} · Pattaya · Thailand</p>
     ${categoryHubCtas(cat)}
   </div>
@@ -2042,7 +2062,7 @@ const AREA_CONTENT = {
 function areaPage(slug, label, venues) {
   const url = `${SITE}/area/${slug}/`;
   const title = `Gyms in ${label}, Pattaya (${venues.length}) | Pattaya.Gym`;
-  const desc = truncateDesc(`Every gym, Muay Thai camp and sport venue in ${label}, Pattaya — ${venues.length} hand-checked listings with hours, prices, maps and contact where published. Filter by sport or compare side by side.`);
+  const desc = truncateDesc(`Find gyms, Muay Thai camps and sport venues in ${label}, Pattaya — ${venues.length} source-checked records with hours, prices, maps and contact where published. Filter by sport or compare side by side.`);
 
   const itemList = {
     '@context': 'https://schema.org',
@@ -2093,7 +2113,7 @@ ${(() => {
     <h1 class="hero-h1">
       Gyms in <span class="${accent}">${esc(label)}, Pattaya.</span>
     </h1>
-    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:780px;">${content ? esc(content.summary) : `Every gym and sport venue in <strong>${esc(label)}, Pattaya</strong> — ${venues.length} hand-checked entries across Muay Thai, fitness, yoga, golf and more.`}</p>
+    <p class="hero-lede" style="text-align:left; margin-left:0; max-width:780px;">${content ? esc(content.summary) : `Find gyms and sport venues in <strong>${esc(label)}, Pattaya</strong> — ${venues.length} source-checked entries across Muay Thai, fitness, yoga, golf and more.`}</p>
     <p class="hero-meta u-text-left">${venues.length} venues · ${esc(label)} · Pattaya · Updated ${TODAY}</p>
     <div class="btn-row u-mt-5">
       <a href="/search/?area=${esc(slug)}" class="btn btn-primary">▶ Search ${esc(label)}</a>
@@ -2204,7 +2224,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
   const catLabel = cat.label;
   const core = `${catLabel} in ${areaLabel}, Pattaya`;
   const title = core.length <= 49 ? `${core} | Pattaya.Gym` : truncateTitle(core);
-  const desc = truncateDesc(`Every ${catLabel.toLowerCase()} venue in ${areaLabel}, Pattaya — ${venues.length} hand-checked ${venues.length === 1 ? 'option' : 'options'} with hours, prices and contact details where published. Independent directory, no paid placements, verified on a rolling schedule.`);
+  const desc = truncateDesc(`Every ${catLabel.toLowerCase()} venue in ${areaLabel}, Pattaya — ${venues.length} source-checked ${venues.length === 1 ? 'option' : 'options'} with hours, prices and contact details where published. Independent directory, no paid placements, reviewed on a rolling schedule.`);
 
   const accentColors = {
     'muay-thai':'accent-pink','mma':'accent-pink','bjj':'accent-pink',
@@ -2255,7 +2275,7 @@ function categoryAreaPage(areaSlug, areaLabel, cat, venues) {
       <span class="${accent}">${esc(catLabel)}</span><br>
       <span class="hub-hero-sub">in ${esc(areaLabel)}.</span>
     </h1>
-    <p class="hero-lede u-text-left-ml0">${venues.length} hand-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Verified on a rolling schedule. The complete local list.</p>
+    <p class="hero-lede u-text-left-ml0">${venues.length} source-checked <strong>${esc(catLabel.toLowerCase())}</strong> ${venues.length === 1 ? 'venue' : 'venues'} in <strong>${esc(areaLabel)}, Pattaya</strong>. No paid placements. Reviewed on a rolling schedule. The complete local list.</p>
     <p class="hero-meta u-text-left">${venues.length} venues · ${esc(areaLabel)} · Pattaya · Updated ${TODAY}</p>
     <div class="btn-row u-mt-5">
       <a href="/search/?cat=${esc(cat.key)}&amp;area=${esc(areaSlug)}" class="btn btn-primary">▶ Search in ${esc(areaLabel)}</a>
@@ -2331,14 +2351,14 @@ function utilityPage({ slug, title, desc, eyebrow, headlineLead, headlineAccent,
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// Email</div>
         <h3 class="channel-card-name">info@pattaya-gym.com</h3>
-        <div class="channel-card-sub">Reply within 24h</div>
+        <div class="channel-card-sub">Email Tim &amp; Paemi</div>
       </a>
       
       <a href="https://line.me/ti/p/~timpaemi" target="_blank" rel="noopener noreferrer" class="channel-card is-line">
         <span class="channel-card-arrow">↗</span>
         <div class="channel-card-tag">// LINE</div>
         <h3 class="channel-card-name">@timpaemi</h3>
-        <div class="channel-card-sub">Daily check</div>
+        <div class="channel-card-sub">LINE with Tim &amp; Paemi</div>
       </a>
     </div>
   </div>
@@ -2424,7 +2444,12 @@ function buildSportStatsBody() {
   let geoCount = 0;
   try {
     const geoMap = VENUE_GEO || {};
-    geoCount = GYMS.filter(g => geoMap[g.id] && geoMap[g.id].lat).length;
+    geoCount = GYMS.filter(g => {
+      const point = geoMap[g.id];
+      if (!point || !point.lat || !point.lng) return false;
+      if (['outside_pattaya_region', 'area_fallback', 'area_centroid', 'missing_exact_geo'].includes(point._flag)) return false;
+      return point.strategy !== 'area_centroid' && Number(point.lat) >= 12.55 && Number(point.lat) <= 13.25 && Number(point.lng) >= 100.70 && Number(point.lng) <= 101.25;
+    }).length;
   } catch (e) { geoCount = 0; }
   const detailCount = GYMS.filter(g => g.detailFile).length;
   const sourcesCount = 0; // editorial — would need to parse each MD; leave for now
@@ -2504,7 +2529,7 @@ function buildSportStatsBody() {
   return `
 <h2>Top-line</h2>
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:16px; margin:var(--s-5) 0;">
-  <div style="background:rgba(255,46,126,0.08); border:1px solid rgba(255,46,126,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#ff2e7e;">${total}</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Venues hand-checked</div></div>
+  <div style="background:rgba(255,46,126,0.08); border:1px solid rgba(255,46,126,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#ff2e7e;">${total}</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Source-checked records</div></div>
   <div style="background:rgba(78,224,255,0.08); border:1px solid rgba(78,224,255,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#4ee0ff;">${CATEGORIES.length}</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Sport categories</div></div>
   <div style="background:rgba(253,224,71,0.08); border:1px solid rgba(253,224,71,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#fde047;">${Object.keys(AREA_LABELS).length}</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Geographic areas</div></div>
   <div style="background:rgba(95,255,160,0.08); border:1px solid rgba(95,255,160,0.25); border-radius:14px; padding:20px;"><div style="font-family:Space Grotesk, sans-serif; font-size:36px; font-weight:700; color:#5fffa0;">0</div><div style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;">Paid placements</div></div>
@@ -2523,7 +2548,7 @@ ${areaChartHTML}
 ${donutHTML}
 
 <h2>Verification freshness</h2>
-<p>Every venue has a <strong>verified date</strong> — the last time we hand-checked hours, prices, and operating status. Target: re-verify the full directory every 30 days. Current breakdown:</p>
+<p>Every venue has a <strong>sources-reviewed date</strong> — the last time editors reopened the record's evidence. This is not a visit claim and it is separate from a dated price. Current breakdown:</p>
 <ul style="font-family:var(--font-mono); font-size:14px;">
   <li><strong style="color:#5fffa0;">${fresh30}</strong> venues verified within 30 days <span class="u-muted">(${pct(fresh30, total)}% of directory)</span></li>
   <li><strong style="color:#fde047;">${fresh60}</strong> venues verified 30-60 days ago</li>
@@ -2540,9 +2565,7 @@ ${donutHTML}
 </div>
 
 <h2>What's <em>not</em> here</h2>
-<p>Pattaya.Gym focuses exclusively on training venues — gyms, camps, courts, courses, studios, dive operators, sport landmarks. We do <strong>not</strong> cover entertainment venues, restaurants, nightlife, or visa services. For those, see our sister sites:</p>
-<ul>
-</ul>
+<p>Pattaya.Gym focuses exclusively on training venues — gyms, camps, courts, courses, studios, dive operators and sport landmarks. It does <strong>not</strong> cover unrelated local categories, and it does not use cross-site recommendation links.</p>
 
 <h2>About these numbers</h2>
 <p>This page is regenerated on every site build from <a href="/api/venues.json">live data</a>. The numbers update automatically — no manual edits. Machine-readable equivalent at <a href="/status.json">/status.json</a>. Full methodology at <a href="/methodology/">/methodology/</a>.</p>
@@ -2552,8 +2575,8 @@ ${donutHTML}
 const UTILITY_PAGES = [
   {
     slug: 'about',
-    title: 'About Pattaya.Gym — Independent, hand-checked directory',
-    desc: 'Pattaya.Gym is the most complete directory of gyms, Muay Thai camps, and sport venues in Pattaya. Independent. Hand-checked. No paid placements.',
+    title: 'About Pattaya.Gym — Independent, source-checked directory',
+    desc: 'Pattaya.Gym is an independent directory of gyms, Muay Thai camps, and sport venues in Pattaya. Source-checked records. No paid placements.',
     eyebrow: 'About',
     headlineLead: 'Independent.',
     headlineAccent: 'One purpose',
@@ -2562,14 +2585,15 @@ const UTILITY_PAGES = [
     showContactCard: true,
     bodyHtml: `
 <h2>Why this site exists</h2>
-<p>Most directories you find for Pattaya gyms are scraped, paid-for, or both. Search results are dominated by sites that have never set foot in any of the venues they rank.</p>
-<p>Pattaya.Gym is the opposite. Every venue is researched from public sources, official channels, and on-the-ground local knowledge. We cross-check hours, phone numbers, and locations against each venue's own listings wherever they are published — and where a detail cannot be confirmed yet, we flag it for follow-up rather than guessing. When a venue closes or changes hands, the page is updated as soon as we hear about it.</p>
+<p>Many local directories are scraped, stale or pay-to-play. Pattaya.Gym is built around a different promise: dated facts, named sources and visible uncertainty.</p>
+<p>Records use operator pages, current public listings, sport bodies, authorities and retained direct replies. We cross-check hours, phone numbers and locations where sources allow it; when a detail cannot be confirmed, it stays missing or is flagged instead of being guessed. No page implies that Tim or Paemi visited a venue.</p>
 
 <h2>How venues are ranked</h2>
-<p>No money changes hands. Ranking is based on consistent quality, current operation, breadth of facility, instructor caliber, and community reputation. Gyms with closed doors or stale information get demoted automatically.</p>
+<p>No venue can buy placement or rank. Ranked guides state their decision criteria and evidence; unresolved or stale records are labelled and should not outrank current, better-supported options.</p>
 
 <h2>What we operate</h2>
-<p>Pattaya.Gym is part of the independent TimPaemi network of Pattaya publications operated by <strong>TimPaemi Co., Ltd.</strong>.. The agency funds the directories. The directories don't take money from listed venues. That's how the independence stays real.</p>
+<p>Pattaya.Gym is one of more than 20 independently managed Pattaya publications and products operated by <strong>TimPaemi Co., Ltd.</strong> TimPaemi is the central publisher identity across the group; this site remains editorially distinct and carries no followed links to the other properties.</p>
+<p>Tim and Paemi work across local publishing, agency development, frontend and backend systems, events and streaming. TimPaemi Co. funds this directory; listed venues do not.</p>
 
 <h2>Who runs this</h2>
 <p><img src="/authors/timpaemi.jpg" alt="Tim and Paemi, founders and editors of Pattaya.Gym" width="120" height="120" loading="lazy" style="float:right; border-radius:12px; margin:0 0 12px 16px;"></p>
@@ -2581,7 +2605,7 @@ const UTILITY_PAGES = [
 <h3 id="paemi">Paemi — co-founder and editor</h3>
 <p>Co-founder of TimPaemi Co., Ltd., also based in Pattaya. Paemi works on venue research and Thai-language sourcing — the operator pages, Thai social posts and local listings that an English-only search never reaches.</p>
 
-<p>Everything across the network carries the TimPaemi byline; <a href="https://timpaemi.com/" rel="author noopener">timpaemi.com</a> is the identity behind every site.</p>
+<p>Everything across the group carries the TimPaemi byline; <a href="https://timpaemi.com/" rel="author noopener">timpaemi.com</a> is the central publisher identity.</p>
 
 <h2>Editorial policy</h2>
 <ul>
@@ -2594,19 +2618,19 @@ const UTILITY_PAGES = [
   },
   {
     slug: 'contact',
-    title: 'Contact Pattaya.Gym — Email, WhatsApp, LINE',
-    desc: 'Three ways to reach Pattaya.Gym. Email info@pattaya-gym.com,, or LINE @timpaemi. We reply to every message personally.',
+    title: 'Contact Pattaya.Gym — Email and LINE',
+    desc: 'Contact Tim and Paemi about corrections, venue submissions, data questions, press, or partnerships.',
     eyebrow: 'Contact',
     headlineLead: 'Reach us',
     headlineAccent: 'direct',
     accentClass: 'accent-mint',
-    lede: 'Three ways to reach us. We reply to every message personally, usually within 24h. No bots. No auto-responders. Real humans in Pattaya.',
+    lede: 'Send a correction, venue submission, data question or press inquiry directly to Tim and Paemi in Pattaya.',
     showContactCard: true,
     bodyHtml: `
 <h2>What we can help with</h2>
 <ul>
 <li>Recommending the right gym for your level, sport, and budget</li>
-<li>Verifying current hours, pricing, or coach roster at any listed venue</li>
+<li>Re-checking published hours, pricing, or coach details when you report a possible change</li>
 <li>Adding your gym, camp, or sport venue to the directory — free, no fees</li>
 <li>Correcting outdated information on any venue page</li>
 <li>Press, partnership, or media inquiries</li>
@@ -2615,15 +2639,11 @@ const UTILITY_PAGES = [
 <h2>What we won't do</h2>
 <p>We don't book classes for you, take payment, or operate as an intermediary. You contact the gym directly — we just help you find the right one. No commission on bookings. No affiliate kickbacks.</p>
 
-<h2>Response times</h2>
-<ul>
-<li><strong>WhatsApp:</strong> fastest — usually within 1–4h during Pattaya daytime hours (GMT+7)</li>
-<li><strong>LINE:</strong> daily check, typically same-day reply</li>
-<li><strong>Email:</strong> within 24h, often much faster</li>
-</ul>
+<h2>Response route</h2>
+<p>Email is best for source links and detailed corrections. LINE is useful for short operational updates. We read both directly; urgent venue changes are prioritised, but no fixed response time is promised.</p>
 
 <h2>Where we are</h2>
-<p>Operated from our villa in Pattaya City, Bang Lamung District, Chonburi 20150, Thailand. Coordinates 12.92°N, 100.87°E.</p>
+<p>Operated by TimPaemi Co., Ltd. in Pattaya City, Bang Lamung District, Chon Buri, Thailand. We do not publish a private residential address.</p>
 `
   },
   {
@@ -2638,29 +2658,33 @@ const UTILITY_PAGES = [
     showContactCard: false,
     bodyHtml: `
 <h2>Sourcing</h2>
-<p>We source venues from a mix of local knowledge, on-foot exploration, community recommendations, and English/Thai search. Every entry traces back to at least one of:</p>
+<p>We discover venues through local knowledge, community leads, operator directories, and English- and Thai-language search. Discovery is only a lead: a fact is published when a named public source or a recorded direct operator reply supports it.</p>
 <ul>
-<li>Direct visit by us or a trusted local</li>
-<li>Verified primary source (the venue's own website or social, dated within 12 months)</li>
-<li>Community recommendation from a long-term Pattaya resident</li>
+<li>Primary source: the venue website, booking page, current social post, timetable or price document</li>
+<li>Public authority or sport-body source: company registry, federation, municipality or event organiser</li>
+<li>Public listing used for identity, location or contact details, distinguished from operator claims</li>
+<li>Direct operator reply retained in the private editorial ledger</li>
 </ul>
-<p>We do <strong>not</strong> scrape Google Maps, TripAdvisor, or other directories without verification.</p>
+<p>Community tips help us find what to check; they are not evidence on their own. We do not claim to have visited a venue unless a future record explicitly carries documented first-hand evidence. At the time of this policy, no venue page carries that claim.</p>
 
 <h2>Verification</h2>
 <p>Each venue is checked for:</p>
 <ul>
-<li><strong>Is it open?</strong> — phone or in-person confirmation</li>
-<li><strong>Stated hours match reality</strong> — cross-checked with current customers when possible</li>
-<li><strong>Price tier accurate</strong> — entry-level pricing confirmed via published rate or direct quote</li>
-<li><strong>Category appropriate</strong> — venue actually does the sport it claims</li>
-<li><strong>Quality of facility</strong> — equipment, cleanliness, instructor presence</li>
+<li><strong>Operating status</strong> — current operator activity, public listing state, or a recorded direct reply</li>
+<li><strong>Hours</strong> — the exact source is named; conflicts stay visible instead of being averaged away</li>
+<li><strong>Price</strong> — a published rate or direct quote gets its own as-of date; missing public prices stay missing</li>
+<li><strong>Category</strong> — current programmes, not a historic or marketing-only label</li>
+<li><strong>Facilities and coaches</strong> — published only when a cited source names or quantifies them</li>
 </ul>
+
+<h2>What the dates mean</h2>
+<p><strong>Sources reviewed</strong> is the date our editors last re-opened the record's sources. <strong>Price checked</strong> is separate and appears only when a price source exists. Neither label means Tim or Paemi visited, trained at, tested, or photographed the venue.</p>
 
 <h2>Ranking</h2>
 <p>Within a category, venues rank by composite score: facility depth, instructor caliber, customer feedback signal, longevity, breadth of programs offered, and operational reliability (how often doors are open as advertised). No paid weighting.</p>
 
 <h2>Updates</h2>
-<p>A verified date appears on every venue page. Re-verification is rolling rather than rigid: priority queue first (popular venues, recent reports, venues that have moved or changed format), background queue second. When we hear of a closure or major change we re-check and update as fast as we reasonably can — typically within days, never longer than a couple of weeks. If we can't reach a venue across 30 days of attempts, it's marked stale and ranking-suppressed. Public reports of errors or closures can be sent to <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
+<p>A sources-reviewed date appears on every venue page. Re-checking is rolling: recent reports, popular records and venues that changed identity or format enter the priority queue. A date records completed source review; it is not an automatic freshness guarantee. Unresolved operation is labelled. Public reports can be sent to <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
 
 <h2>Removals</h2>
 <p>Venues are removed when:</p>
@@ -2683,12 +2707,10 @@ const UTILITY_PAGES = [
     showContactCard: true,
     bodyHtml: `
 <h2>The agency</h2>
-<p>Pattaya.Gym is one of four projects operated by <strong>TimPaemi Co., Ltd.</strong>, a Pattaya-based agency focused on long-term local market positioning.</p>
+<p>Pattaya.Gym is one of more than 20 independently managed Pattaya publications and products operated by <strong>TimPaemi Co., Ltd.</strong>, the local publisher and agency led by Tim and Paemi.</p>
 
-<h2>Sister projects</h2>
-<ul>
-<li><strong>Pattaya.Gym</strong> (this site) — fitness directory. Every gym, every camp, every court in Pattaya.</li>
-</ul>
+<h2>Publisher focus</h2>
+<p>Pattaya.Gym is the sport directory. TimPaemi.com is the single central publisher identity; this press page does not link the other independently managed properties.</p>
 
 <h2>Reach</h2>
 <ul>
@@ -2727,7 +2749,7 @@ const UTILITY_PAGES = [
 <h2>What happens next</h2>
 <ol>
 <li>We verify the venue exists, hours are accurate, and contact info works</li>
-<li>We visit or call to confirm — typically within a few days, never longer than two weeks</li>
+<li>We check the supplied sources and, where needed, call or message the operator for a recorded confirmation</li>
 <li>We write a neutral entry based on our verification, not your marketing copy</li>
 <li>The page goes live with a "verified" date</li>
 <li>We re-verify every 90 days going forward</li>
@@ -2796,12 +2818,12 @@ const UTILITY_PAGES = [
   {
     slug: 'pattaya-sport-stats',
     title: `Pattaya sport stats — ${VENUE_N} venues across 15 sports`,
-    desc: `The numbers behind Pattaya as a training destination. ${VENUE_N} hand-checked venues, 15 sports, 6 areas. Verified on a rolling schedule.`,
+    desc: `The numbers behind Pattaya as a training destination. ${VENUE_N} source-checked records, 15 sports, 6 areas. Reviewed on a rolling schedule.`,
     eyebrow: 'Stats',
     headlineLead: 'Pattaya',
     headlineAccent: 'by the numbers',
     accentClass: 'accent-yellow',
-    lede: `The training landscape of Pattaya in numbers. ${VENUE_N} hand-checked venues across 15 sports and 6 distinct areas. One of the world's deepest single-city Muay Thai scenes.`,
+    lede: `The training landscape of Pattaya in numbers. ${VENUE_N} source-checked records across 15 sports and 6 distinct areas.`,
     showContactCard: false,
     bodyHtml: buildSportStatsBody()
   },
@@ -2819,13 +2841,14 @@ const UTILITY_PAGES = [
     lede: 'Pattaya.Gym is an independent directory. We sell no ads, we share no profiles, and we keep our data collection minimal. Here is exactly what happens when you visit.',
     showContactCard: false,
     bodyHtml: `
-<p><strong>Last updated:</strong> 2026-05-18. <strong>Operator:</strong> TimPaemi Co., Ltd., Pattaya City, Thailand. <strong>Contact:</strong> <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
+<p><strong>Last updated:</strong> 2026-08-02. <strong>Operator:</strong> TimPaemi Co., Ltd., Pattaya City, Thailand. <strong>Contact:</strong> <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a>.</p>
 
 <h2>What we collect, in plain English</h2>
-<p>We collect three classes of data and nothing else:</p>
+<p>The directory works without analytics. Optional analytics remains off until you choose “Allow analytics”; Global Privacy Control and Do Not Track are treated as a decline. Your choice stays in this browser and can be changed from the “Privacy choices” control.</p>
+<p>We use three local or optional data mechanisms:</p>
 <ol>
-<li><strong>Aggregate analytics (Google Analytics 4).</strong> Page views, device class, country-level location, and referrer. We use this to see which guides and venues people actually read so we can write more of what helps. We do not enable Google Signals, advertising features, demographic profiles, or cross-site identity stitching. GA4 retention is set to the shortest available window (2 months for event data, 14 months for user data).</li>
-<li><strong>Browser localStorage on venue pages.</strong> A small list of the last 8 venues you opened, stored only in your browser, so we can show a "Recently viewed" strip on venue pages. The key is <code>pattaya-gym:recently-viewed</code>. This never leaves your device and we cannot read it from the server.</li>
+<li><strong>Optional aggregate analytics (Google Analytics 4).</strong> When allowed, page views, device class, country-level location, and referrer help us see which records are useful. Advertising features, Google Signals, demographic profiles and cross-site identity stitching are disabled. The consent key is <code>pg_analytics_consent_v1</code>.</li>
+<li><strong>Browser localStorage.</strong> <code>pgym_recent_v1</code> stores up to 8 recently opened venues; <code>pg_favorites_v1</code> stores up to 100 saved venues. Both stay in your browser, are never sent to Pattaya.Gym, and can be cleared in browser settings.</li>
 <li><strong>URL parameters on /compare/.</strong> When you compare venues, the picks are encoded in the URL itself (<code>?a=&amp;b=&amp;c=&amp;d=</code>) so the comparison is bookmarkable and shareable. The URL is the data; we store nothing about your comparison server-side.</li>
 </ol>
 
@@ -2838,7 +2861,7 @@ const UTILITY_PAGES = [
 </ul>
 
 <h2>Cookies</h2>
-<p>The only cookies set on this domain are the Google Analytics 4 cookies (<code>_ga</code>, <code>_ga_*</code>). They identify a browser anonymously for analytics counting. They are not used for advertising. You can block them with any ad blocker, with browser tracking-protection settings, or with the global privacy control. The site works completely without analytics enabled.</p>
+<p>If you allow analytics, Google Analytics may set <code>_ga</code> and <code>_ga_*</code>. Before consent—and whenever GPC or DNT is enabled—the Google tag is not requested. Declining or withdrawing expires known GA cookies on this domain. The directory remains fully functional.</p>
 
 <h2>AI and LLM crawler policy</h2>
 <p>Our <a href="/robots.txt">robots.txt</a> explicitly allows the major AI/LLM crawlers (GPTBot, ClaudeBot, PerplexityBot, CCBot, Google-Extended, Applebot-Extended, Meta-ExternalAgent, Bytespider, cohere-ai, Diffbot, Amazonbot, and others) to retrieve our content for training and live retrieval. This is a deliberate editorial choice: a public, accurate Pattaya directory is more useful inside AI tools than locked away from them. We do not provide any private user data to these crawlers — only the same HTML pages a human browser sees.</p>
@@ -2855,7 +2878,7 @@ const UTILITY_PAGES = [
 <p>Pattaya.Gym is one of several independent publications operated by <strong>TimPaemi Co., Ltd.</strong>. Each runs on the same independence and editorial standards. Each site has its own privacy policy.</p>
 
 <h2>Your rights — GDPR (EU/UK) and PDPA (Thailand)</h2>
-<p>If you are in the EU, UK, or Thailand (or anywhere with similar legislation), you have the right to: request access to whatever data we hold on you (which is functionally nothing beyond aggregate GA counts you cannot be re-identified from), request deletion, request correction, withdraw consent, and lodge a complaint with your national data-protection authority. Email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a> and we will respond within 30 days. Because we do not run accounts, most requests are satisfied simply by you clearing your browser data — but we will confirm in writing if you ask.</p>
+<p>Depending on where you live, you may have rights to request access, deletion or correction, withdraw consent, or complain to a data-protection authority. Optional analytics is processed by Google after consent and can involve identifiers and cookies described in Google's own privacy documentation. Email <a href="mailto:info@pattaya-gym.com">info@pattaya-gym.com</a> for a privacy request. Clearing this site's browser data also removes local preferences and saved venues from that browser.</p>
 
 <h2>Children</h2>
 <p>This is a general-interest sport directory. We do not knowingly collect data from anyone under 13.</p>
@@ -2922,8 +2945,9 @@ const UTILITY_PAGES = [
   <a href="/compare/" class="btn btn-ghost">Compare</a>
 </div>
 <div class="eyebrow u-mt-8"><span class="num">★</span> Popular</div>
+<h2 class="sr-only">Popular directory sections</h2>
 <div class="numlist u-mt-4">
-  <a href="/category/muay-thai/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">01</span><h3 class="numcard-title">// Muay Thai</h3></div><p class="numcard-body">Every camp in Pattaya — hand-checked.</p></a>
+  <a href="/category/muay-thai/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">01</span><h3 class="numcard-title">// Muay Thai</h3></div><p class="numcard-body">Every directory record, with sources and review dates.</p></a>
   <a href="/category/fitness/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">02</span><h3 class="numcard-title">// Fitness</h3></div><p class="numcard-body">Gyms, hotel fitness, 24-hour options.</p></a>
   <a href="/area/jomtien/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">03</span><h3 class="numcard-title">// Jomtien</h3></div><p class="numcard-body">Beachfront neighborhood venues.</p></a>
   <a href="/guides/" class="numcard u-plain-link"><div class="numcard-head"><span class="numcard-num">04</span><h3 class="numcard-title">// Guides</h3></div><p class="numcard-body">Ranked lists and trip planners.</p></a>
@@ -2937,12 +2961,12 @@ const UTILITY_PAGES = [
 function sportsHubPage() {
   const url = `${SITE}/sports/`;
   const title = `Pattaya Gyms & Sport — ${VENUE_N} Venues, 15 Categories | Pattaya.Gym`;
-  const desc = truncateDesc(`Browse every Pattaya gym and sport venue: Muay Thai camps, fitness chains, golf, yoga, BJJ, diving, climbing and more. ${VENUE_N} hand-checked listings — filter by area, price or sport.`);
+  const desc = truncateDesc(`Browse Pattaya gyms and sport venues: Muay Thai camps, fitness, golf, yoga, BJJ, diving, climbing and more. ${VENUE_N} source-checked records — filter by area, price or sport.`);
   const cards = CATEGORIES.map(c => {
     const n = GYMS.filter(g => g.category === c.key).length;
     return `<a href="/category/${c.key}/" class="numcard u-plain-link">
         <div class="numcard-head"><span class="numcard-num">${String(n).padStart(2,'0')}</span><h3 class="numcard-title">// ${esc(c.label)}</h3></div>
-        <p class="numcard-body">${n} ${n === 1 ? 'venue' : 'venues'} in Pattaya. Hand-checked, no paid placements.</p>
+        <p class="numcard-body">${n} ${n === 1 ? 'venue' : 'venues'} in Pattaya. Source-checked, no paid placements.</p>
       </a>`;
   }).join('\n      ');
   const itemList = {
@@ -2961,7 +2985,7 @@ function sportsHubPage() {
   <div class="hero-inner u-wrap-max">
     <div class="hero-kicker">// Every sport &middot; 15 categories &middot; ${VENUE_N} venues</div>
     <h1 class="hero-h1">Pattaya <span class="accent-cyan">gyms &amp; sport.</span></h1>
-    <p class="hero-lede u-text-left-ml0">Every gym, Muay Thai camp, and sport venue in Pattaya — ${VENUE_N} hand-checked listings across 15 categories. From budget fitness on Soi Buakhao to resort golf east of the city.</p>
+    <p class="hero-lede u-text-left-ml0">Pattaya gyms, Muay Thai camps and sport venues — ${VENUE_N} source-checked records across 15 categories, with dated evidence and visible gaps.</p>
   </div>
 </section>
 
@@ -2988,7 +3012,7 @@ function generateSitemap() {
     .filter(e => e.isDirectory() && fs.existsSync(path.join(guidesDir, e.name, 'index.html')))
     .map(e => e.name)
     .sort();
-  const TOOL_SLUGS = ['compare','plan-my-trip'];
+  const TOOL_SLUGS = ['compare','plan-my-trip','map','find-my-coach'];
   const UTILITY_EXTRA = ['sports','add-your-gym','colophon','press','pattaya-sport-stats','changelog','privacy','terms'];
   const urls = [
     `${SITE}/`,
@@ -3104,4 +3128,3 @@ function main() {
 }
 
 main();
-

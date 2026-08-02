@@ -1,6 +1,7 @@
 ---
 id: khao-chi-chan-buddha-mountain
 name: Khao Chi Chan (Buddha Mountain)
+nameTh: เขาชีจรรย์
 category: clubs
 area: Na Jomtien / Sattahip
 address: Khao Chi Chan, Na Jomtien, Sattahip District, Chonburi 20250
@@ -14,6 +15,7 @@ verified: 2026-07-26
 sources:
   - https://www.tourismthailand.org/Destinations/Provinces/Pattaya/469
   - https://www.google.com/maps/search/?api=1&query=Khao+Chi+Chan+Buddha+Mountain
+  - https://www.dmr.go.th/%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%88%E0%B8%A3%E0%B8%A3%E0%B8%A2%E0%B9%8C/
 description: Landscaped cultural site near Na Jomtien where visitors can walk around the grounds beneath a cliff-carved Buddha image.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Khao+Chi+Chan+Buddha+Mountain"
 tags: [walking, cultural-site, buddha-mountain, sattahip]
@@ -22,6 +24,8 @@ tags: [walking, cultural-site, buddha-mountain, sattahip]
 # Khao Chi Chan (Buddha Mountain)
 
 Khao Chi Chan is a cultural sightseeing and light-walking stop near Na Jomtien, not a training venue. The Tourism Authority of Thailand lists daily 06:00-18:00 opening and asks visitors to dress respectfully and stay clear of the Buddha image and cliff. The Maps result identifies the cliff-carved attraction and distinguishes it from the nearby Wat Khao Chi Chan result.
+
+The Thai Department of Mineral Resources page calls this 109-metre cliff landmark **เขาชีจรรย์**.
 
 ## What training is on offer
 

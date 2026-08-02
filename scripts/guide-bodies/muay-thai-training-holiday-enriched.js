@@ -30,7 +30,7 @@ module.exports = `
 </table>
 </div>
 
-<p>These are examples, not a city average. Product wording controls the comparison. Fairtex’s month is not a room price. Kombat’s published week is not just class access. Sityodtong’s THB 400 establishes one pad-work session only. The linked records explain what remains outside each number.</p>
+<p>These are examples, not a city average. Product wording controls the comparison. <a href="/gyms/fairtex-pattaya/">Fairtex’s month</a> is not a room price. <a href="/gyms/kombat-group-thailand/">Kombat’s published week</a> is not just class access. <a href="/gyms/sityodtong-pattaya/">Sityodtong’s THB 400</a> establishes one pad-work session only. The linked records explain what remains outside each number.</p>
 
 <h2>How to choose the first commitment</h2>
 
@@ -38,15 +38,15 @@ module.exports = `
 
 <p>A single session is the most reversible test. It can answer whether the entrance is easy to find, the session is suitable for the stated level, coaching communication works and the contact level is acceptable. It does not show how the same gym feels through a full training week or whether accommodation is suitable.</p>
 
-<p>Use a named published product where possible. Battle &amp; Conquer publishes a THB 500 group session. Fairtex publishes THB 800 for Muay Thai. Sityodtong publishes THB 400 for individual pad work. Those labels are not interchangeable; confirm duration, group format, equipment and whether warm-up or open-gym time is included.</p>
+<p>Use a named published product where possible. <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> publishes a THB 500 group session. <a href="/gyms/fairtex-pattaya/">Fairtex</a> publishes THB 800 for Muay Thai. <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> publishes THB 400 for individual pad work. Those labels are not interchangeable; confirm duration, group format, equipment and whether warm-up or open-gym time is included.</p>
 
 <h3>One week</h3>
 
-<p>A weekly product suits a short holiday or a trial before extending. Battle &amp; Conquer publishes THB 2,500 for its group-training package. ISS publishes THB 4,000 for boxing and Muay Thai classes. Kombat’s THB 20,900 standard week is residential and carries the operator’s stated VAT and card-fee conditions. The price gap reflects a different purchase, not evidence that one gym is universally better value.</p>
+<p>A weekly product suits a short holiday or a trial before extending. <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> publishes THB 2,500 for its group-training package. <a href="/gyms/wko-muay-thai/">ISS</a> publishes THB 4,000 for boxing and Muay Thai classes. <a href="/gyms/kombat-group-thailand/">Kombat’s THB 20,900 standard week</a> is residential and carries the operator’s stated VAT and card-fee conditions. The price gap reflects a different purchase, not evidence that one gym is universally better value.</p>
 
 <h3>One month</h3>
 
-<p>A month creates exposure to schedule changes, minor injury, room dissatisfaction and a route that looks easy on a map but is inconvenient in daily use. Fairtex, Battle &amp; Conquer and ISS publish monthly training products, while Sityodtong and Sitpholek require more direct clarification. Ask whether the month starts at purchase, first attendance or a fixed calendar date, and whether pauses or transfers are allowed.</p>
+<p>A month creates exposure to schedule changes, minor injury, room dissatisfaction and a route that looks easy on a map but is inconvenient in daily use. <a href="/gyms/fairtex-pattaya/">Fairtex</a>, <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> and <a href="/gyms/wko-muay-thai/">ISS</a> publish monthly training products, while <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> and <a href="/gyms/sitpholek-muay-thai/">Sitpholek</a> require more direct clarification. Ask whether the month starts at purchase, first attendance or a fixed calendar date, and whether pauses or transfers are allowed.</p>
 
 <h2>Residential options: verify the room separately</h2>
 
@@ -56,11 +56,11 @@ module.exports = `
 
 <p><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> documents on-site rooms, a pool and several combat and fitness disciplines, but no stable public residential tariff was available in the checked pages. Its breadth can suit a group whose members want different training, yet it also makes the written quote more important: identify which disciplines, room services and sessions are included.</p>
 
-<p>Sityodtong presents a four-week camp route with housing, but the checked public pages did not expose a complete current residential price. Sitpholek’s old website says rooms were unavailable at that time and lists nearby historic figures; those statements are not a current accommodation offer.</p>
+<p><a href="/gyms/sityodtong-pattaya/">Sityodtong</a> presents a four-week camp route with housing, but the checked public pages did not expose a complete current residential price. <a href="/gyms/sitpholek-muay-thai/">Sitpholek’s old website</a> says rooms were unavailable at that time and lists nearby historic figures; those statements are not a current accommodation offer.</p>
 
 <h2>Build the schedule from operator times, not a generic fight-camp day</h2>
 
-<p>There is no one Pattaya timetable. Fairtex lists centre hours from 07:30 to 20:00 Monday through Saturday, with programme times varying. Battle &amp; Conquer publishes group Muay Thai at 08:00-10:00 and 16:00-18:00 daily. ISS publishes boxing and Muay Thai classes Monday through Saturday from 14:00 to 15:30. Sityodtong publishes 08:00-10:00 and 15:00-17:30 Monday through Saturday.</p>
+<p>There is no one Pattaya timetable. <a href="/gyms/fairtex-pattaya/">Fairtex</a> lists centre hours from 07:30 to 20:00 Monday through Saturday, with programme times varying. <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> publishes group Muay Thai at 08:00-10:00 and 16:00-18:00 daily. <a href="/gyms/wko-muay-thai/">ISS</a> publishes boxing and Muay Thai classes Monday through Saturday from 14:00 to 15:30. <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> publishes 08:00-10:00 and 15:00-17:30 Monday through Saturday.</p>
 
 <p>Sitpholek illustrates why Maps hours cannot be copied into a holiday plan. Maps lists 08:00-18:00 daily, while the old operator page describes Sunday as rest. Contact the gym for the exact current class. <a href="/gyms/rage-fight-academy/">Rage</a> lists business hours but not a dependable class-by-class timetable in its checked public pages.</p>
 
@@ -103,12 +103,12 @@ module.exports = `
 
 <h2>Make the call</h2>
 
-<p>Choose Kombat when a current residential package and a single operator relationship matter more than flexibility. Choose a published week at Battle &amp; Conquer or ISS when accommodation should stay separate. Use Fairtex when its specific training or package menu fits the requested product. Use Sityodtong for the named pad-work entry or contact it for a longer route. Contact Sitpholek and Rage when their verified facilities or locations fit, while accepting that the decisive price must come from a current reply.</p>
+<p>Choose <a href="/gyms/kombat-group-thailand/">Kombat</a> when a current residential package and a single operator relationship matter more than flexibility. Choose a published week at <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> or <a href="/gyms/wko-muay-thai/">ISS</a> when accommodation should stay separate. Use <a href="/gyms/fairtex-pattaya/">Fairtex</a> when its specific training or package menu fits the requested product. Use <a href="/gyms/sityodtong-pattaya/">Sityodtong</a> for the named pad-work entry or contact it for a longer route. Contact <a href="/gyms/sitpholek-muay-thai/">Sitpholek</a> and <a href="/gyms/rage-fight-academy/">Rage</a> when their verified facilities or locations fit, while accepting that the decisive price must come from a current reply.</p>
 
 <section class="guide-faq" aria-labelledby="training-holiday-faq-h">
 <h2 id="training-holiday-faq-h">Training-holiday questions</h2>
 <details class="faq-item"><summary>Should a beginner book one month of Muay Thai before arriving?</summary><p>A month can be appropriate, but it is a large commitment to one class, coach, room and route. A shorter named product can test those variables first. If booking a month, obtain session frequency, start date, pauses, equipment, accommodation and change terms in writing.</p></details>
-<details class="faq-item"><summary>Which current Pattaya option has a published residential week?</summary><p>Kombat Group publishes a one-week standard Muay Thai or western-boxing residential product at THB 20,900, checked 25 July 2026. The operator says 7% VAT is excluded and card payment adds 3%. Compare the exact room and inclusions, not only the headline.</p></details>
+<details class="faq-item"><summary>Which current Pattaya option has a published residential week?</summary><p><a href="/gyms/kombat-group-thailand/">Kombat Group</a> publishes a one-week standard Muay Thai or western-boxing residential product at THB 20,900, checked 25 July 2026. The operator says 7% VAT is excluded and card payment adds 3%. Compare the exact room and inclusions, not only the headline.</p></details>
 <details class="faq-item"><summary>What does a blank training price mean?</summary><p>It means no dependable current public tariff was verified. It does not mean the gym is closed, free or unwilling to accept visitors. Contact the exact operator for the named session, dates, inclusions, total, payment and change terms.</p></details>
 </section>
 `;

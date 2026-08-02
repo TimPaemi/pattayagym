@@ -1,6 +1,7 @@
 ---
 id: st-andrews-2000
 name: St Andrews 2000 Golf Club
+nameTh: เซนต์แอนดรูว์ 2000 กอล์ฟคลับ
 category: golf
 area: Ban Chang / Rayong
 address: 9/36 Moo 7, Samnak Thon, Ban Chang, Rayong 21130
@@ -11,7 +12,7 @@ hours: Daily 08:00-17:00 office hours; tee availability requires reservation
 priceRange: ""
 distinction: 18-hole course within the St Andrews 2000 and Rayong Green Valley complex
 holes: 18
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://greenvalleythailand.wixsite.com/standrews2000golf
   - https://greenvalleythailand.wixsite.com/standrews2000golf/standrews2000
@@ -19,12 +20,15 @@ sources:
   - https://greenvalleythailand.wixsite.com/standrews2000golf/facilities
   - https://greenvalleythailand.wixsite.com/standrews2000golf/accommodation
   - https://www.google.com/maps/search/?api=1&query=St+Andrews+2000+Golf+Club+Thailand
+  - "https://www.google.com/maps/search/?api=1&query=St+Andrews+2000+Golf+Club&hl=th"
 description: Ban Chang golf course and resort complex with published facilities and accommodation but no readable current public green-fee table.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=St+Andrews+2000+Golf+Club+Thailand"
 tags: [golf, ban-chang, rayong, 18-holes]
 ---
 
 # St Andrews 2000 Golf Club
+
+The 18-hole property's Thai Maps name is **เซนต์แอนดรูว์ 2000 กอล์ฟคลับ**.
 
 St Andrews 2000 Golf Club is a confirmed Ban Chang course and resort contact, but not a transparent online green-fee purchase. The operator still markets the course under the St Andrews 2000 name, while the checked contact page uses a Barcelona Valley email domain for replies. That makes the venue real, but it also makes direct confirmation more important than a generic legacy golf listing.
 

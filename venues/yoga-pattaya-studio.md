@@ -1,5 +1,6 @@
 ---
 id: yoga-pattaya-studio
+nameTh: โยคะ พัทยา
 name: Yoga Pattaya Studio
 category: yoga
 area: Thepprasit / Jomtien
@@ -31,6 +32,8 @@ tags: [yoga, ashtanga, mysore, hatha, vinyasa, jomtien]
 ---
 
 # Yoga Pattaya Studio
+
+The studio's Thai contact page uses **โยคะ พัทยา** as its taxi-search name and confirms the **315/322** Thepprasit Soi 12 address for arrivals.
 
 Yoga Pattaya Studio is a group and private yoga studio on Thepprasit Soi 12. The operator publishes a broad class menu, multilingual teaching and current pass prices. Most classes accept drop-ins, but the timetable changes and the selected teacher and language should be confirmed before arrival.
 

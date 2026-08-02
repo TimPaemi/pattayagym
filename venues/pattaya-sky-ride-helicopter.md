@@ -1,6 +1,7 @@
 ---
 id: pattaya-sky-ride-helicopter
 name: Pattaya Sky Ride
+nameTh: เฮลิคอปเตอร์ชมวิวพัทยา
 category: adventure
 area: Huai Yai / East Pattaya
 address: 789 Moo 14, Chak Nok 19, Nong Prue, Bang Lamung, Chonburi 20150
@@ -13,6 +14,7 @@ distinction: Helicopter sightseeing and Bangkok-Pattaya transport operator
 tourTypes: [Pattaya sightseeing, Bangkok-Pattaya helicopter transport]
 verified: 2026-07-27
 sources:
+  - https://www.thairath.co.th/news/auto/news/2785266
   - https://www.pattayaskyride.com/
   - https://www.pattayaskyride.com/package
   - https://www.pattayaskyride.com/contact-us
@@ -25,6 +27,8 @@ tags: [helicopter, sightseeing, charter, huai-yai, appointment]
 ---
 
 # Pattaya Sky Ride
+
+The Thai news report describes the service as **เฮลิคอปเตอร์ชมวิวพัทยา**.
 
 ## What training is on offer
 

@@ -29,7 +29,7 @@ module.exports = `
 
 <h2>What a one-month stay should optimize for</h2>
 
-<p>A month changes the economics because transport, housing and repeatability start to matter as much as the class fee. The strongest current example is <a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a>. Its official classes page checked 2026-07-27 lists THB 1,000 per day, THB 4,000 per week and THB 8,000 per month for the boxing-and-Muay-Thai class product, while general gym and recovery-room access are sold separately. That matters because a month buyer can compare the true class product rather than assuming a cheaper facility pass includes coaching.</p>
+<p>A month changes the economics because transport, housing and repeatability start to matter as much as the class fee. A current example is <a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a>. Its official classes page checked 2026-07-27 lists THB 1,000 per day, THB 4,000 per week and THB 8,000 per month for the boxing-and-Muay-Thai class product, while general gym and recovery-room access are sold separately. That matters because a month buyer can compare the true class product rather than assuming a cheaper facility pass includes coaching.</p>
 
 <p><a href="/gyms/fairtex-pattaya/">Fairtex</a> and <a href="/gyms/kombat-group-thailand/">Kombat Group</a> illustrate the residential side instead. Fairtex publishes accommodation-linked package prices, including a one-month product at THB 46,500 for one person or THB 63,000 for two sharing, checked 2026-07-26. Kombat's one-week Bronze, Standard and Deluxe ladders show how much the room, meals and facility access can change the all-in number before the operator's stated 7% VAT and 3% card fee. That is why a month comparison should separate training-only from room-and-training packages. They answer different problems.</p>
 
@@ -43,7 +43,7 @@ module.exports = `
 
 <h2>Recovery, intensity and the honest first commitment</h2>
 
-<p>One week and one month also differ in how much recovery planning matters. On a seven-day trip, you can often solve the problem by training once per day, sleeping properly and not turning every evening into nightlife plus dehydration. On a month, the recovery products around the gym start to matter more. ISS is again a useful example because its recovery-room access is priced separately from the class product. That makes the cost of “train and recover here” clearer than a generic social post promising sauna or ice bath somewhere else.</p>
+<p>One week and one month also differ in how much recovery planning matters. On a seven-day trip, you can often solve the problem by training once per day, sleeping properly and not turning every evening into nightlife plus dehydration. On a month, the recovery products around the gym start to matter more. <a href="/gyms/wko-muay-thai/">ISS</a> is again a useful example because its recovery-room access is priced separately from the class product. That makes the cost of “train and recover here” clearer than a generic social post promising sauna or ice bath somewhere else.</p>
 
 <p>The same honesty applies to stadium nights. Bangkok venues such as <a href="/gyms/lumpinee-boxing-stadium/">Lumpinee</a> and <a href="/gyms/rajadamnern-stadium/">Rajadamnern</a> are spectator add-ons, not substitutes for your training plan. A one-week traveller can use a fight night as entertainment. A one-month traveller can fit one into a recovery or sightseeing day. Neither stadium should replace the choice of actual Pattaya training product.</p>
 
@@ -53,8 +53,8 @@ module.exports = `
 <p>It is enough to test whether you like the coaching, the pace and the daily routine. It is not enough to treat Pattaya like a full fight camp unless you already compete. Buy the smallest named product that answers the biggest question, then extend only if the first sessions and the route both work.</p>
 
 <h3>Is one month enough to improve meaningfully?</h3>
-<p>Yes, if the class schedule, accommodation and recovery plan are sustainable. The key change from a week is not just more sessions; it is whether the gym location and product still make sense after repetition. A transparent monthly class product such as ISS can be easier to evaluate than a vague all-inclusive promise.</p>
+<p>Yes, if the class schedule, accommodation and recovery plan are sustainable. The key change from a week is not just more sessions; it is whether the gym location and product still make sense after repetition. A transparent monthly class product such as <a href="/gyms/wko-muay-thai/">ISS</a> can be easier to evaluate than a vague all-inclusive promise.</p>
 
 <h3>Should I buy a month before trying the gym once?</h3>
-<p>Usually no. Exceptions are the most transparent residential products where you already know you want the room-and-training package. Otherwise, a one-session or one-week buy is the safer first commitment because it tests the coach, timing, route and equipment policy before the bigger spend.</p>
+<p>Usually no. Exceptions are residential products where you already know you want the room-and-training package. Otherwise, a one-session or one-week buy is the safer first commitment because it tests the coach, timing, route and equipment policy before the bigger spend.</p>
 `;

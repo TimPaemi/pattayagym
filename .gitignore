@@ -67,3 +67,5 @@ CLAUDE.md
 AGENTS.md
 RULES.md
 CHANGELOG-STRUCTURAL.md
+# loop concurrency run lock (operational state)
+.internal-docs/RUN-LOCK.json

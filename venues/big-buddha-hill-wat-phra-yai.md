@@ -1,6 +1,7 @@
 ---
 id: big-buddha-hill-wat-phra-yai
 name: Wat Phra Yai — Big Buddha Hill Stair Climb
+nameTh: วัดพระใหญ่
 category: clubs
 area: Pratamnak Hill
 address: 384 Regent Soi 2, Pattaya, Bang Lamung, Chonburi 20150
@@ -10,17 +11,20 @@ social: {}
 hours: Daily 10:00-20:00
 priceRange: ""
 distinction: Hilltop temple reached by a substantial staircase
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.thailandtravel.or.jp/wat-phra-yai-pattaya/
   - https://www.thailandtourismdirectory.go.th/en/attraction/21350
   - https://www.google.com/maps/search/?api=1&query=Wat+Phra+Yai+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Big+Buddha+Hill+Wat+Phra+Yai+Pattaya&hl=th"
 description: Active Pratamnak hilltop temple whose staircase can form part of a walking route.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Wat+Phra+Yai+Pattaya"
 tags: [walking, stairs, pratamnak, temple, outdoor]
 ---
 
 # Wat Phra Yai — Big Buddha Hill Stair Climb
+
+The 384 Regent Soi 2 place, open daily until 20:00, is **วัดพระใหญ่** in Thai Maps.
 
 Wat Phra Yai is an active hilltop temple on Pratamnak, not a gym or outdoor fitness park. Its staircase can form one segment of a respectful walk, but it does not offer supervised training or a measured workout. The religious site comes first, and the official visitor page leaves access and admission questions unresolved.
 

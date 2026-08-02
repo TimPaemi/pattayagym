@@ -6,7 +6,7 @@ module.exports = `
 <h2>Short answer: choose by access model</h2>
 
 <ul>
-  <li><strong>Published monthly prices:</strong> <a href="/gyms/coco-fitness/">Coco Fitness</a> has the clearest current central membership menu and daily 07:00–22:00 hours.</li>
+  <li><strong>Published monthly prices:</strong> <a href="/gyms/coco-fitness/">Coco Fitness</a> has a current central membership menu and daily 07:00–22:00 hours.</li>
   <li><strong>Twenty-four-hour facility:</strong> <a href="/gyms/fitness-7/">Fitness 7 Pattaya</a> publishes 24-hour operation and a broad facility description, but no current public tariff was visible.</li>
   <li><strong>Twenty-four-hour chain member access:</strong> <a href="/gyms/jetts-fitness-pattaya/">Jetts Little Walk</a> and <a href="/gyms/anytime-fitness-pattaya/">Anytime Fitness Pattaya</a> distinguish member access from staffed service; both require a price and first-entry check.</li>
   <li><strong>Gym access or coached striking with dated prices:</strong> <a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a> publishes separate facility, class and recovery-room tariffs.</li>
@@ -19,17 +19,17 @@ module.exports = `
 
 <p>The area rule covers records described with Central Pattaya, Beach Road, Pattaya Klang, Soi Buakhao, Third Road, Mike Shopping Mall, Walking Street or South Pattaya wording. It therefore joins several corridors rather than drawing a compact walking circle. A venue at Mike Shopping Mall, one at The Avenue, one at Little Walk on Sukhumvit and one in Soi Bonkai can all enter the same area view while using different roads and entrances.</p>
 
-<p>The 38-result set contains nine fitness records, six clubs, six watersports records, five Muay Thai records, four racquet records, three kids-and-youth records, two adventure records and one each for MMA, swimming and golf. Diamond Badminton and JUMPZ Harbor Pattaya are closed. BOUNCE Pattaya and Pattaya Beach Public Aerobics are unverified. Pattaya Floating Market is labelled non-sport. Always read the individual status before planning a visit.</p>
+<p>The 38-result set contains nine fitness records, six clubs, six watersports records, five Muay Thai records, four racquet records, three kids-and-youth records, two adventure records and one each for MMA, swimming and golf. <a href="/gyms/diamond-badminton/">Diamond Badminton</a> and <a href="/gyms/jumpz-trampoline-park/">JUMPZ Harbor Pattaya</a> are closed. <a href="/gyms/bounce-pattaya/">BOUNCE Pattaya</a> and <a href="/gyms/pattaya-beach-public-aerobics/">Pattaya Beach Public Aerobics</a> are unverified. <a href="/gyms/pattaya-floating-market/">Pattaya Floating Market</a> is labelled non-sport. Always read the individual status before planning a visit.</p>
 
 <p>Use the exact Maps link on a venue page, check the building floor and entrance, and decide how you will return after training. This guide does not publish fixed road-transfer times, songthaew fares or taxi prices because those are not stable venue facts.</p>
 
-<h2>Best current price transparency: Coco Fitness</h2>
+<h2>Current price transparency: Coco Fitness</h2>
 
 <p><a href="/gyms/coco-fitness/">Coco Fitness</a> is on the fourth floor of Mike Shopping Mall. Owner posts describe more than 1,000 square metres with machines, weights, cardio, stretching and a boxing area. The equipment description is broad rather than itemised: it does not prove that a particular rack, platform, bar or specialist machine will be available at a chosen hour.</p>
 
 <p>The operator tariff checked on 26 July 2026 lists ฿1,599 for one month, ฿4,299 for three months, ฿8,299 for six months and ฿12,999 for twelve months. A separate July promotion lists ฿2,998 for either two months for one person or one month each for two people. Confirm that promotion before paying and ask when the purchased period starts.</p>
 
-<p>Coco publishes daily 07:00–22:00 opening. It does not currently publish a day-pass amount, joining fee, deposit, personal-training tariff or group-class timetable. Coco is therefore the clearest choice here for comparing a multi-week or multi-month price, not a guaranteed one-off workout. Ask the desk about lockers, towels, showers, parking validation and any registration requirement.</p>
+<p><a href="/gyms/coco-fitness/">Coco</a> publishes daily 07:00–22:00 opening. It does not currently publish a day-pass amount, joining fee, deposit, personal-training tariff or group-class timetable. <a href="/gyms/coco-fitness/">Coco</a> is therefore the most directly comparable option here for a multi-week or multi-month price, not a guaranteed one-off workout. Ask the desk about lockers, towels, showers, parking validation and any registration requirement.</p>
 
 <h2>Best documented 24-hour facility: Fitness 7</h2>
 
@@ -37,7 +37,7 @@ module.exports = `
 
 <p>The same current branch page does not publish a Pattaya day pass, monthly membership, joining fee or class timetable. That gap matters. A reader can verify the operating window and facility categories but cannot calculate the first-visit cost from the public page. Contact the branch for the full current amount, staffed arrival procedure, identification, deposit and whether a specific class needs booking.</p>
 
-<p>Fitness 7 suits someone who prioritises a documented round-the-clock facility and is willing to get a quote. Coco suits someone who prioritises a dated monthly menu and can train between 07:00 and 22:00. Neither page supports a blanket claim that it is cheaper, quieter or better equipped for every programme.</p>
+<p><a href="/gyms/fitness-7/">Fitness 7</a> suits someone who prioritises a documented round-the-clock facility and is willing to get a quote. <a href="/gyms/coco-fitness/">Coco</a> suits someone who prioritises a dated monthly menu and can train between 07:00 and 22:00. Neither page supports a blanket claim that it is cheaper, quieter or better equipped for every programme.</p>
 
 <h2>Jetts and Anytime: member access is not the reception schedule</h2>
 
@@ -53,7 +53,7 @@ module.exports = `
 
 <p><a href="/gyms/tonys-gym/">Tony’s Fitness Group</a> now documents one current verifiable venue: the open-air weight-training gym on South Pattaya Third Road. Its exact Maps listing publishes 24-hour opening and phone +66 95 850 3475. The operator Facebook identity remains live.</p>
 
-<p>Older versions of Pattaya gym guides often repeat a former multi-branch network, old addresses and old prices. This record deliberately removes those claims because current first-hand evidence did not support them. No current operator pass or membership tariff was found. Confirm staffed hours, day access, monthly price, changing facilities and the equipment needed before choosing Tony’s on historical reputation alone.</p>
+<p>Older versions of Pattaya gym guides often repeat a former multi-branch network, old addresses and old prices. This record deliberately removes those claims because current first-hand evidence did not support them. No current operator pass or membership tariff was found. Confirm staffed hours, day access, monthly price, changing facilities and the equipment needed before choosing <a href="/gyms/tonys-gym/">Tony’s</a> on historical reputation alone.</p>
 
 <h2>Best transparent combat comparison: ISS Boxing and Muay Thai</h2>
 
@@ -71,7 +71,7 @@ module.exports = `
 
 <h2>Pool access and hotel gyms</h2>
 
-<p><a href="/gyms/hard-rock-pool/">Hard Rock Hotel Pattaya Pool</a> is the clearest currently priced non-guest water product in the central set. The hotel describes a 2,000-square-metre freeform pool with an artificial beach, jacuzzi, children’s area, slides and lifeguards. This is a leisure pool rather than a dedicated lap-training venue.</p>
+<p><a href="/gyms/hard-rock-pool/">Hard Rock Hotel Pattaya Pool</a> is a currently priced non-guest water product in the central set. The hotel describes a 2,000-square-metre freeform pool with an artificial beach, jacuzzi, children’s area, slides and lifeguards. This is a leisure pool rather than a dedicated lap-training venue.</p>
 
 <p>The operator page checked on 25 July 2026 lists non-guest access from 09:00 to 19:00 at ฿500 per adult including one cocktail and ฿400 per child under 12 including one juice. Inflatable hire was ฿200 per day. Confirm availability before travelling, particularly when an event or busy hotel date could affect outside entry.</p>
 

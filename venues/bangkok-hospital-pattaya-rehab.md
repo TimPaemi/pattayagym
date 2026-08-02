@@ -1,6 +1,7 @@
 ---
 id: bangkok-hospital-pattaya-rehab
 name: Bangkok Hospital Pattaya Rehabilitation Center
+nameTh: โรงพยาบาลกรุงเทพพัทยา
 category: clubs
 area: North Pattaya
 address: Building A, 3rd Floor, Bangkok Hospital Pattaya, 301 Moo 6, Sukhumvit Road Km 143, Naklua, Bang Lamung, Chonburi 20150
@@ -15,12 +16,15 @@ verified: 2026-07-26
 sources:
   - https://www.bangkokhospital.com/en/pattaya/center-clinic/bone-joint/rehabilitation-bph/overview
   - https://www.google.com/maps/search/?api=1&query=Bangkok+Hospital+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Bangkok+Hospital+Pattaya&hl=th"
 description: Clinical rehabilitation centre with physician-led assessment and physical or occupational therapy for post-orthopaedic, musculoskeletal and neurological needs.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Bangkok+Hospital+Pattaya"
 tags: [rehabilitation, physiotherapy, injury-recovery, hospital, north-pattaya]
 ---
 
 # Bangkok Hospital Pattaya Rehabilitation Center
+
+Thai Maps names the parent hospital **โรงพยาบาลกรุงเทพพัทยา**; this directory record specifically covers its Building A, 3rd-floor rehabilitation centre only here.
 
 ## What training is on offer
 

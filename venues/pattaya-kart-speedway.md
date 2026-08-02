@@ -1,6 +1,7 @@
 ---
 id: pattaya-kart-speedway
 name: Pattaya Kart Speedway
+nameTh: สนามโกคาร์ท พัทยาคาร์ทสปีดเวย์
 category: adventure
 area: Thepprasit Road
 address: 248/2 Thepprasit Road, Pattaya, Bang Lamung, Chonburi 20150
@@ -23,12 +24,15 @@ sources:
   - https://pattayakart.com/en/professional-track/
   - https://pattayakart.com/en/atv-track-2/
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Kart+Speedway
+  - "https://www.google.com/maps/search/?api=1&query=Pattaya+Kart+Speedway&hl=th"
 description: Thepprasit Road outdoor karting venue with beginner and experienced-driver tracks.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Kart+Speedway"
 tags: [karting, outdoor, thepprasit, beginner-track]
 ---
 
 # Pattaya Kart Speedway
+
+Its Thai Maps name is **สนามโกคาร์ท พัทยาคาร์ทสปีดเวย์**.
 
 Pattaya Kart Speedway is an outdoor karting and ATV venue at 248/2 Thepprasit Road. The operator separates first-time and younger drivers from the professional-track product, so choosing the correct activity matters more than asking simply for “a kart”. Current operator material lists daily opening from 09:30 to 18:30.
 

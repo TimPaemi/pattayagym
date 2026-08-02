@@ -1,5 +1,6 @@
 ---
 id: pattaya-water-sports-club
+nameTh: พัทยา วอเตอร์ สปอร์ต คลับ
 name: Pattaya Water Sports Club
 category: watersports
 area: Na Jomtien
@@ -19,12 +20,15 @@ sources:
   - https://www.pattayawatersportsclub.com/contact-us/
   - https://www.facebook.com/PattayaWaterSportsClub/
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Water+Sports+Club+Na+Jomtien
+  - https://fliphtml5.com/fqgck/yfak/
 description: Soi Na Jomtien 22 watersports club offering powered activities, paddle sports and yacht enquiries.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Water+Sports+Club+Na+Jomtien"
 tags: [jet-ski, flyboard, wakeboard, sup, kayak, banana-boat, na-jomtien]
 ---
 
 # Pattaya Water Sports Club
+
+A Thai-language Pattaya hotel brochure lists Pattaya Water Sports Club as พัทยา วอเตอร์ สปอร์ต คลับ and notes 09:00-17:00 hours at 73/95.
 
 ## What training is on offer
 

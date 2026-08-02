@@ -1,5 +1,6 @@
 ---
 id: pattaya-archery-club
+nameTh: พัทยา อาร์เชรี่ คลับ
 name: Pattaya Archery Club
 category: clubs
 area: Huai Yai
@@ -19,12 +20,15 @@ sources:
   - https://www.pattayaarcheryclub.com/coaching/
   - https://www.pattayaarcheryclub.com/contact/
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Archery+Club
+  - https://www.soidb.com/pattaya/activity/pattaya-archery-club.html
 description: Non-profit Huai Yai archery club with free beginner coaching and published annual membership fees.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Archery+Club"
 tags: [archery, non-profit, huai-yai, beginners, coaching]
 ---
 
 # Pattaya Archery Club
+
+SoiDB's Thai field names the club พัทยา อาร์เชรี่ คลับ; its operator page describes a 2006 founding and free coaching for beginners on 4 shooting days.
 
 Pattaya Archery Club is a non-profit range-based club in the Huai Yai corridor, not a tourist attraction selling anonymous walk-in tickets. Its own pages are unusually clear about beginner coaching being free and about the annual club-fee structure, which makes it useful for a parent, hobbyist or long-stay resident deciding whether to try archery properly.
 

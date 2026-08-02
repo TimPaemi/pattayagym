@@ -1,6 +1,7 @@
 ---
 id: naklua-16-badminton
 name: Naklua 16 Badminton
+nameTh: นาเกลือ 16 แบดมินตัน
 category: racquet
 area: Naklua
 address: 508/1 Soi Photisan, Pattaya, Bang Lamung, Chonburi 20150
@@ -16,12 +17,15 @@ verified: 2026-07-26
 sources:
   - https://www.facebook.com/Naklua-16-Badminton-109011103936674
   - https://www.google.com/maps/search/?api=1&query=Naklua+16+Badminton
+  - "https://www.google.com/maps/search/?api=1&query=Naklua+16+Badminton&hl=th"
 description: Active Thai badminton venue off Soi Photisan in Naklua.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Naklua+16+Badminton"
 tags: [badminton, naklua, thai-language]
 ---
 
 # Naklua 16 Badminton
+
+The venue appears in Thai Maps as **นาเกลือ 16 แบดมินตัน**.
 
 Naklua 16 Badminton is an active Thai badminton venue off Soi Photisan. Its operator Facebook page posted in July 2026 and the location-specific Maps listing supports the address at 508/1 Soi Photisan. Maps listed 12:00-23:00 from Monday to Friday and on Sunday, with Saturday closed, when checked on 26 July 2026. Confirm the day before travelling, as holiday hours may differ.
 

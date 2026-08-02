@@ -1,6 +1,7 @@
 ---
 id: anytime-fitness-pattaya
 name: Anytime Fitness Pattaya
+nameTh: เอนี่ไทม์ ฟิตเนส พัทยา
 category: fitness
 area: Naklua and South Pattaya
 address: Again Pattaya, 2nd Floor, 85 Soi Naklua 33, Nong Prue, Bang Lamung, Chonburi 20150; separate Bukis Point South Pattaya branch
@@ -8,17 +9,18 @@ phone: "+66 64 167 0270"
 website: https://www.anytimefitness.co.th/gyms/th-0028/pattaya-chonburi/
 social:
   facebook: AnytimeFitnessTh
-hours: Both branch listings show 24-hour member access; staffed hours are not published
+hours: Member access daily 00:00-24:00; staffed hours are not published
 priceRange: ""
 distinction: Two current Pattaya branches with round-the-clock member access
 facilities: [Cardio equipment, Strength equipment, Personal training, Group classes]
 beginnerFriendly: true
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.anytimefitness.co.th/gyms/th-0028/pattaya-chonburi/
   - https://www.facebook.com/afbukispoint/
   - https://www.google.com/maps/search/?api=1&query=Anytime+Fitness+Again+Pattaya
   - https://www.google.com/maps/search/?api=1&query=Anytime+Fitness+Bukis+Point+South+Pattaya
+  - https://www.jobthai.com/en/company/370378
 description: One directory record covering separate Again Pattaya and Bukit Point clubs, both with 24-hour member access and branch-specific unanswered pricing questions.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Anytime+Fitness+Pattaya"
 tags: [fitness, 24-hour, chain-gym, naklua, south-pattaya]
@@ -27,6 +29,8 @@ tags: [fitness, 24-hour, chain-gym, naklua, south-pattaya]
 # Anytime Fitness Pattaya
 
 This record covers **two separate Anytime Fitness clubs**, not one gym with two entrances. The first is **Again Pattaya** in Naklua. The second is the South Pattaya branch whose official operator page uses **Bukit Point Pattaya**, while the social and map wording often appears as **Bukis Point South Pattaya**. The point is the same: the branches are separate and should not be merged casually when asking for price or access.
+
+Thai-language company information writes the brand as **เอนี่ไทม์ ฟิตเนส** and lists the Pattaya branch at 85 Soi Naklua 33.
 
 ## What training is on offer
 

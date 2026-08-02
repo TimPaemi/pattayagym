@@ -1,34 +1,38 @@
 {
  "styles.css": {
-  "sha": "b1d6225a4bf20ffe",
-  "version": "471"
+  "sha": "7726b26aa8316df7",
+  "version": "474"
  },
  "venue.css": {
   "sha": "e32d75d1575981ff",
-  "version": "471"
+  "version": "474"
  },
  "site-ui.js": {
   "sha": "582f68c1995b140c",
-  "version": "471"
+  "version": "474"
  },
  "favorites.js": {
   "sha": "b08ad26d97b97913",
-  "version": "471"
+  "version": "474"
  },
  "share.js": {
   "sha": "91899d558e4563ab",
-  "version": "471"
+  "version": "474"
  },
  "shortcuts.js": {
   "sha": "37a5a1d3d0dd9130",
-  "version": "471"
+  "version": "474"
  },
  "search-page.js": {
-  "sha": "73677f05b5d2af88",
-  "version": "471"
+  "sha": "1432b73636c87b08",
+  "version": "474"
  },
  "analytics.js": {
-  "sha": "b686a99cdb4c9514",
-  "version": "471"
+  "sha": "eb157811b697a71f",
+  "version": "474"
+ },
+ "location-tools.js": {
+  "sha": "f3fab9333f1e2ca8",
+  "version": "474"
  }
 }

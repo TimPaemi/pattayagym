@@ -27,7 +27,7 @@ const BRAND = {
   site: 'Pattaya.Gym',
   domain: 'pattaya-gym.com',
   url: 'https://pattaya-gym.com',
-  tagline: 'Every gym, ring and court in Pattaya.',
+  tagline: 'Find gyms, rings and courts in Pattaya.',
   entity: 'TimPaemi Co., Ltd.',
   founders: ['Tim', 'Paemi'],
   city: 'Pattaya',

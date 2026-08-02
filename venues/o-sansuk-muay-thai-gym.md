@@ -1,6 +1,7 @@
 ---
 id: o-sansuk-muay-thai-gym
 name: O. Sansuk Muay Thai Gym Pattaya
+nameTh: อ.แสนศึกมวยไทย พัทยา
 category: muay-thai
 area: East Pattaya / Sukhumvit Soi 61/1
 address: 29 Soi Sukhumvit Pattaya 61/1, Pattaya, Bang Lamung, Chonburi 20150
@@ -13,16 +14,19 @@ hours: Mon-Fri 07:00-09:00, 15:00-17:00 and 18:00-20:00; Sat 07:00-09:00 and 12:
 priceRange: ""
 distinction: Thai Muay Thai gym opposite the former Max Muay Thai stadium site
 disciplines: [Muay Thai]
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/otsansuk.muaythaigym999
   - https://www.google.com/maps/search/?api=1&query=O+Sansuk+Muay+Thai+Gym+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=O+Sansuk+Muay+Thai+Pattaya&hl=th"
 description: East Pattaya Muay Thai gym with split weekday training periods, Saturday sessions and current private-training activity.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=O+Sansuk+Muay+Thai+Gym+Pattaya"
 tags: [muay-thai, thai-gym, east-pattaya]
 ---
 
 # O. Sansuk Muay Thai Gym Pattaya
+
+On Thai Maps, the gym at 29 Soi Sukhumvit Pattaya 61/1 is named **อ.แสนศึกมวยไทย พัทยา**.
 
 O. Sansuk is a Muay Thai gym on Sukhumvit Pattaya Soi 61/1, east of the central beach districts. Its current owner page describes the location as opposite the former Max Muay Thai stadium site and publishes the same phone and soi as the exact Google Maps identity. The owner page was active in July 2026 and included a current private-training post, supporting live training activity without turning a social-media clip into a permanent class promise.
 

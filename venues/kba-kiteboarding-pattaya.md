@@ -1,5 +1,6 @@
 ---
 id: kba-kiteboarding-pattaya
+nameTh: เคบีเอ ไคท์บอร์ดดิ้ง เอเชีย
 name: KBA Kiteboarding Asia Pattaya
 category: watersports
 area: Blue Lagoon / Na Jomtien
@@ -20,12 +21,15 @@ sources:
   - https://kiteboardingasia.com/kitesurf/
   - https://kiteboardingasia.com/product/gift-card/
   - https://www.google.com/maps/search/?api=1&query=KBA+Kiteboarding+Asia+Pattaya+Blue+Lagoon
+  - https://www.thailand.org/REVIEWS-kba-kiteboarding-asia-15204-l.html
 description: Blue Lagoon watersports school offering kitesurf, kitefoil, efoil, wingfoil and Wing SUP.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=KBA+Kiteboarding+Asia+Pattaya+Blue+Lagoon"
 tags: [kiteboarding, kitefoil, efoil, wingfoil, na-jomtien, school]
 ---
 
 # KBA Kiteboarding Asia Pattaya
+
+The branch's official Pattaya page gives the Blue Lagoon address 23/4 Moo 2, while a Thai tourism listing records the network name as เคบีเอ ไคท์บอร์ดดิ้ง เอเชีย.
 
 KBA Kiteboarding Asia Pattaya is a Blue Lagoon watersports school in Na Jomtien focused on board sports rather than a generic beach-rental stall. Its current Pattaya page clearly ties the branch to kitesurf, kitefoil, efoil, wingfoil and Wing SUP, plus gear rental and shop support. The limitation is availability: wind and branch scheduling matter, so a named lesson or rental should be confirmed before you travel.
 

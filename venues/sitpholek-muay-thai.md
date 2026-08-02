@@ -1,6 +1,7 @@
 ---
 id: sitpholek-muay-thai
 name: Sitpholek Institute of Muay Thai Techniques
+nameTh: ค่ายมวย ศิษย์พ่อเหล็กและยิม
 category: muay-thai
 area: Nong Prue / East Pattaya
 address: 93/123 Moo 11, Khao Talo Soi 8, Nong Prue, Bang Lamung, Chonburi 20150
@@ -13,18 +14,21 @@ priceRange: ""
 distinction: Long-running Khao Talo Muay Thai gym led by Frank Sitpholek
 disciplines: [Muay Thai]
 beginnerFriendly: true
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://sitpholek.de.tl/
   - https://sitpholek.de.tl/Contact.htm
   - https://www.facebook.com/sitpholekmuaythaipattaya/
   - https://www.google.com/maps/search/?api=1&query=Sitpholek%20Muay%20Thai%20Gym%20Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Sitpholek+Muay+Thai+Pattaya&hl=th"
 description: Active Khao Talo Muay Thai gym with a confirmed phone and location but no current public tariff or class timetable.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Sitpholek%20Muay%20Thai%20Gym%20Pattaya"
 tags: [muay-thai, khao-talo, east-pattaya, trainer-led]
 ---
 
 # Sitpholek Institute of Muay Thai Techniques
+
+The 93/123 Moo 11 camp appears in Thai Maps as **ค่ายมวย ศิษย์พ่อเหล็กและยิม**.
 
 Sitpholek is an active Muay Thai gym at 93/123 Moo 11 on Khao Talo Soi 8. The current Maps identity matches the operator’s Facebook page and the phone published by Frank Sitpholek. Its public website is old, however, so historical prices and a Sunday-rest statement are not presented as a current tariff or timetable.
 

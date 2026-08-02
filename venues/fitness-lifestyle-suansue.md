@@ -1,6 +1,7 @@
 ---
 id: fitness-lifestyle-suansue
 name: Fitness Lifestyle Suansue
+nameTh: Fitness Lifestyle สวนเสือศรีราชา
 category: fitness
 area: Nong Kham / Si Racha
 address: 341/688, Nong Kham, Si Racha, Chonburi 20110
@@ -17,12 +18,15 @@ verified: 2026-07-26
 sources:
   - https://www.facebook.com/FitnessLifestyleSuansue/
   - https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Suansue+Sriracha
+  - "https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Suansue&hl=th"
 description: Nong Kham fitness club with equipment, group exercise, Pilates Reformer and HYROX training.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Fitness+Lifestyle+Suansue+Sriracha"
 tags: [fitness, group-training, pilates, hyrox, sriracha, nong-kham]
 ---
 
 # Fitness Lifestyle Suansue
+
+The 341/688 Nong Kham gym in Si Racha district is **Fitness Lifestyle สวนเสือศรีราชา** in Thai Maps and publishes daily 06:00-22:00 opening.
 
 Fitness Lifestyle Suansue is an active fitness club at 341/688 in Nong Kham, Si Racha. The operator presents ordinary fitness access alongside group training, group exercise, Pilates Reformer and HYROX programming. Its public evidence is current enough to confirm activity, but pricing and long-term class times remain contact-first.
 

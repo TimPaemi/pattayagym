@@ -1,6 +1,7 @@
 ---
 id: thai-wake-park
 name: Thai Wake Park Pattaya
+nameTh: ไทยเวคพาร์ค พัทยา
 category: watersports
 area: Nong Pla Lai / East Pattaya
 address: 58 Soi 3, Nong Pla Lai, Bang Lamung, Chonburi 20150
@@ -16,6 +17,8 @@ verified: 2026-07-26
 sources:
   - https://www.thaiwakepark.com/
   - https://www.thaiwakepark.com/pattaya-price-en.html
+  - https://www.thaiwakepark.com/what-to-prepare-th.html
+  - https://map.longdo.com/poilist/4?page=79
   - https://pattaya.wakesys.com/browser/index.php
   - https://www.google.com/maps/search/?api=1&query=Thai+Wake+Park+Pattaya
 description: Nong Pla Lai cable wakeboarding park with daily riding and low-speed beginner sessions.
@@ -26,6 +29,8 @@ tags: [wakeboarding, cable-park, beginner-sessions, east-pattaya]
 # Thai Wake Park Pattaya
 
 Thai Wake Park Pattaya is a full-cable wakeboarding venue in Nong Pla Lai. The operator publishes lower-speed beginner periods as well as general riding, but its current numeric tariff is embedded in a booking system and could not be verified as stable page text. Select the rider, duration and equipment before comparing costs.
+
+The Thai wake-park pages and local map index identify the 58 Soi 3 branch in Nong Pla Lai as **ไทยเวคพาร์ค พัทยา**.
 
 ## What training is on offer
 

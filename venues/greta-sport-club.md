@@ -1,5 +1,6 @@
 ---
 id: greta-sport-club
+nameTh: เกรต้า สปอร์ต คลับ พัทยา
 name: Greta Sport Club Pattaya
 category: racquet
 area: Na Jomtien / Sattahip
@@ -12,19 +13,22 @@ hours: Daily 06:00-22:00 according to the current Maps listing
 priceRange: ""
 distinction: Na Jomtien venue hosting current ITF tennis and beach-tennis competition
 disciplines: [Tennis, Beach tennis]
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.google.com/maps/search/?api=1&query=Greta+Sport+Club+Pattaya
   - https://www.facebook.com/gretaresortandsportclub/
   - https://tatptour.blogspot.com/p/singha-classic-2026.html
   - https://www.itftennis.com/en/tournament/mt400-pattaya/tha/2026/s-mt400-tha-2026-002/
   - https://www.itftennis.com/en/tournament/bt10-pattaya-2/tha/2026/b-tour-tha-2026-004/
+  - https://www.tour.ltat.org/tournaments-factsheet-acceptance-MTIxNCMjIzM%3D.html
 description: Na Jomtien tennis and beach-tennis venue with current 2026 federation event use.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Greta+Sport+Club+Pattaya"
 tags: [tennis, beach-tennis, na-jomtien, tournament]
 ---
 
 # Greta Sport Club Pattaya
+
+Thailand's Lawn Tennis Association factsheet lists Greta Resort & Greta Sport Club, Pattaya and the Thai name เกรต้า สปอร์ต คลับ พัทยา; the venue has 6 courts in the retained record.
 
 Greta Sport Club is an active racquet venue on Soi Wat Yan in Na Jomtien. The operator Facebook page identifies tennis and beach-tennis courts, while current International Tennis Federation and TATP records document 2026 competition at the site. Maps publishes daily 06:00–22:00 hours and phone +66 63 187 6331.
 

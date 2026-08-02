@@ -3,11 +3,11 @@ module.exports = `
 
 <p>For every current camp, use the <a href="/category/muay-thai/">Muay Thai directory</a>. For overall product and price comparison, read the <a href="/guides/best-muay-thai-pattaya/">best Muay Thai guide</a>. Absolute beginners should also use the <a href="/guides/muay-thai-pattaya-beginners/">beginner guide</a>.</p>
 
-<h2>The strongest explicit English evidence: Kombat Group</h2>
+<h2>Explicit English evidence: Kombat Group</h2>
 
-<p><a href="/gyms/kombat-group-thailand/">Kombat Group Thailand</a> is the clearest current record because the operator FAQ asks directly whether the trainers speak English. Its answer says all trainers speak English, while honestly qualifying that most Muay Thai trainers use a very basic level. It also mentions some Russian, Italian, Spanish, Portuguese and Japanese. That wording is more useful than a generic “international camp” label because it sets the expectation: training can be conducted, but complex technical discussion may still require patience and demonstration.</p>
+<p><a href="/gyms/kombat-group-thailand/">Kombat Group Thailand</a> is a current record with direct English-language evidence because the operator FAQ asks whether the trainers speak English. Its answer says all trainers speak English, while honestly qualifying that most Muay Thai trainers use a very basic level. It also mentions some Russian, Italian, Spanish, Portuguese and Japanese. That wording is more useful than a generic “international camp” label because it sets the expectation: training can be conducted, but complex technical discussion may still require patience and demonstration.</p>
 
-<p>Kombat is a residential Huai Yai purchase, not a simple central drop-in. The operator's one-week standard Muay Thai package was THB 20,900 on 25 July 2026, before the site's stated 7% VAT and 3% card charge. The current Muay Thai page describes structured, beginner-friendly coaching, on-site accommodation, meals and a weekly schedule. Ask which room and arrival date the quote covers, what equipment is included and whether the trainer assigned to the preferred sessions can handle the level of English required.</p>
+<p><a href="/gyms/kombat-group-thailand/">Kombat</a> is a residential Huai Yai purchase, not a simple central drop-in. The operator's one-week standard Muay Thai package was THB 20,900 on 25 July 2026, before the site's stated 7% VAT and 3% card charge. The current Muay Thai page describes structured, beginner-friendly coaching, on-site accommodation, meals and a weekly schedule. Ask which room and arrival date the quote covers, what equipment is included and whether the trainer assigned to the preferred sessions can handle the level of English required.</p>
 
 <h2>Fairtex has international training evidence, but still confirm the trainer</h2>
 
@@ -23,7 +23,7 @@ module.exports = `
 
 <h2>ISS: central schedule and price, exact language still unverified</h2>
 
-<p><a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a> is the clearest central product. Its operator site lists boxing and Muay Thai classes Monday to Saturday from 14:00–15:30. The current class package was THB 1,000 for a day, THB 4,000 for a week and THB 8,000 for a month. Separate general-gym access was THB 300 per day, THB 800 per week or THB 1,500 per month.</p>
+<p><a href="/gyms/wko-muay-thai/">ISS Boxing and Muay Thai</a> is a central product with a published class schedule. Its operator site lists boxing and Muay Thai classes Monday to Saturday from 14:00–15:30. The current class package was THB 1,000 for a day, THB 4,000 for a week and THB 8,000 for a month. Separate general-gym access was THB 300 per day, THB 800 per week or THB 1,500 per month.</p>
 
 <p>The difference matters when messaging the gym: “I want a day pass” could produce the weight-room product rather than coached Muay Thai. Ask for the boxing/Muay Thai class by name, then ask whether the coach for the chosen date can instruct in English. The public site being readable in English does not prove the depth of spoken correction in every class.</p>
 
@@ -61,26 +61,26 @@ module.exports = `
 
 <p>A group class is usually the lower-cost test of atmosphere, training volume and basic communication. It can work well when the coach demonstrates clearly and the trainee already understands common combat-sport terms. It can be a poor first purchase when the visitor needs a detailed injury modification, feels anxious about contact or wants repeated technical explanation.</p>
 
-<p>Private training costs more but makes the language requirement explicit and gives the operator one coach to assign. Fairtex and Battle &amp; Conquer publish current private prices; other camps require a quote. Ask whether facility entry, equipment and warm-up time are included in the private fee. A private label does not itself guarantee English, a ninety-minute duration or a no-contact format.</p>
+<p>Private training costs more but makes the language requirement explicit and gives the operator one coach to assign. <a href="/gyms/fairtex-pattaya/">Fairtex</a> and <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> publish current private prices; other camps require a quote. Ask whether facility entry, equipment and warm-up time are included in the private fee. A private label does not itself guarantee English, a ninety-minute duration or a no-contact format.</p>
 
 <h2>Choose location after language and product</h2>
 
-<p>Fairtex is in North Pattaya, ISS is central, Battle &amp; Conquer is in Pratamnak, Rage is on the South Pattaya/Thappraya side, and Kombat is inland in Huai Yai. Sudsakorn and Sor Klinmee are East Pattaya records. Crossing the city twice daily can make a small price saving irrelevant. Compare the [Central Pattaya area](/area/central-pattaya/), [East Pattaya area](/area/east-pattaya/) and north-side options only after a camp confirms the right English-supported session.</p>
+<p><a href="/gyms/fairtex-pattaya/">Fairtex</a> is in North Pattaya, <a href="/gyms/wko-muay-thai/">ISS</a> is central, <a href="/gyms/battle-conquer-gym/">Battle &amp; Conquer</a> is in Pratamnak, <a href="/gyms/rage-fight-academy/">Rage</a> is on the South Pattaya/Thappraya side, and <a href="/gyms/kombat-group-thailand/">Kombat</a> is inland in Huai Yai. <a href="/gyms/sudsakorn-muay-thai-gym/">Sudsakorn</a> and <a href="/gyms/sor-klinmee/">Sor Klinmee</a> are East Pattaya records. Crossing the city twice daily can make a small price saving irrelevant. Compare the <a href="/area/central-pattaya/">Central Pattaya area</a>, <a href="/area/east-pattaya/">East Pattaya area</a> and north-side options only after a camp confirms the right English-supported session.</p>
 
 <p>For a residential plan, continue to the <a href="/guides/muay-thai-camps-with-accommodation-pattaya/">stay-and-train guide</a>. Accommodation can simplify transport, but it still does not guarantee the coaching language, room standard or trainer assigned to every session.</p>
 
 <h2>Frequently asked questions</h2>
 
 <h3>Do all Pattaya Muay Thai trainers speak English?</h3>
-<p>No current evidence supports that city-wide claim. Kombat explicitly says all trainers use English while qualifying that most Muay Thai trainers use a basic level. Other international-facing camps have English booking paths but still require trainer-specific confirmation.</p>
+<p>No current evidence supports that city-wide claim. <a href="/gyms/kombat-group-thailand/">Kombat</a> explicitly says all trainers use English while qualifying that most Muay Thai trainers use a basic level. Other international-facing camps have English booking paths but still require trainer-specific confirmation.</p>
 
 <h3>Which camp has the best verified English?</h3>
-<p>Kombat has the strongest explicit operator statement, but “best” depends on the purchase. It is a residential Huai Yai camp. A central visitor may prefer ISS or a private at Fairtex or Battle &amp; Conquer after confirming the assigned coach's English.</p>
+<p>Kombat has an explicit operator statement, but “best” depends on the purchase. It is a residential Huai Yai camp. A central visitor may prefer ISS or a private at Fairtex or Battle &amp; Conquer after confirming the assigned coach's English.</p>
 
 <h3>Can I train with only basic English?</h3>
 <p>Often, provided the coach demonstrates clearly and both sides share safety words. Send the language requirement in advance, start with one session and make “stop,” pain, injury and contact limits unambiguous. Detailed technical goals may justify a private lesson with a specifically confirmed coach.</p>
 
 <h2>Use evidence, not a ten-camp promise</h2>
 
-<p>The old version of this guide claimed ten Tier-A English camps and implied first-hand visits that the current record could not support. The safer conclusion is narrower: Kombat publishes an explicit and qualified English statement; several camps publish clear international booking products; traditional camps remain contact-first. Verify the coach and session, then compare price, location and training format through <a href="/compare/">the directory comparison tool</a>.</p>
+<p>The old version of this guide claimed ten Tier-A English camps and implied first-hand visits that the current record could not support. The safer conclusion is narrower: <a href="/gyms/kombat-group-thailand/">Kombat</a> publishes an explicit and qualified English statement; several camps publish clear international booking products; traditional camps remain contact-first. Verify the coach and session, then compare price, location and training format through <a href="/compare/">the directory comparison tool</a>.</p>
 `;

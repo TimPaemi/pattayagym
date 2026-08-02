@@ -1,6 +1,7 @@
 ---
 id: sanctuary-of-truth
 name: Sanctuary of Truth Museum
+nameTh: ปราสาทสัจธรรม
 category: clubs
 area: Naklua / North Pattaya
 address: 206/2 Moo 5, Pattaya-Naklua Road, Banglamung, Chonburi 20150
@@ -19,6 +20,7 @@ sources:
   - https://sanctuaryoftruthmuseum.com/visit-us/
   - https://sanctuaryoftruthmuseum.com/shop/sanctuary-of-truth-entrance-ticket/
   - https://www.google.com/maps/search/?api=1&query=Sanctuary+of+Truth+Museum
+  - https://www.openstreetmap.org/way/223698118
 description: Naklua cultural museum rather than a sports venue; its separately sold visitor activities are not training facilities.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Sanctuary+of+Truth+Museum"
 tags: [cultural-attraction, museum, legacy-record, non-sport, naklua]
@@ -26,7 +28,7 @@ tags: [cultural-attraction, museum, legacy-record, non-sport, naklua]
 
 # Sanctuary of Truth Museum
 
-The Sanctuary of Truth is an operating cultural museum in Naklua, not a gym, sports club or training venue. This legacy directory record remains visible with a non-sport label so older activity references do not become an accidental training recommendation. The useful decision is between its published day and night visits.
+The Sanctuary of Truth is an operating cultural museum in Naklua, not a gym, sports club or training venue. The OpenStreetMap way **223698118** records the Thai name **ปราสาทสัจธรรม**, which helps Thai-speaking visitors match the attraction identity. This legacy directory record remains visible with a non-sport label so older activity references do not become an accidental training recommendation. The useful decision is between its published day and night visits.
 
 ## What training is on offer
 

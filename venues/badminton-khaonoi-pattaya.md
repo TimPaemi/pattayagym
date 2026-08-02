@@ -1,5 +1,6 @@
 ---
 id: badminton-khaonoi-pattaya
+nameTh: สนามแบดมินตันเขาน้อยพัทยา
 name: Badminton Kho-Noi Pattaya
 category: racquet
 area: Khao Noi / East Pattaya
@@ -8,19 +9,22 @@ phone: "+66 83 871 8780"
 website: ""
 social:
   facebook: "100063722133452"
-hours: "Open 24 hours daily"
+hours: "Daily 00:00-24:00"
 priceRange: ""
 distinction: Twelve-court, 24-hour badminton venue in East Pattaya
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/people/Badminton-Kho-Noi-Pattaya-%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%A1%E0%B9%81%E0%B8%9A%E0%B8%94%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%95%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2/100063722133452/
   - https://www.google.com/maps/search/?api=1&query=Badminton-Khaonoi
+  - https://www.thaithurkic.com/badminton-khaonoi-033-640-562
 description: Twelve-court East Pattaya badminton venue on Soi Boonsampan, open 24 hours daily.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Badminton-Khaonoi"
 tags: [badminton, east-pattaya, khao-noi, late-night, neighbourhood-court]
 ---
 
 # Badminton Kho-Noi Pattaya
+
+The Thai directory's linked local identity is **สนามแบดมินตันเขาน้อยพัทยา**, while its contact listing gives **212/114** Moo 5.
 
 Badminton Kho-Noi is a dedicated 12-court badminton venue on Soi Boonsampan in East Pattaya. It suits groups that need a court outside normal commercial-gym hours: the owner page lists 24-hour opening. The limitation is price transparency, because no current court tariff is published online.
 

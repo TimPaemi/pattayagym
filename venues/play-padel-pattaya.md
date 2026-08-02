@@ -1,5 +1,6 @@
 ---
 id: play-padel-pattaya
+nameTh: เพลย์ พาเดล พัทยา
 name: Play Padel Pattaya
 category: racquet
 area: Pratamnak
@@ -34,6 +35,8 @@ tags: [padel, indoor, pratamnak, coaching, racket-rental]
 ---
 
 # Play Padel Pattaya
+
+The operator site is the local source for **เพลย์ พาเดล พัทยา**; its court page specifies **6** air-conditioning units per court beneath an **11.5-metre** roof.
 
 ## What training is on offer
 

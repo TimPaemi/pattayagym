@@ -1,6 +1,7 @@
 ---
 id: intercontinental-pattaya
 name: InterContinental Pattaya Resort
+nameTh: อินเตอร์คอนติเนนตัล พัทยา รีสอร์ท
 category: fitness
 area: Pratamnak Hill
 address: 437 Phra Tamnak Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -16,12 +17,15 @@ sources:
   - https://www.ihg.com/intercontinental/hotels/us/en/pattaya/pyxha/hoteldetail/amenities
   - https://www.ihg.com/intercontinental/hotels/us/en/pattaya/pyxha/hoteldetail
   - https://www.google.com/maps/search/?api=1&query=InterContinental+Pattaya+Resort
+  - "https://www.google.com/maps/search/?api=1&query=InterContinental+Pattaya+Resort&hl=th"
 description: Pratamnak resort with a hotel-guest fitness centre, three lagoon-style pools, beach access and Amburaya Spa.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=InterContinental+Pattaya+Resort"
 tags: [hotel-gym, pratamnak, swimming-pool, spa, hotel-guests]
 ---
 
 # InterContinental Pattaya Resort
+
+Thai Maps shows the 437 Phra Tamnak Road resort property as **อินเตอร์คอนติเนนตัล พัทยา รีสอร์ท**, with three pools recorded for 07:00-20:00.
 
 InterContinental Pattaya belongs in this directory as a hotel fitness and recovery record, not a confirmed public gym. It suits a registered guest considering a workout, leisure pools and spa facilities in one resort. The operator does not publish a non-resident sport pass or current fitness-centre timetable.
 

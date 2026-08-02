@@ -19,7 +19,7 @@ module.exports = `
 
 <h2>Certified-diver day trips use another price frame</h2>
 
-<p>Pattaya Dive Centre's two-dive Pattaya day was THB 2,700 with the diver's own equipment or THB 3,000 with rental equipment on 25 July 2026. No Limit Divers listed a two-dive trip with equipment at THB 2,800. Adventure Divers listed THB 2,800 with the diver's own equipment and THB 3,300 with rental equipment. Real Divers listed two speedboat dives meeting at the centre at THB 2,700 with the diver's own gear or THB 3,000 with rental equipment; its local pickup-and-return versions were THB 3,300 and THB 3,600 respectively.</p>
+<p><a href="/gyms/pattaya-dive-centre/">Pattaya Dive Centre's</a> two-dive Pattaya day was THB 2,700 with the diver's own equipment or THB 3,000 with rental equipment on 25 July 2026. <a href="/gyms/no-limit-divers/">No Limit Divers</a> listed a two-dive trip with equipment at THB 2,800. <a href="/gyms/adventure-divers-pattaya/">Adventure Divers</a> listed THB 2,800 with the diver's own equipment and THB 3,300 with rental equipment. <a href="/gyms/real-divers-pattaya/">Real Divers</a> listed two speedboat dives meeting at the centre at THB 2,700 with the diver's own gear or THB 3,000 with rental equipment; its local pickup-and-return versions were THB 3,300 and THB 3,600 respectively.</p>
 
 <p>These amounts are evidence for named operator products, not a city-wide “normal price.” A boat day can change with destination, dive count, equipment, transport and qualification. Ask whether weights and tanks are included, whether a computer is required or rented separately, and whether a long break from diving triggers a refresher recommendation. Never book a wreck or deeper profile by copying the cheapest general trip price.</p>
 
@@ -35,13 +35,13 @@ module.exports = `
 
 <p><a href="/gyms/clubloongchat-watersports/">Clubloongchat</a> publishes a broader rental and lesson menu from Na Jomtien. Its one-hour lesson was THB 1,700. One-hour rentals included THB 300 for SUP or surf board, THB 500 for a beginner windsurf set, THB 700 for wing plus SUP, THB 1,000 for wing plus foil and THB 1,200 for either kite plus twin-tip or a sailboat. The operator requires an instructor for the first hour of a first kitesurf or sailboat rental at an additional THB 400.</p>
 
-<p>Business hours do not guarantee usable wind or water. State your weight, experience, certification where relevant and preferred discipline, then let the school confirm whether a lesson or independent rental is suitable. Ask what happens when conditions prevent the booked activity and whether the time is moved, credited or refunded.</p>
+<p>Business hours do not guarantee usable wind or water at <a href="/gyms/kba-kiteboarding-pattaya/">KBA</a> or <a href="/gyms/clubloongchat-watersports/">Clubloongchat</a>. State your weight, experience, certification where relevant and preferred discipline, then let the school confirm whether a lesson or independent rental is suitable. Ask what happens when conditions prevent the booked activity and whether the time is moved, credited or refunded.</p>
 
 <h2>Cable wakeboarding is not wind-sport rental</h2>
 
 <p><a href="/gyms/thai-wake-park/">Thai Wake Park Pattaya</a> is a full-cable venue in Nong Pla Lai. Its operator publishes 10:30–18:30 Monday to Friday and 09:00–18:30 on weekends, with lower-speed beginner periods from weekday opening until noon and 09:00–10:30 on weekends. Riding rates include a basic board and life jacket; a helmet is compulsory and rentable. Riders under 15 require a parent or guardian waiver.</p>
 
-<p>The current numeric tariff sits inside the live booking flow and was not reproduced in the venue record. That is a reason to check the system for the exact date, not a reason to import an older blog price. Ask whether the purchase covers riding time, a lesson, an upgraded board, helmet rental or all of them.</p>
+<p><a href="/gyms/thai-wake-park/">Thai Wake Park's</a> current numeric tariff sits inside the live booking flow and was not reproduced in the venue record. That is a reason to check the system for the exact date, not a reason to import an older blog price. Ask whether the purchase covers riding time, a lesson, an upgraded board, helmet rental or all of them.</p>
 
 <h2>Sailing ranges from lessons to competition and membership</h2>
 
@@ -49,7 +49,7 @@ module.exports = `
 
 <p><a href="/gyms/ocean-marina-jomtien/">Ocean Marina Jomtien</a> is a working Na Jomtien marina with charter, berth and sailing contacts. Its 2026 Platu calendar listed championship rounds and a THB 7,500 entry fee per regatta. That is a crew competition fee, not public admission, a sailing lesson or a berth price. Ask for the exact product rather than using a regatta amount as a leisure tariff.</p>
 
-<p>The [Na Jomtien and Sattahip guide](/guides/best-gym-sattahip-pattaya/) helps place the marina and wind-sport records geographically. It does not make them walk-in attractions. Sailing lessons, charters, regatta entry, club membership and marina services require separate enquiries.</p>
+<p>The [Na Jomtien and Sattahip guide](/guides/best-gym-sattahip-pattaya/) helps place <a href="/gyms/ocean-marina-jomtien/">Ocean Marina</a>, <a href="/gyms/royal-varuna-yacht-club/">Royal Varuna</a> and the wind-sport records geographically. It does not make them walk-in attractions. Sailing lessons, charters, regatta entry, club membership and marina services require separate enquiries.</p>
 
 <h2>A practical booking sequence</h2>
 

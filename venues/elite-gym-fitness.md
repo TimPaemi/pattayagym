@@ -1,5 +1,6 @@
 ---
 id: elite-gym-fitness
+nameTh: อีลิท ยิม แอนด์ ฟิตเนส พัทยา
 name: Elite Gym & Fitness Pattaya
 category: fitness
 area: Sukhumvit Road / East Pattaya
@@ -16,6 +17,7 @@ priceSourceUrl: https://elitegympattaya.com/our-rates/
 beginnerFriendly: true
 verified: 2026-07-27
 sources:
+  - https://pattayasports.org/members-discounts/
   - https://elitegympattaya.com/our-location/
   - https://elitegympattaya.com/our-rates/
   - https://elitegympattaya.com/our-classes/
@@ -30,6 +32,8 @@ tags: [fitness, commercial-gym, group-classes, personal-training, sukhumvit]
 Elite is a 1,600-square-metre air-conditioned gym at 392/62 Sukhumvit Road. Its operator separates ordinary gym membership, functional training, personal training and standalone fitness classes. That distinction corrects the former record, which quoted the higher functional-training price as if it were the ordinary day pass.
 
 ## What training is on offer
+
+A Thai member-discount page lists the 392/62 Sukhumvit branch as **อีลิท ยิม แอนด์ ฟิตเนส พัทยา** with member pricing information.
 
 The operator publishes general gym access, functional training, personal training and a class page naming Bodycombat, Bodyfit, Elite Balance, Elite Dance, yoga and Zumba. The rate page says ordinary gym memberships include daily classes except functional-training classes. Functional products, by contrast, include gym membership and access to all classes.
 

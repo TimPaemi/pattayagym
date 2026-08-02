@@ -29,7 +29,7 @@ module.exports = `
 
 <h2>Commercial gym access versus coached training</h2>
 
-<p><a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies Gym</a> is the clearest published long-stay weights offer in this filter. Its operator listed ฿2,500 for three months and ฿4,500 for six months, checked on 25 July 2026. Those are advance memberships, not proof of a day pass. Ask whether a trial visit is possible, what identification is required and whether any joining or key charge is separate.</p>
+<p><a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies Gym</a> publishes a long-stay weights offer in this filter. Its operator listed ฿2,500 for three months and ฿4,500 for six months, checked on 25 July 2026. Those are advance memberships, not proof of a day pass. Ask whether a trial visit is possible, what identification is required and whether any joining or key charge is separate.</p>
 
 <p><a href="/gyms/fight-evo360/">FIGHT EVO360</a> publishes different products: ฿150 for open gym, ฿500 for a Muay Thai morning or evening group and ฿300 for listed children's Muay Thai, wrestling, yoga or strength-and-conditioning sessions. Those amounts were checked on 25 July 2026 through the operator booking page. The same public timetable contains repeated closed-day notices, so a bookable-looking price is not enough. Send the intended date and class name and wait for confirmation before paying.</p>
 
@@ -43,9 +43,9 @@ module.exports = `
 
 <h2>Yoga and mobility</h2>
 
-<p><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> publishes the strongest comparable yoga tariff in the filter. On 25 July 2026, its operator listed a standard drop-in at ฿500 and an Ashtanga drop-in at ฿600. Eight standard classes per month were ฿3,100, while eight Ashtanga classes were ฿3,500; unlimited monthly plans were ฿4,500 and ฿5,800 respectively. A private session was ฿1,500 for one person or ฿1,800 for two. Confirm the teacher, style, language and whether advance reservation is required.</p>
+<p><a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> publishes a comparable yoga tariff in the filter. On 25 July 2026, its operator listed a standard drop-in at ฿500 and an Ashtanga drop-in at ฿600. Eight standard classes per month were ฿3,100, while eight Ashtanga classes were ฿3,500; unlimited monthly plans were ฿4,500 and ฿5,800 respectively. A private session was ฿1,500 for one person or ฿1,800 for two. Confirm the teacher, style, language and whether advance reservation is required.</p>
 
-<p><a href="/gyms/ashtanga-yoga-pattaya/">Ashtanga Yoga Pattaya</a> is a separate practice record. Do not merge its timetable or access terms with Yoga Pattaya Studio merely because both mention Ashtanga. For recovery around hard training, choose the class level you can actually sustain rather than treating yoga as an automatic low-intensity rest day.</p>
+<p><a href="/gyms/ashtanga-yoga-pattaya/">Ashtanga Yoga Pattaya</a> is a separate practice record. Do not merge its timetable or access terms with <a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> merely because both mention Ashtanga. For recovery around hard training, choose the class level you can actually sustain rather than treating yoga as an automatic low-intensity rest day.</p>
 
 <h2>Courts and social play</h2>
 
@@ -71,7 +71,7 @@ module.exports = `
 
 <p>Resort records such as <a href="/gyms/andaz-pattaya-jomtien/">Andaz Pattaya Jomtien</a>, <a href="/gyms/renaissance-pattaya-resort/">Renaissance Pattaya Resort</a> and <a href="/gyms/movenpick-siam-pattaya/">Mövenpick Siam Na Jomtien</a> document guest fitness or pool facilities. Unless the operator publishes outside access, do not assume a non-guest can buy entry. Ask the hotel directly for the date, facility, visitor eligibility, full price, towel or locker terms and any reservation requirement.</p>
 
-<p>The generic Jomtien public-pool record remains unverified because no exact current municipal pool could be confirmed under that name. It must not be described as a cheap lap pool. For verified municipal context elsewhere, use the <a href="/category/swimming/">swimming category</a> and read each venue's public-access evidence. A beach, water park, swim school, hotel pool and competition pool are not substitutes for one another.</p>
+<p>The generic <a href="/gyms/pattaya-public-pool-jomtien/">Jomtien public-pool record</a> remains unverified because no exact current municipal pool could be confirmed under that name. It must not be described as a cheap lap pool. For verified municipal context elsewhere, use the <a href="/category/swimming/">swimming category</a> and read each venue's public-access evidence. A beach, water park, swim school, hotel pool and competition pool are not substitutes for one another.</p>
 
 <h2>A practical first-booking checklist</h2>
 
@@ -89,10 +89,10 @@ module.exports = `
 <h2>FAQ</h2>
 
 <h3>Which Jomtien option publishes a true drop-in?</h3>
-<p>For coached or general training, FIGHT EVO360 published ฿150 open gym and ฿500 Muay Thai group sessions on 25 July 2026, but its schedule carries closure notices, so confirm the live class first. Yoga Pattaya Studio published standard and Ashtanga drop-ins at ฿500 and ฿600. Better Bodies published only multi-month memberships, not a drop-in.</p>
+<p>For coached or general training, <a href="/gyms/fight-evo360/">FIGHT EVO360</a> published ฿150 open gym and ฿500 Muay Thai group sessions on 25 July 2026, but its schedule carries closure notices, so confirm the live class first. <a href="/gyms/yoga-pattaya-studio/">Yoga Pattaya Studio</a> published standard and Ashtanga drop-ins at ฿500 and ฿600. <a href="/gyms/better-bodies-gym-na-jomtien/">Better Bodies</a> published only multi-month memberships, not a drop-in.</p>
 
 <h3>Is there a verified public lap pool in Jomtien?</h3>
-<p>No exact current municipal lap pool was verified under the generic Jomtien Public Swimming Pool name, so that record remains marked unverified. Resort pools, Ramayana and the beach are different products and should not be presented as public lap-lane substitutes.</p>
+<p>No exact current municipal lap pool was verified under the generic <a href="/gyms/pattaya-public-pool-jomtien/">Jomtien Public Swimming Pool</a> name, so that record remains marked unverified. Resort pools, <a href="/gyms/ramayana-water-park/">Ramayana</a> and the beach are different products and should not be presented as public lap-lane substitutes.</p>
 
 <h3>Are Na Jomtien resort gyms open to non-guests?</h3>
 <p>Do not assume so. The resort records confirm guest facilities, but outside access requires an operator-published pass or direct hotel confirmation for the intended date. Ask about visitor eligibility, price, reservation, pool access, towels and lockers before travelling.</p>

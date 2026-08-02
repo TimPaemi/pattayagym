@@ -9,13 +9,16 @@ website: https://smashfitnesskickboxing.com/
 social: {}
 hours: "Mon-Fri 09:00-21:00; Sat-Sun 09:00-12:00"
 priceRange: ""
+priceAsOf: 2026-07-29
+priceSourceUrl: https://smashfitnesskickboxing.com/faq/
 distinction: Boutique group training centred on kickboxing, strength and hybrid classes
 beginnerFriendly: true
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://smashfitnesskickboxing.com/
   - https://smashfitnesskickboxing.com/contact/
   - https://smashfitnesskickboxing.com/the-space/
+  - https://smashfitnesskickboxing.com/faq/
   - https://app.glofox.com/portal/#/branch/670c5d55827be7ebff0916ed/classes-week-view?header=classes
   - https://app.glofox.com/portal/#/branch/670c5d55827be7ebff0916ed/memberships
   - https://www.google.com/maps/search/?api=1&query=SMASH+Fitness+Kickboxing+Pattaya
@@ -36,7 +39,7 @@ This mix is why the directory places SMASH in the [Pattaya fitness category](/ca
 
 ## What it costs
 
-No stable operator-published baht rate was found on 27 July 2026. The public membership portal displayed several numerals beside a dollar sign, but it did not clearly establish the transaction currency or explain enough inclusions to turn those figures into a reliable Pattaya price. They are therefore not reproduced here.
+The operator's FAQ, checked 29 July 2026, publishes a **free seven-day trial**. This is a trial offer, not a published membership tariff. The public membership portal displayed several numerals beside a dollar sign, but it did not clearly establish the transaction currency or explain enough inclusions to turn those figures into a reliable Pattaya price. They are therefore not reproduced here.
 
 Ask the studio for the current trial, single-class and membership prices; whether tax is included; and whether gloves, wraps, app access or class reservations carry separate charges. A blank directory price means the amount remains unresolved, not that training is free.
 

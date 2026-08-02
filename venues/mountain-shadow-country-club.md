@@ -1,6 +1,7 @@
 ---
 id: mountain-shadow-country-club
 name: Mountain Shadow Golf Club
+nameTh: สนามกอล์ฟเมาน์เทนชาโดว์
 category: golf
 area: Mueang Chonburi / north of Pattaya
 address: 159/1 Moo 2 Saensuk-Bang Phra Road, Mueang, Mueang Chonburi, Chonburi 20130
@@ -10,16 +11,19 @@ social: {}
 hours: Daily 06:00-17:00
 priceRange: ""
 distinction: Eighteen-hole, par-72 course in Mueang Chonburi
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.thailandtravel.or.jp/mountain-shadow-golf-club/
   - https://www.google.com/maps/search/?api=1&query=Mountain+Shadow+Golf+Club+Chonburi
+  - "https://www.google.com/maps/search/?api=1&query=Mountain+Shadow+Golf+Club+Chonburi&hl=th"
 description: Operating 18-hole, par-72 golf course in Mueang Chonburi, north of Pattaya.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Mountain+Shadow+Golf+Club+Chonburi"
 tags: [golf, 18-holes, par-72, mueang-chonburi, regional]
 ---
 
 # Mountain Shadow Golf Club
+
+The course open 06:00-17:00 is named **สนามกอล์ฟเมาน์เทนชาโดว์** in Thai Maps.
 
 Mountain Shadow is an operating golf course in Mueang Chonburi, north of Pattaya. It is not a Pattaya-city course and should not be confused with a Si Racha address. The current Google Maps listing identifies the same course, telephone number and Mueang Chonburi location; it listed daily 06:00-17:00 opening hours when checked on 26 July 2026.
 

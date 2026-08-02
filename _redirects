@@ -1,8 +1,20 @@
 https://www.pattaya-gym.com/* https://pattaya-gym.com/:splat 301
 
 # Ops exports — not public (CSV is local-only; CF Pages does not support 404 in _redirects).
+/venue-outreach-list.csv /404.html 302
 /outreach/venue-outreach.csv /404.html 302
 /outreach/* /404.html 302
+
+# Build and release internals are never part of the reader-facing product.
+/scripts/* /404.html 302
+/build.js /404.html 302
+/build-v2.js /404.html 302
+/build-discovery.js /404.html 302
+/build-extras.js /404.html 302
+/*.cmd /404.html 302
+/*.md /404.html 302
+/*.ps1 /404.html 302
+/tsconfig.json /404.html 302
 
 # Duplicate-content consolidation: af-academy-football was an early stub that was later
 # superseded by the deeper af-academy-pattaya record (same business, same website

@@ -1,6 +1,7 @@
 ---
 id: tarzan-adventure-pattaya
 name: Tarzan Adventure Pattaya
+nameTh: ทาร์ซาน แอดเวนเจอร์ พัทยา
 category: adventure
 area: Na Chom Thian / Sattahip
 address: 108/14 Moo 6, Na Chom Thian, Sattahip District, Chonburi 20250
@@ -18,12 +19,15 @@ sources:
   - https://www.facebook.com/reel/2514048982368525/
   - https://www.instagram.com/tarzanziplinepattaya/
   - https://www.google.com/maps/search/?api=1&query=Tarzan+Adventure+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Tarzan+Adventure+Pattaya&hl=th"
 description: Na Chom Thian adventure operator with current first-hand promotion of zipline and ATV activities.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Tarzan+Adventure+Pattaya"
 tags: [zipline, atv, adventure-park, na-chom-thian, sattahip]
 ---
 
 # Tarzan Adventure Pattaya
+
+The daily 09:00-17:30 Na Chom Thian zipline attraction site is **ทาร์ซาน แอดเวนเจอร์ พัทยา** in Thai Maps, corresponding to the 108/14 Moo 6 operator address and its advance-booking activity model.
 
 Tarzan Adventure Pattaya is an activity operator at 108/14 Moo 6 in Na Chom Thian. Its current Facebook page, recent operator reel and exact Maps listing agree on the identity and contact. The recent first-hand promotion explicitly names zipline and ATV, but it does not provide enough detail to reconstruct packages, course counts or participant limits.
 

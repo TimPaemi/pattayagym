@@ -1,6 +1,7 @@
 ---
 id: pattaya-golf-driving-range
 name: Pattaya Golf Driving Range
+nameTh: ศูนย์ฝึกกอล์ฟพัทยา
 category: golf
 area: North Pattaya / Third Road
 address: Pattaya Third Road, North Pattaya, Bang Lamung, Chonburi 20150
@@ -15,8 +16,9 @@ priceSourceUrl: https://pattayasports.org/members-discounts/
 distinction: Third Road practice range with a current Pattaya Sports Club member ball-tray rate
 beginnerFriendly: true
 languages: [Thai]
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
+  - https://map.longdo.com/poilist/3?locale=en&page=47
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Golf+Driving+Range
   - https://www.facebook.com/people/Pattaya-driving-range/100042395784786/
   - https://pattayasports.org/members-discounts/
@@ -26,6 +28,8 @@ tags: [golf, driving-range, practice, north-pattaya, third-road, psc-discount]
 ---
 
 # Pattaya Golf Driving Range
+
+The Thai location directory lists this facility as **ศูนย์ฝึกกอล์ฟพัทยา**.
 
 Pattaya Golf Driving Range is the active Third Road practice facility in North Pattaya. Its exact Maps identity and owner Facebook profile agree on the telephone and location. One current Pattaya Sports Club rate is published, but the ordinary public tray price, bay specification and equipment services remain contact-first.
 

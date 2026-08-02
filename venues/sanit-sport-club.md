@@ -1,6 +1,7 @@
 ---
 id: sanit-sport-club
 name: Sanit Sport Club
+nameTh: สานิตย์ สปอร์ต คลับ
 category: fitness
 area: Pong / East Pattaya
 address: 119 Moo 3, Pong, Bang Lamung, Chonburi 20150
@@ -11,8 +12,9 @@ social:
 hours: "Mon-Sat 06:00-21:00; Sun closed"
 priceRange: ""
 distinction: Neighbourhood fitness facility in Pong
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
+  - https://www.dataforthai.com/company/0205558033990/
   - https://www.facebook.com/sanitsportclub
   - https://www.google.com/maps/search/?api=1&query=Sanit+Sport+Club
 description: Pong fitness facility with a live Maps identity; current programme details require direct confirmation.
@@ -21,6 +23,8 @@ tags: [fitness, aerobics, pong, east-pattaya, neighbourhood-gym]
 ---
 
 # Sanit Sport Club
+
+The Thai company record names the venue **สานิตย์ สปอร์ต คลับ**.
 
 Sanit Sport Club is a neighbourhood fitness facility at 119 Moo 3 in Pong. Its live Maps identity confirms the business, category, address, phone and weekly hours. It is useful as a contact-first East Pattaya gym, but no current public tariff, class timetable or dependable equipment inventory was found.
 

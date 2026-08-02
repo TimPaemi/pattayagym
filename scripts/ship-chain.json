@@ -22,9 +22,14 @@
   "build": [
     { "script": "build-v2.js", "label": "build-v2 (venues, categories, areas)" },
     { "script": "scripts/rebuild-tool-stubs.js" },
+    { "script": "scripts/build-location-tools.js",
+      "why": "Replaces the two honest placeholders with a safe-coordinate map explorer and a source-checked coaching venue matcher; no centroid or invented coach profiles." },
     { "script": "scripts/build-compare-page.js" },
     { "script": "scripts/build-plan-page.js" },
+    { "script": "scripts/build-favorites-page.js" },
     { "script": "scripts/write-status-json.js" },
+    { "script": "scripts/write-humans-txt.js" },
+    { "script": "scripts/write-openapi.js" },
     { "script": "scripts/write-changelog.js" },
     { "script": "scripts/write-data-endpoints.js" },
     { "script": "scripts/inject-area-guide-faq-r74.js" },
@@ -58,6 +63,12 @@
       "why": "The write-*-guides scripts rewrite guides from scratch and drop the FAQPage schema injected earlier. verify-deploy fails without this." },
     { "script": "scripts/build-press-kit.js", "label": "build-press-kit (live figures)",
       "why": "Last among HTML writers except the entity/date passes: it swaps <main> on /press/ and must see the chrome the sweeps just applied." },
+    { "script": "scripts/build-search-fallback.js",
+      "why": "Server-renders the first 24 search cards so no-JS users get results and client startup no longer inserts a layout-shifting viewport of content." },
+    { "script": "scripts/sync-index-venue-count.js",
+      "why": "Replaces stale global directory counts after every HTML writer has finished; subset and address numbers are not touched." },
+    { "script": "scripts/apply-flagship-2027.js",
+      "why": "Final reader-facing sweep: consent-first analytics, source-checked language and one publisher link, regardless of which legacy writer emitted the page." },
     { "script": "scripts/normalize-entity-graph.js",
       "why": "Resolves bare founder Person nodes to @id, and gives any page showing the byline the author markup to match (S2-B1)." },
 
@@ -78,6 +89,8 @@
       "why": "Zero sister-site references in any machine-readable position, and exactly one followed timpaemi.com credit per page. Also a prebuild hook, but SHIP bypasses npm run build, so it is listed here explicitly." },
     { "script": "scripts/verify-regressions.js", "label": "verify-regressions.js (audit 2026-07 repairs)",
       "why": "Proves each defect repaired after the July 2026 audit stays repaired: the JSON-LD sister-domain leak, venue status reconciliation, dateModified integrity, and false first-hand claims." },
+    { "script": "scripts/verify-flagship-2027.js", "label": "verify-flagship-2027.js (truth, privacy, tools)",
+      "why": "Hard-gates visible evidence ledgers, authorship, safe geo, publisher-link uniqueness, consent-first analytics, functional tools, SSR search and blocked operational files." },
     { "script": "scripts/verify-ship-chain.js", "label": "verify-ship-chain.js (this manifest vs AGENTS.md)",
       "why": "Fails if the documented chain drifts from this manifest, or if a listed script is missing. The defect S2-F1 described was three documents disagreeing; this is what stops it recurring." },
     { "script": "scripts/verify-asset-version.js", "label": "verify-asset-version.js (cache safety)",
@@ -97,6 +110,9 @@
   "manual": [
     { "script": "scripts/check-record-originality.js",
       "why": "Takes venue ids as arguments and is run deliberately, not on every ship. The July 2026 audit listed its absence from SHIP as part of the chain divergence; it is recorded here as an explicit manual step rather than left as an unexplained gap.",
-      "how": "$ids = node -e \"const {GYMS}=require('./data'); console.log(GYMS.map(x=>x.id).join(' '))\"; node scripts/check-record-originality.js @($ids -split ' ')" }
+      "how": "$ids = node -e \"const {GYMS}=require('./data'); console.log(GYMS.map(x=>x.id).join(' '))\"; node scripts/check-record-originality.js @($ids -split ' ')" },
+    { "script": "scripts/verify-enrichment-claims.js",
+      "why": "Run after each enrichment batch with the touched venue ids. It binds each new fact to a live source URL and proves both survived onto the generated page.",
+      "how": "node scripts/verify-enrichment-claims.js <venue-id> [...]" }
   ]
 }

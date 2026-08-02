@@ -1,6 +1,7 @@
 ---
 id: nongnooch-cultural-show
 name: Nong Nooch Thai Cultural Show
+nameTh: สวนนงนุชพัทยา
 category: clubs
 area: Na Jomtien / Sattahip
 address: 34/1 Moo 7, Na Jomtien, Sattahip, Chonburi 20250
@@ -20,12 +21,15 @@ sources:
   - https://www.nongnoochpattaya.com/en/event/1
   - https://www.nongnoochpattaya.com/en/booking
   - https://www.google.com/maps/search/?api=1&query=Nong+Nooch+Tropical+Garden
+  - "https://www.google.com/maps/search/?api=1&query=Nong+Nooch+Pattaya&hl=th"
 description: Daily Thai cultural performance with martial-arts sequences and dated official ticket options inside Nong Nooch Tropical Garden.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Nong+Nooch+Tropical+Garden"
 tags: [cultural-show, martial-arts-demonstration, family, na-jomtien]
 ---
 
 # Nong Nooch Thai Cultural Show
+
+Thai Maps identifies the exact 34/1 Moo 7 attraction as **สวนนงนุชพัทยา**.
 
 ## What training is on offer
 

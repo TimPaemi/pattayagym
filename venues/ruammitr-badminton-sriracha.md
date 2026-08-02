@@ -1,6 +1,7 @@
 ---
 id: ruammitr-badminton-sriracha
 name: Ruammitr Badminton Court
+nameTh: รวมมิตรคอร์ท สนามแบดมินตัน ศรีราชา Ruammitr court
 category: racquet
 area: Sriracha
 address: 19 Surasak 10, Surasak, Si Racha District, Chonburi 20110
@@ -16,12 +17,15 @@ verified: 2026-07-26
 sources:
   - https://line.me/R/ti/p/@ruammitrcourt
   - https://www.google.com/maps/search/?api=1&query=Ruammitr+Badminton+Court+Sriracha
+  - "https://www.google.com/maps/search/?api=1&query=Ruammitr+Badminton+Sriracha&hl=th"
 description: Surasak badminton venue with daily court-hire hours and direct Line contact.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ruammitr+Badminton+Court+Sriracha"
 tags: [badminton, sriracha, surasak, thai-language, court-hire]
 ---
 
 # Ruammitr Badminton Court
+
+The 19 Surasak 10 listing in Si Racha appears in Thai Maps as **รวมมิตรคอร์ท สนามแบดมินตัน ศรีราชา Ruammitr court**, with the current place showing daily 10:00-22:00 business hours.
 
 Ruammitr Badminton Court is a dedicated badminton venue at 19 Surasak 10 in Sriracha with a direct Line booking account, @ruammitrcourt. Its Maps listing supports the Thai and English venue name, phone number +66 90 296 8779, and daily 10:00-22:00 hours. The useful next step is to ask for a specific court slot through Line or phone, because no public owner rate card was available.
 

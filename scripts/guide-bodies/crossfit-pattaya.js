@@ -1,23 +1,23 @@
 module.exports = `
 <p>Pattaya's directory has one CrossFit-category record, but it is not a current CrossFit affiliate. The official CrossFit Games directory marks <strong>CrossFit Pattaya as departed</strong>. The operating business attached to the local record is <a href="/gyms/crossfit-pattaya/">Jungle Gym Pattaya</a>, an independent multi-activity venue in Nong Prue that still publishes a functional group-training schedule.</p>
 
-<p>That distinction is the foundation of this guide. Jungle Gym may be a relevant functional-fitness option, but visitors should not book it on the assumption that they are dropping into an active CrossFit affiliate. Start with the <a href="/category/crossfit/">CrossFit category</a> for the underlying status record.</p>
+<p>That distinction is the foundation of this guide. <a href="/gyms/crossfit-pattaya/">Jungle Gym</a> may be a relevant functional-fitness option, but visitors should not book it on the assumption that they are dropping into an active CrossFit affiliate. Start with the <a href="/category/crossfit/">CrossFit category</a> for the underlying status record.</p>
 
 <h2>The status in one minute</h2>
 
 <ul>
 <li><strong>Current affiliate claim:</strong> none verified in the Pattaya directory.</li>
-<li><strong>Historical identity:</strong> CrossFit Pattaya appears in the official affiliate directory as departed.</li>
-<li><strong>Current local operator:</strong> Jungle Gym Pattaya at 165/4 Moo 6 in Nong Prue.</li>
-<li><strong>Current scheduled product:</strong> group fitness Monday–Friday at 09:00–10:00 and 19:00–20:00, plus Saturday 09:00–10:00.</li>
+<li><strong>Historical identity:</strong> <a href="/gyms/crossfit-pattaya/">CrossFit Pattaya appears in the official affiliate directory as departed.</a></li>
+<li><strong>Current local operator:</strong> <a href="/gyms/crossfit-pattaya/">Jungle Gym Pattaya at 165/4 Moo 6 in Nong Prue.</a></li>
+<li><strong>Current scheduled product:</strong> <a href="/gyms/crossfit-pattaya/">group fitness</a> Monday–Friday at 09:00–10:00 and 19:00–20:00, plus Saturday 09:00–10:00.</li>
 <li><strong>Price status:</strong> no current public operator tariff was verified.</li>
 </ul>
 
-<p>“Departed” is not the same as closed. It means the former affiliation should not be presented as current. Jungle Gym's own site remains active and offers training, but the transaction is with Jungle Gym under its current independent identity.</p>
+<p>“Departed” is not the same as closed. It means the former affiliation should not be presented as current. <a href="/gyms/crossfit-pattaya/">Jungle Gym's</a> own site remains active and offers training, but the transaction is with Jungle Gym under its current independent identity.</p>
 
 <h2>What Jungle Gym currently offers</h2>
 
-<p>The operator presents personal training, small-group training, nutrition services, DNA testing, MMA and self-defence alongside activities including dodgeball, slacklining and archery. The breadth makes Jungle Gym different from a single-programme box. It also means a visitor should name the exact product required rather than asking only whether “the gym” is open.</p>
+<p>The operator presents personal training, small-group training, nutrition services, DNA testing, MMA and self-defence alongside activities including dodgeball, slacklining and archery. The breadth makes <a href="/gyms/crossfit-pattaya/">Jungle Gym</a> different from a single-programme box. It also means a visitor should name the exact product required rather than asking only whether “the gym” is open.</p>
 
 <p>The current group-fitness page lists weekday sessions from 09:00 to 10:00 and 19:00 to 20:00, plus Saturday from 09:00 to 10:00. Saturday evening and Sunday are closed on that schedule. The operator also indicates weekday open-gym or private-training availability between classes, but that wording does not establish unsupervised visitor access at any arbitrary hour.</p>
 
@@ -25,15 +25,15 @@ module.exports = `
 
 <h2>Why affiliate status matters</h2>
 
-<p>CrossFit is a brand and affiliate system, not a generic synonym for every circuit, strength-and-conditioning class or functional gym. A traveller may care about affiliate status because they expect a familiar drop-in process, programming vocabulary or link to a home box. The official directory's departed label means those expectations require a fresh conversation with Jungle Gym.</p>
+<p>CrossFit is a brand and affiliate system, not a generic synonym for every circuit, strength-and-conditioning class or functional gym. A traveller may care about affiliate status because they expect a familiar drop-in process, programming vocabulary or link to a home box. The official directory's departed label means those expectations require a fresh conversation with <a href="/gyms/crossfit-pattaya/">Jungle Gym</a>.</p>
 
-<p>This is not a judgement on training quality. It is an identity and consumer-clarity point. The current evidence supports an independent functional-fitness venue with scheduled group sessions. It does not support the older claims that Pattaya has “the only CrossFit affiliate,” that an affiliate coach runs a named CrossFit programme, or that a visitor can transfer a membership relationship.</p>
+<p>This is not a judgement on training quality. It is an identity and consumer-clarity point. The <a href="/gyms/crossfit-pattaya/">current evidence</a> supports an independent functional-fitness venue with scheduled group sessions. It does not support the older claims that Pattaya has “the only CrossFit affiliate,” that an affiliate coach runs a named CrossFit programme, or that a visitor can transfer a membership relationship.</p>
 
 <p>Readers who simply want general strength or conditioning can compare the wider <a href="/category/fitness/">Pattaya fitness directory</a>. Those gyms have different access rules and may not provide coached group programming, but they should not be excluded merely because they do not use the CrossFit name.</p>
 
 <h2>Who should consider Jungle Gym</h2>
 
-<p>Jungle Gym is relevant to someone who wants a scheduled functional group session in Nong Prue and is comfortable booking with the current independent operator. It may also fit a household or group with different interests because the site presents personal training and several non-gym activities in the same business.</p>
+<p><a href="/gyms/crossfit-pattaya/">Jungle Gym</a> is relevant to someone who wants a scheduled functional group session in Nong Prue and is comfortable booking with the current independent operator. It may also fit a household or group with different interests because the site presents personal training and several non-gym activities in the same business.</p>
 
 <p>It is a weaker fit for a visiting athlete whose non-negotiable requirement is a current licensed CrossFit affiliate. No such Pattaya record was verified. It is also a poor choice for someone who needs a transparent online drop-in fee, a guaranteed open-gym slot or a documented class plan before making contact; those details were not available.</p>
 
@@ -53,7 +53,7 @@ module.exports = `
 <li>What are the late-arrival, cancellation, payment and refund rules?</li>
 </ul>
 
-<p>No current operator price card was found, so this guide does not estimate a drop-in or membership rate. A price from an old review or former affiliate page would not prove the current Jungle Gym transaction.</p>
+<p>No current operator price card was found, so this guide does not estimate a drop-in or membership rate. A price from an old review or former affiliate page would not prove the current <a href="/gyms/crossfit-pattaya/">Jungle Gym</a> transaction.</p>
 
 <h2>Schedule choices and recovery</h2>
 
@@ -70,16 +70,16 @@ module.exports = `
 <p>If the label is not essential, define the practical need:</p>
 
 <ul>
-<li><strong>Coached functional group session:</strong> contact Jungle Gym for the current schedule, price and first-visit process.</li>
+<li><strong>Coached functional group session:</strong> contact <a href="/gyms/crossfit-pattaya/">Jungle Gym</a> for the current schedule, price and first-visit process.</li>
 <li><strong>General strength or cardio access:</strong> compare the <a href="/category/fitness/">fitness category</a> by hours, price evidence and location.</li>
 <li><strong>24-hour member access:</strong> use the <a href="/guides/24-hour-gyms-pattaya/">24-hour gyms guide</a> and distinguish member access from staffed help.</li>
 <li><strong>Combat-sport conditioning:</strong> choose the actual striking or grappling programme rather than assuming it reproduces a functional-fitness class.</li>
-<li><strong>Private coaching:</strong> ask Jungle Gym or another operator for a written session goal, coach, duration and total price.</li>
+<li><strong>Private coaching:</strong> ask <a href="/gyms/crossfit-pattaya/">Jungle Gym</a> or another operator for a written session goal, coach, duration and total price.</li>
 </ul>
 
 <h2>Getting to the current venue</h2>
 
-<p>The current venue record uses 165/4 Moo 6, Nong Prue. The old official affiliate entry historically referenced a different Classic Sport Club address, another reason not to navigate from the departed listing. Use Jungle Gym's current record and exact live pin.</p>
+<p>The <a href="/gyms/crossfit-pattaya/">current venue record</a> uses 165/4 Moo 6, Nong Prue. The old official affiliate entry historically referenced a different Classic Sport Club address, another reason not to navigate from the departed listing. Use <a href="/gyms/crossfit-pattaya/">Jungle Gym's current record</a> and exact live pin.</p>
 
 <p>No fixed Beach Road travel time, taxi fare, baht-bus combination, hotel transfer or parking rule was verified. Arrange transport around the confirmed start and finish. For the 19:00 class, plan the return as carefully as the outward trip; general opening language does not establish that reception remains staffed after every session.</p>
 
@@ -94,7 +94,7 @@ module.exports = `
 <li>Compare a nearby general gym if transport or class timing creates more friction than value.</li>
 </ol>
 
-<p>The honest recommendation is conditional, not a ranking win. Jungle Gym is the one current functional-fitness record associated with Pattaya's former affiliate history. It can be evaluated on its present schedule, services, location and quote, while the departed CrossFit status remains explicit.</p>
+<p>The honest recommendation is conditional, not a ranking win. <a href="/gyms/crossfit-pattaya/">Jungle Gym</a> is the one current functional-fitness record associated with Pattaya's former affiliate history. It can be evaluated on its present schedule, services, location and quote, while the departed CrossFit status remains explicit.</p>
 
 <section class="guide-faq" aria-labelledby="crossfit-faq-h">
 <h2 id="crossfit-faq-h">FAQ</h2>

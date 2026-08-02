@@ -1,5 +1,6 @@
 ---
 id: silk-muay-thai
+nameTh: ซิลค์มวยไทย พัทยา
 name: Silk Muay Thai
 category: muay-thai
 area: Nong Prue / East Pattaya
@@ -19,6 +20,7 @@ priceSourceUrl: https://silkmuaythai.com/
 beginnerFriendly: true
 verified: 2026-07-27
 sources:
+  - https://www.thboxing.com/statistics-%E0%B9%80%E0%B8%94%E0%B8%8A%E0%B8%A7%E0%B8%A5%E0%B8%B4%E0%B8%95-%E0%B8%8B%E0%B8%B4%E0%B8%A5%E0%B8%84%E0%B9%8C%E0%B8%A1%E0%B8%A7%E0%B8%A2%E0%B9%84%E0%B8%97%E0%B8%A2-15630-red/
   - https://silkmuaythai.com/
   - https://silkmuaythai.com/our-process/
   - https://silkmuaythai.com/contact/
@@ -33,6 +35,8 @@ tags: [muay-thai, accommodation, residential, east-pattaya]
 Silk Muay Thai is an East Pattaya residential camp rather than a simple walk-in pad gym. The operator presents it as a stay-and-train product with group sessions, private coaching and on-site rooms, which suits visitors who want accommodation and training under one booking. The limitation is that the public pages are much clearer on camp packages than on drop-in or gym-only access.
 
 ## What training is on offer
+
+A Thai boxing results page identifies the Thung Klom-Tan Man 18 camp as **ซิลค์มวยไทย พัทยา** in Pattaya for this venue.
 
 Silk's own pages describe scheduled group training Monday to Saturday, with the camp open from 08:00 to 19:00 and group work typically split into a morning block and an afternoon block. The operator's training description names cardio, bag work, technical rounds with trainers, sparring and clinching as the core format rather than a pure fitness-boxing class. Private training is also promoted as part of the offer, but the public pages do not publish a fixed menu of private-session lengths or coach-specific rates.
 

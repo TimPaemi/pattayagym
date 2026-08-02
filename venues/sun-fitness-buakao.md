@@ -1,6 +1,7 @@
 ---
 id: sun-fitness-buakao
 name: SUN Fitness Pattaya
+nameTh: ซันฟิตเนสกรุ๊ป
 category: fitness
 area: Soi Buakhao + Pratamnak + Naklua
 address: Buakhao branch, 281/4 Soi Buakhao, Pattaya City, Bang Lamung, Chonburi 20150
@@ -12,8 +13,9 @@ hours: Buakhao Mon-Fri 07:00-00:00; Sat-Sun 09:00-00:00
 priceRange: ""
 distinction: Three Pattaya branches with one-card member access across the group
 branches: [Soi Buakhao, Pratamnak Hill, Naklua]
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
+  - https://www.localgymsandfitness.com/TH/Pattaya/102220101646952/SUN-fitness-Buakao
   - https://www.facebook.com/p/SUN-fitness-Buakao-100063609967196/
   - https://www.facebook.com/p/Sun-fitness-pratamnak-61579607596397/
   - https://www.facebook.com/p/Sun-Fitness-naklua-100078003678419/
@@ -26,6 +28,8 @@ tags: [fitness, multi-location, soi-buakhao, pratamnak, naklua]
 ---
 
 # SUN Fitness Pattaya
+
+The operator's Thai-language update refers to the group as **ซันฟิตเนสกรุ๊ป**.
 
 ## What training is on offer
 

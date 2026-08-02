@@ -1,5 +1,6 @@
 ---
 id: sudsakorn-muay-thai-gym
+nameTh: ค่ายมวยสุดสาคร
 name: Sudsakorn Muay Thai Gym
 category: muay-thai
 area: Nong Prue / East Pattaya
@@ -15,6 +16,7 @@ distinction: Two-session-a-day Muay Thai gym in East Pattaya
 beginnerFriendly: true
 verified: 2026-07-27
 sources:
+  - https://www.kkday.com/th/product/185343?modal=DescProductIntroGroup&modalId=product-info-sec
   - https://sudsakornmuaythai.com/
   - https://www.google.com/maps/search/?api=1&query=Sudsakorn+Muay+Thai+Gym+Pattaya
 description: East Pattaya Muay Thai gym with twice-daily Monday-Saturday training and a current six-line public rate card.
@@ -27,6 +29,8 @@ tags: [muay-thai, boxing, east-pattaya, nong-prue, morning-training, afternoon-t
 Sudsakorn Muay Thai Gym is a straightforward East Pattaya camp with a usable public rate card and two daily training windows Monday to Saturday. The operator site supports the gym's Muay Thai focus and beginner-friendly messaging, while the live Maps identity confirms the phone, address area and Sunday closure. It is one of the clearer contact-and-price records in the [Muay Thai category](/category/muay-thai/).
 
 ## What training is on offer
+
+A Thai activity listing names the 999/1 Pattaya venue **ค่ายมวยสุดสาคร** for visitors comparing local Muay Thai camps.
 
 The operator presents Sudsakorn as a Muay Thai gym rather than a hotel package or multi-sport compound. Current public information supports two coached training periods, **08:00-11:00** and **16:00-19:00**, from Monday to Saturday. The site also pitches the gym to people learning boxing skills, improving fitness and losing weight, which is useful for beginners or ordinary travellers rather than only active fighters.
 

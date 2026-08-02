@@ -1,7 +1,7 @@
 {
   "name": "Pattaya Gym Directory — categories",
   "url": "https://pattaya-gym.com/",
-  "generated": "2026-07-29",
+  "generated": "2026-08-02",
   "license": "CC BY 4.0",
   "count": 15,
   "categories": [
@@ -51,21 +51,21 @@
           "name": "Sor Klinmee Gym",
           "url": "https://pattaya-gym.com/gyms/sor-klinmee/",
           "area": "Nong Prue / East Pattaya",
-          "priceRange": null
+          "priceRange": "฿200-300 per session; ฿6,000/month (1 session/day); ฿10,000/month (2 sessions/day)"
         },
         {
           "id": "petchrungruang-gym",
           "name": "Petchrungruang Gym",
           "url": "https://pattaya-gym.com/gyms/petchrungruang-gym/",
           "area": "South Pattaya / Sukhumvit",
-          "priceRange": null
+          "priceRange": "฿5,000/month (1 session/day); ฿9,000/month (2 sessions/day)"
         },
         {
           "id": "venum-training-camp",
           "name": "Venum Training Camp Thailand",
           "url": "https://pattaya-gym.com/gyms/venum-training-camp/",
           "area": "Soi Khopai / South Pattaya",
-          "priceRange": null
+          "priceRange": "฿2,000-5,000 per week by discipline; kids ฿1,500/week"
         },
         {
           "id": "lumpinee-boxing-stadium",
@@ -86,7 +86,7 @@
           "name": "Rage Fight Academy",
           "url": "https://pattaya-gym.com/gyms/rage-fight-academy/",
           "area": "Thappraya / South Pattaya",
-          "priceRange": null
+          "priceRange": "฿1,500 membership agreement fee/deposit; confirm selected plan and period"
         },
         {
           "id": "silk-muay-thai",
@@ -128,7 +128,7 @@
           "name": "MAX Muay Thai Stadium Pattaya",
           "url": "https://pattaya-gym.com/gyms/max-muay-thai-stadium/",
           "area": "Sukhumvit Road / Central Pattaya",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "cho-nateetong",
@@ -335,7 +335,7 @@
           "name": "Muscle Factory Pattaya",
           "url": "https://pattaya-gym.com/gyms/muscle-factory-pattaya/",
           "area": "Pratamnak Hill",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "pratumnak-fitness-park",
@@ -426,7 +426,7 @@
           "name": "SMASH Fitness Kickboxing",
           "url": "https://pattaya-gym.com/gyms/smash-fitness-kickboxing/",
           "area": "Thepprasit / South Pattaya",
-          "priceRange": null
+          "priceRange": "฿"
         },
         {
           "id": "better-bodies-gym-na-jomtien",
@@ -553,7 +553,7 @@
           "name": "Ashtanga Yoga Pattaya",
           "url": "https://pattaya-gym.com/gyms/ashtanga-yoga-pattaya/",
           "area": "Pratamnak / Thappraya Road",
-          "priceRange": "฿฿"
+          "priceRange": null
         },
         {
           "id": "one-d-yoga-studio",
@@ -588,7 +588,7 @@
           "name": "Lek Thai Yoga",
           "url": "https://pattaya-gym.com/gyms/lek-thai-yoga-pattaya/",
           "area": "Jomtien / Thepprasit",
-          "priceRange": null
+          "priceRange": "฿฿฿฿"
         }
       ]
     },
@@ -617,7 +617,7 @@
           "name": "Phoenix Gold Golf & Country Club",
           "url": "https://pattaya-gym.com/gyms/phoenix-gold-golf/",
           "area": "Huai Yai",
-          "priceRange": null
+          "priceRange": "฿฿฿"
         },
         {
           "id": "burapha-golf-club",
@@ -723,7 +723,7 @@
       "key": "racquet",
       "label": "Tennis / Padel / Squash",
       "url": "https://pattaya-gym.com/category/racquet/",
-      "venueCount": 25,
+      "venueCount": 27,
       "venues": [
         {
           "id": "greta-sport-club",
@@ -899,6 +899,20 @@
           "url": "https://pattaya-gym.com/gyms/acs-sports-hall-sriracha/",
           "area": "Sriracha",
           "priceRange": null
+        },
+        {
+          "id": "att-pattaya-table-tennis-club",
+          "name": "ATT Pattaya Table Tennis Club",
+          "url": "https://pattaya-gym.com/gyms/att-pattaya-table-tennis-club/",
+          "area": "Central Pattaya / Mike Shopping Mall",
+          "priceRange": null
+        },
+        {
+          "id": "table-tennis-plaza-pattaya",
+          "name": "Table Tennis Plaza Pattaya",
+          "url": "https://pattaya-gym.com/gyms/table-tennis-plaza-pattaya/",
+          "area": "Central Pattaya / Royal Garden Plaza",
+          "priceRange": null
         }
       ]
     },
@@ -934,7 +948,7 @@
           "name": "Columbia Pictures Aquaverse",
           "url": "https://pattaya-gym.com/gyms/cartoon-network-amazone/",
           "area": "Na Jomtien / Sattahip",
-          "priceRange": null
+          "priceRange": "฿฿"
         },
         {
           "id": "ramayana-water-park",
@@ -1514,7 +1528,7 @@
       "key": "adventure",
       "label": "Adventure / Multi-Sport",
       "url": "https://pattaya-gym.com/category/adventure/",
-      "venueCount": 16,
+      "venueCount": 17,
       "venues": [
         {
           "id": "easykart-pattaya",
@@ -1626,6 +1640,13 @@
           "name": "Premier Football Arena",
           "url": "https://pattaya-gym.com/gyms/premier-football-arena-pattaya/",
           "area": "Naklua / North Pattaya",
+          "priceRange": null
+        },
+        {
+          "id": "nova-fencing-academy",
+          "name": "Nova Fencing Academy",
+          "url": "https://pattaya-gym.com/gyms/nova-fencing-academy/",
+          "area": "Nong Prue / East Pattaya",
           "priceRange": null
         }
       ]

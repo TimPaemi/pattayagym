@@ -1,13 +1,14 @@
 # Pattaya Gym Directory
-> The most comprehensive, independently-verified directory of gyms, Muay Thai camps, BJJ academies, golf courses, dive operators, watersports, climbing, yoga and sport venues in Pattaya, Thailand. 215 venues, 47 guides, 15 categories, 6 areas — no paid placements, source-cited research.
+> Source-checked directory of Pattaya gyms, Muay Thai camps and sport venues. 218 records, 47 guides, 15 categories and 6 areas — with dated evidence, visible gaps and no paid placements.
 
 This llms.txt file provides AI agents and language-model crawlers with a curated map of the most useful, high-signal pages on pattaya-gym.com.
 
 ## Core directory
 
 - [Home](https://pattaya-gym.com/): Full directory with search, filters, featured venues
-- [Search](https://pattaya-gym.com/search/): Full-text search across all 215 venues
-- [Map](https://pattaya-gym.com/map/): Stub page (noindex) — use [Search](https://pattaya-gym.com/search/) or area hubs meanwhile
+- [Search](https://pattaya-gym.com/search/): Full-text search across all 218 venues
+- [Map](https://pattaya-gym.com/map/): First-party explorer with venue-specific stored points; centroids and fallbacks are excluded
+- [Find coaching](https://pattaya-gym.com/find-my-coach/): Match training needs to venue records that publish coaching signals
 - [Compare](https://pattaya-gym.com/compare/): Side-by-side comparison of any 2–4 venues
 - [Plan My Trip](https://pattaya-gym.com/plan-my-trip/): Free trip builder - a tailored Pattaya training-trip plan by sport, length, budget and travel style
 - [All sports](https://pattaya-gym.com/sports/): Hub linking all 15 sport categories
@@ -27,14 +28,14 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 - [Fitness / Gym](https://pattaya-gym.com/category/fitness/): 43 venues — 24-hour chains, hotel gyms, boutique
 - [Golf](https://pattaya-gym.com/category/golf/): 17 courses including Siam Country Club, Laem Chabang, Phoenix Gold
 - [Yoga / Pilates](https://pattaya-gym.com/category/yoga/): 8 studios
-- [Tennis / Padel / Squash](https://pattaya-gym.com/category/racquet/): 25 venues
+- [Tennis / Padel / Squash](https://pattaya-gym.com/category/racquet/): 27 venues
 - [Watersports / Diving](https://pattaya-gym.com/category/watersports/): 21 dive operators + kitesurf + yacht clubs
 - [Swimming](https://pattaya-gym.com/category/swimming/): 15 pools + waterparks
 - [Climbing](https://pattaya-gym.com/category/climbing/): 2 climbing gyms
 - [Running / Cycling Clubs](https://pattaya-gym.com/category/clubs/): 26 groups
 - [Kids / Youth Sports](https://pattaya-gym.com/category/kids-youth/): 14 football academies + trampoline parks
 - [Equestrian](https://pattaya-gym.com/category/equestrian/): 2 facilities including Thai Polo & Equestrian Club
-- [Adventure / Multi-Sport](https://pattaya-gym.com/category/adventure/): 16 venues — skydiving, karts, ATV, ziplines
+- [Adventure / Multi-Sport](https://pattaya-gym.com/category/adventure/): 17 venues — skydiving, karts, ATV, ziplines
 - [MMA](https://pattaya-gym.com/category/mma/): 2 verified MMA camp
 - [BJJ / Grappling](https://pattaya-gym.com/category/bjj/): 1 verified BJJ academy
 - [CrossFit / Functional](https://pattaya-gym.com/category/crossfit/): 1 affiliate
@@ -117,10 +118,8 @@ This llms.txt file provides AI agents and language-model crawlers with a curated
 
 ## Editorial promise
 
-Every listing on pattaya-gym.com is researched and source-cited from public information.
-No paid placements, no sponsored listings, no affiliate-only entries.
-Independent directory operated since 2026. Built and maintained in Pattaya, Thailand.
-Coordinates: 12.93°N, 100.88°E.
+Pattaya.Gym publishes source-checked venue records with a sources-reviewed date. Published prices carry a separate as-of date; missing tariffs, unresolved operation and imprecise locations remain visible. The site does not claim first-hand visits. No paid placements, sponsored rankings or venue affiliate commissions.
 
-Last update: 2026-07-01
+Published by Tim and Paemi / TimPaemi Co., Ltd. in Pattaya, Thailand.
 
+Last update: 2026-08-02

@@ -1,6 +1,7 @@
 ---
 id: wong-amat-beach
 name: Wong Amat Beach
+nameTh: หาดวงศ์อมาตย์
 category: swimming
 area: Naklua / North Pattaya
 address: Wong Amat Beach, Naklua, Bang Lamung, Chonburi 20150
@@ -14,6 +15,7 @@ distinction: Public Naklua beach used for informal sea swimming
 verified: 2026-07-26
 sources:
   - https://www.google.com/maps/search/?api=1&query=Wong+Amat+Beach
+  - https://www.openstreetmap.org/way/183413169
 description: Public Naklua beach used for informal sea swimming, with no verified operator hours or lifeguard schedule.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Wong+Amat+Beach"
 tags: [public-beach, sea-swimming, naklua, informal-activity]
@@ -21,7 +23,7 @@ tags: [public-beach, sea-swimming, naklua, informal-activity]
 
 # Wong Amat Beach
 
-Wong Amat Beach is a public Naklua beach, not a managed swimming facility with a reception desk, lane timetable or day ticket. The current Maps search confirms the coastal location, but it returns several overlapping place records rather than one authoritative beach operator. Those listings do not establish a fixed entrance, supervised swimming period or water-safety programme.
+Wong Amat Beach is a public Naklua beach, not a managed swimming facility with a reception desk, lane timetable or day ticket. The OpenStreetMap way **183413169** records the Thai name **หาดวงศ์อมาตย์**, which helps Thai-speaking visitors match the beach identity. The current Maps search confirms the coastal location, but it returns several overlapping place records rather than one authoritative beach operator. Those listings do not establish a fixed entrance, supervised swimming period or water-safety programme.
 
 The <a href="/area/naklua/">Naklua area directory</a> places the beach among other north-Pattaya sport records, while the <a href="/category/swimming/">swimming category</a> also contains managed pools with more explicit access evidence. Wong Amat is the informal sea-swimming option, not a substitute for a reserved lap lane.
 

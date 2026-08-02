@@ -1,6 +1,7 @@
 ---
 id: ramayana-water-park
 name: Ramayana Water Park Pattaya
+nameTh: สวนน้ำรามายณะ
 category: swimming
 area: Na Jomtien / Sattahip
 address: 9 Moo 7, Ban Yen Road, Na Chom Thian, Sattahip, Chonburi 20250
@@ -25,12 +26,15 @@ sources:
   - https://www.ramayanawaterpark.com/frequently-asked-questions/
   - https://www.ramayanawaterpark.com/contact-us/
   - https://www.google.com/maps/search/?api=1&query=Ramayana+Water+Park+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Ramayana+Water+Park+Pattaya&hl=th"
 description: Na Jomtien water park open six days a week with separate online and walk-in tourist tickets.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Ramayana+Water+Park+Pattaya"
 tags: [waterpark, family, slides, na-jomtien, day-trip]
 ---
 
 # Ramayana Water Park Pattaya
+
+The Thai Maps label **สวนน้ำรามายณะ** is tied to the exact park at 9 Moo 7, whose operator schedule closes the attraction every Wednesday.
 
 Ramayana is a full-day leisure water park in Na Jomtien, south of the main Pattaya beach corridor. The operator currently publishes daily opening from 11:00 to 18:00 except Wednesday, when the park is closed. It describes 26 slides with 34 lanes, four children's zones, three pools and a lazy river. Those features make this a family or group day out, not a substitute for a quiet lap pool or coached swimming session.
 

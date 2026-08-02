@@ -144,7 +144,7 @@ const GUIDES = [
     body: `
 <p>Pattaya is the most foreigner-friendly Muay Thai city in Thailand. Bangkok has stronger lineage; Phuket has the resort packages; but Pattaya has the highest density of English-speaking kru per square kilometre because the city has been training Western fighters since the 1980s.</p>
 
-<p>The list below is built from our 158-venue Pattaya.Gym directory. Every gym here has at least one head kru or senior trainer who can run a complete pad round in English — including technique corrections, conditioning instructions, and sparring callouts. We've trained at or visited every one personally, in 2025-2026.</p>
+<p>The list below is built from the current Pattaya.Gym directory. Each included record has public-source evidence for an English-capable head kru or senior trainer; where an operator does not publish that evidence, the record says to confirm directly. This is source research, not a claim that our editors trained at or visited the venue.</p>
 
 <h2>What "English-speaking" actually means at a Pattaya gym</h2>
 

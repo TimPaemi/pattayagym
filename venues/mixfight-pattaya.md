@@ -12,7 +12,7 @@ hours: Mon, Wed and Fri 08:00-21:00; Tue, Thu and Sat 08:00-19:00; Sun closed
 priceRange: ""
 distinction: Multi-discipline combat school with MMA event evidence
 beginnerFriendly: true
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.google.com/maps/search/?api=1&query=BOXING+CLUB+Mixfight+Pattaya
   - https://www.instagram.com/coach.pattaya/

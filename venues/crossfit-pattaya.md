@@ -16,7 +16,7 @@ distinction: Functional-fitness gym whose former CrossFit affiliate listing is n
 disciplines: [Functional fitness, Group training, Open gym, Personal training]
 beginnerFriendly: true
 languages: [English, Thai]
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.junglegympattaya.com/
   - https://www.junglegympattaya.com/crossfit

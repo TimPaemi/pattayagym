@@ -1,5 +1,6 @@
 ---
 id: nong-prue-municipal-swimming-pool
+nameTh: สระว่ายน้ำเทศบาลเมืองหนองปรือ
 name: Nong Prue Municipal Swimming Pool
 category: swimming
 area: Nong Prue / East Pattaya
@@ -13,6 +14,7 @@ distinction: Municipal pool with current 2026 service notices and youth-swimming
 poolType: Municipal public pool
 verified: 2026-07-27
 sources:
+  - https://openchat.line.me/th/cover/quxXW54ydD02rMofEnxbpiqNxrEIkYOD-vvkogc9NJyD71EHMHTC0RYr_SQ
   - https://nongpruecity.go.th/news/detail/52948
   - https://nongpruecity.go.th/news/detail/57106
   - https://nongpruecity.go.th/news/detail/57375/data.html
@@ -28,6 +30,8 @@ tags: [swimming, municipal, public-pool, nong-prue, east-pattaya]
 This is the identifiable Nong Prue municipal pool currently linked to council notices and the Maps place labelled Sea Swim เทศบาลเมืองหนองปรือ. The value of the record is not a published tariff but the municipality's continuing 2026 operating notices, which confirm a live [swimming record](/category/swimming/) rather than a stale public-facility entry.
 
 ## What training is on offer
+
+The municipal Thai listing uses **สระว่ายน้ำเทศบาลเมืองหนองปรือ** for the 77/268 Moo 1 facility.
 
 The municipality's own notices establish an operating public swimming pool and also show organised use beyond casual entry. The 2026 basic-swimming programme notice confirms children's instruction activity, while separate municipal updates announce temporary closures tied to training use and Songkran. That tells a visitor two useful things: this is a real public pool with recurring municipal management, and lane or whole-pool access can change around official programmes.
 

@@ -1,5 +1,6 @@
 ---
 id: pattaya-padel-club
+nameTh: สโมสรเพเดิ้ลพัทยา
 name: Pattaya Padel Club
 category: racquet
 area: Mabprachan / East Pattaya
@@ -22,12 +23,15 @@ sources:
   - https://www.facebook.com/profile.php?id=100093982632589
   - https://www.instagram.com/pattaya.padel.club/
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Padel+Club
+  - https://www.khaodentuathai.com/%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%84/28597
 description: Mabprachan padel club with public court pricing and one-hour private coaching rates on its own site.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Pattaya+Padel+Club"
 tags: [padel, mabprachan, east-pattaya, coaching, court-hire]
 ---
 
 # Pattaya Padel Club
+
+A Thai local report names the venue สโมสรเพเดิ้ลพัทยา and places its launch at 44 Soi Mabprachan Lang 2 in Pong, matching this record's address.
 
 Pattaya Padel Club is a Mabprachan-side padel venue with current public court prices and current coaching prices on its own site. That makes it stronger than many contact-only racquet records for visitors who want to compare a real booking total before travelling. It still works best as a pre-booked destination rather than an impulsive central-Pattaya walk-in.
 

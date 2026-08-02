@@ -1,6 +1,7 @@
 ---
 id: sityodtong-pattaya
 name: Sityodtong Muay Thai Camp
+nameTh: ค่ายมวยศิษย์ยอดธง Sityodtong Muaythai Camp
 category: muay-thai
 area: Nong Prue / East Pattaya
 address: 36 Pattaya City, Bang Lamung District, Chonburi 20150
@@ -25,12 +26,15 @@ sources:
   - https://sityodtongthailand.com/contact/
   - https://www.facebook.com/sityodtongmuaythai/
   - https://www.google.com/maps/search/?api=1&query=Sityodtong+Muay+Thai+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Sityodtong+Pattaya&hl=th"
 description: Historic East Pattaya Muay Thai camp offering training for beginner, intermediate and advanced students.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Sityodtong+Muay+Thai+Pattaya"
 tags: [muay-thai, historic, lineage, east-pattaya]
 ---
 
 # Sityodtong Muay Thai Camp
+
+Thai Maps signposts the camp as **ค่ายมวยศิษย์ยอดธง Sityodtong Muaythai Camp**, matching the record whose published training periods begin at 08:00 and 15:00.
 
 Sityodtong is the current Bang Lamung home of the Muay Thai camp established by Kru Yodtong Senanan in 1960. The operator explicitly welcomes beginner, intermediate and advanced students. Its timetable and one pad-work price are public, but the full visitor and residential tariff still requires direct contact.
 

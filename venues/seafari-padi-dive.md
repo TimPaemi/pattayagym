@@ -1,5 +1,6 @@
 ---
 id: seafari-padi-dive
+nameTh: ซีฟารี ไดฟ์ เซ็นเตอร์
 name: Seafari Diving Center
 category: watersports
 area: Central Pattaya
@@ -25,12 +26,15 @@ sources:
   - https://www.facebook.com/Seafaridivepattaya/
   - https://www.padi.com/dive-center/thailand/seafari-diving-center/
   - https://www.google.com/maps/search/?api=1&query=Seafari+Diving+Center+Pattaya
+  - https://www.dataforthai.com/company/0205559006368/
 description: Central Pattaya PADI 5 Star IDC offering recreational, technical and professional training.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Seafari+Diving+Center+Pattaya"
 tags: [padi-5-star-idc, scuba, tec-diving, snorkelling, central-pattaya]
 ---
 
 # Seafari Diving Center
+
+A Thai company listing uses บริษัท ซีฟารี ไดฟ์ เซ็นเตอร์ จำกัด; the current record address is 262, AOP 1/8.
 
 Seafari is a current PADI 5 Star Instructor Development Center behind the Mike Shopping Mall area on Pattaya Second Road. PADI's live centre listing gives daily 08:00–19:00 hours, the 262 AOP 1/8 address, phone +66 81 762 4187 and four listed PADI instructors. Shop hours are not a boat timetable; the booked product controls the meeting and return plan.
 

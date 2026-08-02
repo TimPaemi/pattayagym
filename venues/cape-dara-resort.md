@@ -1,6 +1,7 @@
 ---
 id: cape-dara-resort
 name: Cape Dara Resort
+nameTh: เคป ดารา รีสอร์ท พัทยา
 category: fitness
 area: Naklua / North Pattaya
 address: 256 Dara Beach, Soi 20 Pattaya-Naklua Road, Bang Lamung, Chonburi 20150
@@ -18,12 +19,15 @@ sources:
   - https://capedarapattaya.com/resort-support/
   - https://capedarapattaya.com/contact-us/
   - https://www.google.com/maps/search/?api=1&query=Cape+Dara+Resort+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Cape+Dara+Resort+Pattaya&hl=th"
 description: North Pattaya resort with a hotel-guest fitness centre open daily from 06:00 to 22:00.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Cape+Dara+Resort+Pattaya"
 tags: [hotel-fitness, naklua, cardio, strength, free-weights, guest-access]
 ---
 
 # Cape Dara Resort
+
+The Thai Maps entity **เคป ดารา รีสอร์ท พัทยา** matches the Dara Beach Soi 20 property and its daily 06:00-22:00 fitness centre.
 
 Cape Dara belongs in the directory as a hotel-guest fitness option in Naklua, not as a confirmed public gym. Its current resort-activity page publishes daily fitness-centre hours of 06:00-22:00. The resort-support page says the swimming pools, fitness centre, playroom and Dara Club Lounge are reserved exclusively for registered in-house guests.
 

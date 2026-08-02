@@ -1,7 +1,7 @@
 module.exports = `
-<p><strong>East Pattaya is a collection of inland corridors, not one walkable gym district.</strong> The directory filter currently returns 60 records across 14 categories: ten Muay Thai, ten kids-and-youth, nine racquet, six clubs, five swimming, four fitness, four adventure, three golf, two yoga, two equestrian, two watersports and one each for MMA, functional fitness and climbing. Fifty-nine carry no closure or verification warning in the main dataset. Pattaya Floating Market is the one non-sport result, caught because its address contains Sukhumvit Road; it is not a training choice.</p>
+<p><strong>East Pattaya is a collection of inland corridors, not one walkable gym district.</strong> The directory filter currently returns 60 records across 14 categories: ten Muay Thai, ten kids-and-youth, nine racquet, six clubs, five swimming, four fitness, four adventure, three golf, two yoga, two equestrian, two watersports and one each for MMA, functional fitness and climbing. Fifty-nine carry no closure or verification warning in the main dataset. <a href="/gyms/pattaya-floating-market/">Pattaya Floating Market</a> is the one non-sport result, caught because its address contains Sukhumvit Road; it is not a training choice.</p>
 
-<p>The useful way to choose an east-side venue is by product and exact pin. A group Muay Thai session, a residential combat package, a gym membership, a booked court and a youth academy all require different questions. Start with the <a href="/area/east-pattaya/">East Pattaya area directory</a> for the full filter, then use this guide to match the strongest current evidence to the trip you are planning.</p>
+<p>The useful way to choose an east-side venue is by product and exact pin. A group Muay Thai session, a residential combat package, a gym membership, a booked court and a youth academy all require different questions. Start with the <a href="/area/east-pattaya/">East Pattaya area directory</a> for the full filter, then use this guide to match the current evidence to the trip you are planning.</p>
 
 <h2>Inland location belts</h2>
 
@@ -32,7 +32,7 @@ module.exports = `
 
 <h2>Short coached combat sessions</h2>
 
-<p><a href="/gyms/sudsakorn-muay-thai-gym/">Sudsakorn Muay Thai Gym</a> is the clearest East Pattaya choice for a visitor who wants a current, ordinary group-training tariff. The operator publishes Monday–Saturday training from 08:00–11:00 and 16:00–19:00, with Sunday closed. Prices checked on 25 July 2026 were ฿400 for one session, ฿600 for two sessions in one day, ฿1,800 for one week at one session per day, ฿3,000 for one week at two per day, ฿6,000 for a month at one per day and ฿9,000 for a month at two per day.</p>
+<p><a href="/gyms/sudsakorn-muay-thai-gym/">Sudsakorn Muay Thai Gym</a> is an East Pattaya option for a visitor who wants a current, ordinary group-training tariff. The operator publishes Monday–Saturday training from 08:00–11:00 and 16:00–19:00, with Sunday closed. Prices checked on 25 July 2026 were ฿400 for one session, ฿600 for two sessions in one day, ฿1,800 for one week at one session per day, ฿3,000 for one week at two per day, ฿6,000 for a month at one per day and ฿9,000 for a month at two per day.</p>
 
 <p>That menu lets a traveller compare training frequency without pretending every three-hour operating window is one continuous coached class. Contact the gym with your experience level and selected date. Ask about the session start, equipment, private coaching, sparring expectations and whether advance booking is required.</p>
 
@@ -42,7 +42,7 @@ module.exports = `
 
 <p><a href="/gyms/silk-muay-thai/">Silk Muay Thai</a> and <a href="/gyms/kombat-group-thailand/">Kombat Group Thailand</a> are relevant when accommodation is part of the purchase. Silk's operator pages list group periods Monday–Saturday and packages from ฿16,000 for one week, ฿34,000 for one month with one daily Muay Thai session and ฿39,000 for a month with two daily sessions, checked on 25 July 2026. The one-week starting product includes a private room, one daily session, a fundamentals class and one meal; package inclusions vary. The site also describes pool, sauna, spa and restaurant access within the residential offer.</p>
 
-<p>Kombat's live pricing page listed a one-week standard Muay Thai or western-boxing package at ฿20,900 on the same check date. The operator says its displayed prices exclude 7% VAT and that card payments add 3%. Kombat also sells MMA and BJJ programmes, but prices and inclusions vary by discipline, room and package tier. Neither starting figure is a normal drop-in price.</p>
+<p><a href="/gyms/kombat-group-thailand/">Kombat's</a> live pricing page listed a one-week standard Muay Thai or western-boxing package at ฿20,900 on the same check date. The operator says its displayed prices exclude 7% VAT and that card payments add 3%. <a href="/gyms/kombat-group-thailand/">Kombat</a> also sells MMA and BJJ programmes, but prices and inclusions vary by discipline, room and package tier. Neither starting figure is a normal drop-in price.</p>
 
 <p>Compare the final invoice, not the headline. Request the exact room, bathroom and air-conditioning standard, training frequency, meal count, laundry, equipment, recovery access, transfer, arrival and departure dates, taxes, card charge and refund terms. Someone who already has accommodation should compare the training-only value separately rather than assuming a residential bundle will be cheaper.</p>
 
@@ -75,12 +75,12 @@ module.exports = `
 <h2>Decision checklist</h2>
 
 <ul>
-  <li><strong>One or two coached combat sessions:</strong> start with Sudsakorn's dated session menu or Castra's fight-club timetable.</li>
-  <li><strong>Weights plus scheduled combat:</strong> ask Castra for the current general gym tariff and confirm the selected class.</li>
-  <li><strong>Stay-and-train:</strong> compare Silk and Kombat only after obtaining itemised inclusions, taxes and room terms.</li>
+  <li><strong>One or two coached combat sessions:</strong> start with <a href="/gyms/sudsakorn-muay-thai-gym/">Sudsakorn's</a> dated session menu or <a href="/gyms/castra-gym/">Castra's</a> fight-club timetable.</li>
+  <li><strong>Weights plus scheduled combat:</strong> ask <a href="/gyms/castra-gym/">Castra</a> for the current general gym tariff and confirm the selected class.</li>
+  <li><strong>Stay-and-train:</strong> compare <a href="/gyms/silk-muay-thai/">Silk</a> and <a href="/gyms/kombat-group-thailand/">Kombat</a> only after obtaining itemised inclusions, taxes and room terms.</li>
   <li><strong>Padel or badminton:</strong> book the exact court, time band and equipment rather than using a per-person assumption.</li>
-  <li><strong>Youth football:</strong> match age and level to Planet Football's open, development or academy pathway.</li>
-  <li><strong>Team pitch hire:</strong> contact K Football with the team format and booking duration; no public rate is established.</li>
+  <li><strong>Youth football:</strong> match age and level to <a href="/gyms/planet-football-pattaya/">Planet Football's</a> open, development or academy pathway.</li>
+  <li><strong>Team pitch hire:</strong> contact <a href="/gyms/k-football-stadium-pattaya/">K Football</a> with the team format and booking duration; no public rate is established.</li>
 </ul>
 
 <p>Blank prices in this guide mean no stable current first-hand tariff was found, not free admission. Before choosing a long-stay base, verify the venue's current map, schedule and access product, then test the route at the time of day you will actually travel. For a beach-corridor alternative, compare the <a href="/guides/best-gym-central-pattaya/">Central Pattaya guide</a> or <a href="/guides/best-gym-jomtien-pattaya/">Jomtien guide</a>.</p>
@@ -90,9 +90,9 @@ module.exports = `
 <h3>Is East Pattaya practical without a scooter?</h3>
 <p>It can be, when accommodation is close to one chosen venue or the camp provides a documented transfer. The area spans several inland corridors, and the directory does not guarantee taxi availability or a fixed fare. Check the exact route and return plan before booking accommodation; do not ride without the appropriate licence, insurance and experience.</p>
 
-<h3>Which East Pattaya option has the clearest drop-in price?</h3>
-<p>For coached Muay Thai, Sudsakorn publishes ฿400 for one session and ฿600 for two in one day, checked 25 July 2026. Castra publishes a ฿300 fight-club group class. For court sport, SB Badminton lists ฿180 per court-hour and Pattaya Padel Club lists ฿600 or ฿800 per court-hour by time band. Reconfirm the selected product and date.</p>
+<h3>Which East Pattaya option publishes a drop-in price?</h3>
+<p>For coached Muay Thai, <a href="/gyms/sudsakorn-muay-thai-gym/">Sudsakorn</a> publishes ฿400 for one session and ฿600 for two in one day, checked 25 July 2026. <a href="/gyms/castra-gym/">Castra</a> publishes a ฿300 fight-club group class. For court sport, <a href="/gyms/sb-badminton-huai-yai/">SB Badminton</a> lists ฿180 per court-hour and <a href="/gyms/pattaya-padel-club/">Pattaya Padel Club</a> lists ฿600 or ฿800 per court-hour by time band. Reconfirm the selected product and date.</p>
 
 <h3>Can a family book Planet Football as a casual public pitch?</h3>
-<p>The youth coaching pages publish age-banded sessions and development programmes, while the facilities page provides separate booking contacts. A coaching fee does not establish a whole-pitch hire price. Contact Planet Football with the child's age for a programme or with the team size and duration for facility hire, and confirm which of its two stadiums is used.</p>
+<p>The youth coaching pages publish age-banded sessions and development programmes, while the facilities page provides separate booking contacts. A coaching fee does not establish a whole-pitch hire price. Contact <a href="/gyms/planet-football-pattaya/">Planet Football</a> with the child's age for a programme or with the team size and duration for facility hire, and confirm which of its two stadiums is used.</p>
 `;

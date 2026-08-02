@@ -1,6 +1,7 @@
 ---
 id: andaz-pattaya-jomtien
 name: Andaz Pattaya Jomtien Beach
+nameTh: โรงแรมแอนดาซ พัทยา จอมเทียน บีช - อะ คอนเซ็ป บาย ไฮแอท
 category: fitness
 area: Na Jomtien / Sattahip
 address: 345 Moo 3, Na Jomtien, Sattahip, Chonburi 20250
@@ -16,12 +17,15 @@ sources:
   - https://www.hyatt.com/andaz/en-US/utpaz-hyatt-andaz-pattaya-jomtien-beach/hotel-info
   - https://www.hyatt.com/content/dam/hotel/propertysites/assets/andaz/utpaz/documents/en_us/Resort-Experiences.pdf
   - https://www.google.com/maps/search/?api=1&query=Andaz+Pattaya+Jomtien+Beach
+  - "https://www.google.com/maps/search/?api=1&query=Andaz+Pattaya+Jomtien+Beach&hl=th"
 description: Hotel-guest fitness and wellness facilities with a 24-hour Technogym gym, three pools and scheduled resort activities.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Andaz+Pattaya+Jomtien+Beach"
 tags: [hotel-guest-only, technogym, pools, yoga, sauna, onsen]
 ---
 
 # Andaz Pattaya Jomtien Beach
+
+The 345 Moo 3 Na Jomtien resort appears in Thai Maps as **โรงแรมแอนดาซ พัทยา จอมเทียน บีช - อะ คอนเซ็ป บาย ไฮแอท**, alongside its documented 24-hour fitness centre.
 
 Andaz Pattaya Jomtien Beach is a Na Jomtien resort with a 24-hour Technogym fitness centre, separate movement space, three pools and a changing weekly activity programme. Hyatt describes the experiences as exclusive to registered guests. No public gym or pool pass is currently documented.
 

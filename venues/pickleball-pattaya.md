@@ -10,7 +10,7 @@ social: {}
 hours: Daily 07:00-21:00
 priceRange: ""
 distinction: Dedicated Pratamnak pickleball club now operating publicly as PR Pattaya Pickleball
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://pickleballpattaya.com/
   - https://pickleballpattaya.com/wpbc-booking/

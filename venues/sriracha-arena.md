@@ -1,5 +1,6 @@
 ---
 id: sriracha-arena
+nameTh: ศรีราชา อารีน่า สปอร์ตคลับ
 name: Sriracha Arena Sport Club
 category: adventure
 area: Laem Chabang / Sriracha
@@ -28,6 +29,8 @@ tags: [football, futsal, badminton, sriracha, laem-chabang, indoor]
 Sriracha Arena is a large indoor football and badminton complex at 888 Moo 6 on Sukhumvit Road in Thung Sukhla. The operator website and current Maps identity agree on the venue and connect it to separate sport desks. Maps lists +66 64 563 5665 as the main phone and daily operation from 06:00 to midnight; those are venue hours rather than a guaranteed open slot.
 
 ## What training is on offer
+
+The operator's Thai homepage calls the 888 Moo 6 complex **ศรีราชา อารีน่า สปอร์ตคลับ** and advertises football plus badminton courts.
 
 The official site publishes four indoor artificial-turf football pitches described as FIFA-standard and six badminton courts described as international-standard. It also markets the site for sport days and larger events and says the venue can support events of up to 1,000 people. That is event capacity, not a promise that all courts or pitches are available together on an ordinary day.
 

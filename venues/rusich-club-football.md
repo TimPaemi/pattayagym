@@ -7,15 +7,15 @@ address: 46/65 Moo 11, Pattaya, Chonburi 20150
 phone: "+66 62 002 6726"
 website: https://rusich.club/en/
 social: {}
-hours: Published discipline timetables vary by age group; reconfirm before attending
+hours: "Mon/Wed/Fri functional 10:00-11:00; Mon-Fri mix fighting 17:00-18:30; Sat grappling 10:00-11:30; age-specific schedules vary"
 priceRange: ฿
 distinction: Russian-language combat and functional-training club for children and adults
 disciplines: [Judo, Sambo, Jiu-jitsu, Muay Thai, Mixed fighting, Grappling, Hand-to-hand fighting, MMA, Functional training]
 singleClassPrice: 350 THB for listed combat classes
-priceAsOf: 2026-07-26
+priceAsOf: 2026-07-29
 priceSourceUrl: https://rusich.club/en/classes/mma_eng/
 beginnerFriendly: true
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://rusich.club/en/
   - https://rusich.club/en/contact_en/
@@ -25,6 +25,8 @@ sources:
   - https://rusich.club/en/classes/wrestling_en/
   - https://rusich.club/en/classes/h2h_children_en/
   - https://rusich.club/en/classes/grappling_en/
+  - https://rusich.club/en/classes/ft_en/
+  - https://rusich.club/en/classes/mix-fighting_en/
   - https://rusich.world/contacts/
   - https://www.google.com/maps/search/?api=1&query=Rusich+Club+Pattaya
 description: East Pattaya club publishing age-specific wrestling, MMA, hand-to-hand fighting, Muay Thai, grappling and functional-training classes.
@@ -40,11 +42,11 @@ Rusich is an East Pattaya combat and functional-training club, not a football ac
 
 The current operator site lists combined judo, sambo and jiu-jitsu wrestling; MMA; hand-to-hand fighting; Muay Thai and mixed fighting; grappling; and functional training with CrossFit elements. It says beginners and experienced participants are accepted, subject to the appropriate group.
 
-Exact class pages checked 2026-07-26 list adult wrestling from age 11 on Tuesday and Thursday, 19:00-20:30; adult MMA from age 16 on Monday, Wednesday and Friday, 10:00-11:30; and MMA with hand-to-hand fighting from age 11 on those days, 19:00-20:30. Children's wrestling ages 4-10 runs Tuesday and Thursday, 17:30-18:30; children's hand-to-hand fighting uses Monday, Wednesday and Friday at the same time. Grappling from age 10 is Saturday, 10:00-11:30.
+Exact class pages checked 2026-07-29 list adult wrestling from age 11 on Tuesday and Thursday, 19:00-20:30; adult MMA from age 16 on Monday, Wednesday and Friday, 10:00-11:30; and MMA with hand-to-hand fighting from age 11 on those days, 19:00-20:30. Children's wrestling ages 4-10 runs Tuesday and Thursday, 17:30-18:30; children's hand-to-hand fighting uses Monday, Wednesday and Friday at the same time. Grappling from age 10 is Saturday, 10:00-11:30. The current functional-training page lists Monday, Wednesday and Friday 10:00-11:00, while adult Muay Thai and mix fighting is listed Monday-Friday 17:00-18:30.
 
 ## What it costs
 
-The named combat-class pages checked 2026-07-26 list ฿350 for one class. Adult MMA and adult MMA/hand-to-hand products list a free trial and ฿3,000 for one month of three weekly sessions. Adult wrestling lists a free trial and ฿2,500 for one month of two weekly evening sessions.
+The named combat-class pages checked 2026-07-29 list ฿350 for one class. Adult MMA and adult MMA/hand-to-hand products list a free trial and ฿3,000 for one month of three weekly sessions. Adult wrestling lists a free trial and ฿2,500 for one month of two weekly evening sessions.
 
 Children's wrestling lists a free trial and ฿2,500 for one month; children's hand-to-hand fighting lists a free trial and ฿3,000 for one month. The grappling page lists ฿1,200 for one month and does not display a free-trial line. Several pages advertise 10% off two memberships and 15% off three, also checked 2026-07-26. Confirm qualifying products and whether registration, uniform or protective equipment costs extra.
 

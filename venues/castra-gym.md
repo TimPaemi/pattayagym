@@ -1,5 +1,6 @@
 ---
 id: castra-gym
+nameTh: คาสตร้ายิม พัทยา
 name: Castra Gym
 category: fitness
 area: Khao Talo / East Pattaya
@@ -22,12 +23,15 @@ sources:
   - https://castragym.com/castra-trainers/
   - https://castragym.com/contact/
   - https://www.google.com/maps/search/?api=1&query=Castra+Gym+Pattaya
+  - https://www.soidb.com/pattaya/sports-club/castra-gym-pattaya.html
 description: Khao Talo gym combining general strength and cardio equipment with scheduled Muay Thai and BJJ.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Castra+Gym+Pattaya"
 tags: [strength, cardio, muay-thai, bjj, east-pattaya, khao-talo]
 ---
 
 # Castra Gym
+
+SoiDB lists the local name as **คาสตร้ายิม พัทยา**; the operator's contact page places this mixed-training gym at **61/17** Soi Khao Talo.
 
 Castra Gym is a Khao Talo weights-and-cardio gym with a separate fight-club offer layered on top, not a pure Muay Thai camp. Its current site makes that split useful: the business has general gym opening hours, while the fight-club page publishes class times and combat pricing. The main limitation is transparency outside that page, because no current public general-gym membership tariff was visible.
 

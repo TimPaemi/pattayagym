@@ -1,28 +1,32 @@
 ---
 id: koh-larn-coral-island
 name: Koh Larn (Coral Island)
+nameTh: เกาะล้าน
 category: watersports
 area: Offshore / Bang Lamung
 address: Koh Larn, Bang Lamung District, Chonburi 20150; public boats depart from Bali Hai Pier
 phone: ""
 website: https://www.tourismthailand.org/Destinations/Provinces/Pattaya/469
 social: {}
-hours: Public ferry times vary by pier and destination; check the same day at Bali Hai Pier
+hours: Pattaya departures 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:30, 17:00 and 18:30; confirm same-day service at Bali Hai Pier
 priceRange: ฿
 distinction: Offshore day-trip island reached by public ferry from Pattaya
 priceAsOf: 2026-07-27
 priceSourceUrl: https://www.pattaya.go.th/document/standard/capter02/47.pdf
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.tourismthailand.org/Destinations/Provinces/Pattaya/469
   - https://www.pattaya.go.th/document/standard/capter02/47.pdf
   - https://www.google.com/maps/search/?api=1&query=Koh+Larn+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Koh+Larn+Coral+Island&hl=th"
 description: Pattaya day-trip island reached by public boat from Bali Hai Pier, with local transport connecting arrival points and beaches.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Koh+Larn+Pattaya"
 tags: [island, ferry, day-trip, beach, watersports, bali-hai-pier]
 ---
 
 # Koh Larn (Coral Island)
+
+Thai Maps names the island **เกาะล้าน**, matching public departures that begin at 07:00.
 
 ## What training is on offer
 

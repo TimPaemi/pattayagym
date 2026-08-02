@@ -1,6 +1,7 @@
 ---
 id: underwater-world-pattaya
 name: Underwater World Pattaya
+nameTh: อันเดอร์วอเตอร์ เวิลด์ พัทยา
 category: watersports
 area: South Pattaya / Sukhumvit Road
 address: 22/22 Moo 11, Sukhumvit Road, Nong Prue, Bang Lamung, Chonburi 20150
@@ -21,12 +22,15 @@ sources:
   - https://underwaterworldpattaya.com/contact-us/
   - https://underwaterworldpattaya.com/schools-programs/
   - https://www.google.com/maps/search/?api=1&query=Underwater+World+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Underwater+World+Pattaya&hl=th"
 description: South Pattaya aquarium with published ticketing, feeding-show times and school-programme options; not a scuba-training venue.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Underwater+World+Pattaya"
 tags: [aquarium, underwater-tunnel, family, south-pattaya]
 ---
 
 # Underwater World Pattaya
+
+The exact Thai Maps listing **อันเดอร์วอเตอร์ เวิลด์ พัทยา** corresponds to 22/22 Moo 11 and its 17:30 last admission.
 
 Underwater World Pattaya is a South Pattaya aquarium on Sukhumvit Road, not a dive school or swim-training venue. The operator currently publishes daily 09:00-18:00 opening, a 17:30 last-admission cut-off and a clear acrylic tunnel more than 105 metres long.
 

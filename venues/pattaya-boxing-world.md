@@ -1,5 +1,6 @@
 ---
 id: pattaya-boxing-world
+nameTh: พัทยาบ็อกซิ่งเวิร์ล
 name: Pattaya Boxing World
 category: muay-thai
 area: North Pattaya / Sukhumvit Road
@@ -13,6 +14,7 @@ distinction: Former Muay Thai spectator stadium near Mini Siam
 status: unverified
 verified: 2026-07-25
 sources:
+  - https://en.wikipedia.org/wiki/Pattaya_Boxing_World
   - https://www.google.com/maps/search/?api=1&query=Pattaya+Boxing+World+Stadium
   - https://amazingthailand.org/pattaya-boxing-world
   - https://www.pattayamail.com/pattayasports/pattaya-boxing-world-stadium-sees-out-2012-with-top-fight-nights-20452
@@ -26,6 +28,8 @@ tags: [muay-thai-stadium, spectator, unverified, legacy-listing]
 Pattaya Boxing World is a legacy spectator-stadium listing, not a confirmed current fight-night option. The available tourism and local-press sources describe its earlier programme near Mini Siam, but an exact-name Maps search on 25 July 2026 did not establish an active venue, current schedule, ticket seller or contact. Do not plan a fight night around this record without finding a current operator announcement.
 
 ## What training is on offer
+
+The Thai native-name entry records the former 387 Moo 6 stadium as **พัทยาบ็อกซิ่งเวิร์ล** and lists 600 seats.
 
 The historical sources describe a Muay Thai spectator stadium rather than a verified training gym. They are useful for identifying the former venue and its place in Pattaya’s fight-night history, but they do not prove that lessons, a camp, a gym floor, trainers or any present-day programme are available. No current operator channel or live timetable was found in the sources checked. This record therefore does not describe training sessions as if they can be booked today.
 

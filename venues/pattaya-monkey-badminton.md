@@ -38,3 +38,23 @@ The weekly Maps schedule checked on 26 July 2026 is:
 That Sunday opening is later than the previous all-days schedule in this directory. Holiday or tournament hours can still change.
 
 No current operator-published court tariff or booking policy was found. Contact the centre for an available time and ask whether the quote covers the whole court or each player. Confirm payment or deposit terms, racket rental, shuttlecocks, coaching, player matching, non-marking-shoe rules and cancellation terms. The June competition post confirms current venue use; it does not mean an unscheduled visitor can join a game or that every court is available during the full business-hours window.
+
+## What training is on offer
+
+The sources identify a dedicated badminton centre and a June 2026 competition hosted there. They do not publish coaching, player-matching, a junior programme, court count or league schedule.
+
+## Who it suits — and who it does not
+
+The venue may suit players able to secure a court directly. It is not evidence that an unscheduled solo visitor can join a game or that any particular court is available.
+
+## Getting there
+
+Maps gives 252/152 Moo 13, while the owner page gives 252/151. Use the live pin and contact +66 81 949 7272 to confirm the entrance rather than relying on the final address digit.
+
+## Before you go
+
+Published hours are Monday-Saturday 10:00-23:00 and Sunday 17:00-23:00. Confirm holiday or tournament changes, the booking term and non-marking-shoe rules before travel.
+
+## What we could not verify
+
+No tariff, deposit, racket or shuttlecock policy, equipment inventory, coaching schedule or cancellation term is published in the retained sources.

@@ -1,5 +1,5 @@
 module.exports = `
-<p><strong>If you only read one thing: book the exact beginner product, not a gym reputation.</strong> A camp can be active and respected without publishing a beginner class, a session price, an instruction language or an opt-in contact policy. The strongest first-session choices below expose at least some of those details; the remaining gaps are questions to ask before payment.</p>
+<p><strong>If you only read one thing: book the exact beginner product, not a gym reputation.</strong> A camp can be active and respected without publishing a beginner class, a session price, an instruction language or an opt-in contact policy. The documented first-session choices below expose at least some of those details; the remaining gaps are questions to ask before payment.</p>
 
 <p>This comparison uses operator prices and schedules checked on <strong>26 July 2026</strong>. “Beginner-friendly” means the operator explicitly welcomes beginners or publishes a practical first-session route. It does not mean risk-free, one-to-one coaching or automatic English instruction. Use the linked venue record for the evidence behind each option.</p>
 
@@ -20,7 +20,7 @@ module.exports = `
 </table>
 </div>
 
-<p>These numbers buy different products. Sityodtong's named pad session is not the same as a group class. ISS separates coached boxing/Muay Thai classes from general gym access. Rage has useful beginner positioning but no current public price. Compare instruction format, schedule and inclusions before comparing the amount.</p>
+<p>These numbers buy different products. <a href="/gyms/sityodtong-pattaya/">Sityodtong</a>'s named pad session is not the same as a group class. <a href="/gyms/wko-muay-thai/">ISS</a> separates coached boxing/Muay Thai classes from general gym access. <a href="/gyms/rage-fight-academy/">Rage</a> has useful beginner positioning but no current public price. Compare instruction format, schedule and inclusions before comparing the amount.</p>
 
 <h2>Fairtex: explicit beginner route with a public tariff</h2>
 
@@ -36,15 +36,15 @@ module.exports = `
 
 <p>The useful question is what surrounds the named pad work: warm-up, technique explanation, bag work, conditioning, equipment and total session length were not all established by that single price. Ask which window handles a first visit and whether the ฿400 product requires booking. Confirm language needs directly instead of assuming an English website guarantees the assigned trainer's explanation language.</p>
 
-<p>Sityodtong is a strong contact candidate for someone who values an explicit level pathway and traditional camp environment. It is less convenient for a traveller who needs every first-session inclusion shown online before making contact.</p>
+<p><a href="/gyms/sityodtong-pattaya/">Sityodtong</a> is a strong contact candidate for someone who values an explicit level pathway and traditional camp environment. It is less convenient for a traveller who needs every first-session inclusion shown online before making contact.</p>
 
 <h2>Rage: beginner claim with mixed-discipline facilities</h2>
 
 <p><a href="/gyms/rage-fight-academy/">Rage Fight Academy</a> describes its training as suitable for beginners and documents Muay Thai and boxing areas, three full-size rings, a BJJ/MMA mat zone, functional-fitness and weight facilities, a pool and on-site rooms. The exact current Maps listing gives 08:00-19:00 Monday-Saturday and Sunday closed.</p>
 
-<p>The operator did not expose a dependable class-by-class timetable or public fee table on 26 July 2026. The broad opening window is not a beginner class time. Contact Rage for the discipline, group or private format, instructor language, session length, equipment and complete amount. If staying on site, request the room and training as separate line items.</p>
+<p>The operator did not expose a dependable class-by-class timetable or public fee table on 26 July 2026. The broad opening window is not a beginner class time. Contact <a href="/gyms/rage-fight-academy/">Rage</a> for the discipline, group or private format, instructor language, session length, equipment and complete amount. If staying on site, request the room and training as separate line items.</p>
 
-<p>Rage fits someone who wants a multi-discipline camp and is comfortable arranging the product directly. It is not the most transparent option for a spontaneous visitor comparing numeric walk-in prices.</p>
+<p><a href="/gyms/rage-fight-academy/">Rage</a> fits someone who wants a multi-discipline camp and is comfortable arranging the product directly. It does not publish the kind of numeric walk-in price that a spontaneous visitor may want to compare.</p>
 
 <h2>Battle &amp; Conquer: simple price ladder and two daily windows</h2>
 
@@ -60,7 +60,7 @@ module.exports = `
 
 <p>That ladder makes frequency costs visible, but the lowest two-a-day amount should not decide a beginner's schedule. It only documents what the operator sells. Confirm which window is appropriate for a first visit, how the class is structured, whether individual pad work is included, which equipment is available and the instruction language.</p>
 
-<p>Sudsakorn is useful for a traveller who wants to compare one session with a short block using published numbers. Someone who needs a dedicated fundamentals group should verify that exact format rather than treating a multi-level camp schedule as one.</p>
+<p><a href="/gyms/sudsakorn-muay-thai-gym/">Sudsakorn</a> is useful for a traveller who wants to compare one session with a short block using published numbers. Someone who needs a dedicated fundamentals group should verify that exact format rather than treating a multi-level camp schedule as one.</p>
 
 <h2>ISS: distinguish coached class from gym access</h2>
 
@@ -68,7 +68,7 @@ module.exports = `
 
 <p>The ฿300 amount does not buy the coached class. That distinction is exactly why the product name matters. A beginner should ask whether the 14:00 class accepts a first-timer on the chosen date, whether booking is required, what contact level occurs, what equipment is included and which language the coach will use.</p>
 
-<p>ISS suits someone based centrally who wants a named class time and does not confuse open gym with instruction. Its one-day coached amount is higher than several other published group or pad-session entries, so compare the format and location rather than ranking by price alone.</p>
+<p><a href="/gyms/wko-muay-thai/">ISS</a> suits someone based centrally who wants a named class time and does not confuse open gym with instruction. Its one-day coached amount is higher than several other published group or pad-session entries, so compare the format and location rather than ranking by price alone.</p>
 
 <h2>Contact-first camps: what the missing tariff means</h2>
 
@@ -104,7 +104,7 @@ module.exports = `
 <section class="guide-faq">
 <h2>Questions people ask</h2>
 
-<details class="faq-item"><summary>Which Pattaya Muay Thai gym has the cheapest verified beginner entry?</summary><p>Among the products in the comparison table, Sityodtong's named individual pad session and Sudsakorn's single session are each published at ฿400. They are not necessarily the same duration or format. Confirm beginner acceptance, inclusions and the chosen date before treating either as the lower-cost fit.</p></details>
+<details class="faq-item"><summary>Which Pattaya Muay Thai gym has the cheapest verified beginner entry?</summary><p>Among the products in the comparison table, <a href="/gyms/sityodtong-pattaya/">Sityodtong</a>'s named individual pad session and <a href="/gyms/sudsakorn-muay-thai-gym/">Sudsakorn</a>'s single session are each published at ฿400. They are not necessarily the same duration or format. Confirm beginner acceptance, inclusions and the chosen date before treating either as the lower-cost fit.</p></details>
 
 <details class="faq-item"><summary>Does a beginner have to spar?</summary><p>This guide does not assume sparring is included or required. Ask the operator how partner drills and sparring are handled in the exact session, state the level of contact accepted and obtain a clear answer before paying. A general “all levels” label does not settle that question.</p></details>
 

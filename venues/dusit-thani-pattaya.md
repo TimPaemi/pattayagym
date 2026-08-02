@@ -1,6 +1,7 @@
 ---
 id: dusit-thani-pattaya
 name: Dusit Thani Pattaya — Devarana Wellness
+nameTh: โรงแรมดุสิตธานี พัทยา
 category: fitness
 area: North Pattaya / Beach Road
 address: 240/2 Pattaya Beach Road, Pattaya, Bang Lamung, Chonburi 20150
@@ -13,9 +14,9 @@ hours: Tennis daily 07:00-20:00; Devarana wellness products require reservation;
 priceRange: ฿฿฿
 distinction: Resort wellness facilities with a fitness centre, yoga, two outdoor pools and tennis
 facilities: [Fitness centre, Yoga, Outdoor pools, Tennis, Kids club]
-priceAsOf: 2026-07-27
-priceSourceUrl: https://www.dusit.com/dusitthani-pattaya/specialoffers/
-verified: 2026-07-27
+priceAsOf: 2026-07-29
+priceSourceUrl: https://www.dusit.com/dusitthani-pattaya/specialoffers/tennis-court/
+verified: 2026-07-29
 sources:
   - https://www.dusit.com/dusitthani-pattaya/
   - https://www.dusit.com/dusitthani-pattaya/devarana-wellness/
@@ -23,12 +24,15 @@ sources:
   - https://www.dusit.com/dusitthani-pattaya/facilities/tennis-court/
   - https://www.dusit.com/dusitthani-pattaya/specialoffer/ice-bath-ritual-by-devarana-wellness/
   - https://www.google.com/maps/search/?api=1&query=Dusit+Thani+Pattaya
+  - "https://www.google.com/maps/search/?api=1&query=Dusit+Thani+Pattaya&hl=th"
 description: North Pattaya resort wellness option with a published Devarana day pass, public tennis pricing and broader hotel fitness facilities.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Dusit+Thani+Pattaya"
 tags: [hotel-fitness, wellness, swimming, tennis, yoga, north-pattaya]
 ---
 
 # Dusit Thani Pattaya — Devarana Wellness
+
+The 240/2 Pattaya Beach Road hotel is **โรงแรมดุสิตธานี พัทยา** in Thai Maps; its tennis hours run 07:00-20:00.
 
 Dusit Thani Pattaya is a hotel wellness record with some genuinely published public products, not just a vague “ask the resort” listing. The checked operator pages now support a Devarana wellness day pass, a public tennis product and an ice-bath offer alongside the broader hotel fitness, pool and spa facilities.
 

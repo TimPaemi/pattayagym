@@ -13,7 +13,7 @@ hours: Daily 06:00-21:00
 priceRange: ""
 distinction: Jomtien-area tennis academy on Chaiyapruek Road
 sport: Tennis
-verified: 2026-07-26
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/tostennis/
   - https://www.google.com/maps/search/?api=1&query=TOS+Tennis+Academy+Pattaya

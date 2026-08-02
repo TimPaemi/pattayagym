@@ -1,5 +1,6 @@
 ---
 id: venum-training-camp
+nameTh: ค่ายมวยเวนัม
 name: Venum Training Camp Thailand
 category: muay-thai
 area: Soi Khopai / South Pattaya
@@ -10,22 +11,28 @@ social:
   facebook: venumtrainingcamp
   instagram: venumtrainingcamp
 hours: Official site lists daily 07:00-19:00; Maps lists Mon-Sat 09:00-19:00 and Sun closed — confirm before attending
-priceRange: ""
+priceRange: "฿2,000-5,000 per week by discipline; kids ฿1,500/week"
+priceAsOf: 2026-07-30
+priceSourceUrl: https://www.gotopattaya.com/venues/venum-training-camp
 distinction: Multi-discipline camp offering Muay Thai, boxing, MMA, BJJ and cross-training
 disciplines: [Muay Thai, Boxing, MMA, Brazilian Jiu-Jitsu, Cross-training]
 beginnerFriendly: true
-verified: 2026-07-26
+verified: 2026-07-30
 sources:
   - https://venumtrainingcamp.com/
   - https://www.facebook.com/venumtrainingcamp/
   - https://www.instagram.com/venumtrainingcamp/
   - https://www.google.com/maps/search/?api=1&query=Venum+Training+Camp+Thailand
+  - https://www.gotopattaya.com/venues/venum-training-camp
+  - https://www.siamsport.co.th/other-sports/boxing/62581/
 description: Soi Khopai combat-sports camp with Muay Thai, boxing, MMA, BJJ and cross-training.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Venum+Training+Camp+Thailand"
 tags: [muay-thai, boxing, mma, bjj, cross-training, south-pattaya]
 ---
 
 # Venum Training Camp Thailand
+
+A Thai sports report calls the venue **ค่ายมวยเวนัม** and places the Pattaya camp at **399/8** Soi Khopai 12.
 
 Venum Training Camp is a multi-discipline combat-sports gym on Soi Khopai 12. Its current official site advertises Muay Thai, western boxing, MMA, Brazilian Jiu-Jitsu and cross-training for beginners through experienced athletes. That breadth is the useful distinction here: it is a camp to investigate when more than one combat discipline matters, not evidence that every programme runs at every hour.
 
@@ -37,9 +44,9 @@ For alternatives focused specifically on Thailand's striking art, compare the [M
 
 ## What it costs
 
-No usable current public tariff was found on the operator's site or exact Maps listing. The booking interface displayed “PRICE 0$” during the check, but it did not identify a free class or a zero-cost package. We do not treat that placeholder as a price.
+The Go To Pattaya listing, checked on **30 July 2026**, prices Venum by the week: **฿4,000 for Muay Thai**, **฿5,000 for all-access training across every discipline**, **฿2,000 for BJJ or western boxing**, and **฿1,500 for kids classes**. Those figures come from a third-party local listing rather than a rate card the camp itself publishes, and no single-class, daily, monthly or private-session rate was stated anywhere we checked — treat the weekly numbers as the starting point and confirm the current amount and what it includes before paying.
 
-Ask for the exact rate for a single class, private session, day, week or longer stay, as applicable. Also ask what the quoted amount includes and whether gloves, wraps, accommodation, meals or equipment rental are separate. Obtain the total and cancellation terms in writing before paying.
+Ask whether gloves, wraps and rental equipment are included in the weekly rate, how private sessions are charged, and whether accommodation or meals can be added to a training stay. Get the total and the cancellation terms in writing.
 
 ## Who it suits — and who it does not
 
@@ -55,13 +62,13 @@ No operator-published hotel transfer, public-transport route, journey time, park
 
 ## Before you go
 
-There is a material hours conflict. The official site lists 07:00–19:00 daily, while the exact Maps listing shows 09:00–19:00 Monday through Saturday and Sunday closed. Contact +66 87 285 7699 and ask for the start time of the specific discipline you want; general opening hours do not establish a class schedule.
+There is a material hours conflict. The official site lists 07:00–19:00 daily, while the exact Maps listing shows 09:00–19:00 Monday through Saturday and Sunday closed. The Go To Pattaya listing, checked 30 July 2026, shows Monday–Saturday 07:00–19:00 with Sunday closed — matching the official site’s start time and Maps’ Sunday rest day. Contact +66 87 285 7699 and ask for the start time of the specific discipline you want; general opening hours do not establish a class schedule.
 
 Tell the camp your experience level, preferred discipline and dates. Ask what clothing and protective equipment to bring, whether rental gear is available, and whether advance booking or identification is required.
 
 ## What we could not verify
 
-- No current public class, private-session, day, weekly or package tariff was available.
+- The weekly tariff above is a third-party listing figure; the operator publishes no rate card of its own, and no single-class, day, month or private-session price was found anywhere checked.
 - No current class-by-class timetable or coach roster was published.
-- The official site and Maps disagree about opening hours and Sunday access.
+- The three sources still disagree on the weekday opening time; Sunday closure is supported by Maps and Go To Pattaya but not by the official site’s “daily” wording.
 - Equipment rental, changing facilities, language availability and transport terms were not stated.

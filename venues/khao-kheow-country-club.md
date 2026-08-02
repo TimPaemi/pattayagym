@@ -1,6 +1,7 @@
 ---
 id: khao-kheow-country-club
 name: Khao Kheow Country Club
+nameTh: เขาเขียวคันทรี่คลับ
 category: golf
 area: Bang Phra / Si Racha
 address: 220/15 Moo 12, Bang Phra, Si Racha, Chonburi 20110
@@ -11,18 +12,21 @@ social:
 hours: Daily 06:00-19:00; tee times require confirmation
 priceRange: ""
 distinction: Si Racha golf club with current Pattaya society play
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.facebook.com/khaokheowcountryclub/
   - http://khaokheowgolf.com/
   - https://pattayasports.org/golf-society-report/pattaya-sports-hub-golf-society-at-khao-kheow-golf-country-club-4/
   - https://www.google.com/maps/search/?api=1&query=Khao+Kheow+Country+Club
+  - "https://www.google.com/maps/search/?api=1&query=Khao+Kheow+Country+Club&hl=th"
 description: Active Bang Phra golf club with daily hours and current society play, but no dependable first-hand visitor tariff.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Khao+Kheow+Country+Club"
 tags: [golf, si-racha, bang-phra, call-ahead]
 ---
 
 # Khao Kheow Country Club
+
+Thai Maps lists the club at 220/15 Moo 12 as **เขาเขียวคันทรี่คลับ**.
 
 Khao Kheow Country Club is an active golf club in Bang Phra, Si Racha. Current Maps details establish the location, phone and operating window, while a March 2026 Pattaya Sports Club report documents recent organised play. The principal limitation is commercial: the operator's linked website does not provide a usable current visitor tariff or booking flow.
 

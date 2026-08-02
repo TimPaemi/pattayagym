@@ -1,6 +1,7 @@
 ---
 id: cross-pattaya-pratamnak
 name: Cross Pattaya Pratamnak — Cloud Club
+nameTh: โรงแรมครอส พัทยา พระตำหนัก
 category: fitness
 area: Pratamnak Hill
 address: 286/4 Moo 12 Kasetsin, Pattaya, Bang Lamung, Chonburi 20150
@@ -14,17 +15,20 @@ distinction: Hotel fitness room and saltwater pools; public access is not confir
 fitnessAmenities: [Treadmills, Exercise bicycles, Yoga space, Main saltwater pool, Children's pool]
 beginnerFriendly: true
 languages: [English, Thai]
-verified: 2026-07-27
+verified: 2026-07-29
 sources:
   - https://www.crosspattayapratamnak.com/
   - https://www.sonohotelsresortsasia.com/crosspattayapratamnak
   - https://www.crosspattayapratamnak.com/contact
+  - "https://www.google.com/maps/search/?api=1&query=Cross+Pattaya+Pratamnak&hl=th"
 description: Hotel wellness amenity with published Cloud Club hours, saltwater-pool hours and no current public non-resident day pass.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Cross+Pattaya+Pratamnak"
 tags: [hotel-gym, pratamnak, pool, yoga]
 ---
 
 # Cross Pattaya Pratamnak — Cloud Club
+
+Thai Maps identifies the 286/4 Moo 12 property as **โรงแรมครอส พัทยา พระตำหนัก**.
 
 Cross Pattaya Pratamnak's Cloud Club is best understood as a hotel wellness amenity, not a normal public gym. The hotel's own pages publish useful facility and hour details, but they do not currently publish a non-resident access product, so this record is valuable mainly as an honest hotel-facility reference rather than a guaranteed day-pass recommendation.
 

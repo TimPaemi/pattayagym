@@ -201,31 +201,6 @@ const INTENT_BLOCK = `
 </section>
 `;
 
-const NETWORK_BLOCK = `
-<section class="section network-hub" id="pattaya-network">
-  <div class="wrap">
-    <div class="eyebrow"><span class="num">02</span> Pattaya network</div>
-    <h2 class="h-section">The TimPaemi <span class="accent-pink">Pattaya guides.</span></h2>
-    <p class="lede">Pattaya.Gym is one property in an independent network built in Pattaya — restaurants, visas, schools, coffee, medical, and more. Cross-linked for long-stay trainers and relocators.</p>
-    <nav class="network-grid" aria-label="Pattaya Authority network sites">
-      <span class="network-card-name">Pattaya Authority</span><span class="network-card-desc">Network hub · all properties</span>
-      <span class="network-card-name">Restaurant Guide</span><span class="network-card-desc">Eat after training</span>
-      <span class="network-card-name">Visa Help</span><span class="network-card-desc">Long-stay &amp; ED visa</span>
-      <span class="network-card-name">School Guide</span><span class="network-card-desc">Families relocating</span>
-      <span class="network-card-name">Pattaya Coffee</span><span class="network-card-desc">Remote work cafés</span>
-      <span class="network-card-name">Personal Trainer</span><span class="network-card-desc">1-on-1 coaching</span>
-      <span class="network-card-name">Pattaya Villa</span><span class="network-card-desc">Long-stay accommodation</span>
-      <span class="network-card-name">Mr We Outside</span><span class="network-card-desc">Outdoor community</span>
-      <span class="network-card-name">Villa Stream</span><span class="network-card-desc">Life in Pattaya</span>
-      <span class="network-card-name">Pattaya Medical</span><span class="network-card-desc">Clinics &amp; injury</span>
-      <span class="network-card-name">PattayaPets</span><span class="network-card-desc">Vets &amp; pet life</span>
-      <span class="network-card-name">Vehicle Rentals</span><span class="network-card-desc">Scooters &amp; cars</span>
-      <span class="network-card-name">TimPaemi</span><span class="network-card-desc">Founders · agency</span>
-    </nav>
-  </div>
-</section>
-`;
-
 let html = fs.readFileSync(INDEX, 'utf8');
 
 const INTENT = INTENT_BLOCK.replace('__GUIDE_COUNT__', String(guideCount()));

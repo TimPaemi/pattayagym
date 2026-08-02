@@ -1,6 +1,7 @@
 ---
 id: pratumnak-fitness-park
 name: Pratumnak Fitness Park
+nameTh: เขาพระตำหนักและสวนสาธารณะออกกำลังกาย
 category: fitness
 area: Pratamnak Hill
 address: Pratumnak Road, near Chaloem Phrakiat Park and the Buddha Hill entrance, Pattaya, Chonburi
@@ -14,6 +15,7 @@ equipment: [Outdoor exercise apparatus, Pull-up and bodyweight stations]
 beginnerFriendly: true
 verified: 2026-07-26
 sources:
+  - https://roamfit.net/th/articles/pattaya-water-sports-beach-fitness-th
   - https://www.pattayaunlimited.com/pattaya-fitness-park/
   - https://www.pattaya.go.th/document/standard/capter02/44.pdf
   - https://info.pattaya.go.th/DocLib5/%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%87%E0%B8%97%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2.aspx
@@ -24,6 +26,8 @@ tags: [outdoor, public-park, calisthenics, running, pratamnak]
 ---
 
 # Pratumnak Fitness Park
+
+The Thai fitness guide groups this location under **เขาพระตำหนักและสวนสาธารณะออกกำลังกาย**.
 
 Pratumnak Fitness Park is the exercise area at Chaloem Phrakiat Park on Pratumnak Road. Municipal records support a walking and running surface, a multipurpose court and 12 outdoor exercise stations. It suits self-directed outdoor training; it does not provide the published staffing, equipment inventory or weather protection of a commercial gym.
 

@@ -1,6 +1,7 @@
 ---
 id: bangpra-international
 name: Bangpra Golf Club
+nameTh: บางพระ กอล์ฟ คลับ
 category: golf
 area: Bang Phra / Si Racha
 address: 45 Moo 6, Bang Phra, Si Racha, Chonburi 20110
@@ -23,12 +24,15 @@ sources:
   - https://www.facebook.com/BangpraGolfClubAndResort/
   - https://www.facebook.com/BangpraGolfClubAndResort/posts/pfbid022uzyzuY71fgjcM6h15ipWCqpnzTfBzkmwTRxd1yTscpTaSc9HhvFNXxamuAYmFeul
   - https://www.google.com/maps/search/?api=1&query=Bangpra+Golf+Club
+  - "https://www.google.com/maps/search/?api=1&query=Bangpra+International+Golf+Club&hl=th"
 description: Bang Phra 18-hole, par-72 golf course with a dated 28-29 July 2026 inclusive package.
 mapsUrl: "https://www.google.com/maps/search/?api=1&query=Bangpra+Golf+Club"
 tags: [golf, 18-holes, bang-phra, sriracha]
 ---
 
 # Bangpra Golf Club
+
+The Thai Maps listing uses **บางพระ กอล์ฟ คลับ** for the 18-hole property at 45 Moo 6.
 
 Bangpra Golf Club is an operating 18-hole course and hotel in Bang Phra, Si Racha. The exact Maps place and active owner page use the same identity and 45 Moo 6 address. Its useful current price evidence is a two-day July package, not a permanent public tariff.
 

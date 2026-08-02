@@ -27,7 +27,9 @@ const { GYMS, CATEGORIES } = require(dataPath);
 let geoCount = 0;
 try {
   const geo = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'venue-geo.json'), 'utf8'));
-  geoCount = Object.values(geo).filter(v => v && v.lat && v.lng && !v.failed).length;
+  geoCount = Object.values(geo).filter(v => v && v.lat && v.lng && !v.failed &&
+    v._flag !== 'area_fallback' && v._flag !== 'area_centroid' && v.strategy !== 'area_centroid' &&
+    Number(v.lat) >= 12.55 && Number(v.lat) <= 13.25 && Number(v.lng) >= 100.70 && Number(v.lng) <= 101.25).length;
 } catch (e) {}
 
 // Schema completeness
@@ -85,7 +87,8 @@ const status = {
     location: 'Pattaya, Chon Buri, Thailand',
     independent: true,
     paidPlacements: false,
-    handChecked: true,
+    editorialModel: 'source-bounded records with visible gaps',
+    firstHandVisitsClaimed: false,
     updateCadence: 'rolling'
   },
 
@@ -109,6 +112,7 @@ const status = {
 
   // Schema completeness
   schema_completeness: {
+    definition: 'Counts only venue-specific published fields. Area centroids and other location placeholders are excluded.',
     venues_with_verified_date: verifiedCount,
     venues_with_phone: phoneCount,
     venues_with_website: websiteCount,
@@ -146,7 +150,7 @@ const status = {
     fake_reviews: 'never',
     seo_spam: 'never',
     update_cadence: 'venues re-verified on a rolling weekly schedule',
-    correction_sla_days: 7,
+    correction_process: 'reports are triaged; urgent operating-status changes are prioritised',
     methodology_url: `${SITE}/methodology/`
   }
 };

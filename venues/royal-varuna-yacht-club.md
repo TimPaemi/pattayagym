@@ -1,5 +1,6 @@
 ---
 id: royal-varuna-yacht-club
+nameTh: สโมสรราชวรุณในพระบรมราชูปถัมภ์
 name: Royal Varuna Yacht Club
 category: watersports
 area: Pratamnak Hill
@@ -13,6 +14,7 @@ priceRange: ""
 distinction: Member sailing club and RYA-accredited training centre
 verified: 2026-07-27
 sources:
+  - https://th.soidb.com/pattaya/activity/royal-varuna-yacht-club.html
   - https://www.varuna.org/
   - https://www.varuna.org/training
   - https://www.varuna.org/sailing
@@ -30,6 +32,8 @@ tags: [sailing, rya-training, dinghy, multihull, powerboat, membership, pratamna
 Royal Varuna is a member sailing club and RYA-accredited training centre on the Pratamnak coast. Its current programme covers youth and adult instruction, private tuition and powerboat training, while the 2026 regatta calendar confirms active organised sailing. Public access and course cost still need direct confirmation for the intended date.
 
 ## What training is on offer
+
+The Thai directory names the 286 Moo 12 club **สโมสรราชวรุณในพระบรมราชูปถัมภ์**.
 
 The operator's 2026 training page lists youth courses, adult courses, private tuition, instructor training and a two-day **RYA Powerboat Level 2** programme. It says the school is RYA-accredited for dinghy, multihull and powerboat training and that instruction is in English. The sailing page separately presents racing, boat charter and the club fleet. A course enquiry is therefore different from asking to use member boats or facilities independently.
 
